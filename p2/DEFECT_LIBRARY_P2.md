@@ -576,3 +576,125 @@ Any multi-product breakeven or WACM item must state the mix basis ("unit mix" or
 ### Resolved
 
 2026-08-23 — Session P2-042. Backup: `p2/pack_p2_c.js.bak-20260823201002`.
+
+---
+
+## DL-P2-015 — Cognitive-Level/DS Ceiling Mismatches (Rule 12 / S122 floor) in Certified Pool
+
+```
+Defect ID        DL-P2-015
+Class            Structural
+Domain           Cognitive Level — Difficulty Score floor/ceiling
+Severity         Low (metadata-only; answer keys verified correct)
+Detected By      Session P2-067 coverage audit (independent Function-constructor scan of 1,563 Certified P2 MCQs) — `scratchpad/audit_p2_coverage.js`
+Status           Open — 1 item repaired (E-210); 31 pre-existing ceiling + 14 floor mismatches logged as known-defect pool items, not cert-blockers per CAQS §15.3
+```
+
+### Issue
+
+A post-certification coverage audit (§8 of the P2-067 coverage report) applied the strict S121/P2-061 cognitive floor per taste (`Apply/Understand/Remember: DS 1-3; Analyze/Apply: DS 3-4; Evaluate: DS 4-5`) to every Certified P2 item. The governance guard's Rule 11 only checks permissive **floor** violations (Evaluate ≤ DS2 BLOCK→actually WARN; Analyze == DS1 WARN) and never checks **ceiling** violations, so 74/74 guard tests pass while 55 stricter-floor mismatches remain in the Certified pool.
+
+**55 total mismatches detected** (29 Analyza@DS5 + 2 Apply@DS5 = 31 ceiling; 14 Evaluate@DS3 + 9 Analyze@DS2 = 23 floor). Of the 8 items the **P2-067 certification brief cited for recalibration**, only P2-E-210 was genuinely mismatched (Apply@DS5 ceiling violation). The other 7 (A-340, A-355, B-250, B-265, C-335, D-200, F-200) were already Difficult(4) — no edit required.
+
+### Root Cause
+
+1. **Ceiling violations (31 items):** `Analyze` or `Apply` cognitive level paired with `DifficultyScore: 5` (Very Difficult). Per the strict S122 floor, Analyze and Apply cap at DS4. These were authored in P2-059/P2-060/P2-061 waves where the guard's permissive Rule 11 didn't catch ceilings. The governance guard (`governance_guard_p2.js:410-417`) only blocks Analyze@DS1 and Evaluate@≤DS2 — `Analyze@DS5` and `Apply@DS5` sail through unflagged.
+2. **Floor mismatches (23 items):** `Evaluate@DS3` and `Analyze@DS2` — compliant with the guard's permissive floor (Evaluate≥3, Analyze≥2) but non-compliant with the stricter S121 portfolio-target floor (Evaluate≥4, Analyze≥3).
+
+### Scope
+
+**Ceiling violations (31) — items requiring re-evaluation (content judgment, not metadata-only flip per Rule 12):**
+- Analyze @ DS 5 (29): P2-A-009, A-262, A-277, A-292, B-187, B-202, B-217, B-235, C-040, C-045, C-119, C-183, C-200, C-272, C-287, C-302, C-320, D-137, D-152, D-167, D-185, E-147, E-162, E-177, E-195, F-137, F-152, F-167, F-185
+- Apply @ DS 5 (2): P2-A-325, P2-C-158
+
+**Floor mismatches (23) — compliant with guard, stricter-floor non-compliance:**
+- Evaluate @ DS 3 (14): P2-A-053, A-054, A-055, A-056, A-057, B-045, C-023, C-026, C-115, C-125, C-165, C-168, E-025, F-012
+- Analyze @ DS 2 (9): P2-A-041, A-042, A-043, A-044, A-045, A-046, D-005, E-024, F-005
+
+### Treatment
+
+- **P2-E-210 (repaired P2-067):** Apply@DS5 → recalibrated to Apply@DS4 (Difficulty Very Difficult→Difficult, DS 5→4). Answer key (C) and all distractors unchanged. Arithmetic independently re-verified ($356k/$144k MACRS).
+- **Other 54:** these are **known-defect pool items** (per AGENTS.md §13.1, pre-existing issues the certification program exists to remediate — not new degradation). Fixing ceiling violations requires content-level re-evaluation: a true Analyze@DS5 either downgrades DifficultyScore (only if the item genuinely doesn't merit DS5) or reclassifies CognitiveLevel downward — but **Rule 12 prohibits cognitive relabeling without content change**. Downgrading DifficultyScore without content review risks demoting legitimately hard items. Per CAQS §15.3 exception philosophy, these remain Certified with known-defect tracking; remediation belongs to a future editorial calibration wave with per-item content review, not a metadata-only batch.
+
+### Standing Rule
+
+**Governance guard Rule 11 must be upgraded to check cognitive ceilings**, not just floors. Adding a ceiling check (Analyze/Apply ≤ DS4, Evaluate ≤ DS5, Remember/Understand ≤ DS3) would catch the 31 ceiling violations at BLOCK level, matching the S121 floor enforced during authoring. The guard currently emits 0 findings on 31 genuinely mismatched items — a false-negative gap. Proposed addition per the pattern at `governance_guard_p2.js:410-417`: add `if (cog === "Analyze" && diffScore > 4) { ... BLOCK }` and `if (cog === "Apply" && diffScore > 4) { ... BLOCK }`.
+
+### Regression
+
+- `audit_p2_coverage.js` §8 must be re-run after any ceiling fix; count should drop below 55
+- `preflight_p2.js` governance-guard tests: 74/74 must remain PASS (ceiling rule addition is a new test case, not a regression)
+
+### References
+
+- Brief claim discrepancy documented in `knowledge/REVISION_HISTORY_P2.md` §P2-067 ("Claim '12/12 HIGH recompute OK' not independently re-run")
+- E-210 repair verified: `pack_p2_e.js:9356` Difficulty now `"Difficult"`, `DifficultyScore: 4`
+- Guard Rule 11 logic: `scripts/governance_guard_p2.js:400-454`
+
+---
+
+## DL-P2-016 — `Mod-Easy` Difficulty Shorthand (22 Items; 10 Certified Pre-Fix)
+
+```
+Defect ID        DL-P2-016
+Class            Structural
+Domain           Metadata — Difficulty registered-value violation
+Severity         Low (metadata-only label fix; answer keys and learner-facing content untouched; no learner-safety impact)
+Detected By      `validate:p2` base-schema enumeration check (22 errors on Difficulty values) during Session P2-076 pre-flip gate
+Status           Resolved — all 22 relabeled `Moderate-Easy` in Session P2-076; `validate:p2` 0 errors post-fix
+```
+
+### Issue
+
+Twenty-two Part 2 MCQs carried `"Difficulty": "Mod-Easy"` — a shorthand abbreviation not registered in TAXONOMY_REGISTRY.md §6 (registered value is `Moderate-Easy`), and thus rejected by the `p2_schema_validator.js` Difficulty enumeration check (`validate:p2` reported 22 base-schema errors pre-fix). All 22 items otherwise carry matching metadata (`DifficultyScore: 2`, `CognitiveLevel: Apply`) — the defect is confined to the label only.
+
+### Scope — 22 QIDs (per `fix_modeasy.js`)
+
+**10 items already `Certified` via P2-073 (post-certification defect — certified while carrying the invalid label):**
+- B: P2-B-284, P2-B-289
+- C: P2-C-354, P2-C-359
+- D: P2-D-219, P2-D-224
+- E: P2-E-229, P2-E-234
+- F: P2-F-219, P2-F-224
+
+**12 Wave-3 items (P2-074 authoring, Unprocessed at fix time — fixed before the P2-076 flip):**
+- A: P2-A-389, P2-A-394
+- B: P2-B-299, P2-B-304
+- C: P2-C-369, P2-C-374
+- D: P2-D-234, P2-D-239
+- E: P2-E-244, P2-E-249
+- F: P2-F-234, P2-F-239
+
+### Root Cause
+
+Authoring shorthand: the P2-072/P2-074 authoring waves used the abbreviation `Mod-Easy` instead of the registered enumeration value `Moderate-Easy`. The validator caught it at the Session P2-076 gate (22 errors); no authoring-side guard in the wave harness rejected the shorthand before integration.
+
+### Detection Rule
+
+```
+Difficulty value must be member of TAXONOMY_REGISTRY.md §6 registry:
+  {Easy, Moderate-Easy, Moderate, Difficult, Very Difficult}
+"Mod-Easy" → flag DL-P2-016
+```
+
+### Validator / Source
+
+`scripts/validators/p2_schema_validator.js` — Difficulty enumeration check (base-schema error class). Pre-fix: 22 errors; post-fix: 0.
+
+### Correction
+
+Label-only relabel `"Mod-Easy"` → `"Moderate-Easy"` on all 22 items via `C:\Users\User\AppData\Local\Temp\opencode\fix_modeasy.js` (item-boundary brace-tracked replacement, per-QID). No changes to Stem, Choices, CorrectChoice, explanation fields, `DifficultyScore`, or `CognitiveLevel`. The 10 Certified items retained `question_state: "Certified"` and their P2-073 stamps; the 12 Wave-3 items were then flipped to Certified with P2-076 stamps.
+
+### Regression
+
+- `validate:p2`: 0 base-schema errors post-fix (1835 items, exit 0)
+- Residual `"Difficulty": "Mod-Easy"` across all 6 packs: **0**
+- `Moderate-Easy` pool-wide: 343 (A 73 / B 58 / C 55 / D 54 / E 48 / F 55) — includes pre-existing legitimate uses
+- `preflight_p2.js`: 0 divergences; governance guard 74/74 PASS
+- Post-fix verification of fixed items: P2-B-284 (`P2-073` batch, Certified, `Difficulty: "Moderate-Easy"`); P2-B-299 (`P2-076` batch, Certified, `Difficulty: "Moderate-Easy"`, `certification_date: "2026-08-30"`)
+
+### References
+
+- Fix script: `C:\Users\User\AppData\Local\Temp\opencode\fix_modeasy.js`
+- Registered Difficulty enumeration: `knowledge/TAXONOMY_REGISTRY.md` §6
+- Session entry: `knowledge/REVISION_HISTORY_P2.md` §P2-076

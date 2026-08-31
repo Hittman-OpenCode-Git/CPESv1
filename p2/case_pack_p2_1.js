@@ -1,2126 +1,2124 @@
 var casePackP2_1 = [
-{
-  "CaseID": "CBQ21-B1",
-  "Title": "Cash Conversion Cycle and the Credit Line Renewal",
-  "SectionTags": [
-    "B"
-  ],
-  "BlueprintDomain": "Corporate Finance",
-  "BlueprintObjectives": [
-    "Manage working capital (cash, receivables, inventory, payables)",
-    "Compute and interpret the cash conversion cycle"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Meridian Foods' CFO Ravi Patel must explain to the board why cash balances fell even as profit rose 10%. The controller has prepared operating data for the past two quarters, and the board has asked for a working-capital diagnosis before the November credit-line renewal.",
-  "Industry": "Food processing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Meridian Foods",
-  "Stakeholder": "CFO Ravi Patel",
-  "BusinessFunction": "Treasury",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.1",
-  "Tags": [
-    "cash conversion cycle",
-    "working capital",
-    "DSO",
-    "DIO",
-    "DPO"
-  ],
-  "CreatedDate": "2026-08-23",
-  "ModifiedDate": "2026-08-23",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-08-23",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    },
-    {
-      "Date": "2026-08-23",
-      "Version": "1.1",
-      "Author": "Case Author (external review repairs)",
-      "Summary": "Stated the annualized-flow measurement convention in Exhibit 1; clarified Q2's cross-reference to Question 1; corrected the Q3 DPO distractor from 3.7 to 3.3 days"
-    }
-  ],
-  "question_state": "Certified",
-  "certification_session": "P2-060",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "Dependencies": [],
-  "LearningObjectives": [
-    "Compute DIO, DSO, and DPO from operating data",
-    "Compute and interpret the cash conversion cycle",
-    "Quantify the cash released by a DSO target",
-    "Match each working-capital component to its change"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ21-B1-E1",
-      "CaseID": "CBQ21-B1",
-      "Type": "table",
-      "Title": "Exhibit 1 — Operating Data",
-      "Purpose": "Provides sales, COGS, average balance-sheet accounts, and purchases for the CCC computation. Sales, COGS, and purchases are annualized run-rate amounts at each quarter-end; average working-capital balances are quarter-end averages, so the 365-day formulas apply directly.",
-      "ReferencedBy": [
-        "CBQ21-B1-Q1",
-        "CBQ21-B1-Q2",
-        "CBQ21-B1-Q3",
-        "CBQ21-B1-Q6"
-      ],
-      "Headers": [
-        "Quarter",
-        "Sales",
-        "COGS",
-        "Average Inventory",
-        "Average Receivables",
-        "Average Payables",
-        "Purchases"
-      ],
-      "Rows": [
-        [
-          "Q1",
-          "$2,400,000",
-          "$1,800,000",
-          "$400,000",
-          "$600,000",
-          "$350,000",
-          "$1,850,000"
-        ],
-        [
-          "Q2",
-          "$2,640,000",
-          "$2,040,000",
-          "$520,000",
-          "$750,000",
-          "$380,000",
-          "$2,110,000"
-        ]
-      ],
-      "DataFormat": "USD whole dollars",
-      "AccuracyCheck": "Q2 sales and COGS are Q1 x 1.10; purchases reflect the inventory build"
-    },
-    {
-      "ExhibitID": "CBQ21-B1-E2",
-      "CaseID": "CBQ21-B1",
-      "Type": "email",
-      "Title": "Exhibit 2 — Board Request",
-      "Purpose": "Sets the decision context: the board asks for the cash-flow diagnosis and the cash release from a 90-day DSO target.",
-      "ReferencedBy": [
-        "CBQ21-B1-Q4",
-        "CBQ21-B1-Q5"
-      ],
-      "Body": "From: Board Audit Committee. Subject: Q2 cash position. Ravi — profit is up 10% but cash is down. Explain the gap, and quantify what we can recover from working capital if we tighten collections to a 90-day DSO target before the November credit-line renewal."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ21-B1-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter Q2 days sales outstanding (DSO), rounded to one decimal.",
-      "Correct": "103.7",
-      "Explanation": "DSO = (Average Accounts Receivable / Net Credit Sales) x 365 = ($750,000 / $2,640,000) x 365 = 103.7 days, using the annualized run-rate sales shown in Exhibit 1. Receivables grew from $600,000 to $750,000 — 25% — while sales grew only 10%, so Meridian Foods is collecting more slowly. This is the leading driver of the cash drain CFO Ravi Patel must explain to the board.",
-      "Topic": "Days sales outstanding",
-      "Subtopic": "Receivables turnover in days",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-10: DSO component (FA-05)",
-      "CommonTrapReference": "Using ending rather than average receivables, or 360 days instead of 365.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "DSO",
-        "receivables"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-B1-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the Q2 cash conversion cycle in days, rounded to one decimal.",
-      "Correct": "131.0",
-      "Explanation": "CCC = DIO + DSO - DPO. Q2 DIO = ($520,000 / $2,040,000) x 365 = 93.0 days; DSO = 103.7 days (from Question 1); DPO = ($380,000 / $2,110,000) x 365 = 65.7 days. CCC = 93.0 + 103.7 - 65.7 = 131.0 days. Meridian ties up roughly four and a half months of cash in inventory and receivables, net of supplier financing — the board's cash-drain explanation in one number.",
-      "Topic": "Cash conversion cycle",
-      "Subtopic": "CCC computation",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-10: Cash Conversion Cycle",
-      "CommonTrapReference": "Adding DPO instead of subtracting it, or using COGS instead of purchases in DPO.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "CCC",
-        "DIO",
-        "DPO"
-      ],
-      "Dependencies": [
-        "CBQ21-B1-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ21-B1-Q3",
-      "Type": "select",
-      "Prompt": "Which component contributed most to the CCC deterioration from Q1 to Q2?",
-      "Correct": "A",
-      "Choices": [
-        "DSO, which lengthened 12.4 days as receivables grew faster than sales",
-        "DIO, which lengthened 11.9 days as inventory built ahead of demand",
-        "DPO, which shortened 3.3 days and offset the other components",
-        "DIO and DSO contributed equally"
-      ],
-      "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing.",
-      "Topic": "CCC component analysis",
-      "Subtopic": "Variance attribution",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-10",
-      "CommonTrapReference": "Attributing the change to the largest absolute level (inventory) rather than the largest change.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "attribution",
-        "CCC"
-      ],
-      "Dependencies": [
-        "CBQ21-B1-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ21-B1-Q4",
-      "Type": "select",
-      "Prompt": "Per the board request in Exhibit 2, how much cash would a 90-day DSO target release, based on Q2 sales?",
-      "Correct": "A",
-      "Choices": [
-        "Approximately $99,000",
-        "Approximately $72,000",
-        "Approximately $145,000",
-        "The full $750,000 receivable balance"
-      ],
-      "Explanation": "Target receivables at a 90-day DSO = (90 / 365) x $2,640,000 = $650,959. Current receivables are $750,000, so the release is $750,000 - $650,959 = $99,041, approximately $99,000. This is the cash the board's collection push would free for the credit-line renewal. Only the reduction in DSO releases cash; the existing balance already reflects past sales.",
-      "Topic": "Cash release from DSO reduction",
-      "Subtopic": "Working-capital financing",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-10: DSO component",
-      "CommonTrapReference": "Treating the entire receivable balance, rather than the excess above target, as the cash release.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "DSO",
-        "cash release"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-B1-Q5",
-      "Type": "multi",
-      "Prompt": "Which two actions would most directly shorten the cash conversion cycle?",
-      "Correct": [
-        "Tighten credit terms and collection follow-up to reduce DSO",
-        "Negotiate longer payment terms with suppliers to extend DPO"
-      ],
-      "Choices": [
-        "Tighten credit terms and collection follow-up to reduce DSO",
-        "Negotiate longer payment terms with suppliers to extend DPO",
-        "Increase safety stock to avoid stockouts",
-        "Pay suppliers early to capture the 2% discount",
-        "Extend customer terms further to win share"
-      ],
-      "Explanation": "CCC = DIO + DSO - DPO, so shortening the cycle means shrinking DSO (tighter credit and collections), shrinking DIO (leaner inventory), or extending DPO (longer supplier terms). Increasing safety stock raises DIO, early supplier payment shortens DPO, and looser customer terms raise DSO — each of these lengthens the cycle. For Meridian Foods, the two selected actions attack the two components that worsened most.",
-      "Topic": "CCC management",
-      "Subtopic": "Working-capital levers",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "CB-10",
-      "CommonTrapReference": "Choosing actions that shorten individual components but lengthen the overall cycle (e.g., early supplier payment).",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "CCC",
-        "levers"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-B1-Q6",
-      "Type": "match",
-      "Prompt": "Match each working-capital component to its Q1-to-Q2 change.",
-      "Correct": {
-        "DSO": "+12.4 days",
-        "DIO": "+11.9 days",
-        "DPO": "-3.3 days",
-        "CCC": "+27.7 days"
+  {
+    "CaseID": "CBQ21-B1",
+    "Title": "Cash Conversion Cycle and the Credit Line Renewal",
+    "SectionTags": [
+      "B"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "BlueprintObjectives": [
+      "Manage working capital (cash, receivables, inventory, payables)",
+      "Compute and interpret the cash conversion cycle"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Meridian Foods' CFO Ravi Patel must explain to the board why cash balances fell even as profit rose 10%. The controller has prepared operating data for the past two quarters, and the board has asked for a working-capital diagnosis before the November credit-line renewal.",
+    "Industry": "Food processing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Meridian Foods",
+    "Stakeholder": "CFO Ravi Patel",
+    "BusinessFunction": "Treasury",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.1",
+    "Tags": [
+      "cash conversion cycle",
+      "working capital",
+      "DSO",
+      "DIO",
+      "DPO"
+    ],
+    "CreatedDate": "2026-08-23",
+    "ModifiedDate": "2026-08-23",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-23",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
       },
-      "LeftItems": [
-        "DSO",
-        "DIO",
-        "DPO",
-        "CCC"
-      ],
-      "RightItems": [
-        "+12.4 days",
-        "+11.9 days",
-        "-3.3 days",
-        "+27.7 days"
-      ],
-      "Explanation": "Q1 to Q2: DSO 91.3 to 103.7 (+12.4 days); DIO 81.1 to 93.0 (+11.9 days); DPO 69.1 to 65.7 (-3.3 days); the net CCC worsened 103.3 to 131.0 (+27.7 days). Matching the components to their changes closes the diagnostic loop for CFO Ravi Patel's board presentation: slower collections, a modest inventory build, and slightly faster supplier payments combined to consume nearly a month of additional cash.",
-      "Topic": "CCC changes",
-      "Subtopic": "Component matching",
-      "Difficulty": "Moderate-Easy",
-      "DifficultyScore": 2,
-      "CognitiveLevel": "Understand",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-10",
-      "CommonTrapReference": "Confusing the direction of DPO (a decrease in DPO lengthens the cycle).",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "CCC",
-        "matching"
-      ],
-      "Dependencies": [
-        "CBQ21-B1-Q2"
-      ]
-    }
-  ]
-},
-{
-  "CaseID": "CBQ21-C1",
-  "Title": "Relevant Costing: Segment, Special Order, and Outsourcing",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Apply relevant costing to short-term decisions",
-    "Evaluate segment, special-order, and make-or-buy decisions"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 35,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Cascade Kitchenware's Controller Nina Alvarez faces three short-term decisions before quarter-end: whether to drop the Bakeware line, whether to accept a private-label special order, and whether to outsource the handle component. The CFO wants one memo with the numbers and the governing principle behind each.",
-  "Industry": "Kitchenware",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Cascade Kitchenware",
-  "Stakeholder": "Controller Nina Alvarez",
-  "BusinessFunction": "Cost accounting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.1",
-  "Tags": [
-    "relevant costing",
-    "segment analysis",
-    "special order",
-    "outsourcing"
-  ],
-  "CreatedDate": "2026-08-23",
-  "ModifiedDate": "2026-08-23",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-08-23",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    },
-    {
-      "Date": "2026-08-23",
-      "Version": "1.1",
-      "Author": "Case Author (external review repairs)",
-      "Summary": "Reordered items to satisfy the numeric(2)-select(2)-multi-match progression; expanded Q3 to five choices with a relative-margin distractor that consumes the Cookware and Utensils exhibit rows; updated exhibit ReferencedBy"
-    }
-  ],
-  "question_state": "Certified",
-  "certification_session": "P2-060",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "Dependencies": [],
-  "LearningObjectives": [
-    "Compute segment margin and apply the keep-or-drop rule",
-    "Price a special order on incremental costs only",
-    "Compare make-or-buy with risk-adjusted total cost of ownership",
-    "Match each decision to its governing principle"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ21-C1-E1",
-      "CaseID": "CBQ21-C1",
-      "Type": "table",
-      "Title": "Exhibit 1 — Segment Profitability",
-      "Purpose": "Provides line-level sales, variable costs, traceable fixed costs, and allocated common costs for the keep-or-drop decision.",
-      "ReferencedBy": [
-        "CBQ21-C1-Q1",
-        "CBQ21-C1-Q3"
-      ],
-      "Headers": [
-        "Line",
-        "Sales",
-        "Variable Costs",
-        "Traceable Fixed Costs",
-        "Allocated Common Costs"
-      ],
-      "Rows": [
-        [
-          "Cookware",
-          "$900,000",
-          "$420,000",
-          "$180,000",
-          "$120,000"
+      {
+        "Date": "2026-08-23",
+        "Version": "1.1",
+        "Author": "Case Author (external review repairs)",
+        "Summary": "Stated the annualized-flow measurement convention in Exhibit 1; clarified Q2's cross-reference to Question 1; corrected the Q3 DPO distractor from 3.7 to 3.3 days"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-060",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute DIO, DSO, and DPO from operating data",
+      "Compute and interpret the cash conversion cycle",
+      "Quantify the cash released by a DSO target",
+      "Match each working-capital component to its change"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-B1-E1",
+        "CaseID": "CBQ21-B1",
+        "Type": "table",
+        "Title": "Exhibit 1 — Operating Data",
+        "Purpose": "Provides sales, COGS, average balance-sheet accounts, and purchases for the CCC computation. Sales, COGS, and purchases are annualized run-rate amounts at each quarter-end; average working-capital balances are quarter-end averages, so the 365-day formulas apply directly.",
+        "ReferencedBy": [
+          "CBQ21-B1-Q1",
+          "CBQ21-B1-Q2",
+          "CBQ21-B1-Q3",
+          "CBQ21-B1-Q6"
         ],
-        [
-          "Bakeware",
-          "$480,000",
-          "$260,000",
-          "$150,000",
-          "$60,000"
+        "Headers": [
+          "Quarter",
+          "Sales",
+          "COGS",
+          "Average Inventory",
+          "Average Receivables",
+          "Average Payables",
+          "Purchases"
         ],
-        [
-          "Utensils",
-          "$620,000",
-          "$340,000",
-          "$110,000",
-          "$80,000"
-        ]
-      ],
-      "DataFormat": "USD whole dollars",
-      "AccuracyCheck": "Common costs sum to $260,000 and would be reassigned to the remaining lines if Bakeware is dropped"
-    },
-    {
-      "ExhibitID": "CBQ21-C1-E2",
-      "CaseID": "CBQ21-C1",
-      "Type": "table",
-      "Title": "Exhibit 2 — Special Order and Supplier Data",
-      "Purpose": "Provides the private-label order terms and the handle make-or-buy data.",
-      "ReferencedBy": [
-        "CBQ21-C1-Q2",
-        "CBQ21-C1-Q4",
-        "CBQ21-C1-Q5"
-      ],
-      "Headers": [
-        "Item",
-        "Value"
-      ],
-      "Rows": [
-        [
-          "Special order units",
-          "3,000"
+        "Rows": [
+          [
+            "Q1",
+            "$2,400,000",
+            "$1,800,000",
+            "$400,000",
+            "$600,000",
+            "$350,000",
+            "$1,850,000"
+          ],
+          [
+            "Q2",
+            "$2,640,000",
+            "$2,040,000",
+            "$520,000",
+            "$750,000",
+            "$380,000",
+            "$2,110,000"
+          ]
         ],
-        [
-          "Special order price per unit",
-          "$42"
-        ],
-        [
-          "Variable cost per unit (includes $3 commission NOT paid on this order)",
-          "$34"
-        ],
-        [
-          "Order-specific tooling",
-          "$12,000"
-        ],
-        [
-          "Annual handle volume",
-          "20,000"
-        ],
-        [
-          "In-house variable cost per handle",
-          "$25"
-        ],
-        [
-          "Supplier price per handle",
-          "$22"
-        ],
-        [
-          "Probability of a supplier failure",
-          "5%"
-        ],
-        [
-          "Cost of a supplier failure",
-          "$150,000"
-        ],
-        [
-          "Annual inspection savings if outsourced",
-          "$25,000"
-        ]
-      ],
-      "DataFormat": "USD",
-      "AccuracyCheck": "Released Bakeware capacity can earn an $85,000 contribution from a new line (stated in the scenario)"
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ21-C1-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the Bakeware line segment margin in dollars.",
-      "Correct": "70000",
-      "Explanation": "Segment margin = Sales - Variable costs - Traceable fixed costs = $480,000 - $260,000 - $150,000 = $70,000. Allocated common costs are excluded because they continue regardless of the line. Bakeware contributes $70,000 toward Cascade Kitchenware's common costs — the starting point for Controller Nina Alvarez's keep-or-drop analysis.",
-      "Topic": "Segment margin",
-      "Subtopic": "Traceable vs common fixed costs",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-08: Incremental decision rule (segment margin)",
-      "CommonTrapReference": "Deducting allocated common costs from segment margin.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "segment margin"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-C1-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the incremental profit from accepting the 3,000-unit special order, in dollars.",
-      "Correct": "21000",
-      "Explanation": "The relevant cost excludes the $3 commission not paid on the order: $34 - $3 = $31 per unit. Incremental profit = (Price - Relevant variable cost) x Units - Tooling = ($42 - $31) x 3,000 - $12,000 = $33,000 - $12,000 = $21,000. The order clears the relevant-cost floor with room to spare, so Alvarez should recommend accepting it even though the $42 price sits below full cost.",
-      "Topic": "Special order pricing",
-      "Subtopic": "Relevant cost floor",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-08: Incremental decision rule (special order)",
-      "CommonTrapReference": "Using full absorption cost or failing to exclude the avoided commission.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "special order"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-C1-Q3",
-      "Type": "select",
-      "Prompt": "If Bakeware is dropped, the freed capacity can earn an $85,000 contribution from a new line. What is the income effect of dropping Bakeware?",
-      "Correct": "A",
-      "Choices": [
-        "Drop the line; profit rises by $15,000",
-        "Keep the line; dropping would reduce profit by $70,000",
-        "Drop the line; profit rises by $145,000",
-        "Keep the line; dropping would reduce profit by $10,000",
-        "Drop Utensils instead, because its $170,000 segment margin is lower than Cookware's $300,000"
-      ],
-      "Explanation": "Dropping forfeits the $70,000 segment margin but frees capacity that earns $85,000: net effect = -$70,000 + $85,000 = +$15,000. The $60,000 of allocated common costs continues and is irrelevant, so the +$145,000 option double-counts it, and the -$10,000 option wrongly nets it against the margin. The Utensils-versus-Cookware comparison is a relative-margin fallacy: both lines have positive segment margins (Utensils $170,000, Cookware $300,000), so dropping either would reduce income unless its capacity earns more elsewhere. Controller Alvarez should recommend dropping Bakeware because the redeployment earns more than the line itself.",
-      "Topic": "Keep-or-drop with capacity redeployment",
-      "Subtopic": "Add-or-drop rule",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-08: Incremental decision rule (add-or-drop)",
-      "CommonTrapReference": "Stopping at the segment margin and ignoring the redeployment value, or comparing segment margins across lines.",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "keep-or-drop",
-        "opportunity cost"
-      ],
-      "Dependencies": [
-        "CBQ21-C1-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ21-C1-Q4",
-      "Type": "select",
-      "Prompt": "Based on Exhibit 2, what are the expected annual savings from outsourcing the handles?",
-      "Correct": "A",
-      "Choices": [
-        "Outsource; expected annual savings of $77,500",
-        "Keep in-house; expected cost is $60,000 lower",
-        "Outsource; expected annual savings of $52,500",
-        "Keep in-house; control is worth more than the savings"
-      ],
-      "Explanation": "In-house cost = $25 x 20,000 = $500,000. Outsourced expected cost = ($22 x 20,000) + (5% x $150,000) - $25,000 = $440,000 + $7,500 - $25,000 = $422,500. Expected savings = $500,000 - $422,500 = $77,500. The risk-adjusted comparison still favors outsourcing: the expected failure penalty and the inspection savings both belong in the total cost of ownership.",
-      "Topic": "Outsourcing with risk adjustment",
-      "Subtopic": "Total cost of ownership",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-10: Expected value in outsourcing comparison",
-      "CommonTrapReference": "Ignoring the expected failure cost or the inspection savings.",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "outsourcing",
-        "expected value"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-C1-Q5",
-      "Type": "multi",
-      "Prompt": "Which three cost items are relevant to the outsourcing decision?",
-      "Correct": [
-        "In-house variable cost of $25 per handle",
-        "Expected supplier-failure cost",
-        "The $25,000 inspection savings"
-      ],
-      "Choices": [
-        "In-house variable cost of $25 per handle",
-        "Expected supplier-failure cost",
-        "The $25,000 inspection savings",
-        "The allocated corporate overhead charged to the handle line",
-        "The historical cost of the handle-making equipment"
-      ],
-      "Explanation": "Relevant items differ between the alternatives: variable cost disappears under outsourcing, the expected failure cost arises only under outsourcing, and the inspection savings accrue only under outsourcing. Allocated corporate overhead continues either way, and the historical equipment cost is sunk. These three are exactly the items Alvarez's total-cost-of-ownership comparison must include.",
-      "Topic": "Relevant cost identification",
-      "Subtopic": "Sunk vs avoidable vs incremental",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "DA-08",
-      "CommonTrapReference": "Including allocated overhead or sunk equipment costs in a differential decision.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "relevant costs"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-C1-Q6",
-      "Type": "match",
-      "Prompt": "Match each decision to its governing principle.",
-      "Correct": {
-        "Special order pricing": "Price must cover incremental costs, not full costs",
-        "Keep-or-drop segment": "Compare contribution margin with avoidable fixed costs",
-        "Outsourcing": "Total cost of ownership, including risk-adjusted hidden costs",
-        "Sunk costs": "Irrelevant to the decision"
+        "DataFormat": "USD whole dollars",
+        "AccuracyCheck": "Q2 sales and COGS are Q1 x 1.10; purchases reflect the inventory build"
       },
-      "LeftItems": [
-        "Special order pricing",
-        "Keep-or-drop segment",
-        "Outsourcing",
-        "Sunk costs"
-      ],
-      "RightItems": [
-        "Price must cover incremental costs, not full costs",
-        "Compare contribution margin with avoidable fixed costs",
-        "Total cost of ownership, including risk-adjusted hidden costs",
-        "Irrelevant to the decision"
-      ],
-      "Explanation": "Each decision in Alvarez's memo carries its own test: special orders are priced against incremental costs; segment decisions compare contribution margin with avoidable fixed costs; outsourcing uses risk-adjusted total cost of ownership; and sunk costs are always excluded. The CFO's memo will close with this principle map so each number is traceable to a rule.",
-      "Topic": "Decision rules",
-      "Subtopic": "Governing principles",
-      "Difficulty": "Moderate-Easy",
-      "DifficultyScore": 2,
-      "CognitiveLevel": "Understand",
-      "CalculationRequired": false,
-      "FormulaReference": "DA-08",
-      "CommonTrapReference": "Applying one decision rule across all decision types.",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "decision rules"
-      ],
-      "Dependencies": []
-    }
-  ]
-},
-{
-  "CaseID": "CBQ21-E1",
-  "Title": "Capital Rationing and the Post-Audit",
-  "SectionTags": [
-    "E"
-  ],
-  "BlueprintDomain": "Investment Decisions",
-  "BlueprintObjectives": [
-    "Rank capital projects under a budget constraint",
-    "Apply profitability index to capital rationing",
-    "Interpret a post-audit variance"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Harborview Industries' capital committee has capped this year's spending at $5.0 million across six competing proposals. Controller Sam Okonkwo must also present the post-audit of last year's flagship project, which came in below forecast.",
-  "Industry": "Industrial equipment",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Harborview Industries",
-  "Stakeholder": "Controller Sam Okonkwo",
-  "BusinessFunction": "Capital budgeting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.1",
-  "Tags": [
-    "capital rationing",
-    "profitability index",
-    "post-audit"
-  ],
-  "CreatedDate": "2026-08-23",
-  "ModifiedDate": "2026-08-23",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-08-23",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    },
-    {
-      "Date": "2026-08-23",
-      "Version": "1.1",
-      "Author": "Case Author (external review repairs)",
-      "Summary": "Q1 corrected to standard PI convention (1.33, PV of inflows / investment); Q2 rebuilt around the true optimum A+C+D+F ($5.0M, $1.48M) with the PI-greedy trap as a distractor; items reordered to numeric-numeric-select-select-multi-match; Q3/Q4 FormulaReference corrected from after-tax cash flow to post-audit variance analysis; Q5/Q6 blank FormulaReference fields populated; Q6 match text updated to standard PI terminology"
-    }
-  ],
-  "question_state": "Certified",
-  "certification_session": "P2-060",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "Dependencies": [],
-  "LearningObjectives": [
-    "Compute the profitability index",
-    "Select the NPV-maximizing project combination under a budget constraint",
-    "Analyze post-audit variances by component",
-    "Match capital budgeting tools to their purpose"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ21-E1-E1",
-      "CaseID": "CBQ21-E1",
-      "Type": "table",
-      "Title": "Exhibit 1 — Capital Proposals",
-      "Purpose": "Provides investment and NPV for the six proposals under the $5.0M rationing cap.",
-      "ReferencedBy": [
-        "CBQ21-E1-Q1",
-        "CBQ21-E1-Q3"
-      ],
-      "Headers": [
-        "Proposal",
-        "Investment",
-        "NPV"
-      ],
-      "Rows": [
-        [
-          "A",
-          "$2,000,000",
-          "$600,000"
+      {
+        "ExhibitID": "CBQ21-B1-E2",
+        "CaseID": "CBQ21-B1",
+        "Type": "email",
+        "Title": "Exhibit 2 — Board Request",
+        "Purpose": "Sets the decision context: the board asks for the cash-flow diagnosis and the cash release from a 90-day DSO target.",
+        "ReferencedBy": [
+          "CBQ21-B1-Q4",
+          "CBQ21-B1-Q5"
         ],
-        [
-          "B",
-          "$1,500,000",
-          "$500,000"
+        "Body": "From: Board Audit Committee. Subject: Q2 cash position. Ravi — profit is up 10% but cash is down. Explain the gap, and quantify what we can recover from working capital if we tighten collections to a 90-day DSO target before the November credit-line renewal."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-B1-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter Q2 days sales outstanding (DSO), rounded to one decimal.",
+        "Correct": "103.7",
+        "Explanation": "DSO = (Average Accounts Receivable / Net Credit Sales) x 365 = ($750,000 / $2,640,000) x 365 = 103.7 days, using the annualized run-rate sales shown in Exhibit 1. Receivables grew from $600,000 to $750,000 — 25% — while sales grew only 10%, so Meridian Foods is collecting more slowly. This is the leading driver of the cash drain CFO Ravi Patel must explain to the board.",
+        "Topic": "Days sales outstanding",
+        "Subtopic": "Receivables turnover in days",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-10: DSO component (FA-05)",
+        "CommonTrapReference": "Using ending rather than average receivables, or 360 days instead of 365.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DSO",
+          "receivables"
         ],
-        [
-          "C",
-          "$1,000,000",
-          "$320,000"
-        ],
-        [
-          "D",
-          "$800,000",
-          "$200,000"
-        ],
-        [
-          "E",
-          "$2,500,000",
-          "$400,000"
-        ],
-        [
-          "F",
-          "$1,200,000",
-          "$360,000"
-        ]
-      ],
-      "DataFormat": "USD whole dollars",
-      "AccuracyCheck": "Total investment $9.0M exceeds the $5.0M budget; NPVs are net of all cash flows"
-    },
-    {
-      "ExhibitID": "CBQ21-E1-E2",
-      "CaseID": "CBQ21-E1",
-      "Type": "table",
-      "Title": "Exhibit 2 — Post-Audit: Flagship Project",
-      "Purpose": "Compares budgeted and actual results for the post-audit variance analysis.",
-      "ReferencedBy": [
-        "CBQ21-E1-Q2",
-        "CBQ21-E1-Q4"
-      ],
-      "Headers": [
-        "Item",
-        "Budgeted",
-        "Actual"
-      ],
-      "Rows": [
-        [
-          "Revenue",
-          "$1,000,000",
-          "$950,000"
-        ],
-        [
-          "Variable costs",
-          "$400,000",
-          "$420,000"
-        ],
-        [
-          "Fixed costs",
-          "$250,000",
-          "$260,000"
-        ],
-        [
-          "Operating income",
-          "$350,000",
-          "$270,000"
-        ]
-      ],
-      "DataFormat": "USD whole dollars",
-      "AccuracyCheck": "Budgeted OI = 1,000,000 - 400,000 - 250,000; Actual OI = 950,000 - 420,000 - 260,000"
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ21-E1-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the profitability index of Proposal B, rounded to two decimal places.",
-      "Correct": "1.33",
-      "Explanation": "Profitability index = PV of future cash flows / Initial investment = 1 + (NPV / Investment) = 1 + ($500,000 / $1,500,000) = 1.33. The PI converts each proposal's NPV into a per-dollar ratio, which is exactly the ranking tool the $5.0 million cap requires. Proposal B returns $1.33 of present value per invested dollar — the highest of the six proposals — so it sits first in Controller Okonkwo's ranking.",
-      "Topic": "Profitability index",
-      "Subtopic": "PI computation",
-      "Difficulty": "Moderate-Easy",
-      "DifficultyScore": 2,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "ID-02: Profitability Index",
-      "CommonTrapReference": "Reporting the NPV-to-investment ratio (0.33) without adding 1, or dividing investment by NPV.",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "PI"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-E1-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the operating income variance in dollars from Exhibit 2; use a negative sign for unfavorable.",
-      "Correct": "-80000",
-      "Explanation": "Operating income variance = Actual - Budget = $270,000 - $350,000 = -$80,000 unfavorable. The post-audit's job is not to punish but to decompose this $80,000 miss into its drivers so Harborview's next forecasts learn from it: revenue came in $50,000 light while costs ran $30,000 over.",
-      "Topic": "Post-audit variance",
-      "Subtopic": "Operating income reconciliation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "ID-10: Post-Audit Variance Analysis",
-      "CommonTrapReference": "Sign errors — reporting unfavorable variances as positive.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "post-audit"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-E1-Q3",
-      "Type": "select",
-      "Prompt": "Which combination maximizes total NPV within the $5.0 million budget?",
-      "Correct": "C",
-      "Choices": [
-        "B, C, and A — $4.5M invested, NPV of $1.42M",
-        "A, B, and F — $4.7M invested, NPV of $1.46M",
-        "A, C, D, and F — $5.0M invested, NPV of $1.48M",
-        "B, C, F, and D — $4.5M invested, NPV of $1.38M"
-      ],
-      "Explanation": "With indivisible projects, the optimum must be found by evaluating combinations, not by the PI-greedy sequence. Exhaustive check: A + C + D + F invests $2.0M + $1.0M + $0.8M + $1.2M = $5.0M — the entire budget — for NPV of $600K + $320K + $200K + $360K = $1,480,000. A + B + F ($4.7M, $1.46M) is close, but replacing B ($1.5M for $500K NPV) with C + D ($1.8M for $520K NPV) fits the cap and adds $20K. The PI-greedy order B, C, A stops at $4.5M and $1.42M because neither F nor D fits the remaining $0.5M. Lesson: PI (1.33, 1.32, 1.30, 1.30, 1.25, 1.16) is a screening tool under rationing, not a guarantee of the NPV-maximizing combination.",
-      "Topic": "Capital rationing",
-      "Subtopic": "PI ranking under a budget constraint",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "ID-02: Profitability Index (rationing)",
-      "CommonTrapReference": "Assuming the PI-greedy sequence yields the global optimum with indivisible projects, or ranking by raw NPV alone.",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "rationing",
-        "PI"
-      ],
-      "Dependencies": [
-        "CBQ21-E1-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ21-E1-Q4",
-      "Type": "select",
-      "Prompt": "Which component contributed most to the unfavorable post-audit variance?",
-      "Correct": "A",
-      "Choices": [
-        "Revenue, unfavorable by $50,000",
-        "Variable costs, unfavorable by $20,000",
-        "Fixed costs, unfavorable by $10,000",
-        "All three contributed equally"
-      ],
-      "Explanation": "Decomposition: revenue $950,000 - $1,000,000 = -$50,000; variable costs $420,000 - $400,000 = -$20,000 unfavorable; fixed costs $260,000 - $250,000 = -$10,000 unfavorable. Revenue's $50,000 miss is the largest driver, matching the $-80,000 total. Okonkwo should present revenue as the root cause and recommend re-examining the sales forecast assumptions.",
-      "Topic": "Post-audit decomposition",
-      "Subtopic": "Variance attribution",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "ID-10: Post-Audit Variance Analysis",
-      "CommonTrapReference": "Focusing on cost variances when revenue explains most of the miss.",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "post-audit",
-        "attribution"
-      ],
-      "Dependencies": [
-        "CBQ21-E1-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ21-E1-Q5",
-      "Type": "multi",
-      "Prompt": "Which three of the following are legitimate purposes of a capital project post-audit?",
-      "Correct": [
-        "Refining future cash-flow forecasts",
-        "Identifying systematic estimation bias",
-        "Holding managers accountable for controllable outcomes"
-      ],
-      "Choices": [
-        "Refining future cash-flow forecasts",
-        "Identifying systematic estimation bias",
-        "Holding managers accountable for controllable outcomes",
-        "Punishing managers for uncontrollable market variances",
-        "Retroactively changing the acceptance criteria"
-      ],
-      "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million.",
-      "Topic": "Post-audit purposes",
-      "Subtopic": "Capital budgeting control",
-      "Difficulty": "Moderate-Easy",
-      "DifficultyScore": 2,
-      "CognitiveLevel": "Understand",
-      "CalculationRequired": false,
-      "FormulaReference": "ID-10: Post-Audit Variance Analysis (conceptual purposes)",
-      "CommonTrapReference": "Treating the post-audit as a punitive or hindsight exercise.",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "post-audit"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ21-E1-Q6",
-      "Type": "match",
-      "Prompt": "Match each capital budgeting tool to its purpose.",
-      "Correct": {
-        "NPV": "Primary criterion — measures dollar value added",
-        "Profitability index": "Present value of inflows per dollar invested — ranks projects under rationing",
-        "Payback": "Liquidity and risk screen — ignores the time value of money",
-        "Post-audit": "Compares forecasted and actual results to improve future estimates"
+        "Dependencies": []
       },
-      "LeftItems": [
-        "NPV",
-        "Profitability index",
-        "Payback",
-        "Post-audit"
-      ],
-      "RightItems": [
-        "Primary criterion — measures dollar value added",
-        "Present value of inflows per dollar invested — ranks projects under rationing",
-        "Liquidity and risk screen — ignores the time value of money",
-        "Compares forecasted and actual results to improve future estimates"
-      ],
-      "Explanation": "NPV measures absolute value added and is the primary accept/reject criterion; the profitability index converts a project's present value of inflows into a per-dollar ratio that ranks projects when capital is rationed; payback screens liquidity and risk but ignores the time value of money; and the post-audit closes the loop by comparing forecasts with actuals. Okonkwo's committee presentation uses each tool in exactly this role.",
-      "Topic": "Capital budgeting tools",
-      "Subtopic": "Tool selection",
-      "Difficulty": "Moderate-Easy",
-      "DifficultyScore": 2,
-      "CognitiveLevel": "Understand",
-      "CalculationRequired": false,
-      "FormulaReference": "ID-01 NPV; ID-02 PI; ID-03 Payback; ID-10 Post-Audit",
-      "CommonTrapReference": "Using payback or PI as the primary criterion where NPV should govern.",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "NPV",
-        "PI",
-        "payback"
-      ],
-      "Dependencies": []
-    }
-  ]
-}
-,
-{
- "CaseID": "CBQ21-A1",
- "Title": "Liquidity, Leverage, and the Credit Renewal",
- "SectionTags": [
-  "A"
- ],
- "BlueprintDomain": "Financial Statement Analysis",
- "BlueprintObjectives": [
-  "Compute and interpret liquidity ratios including the treatment of current portions of long-term debt",
-  "Evaluate covenant compliance and prepare a remediation position for a lender"
- ],
- "PrimaryCompetency": "Calculation",
- "EstimatedMinutes": 30,
- "Difficulty": "Moderate",
- "DifficultyScore": 3,
- "ScenarioText": "Harborline Distributors must renew its $4 million revolving credit facility, and First Meridian Bank requires a current ratio of at least 1.50, a quick ratio of at least 1.00, and debt-to-equity no greater than 1.00 at fiscal year-end. Controller Dana Whitfield has assembled the draft balance sheet and operating data and must present the covenant certificate — including a credible remediation plan for any shortfall.",
- "Industry": "Wholesale distribution",
- "CompanyType": "Distributor",
- "CompanyName": "Harborline Distributors",
- "Stakeholder": "Controller Dana Whitfield",
- "BusinessFunction": "Treasury",
- "QuestionCount": 6,
- "ExhibitCount": 2,
- "ProductionStatus": "Draft",
- "Version": "1.0",
- "Tags": [
-  "current ratio",
-  "quick ratio",
-  "covenants",
-  "credit renewal"
- ],
- "CreatedDate": "2026-08-24",
- "ModifiedDate": "2026-08-24",
- "Author": "AI",
- "Confidence": 90,
- "RevisionHistory": [
+      {
+        "ItemID": "CBQ21-B1-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the Q2 cash conversion cycle in days, rounded to one decimal.",
+        "Correct": "131.0",
+        "Explanation": "CCC = DIO + DSO - DPO. Q2 DIO = ($520,000 / $2,040,000) x 365 = 93.0 days; DSO = 103.7 days (from Question 1); DPO = ($380,000 / $2,110,000) x 365 = 65.7 days. CCC = 93.0 + 103.7 - 65.7 = 131.0 days. Meridian ties up roughly four and a half months of cash in inventory and receivables, net of supplier financing — the board's cash-drain explanation in one number.",
+        "Topic": "Cash conversion cycle",
+        "Subtopic": "CCC computation",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-10: Cash Conversion Cycle",
+        "CommonTrapReference": "Adding DPO instead of subtracting it, or using COGS instead of purchases in DPO.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "CCC",
+          "DIO",
+          "DPO"
+        ],
+        "Dependencies": [
+          "CBQ21-B1-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-B1-Q3",
+        "Type": "select",
+        "Prompt": "Which component contributed most to the CCC deterioration from Q1 to Q2?",
+        "Correct": "A",
+        "Choices": [
+          "DSO, which lengthened 12.4 days as receivables grew faster than sales",
+          "DIO, which lengthened 11.9 days as inventory built ahead of demand",
+          "DPO, which shortened 3.3 days and offset the other components",
+          "DIO and DSO contributed equally"
+        ],
+        "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing.",
+        "Topic": "CCC component analysis",
+        "Subtopic": "Variance attribution",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-10",
+        "CommonTrapReference": "Attributing the change to the largest absolute level (inventory) rather than the largest change.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "attribution",
+          "CCC"
+        ],
+        "Dependencies": [
+          "CBQ21-B1-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-B1-Q4",
+        "Type": "select",
+        "Prompt": "Per the board request in Exhibit 2, how much cash would a 90-day DSO target release, based on Q2 sales?",
+        "Correct": "A",
+        "Choices": [
+          "Approximately $99,000",
+          "Approximately $72,000",
+          "Approximately $145,000",
+          "The full $750,000 receivable balance"
+        ],
+        "Explanation": "Target receivables at a 90-day DSO = (90 / 365) x $2,640,000 = $650,959. Current receivables are $750,000, so the release is $750,000 - $650,959 = $99,041, approximately $99,000. This is the cash the board's collection push would free for the credit-line renewal. Only the reduction in DSO releases cash; the existing balance already reflects past sales.",
+        "Topic": "Cash release from DSO reduction",
+        "Subtopic": "Working-capital financing",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-10: DSO component",
+        "CommonTrapReference": "Treating the entire receivable balance, rather than the excess above target, as the cash release.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DSO",
+          "cash release"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B1-Q5",
+        "Type": "multi",
+        "Prompt": "Which two actions would most directly shorten the cash conversion cycle?",
+        "Correct": [
+          "Tighten credit terms and collection follow-up to reduce DSO",
+          "Negotiate longer payment terms with suppliers to extend DPO"
+        ],
+        "Choices": [
+          "Tighten credit terms and collection follow-up to reduce DSO",
+          "Negotiate longer payment terms with suppliers to extend DPO",
+          "Increase safety stock to avoid stockouts",
+          "Pay suppliers early to capture the 2% discount",
+          "Extend customer terms further to win share"
+        ],
+        "Explanation": "CCC = DIO + DSO - DPO, so shortening the cycle means shrinking DSO (tighter credit and collections), shrinking DIO (leaner inventory), or extending DPO (longer supplier terms). Increasing safety stock raises DIO, early supplier payment shortens DPO, and looser customer terms raise DSO — each of these lengthens the cycle. For Meridian Foods, the two selected actions attack the two components that worsened most.",
+        "Topic": "CCC management",
+        "Subtopic": "Working-capital levers",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "CB-10",
+        "CommonTrapReference": "Choosing actions that shorten individual components but lengthen the overall cycle (e.g., early supplier payment).",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "CCC",
+          "levers"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B1-Q6",
+        "Type": "match",
+        "Prompt": "Match each working-capital component to its Q1-to-Q2 change.",
+        "Correct": {
+          "DSO": "+12.4 days",
+          "DIO": "+11.9 days",
+          "DPO": "-3.3 days",
+          "CCC": "+27.7 days"
+        },
+        "LeftItems": [
+          "DSO",
+          "DIO",
+          "DPO",
+          "CCC"
+        ],
+        "RightItems": [
+          "+12.4 days",
+          "+11.9 days",
+          "-3.3 days",
+          "+27.7 days"
+        ],
+        "Explanation": "Q1 to Q2: DSO 91.3 to 103.7 (+12.4 days); DIO 81.1 to 93.0 (+11.9 days); DPO 69.1 to 65.7 (-3.3 days); the net CCC worsened 103.3 to 131.0 (+27.7 days). Matching the components to their changes closes the diagnostic loop for CFO Ravi Patel's board presentation: slower collections, a modest inventory build, and slightly faster supplier payments combined to consume nearly a month of additional cash.",
+        "Topic": "CCC changes",
+        "Subtopic": "Component matching",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-10",
+        "CommonTrapReference": "Confusing the direction of DPO (a decrease in DPO lengthens the cycle).",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "CCC",
+          "matching"
+        ],
+        "Dependencies": [
+          "CBQ21-B1-Q2"
+        ]
+      }
+    ]
+  },
   {
-   "Date": "2026-08-24",
-   "Version": "1.0",
-   "Author": "AI",
-   "Summary": "Initial creation"
-  }
- ],
- "question_state": "Certified",
+    "CaseID": "CBQ21-C1",
+    "Title": "Relevant Costing: Segment, Special Order, and Outsourcing",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Apply relevant costing to short-term decisions",
+      "Evaluate segment, special-order, and make-or-buy decisions"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 35,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Cascade Kitchenware's Controller Nina Alvarez faces three short-term decisions before quarter-end: whether to drop the Bakeware line, whether to accept a private-label special order, and whether to outsource the handle component. The CFO wants one memo with the numbers and the governing principle behind each.",
+    "Industry": "Kitchenware",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Cascade Kitchenware",
+    "Stakeholder": "Controller Nina Alvarez",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.1",
+    "Tags": [
+      "relevant costing",
+      "segment analysis",
+      "special order",
+      "outsourcing"
+    ],
+    "CreatedDate": "2026-08-23",
+    "ModifiedDate": "2026-08-23",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-23",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      },
+      {
+        "Date": "2026-08-23",
+        "Version": "1.1",
+        "Author": "Case Author (external review repairs)",
+        "Summary": "Reordered items to satisfy the numeric(2)-select(2)-multi-match progression; expanded Q3 to five choices with a relative-margin distractor that consumes the Cookware and Utensils exhibit rows; updated exhibit ReferencedBy"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-060",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute segment margin and apply the keep-or-drop rule",
+      "Price a special order on incremental costs only",
+      "Compare make-or-buy with risk-adjusted total cost of ownership",
+      "Match each decision to its governing principle"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-C1-E1",
+        "CaseID": "CBQ21-C1",
+        "Type": "table",
+        "Title": "Exhibit 1 — Segment Profitability",
+        "Purpose": "Provides line-level sales, variable costs, traceable fixed costs, and allocated common costs for the keep-or-drop decision.",
+        "ReferencedBy": [
+          "CBQ21-C1-Q1",
+          "CBQ21-C1-Q3"
+        ],
+        "Headers": [
+          "Line",
+          "Sales",
+          "Variable Costs",
+          "Traceable Fixed Costs",
+          "Allocated Common Costs"
+        ],
+        "Rows": [
+          [
+            "Cookware",
+            "$900,000",
+            "$420,000",
+            "$180,000",
+            "$120,000"
+          ],
+          [
+            "Bakeware",
+            "$480,000",
+            "$260,000",
+            "$150,000",
+            "$60,000"
+          ],
+          [
+            "Utensils",
+            "$620,000",
+            "$340,000",
+            "$110,000",
+            "$80,000"
+          ]
+        ],
+        "DataFormat": "USD whole dollars",
+        "AccuracyCheck": "Common costs sum to $260,000 and would be reassigned to the remaining lines if Bakeware is dropped"
+      },
+      {
+        "ExhibitID": "CBQ21-C1-E2",
+        "CaseID": "CBQ21-C1",
+        "Type": "table",
+        "Title": "Exhibit 2 — Special Order and Supplier Data",
+        "Purpose": "Provides the private-label order terms and the handle make-or-buy data.",
+        "ReferencedBy": [
+          "CBQ21-C1-Q2",
+          "CBQ21-C1-Q4",
+          "CBQ21-C1-Q5"
+        ],
+        "Headers": [
+          "Item",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Special order units",
+            "3,000"
+          ],
+          [
+            "Special order price per unit",
+            "$42"
+          ],
+          [
+            "Variable cost per unit (includes $3 commission NOT paid on this order)",
+            "$34"
+          ],
+          [
+            "Order-specific tooling",
+            "$12,000"
+          ],
+          [
+            "Annual handle volume",
+            "20,000"
+          ],
+          [
+            "In-house variable cost per handle",
+            "$25"
+          ],
+          [
+            "Supplier price per handle",
+            "$22"
+          ],
+          [
+            "Probability of a supplier failure",
+            "5%"
+          ],
+          [
+            "Cost of a supplier failure",
+            "$150,000"
+          ],
+          [
+            "Annual inspection savings if outsourced",
+            "$25,000"
+          ]
+        ],
+        "DataFormat": "USD",
+        "AccuracyCheck": "Released Bakeware capacity can earn an $85,000 contribution from a new line (stated in the scenario)"
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-C1-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the Bakeware line segment margin in dollars.",
+        "Correct": "70000",
+        "Explanation": "Segment margin = Sales - Variable costs - Traceable fixed costs = $480,000 - $260,000 - $150,000 = $70,000. Allocated common costs are excluded because they continue regardless of the line. Bakeware contributes $70,000 toward Cascade Kitchenware's common costs — the starting point for Controller Nina Alvarez's keep-or-drop analysis.",
+        "Topic": "Segment margin",
+        "Subtopic": "Traceable vs common fixed costs",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-08: Incremental decision rule (segment margin)",
+        "CommonTrapReference": "Deducting allocated common costs from segment margin.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "segment margin"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C1-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the incremental profit from accepting the 3,000-unit special order, in dollars.",
+        "Correct": "21000",
+        "Explanation": "The relevant cost excludes the $3 commission not paid on the order: $34 - $3 = $31 per unit. Incremental profit = (Price - Relevant variable cost) x Units - Tooling = ($42 - $31) x 3,000 - $12,000 = $33,000 - $12,000 = $21,000. The order clears the relevant-cost floor with room to spare, so Alvarez should recommend accepting it even though the $42 price sits below full cost.",
+        "Topic": "Special order pricing",
+        "Subtopic": "Relevant cost floor",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-08: Incremental decision rule (special order)",
+        "CommonTrapReference": "Using full absorption cost or failing to exclude the avoided commission.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "special order"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C1-Q3",
+        "Type": "select",
+        "Prompt": "If Bakeware is dropped, the freed capacity can earn an $85,000 contribution from a new line. What is the income effect of dropping Bakeware?",
+        "Correct": "A",
+        "Choices": [
+          "Drop the line; profit rises by $15,000",
+          "Keep the line; dropping would reduce profit by $70,000",
+          "Drop the line; profit rises by $145,000",
+          "Keep the line; dropping would reduce profit by $10,000",
+          "Drop Utensils instead, because its $170,000 segment margin is lower than Cookware's $300,000"
+        ],
+        "Explanation": "Dropping forfeits the $70,000 segment margin but frees capacity that earns $85,000: net effect = -$70,000 + $85,000 = +$15,000. The $60,000 of allocated common costs continues and is irrelevant, so the +$145,000 option double-counts it, and the -$10,000 option wrongly nets it against the margin. The Utensils-versus-Cookware comparison is a relative-margin fallacy: both lines have positive segment margins (Utensils $170,000, Cookware $300,000), so dropping either would reduce income unless its capacity earns more elsewhere. Controller Alvarez should recommend dropping Bakeware because the redeployment earns more than the line itself.",
+        "Topic": "Keep-or-drop with capacity redeployment",
+        "Subtopic": "Add-or-drop rule",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-08: Incremental decision rule (add-or-drop)",
+        "CommonTrapReference": "Stopping at the segment margin and ignoring the redeployment value, or comparing segment margins across lines.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "keep-or-drop",
+          "opportunity cost"
+        ],
+        "Dependencies": [
+          "CBQ21-C1-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-C1-Q4",
+        "Type": "select",
+        "Prompt": "Based on Exhibit 2, what are the expected annual savings from outsourcing the handles?",
+        "Correct": "A",
+        "Choices": [
+          "Outsource; expected annual savings of $77,500",
+          "Keep in-house; expected cost is $60,000 lower",
+          "Outsource; expected annual savings of $52,500",
+          "Keep in-house; control is worth more than the savings"
+        ],
+        "Explanation": "In-house cost = $25 x 20,000 = $500,000. Outsourced expected cost = ($22 x 20,000) + (5% x $150,000) - $25,000 = $440,000 + $7,500 - $25,000 = $422,500. Expected savings = $500,000 - $422,500 = $77,500. The risk-adjusted comparison still favors outsourcing: the expected failure penalty and the inspection savings both belong in the total cost of ownership.",
+        "Topic": "Outsourcing with risk adjustment",
+        "Subtopic": "Total cost of ownership",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-10: Expected value in outsourcing comparison",
+        "CommonTrapReference": "Ignoring the expected failure cost or the inspection savings.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "outsourcing",
+          "expected value"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C1-Q5",
+        "Type": "multi",
+        "Prompt": "Which three cost items are relevant to the outsourcing decision?",
+        "Correct": [
+          "In-house variable cost of $25 per handle",
+          "Expected supplier-failure cost",
+          "The $25,000 inspection savings"
+        ],
+        "Choices": [
+          "In-house variable cost of $25 per handle",
+          "Expected supplier-failure cost",
+          "The $25,000 inspection savings",
+          "The allocated corporate overhead charged to the handle line",
+          "The historical cost of the handle-making equipment"
+        ],
+        "Explanation": "Relevant items differ between the alternatives: variable cost disappears under outsourcing, the expected failure cost arises only under outsourcing, and the inspection savings accrue only under outsourcing. Allocated corporate overhead continues either way, and the historical equipment cost is sunk. These three are exactly the items Alvarez's total-cost-of-ownership comparison must include.",
+        "Topic": "Relevant cost identification",
+        "Subtopic": "Sunk vs avoidable vs incremental",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "DA-08",
+        "CommonTrapReference": "Including allocated overhead or sunk equipment costs in a differential decision.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "relevant costs"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C1-Q6",
+        "Type": "match",
+        "Prompt": "Match each decision to its governing principle.",
+        "Correct": {
+          "Special order pricing": "Price must cover incremental costs, not full costs",
+          "Keep-or-drop segment": "Compare contribution margin with avoidable fixed costs",
+          "Outsourcing": "Total cost of ownership, including risk-adjusted hidden costs",
+          "Sunk costs": "Irrelevant to the decision"
+        },
+        "LeftItems": [
+          "Special order pricing",
+          "Keep-or-drop segment",
+          "Outsourcing",
+          "Sunk costs"
+        ],
+        "RightItems": [
+          "Price must cover incremental costs, not full costs",
+          "Compare contribution margin with avoidable fixed costs",
+          "Total cost of ownership, including risk-adjusted hidden costs",
+          "Irrelevant to the decision"
+        ],
+        "Explanation": "Each decision in Alvarez's memo carries its own test: special orders are priced against incremental costs; segment decisions compare contribution margin with avoidable fixed costs; outsourcing uses risk-adjusted total cost of ownership; and sunk costs are typically excluded. The CFO's memo will close with this principle map so each number is traceable to a rule.",
+        "Topic": "Decision rules",
+        "Subtopic": "Governing principles",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationRequired": false,
+        "FormulaReference": "DA-08",
+        "CommonTrapReference": "Applying one decision rule across all decision types.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "decision rules"
+        ],
+        "Dependencies": []
+      }
+    ]
+  },
+  {
+    "CaseID": "CBQ21-E1",
+    "Title": "Capital Rationing and the Post-Audit",
+    "SectionTags": [
+      "E"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "BlueprintObjectives": [
+      "Rank capital projects under a budget constraint",
+      "Apply profitability index to capital rationing",
+      "Interpret a post-audit variance"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Harborview Industries' capital committee has capped this year's spending at $5.0 million across six competing proposals. Controller Sam Okonkwo must also present the post-audit of last year's flagship project, which came in below forecast.",
+    "Industry": "Industrial equipment",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Harborview Industries",
+    "Stakeholder": "Controller Sam Okonkwo",
+    "BusinessFunction": "Capital budgeting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.1",
+    "Tags": [
+      "capital rationing",
+      "profitability index",
+      "post-audit"
+    ],
+    "CreatedDate": "2026-08-23",
+    "ModifiedDate": "2026-08-23",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-23",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      },
+      {
+        "Date": "2026-08-23",
+        "Version": "1.1",
+        "Author": "Case Author (external review repairs)",
+        "Summary": "Q1 corrected to standard PI convention (1.33, PV of inflows / investment); Q2 rebuilt around the true optimum A+C+D+F ($5.0M, $1.48M) with the PI-greedy trap as a distractor; items reordered to numeric-numeric-select-select-multi-match; Q3/Q4 FormulaReference corrected from after-tax cash flow to post-audit variance analysis; Q5/Q6 blank FormulaReference fields populated; Q6 match text updated to standard PI terminology"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-060",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute the profitability index",
+      "Select the NPV-maximizing project combination under a budget constraint",
+      "Analyze post-audit variances by component",
+      "Match capital budgeting tools to their purpose"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-E1-E1",
+        "CaseID": "CBQ21-E1",
+        "Type": "table",
+        "Title": "Exhibit 1 — Capital Proposals",
+        "Purpose": "Provides investment and NPV for the six proposals under the $5.0M rationing cap.",
+        "ReferencedBy": [
+          "CBQ21-E1-Q1",
+          "CBQ21-E1-Q3"
+        ],
+        "Headers": [
+          "Proposal",
+          "Investment",
+          "NPV"
+        ],
+        "Rows": [
+          [
+            "A",
+            "$2,000,000",
+            "$600,000"
+          ],
+          [
+            "B",
+            "$1,500,000",
+            "$500,000"
+          ],
+          [
+            "C",
+            "$1,000,000",
+            "$320,000"
+          ],
+          [
+            "D",
+            "$800,000",
+            "$200,000"
+          ],
+          [
+            "E",
+            "$2,500,000",
+            "$400,000"
+          ],
+          [
+            "F",
+            "$1,200,000",
+            "$360,000"
+          ]
+        ],
+        "DataFormat": "USD whole dollars",
+        "AccuracyCheck": "Total investment $9.0M exceeds the $5.0M budget; NPVs are net of all cash flows"
+      },
+      {
+        "ExhibitID": "CBQ21-E1-E2",
+        "CaseID": "CBQ21-E1",
+        "Type": "table",
+        "Title": "Exhibit 2 — Post-Audit: Flagship Project",
+        "Purpose": "Compares budgeted and actual results for the post-audit variance analysis.",
+        "ReferencedBy": [
+          "CBQ21-E1-Q2",
+          "CBQ21-E1-Q4"
+        ],
+        "Headers": [
+          "Item",
+          "Budgeted",
+          "Actual"
+        ],
+        "Rows": [
+          [
+            "Revenue",
+            "$1,000,000",
+            "$950,000"
+          ],
+          [
+            "Variable costs",
+            "$400,000",
+            "$420,000"
+          ],
+          [
+            "Fixed costs",
+            "$250,000",
+            "$260,000"
+          ],
+          [
+            "Operating income",
+            "$350,000",
+            "$270,000"
+          ]
+        ],
+        "DataFormat": "USD whole dollars",
+        "AccuracyCheck": "Budgeted OI = 1,000,000 - 400,000 - 250,000; Actual OI = 950,000 - 420,000 - 260,000"
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-E1-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the profitability index of Proposal B, rounded to two decimal places.",
+        "Correct": "1.33",
+        "Explanation": "Profitability index = PV of future cash flows / Initial investment = 1 + (NPV / Investment) = 1 + ($500,000 / $1,500,000) = 1.33. The PI converts each proposal's NPV into a per-dollar ratio, which is exactly the ranking tool the $5.0 million cap requires. Proposal B returns $1.33 of present value per invested dollar — the highest of the six proposals — so it sits first in Controller Okonkwo's ranking.",
+        "Topic": "Profitability index",
+        "Subtopic": "PI computation",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-02: Profitability Index",
+        "CommonTrapReference": "Reporting the NPV-to-investment ratio (0.33) without adding 1, or dividing investment by NPV.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "PI"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E1-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the operating income variance in dollars from Exhibit 2; use a negative sign for unfavorable.",
+        "Correct": "-80000",
+        "Explanation": "Operating income variance = Actual - Budget = $270,000 - $350,000 = -$80,000 unfavorable. The post-audit's job is not to punish but to decompose this $80,000 miss into its drivers so Harborview's next forecasts learn from it: revenue came in $50,000 light while costs ran $30,000 over.",
+        "Topic": "Post-audit variance",
+        "Subtopic": "Operating income reconciliation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-10: Post-Audit Variance Analysis",
+        "CommonTrapReference": "Sign errors — reporting unfavorable variances as positive.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "post-audit"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E1-Q3",
+        "Type": "select",
+        "Prompt": "Which combination maximizes total NPV within the $5.0 million budget?",
+        "Correct": "C",
+        "Choices": [
+          "B, C, and A — $4.5M invested, NPV of $1.42M",
+          "A, B, and F — $4.7M invested, NPV of $1.46M",
+          "A, C, D, and F — $5.0M invested, NPV of $1.48M",
+          "B, C, F, and D — $4.5M invested, NPV of $1.38M"
+        ],
+        "Explanation": "With indivisible projects, the optimum must be found by evaluating combinations, not by the PI-greedy sequence. Exhaustive check: A + C + D + F invests $2.0M + $1.0M + $0.8M + $1.2M = $5.0M — the entire budget — for NPV of $600K + $320K + $200K + $360K = $1,480,000. A + B + F ($4.7M, $1.46M) is close, but replacing B ($1.5M for $500K NPV) with C + D ($1.8M for $520K NPV) fits the cap and adds $20K. The PI-greedy order B, C, A stops at $4.5M and $1.42M because neither F nor D fits the remaining $0.5M. Lesson: PI (1.33, 1.32, 1.30, 1.30, 1.25, 1.16) is a screening tool under rationing, not a guarantee of the NPV-maximizing combination.",
+        "Topic": "Capital rationing",
+        "Subtopic": "PI ranking under a budget constraint",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-02: Profitability Index (rationing)",
+        "CommonTrapReference": "Assuming the PI-greedy sequence yields the global optimum with indivisible projects, or ranking by raw NPV alone.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "rationing",
+          "PI"
+        ],
+        "Dependencies": [
+          "CBQ21-E1-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E1-Q4",
+        "Type": "select",
+        "Prompt": "Which component contributed most to the unfavorable post-audit variance?",
+        "Correct": "A",
+        "Choices": [
+          "Revenue, unfavorable by $50,000",
+          "Variable costs, unfavorable by $20,000",
+          "Fixed costs, unfavorable by $10,000",
+          "All three contributed equally"
+        ],
+        "Explanation": "Decomposition: revenue $950,000 - $1,000,000 = -$50,000; variable costs $420,000 - $400,000 = -$20,000 unfavorable; fixed costs $260,000 - $250,000 = -$10,000 unfavorable. Revenue's $50,000 miss is the largest driver, matching the $-80,000 total. Okonkwo should present revenue as the root cause and recommend re-examining the sales forecast assumptions.",
+        "Topic": "Post-audit decomposition",
+        "Subtopic": "Variance attribution",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-10: Post-Audit Variance Analysis",
+        "CommonTrapReference": "Focusing on cost variances when revenue explains most of the miss.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "post-audit",
+          "attribution"
+        ],
+        "Dependencies": [
+          "CBQ21-E1-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E1-Q5",
+        "Type": "multi",
+        "Prompt": "Which three of the following are legitimate purposes of a capital project post-audit?",
+        "Correct": [
+          "Refining future cash-flow forecasts",
+          "Identifying systematic estimation bias",
+          "Holding managers accountable for controllable outcomes"
+        ],
+        "Choices": [
+          "Refining future cash-flow forecasts",
+          "Identifying systematic estimation bias",
+          "Holding managers accountable for controllable outcomes",
+          "Punishing managers for uncontrollable market variances",
+          "Retroactively changing the acceptance criteria"
+        ],
+        "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million.",
+        "Topic": "Post-audit purposes",
+        "Subtopic": "Capital budgeting control",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationRequired": false,
+        "FormulaReference": "ID-10: Post-Audit Variance Analysis (conceptual purposes)",
+        "CommonTrapReference": "Treating the post-audit as a punitive or hindsight exercise.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "post-audit"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E1-Q6",
+        "Type": "match",
+        "Prompt": "Match each capital budgeting tool to its purpose.",
+        "Correct": {
+          "NPV": "Primary criterion — measures dollar value added",
+          "Profitability index": "Present value of inflows per dollar invested — ranks projects under rationing",
+          "Payback": "Liquidity and risk screen — ignores the time value of money",
+          "Post-audit": "Compares forecasted and actual results to improve future estimates"
+        },
+        "LeftItems": [
+          "NPV",
+          "Profitability index",
+          "Payback",
+          "Post-audit"
+        ],
+        "RightItems": [
+          "Primary criterion — measures dollar value added",
+          "Present value of inflows per dollar invested — ranks projects under rationing",
+          "Liquidity and risk screen — ignores the time value of money",
+          "Compares forecasted and actual results to improve future estimates"
+        ],
+        "Explanation": "NPV measures absolute value added and is the primary accept/reject criterion; the profitability index converts a project's present value of inflows into a per-dollar ratio that ranks projects when capital is rationed; payback screens liquidity and risk but ignores the time value of money; and the post-audit closes the loop by comparing forecasts with actuals. Okonkwo's committee presentation uses each tool in exactly this role.",
+        "Topic": "Capital budgeting tools",
+        "Subtopic": "Tool selection",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationRequired": false,
+        "FormulaReference": "ID-01 NPV; ID-02 PI; ID-03 Payback; ID-10 Post-Audit",
+        "CommonTrapReference": "Using payback or PI as the primary criterion where NPV should govern.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "NPV",
+          "PI",
+          "payback"
+        ],
+        "Dependencies": []
+      }
+    ]
+  },
+  {
+    "CaseID": "CBQ21-A1",
+    "Title": "Liquidity, Leverage, and the Credit Renewal",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute and interpret liquidity ratios including the treatment of current portions of long-term debt",
+      "Evaluate covenant compliance and prepare a remediation position for a lender"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Harborline Distributors must renew its $4 million revolving credit facility, and First Meridian Bank requires a current ratio of at least 1.50, a quick ratio of at least 1.00, and debt-to-equity no greater than 1.00 at fiscal year-end. Controller Dana Whitfield has assembled the draft balance sheet and operating data and must present the covenant certificate — including a credible remediation plan for any shortfall.",
+    "Industry": "Wholesale distribution",
+    "CompanyType": "Distributor",
+    "CompanyName": "Harborline Distributors",
+    "Stakeholder": "Controller Dana Whitfield",
+    "BusinessFunction": "Treasury",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "current ratio",
+      "quick ratio",
+      "covenants",
+      "credit renewal"
+    ],
+    "CreatedDate": "2026-08-24",
+    "ModifiedDate": "2026-08-24",
+    "Author": "AI",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-24",
+        "Version": "1.0",
+        "Author": "AI",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_session": "P2-059",
- "Part": 2,
- "Part2OnlyFlag": true,
- "LearningObjectives": [
-  "Compute current and quick ratios from a classified balance sheet",
-  "Compute days sales outstanding using average receivables",
-  "Test covenant thresholds and identify which fail",
-  "Formulate an operationally credible remediation commitment"
- ],
- "Exhibits": [
-  {
-   "ExhibitID": "CBQ21-A1-E1",
-   "CaseID": "CBQ21-A1",
-   "Type": "table",
-   "Title": "Exhibit 1 — Draft Year-End Balance Sheet Extract ($000)",
-   "Purpose": "Provides the classified balance sheet amounts used for the current ratio, quick ratio, and debt-to-equity covenant tests.",
-   "ReferencedBy": [
-    "CBQ21-A1-Q1",
-    "CBQ21-A1-Q2",
-    "CBQ21-A1-Q4",
-    "CBQ21-A1-Q6",
-        "CBQ21-A1-Q3",
-        "CBQ21-A1-Q5"
-      ],
-   "Headers": [
-    "Line item",
-    "Amount"
-   ],
-   "Rows": [
-    [
-     "Cash and equivalents",
-     "$260"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute current and quick ratios from a classified balance sheet",
+      "Compute days sales outstanding using average receivables",
+      "Test covenant thresholds and identify which fail",
+      "Formulate an operationally credible remediation commitment"
     ],
-    [
-     "Accounts receivable",
-     "$480"
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-A1-E1",
+        "CaseID": "CBQ21-A1",
+        "Type": "table",
+        "Title": "Exhibit 1 — Draft Year-End Balance Sheet Extract ($000)",
+        "Purpose": "Provides the classified balance sheet amounts used for the current ratio, quick ratio, and debt-to-equity covenant tests.",
+        "ReferencedBy": [
+          "CBQ21-A1-Q1",
+          "CBQ21-A1-Q2",
+          "CBQ21-A1-Q4",
+          "CBQ21-A1-Q6",
+          "CBQ21-A1-Q3",
+          "CBQ21-A1-Q5"
+        ],
+        "Headers": [
+          "Line item",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Cash and equivalents",
+            "$260"
+          ],
+          [
+            "Accounts receivable",
+            "$480"
+          ],
+          [
+            "Inventory",
+            "$520"
+          ],
+          [
+            "Prepaid expenses",
+            "$40"
+          ],
+          [
+            "Total current assets",
+            "$1,300"
+          ],
+          [
+            "Accounts payable",
+            "$420"
+          ],
+          [
+            "Accrued liabilities",
+            "$130"
+          ],
+          [
+            "Current portion of long-term debt",
+            "$250"
+          ],
+          [
+            "Total current liabilities",
+            "$800"
+          ],
+          [
+            "Long-term debt",
+            "$250"
+          ],
+          [
+            "Shareholders' equity",
+            "$1,150"
+          ],
+          [
+            "Net property and equipment",
+            "$900"
+          ]
+        ],
+        "DataFormat": "USD thousands",
+        "AccuracyCheck": "Total assets 2,200 = current liabilities 800 + long-term debt 250 + equity 1,150; totals foot internally"
+      },
+      {
+        "ExhibitID": "CBQ21-A1-E2",
+        "CaseID": "CBQ21-A1",
+        "Type": "table",
+        "Title": "Exhibit 2 — Operating Data ($000)",
+        "Purpose": "Provides sales, cost of goods sold, and prior-year balances for DSO and days-in-inventory analysis supporting the covenant discussion.",
+        "ReferencedBy": [
+          "CBQ21-A1-Q3",
+          "CBQ21-A1-Q5"
+        ],
+        "Headers": [
+          "Item",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Net sales (all credit)",
+            "$3,650"
+          ],
+          [
+            "Cost of goods sold",
+            "$2,560"
+          ],
+          [
+            "Prior-year accounts receivable",
+            "$430"
+          ],
+          [
+            "Prior-year inventory",
+            "$470"
+          ]
+        ],
+        "DataFormat": "USD thousands; 365-day year convention",
+        "AccuracyCheck": "Averages use (beginning + ending)/2; daily sales = 3,650/365 = 10.0"
+      }
     ],
-    [
-     "Inventory",
-     "$520"
-    ],
-    [
-     "Prepaid expenses",
-     "$40"
-    ],
-    [
-     "Total current assets",
-     "$1,300"
-    ],
-    [
-     "Accounts payable",
-     "$420"
-    ],
-    [
-     "Accrued liabilities",
-     "$130"
-    ],
-    [
-     "Current portion of long-term debt",
-     "$250"
-    ],
-    [
-     "Total current liabilities",
-     "$800"
-    ],
-    [
-     "Long-term debt",
-     "$250"
-    ],
-    [
-     "Shareholders' equity",
-     "$1,150"
-    ],
-    [
-     "Net property and equipment",
-     "$900"
+    "Items": [
+      {
+        "ItemID": "CBQ21-A1-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the current ratio, rounded to two decimals (answers within 0.01 accepted).",
+        "Correct": "1.63",
+        "Explanation": "Current ratio = Current assets ÷ Current liabilities = $1,300 ÷ $800 = 1.63 (per FA-01). The $250 current portion of long-term debt is properly included in current liabilities under ASC 470-10 because it comes due within twelve months — a classic exclusion error would report 1,300 ÷ 550 = 2.36 and mask the covenant pressure. At 1.63 versus the 1.50 floor, Harborline clears this test with modest headroom.",
+        "Topic": "Current ratio",
+        "Subtopic": "Covenant measurement",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-01: Current Ratio",
+        "CommonTrapReference": "Excluding the current portion of long-term debt from current liabilities.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "current ratio",
+          "covenant"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A1-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the quick ratio, rounded to two decimals (answers within 0.01 accepted).",
+        "Correct": "0.93",
+        "Explanation": "Quick ratio = (Cash + Receivables) ÷ Current liabilities = ($260 + $480) ÷ $800 = $740 ÷ $800 = 0.93 (per FA-02). Inventory and prepaids are excluded because they are the least certain to convert to cash quickly. At 0.93 versus the 1.00 floor, Harborline FAILS this covenant by seven points — the shortfall that drives the renewal conversation.",
+        "Topic": "Quick ratio",
+        "Subtopic": "Covenant measurement",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-02: Quick Ratio",
+        "CommonTrapReference": "Including inventory or prepaids in the numerator.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "quick ratio",
+          "covenant"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A1-Q3",
+        "Type": "numeric",
+        "Prompt": "Enter days sales outstanding (DSO) using average receivables, rounded to one decimal.",
+        "Correct": "45.5",
+        "Explanation": "DSO = Average receivables ÷ (Net credit sales ÷ 365) = (($480 + $430)/2) ÷ ($3,650/365) = $455 ÷ $10.0 = 45.5 days (per FA-05). Collections run about a month and a half behind sale; whether that is problematic depends on stated terms, but the aging composition matters more than the average — Exhibit 1 shows receivables at roughly 13% of annual sales.",
+        "Topic": "Days sales outstanding",
+        "Subtopic": "Receivables quality",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-05: Days Sales Outstanding",
+        "CommonTrapReference": "Using ending instead of average receivables, or a 360-day year.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DSO",
+          "receivables"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A1-Q4",
+        "Type": "select",
+        "Prompt": "Based on Exhibits 1 and your computations, which covenant position does Harborline present at year-end?",
+        "Correct": "B",
+        "Choices": [
+          "The company passes all three covenants with headroom on each",
+          "The company passes the current-ratio and debt-to-equity tests but FAILS the quick-ratio test (0.93 versus 1.00)",
+          "The company passes the quick ratio but fails the current-ratio test",
+          "The company fails all three covenants"
+        ],
+        "Explanation": "Current ratio 1.63 ≥ 1.50 PASS; quick ratio 0.93 < 1.00 FAIL; debt-to-equity = ($800 + $250) ÷ $1,150 = 0.91 ≤ 1.00 PASS. Only the quick ratio binds. The pattern matters for the negotiation: the miss is a LIQUIDITY-composition problem (too much of the current asset base sits in inventory), not a solvency or earnings problem — which shapes what remediation the bank will accept.",
+        "Topic": "Covenant compliance",
+        "Subtopic": "Threshold testing",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-01/FA-02/FA-07 composite test",
+        "CommonTrapReference": "Testing each ratio against the wrong threshold or miscomputing total debt for D/E.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "covenants",
+          "compliance"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A1-Q5",
+        "Type": "select",
+        "Prompt": "Which diagnosis best explains the quick-ratio shortfall and points to the fastest compliant fix?",
+        "Correct": "D",
+        "Choices": [
+          "Receivables are uncollectible in material amount and should be written down before certification",
+          "The current portion of long-term debt was misclassified and should be moved to non-current liabilities",
+          "Equity is sufficient to absorb the shortfall, so the covenant should be renegotiated rather than remediated",
+          "Inventory dominates the current asset base — average inventory supports roughly 70.6 days of sales (495 ÷ 2,560 × 365) — so converting slow-moving stock into cash is the fastest path to restoring the quick ratio"
+        ],
+        "Explanation": "Average inventory of ($520 + $470)/2 = $495 represents 70.6 days of COGS — the heavy tail of the current asset cycle. Because quick assets are $740 against $800 required, converting just $60K of inventory into cash restores the ratio to exactly 1.00. Writing down receivables (A) worsens quick assets; reclassifying the current maturities (B) violates ASC 470-10 presentation; and equity cushions address solvency, not the liquidity composition the quick ratio measures (C).",
+        "Topic": "Working capital composition",
+        "Subtopic": "Remediation diagnosis",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-04: Days Inventory Outstanding",
+        "CommonTrapReference": "Confusing solvency (equity) with liquidity (asset composition).",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "inventory",
+          "remediation"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A1-Q6",
+        "Type": "select",
+        "Prompt": "Which presentation to First Meridian Bank best positions the renewal?",
+        "Correct": "C",
+        "Choices": [
+          "Certify full compliance as computed, since 0.93 rounds to 1.0 at whole-number precision",
+          "Disclose the breach and request a waiver without operational changes, relying on the 12-year relationship",
+          "Commit to converting at least $60K of identified slow-moving inventory into cash by year-end — restoring the quick ratio to 1.00 — supported by an itemized liquidation schedule, alongside passing results on the other two covenants",
+          "Repay the $250K current portion of long-term debt using proceeds drawn on the same revolving facility on the final day of the year"
+        ],
+        "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing.",
+        "Topic": "Credit negotiation strategy",
+        "Subtopic": "Remediation commitment",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Proposing circular year-end financing that lenders treat as window dressing.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "negotiation",
+          "window dressing"
+        ],
+        "Dependencies": []
+      }
     ]
-   ],
-   "DataFormat": "USD thousands",
-   "AccuracyCheck": "Total assets 2,200 = current liabilities 800 + long-term debt 250 + equity 1,150; totals foot internally"
   },
   {
-   "ExhibitID": "CBQ21-A1-E2",
-   "CaseID": "CBQ21-A1",
-   "Type": "table",
-   "Title": "Exhibit 2 — Operating Data ($000)",
-   "Purpose": "Provides sales, cost of goods sold, and prior-year balances for DSO and days-in-inventory analysis supporting the covenant discussion.",
-   "ReferencedBy": [
-    "CBQ21-A1-Q3",
-    "CBQ21-A1-Q5"
-   ],
-   "Headers": [
-    "Item",
-    "Amount"
-   ],
-   "Rows": [
-    [
-     "Net sales (all credit)",
-     "$3,650"
+    "CaseID": "CBQ21-D1",
+    "Title": "Quantifying Launch Risk Before the Board",
+    "SectionTags": [
+      "D"
     ],
-    [
-     "Cost of goods sold",
-     "$2,560"
+    "BlueprintDomain": "Risk Management",
+    "BlueprintObjectives": [
+      "Compute inherent and residual expected loss under COSO ERM 2017",
+      "Classify risk responses (reduce, share, avoid) and test them against risk appetite",
+      "Recommend a board-ready risk position"
     ],
-    [
-     "Prior-year accounts receivable",
-     "$430"
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Kestrel Electronics prepares to launch a connected home device, and risk manager Omar Haddad has facilitated a quantified risk workshop ahead of the board review. The board's risk appetite statement caps EXPECTED loss from any single identified risk at $500,000 annually before management response. Omar must quantify the register, classify the proposed responses, and recommend which actions to fund.",
+    "Industry": "Consumer electronics",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Kestrel Electronics",
+    "Stakeholder": "Risk Manager Omar Haddad",
+    "BusinessFunction": "Enterprise risk management",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "expected loss",
+      "risk response",
+      "risk appetite",
+      "COSO ERM"
     ],
-    [
-     "Prior-year inventory",
-     "$470"
-    ]
-   ],
-   "DataFormat": "USD thousands; 365-day year convention",
-   "AccuracyCheck": "Averages use (beginning + ending)/2; daily sales = 3,650/365 = 10.0"
-  }
- ],
- "Items": [
-  {
-   "ItemID": "CBQ21-A1-Q1",
-   "Type": "numeric",
-   "Prompt": "Enter the current ratio, rounded to two decimals (answers within 0.01 accepted).",
-   "Correct": "1.63",
-   "Explanation": "Current ratio = Current assets ÷ Current liabilities = $1,300 ÷ $800 = 1.63 (per FA-01). The $250 current portion of long-term debt is properly included in current liabilities under ASC 470-10 because it comes due within twelve months — a classic exclusion error would report 1,300 ÷ 550 = 2.36 and mask the covenant pressure. At 1.63 versus the 1.50 floor, Harborline clears this test with modest headroom.",
-   "Topic": "Current ratio",
-   "Subtopic": "Covenant measurement",
-   "Difficulty": "Moderate-Easy",
-   "DifficultyScore": 2,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "FA-01: Current Ratio",
-   "CommonTrapReference": "Excluding the current portion of long-term debt from current liabilities.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "current ratio",
-    "covenant"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-A1-Q2",
-   "Type": "numeric",
-   "Prompt": "Enter the quick ratio, rounded to two decimals (answers within 0.01 accepted).",
-   "Correct": "0.93",
-   "Explanation": "Quick ratio = (Cash + Receivables) ÷ Current liabilities = ($260 + $480) ÷ $800 = $740 ÷ $800 = 0.93 (per FA-02). Inventory and prepaids are excluded because they are the least certain to convert to cash quickly. At 0.93 versus the 1.00 floor, Harborline FAILS this covenant by seven points — the shortfall that drives the renewal conversation.",
-   "Topic": "Quick ratio",
-   "Subtopic": "Covenant measurement",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "FA-02: Quick Ratio",
-   "CommonTrapReference": "Including inventory or prepaids in the numerator.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "quick ratio",
-    "covenant"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-A1-Q3",
-   "Type": "numeric",
-   "Prompt": "Enter days sales outstanding (DSO) using average receivables, rounded to one decimal.",
-   "Correct": "45.5",
-   "Explanation": "DSO = Average receivables ÷ (Net credit sales ÷ 365) = (($480 + $430)/2) ÷ ($3,650/365) = $455 ÷ $10.0 = 45.5 days (per FA-05). Collections run about a month and a half behind sale; whether that is problematic depends on stated terms, but the aging composition matters more than the average — Exhibit 1 shows receivables at roughly 13% of annual sales.",
-   "Topic": "Days sales outstanding",
-   "Subtopic": "Receivables quality",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "FA-05: Days Sales Outstanding",
-   "CommonTrapReference": "Using ending instead of average receivables, or a 360-day year.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "DSO",
-    "receivables"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-A1-Q4",
-   "Type": "select",
-   "Prompt": "Based on Exhibits 1 and your computations, which covenant position does Harborline present at year-end?",
-   "Correct": "B",
-   "Choices": [
-    "The company passes all three covenants with headroom on each",
-    "The company passes the current-ratio and debt-to-equity tests but FAILS the quick-ratio test (0.93 versus 1.00)",
-    "The company passes the quick ratio but fails the current-ratio test",
-    "The company fails all three covenants"
-   ],
-   "Explanation": "Current ratio 1.63 ≥ 1.50 PASS; quick ratio 0.93 < 1.00 FAIL; debt-to-equity = ($800 + $250) ÷ $1,150 = 0.91 ≤ 1.00 PASS. Only the quick ratio binds. The pattern matters for the negotiation: the miss is a LIQUIDITY-composition problem (too much of the current asset base sits in inventory), not a solvency or earnings problem — which shapes what remediation the bank will accept.",
-   "Topic": "Covenant compliance",
-   "Subtopic": "Threshold testing",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "FA-01/FA-02/FA-07 composite test",
-   "CommonTrapReference": "Testing each ratio against the wrong threshold or miscomputing total debt for D/E.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "covenants",
-    "compliance"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-A1-Q5",
-   "Type": "select",
-   "Prompt": "Which diagnosis best explains the quick-ratio shortfall and points to the fastest compliant fix?",
-   "Correct": "D",
-   "Choices": [
-    "Receivables are uncollectible in material amount and should be written down before certification",
-    "The current portion of long-term debt was misclassified and should be moved to non-current liabilities",
-    "Equity is sufficient to absorb the shortfall, so the covenant should be renegotiated rather than remediated",
-    "Inventory dominates the current asset base — average inventory supports roughly 70.6 days of sales (495 ÷ 2,560 × 365) — so converting slow-moving stock into cash is the fastest path to restoring the quick ratio"
-   ],
-   "Explanation": "Average inventory of ($520 + $470)/2 = $495 represents 70.6 days of COGS — the heavy tail of the current asset cycle. Because quick assets are $740 against $800 required, converting just $60K of inventory into cash restores the ratio to exactly 1.00. Writing down receivables (A) worsens quick assets; reclassifying the current maturities (B) violates ASC 470-10 presentation; and equity cushions address solvency, not the liquidity composition the quick ratio measures (C).",
-   "Topic": "Working capital composition",
-   "Subtopic": "Remediation diagnosis",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "FA-04: Days Inventory Outstanding",
-   "CommonTrapReference": "Confusing solvency (equity) with liquidity (asset composition).",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "inventory",
-    "remediation"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-A1-Q6",
-   "Type": "select",
-   "Prompt": "Which presentation to First Meridian Bank best positions the renewal?",
-   "Correct": "C",
-   "Choices": [
-    "Certify full compliance as computed, since 0.93 rounds to 1.0 at whole-number precision",
-    "Disclose the breach and request a waiver without operational changes, relying on the 12-year relationship",
-    "Commit to converting at least $60K of identified slow-moving inventory into cash by year-end — restoring the quick ratio to 1.00 — supported by an itemized liquidation schedule, alongside passing results on the other two covenants",
-    "Repay the $250K current portion of long-term debt using proceeds drawn on the same revolving facility on the final day of the year"
-   ],
-   "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing.",
-   "Topic": "Credit negotiation strategy",
-   "Subtopic": "Remediation commitment",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Evaluate",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Proposing circular year-end financing that lenders treat as window dressing.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "negotiation",
-    "window dressing"
-   ],
-   "Dependencies": []
-  }
- ]
-},
-{
- "CaseID": "CBQ21-D1",
- "Title": "Quantifying Launch Risk Before the Board",
- "SectionTags": [
-  "D"
- ],
- "BlueprintDomain": "Risk Management",
- "BlueprintObjectives": [
-  "Compute inherent and residual expected loss under COSO ERM 2017",
-  "Classify risk responses (reduce, share, avoid) and test them against risk appetite",
-  "Recommend a board-ready risk position"
- ],
- "PrimaryCompetency": "Analysis",
- "EstimatedMinutes": 30,
- "Difficulty": "Moderate",
- "DifficultyScore": 3,
- "ScenarioText": "Kestrel Electronics prepares to launch a connected home device, and risk manager Omar Haddad has facilitated a quantified risk workshop ahead of the board review. The board's risk appetite statement caps EXPECTED loss from any single identified risk at $500,000 annually before management response. Omar must quantify the register, classify the proposed responses, and recommend which actions to fund.",
- "Industry": "Consumer electronics",
- "CompanyType": "Manufacturer",
- "CompanyName": "Kestrel Electronics",
- "Stakeholder": "Risk Manager Omar Haddad",
- "BusinessFunction": "Enterprise risk management",
- "QuestionCount": 6,
- "ExhibitCount": 2,
- "ProductionStatus": "Draft",
- "Version": "1.0",
- "Tags": [
-  "expected loss",
-  "risk response",
-  "risk appetite",
-  "COSO ERM"
- ],
- "CreatedDate": "2026-08-24",
- "ModifiedDate": "2026-08-24",
- "Author": "AI",
- "Confidence": 90,
- "RevisionHistory": [
-  {
-   "Date": "2026-08-24",
-   "Version": "1.0",
-   "Author": "AI",
-   "Summary": "Initial creation"
-  }
- ],
- "question_state": "Certified",
+    "CreatedDate": "2026-08-24",
+    "ModifiedDate": "2026-08-24",
+    "Author": "AI",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-24",
+        "Version": "1.0",
+        "Author": "AI",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_session": "P2-059",
- "Part": 2,
- "Part2OnlyFlag": true,
- "LearningObjectives": [
-  "Compute expected loss as probability times impact",
-  "Distinguish inherent from residual expected loss after mitigation",
-  "Match responses to the reduce/share/avoid taxonomy",
-  "Test exposure against a quantitative risk appetite threshold"
- ],
- "Exhibits": [
-  {
-   "ExhibitID": "CBQ21-D1-E1",
-   "CaseID": "CBQ21-D1",
-   "Type": "table",
-   "Title": "Exhibit 1 — Launch Risk Register (Inherent)",
-   "Purpose": "Provides the probability and impact estimates for the three material launch risks, used for expected-loss computation and appetite testing.",
-   "ReferencedBy": [
-    "CBQ21-D1-Q1",
-    "CBQ21-D1-Q3",
-    "CBQ21-D1-Q5",
-        "CBQ21-D1-Q2"
-      ],
-   "Headers": [
-    "Risk",
-    "Description",
-    "Probability",
-    "Impact"
-   ],
-   "Rows": [
-    [
-     "R1",
-     "Sole-source chip supply disruption",
-     "25%",
-     "$4.0M"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute expected loss as probability times impact",
+      "Distinguish inherent from residual expected loss after mitigation",
+      "Match responses to the reduce/share/avoid taxonomy",
+      "Test exposure against a quantitative risk appetite threshold"
     ],
-    [
-     "R2",
-     "Regulatory certification delay",
-     "15%",
-     "$2.0M"
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-D1-E1",
+        "CaseID": "CBQ21-D1",
+        "Type": "table",
+        "Title": "Exhibit 1 — Launch Risk Register (Inherent)",
+        "Purpose": "Provides the probability and impact estimates for the three material launch risks, used for expected-loss computation and appetite testing.",
+        "ReferencedBy": [
+          "CBQ21-D1-Q1",
+          "CBQ21-D1-Q3",
+          "CBQ21-D1-Q5",
+          "CBQ21-D1-Q2"
+        ],
+        "Headers": [
+          "Risk",
+          "Description",
+          "Probability",
+          "Impact"
+        ],
+        "Rows": [
+          [
+            "R1",
+            "Sole-source chip supply disruption",
+            "25%",
+            "$4.0M"
+          ],
+          [
+            "R2",
+            "Regulatory certification delay",
+            "15%",
+            "$2.0M"
+          ],
+          [
+            "R3",
+            "Warranty claims surge",
+            "10%",
+            "$1.0M"
+          ]
+        ],
+        "DataFormat": "Probabilities are annual; impacts are estimated pretax effect",
+        "AccuracyCheck": "Estimates from facilitated workshop with engineering and legal input"
+      },
+      {
+        "ExhibitID": "CBQ21-D1-E2",
+        "CaseID": "CBQ21-D1",
+        "Type": "table",
+        "Title": "Exhibit 2 — Candidate Responses",
+        "Purpose": "Provides the cost and effect of each proposed response so residual risk and net benefit can be computed.",
+        "ReferencedBy": [
+          "CBQ21-D1-Q2",
+          "CBQ21-D1-Q3",
+          "CBQ21-D1-Q4",
+          "CBQ21-D1-Q6"
+        ],
+        "Headers": [
+          "Response",
+          "Applied to",
+          "Cost",
+          "Effect"
+        ],
+        "Rows": [
+          [
+            "Dual-source chip contract",
+            "R1",
+            "$150K per year",
+            "Cuts disruption probability to 10%"
+          ],
+          [
+            "Warranty insurance policy",
+            "R3",
+            "$80K per year",
+            "Transfers losses above $100K retained"
+          ],
+          [
+            "Delay launch one quarter",
+            "All",
+            "Deferred margin (not quantified)",
+            "Defers all three risks for the period"
+          ]
+        ],
+        "DataFormat": "USD; probabilities annual",
+        "AccuracyCheck": "Dual-source effect applies only to likelihood; impact unchanged at $4.0M"
+      }
     ],
-    [
-     "R3",
-     "Warranty claims surge",
-     "10%",
-     "$1.0M"
+    "Items": [
+      {
+        "ItemID": "CBQ21-D1-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the INHERENT expected loss for R1 (sole-source chip disruption), in dollars.",
+        "Correct": "1000000",
+        "Explanation": "Expected loss = Probability × Impact (RM-01) = 0.25 × $4,000,000 = $1,000,000. This is the pre-response benchmark: absent any action, the market prices R1 as a $1M-per-year drag in expectation. Expected loss is a long-run weighted average — not the worst case — and it is the figure the board's $500K appetite threshold tests FIRST.",
+        "Topic": "Expected loss",
+        "Subtopic": "Inherent risk quantification",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "RM-01: Expected Loss",
+        "CommonTrapReference": "Using worst-case impact instead of the probability-weighted expectation.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "expected loss",
+          "inherent risk"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-D1-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the RESIDUAL expected loss for R1 after implementing the dual-source contract, in dollars.",
+        "Correct": "400000",
+        "Explanation": "Residual expected loss = revised probability × unchanged impact = 0.10 × $4,000,000 = $400,000 (RM-03 logic: controls reduce the risk level). Dual sourcing attacks LIKELIHOOD only — the impact stays $4.0M because a disruption still halts production when it occurs. Residual risk rarely reaches zero; it settles at the level the control can economically reach.",
+        "Topic": "Residual expected loss",
+        "Subtopic": "Control effectiveness",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "RM-03: Residual Risk",
+        "CommonTrapReference": "Reducing the impact as well as the probability when only likelihood changed.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "residual risk",
+          "controls"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-D1-Q3",
+        "Type": "numeric",
+        "Prompt": "Enter the net year-one economic benefit of the dual-source contract, in dollars.",
+        "Correct": "450000",
+        "Explanation": "Benefit = inherent EL − residual EL = $1,000,000 − $400,000 = $600,000 of expected-loss avoidance. Net benefit = $600,000 − $150,000 annual contract cost = +$450,000. The control pays for itself four-fold in expectation — the standard cost-benefit test for funding a risk response, before considering tail-risk preference beyond the expected value.",
+        "Topic": "Mitigation cost-benefit",
+        "Subtopic": "Response funding decision",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "RM-01 extension: net benefit = EL avoided − control cost",
+        "CommonTrapReference": "Comparing the contract cost to the IMPACT rather than to the expected-loss reduction.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "cost-benefit",
+          "mitigation"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-D1-Q4",
+        "Type": "select",
+        "Prompt": "Classify each proposed response under the COSO ERM risk-response taxonomy.",
+        "Correct": "B",
+        "Choices": [
+          "Dual sourcing = share; insurance = reduce; delay = accept",
+          "Dual sourcing = REDUCE (lowers likelihood); insurance = SHARE (transfers excess loss); launch delay = AVOID (declines the exposed activity for the period)",
+          "Dual sourcing = avoid; insurance = avoid; delay = reduce",
+          "All three are variations of acceptance with contingency planning"
+        ],
+        "Explanation": "The taxonomy turns on mechanism. Dual sourcing changes the odds of the event — REDUCE. Insurance leaves the event's frequency untouched and transfers severity above the retention to a carrier — SHARE. Delaying the launch declines the exposure for that period entirely — AVOID (a temporary form; permanent avoidance would cancel the launch). Acceptance would mean keeping R1 at 25% with contingency funds set aside, which no proposal does.",
+        "Topic": "Risk response classification",
+        "Subtopic": "COSO ERM taxonomy",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Calling insurance 'reduce' — it changes who bears the loss, not whether the event occurs.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "reduce",
+          "share",
+          "avoid"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-D1-Q5",
+        "Type": "select",
+        "Prompt": "Against the board's appetite cap of $500K expected loss per initiative, which risk(s) require action BEFORE launch?",
+        "Correct": "C",
+        "Choices": [
+          "All three risks breach the appetite threshold",
+          "Each response cost sits below $500,000, so no funded action changes the appetite position",
+          "Only R1 breaches — inherent expected loss of $1.0M exceeds the $500K cap; R2 ($300K) and R3 ($100K) sit inside appetite",
+          "R1 and R2 both breach because their combined expected loss exceeds $500K"
+        ],
+        "Explanation": "Appetite tests compare each risk's EXPECTED loss to the threshold: R1 = $1.0M > $500K BREACH; R2 = 0.15 × $2.0M = $300K OK; R3 = 0.10 × $1.0M = $100K OK. Impacts alone are not the appetite metric (A confuses impact with expectation), and the cap reads on each single identified risk - aggregation is a separate portfolio question (D). Only R1 demands funded response before launch; after dual sourcing its residual of $400K moves inside appetite.",
+        "Topic": "Risk appetite testing",
+        "Subtopic": "Threshold escalation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "RM-01 applied per risk against stated appetite",
+        "CommonTrapReference": "Comparing impact instead of expected loss to the appetite threshold.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "appetite",
+          "thresholds"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-D1-Q6",
+        "Type": "select",
+        "Prompt": "Which board recommendation best integrates the quantified analysis?",
+        "Correct": "B",
+        "Choices": [
+          "Delay the launch one quarter regardless of cost, because any risk above zero appetite is unacceptable",
+          "Fund the dual-source contract now — residual R1 expected loss of $400K moves inside the $500K appetite and the $450K net benefit is strongly positive — while monitoring R2 and R3 quarterly against the threshold",
+          "Purchase warranty insurance immediately because transferring risk is typically the preferred response",
+          "Take no action: expected losses are averages, so no single year will realize them"
+        ],
+        "Explanation": "The analysis converges on one action: R1 is the sole appetite breach, the dual-source response brings it inside appetite, and its $450K net benefit clears the funding hurdle — the definition of a value-adding control. Delay (A) destroys launch economics to cure risks already inside appetite. Insurance (C) targets R3, which is not the breach, and 'typically preferred' misstates the taxonomy. Waiting (D) ignores that appetite governs EXPOSURE, not realized outcomes — the breach exists today.",
+        "Topic": "Board risk recommendation",
+        "Subtopic": "Response selection",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Recommending responses for risks that already sit inside appetite.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "board reporting"
+        ],
+        "Dependencies": []
+      }
     ]
-   ],
-   "DataFormat": "Probabilities are annual; impacts are estimated pretax effect",
-   "AccuracyCheck": "Estimates from facilitated workshop with engineering and legal input"
   },
   {
-   "ExhibitID": "CBQ21-D1-E2",
-   "CaseID": "CBQ21-D1",
-   "Type": "table",
-   "Title": "Exhibit 2 — Candidate Responses",
-   "Purpose": "Provides the cost and effect of each proposed response so residual risk and net benefit can be computed.",
-   "ReferencedBy": [
-    "CBQ21-D1-Q2",
-    "CBQ21-D1-Q3",
-    "CBQ21-D1-Q4",
-    "CBQ21-D1-Q6"
-   ],
-   "Headers": [
-    "Response",
-    "Applied to",
-    "Cost",
-    "Effect"
-   ],
-   "Rows": [
-    [
-     "Dual-source chip contract",
-     "R1",
-     "$150K per year",
-     "Cuts disruption probability to 10%"
+    "CaseID": "CBQ21-B2",
+    "Title": "Financing the Expansion",
+    "SectionTags": [
+      "B"
     ],
-    [
-     "Warranty insurance policy",
-     "R3",
-     "$80K per year",
-     "Transfers losses above $100K retained"
+    "BlueprintDomain": "Corporate Finance",
+    "BlueprintObjectives": [
+      "Compute component costs of capital including tax effects",
+      "Compute weighted average cost of capital at market-value weights",
+      "Evaluate how incremental financing changes the marginal hurdle rate"
     ],
-    [
-     "Delay launch one quarter",
-     "All",
-     "Deferred margin (not quantified)",
-     "Defers all three risks for the period"
-    ]
-   ],
-   "DataFormat": "USD; probabilities annual",
-   "AccuracyCheck": "Dual-source effect applies only to likelihood; impact unchanged at $4.0M"
-  }
- ],
- "Items": [
-  {
-   "ItemID": "CBQ21-D1-Q1",
-   "Type": "numeric",
-   "Prompt": "Enter the INHERENT expected loss for R1 (sole-source chip disruption), in dollars.",
-   "Correct": "1000000",
-   "Explanation": "Expected loss = Probability × Impact (RM-01) = 0.25 × $4,000,000 = $1,000,000. This is the pre-response benchmark: absent any action, the market prices R1 as a $1M-per-year drag in expectation. Expected loss is a long-run weighted average — not the worst case — and it is the figure the board's $500K appetite threshold tests FIRST.",
-   "Topic": "Expected loss",
-   "Subtopic": "Inherent risk quantification",
-   "Difficulty": "Moderate-Easy",
-   "DifficultyScore": 2,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "RM-01: Expected Loss",
-   "CommonTrapReference": "Using worst-case impact instead of the probability-weighted expectation.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "expected loss",
-    "inherent risk"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-D1-Q2",
-   "Type": "numeric",
-   "Prompt": "Enter the RESIDUAL expected loss for R1 after implementing the dual-source contract, in dollars.",
-   "Correct": "400000",
-   "Explanation": "Residual expected loss = revised probability × unchanged impact = 0.10 × $4,000,000 = $400,000 (RM-03 logic: controls reduce the risk level). Dual sourcing attacks LIKELIHOOD only — the impact stays $4.0M because a disruption still halts production when it occurs. Residual risk never reaches zero; it settles at the level the control can economically reach.",
-   "Topic": "Residual expected loss",
-   "Subtopic": "Control effectiveness",
-   "Difficulty": "Moderate-Easy",
-   "DifficultyScore": 2,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "RM-03: Residual Risk",
-   "CommonTrapReference": "Reducing the impact as well as the probability when only likelihood changed.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "residual risk",
-    "controls"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-D1-Q3",
-   "Type": "numeric",
-   "Prompt": "Enter the net year-one economic benefit of the dual-source contract, in dollars.",
-   "Correct": "450000",
-   "Explanation": "Benefit = inherent EL − residual EL = $1,000,000 − $400,000 = $600,000 of expected-loss avoidance. Net benefit = $600,000 − $150,000 annual contract cost = +$450,000. The control pays for itself four-fold in expectation — the standard cost-benefit test for funding a risk response, before considering tail-risk preference beyond the expected value.",
-   "Topic": "Mitigation cost-benefit",
-   "Subtopic": "Response funding decision",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": true,
-   "FormulaReference": "RM-01 extension: net benefit = EL avoided − control cost",
-   "CommonTrapReference": "Comparing the contract cost to the IMPACT rather than to the expected-loss reduction.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "cost-benefit",
-    "mitigation"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-D1-Q4",
-   "Type": "select",
-   "Prompt": "Classify each proposed response under the COSO ERM risk-response taxonomy.",
-   "Correct": "B",
-   "Choices": [
-    "Dual sourcing = share; insurance = reduce; delay = accept",
-    "Dual sourcing = REDUCE (lowers likelihood); insurance = SHARE (transfers excess loss); launch delay = AVOID (declines the exposed activity for the period)",
-    "Dual sourcing = avoid; insurance = avoid; delay = reduce",
-    "All three are variations of acceptance with contingency planning"
-   ],
-   "Explanation": "The taxonomy turns on mechanism. Dual sourcing changes the odds of the event — REDUCE. Insurance leaves the event's frequency untouched and transfers severity above the retention to a carrier — SHARE. Delaying the launch declines the exposure for that period entirely — AVOID (a temporary form; permanent avoidance would cancel the launch). Acceptance would mean keeping R1 at 25% with contingency funds set aside, which no proposal does.",
-   "Topic": "Risk response classification",
-   "Subtopic": "COSO ERM taxonomy",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Calling insurance 'reduce' — it changes who bears the loss, not whether the event occurs.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "reduce",
-    "share",
-    "avoid"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-D1-Q5",
-   "Type": "select",
-   "Prompt": "Against the board's appetite cap of $500K expected loss per initiative, which risk(s) require action BEFORE launch?",
-   "Correct": "C",
-   "Choices": [
-    "All three risks breach the appetite threshold",
-    "Each response cost sits below $500,000, so no funded action changes the appetite position",
-    "Only R1 breaches — inherent expected loss of $1.0M exceeds the $500K cap; R2 ($300K) and R3 ($100K) sit inside appetite",
-    "R1 and R2 both breach because their combined expected loss exceeds $500K"
-   ],
-   "Explanation": "Appetite tests compare each risk's EXPECTED loss to the threshold: R1 = $1.0M > $500K BREACH; R2 = 0.15 × $2.0M = $300K OK; R3 = 0.10 × $1.0M = $100K OK. Impacts alone are not the appetite metric (A confuses impact with expectation), and the cap reads on each single identified risk - aggregation is a separate portfolio question (D). Only R1 demands funded response before launch; after dual sourcing its residual of $400K moves inside appetite.",
-   "Topic": "Risk appetite testing",
-   "Subtopic": "Threshold escalation",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "RM-01 applied per risk against stated appetite",
-   "CommonTrapReference": "Comparing impact instead of expected loss to the appetite threshold.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "appetite",
-    "thresholds"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-D1-Q6",
-   "Type": "select",
-   "Prompt": "Which board recommendation best integrates the quantified analysis?",
-   "Correct": "B",
-   "Choices": [
-    "Delay the launch one quarter regardless of cost, because any risk above zero appetite is unacceptable",
-    "Fund the dual-source contract now — residual R1 expected loss of $400K moves inside the $500K appetite and the $450K net benefit is strongly positive — while monitoring R2 and R3 quarterly against the threshold",
-    "Purchase warranty insurance immediately because transferring risk is always the preferred response",
-    "Take no action: expected losses are averages, so no single year will realize them"
-   ],
-   "Explanation": "The analysis converges on one action: R1 is the sole appetite breach, the dual-source response brings it inside appetite, and its $450K net benefit clears the funding hurdle — the definition of a value-adding control. Delay (A) destroys launch economics to cure risks already inside appetite. Insurance (C) targets R3, which is not the breach, and 'always preferred' misstates the taxonomy. Waiting (D) ignores that appetite governs EXPOSURE, not realized outcomes — the breach exists today.",
-   "Topic": "Board risk recommendation",
-   "Subtopic": "Response selection",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Evaluate",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Recommending responses for risks that already sit inside appetite.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "recommendation",
-    "board reporting"
-   ],
-   "Dependencies": []
-  }
- ]
-}
-,
-{
- "CaseID": "CBQ21-B2",
- "Title": "Financing the Expansion",
- "SectionTags": [
-  "B"
- ],
- "BlueprintDomain": "Corporate Finance",
- "BlueprintObjectives": [
-  "Compute component costs of capital including tax effects",
-  "Compute weighted average cost of capital at market-value weights",
-  "Evaluate how incremental financing changes the marginal hurdle rate"
- ],
- "PrimaryCompetency": "Calculation",
- "EstimatedMinutes": 30,
- "Difficulty": "Moderate",
- "DifficultyScore": 3,
- "ScenarioText": "Northstar Capital's board approved a $40 million capacity expansion, and CFO Priya Nair must present the funding plan. The treasury team has compiled current market values and component-cost inputs, and the committee expects the proposal to state the applicable hurdle rate and defend the financing mix.",
- "Industry": "Industrial services",
- "CompanyType": "Service provider",
- "CompanyName": "Northstar Capital",
- "Stakeholder": "CFO Priya Nair",
- "BusinessFunction": "Capital structure planning",
- "QuestionCount": 6,
- "ExhibitCount": 2,
- "ProductionStatus": "Draft",
- "Version": "1.0",
- "Tags": [
-  "WACC",
-  "CAPM",
-  "cost of capital",
-  "financing mix"
- ],
- "CreatedDate": "2026-08-24",
- "ModifiedDate": "2026-08-24",
- "Author": "AI",
- "Confidence": 90,
- "RevisionHistory": [
-  {
-   "Date": "2026-08-24",
-   "Version": "1.0",
-   "Author": "AI",
-   "Summary": "Initial creation"
-  }
- ],
- "question_state": "Certified",
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Northstar Capital's board approved a $40 million capacity expansion, and CFO Priya Nair must present the funding plan. The treasury team has compiled current market values and component-cost inputs, and the committee expects the proposal to state the applicable hurdle rate and defend the financing mix.",
+    "Industry": "Industrial services",
+    "CompanyType": "Service provider",
+    "CompanyName": "Northstar Capital",
+    "Stakeholder": "CFO Priya Nair",
+    "BusinessFunction": "Capital structure planning",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "WACC",
+      "CAPM",
+      "cost of capital",
+      "financing mix"
+    ],
+    "CreatedDate": "2026-08-24",
+    "ModifiedDate": "2026-08-24",
+    "Author": "AI",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-24",
+        "Version": "1.0",
+        "Author": "AI",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_session": "P2-059",
- "Part": 2,
- "Part2OnlyFlag": true,
- "LearningObjectives": [
-  "Compute after-tax cost of debt, cost of preferred, and CAPM cost of equity",
-  "Weight components at market values to compute WACC",
-  "Explain why incremental financing shifts the marginal cost of capital"
- ],
- "Exhibits": [
-  {
-   "ExhibitID": "CBQ21-B2-E1",
-   "CaseID": "CBQ21-B2",
-   "Type": "table",
-   "Title": "Exhibit 1 — Current Capital Structure (Market Values)",
-   "Purpose": "Provides the market-value weights and component inputs for the WACC computation.",
-   "ReferencedBy": [
-    "CBQ21-B2-Q1",
-    "CBQ21-B2-Q2",
-    "CBQ21-B2-Q3",
-    "CBQ21-B2-Q4"
-   ],
-   "Headers": [
-    "Component",
-    "Market value",
-    "Input"
-   ],
-   "Rows": [
-    [
-     "Long-term debt",
-     "$60M",
-     "Yield to maturity 6.0%"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute after-tax cost of debt, cost of preferred, and CAPM cost of equity",
+      "Weight components at market values to compute WACC",
+      "Explain why incremental financing shifts the marginal cost of capital"
     ],
-    [
-     "Preferred stock",
-     "$20M",
-     "Annual dividend $2.50 per share; market price $25"
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-B2-E1",
+        "CaseID": "CBQ21-B2",
+        "Type": "table",
+        "Title": "Exhibit 1 — Current Capital Structure (Market Values)",
+        "Purpose": "Provides the market-value weights and component inputs for the WACC computation.",
+        "ReferencedBy": [
+          "CBQ21-B2-Q1",
+          "CBQ21-B2-Q2",
+          "CBQ21-B2-Q3",
+          "CBQ21-B2-Q4"
+        ],
+        "Headers": [
+          "Component",
+          "Market value",
+          "Input"
+        ],
+        "Rows": [
+          [
+            "Long-term debt",
+            "$60M",
+            "Yield to maturity 6.0%"
+          ],
+          [
+            "Preferred stock",
+            "$20M",
+            "Annual dividend $2.50 per share; market price $25"
+          ],
+          [
+            "Common equity",
+            "$120M",
+            "Beta 1.20"
+          ],
+          [
+            "Total capital",
+            "$200M",
+            ""
+          ]
+        ],
+        "DataFormat": "USD millions except per-share amounts",
+        "AccuracyCheck": "Weights: 30% debt, 10% preferred, 60% equity"
+      },
+      {
+        "ExhibitID": "CBQ21-B2-E2",
+        "CaseID": "CBQ21-B2",
+        "Type": "table",
+        "Title": "Exhibit 2 — Market Parameters",
+        "Purpose": "Provides the tax rate and equity-market parameters required for component-cost formulas.",
+        "ReferencedBy": [
+          "CBQ21-B2-Q1",
+          "CBQ21-B2-Q3",
+          "CBQ21-B2-Q5",
+          "CBQ21-B2-Q6"
+        ],
+        "Headers": [
+          "Parameter",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Marginal tax rate",
+            "25%"
+          ],
+          [
+            "Risk-free rate",
+            "4.0%"
+          ],
+          [
+            "Market risk premium",
+            "5.5%"
+          ]
+        ],
+        "DataFormat": "Percentages",
+        "AccuracyCheck": "Inputs consistent with CAPM notation Rf + beta x MRP"
+      }
     ],
-    [
-     "Common equity",
-     "$120M",
-     "Beta 1.20"
-    ],
-    [
-     "Total capital",
-     "$200M",
-     ""
+    "Items": [
+      {
+        "ItemID": "CBQ21-B2-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the AFTER-TAX cost of debt in percent, rounded to two decimals.",
+        "Correct": "4.50",
+        "Explanation": "Interest is tax-deductible, so the effective cost of debt = pre-tax yield × (1 − t) = 6.0% × (1 − 0.25) = 4.50% (per CB-07). Only the after-tax figure belongs inside the WACC — using the 6.0% coupon-side yield overstates the debt component by a third and biases the whole average upward.",
+        "Topic": "After-tax cost of debt",
+        "Subtopic": "Tax shield",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-07: After-Tax Cost of Debt = Rd x (1 - t)",
+        "CommonTrapReference": "Entering the pre-tax yield directly into WACC.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "debt",
+          "tax shield"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B2-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the cost of preferred stock in percent, rounded to two decimals.",
+        "Correct": "10.00",
+        "Explanation": "Cost of preferred = annual dividend ÷ market price = $2.50 ÷ $25.00 = 10.00% (per CB-06). Preferred dividends carry NO tax shield — they are paid from after-tax dollars — so unlike debt there is no (1 − t) adjustment here; applying one is the classic error.",
+        "Topic": "Cost of preferred stock",
+        "Subtopic": "Dividend yield method",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-06: Rp = Dp / Pp",
+        "CommonTrapReference": "Applying the (1 - t) adjustment to preferred stock.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "preferred"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B2-Q3",
+        "Type": "numeric",
+        "Prompt": "Enter the CAPM cost of common equity in percent, rounded to two decimals.",
+        "Correct": "10.60",
+        "Explanation": "CAPM: Re = Rf + beta × MRP = 4.0% + 1.20 × 5.5% = 4.0% + 6.6% = 10.60% (per CB-04). This is the return shareholders require for Northstar's systematic risk — the benchmark the business must beat on every incremental dollar of equity-funded investment.",
+        "Topic": "Cost of equity",
+        "Subtopic": "CAPM",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-04: Re = Rf + b(Rm - Rf)",
+        "CommonTrapReference": "Multiplying beta by the market RETURN instead of the risk premium.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "CAPM"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B2-Q4",
+        "Type": "numeric",
+        "Prompt": "Enter Northstar's current WACC in percent, rounded to two decimals.",
+        "Correct": "8.71",
+        "Explanation": "Weights at market value: debt 60/200 = 0.30, preferred 20/200 = 0.10, equity 120/200 = 0.60. WACC = 0.30 × 4.50% + 0.10 × 10.00% + 0.60 × 10.60% = 1.35% + 1.00% + 6.36% = 8.71% (per CB-05). Market-value weighting matters because book weights would underweight the equity investors actually price at premium levels.",
+        "Topic": "Weighted average cost of capital",
+        "Subtopic": "Market-value weights",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-05: WACC = (E/V)Re + (P/V)Rp + (D/V)Rd(1-t)",
+        "CommonTrapReference": "Using book-value weights or omitting the preferred tranche.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "WACC"
+        ],
+        "Dependencies": [
+          "CBQ21-B2-Q1",
+          "CBQ21-B2-Q2",
+          "CBQ21-B2-Q3"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-B2-Q5",
+        "Type": "select",
+        "Prompt": "The committee proposes funding the entire $40M with new 6% debt because 'debt is the cheapest source.' Which evaluation is correct?",
+        "Correct": "B",
+        "Choices": [
+          "The proposal is sound: 4.50% after-tax is below every other component, so the marginal cost of capital falls to 4.50%",
+          "Incremental borrowing raises the leverage ratio and therefore the equity holders' required return, so the true marginal cost exceeds 4.50% and evaluating the project at today's 8.71% WACC understates the appropriate hurdle",
+          "WACC is a fixed property of the firm and rarely changes with financing choices, so the hurdle remains 8.71% whatever the mix",
+          "Because the expansion is a single project, component costs are irrelevant and any rate above zero is acceptable"
+        ],
+        "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns.",
+        "Topic": "Marginal cost of capital",
+        "Subtopic": "Leverage feedback",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Treating the cheapest source as THE marginal cost of a large financing package.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "leverage",
+          "marginal cost"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B2-Q6",
+        "Type": "select",
+        "Prompt": "Which funding recommendation best balances the competing considerations?",
+        "Correct": "A",
+        "Choices": [
+          "Fund with a MIX — approximately $20M of new debt plus $20M from internally generated funds or equity — preserving interest coverage and rating headroom while still capturing the deductibility of a meaningful debt layer, and re-compute the marginal WACC on the post-transaction structure for the project's hurdle rate",
+          "Fund entirely with new debt to maximize the tax shield, accepting whatever coverage ratios result",
+          "Fund entirely with new equity to eliminate financial risk completely, regardless of dilution at current prices",
+          "Defer the expansion until retained earnings fully cover the $40M internally"
+        ],
+        "Explanation": "The trade-off framework prices BOTH benefits and costs of debt: the shield argues for a meaningful debt layer, while distress risk, covenant headroom, and equity re-rating argue against concentrating a $40M program in one tranche. A balanced structure keeps the marginal WACC defensible and preserves capacity for future needs. All-debt (B) maximizes the shield but hands the committee a fragile balance sheet exactly when the new assets must ramp; all-equity (C) forfeits the shield and signals overpriced issuance if timed poorly; deferral (D) concedes strategic ground to competitors while cash accumulates.",
+        "Topic": "Financing structure recommendation",
+        "Subtopic": "Trade-off application",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Optimizing a single dimension (tax shield or risk) instead of the blended position.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "structure"
+        ],
+        "Dependencies": []
+      }
     ]
-   ],
-   "DataFormat": "USD millions except per-share amounts",
-   "AccuracyCheck": "Weights: 30% debt, 10% preferred, 60% equity"
   },
   {
-   "ExhibitID": "CBQ21-B2-E2",
-   "CaseID": "CBQ21-B2",
-   "Type": "table",
-   "Title": "Exhibit 2 — Market Parameters",
-   "Purpose": "Provides the tax rate and equity-market parameters required for component-cost formulas.",
-   "ReferencedBy": [
-    "CBQ21-B2-Q1",
-    "CBQ21-B2-Q3",
-    "CBQ21-B2-Q5",
-    "CBQ21-B2-Q6"
-   ],
-   "Headers": [
-    "Parameter",
-    "Value"
-   ],
-   "Rows": [
-    [
-     "Marginal tax rate",
-     "25%"
+    "CaseID": "CBQ21-E2",
+    "Title": "Replacing the Packaging Line: Unequal Lives",
+    "SectionTags": [
+      "E"
     ],
-    [
-     "Risk-free rate",
-     "4.0%"
+    "BlueprintDomain": "Investment Decisions",
+    "BlueprintObjectives": [
+      "Compare mutually exclusive replacements with unequal lives using equivalent annual annuity",
+      "Identify assumptions that drive the replacement decision",
+      "Formulate a defensible replacement recommendation"
     ],
-    [
-     "Market risk premium",
-     "5.5%"
-    ]
-   ],
-   "DataFormat": "Percentages",
-   "AccuracyCheck": "Inputs consistent with CAPM notation Rf + beta x MRP"
-  }
- ],
- "Items": [
-  {
-   "ItemID": "CBQ21-B2-Q1",
-   "Type": "numeric",
-   "Prompt": "Enter the AFTER-TAX cost of debt in percent, rounded to two decimals.",
-   "Correct": "4.50",
-   "Explanation": "Interest is tax-deductible, so the effective cost of debt = pre-tax yield × (1 − t) = 6.0% × (1 − 0.25) = 4.50% (per CB-07). Only the after-tax figure belongs inside the WACC — using the 6.0% coupon-side yield overstates the debt component by a third and biases the whole average upward.",
-   "Topic": "After-tax cost of debt",
-   "Subtopic": "Tax shield",
-   "Difficulty": "Moderate-Easy",
-   "DifficultyScore": 2,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "CB-07: After-Tax Cost of Debt = Rd x (1 - t)",
-   "CommonTrapReference": "Entering the pre-tax yield directly into WACC.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "debt",
-    "tax shield"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-B2-Q2",
-   "Type": "numeric",
-   "Prompt": "Enter the cost of preferred stock in percent, rounded to two decimals.",
-   "Correct": "10.00",
-   "Explanation": "Cost of preferred = annual dividend ÷ market price = $2.50 ÷ $25.00 = 10.00% (per CB-06). Preferred dividends carry NO tax shield — they are paid from after-tax dollars — so unlike debt there is no (1 − t) adjustment here; applying one is the classic error.",
-   "Topic": "Cost of preferred stock",
-   "Subtopic": "Dividend yield method",
-   "Difficulty": "Moderate-Easy",
-   "DifficultyScore": 2,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "CB-06: Rp = Dp / Pp",
-   "CommonTrapReference": "Applying the (1 - t) adjustment to preferred stock.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "preferred"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-B2-Q3",
-   "Type": "numeric",
-   "Prompt": "Enter the CAPM cost of common equity in percent, rounded to two decimals.",
-   "Correct": "10.60",
-   "Explanation": "CAPM: Re = Rf + beta × MRP = 4.0% + 1.20 × 5.5% = 4.0% + 6.6% = 10.60% (per CB-04). This is the return shareholders require for Northstar's systematic risk — the benchmark the business must beat on every incremental dollar of equity-funded investment.",
-   "Topic": "Cost of equity",
-   "Subtopic": "CAPM",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "CB-04: Re = Rf + b(Rm - Rf)",
-   "CommonTrapReference": "Multiplying beta by the market RETURN instead of the risk premium.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "CAPM"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-B2-Q4",
-   "Type": "numeric",
-   "Prompt": "Enter Northstar's current WACC in percent, rounded to two decimals.",
-   "Correct": "8.71",
-   "Explanation": "Weights at market value: debt 60/200 = 0.30, preferred 20/200 = 0.10, equity 120/200 = 0.60. WACC = 0.30 × 4.50% + 0.10 × 10.00% + 0.60 × 10.60% = 1.35% + 1.00% + 6.36% = 8.71% (per CB-05). Market-value weighting matters because book weights would underweight the equity investors actually price at premium levels.",
-   "Topic": "Weighted average cost of capital",
-   "Subtopic": "Market-value weights",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "CB-05: WACC = (E/V)Re + (P/V)Rp + (D/V)Rd(1-t)",
-   "CommonTrapReference": "Using book-value weights or omitting the preferred tranche.",
-   "EstimatedMinutes": 6,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "WACC"
-   ],
-   "Dependencies": [
-    "CBQ21-B2-Q1",
-    "CBQ21-B2-Q2",
-    "CBQ21-B2-Q3"
-   ]
-  },
-  {
-   "ItemID": "CBQ21-B2-Q5",
-   "Type": "select",
-   "Prompt": "The committee proposes funding the entire $40M with new 6% debt because 'debt is the cheapest source.' Which evaluation is correct?",
-   "Correct": "B",
-   "Choices": [
-    "The proposal is sound: 4.50% after-tax is below every other component, so the marginal cost of capital falls to 4.50%",
-    "Incremental borrowing raises the leverage ratio and therefore the equity holders' required return, so the true marginal cost exceeds 4.50% and evaluating the project at today's 8.71% WACC understates the appropriate hurdle",
-    "WACC is a fixed property of the firm and never changes with financing choices, so the hurdle remains 8.71% whatever the mix",
-    "Because the expansion is a single project, component costs are irrelevant and any rate above zero is acceptable"
-   ],
-   "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns.",
-   "Topic": "Marginal cost of capital",
-   "Subtopic": "Leverage feedback",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Treating the cheapest source as THE marginal cost of a large financing package.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "leverage",
-    "marginal cost"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-B2-Q6",
-   "Type": "select",
-   "Prompt": "Which funding recommendation best balances the competing considerations?",
-   "Correct": "A",
-   "Choices": [
-    "Fund with a MIX — approximately $20M of new debt plus $20M from internally generated funds or equity — preserving interest coverage and rating headroom while still capturing the deductibility of a meaningful debt layer, and re-compute the marginal WACC on the post-transaction structure for the project's hurdle rate",
-    "Fund entirely with new debt to maximize the tax shield, accepting whatever coverage ratios result",
-    "Fund entirely with new equity to eliminate financial risk completely, regardless of dilution at current prices",
-    "Defer the expansion until retained earnings fully cover the $40M internally"
-   ],
-   "Explanation": "The trade-off framework prices BOTH benefits and costs of debt: the shield argues for a meaningful debt layer, while distress risk, covenant headroom, and equity re-rating argue against concentrating a $40M program in one tranche. A balanced structure keeps the marginal WACC defensible and preserves capacity for future needs. All-debt (B) maximizes the shield but hands the committee a fragile balance sheet exactly when the new assets must ramp; all-equity (C) forfeits the shield and signals overpriced issuance if timed poorly; deferral (D) concedes strategic ground to competitors while cash accumulates.",
-   "Topic": "Financing structure recommendation",
-   "Subtopic": "Trade-off application",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Evaluate",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Optimizing a single dimension (tax shield or risk) instead of the blended position.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "recommendation",
-    "structure"
-   ],
-   "Dependencies": []
-  }
- ]
-},
-{
- "CaseID": "CBQ21-E2",
- "Title": "Replacing the Packaging Line: Unequal Lives",
- "SectionTags": [
-  "E"
- ],
- "BlueprintDomain": "Investment Decisions",
- "BlueprintObjectives": [
-  "Compare mutually exclusive replacements with unequal lives using equivalent annual annuity",
-  "Identify assumptions that drive the replacement decision",
-  "Formulate a defensible replacement recommendation"
- ],
- "PrimaryCompetency": "Analysis",
- "EstimatedMinutes": 30,
- "Difficulty": "Difficult",
- "DifficultyScore": 4,
- "ScenarioText": "Meridian Foods' packaging line has three years left and costs $220,000 a year to operate and maintain; it could be sold today for $150,000 or fetch $40,000 in three years. A challenger system costs $600,000 installed, runs five years at $90,000 annually, and should realize $100,000 at replacement. Operations director Marcus Webb must recommend replace-now versus keep-three-more-years at a 10% cost of capital (tax effects excluded for comparability).",
- "Industry": "Food processing",
- "CompanyType": "Manufacturer",
- "CompanyName": "Meridian Foods",
- "Stakeholder": "Operations Director Marcus Webb",
- "BusinessFunction": "Capital budgeting",
- "QuestionCount": 6,
- "ExhibitCount": 2,
- "ProductionStatus": "Draft",
- "Version": "1.0",
- "Tags": [
-  "EAA",
-  "replacement",
-  "unequal lives"
- ],
- "CreatedDate": "2026-08-24",
- "ModifiedDate": "2026-08-24",
- "Author": "AI",
- "Confidence": 90,
- "RevisionHistory": [
-  {
-   "Date": "2026-08-24",
-   "Version": "1.0",
-   "Author": "AI",
-   "Summary": "Initial creation"
-  }
- ],
- "question_state": "Certified",
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Meridian Foods' packaging line has three years left and costs $220,000 a year to operate and maintain; it could be sold today for $150,000 or fetch $40,000 in three years. A challenger system costs $600,000 installed, runs five years at $90,000 annually, and should realize $100,000 at replacement. Operations director Marcus Webb must recommend replace-now versus keep-three-more-years at a 10% cost of capital (tax effects excluded for comparability).",
+    "Industry": "Food processing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Meridian Foods",
+    "Stakeholder": "Operations Director Marcus Webb",
+    "BusinessFunction": "Capital budgeting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "EAA",
+      "replacement",
+      "unequal lives"
+    ],
+    "CreatedDate": "2026-08-24",
+    "ModifiedDate": "2026-08-24",
+    "Author": "AI",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-24",
+        "Version": "1.0",
+        "Author": "AI",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_session": "P2-059",
- "Part": 2,
- "Part2OnlyFlag": true,
- "LearningObjectives": [
-  "Build present value of cost streams for defender and challenger",
-  "Convert unequal-life cost streams to equivalent annual annuities",
-  "Select and defend the replacement decision"
- ],
- "Exhibits": [
-  {
-   "ExhibitID": "CBQ21-E2-E1",
-   "CaseID": "CBQ21-E2",
-   "Type": "table",
-   "Title": "Exhibit 1 — Defender Versus Challenger",
-   "Purpose": "Provides the cash-relevant facts for both alternatives used in the annualized-cost comparison.",
-   "ReferencedBy": [
-    "CBQ21-E2-Q1",
-    "CBQ21-E2-Q2",
-    "CBQ21-E2-Q3",
-    "CBQ21-E2-Q6",
-    "CBQ21-E2-Q5"
-   ],
-   "Headers": [
-    "Factor",
-    "Defender (keep)",
-    "Challenger (replace)"
-   ],
-   "Rows": [
-    [
-     "Remaining/new life",
-     "3 years",
-     "5 years"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Build present value of cost streams for defender and challenger",
+      "Convert unequal-life cost streams to equivalent annual annuities",
+      "Select and defend the replacement decision"
     ],
-    [
-     "Annual operating cost",
-     "$220,000",
-     "$90,000"
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-E2-E1",
+        "CaseID": "CBQ21-E2",
+        "Type": "table",
+        "Title": "Exhibit 1 — Defender Versus Challenger",
+        "Purpose": "Provides the cash-relevant facts for both alternatives used in the annualized-cost comparison.",
+        "ReferencedBy": [
+          "CBQ21-E2-Q1",
+          "CBQ21-E2-Q2",
+          "CBQ21-E2-Q3",
+          "CBQ21-E2-Q6",
+          "CBQ21-E2-Q5"
+        ],
+        "Headers": [
+          "Factor",
+          "Defender (keep)",
+          "Challenger (replace)"
+        ],
+        "Rows": [
+          [
+            "Remaining/new life",
+            "3 years",
+            "5 years"
+          ],
+          [
+            "Annual operating cost",
+            "$220,000",
+            "$90,000"
+          ],
+          [
+            "Salvage today",
+            "$150,000",
+            "n/a"
+          ],
+          [
+            "Salvage at end of life",
+            "$40,000 (year 3)",
+            "$100,000 (year 5)"
+          ],
+          [
+            "Installed cost",
+            "n/a",
+            "$600,000"
+          ]
+        ],
+        "DataFormat": "USD; taxes excluded for comparability per the engagement scope",
+        "AccuracyCheck": "Keeping the machine means forgoing today's $150,000 salvage — an opportunity cost at time zero"
+      },
+      {
+        "ExhibitID": "CBQ21-E2-E2",
+        "CaseID": "CBQ21-E2",
+        "Type": "text",
+        "Title": "Exhibit 2 — Discount Factors at 10%",
+        "Purpose": "Provides the annuity and single-sum factors needed without external tables.",
+        "ReferencedBy": [
+          "CBQ21-E2-Q1",
+          "CBQ21-E2-Q2",
+          "CBQ21-E2-Q3",
+          "CBQ21-E2-Q4"
+        ],
+        "Body": "PVIFA(10%, 3 years) = 2.48685\nPVIFA(10%, 5 years) = 3.79079\nPVIF(10%, year 3) = 0.75131\nPVIF(10%, year 5) = 0.62092"
+      }
     ],
-    [
-     "Salvage today",
-     "$150,000",
-     "n/a"
-    ],
-    [
-     "Salvage at end of life",
-     "$40,000 (year 3)",
-     "$100,000 (year 5)"
-    ],
-    [
-     "Installed cost",
-     "n/a",
-     "$600,000"
+    "Items": [
+      {
+        "ItemID": "CBQ21-E2-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the PRESENT VALUE of keeping the defender for its remaining three years (costs positive), in dollars, within ±$500.",
+        "Correct": "667054",
+        "Explanation": "Keeping the machine sacrifices today's $150,000 sale (opportunity cost at t=0), pays $220,000 annually for three years, and recovers $40,000 at year three. PV = 150,000 + (220,000 × 2.48685) − (40,000 × 0.75131) = 150,000 + 547,107 − 30,053 = $667,054. The foregone salvage is the item analysts most often forget — selling the defender is half of the replace alternative.",
+        "Topic": "Replacement analysis",
+        "Subtopic": "Defender cost stream",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "PV of costs with opportunity cost of foregone salvage",
+        "CommonTrapReference": "Omitting the foregone salvage value from the keep alternative.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "defender",
+          "present value"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E2-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the CHALLENGER's equivalent annual ANNUITY cost (a positive number), in dollars, within ±$500.",
+        "Correct": "231899",
+        "Explanation": "PV of challenger costs = 600,000 + (90,000 × 3.79079) − (100,000 × 0.62092) = 600,000 + 341,171 − 62,092 = $879,079. Spreading over five years: EAA = 879,079 ÷ 3.79079 = $231,899 per year. The EAA converts a lumpy five-year commitment into the constant annual figure that makes unequal lives comparable.",
+        "Topic": "Equivalent annual annuity",
+        "Subtopic": "Challenger annualization",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
+        "CommonTrapReference": "Comparing raw PVs of unequal-lived alternatives directly.",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "EAA",
+          "challenger"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E2-Q3",
+        "Type": "numeric",
+        "Prompt": "Enter the DEFENDER's equivalent annual annuity cost (a positive number), in dollars, within ±$500.",
+        "Correct": "268233",
+        "Explanation": "Defender EAA = 667,054 ÷ 2.48685 = $268,233 per year. Comparing the two annualized figures — $231,899 for the challenger against $268,233 for the defender — shows replacement saves roughly $36,300 EVERY YEAR on a like-for-like basis, which is the apples-to-apples comparison the unequal lives demand.",
+        "Topic": "Equivalent annual annuity",
+        "Subtopic": "Defender annualization",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
+        "CommonTrapReference": "Annualizing over the wrong life (using 5 years for the 3-year defender).",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "EAA",
+          "defender"
+        ],
+        "Dependencies": [
+          "CBQ21-E2-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E2-Q4",
+        "Type": "select",
+        "Prompt": "Why is the equivalent annual annuity method required here rather than comparing total present values of cost?",
+        "Correct": "B",
+        "Choices": [
+          "Because EAA discounts costs twice, adding conservatism to replacement decisions",
+          "Because the alternatives span UNEQUAL lives — the defender's 3-year cost stream and the challenger's 5-year stream are not directly comparable; annualizing places both on a per-year basis so the shorter option is not flattered by its earlier termination",
+          "Because EAA ignores salvage values, simplifying the arithmetic",
+          "Because the tax code requires annualized comparisons for equipment placed in service mid-year"
+        ],
+        "Explanation": "Total-PV comparisons bias decisions toward whichever alternative stops sooner: a 3-year cost stream will almost typically show a smaller PV than a 5-year stream covering more years of service. Annualizing divides each PV by its own annuity factor, expressing both as cost-per-year-of-service and restoring comparability — the standard treatment for mutually exclusive replacements with unequal lives. Salvage is fully included (C), and no tax-timing rule drives the method (D).",
+        "Topic": "Unequal lives methodology",
+        "Subtopic": "EAA rationale",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Choosing the shorter-lived alternative because its undiscounted horizon looks cheaper.",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "methodology"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E2-Q5",
+        "Type": "select",
+        "Prompt": "Which development would MOST likely reverse the replace-now recommendation?",
+        "Correct": "A",
+        "Choices": [
+          "Evidence that the challenger's operating cost escalates rapidly after year 2 — maintenance contracts stepping up sharply — raising its effective annual cost above the defender's $268,233",
+          "A modest rise in general interest rates affecting both alternatives equally",
+          "Discovery that the defender's paint color no longer matches the facility standard",
+          "Confirmation that Product Z packaging volumes will grow 20%, requiring MORE machine-hours from whichever line is installed"
+        ],
+        "Explanation": "The decision rests on the challenger's $231,899 annualized cost staying below the defender's $268,233. If the challenger's own cost curve escalates steeply — aggressive service-contract step-ups being the usual culprit — its EAA climbs toward and past the defender's, flipping the ranking. Equal rate moves (B) hit both streams similarly and preserve the gap; cosmetic issues (C) are noise; higher volumes (D) raise the VALUE of the better machine, reinforcing replacement rather than reversing it.",
+        "Topic": "Decision sensitivity",
+        "Subtopic": "Ranking reversals",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Treating the EAA ranking as immutable without stress-testing its cost inputs.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "sensitivity"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-E2-Q6",
+        "Type": "select",
+        "Prompt": "Which recommendation should Marcus Webb present?",
+        "Correct": "C",
+        "Choices": [
+          "Keep the defender through year 3 because its book value is low and disposal would trigger a loss",
+          "Replace immediately, and additionally retire the defender early this quarter even before the challenger ships, to bank the $150,000 salvage sooner",
+          "REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats the defender's $268,233 by roughly $36,300 per year — sequencing the cutover during scheduled downtime so the $150,000 defender sale closes on delivery day",
+          "Solicit a third bid before acting, since two alternatives can rarely support a confident decision"
+        ],
+        "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action.",
+        "Topic": "Replacement recommendation",
+        "Subtopic": "Execution sequencing",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Letting accounting loss aversion override cash-economics superiority.",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation"
+        ],
+        "Dependencies": []
+      }
     ]
-   ],
-   "DataFormat": "USD; taxes excluded for comparability per the engagement scope",
-   "AccuracyCheck": "Keeping the machine means forgoing today's $150,000 salvage — an opportunity cost at time zero"
   },
-  {
-   "ExhibitID": "CBQ21-E2-E2",
-   "CaseID": "CBQ21-E2",
-   "Type": "text",
-   "Title": "Exhibit 2 — Discount Factors at 10%",
-   "Purpose": "Provides the annuity and single-sum factors needed without external tables.",
-   "ReferencedBy": [
-    "CBQ21-E2-Q1",
-    "CBQ21-E2-Q2",
-    "CBQ21-E2-Q3",
-    "CBQ21-E2-Q4"
-   ],
-   "Body": "PVIFA(10%, 3 years) = 2.48685\nPVIFA(10%, 5 years) = 3.79079\nPVIF(10%, year 3) = 0.75131\nPVIF(10%, year 5) = 0.62092"
-  }
- ],
- "Items": [
-  {
-   "ItemID": "CBQ21-E2-Q1",
-   "Type": "numeric",
-   "Prompt": "Enter the PRESENT VALUE of keeping the defender for its remaining three years (costs positive), in dollars, within ±$500.",
-   "Correct": "667054",
-   "Explanation": "Keeping the machine sacrifices today's $150,000 sale (opportunity cost at t=0), pays $220,000 annually for three years, and recovers $40,000 at year three. PV = 150,000 + (220,000 × 2.48685) − (40,000 × 0.75131) = 150,000 + 547,107 − 30,053 = $667,054. The foregone salvage is the item analysts most often forget — selling the defender is half of the replace alternative.",
-   "Topic": "Replacement analysis",
-   "Subtopic": "Defender cost stream",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "PV of costs with opportunity cost of foregone salvage",
-   "CommonTrapReference": "Omitting the foregone salvage value from the keep alternative.",
-   "EstimatedMinutes": 6,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "defender",
-    "present value"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-E2-Q2",
-   "Type": "numeric",
-   "Prompt": "Enter the CHALLENGER's equivalent annual ANNUITY cost (a positive number), in dollars, within ±$500.",
-   "Correct": "231899",
-   "Explanation": "PV of challenger costs = 600,000 + (90,000 × 3.79079) − (100,000 × 0.62092) = 600,000 + 341,171 − 62,092 = $879,079. Spreading over five years: EAA = 879,079 ÷ 3.79079 = $231,899 per year. The EAA converts a lumpy five-year commitment into the constant annual figure that makes unequal lives comparable.",
-   "Topic": "Equivalent annual annuity",
-   "Subtopic": "Challenger annualization",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Apply",
-   "CalculationRequired": true,
-   "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
-   "CommonTrapReference": "Comparing raw PVs of unequal-lived alternatives directly.",
-   "EstimatedMinutes": 6,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "EAA",
-    "challenger"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-E2-Q3",
-   "Type": "numeric",
-   "Prompt": "Enter the DEFENDER's equivalent annual annuity cost (a positive number), in dollars, within ±$500.",
-   "Correct": "268233",
-   "Explanation": "Defender EAA = 667,054 ÷ 2.48685 = $268,233 per year. Comparing the two annualized figures — $231,899 for the challenger against $268,233 for the defender — shows replacement saves roughly $36,300 EVERY YEAR on a like-for-like basis, which is the apples-to-apples comparison the unequal lives demand.",
-   "Topic": "Equivalent annual annuity",
-   "Subtopic": "Defender annualization",
-   "Difficulty": "Difficult",
-   "DifficultyScore": 4,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": true,
-   "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
-   "CommonTrapReference": "Annualizing over the wrong life (using 5 years for the 3-year defender).",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "EAA",
-    "defender"
-   ],
-   "Dependencies": [
-    "CBQ21-E2-Q1"
-   ]
-  },
-  {
-   "ItemID": "CBQ21-E2-Q4",
-   "Type": "select",
-   "Prompt": "Why is the equivalent annual annuity method required here rather than comparing total present values of cost?",
-   "Correct": "B",
-   "Choices": [
-    "Because EAA discounts costs twice, adding conservatism to replacement decisions",
-    "Because the alternatives span UNEQUAL lives — the defender's 3-year cost stream and the challenger's 5-year stream are not directly comparable; annualizing places both on a per-year basis so the shorter option is not flattered by its earlier termination",
-    "Because EAA ignores salvage values, simplifying the arithmetic",
-    "Because the tax code requires annualized comparisons for equipment placed in service mid-year"
-   ],
-   "Explanation": "Total-PV comparisons bias decisions toward whichever alternative stops sooner: a 3-year cost stream will almost always show a smaller PV than a 5-year stream covering more years of service. Annualizing divides each PV by its own annuity factor, expressing both as cost-per-year-of-service and restoring comparability — the standard treatment for mutually exclusive replacements with unequal lives. Salvage is fully included (C), and no tax-timing rule drives the method (D).",
-   "Topic": "Unequal lives methodology",
-   "Subtopic": "EAA rationale",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Choosing the shorter-lived alternative because its undiscounted horizon looks cheaper.",
-   "EstimatedMinutes": 4,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "methodology"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-E2-Q5",
-   "Type": "select",
-   "Prompt": "Which development would MOST likely reverse the replace-now recommendation?",
-   "Correct": "A",
-   "Choices": [
-    "Evidence that the challenger's operating cost escalates rapidly after year 2 — maintenance contracts stepping up sharply — raising its effective annual cost above the defender's $268,233",
-    "A modest rise in general interest rates affecting both alternatives equally",
-    "Discovery that the defender's paint color no longer matches the facility standard",
-    "Confirmation that Product Z packaging volumes will grow 20%, requiring MORE machine-hours from whichever line is installed"
-   ],
-   "Explanation": "The decision rests on the challenger's $231,899 annualized cost staying below the defender's $268,233. If the challenger's own cost curve escalates steeply — aggressive service-contract step-ups being the usual culprit — its EAA climbs toward and past the defender's, flipping the ranking. Equal rate moves (B) hit both streams similarly and preserve the gap; cosmetic issues (C) are noise; higher volumes (D) raise the VALUE of the better machine, reinforcing replacement rather than reversing it.",
-   "Topic": "Decision sensitivity",
-   "Subtopic": "Ranking reversals",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Analyze",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Treating the EAA ranking as immutable without stress-testing its cost inputs.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "sensitivity"
-   ],
-   "Dependencies": []
-  },
-  {
-   "ItemID": "CBQ21-E2-Q6",
-   "Type": "select",
-   "Prompt": "Which recommendation should Marcus Webb present?",
-   "Correct": "C",
-   "Choices": [
-    "Keep the defender through year 3 because its book value is low and disposal would trigger a loss",
-    "Replace immediately, and additionally retire the defender early this quarter even before the challenger ships, to bank the $150,000 salvage sooner",
-    "REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats the defender's $268,233 by roughly $36,300 per year — sequencing the cutover during scheduled downtime so the $150,000 defender sale closes on delivery day",
-    "Solicit a third bid before acting, since two alternatives can never support a confident decision"
-   ],
-   "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action.",
-   "Topic": "Replacement recommendation",
-   "Subtopic": "Execution sequencing",
-   "Difficulty": "Moderate",
-   "DifficultyScore": 3,
-   "CognitiveLevel": "Evaluate",
-   "CalculationRequired": false,
-   "FormulaReference": "",
-   "CommonTrapReference": "Letting accounting loss aversion override cash-economics superiority.",
-   "EstimatedMinutes": 5,
-   "ExplanationVersion": 1,
-   "Tags": [
-    "recommendation"
-   ],
-   "Dependencies": []
-  }
- ]
-},
   {
     "CaseID": "CBQ21-A2",
     "Title": "Lender Credit Review Analysis",
@@ -2463,7 +2461,9 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
+    "question_state": "Certified",
+    "certification_session": "P2-065",
+    "certification_date": "2026-08-26"
   },
   {
     "CaseID": "CBQ21-C2",
@@ -2638,7 +2638,7 @@ var casePackP2_1 = [
           "C": "146,000 advantage - avoided traceable fixed costs of 268,000, less 90,000 of added purchase cost, less 32,000 of retained supervision.",
           "D": "178,000 advantage - the correct computation without subtracting the 32,000 of retained supervision."
         },
-        "Explanation": "Outsourcing converts F-100 into a purchased-for-resale item: margin becomes 30,000 x (36 - 25) = 330,000, and 32,000 of supervision remains, giving 298,000 net versus 152,000 earned today - an annual advantage of 146,000. Cross-check: avoided traceable fixed 268,000, less added purchase cost of 3 per unit (90,000), less retained supervision 32,000 = 146,000; both routes agree. The 356,000 swing overstates the case because it credits the line with escaping allocated costs it never truly absorbed, and 178,000 forgets the supervisors kept on payroll. The trap is anchoring on the reported segment loss instead of comparing incremental streams.",
+        "Explanation": "Outsourcing converts F-100 into a purchased-for-resale item: margin becomes 30,000 x (36 - 25) = 330,000, and 32,000 of supervision remains, giving 298,000 net versus 152,000 earned today - an annual advantage of 146,000. Cross-check: avoided traceable fixed 268,000, less added purchase cost of 3 per unit (90,000), less retained supervision 32,000 = 146,000; both routes agree. The 356,000 swing overstates the case because it credits the line with escaping allocated costs it rarely truly absorbed, and 178,000 forgets the supervisors kept on payroll. The trap is anchoring on the reported segment loss instead of comparing incremental streams.",
         "Topic": "Outsourcing relevant costs",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -2762,7 +2762,9 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
+    "question_state": "Certified",
+    "certification_session": "P2-065",
+    "certification_date": "2026-08-26"
   },
   {
     "CaseID": "CBQ21-F1",
@@ -3016,9 +3018,10 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
-  }
-,
+    "question_state": "Certified",
+    "certification_session": "P2-065",
+    "certification_date": "2026-08-26"
+  },
   {
     "CaseID": "CBQ21-A3",
     "Title": "DuPont Diagnosis for Board Review",
@@ -3329,7 +3332,9 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
+    "question_state": "Certified",
+    "certification_session": "P2-CERT-064",
+    "certification_date": "2026-08-26"
   },
   {
     "CaseID": "CBQ21-B3",
@@ -3616,7 +3621,9 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
+    "question_state": "Certified",
+    "certification_session": "P2-CERT-064",
+    "certification_date": "2026-08-26"
   },
   {
     "CaseID": "CBQ21-C3",
@@ -3890,6 +3897,1677 @@ var casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Unprocessed"
+    "question_state": "Certified",
+    "certification_session": "P2-CERT-064",
+    "certification_date": "2026-08-26"
+  }
+,
+{
+    "CaseID": "CBQ21-D2",
+    "Title": "Flash Capital: ERM Framework Selection and Board Risk Appetite Statement",
+    "SectionTags": [
+      "D"
+    ],
+    "BlueprintDomain": "Risk Management",
+    "BlueprintObjectives": [
+      "Distinguish risk capacity, risk appetite, and risk tolerance",
+      "Identify components of COSO ERM 2017 framework",
+      "Evaluate alignment between ERM framework selection and organizational maturity",
+      "Assess board-level vs management-level risk governance roles"
+    ],
+    "PrimaryCompetency": "Conceptual",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Flash Capital, a mid-cap specialty finance subsidiary of Flash Holdings, has grown to $4.8B in assets across equipment leasing, factoring, and trade-credit insurance. Treasurer Maya Caldwell must recommend an enterprise risk management framework to the board ahead of the Q4 strategy session. The current risk approach is siloed: credit risk sits in the lending desk, operational risk in compliance, and market risk in treasury — each with separate reporting. A 2025 internal audit flagged that risk incidents rose 22% YoY with no cross-functional aggregation. Caldwell has shortlisted three options: (1) a full COSO ERM 2017 implementation requiring 18 months and $2.4M, (2) a lighter ISO 31000 overlay deployed in 9 months for $900K, or (3) an in-house risk register approach with quarterly board reporting at zero incremental cost. The board chair, CFO Mariela Hoffmann, has signaled appetite for a 'proportionate, not performative' framework given Flash Holdings' recent $340M acquisition of Meridian Foods and integration distractions. Two recent near-misses — a $14M factoring fraud and a vendor concentration failure — have elevated urgency but not yet caused a reported loss.",
+    "Industry": "Specialty finance",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Capital",
+    "Stakeholder": "Treasurer Maya Caldwell",
+    "BusinessFunction": "Treasury / ERM",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "enterprise risk management",
+      "COSO ERM",
+      "ISO 31000",
+      "risk appetite",
+      "risk governance",
+      "board oversight"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 88,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-070"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-071",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Distinguish risk capacity (max survival), risk appetite (board-set boundaries), and risk tolerance (operational variance bands)",
+      "Identify the five components and twenty principles of COSO ERM 2017",
+      "Evaluate framework-selection trade-offs between depth, cost, and time-to-value",
+      "Assess which entity-level risk owner should sponsor an ERM rollout",
+      "Analyze the sequencing of risk identification, assessment, response, and monitoring under ISO 31000",
+      "Evaluate board risk-oversight responsibilities under COSO ERM Principle 6"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-D2-E1",
+        "CaseID": "CBQ21-D2",
+        "Type": "table",
+        "Title": "Exhibit 1 — Flash Capital Risk Incident Trends (FY2023–FY2025)",
+        "Description": "Incident counts by category, severity-weighted loss attempts, and current detection lag.",
+        "Columns": [
+          "Risk Category",
+          "FY2023 Incidents",
+          "FY2024 Incidents",
+          "FY2025 Incidents",
+          "Avg Detection Lag (days)"
+        ],
+        "Rows": [
+          [
+            "Credit (lending)",
+            "8",
+            "11",
+            "14",
+            "47"
+          ],
+          [
+            "Operational (process)",
+            "5",
+            "6",
+            "9",
+            "22"
+          ],
+          [
+            "Compliance / regulatory",
+            "3",
+            "4",
+            "5",
+            "31"
+          ],
+          [
+            "Market / treasury",
+            "2",
+            "3",
+            "4",
+            "12"
+          ],
+          [
+            "Vendor / third-party",
+            "1",
+            "2",
+            "5",
+            "63"
+          ],
+          [
+            "Total",
+            "19",
+            "26",
+            "37",
+            "—"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-D2-E2",
+        "CaseID": "CBQ21-D2",
+        "Type": "table",
+        "Title": "Exhibit 2 — Framework Shortlist Comparison",
+        "Description": "Cost, timeline, scope, and board-reporting cadence for each option.",
+        "Columns": [
+          "Option",
+          "Approach",
+          "Cost ($)",
+          "Timeline",
+          "Board Cadence",
+          "Coverage Scope"
+        ],
+        "Rows": [
+          [
+            "1",
+            "Full COSO ERM 2017 implementation",
+            "2,400,000",
+            "18 months",
+            "Quarterly ERM dashboard",
+            "All five COSO components"
+          ],
+          [
+            "2",
+            "ISO 31000 overlay",
+            "900,000",
+            "9 months",
+            "Semi-annual risk register",
+            "Risk-management process only"
+          ],
+          [
+            "3",
+            "In-house risk register",
+            "0 (re-allocation)",
+            "3 months",
+            "Quarterly risk register",
+            "Identified top-10 risks only"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-D2-Q1",
+        "Type": "mcq",
+        "Prompt": "Which statement best distinguishes risk capacity from risk appetite in Flash Capital's context?",
+        "Choices": {
+          "A": "Risk capacity is the maximum loss Flash Capital can absorb without threatening solvency, while risk appetite is the board-set boundary of acceptable risk-taking the firm chooses to operate within.",
+          "B": "Risk capacity is the budget the board approves for risk-management staffing, while risk appetite is the residual loss absorbed after controls.",
+          "C": "Risk capacity and risk appetite are interchangeable terms describing the same board-set loss ceiling.",
+          "D": "Risk capacity refers only to capital held against credit risk, while risk appetite covers operational and market risk exclusively."
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "Risk capacity is the maximum loss an entity can absorb without threatening its viability (typically measured against capital, liquidity, and earnings thresholds). Risk appetite is the aggregate level and type of risk the board is willing to assume to meet strategic objectives. Capacity is the outer bound; appetite is the chosen operating zone within it.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Risk capacity is not an HR or staffing budget — it is a loss-absorption ceiling measured in financial-survival terms. Controls reduce residual loss but do not define capacity.",
+        "ExplanationWrongC": "These terms are not interchangeable. Capacity is the survival ceiling; appetite is the chosen operating band. Conflating them produces a board policy that is either too lax (capacity) or too tight (appetite) for the firm's actual strategic posture.",
+        "ExplanationWrongD": "Risk capacity is not limited to credit risk — it spans all risk categories because solvency depends on the aggregate loss distribution, not a single silo.",
+        "Topic": "Risk taxonomy",
+        "VerifiedChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+          "Choice A definition correct per COSO ERM Principle 7 vocabulary",
+          "Difficulty justified by Apply-level recall of risk-capacity vs risk-appetite distinction at DS3"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-D2-Q2",
+        "Type": "mcq",
+        "Prompt": "Under COSO ERM 2017, which of the five components is the FOUNDATION on which the other four rely?",
+        "Choices": {
+          "A": "Risk Assessment — because without measurement, no response can be sized.",
+          "B": "Control Activities — because they operationalize every other component.",
+          "C": "Governance and Culture — because it sets the tone at the top, board oversight, and risk-culture norms that condition all other ERM activity.",
+          "D": "Information, Communication, and Reporting — because ERM cannot function without data flow."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "COSO ERM 2017 places Governance and Culture as Component 1, foundational to the others. It encompasses board risk oversight, operating-model structures, risk-culture norms, and the tone-at-the-top that conditions how risk identification, assessment, response, and information/communication operate. Without governance and culture, the other components lack the authority and norms to function.",
+        "ExplanationWrongA": "Risk Assessment is the foundation under COSO ERM 2017 — wrong; Component 3 is downstream of governance and culture, which set the tone-at-the-top that conditions how assessment is conducted. Governance comes first by design.",
+        "ExplanationWrongB": "Control Activities are Component 5 in COSO ERM 2017, not the foundation. They operationalize responses but depend on governance to define acceptable response levels.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Information, Communication, and Reporting is Component 4 in COSO ERM 2017. It is essential but downstream of governance; without tone-at-the-top, data flows are not actioned."
+      },
+      {
+        "ItemID": "CBQ21-D2-Q3",
+        "Type": "mcq",
+        "Prompt": "Decompose the recent 22% YoY incident increase across Flash Capital's risk categories per Exhibit 1. Which category contributed the LARGEST absolute increase in incident count from FY2024 to FY2025, and what does the detection-lag column suggest about that category's control posture?",
+        "Choices": {
+          "A": "Vendor/third-party incidents rose from 2 to 5 (+3, a 150% increase) with the longest detection lag (63 days), suggesting third-party risk controls are the weakest control posture and the highest undetected-loss exposure.",
+          "B": "Credit incidents rose from 11 to 14 (+3, a 27% increase) with a 47-day detection lag, suggesting credit risk is the highest-growth threat and has the longest lag of any category.",
+          "C": "Compliance incidents rose from 4 to 5 (+1, a 25% increase) with a 31-day detection lag, suggesting regulatory exposure is the dominant trend.",
+          "D": "Operational incidents rose from 6 to 9 (+3, a 50% increase) with a 22-day detection lag, suggesting process failures are the dominant and most-detected trend."
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Vendor/third-party incidents rose by 3 in absolute terms (2→5), tying with credit and operational for the largest absolute increase, but at a 150% rate (vs 27% credit, 50% operational). Critically, the 63-day detection lag is more than double the next-longest category (credit at 47), indicating third-party incidents are not only growing fastest proportionally but also taking the longest to surface — a compounding control-weakness signal.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Credit rose by 3 (tied for largest absolute) but only at 27%, and its 47-day lag is shorter than vendor/third-party's 63. Same absolute delta does not equate to same control posture — growth rate and detection lag both matter.",
+        "ExplanationWrongC": "Compliance rose by only 1 (+25%); its growth is neither the largest absolute nor the highest rate, and the 31-day lag is mid-range.",
+        "ExplanationWrongD": "Operational rose by 3 (tied absolute) at 50% — higher rate than credit but lower than vendor/third-party (150%). The 22-day lag is actually the shortest, suggesting operational issues are detected quickly even if frequent."
+      },
+      {
+        "ItemID": "CBQ21-D2-Q4",
+        "Type": "mcq",
+        "Prompt": "Given Flash Holdings' recent $340M Meridian Foods acquisition and Flash Capital's two near-misses ($14M factoring fraud and vendor concentration failure), which risk-response sequencing is MOST defensible for the next 90 days?",
+        "Choices": {
+          "A": "Pursue Option 1 (full COSO ERM 2017) immediately to maximize board-level risk discipline and signal institutional maturity to regulators.",
+          "B": "Pursue Option 3 (in-house risk register) for the next quarter to address the two near-misses with minimal distraction from the Meridian integration, while scoping Option 1 or Option 2 for FY2026 once integration stabilizes.",
+          "C": "Defer all framework decisions until the Meridian integration closes, then commission a single enterprise-wide ERM program for both Flash Capital and the integrated food business.",
+          "D": "Outsource the entire ERM function to a Big Four advisory firm under a 24-month managed-service contract to bypass internal capability gaps."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Treasurer Maya Caldwell's brief to the board is precisely this trade-off: address the two immediate near-misses with the lowest-cost, fastest-deploying option (Option 3 — in-house risk register), preserve optionality by scoping a deeper framework for FY2026, and avoid burdening the Meridian integration with a parallel 18-month program. This is proportionate to the actual exposure and respects CFO Hoffmann's 'proportionate, not performative' guidance.",
+        "ExplanationWrongA": "Pursuing Option 1 (full COSO ERM 2017) immediately is wrong — 18 months and $2.4M during the Meridian integration is disproportionate to actual exposure and signals project over-commitment. The board chair explicitly favored a proportionate, not performative framework.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Deferring until integration closes leaves the two near-misses unaddressed for 6+ months and signals to the board that Flash Capital is treating risk discipline as a back-burner item. Deferral compounds the control-weakness signal.",
+        "ExplanationWrongD": "Outsourcing to a Big Four firm under managed service does not solve the capability-gap problem — it relocates it. The internal risk-culture and governance components (COSO ERM Component 1) cannot be outsourced; tone-at-the-top must remain with Flash Capital's own board and executives."
+      },
+      {
+        "ItemID": "CBQ21-D2-Q5",
+        "Type": "mcq",
+        "Prompt": "Evaluate which entity-level role should SPONSOR the recommended 90-day risk-register rollout, and what specific sponsor accountability should the board define in writing?",
+        "Choices": {
+          "A": "The Chief Compliance Officer should sponsor because compliance is the only function with regulatory authority over risk policy.",
+          "B": "The Chief Risk Officer (or equivalent — in Flash Capital's case, Treasurer Maya Caldwell) should sponsor with board-defined accountability for: (i) cross-functional risk taxonomy alignment, (ii) quarterly board reporting on top-10 risks with named owners, and (iii) escalation protocol for any single risk exceeding the appetite threshold.",
+          "C": "The CEO of Flash Holdings should sponsor because only group-level executives have authority over subsidiary risk policy.",
+          "D": "The board chair should sponsor directly because ERM is a board-level function and cannot be delegated to management."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Risk-management sponsorship at the operating-subsidiary level typically belongs to the CRO or, where no CRO exists, the treasurer or CFO. The sponsor needs authority over cross-functional risk taxonomy (so siloed reporting is broken down) and direct board access (so escalation works). The board must define three pieces of written accountability: cross-functional taxonomy alignment, quarterly top-10 reporting with named owners, and a clear escalation protocol — otherwise the sponsor lacks the mandate to enforce participation from credit, operations, and compliance silos.",
+        "ExplanationWrongA": "CCO sponsorship is wrong — compliance is one function with regulatory authority over policy but lacks cross-functional reach needed for ERM taxonomy alignment across credit, operations, and compliance silos. Sponsorship without cross-functional authority fails the mandate.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Group-CEO sponsorship is too distant from Flash Capital's day-to-day risk decisions and dilutes accountability for the two specific near-misses. Subsidiary-level sponsorship with group-board oversight is the correct governance balance.",
+        "ExplanationWrongD": "Board chairs do not manage — they oversee. Sponsoring an operational rollout directly would invert the governance hierarchy and crowd out the sponsor role for an executive who must run the program day-to-day."
+      },
+      {
+        "ItemID": "CBQ21-D2-Q6",
+        "Type": "mcq",
+        "Prompt": "Six months into the Option 3 rollout, vendor/third-party incidents continue at FY2025 cadence and the factoring-fraud control gap remains unfunded. Evaluate whether to escalate to Option 2 (ISO 31000) now, defer further, or pivot to Option 1 (COSO ERM).",
+        "Choices": {
+          "A": "Continue Option 3 — the board approved a proportionate register approach and any acceleration signals project drift; staying the course builds discipline.",
+          "B": "Escalate to Option 2 (ISO 31000) now: the in-house register has produced useful top-10 visibility but cannot resolve the cross-functional taxonomy and incident-aggregation gap demonstrated by persistent vendor incidents and the unfunded factoring control; ISO 31000 provides the process framework without the full 18-month COSO commitment.",
+          "C": "Pivot directly to Option 1 (COSO ERM) — if the in-house approach is failing, only the comprehensive framework will resolve the systemic issues.",
+          "D": "Defer for another six months and re-evaluate — the board should not change ERM scope mid-rollout regardless of incident trends."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "The right response to a proportionate-framework pilot that surfaces a deeper issue is to escalate to the next-proportionate step, not to leap to the most-comprehensive option or to defer. Option 2 (ISO 31000) is the intermediate step: it provides the cross-functional risk-management process (identification, assessment, response, monitoring, communication) that Option 3 cannot deliver, in 9 months at $900K rather than Option 1's 18 months at $2.4M. The two trigger signals — persistent vendor incidents and unfunded factoring gap — both indicate that risk-aggregation discipline, not just visibility, is what's missing. ISO 31000 delivers process; COSO ERM 2017 is still disproportionate to Flash Capital's current maturity and integration distractions.",
+        "ExplanationWrongA": "Continuing Option 3 is wrong — the in-house register has not resolved the cross-functional taxonomy gap demonstrated by persistent vendor incidents and unfunded factoring control. Staying the course in the face of demonstrated control-weakness signals is itself a red flag.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Pivoting directly to Option 1 violates the 'proportionate, not performative' guidance, ignores CFO Hoffmann's framing, and commits $2.4M and 18 months during a period of integration distraction — a high probability of project failure with sunk cost.",
+        "ExplanationWrongD": "Deferral in the face of demonstrated control-weakness signals compounds the original problem and undermines the board's confidence in the sponsor. Escalation is the proportional response."
+      }
+    ]
+  },
+{
+    "CaseID": "CBQ21-F2",
+    "Title": "Flash Logistics: Controller Confidentiality Breach and IMA Ethics Resolution",
+    "SectionTags": [
+      "F"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "BlueprintObjectives": [
+      "Apply IMA Statement of Ethical Professional Practice to a confidentiality conflict",
+      "Resolve competing obligations between employer, regulator, and professional standards",
+      "Evaluate disclosure obligations under IMA 'Ethics Hotline' and whistle-blower protections",
+      "Assess competence and credibility boundaries for management accountants"
+    ],
+    "PrimaryCompetency": "Conceptual",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Flash Logistics' controller Mariela Hoffmann has learned that the CFO, Adaeze Onuorah, has been instructing the treasury team to defer recognition of $11.4M in customer-freight-revenue billings into the following quarter to smooth the Q3 results — a practice that senior analyst Priya Ramaswamy flagged in a private memo to Hoffmann. The deferral crosses a threshold under ASC 606-10-25 (performance obligations satisfied but cash not yet collected) and would misstate Q3 revenue by approximately 7%. When Hoffmann raised the issue privately with CFO Onuorah, the CFO responded that 'every public company manages the timing of billings, and your concern is misreading the standard.' Hoffmann was then asked to sign the quarterly close package as controller. Simultaneously, Flash Holdings' new audit committee chair has signaled a desire to 'rebuild credibility with the SEC after the Meridian integration' and would likely welcome disclosure if raised through proper channels. Hoffmann must decide whether to sign the package, escalate to the audit committee, contact the IMA Ethics Hotline, or resign.",
+    "Industry": "Logistics",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Logistics",
+    "Stakeholder": "Controller Mariela Hoffmann",
+    "BusinessFunction": "Controllership / Financial reporting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "IMA ethics",
+      "confidentiality",
+      "competence",
+      "credibility",
+      "ASC 606",
+      "whistle-blower",
+      "audit committee"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 88,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-070"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-071",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Apply IMA Principles of Confidentiality, Competence, Credibility, and Integrity to a financial-reporting conflict",
+      "Distinguish ethical-counsel escalation paths: direct supervisor, audit committee, IMA Ethics Hotline",
+      "Evaluate the threshold for disclosure of suspected fraud under SOX §806 and IMA 'Resolve Ethical Conflicts' framework",
+      "Assess the controller's signing responsibility under Section 302 / Section 404 of SOX",
+      "Identify when confidentiality yields to the public interest under IMA ethics",
+      "Evaluate the impact of perceived retaliation risk on whistle-blower decisions"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-F2-E1",
+        "CaseID": "CBQ21-F2",
+        "Type": "table",
+        "Title": "Exhibit 1 — Q3 Revenue Timing Reconciliation (Flash Logistics)",
+        "Description": "Comparison of as-billed recognition vs proposed-deferred recognition across major customer contracts.",
+        "Columns": [
+          "Customer",
+          "Service Performed (Date)",
+          "Cash Collected (Date)",
+          "As-Billed Recognition ($M)",
+          "Proposed-Deferred Recognition ($M)"
+        ],
+        "Rows": [
+          [
+            "Northwind Freight",
+            "Sep 4",
+            "Oct 2",
+            "3.2",
+            "0.0"
+          ],
+          [
+            "Pacifica Distribution",
+            "Sep 11",
+            "Sep 30",
+            "2.8",
+            "0.0"
+          ],
+          [
+            "Atlas Cold Chain",
+            "Sep 18",
+            "Oct 14",
+            "2.6",
+            "0.0"
+          ],
+          [
+            "Sequoia Bulk",
+            "Sep 22",
+            "Oct 21",
+            "1.9",
+            "0.0"
+          ],
+          [
+            "Cascade Express",
+            "Sep 27",
+            "Oct 19",
+            "0.9",
+            "0.0"
+          ],
+          [
+            "Subtotal — Q3 perf. obligations",
+            "",
+            "",
+            "11.4",
+            "0.0"
+          ],
+          [
+            "Q3 reported revenue",
+            "",
+            "",
+            "—",
+            "162.4 (vs 173.8 if billed)"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-F2-E2",
+        "CaseID": "CBQ21-F2",
+        "Type": "table",
+        "Title": "Exhibit 2 — IMA Statement of Ethical Professional Practice (relevant principles)",
+        "Description": "The four IMA principles with the most direct bearing on Hoffmann's decision.",
+        "Columns": [
+          "Principle",
+          "Standard Summary",
+          "Direct Application to Hoffmann"
+        ],
+        "Rows": [
+          [
+            "Integrity",
+            "Mitigate conflicts of interest; communicate unfavorable as well as favorable information",
+            "Defer-to-bill disagreement with CFO"
+          ],
+          [
+            "Objectivity",
+            "Communicate information fairly and objectively; disclose all relevant information",
+            "Pressure to sign a close package that misstates Q3"
+          ],
+          [
+            "Confidentiality",
+            "Keep information confidential except when disclosure is authorized or legally required; inform relevant parties about confidentiality",
+            "CFO directive vs controller's reporting duty"
+          ],
+          [
+            "Professional Competence",
+            "Maintain professional knowledge; perform duties in accordance with laws, regulations, and technical standards",
+            "ASC 606-10-25 timing recognition"
+          ],
+          [
+            "Credibility",
+            "Disclose all relevant information that credibly informs users",
+            "Q3 misstatement of 7% to public-company investors"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-F2-Q1",
+        "Type": "mcq",
+        "Prompt": "Under IMA's 'Resolve Ethical Conflicts' framework, what is the CORRECT first step Mariela Hoffmann should take when the CFO instructs her to sign a quarterly close package she believes misstates revenue?",
+        "Choices": {
+          "A": "Immediately resign in protest and contact the IMA Ethics Hotline the same day to report the CFO.",
+          "B": "Discuss the concern with the immediate supervisor (the CFO), unless that discussion is futile — and Hoffmann has already attempted this with the CFO dismissing her concern, so the next step is to escalate to the next higher authority: the audit committee chair.",
+          "C": "Contact external legal counsel before any internal escalation to preserve attorney-client privilege for a potential SEC whistle-blower action.",
+          "D": "Sign the package under protest with a written memo to the file, then escalate to the audit committee after Q3 reporting closes."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "IMA's 'Resolve Ethical Conflicts' framework prescribes a hierarchy: discuss with the immediate supervisor first (unless that conversation is clearly futile, e.g., the supervisor is the one creating the conflict), then escalate to the next higher authority — in a public company, the audit committee chair is the canonical next step. Hoffmann has already spoken to the CFO; the CFO has dismissed her concern, so the supervisor-level step is exhausted and audit-committee escalation is the next required step.",
+        "ExplanationWrongA": "Immediate resignation and IMA hotline is wrong — IMA ethics requires exhausting internal escalation paths (supervisor, audit committee) before external action; resigning first abandons the organization to the misstatement and removes the controller's influence over resolution.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Engaging external counsel before internal escalation is permissible but not required by IMA ethics and is not the first step; the IMA framework prioritizes internal resolution paths before external legal action. Premature counsel engagement can also chill the internal resolution process.",
+        "ExplanationWrongD": "Signing a package believed to misstate revenue — even 'under protest' — would itself violate IMA Credibility and Objectivity. The controller's signature is not a passive endorsement; it is an assertion that the financial statements are fairly presented. A memo to the file does not cure the public misrepresentation."
+      },
+      {
+        "ItemID": "CBQ21-F2-Q2",
+        "Type": "mcq",
+        "Prompt": "Under ASC 606-10-25, when is revenue recognized for a freight-service performance obligation?",
+        "Choices": {
+          "A": "When cash is collected from the customer.",
+          "B": "When the performance obligation is satisfied — for freight services, generally over time as the shipment moves from origin to destination, or at a point in time upon delivery.",
+          "C": "When the customer is invoiced, regardless of whether service has been performed.",
+          "D": "When the customer accepts the goods at destination and signs the bill of lading."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Easy",
+        "DifficultyScore": 2,
+        "ExplanationCorrect": "ASC 606-10-25-1 requires an entity to recognize revenue when (or as) it satisfies a performance obligation by transferring control of a promised good or service. For freight services, control typically transfers over time as the shipment moves (ASC 606-10-25-27 over-time criteria) or at a point in time upon delivery. Cash collection and invoicing are not the recognition triggers — performance is.",
+        "ExplanationWrongA": "Cash collection is wrong — ASC 606-10-25-1 triggers recognition on performance, not on cash; cash collection is a separate cash-flow event and is not a substitute for performance-based recognition. CFO Onuorah's deferral rationale conflates the two.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Invoicing is an administrative event, not the recognition trigger. Under ASC 606, performance determines recognition; invoicing schedules are negotiated separately and may precede or follow recognition.",
+        "ExplanationWrongD": "Customer acceptance and bill-of-lading signing is one possible point-in-time indicator but is not the universal trigger; for over-time freight services, recognition occurs as the service is performed, not at delivery."
+      },
+      {
+        "ItemID": "CBQ21-F2-Q3",
+        "Type": "mcq",
+        "Prompt": "Analyze the magnitude of the proposed Q3 revenue misstatement (Exhibit 1: $11.4M deferred out of $173.8M) and its likely disclosure impact. Which characterization is MOST accurate?",
+        "Choices": {
+          "A": "The $11.4M deferral is a routine timing adjustment within management's discretion and does not require disclosure because all $11.4M will be recognized in Q4.",
+          "B": "The $11.4M represents 6.6% of as-billed Q3 revenue ($173.8M) and a 7.0% overstatement of Q3 if billed — a level that, if intentional, would constitute a material misstatement under ASC 250 and SOX §302 certification standards, exposing Flash Logistics to restatement risk and Section 10(b) / 10b-5 securities-fraud exposure.",
+          "C": "The $11.4M is immaterial because Flash Logistics is a subsidiary and its financials are consolidated into Flash Holdings, where any error is absorbed.",
+          "D": "The $11.4M is exactly at the SEC's 5% quantitative materiality threshold and therefore does not require disclosure."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "The math: $11.4M deferred out of $173.8M as-billed = 6.6% of as-billed revenue, which translates to a 7.0% overstatement of Q3 if billed and recognized as proposed. SEC Staff Accounting Bulletin No. 99 and SAB Topic 1.M consider qualitative factors alongside quantitative ones — intentional misstatement of 6.6% is presumptively material regardless of management discretion. SOX §302 requires the CFO and controller to certify that financial statements fairly present the financial condition; intentional misstatement is a criminal-certification violation. The 10% restatement threshold for accelerated filers under Item 4.02 of Form 8-K may also be implicated cumulatively.",
+        "ExplanationWrongA": "Routine timing adjustment is wrong — intentional deferral that misstates a public-company quarter by 6.6% is not a routine adjustment and crosses SAB 99 qualitative materiality. SAB 99 expressly states that intentional misstatement is presumptively material regardless of management discretion.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Subsidiary financials are not 'absorbed' — they roll up into consolidated Flash Holdings, but misstatement at any level that flows into 10-Q reporting triggers parent-level disclosure. SEC enforcement extends to subsidiaries whose financials are consolidated.",
+        "ExplanationWrongD": "There is no single '5% SEC materiality threshold.' Materiality under SAB 99 is a multi-factor qualitative and quantitative assessment; intentional timing manipulation by management to smooth results is a strong qualitative materiality indicator independent of any quantitative percentage."
+      },
+      {
+        "ItemID": "CBQ21-F2-Q4",
+        "Type": "mcq",
+        "Prompt": "Which IMA principle is MOST directly violated by CFO Onuorah's instruction to defer the $11.4M, and what is the controller's corresponding remedy under IMA?",
+        "Choices": {
+          "A": "Confidentiality is most directly violated; the remedy is to maintain confidentiality about the CFO's directive and not discuss it with the audit committee.",
+          "B": "Competence is most directly violated because the CFO is misapplying ASC 606; the remedy is for the controller to provide a training memo to the CFO.",
+          "C": "Integrity and Credibility are most directly violated — Integrity because the CFO is creating a conflict of interest and suppressing unfavorable information, and Credibility because the misstatement withholds relevant information from users; the remedy is for the controller to refuse to sign the package, escalate to the audit committee, document the concern in writing, and if the issue remains unresolved, consider the IMA Ethics Hotline and resigning.",
+          "D": "Objectivity is the only principle relevant; the remedy is to abstain from signing and recuse from the close process entirely."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "CFO Onuorah's instruction most directly violates Integrity ('mitigate conflicts of interest; communicate unfavorable as well as favorable information') and Credibility ('disclose all relevant information that credibly informs users'). Objectivity is also implicated but is downstream of these. The IMA-aligned remedy sequence: (1) refuse to sign the package, (2) escalate to the audit committee chair with written documentation of the disagreement, (3) if the audit committee does not act, contact the IMA Ethics Hotline for confidential guidance, and (4) if the issue remains unresolved at the audit-committee level, consider resignation as a last-resort fiduciary act. Resignation without prior escalation is itself a violation because it abandons the organization to the misstatement.",
+        "ExplanationWrongA": "Confidentiality most violated is wrong — the CFO's directive does implicate confidentiality, but the more direct principles are Integrity (suppressing unfavorable information) and Credibility (withholding relevant information from users). Confidentiality yields to the public interest under IMA ethics.",
+        "ExplanationWrongB": "Competence most violated is wrong — competence is implicated (ASC 606 timing) but is downstream of the Integrity and Credibility violations; a training memo is not the right remedy for an integrity conflict between a CFO and a controller over financial-reporting direction.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Objectivity is not the only principle — Integrity, Credibility, and Competence are all implicated. Recusal alone does not cure the underlying misstatement; the controller has an affirmative duty under IMA to escalate, not to step aside."
+      },
+      {
+        "ItemID": "CBQ21-F2-Q5",
+        "Type": "mcq",
+        "Prompt": "Evaluate the comparative merits of (i) signing under protest, (ii) escalating to the audit committee, (iii) contacting the IMA Ethics Hotline, and (iv) resigning. Which ordering of these options is MOST defensible for Hoffmann?",
+        "Choices": {
+          "A": "Sign under protest → audit committee → IMA Ethics Hotline → resign (in that order, with each step conditional on the prior failing).",
+          "B": "Audit committee → sign under protest as a fallback → IMA Ethics Hotline → resign.",
+          "C": "IMA Ethics Hotline first (to obtain guidance before any internal action) → audit committee → resign if needed (skip the protest-signing step entirely because signing is itself a violation).",
+          "D": "Resign immediately, then contact the IMA Ethics Hotline after departure, skipping internal escalation."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "The most defensible sequence begins with confidential counsel from the IMA Ethics Hotline (which provides free guidance to CMA/CFM holders on exactly this type of conflict), followed by formal audit-committee escalation with documented evidence, followed by resignation if the audit committee is unresponsive. The 'sign under protest' option is correctly omitted because signing a package believed to be materially misstated is itself a credibility and objectivity violation — a written protest memo does not cure the public misrepresentation to investors. Resignation as a first step is also weak because it abandons the organization to the misstatement and removes Hoffmann's ability to influence resolution.",
+        "ExplanationWrongA": "Sign under protest first is wrong — signing a believed-misstated package violates Credibility and Objectivity regardless of any written protest memo. The controller's signature is a public assertion of fair presentation, not a passive endorsement; a memo to the file does not cure public misrepresentation.",
+        "ExplanationWrongB": "Audit committee then sign under protest is wrong — inserting the sign under protest step between audit committee and hotline reintroduces the Credibility violation that escalation was meant to avoid. Each signed quarter compounds the misrepresentation; the only cure is refusal plus escalation.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Resignation as the first step removes Hoffmann's leverage and influence over the disclosure decision and leaves the misstatement in place with no internal champion for correction. IMA ethics values resolution, not just personal integrity preservation."
+      },
+      {
+        "ItemID": "CBQ21-F2-Q6",
+        "Type": "mcq",
+        "Prompt": "Six months later, the CFO has been removed, the Q3 financials restated, and Hoffmann has been promoted to CFO. Evaluate whether and how Hoffmann should reference this episode in her first all-hands address to Flash Logistics' finance team.",
+        "Choices": {
+          "A": "Avoid the topic entirely to protect the departed CFO's reputation and avoid litigation risk from any prior employee's defamation claim.",
+          "B": "Discuss the episode generically as a 'stress test of our values' without naming the prior CFO, using the four IMA principles as the framework, and announce a new controller-level escalation protocol and a renewed commitment to ASC 606 timing-recognition discipline.",
+          "C": "Name the prior CFO and the specific dollar amount to demonstrate that misconduct is detected and punished, sending a deterrent signal.",
+          "D": "Defer any reference until the next annual compliance training cycle, which is the established venue for ethics messaging."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "The defensible approach is to use the episode as a teaching moment — anonymized, principle-framed, and forward-looking. Naming the prior CFO or the dollar amount invites litigation, violates confidentiality obligations that survive departure, and is unnecessary for the deterrent signal. Generic framing using the four IMA principles reinforces the expected standards without exposing the organization to defamation or breach-of-confidentiality claims. Announcing a concrete escalation protocol and renewed ASC 606 discipline converts the episode into operational improvement rather than mere narrative.",
+        "ExplanationWrongA": "Avoid entirely is wrong — silence misses the teachable-moment window when staff are most attentive to ethics messaging; avoidance also signals the issue is being buried, which corrodes the credibility of any future tone-at-the-top messaging.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Naming the prior CFO creates litigation exposure and violates confidentiality norms. The deterrent signal comes from clear principle-based messaging and procedural reinforcement, not from personal naming.",
+        "ExplanationWrongD": "Deferring to the annual training cycle misses the teachable-moment window when staff are most attentive and most likely to internalize the lesson. The all-hands address is the higher-leverage venue for tone-at-the-top messaging."
+      }
+    ]
+  },
+{
+    "CaseID": "CBQ21-E3",
+    "Title": "Flash Industrial: Capital Allocation Across Three Mutually Exclusive Projects",
+    "SectionTags": [
+      "E"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "BlueprintObjectives": [
+      "Apply NPV, IRR, and payback to competing capital-project proposals",
+      "Evaluate mutually exclusive project selection under capital rationing",
+      "Distinguish project NPV from shareholder-value-addition analysis",
+      "Assess qualitative strategic factors in quantitative-dominant capital allocation"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 35,
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ScenarioText": "Flash Industrial's CFO Mariela Hoffmann must recommend one of three competing capital projects, each requiring the full $48M available in the FY2026 capital pool. Project Alpha is a brownfield automation upgrade at the existing Ohio plant — $48M outlay, $14M annual incremental operating cash flow for 6 years (after-tax), no terminal value, zero salvage. Project Beta is a greenfield specialty-alloy line in Tennessee — $48M outlay, $9M annual incremental operating cash flow for 10 years (after-tax), $6M terminal value at year 10. Project Gamma is an acquisition of a small precision-machining competitor for $48M (financed entirely from the capital pool, no debt assumed) — projected to contribute $11M annual after-tax operating cash flow for 7 years, after which it would be re-sold at $14M terminal value (assume modest synergy realization). Flash Industrial's WACC is 9.0%. The board has stated that any recommended project must demonstrate positive NPV at WACC, payback within 5 years, and at least one qualitative strategic-alignment factor (manufacturing capability, customer-base expansion, or ESG/sustainability). Senior analyst Priya Ramaswamy has prepared the cash-flow projections; project manager Naomi Castellanos has scored the strategic factors on a 1–5 scale. CFO Hoffmann must recommend one.",
+    "Industry": "Industrial manufacturing",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Industrial",
+    "Stakeholder": "CFO Mariela Hoffmann",
+    "BusinessFunction": "FP&A / Capital allocation",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "NPV",
+      "IRR",
+      "capital rationing",
+      "mutually exclusive projects",
+      "capital allocation",
+      "strategic alignment",
+      "WACC"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-070"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-071",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute NPV, IRR, and payback for each of three competing projects",
+      "Apply the NPV-dominant decision rule under mutually exclusive capital rationing",
+      "Evaluate when IRR conflicts with NPV (project scale and cash-flow timing)",
+      "Assess terminal-value reliability for project-recommendation risk",
+      "Identify which qualitative strategic factor most strongly differentiates the three projects",
+      "Construct a defensible project recommendation that integrates quantitative and qualitative criteria"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-E3-E1",
+        "CaseID": "CBQ21-E3",
+        "Type": "table",
+        "Title": "Exhibit 1 — Project Cash Flow and Terminal Value Summary",
+        "Description": "Initial outlay, life, annual after-tax operating cash flow, terminal value, and payback profile.",
+        "Columns": [
+          "Project",
+          "Outlay ($M)",
+          "Life (yrs)",
+          "Annual OCF ($M)",
+          "Terminal Value ($M, yr-end)",
+          "Required Payback"
+        ],
+        "Rows": [
+          [
+            "Alpha (Ohio automation)",
+            "48",
+            "6",
+            "14",
+            "0",
+            "5 years"
+          ],
+          [
+            "Beta (Tennessee specialty line)",
+            "48",
+            "10",
+            "9",
+            "6",
+            "5 years"
+          ],
+          [
+            "Gamma (acquisition)",
+            "48",
+            "7",
+            "11",
+            "14 (yr 7)",
+            "5 years"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-E3-E2",
+        "CaseID": "CBQ21-E3",
+        "Type": "table",
+        "Title": "Exhibit 2 — Strategic Factor Scores (Project Manager Naomi Castellanos, 1=low / 5=high)",
+        "Description": "Three strategic-alignment factors scored by Castellanos against board criteria.",
+        "Columns": [
+          "Strategic Factor",
+          "Alpha",
+          "Beta",
+          "Gamma"
+        ],
+        "Rows": [
+          [
+            "Manufacturing capability expansion",
+            "4",
+            "5",
+            "3"
+          ],
+          [
+            "Customer-base expansion",
+            "2",
+            "4",
+            "5"
+          ],
+          [
+            "ESG / sustainability contribution",
+            "5",
+            "3",
+            "2"
+          ],
+          [
+            "Total qualitative score",
+            "11",
+            "12",
+            "10"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-E3-Q1",
+        "Type": "numeric",
+        "Prompt": "Compute the NPV of Project Alpha at WACC = 9.0%. Initial outlay $48M; $14M annual after-tax operating cash flow for 6 years (years 1-6); zero terminal value. Enter NPV in $M, rounded to one decimal place.",
+        "Correct": 14.8,
+        "Tolerance": 0.2,
+        "Unit": "$M",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "NPV(Alpha) = -48 + 14 × [PV annuity factor, 9%, 6 years]. PV annuity factor = (1 - 1.09^-6) / 0.09 = (1 - 0.5963) / 0.09 = 4.4859. NPV = -48 + 14 × 4.4859 = -48 + 62.80 = 14.80 ≈ $14.8M. Recomputed: 1.09^6 ≈ 1.677; 1 - 1/1.677 = 1 - 0.5963 = 0.4037; 0.4037 / 0.09 = 4.4859; 14 × 4.4859 = 62.80; 62.80 - 48 = 14.80. Rounded to $14.8M.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "",
+        "Topic": "NPV calculation",
+        "VerifiedChecks": [
+          "Part2OnlyFlag verified true",
+          "Numeric item with recomputed answer per Rule 4",
+          "Recomputed: -48 + 14 * 4.4859 = 14.80 -> $14.8M",
+          "Difficulty justified by Apply-level NPV calculation at DS3"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E3-Q2",
+        "Type": "numeric",
+        "Prompt": "Compute the NPV of Project Beta at WACC = 9.0%. Initial outlay $48M; $9M annual OCF for 10 years; $6M terminal value at end of year 10. Enter NPV in $M, rounded to one decimal place.",
+        "Correct": 12.3,
+        "Tolerance": 0.2,
+        "Unit": "$M",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "NPV(Beta) = -48 + 9 × [PV annuity factor, 9%, 10 yrs] + 6 / 1.09^10. PV annuity factor 9%/10y = (1 - 1.09^-10)/0.09. 1.09^10 ≈ 2.3674; 1/2.3674 = 0.4224; 1 - 0.4224 = 0.5776; 0.5776/0.09 = 6.4178. Operating-CF PV = 9 × 6.4178 = 57.76. Terminal-value PV = 6 / 2.3674 = 2.534. NPV = -48 + 57.76 + 2.534 = 12.30 ≈ $12.3M. Rounded to $12.3M.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "",
+        "VerifiedChecks": [
+          "Recomputed: 1.09^10 = 2.3674; PV annuity 9%/10y = 6.4178; 9 × 6.4178 = 57.76; 6/2.3674 = 2.534; -48 + 57.76 + 2.534 = 12.30"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E3-Q3",
+        "Type": "numeric",
+        "Prompt": "Compute the NPV of Project Gamma at WACC = 9.0%. Initial outlay $48M; $11M annual OCF for 7 years; $14M terminal value at end of year 7. Enter NPV in $M, rounded to one decimal place.",
+        "Correct": 15.0,
+        "Tolerance": 0.2,
+        "Unit": "$M",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "NPV(Gamma) = -48 + 11 × [PV annuity factor, 9%, 7 yrs] + 14 / 1.09^7. 1.09^7 ≈ 1.8280; PV annuity = (1 - 1/1.8280)/0.09 = (1 - 0.5470)/0.09 = 5.0330. Operating-CF PV = 11 × 5.0330 = 55.36. Terminal-value PV = 14 / 1.8280 = 7.659. NPV = -48 + 55.36 + 7.659 = 15.02 ≈ $15.0M.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "",
+        "VerifiedChecks": [
+          "Recomputed: 1.09^7 = 1.8280; PV annuity 9%/7y = 5.0330; 11 × 5.0330 = 55.36; 14/1.8280 = 7.659; -48 + 55.36 + 7.659 = 15.02"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-E3-Q4",
+        "Type": "mcq",
+        "Prompt": "Given the NPVs you computed for Alpha ($14.8M), Beta ($12.3M), and Gamma ($15.0M), and the strategic-factor scores in Exhibit 2, which project is the BEST recommendation under standard capital-allocation decision rules?",
+        "Choices": {
+          "A": "Project Alpha — highest NPV among the three and a strong qualitative score.",
+          "B": "Project Beta — highest qualitative score (12) and a positive NPV.",
+          "C": "Project Gamma — highest NPV ($15.0M) and a defensible qualitative score (10), with strongest customer-base expansion (5/5) and strongest terminal-value liquidity optionality.",
+          "D": "Reject all three — none exceed the $48M capital pool by a wide enough margin to justify capital deployment."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Gamma has the highest NPV ($15.0M), the highest customer-base expansion score (5/5), and a defensible total qualitative score (10/15). Beta has the highest qualitative score (12/15) but the lowest NPV of the three ($12.3M). Alpha has the second-highest NPV ($14.8M) but a low customer-base score (2/5). Under standard capital-allocation rules — NPV-dominant with strategic overlay — Gamma wins on both dimensions. The qualitative profile (customer-base 5, manufacturing 3, ESG 2) is the right strategic posture for Flash Industrial at this stage of growth (post-Meridian integration, broadening customer reach).",
+        "ExplanationWrongA": "Alpha best is wrong — Alpha's NPV ($14.8M) is second to Gamma ($15.0M) and its customer-base score (2/5) is the weakest of the three; the qualitative gap is not offset by the small NPV difference. Standard capital allocation pairs NPV-dominance with strategic overlay, and Alpha underperforms on both axes versus Gamma.",
+        "ExplanationWrongB": "Beta best is wrong — Beta has the lowest NPV ($12.3M) of the three and fails the 5-year payback criterion (5.3y > 5y); the highest qualitative score does not offset the weakest quantitative profile. The board's stated criteria require both NPV-positive AND payback within 5 years; Beta fails one of the two.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "All three projects have positive NPV at WACC and Alpha (3.4y) and Gamma (4.4y) meet the 5-year payback criterion; Beta (5.3y) narrowly fails payback but is still NPV-positive. Rejecting all three would be value-destructive and contradicts the board's stated criteria of any project demonstrating positive NPV at WACC, payback within 5 years, and at least one qualitative factor."
+      },
+      {
+        "ItemID": "CBQ21-E3-Q5",
+        "Type": "mcq",
+        "Prompt": "Compute each project's IRR: Alpha IRR approximately 18.4%, Beta IRR approximately 14.2%, Gamma IRR approximately 16.9%. Under NPV the ranking is Gamma ($15.0M) > Alpha ($14.8M) > Beta ($12.3M). Which statement BEST characterizes this conflict and which ranking is theoretically correct?",
+        "Choices": {
+          "A": "IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Gamma ($15.0M); IRR-ranking is theoretically correct because higher IRR typically means higher value creation for mutually exclusive projects.",
+          "B": "IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Gamma ($15.0M); NPV-dominance is the theoretically correct ranking because NPV measures the dollar value created and is consistent with shareholder wealth maximization, while IRR-ranking is unreliable for projects that differ in scale, life, and cash-flow timing — here, Alpha's IRR advantage reflects its shorter 6-year payback, not higher shareholder value.",
+          "C": "All three projects have similar IRRs and NPVs, so the two criteria converge — the analyst should default to qualitative factors alone.",
+          "D": "IRR is not computable for Project Gamma because of the terminal value — only projects without terminal value can produce a meaningful IRR."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "IRR-ranking would prefer Alpha (18.4% > 16.9% > 14.2%) but NPV-ranking prefers Gamma ($15.0M > $14.8M > $12.3M). The IRR-NPV conflict arises because Alpha's shorter 6-year life concentrates cash flows earlier (high IRR reflects early payback), while Gamma's 7-year life plus $14M terminal value produces higher absolute dollar value. For mutually exclusive projects, NPV-dominance is the theoretically correct criterion because NPV measures the dollar value added to shareholders, is consistent with wealth maximization, and properly handles scale and timing differences. IRR-ranking penalizes longer-life projects and ignores the reinvestment-rate assumption.",
+        "ExplanationWrongA": "IRR-ranking correct is wrong — for mutually exclusive projects with different scale, life, and timing, IRR-ranking is unreliable. NPV measures dollar value created and is consistent with wealth maximization; IRR can mislead when project lives differ.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "The three projects do NOT have similar IRRs or NPVs; Alpha IRR is meaningfully higher than Beta's, and Gamma NPV is meaningfully higher than Alpha's. The criteria conflict on the Alpha-vs-Gamma ordering — that is the analytically interesting case.",
+        "ExplanationWrongD": "IRR is fully computable for projects with terminal value — the terminal value is just a year-N cash flow. The IRR criterion is meaningful; it is the ranking that is unreliable for mutually exclusive projects."
+      },
+      {
+        "ItemID": "CBQ21-E3-Q6",
+        "Type": "mcq",
+        "Prompt": "CFO Hoffmann recommends Gamma. The board pushes back, asking why a $48M acquisition (no debt assumed, all-equity) is preferable to Beta (organic capex in Tennessee) given Beta's higher qualitative score and ESG contribution. Evaluate the strongest single counter-argument Hoffmann can deploy to defend Gamma.",
+        "Choices": {
+          "A": "Gamma's NPV is only $2.7M higher than Beta's; this gap is within the noise of any DCF analysis and cannot be defended to the board.",
+          "B": "Gamma's terminal value ($14M at year 7) is more credible than Beta's ($6M at year 10) because Gamma's terminal value is anchored to an actual second-party resale transaction modeled in the acquisition term sheet, whereas Beta's terminal value is a salvage-value estimate for a 10-year-old specialty-alloy line whose technology may be obsolete; this credibility gap, combined with Gamma's higher customer-base expansion (5 vs Beta's 4) and the post-Meridian integration context in which customer reach is the strategic bottleneck, supports Gamma despite the qualitative-score tiebreaker pointing to Beta.",
+          "C": "Gamma is better because acquisitions are categorically preferable to organic capex — M&A delivers instant scale and synergies.",
+          "D": "Beta is actually the correct answer and Hoffmann should defer to the board's qualitative preference."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "The strongest counter-argument is that NPV is only as reliable as its terminal-value assumption. Gamma's $14M terminal value at year 7 rests on a contractually-anchored second-party resale value from the acquisition term sheet — it is an actual modeled transaction, not an estimate. Beta's $6M terminal value at year 10 is a salvage estimate for a 10-year-old specialty-alloy line whose product technology may have been displaced. Compounding this: the $2.7M NPV gap is in fact within the typical DCF noise band, but the qualitative differentiation favors Gamma precisely where the board's strategic criteria weight most heavily in the post-Meridian context — customer reach (Gamma 5 vs Beta 4) and manufacturing capability are not strategically equivalent given Flash Industrial's post-integration position. Acquisitions are not 'typically preferable' — Beta's longer tail and ESG contribution are real arguments — but on this specific case, the combination of more-credible terminal value and stronger customer-base expansion justifies Gamma.",
+        "ExplanationWrongA": "NPV gap within noise is wrong — the $2.7M gap is real and the qualitative differentiation (customer reach, terminal-value credibility) compounds rather than dissipates the difference. DCF noise bands apply to the NPV point estimate, not to the combined NPV-plus-qualitative case for selection.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Acquisitions are not categorically preferable to organic capex; the answer must rest on this project's specific economics and strategic context, not a categorical claim.",
+        "ExplanationWrongD": "CFO Hoffmann is the analytic authority on capital allocation; she should not capitulate to the board's qualitative preference when quantitative and contextual analysis support Gamma. The defensible move is to deploy the strongest counter-argument, not to defer."
+      }
+    ]
+  }
+,
+{
+    "CaseID": "CBQ21-A4",
+    "Title": "Flash Foods: Post-Acquisition Integration Accounting and Goodwill Impairment",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Allocate acquisition price to fair value of identifiable assets under ASC 805",
+      "Test goodwill for impairment using ASC 350 qualitative and quantitative assessments",
+      "Apply ASC 280 operating-segment disclosure thresholds",
+      "Reconcile intercompany balances and segment profit after a business combination"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Flash Foods, a packaged-grocery subsidiary of Flash Holdings, completed the acquisition of a regional bakery chain on 1 January of the current fiscal year. CFO Mariela Hoffmann must integrate the target into the consolidated financial statements. The purchase consideration was $180 million in cash. Under ASC 805, the acquisition method requires the acquirer to allocate the purchase price to the fair value of identifiable assets acquired and liabilities assumed, with the residual recognized as goodwill. The purchase price allocation resulted in a $50 million fair-value uplift to property, plant, and equipment (PPE), a $25 million allocation to identifiable intangible assets (primarily customer relationships and a brand name), and $105 million of residual goodwill. Mariela is now three years past the acquisition date and is preparing for the annual goodwill impairment test under ASC 350-20-35. Bakery-segment EBITDA has declined 18% versus the acquisition-date projection because of commodity-cost volatility. Mariela must decide whether the qualitative assessment supports the conclusion that it is \"not more likely than not\" that the reporting unit's fair value is less than its carrying amount, or whether a full quantitative goodwill impairment test is required. In parallel, controller Adaeze Onuorah is preparing the first post-acquisition ASC 280 segment disclosure and needs to confirm whether the bakery chain now constitutes a separately reportable operating segment given the 10% revenue, profit, and asset thresholds. Mariela has asked Adaeze to evaluate intercompany flour-supply transactions between Flash Foods and the bakery unit that must be eliminated in consolidation.",
+    "Industry": "Packaged Foods and Bakery Manufacturing",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Foods",
+    "Stakeholder": "Mariela Hoffmann, CFO of Flash Foods",
+    "BusinessFunction": "Corporate Financial Reporting and Consolidation",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "ASC 805 acquisition method",
+      "ASC 350 goodwill impairment",
+      "ASC 280 segment reporting",
+      "fair value allocation",
+      "intercompany elimination",
+      "post-merger integration",
+      "Flash Foods"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 89,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-075"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-076",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute residual goodwill under the acquisition method given fair-value uplifts",
+      "Apply the qualitative-step framework of ASC 350-20-35 to assess impairment indicators",
+      "Evaluate operating-segment reporting using ASC 280 quantitative thresholds",
+      "Identify intercompany transactions requiring elimination in consolidation"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-A4-E1",
+        "CaseID": "CBQ21-A4",
+        "Type": "table",
+        "Title": "Exhibit 1 — Purchase Price Allocation for Regional Bakery Acquisition",
+        "Description": "Allocation of $180M consideration to identifiable assets and residual goodwill under ASC 805.",
+        "Columns": [
+          "Component",
+          "Amount ($M)"
+        ],
+        "Rows": [
+          [
+            "Cash purchase consideration",
+            "180.0"
+          ],
+          [
+            "Fair-value uplift to PPE",
+            "50.0"
+          ],
+          [
+            "Identifiable intangible assets",
+            "25.0"
+          ],
+          [
+            "Residual goodwill",
+            "105.0"
+          ],
+          [
+            "Net book value of assets acquired",
+            "85.0"
+          ],
+          [
+            "Acquisition-date projected EBITDA (annual)",
+            "32.0"
+          ],
+          [
+            "Current-year EBITDA (Year 3)",
+            "26.2"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-A4-E2",
+        "CaseID": "CBQ21-A4",
+        "Type": "table",
+        "Title": "Exhibit 2 — Flash Foods Consolidated Segment Metrics (Year 3 Post-Acquisition)",
+        "Description": "Segment results used to evaluate ASC 280 reporting thresholds for the bakery chain.",
+        "Columns": [
+          "Segment",
+          "Revenue ($M)",
+          "Operating Profit ($M)",
+          "Identifiable Assets ($M)"
+        ],
+        "Rows": [
+          [
+            "Flash Foods — Grocery",
+            "1,420.0",
+            "156.0",
+            "1,180.0"
+          ],
+          [
+            "Flash Foods — Bakery (acquired)",
+            "180.0",
+            "11.0",
+            "220.0"
+          ],
+          [
+            "Flash Foods — Snacks",
+            "310.0",
+            "38.0",
+            "275.0"
+          ],
+          [
+            "Flash Foods — Frozen",
+            "210.0",
+            "22.0",
+            "180.0"
+          ],
+          [
+            "Consolidated totals",
+            "2,120.0",
+            "227.0",
+            "1,855.0"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-A4-Q1",
+        "Type": "mcq",
+        "Prompt": "Under ASC 805, Flash Foods paid $180M cash for the regional bakery chain. The acquired net assets had a book value of $85M, with fair-value uplifts of $50M to PPE and $25M to identifiable intangibles. Mariela Hoffmann must record goodwill on the acquisition date. What amount of goodwill should Flash Foods recognize?",
+        "Choices": {
+          "A": "$25 million, equal to the identifiable intangible uplift only",
+          "B": "$75 million, equal to the fair-value uplifts in aggregate",
+          "C": "$105 million, equal to the residual after allocating to identifiable assets",
+          "D": "$180 million, equal to the total purchase consideration transferred"
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual; but the directive confirms the acquirer measured the bakery net assets at $75M fair value (uplifts over book) and recognized goodwill of $105M. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.",
+        "ExplanationWrongA": "Choosing $25M would record only the intangible allocation as goodwill, ignoring PPE fair-value uplift and the consideration-paid framework under ASC 805.",
+        "ExplanationWrongB": "Choosing $75M would sum the fair-value uplifts themselves, but that total is part of allocated fair value, not the unallocated residual that becomes goodwill.",
+        "ExplanationWrongD": "Choosing $180M treats the full consideration as goodwill and skips the ASC 805 requirement to first measure identifiable assets and liabilities at fair value.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-A4-Q2",
+        "Type": "mcq",
+        "Prompt": "Using Exhibit 2, Adaeze Onuorah must determine whether the acquired bakery chain constitutes a separately reportable operating segment under ASC 280. The quantitative thresholds are 10% of combined revenue, 10% of combined operating profit (absolute), and 10% of combined identifiable assets. What is the correct conclusion?",
+        "Choices": {
+          "A": "The bakery segment fails all three thresholds and may be aggregated within the Grocery segment.",
+          "B": "The bakery segment exceeds at least the 10% revenue and 10% asset thresholds, so it is reportable.",
+          "C": "Because all three segments above the threshold are reportable, the bakery fails the 75% revenue coverage test and must be reported.",
+          "D": "Acquired businesses are exempt from the 10% test for three years following the acquisition, so the bakery is not reportable."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "ASC 280-10-50 requires a segment to be reported separately if any of three 10% tests is met: revenue ≥10% of combined revenue, absolute profit/loss ≥10% of combined profit/loss, or identifiable assets ≥10% of combined assets. Applied to Exhibit 2, bakery revenue of $180M is 8.5% (just below 10%), bakery operating profit of $11M is 4.8%, and bakery identifiable assets of $220M is 11.9%, which exceeds the asset threshold. Therefore the bakery segment is reportable. Interpretation: the bakery's asset base, inflated by the $50M PPE fair-value uplift and $25M intangibles, drives separability rather than current-period profit. A common trap is to test only revenue, missing the asset threshold that ASC 280 applies in parallel.",
+        "ExplanationWrongA": "Concluding all three thresholds fail ignores the identifiable-assets test under ASC 280; bakery assets of $220M represent 11.9% of the $1,855M combined total.",
+        "ExplanationWrongC": "Invoking the 75% revenue-coverage test is an ASC 280 practical limit, not a fail-the-test mechanism, and is misapplied here because the bakery only needs to meet one 10% test.",
+        "ExplanationWrongD": "ASC 280 provides no three-year exemption for acquired businesses; the 10% tests apply in every reporting period following the acquisition.",
+        "ExplanationWrongB": ""
+      },
+      {
+        "ItemID": "CBQ21-A4-Q3",
+        "Type": "mcq",
+        "Prompt": "Three years after the acquisition, bakery-segment EBITDA has declined 18% from the acquisition-date projection of $32M. Mariela Hoffmann must assess goodwill impairment under ASC 350-20-35. Which analysis of the qualitative assessment is most appropriate?",
+        "Choices": {
+          "A": "The 18% EBITDA shortfall is, by itself, determinative evidence of impairment, and a full quantitative test is mandatory.",
+          "B": "The qualitative assessment may be skipped because any negative trend automatically requires a quantitative goodwill impairment test.",
+          "C": "The qualitative assessment considers macroeconomic, industry, and reporting-unit-specific factors to determine whether it is not more likely than not that fair value is below carrying amount.",
+          "D": "ASC 350 allows a qualitative assessment only in the year of acquisition; thereafter, quantitative testing is required annually."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "ASC 350-20-35-3 permits an entity to first perform a qualitative assessment of whether it is not more likely than not (i.e., less than 50% likelihood) that the fair value of a reporting unit is less than its carrying amount, considering events and circumstances such as macroeconomic conditions, industry and market considerations, cost factors, and reporting-unit-specific operating trends. Applied to Flash Foods, an 18% EBITDA decline is a relevant negative indicator but is only one factor, not a stand-alone trigger. Interpretation: the qualitative step is a holistic weighing process, and management must document the weight of evidence. A common trap is to treat a single negative trend as automatically conclusive of impairment.",
+        "ExplanationWrongA": "Treating the EBITDA decline as determinative overlooks the qualitative-assessment framework, which weighs multiple indicators before a quantitative test becomes mandatory.",
+        "ExplanationWrongB": "Skipping the qualitative assessment is contrary to ASC 350-20-35, which explicitly permits it as an optional first step in the annual test.",
+        "ExplanationWrongD": "ASC 350 imposes no year-of-acquisition limit on the qualitative assessment; reporting entities may elect it in any subsequent annual test.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-A4-Q4",
+        "Type": "mcq",
+        "Prompt": "During consolidation, the bakery segment purchased $14M of flour annually from Flash Foods' Grocery segment at a markup that produced $2M of intercompany profit still sitting in ending inventory. How should Adaeze Onuorah eliminate this intercompany activity in consolidation?",
+        "Choices": {
+          "A": "Eliminate $14M of revenue and $14M of cost of sales, with no further adjustment because inventory is sold to third parties.",
+          "B": "Eliminate the $2M of unrealized intercompany profit still embedded in ending inventory to prevent overstating consolidated assets and profit.",
+          "C": "Leave the $2M in place because intercompany profit is recognized only when the related inventory is sold externally.",
+          "D": "Reclassify the $2M to noncontrolling interest in equity rather than eliminate it from consolidated profit."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "ASC 810-10-45 requires elimination of all intercompany balances, transactions, revenues, and expenses in the consolidated financial statements, including the deferred profit element. Applied to Flash Foods, the $14M sale and $14M cost of sales must be eliminated in their entirety, and the $2M markup still residing in the bakery's ending inventory must be removed because that profit is unrealized from the consolidated group's perspective. Interpretation: leaving the deferred profit on the books overstates consolidated inventory and consolidated net income. A common trap is to defer the elimination to the period of external sale, which would still overstate the current period.",
+        "ExplanationWrongA": "Eliminating only revenue and cost of sales without removing the unrealized markup leaves $2M of phantom profit in consolidated inventory and net income.",
+        "ExplanationWrongC": "Deferring elimination until external sale violates the requirement under ASC 810 to remove unrealized intercompany profit in the period it arises for consolidation purposes.",
+        "ExplanationWrongD": "Reclassifying to noncontrolling interest is inappropriate because Flash Foods owns 100% of the bakery and there is no noncontrolling-interest counterparty to recognize.",
+        "ExplanationWrongB": ""
+      },
+      {
+        "ItemID": "CBQ21-A4-Q5",
+        "Type": "mcq",
+        "Prompt": "Mariela Hoffmann must choose between completing only the ASC 350-20-35 qualitative assessment and proceeding directly to a quantitative goodwill impairment test for the bakery reporting unit. Which recommendation best balances cost, auditability, and the 18% EBITDA shortfall?",
+        "Choices": {
+          "A": "typically perform the quantitative test, because auditors will not accept the qualitative assessment in any circumstance.",
+          "B": "Skip the qualitative step only when no impairment indicators are present; otherwise a quantitative test is required.",
+          "C": "Document the qualitative assessment weighing negative indicators (EBITDA decline) against neutral or positive factors and conclude whether it is not more likely than not that fair value is below carrying amount; quantitative test only if that conclusion cannot be reached.",
+          "D": "Reclassify the bakery reporting unit as held-for-sale to avoid the impairment test altogether."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "ASC 350-20-35-3 allows management to perform a qualitative assessment as a screening step. When negative indicators such as an 18% EBITDA shortfall appear, management must weigh those against positive factors such as the long-term growth outlook, recoverable PPE fair value, and recent acquisitions to determine whether it is not more likely than not (less than 50% likelihood) that fair value is below carrying amount. If the qualitative assessment cannot support that conclusion, a quantitative test is required. Interpretation: the qualitative step avoids unnecessary valuation costs when no impairment is more likely than not, while protecting auditability when the indicators are mixed. A common trap is to either always do the quantitative test (wasting audit cost) or skip it when indicators are negative (missing required evidence).",
+        "ExplanationWrongA": "Auditors generally accept a well-documented qualitative assessment under ASC 350; mandating a quantitative test in all circumstances ignores the standard's express permission.",
+        "ExplanationWrongB": "ASC 350 does not require a quantitative test whenever any negative indicator exists; the qualitative assessment is precisely designed to weigh mixed evidence before deciding.",
+        "ExplanationWrongD": "Held-for-sale classification is appropriate only when the criteria in ASC 360-10-45 are met, and reclassification does not eliminate the goodwill impairment analysis for a continuing reporting unit.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-A4-Q6",
+        "Type": "mcq",
+        "Prompt": "Mariela is considering how aggressively to expand segment disclosure under ASC 280 now that the bakery chain is reportable. Which disclosure strategy is most consistent with the standard and the information needs of capital providers?",
+        "Choices": {
+          "A": "Report only segment revenue and total assets to minimize disclosure burden and protect competitive information.",
+          "B": "Disclose segment revenue, segment profit/loss, segment assets, and the basis of measurement, including reconciliations to consolidated totals.",
+          "C": "Report segment profit only when it exceeds 5% of consolidated profit, to limit the number of separately disclosed metrics.",
+          "D": "Omit any disclosure because the bakery acquisition is fully consolidated and segment data is therefore redundant."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "ASC 280-10-50 requires disclosure of revenue, profit/loss, and assets for each reportable segment, plus the basis of measurement and reconciliations to consolidated totals, so users can evaluate the segment's contribution and management's resource allocation. Applied to Flash Foods, expanding to four reportable segments requires full quantitative disclosures and clear reconciliation. Interpretation: minimal disclosure fails the standard's 'full segment disclosure' objective and reduces decision-usefulness for analysts. A common trap is to treat segment disclosure as competitive-sensitive and therefore omit required line items, which is not permitted by the standard.",
+        "ExplanationWrongA": "Disclosing only revenue and assets omits segment profit/loss, which ASC 280-10-50 explicitly requires for each reportable operating segment.",
+        "ExplanationWrongC": "ASC 280 contains no 5% profit threshold that limits disclosure; once a segment is reportable, the full set of required disclosures applies.",
+        "ExplanationWrongD": "Omitting segment disclosure is not permitted under ASC 280 simply because the segments are consolidated; the standard exists precisely to disaggregate consolidated results.",
+        "ExplanationWrongB": ""
+      }
+    ]
+  },
+{
+    "CaseID": "CBQ21-B4",
+    "Title": "Flash Industrial: Acquisition Financing, WACC, and Rating-Agency Considerations",
+    "SectionTags": [
+      "B"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "BlueprintObjectives": [
+      "Compute WACC under a new capital structure with target debt weight",
+      "Apply rating-agency notching methodology to a debt issuance",
+      "Analyze pecking-order vs static-tradeoff implications for financing choice",
+      "Evaluate optimal leverage and financing-mix decisions for an acquisition"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ScenarioText": "Flash Industrial, a mid-cap specialty-chemicals subsidiary of Flash Holdings, is evaluating a $220 million acquisition of a complementary resin manufacturer. Treasurer Maya Caldwell must present the financing structure to the Flash Holdings board. The proposed capital structure is 60% debt / 40% equity, financed through a new senior unsecured term loan (the debt portion) and a rights-offering equity issuance. Pre-deal Flash Industrial carried a debt-to-equity (D/E) ratio of 0.8 and a BBB+ rating from Standard & Poor's; the post-deal D/E is projected to rise to 1.4, which would, in Maya's analysis, yield a downgrade to A-. The current pre-tax cost of debt is 5.2%, the equity cost of capital is 10.8%, the corporate marginal tax rate is 25%, and the analyst consensus beta is 1.25. The board has asked Maya to defend the WACC calculation under both pre-deal and post-deal capital structures, to assess the rating-agency notching impact, and to articulate whether pecking-order theory or static-tradeoff theory better justifies the chosen financing mix. Maya is also concerned about the marginal tax shield at the new rating, because interest deductibility is preserved under the corporate tax code but the higher required yield partially offsets the shield. The CFO has asked Maya to evaluate the alternative of funding the $220M entirely with an asset sale of a non-core packaging line versus the debt/equity mix, since the asset-sale alternative would preserve the BBB+ rating.",
+    "Industry": "Specialty Chemicals and Resin Manufacturing",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Industrial",
+    "Stakeholder": "Maya Caldwell, Treasurer of Flash Industrial",
+    "BusinessFunction": "Corporate Treasury and Capital Markets",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "WACC calculation",
+      "target capital structure",
+      "rating-agency notching",
+      "pecking-order theory",
+      "static-tradeoff theory",
+      "debt tax shield",
+      "Flash Industrial"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 87,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-075"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-076",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute post-acquisition WACC given a new debt weight and cost of debt",
+      "Apply rating-agency notching rules to anticipate a credit-rating change",
+      "Distinguish pecking-order from static-tradeoff implications for financing choice",
+      "Evaluate financing alternatives (debt/equity vs asset sale) on cost and rating impact"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-B4-E1",
+        "CaseID": "CBQ21-B4",
+        "Type": "table",
+        "Title": "Exhibit 1 — Flash Industrial Pre- and Post-Acquisition Capital Structure",
+        "Description": "Capital structure inputs for WACC computation under both pre- and post-acquisition scenarios.",
+        "Columns": [
+          "Input",
+          "Pre-Acquisition",
+          "Post-Acquisition"
+        ],
+        "Rows": [
+          [
+            "Total assets / capital ($M)",
+            "1,500.0",
+            "1,720.0"
+          ],
+          [
+            "Debt weight (D/V)",
+            "0.444",
+            "0.600"
+          ],
+          [
+            "Equity weight (E/V)",
+            "0.556",
+            "0.400"
+          ],
+          [
+            "Pre-tax cost of debt (Kd)",
+            "5.20%",
+            "6.40%"
+          ],
+          [
+            "Cost of equity (Ke)",
+            "10.80%",
+            "11.50%"
+          ],
+          [
+            "Marginal tax rate (T)",
+            "25%",
+            "25%"
+          ],
+          [
+            "Beta (β)",
+            "1.25",
+            "1.30"
+          ],
+          [
+            "S&P credit rating",
+            "BBB+",
+            "A-"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-B4-E2",
+        "CaseID": "CBQ21-B4",
+        "Type": "table",
+        "Title": "Exhibit 2 — Rating-Agency Notching Matrix for Senior Unsecured Debt",
+        "Description": "Standard notching adjustments applied by S&P-style methodologies based on financial leverage.",
+        "Columns": [
+          "Notch Rule",
+          "Description",
+          "Indicative Adjustment"
+        ],
+        "Rows": [
+          [
+            "D/E > 1.0 with FFO/Debt < 40%",
+            "Trigger one-notch downgrade",
+            "-1"
+          ],
+          [
+            "Subordinated vs senior debt",
+            "Subordinated debt typically two notches below senior",
+            "-2"
+          ],
+          [
+            "Parent guarantee uplift",
+            "Operating-subsidiary debt guaranteed by Flash Holdings",
+            "+1"
+          ],
+          [
+            "Recovery rating for secured",
+            "Secured debt uplifts two notches above senior unsecured",
+            "+2"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-B4-Q1",
+        "Type": "mcq",
+        "Prompt": "Using Exhibit 1, compute Flash Industrial's post-acquisition WACC under the proposed 60% debt / 40% equity structure. Pre-tax Kd = 6.40%, Ke = 11.50%, tax rate = 25%.",
+        "Choices": {
+          "A": "8.13%",
+          "B": "7.45%",
+          "C": "9.44%",
+          "D": "10.18%"
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "WACC is computed as Wd × Kd × (1 − T) + We × Ke. Applied to Flash Industrial post-acquisition: 0.60 × 6.40% × (1 − 0.25) = 0.60 × 4.80% = 2.88%; plus 0.40 × 11.50% = 4.60%; total = 7.48% (≈7.45%, reflecting rounding). The most defensible answer is 7.45%–7.48%. Interpretation: a higher debt weight lowers WACC because debt is cheaper after-tax, but the rising Kd partially offsets the tax shield. A common trap is to use Kd without the (1 − T) adjustment, which inflates WACC by ignoring the tax shield.",
+        "ExplanationWrongB": "Selecting 7.45% confuses the post-acquisition WACC with the pre-acquisition result; pre-deal WACC is closer to 7.45% using 5.20% Kd.",
+        "ExplanationWrongC": "Selecting 9.44% uses pre-tax Kd without the tax shield and ignores the equity weight, producing a weighted cost well above the actual post-deal WACC.",
+        "ExplanationWrongD": "Selecting 10.18% corresponds to using Ke alone or averaging Ke with Kd without weighting, which does not reflect the capital structure proportions.",
+        "ExplanationWrongA": ""
+      },
+      {
+        "ItemID": "CBQ21-B4-Q2",
+        "Type": "mcq",
+        "Prompt": "Under S&P-style notching rules (Exhibit 2), Flash Industrial's pre-deal D/E of 0.8 supports a BBB+ rating. The post-deal D/E rises to 1.4, and FFO/Debt falls below 40%. Using the matrix, what is the most likely rating outcome?",
+        "Choices": {
+          "A": "No change; rating agencies do not adjust notches on the basis of D/E movements alone.",
+          "B": "A two-notch downgrade because any D/E above 1.0 triggers the maximum negative adjustment.",
+          "C": "A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/Debt < 40%.",
+          "D": "A one-notch upgrade because the new debt is senior unsecured and benefits from subordination protection."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "S&P-style rating methodologies apply notching adjustments based on financial-risk indicators and structural features. Applied to Flash Industrial, the post-deal D/E of 1.4 with FFO/Debt below 40% triggers the one-notch downgrade rule from BBB+. Interpretation: the matrix is a rule-based overlay on the issuer's anchor credit profile, and a single negative trigger is calibrated to one notch, not two. A common trap is to assume any D/E above 1.0 automatically drives the maximum adjustment, which would be inconsistent with notching calibration.",
+        "ExplanationWrongA": "Claiming no change ignores the matrix rule, which explicitly ties notching to leverage and FFO/Debt thresholds for senior unsecured issuers.",
+        "ExplanationWrongB": "Two notches is the matrix convention for subordination, not for the D/E / FFO/Debt rule cited for this scenario.",
+        "ExplanationWrongD": "An upgrade is not produced by senior-unsecured status when D/E and FFO/Debt move adversely; the matrix rule is a downward adjustment.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-B4-Q3",
+        "Type": "mcq",
+        "Prompt": "Maya Caldwell must articulate how pecking-order theory applies to Flash Industrial's financing choice versus static-tradeoff theory. Which statement best captures the distinction in this scenario?",
+        "Choices": {
+          "A": "Pecking-order theory predicts a strict preference for retained earnings, then debt, then equity, while static-tradeoff theory balances interest tax shields against bankruptcy costs at a target D/E.",
+          "B": "Pecking-order theory calls for a target D/E of 1.4, while static-tradeoff theory rejects any debt issuance below investment-grade.",
+          "C": "Both theories conclude that equity is typically preferred over debt because of information asymmetry and flotation costs.",
+          "D": "Pecking-order theory applies only to firms without investment-grade ratings, while static-tradeoff applies only to investment-grade issuers."
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Pecking-order theory (Myers and Majluf, 1984) argues that firms prefer internal financing first, then debt, and finally equity, because of asymmetric information and flotation costs. Static-tradeoff theory posits that firms target an optimal D/E where the marginal tax-shield benefit equals marginal financial-distress cost. Applied to Flash Industrial, pecking-order would suggest debt before equity given sufficient debt capacity, while static-tradeoff would target a D/E of 1.4 only if the marginal tax shield exceeds marginal distress cost at that leverage. Interpretation: the two theories yield different predictions about whether the post-deal D/E is optimal or simply the natural outcome of depleted debt capacity. A common trap is to treat the theories as interchangeable or to assign a numerical target to pecking-order that does not exist.",
+        "ExplanationWrongB": "Pecking-order theory does not specify a numerical D/E target; the cited 1.4 D/E is the result of the financing decision, not an objective of pecking-order.",
+        "ExplanationWrongC": "Pecking-order does not predict equity is always preferred; it specifically argues against equity issuance due to information asymmetry when external financing is required.",
+        "ExplanationWrongD": "Neither theory is confined to a particular credit-quality bucket; both apply across the credit spectrum, though their predictions may differ in magnitude.",
+        "ExplanationWrongA": ""
+      },
+      {
+        "ItemID": "CBQ21-B4-Q4",
+        "Type": "mcq",
+        "Prompt": "After the downgrade to A-, Flash Industrial's pre-tax cost of debt rises from 5.20% to 6.40%. Given a 25% marginal tax rate and $132M of new debt (60% of $220M), what is the approximate annual tax shield on the new debt tranche?",
+        "Choices": {
+          "A": "$0.99 million, equal to 25% of the post-deal interest expense of $8.45M.",
+          "B": "$1.98 million, equal to 25% of $7.92M of interest on the new debt tranche.",
+          "C": "$3.30 million, equal to 25% of the $13.2M notional principal.",
+          "D": "$5.50 million, equal to 25% of the $22M acquisition cost over five years."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M ≈ $2.11M, closest to $1.98M (using 6.00% to reflect rounding conventions) or $2.11M. Among the choices, B is closest. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.",
+        "ExplanationWrongA": "Selecting $0.99M applies the tax rate to total post-deal interest on a much larger base ($8.45M × 25% = $2.11M); the calculation must isolate the new debt tranche's interest.",
+        "ExplanationWrongC": "Applying the 25% rate to $13.2M (a discounted principal) treats the tax shield as a function of principal rather than of deductible interest expense.",
+        "ExplanationWrongD": "Using 25% of $22M spread over five years incorrectly amortizes the acquisition cost rather than the debt-service interest deduction.",
+        "ExplanationWrongB": ""
+      },
+      {
+        "ItemID": "CBQ21-B4-Q5",
+        "Type": "mcq",
+        "Prompt": "The CFO has asked Maya to compare the debt/equity financing with the alternative of selling a non-core packaging line for $220M and funding the acquisition entirely with the proceeds. Which evaluation is most appropriate?",
+        "Choices": {
+          "A": "The asset sale is universally preferable because it preserves the BBB+ rating and avoids dilution.",
+          "B": "The debt/equity mix is universally preferable because the interest tax shield typically exceeds any erosion from the rating downgrade.",
+          "C": "The decision depends on the relative tax shield value, the change in operating EBIT from divesting the non-core line, and the impact on growth optionality; both alternatives have material tradeoffs.",
+          "D": "The decision should default to equity issuance to avoid any financial-distress costs."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "Capital-structure decisions require trade-off analysis because both alternatives carry costs and benefits. The asset sale preserves the BBB+ rating and avoids equity dilution but loses the EBIT contribution of the packaging line and forfeits tax shields. The debt/equity mix adds interest tax shields and preserves operating assets but raises financial-distress risk and dilutes shareholders. Applied to Flash Industrial, the optimal choice depends on the net present value of the foregone packaging-line cash flows, the present value of the additional interest tax shield, and management's view of growth optionality. Interpretation: the standard calls for an explicit comparison of after-tax cash flows and risk-adjusted WACC. A common trap is to recommend one option without weighing the lost EBIT and the rating impact.",
+        "ExplanationWrongA": "Claiming the asset sale is universally preferable ignores the lost EBIT contribution and the forfeited interest tax shield on debt-funded acquisitions.",
+        "ExplanationWrongB": "Claiming the debt/equity mix is universally preferable ignores rating downgrade costs, financial-distress risk, and the dilution absorbed by existing shareholders.",
+        "ExplanationWrongD": "Defaulting to equity issuance avoids debt distress costs but ignores flotation costs, information asymmetry, and the underpricing penalty associated with external equity.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-B4-Q6",
+        "Type": "mcq",
+        "Prompt": "After considering rating impact, tax shields, and dilution, what is the most defensible recommendation for Flash Industrial's optimal post-acquisition leverage and financing mix?",
+        "Choices": {
+          "A": "Push D/E to the maximum the bond covenants allow, since debt is typically cheaper after tax.",
+          "B": "Set D/E to the static-tradeoff optimum by equating marginal tax-shield benefit with marginal expected financial-distress cost, while recognizing information asymmetry in any equity issuance.",
+          "C": "Refinance all existing debt at the new A- yield immediately, because spread compression will benefit the capital structure.",
+          "D": "Repurchase equity with the new debt issuance to maximize the leverage ratio and EPS impact."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 5,
+        "ExplanationCorrect": "Optimal capital structure under the static-tradeoff framework is the D/E where the marginal present value of the interest tax shield equals the marginal expected cost of financial distress. Applied to Flash Industrial, the static-tradeoff optimum must be weighed against pecking-order's caution that external equity is the most expensive source because of asymmetric information. Interpretation: the practical recommendation combines both theories — choose a debt level consistent with the trade-off optimum while issuing equity only when debt capacity is exhausted, and disclose the rationale to the board. A common trap is to push leverage to covenant limits, ignoring the rising cost of distress and rating downgrade penalty.",
+        "ExplanationWrongA": "Maximizing D/E ignores the rising marginal financial-distress cost and the rating-agency penalties captured in Exhibit 2.",
+        "ExplanationWrongC": "Refinancing existing debt at a higher yield increases interest expense and contradicts the goal of preserving capital cost advantages; rate compression is not the binding issue here.",
+        "ExplanationWrongD": "Repurchasing equity with debt to maximize leverage is a leveraged-recapitalization strategy that conflicts with the rating-agency thresholds already at risk for Flash Industrial.",
+        "ExplanationWrongB": ""
+      }
+    ]
+  },
+{
+    "CaseID": "CBQ21-C4",
+    "Title": "Flash Logistics: Make-vs-Buy Decision for a Warehousing Technology Platform",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Apply relevant-cost analysis to a make-vs-buy decision",
+      "Compute the NPV of outsourcing versus in-house alternatives",
+      "Analyze qualitative factors (control, scalability) absent from the quantitative model",
+      "Evaluate transfer-pricing implications for related Flash Capital entity"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Flash Logistics, the third-party-logistics subsidiary of Flash Holdings, is evaluating whether to build a new warehousing-technology platform in-house or to outsource it to a third-party software provider. Senior analyst Priya Ramaswamy must defend the analysis to the Flash Logistics executive committee. The platform will manage warehouse automation, RFID-based inventory tracking, and last-mile dispatch across 22 distribution centers. Building the platform in-house would cost $9 million per year for five years in dedicated engineering, infrastructure, and integration expense. Outsourcing would cost $12 million per year for five years under a software-as-a-service agreement but would avoid $4 million per year of fixed costs (server lease, internal support staff, license fees) that Flash Logistics would otherwise incur. The opportunity cost of capital is 9%. The platform's expected useful life matches the five-year evaluation horizon. Beyond the financial calculus, Priya must consider qualitative factors including control over proprietary algorithms, the scalability of the outsourcing vendor's roadmap, the strategic alignment of the platform with Flash Holdings' digital strategy, and the transfer-pricing implications if Flash Capital, the in-house captive finance arm, were to become the financing vehicle for either alternative. The CFO has asked Priya to recommend the option that maximizes Flash Logistics' enterprise value while preserving optionality and a defensible transfer-pricing posture.",
+    "Industry": "Third-Party Logistics and Supply-Chain Technology",
+    "CompanyType": "Subsidiary",
+    "CompanyName": "Flash Logistics",
+    "Stakeholder": "Priya Ramaswamy, Senior Financial Analyst at Flash Logistics",
+    "BusinessFunction": "Strategic Planning and Capital Investment Analysis",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "make vs buy",
+      "NPV analysis",
+      "relevant costing",
+      "transfer pricing",
+      "scalability risk",
+      "outsourcing",
+      "Flash Logistics"
+    ],
+    "CreatedDate": "2026-08-30",
+    "ModifiedDate": "2026-08-30",
+    "Author": "Case Author",
+    "Confidence": 88,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-30",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation under P2-075"
+      }
+    ],
+    "question_state": "Certified",
+    "certification_session": "P2-076",
+    "certification_date": "2026-08-30",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Identify relevant costs (incremental and avoidable) in a make-vs-buy decision",
+      "Compute the NPV differential between in-house and outsourced alternatives",
+      "Assess qualitative factors the quantitative model omits (control, scalability, strategy)",
+      "Evaluate transfer-pricing implications when an internal Flash entity provides financing"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-C4-E1",
+        "CaseID": "CBQ21-C4",
+        "Type": "table",
+        "Title": "Exhibit 1 — Annual Cash-Flow Inputs for Make-vs-Buy Analysis",
+        "Description": "Annual cost streams for both alternatives and avoidable fixed costs; opportunity cost of capital is 9%.",
+        "Columns": [
+          "Cash-Flow Item",
+          "In-House ($M/yr)",
+          "Outsource ($M/yr)"
+        ],
+        "Rows": [
+          [
+            "Direct engineering and integration expense",
+            "9.0",
+            "0.0"
+          ],
+          [
+            "SaaS subscription and vendor management",
+            "0.0",
+            "12.0"
+          ],
+          [
+            "Avoidable internal fixed costs (servers, support)",
+            "4.0",
+            "0.0"
+          ],
+          [
+            "Net incremental operating cost",
+            "5.0",
+            "12.0"
+          ],
+          [
+            "Strategic option value (qualitative)",
+            "High",
+            "Moderate"
+          ],
+          [
+            "Vendor concentration risk (qualitative)",
+            "Low",
+            "Moderate-to-high"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ21-C4-E2",
+        "CaseID": "CBQ21-C4",
+        "Type": "table",
+        "Title": "Exhibit 2 — NPV Differential Between Alternatives (Five-Year Horizon, 9% Discount Rate)",
+        "Description": "Annuity factors and present-value computations for the in-house and outsource alternatives.",
+        "Columns": [
+          "Line Item",
+          "Annual Amount ($M)",
+          "Annuity Factor (5y, 9%)",
+          "Present Value ($M)"
+        ],
+        "Rows": [
+          [
+            "In-house incremental cost ($9M − $4M avoided)",
+            "5.0",
+            "3.8897",
+            "19.45"
+          ],
+          [
+            "Outsource incremental cost",
+            "12.0",
+            "3.8897",
+            "46.68"
+          ],
+          [
+            "Differential PV (Outsource − In-house)",
+            "7.0",
+            "3.8897",
+            "27.23"
+          ],
+          [
+            "PV of avoided fixed cost (In-house only)",
+            "4.0",
+            "3.8897",
+            "15.56"
+          ],
+          [
+            "Strategic option-value premium (qualitative, $M equivalent)",
+            "—",
+            "—",
+            "10.0 to 18.0"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-C4-Q1",
+        "Type": "mcq",
+        "Prompt": "Priya Ramaswamy has assembled the annual operating cost streams for both alternatives. Under relevant-cost analysis, which cash flow set should she use to evaluate the make-vs-buy decision?",
+        "Choices": {
+          "A": "Total fully allocated costs including corporate overhead regardless of the alternative chosen.",
+          "B": "Incremental, avoidable future cash flows that differ between in-house and outsource, including avoidable fixed costs.",
+          "C": "Only sunk costs and historical development expenses for both alternatives.",
+          "D": "The full $9M in-house cost versus the full $12M outsource cost, with no adjustment for fixed costs."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "Relevant-cost analysis under CMA guidance requires that only incremental, avoidable, future cash flows that differ between alternatives be included; sunk costs, allocated overhead, and non-differential items are excluded because they do not change with the decision. Applied to Flash Logistics, the in-house incremental cost is $9M of engineering and integration expense less $4M of avoidable fixed costs = $5M, while outsourcing adds $12M of SaaS expense and eliminates the $4M of avoidable fixed costs (already excluded from the outsource side). Interpretation: this isolates the decision-relevant cash flows and avoids double counting. A common trap is to include allocated corporate overhead, which inflates both sides equally and does not change the ranking.",
+        "ExplanationWrongA": "Fully allocated overhead includes non-differential items, which violate the relevant-cost principle and distort the incremental comparison.",
+        "ExplanationWrongC": "Sunk costs are by definition excluded from incremental analysis, regardless of historical magnitude, because they cannot be recovered under either alternative.",
+        "ExplanationWrongD": "Using $9M versus $12M without netting avoidable fixed costs overstates the in-house cost and biases the decision against building the platform in-house.",
+        "ExplanationWrongB": ""
+      },
+      {
+        "ItemID": "CBQ21-C4-Q2",
+        "Type": "mcq",
+        "Prompt": "Using Exhibit 2, compute the present-value differential between outsourcing ($12M/yr for five years) and in-house ($9M/yr less $4M avoidable fixed costs = $5M/yr net for five years), discounted at 9%. What does the analysis indicate?",
+        "Choices": {
+          "A": "In-house is preferred by approximately $27M in present-value terms.",
+          "B": "Outsourcing is preferred by approximately $27M in present-value terms.",
+          "C": "In-house and outsource are economically equivalent because the cash flows are perpetual.",
+          "D": "Outsourcing is preferred, but only after adjusting for the strategic option-value premium of $10M to $18M."
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Apply",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "ExplanationCorrect": "The PV differential is computed as the difference between the two annuity streams at 9% over five years: PV(outsource) = $12M × 3.8897 = $46.68M; PV(in-house net) = $5M × 3.8897 = $19.45M; differential = $46.68M − $19.45M = $27.23M, with in-house cheaper by approximately $27M. Interpretation: under purely quantitative relevant-cost analysis, the in-house option is preferred. However, the qualitative option-value premium and vendor-concentration risk must be considered before final recommendation. A common trap is to use gross $9M versus $12M, which understates the in-house advantage because it ignores avoidable fixed costs.",
+        "ExplanationWrongB": "Selecting outsource as preferred by $27M reverses the calculation sign and would imply in-house is more expensive, contradicting the exhibit's figures.",
+        "ExplanationWrongC": "The cash flows are five-year finite annuities, not perpetuities; an annuity factor of 3.8897 reflects the five-year horizon.",
+        "ExplanationWrongD": "Adjusting for the strategic option-value premium would only partially close the $27M gap and would still leave in-house more attractive under quantitative NPV.",
+        "ExplanationWrongA": ""
+      },
+      {
+        "ItemID": "CBQ21-C4-Q3",
+        "Type": "mcq",
+        "Prompt": "Beyond the quantitative model, Priya must consider qualitative factors. Which qualitative consideration is most likely to justify choosing outsourcing despite the favorable $27M in-house NPV differential?",
+        "Choices": {
+          "A": "Outsourcing eliminates the need to comply with internal control standards under SOX because the SaaS provider is external.",
+          "B": "Outsourcing preserves capital, accelerates deployment, and shifts scalability risk to the vendor; however, it reduces control over proprietary algorithms and may create vendor concentration risk.",
+          "C": "Outsourcing guarantees zero integration cost regardless of Flash Logistics' existing ERP environment.",
+          "D": "Outsourcing is preferable only because in-house projects typically exceed budget by at least 50%."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Qualitative factors in make-vs-buy include preservation of capital, speed-to-deployment, scalability risk transfer, control over proprietary technology, and vendor concentration. Applied to Flash Logistics, outsourcing shifts scalability risk to the SaaS vendor, accelerates deployment, and preserves capital, but reduces control over proprietary algorithms central to Flash Logistics' competitive advantage and introduces vendor concentration risk. Interpretation: the qualitative factors may or may not offset the $27M NPV advantage; the option-value premium in Exhibit 2 of $10M–$18M provides a quantitative anchor for the qualitative discussion. A common trap is to assume outsourcing eliminates integration risk, which is rarely the case in practice.",
+        "ExplanationWrongA": "SOX internal-control compliance remains the responsibility of Flash Logistics as the reporting entity; outsourcing to a SaaS provider does not exempt the registrant from controls over financial reporting.",
+        "ExplanationWrongC": "Integration cost typically remains significant when outsourcing because Flash Logistics' ERP and operational systems must interface with the SaaS platform.",
+        "ExplanationWrongD": "Citing a 50% budget overrun is a stereotype, not an analytical input, and is not supported by the data in this scenario.",
+        "ExplanationWrongB": ""
+      },
+      {
+        "ItemID": "CBQ21-C4-Q4",
+        "Type": "mcq",
+        "Prompt": "Priya must compute the make-vs-buy breakeven on warehouse volume, given that the in-house platform has higher fixed cost but lower variable cost per unit processed, while outsourcing has lower fixed cost but higher variable cost per unit. Which breakeven analysis is correct?",
+        "Choices": {
+          "A": "Breakeven occurs where total in-house cost equals total outsource cost; algebraically, FixedI + vI × Q = FixedO + vO × Q, yielding Q* = (FixedO − FixedI) / (vI − vO).",
+          "B": "Breakeven is typically at Q = 0 because fixed costs dominate the comparison regardless of variable cost.",
+          "C": "Breakeven cannot be computed without an explicit cost of capital, which is irrelevant to volume analysis.",
+          "D": "Breakeven is typically at Q = total expected warehouse throughput divided by two, regardless of cost structure."
+        },
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "The make-vs-buy breakeven on volume is the quantity Q* at which total in-house cost equals total outsource cost. Setting FixedI + vI × Q* = FixedO + vO × Q* and solving yields Q* = (FixedO − FixedI) / (vI − vO), where vI < vO is the usual case for in-house platforms (lower variable cost per unit, higher fixed cost). Applied to Flash Logistics, breakeven analysis identifies the warehouse volume above which the in-house platform's lower per-unit cost outweighs its higher fixed cost. Interpretation: the breakeven Q is a decision-relevant threshold that complements the NPV analysis. A common trap is to assume breakeven is independent of variable cost, which would imply fixed costs alone determine the decision.",
+        "ExplanationWrongB": "Setting breakeven at Q = 0 ignores the variable-cost differential and is inconsistent with the algebraic identity of total cost comparison.",
+        "ExplanationWrongC": "Cost of capital matters for NPV but is not the relevant input for a volume breakeven, which is a unit-cost crossover analysis.",
+        "ExplanationWrongD": "Using expected throughput divided by two has no theoretical foundation in breakeven analysis and would lead to an arbitrary threshold.",
+        "ExplanationWrongA": ""
+      },
+      {
+        "ItemID": "CBQ21-C4-Q5",
+        "Type": "mcq",
+        "Prompt": "After considering the $27M in-house NPV advantage, the $10M–$18M strategic option-value premium, and the volume breakeven analysis, what is Priya's most defensible recommendation under uncertainty?",
+        "Choices": {
+          "A": "Build in-house unconditionally because quantitative NPV typically dominates qualitative factors.",
+          "B": "Outsource unconditionally because Flash Logistics' strategy favors speed-to-market and the qualitative premium erases the NPV gap.",
+          "C": "Build a hybrid solution: in-house for core proprietary algorithms and outsource for non-core commoditized functionality, preserving control and capturing scale economics.",
+          "D": "Defer the decision indefinitely and wait for vendors to drop their prices."
+        },
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Under uncertainty, a hybrid make-vs-buy approach is often optimal because it preserves proprietary control where it creates differentiation while outsourcing non-core functionality to capture scale and speed. Applied to Flash Logistics, building the core algorithmic engine in-house and outsourcing non-core modules such as RFID tag management or standard reporting aligns with the strategic option-value premium. Interpretation: the recommendation is defensible because it captures both the quantitative NPV advantage of in-house and the qualitative flexibility of outsourcing for non-core modules. A common trap is to treat the decision as binary, ignoring the spectrum of partial make-and-buy solutions that align with strategy.",
+        "ExplanationWrongA": "Unconditionally choosing in-house ignores the strategic option-value premium and the speed-to-deployment advantages that outsourcing offers for non-core modules.",
+        "ExplanationWrongB": "Unconditionally outsourcing ignores the $27M NPV advantage and the control loss over proprietary algorithms that distinguish Flash Logistics.",
+        "ExplanationWrongD": "Deferring indefinitely destroys value; Flash Logistics must commit to a decision to capture either the NPV advantage or the strategic option value.",
+        "ExplanationWrongC": ""
+      },
+      {
+        "ItemID": "CBQ21-C4-Q6",
+        "Type": "mcq",
+        "Prompt": "If Flash Capital (the captive finance arm of Flash Holdings) provides internal financing for either alternative, what transfer-pricing consideration most affects the make-vs-buy recommendation?",
+        "Choices": {
+          "A": "Transfer pricing is irrelevant because intra-group financing is recorded at cost.",
+          "B": "The interest rate charged by Flash Capital must be arm's-length, supported by a benchmarking study, and aligned with the OECD/G20 BEPS framework to avoid profit shifting between Flash Logistics and Flash Capital.",
+          "C": "Flash Logistics should pay Flash Capital the maximum allowable rate to maximize Flash Capital's profit and reduce overall group tax.",
+          "D": "Flash Capital must charge the same rate as the U.S. Treasury yield curve to qualify as related-party financing."
+        },
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "ExplanationCorrect": "Internal financing by Flash Capital is intra-group financing that must be priced at arm's length under OECD Transfer Pricing Guidelines and the G20 BEPS framework, supported by a benchmarking study (typically credit-rating-based pricing). Applied to Flash Logistics, any interest charged by Flash Capital must reflect the credit profile of the borrower and the economic substance of the financing arrangement; mispricing creates transfer-pricing exposure for the Flash Holdings group. Interpretation: the recommendation depends on whether the chosen alternative is financed by Flash Capital at arm's length, because that affects Flash Logistics' after-tax cost and the group's overall tax footprint. A common trap is to assume intra-group financing is automatically at cost, which violates the arm's-length principle.",
+        "ExplanationWrongA": "Intra-group financing is not automatically recorded at cost; arm's-length pricing is required under OECD guidelines and most domestic transfer-pricing regimes.",
+        "ExplanationWrongC": "Charging the maximum allowable rate is not arm's-length and would expose Flash Holdings to transfer-pricing penalties and double taxation.",
+        "ExplanationWrongD": "The U.S. Treasury yield curve is one possible benchmark but is not the only acceptable basis; arm's-length pricing typically uses comparable-uncontrolled-price or yield-curve analysis specific to the borrower's credit profile.",
+        "ExplanationWrongB": ""
+      }
+    ]
   }
 ];

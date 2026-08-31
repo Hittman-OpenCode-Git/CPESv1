@@ -142,7 +142,7 @@ Legacy items (no `schema_version`, or `"1.0"`) remain valid. `p2_schema_validato
 |-----------|--------|-------|-----------|
 | `pack_p2_a.js` | A — Financial Statement Analysis | 500 | P2-A-001 to P2-A-500 |
 | `pack_p2_b.js` | B — Corporate Finance | 500 | P2-B-001 to P2-B-500 |
-| `pack_p2_c.js` | C — Decision Analysis | 625 | P2-C-001 to P2-C-625 |
+| `pack_p2_c.js` | C — Decision Analysis | 750 | P2-C-001 to P2-C-750 |
 | `pack_p2_d.js` | D — Risk Management | 250 | P2-D-001 to P2-D-250 |
 | `pack_p2_e.js` | E — Investment Decisions | 250 | P2-E-001 to P2-E-250 |
 | `pack_p2_f.js` | F — Professional Ethics | 375 | P2-F-001 to P2-F-375 |
@@ -151,7 +151,7 @@ Legacy items (no `schema_version`, or `"1.0"`) remain valid. `p2_schema_validato
 ## 5. QID Format
 
 **Pattern:** `P2-{Section}-{NNN}`  
-**Regex:** `^P2-[A-F]-(\d{3})$` (001–625 range for C; 001–500 for A/B; 001–375 for F; 001–250 for D/E)
+**Regex:** `^P2-[A-F]-(\d{3})$` (001–750 range for C; 001–500 for A/B; 001–375 for F; 001–250 for D/E)
 
 ## 6. Governance Rules Specific to P2
 

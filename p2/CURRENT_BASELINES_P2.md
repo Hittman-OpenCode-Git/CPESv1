@@ -2,31 +2,31 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-08-26 — Session P2-064 Overnight Completion Program checkpoint: +180 MCQs (3 waves x 60) + 9 cases; pool now 1,250 MCQs (708 Certified / 542 Unprocessed / 0 Archived... see ledger) and 33 cases (15 Certified / 18 Unprocessed).
-**Preflight script:** `scripts/preflight_p2.js`
+**Updated:** 2026-08-26 — Session P2-065 certification wave: +360 MCQs (12 batches × 30) + 9 cases (3 batches × 3). Pool then **1,340 MCQs (1,338 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. **2026-08-28 — Session P2-067 certification wave: +210 Unprocessed→Certified** (all remaining non-Archived MCQs). Pool now **1,565 MCQs (1,563 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. One pre-flip metadata recalibration applied (P2-E-210: VD/DS5 → Difficult/DS4 per Rule 12). All P2-067 flips carry `certification_session: 'P2-067'`, `certification_date: '2026-08-28'`. **2026-08-30 — Session P2-068 Wave 1 authoring: +90 MCQs (15×6 packs, Unprocessed, schema v1.1, 0 errors)**. Pool then **1,655 MCQs (1,563 Certified / 90 Unprocessed / 2 Archived)**. **Sessions P2-074/P2-075 — Waves 2&amp;3 authoring: +180 MCQs (waves ×90) and +9 cases.** **2026-08-30 — Session P2-076 certification wave: 90 Unprocessed→Certified MCQs (all wave-3 items) + 9 Unprocessed→Certified cases; 22-item `Mod-Easy`→`Moderate-Easy` label defect fixed (DL-P2-016).** Pool now **1,835 MCQs (1,833 Certified / 0 Unprocessed / 2 Archived)** and **45 cases (45 Certified / 0 Non-Certified)**. All P2-076 MCQs carry `certification_batch: 'P2-076'`, `certification_date: '2026-08-30'`; cases carry `certification_session: 'P2-076'`. Post-Tend verification: `preflight_p2.js` 0 divergences + 74/74 governance guard PASS; `validate:p2` 0 errors (90 v1.1 PASS; 1,565 grandfathered; 180 migration-required report-only).
+**Preflight script:** `scripts/preflight_p2.js` (read-only T0/Tend gate; cross-checks counts here)
 
 ---
 
 ## §1. Part 2 MCQ Pack Baselines
 
-| Pack | File | Target QIDs | Current QIDs | Certified | Hash (SHA256) |
-|------|------|-------------|-------------|-----------|---------------|
-| A | p2/pack_p2_a.js | 500 | 280 | 190 | — |
-| B | p2/pack_p2_b.js | 500 | 205 | 115 | — |
-| C | p2/pack_p2_c.js | 625 | 290 | 198 | — |
-| D | p2/pack_p2_d.js | 250 | 155 | 65 | — |
-| E | p2/pack_p2_e.js | 250 | 165 | 75 | — |
-| F | p2/pack_p2_f.js | 375 | 155 | 65 | — |
-| **Total** | | **2,500** | **1,250** | **708** | |
+| Pack | File | Target QIDs | Current QIDs | Certified | Unprocessed | Archived | Hash (SHA256, post-Tend) |
+|------|------|-------------|-------------|-----------|-------------|----------|--------------------------|
+| A | p2/pack_p2_a.js | 500 | 400 | 400 | 0 | 0 | `d7aa001aed95f0e15726117cc71aeba96be0e166920548f95aa8bf2feda51775` |
+| B | p2/pack_p2_b.js | 500 | 310 | 310 | 0 | 0 | `51521d2fdd0800246ec6babb8196820e283113955c8272f4a6a0a4283e33f152` |
+| C | p2/pack_p2_c.js | 625 | 380 | 378 | 0 | 2 (C-198, C-199) | `31ee5dc06bb7c396a0a4a4bf6104f8f60fbcb41194160d0a2f3e130bf086b52b` |
+| D | p2/pack_p2_d.js | 250 | 245 | 245 | 0 | 0 | `7362bf3684db9c6925663860a2d965aaa48d138488c216895b478b5b9fa8ea80` |
+| E | p2/pack_p2_e.js | 250 | 255 | 255 | 0 | 0 | `a6f27b413ed801d8c79febf17a6063d18993e0fbf1d407ecf452c4ebdce78636` |
+| F | p2/pack_p2_f.js | 375 | 245 | 245 | 0 | 0 | `3ae1028be0bf2c51c18b0a50e87442f786d8a6ce322eb53f713354b27131e02d` *(+F-207/214 FCPA allowlist fix)* |
+| **Total** | | **2,500** | **1,835** | **1,833** | **0** | **2** | |
 
 ## §1b. Case Pack Baselines
 
-| File | Target Cases | Current Cases |
-|------|--------------|---------------|
-| p2/case_pack_p2_1.js | 25 | 13 |
-| p2/case_pack_p2_2.js | 25 | 10 |
-| p2/case_pack_p2_3.js | 25 | 10 |
-| **Total** | **75** | **33** |
+| File | Target Cases | Current Cases | Certified | Non-Certified |
+|------|--------------|---------------|-----------|---------------|
+| p2/case_pack_p2_1.js | 25 | 19 | 19 | 0 |
+| p2/case_pack_p2_2.js | 25 | 13 | 13 | 0 |
+| p2/case_pack_p2_3.js | 25 | 13 | 13 | 0 |
+| **Total** | **75** | **45** | **45** | **0** |
 
 ---
 

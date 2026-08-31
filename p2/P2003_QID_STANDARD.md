@@ -18,7 +18,7 @@
 **Regex:** `^P2-[A-F]-\d{3}$`
 **Range regex (per section):**
 - A, B: `^P2-[AB]-(0[0-9]{2}|[1-4][0-9]{2}|500)$`
-- C: `^P2-C-(0[0-9]{2}|[1-5][0-9]{2}|6[0-1][0-9]|62[0-5])$`  (001–625)
+- C: `^P2-C-(0[0-9]{2}|[1-6][0-9]{2}|7[0-4][0-9]|750)$`  (001–750)
 - D, E: `^P2-[DE]-(0[0-9]{2}|1[0-9]{2}|2[0-4][0-9]|250)$`  (001–250)
 - F: `^P2-F-(0[0-9]{2}|[1-2][0-9]{2}|3[0-6][0-9]|37[0-5])$`  (001–375)
 
@@ -36,12 +36,12 @@
 |---------|--------|------------|-----------|-----------|-------|
 | A | Financial Statement Analysis | 20% | P2-A-001 to P2-A-500 | pack_p2_a.js | 500 |
 | B | Corporate Finance | 20% | P2-B-001 to P2-B-500 | pack_p2_b.js | 500 |
-| C | Decision Analysis | 25% | P2-C-001 to P2-C-625 | pack_p2_c.js | **625** |
+| C | Decision Analysis | 25% | P2-C-001 to P2-C-750 | pack_p2_c.js | **750** |
 | D | Risk Management | 10% | P2-D-001 to P2-D-250 | pack_p2_d.js | 250 |
 | E | Investment Decisions | 10% | P2-E-001 to P2-E-250 | pack_p2_e.js | 250 |
 | F | Professional Ethics | 15% | P2-F-001 to P2-F-375 | pack_p2_f.js | 375 |
 
-**Total: 2,500 MCQs across 6 pack files.**
+**Total: 2,625 MCQs across 6 pack files (500×2 + 750 + 250×2 + 375).**
 
 > **Amendment (v2.0):** The original v1.0 5-pack layout allocated a flat 500 items to Domain C (25% CSO weight) and placed cross-domain items at P2-F-376–500. This created a 125-item shortfall in C — the heaviest domain on the exam. v2.0 corrects this:
 > - **Domain C:** 500 → 625 (matches 25% CSO weight)
