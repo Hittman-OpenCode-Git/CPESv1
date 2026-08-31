@@ -1,3 +1,92 @@
+## MAY-Phase-0b — Real Model Selection & Benchmarking (Full Lane) — 2026-08-26
+
+**Session:** MAY-Phase-0b (Full Governance Lane — May coaching layer, browser-side devDep, provider routing)
+**Plan:** `~/.commandcode/plans/phase0b-real-model-selection.md`
+**Report:** `reports/phase0b_model_selection.md`
+
+**Summary:** Selected a real in-browser intent classifier (`Xenova/mobilebert-uncased-mnli` q8) to replace the deterministic regex stub. Benchmarked 3 MNLI candidate models in Node.js (`@huggingface/transformers@4.2.0`) and 2 survivors in headless Chromium via Playwright. Winner passes 50 MB heap budget (9.28 MB delta in Node), achieves 25% mode accuracy on 20 genuinely-unseen held-out intents (vs stub's 100% by construction), and produces the fastest browser p95 latency (179 ms desktop / 1,254 ms mobile 4× CPU throttle).
+
+**Files created:**
+- `app/may/providers/real-intent-provider.js` — Main-thread `PROVIDER_INTERFACE` implementation; browser dispatches to a Worker, Node uses pipeline() directly.
+- `app/may/providers/real-intent-worker.js` — First Web Worker in the project. Loads `transformers.web.min.js` via `importScripts`, hosts the zero-shot-classification pipeline.
+- `app/may/providers/__benchmark__/heldout.intents.json` — 24-item held-out set (20 mode + 4 edge), disjoint from gold labels except for the intentional typo case.
+- `app/may/providers/__benchmark__/bench.phase0b.html` — Browser benchmark harness (CDN ESM, `window.__BENCH__` results).
+- `app/may/providers/__benchmark__/bench.phase0b.node.js` — Node.js pre-screen harness (cold-start + heap + latency + accuracy).
+- `app/may/providers/__benchmark__/bench.phase0b.browser.js` — Playwright runner (desktop + mobile emulation).
+
+**Files modified:**
+- `package.json` — Added `@huggingface/transformers@^4.2.0` to devDependencies (4.2.0 is current stable; brief specified v3 which is one major behind).
+- `app/may/may-feature-flags.js` — Added `MAY_ENABLE_NEEDLE_ROUTER` and `MAY_ENABLE_INTENT_ROUTER` env-var overrides (previously missing for `ENABLE_NEEDLE_ROUTER`).
+- `app/may/may-llm-provider-registry.js` — Added `RealIntentProvider` class loader + registration in `initialize()`. `selectProvider()` now prefers real-intent over stub-intent when `ENABLE_NEEDLE_ROUTER=true` AND `real-intent.isAvailable()` returns true.
+- `index_updated.html` — Added `<script>` tags for `stub-intent-provider.js` and `real-intent-provider.js` BEFORE `may-llm-provider-registry.js` (fixes load-order issue where the registry's inline `require()` doesn't work in browser; `window.X` is now defined first).
+- `scripts/smoke_test.js` — Added 3 Phase 0b assertions: real-intent registered, real-intent `isAvailable()=false` when flag is off (hidden-beta invariant), stub-intent still registered (Phase 0 preserved).
+
+**Decisions taken:**
+- **Lane:** Full Lane (brief said Light, but adding devDep + modifying `selectProvider` per AGENTS.md §9.1 = Full Lane trigger).
+- **Version:** v4.2.0 (not v3 from brief — v3 deprecated in favor of v4's WebGPU rewrite).
+- **Winner selection:** `mobilebert-uncased-mnli` over `distilbert-base-uncased-mnli` based on **browser** p95 latency (179ms vs 387ms desktop; distilbert is faster in Node but slower in browser).
+- **Hidden beta preserved:** `ENABLE_NEEDLE_ROUTER` default `false`. Production behavior unchanged. Real provider `isAvailable()=false` until Worker loads the model and emits 'ready'.
+- **Heap budget:** 50 MB hard stop. `nli-deberta-v3-xsmall` was most accurate (35%) but exceeded 50 MB at both q8 (84.57 MB) and q4 (82.72 MB) — eliminated.
+- **Stub preserved:** Phase 0 `stub-intent-provider.js` left untouched. Still registered, still routable as deterministic fallback behind the real provider.
+- **No Needle2:** Confirmed (Phase 0) that Needle2 has no JS/WASM bindings. Documented.
+
+**Verification:**
+- `npm run preflight` PASS at T0 and Tend (0 divergences, all 5 pack parsers OK, 74/74 governance-guard tests pass, 2,620 certified unchanged).
+- `npm run smoke` PASS (all 36 UI surfaces + 3 new Phase 0b assertions + zero page/console errors beyond the existing file:// fetch warnings).
+- `git status` — no `pack_*_corrected.js` / `scored_cases*.js` / `MASTER_QUESTION_REGISTRY.md` / `DEFECT_LIBRARY.md` / `question_state` writes. Phase 1 pool unchanged at 2,620 certified.
+
+**Process lessons / governance notes:**
+- The Phase 0b brief contained 8 factual errors (v3 vs v4, gated models, SQuAD-as-classifier, light-vs-full lane, missing env override, heap contradiction, test-leakage). Plan-mode surfaced all 8 before any code was written; resolving them upfront saved ~30 min of misdirected work.
+- The Phase 0 stub's 100% accuracy was a structural property of the regex approach, NOT an ML signal (Phase 0 report §5, §8.1 explicitly noted this). Phase 0b's 25% real-model accuracy is the honest ML baseline; the 100% is still a higher floor on the same metric but represents memorization of patterns.
+- The original `may-llm-provider-registry.js` used `require('./providers/stub-intent-provider.js')` inline — which works in Node but not in browser. This was latent in Phase 0 (the browser never tested provider registration). Phase 0b's smoke test caught it. Fix: explicit `<script>` tags in `index_updated.html`.
+
+## P2-065 — Certification Wave: 360 Remaining MCQs + 9 Cases (Cross-Reference) — 2026-08-26
+
+**Session:** P2-065 (Full Governance Lane — P2 packs + case packs only; zero Part 1 file changes)
+**Full entry:** `knowledge/REVISION_HISTORY_P2.md` §P2-065 (Batches 1-15).
+
+**Summary:** Certified all remaining 360 Unprocessed MCQs (12 batches of 30 each: A 191-250, B 116-175, C 201-260, D 066-125, E 076-135, F 066-125) + 9 cases (3 batches of 3 each: CBQ21-A2/C2/F1, CBQ22-C1/E1/B2, CBQ23-A1/B1/D1). All 360 candidates verified structurally clean (0 DL-008/026/013/037, 21 absolute-language WARNs flagged per DL-003 precedent — non-blocking). Cases follow P2-059/P2-060 precedent (question_state='Certified', ProductionStatus kept='Draft', Part2OnlyFlag=true, Part=2). All flips carry `certification_session: 'P2-065'` and `certification_date: '2026-08-26'`.
+
+**Census:** Pool now **1,340 MCQs (1,338 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. **All non-Archived items in the Part 2 pool are now Certified.** Net delta from session start: +360 MCQ Certified, +9 cases Certified.
+
+**Decisions taken:**
+- v1.1 policy: certified as v1.0 grandfathered per P2_SCHEMA_STANDARD §1.2 (skip backfill; CURRENT_BASELINES_P2.md §4 migration gate remains report-only).
+- BLOCK-AUTHORIZED marker: not added (30 ≤ 30 is rule-compliant per P2-CERT-064 precedent).
+- Prior work / P2-CERT-064 baseline preserved (978 invariant held).
+- Baseline update: deferred to Tend per user decision; applied at closeout.
+
+**Process disclosure (surgical fix):** Initial certify_batch.js / certify_case.js scratchpad scripts had `const sessionId = "P2-CERT-064";` hardcoded from yesterday's session. All 369 P2-065 flips initially carried the wrong certification_session marker. The question_state flips themselves were correct. Surgical fix via `fix_p2_065_session_marker.js` corrected the 369 markers to "P2-065" without disturbing any other field. **Process lesson:** scratchpad scripts should be session-specific or accept session ID as a CLI argument; the P2-CERT-064 scripts should not have been reused verbatim.
+
+**Backups:** `pack_p2_{a..f}.js.bak-P2-065-20260826174529` (6 files, 4,754,072 bytes total, byte-equal to pre-flip source), `case_pack_p2_{1,2,3}.js.bak-P2-065-20260826174529` (3 files, 523,806 bytes total, byte-equal).
+
+**Known warnings (non-blocking, for next editorial wave):**
+- 21 absolute-language distractors flagged across the 360-item scope (P2-A-201/210/221/228/243, P2-B-149, P2-C-216/248/257, P2-D-093/094/107/118/119/122/124, P2-E-086, P2-F-076/109/124). Most use "every" descriptively (e.g., "every expense line," "every identified hazard") rather than as hard absolutes. Per DL-003 Batch 2 precedent (P2-060), these are soft warnings, not blockers.
+
+---
+
+## P2-CERT-064 — Certification Wave: 270 MCQs + 9 Cases (Cross-Reference) — 2026-08-26
+
+**Session:** P2-CERT-064 (Full Governance Lane — P2 packs + case packs only; zero Part 1 file changes)
+**Full entry:** `knowledge/REVISION_HISTORY_P2.md` §P2-CERT-064 (Batches 1-12 + case batches 10-12).
+
+**Summary:** Certified 270 MCQs (12 batches of ≤30 items each across 6 packs: A 251-295, B 176-220, C 261-305, D 126-170, E 136-180, F 126-170) + 9 cases (3 batches of 3 each: CBQ21-A3/B3/C3, CBQ22-C2/D3/F2, CBQ23-A2/E2/F3). All candidates verified structurally clean (0 DL-008/026/013/037 violations) and arithmetically per VerifiedChecks field; spot-check 5/5 PASS. Cases follow P2-059/P2-060 precedent (question_state='Certified', ProductionStatus kept='Draft', Part2OnlyFlag=true, Part=2). All flips carry `certification_session: 'P2-CERT-064'` and `certification_date: '2026-08-26'`.
+
+**Census:** Pool now **1,340 MCQs (978 Certified / 360 Unprocessed / 2 Archived)** and **33 cases (24 Certified / 9 Non-Certified)**. Net delta from session start: +270 MCQ Certified, +9 cases Certified.
+
+**Decisions taken:**
+- v1.1 policy: certified as v1.0 grandfathered per P2_SCHEMA_STANDARD §1.2 (skip backfill; CURRENT_BASELINES_P2.md §4 migration gate remains report-only).
+- Case state semantic: P2-059/P2-060 precedent.
+- Prior P2-064 work: P2-064 backup diff confirmed purely additive (0 field changes on shared QIDs).
+- Batch sizing: 30 items exactly (Rule 5 ≤30 cap, no BLOCK-AUTHORIZED marker).
+- Baseline update: deferred to Tend per user decision; applied at closeout.
+
+**Backups:** `pack_p2_{a..f}.js.bak-P2CERT064-20260826172701` (6 files, 4,049,107 bytes total, byte-equal to source), `case_pack_p2_{1,2,3}.js.bak-P2CERT064-20260826172701` (3 files, 504,903 bytes total, byte-equal).
+
+**Known warnings (non-blocking, for next editorial wave):**
+- Absolute language in 2 distractors: P2-B-210 ('debt almost always lowers WACC'), P2-B-216 ('increases total firm value automatically'). Per DL-003 Batch 2 precedent (P2-060), soft warnings not blockers. Recommend editorial review in next wave.
+
+---
+
 ## P2-061 — Part 2 Authoring Program: 360 MCQs + 9 Cases (Cross-Reference) — 2026-08-25
 
 **Session:** P2-061 (Full Governance Lane — P2 packs + case packs only; zero Part 1 file changes)
@@ -32435,3 +32524,41 @@ test:parser 20/20 · harness ALL GATES · validate Errors 0/WARN/exit 0 (warning
 ## Session P2-064 — Cross-Reference (Part 2 Overnight Completion Program checkpoint)
 
 **Date:** 2026-08-26. Part 2 authoring session executed under Full Governance Lane per AGENTS.md/P2002. Added +180 Unprocessed P2 MCQs (six 15-item waves x 2 cycles) and +9 Unprocessed P2 cases (3 per case pack). All writes backed up (backups/*.bak-P2-064-*), validated pre-integration (contract gates + 27 arithmetic spot-checks all agreeing), integrated via orchestrator-only splice with post-parse assertions, and verified post-write (preflight_p2 0 divergences; validate:p2 ERROR 0; P1 preflight 0 divergences, Certified 2,620 unchanged; pipeline GREEN). Part 1 pool untouched. Full detail: knowledge/REVISION_HISTORY_P2.md "Session P2-064". This entry is a pointer only; the authoritative record lives in REVISION_HISTORY_P2.md.
+
+---
+
+## Session 2026-08-31 — Pause-Timer Fix + Double-Confirmation Submit Guard
+
+**Session:** 2026-08-31 (Full Governance Lane — app.js exam/session integrity)
+**Scope:** `app/app.js` (pause timer, submit confirmation), `styles.css` (confirmation UI), `scripts/thorough_test.js` (submit-flow assertions updated to the new guard)
+
+**Summary:** Two exam-integrity / workflow fixes requested by the user, plus a small UX scroll fix:
+
+1. **Pause-timer bug fixed.** Root cause: `state.session.start` is a fixed epoch and `elapsed = Date.now() - start`; the pause feature never advanced `start` by the paused duration, so paused time counted as elapsed. On resume `remaining` jumped toward 0 and could trigger a forced submit. The `pausedElapsed` field was dead data. Fix: `pause()` records `s._pausedAt`; on resume it advances `s.start += (Date.now() - s._pausedAt)` and clears `_pausedAt`; `remaining()` is pause-aware (subtracts active `_pausedAt` delta with a `|| Date.now()` guard); `recoveryResume` folds persisted paused time into `start` exactly once before `startTimer()`.
+   - Verified: paused 5s + resumed 1.5s → timer dropped only 1s (not 5+). Reload-while-paused → resume drops only ~2s.
+
+2. **Double-confirmation submit guard** (two affirmative responses in two different screen locations, unless the exam timer has elapsed). New `ExamSessionManager.confirmFinish()`:
+   - If `remaining() === 0` → calls `finish()` immediately (time-expired submits without confirmation).
+   - Else opens Stage 1 (centered modal, affirmative button mid-viewport) → on affirmation opens Stage 2 (bottom-anchored bar with `Confirm Final Submission`), a physically different screen location. Both stages expose Cancel (no submit). A 500 ms guard auto-submits if time expires while a confirmation is open.
+   - Wired both submission entry points: `#finishExam` (review screen) and `#submitEarlyGate` (gate-fail screen) now call `confirmFinish()` instead of `finish()`. Timer-expiry forced-submit path (`left === 0`) still calls `finish()` directly (no confirmation — correct).
+   - Stage 2 advancement scrolls the review content to the bottom so the final-confirmation bar is visible in context (user request).
+
+3. **test updates:** `scripts/thorough_test.js` submit-flow checks that previously clicked submit once and expected an immediate Score Report now drive the full two-stage confirmation (Stage 1 → Stage 2 → submit). Zero-answer, normal, and double-submit paths all updated; double-click remains non-throwing (guard makes 2nd click a no-op).
+
+**Governance:** T0 preflight PASS (0 divergences, 74/74). Tend preflight PASS (0 divergences; Certified 2,620 unchanged). 31/31 thorough_test PASS. 15/15 focused pause+confirm verification PASS. Smoke PASS. app.js/styles.css syntax OK. Backups: `backups/app.js.bak-pauseconfirm-20260831113211`, `backups/styles.css.bak-pauseconfirm-20260831113211`.
+
+**Learner-pool note:** no pack files, `question_state`, answer keys, or registries were modified. Part 1 Certified pool remains 2,620.
+
+---
+
+## Board Meeting — 2026-08-31 (Pause Timer + Submission Guard + Part 2 Clone Gate)
+
+**Convened:** 2026-08-31 (Tend of the pause/submission-guard session).
+**Board action:** Approved and published a new standing-guidance section in the project governance (`AGENTS.md` §19) codifying four directives, each traced to a concrete recent finding (per §14: every governance step protects content quality or learner safety):
+
+1. **§19.1 Exam-Integrity Timer Rule** — elapsed = active time only; resume paths advance the start epoch by paused duration; no dead timing fields (`pausedElapsed` precedent); time-expiry forced-submit is not confirmation-gated. *Finding: pause bug (paused time counted as elapsed, leaping countdown toward forced submit).*
+2. **§19.2 Behavior-Change/Test-Coupling Rule** — any learner-facing behavior change must update the encoding automated test assertions in the same change-set. *Finding: `thorough_test.js` single-click-submit assertions broke under the new guard.*
+3. **§19.3 Learner-Submission Guard Rule** — two affirmative responses in two different screen locations (centered modal → bottom bar), both with Cancel, unless time elapsed; all submission entry points route through a single guard (`ExamSessionManager.confirmFinish()`).
+4. **§19.4 Part 2 Certification Clone Gate** — before any Part 2 cert batch flip, scan across ALL packs on (numeric-literal multiset + Topic) to catch rotation-clones that Jaccard misses. *Finding: DL-046-P2 / P2-059*.
+
+**Verification carried into the board record:** preflight 0 divergences (74/74), thorough_test 31/31, smoke PASS, focused pause+confirm verification 15/15, app.js/styles.css syntax OK, Certified pool 2,620 unchanged. Backups: `backups/app.js.bak-pauseconfirm-20260831113211`, `backups/styles.css.bak-pauseconfirm-20260831113211`.

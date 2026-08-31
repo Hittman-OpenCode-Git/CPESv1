@@ -2,14 +2,14 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-08-26 04:14:32
+  Last generated: 2026-08-30 01:17:49
   Source hash: 637bb08f
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-08-26 04:14:32
+**Generated:** 2026-08-30 01:17:49
 **Source Hash:** `637bb08f`
 **Total Questions:** 3020
 
@@ -9800,20 +9800,20 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 1ms)
-- **Metadata Validator**: WARN (0 errors, 4 warnings, 175ms)
-- **Blueprint Validator**: WARN (0 errors, 70 warnings, 117ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 0ms)
-- **Difficulty Validator**: WARN (0 errors, 39 warnings, 117ms)
-- **Reference Validator**: WARN (0 errors, 159 warnings, 118ms)
-- **Explanation Validator**: WARN (0 errors, 24 warnings, 392ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 6ms)
+- **Metadata Validator**: WARN (0 errors, 4 warnings, 640ms)
+- **Blueprint Validator**: WARN (0 errors, 70 warnings, 275ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 2ms)
+- **Difficulty Validator**: WARN (0 errors, 39 warnings, 298ms)
+- **Reference Validator**: WARN (0 errors, 159 warnings, 210ms)
+- **Explanation Validator**: WARN (0 errors, 24 warnings, 1448ms)
 - **Case Integrity Validator**: WARN (0 errors, 10 warnings, 36ms)
-- **PsychometricValidator**: WARN (0 errors, 1662 warnings, 1152ms)
+- **PsychometricValidator**: WARN (0 errors, 1662 warnings, 1417ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-08-26 04:14:32
+  Registry regenerated on 2026-08-30 01:17:49
   Source hash: 637bb08f
   Questions: 3020
   To regenerate: node scripts/generate_registry.js
