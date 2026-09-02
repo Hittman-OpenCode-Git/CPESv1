@@ -2031,6 +2031,73 @@ const SessionPersistence = {
 };
 
 // ============================================================
+// Tolerant Answer Normalization — Part 1 & Part 2 free-text
+// ============================================================
+// Single source of truth for numeric / text tolerance consumed by
+// both scoreMCQ (MCQ match) and ExamSessionManager.correctCase
+// (all case-study free-text). Covers P1 + P2 banks identically.
+//   Numeric: $65,000 ≡ 65000 ≡ 65 000 ≡ 65000.00  (formatting stripped, exact numeric)
+//   Text:    mother-in-law ≡ mother in law ≡ mother_in_law (hyphen/underscore/space)
+//   Fuzzy:   recievable ≈ receivable  (Damerau-Levenshtein ≤ length-relative threshold)
+function parseNumericValue(s) {
+    if (s === null || s === undefined) return null;
+    let t = String(s).trim();
+    if (!t) return null;
+    let isParenNeg = false;
+    if (/^\(.*\)$/.test(t)) { isParenNeg = true; t = t.slice(1, -1).trim(); }
+    // strip currency/commas/spaces/underscores/NBSP/apostrophes/quotes
+    let c = t.replace(/[\$€£¥,\s_\u00A0'"]/g, '');
+    if (c.endsWith('%')) c = c.slice(0, -1);
+    if (!/^[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?$/.test(c)) return null;
+    const n = Number(c);
+    if (!isFinite(n)) return null;
+    return isParenNeg ? -n : n;
+}
+function normalizeTextValue(s) {
+    return String(s || '').trim().toLowerCase()
+        .replace(/[‐-‒–—―_\/\\]+/g, ' ')
+        .replace(/['`´\u2019\u2018]/g, '')
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+function levenshteinDistance(a, b) {
+    a = String(a || ''); b = String(b || '');
+    const m = a.length, n = b.length;
+    if (m === 0) return n; if (n === 0) return m;
+    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+    for (let i = 0; i <= m; i++) dp[i][0] = i;
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+    for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) dp[i][j] = Math.min(dp[i][j], dp[i - 2][j - 2] + 1);
+    }
+    return dp[m][n];
+}
+function tolerantTextEqual(correct, attempt) {
+    const c = normalizeTextValue(correct);
+    const a = normalizeTextValue(attempt);
+    if (c === a) return true;
+    const dist = levenshteinDistance(c, a);
+    const len = Math.max(c.length, a.length) || 1;
+    if (len <= 5) return dist <= 1;
+    if (len <= 9) return dist <= 2;
+    return dist <= 2 || (dist <= 3 && (1 - dist / len) >= 0.85);
+}
+function numericEqual(a, b) {
+    const na = parseNumericValue(a);
+    const nb = parseNumericValue(b);
+    if (na === null || nb === null) return null;
+    return Math.abs(na - nb) < 1e-9;
+}
+function tolerantAnswerEqual(correct, attempt) {
+    const numEq = numericEqual(correct, attempt);
+    if (numEq !== null) return numEq;
+    return tolerantTextEqual(correct, attempt);
+}
+
+// ============================================================
 // scoreMCQ — CMA-Style Binary MCQ Grading
 // ============================================================
 // Returns 1 (correct) or 0 (incorrect). No partial credit, no
@@ -2047,12 +2114,11 @@ function scoreMCQ(item, ans) {
         if (!Array.isArray(ans) || !Array.isArray(correct)) return 0;
         return correct.length === ans.length && correct.every(x => ans.includes(x)) ? 1 : 0;
     }
-    // Matching (case items)
+    // Matching (case items) — tolerant (P1 + P2)
     if (item.Type === 'match') {
         const keys = Object.keys(item.Correct || {});
         if (!keys.length || !ans || typeof ans !== 'object') return 0;
-        const nm = x => String(x || '').trim().toLowerCase().replace(/[$,]/g, '');
-        return keys.every(k => nm(ans[k]) === nm(item.Correct[k])) ? 1 : 0;
+        return keys.every(k => tolerantAnswerEqual(item.Correct[k], ans[k])) ? 1 : 0;
     }
     // Single-select (pack MCQs and case select items)
     return ans === item.CorrectChoice ? 1 : 0;
@@ -3210,15 +3276,24 @@ const ExamSessionManager = {
     },
 
     caseKey(c, i) { return c.CaseID + '-' + i; },
-    norm(x) { return String(x || '').trim().toLowerCase().replace(/[$,]/g, ''); },
+    // Legacy norm kept for backward compat — now delegates to tolerant text normalizer (P1+P2)
+    norm(x) { return normalizeTextValue(x); },
+    // Wrappers so correctCase and external callers can reuse the single source (P1+P2)
+    parseNumeric(s) { return parseNumericValue(s); },
+    normalizeText(s) { return normalizeTextValue(s); },
 
     correctCase(it, ans) {
         if (it.Type === 'multi') { if (!Array.isArray(ans) || !Array.isArray(it.Correct)) return false; return it.Correct.length === ans.length && it.Correct.every(x => ans.includes(x)); }
-        if (it.Type === 'match') { if (!ans || typeof ans !== 'object' || !it.Correct || typeof it.Correct !== 'object') return false; return Object.keys(it.Correct).every(k => this.norm(ans[k]) === this.norm(it.Correct[k])); }
-        return this.norm(ans) === this.norm(it.Correct);
+        if (it.Type === 'match') { if (!ans || typeof ans !== 'object' || !it.Correct || typeof it.Correct !== 'object') return false; return Object.keys(it.Correct).every(k => tolerantAnswerEqual(it.Correct[k], ans[k])); }
+        // numeric / fill / select — shared tolerant path (P1 + P2)
+        return tolerantAnswerEqual(it.Correct, ans);
     },
 
-    normalizeCaseInput(it, value) { if (it.Type !== 'numeric') return value; return String(value || '').replace(/[$,\s]/g, ''); },
+    normalizeCaseInput(it, value) {
+        // Preserve raw for tolerant comparison; historic numeric strip kept as light pre-clean only
+        if (it.Type === 'numeric') return String(value || '').trim();
+        return value;
+    },
 
     bindCaseInputs(c) {
         let s = state.session;
