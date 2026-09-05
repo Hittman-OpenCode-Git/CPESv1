@@ -1,0 +1,363 @@
+{
+  "batch": "Pack A Batch 1",
+  "file": "p2/sprint_output/pack_p2_a_batch1.js",
+  "items_reviewed": 15,
+  "verdict": "FAIL",
+  "verdict_summary": "3 items HELD for structural/content defects; 12 items certification-eligible",
+  "items": [
+    {
+      "QuestionID": "P2-A-501",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "SGR = ROE x Retention Ratio. Independent calc: ROE = 12.4/95.2 = 13.03%, retention = 1 - 3.1/12.4 = 0.75, SGR = 9.77%. Option A correctly defines SGR. Formula FA-21 verified."},
+        "Precision": {"confidence": "HIGH", "notes": "Unambiguous definition question. One defensible answer (SGR). No missing assumptions."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Easy/Remember is appropriate for a pure definition question. No DL-031 inflation."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "B (IGR), C (CAGR), D (ROIC) each target distinct misconceptions. All substantive."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9 aligns with sustainable growth rate topic. BlueprintDomain correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance growth analysis is Part 2 material. Authority (Higgins 1977) appropriate."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-502",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "ROE = 45/300 = 15%, retention = 1 - 18/45 = 0.60, SGR = 15% x 0.60 = 9.00%. Option B correct."},
+        "Precision": {"confidence": "HIGH", "notes": "All inputs traceable. Single defensible answer. No ambiguity."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate-Easy/Apply is appropriate for direct formula application."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (misapplies retention), C (ROE alone), D (dividend yield subtraction) all plausible errors."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic A.9 SGR calculation. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance growth analysis. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-503",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "SGR = 18% x (1 - 0.40) = 18% x 0.60 = 10.80%. Option A correct."},
+        "Precision": {"confidence": "HIGH", "notes": "Clean formula application. No ambiguity."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate-Easy/Apply appropriate."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "B (payout ratio), C (ROE alone), D (division) all target real errors."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic SGR calculation. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance. Part 2."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-504",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Option B correctly defines residual policy (dividends = NI - equity portion of capex) vs constant payout. Standard corporate finance theory."},
+        "Precision": {"confidence": "HIGH", "notes": "Clear conceptual contrast. One defensible answer."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate/Understand appropriate for conceptual contrast."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A reverses definitions, C describes stable dividends, D describes cash gate. All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic residual dividend policy. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend policy theory. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-505",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "MM dividend irrelevance: stock drops by exactly the dividend amount ($8), wealth unchanged ($152 + $8 = $160). Option B correctly states MM theory. Option C is a deflection about ex-date mechanics that doesn't answer the CFO's question. However, the EC text explains the MM framework and the question seeks 'practical interpretation' - B is the stronger answer but C is defensible as 'practical interpretation'."},
+        "Precision": {"confidence": "MEDIUM", "notes": "Ambiguity in what 'practical interpretation' means. B correctly applies MM theory to answer the question directly; C deflects to ex-date mechanics. Both are defensible but B is stronger."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate/Understand appropriate for MM theory application."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (signaling), D (empirical premium) target distinct misconceptions."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic MM dividend irrelevance. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend policy theory (Modigliani-Miller). Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-506",
+      "dimensions": {
+        "Correctness": {"confidence": "ZERO", "notes": "CRITICAL: CorrectChoice=A (tax differential theory) but ExplanationCorrect text describes the clientele effect - investors self-select into stocks based on dividend preferences and must sell when eliminated. This directly describes option B (clientele effect), not option A. Stem describes income-oriented investor clientele. CC should be B."},
+        "Precision": {"confidence": "HIGH", "notes": "The stem describes income-oriented investors - clearly a clientele effect scenario."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate-Easy/Apply appropriate for applying dividend theory."},
+        "DistractorEngineering": {"confidence": "MEDIUM", "notes": "ExplanationWrong fields describe the correct theories but the CC/EC mismatch undermines the item's validity."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic clientele effect. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend policy theory. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": false,
+      "hold_reason": "CC/EC mismatch: CorrectChoice=A (tax differential) but ExplanationCorrect text describes clientele effect (option B's concept). The stem clearly describes a clientele effect scenario. CorrectChoice should be B."
+    },
+    {
+      "QuestionID": "P2-A-507",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Dividend yield = ($0.45 x 4) / $72.00 = 2.50%. Option C correctly calculates yield. The EC text correctly interprets below-median yield."},
+        "Precision": {"confidence": "HIGH", "notes": "Clean calculation. Single defensible answer."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate/Apply appropriate for yield calculation + interpretation."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "B (quarterly yield), C (undervaluation conclusion), D (par value) all distinct errors."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic dividend yield. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Market ratio analysis. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-508",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "P0 = D1/(r-g) = $2.52/0.07 = $36.00. Option C correct. Independent recalc verified."},
+        "Precision": {"confidence": "HIGH", "notes": "All inputs traceable. Single defensible answer."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate/Apply appropriate for Gordon Growth Model."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (no-growth perpetuity), B (D0 instead of D1), D (divide by g) all common errors."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic Gordon Growth Model. Correct. source_id CB-11 verified."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Cost of equity / valuation. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-509",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Stock drops $45.00 - $43.50 = $1.50 = exactly the dividend amount. Option A correctly addresses why the drop might differ from theoretical amount (tax-exempt buyers, market efficiency). The EC text explains tax differential theory for ex-dividend drops."},
+        "Precision": {"confidence": "HIGH", "notes": "Clear scenario. One defensible answer."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Difficult/Apply appropriate for nuanced ex-dividend theory."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "B (states correctness without theory), C (theory but not specific case), D (denies adjustment). All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic ex-dividend date. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend policy theory. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-510",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Repurchase: $40M/$40 = 1M shares; remaining 19M; equity = $360M. EPS = $50M/19M = $2.63 (up from $2.50). BVPS = $360M/19M = $18.95 (down from $20.00). Option D correctly identifies EPS increases and BVPS decreases."},
+        "Precision": {"confidence": "HIGH", "notes": "All inputs traceable. Calculation straightforward."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Difficult/Analyze appropriate for dual-metric impact analysis."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A/B (wrong share count), C (no effect) all plausible errors."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic stock repurchase effects. Correct. FA-15 verified."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "EPS and market ratios. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-511",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Retained earnings = $8.0M - $2.0M = $6.0M. Option B correctly computes the gap. The answer is mathematically correct."},
+        "Precision": {"confidence": "HIGH", "notes": "Simple arithmetic. Unambiguous."},
+        "DifficultyCalibration": {"confidence": "MEDIUM", "notes": "Item labeled Easy/Apply but content is closer to Remember level (definition of retained earnings). Minor DL-031 inflation. Not blocking but flagged."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (confuses NI with RE), C (reverses relationship), D (ignores constraint). All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic retained earnings. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance / growth analysis. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-512",
+      "dimensions": {
+        "Correctness": {"confidence": "ZERO", "notes": "CRITICAL: CorrectChoice=C ('Increase the dividend to 50% because above-median payout indicates more cash than profitable investment opportunities') but ExplanationCorrect text states 'Maintaining the current policy is appropriate' and 'a 5-point deviation does not independently signal financial weakness or excess cash.' The EC directly contradicts option C. The EC supports option B (Maintain). Item has wrong CorrectChoice or wrong ExplanationCorrect."},
+        "Precision": {"confidence": "HIGH", "notes": "Fact pattern is clear (40% payout vs 35% median). The ambiguity is in which answer is correct, not in the stem."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Very Difficult/Analyze appropriate for multi-factor dividend policy judgment."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (mechanical cut), B (maintain - supported by EC), D (invoke MM). All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic payout ratio analysis. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend policy analysis. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": false,
+      "hold_reason": "CRITICAL: CorrectChoice/ExplanationCorrect mismatch. CC=C says 'Increase to 50%' but EC text argues 'Maintaining is appropriate' and '5-point deviation does not independently signal weakness.' EC supports answer B, not C. Item needs answer key correction."
+    },
+    {
+      "QuestionID": "P2-A-513",
+      "dimensions": {
+        "Correctness": {"confidence": "ZERO", "notes": "CRITICAL: CorrectChoice=D proposes issuing new equity to fund growth while paying higher dividends - a value-destructive strategy. The ExplanationCorrect text describes the tension between reinvestment returns and investor preferences, which directly supports option B. CC/EC mismatch - CC should be B."},
+        "Precision": {"confidence": "HIGH", "notes": "Clear scenario with defined ROE, retention, and market signal. B is the only answer that correctly identifies the core tension."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Moderate/Analyze appropriate for growth-dividend tradeoff analysis."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (correct math but absolute conclusion), C (MM dismissal), D (impractical equity issuance). All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic growth-dividend tradeoff. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance growth analysis. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": false,
+      "hold_reason": "CRITICAL: CorrectChoice/ExplanationCorrect mismatch. CC=D proposes issuing equity to pay dividends (value-destructive). EC text supports B (identifying the core tension between reinvestment returns and investor preferences). CC should be B."
+    },
+    {
+      "QuestionID": "P2-A-514",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Cash dividend: DR RE $10M, CR Cash $10M (reduces assets and equity). Stock dividend: DR RE $20M, CR CS $2.5M, CR APIC $17.5M (equity unchanged, reallocation within). Option B correctly describes both effects. ASC 505-20 citation appropriate."},
+        "Precision": {"confidence": "HIGH", "notes": "Clear accounting treatment. Single defensible answer."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Difficult/Understand appropriate for dual-treatment accounting knowledge."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (equivalence claim), C (equity reduction error), D (no equity effect error). All distinct."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic cash vs stock dividends. Correct. ASC 505-20 citation appropriate."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Dividend accounting (ASC 505-20). Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-515",
+      "dimensions": {
+        "Correctness": {"confidence": "HIGH", "notes": "Three independent constraints: covenant (current ratio 1.62 vs 1.50 requirement), capex ($80M competing for cash), credit rating (50% payout cap). Option D correctly identifies all three as independent binding constraints. No single constraint is dominant."},
+        "Precision": {"confidence": "HIGH", "notes": "All three constraints are explicitly stated in stem. Clear multi-factor analysis."},
+        "DifficultyCalibration": {"confidence": "HIGH", "notes": "Very Difficult/Evaluate appropriate for multi-constraint judgment."},
+        "DistractorEngineering": {"confidence": "HIGH", "notes": "A (covenant only), B (rating only), C (two of three). All target incomplete analysis."},
+        "BlueprintAlignment": {"confidence": "HIGH", "notes": "LOSTag A.9, Topic factors affecting dividend policy. Correct."},
+        "Part2Relevance": {"confidence": "HIGH", "notes": "Corporate finance dividend policy constraints. Part 2 material."}
+      },
+      "structural_checks": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "dl021": "PASS",
+        "part2onlyflag": "PASS",
+        "all_fields_present": "PASS",
+        "source_ids_resolve": "PASS",
+        "explanation_length": "PASS"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    }
+  ],
+  "summary": {
+    "high_confidence": 12,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "zero_confidence": 3,
+    "structural_failures": 0,
+    "certification_eligible_count": 12,
+    "hold_count": 3,
+    "held_items": [
+      {
+        "QuestionID": "P2-A-506",
+        "hold_reason": "CC/EC mismatch: CorrectChoice=A (tax differential theory) but ExplanationCorrect text describes the clientele effect (option B's concept). Stem clearly describes income-oriented investor clientele departure - this is a clientele effect question. CorrectChoice should be B."
+      },
+      {
+        "QuestionID": "P2-A-512",
+        "hold_reason": "CRITICAL CorrectChoice/ExplanationCorrect mismatch: CC=C says 'Increase the dividend to 50%' but EC text argues 'Maintaining the current policy is appropriate' and 'a 5-point deviation does not independently signal financial weakness.' EC supports answer B (Maintain), not C (Increase). Wrong CorrectChoice or wrong ExplanationCorrect."
+      },
+      {
+        "QuestionID": "P2-A-513",
+        "hold_reason": "CRITICAL CorrectChoice/ExplanationCorrect mismatch: CC=D proposes issuing equity to pay dividends (value-destructive). EC text supports B (identifying the core tension between reinvestment returns and investor preferences). CC should be B."
+      }
+    ],
+    "notes": "All 15 items have valid structural fields (DL-008, DL-026, DL-021 all PASS). All Part2OnlyFlag = true. All source_ids resolve. All ExplanationCorrect >= 200 chars. No DL-013 boilerplate. The 3 held items have correct structural compliance but content-level answer key errors."
+  }
+}

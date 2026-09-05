@@ -3649,6 +3649,136 @@ Certification batches must include a numeric-multiset + Topic clone scan across 
 
 ---
 
+## DL-047 — Certified Answer-Key / Explanation-Content Contradictions (Semantic Verification Gap)
+
+```
+Defect ID        DL-047
+Class            Content / Structural (hybrid)
+Domain           Semantic Accuracy — Answer-Key / Explanation Agreement
+Severity         Critical (7 key inversions teach a wrong answer as correct on live-pool items); High (foreign-topic contamination, misassignment, incomplete content)
+Detected By      Learner challenge (2026-09-05 — P1-F-009, P1-E-056) + Build-Time AI Verification pool-wide audit (4 screens over 2,620/2,620 parsed items)
+Status           Resolved — remediated + recertified 2026-09-05 (10/10 items; see Correction below)
+Category         Semantic-verification gap: contradiction between stored key and explanation content, invisible to all structural gates
+```
+
+**Question IDs (10, all `question_state: "Certified"` — live learner pool):**
+
+| # | QID | Pack | Stored CC | True answer | Manifestations |
+|---|-----|------|-----------|-------------|----------------|
+| 1 | P1-F-009 | A | D | **C** | Key inversion; EW_C holds supporting fragment (user-reported) |
+| 2 | P1-E-056 | A | D | **B** | Key inversion; foreign-topic EC; EW_B/EW_C shift (user-reported) |
+| 3 | P1-F-054 | A | A | **D** | Key inversion; EC + EW_D support D |
+| 4 | P1-EC-001 | C | D | **A** | Key inversion; EC supports A; EW_A/B/C foreign scenario |
+| 5 | P1-EC-005 | C | B | **A** | Key inversion; EC supports A; EW_A/C/D foreign scenario |
+| 6 | P1-EC-010 | C | C | **B** | Key inversion; EC supports B; EW_A/D foreign; EW_B refutes correct answer |
+| 7 | P1-EC-055 | C | D | **C** | Key inversion; EC supports C; EW_A/B foreign |
+| 8 | P1-DD-022 | D | B (intact) | **B** | Key intact; EW_A/C/D foreign-topic contamination |
+| 9 | P1B-B-102 | B | B (intact) | **B** | Key intact; EW_A/C/D misassigned (+1 shift) |
+| 10 | P1E-C-092 | E | D | unanswerable | Incomplete stem/choices (blank numbers); fragment choice D |
+
+### Summary
+
+Ten Certified items carry contradictions between the stored answer key and the item's own explanation content. Seven teach a factually wrong answer as correct (Critical — strictly worse than DL-008, which shows wrong *feedback* but keeps the right *key*). Two carry foreign-topic explanation text with an intact key (High). One is unanswerable as stored (High). All ten pass every automated gate (DL-008 = 0, DL-026 = 0, Rule 9 = 0), which is why successive "learner pool confirmed clean" attestations missed them: those attestations cover structural defects only. No semantic key/explanation-agreement gate exists anywhere in the pipeline.
+
+### Group A — Key inversions (stored key contradicts stem + choices + explanations)
+
+**A1. P1-F-009** — `content/packs/pack_a_corrected.js:22023-22057` (Certified, Session 68 Wave 1, 2026-07-24). Stem: POS feed arrives two days *after* pricing decisions → timeliness. Choice C ("Timeliness, because data are not available when needed") is correct; stored CC = D ("Validity … format and range checks" — no stem facts support it). EC (line 22031) explains timeliness. EW_C (line 22056) holds the fragment *"because the data arrive after managers need them for pricing decisions"* — a justification *for* the correct answer filed in a wrong-answer slot (DL-010). Learner review rendered EC as "WHAT WAS TESTED / WHY THE CORRECT ANSWER WINS" and EW_C as "WHY YOUR ANSWER WAS WRONG," so the UI faithfully displayed the data defect (renderer exonerated).
+
+**A2. P1-E-056** — `content/packs/pack_a_corrected.js:20555-20592` (Certified, S803 Wave 1, 2026-07-26). Stem: custodian performs the physical count without independent oversight → segregation-of-duties failure. Choice B is correct; stored CC = D ("required for accurate cycle counts" — factually false; independence, not custody, is required). EC (line 20563) is foreign-topic text about *periodic access recertification / least privilege / MFA* belonging to a different item (DL-016/DL-010 contamination). EW_B (line 20590) refutes choice C's "more accurate" claim at B's slot; EW_C (line 20591) refutes choice D's claim at C's slot; only EW_A sits in its correct slot — a forward-shift pattern consistent with the empty/CC slot having moved B→D while the true answer stayed B.
+
+**A3. P1-F-054** — `content/packs/pack_a_corrected.js:24306` (Certified, no batch stamp). Stem asks which metric's lineage gap is highest-risk. EC + EW_D both conclude Metric 5 / Diluted EPS (choice D) is a *confirmed* error outranking risk-only metrics; stored CC = A (Metric 1). Entire explanation set written for CC=D; the key is the outlier. True answer D.
+
+**A4. P1-EC-001** — `content/packs/pack_c_corrected.js:17934` (Certified, no batch stamp). Stem describes textbook three-way segregation (authorize / record / reconcile) → A. EC supports A; stored CC = D (risk acceptance). EW_A/B/C all narrate a *different* scenario (warehouse PO-creation + invoice-entry custody, duplicate-payment scheme, $47,000) absent from this stem.
+
+**A5. P1-EC-005** — `content/packs/pack_c_corrected.js:18139` (Certified, no batch stamp). Same stem skeleton as A4 (Emberton three-way split) → A. EC supports A; stored CC = B (cost-benefit). EW_A/C/D narrate a foreign compensating-monitoring scenario (duplicate scheme undetected six months).
+
+**A6. P1-EC-010** — `content/packs/pack_c_corrected.js:18395` (Certified, no batch stamp). Stem: "five integrated components" internal-control framework → B (COSO IC-IF) by definition. EC supports B; stored CC = C (Balanced Scorecard). EW_A (fraud-triangle pressure) and EW_D (fraud diamond) are foreign-topic; EW_B refutes the correct answer with reasoning the stem directly contradicts.
+
+**A7. P1-EC-055** — `content/packs/pack_c_corrected.js:20705` (Certified, no batch stamp). Stem: small firm cannot segregate → C (compensating owner/management review, the standard answer). EC supports C; stored CC = D ("Eliminating internal controls entirely" — certifying this as correct teaches learners to dismantle controls). EW_A (board independence) and EW_B (control-environment taxonomy) are foreign-topic.
+
+### Group B — Explanation contamination / misassignment with intact key
+
+**B1. P1-DD-022** — `content/packs/pack_d_corrected.js:15176` (Certified, no batch stamp). Key B correct (R-squared 0.82 → purchase orders; EC on-topic). EW_A/C/D cite a foreign assignment question's numbers ($120,000 pool, 2,400 orders, Product A 600 × $50 = $30,000, $50,000 rate) nowhere present in this stem ($180,000 pool, 1,200 POs, R-squared). Learners selecting A/C/D receive feedback about a different question.
+
+**B2. P1B-B-102** — `content/packs/pack_b_corrected.js:3236` (Certified, no batch stamp). Key B correct (direct materials purchases budget is operating). EW_A (slot A, choice A = capex budget) describes the *cash* budget; EW_C (slot C, choice C = cash budget) describes the *balance sheet*; EW_D invokes the sales budget (not a choice) — a +1 misassignment shift with a correct key (DL-010).
+
+### Group C — Incomplete content
+
+**C1. P1E-C-092** — `content/packs/pack_e_corrected.js:25010` (Certified, S71, 2026-07-24). Stem contains unfilled numeric blanks ("Segment A assets , segment B assets . Total assets ."); choice D is the fragment `" > 10% of "` (leading-space fragment pattern — DL-046 family). EC and EW_B/C assert "Segment A's assets equal exactly 10%" — facts not in evidence in the stem. Unanswerable as stored.
+
+### Why every gate missed this class
+
+| Gate | Result on all 10 items | Reason |
+|------|------------------------|--------|
+| DL-008 (Rule 2) | 0 | CC slots correctly empty — structure fine, semantics wrong |
+| DL-026 (Rule 6) | 0 | Non-CC slots non-empty — filled with wrong-topic text, which Rule 6 does not screen |
+| Rule 9 (lead-in polarity) | 0 | No Yes/No lead-ins involved |
+| DL-010 validators | No coverage | No automated validator checks semantic slot assignment |
+| Certification waves | Passed | Waves checked DL-008/DL-026 only (S853 pattern); semantic key agreement never verified |
+| Baselines §3 "pool clean" | Stale scope | Attests structural defects only |
+
+### Root cause
+
+Answer-position rotation/shift during authoring or certification waves moved the stored CorrectChoice (and, on E-056/B-B-102, the empty-slot marker) without moving the explanation content written for the true answer; on E-056/EC-001/EC-005/EC-010/EC-055/DD-022, whole explanation fields were pasted from unrelated items of the same section (same template-pipeline family as DL-012/DL-016). Eight of ten items carry no `certification_batch`/`certification_date` stamp, limiting wave attribution to: Session 68 Wave 1 (F-009), S803 Wave 1 restoration (E-056), S71 (E-C-092).
+
+### Detection rule (4 screens; DL-029-compliant within-object extraction via `scripts/lib/pack_parser.js`)
+
+1. **Exact-phrase fingerprints** — search pool for known contaminant strings (F-009 EW_C fragment; E-056 access-recertification EC; F-009 timeliness EC). Any hit outside the source item = spread.
+2. **EC lead-token echo** — per Certified item, keyword-recall of each choice's lead phrase against EC; flag when best-recall letter ≠ CC with recall ≥ 0.50 and margin ≥ 0.40.
+3. **EC–stem topical mismatch** — Jaccard(content-words(EC), content-words(stem+choices)); flag < 0.05 with EC ≥ 20 content words.
+4. **EW lowercase-fragment** — flag any non-empty EW slot whose trimmed text starts with a lowercase letter (misfiled justification continuation, e.g. F-009's *"because…"*).
+
+### Audit scope and methodology (2026-09-05)
+
+- All 5 MCQ packs: 2,620/2,620 items parsed (matches preflight QID totals 500/500/500/500/620); 2,620 Certified screened.
+- Screen yields: A = 3 hits (all on the 2 source items, no spread); B = 24 flags → 6 key-inversion confirmations (A1, A3–A7) + 1 intact-key shift (B2), 17 adjudicated-clean heuristic FPs (generic-word overlap, e.g. P1-C-049 "acceptable/price"; short ECs naming contrasted choices, e.g. AC-071–075 rotation group verified slot-clean); C = 1 flag → A2 confirmed; D = 14 flags → A1 + B1 confirmed, 12 style-only lowercase continuations with correct content (BC-056, FC-026, AD-054/055, DD-024, E-D-005/026/073).
+- Count stability (§6): full screen re-run produced identical 24/1/14/3 yields before adjudication.
+- Every confirmation verified by verbatim within-object extraction (pack + line cited above); UI mapping verified field-for-field against the learner screenshots (renderer exonerated).
+- Case banks excluded: different schema, outside the challenged MCQ review UI scope — flagged as residual risk, not audited.
+
+### Correction (executed 2026-09-05 — user-authorized remediation + recertification)
+
+Flow per item: `Certified` → `In Audit` (delivery quarantine) → content fix → verify → `Certified` + `recertification_batch`/`recertification_date` stamps (provenance; original `certification_batch` preserved where present). Surgical in-block replacement (byte-exact anchors, two-phase commit, post-edit re-parse); per-pack change-sets of 4/3/1/1/1 objects (Rule 5 compliant). Backups: `backups/pack_{a,b,c,d,e}_corrected.js.bak-DL047-20260905143918` (all non-zero, verified pre-write).
+
+| # | QID | Key flip | Slots repaired | CC slot | State |
+|---|-----|----------|----------------|---------|-------|
+| A1 | P1-F-009 | D→**C** | EW_C→`""`; EW_D authored (validity refutation) | `""` ✓ | Certified + stamps |
+| A2 | P1-E-056 | D→**B** | EC rewritten (SoD physical count); EW_B→`""`; EW_C/D authored | `""` ✓ | Certified + stamps |
+| A3 | P1-F-054 | A→**D** | EW_D→`""`; EW_A authored (Metric 1 risk-vs-error) | `""` ✓ | Certified + stamps |
+| A4 | P1-EC-001 | D→**A** | EW_A→`""`; EW_B/C/D authored (override, cost-benefit, risk-acceptance refutations) | `""` ✓ | Certified + stamps |
+| A5 | P1-EC-005 | B→**A** | EW_A→`""`; EW_B/C/D authored | `""` ✓ | Certified + stamps |
+| A6 | P1-EC-010 | C→**B** | EW_B→`""`; EW_A/C/D authored (ToC, BSC, DMAIC refutations) | `""` ✓ | Certified + stamps |
+| A7 | P1-EC-055 | D→**C** | EW_C→`""`; EW_A/B/D authored | `""` ✓ | Certified + stamps |
+| B1 | P1-DD-022 | B intact | EW_A/C/D rewritten (cause-and-effect criterion) | `""` ✓ | Certified + stamps |
+| B2 | P1B-B-102 | B intact | EW_A/C/D rewritten (financial-vs-operating per choice) | `""` ✓ | Certified + stamps |
+| C1 | P1E-C-092 | D intact | Stem completed ($500K/$4.5M/$5M ⇒ exactly 10%, matching EC/EW); choice D rewritten | `""` ✓ | Certified + stamps |
+
+Post-fix verification: per-item asserts (state, CC, exact EW/EC text, CC-slot empty, all non-CC slots ≥ 50 chars) ALL PASS; 4-screen re-run shows all 10 signatures gone (B 24→16 residual = documented FP set; C 1→0; D 14→12 residual = documented style set; A fingerprints confined to fixed source items); preflight 0 divergences (2,620 Certified); `npm run pipeline` GREEN. No CognitiveLevel/DifficultyScore/Part1OnlyFlag/QID changes (Rules 12/13/14 clean); no Yes/No choice edits except C1's affirmatively-aligned D (Rule 9 clean). Rule 4 notes: per-item independent derivations recorded in REVISION_HISTORY.md 2026-09-05 DL-047 entry.
+
+### Regression test
+
+- Re-run the 4 screens: expect only the documented FP set (17 + 12 style-only) and zero new key-contradiction flags.
+- Independent derivation audit of CorrectChoice on any future certification batch (human + six-dimension verification per CAQS §1.6 — structural gates are necessary but not sufficient).
+- Preflight 0 divergences; QID counts unchanged.
+
+### Observations (non-blocking)
+
+- Pack E leading-space choice pattern (`" work to date"` E-D-005-D, `" costs incurred"` E-D-026-D, `" manufacturing costs"` E-D-073-B, `" > 10% of "` E-C-092-D): cosmetic DL-046-family marker; only E-C-092 rises to defect. Monitor in future choice-text screens.
+- Missing certification provenance on 8/10 items (no batch/date stamp) weakens wave attribution; recommend stamping provenance on all future certification writes.
+
+### Cross-References
+
+- DL-030 (CorrectChoice answer-key errors — resolved 2026-07-24; DL-047 is its Certified-pool recurrence through structural gates)
+- DL-010 (misassigned choice explanations — B2 class; A2 EW shift)
+- DL-016 (rotation-shift contamination family — A2 EC; B1)
+- DL-046 (fragment/corrupted-choice family — C1; Pack E leading-space observation)
+- DL-002 (keyword-overlap heuristic confidence caveat — why Screen B FPs required manual adjudication)
+- DL-029 (within-object extraction methodology — no forward-scan; CC read from same object as EW)
+- DL-045 (positive-evidence doctrine — per-item pack:line evidence above; deterministic screen yields; QID lists)
+- REVISION_HISTORY.md: 2026-09-05 DL-047 audit entry (this session)
+
+---
+
 ## Template for New Entries
 
 ```markdown

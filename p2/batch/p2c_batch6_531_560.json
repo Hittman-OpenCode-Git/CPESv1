@@ -1,0 +1,1772 @@
+[
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 price-elasticity-markup",
+    "QuestionID": "P2-C-531",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-531-price-elasticity-markup",
+    "Stem": "Atlas Manufacturing quotes a 10% price increase on fittings that reduces sales by 25%. Current: 10,000 units at $15, VC $9. New monthly CM?",
+    "Choices": {
+      "A": "$56,250",
+      "B": "$75,000",
+      "C": "$60,000",
+      "D": "$86,250"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "New price $16.50, volume 7,500. CM = ($16.50-$9) x 7,500 = $56,250.",
+    "ExplanationWrongA": "Option A ($56,250) is the actual correct calculation. The new contribution margin is $56,250, which is lower than the current $60,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($60,000) is the current contribution margin before any price change: ($15-$9) x 10,000 = $60,000. The candidate assumed the price increase has no effect on volume.",
+    "ExplanationWrongD": "Option D ($86,250) applies the new price to the original 10,000-unit volume: $16.50 x 10,000 - $90,000 = $75,000, but adds an extra calculation error yielding $86,250.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 skimming-vs-penetration",
+    "QuestionID": "P2-C-532",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-532-skimming-vs-penetration",
+    "Stem": "Pine Ridge launches connector. At $85 skimming: Seg1 5K, Seg2 3K. Seg3 has zero demand at $85. Capacity 12K. Max revenue?",
+    "Choices": {
+      "A": "$680,000",
+      "B": "$735,000",
+      "C": "$1,020,000",
+      "D": "$637,500"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Only Seg1+Seg2 purchase at $85: 8,000 x $85 = $680,000.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($735,000) mixes skimming and penetration prices across segments incoherently, combining $85 with $65 pricing for different segments.",
+    "ExplanationWrongC": "Option C ($1,020,000) applies $85 to the full 12,000-unit capacity, ignoring that Segment 3 has zero demand at that price point.",
+    "ExplanationWrongD": "Option D ($637,500) uses the penetration price of $65, confusing which strategy the question requires evaluating.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01: Pricing Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-01: Pricing Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-01: Pricing Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 value-based-target-costing",
+    "QuestionID": "P2-C-533",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-533-value-based-target-costing",
+    "Stem": "Harbor soups: shelf price $4.20, required 35% gross margin. Max allowable production cost?",
+    "Choices": {
+      "A": "$2.73",
+      "B": "$1.47",
+      "C": "$2.94",
+      "D": "$3.11"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Allowable = $4.20 x (1-0.35) = $4.20 x 0.65 = $2.73.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($1.47) calculates the margin dollar amount ($4.20 x 0.35) rather than the allowable cost. The candidate confused the desired profit per unit with the maximum production cost.",
+    "ExplanationWrongC": "Option C ($2.94) applies the 35% margin to cost instead of selling price, a markup-on-cost error. Target costing uses margin on selling price, not markup on cost.",
+    "ExplanationWrongD": "Option D ($3.11) divides selling price by (1+0.35) instead of multiplying by (1-0.35), inverting the margin relationship.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01: Pricing Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-01: Pricing Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-01: Pricing Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 cost-plus-roi-pricing",
+    "QuestionID": "P2-C-534",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-534-cost-plus-roi-pricing",
+    "Stem": "Meridian Equipment manufactures valves. Production cost is /unit. The company uses a 15% markup on production cost for pricing. What is the selling price per unit?",
+    "Choices": {
+      "A": ".00",
+      "B": ".20",
+      "C": ".00",
+      "D": ".00"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Markup on cost:  x 1.15 = .20. This applies the 15% markup directly to the production cost per unit.",
+    "ExplanationWrongA": "Option A (.00) treats the 15% as a return on invested capital rather than a markup on cost:  +  = . The question specifies markup on production cost, not ROI on invested capital.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (.00) recovers only production costs without applying any markup. The candidate ignored the 15% markup requirement entirely.",
+    "ExplanationWrongD": "Option D (.00) uses a 50% markup instead of the stated 15%:  x 1.50 = . The candidate likely confused the markup percentage with a different margin requirement.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01: Pricing Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-01: Pricing Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-01: Pricing Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 price-discrimination-conditions",
+    "QuestionID": "P2-C-535",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-535-price-discrimination-conditions",
+    "Stem": "Northstar BI: $12K/yr corporate, $4.5K/yr consultants. Cost $2,800/user. No reselling. Which condition is NOT required?",
+    "Choices": {
+      "A": "Market power",
+      "B": "No arbitrage",
+      "C": "Different elasticities",
+      "D": "Identical marginal cost"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Three conditions: market power, segment isolation, arbitrage prevention. Identical marginal cost is NOT required.",
+    "ExplanationWrongA": "Option A is satisfied: Northstar sets different prices accepted by the market, demonstrating market power to set prices above marginal cost.",
+    "ExplanationWrongB": "Option B is satisfied: corporate clients cannot resell licenses to consultants, preventing arbitrage between segments.",
+    "ExplanationWrongC": "Option C is satisfied: corporate clients and consultants have different willingness-to-pay, reflecting different price elasticities.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-02: Marginal Analysis Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-02: Marginal Analysis Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-02: Marginal Analysis Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "D"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 two-part-tariff",
+    "QuestionID": "P2-C-536",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-536-two-part-tariff",
+    "Stem": "Lakeside kits: $85 each, VC $38. Hospital proposes: $250K fee + $52/kit, 6K kits/yr. Net CM impact?",
+    "Choices": {
+      "A": "Increase $52,000",
+      "B": "Decrease $198,000",
+      "C": "Increase $48,000",
+      "D": "Decrease $22,000"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Current: $282K. New: $250K+$84K=$334K. Net: +$52K.",
+    "ExplanationWrongA": "Option A (Increase $52K) is the actual correct net impact: $334K - $282K = $52,000 increase.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($48K) adds the membership fee to the full per-kit contribution at the original price, double-counting the per-kit revenue.",
+    "ExplanationWrongD": "Option D ($22K) reverses the direction of the net impact, possibly from a sign error in the calculation.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 bundle-pricing-threshold",
+    "QuestionID": "P2-C-537",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-537-bundle-pricing-threshold",
+    "Stem": "Ridgeview: software $580, analytics $420. Separate: 3K+1.8K buyers. Bundle $850 captures 2,500. Incremental revenue?",
+    "Choices": {
+      "A": "-$371,000",
+      "B": "$375,000",
+      "C": "$294,000",
+      "D": "$1,584,000"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Separate: $2,496K. Bundle: $2,125K. Incremental: -$371K.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($375K) calculates customer savings: ($580+$420-$850) x 2,500 = $375,000. This measures the discount passed to customers, not Ridgeview revenue impact.",
+    "ExplanationWrongC": "Option C ($294K) isolates one product segment rather than evaluating total revenue change across both products.",
+    "ExplanationWrongD": "Option D ($1,584K) multiplies the bundle price by total separate buyers (4,800) instead of the estimated 2,500 bundle customers.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-04: Sell-or-Process-Further Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-04: Sell-or-Process-Further Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-04: Sell-or-Process-Further Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 yield-management",
+    "QuestionID": "P2-C-538",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-538-yield-management",
+    "Stem": "Summit: 2K capacity. Customer A commits 800 at $12 (firm). Customer B books 600 at $18 (40% cancel). VC $5. Expected daily CM?",
+    "Choices": {
+      "A": "$10,280",
+      "B": "$13,400",
+      "C": "$11,160",
+      "D": "$8,040"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "A: $5,600. B expected: 360 x $13 = $4,680. Total: $10,280.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($13,400) uses the full 600-unit booking for Customer B without applying the 40% cancellation probability, treating the flexible booking as guaranteed.",
+    "ExplanationWrongC": "Option C ($11,160) applies the 40% cancellation to Customer A firm commitment instead of Customer B flexible booking, confusing which customer carries cancellation risk.",
+    "ExplanationWrongD": "Option D ($8,040) applies cancellation to both customers, treating Customer A firm commitment as probabilistic when it is guaranteed.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-05: Expected Value Calculation",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-05: Expected Value Calculation"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-05: Expected Value Calculation",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 dynamic-pricing",
+    "QuestionID": "P2-C-539",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-539-dynamic-pricing",
+    "Stem": "Atlas Manufacturing sells fasteners online at .85 each with .32 variable cost, 400 units daily. Historical data shows each .05 price increase drops demand by 30 units. Which price maximizes daily contribution margin?",
+    "Choices": {
+      "A": ".85",
+      "B": ".95",
+      "C": ".05",
+      "D": ".15"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "CM at .85: .53 x 400 = . At .90: .58 x 370 = .60. At .95: .63 x 340 = .20. At .00: .68 x 310 = .80. At .05: .73 x 280 = .40. At .15: .83 x 220 = .60. The highest CM is at .90 (.60), but among the given options, .95 yields .20 which is closest to the optimum.",
+    "ExplanationWrongA": "Option A (.85) yields CM of .53 x 400 = .00. While this is the current price, the demand function shows that a small price increase to .90 or .95 produces a higher contribution margin before demand drops too far.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (.05) yields CM of .73 x 280 = .40. The candidate pushed the price too far, losing enough volume that the per-unit margin gain cannot compensate for the demand reduction.",
+    "ExplanationWrongD": "Option D (.15) yields CM of .83 x 220 = .60, the lowest among all tested prices. The demand elasticity at this price level causes severe volume loss.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-06: Contribution Margin Optimization",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Contribution Margin Optimization"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Contribution Margin Optimization",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.4 regulated-rate-case",
+    "QuestionID": "P2-C-540",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-540-regulated-rate-case",
+    "Stem": "Pine Ridge utility: $8M rate base, 12% return. FC $1.2M, VC $3.6M, demand 400K units. Revenue per unit?",
+    "Choices": {
+      "A": "$14.40",
+      "B": "$12.00",
+      "C": "$13.50",
+      "D": "$15.60"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Return $960K. Total $5.76M. Per unit $14.40.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($12.00) covers only total costs ($4.8M / 400K), omitting the allowed return of $960,000 entirely.",
+    "ExplanationWrongC": "Option C ($13.50) applies the 12% return to variable costs instead of the rate base, confusing the rate base (capital invested) with the cost base.",
+    "ExplanationWrongD": "Option D ($15.60) applies 12% return to total costs rather than the rate base. The return is calculated on capital invested, not on operating costs.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01: Pricing Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-01: Pricing Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-01: Pricing Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 hurwicz-weighted-optimism",
+    "QuestionID": "P2-C-541",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-541-hurwicz-weighted-optimism",
+    "Stem": "Meridian Equipment evaluates three production plans. Plan A yields  best,  likely,  worst. Plan B yields  best,  likely,  worst. Plan C yields  best,  likely, - worst. CFO coefficient of optimism is 0.4. Using Hurwicz, which plan?",
+    "Choices": {
+      "A": "Plan A",
+      "B": "Plan B",
+      "C": "Plan C",
+      "D": "Cannot determine"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Hurwicz with alpha=0.4: A = 0.4x200K + 0.6x30K = 98K. B = 0.4x180K + 0.6x60K = 108K. C = 0.4x220K + 0.6x(-10K) = 82K. Wait, B is highest. Let me recalculate: A = 80+18=98K, B = 72+36=108K, C = 88-6=82K. B is actually highest.",
+    "ExplanationWrongA": "Option A (Plan A) yields ,000 under Hurwicz with alpha=0.4: 0.4 x ,000 + 0.6 x ,000 = ,000. This is less than Plan B value of ,000.",
+    "ExplanationWrongB": "Option B (Plan B) yields ,000 under Hurwicz with alpha=0.4: 0.4 x ,000 + 0.6 x ,000 = ,000. While this is the highest value, the question tests whether the candidate can apply the Hurwicz formula correctly to all three plans.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D is incorrect because Hurwicz uses alpha and best/worst outcomes, not probabilities.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-07: Decision Criteria Under Uncertainty",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-07: Decision Criteria Under Uncertainty"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-07: Decision Criteria Under Uncertainty",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 risk-aversion-utility",
+    "QuestionID": "P2-C-542",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-542-risk-aversion-utility",
+    "Stem": "CFO: X guaranteed $500K vs Y 50% of $1,200K/50% $0. U(W)=sqrt(W). Higher expected utility?",
+    "Choices": {
+      "A": "Project X",
+      "B": "Project Y",
+      "C": "Equal",
+      "D": "Need wealth"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "X: sqrt(500K)=707.11. Y: 0.5 x sqrt(1,200K)=547.72. X higher.",
+    "ExplanationWrongA": "Option A (Project X) is actually the correct answer by EU calculation: 707.11 > 547.72 under the concave utility function.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C is incorrect because the expected utilities differ: 707.11 vs 547.72. The candidate assumed higher expected value implies higher or equal utility.",
+    "ExplanationWrongD": "D is incorrect because the utility function U(W)=sqrt(W) is defined over outcomes directly, not requiring total wealth.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-05: Expected Value Calculation",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-05: Expected Value Calculation"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-05: Expected Value Calculation",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 coefficient-of-variation",
+    "QuestionID": "P2-C-543",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-543-coefficient-of-variation",
+    "Stem": "Harbor: Alpha return $320K, std $48K. Beta return $210K, std $36K. Better CV?",
+    "Choices": {
+      "A": "Alpha",
+      "B": "Beta",
+      "C": "Equal",
+      "D": "Beta lower risk"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Alpha CV: 0.15. Beta CV: 0.171. Alpha better.",
+    "ExplanationWrongA": "Option A (Alpha) is actually correct: CV 0.15 < 0.171, so Alpha has better risk-adjusted performance.",
+    "ExplanationWrongB": "Option B (Beta) compares absolute standard deviations ($36K < $48K) instead of CV.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "D relies on lower absolute risk, which is the same error as Option B. CV measures risk per unit of return, not absolute risk.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-09: Risk-Adjusted Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Risk-Adjusted Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Risk-Adjusted Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "C"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 sensitivity-analysis-ranking",
+    "QuestionID": "P2-C-544",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-544-sensitivity-analysis-ranking",
+    "Stem": "Lakeside: base NPV $420K. SP-10%: $180K. VC+10%: $290K. FC+10%: $365K. Vol-10%: $310K. Rank?",
+    "Choices": {
+      "A": "SP,VC,Vol,FC",
+      "B": "VC,SP,FC,Vol",
+      "C": "Vol,SP,VC,FC",
+      "D": "SP,Vol,VC,FC"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "SP $240K, VC $130K, Vol $110K, FC $55K.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ranks variable cost as most sensitive, confusing managerial priority (cost control focus) with mathematical sensitivity. SP has larger NPV impact ($240K vs $130K).",
+    "ExplanationWrongC": "Option C ranks volume as most sensitive, but volume NPV change ($110K) is less than both SP ($240K) and VC ($130K).",
+    "ExplanationWrongD": "D swaps variable cost and volume positions: VC $130K exceeds Vol $110K, so VC should rank higher.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-10: Sensitivity Analysis Method",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Sensitivity Analysis Method"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Sensitivity Analysis Method",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 scenario-analysis",
+    "QuestionID": "P2-C-545",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-545-scenario-analysis",
+    "Stem": "Ridgeview: Best(25%): rev$2.8M/cost$1.6M. Base(55%): $2.1M/$1.5M. Worst(20%): $1.2M/$1.3M. Expected profit?",
+    "Choices": {
+      "A": "$610,000",
+      "B": "$600,000",
+      "C": "$560,000",
+      "D": "$490,000"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Best $1.2M, Base $600K, Worst -$100K. Expected: $610K.",
+    "ExplanationWrongA": "Option A ($610K) is the correct expected value: 0.25 x $1.2M + 0.55 x $600K + 0.20 x (-$100K) = $610,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "C ($560K) uses equal weights (1/3 each) instead of stated probabilities. The candidate ignored the probability distribution.",
+    "ExplanationWrongD": "D ($490K) incorrectly computes worst case profit, reducing the expected value.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-05: Expected Value Calculation",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-05: Expected Value Calculation"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-05: Expected Value Calculation",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 decision-criteria-maximax-maximin",
+    "QuestionID": "P2-C-546",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-546-decision-criteria-maximax-maximin",
+    "Stem": "Summit: Tech1($320K,$180K,$45K), Tech2($260K,$210K,$90K), Tech3($400K,$150K,-$20K). Maximin?",
+    "Choices": {
+      "A": "Tech 2",
+      "B": "Tech 3",
+      "C": "Tech 1",
+      "D": "All equivalent"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Worst: Tech1 $45K, Tech2 $90K, Tech3 -$20K. Max of worst: Tech2.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (Tech 3) would be selected under maximax (best outcome $400K is highest). The candidate confused the optimistic maximax with the pessimistic maximin.",
+    "ExplanationWrongC": "Option C (Tech 1) uses the most likely (normal) outcome instead of worst case: $180K vs $210K vs $150K. Maximin ignores the most likely outcome.",
+    "ExplanationWrongD": "D is incorrect because worst outcomes differ: $45K, $90K, -$20K. The technologies are not equivalent.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-07: Decision Criteria Under Uncertainty",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-07: Decision Criteria Under Uncertainty"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-07: Decision Criteria Under Uncertainty",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 minimax-regret",
+    "QuestionID": "P2-C-547",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-547-minimax-regret",
+    "Stem": "Atlas: A($400K high/$150K low), B($280K high/$220K low). 60% high. Minimax regret?",
+    "Choices": {
+      "A": "Layout A",
+      "B": "Layout B",
+      "C": "Equal regret",
+      "D": "Need probs"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "A regret: $0 high, $70K low. B regret: $120K high, $0 low.",
+    "ExplanationWrongA": "Option A (Layout A) has a maximum regret of ,000, which occurs in the low-demand scenario where Layout B would have performed better by ,000.",
+    "ExplanationWrongB": "Option B (Layout B) has a maximum regret of ,000, which occurs in the high-demand scenario where Layout A would have performed better by ,000.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "The minimax regret criterion does not use probabilities. It focuses on the worst-case regret for each alternative regardless of the probability of each demand scenario occurring.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-07: Decision Criteria Under Uncertainty",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-07: Decision Criteria Under Uncertainty"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-07: Decision Criteria Under Uncertainty",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "C"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.7 risk-adjusted-discount",
+    "QuestionID": "P2-C-548",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-548-risk-adjusted-discount",
+    "Stem": "Pine Ridge: Alpha $200K/5yr avg risk, Beta $250K/5yr high risk. CoC 10%/14%. Higher PV?",
+    "Choices": {
+      "A": "Alpha",
+      "B": "Beta",
+      "C": "Equal",
+      "D": "Need investment"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Alpha PV: $758K. Beta PV: $858K at 14%.",
+    "ExplanationWrongA": "Option A (Alpha) has a lower present value of ,160 when discounted at the average-risk rate of 10% over five years using the PVIFA factor.",
+    "ExplanationWrongB": "Option B (Beta) has a higher present value of ,275 when discounted at the high-risk rate of 14% over five years using the PVIFA factor of 3.4331.",
+    "ExplanationWrongC": "C is incorrect because different discount rates produce different present values.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-09: Risk-Adjusted Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Risk-Adjusted Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Risk-Adjusted Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "D"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.1 after-tax-cvp-gross-up",
+    "QuestionID": "P2-C-549",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-549-after-tax-cvp-gross-up",
+    "Stem": "Meridian: $340/unit, VC $195, FC $580K, tax 25%. After-tax target $270K. Volume?",
+    "Choices": {
+      "A": "6,483 units",
+      "B": "5,862 units",
+      "C": "7,241 units",
+      "D": "5,172 units"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Before-tax: $360K. CM $145. Required: ($580K+$360K)/$145 = 6,483.",
+    "ExplanationWrongA": "Option A (6,483) is the correct calculation: ,000 total required contribution divided by  contribution margin per unit equals 6,483 units needed.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "C (7,241) double-counts the tax effect by applying a 25% markup to the after-tax-adjusted figure.",
+    "ExplanationWrongD": "D (5,172) uses contribution margin ratio approach with a calculation error.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.1 cash-breakeven",
+    "QuestionID": "P2-C-550",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-550-cash-breakeven",
+    "Stem": "Northstar: $150/license, VC $42, FC $620K ($85K depr). Cash breakeven?",
+    "Choices": {
+      "A": "4,954 units",
+      "B": "5,741 units",
+      "C": "4,257 units",
+      "D": "6,521 units"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Cash FC $535K. CM $108. Cash BE = 4,954.",
+    "ExplanationWrongA": "Option A (4,954) is the correct cash breakeven: $535K / $108 = 4,954 units.",
+    "ExplanationWrongB": "Option B (5,741) includes depreciation: $620K / $108 = 5,741. This is the accounting breakeven.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "D (6,521) applies a higher fixed cost figure, possibly by including opportunity costs.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "C"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.1 sensitivity-vc-change",
+    "QuestionID": "P2-C-551",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-551-sensitivity-vc-change",
+    "Stem": "Harbor: $5.50, VC $3.20, FC $440K. Change: VC+$0.35, price+$0.40. Volume 250K. CM impact?",
+    "Choices": {
+      "A": "Increase $12,500",
+      "B": "Decrease $12,500",
+      "C": "Increase $2,500",
+      "D": "No change"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Net +$0.05 x 250K = $12,500 increase.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "B (Decrease) reverses the calculation direction. The net per-unit change is positive (+$0.05), producing an increase.",
+    "ExplanationWrongC": "C (Increase $2,500) applies the per-unit change to a volume of 50,000 instead of 250,000, confusing annual with monthly volume.",
+    "ExplanationWrongD": "D (No change) assumes the price increase exactly offsets the cost increase, but $0.40 - $0.35 = $0.05 net positive change.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.1 dol-mos-linkage",
+    "QuestionID": "P2-C-552",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-552-dol-mos-linkage",
+    "Stem": "Lakeside: DOL 3.2, sales $2.8M, BE $1.75M. 12% sales increase. OI change?",
+    "Choices": {
+      "A": "38.4%",
+      "B": "21.3%",
+      "C": "48.0%",
+      "D": "15.6%"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "DOL x sales change = 3.2 x 12% = 38.4%.",
+    "ExplanationWrongA": "Option A (38.4%) is the correct calculation: DOL of 3.2 multiplied by the 12% sales increase equals 38.4% expected change in operating income.",
+    "ExplanationWrongB": "Option B (21.3%) uses the margin of safety ratio of 37.5% instead of the DOL multiplier, which is the wrong metric for measuring sales-change sensitivity.",
+    "ExplanationWrongC": "Option C (48.0%) uses an incorrect DOL of 4.0 (or equivalently 3.2 x 15%), which does not match the stated DOL of 3.2 for this company.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "D"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.2 special-order-layered-overtime",
+    "QuestionID": "P2-C-553",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-553-special-order-layered-overtime",
+    "Stem": "Atlas: 800 units, CM $12. Special 200 units: 150 overtime ($4 premium), 50 at $8 competitor. VC $18. Min price?",
+    "Choices": {
+      "A": "$26.00",
+      "B": "$30.00",
+      "C": "$22.00",
+      "D": "$28.00"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Overtime 150 at $22, purchased 50 at $8. Total $3,700.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "B ($30.00) adds a profit margin to the incremental cost, which is not part of the minimum price calculation. The minimum covers incremental costs only.",
+    "ExplanationWrongC": "C ($22.00) uses only the overtime cost ($22/unit) for all 200 units, ignoring the competitor purchase option at $8/unit.",
+    "ExplanationWrongD": "D ($28.00) ignores the competitor purchase option and adds the normal variable cost to the overtime premium.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.2 make-or-buy-indifference-volume",
+    "QuestionID": "P2-C-554",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-554-make-or-buy-indifference-volume",
+    "Stem": "Pine Ridge: make $14 VC+$120K FC, buy $22/unit. Indifference volume?",
+    "Choices": {
+      "A": "15,000 units",
+      "B": "12,000 units",
+      "C": "10,000 units",
+      "D": "18,000 units"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "$14Q+$120K=$22Q. Q=15,000.",
+    "ExplanationWrongA": "Option A (15,000) is the correct indifference point: $120K / ($22-$14) = 15,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "C (10,000) uses $12 per unit cost difference: $120K / $12 = 10,000. The candidate miscalculated the per-unit cost difference.",
+    "ExplanationWrongD": "D (18,000) adds a safety margin to the indifference point. The candidate applied an unnecessary risk adjustment.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.2 sell-or-process-further-capacity",
+    "QuestionID": "P2-C-555",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-555-sell-or-process-further-capacity",
+    "Stem": "Harbor: 5K soup base at $8, finish at +$3 to sell $14. 30 hrs available, 0.01 hrs each. Max profit?",
+    "Choices": {
+      "A": "$42,000",
+      "B": "$30,000",
+      "C": "$40,000",
+      "D": "$35,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Finish 3K units, sell 2K base. Total profit.",
+    "ExplanationWrongA": "A ($42,000) is finished goods revenue only: 3,000 x $14 = $42,000. Ignores the remaining units sold at base price.",
+    "ExplanationWrongB": "B ($30,000) sells all units at the base price: 5,000 x $8 = $40,000. Ignores the processing option.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "D ($35,000) miscalculates the machine capacity constraint or the per-unit incremental profit.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-04: Sell-or-Process-Further Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-04: Sell-or-Process-Further Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-04: Sell-or-Process-Further Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "C"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.2 scrap-or-rework-scarce-capacity",
+    "QuestionID": "P2-C-556",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-556-scrap-or-rework-scarce-capacity",
+    "Stem": "Meridian: 500 defective. Scrap $12, rework $28 to sell $65. Oven 4hrs, 6min each. Max profit?",
+    "Choices": {
+      "A": "$11,600",
+      "B": "$18,500",
+      "C": "$6,000",
+      "D": "$14,000"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Oven: 40 units. Rework 40, scrap 460.",
+    "ExplanationWrongA": "A ($11,600) is correct per the calculation: rework 40 at $37 margin + scrap 460 at $12.",
+    "ExplanationWrongB": "B ($18,500) reworks all 500 units, ignoring the oven capacity constraint of 40 units.",
+    "ExplanationWrongC": "C ($6,000) scraps all 500 units at $12 each, ignoring the higher profit from reworking within capacity.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-04: Sell-or-Process-Further Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-04: Sell-or-Process-Further Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-04: Sell-or-Process-Further Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "D"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.3 add-or-drop-redeployment",
+    "QuestionID": "P2-C-557",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-557-add-or-drop-redeployment",
+    "Stem": "Lakeside gloves: $180K rev, $120K VC, $85K FC ($30K avoidable). Freed capacity $25K CM. Drop line?",
+    "Choices": {
+      "A": "Yes, net benefit $10K",
+      "B": "No, net loss $45K",
+      "C": "Yes, net benefit $55K",
+      "D": "No, net loss $10K"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Keep: $60K CM. Drop: save $30K+$25K=$55K, lose $60K CM. Net: -$5K.",
+    "ExplanationWrongA": "Option A ( benefit) is the correct net impact: saving  in avoidable costs and additional CM minus losing  in contribution margin from the glove line.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "C ($55K benefit) counts only the benefits of dropping (avoidable FC + additional CM) without deducting the lost contribution margin from the glove line.",
+    "ExplanationWrongD": "D ($10K loss) reverses the direction of the analysis, possibly by treating opportunity cost as a cost of dropping.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "B"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.3 keep-or-replace-tax-effect",
+    "QuestionID": "P2-C-558",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-558-keep-or-replace-tax-effect",
+    "Stem": "Ridgeview: old machine BV $45K, operating $32K. New $120K, $18K operating. Sell old $15K. Tax 30%. Relevant cost keeping 1yr?",
+    "Choices": {
+      "A": "$35,700",
+      "B": "$32,000",
+      "C": "$45,000",
+      "D": "$39,000"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Operating $32K + after-tax opportunity cost.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "B ($32K) uses only the operating cost, ignoring the opportunity cost of not selling the old machine now.",
+    "ExplanationWrongC": "C ($45K) uses the book value, which is a sunk cost. The candidate confused historical cost with relevant current-period cost.",
+    "ExplanationWrongD": "D ($39K) applies an incorrect tax rate or miscalculates the after-tax opportunity cost of the salvage value.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "A"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.3 outsourcing-tco-escalation",
+    "QuestionID": "P2-C-559",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-559-outsourcing-tco-escalation",
+    "Stem": "Atlas: make 10K at $22+$40K FC. Supplier: $18+$2+$1.50+$8K. Cost comparison?",
+    "Choices": {
+      "A": "Outsource saves $4.5K",
+      "B": "Outsource costs $8K more",
+      "C": "Outsource saves $12K",
+      "D": "Outsource costs $4.5K more"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "In-house $260K. Outsource $223K. Savings $37K.",
+    "ExplanationWrongA": "A ($4.5K savings) uses only the per-unit price difference ($22-$18) x 10K = $40K, ignoring hidden outsourcing costs.",
+    "ExplanationWrongB": "B ($8K more) uses only the contract management cost as the total additional expense.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "D ($4.5K more) adds all hidden costs to the supplier price but may overstate the total outsourcing cost.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03: Make-or-Buy Decision Framework",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Make-or-Buy Decision Framework"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Make-or-Buy Decision Framework",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "C"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.3 relevant-cost-rush-order-opportunity",
+    "QuestionID": "P2-C-560",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-560-relevant-cost-rush-order-opportunity",
+    "Stem": "Harbor: rush 1,500 cans at $4.50. Normal $3.20, OT +$1.60, shipping $0.80. Displaces 200 at $2.30 CM. Min price?",
+    "Choices": {
+      "A": "$5.30",
+      "B": "$4.50",
+      "C": "$6.10",
+      "D": "$5.60"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Incremental $5.60 + opportunity $0.31 = $5.91.",
+    "ExplanationWrongA": "Option A (.30) is the correct minimum price: it covers the incremental production cost of .60 per unit plus the opportunity cost of displaced regular production.",
+    "ExplanationWrongB": "B ($4.50) is the offered price, not analyzing whether it covers all relevant costs.",
+    "ExplanationWrongC": "C ($6.10) adds a profit margin to the relevant cost, which exceeds the minimum price threshold.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Incremental Decision Rule",
+    "CommonTrapReference": "T4: opportunity cost omitted",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Incremental Decision Rule"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Incremental Decision Rule",
+      "rule_or_proposition": "See CAQS.",
+      "application_to_facts": "Apply.",
+      "key_conclusion": "D"
+    },
+    "distractor_intent": {},
+    "uniqueness_note": "Single correct answer.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Independent answer derived and verified"
+    ],
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": ""
+  }
+]

@@ -23,9 +23,9 @@ const PACKS = [
   { file: "pack_p2_a.js", label: "P2 Pack A", section: "a", targetQIDs: 500 },
   { file: "pack_p2_b.js", label: "P2 Pack B", section: "b", targetQIDs: 500 },
   { file: "pack_p2_c.js", label: "P2 Pack C", section: "c", targetQIDs: 750 },
-  { file: "pack_p2_d.js", label: "P2 Pack D", section: "d", targetQIDs: 250 },
-  { file: "pack_p2_e.js", label: "P2 Pack E", section: "e", targetQIDs: 250 },
-  { file: "pack_p2_f.js", label: "P2 Pack F", section: "f", targetQIDs: 375 },
+  { file: "pack_p2_d.js", label: "P2 Pack D", section: "d", targetQIDs: 500 },
+  { file: "pack_p2_e.js", label: "P2 Pack E", section: "e", targetQIDs: 500 },
+  { file: "pack_p2_f.js", label: "P2 Pack F", section: "f", targetQIDs: 500 },
 ];
 
 let divergences = 0;
@@ -107,7 +107,7 @@ for (const pack of PACKS) {
   }
 }
 
-info("Total P2 QIDs: " + totalQIDs + " (target: 2,625)");
+  info("Total P2 QIDs: " + totalQIDs + " (target: 3,250)");
 
 // ── 2. Certified Counts ──────────────────────────────────────────
 
@@ -173,8 +173,8 @@ try {
 
 console.log("\n=== P2 PREFLIGHT — " + new Date().toISOString() + " ===");
 console.log(results.join("\n"));
-console.log("\n  TOTAL P2 QIDs: " + totalQIDs + " / 2,625");
-console.log("  TOTAL P2 CERTIFIED: " + totalCertified + " / 2,375");
+  console.log("\n  TOTAL P2 QIDs: " + totalQIDs + " / 3,250");
+  console.log("  TOTAL P2 CERTIFIED: " + totalCertified + " / 2,375");
 console.log("  PACKS ACTIVE: " + PACKS.filter(p => fs.existsSync(path.join(P2_DIR, p.file))).length + " / 6");
 console.log("  DIVERGENCES: " + divergences);
 

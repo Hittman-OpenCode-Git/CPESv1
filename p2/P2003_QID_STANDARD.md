@@ -1,10 +1,10 @@
-# P2003 — CMA Part 2 QID & Identifier Standard v2.0
+# P2003 — CMA Part 2 QID & Identifier Standard v3.0
 
-**Version:** 2.0 (Schema Lock — CSO Weight Reallocation)
+**Version:** 3.0 (Pack Goal Revision — 3,450 MCQs)
 **Status:** Active — Part 2 Architecture
 **Authority:** P2_SCHEMA_STANDARD.md v1.0, P2_EXPANSION_PLAN.md, P2001_PART2_BLUEPRINT_FOUNDATION.md
-**Date:** 2026-07-29 (v1.0), **2026-08-04** (v2.0)
-**Session:** P2-003 (v1.0) → P2-020 Schema Lock (v2.0)
+**Date:** 2026-07-29 (v1.0), 2026-08-04 (v2.0), **2026-09-04** (v3.0)
+**Session:** P2-003 (v1.0) → P2-020 Schema Lock (v2.0) → P2-079 Pack Goal Revision (v3.0)
 **Scope:** Single source of truth for all CMA Part 2 identifier generation (MCQ QIDs, CaseIDs, ItemIDs, ExhibitIDs)
 **Amended by:** P2_EXPANSION_PLAN.md §0.1 (CSO weights), §3 (6-pack layout), P2_SCHEMA_STANDARD.md (field schema)
 
@@ -17,10 +17,12 @@
 **Pattern:** `P2-{Section}-{NNN}`
 **Regex:** `^P2-[A-F]-\d{3}$`
 **Range regex (per section):**
-- A, B: `^P2-[AB]-(0[0-9]{2}|[1-4][0-9]{2}|500)$`
+- A: `^P2-A-(0[0-9]{2}|[1-5][0-9]{2}|600)$`  (001–600)
+- B: `^P2-B-(0[0-9]{2}|[1-5][0-9]{2}|600)$`  (001–600)
 - C: `^P2-C-(0[0-9]{2}|[1-6][0-9]{2}|7[0-4][0-9]|750)$`  (001–750)
-- D, E: `^P2-[DE]-(0[0-9]{2}|1[0-9]{2}|2[0-4][0-9]|250)$`  (001–250)
-- F: `^P2-F-(0[0-9]{2}|[1-2][0-9]{2}|3[0-6][0-9]|37[0-5])$`  (001–375)
+- D: `^P2-D-(0[0-9]{2}|[1-4][0-9]{2}|500)$`  (001–500)
+- E: `^P2-E-(0[0-9]{2}|[1-4][0-9]{2}|500)$`  (001–500)
+- F: `^P2-F-(0[0-9]{2}|[1-4][0-9]{2}|500)$`  (001–500)
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
@@ -30,23 +32,23 @@
 | `-` | Separator | Required |
 | `{NNN}` | Zero-padded 3-digit sequence number | `001` through `500` |
 
-### 1.2 Section Assignments (CSO Weight-Faithful — 6 Packs)
+### 1.2 Section Assignments (CSO Weight-Faithful — 6 Packs, revised 2026-09-04)
 
-| Section | Domain | CSO Weight | QID Range | Pack File | Count |
-|---------|--------|------------|-----------|-----------|-------|
-| A | Financial Statement Analysis | 20% | P2-A-001 to P2-A-500 | pack_p2_a.js | 500 |
-| B | Corporate Finance | 20% | P2-B-001 to P2-B-500 | pack_p2_b.js | 500 |
+Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500.
+
+| Section | Domain | CSO Weight | QID Range | Pack File | Target Count |
+|---------|--------|-----------|-----------|-----------|-------------|
+| A | Financial Statement Analysis | 20% | P2-A-001 to P2-A-600 | pack_p2_a.js | **600** |
+| B | Corporate Finance | 20% | P2-B-001 to P2-B-600 | pack_p2_b.js | **600** |
 | C | Decision Analysis | 25% | P2-C-001 to P2-C-750 | pack_p2_c.js | **750** |
-| D | Risk Management | 10% | P2-D-001 to P2-D-250 | pack_p2_d.js | 250 |
-| E | Investment Decisions | 10% | P2-E-001 to P2-E-250 | pack_p2_e.js | 250 |
-| F | Professional Ethics | 15% | P2-F-001 to P2-F-375 | pack_p2_f.js | 375 |
+| D | Enterprise Risk Management | 10% | P2-D-001 to P2-D-500 | pack_p2_d.js | **500** |
+| E | Capital Investment Decisions | 10% | P2-E-001 to P2-E-500 | pack_p2_e.js | **500** |
+| F | Professional Ethics | 15% | P2-F-001 to P2-F-500 | pack_p2_f.js | **500** |
+| **Total** | | **100%** | | | **3,450** |
 
-**Total: 2,625 MCQs across 6 pack files (500×2 + 750 + 250×2 + 375).**
+**Total: 3,450 MCQs across 6 pack files (600×2 + 750 + 500×3).**
 
-> **Amendment (v2.0):** The original v1.0 5-pack layout allocated a flat 500 items to Domain C (25% CSO weight) and placed cross-domain items at P2-F-376–500. This created a 125-item shortfall in C — the heaviest domain on the exam. v2.0 corrects this:
-> - **Domain C:** 500 → 625 (matches 25% CSO weight)
-> - **Cross-domain phantom pack dissolved.** Items that test multiple domains are tagged via `CrossDomainTags: ["B","E"]` on their primary-domain record. ~125 items (~5%) are expected to carry a secondary tag.
-> - **Pack F promoted to dedicated pack.** Domain F (Professional Ethics, 15%) now occupies its own pack file.
+> **Amendment (v3.0):** Revised pack sizing per user authorization (2026-09-04). Prior v2.0 allocated 3,250 MCQs (A=500, B=500, C=750, D=500, E=500, F=500). v3.0 increases A and B to 600 each to better match their 20% CSO weight. The 500-item floor for D/E/F (≤15% CSO weight) is retained to ensure viable difficulty distribution and certification depth.
 
 ### 1.2a Cross-Domain Tagging (replaces phantom pack)
 
@@ -62,13 +64,13 @@ Items that test concepts spanning multiple domains use the `CrossDomainTags` arr
 
 - Primary domain determines the QID section letter and pack file
 - Secondary domains are listed in `CrossDomainTags`
-- Target: ~125 items (5%) carry at least one secondary tag
+- Target: ~175 items (5%) carry at least one secondary tag
 - Items with cross-domain tags count against their primary domain's allocation, not a separate pool
 
 ### 1.3 QID Generation Rules
 
 1. Section letter matches the item's internal `Section` field exactly (A-F).
-2. Sequence numbers are zero-padded to 3 digits (`001`–`500`).
+2. Sequence numbers are zero-padded to 3 digits (`001`–`600` for A/B, `001`–`750` for C, `001`–`500` for D/E/F).
 3. No gaps allowed — sequence numbers must be consecutive within each section block.
 4. No reuse — once a QID is assigned, it is never reassigned.
 5. QIDs are globally unique across all 6 packs (enforced by section letter prefix).
@@ -185,50 +187,50 @@ Items that test concepts spanning multiple domains use the `CrossDomainTags` arr
 | Pack 2 | `CBQ22-{Section}{Seq}` | `^CBQ22-[A-F]\d+$` | `CBQ22-B5` |
 | Pack 3 | `CBQ23-{Section}{Seq}` | `^CBQ23-[A-F]\d+$` | `CBQ23-C3` |
 
-### 2.3 Pack 1 Section Assignments (25 cases)
+### 2.3 Pack 1 Section Assignments (33 cases)
 
 | Section | Domain | CaseID Range | Cases |
 |---------|--------|-------------|-------|
-| A | Financial Statement Analysis | CBQ2-A1 to CBQ2-A6 | 6 |
-| B | Corporate Finance | CBQ2-B1 to CBQ2-B5 | 5 |
-| C | Decision Analysis | CBQ2-C1 to CBQ2-C6 | 6 |
-| D | Risk Management | CBQ2-D1 to CBQ2-D3 | 3 |
-| E | Investment Decisions | CBQ2-E1 to CBQ2-E3 | 3 |
-| F | Professional Ethics | CBQ2-F1 to CBQ2-F2 | 2 |
+| A | Financial Statement Analysis | CBQ2-A1 to CBQ2-A8 | 8 |
+| B | Corporate Finance | CBQ2-B1 to CBQ2-B6 | 6 |
+| C | Decision Analysis | CBQ2-C1 to CBQ2-C8 | 8 |
+| D | Risk Management | CBQ2-D1 to CBQ2-D4 | 4 |
+| E | Investment Decisions | CBQ2-E1 to CBQ2-E4 | 4 |
+| F | Professional Ethics | CBQ2-F1 to CBQ2-F3 | 3 |
 
-### 2.4 Pack 2 Section Assignments (25 cases)
-
-| Section | Domain | CaseID Range | Cases |
-|---------|--------|-------------|-------|
-| A | Financial Statement Analysis | CBQ22-A1 to CBQ22-A4 | 4 |
-| B | Corporate Finance | CBQ22-B1 to CBQ22-B5 | 5 |
-| C | Decision Analysis | CBQ22-C1 to CBQ22-C6 | 6 |
-| D | Risk Management | CBQ22-D1 to CBQ22-D3 | 3 |
-| E | Investment Decisions | CBQ22-E1 to CBQ22-E2 | 2 |
-| F | Professional Ethics | CBQ22-F1 to CBQ22-F5 | 5 |
-
-### 2.5 Pack 3 Section Assignments (25 cases)
+### 2.4 Pack 2 Section Assignments (33 cases)
 
 | Section | Domain | CaseID Range | Cases |
 |---------|--------|-------------|-------|
-| A | Financial Statement Analysis | CBQ23-A1 to CBQ23-A5 | 5 |
-| B | Corporate Finance | CBQ23-B1 to CBQ23-B5 | 5 |
-| C | Decision Analysis | CBQ23-C1 to CBQ23-C6 | 6 |
-| D | Risk Management | CBQ23-D1 to CBQ23-D2 | 2 |
-| E | Investment Decisions | CBQ23-E1 to CBQ23-E2 | 2 |
-| F | Professional Ethics | CBQ23-F1 to CBQ23-F5 | 5 |
+| A | Financial Statement Analysis | CBQ22-A1 to CBQ22-A5 | 5 |
+| B | Corporate Finance | CBQ22-B1 to CBQ22-B6 | 6 |
+| C | Decision Analysis | CBQ22-C1 to CBQ22-C8 | 8 |
+| D | Risk Management | CBQ22-D1 to CBQ22-D4 | 4 |
+| E | Investment Decisions | CBQ22-E1 to CBQ22-E3 | 3 |
+| F | Professional Ethics | CBQ22-F1 to CBQ22-F7 | 7 |
+
+### 2.5 Pack 3 Section Assignments (34 cases)
+
+| Section | Domain | CaseID Range | Cases |
+|---------|--------|-------------|-------|
+| A | Financial Statement Analysis | CBQ23-A1 to CBQ23-A6 | 6 |
+| B | Corporate Finance | CBQ23-B1 to CBQ23-B6 | 6 |
+| C | Decision Analysis | CBQ23-C1 to CBQ23-C8 | 8 |
+| D | Risk Management | CBQ23-D1 to CBQ23-D3 | 3 |
+| E | Investment Decisions | CBQ23-E1 to CBQ23-E3 | 3 |
+| F | Professional Ethics | CBQ23-F1 to CBQ23-F8 | 8 |
 
 ### 2.6 Domain-Level Case Totals
 
 | Domain | Pack 1 | Pack 2 | Pack 3 | Total Cases | Items (est.) |
 |--------|--------|--------|--------|-------------|-------------|
-| A | 6 | 4 | 5 | **15** | 75–90 |
-| B | 5 | 5 | 5 | **15** | 75–90 |
-| C | 6 | 6 | 6 | **18** | 90–108 |
-| D | 3 | 3 | 2 | **8** | 40–48 |
-| E | 3 | 2 | 2 | **7** | 35–42 |
-| F | 2 | 5 | 5 | **12** | 60–72 |
-| **Total** | **25** | **25** | **25** | **75** | **375–450** |
+| A | 8 | 5 | 6 | **19** | 95–114 |
+| B | 6 | 6 | 6 | **18** | 90–108 |
+| C | 8 | 8 | 8 | **24** | 120–144 |
+| D | 4 | 4 | 3 | **11** | 55–66 |
+| E | 4 | 3 | 3 | **10** | 50–60 |
+| F | 3 | 7 | 8 | **18** | 90–108 |
+| **Total** | **33** | **33** | **34** | **100** | **500–600** |
 
 ---
 
@@ -354,9 +356,17 @@ function routeIdentifier(id) {
 | Property | Value |
 |----------|-------|
 | Document ID | P2003 |
-| Version | 2.0 |
-| Date | 2026-08-04 |
-| Session | P2-020 — Schema Lock |
+| Version | **3.0** |
+| Date | **2026-09-04** |
+| Session | P2-079 — Pack Goal Revision |
 | Status | Active |
-| Amends | v1.0 → 6-pack layout, C 001–625 range, cross-domain→tags, ratified field schema |
+| Amends | v2.0 → 3,450 MCQs, A/B 001–600, one domain per pack |
 | See also | P2_SCHEMA_STANDARD.md, P2_EXPANSION_PLAN.md |
+
+**Revision History:**
+
+| Version | Date | Change |
+|---------|------|--------|
+| 1.0 | 2026-07-29 | Initial QID standard — 5-pack layout, 2,500 MCQs |
+| 2.0 | 2026-08-04 | CSO weight reallocation — 6-pack layout, 3,250 MCQs, C 001–750 |
+| **3.0** | **2026-09-04** | **Pack goal revision — 3,450 MCQs. Sizing rule: 25% → 750, 20% → 600, ≤15% → 500. A/B extended to 001–600.** |

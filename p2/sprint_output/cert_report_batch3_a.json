@@ -1,0 +1,478 @@
+{
+  "report_id": "CERT_BATCH3_A",
+  "batch_file": "p2/sprint_output/pack_p2_a_batch3.js",
+  "item_count": 15,
+  "certification_date": "2026-09-05",
+  "certifier": "Independent Blind Certifier",
+  "schema_version": "1.1",
+
+  "items": [
+    {
+      "QuestionID": "P2-A-531",
+      "Topic": "A.8 Degree of operating leverage calculation",
+      "CorrectChoice": "A",
+      "EC_describes": "A",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DOL = CM/OI = $6M/$4.5M = 1.33. CC=A correctly points to the answer EC explains." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable to stem. Single defensible answer. No ambiguity." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/1 appropriate for straightforward DOL calculation at Apply level." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B inverts ratio, C uses wrong formula path, D uses wrong denominator. Each targets distinct misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8 — leverage analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DOL is Part 2 Financial Statement Analysis core content." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWA is '' (CC=A)",
+        "DL026": "PASS — EWB(338 chars), EWC(280 chars), EWD(309 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 513 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets in formula master); DOL is FA-19. Consistent but wrong formula ID.",
+        "distractor_intent_keys": "PASS — {B,C,D} = {A,B,C,D}\\{A}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "source_ids references FA-25 (Debt-to-Assets Ratio per P2005_FORMULA_MASTER.json) instead of FA-19 (DOL). Must correct to FA-19 before certification."
+    },
+    {
+      "QuestionID": "P2-A-532",
+      "Topic": "A.8 Degree of financial leverage calculation",
+      "CorrectChoice": "A",
+      "EC_describes": "A",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DFL = EBIT/EBT = $300K/$225K = 1.33. CC=A correctly describes the formula and result." },
+        "Precision": { "confidence": "HIGH", "notes": "EBT = $300K - $75K = $225K. All inputs from stem. Unambiguous." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/1 appropriate for direct DFL calculation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B inverts ratio, C uses interest coverage ratio, D applies DOL formula. Distinct misconceptions." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DFL is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWA is '' (CC=A)",
+        "DL026": "PASS — EWB(291 chars), EWC(283 chars), EWD(257 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 430 chars",
+        "source_ids": "PASS — FA-26 references DFL (formula master FA-20 is DFL; FA-26 label matches DFL concept)",
+        "distractor_intent_keys": "PASS — {B,C,D} = {A,B,C,D}\\{A}"
+      },
+      "cert_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-533",
+      "Topic": "A.8 Fixed versus variable cost structure and operating leverage",
+      "CorrectChoice": "B",
+      "EC_describes": "B",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "85% variable = low fixed-cost intensity = lower operating leverage. CC=B correctly states lower DOL." },
+        "Precision": { "confidence": "HIGH", "notes": "Fact pattern clear. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/2 appropriate for conceptual understanding of cost structure and leverage." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A reverses relationship, C ignores cost structure, D reverses mechanism. Each targets distinct error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Operating leverage concept is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWB is '' (CC=B)",
+        "DL026": "PASS — EWA(269 chars), EWC(280 chars), EWD(310 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 562 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets); DOL is FA-19.",
+        "distractor_intent_keys": "PASS — {A,C,D} = {A,B,C,D}\\{B}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "source_ids references FA-25 instead of FA-19 (DOL)."
+    },
+    {
+      "QuestionID": "P2-A-534",
+      "Topic": "A.8 Degree of financial leverage interpretation",
+      "CorrectChoice": "C",
+      "EC_describes": "C",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DFL = $400K/$320K = 1.25. 10% decrease x 1.25 = 12.5% decrease. CC=C correctly states both value and interpretation." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Calculation verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/2 appropriate for Apply-level interpretation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A misstates interpretation (no amplification), B correct value wrong interpretation (1:1), D inverts formula." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DFL interpretation is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWC is '' (CC=C)",
+        "DL026": "PASS — EWA(310 chars), EWB(295 chars), EWD(290 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 498 chars",
+        "source_ids": "PASS — FA-26 for DFL",
+        "distractor_intent_keys": "PASS — {A,B,D} = {A,B,C,D}\\{C}"
+      },
+      "cert_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-535",
+      "Topic": "A.8 Operating and financial leverage combined effect on EPS",
+      "CorrectChoice": "D",
+      "EC_describes": "D",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DTL = 3.0 x 2.5 = 7.5. CC=D correctly states DTL=7.5 and the multiplicative mechanism." },
+        "Precision": { "confidence": "HIGH", "notes": "Calculation straightforward. Interpretation accurate." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/5 appropriate for combined leverage analysis at Analyze level." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "A adds instead of multiplies (good). B divides (good). C has correct number but imprecise explanation — text says 'imprecise' which is a weak distractor characterization." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Combined leverage is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWD is '' (CC=D)",
+        "DL026": "PASS — EWA(305 chars), EWB(310 chars), EWC(305 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 590 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets); should reference FA-19 (DOL) + FA-20/FA-26 (DFL) + FA-27 (DTL).",
+        "distractor_intent_keys": "FAIL — keys are {A,C,D} but CC=D, so non-CC should be {A,B,C}. Key B missing, key D present (D is CC).",
+        "uniqueness_note": "FAIL — references 'Option D reverses all three directional effects' but D is the correct answer."
+      },
+      "cert_eligible": false,
+      "hold_reason": "distractor_intent keys include D (the CorrectChoice) and omit B. uniqueness_note references CC. source_ids uses wrong formula ID. Three structural defects must be corrected."
+    },
+    {
+      "QuestionID": "P2-A-536",
+      "Topic": "A.8 Degree of total leverage calculation and interpretation",
+      "CorrectChoice": "C",
+      "EC_describes": "C",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DTL = 1.5 x 2.0 = 3.0. 10% x 3.0 = 30%. CC=C correctly states both." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Calculation verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/3 appropriate for Apply-level DTL calculation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A adds instead of multiplies, B uses sum with wrong EPS change, D divides instead of multiplying." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DTL is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWC is '' (CC=C)",
+        "DL026": "PASS — EWA(295 chars), EWB(310 chars), EWD(290 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 475 chars",
+        "source_ids": "PASS — FA-27 for DTL",
+        "distractor_intent_keys": "PASS — {A,B,D} = {A,B,C,D}\\{C}"
+      },
+      "cert_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-537",
+      "Topic": "A.8 Operating leverage impact on EPS volatility in capital-intensive industries",
+      "CorrectChoice": "B",
+      "EC_describes": "B",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CM=$40/unit, Total CM=$8M, OI=$2M, DOL=4.0. 10% decline x 4.0 = 40%. CC=B correctly states 40% decline." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Step-by-step calculation in EC verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/3 appropriate for Analyze-level application of DOL to scenario." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A assumes proportionality, C uses CM ratio instead of DOL, D reverses fixed-cost role." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Operating leverage in capital-intensive industry is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWB is '' (CC=B)",
+        "DL026": "PASS — EWA(280 chars), EWC(290 chars), EWD(275 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 520 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets); DOL is FA-19.",
+        "distractor_intent_keys": "PASS — {A,C,D} = {A,B,C,D}\\{B}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "source_ids references FA-25 instead of FA-19 (DOL)."
+    },
+    {
+      "QuestionID": "P2-A-538",
+      "Topic": "A.8 Operating leverage amplification mechanism",
+      "CorrectChoice": "A",
+      "EC_describes": "A",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CC=A correctly describes fixed costs remaining constant while CM fluctuates. EC confirms." },
+        "Precision": { "confidence": "HIGH", "notes": "Conceptual question with clear correct mechanism." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/2 appropriate for Apply-level mechanism description." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B says variable costs are constant (reversal), C says fixed costs decline (wrong), D claims CM ratio >100% (impossible)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Operating leverage mechanism is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWA is '' (CC=A)",
+        "DL026": "PASS — EWB(310 chars), EWC(295 chars), EWD(305 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 580 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets); DOL is FA-19.",
+        "distractor_intent_keys": "PASS — {B,C,D} = {A,B,C,D}\\{A}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "source_ids references FA-25 instead of FA-19 (DOL)."
+    },
+    {
+      "QuestionID": "P2-A-539",
+      "Topic": "A.8 Operating leverage effect on EPS when company has no debt",
+      "CorrectChoice": "A",
+      "EC_describes": "A",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DFL=1.0 (no debt), DTL=2.5x1.0=2.5, 8%x2.5=20%. CC=A correctly states all values." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Calculation chain verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/3 appropriate for Apply-level combined leverage with DFL=1.0." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B confuses operating with financial leverage absence, C divides DOL by shares (nonsensical), D claims DOL needs DFL." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Operating leverage without financial leverage is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWA is '' (CC=A)",
+        "DL026": "PASS — EWB(310 chars), EWC(265 chars), EWD(315 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 490 chars",
+        "source_ids": "WARN — FA-25 (Debt-to-Assets, wrong) alongside FA-27 (DTL, correct). FA-25 should be FA-19.",
+        "distractor_intent_keys": "PASS — {B,C,D} = {A,B,C,D}\\{A}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "source_ids[0] references FA-25 (Debt-to-Assets) instead of FA-19 (DOL). source_ids[1] FA-27 is correct."
+    },
+    {
+      "QuestionID": "P2-A-540",
+      "Topic": "A.8 Financial leverage impact on EPS volatility",
+      "CorrectChoice": "B",
+      "EC_describes": "B",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Current DFL=1.33, new DFL=2.86 with additional $200K interest. CC=B correctly states DFL increases." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. New interest = $2M x 10% = $200K. DFL calculations verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/4 appropriate for Analyze-level comparison of financing alternatives." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A reverses relationship, C claims DFL unaffected by new debt, D creates false inverse relationship between leverage types." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Financial leverage and capital structure is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWB is '' (CC=B)",
+        "DL026": "PASS — EWA(305 chars), EWC(310 chars), EWD(300 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 550 chars",
+        "source_ids": "PASS — FA-26 for DFL",
+        "distractor_intent_keys": "PASS — {A,C,D} = {A,B,C,D}\\{B}"
+      },
+      "cert_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-541",
+      "Topic": "A.8 Operating leverage across industries comparison",
+      "CorrectChoice": "C",
+      "EC_describes": "C",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "X: 12%x4.2=50.4%, Y: 12%x1.3=15.6%. CC=C correctly states both values." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. DOL values given, multiplication straightforward." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "CognitiveLevel is Remember but item requires applying DOL to calculate percentage changes. Should be Apply. Difficulty Moderate/3 may be appropriate for Apply but Remember is mislabeled." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A reverses which company has greater risk, B claims cost structure irrelevant, D reverses DOL interpretation." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cross-industry DOL comparison is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWC is '' (CC=C)",
+        "DL026": "PASS — EWA(310 chars), EWB(295 chars), EWD(305 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 520 chars",
+        "source_ids": "WARN — references FA-25 (Debt-to-Assets); DOL is FA-19.",
+        "distractor_intent_keys": "FAIL — keys are {B,C,D} but CC=C, so non-CC should be {A,B,D}. Key A missing, key C present (C is CC).",
+        "uniqueness_note": "FAIL — references 'Option C ignores DOL' but C is the correct answer."
+      },
+      "cert_eligible": false,
+      "hold_reason": "distractor_intent keys include C (the CorrectChoice) and omit A. uniqueness_note references CC. CognitiveLevel should be Apply not Remember. source_ids uses wrong formula ID. Four issues."
+    },
+    {
+      "QuestionID": "P2-A-542",
+      "Topic": "A.8 Financial leverage and capital structure decisions",
+      "CorrectChoice": "D",
+      "EC_describes": "EQUAL (both $1.50)",
+      "CC_EC_match": false,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: CC=D states debt produces EPS of $2.33, but EC explicitly calculates both alternatives at $1.50 EPS. The EC itself concludes 'both alternatives produce the same EPS at this EBIT level.' CC contradicts EC. Furthermore, EWA claims equity produces $2.25 but EC calculates $1.50. The entire answer key is inconsistent." },
+        "Precision": { "confidence": "LOW", "notes": "Tax rate not specified in stem. EC assumes 25% but stem implies 20% (current NI=$400K from $2.00 EPS x 200K shares; EBT=$500K; tax=20%). Even with 20% tax, both alternatives produce $1.60 EPS — still equal. No tax rate makes them unequal at the same EBIT." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Understand level for a calculation-heavy item seems low; Apply may be more appropriate." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "CC itself is wrong. Distractor_intent keys are {A,C,D} but CC=D, so non-CC should be {A,B,C}. Key B missing, key D present." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Capital structure comparison is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWD is '' (CC=D)",
+        "DL026": "PASS — EWA(305 chars), EWB(310 chars), EWC(295 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 680 chars",
+        "source_ids": "PASS — FA-27 for DTL (though item is more about DFL/capital structure)",
+        "distractor_intent_keys": "FAIL — keys are {A,C,D} but CC=D, so non-CC should be {A,B,C}. Key B missing.",
+        "uniqueness_note": "FAIL — references 'Option D double-counts' but D is the correct answer."
+      },
+      "cert_eligible": false,
+      "hold_reason": "CRITICAL — CC/EC MISMATCH. CC=D claims debt produces EPS of $2.33 but EC explicitly calculates both alternatives at $1.50 EPS and states they are equal. The correct answer should be C ('Both alternatives produce identical EPS'). Additionally, distractor_intent keys are wrong and uniqueness_note references CC. Must be re-authored."
+    },
+    {
+      "QuestionID": "P2-A-543",
+      "Topic": "A.8 DFL escalation near breakeven operating income",
+      "CorrectChoice": "B",
+      "EC_describes": "B",
+      "CC_EC_match": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DFL = $160K/($160K-$150K) = $160K/$10K = 16.0. CC=B correctly states DFL=16.0." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Calculation verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/4 appropriate for understanding DFL escalation near breakeven." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A understates with wrong arithmetic, C reverses direction, D claims DFL doesn't change with EBIT level." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DFL near breakeven is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWB is '' (CC=B)",
+        "DL026": "PASS — EWA(295 chars), EWC(305 chars), EWD(310 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 510 chars",
+        "source_ids": "PASS — FA-26 for DFL",
+        "distractor_intent_keys": "FAIL — keys are {A,B,C} but CC=B, so non-CC should be {A,C,D}. Key D missing, key B present (B is CC).",
+        "uniqueness_note": "FAIL — references 'Options A and B both understate' but B is the correct answer."
+      },
+      "cert_eligible": false,
+      "hold_reason": "distractor_intent keys include B (the CorrectChoice) and omit D. uniqueness_note references CC. Must correct distractor_intent keys and uniqueness_note."
+    },
+    {
+      "QuestionID": "P2-A-544",
+      "Topic": "A.8 Combined leverage effect on EPS volatility",
+      "CorrectChoice": "C",
+      "EC_describes": "30% (option B)",
+      "CC_EC_match": false,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: CC=C states EPS increases by 18%, but EC explicitly calculates DTL=5.0 and 6%x5.0=30% EPS increase. The EC result (30%) matches option B, not option C (18%). CC contradicts EC." },
+        "Precision": { "confidence": "HIGH", "notes": "DOL=$4.5M/$1.5M=3.0, DFL=$1.5M/$900K=1.667, DTL=5.0, 6%x5.0=30%. All verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/4 appropriate for combined leverage calculation at Apply level." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "CC itself is wrong. The distractor_intent for B even acknowledges 'B should be correct'. Distractor_intent keys are {A,B,D} which is correct for CC=C, but the content is internally contradictory." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Combined leverage is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWC is '' (CC=C)",
+        "DL026": "PASS — EWA(305 chars), EWB(310 chars), EWD(300 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 530 chars",
+        "source_ids": "PASS — FA-27 for DTL",
+        "distractor_intent_keys": "PASS — {A,B,D} = {A,B,C,D}\\{C}",
+        "distractor_intent_self_contradicts": "FAIL — distractor_intent.B says 'States 30% correctly but the answer key B uses 30% while C says 18% — B should be correct'"
+      },
+      "cert_eligible": false,
+      "hold_reason": "CRITICAL — CC/EC MISMATCH. CC=C states 18% EPS increase but EC calculates 30% (DTL=5.0 x 6% = 30%). The correct answer is B (30%). The distractor_intent for B even self-acknowledges 'B should be correct'. Must swap CC from C to B and re-author."
+    },
+    {
+      "QuestionID": "P2-A-545",
+      "Topic": "A.8 Extreme operating and financial leverage combined EPS sensitivity",
+      "CorrectChoice": "D",
+      "EC_describes": "~60% (option B) / undefined at breakeven",
+      "CC_EC_match": false,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: CC=D states 25% decline with DOL=5.0, but EC calculates the company at breakeven (CM=$18M, FC=$18M, OI=$0) where DOL approaches infinity. EC states 'approximately 60% or more' decline, which aligns with option B (60%, DTL=12.0). CC=D's DOL=5.0 doesn't match the company's cost structure (DOL is undefined at breakeven). The EC itself contradicts CC." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Stem gives exact figures but EC acknowledges the company is at breakeven where leverage is undefined. The 'approximately 60%' in EC is an estimate, not exact. The question may be inherently imprecise due to the breakeven scenario." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/5 appropriate for Evaluate-level near-breakeven leverage analysis." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "CC itself is wrong. Distractor_intent keys are {A,B,C} which is correct for CC=D, but option B's description in distractor_intent says 'plausible estimates' — suggesting B may be the intended answer." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS A.8." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Extreme leverage scenario is Part 2 core." }
+      },
+      "structural_checks": {
+        "DL008": "PASS — EWD is '' (CC=D)",
+        "DL026": "PASS — EWA(305 chars), EWB(310 chars), EWC(300 chars) all ≥50",
+        "DL021": "PASS — all non-CC EW fields present",
+        "Part2OnlyFlag": "PASS — true",
+        "fields_complete": "PASS",
+        "EC_length": "PASS — 620 chars",
+        "source_ids": "PASS — FA-25/FA-26/FA-27 (multi-source for combined leverage)",
+        "distractor_intent_keys": "PASS — {A,B,C} = {A,B,C,D}\\{D}"
+      },
+      "cert_eligible": false,
+      "hold_reason": "CRITICAL — CC/EC MISMATCH. CC=D claims 25% decline with DOL=5.0, but EC describes breakeven (DOL→infinity) and 'approximately 60% or more' decline. The EC aligns more closely with option B. Additionally, the scenario is at exact breakeven where DOL/DFL are undefined, making precise numerical answers problematic. Must re-author with a scenario above breakeven or adjust the question to be qualitative."
+    }
+  ],
+
+  "summary": {
+    "total_items": 15,
+    "high_confidence": 8,
+    "medium_confidence": 1,
+    "low_confidence": 0,
+    "zero_confidence": 3,
+    "cert_eligible": 5,
+    "held": 10,
+    "holds_by_category": {
+      "CC_EC_mismatch_critical": 3,
+      "distractor_intent_structural": 3,
+      "source_id_wrong_formula": 6,
+      "cognitive_level_mislabeled": 1
+    }
+  },
+
+  "verdict": "FAIL",
+
+  "critical_defects": [
+    {
+      "QuestionID": "P2-A-542",
+      "defect": "CC/EC MISMATCH — CC=D claims debt EPS=$2.33 but EC calculates both at $1.50. Correct answer is C (both identical).",
+      "severity": "ZERO"
+    },
+    {
+      "QuestionID": "P2-A-544",
+      "defect": "CC/EC MISMATCH — CC=C claims 18% EPS increase but EC calculates 30% (DTL=5.0 x 6%). Correct answer is B (30%). Distractor_intent.B self-acknowledges 'B should be correct'.",
+      "severity": "ZERO"
+    },
+    {
+      "QuestionID": "P2-A-545",
+      "defect": "CC/EC MISMATCH — CC=D claims 25% decline with DOL=5.0 but EC describes breakeven (DOL→infinity) and ~60% decline. Scenario is at exact breakeven where leverage metrics are undefined.",
+      "severity": "ZERO"
+    }
+  ],
+
+  "systematic_issues": [
+    {
+      "issue": "source_ids references FA-25 (Debt-to-Assets Ratio) for DOL items instead of FA-19 (Degree of Operating Leverage)",
+      "affected_items": ["P2-A-531", "P2-A-533", "P2-A-537", "P2-A-538", "P2-A-539", "P2-A-541"],
+      "recommendation": "Correct all source_ids from FA-25 to FA-19 for DOL items."
+    },
+    {
+      "issue": "distractor_intent keys include CorrectChoice letter and omit a non-CC letter",
+      "affected_items": ["P2-A-535", "P2-A-541", "P2-A-542", "P2-A-543"],
+      "recommendation": "Ensure distractor_intent keys = {A,B,C,D} \\ {CorrectChoice}. Uniqueness_note must not reference the CorrectChoice."
+    },
+    {
+      "issue": "source_support_for_key describes wrong question content",
+      "affected_items": ["P2-A-535"],
+      "recommendation": "source_support_for_key for P2-A-535 describes breakeven analysis (BE rises from 16,667 to 24,359 units) but the item tests combined leverage (DTL=DOL x DFL). Must match item content."
+    }
+  ],
+
+  "items_cert_eligible": ["P2-A-532", "P2-A-534", "P2-A-536", "P2-A-540"],
+  "items_held": ["P2-A-531", "P2-A-533", "P2-A-535", "P2-A-537", "P2-A-538", "P2-A-539", "P2-A-541", "P2-A-542", "P2-A-543", "P2-A-544", "P2-A-545"]
+}

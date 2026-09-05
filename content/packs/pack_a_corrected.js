@@ -20559,8 +20559,8 @@ var MCQ_BANK_A = [
       "C": "The count will be more accurate than an independent count",
       "D": "This arrangement is required for accurate cycle counts"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Periodic access recertification compares current user access rights against current job responsibilities. Under COSO Principle 10 (control activities) and the principle of least privilege, organizations must regularly review and validate that user access remains appropriate for each employee's current role. When employees transfer departments, their old access rights should be revoked and new permissions granted based on their new responsibilities. Without periodic recertification, access rights accumulate over time, creating segregation-of-duties violations and unauthorized-access risk. A common CMA exam trap is confusing authentication controls (verifying identity) with authorization controls (verifying appropriate access level) — MFA and password policies address the former, not the latter.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO Principle 10 (control activities), custody of an asset must be segregated from verifying that asset's existence. When the warehouse manager who holds inventory also performs the physical count without independent oversight, shortages, theft, or deterioration can be concealed by manipulating the count to match overstated records. Independent personnel — such as internal audit or finance staff — must perform or directly supervise the count.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20575,6 +20575,8 @@ var MCQ_BANK_A = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-E-056",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "question_state": "Certified",
     "certification_date": "2026-07-26",
     "certification_batch": "S803 Wave 1 — Archived-in-error restoration",
@@ -20587,9 +20589,9 @@ var MCQ_BANK_A = [
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "The assertion that no weakness exists because the manager knows the inventory best conflates operational knowledge with control independence — two fundamentally different concepts under COSO. The purpose of an independent physical count is not to benefit from the custodian's familiarity with the inventory but to provide objective verification of what is physically present. A manager with custody of inventory has both the opportunity and incentive to conceal shortages, theft, or deterioration. Under COSO Principle 10, the person who has custody of an asset should not also be responsible for verifying that asset's existence. This is a well-established segregation-of-duties requirement, not a matter of the manager's competence.",
-    "ExplanationWrongB": "The claim that the count will always be more accurate when performed by the warehouse manager is incorrect and reflects a misunderstanding of the control objective. The purpose of a physical inventory count is not maximum accuracy in an absolute sense — it is reliable, objective verification of inventory existence. A count performed by the custodian may be more 'accurate' in terms of matching the perpetual records — but this is precisely the problem: the custodian can manipulate the count to agree with records that may themselves be overstated to conceal theft. Independence, not the custodian's familiarity, is the quality that makes a physical count a reliable control.",
-    "ExplanationWrongC": "The statement that this arrangement is required for accurate cycle counts is incorrect and directly contradicts COSO Principle 10. Segregation of duties requires that the person who has custody of inventory should not perform the count that verifies inventory existence. Best practice in inventory management is that cycle counts be performed by personnel independent of the warehouse function — such as internal audit, finance staff, or a dedicated inventory control team — with warehouse personnel present as escorts but not as counters. Independence, not custody, is the essential quality of an effective physical count control under the COSO framework.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "A custodian-performed count may agree with the perpetual records, but agreement is not reliability — the custodian can manipulate the count to match records overstated to conceal theft. Independence, not familiarity, makes a physical count a trustworthy control.",
+    "ExplanationWrongD": "This arrangement is not required for accurate cycle counts — it directly contradicts COSO Principle 10. Cycle counts should be performed by personnel independent of the warehouse function, with warehouse staff present as escorts but not counters.",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand"
   },
@@ -22027,7 +22029,7 @@ var MCQ_BANK_A = [
       "C": "Timeliness, because data are not available when needed for decisions or reporting",
       "D": "Validity, because transaction codes may fail format and range checks"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "C",
     "ExplanationCorrect": "Timeliness means data are available when needed for reporting, monitoring, or decisions. Late data can make analytics less useful even if the data are accurate and complete.",
     "StudyLinks": [
       {
@@ -22043,6 +22045,8 @@ var MCQ_BANK_A = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-F-009",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -22053,8 +22057,8 @@ var MCQ_BANK_A = [
     ],
     "ExplanationWrongA": "Completeness would be the issue if required records or fields were missing. The stem focuses on late arrival.",
     "ExplanationWrongB": "Accuracy would be the issue if values did not match source records. The stem does not indicate incorrect values.",
-    "ExplanationWrongC": "because the data arrive after managers need them for pricing decisions.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Validity concerns whether transaction codes conform to required formats and ranges. The stem describes late arrival, not format failures — no facts suggest codes failed checks. The issue is availability when needed (timeliness), not conformance (validity).",
     "question_state": "Certified",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
@@ -24322,7 +24326,7 @@ var MCQ_BANK_A = [
       "C": "Operating Expenses (Metric 4) — 14 of 47 business rules exist only as 'business knowledge' in the ETL developer's head, creating a key-person dependency where 30% of the OpEx calculation logic is undocumented and unreplicable if the developer leaves",
       "D": "Diluted EPS (Metric 5) — the convertible bond dilution calculation still reflects a 2018 indenture provision that was amended in 2022, meaning the dilution component of EPS is being calculated using an outdated, legally superseded provision"
     },
-    "CorrectChoice": "A",
+    "CorrectChoice": "D",
     "ExplanationCorrect": "Diluted EPS (Metric 5) represents the highest risk because it contains a KNOWN error: the diluted EPS calculation uses a convertible bond indenture provision from 2018 that was amended in 2022. This is not a risk of error — it is a confirmed error that is actively producing incorrect financial results. Diluted EPS is a GAAP-reported metric that appears on the face of the income statement; an error in this calculation directly produces a misstated financial statement. The amendment to the convertible bond indenture likely changed the conversion ratio, the conversion price, or the anti-dilution provisions — any of which would change the number of potentially dilutive shares, directly affecting the EPS calculation. Unlike the other metrics where lineage gaps create RISK that errors COULD occur, Metric 5 has an error that HAS occurred and is currently reflected in Crosswind's filed financial statements. The lineage gap is also the most severe in terms of auditability: an external auditor reviewing the EPS calculation would trace the convertible bond dilution to the 2018 indenture (because that's what the system's template references) and would not independently discover the 2022 amendment unless they specifically tested for it. The data lineage principle is that gaps that create KNOWN errors take priority over gaps that create RISK of future errors.",
     "StudyLinks": [
       {
@@ -24338,6 +24342,8 @@ var MCQ_BANK_A = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-F-054",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -24346,10 +24352,10 @@ var MCQ_BANK_A = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "Metric 1's undocumented MXN/BRL currency-conversion logic is a genuine lineage risk, but it is a risk of error, not a confirmed error. Metric 5 contains a KNOWN error — the dilution calculation still uses the superseded 2018 indenture provision — and Diluted EPS is a GAAP income-statement metric. A confirmed GAAP error outranks a documentation risk.",
     "ExplanationWrongB": "Adjusted EBITDA's dependence on a single SharePoint file with verbal-only VP review is a significant control weakness. 'One-time' restructuring charges directly affect Adjusted EBITDA — a key non-GAAP metric that investors and analysts use to value the company. The lack of formal approval workflow means items can be classified as 'one-time' without documented justification, and the absence of a changelog means previous period classifications cannot be audited. This is a material governance gap. However, Metric 2's risk is a POTENTIAL error — the items may be classified correctly despite the weak process. Metric 5 (Diluted EPS) is an ACTUAL error — the 2022 amendment changed the indenture terms, and the system was never updated. Between a risk of error and a confirmed error, the confirmed error takes priority. Additionally, Adjusted EBITDA is a non-GAAP metric (supplementary disclosure), while Diluted EPS is a GAAP metric (income statement). GAAP errors carry higher regulatory and audit risk than non-GAAP errors.",
     "ExplanationWrongC": "Operating Expenses' key-person dependency (14 of 47 business rules existing only in the ETL developer's knowledge) is a significant operational risk. If the developer resigns or becomes unavailable, 30% of the OpEx classification logic is immediately lost — the organization would need to reverse-engineer the rules from SQL stored procedures, a process that could take months and might fail to recover all logic. This is a classic business continuity risk in data engineering. However, Metric 4's risk is a FUTURE risk (the developer MIGHT leave and the rules MIGHT be unrecoverable), whereas Metric 5's risk is a PRESENT error (the dilution calculation IS wrong). Additionally, the OpEx rules, while undocumented, are embedded in functioning SQL code — the logic EXISTS and can be reverse-engineered from the code with sufficient effort. By contrast, the Diluted EPS error requires knowing that the indenture was amended, which no amount of system inspection would reveal. The lineage prioritization principle is: known errors first, key-person dependencies second, documentation gaps third.",
-    "ExplanationWrongD": "Operating Expenses (Metric 4) has a legitimate key-person dependency risk — 14 of 47 business rules reside only in the ETL developer's knowledge, making 30% of the OpEx calculation logic unreplicable if the developer leaves. This is a significant business continuity concern for financial reporting. However, Metric 4's risk is a FUTURE risk — the developer MIGHT leave and the rules MIGHT be unrecoverable. Metric 5 (Diluted EPS) already CONTAINS a confirmed error because the 2022 indenture amendment was never reflected in the calculation template. The data lineage prioritization principle is that confirmed, active errors that affect GAAP-reported metrics (diluted EPS appears on the income statement) take priority over key-person dependencies that represent future operational risk. Additionally, while the OpEx rules are undocumented, they exist as functioning SQL code that can be reverse-engineered — the Diluted EPS error requires external knowledge (knowing that the indenture was amended) that no amount of system inspection would discover.",
+    "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Analyze"

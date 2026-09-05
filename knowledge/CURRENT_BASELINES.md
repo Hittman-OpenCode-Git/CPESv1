@@ -3,7 +3,7 @@
 **Purpose:** Single source of truth for all runtime-critical file baselines — SHA-256 hashes, sizes, provenance, and structural notes.
 
 **Generated:** 2026-07-24 — Session 20 (Governance & Structure Cleanup)
-**Updated:** 2026-08-03 — regenerate_ Full Pool Closure (ALL 5 packs at 100%. Pack D: 34 archived items re-authored + certified. Total certified pool: 2,620/2,620. Governance guard 66/66.)
+**Updated:** 2026-09-04 — S918-Authoring Wave (Pack 3 expanded: 25→30 cases, 127→152 items, balanced section distribution. 5 new cases: CBQ3-A1 Revenue Recognition, CBQ3-A2 Inventory LCNRV, CBQ3-B4 Master Budget, CBQ3-C4 Standard Costing, CBQ3-D4 Job Order Costing. All Certified. Preflight 0 divergences. Guard 74/74.)
 **Prior updates:** S905–S907 (G1–G5 Drift Reconciliation & Full 5-Pack Re-Baseline), 2026-07-27 — S227 (C5 SHA-256 capture + C7 drift verification. Packs A-D re-baselined post-S865-S868 Cohort C + S221 governance upgrade authorized drift. All S220 recertification conditions MET.), Session 374 Phase 0 (Packs C+D re-baselined post-S371/S853/S826/S829 authorized drift), Session 811 (Framework v2 Wave 1), Session 726 (Phantom Baseline Remediation), Session 537 (ENHANCED_CASE_BASE certification), Session 530 (Wave 0 Remediation)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
@@ -41,15 +41,15 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 **rebuild_baselines S377: Pack A 500 (matched S892 baseline), Pack B 500 (matched S888 baseline), Pack C 438 (+50 from S853 WAVE_A), Pack D 439 (+50 from S853 WAVE_A), Pack E 540 (matched S888 baseline). Packs C+D hashes recaptured (authorized drift from S853 certification). Pack A: DRIFT FLAG CLEARED — §1 hash matches S892 baseline. Governance guard 51/51 PASS. Certified pool: 2,417 (Pack A 500 + Pack B 500 + Pack C 438 + Pack D 439 + Pack E 540 = 2,417). DL-035: 39 Certified Domain F items carry empty distractor EW slots — S377 IN PROGRESS.**
 
-### Case Pack Files (3×25 Architecture — S916–S918 Reconsolidation)
+### Case Pack Files (3-Pack Architecture — S916–S918 + S918-Authoring Wave)
 
 | File | SHA-256 | MD5 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-----|-------------|---------------|------------|
 | `case_pack_1_corrected.js` | `10BB5CE59D04F44398F8CE27C42C3F9BD15714CF586D4E3F68234B8A41BAF330` | `TBD` | 547,722 | 2026-07-28 12:30 | **S922 regenerate_ CASE_BANK_A + CASE_BANK_D. 25 cases, 141 items, all Certified. Sections: A4 B4 C5 D5 E4 F3. Aliases: CASE_BANK_A/D, MIGRATED_CASE_BASE_A/D.** |
 | `case_pack_2_corrected.js` | `76DF40C2B9A6BC7EF446BE9B1AC75FC10CBADA65F77D62777C337C0DCF15DBD1` | `TBD` | 389,349 | 2026-07-28 12:30 | **S922 regenerate_ CASE_BANK_B + CASE_BANK_E. 25 cases, 132 items, all Certified. Sections: A4 B4 C5 D5 E4 F3. Aliases: CASE_BANK_B/E, MIGRATED_CASE_BASE_B/E.** |
-| `case_pack_3_corrected.js` | `5C3560F61DCD392A7D2D4AAE2229703636BB712050382F751735391B176CC512` | `TBD` | 458,444 | 2026-07-28 16:19 | **S916–S918: Case Pack 3 (CASE_BANK_C). 25 cases, 127 items, all Certified. Sections: A3 B4 C4 D4 E5 F5.** |
+| `case_pack_3_corrected.js` | `8B84A0DC53A879EBA1C4F6494F8037E71305A8DAD8D08FF36234D4C998DD683F` | `TBD` | 530,746 | 2026-09-04 16:12 | **S918-Authoring Wave: Case Pack 3 (CASE_BANK_C). 30 cases, 152 items, all Certified. Sections: A5 B5 C5 D5 E5 F5. 5 new cases authored: CBQ3-A1 (Revenue Recognition ASC 606), CBQ3-A2 (Inventory LCNRV), CBQ3-B4 (Master Budget), CBQ3-C4 (Standard Costing Variance Analysis), CBQ3-D4 (Job Order Costing). Balanced section distribution achieved.** |
 
-**regenerate_ Total: 75 cases, 400 items across 3 packs (A=25, B=25, C=25 + D/E aliased from A/B). All Certified. 5 legacy scored_cases files preserved in backups/ (s916-2026-07-28T1619). After S922 UI wiring: A=25, B=25, C=25, D=25(CASE_PACK_1 alias), E=25(CASE_PACK_2 alias).** (S923: C=27 documentation error corrected — all packs confirmed at 25 via rebuild_baselines_s923 regeneration.)
+**Total: 80 cases, 425 items across 3 packs (A=25, B=25, C=30 + D/E aliased from A/B). All Certified. Pack 3 now has balanced 5-case-per-section distribution.** (S923: C=27 documentation error corrected — all packs confirmed at 25 via rebuild_baselines_s923 regeneration. S918-Authoring: Pack 3 expanded from 25→30 cases with 5 new cases targeting section gaps.)
 
 ### Legacy Scored Case Files (Archived — S916–S918)
 
@@ -76,7 +76,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 **Methodology regenerate_ Full Pool Closure:** All 5 packs 100% certified. QID counts: 500/500/500/500/620. Certified: 500/500/500/500/620. Total pool: 2,620/2,620.
 
-**Case Pack Certification (post-S922 regenerate_):** 75 consolidated cases across 3 packs, 400 items. **All 75 cases, 400 items Certified.** 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:3 B:4 C:4 D:4 E:5 F:5 → alias C). 100% case pool closure. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility.
+**Case Pack Certification (post-S918-Authoring):** 80 consolidated cases across 3 packs, 425 items. **All 80 cases, 425 items Certified.** 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:5 B:5 C:5 D:5 E:5 F:5 → alias C). Balanced 5-case-per-section distribution in Pack 3. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility.
 
 ---
 

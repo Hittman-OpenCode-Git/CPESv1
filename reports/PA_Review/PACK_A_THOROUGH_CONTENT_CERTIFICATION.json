@@ -1,0 +1,172 @@
+{
+  "session": "P2-PA-CERT — Pack A Thorough Content Coverage Certification",
+  "date": "2026-09-01",
+  "orchestrator": "stewardship-orchestrator (200-Series Executive Architecture Board)",
+  "scope": "p2/pack_p2_a.js — 500 QIDs P2-A-001..500 — Domain A Financial Statement Analysis — full governance lane certification",
+  "source": {
+    "file": "p2/pack_p2_a.js",
+    "sha256": "962b382176363e1cad7eb3e4ed2455890620d2650ff4a206976812772f68b954",
+    "size_bytes": 2144097,
+    "qids": 500,
+    "range": "P2-A-001..500",
+    "var_declaration": "var pack_p2_a_questions",
+    "baseline_stale": {
+      "baseline_file": "p2/CURRENT_BASELINES_P2.md §1 Pack A",
+      "baseline_qids": 400,
+      "baseline_hash": "d7aa001aed95f0e15726117cc71aeba96be0e166920548f95aa8bf2feda51775",
+      "actual_qids": 500,
+      "delta": "+100 (25% short)",
+      "impact": "preflight_p2 will report 1-2 divergences until Tend regeneration; no learner-pool impact"
+    }
+  },
+  "delegation": {
+    "mode": "parallel foreground specialist subagents (opencode.json stewardship-orchestrator allow-list)",
+    "agents": [
+      { "id": "registry-integrity", "task": "ses_fa13b8b00ffeqRGNTysa5W6Bl0", "scope": "registry ownership, QID integrity, Section/LOSTag/Topic/UniqueConceptKey traceability, blueprint coverage" },
+      { "id": "stewardship-inspector", "task": "ses_fa138e353ffeRKsNlEFMSWR1e5", "scope": "drift 6 categories, technical debt DL-008/013/021/026/037/016, learner-safety, distributions, artifact quality" },
+      { "id": "governance-validator", "task": "ses_fa131c7f9ffeMYg5TYa1D9NHmy", "scope": "14 guard rules, mitigation effectiveness, answer/diversity CAQS, topic coverage, stop conditions, scalability" },
+      { "id": "drift-detector", "task": "ses_fa12be0c5ffeNZzQPkEErOqd38", "scope": "difficulty/cognitive/answer scoring vs CAQS/S121, streak detection, controlled drift scenarios S208" }
+    ],
+    "board_role": "synthesis, deliverable authoring, final determination"
+  },
+  "registry_and_traceability": {
+    "verdict": "PASS",
+    "qid_integrity": "500/500 consecutive P2-A-001..500, 0 gaps, 0 dups, regex ^P2-[A-F]-\\d{3}$, Part 2 500/500, Part2OnlyFlag true 500/500, CorrectChoice A-D 500/500, question_state Certified 500/500",
+    "ownership": "sole authoritative registry p2/pack_p2_a.js per P2002/P2003/P2_SCHEMA_STANDARD triad; 0 P2-A QIDs in other P2 packs, 0 P2 QIDs in Part1 registries; no duplicate Question Registry",
+    "section_distribution": { "A": 500, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "expected_A": 500, "match": true },
+    "blueprint_domain": "Financial Statement Analysis 500/500",
+    "lostag_coverage": { "A.1": 110, "A.2": 66, "A.3": 71, "A.4": 64, "A.5": 56, "A.6": 40, "A.7": 40, "A.8": 28, "A.9": 25, "total": 500, "los_covered": "9/9", "orphans": 0, "gaps": 0 },
+    "topic": "A.001..A.500 sequential, 500/500 unique, 0 duplicates",
+    "uniqueConceptKey": "A-001..A-500 kebab, 500/500 unique",
+    "traceability_chain": "Section→BlueprintDomain→Topic→UniqueConceptKey→LOSTag 500/500 intact; 0 orphans"
+  },
+  "coverage_topic": {
+    "verdict": "PASS — FULL DOMAIN A COVERAGE",
+    "9_of_9_los": true,
+    "density_notes": "A.1 22% heaviest (ratio foundation, per blueprint), A.6/A.7 8% each light but present, A.8 5.6% (28) and A.9 5% (25) thinnest — still covered, density risk only",
+    "next_wave_priority": "A.8 leverage (DOL/DFL/DTL) and A.9 SGR/dividend to reach 40-45 each"
+  },
+  "coverage_difficulty": {
+    "counts_exact": { "Easy_DS1": 56, "ModerateEasy_DS2": 84, "VeryDifficult_DS5": 54, "Moderate_DS3_est": 181, "Difficult_DS4_est": 125 },
+    "counts_est_note": "Moderate/Difficult estimates carry ±2-3 item uncertainty due to grep 100-match truncation; Easy/ME/VD/Remember/Understand/Evaluate/A.6-A.9 are exact",
+    "vs_CAQS_6_1_S121_general_15_20_30_25_10": {
+      "Easy_11.2pct": "56 delta -3.8pp UNDER (S121 flag)",
+      "ModEasy_16.8pct": "84 delta -3.2pp UNDER (flag)",
+      "Moderate_36.2pct": "181 delta +6.2pp OVER (flag)",
+      "Difficult_25.0pct": "125 delta 0.0 PASS",
+      "VeryDifficult_10.8pct": "54 delta +0.8 PASS"
+    },
+    "vs_P2002_G1_DomainA_10_20_30_30_10": { "Easy_11.2": "+1.2 PASS", "ME_16.8": "-3.2 borderline", "Moderate_30.6": "+0.6 PASS", "Difficult_30.6": "+0.6 PASS", "VD_10.8": "+0.8 PASS" },
+    "sum_abs_deviation": "14pp (~2.8pp per tier)",
+    "dashboard_flags": ["Easy UNDER", "Moderate-Easy UNDER", "Moderate OVER"],
+    "verdict": "CONCERN — not blocking standalone, but portfolio tolerance (±3pp) exceeded on 3/5 tiers; drift toward Moderate-heavy; per-50 volatility extreme (B1 60% D+VD vs B4 28%)",
+    "quality": "No definition-match inflation; Very Difficult are genuine Evaluate capstones; Early Difficult-heavy Wave1 (0 Easy/0 ME/0 Moderate/21D/9VD) corrected by later waves"
+  },
+  "coverage_cognitive": {
+    "counts": { "Remember": 33, "Understand": 75, "Apply": 194, "Analyze": 128, "Evaluate": 70 },
+    "vs_CAQS_6_2_5_15_40_25_15": {
+      "Remember_6.6": "+1.6 PASS",
+      "Understand_15.0": "0.0 PASS",
+      "Apply_38.8": "-1.2 PASS",
+      "Analyze_25.6": "+0.6 PASS",
+      "Evaluate_14.0": "-1.0 PASS"
+    },
+    "vs_S121_10_20_40_20_10": {
+      "Remember_6.6": "-3.4 CONCERN",
+      "Understand_15.0": "-5.0 FAIL",
+      "Apply_38.8": "-1.2 PASS",
+      "Analyze_25.6": "+5.6 OVER",
+      "Evaluate_14.0": "+4.0 OVER"
+    },
+    "blended_score": { "vs_CAQS": 91, "vs_S121": 62, "reported": 75 },
+    "cross_tab_DS_Cognitive": "DS1 Remember30/Apply7, DS2 Remember3/Understand38/Apply39/Analyze6, DS3 Apply127/Analyze29/Evaluate5, DS4 Analyze89/Apply19/Evaluate17 (71% Analyze at DS4 correct), DS5 Evaluate48/Analyze4/Apply2 (89% Evaluate at DS5 — AF-5 satisfied)",
+    "verdict": "PASS vs CAQS 6.2 (excellent), CONCERN vs S121 generic (Analyze/Evaluate overweight) — ambiguity: S121 default not domain-calibrated for Financial Statement Analysis which legitimately skews analytical; no blocking mislabel in sample"
+  },
+  "coverage_answer_diversity": {
+    "verdict": "FAIL — CRITICAL",
+    "pack_wide": { "A": "144 (28.8%) +3.8pp OVER (barely outside 22-28%)", "B": "156 (31.2%) +6.2pp OVER FAIL", "C": "112 (22.4%) PASS", "D": "88 (17.6%) -7.4pp below 25% target, -4.4pp below 22% floor FAIL" },
+    "chi_square_vs_uniform": "22.88 > 7.81 (df3, p0.05) => significantly non-uniform",
+    "guessability": "D starvation enables D-de-weighting strategy; B over-representation rewards B-guessing",
+    "streaks": {
+      "max_streak": "10x A at Q491-500 (P2-A-491..500 all A) — CRITICAL, exceeds CAQS 6.6 limit 4 by 6",
+      "streaks_ge3": 18,
+      "streaks_ge4": 14,
+      "examples": ["D x5 Q017-021", "B x6 Q069-074", "B x7 Q079-085", "A x10 Q491-500", "B x5 Q434-438", "A x5 Q439-443"],
+      "last_100_detail": "Q401-500: A47% B39% C10% D4% chi2 53.84 — catastrophic collapse of C/D",
+      "last_50_detail": "Q451-500: A60% B36% C4% D0% — 0 D in last 50"
+    },
+    "per_batch": {
+      "per_100_fail": "4/5 batches outside 22-28% (B2 B OVER, D UNDER; B3 same; B4 A OVER; B5 CRITICAL)",
+      "per_50_fail": "9/10 batches fail (11-14 required per 50), only Q151-200 clean (13/13/13/11)",
+      "finding": "pack-wide average masks per-batch catastrophe; D starvation monotonically intensifies toward tail — authoring fatigue signature"
+    }
+  },
+  "governance_guard": {
+    "overall_tests": "74/74 PASS",
+    "base_schema_validate_p2": "500 items 0 errors PASS (V11 15 PASS /0 HOLD/455 GRANDFATHERED/30 MIGRATION_REQUIRED — report-only until --enforce)",
+    "v11_debt": "30 MIGRATION_REQUIRED in A-371..400 tail (source_ids 'A.x' not catalog-resolving, source_support_for_key facts/conclusion empty, distractor_intent 4 keys vs 3, etc.) — not blocking today but blocks --enforce flip",
+    "rules": {
+      "R2_DL008": "0/500 non-empty EW[CC] PASS",
+      "R6_DL026": "0/500 empty non-CC EW PASS",
+      "R10_DL021": "0/500 absent EW PASS",
+      "R9_polarity": "0 inversions PASS",
+      "R11_cognitive_gates": "74/74 PASS but permissive — only blocks Evaluate≤2 / Analyze==1; does NOT block Analyze@DS5 / Apply@DS5 ceiling (DL-P2-015 31 ceiling items including A-009/A-262 etc. PASS guard but fail stricter S121)",
+      "R13_Part2OnlyFlag": "500/500 true PASS",
+      "R14_QID_boundary": "0 P1 QIDs, P2-A-001..500 contiguous, 0 cross-pack dup PASS",
+      "R5_batch_cap": "CONCERN — P2-067 certified 45+45 on A/B in one session >30 without BLOCK-AUTHORIZED marker cited; content clean but audit trail gap"
+    }
+  },
+  "technical_debt_and_learner_safety": {
+    "critical_structural": { "DL008": 0, "DL013_boilerplate": 0, "DL021_absent": 0, "DL026_empty": 0, "DL037_inversion": 0, "DL016_dual_block": 0, "note": "all VerifiedChecks attest EW[CC] empty + non-CC ≥75 chars + no boilerplate; sampling 30/30 choice-specific EW ≥100-800 chars" },
+    "learner_safety": "PASS — 0 Certified defective QIDs in learner pool (0/500 with DL-008/021/026/037/016); all 500 Certified, delivery reads pack_p2_a.js directly (500 Certified, not baseline 400)",
+    "known_nonblocking_debt": [
+      "DL-P2-015 55 ceiling/floor mismatches (31 Analyze/Apply@DS5 ceiling, 23 Evaluate@DS3 stricter-floor) tracked CAQS §15.3 — not blocking but should not add more DS5 without content change (Rule12)",
+      "DL-P2-016 Mod-Easy 22 items already resolved (0 in Pack A now)",
+      "V11 30 items MIGRATION_REQUIRED (A-371..400) — Unprocessed tail, quarantined from Certified input/pool/export until backfill"
+    ],
+    "artifact_quality": "distractor quality HIGH (each distractor maps to distinct misconception/plausible path), business realism STRONG (named companies/stakeholders/triggers: Meridian/Pacific Rim/Apex/Northstar/Harbor/Sterling etc., lender covenant / credit line / payroll crisis / board review / financing application)",
+    "drift_categories_S208": "6/6 PASS except registry staleness PARTIAL (item-level traceability intact, registry-level CURRENT_BASELINES stale) and content-drift HISTORICAL-MITIGATED (early Difficult/Analyze-heavy corrected but residual Moderate overweight & answer D starvation remain)"
+  },
+  "drift_scenarios_S208": {
+    "SCENARIO_A_difficulty_inflation_50xDifficult": { "detected": "Y via dashboard (would flag D OVER +6.8pp)", "severity": "MEDIUM flagged vs correct HIGH", "response": "2/5 — advisory flag, no BLOCK gate", "note": "Difficult currently on target (25%); Moderate +6.2 is the real drift" },
+    "SCENARIO_B_answer_D_starvation": { "detected": "Y partial (pack-wide dashboard flags D -7.4pp) but per-50/per-100 and streak not in gate", "severity": "HIGH correct", "response": "1/5 — pack certified despite 10-streak and 0-D tail; no BLOCK", "note": "WORST response; trailing 100 4% D collapsed despite wave-level 4/4/4/3 checks which do not compose" },
+    "SCENARIO_C_cognitive_relabel_Rule12": { "detected": "Y", "severity": "HIGH correct", "response": "5/5 exemplary — Rule12 BLOCKs Apply→Analyze without content change with actionable error", "note": "Only drift category with automatic prevention" },
+    "overall_drift_prevention": "C- 58/100 — per-item quality high, portfolio-level prevention fragile; would drift under future authoring pressure without process change"
+  },
+  "stop_conditions_automatic": {
+    "principle_violation": { "triggered": false, "evidence": "no S121 immutable unilateral change, no ID reuse, no standard invention" },
+    "registry_authority_conflict": { "triggered": false, "evidence": "sole source p2/pack_p2_a.js, derived registries not hand-edited (Rules3/7 PASS)" },
+    "broken_traceability": { "triggered": false, "evidence": "QID uniqueness 500/500, LOSTag/Topic/UCK 500/500, VerifiedChecks 500/500 intact" },
+    "duplicate_registry_creation": { "triggered": false, "evidence": "single registry + MASTER_QUESTION_REGISTRY generated" },
+    "governance_guard_not_pass": { "triggered": false, "evidence": "74/74 PASS, base schema 0 errors (V11 report-only)" },
+    "identity_below_99": { "triggered": false, "evidence": "QID format ^P2-[A-F]-\\d{3}$ 500/500, Part2OnlyFlag 100%" },
+    "certified_DL008_exists": { "triggered": false, "evidence": "0 Certified DL-008" },
+    "certified_DL026_exists": { "triggered": false, "evidence": "0 Certified DL-026" },
+    "overall": "0 triggered — no HALT required"
+  },
+  "final_determination": {
+    "verdict": "CONDITIONAL PASS — CERTIFICATION READY FOR 400-CERTIFIED SUBSET; 500/500 FULL PACK NOT YET CERTIFIABLE",
+    "status": "CONDITIONAL_CERTIFICATION",
+    "halted": false,
+    "score_bands": { "governance_certification": 71, "scale": "90-100 Gold / 70-89 Conditional / <70 Reject", "drift_prevention": 58, "coverage_topic": "PASS", "difficulty": "CONCERN (68/C)", "cognitive": "PASS vs CAQS (91/100), MARGINAL vs S121 (62)", "answer_diversity": 42, "guard": "74/74 PASS with procedural gaps" },
+    "summary": "Pack A is item-level excellent (500/500 parse, 0 critical DL defects, 9/9 LOS covered, per-item difficulty/cognitive calibration high-quality, business realism strong, Rule12 5/5 prevention) but PORTFOLIO-LEVEL diversity fails on the one dimension that is test-score exploitable: answer position (D 17.6% <-22% floor, B 31.2% >28%, chi2 22.88 significant, 10-streak A at tail, 0 D in last 50, 9/10 per-50 batches fail). Topic coverage passes outright; difficulty/cognitive are within CAQS portfolio tolerance (Fail vs generic S121 is partly domain-legitimate for Financial Statement Analysis). Governance guard is PASS for live state, with known debt (30 V11 tail, 55 ceiling/floor) correctly quarantined as Unprocessed/known-defect, not contaminating the Certified subset.",
+    "what_is_certifiable_now": "The 400 items that are already Certified under preflight 400/500 snapshot retain certification (Tier 1 deliverable). The trailing 100 items Q401-500 (especially Q451-500 with 60% A / 0% D / 10-streak) plus the 30 V11-MIGRATION_REQUIRED items A-371..400 are NOT certifiable as-shipped and must be quarantined from certification input/pool/export until remediation.",
+    "blocking_gaps_for_500_certification": [
+      "CRITICAL: Answer diversity — pack-wide D 88/500 (17.6%) must reach 22-28% (110-140). Need +22 to floor / +37 to 25% target. Last 100 needs +18 D (4→22) and last 50 needs 11 D (0→11). Max streak 10xA Q491-500 violates CAQS 6.6 limit 4. Per-batch 9/10 fail. Remediation: re-key 22-37 items' CorrectChoice position via letter rotation with recomputed verification per Rule 4 (e.g., promote +18 D in Q401-500, rotate streak tail). DO NOT relabel — Rule12.",
+      "HIGH: Cognitive vs S121 generic — Apply 38.8% vs 45% G.2 Domain A target (-6.2pp) and Analyze/Evaluate overweight if using generic S121. Remediation: authorize domain-specific cognitive targets for Section A (Financial Statement Analysis legitimately analytical) OR author ~15-20 additional Apply at A.8/A.9 Moderate to converge toward 40-45% Apply before adding more Analyze. Requires governance decision, not content relabel (Rule12).",
+      "MEDIUM: Difficulty Moderate 36.2% +6.2pp OVER S121 30% (37pp above nearest tolerance) — future waves must bias Easy/ME (need +7 Easy to 15%, +16 ME to 20%) before adding more Moderate; next 100 authoring slots per P2-079 slot table 15/20/30/25/10.",
+      "MEDIUM: Topic density thin — A.8 28 and A.9 25 (5.6%/5%) vs ~55 equal share — prioritize A.8 leverage and A.9 SGR/dividend in next authoring wave to reach 40-45 each.",
+      "HIGH (governance): 30 V11 MIGRATION_REQUIRED items A-371..400 block validate:p2 --enforce and 500/500 certification — 1 batch of 30 to fix source_ids to catalog-resolving IDs, fill source_support_for_key facts/conclusion, set distractor_intent to exactly 3 non-CC keys with why_plausible + tier 1/2/3 unique, ensure uniqueness_note references all non-CC letters.",
+      "LOW: Rule11 ceiling gap — 31 Analyze/Apply@DS5 not blocked by guard (allows DS5 Analyze/Apply). Upgrade governance-guard.js:410-417 to BLOCK Analyze≥DS5 / Apply≥DS5 ceiling. Plus sync preflight_p2.js targets 2,625→3,250 and add answer balance + streak BLOCK (chi2>7.81 or streak>4 or any position outside 22-28% pack-wide OR per-100) to make dashboard a BLOCK gate. Close R5 procedural gap (P2-067 A45/B45 without BLOCK-AUTHORIZED marker).",
+      "LOW: Baseline staleness — regenerate p2/CURRENT_BASELINES_P2.md (400→500, hash 962b..., total 1835→1935) and log REVISION_HISTORY_P2 entry for +100 delta."
+    ],
+    "gating_remediation_rule": "Rule 5 ≤30/batch, backup-before-write, six-dim HIGH per P2002 §B.3, Part2OnlyFlag verification, no CorrectChoice drift without recomputed note (Rule4)",
+    "post_remediation_gates": ["preflight_p2 0 divergences", "validate:p2 --enforce 0 errors (0 MIGRATION_REQUIRED)", "answer 22-28% per position pack-wide AND per-100, max streak ≤4, chi2 ≤7.81", "difficulty ±3pp vs G.1 10/20/30/30/10", "cognitive ±3pp vs approved domain-specific targets (or generic CAQS 5/15/40/25/15 if retained)", "topic 9/9 LOS ≥25 each (A.8/A.9 ≥35)", "500/500 Certified, QID uniqueness, 74/74 + new ceiling/streak tests PASS"],
+    "if_not_remediated": "Pack remains CONDITIONALLY ADOPTED (71/100 governance, 58/100 drift prevention) — safe to deliver the 400 Certified subset, but automatic promotion to FULLY ADOPTED (≥90) and 500/500 export is blocked per stewardship-orchestrator contract. No HALT required; next session may proceed under same controls. Risk if pressure continues: D will fall to <10% pool-wide, Moderate will exceed 40%, tail bias will amplify — test becomes gameable."
+  },
+  "recommended_handoff_readiness": {
+    "56_part_split": "CONDITIONALLY READY — QID integrity, size compliance, verbatim fidelity excellent; answer position bias does not affect handoff provenance but will be visible to external reviewer (reviewer will see 10-streak A at tail). Disclosure: notify reviewer that pack-wide answer balance is known gap pending rebalance, not a provenance defect. Control test remains attach part01 → confirm P2-A-001 D before disputed QID.",
+    "per_pack_reuse": "APPROVED as reusable standard for B-F after adding BLOCK gates for answer balance + streak + difficulty portfolio (make dashboard BLOCK, not advisory)"
+  },
+  "sign_off": "Executive Architecture Board — stewardship-orchestrator — 2026-09-01 — thorough content certification with coverage of all topics, difficulties, answer diversity"
+}

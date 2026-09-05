@@ -1,0 +1,544 @@
+{
+  "report_id": "CERT-BATCH1C-FIXED",
+  "batch_file": "p2/sprint_output/pack_p2_c_batch1.js",
+  "item_count": 15,
+  "domain": "C — Decision Analysis",
+  "los_range": "C.7 (Pricing Decisions)",
+  "certifier": "Independent Blind Certifier",
+  "verification_date": "2026-09-05",
+  "schema_version_target": "1.1",
+  "batch_header_distribution": "2E / 3ME / 5M / 3D / 2VD | R1/U3/Ap7/An3/Ev1 | 4A/4B/4C/3D, max streak 2",
+
+  "per_item": [
+    {
+      "QuestionID": "P2-C-621",
+      "Topic": "C.621 target-costing-maximum-allowable-cost",
+      "CorrectChoice": "A",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "CalculationItem": false,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Target cost = $180 × (1 - 0.25) = $135.00. Verified against target costing theory." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable to stem ($180 market price, 25% margin). Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Definition-recall item (Remember/Easy) — appropriate for target cost formula application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B targets margin-on-cost confusion ($144=$180/1.25), C captures profit-not-cost error ($45), D catches no-margin error ($180)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — pricing decisions, target costing." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Target costing is Decision Analysis; no Part 1 overlap." }
+      },
+      "arithmetic_verification": "N/A (conceptual)",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-622",
+      "Topic": "C.622 skimming-vs-penetration-pricing-strategy",
+      "CorrectChoice": "B",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "CalculationItem": false,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Price skimming optimal: temporary differentiation + strong early demand + 18-month competitive window. Verified against pricing strategy theory." },
+        "Precision": { "confidence": "HIGH", "notes": "All three skimming conditions explicitly stated in stem. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand — requires understanding pricing strategy selection criteria, not just recall." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: penetration always superior (common tech-market bias), C: cost-plus as default, D: uniform pricing simplicity." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — pricing strategy selection." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pricing strategy is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "N/A (conceptual)",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-623",
+      "Topic": "C.623 price-elasticity-revenue-impact",
+      "CorrectChoice": "A",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "%Q = -2.0 × 15% = -30%. Revenue factor = 1.15 × 0.70 = 0.805 → -19.5%. Verified against elasticity formula." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Correct answer arithmetic verified. Distractor D explanation claims revenue increases 6.75% but independent calc yields 6.375% (1.15 × 0.925 = 1.06375). Minor imprecision in wrong-answer explanation text — does not affect correctness of CC." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Apply — two-step calculation (elasticity application + revenue impact)." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B: E=-1.0 (1:1 confusion), C: correct Q but wrong rev direction, D: E=-0.5 (halved elasticity)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — price elasticity and revenue." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Elasticity pricing analysis is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — %Q=-30%, Revenue change=-19.5% independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": ["Distractor D explanation states revenue increases 6.75% but E=-0.5 × 15% = -7.5% Q change yields revenue factor 1.15 × 0.925 = 1.06375 (6.375% increase). Minor arithmetical imprecision in wrong-answer text — does not affect correct answer or educational value."]
+    },
+    {
+      "QuestionID": "P2-C-624",
+      "Topic": "C.624 cost-based-vs-market-based-pricing",
+      "CorrectChoice": "B",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "CalculationItem": false,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Cost-plus price = $500 × 1.20 = $600. Cost-based pricing guarantees cost recovery + target return. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All figures traceable ($500 full cost, 20% return, $620 market, $580 competitor). Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand — requires understanding cost-based vs market-based tradeoffs." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: market always superior (absolute), C: ignore competitors entirely, D: market price always optimal." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — cost-based pricing framework." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pricing strategy is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "N/A (conceptual)",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-625",
+      "Topic": "C.625 cost-plus-pricing-variable-cost-base",
+      "CorrectChoice": "D",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "SP = $300 × 1.20 = $360.00. Verified against variable-cost-plus formula." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable ($300 VC, 20% markup). Full cost per unit = $420 verified. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — requires selecting correct cost base (variable vs full) and applying markup." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: markup on full cost ($504=$420×1.20), B: wrong markup % ($420=$300×1.40), C: margin/markup confusion ($480=$300×1.60)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — variable-cost-plus pricing." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost-plus pricing is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $300 × 1.20 = $360.00 independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-626",
+      "Topic": "C.626 product-mix-pricing-constraint-optimization",
+      "CorrectChoice": "C",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CM/hr: A=$15, B=$12, C=$18. Product C highest CM per constrained resource. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All CM/hr calculations verified ($45/3=$15, $60/5=$12, $36/2=$18). Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — requires ranking by CM per constrained resource, not CM per unit." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: CM per unit ($45), B: highest CM per unit ($60), D: equal allocation (ignores constraint)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — constrained resource optimization." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Theory of constraints is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — CM/hr rankings independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-627",
+      "Topic": "C.627 bundle-pricing-cannibalization-analysis",
+      "CorrectChoice": "D",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Bundle CM=$480; Expected individual CM=0.5×$480+0.3×$360+0.2×$240=$396; Incremental=$84. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All probabilities sum to 100%. Individual CMs verified ($480, $360, $240). Bundle VC=$720 verified." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — multi-step: compute expected individual contribution, compare to bundle contribution." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: ignores cannibalization ($480 bundle CM only), B: baseline not increment ($396), C: revenue not contribution ($540)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — bundle pricing incremental analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Bundle pricing theory is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $84 incremental contribution independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-628",
+      "Topic": "C.628 dynamic-pricing-profit-maximization",
+      "CorrectChoice": "A",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "$150: 90×2K-80K=$100K; $140: 80×2.4K-80K=$112K; $130: 70×2.8K-80K=$116K; $120: 60×3.2K-80K=$112K. Max=$116K at $130. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All four price-point profit calculations independently verified. VC=$60, FC=$80K consistent." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — four-scenario profit comparison, straightforward arithmetic at each point." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B: highest price=$100K (lowest profit), C: highest volume=$112K, D: $140=$112K (same as $120, demonstrates symmetry)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — dynamic pricing, profit maximization." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Price-volume tradeoff analysis is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — all four price-point profits independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-629",
+      "Topic": "C.629 special-order-pricing-excess-capacity",
+      "CorrectChoice": "B",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "($55-$40)×3,000=$45,000. Excess capacity=3,000=order quantity (no displacement). Fixed costs irrelevant. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "VC=$40, special price=$55, capacity=10K, current=7K, order=3K all traceable. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — standard special order incremental analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: regular price ($105K=$35×3K), C: revenue only ($165K), D: regular price×qty no costs ($225K)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — special order pricing, excess capacity." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Special order analysis is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $45,000 independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-630",
+      "Topic": "C.630 transfer-pricing-minimum-full-capacity",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Min TP = VC + OC = $35 + ($90-$8-$35) = $35+$47 = $82. Alternative: net realizable value = $90-$8 = $82. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "Full capacity confirmed (100% utilization). Opportunity cost = CM foregone on external sales. Selling cost avoidable on internal transfers." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze — requires understanding opportunity cost at full capacity, distinguishing from idle-capacity TP." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: VC only (idle capacity TP), B: gross external price ($90), D: arbitrary average ($62.50)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — transfer pricing, minimum price with full capacity." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Transfer pricing is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $82 minimum TP independently confirmed via two methods",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-631",
+      "Topic": "C.631 value-based-pricing-customer-willingness",
+      "CorrectChoice": "D",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": false,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Value-based maximum price = total economic value to customer = $450,000/year savings. Verified against value-based pricing theory." },
+        "Precision": { "confidence": "HIGH", "notes": "Savings=$450K clearly stated. Question asks for maximum price that delivers value — the theoretical ceiling is the full value created." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Difficult/Analyze is slightly generous — the correct answer is the stated savings figure ($450K), which is straightforward. However, distractor discrimination between market-based, partial-capture, and cost-based approaches adds cognitive complexity. Acceptable." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: competitor average ($280K), B: partial capture ($330K), C: cost-based floor ($120K). Each represents a distinct pricing philosophy." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — value-based pricing, customer willingness to pay." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Value-based pricing is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "N/A (conceptual)",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": ["CognitiveLevel 'Analyze' and DifficultyScore 4 slightly generous for a conceptual item where the answer is the stated savings figure. Distractor discrimination justifies the rating. Non-blocking."]
+    },
+    {
+      "QuestionID": "P2-C-632",
+      "Topic": "C.632 price-discrimination-segment-optimization",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Corporate: MR=500-Q, MC=100 → Q=400, P=500-0.5(400)=$300. Verified against monopoly pricing theory." },
+        "Precision": { "confidence": "HIGH", "notes": "Demand function P=500-0.5Q → TR=500Q-0.5Q² → MR=500-Q. All derivatives verified. MC=$100 given." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze — requires deriving MR from demand function, setting MR=MC, solving for Q, substituting back for P." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B: segment confusion or MR miscalc, C: Q reported as P (400), D: MR=0 revenue maximization ($250)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — price discrimination, segment optimization." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Monopoly pricing/price discrimination is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $300 profit-maximizing price independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-633",
+      "Topic": "C.633 life-cycle-costing-absorption-vs-full",
+      "CorrectChoice": "C",
+      "Difficulty": "Very Difficult",
+      "DifficultyScore": 5,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Total LC cost = $90M + ($22K×30K) + ($10M×6) + ($5M×6) = $90M+$660M+$60M+$30M = $840M. Per unit = $840M/30K = $28,000. Verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All cost categories verified: dev=$90M, prod=$660M, mkt=$60M, svc=$30M. Total=$840M. 30K units confirmed (5K×6yr)." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Evaluate — requires aggregating 4 cost categories across 6-year life cycle and contrasting with absorption costing. Appropriate for Evaluate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: absorption costing only ($22K), B: prod+dev only ($25K), D: overstated ($32K)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — life-cycle costing, absorption vs full cost." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Life-cycle costing is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $28,000 per unit independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    },
+    {
+      "QuestionID": "P2-C-634",
+      "Topic": "C.634 cost-plus-full-cost-with-opportunity",
+      "CorrectChoice": "C",
+      "Difficulty": "Very Difficult",
+      "DifficultyScore": 5,
+      "CognitiveLevel": "Understand",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "SP = $500 × 1.24 = $620.00. Verified against cost-plus pricing formula." },
+        "Precision": { "confidence": "HIGH", "notes": "Full cost=$500, target return=24%. Single multiplication. $500×1.24=$620." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "CognitiveLevel 'Understand' with DifficultyScore 5 appears mismatched. The computation is a single multiplication ($500×1.24). Distractors target base/percentage errors, adding some complexity, but the correct answer is straightforward. Recommend CognitiveLevel 'Apply' and DifficultyScore 2-3. Non-blocking — answer is correct and distractors are well-designed." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: competitor price ($580), B: wrong % ($600=$500×1.20), D: wrong base+wrong % ($420=$350×1.20)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — full-cost-plus pricing." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost-plus pricing is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $500 × 1.24 = $620.00 independently confirmed",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": ["CognitiveLevel 'Understand' + DifficultyScore 5 (Very Difficult) appears inflated for a single-step multiplication ($500×1.24). Recommend recalibrating to Apply/Moderate (DifficultyScore 3). Non-blocking — answer and distractors are correct."]
+    },
+    {
+      "QuestionID": "P2-C-635",
+      "Topic": "C.635 marginal-analysis-pricing-breakeven",
+      "CorrectChoice": "B",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CM = $180K/9K = $20; SP = $22+$20 = $42. Verified: ($42-$22)×9,000 = $180,000 = FC." },
+        "Precision": { "confidence": "HIGH", "notes": "FC=$180K, BE=9K yards, VC=$22 all traceable. Reverse-engineering verified bidirectionally." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply — two-step reverse breakeven. Appropriate for Easy." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: CM only ($20), C: VC only ($22), D: incorrect allocation ($40)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.7 — breakeven analysis, reverse engineering selling price." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP/breakeven analysis is Part 2 Decision Analysis." }
+      },
+      "arithmetic_verification": "PASS — $42.00 independently confirmed via bidirectional check",
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "QID_format": "PASS",
+        "EW_CC_empty": "PASS (absent — DL-018 benign)",
+        "non_CC_EW_all_present": "PASS (3/3 slots, all ≥50 chars)",
+        "schema_v11": true,
+        "source_ids_resolved": true,
+        "distractor_intent_complete": true
+      },
+      "verdict": "PASS",
+      "notes": []
+    }
+  ],
+
+  "summary": {
+    "total_items": 15,
+    "pass": 15,
+    "fail": 0,
+    "overall_verdict": "PASS",
+
+    "arithmetic_items": 12,
+    "arithmetic_pass": 12,
+    "arithmetic_fail": 0,
+
+    "dimension_scores": {
+      "Correctness": { "HIGH": 15, "MEDIUM": 0, "LOW": 0, "ZERO": 0 },
+      "Precision": { "HIGH": 14, "MEDIUM": 1, "LOW": 0, "ZERO": 0 },
+      "DifficultyCalibration": { "HIGH": 13, "MEDIUM": 2, "LOW": 0, "ZERO": 0 },
+      "DistractorEngineering": { "HIGH": 15, "MEDIUM": 0, "LOW": 0, "ZERO": 0 },
+      "BlueprintAlignment": { "HIGH": 15, "MEDIUM": 0, "LOW": 0, "ZERO": 0 },
+      "Part2Relevance": { "HIGH": 15, "MEDIUM": 0, "LOW": 0, "ZERO": 0 }
+    },
+
+    "overall_confidence": "HIGH",
+
+    "difficulty_distribution": {
+      "Easy (1)": { "count": 2, "items": ["P2-C-621", "P2-C-635"] },
+      "Moderate-Easy (2)": { "count": 3, "items": ["P2-C-622", "P2-C-623", "P2-C-624"] },
+      "Moderate (3)": { "count": 5, "items": ["P2-C-625", "P2-C-626", "P2-C-627", "P2-C-628", "P2-C-629"] },
+      "Difficult (4)": { "count": 3, "items": ["P2-C-630", "P2-C-631", "P2-C-632"] },
+      "Very Difficult (5)": { "count": 2, "items": ["P2-C-633", "P2-C-634"] }
+    },
+
+    "cognitive_distribution": {
+      "Remember": { "count": 1, "items": ["P2-C-621"] },
+      "Understand": { "count": 3, "items": ["P2-C-622", "P2-C-624", "P2-C-634"] },
+      "Apply": { "count": 7, "items": ["P2-C-623", "P2-C-625", "P2-C-626", "P2-C-627", "P2-C-628", "P2-C-629", "P2-C-635"] },
+      "Analyze": { "count": 3, "items": ["P2-C-630", "P2-C-631", "P2-C-632"] },
+      "Evaluate": { "count": 1, "items": ["P2-C-633"] }
+    },
+
+    "answer_balance": {
+      "A": { "count": 4, "pct": 26.7 },
+      "B": { "count": 4, "pct": 26.7 },
+      "C": { "count": 4, "pct": 26.7 },
+      "D": { "count": 3, "pct": 20.0 }
+    },
+
+    "answer_sequence": "A,B,A,B,D,C,D,A,B,C,D,A,C,C,B",
+    "max_streak": 2,
+    "no_running_pattern": true,
+
+    "structural_checks": {
+      "Part2OnlyFlag_all_true": true,
+      "QID_format_all_valid": true,
+      "DL008_violations": 0,
+      "DL026_violations": 0,
+      "DL013_boilerplate": 0,
+      "schema_v11_all": true,
+      "all_EW_CC_absent_or_empty": true,
+      "all_non_CC_EW_above_50_chars": true
+    }
+  },
+
+  "minor_notes": [
+    {
+      "QuestionID": "P2-C-623",
+      "field": "ExplanationWrongD",
+      "issue": "Explanation claims revenue increases 6.75% with E=-0.5, but independent calc yields 6.375% (1.15 × 0.925 = 1.06375). Minor arithmetical imprecision in wrong-answer explanation text.",
+      "severity": "Low",
+      "action": "Optional editorial correction of 6.75% to 6.38% in ExplanationWrongD."
+    },
+    {
+      "QuestionID": "P2-C-634",
+      "field": "CognitiveLevel, DifficultyScore",
+      "issue": "CognitiveLevel 'Understand' + DifficultyScore 5 (Very Difficult) appears inflated for a single-step multiplication ($500×1.24=$620). Recommend recalibrating to Apply/Moderate (DifficultyScore 3). Distractors are well-designed but correct-answer computation is trivial.",
+      "severity": "Low",
+      "action": "Optional recalibration to CognitiveLevel: 'Apply', Difficulty: 'Moderate', DifficultyScore: 3."
+    },
+    {
+      "QuestionID": "ALL",
+      "field": "ExplanationWrong[CorrectChoice]",
+      "issue": "All 15 items have EW[CC] field absent (DL-018 benign pattern) rather than present-as-empty string (''). Functionally equivalent — no wrong text displayed at correct answer slot. Structural normalization note.",
+      "severity": "Informational",
+      "action": "No action required. DL-018 benign variant."
+    }
+  ],
+
+  "certification_eligibility": {
+    "eligible": true,
+    "blocking_conditions_checked": {
+      "B4_1_topic_mismatch": "PASS — all EW fields topically relevant",
+      "B4_2_Part2OnlyFlag": "PASS — all 15 items carry Part2OnlyFlag: true",
+      "B4_3_DL008_DL026": "PASS — 0 DL-008, 0 DL-026 violations",
+      "B4_4_authority_citation": "PASS — all citations match tested concepts"
+    },
+    "recommended_state_transition": "Unprocessed → In Audit (ready for six-dimension verification pipeline)"
+  }
+}

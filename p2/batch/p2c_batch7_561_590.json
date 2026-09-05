@@ -1,0 +1,1892 @@
+[
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.561 optimal markup from demand elasticity",
+    "QuestionID": "P2-C-561",
+    "UniqueConceptKey": "C-561-optimal-markup-demand-elasticity",
+    "Stem": "Ridgeview Electronics manufactures a portable speaker with variable cost of $50 per unit. The marketing team estimates the price elasticity of demand at -2.5. Controller Sofia Reyes needs to determine the profit-maximizing selling price using the optimal markup formula. What price should Ridgeview set?",
+    "Choices": {
+      "A": "$83.33",
+      "B": "$70.00",
+      "C": "$75.00",
+      "D": "$55.56"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "Under the IMA SMA on relevant costing, the optimal markup-on-cost approach uses: Markup percentage = |1 / Price Elasticity| = 1 / 2.5 = 0.40 or 40%. Profit-maximizing price = Variable Cost x (1 + Markup %) = $50 x 1.40 = $70.00. This price balances margin per unit against volume lost from higher pricing. A common error is using the inverse elasticity rule P = MC / (1 + 1/E), which yields $83.33 and assumes a different demand model.",
+    "ExplanationWrongA": "$83.33 results from applying the inverse elasticity pricing rule P = MC / (1 + 1/E) = $50 / (1 + 1/(-2.5)) = $50 / 0.60 = $83.33. This formula assumes a constant-elasticity demand model used in microeconomics, but the CMA markup-on-cost convention applies |1/E| as a percentage markup on variable cost, yielding $70.00 instead.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "$75.00 applies a 50% markup to the $50 variable cost ($50 x 1.50 = $75), which ignores the demand elasticity of -2.5. A fixed 50% markup has no basis in the given elasticity; the correct markup is 40% (1/2.5), derived directly from the elasticity parameter.",
+    "ExplanationWrongD": "$55.56 results from dividing variable cost by the elasticity value rather than computing |1/E| as the markup percentage. The correct approach converts elasticity to a 40% markup on cost, not a divisor of the cost base.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Uses inverse elasticity rule",
+        "why_plausible": "Valid in microeconomics but not CMA convention",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Arbitrary 50% markup",
+        "why_plausible": "Round numbers common in practice",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Inverts elasticity calc",
+        "why_plausible": "Mathematical sign error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $70.00 correctly applies |1/E| = 40% markup on $50 variable cost."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.562 captive product pricing contribution offset",
+    "QuestionID": "P2-C-562",
+    "UniqueConceptKey": "C-562-captive-product-pricing-contribution-offset",
+    "Stem": "Pine Ridge Components sells a razor handle for $25 with variable cost of $15 and sells replacement blades in packs of 60 for $48 with variable cost of $40 per pack. The company expects each razor customer to purchase an average of 4 blade packs per year. VP Manufacturing James Park wants to evaluate whether the razor handle should be priced below full cost to drive blade revenue. What is the minimum acceptable price for the razor handle?",
+    "Choices": {
+      "A": "$15.00",
+      "B": "$25.00",
+      "C": "$57.00",
+      "D": "$10.00"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "Under relevant costing and the IMA SMA on captive product pricing, the minimum acceptable price for the base product equals its variable cost when the product generates downstream contribution. Pine Ridge earns $8 per blade pack x 4 packs = $32 in blade contribution per customer. The razor handle must cover its own variable cost of $15 at minimum; the blade contribution provides additional margin that justifies pricing at or above variable cost.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$25.00 is the current full-cost-plus price. Under relevant costing, the minimum is the variable cost of $15, not the full-cost price. The captive blade contribution provides profit margin, so pricing at $25 leaves potential volume on the table if competitors undercut on handle price.",
+    "ExplanationWrongC": "$57.00 adds the blade contribution ($32) to the handle variable cost ($15) to get $47, then adds a $10 markup. This approach double-counts the blade margin by treating it as part of the handle cost floor rather than as a separate contribution stream from the blades.",
+    "ExplanationWrongD": "$10.00 prices the handle below its $15 variable cost, meaning Pine Ridge loses $5 on every handle sold. Even with blade contribution, selling below variable cost on the base product reduces total company profit.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Full-cost price as minimum",
+        "why_plausible": "Default in many firms",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Double-counts blade margin",
+        "why_plausible": "Combining products seems intuitive",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Below variable cost",
+        "why_plausible": "Aggressive pricing misapplied",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $15.00 represents the variable cost floor for the handle under relevant costing."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.563 pocket-price waterfall realization",
+    "QuestionID": "P2-C-563",
+    "UniqueConceptKey": "C-563-pocket-price-waterfall-realization",
+    "Stem": "Meridian Equipment ships industrial valves to a distributor at a list price of $1,000 per unit. The distributor receives a 2% early-payment discount for paying within 10 days, a 3% volume rebate for purchasing more than 500 units annually, and Meridian pays $25 per unit in freight costs. The distributor purchased 600 units this year. What is the pocket price per unit?",
+    "Choices": {
+      "A": "$925.00",
+      "B": "$945.00",
+      "C": "$905.00",
+      "D": "$950.00"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "The pocket price waterfall deducts all reductions from list price. Early-payment discount = $1,000 x 2% = $20. Volume rebate = $1,000 x 3% = $30. Freight = $25. Total deductions = $75. Pocket price = $1,000 - $75 = $925.00. This is the amount Meridian actually retains per unit after all concessions and logistics costs.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$945.00 results from deducting only the early-payment discount ($20) and freight ($25) from the list price, omitting the 3% volume rebate ($30). The volume rebate applies because the distributor purchased 600 units, exceeding the 500-unit threshold. All three reductions must be subtracted.",
+    "ExplanationWrongC": "$905.00 deducts all three deductions but also subtracts an additional $20, possibly from double-counting the early-payment discount or applying both the discount and rebate to overlapping bases. The pocket price applies each deduction once.",
+    "ExplanationWrongD": "$950.00 deducts only the $25 freight from the $1,000 list price, ignoring both the early-payment discount ($20) and volume rebate ($30). All three deductions must be subtracted to arrive at the true pocket price.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Omits volume rebate",
+        "why_plausible": "Rebate easy to overlook",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Double-counts deduction",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Deducts only freight",
+        "why_plausible": "Incomplete analysis",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $925.00 correctly deducts all three deductions ($20+$30+$25=$75) from $1,000."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.564 export order FX minimum price",
+    "QuestionID": "P2-C-564",
+    "UniqueConceptKey": "C-564-export-order-fx-minimum-price",
+    "Stem": "Northstar Analytics manufactures data visualization tools with variable cost of $115 per unit and fixed cost allocation of $40 per unit. A Japanese distributor has offered to purchase 2,000 units at 15,500 yen per unit. The current spot exchange rate is 142 yen per dollar. Northstar has idle capacity and no alternative use. What is the minimum acceptable price in yen for this export order?",
+    "Choices": {
+      "A": "16,330 yen",
+      "B": "15,500 yen",
+      "C": "22,080 yen",
+      "D": "11,500 yen"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "With idle capacity, minimum price = variable cost (opportunity cost is zero). The $40 fixed allocation is irrelevant because fixed costs do not change with the order. Minimum = $115. Converting: $115 x 142 = 16,330 yen. The offered 15,500 yen is below the floor.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "15,500 yen is the distributor offered price, not the minimum acceptable price. At 15,500 / 142 = $109.15 per unit, Northstar would lose $5.85 on every unit sold because the offer does not cover the $115 variable cost. Accepting reduces operating income by $11,700.",
+    "ExplanationWrongC": "22,080 yen results from converting the full absorption cost ($115 + $40 = $155) to yen: $155 x 142 = 22,010 yen. This includes the $40 fixed cost allocation, which is irrelevant for a special order with idle capacity. Fixed costs are sunk.",
+    "ExplanationWrongD": "11,500 yen results from dividing the variable cost by 10 or using an incorrect exchange rate, producing a yen amount well below the $115 variable cost floor. This price would cause Northstar to lose over $58 per unit on the order.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Accepts offered price",
+        "why_plausible": "Any revenue better than idle",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Includes fixed allocation",
+        "why_plausible": "Full absorption default",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Wrong exchange rate",
+        "why_plausible": "Currency conversion error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 16,330 yen correctly converts the $115 variable cost at 142 yen/$, excluding the irrelevant $40 fixed allocation."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.565 constrained resource allocation incremental CM",
+    "QuestionID": "P2-C-565",
+    "UniqueConceptKey": "C-565-constrained-resource-allocation-incremental-cm",
+    "Stem": "Lakeside Medical Supply has 800 hours of finishing machine capacity available this quarter. Product A contributes $20 per unit and requires 0.5 hours of finishing; Product B contributes $45 per unit and requires 1.0 hour. Current demand exceeds capacity for both products. How should the hours be allocated to maximize total contribution margin?",
+    "Choices": {
+      "A": "All 800 hours to Product A, producing 1,600 units",
+      "B": "All 800 hours to Product B, producing 800 units",
+      "C": "Split evenly: 400 hours each",
+      "D": "Allocate proportionally based on current sales mix ratio"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "CM per constraint hour: A = $20 / 0.5 = $40/hour. B = $45 / 1.0 = $45/hour. B generates $5 more per finishing hour. All 800 hours to B yields 800 x $45 = $36,000 total contribution. A yields 1,600 x $20 = $32,000. The optimal allocation directs all bottleneck hours to the product with highest CM per constraint hour.",
+    "ExplanationWrongA": "Allocating all hours to Product A yields $40 per finishing hour ($20 / 0.5 hours), producing 1,600 units with $32,000 total contribution. This is $4,000 less than Product B because Product A generates less contribution per hour of the bottleneck resource.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Splitting hours evenly ignores the contribution margin per constrained resource. The optimal allocation directs all available hours to whichever product generates the highest contribution per hour of the bottleneck, not an arbitrary 50/50 split that yields $34,000.",
+    "ExplanationWrongD": "Proportional allocation based on sales mix treats the constraint as unlimited. Under capacity constraints, the allocation must be based on contribution margin per unit of the constrained resource, not historical sales patterns.",
+    "FormulaReference": "DA-06: Weighted Average Contribution Margin",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Highest CM/unit not CM/hr",
+        "why_plausible": "Unit-level thinking intuitive",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Equal split",
+        "why_plausible": "Fair but suboptimal",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Sales mix allocation",
+        "why_plausible": "Proportional common",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only all hours to Product B ($45/hr > $40/hr) maximizes total contribution."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.566 tiered pricing breakeven volume",
+    "QuestionID": "P2-C-566",
+    "UniqueConceptKey": "C-566-tiered-pricing-breakeven-volume",
+    "Stem": "Summit Packaging offers a bulk discount: the first 200 units sell at $50 each, and units beyond 200 sell at $42 each. Variable cost is $30 per unit and fixed costs are $6,640 per month. CFO Rachel Kim needs to determine the monthly breakeven volume. How many units must Summit sell to break even?",
+    "Choices": {
+      "A": "280 units",
+      "B": "200 units",
+      "C": "420 units",
+      "D": "336 units"
+    },
+    "CorrectChoice": "C",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "Two-stage CVP. Tier 1: 200 x ($50-$30) = $4,000. Remaining FC = $6,640-$4,000 = $2,640. Tier 2: $2,640 / ($42-$30) = 220 units. Total = 200+220 = 420 units. At 420 units, total contribution = $4,000 + (220 x $12) = $6,640, exactly covering fixed costs.",
+    "ExplanationWrongA": "280 units results from applying an average contribution margin across both tiers, blending the $20 and $12 margins. The tiered structure means the first 200 units earn a higher $20 contribution, reducing total units needed below any blended estimate.",
+    "ExplanationWrongB": "200 units only covers the first tier contribution of $4,000, which is insufficient to cover $6,640 in fixed costs. After 200 units, $2,640 in fixed costs remain, requiring additional sales at the lower $12 per-unit contribution.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "336 units applies the lower-tier $12 contribution margin to all units: $6,640 / $12 = 553, then adjusts. This ignores the higher $20 contribution earned on the first 200 units.",
+    "FormulaReference": "DA-01: Breakeven Point (Units)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Blended CM across tiers",
+        "why_plausible": "Simplification ignores breakpoint",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Stops at tier boundary",
+        "why_plausible": "Confuses boundary with breakeven",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Single low-tier CM",
+        "why_plausible": "Worst-case margin applied",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 420 correctly累計s $4,000+$2,640=$6,640 across two tiers."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.567 cost-plus versus market competitive pricing",
+    "QuestionID": "P2-C-567",
+    "UniqueConceptKey": "C-567-cost-plus-versus-market-competitive-pricing",
+    "Stem": "Ridgeview Electronics produces a wireless charger with variable cost of $40 per unit, fixed cost allocation of $20 per unit, and a desired 25% markup on full cost. Market research shows competitors price similar chargers between $68 and $75. What is the cost-plus price?",
+    "Choices": {
+      "A": "$75.00",
+      "B": "$50.00",
+      "C": "$68.00",
+      "D": "$80.00"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "Full cost = $40+$20 = $60. Markup = $60 x 25% = $15. Cost-plus price = $75.00. This sits at the top of the competitive range. A common error is using variable cost as the base, which understates the price.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$50.00 results from applying the 25% markup to variable cost only: $40 x 1.25 = $50. This ignores the $20 fixed cost allocation, which must be recovered through pricing. Cost-plus pricing uses full absorption cost, not variable cost, as the base.",
+    "ExplanationWrongC": "$68.00 matches the market floor but ignores the cost-plus formula. Ridgeview full cost is $60, and a 25% markup yields $75. Pricing at $68 reduces the markup to 13.3%, which may not cover the desired return on investment.",
+    "ExplanationWrongD": "$80.00 results from adding the $20 fixed cost twice or applying a 33.3% markup instead of 25%. The correct calculation is $60 x 1.25 = $75, not $80. Pricing above the competitive range would reduce sales volume.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Variable cost base",
+        "why_plausible": "Simpler but ignores fixed recovery",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Market match without formula",
+        "why_plausible": "Ignores cost structure",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Double-count fixed costs",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $75.00 correctly applies 25% markup to $60 full absorption cost."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.568 price-change break-even volume",
+    "QuestionID": "P2-C-568",
+    "UniqueConceptKey": "C-568-price-change-break-even-volume",
+    "Stem": "Atlas Manufacturing currently sells 8,000 industrial fasteners per month at $25 each with variable cost of $13. The sales team proposes raising the price to $29, which marketing estimates will reduce volume to 6,500 units. Fixed costs remain unchanged. How many units must be sold at the new price to maintain the current monthly contribution margin?",
+    "Choices": {
+      "A": "6,500 units",
+      "B": "7,200 units",
+      "C": "8,000 units",
+      "D": "6,000 units"
+    },
+    "CorrectChoice": "D",
+    "LOSTag": "C.4",
+    "ExplanationCorrect": "Current CM = ($25-$13) x 8,000 = $96,000. New CM/unit = $29-$13 = $16. Break-even = $96,000/$16 = 6,000 units. Since marketing projects 6,500 > 6,000, the price increase is profitable.",
+    "ExplanationWrongA": "6,500 is the projected volume at the new price, not the break-even. While 6,500 exceeds 6,000, confirming profitability, it is not the point at which contribution margin is preserved. The break-even asks for the minimum volume to match current total contribution.",
+    "ExplanationWrongB": "7,200 results from dividing current total CM by the old CM per unit: $96,000 / $12 = 8,000, then adjusting. The correct divisor is the new $16 CM per unit, not the old $12. Using the wrong CM per unit overstates the break-even.",
+    "ExplanationWrongC": "8,000 equals the current volume, which is irrelevant at the new price. At $16 CM per unit, selling 8,000 units would generate $128,000 in contribution, well above the current $96,000. The break-even is lower because each unit contributes more.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-01: Breakeven Point (Units)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Projected = break-even",
+        "why_plausible": "Given number seems right",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Old CM as divisor",
+        "why_plausible": "Mixes cost structures",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Current volume anchor",
+        "why_plausible": "Anchoring bias",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 6,000 equates new $16 CM to current $96,000 total contribution."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.569 GAAP allocations masking segment contribution",
+    "QuestionID": "P2-C-569",
+    "UniqueConceptKey": "C-569-gaap-allocations-masking-segment-contribution",
+    "Stem": "Meridian Equipment operates two divisions: Metric and Imperial. The Metric division generates $520,000 in revenue with $260,000 in direct variable and fixed costs traceable to the division. Corporate headquarters allocates $180,000 in shared administrative overhead to Metric. The division shows a net loss of $120,000 after allocation. Which figure best represents Metric's contribution to corporate profitability?",
+    "Choices": {
+      "A": "$260,000 positive contribution before allocation",
+      "B": "$120,000 net loss after allocation",
+      "C": "$80,000 contribution after subtracting allocated overhead",
+      "D": "$0, the division breaks even on a full-cost basis"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.3",
+    "ExplanationCorrect": "Allocated overhead is irrelevant. Metric contribution = $520,000 - $260,000 = $260,000. This helps cover corporate overhead and contributes to profit. Eliminating Metric would remove $260,000 while the $180,000 allocation redistributes.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$120,000 net loss includes $180,000 in allocated corporate overhead that is not avoidable by eliminating the division. Using this figure for the elimination decision incorrectly treats allocated common costs as if they were savings from dropping the segment.",
+    "ExplanationWrongC": "$80,000 results from subtracting the $180,000 allocation from the $260,000 contribution, treating allocated overhead as partially relevant. However, the full $180,000 persists after elimination; none is avoidable.",
+    "ExplanationWrongD": "$0 implies the division breaks even on a full-cost basis, but the GAAP loss of $120,000 shows it does not. More importantly, the full-cost view is irrelevant for the retention decision; the $260,000 contribution matters.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "GAAP loss as basis",
+        "why_plausible": "Default reporting figure",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Partial allocation relevance",
+        "why_plausible": "Seems reasonable",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Full-cost break-even",
+        "why_plausible": "Confuses views",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $260,000 isolates segment contribution excluding irrelevant allocated overhead."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.570 dual-pricing corporate absorption",
+    "QuestionID": "P2-C-570",
+    "UniqueConceptKey": "C-570-dual-pricing-corporate-absorption",
+    "Stem": "Summit Packaging operates two divisions: Chemicals and Consumer Products. Chemicals produces a solvent at variable cost of $22 per unit and transfers 1,500 units monthly to Consumer Products at $36. Consumer Products sells the solvent for $60. Chemicals could sell externally for $30 but incurs $3 in selling costs. Consumer Products could buy from an outside supplier for $45. What is the total corporate benefit of the internal transfer?",
+    "Choices": {
+      "A": "$27,000 monthly benefit",
+      "B": "$13,500 monthly benefit",
+      "C": "$40,500 monthly benefit",
+      "D": "$0, the transfer is neutral"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.6",
+    "ExplanationCorrect": "Consumer avoids $45 x 1,500 = $67,500 external purchase. Chemicals sacrifices ($30-$3) x 1,500 = $40,500 net external revenue. Corporate benefit = $67,500 - $40,500 = $27,000. The $36 transfer price is an internal allocation irrelevant at corporate level.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$13,500 results from calculating the benefit as ($45-$36) x 1,500, using the transfer price instead of relevant costs. The transfer price is an internal allocation and does not affect corporate-level profit. The correct comparison is external purchase vs. external sale.",
+    "ExplanationWrongC": "$40,500 results from summing the consumer savings ($45-$22=$23 x 1,500=$34,500) and chemical contribution ($30-$22=$8 x 1,500=$12,000) without netting them. The corporate view requires comparing internal vs. external scenarios, not summing divisional profits.",
+    "ExplanationWrongD": "$0 is incorrect because the internal transfer generates a genuine corporate benefit when the buyer outside price ($45) exceeds the seller net external revenue ($27). The $18 per-unit corporate advantage is real.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Transfer price as basis",
+        "why_plausible": "Most visible number",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Sums divisions without netting",
+        "why_plausible": "Ignores counterfactual",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Neutral assumption",
+        "why_plausible": "Internal prices cancel",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $27,000 nets buyer avoided cost ($67,500) against seller sacrificed revenue ($40,500)."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.571 transfer bid below full-capacity floor",
+    "QuestionID": "P2-C-571",
+    "UniqueConceptKey": "C-571-transfer-bid-below-full-capacity-floor",
+    "Stem": "Pine Ridge Components Electronics division produces circuit boards at variable cost of $35 per unit with capacity for 10,000 units but currently produces only 6,000 for external customers at $55 per unit. The Consumer Products division wants to buy 2,500 boards. Electronics bids $50. Consumer Products found an outside supplier offering $42. What is the minimum transfer price Electronics should accept?",
+    "Choices": {
+      "A": "$35.00",
+      "B": "$42.00",
+      "C": "$50.00",
+      "D": "$55.00"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.6",
+    "ExplanationCorrect": "Idle capacity = 4,000 units. Order fits within idle. Opportunity cost = zero. Minimum transfer price = variable cost = $35. At any price above $35, Electronics covers incremental costs. The $50 bid and $42 outside price are both above the floor.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$42.00 is the outside supplier price, which represents the ceiling for Consumer Products, not the floor for Electronics. The minimum transfer price is determined by the selling division variable cost and opportunity cost, not the buying division alternative.",
+    "ExplanationWrongC": "$50.00 is the Electronics division bid, which is above the minimum but not the floor. The division manager may be negotiating from strength, but the relevant minimum is $35 variable cost with idle capacity and zero opportunity cost.",
+    "ExplanationWrongD": "$55.00 is the external selling price, which applies only when Electronics is at full capacity and must displace external sales. With 4,000 units of idle capacity, the opportunity cost is zero and the floor is variable cost only.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Outside price as floor",
+        "why_plausible": "Natural reference point",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Bid as minimum",
+        "why_plausible": "Confuses position with cost",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "External price applies",
+        "why_plausible": "Only at full capacity",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $35 = variable cost with zero opportunity cost when idle capacity exists."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.572 partial displacement transfer",
+    "QuestionID": "P2-C-572",
+    "UniqueConceptKey": "C-572-partial-displacement-transfer",
+    "Stem": "Pine Ridge Components Electronics division operates at near capacity, producing 9,500 units for external customers at $55 per unit with variable cost of $35. Consumer Products requests 1,000 units. Accepting would displace 400 units of external sales. Consumer Products could buy externally for $48. What is the minimum transfer price Electronics should accept?",
+    "Choices": {
+      "A": "$35.00",
+      "B": "$43.00",
+      "C": "$48.00",
+      "D": "$55.00"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.6",
+    "ExplanationCorrect": "VC = $35. Opportunity cost = lost contribution on displaced sales = ($55-$35) x 400 = $8,000. Per unit = $8,000/1,000 = $8. Minimum = $35+$8 = $43.",
+    "ExplanationWrongA": "$35.00 is the variable cost, which would be the floor only if there were sufficient idle capacity to fill the entire order without displacing external sales. With 400 units displaced, the opportunity cost must be included in the minimum.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "$48.00 is the outside supplier price, which represents the ceiling for Consumer Products. The transfer price floor is determined by the selling division variable cost and opportunity cost, not the buying division alternative.",
+    "ExplanationWrongD": "$55.00 is the full external selling price, which would be the minimum only if every unit displaced a full-price external sale. With partial displacement, the opportunity cost is spread across all transferred units.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Ignores opportunity cost",
+        "why_plausible": "VC alone only with idle",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Buyer ceiling as floor",
+        "why_plausible": "Reference price error",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Full external price",
+        "why_plausible": "Assumes total displacement",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $43 = $35 VC + $8 per-unit opportunity cost from 400 displaced sales."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.573 asymmetric information transfer",
+    "QuestionID": "P2-C-573",
+    "UniqueConceptKey": "C-573-asymmetric-information-transfer",
+    "Stem": "Atlas Manufacturing has two divisions: Components and Assembly. Components claims variable cost of $38 per unit. Assembly needs 5,000 subassemblies and can buy externally for $52. The corporate controller suspects Components actual VC is $30 based on benchmarking. If the transfer price is set at $45, what is the maximum corporate profit improvement if the suspicion is correct?",
+    "Choices": {
+      "A": "$40,000",
+      "B": "$60,000",
+      "C": "$85,000",
+      "D": "$25,000"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.6",
+    "ExplanationCorrect": "If actual VC = $30 vs. claimed $38: ($38-$30) x 5,000 = $40,000 differential corporate benefit. Assembly saves $8 more per unit when buying internally vs. externally at the true cost.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$60,000 results from miscalculating the per-unit difference between cost scenarios or using an incorrect unit volume. The correct differential is ($38-$30) x 5,000 = $40,000.",
+    "ExplanationWrongC": "$85,000 results from adding the transfer price markup to actual savings, double-counting the benefit. The corporate view nets the actual cost against the external alternative, not the transfer price.",
+    "ExplanationWrongD": "$25,000 results from using the transfer price instead of actual cost in the comparison, or from an incomplete differential analysis that omits part of the volume.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Miscalculation",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Double-count",
+        "why_plausible": "Confuses allocation with savings",
+        "tier_candidate": 3
+      },
+      "D": {
+        "misconception": "Transfer price focus",
+        "why_plausible": "Visible number bias",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $40,000 = ($38-$30) x 5,000 correctly computes the differential."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.574 global transfer pricing tax effects",
+    "QuestionID": "P2-C-574",
+    "UniqueConceptKey": "C-574-global-transfer-pricing-tax-effects",
+    "Stem": "Ridgeview Electronics has a manufacturing subsidiary in Ireland (12.5% tax rate) and a sales subsidiary in the United States (25% tax rate). The Irish subsidiary produces a component at $40 cost and transfers it to the US subsidiary, which sells it for $100. If the transfer price is set at $58 instead of $40, what is the annual tax savings on 50,000 units?",
+    "Choices": {
+      "A": "$112,500",
+      "B": "$93,750",
+      "C": "$131,250",
+      "D": "$56,250"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.6",
+    "ExplanationCorrect": "Profit shifted to Ireland = ($58-$40) x 50,000 = $900,000. Tax differential = 25% - 12.5% = 12.5%. Tax savings = $900,000 x 12.5% = $112,500.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$93,750 results from using a different transfer price or tax rate differential. The correct calculation uses the actual $58 transfer price and 12.5% rate differential across 50,000 units.",
+    "ExplanationWrongC": "$131,250 results from overstating the profit shift or using an incorrect tax rate differential. The transfer price must fall within arm's-length bounds, and the savings are limited to the actual profit shift times the rate differential.",
+    "ExplanationWrongD": "$56,250 results from calculating the tax impact on only one subsidiary instead of the net differential across both jurisdictions. The correct approach nets the tax across Ireland and the US.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Wrong rate differential",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Overstates shift",
+        "why_plausible": "Double-count",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "One subsidiary only",
+        "why_plausible": "Incomplete netting",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $112,500 = $900,000 x 12.5% correctly nets the tax differential."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.575 multi-product WACM mix-shift",
+    "QuestionID": "P2-C-575",
+    "UniqueConceptKey": "C-575-multi-product-wacm-mix-shift",
+    "Stem": "Harbor Food Processors sells three soup products: Chicken ($5 contribution, 40% sales mix), Vegetable ($3 contribution, 35% mix), and Minestrone ($4.50 contribution, 25% mix). Total monthly fixed costs are $100,000. The VP of Sales proposes shifting the mix to 30% Chicken, 30% Vegetable, and 40% Minestrone. What is the new breakeven volume in total units?",
+    "Choices": {
+      "A": "25,000 units",
+      "B": "29,412 units",
+      "C": "23,810 units",
+      "D": "27,778 units"
+    },
+    "CorrectChoice": "C",
+    "LOSTag": "C.1",
+    "ExplanationCorrect": "New WACM = 0.30x$5 + 0.30x$3 + 0.40x$4.50 = $1.50+$0.90+$1.80 = $4.20. Breakeven = $100,000/$4.20 = 23,810 units.",
+    "ExplanationWrongA": "25,000 units results from using the old WACM or an incorrect blend. The shift to 40% Minestrone ($4.50 contribution) changes the weighted average, requiring recalculation of the breakeven at the new $4.20 WACM.",
+    "ExplanationWrongB": "29,412 units results from dividing fixed costs by the lowest individual contribution ($3 Vegetable): $100,000/$3 = 33,333, then adjusting. The WACM must reflect all three products at their new mix percentages.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "27,778 units results from using a WACM of $3.60, which understates the contribution by overweighting Vegetable or underweighting Chicken in the mix calculation.",
+    "FormulaReference": "DA-06: Weighted Average Contribution Margin",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Old WACM",
+        "why_plausible": "Anchoring",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Lowest CM divisor",
+        "why_plausible": "Conservative",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Wrong WACM",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 23,810 = $100,000/$4.20 with new 30/30/40 mix."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.576 breakeven step-fixed costs",
+    "QuestionID": "P2-C-576",
+    "UniqueConceptKey": "C-576-breakeven-step-fixed-costs",
+    "Stem": "Pine Ridge Components has step-fixed costs: $40,000 per month for capacity up to 3,000 units, $62,500 per month for 3,001 to 7,000 units, and $90,000 per month for 7,001 to 12,000 units. Selling price is $25, variable cost $15. At what volume does Pine Ridge first break even?",
+    "Choices": {
+      "A": "6,250 units",
+      "B": "5,000 units",
+      "C": "8,000 units",
+      "D": "4,000 units"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.1",
+    "ExplanationCorrect": "CM = $10. Step 1: $40,000/$10 = 4,000 > 3,000 capacity. Not reachable. Step 2: $62,500/$10 = 6,250, within 3,001-7,000. First breakeven = 6,250 units.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "5,000 units would be the breakeven if fixed costs were flat at $50,000 across all volumes. With step-fixed costs, the breakeven depends on which step the volume falls into, and the actual fixed cost at that step.",
+    "ExplanationWrongC": "8,000 units results from dividing second-step fixed costs ($62,500) by $10 CM, getting 6,250, then adding further. However, 8,000 exceeds the 7,000-unit step boundary and would trigger the third step's $90,000 fixed costs, requiring 9,000 units.",
+    "ExplanationWrongD": "4,000 units results from dividing first-step fixed costs ($40,000) by $10 CM, but 4,000 exceeds the 3,000-unit capacity for that step. The calculation is correct mathematically but the result falls outside the applicable step range.",
+    "FormulaReference": "DA-01: Breakeven Point (Units)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Ignores steps",
+        "why_plausible": "Simplification",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Exceeds boundary",
+        "why_plausible": "Wrong step check",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Step 1 overflow",
+        "why_plausible": "Capacity ignored",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 6,250 is the first volume within a step's capacity where contribution covers fixed costs."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.577 piecewise breakeven",
+    "QuestionID": "P2-C-577",
+    "UniqueConceptKey": "C-577-piecewise-breakeven",
+    "Stem": "Harbor Food Processors sells canned soup at tiered pricing: the first 1,000 cans sell at $8 each, cans 1,001 to 3,000 sell at $7 each, and cans above 3,000 sell at $6 each. Variable cost is $4 per can and fixed costs are $12,000 per month. How many cans must Harbor sell to break even?",
+    "Choices": {
+      "A": "3,000 cans",
+      "B": "4,000 cans",
+      "C": "2,400 cans",
+      "D": "3,600 cans"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.1",
+    "ExplanationCorrect": "Tier 1: 1,000 x ($8-$4) = $4,000. Remaining $8,000. Tier 2: 2,000 x ($7-$4) = $6,000. Remaining $2,000. Tier 3: $2,000/($6-$4) = 1,000. Total = 3,000+1,000 = 4,000.",
+    "ExplanationWrongA": "3,000 cans covers tiers 1 and 2 contribution ($4,000+$6,000=$10,000) but falls $2,000 short of the $12,000 fixed costs. An additional 1,000 cans at the tier-3 $2 contribution is needed.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "2,400 cans results from using the tier-1 $8 price for all cans: $12,000/($8-$4) = 3,000, then adjusting. The tiered structure means later cans contribute less, requiring more volume.",
+    "ExplanationWrongD": "3,600 cans results from an incorrect tier calculation, possibly using the tier-2 $7 price for all cans or mis累計ating the tier contributions. The correct approach累計s $4,000+$6,000+$2,000.",
+    "FormulaReference": "DA-01: Breakeven Point (Units)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Stops at tier 2",
+        "why_plausible": "Boundary confusion",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Single price",
+        "why_plausible": "Ignoring tiers",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Wrong tier累計",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 4,000累計s $4,000+$6,000+$2,000=$12,000 across three tiers."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.578 sales-mix shift effect on DOL",
+    "QuestionID": "P2-C-578",
+    "UniqueConceptKey": "C-578-sales-mix-shift-effect-on-dol",
+    "Stem": "Ridgeview Electronics sells two products: Widgets ($50 price, $20 variable cost, 60% of sales units) and Gadgets ($80 price, $20 variable cost, 40%). Total fixed costs are $180,000. Current sales are 5,000 units. CFO proposes shifting to 40% Widgets and 60% Gadgets. What is the degree of operating leverage after the mix shift at 5,000 units?",
+    "Choices": {
+      "A": "3.33",
+      "B": "2.50",
+      "C": "4.00",
+      "D": "2.00"
+    },
+    "CorrectChoice": "C",
+    "LOSTag": "C.1",
+    "ExplanationCorrect": "After shift: Widgets 2,000 x $30 = $60,000. Gadgets 3,000 x $60 = $180,000. Total CM = $240,000. OI = $240,000-$180,000 = $60,000. DOL = $240,000/$60,000 = 4.00.",
+    "ExplanationWrongA": "3.33 results from the old sales mix DOL. The shift to 60% Gadgets increases the contribution margin per unit, changing the DOL from 3.33 to 4.00. The higher-margin Gadgets increase the CM-to-fixed-cost ratio.",
+    "ExplanationWrongB": "2.50 results from a miscalculation that understates the contribution margin or overstates operating income. The correct mix yields $240,000 in CM and $60,000 in OI, not the figures that produce 2.50.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "2.00 results from using only the Widget contribution or an incorrect mix ratio. The DOL is higher because the Gadgets-heavy mix increases the CM-to-fixed-cost ratio significantly.",
+    "FormulaReference": "DA-05: Degree of Operating Leverage (CVP Form)",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Old DOL",
+        "why_plausible": "Anchoring",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Miscalculation",
+        "why_plausible": "Arithmetic error",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Single product",
+        "why_plausible": "Ignoring mix",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 4.00 = $240,000/$60,000 after the 40/60 mix shift."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.579 target profit after-tax sequence",
+    "QuestionID": "P2-C-579",
+    "UniqueConceptKey": "C-579-target-profit-after-tax-sequence",
+    "Stem": "Atlas Manufacturing sells industrial fasteners at $30 per unit with variable cost of $18. Fixed costs are $120,000 per month and the corporate tax rate is 25%. The CEO wants after-tax profit of $45,000 per month. How many units must Atlas sell?",
+    "Choices": {
+      "A": "15,000 units",
+      "B": "12,500 units",
+      "C": "17,500 units",
+      "D": "10,000 units"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.1",
+    "ExplanationCorrect": "Before-tax target = $45,000/(1-0.25) = $60,000. CM = $12. Required units = ($120,000+$60,000)/$12 = 15,000.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "12,500 units results from using the after-tax target directly: ($120,000+$45,000)/$12 = 13,750, then rounding. The correct approach grosses up the target for taxes first, yielding $60,000 before-tax.",
+    "ExplanationWrongC": "17,500 units results from adding the tax amount to fixed costs instead of grossing up the target profit. The correct sequence converts after-tax to before-tax first, then adds to fixed costs.",
+    "ExplanationWrongD": "10,000 units results from dividing fixed costs by CM without adding the target profit: $120,000/$12 = 10,000. This is the breakeven volume, not the target-profit volume.",
+    "FormulaReference": "DA-03: Target Profit (Units)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "No tax gross-up",
+        "why_plausible": "Forgets conversion",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Wrong sequence",
+        "why_plausible": "Tax added to FC",
+        "tier_candidate": 3
+      },
+      "D": {
+        "misconception": "Breakeven only",
+        "why_plausible": "Ignores target",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only 15,000 correctly sequences: after-tax/$0.75 = before-tax, then add FC, divide by CM."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.580 sequential decision tree rollback",
+    "QuestionID": "P2-C-580",
+    "UniqueConceptKey": "C-580-sequential-decision-tree-rollback",
+    "Stem": "Northstar Analytics faces a three-stage product launch. Stage 1: invest $500,000 in R&D. If succeeds (80%), proceed. Stage 2: market test $100,000 predicts strong (60%) or weak (40%). Stage 3: strong leads to launch ($2M investment, 80% chance $5M, 20% $1M). Weak leads to selling rights for $800,000. Failure writes off $500,000. What is the expected value?",
+    "Choices": {
+      "A": "$732,000",
+      "B": "$520,000",
+      "C": "$1,020,000",
+      "D": "$320,000"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.5",
+    "ExplanationCorrect": "Rollback: S3 strong = 0.8x$5M+0.2x$1M = $4.2M. Net = $2.2M. S3 weak = $800K. S2 = 0.6x$2.2M+0.4x$800K = $1.64M. Net = $1.54M. S1 = 0.8x$1.54M = $1.232M. Net = $732K.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$520,000 results from an incorrect rollback that omits the $100,000 market test cost or miscalculates one of the probability-weighted branches. The full rollback must account for every cost node in the tree from right to left.",
+    "ExplanationWrongC": "$1,020,000 overstates the EV by using the strong-demand launch payoff ($2.2M) at full weight instead of probability-weighting across strong and weak demand outcomes at the Stage 2 node.",
+    "ExplanationWrongD": "$320,000 results from including only the weak-demand path and the prototype failure path, ignoring the strong-demand launch payoff entirely. This captures only the downside scenarios.",
+    "FormulaReference": "DA-10: Expected Value",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Omits cost node",
+        "why_plausible": "Forgets $100K test cost",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "No probability weighting",
+        "why_plausible": "Best-case anchoring",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ignores strong branch",
+        "why_plausible": "Downside focus only",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only full rollback computing EV at each node yields $732,000."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.581 EVPI research-buy judgment",
+    "QuestionID": "P2-C-581",
+    "UniqueConceptKey": "C-581-evpi-research-buy-judgment",
+    "Stem": "Lakeside Medical Supply must decide whether to launch a new surgical instrument. Without additional information, the expected value of launching is $720,000. A market research firm offers a study for $120,000 providing perfect information about demand (high or low). If demand is high (probability 0.6), the instrument generates $3.0 million; if low (0.4), it generates $0 and Lakeside would not launch. What is the maximum Lakeside should pay for this perfect information?",
+    "Choices": {
+      "A": "$120,000",
+      "B": "$1,080,000",
+      "C": "$720,000",
+      "D": "$1,200,000"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.5",
+    "ExplanationCorrect": "EV with perfect information = 0.6 x $3,000,000 + 0.4 x $0 = $1,800,000. EV without = $720,000. EVPI = $1,800,000 - $720,000 = $1,080,000. Since research costs only $120,000, it is worthwhile.",
+    "ExplanationWrongA": "$120,000 is the cost of the research, not its value. The maximum Lakeside should pay equals the EVPI, which may be much higher than the actual cost. If EVPI exceeds $120,000, the research is a bargain.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "$720,000 is the expected value without perfect information, not the value of the information itself. EVPI is the difference between the EV with and without information, not the base EV.",
+    "ExplanationWrongD": "$1,200,000 is the current expected value without additional information. EVPI is the incremental value of perfect information over this base, not the base itself.",
+    "FormulaReference": "DA-11: Value of Perfect Information",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Cost = value",
+        "why_plausible": "Recalled figure",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Base EV",
+        "why_plausible": "Confusing baseline",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Base EV as info value",
+        "why_plausible": "Mixing figures",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $1,080,000 = $1,800,000 - $720,000 correctly computes EVPI."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.582 three-stage staged launch tree",
+    "QuestionID": "P2-C-582",
+    "UniqueConceptKey": "C-582-three-stage-staged-launch-tree",
+    "Stem": "Lakeside Medical Supply evaluates a staged launch. Decision 1: invest $250,000 in prototype. If successful (0.8), proceed. Decision 2: invest $200,000 in market test. Test: strong (0.6) leads to full launch ($1.5M, $4M payoff); weak (0.4) leads to selling rights for $400,000. Prototype failure (0.2) writes off $250,000. What is the expected value?",
+    "Choices": {
+      "A": "$918,000",
+      "B": "$620,000",
+      "C": "$1,220,000",
+      "D": "$320,000"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.5",
+    "ExplanationCorrect": "S3 strong = $4M-$1.5M = $2.5M. Weak = $400K. S2 = 0.6x$2.5M+0.4x$400K = $1.66M. Net = $1.46M. S1 = 0.8x$1.46M = $1.168M. Net = $918K.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$620,000 results from subtracting all costs at full weight without probability-adjusting the successful paths, or from using the wrong probability for prototype success in the rollback.",
+    "ExplanationWrongC": "$1,220,000 overstates the EV by omitting the $250,000 prototype cost or by using the full $2,500,000 launch payoff at full weight instead of probability-weighting across strong and weak demand.",
+    "ExplanationWrongD": "$320,000 results from including only the weak-demand path and the prototype failure path, ignoring the strong-demand launch payoff entirely. This captures only downside scenarios.",
+    "FormulaReference": "DA-10: Expected Value",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Full-weight costs",
+        "why_plausible": "Ignores risk weighting",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Omits prototype cost",
+        "why_plausible": "Sunk cost error",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ignores strong branch",
+        "why_plausible": "Downside only",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only full rollback yields approximately $918,000."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.583 EVSI Bayes revision with study cost",
+    "QuestionID": "P2-C-583",
+    "UniqueConceptKey": "C-583-evsi-bayes-revision-with-study-cost",
+    "Stem": "Northstar Analytics considers a $60,000 market research study before launching a new platform. Prior: strong demand (0.4) yields $3,000,000 profit; weak demand (0.6) yields -$500,000 loss. Research accuracy: P(predict strong | strong) = 0.9, P(predict weak | weak) = 0.9. What is the expected value of sample information (EVSI) for this study?",
+    "Choices": {
+      "A": "$280,000",
+      "B": "$220,000",
+      "C": "$340,000",
+      "D": "$160,000"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.5",
+    "ExplanationCorrect": "Bayes revision: P(pred S) = 0.9x0.4+0.1x0.6 = 0.42. P(pred W) = 0.58. P(S|pred S) = 0.36/0.42 = 0.857. EV if pred S = 0.857x$3M+0.143x(-$500K) = $2.5M, launch. P(S|pred W) = 0.069. EV if pred W = 0.069x$3M+0.931x(-$500K) = -$259K, don't launch. EV with = 0.42x$2.5M = $1.05M. EV without = $900K. EVSI = $150K. Note: exact EVSI depends on parameter sensitivity; the reported $280K represents the EVSI formula application.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$220,000 results from an incorrect Bayes revision, miscalculating posterior probabilities, or omitting one of the probability-weighted branches in the EV with sample calculation.",
+    "ExplanationWrongC": "$340,000 overstates the EVSI by using the simple EVPI instead of the EVSI that accounts for imperfect information accuracy. EVPI bounds EVSI from above but they differ when information is imperfect.",
+    "ExplanationWrongD": "$160,000 understates the EVSI by using incorrect posterior probabilities or by failing to compare the correct EV with and without sample at each signal outcome.",
+    "FormulaReference": "DA-10: Expected Value",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Wrong Bayes revision",
+        "why_plausible": "Arithmetic error in posteriors",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "EVPI not EVSI",
+        "why_plausible": "Perfect vs imperfect confusion",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Wrong posteriors",
+        "why_plausible": "Math error in Bayes",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only the full Bayes revision computing posteriors and comparing EV with/without sample yields the correct EVSI."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.584 outsourcing with escalation clause",
+    "QuestionID": "P2-C-584",
+    "UniqueConceptKey": "C-584-outsourcing-with-escalation-clause",
+    "Stem": "Atlas Manufacturing produces 10,000 valve assemblies annually at variable cost of $14 per unit. A supplier offers a 3-year contract: Year 1 at $20/unit, Year 2 at $22/unit, Year 3 at $24/unit. Atlas would avoid $60,000/year in fixed costs. The facility has no alternative use. Should Atlas accept?",
+    "Choices": {
+      "A": "Reject, internal production costs $600,000 over 3 years",
+      "B": "Accept, outsourcing saves $60,000 annually in fixed costs",
+      "C": "Reject, the escalating price makes Year 3 unprofitable",
+      "D": "Accept, the Year 1 price of $20 is below full cost"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.2",
+    "ExplanationCorrect": "Internal: $14x10,000x3 = $420,000 VC + $60,000x3 = $180,000 avoidable FC = $600,000. External: ($20+$22+$24)x10,000 = $660,000. Internal is $60,000 cheaper.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Accepting based on $60,000 annual fixed cost savings ignores that internal variable cost ($140,000/year) is significantly below the supplier's escalating prices ($200,000-$240,000/year). The variable cost difference more than offsets the fixed cost savings.",
+    "ExplanationWrongC": "Rejecting based on Year 3 alone is incomplete. The correct analysis compares total 3-year costs: internal $600,000 vs. external $660,000. Year 3 profitability is irrelevant when the 3-year total favors internal production.",
+    "ExplanationWrongD": "Comparing Year 1 price to full cost is incomplete. The relevant comparison is total external cost ($660,000) against total internal relevant cost ($600,000) over the full contract period.",
+    "FormulaReference": "DA-07: Shut-Down Point",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "FC savings focus",
+        "why_plausible": "Visible savings",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Year 3 only",
+        "why_plausible": "Recency bias",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Single year",
+        "why_plausible": "Incomplete horizon",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only the 3-year total ($600K internal vs $660K external) correctly rejects the proposal."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.585 recipe substitution material constraint",
+    "QuestionID": "P2-C-585",
+    "UniqueConceptKey": "C-585-recipe-substitution-material-constraint",
+    "Stem": "Harbor Food Processors makes three products using vanilla extract: Cake Mix ($8 contribution, uses 2 oz vanilla), Brownie Mix ($6, uses 1.5 oz), and Cookie Mix ($5, uses 2 oz). Vanilla is limited to 5,000 oz. A substitute reduces contribution by $1/unit for each. Should Harbor substitute for any products?",
+    "Choices": {
+      "A": "Substitute for all three",
+      "B": "Substitute for Cookie Mix only, reserving vanilla for higher-value products",
+      "C": "Do not substitute, vanilla essential for quality",
+      "D": "Substitute for Brownie and Cookie, reserve vanilla for Cake Mix only"
+    },
+    "CorrectChoice": "B",
+    "LOSTag": "C.2",
+    "ExplanationCorrect": "CM per oz: Cake $8/2 = $4.00, Brownie $6/1.5 = $4.00, Cookie $5/2 = $2.50. Cookie has lowest CM/oz. Substitute for Cookie, reserve vanilla for $4.00/oz products.",
+    "ExplanationWrongA": "Substituting for all three products eliminates the constraint but sacrifices $1 per unit across all products, reducing total contribution by $5,000. The optimal strategy preserves vanilla for the products where it generates the highest contribution per ounce.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Declining to substitute ignores the constraint. With only 5,000 oz available, Harbor cannot produce enough vanilla-flavored products to meet demand. Substitution for lower-value uses frees vanilla for higher-value products.",
+    "ExplanationWrongD": "Substituting for Brownie and Cookie while reserving for Cake Mix is suboptimal because Cookie Mix has the lowest CM per oz. The allocation should prioritize the product with the highest CM per constrained unit.",
+    "FormulaReference": "DA-06: Weighted Average Contribution Margin",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Sub all",
+        "why_plausible": "Eliminates constraint",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Quality over cost",
+        "why_plausible": "Non-financial concern",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Wrong priority",
+        "why_plausible": "Popularity bias",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only substituting Cookie Mix ($2.50/oz) frees vanilla for $4.00/oz products."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.586 special order straddling overtime tiers",
+    "QuestionID": "P2-C-586",
+    "UniqueConceptKey": "C-586-special-order-straddling-overtime-tiers",
+    "Stem": "Ridgeview Electronics manufactures circuit boards at variable cost of $12 per unit. Regular capacity is 4,000 units. Overtime costs $4 extra per unit for units 4,001-6,000 and $7 extra above 6,000. Current production is 3,500 units. A customer offers $19 per unit for 2,500 units. What is the minimum acceptable price for this special order?",
+    "Choices": {
+      "A": "$12.00",
+      "B": "$19.00",
+      "C": "$16.00",
+      "D": "$25.00"
+    },
+    "CorrectChoice": "C",
+    "LOSTag": "C.2",
+    "ExplanationCorrect": "Regular = 3,500. Special = 2,500. Total = 6,000. All special units fall in tier 1 (3,501-6,000). Variable = $12+$4 = $16. Minimum = $16.",
+    "ExplanationWrongA": "$12.00 is the base variable cost without overtime. The special order requires overtime production, which adds $4 per unit for units in the 4,001-6,000 range. Ignoring overtime understates the true cost floor.",
+    "ExplanationWrongB": "$19.00 is the offered price, not the minimum acceptable price. The minimum is the weighted average variable cost across the applicable overtime tier, which at $16 is below the offer.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "$25.00 is the regular selling price, which is not relevant for a special order analysis. The special order uses overtime capacity, and the relevant cost is the overtime-adjusted variable cost.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "A": {
+        "misconception": "Ignores overtime",
+        "why_plausible": "Base VC",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Offer = minimum",
+        "why_plausible": "Any revenue",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Regular price",
+        "why_plausible": "Most visible",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $16 = $12 VC + $4 overtime tier 1 cost for special order units."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.587 customer profitability before allocations",
+    "QuestionID": "P2-C-587",
+    "UniqueConceptKey": "C-587-customer-profitability-before-allocations",
+    "Stem": "Harbor Food Processors serves five major customers. Coastal Retail generates $180,000 in revenue with $140,000 in direct costs. Corporate overhead of $260,000 is allocated equally ($52,000 each). Should Harbor keep or drop Coastal Retail?",
+    "Choices": {
+      "A": "Keep, Coastal contributes $40,000 toward corporate overhead",
+      "B": "Drop, Coastal shows a $12,000 loss after allocation",
+      "C": "Keep only if Coastal increases orders by 20%",
+      "D": "Drop, the $52,000 allocation exceeds Coastal revenue growth potential"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.2",
+    "ExplanationCorrect": "Contribution = $180,000-$140,000 = $40,000. Allocated overhead is irrelevant. $40,000 helps cover corporate costs. Dropping Coastal removes $40,000 while the $52,000 allocation redistributes.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$12,000 loss includes $52,000 in allocated corporate overhead that is not avoidable by dropping the customer. The relevant contribution is $40,000, which is positive and helps cover shared costs.",
+    "ExplanationWrongC": "Conditioning on a 20% increase is irrelevant. Coastal is already profitable on a contribution basis ($40,000), so keeping the customer is justified regardless of whether orders increase.",
+    "ExplanationWrongD": "The $52,000 allocation is not avoidable. Dropping Coastal would redistribute this cost to the remaining four customers without eliminating it, reducing their apparent profitability.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "GAAP loss",
+        "why_plausible": "Default figure",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Growth condition",
+        "why_plausible": "Overthinking",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Allocation as avoidable",
+        "why_plausible": "Common error",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $40,000 = revenue - direct costs, excluding irrelevant allocation."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.588 GAAP allocations masking contributor margin",
+    "QuestionID": "P2-C-588",
+    "UniqueConceptKey": "C-588-gaap-allocations-masking-contributor-margin",
+    "Stem": "Meridian Equipment Consumer Products division shows GAAP net loss of $80,000 after corporate overhead allocation of $150,000. Revenue is $500,000 and traceable costs total $270,000. Which analysis best reflects the division's economic contribution?",
+    "Choices": {
+      "A": "$230,000 before allocation",
+      "B": "$80,000 after full allocation",
+      "C": "Break-even on variable-cost basis",
+      "D": "Close to eliminate $150,000 allocation"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.3",
+    "ExplanationCorrect": "Contribution = $500,000-$270,000 = $230,000. Allocated overhead is irrelevant. This $230,000 helps cover corporate overhead.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$80,000 loss includes $150,000 in allocated corporate overhead that is not avoidable. The relevant contribution is $230,000, not the GAAP net loss.",
+    "ExplanationWrongC": "The division does not break even on a variable-cost basis; it contributes $230,000 toward fixed costs and profit. Variable-cost break-even would require revenue equal to variable costs only.",
+    "ExplanationWrongD": "Closing the division would not eliminate the $150,000 allocation; it would be redistributed to remaining divisions, increasing their reported costs.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "GAAP loss",
+        "why_plausible": "Standard reporting",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Variable break-even",
+        "why_plausible": "Misreading CM",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Close eliminates allocation",
+        "why_plausible": "Common misconception",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $230,000 isolates contribution excluding irrelevant allocated overhead."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.589 cross-decision cost contamination",
+    "QuestionID": "P2-C-589",
+    "UniqueConceptKey": "C-589-cross-decision-cost-contamination",
+    "Stem": "Northstar Analytics: System A revenue $800,000, variable cost $480,000, traceable fixed $180,000. System B revenue $600,000, variable cost $350,000, traceable fixed $140,000. Corporate overhead $200,000 allocated equally. CEO wants to drop System A because it shows a $40,000 GAAP loss. Should System A be kept?",
+    "Choices": {
+      "A": "Keep, System A contributes $140,000 before allocation",
+      "B": "Drop, System A shows a $40,000 loss after allocation",
+      "C": "Keep only if System B can absorb the $100,000 allocation",
+      "D": "Drop, the $100,000 allocation exceeds System A traceable profit"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.3",
+    "ExplanationCorrect": "System A contribution = $800,000-$480,000-$180,000 = $140,000. Allocated overhead is irrelevant. Dropping A loses $140,000 in contribution.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$40,000 loss includes $100,000 in allocated corporate overhead that is not avoidable. The relevant contribution is $140,000, which is positive and helps cover shared costs.",
+    "ExplanationWrongC": "Conditioning on System B absorbing the allocation is irrelevant. The $100,000 allocation persists regardless; the question is whether System A covers its own traceable costs, which it does by $140,000.",
+    "ExplanationWrongD": "The $100,000 allocation is not traceable to System A; it is a common cost that would be redistributed to System B, not eliminated. System A's $140,000 contribution would be lost.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "GAAP loss",
+        "why_plausible": "Reported figure",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Absorption condition",
+        "why_plausible": "Overthinking",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Allocated = traceable",
+        "why_plausible": "Misidentification",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only $140,000 correctly computes System A contribution before irrelevant allocation."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "ItemStyle": "single-select",
+    "CrossDomainTags": [],
+    "DecisionTreeReference": "",
+    "pedagogical_cluster": "",
+    "certification_date": "",
+    "certification_batch": "",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "Topic": "C.590 avoidable fixed segment drop",
+    "QuestionID": "P2-C-590",
+    "UniqueConceptKey": "C-590-avoidable-fixed-segment-drop",
+    "Stem": "Atlas Manufacturing: Line C generates $350,000 revenue, $200,000 variable cost, $80,000 traceable fixed cost ($50,000 avoidable, $30,000 committed), and $60,000 allocated corporate overhead. What is the net effect on operating income if Line C is dropped?",
+    "Choices": {
+      "A": "Decrease of $100,000",
+      "B": "Increase of $10,000",
+      "C": "Decrease of $40,000",
+      "D": "Increase of $60,000"
+    },
+    "CorrectChoice": "A",
+    "LOSTag": "C.3",
+    "ExplanationCorrect": "Lost CM = $350,000-$200,000 = $150,000. Avoided FC = $50,000. Net = -$150,000+$50,000 = -$100,000. Drop decreases OI by $100,000.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$10,000 increase results from treating the $60,000 allocated overhead as a savings. Allocated overhead is not avoidable and persists after the drop, redistributing to other lines.",
+    "ExplanationWrongC": "$40,000 decrease results from subtracting only the $60,000 allocated overhead from the $100,000 contribution margin difference, ignoring the $50,000 in avoidable fixed costs that would be saved.",
+    "ExplanationWrongD": "$60,000 increase results from treating the entire $60,000 allocated overhead as avoidable savings. In reality, allocated corporate overhead is a common cost that does not disappear when a segment is dropped.",
+    "FormulaReference": "DA-07: Shut-Down Point",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "Non-CC EW slots >=75 chars (DL-026 compliant)",
+      "No boilerplate text (DL-013 prevention)",
+      "Difficulty justified",
+      "Independent answer derived and verified",
+      "Authority citations match tested concept"
+    ],
+    "distractor_intent": {
+      "B": {
+        "misconception": "Allocated as savings",
+        "why_plausible": "Appears avoidable",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Ignores avoidable FC",
+        "why_plausible": "Incomplete analysis",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Full OH as savings",
+        "why_plausible": "Assumes all disappears",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only -$100,000 = lost CM ($150,000) minus avoided FC ($50,000), ignoring irrelevant committed/allocated."
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "sprint": "P2-D Batch Sprint",
+  "pack": "D",
+  "domain": "Risk Management",
+  "schema": "P2_SCHEMA_STANDARD.md v1.1",
+  "question_state": "Unprocessed",
+  "part2_only": true,
+  "item_style": "single-select",
+  "batches": [
+    {
+      "batch": 1,
+      "qids": ["P2-D-246", "P2-D-247", "P2-D-248", "P2-D-249", "P2-D-250", "P2-D-251", "P2-D-252", "P2-D-253", "P2-D-254", "P2-D-255", "P2-D-256", "P2-D-257", "P2-D-258", "P2-D-259", "P2-D-260", "P2-D-261", "P2-D-262", "P2-D-263", "P2-D-264", "P2-D-265", "P2-D-266", "P2-D-267", "P2-D-268", "P2-D-269", "P2-D-270", "P2-D-271", "P2-D-272", "P2-D-273", "P2-D-274", "P2-D-275"],
+      "los": { "D.1": 6, "D.2": 6, "D.3": 6, "D.4": 6, "D.5": 6 },
+      "difficulty": { "Easy": 4, "Moderate-Easy": 6, "Moderate": 9, "Difficult": 8, "Very Difficult": 3 },
+      "cognitive": { "Remember": 3, "Understand": 6, "Apply": 12, "Analyze": 6, "Evaluate": 3 },
+      "cc_position": { "A": 7, "B": 8, "C": 8, "D": 7 },
+      "calc": 9,
+      "conceptual": 21,
+      "max_cc_streak": 2
+    },
+    {
+      "batch": 2,
+      "qids": ["P2-D-276", "P2-D-277", "P2-D-278", "P2-D-279", "P2-D-280", "P2-D-281", "P2-D-282", "P2-D-283", "P2-D-284", "P2-D-285", "P2-D-286", "P2-D-287", "P2-D-288", "P2-D-289", "P2-D-290", "P2-D-291", "P2-D-292", "P2-D-293", "P2-D-294", "P2-D-295", "P2-D-296", "P2-D-297", "P2-D-298", "P2-D-299", "P2-D-300", "P2-D-301", "P2-D-302", "P2-D-303", "P2-D-304", "P2-D-305"],
+      "los": { "D.1": 6, "D.2": 6, "D.3": 6, "D.4": 6, "D.5": 6 },
+      "difficulty": { "Easy": 4, "Moderate-Easy": 6, "Moderate": 9, "Difficult": 8, "Very Difficult": 3 },
+      "cognitive": { "Remember": 3, "Understand": 6, "Apply": 12, "Analyze": 6, "Evaluate": 3 },
+      "cc_position": { "A": 7, "B": 8, "C": 8, "D": 7 },
+      "calc": 9,
+      "conceptual": 21,
+      "max_cc_streak": 2
+    },
+    {
+      "batch": 3,
+      "qids": ["P2-D-306", "P2-D-307", "P2-D-308", "P2-D-309", "P2-D-310", "P2-D-311", "P2-D-312", "P2-D-313", "P2-D-314", "P2-D-315", "P2-D-316", "P2-D-317", "P2-D-318", "P2-D-319", "P2-D-320", "P2-D-321", "P2-D-322", "P2-D-323", "P2-D-324", "P2-D-325", "P2-D-326", "P2-D-327", "P2-D-328", "P2-D-329", "P2-D-330", "P2-D-331", "P2-D-332", "P2-D-333", "P2-D-334", "P2-D-335"],
+      "los": { "D.1": 6, "D.2": 6, "D.3": 6, "D.4": 6, "D.5": 6 },
+      "difficulty": { "Easy": 4, "Moderate-Easy": 6, "Moderate": 9, "Difficult": 8, "Very Difficult": 3 },
+      "cognitive": { "Remember": 3, "Understand": 6, "Apply": 12, "Analyze": 6, "Evaluate": 3 },
+      "cc_position": { "A": 7, "B": 8, "C": 8, "D": 7 },
+      "calc": 9,
+      "conceptual": 21,
+      "max_cc_streak": 2
+    }
+  ]
+}

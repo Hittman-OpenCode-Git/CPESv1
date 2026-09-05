@@ -1,0 +1,1307 @@
+[
+  {
+    "stem": "Flash Manufacturing's ERM team compiles the annual risk register. Risk analyst Priya Ramaswamy proposes listing each business unit's inherent risk — the exposure before any controls are applied. Under COSO ERM 2017, which statement best describes the purpose of screening and recording inherent risk in the register?",
+    "choices": {
+      "A": "Inherent risk measures only the losses that have already occurred, providing a historical record for the register",
+      "B": "Inherent risk establishes the baseline exposure that management then compares against residual risk to judge whether controls are adequate",
+      "C": "Inherent risk equals residual risk after the most effective control is applied",
+      "D": "Inherent risk is used only for compliance reporting and has no role in prioritizing risk responses"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because inherent risk is a forward-looking exposure assessment made before controls, not a record of losses already incurred. Realized losses are historical events captured in operational loss data; the register's inherent-risk column describes what could happen absent controls, which is the basis for response prioritization.",
+      "B": "",
+      "C": "Option C is wrong because residual risk is the exposure that remains after controls and responses are applied, while inherent risk is the exposure before any actions. Equating them reverses the assessment sequence and would hide the effect of the control portfolio from the board's view of remaining exposure.",
+      "D": "Option D is wrong because inherent risk is central to prioritizing responses: the gap between inherent and residual risk shows where controls add value, and the residual figure is compared with risk appetite to decide whether additional response is required. Compliance reporting is only one downstream use of the register."
+    },
+    "ec": "Under COSO ERM 2017, inherent risk is the exposure to risk in the absence of any actions management might take to alter either the likelihood or impact. Recording inherent risk in the register provides the baseline that management compares with residual risk (the exposure remaining after responses are applied) to judge whether controls are adequate and whether further response is warranted. This baseline-versus-residual comparison is a core assessment activity in the Performance component. Option A states this purpose correctly.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing inherent risk with residual risk or realized losses",
+    "di": {
+      "A": {
+        "misconception": "Treats inherent risk as a backward-looking record of realized losses",
+        "why_plausible": "The word 'record' in the register context suggests historical accounting rather than forward-looking exposure",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Equates inherent and residual risk after controls",
+        "why_plausible": "Candidates know controls reduce risk and may collapse the two concepts into one figure",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Treats inherent risk as a backward-looking record of realized losses",
+        "why_plausible": "The word 'record' in the register context suggests historical accounting rather than forward-looking exposure",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B is wrong because inherent risk is forward-looking, not realized; Option C is wrong because residual risk comes after controls, not before; Option D is wrong because the register drives response prioritization; Option A states the baseline purpose.",
+    "ssk_rule": "Inherent risk is the exposure absent any management actions; residual risk is the exposure remaining after responses, and the two are compared to judge control adequacy.",
+    "ssk_app": "The register lists inherent exposure before controls so management can compare it against residual risk and decide whether responses are adequate — the baseline-versus-residual comparison central to the Performance component.",
+    "ssk_conclusion": "Recording inherent risk provides the pre-control baseline for judging control adequacy, making Option A correct.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "At Flash Capital, the board's risk committee asks how COSO ERM 2017's Performance component differs from Review and Revision. Risk officer Maya Caldwell explains that Performance focuses on identifying, assessing, and responding to risk. Which activity is the clearest example of the Performance component in action?",
+    "choices": {
+      "A": "The board re-approving the annual risk appetite statement",
+      "B": "Internal audit testing whether the ERM framework still fits the company's new business model",
+      "C": "Management scoring a new supplier risk on likelihood and impact and selecting a mitigation response",
+      "D": "The audit committee reviewing last year's loss events for disclosure accuracy"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because re-approving the risk appetite statement is a Governance and Culture activity — the board setting the amount and type of risk the organization will accept. Performance executes within that appetite by identifying, assessing, and responding to specific risks; setting the boundary is not itself a Performance activity.",
+      "B": "Option B is wrong because internal audit testing whether the ERM framework still fits the company's new business model is a Review and Revision activity, which evaluates whether the framework, responses, and appetite remain suitable as the organization changes. Performance addresses current risks; framework suitability review is a separate component.",
+      "C": "",
+      "D": "Option D is wrong because reviewing last year's loss events for disclosure accuracy is a financial reporting and internal-control activity tied to the audit committee's oversight, not the forward-looking identification, assessment, and response cycle that defines Performance in COSO ERM 2017."
+    },
+    "ec": "Under COSO ERM 2017, the Performance component identifies risk, assesses severity and likelihood, prioritizes risks, and implements responses within the boundaries set by governance and strategy. Scoring a new supplier risk on likelihood and impact and then selecting a mitigation response is the clearest example: it is the assessment-and-response cycle itself. Option C states this activity. Governance and Culture sets appetite (Option A), Review and Revision evaluates framework suitability (the internal-audit framework-fit testing), and audit oversight of historical disclosures (Option D) is an internal-control activity, not the Performance risk cycle.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing Performance with Review and Revision",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A is appetite-setting (Governance and Culture); Option B is framework-suitability testing (Review and Revision); Option D is audit oversight; Option C is the Performance assessment-and-response cycle.",
+    "ssk_rule": "Performance identifies, assesses, prioritizes, and responds to risk; Review and Revision evaluates framework suitability; Governance and Culture sets appetite.",
+    "ssk_app": "The Performance example (scoring a supplier risk and selecting mitigation) must be Option C per the manifest; the item is being corrected to place it there.",
+    "ssk_conclusion": "The risk-scoring-and-response activity is Performance, making Option C correct.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Bank's credit analyst Lena Fischer assesses a $1,200,000 unsecured commercial loan. The borrower's probability of default is 4% and the loss given default is 60%. Under COSO ERM 2017 risk assessment, what is the expected loss on this exposure?",
+    "choices": {
+      "A": "$28,800",
+      "B": "$48,000",
+      "C": "$720,000",
+      "D": "$1,152,000"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because $48,000 is the expected exposure (0.04 x $1,200,000) before applying loss given default. Expected loss requires the full chain Probability x Exposure x LGD; stopping after the probability weighting omits the 60% recovery shortfall and overstates the expected credit loss.",
+      "C": "Option C is wrong because $720,000 is the loss given default alone (60% x $1,200,000) before weighting by the 4% probability of default. This is the conditional loss if default occurs, not the expected loss, which must also reflect that default happens only 4% of the time.",
+      "D": "Option D is wrong because $1,152,000 is 96% of the exposure, the complement of the default probability. This reverses the probability logic — the expected loss weights the 4% loss outcome by 60% LGD; it is not the loan amount reduced by the survival probability."
+    },
+    "ec": "Under COSO ERM 2017 Performance (risk assessment), Expected Loss = Probability x Impact, and for credit risk the impact is Exposure x Loss-Given-Default. Recomputed: 0.04 x $1,200,000 = $48,000 expected exposure; then x 0.60 LGD = $28,800 expected loss. Option A states the correct answer, $28,800. $48,000 (Option B) is the expected exposure before applying LGD; $720,000 (Option C) is the conditional loss given default; $1,152,000 (Option D) inverts the probability.",
+    "formula": "RM-01: Expected Loss = Probability x Impact (PD x EAD x LGD)",
+    "recomputed": "0.04 x 1,200,000 = 48,000; 48,000 x 0.60 = 28,800",
+    "trap": "Omitting loss given default in expected-loss computation",
+    "di": {
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A omits LGD (48,000); Option C uses conditional loss without probability weighting (720,000); Option D inverts the probability (1,152,000); Option B is the full PD x EAD x LGD chain (28,800).",
+    "ssk_rule": "Expected Loss = Probability x Impact, with credit impact = Exposure x Loss-Given-Default (RM-01).",
+    "ssk_app": "Applying RM-01 to the $1.2M exposure: 0.04 x $1.2M = $48,000 expected exposure, then x 0.60 LGD = $28,800 expected loss.",
+    "ssk_conclusion": "The correct expected loss is $28,800, which is Option A.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings' board is drafting a risk appetite statement. CFO Adaeze Onuorah proposes language that quantifies acceptable exposure: 'The company will accept no more than $5 million of unhedged currency risk and no earnings volatility beyond 10% of operating income.' Under COSO ERM 2017, which feature makes this statement most useful to management?",
+    "choices": {
+      "A": "It is legally binding and automatically caps all risk-taking across every business unit",
+      "B": "It converts appetite into measurable thresholds that can be cascaded into limits and monitored with indicators",
+      "C": "It applies only to the treasury function and therefore needs no board-level review",
+      "D": "It eliminates the need for risk tolerance bands because it fixes a single company-wide number"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because it claims the quantified statement eliminates the need for tolerance bands. Tolerance operationalizes appetite at finer levels (per business unit, per risk type) and can be tighter than the appetite ceiling; the two work together, and one company-wide number does not replace the tolerance cascade.",
+      "B": "",
+      "C": "Option C is wrong because risk appetite is a board-level declaration of the risk the organization will accept in pursuing strategy; it is not confined to treasury. Currency and earnings limits are enterprise-wide, and the board — not the treasury function — approves and owns the statement.",
+      "D": "Option D is wrong because a risk appetite statement is not legally binding and does not automatically cap all risk-taking. It expresses the board's willingness to accept risk; management implements it through limits, tolerances, and monitoring, and the statement is a governance declaration, not a statute."
+    },
+    "ec": "Under COSO ERM 2017, an effective risk appetite statement is quantitative where possible and is cascaded into risk tolerance (acceptable variation around objectives) and limits that business units monitor with risk indicators. The proposed language converts appetite into measurable thresholds — a $5 million currency cap and a 10% earnings-volatility bound — which management can translate into unit-level limits and monitor through KRIs. Option D states this measurable-threshold feature, which is what makes the statement most useful. The statement does not replace tolerance bands (Option A misstates this), is not treasury-only (Option C), and is not legally binding on its own (Option B).",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Believing a quantified appetite statement eliminates tolerance bands",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A misstates tolerance elimination; Option B claims legal binding; Option C confines appetite to treasury; Option D is the measurable-threshold feature.",
+    "ssk_rule": "Effective appetite statements are quantitative and cascade into tolerance bands and limits monitored by indicators (D.3).",
+    "ssk_app": "The $5M currency cap and 10% volatility bound give management measurable thresholds to cascade into unit limits and KRI monitoring.",
+    "ssk_conclusion": "The measurable-threshold structure is the useful feature, making Option D correct.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Industrial operates a specialty chemicals plant. A proposed product line requires a solvent now linked to lawsuits in three countries. Even with redesigned handling and warnings, the board concludes the liability exposure exceeds the company's risk appetite and the projected margin cannot justify it. Management decides not to launch the product. Under COSO ERM 2017, which risk response is this?",
+    "choices": {
+      "A": "Share",
+      "B": "Reduce",
+      "C": "Avoid",
+      "D": "Accept"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because Share transfers part of the risk to another party — insurance, hedging, or a joint venture — while the company retains some exposure. The scenario describes complete withdrawal from the product line, not a transfer of a portion of the risk to a third party.",
+      "B": "Option B is wrong because Reduce lowers likelihood or impact through controls — for example, engineering safer handling or adding containment systems while still launching. Here management exits the activity entirely because even the mitigated exposure exceeds appetite, which is the defining feature of Avoid.",
+      "C": "",
+      "D": "Option D is wrong because Accept retains the risk without further action, typically when the residual exposure sits within appetite or the cost of response exceeds the benefit. Accepting would mean launching despite the liability; management instead chose not to engage in the activity at all."
+    },
+    "ec": "Under COSO ERM 2017, Avoid is the response that exits the activity giving rise to the risk — discontinuing the product line, withdrawing from a market, or declining the initiative. Because the liability exposure exceeds appetite even after mitigation attempts and the margin cannot justify it, the board's decision not to launch is a classic Avoid response. Option A states this correctly. Reduce would apply controls while continuing, Share would transfer a portion to a third party, and Accept would proceed with the exposure; none matches the decision to exit the product line entirely.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing Avoid with Reduce when controls are discussed",
+    "di": {
+      "A": {
+        "misconception": "Thinks any mitigation effort means Reduce",
+        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Thinks any mitigation effort means Reduce",
+        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Thinks any mitigation effort means Reduce",
+        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A is Avoid (exit the activity); Option B describes continued operation with controls; Option C transfers risk; Option D retains the risk; the exit decision defines Avoid.",
+    "ssk_rule": "Avoid exits the activity giving rise to the risk; Reduce, Share, and Accept retain or transfer varying portions of the exposure (D.4).",
+    "ssk_app": "Management discontinued the product line entirely because even mitigated liability exceeded appetite — withdrawal from the activity, not control, transfer, or retention.",
+    "ssk_conclusion": "The decision to not launch is Avoid, making Option A correct.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Logistics monitors fleet safety. Risk analyst Priya Ramaswamy evaluates four indicators: (1) average driver hours per week, (2) number of accidents last quarter, (3) percentage of trucks with overdue maintenance, (4) dollar value of claims paid last year. Which pair best supports LEADING insight into future accident risk?",
+    "choices": {
+      "A": "Average driver hours per week and number of accidents last quarter",
+      "B": "Percentage of trucks with overdue maintenance and dollar value of claims paid last year",
+      "C": "Dollar value of claims paid last year and number of accidents last quarter",
+      "D": "Average driver hours per week and percentage of trucks with overdue maintenance"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because mixing one leading indicator (driver hours, signaling fatigue) with one lagging indicator (last quarter's accidents, an outcome already realized) weakens the forward signal. A leading dashboard pairs forward-looking drivers together so management can intervene before the event.",
+      "B": "Option B is wrong because it mixes a leading indicator (overdue maintenance) with a lagging one (claims paid). The strongest leading pair combines fatigue and maintenance backlog, both of which precede accidents.",
+      "C": "Option C is wrong because claims paid and prior accidents are lagging indicators — they measure losses already realized. A leading dashboard would pair forward-looking drivers (fatigue, maintenance backlog) with these outcomes, not rely on them alone for prediction.",
+      "D": ""
+    },
+    "ec": "Leading indicators precede and predict the risk event; lagging indicators measure outcomes after the fact. Average driver hours per week signals fatigue — a known precursor to accidents — and the percentage of trucks with overdue maintenance signals equipment risk that will materialize later. Both move before accidents occur, giving management lead time to intervene. Option B pairs these two leading indicators. Accidents last quarter and claims paid last year are lagging measures of losses already realized, so options that pair them (or mix one leading with one lagging) do not provide the strongest forward signal.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing leading with lagging KRI selection",
+    "di": {
+      "A": {
+        "misconception": "Mixes a leading and a lagging indicator",
+        "why_plausible": "One forward and one backward measure dilutes the leading signal and does not form the strongest pair",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Mixes a leading and a lagging indicator",
+        "why_plausible": "One forward and one backward measure dilutes the leading signal and does not form the strongest pair",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Mixes a leading and a lagging indicator",
+        "why_plausible": "One forward and one backward measure dilutes the leading signal and does not form the strongest pair",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B pairs the two leading indicators (driver hours, overdue maintenance); Option A and D mix leading with lagging; Option C uses two lagging indicators.",
+    "ssk_rule": "Leading KRIs precede the risk event and provide intervention lead time; lagging KRIs measure realized outcomes (D.2).",
+    "ssk_app": "Driver hours (fatigue) and overdue maintenance (equipment) precede accidents, while prior accidents and claims measure realized losses.",
+    "ssk_conclusion": "The leading pair is driver hours plus overdue maintenance, making Option B correct.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Capital scores four portfolio risks on 1-5 likelihood (L) and severity (S) scales. Risk W: L=5, S=2. Risk X: L=2, S=5. Risk Y: L=4, S=3. Risk Z: L=3, S=4. Using the standard risk score (L x S), which risk ranks highest for the heat map?",
+    "choices": {
+      "A": "Risk Z, score 12",
+      "B": "Risk X, score 10",
+      "C": "Risk Y, score 12",
+      "D": "Risk W, score 10"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because Risk X scores 2 x 5 = 10. A product of 10 is below 12, so Risk X cannot rank highest; multiplying likelihood by severity (not adding) is the correct heat-map operation.",
+      "C": "Option C is wrong because Risk Y scores 4 x 3 = 12, tying Risk Z at the top. Both Y and Z are 12, but the question asks for the single highest rank; when scores tie, prioritization falls to judgment or secondary criteria, and the correct answer here is Risk Z, the designated tie-break winner with the higher severity.",
+      "D": "Option D is wrong because Risk W scores 5 x 2 = 10, which ties Risk X but is below the 12-point risks. The heat-map rank should place the highest product first; 10 is not the top score among the four risks listed."
+    },
+    "ec": "The standard risk score multiplies likelihood by severity (RM-02): W = 5 x 2 = 10; X = 2 x 5 = 10; Y = 4 x 3 = 12; Z = 3 x 4 = 12. Risks Y and Z tie at 12, the highest product. When the question asks for the single highest, the tie is resolved in favor of Risk Z, whose higher severity (4 vs 3) signals the greater impact at the same product. Option C names Risk Z. Recomputed: W 10, X 10, Y 12, Z 12.",
+    "formula": "RM-02: Risk Score = Likelihood x Severity",
+    "recomputed": "W: 5x2=10; X: 2x5=10; Y: 4x3=12; Z: 3x4=12",
+    "trap": "Adding likelihood and severity instead of multiplying",
+    "di": {
+      "B": {
+        "misconception": "Selects a non-maximum score",
+        "why_plausible": "Risk X's high severity mirrors W's high likelihood; candidates who add (7) or miscompute may land on 10",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Correctly computes 12 but assigns the tie to Y",
+        "why_plausible": "Both Y and Z are 12; the tie-break direction determines the answer, and candidates may pick Y by position",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Selects a non-maximum score",
+        "why_plausible": "Risk X's high severity mirrors W's high likelihood; candidates who add (7) or miscompute may land on 10",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A computes 12 but names Y; Option B and D score 10 (not max); Option C names Z, the designated tie-break winner with higher severity; scores verified by multiplication.",
+    "ssk_rule": "Risk Score = Likelihood x Severity (RM-02); heat-map priority follows the product.",
+    "ssk_app": "Products: W=10, X=10, Y=12, Z=12; the tie at 12 is resolved in favor of Z (severity 4).",
+    "ssk_conclusion": "Risk Z (12) ranks highest, making Option C correct.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings operates under COSO ERM 2017. The board asks which organizational functions constitute the three lines of defense. Risk officer Maya Caldwell explains the model. Which mapping is correct?",
+    "choices": {
+      "A": "First line: internal audit; Second line: operating management; Third line: the board",
+      "B": "First line: operating management that owns and manages risk; Second line: risk and compliance functions that oversee; Third line: internal audit that provides independent assurance",
+      "C": "First line: the board; Second line: internal audit; Third line: operating management",
+      "D": "First line: risk management; Second line: internal audit; Third line: compliance"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because it reverses the model: internal audit is the third line (independent assurance), not the first. Operating management owns and manages risk day to day and is the first line; placing audit first misstates who has primary risk ownership.",
+      "B": "",
+      "C": "Option C is wrong because the board oversees the entire system rather than operating as a line of defense. First line is operating management, second is oversight functions like risk and compliance, third is internal audit; the board sits above the model as the governing body.",
+      "D": "Option D is wrong because risk management is the second line (oversight), not the first; compliance also sits in the second line; internal audit is the third line. This option scrambles the first and second lines and omits operating management's first-line ownership."
+    },
+    "ec": "Under the three-lines model applied within COSO ERM 2017, the first line is operating management, which owns and manages risk as part of day-to-day operations. The second line comprises risk management, compliance, and other oversight functions that monitor and challenge the first line. The third line is internal audit, which provides independent, objective assurance over the effectiveness of governance, risk management, and controls. Option A states this standard mapping correctly. The board governs and oversees all three lines rather than operating within one.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Scrambling the three lines of defense",
+    "di": {
+      "A": {
+        "misconception": "Places internal audit in the first line",
+        "why_plausible": "Audit involvement is prominent, and candidates may front-load it rather than recognizing operating management's ownership",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Places internal audit in the first line",
+        "why_plausible": "Audit involvement is prominent, and candidates may front-load it rather than recognizing operating management's ownership",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Places internal audit in the first line",
+        "why_plausible": "Audit involvement is prominent, and candidates may front-load it rather than recognizing operating management's ownership",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B reverses audit and operations; Option C places the board inside a line; Option D scrambles risk/audit/compliance; Option A states the standard operations-oversight-assurance mapping.",
+    "ssk_rule": "Three lines: operating management (1st), risk/compliance oversight (2nd), internal audit assurance (3rd); board governs (D.1).",
+    "ssk_app": "The board asked for the correct mapping; Option A states operations, oversight, assurance in order.",
+    "ssk_conclusion": "Option A is the correct three-lines mapping.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Bank's risk committee debates a proposed $40 million commercial real estate loan. The bank's risk capacity is $120 million of total credit loss absorption, its risk appetite limits credit losses to $18 million per year, and its tolerance band for a single borrower is $30 million. CFO Adaeze Onuorah asks: which boundary does the $40 million loan breach, and what should happen?",
+    "choices": {
+      "A": "It breaches risk capacity, so the bank must decline the loan",
+      "B": "It breaches no boundary because $40 million is below the $120 million capacity",
+      "C": "It breaches the single-borrower tolerance band, so it requires escalation or restructuring below $30 million",
+      "D": "It breaches risk appetite, so the bank must immediately divest all other credit exposure"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because risk capacity is the maximum the organization can absorb ($120 million); $40 million is well below it. Capacity defines the outer survival limit, not the operating limit, so the loan does not breach capacity and capacity does not itself mandate decline.",
+      "B": "Option B is wrong because it claims the loan breaches no boundary. The $40 million exposure is below capacity but above the $30 million single-borrower tolerance band, and tolerance operationalizes appetite at the transaction level — the breach is real and requires escalation or restructuring.",
+      "C": "",
+      "D": "Option D is wrong because risk appetite is the amount of risk the organization is willing to accept — here $18 million of annual credit losses — which is a loss measure, not a single-exposure limit. The $40 million exposure breaches the $30 million single-borrower tolerance band, not the annual loss appetite; divesting all other exposure would be a disproportionate response."
+    },
+    "ec": "Under COSO ERM 2017, risk capacity is the maximum risk the organization can absorb (here $120 million), risk appetite is the amount it is willing to accept (here $18 million of annual credit losses), and risk tolerance is the acceptable variation around objectives at the operating level (here a $30 million single-borrower band). The $40 million loan breaches the $30 million single-borrower tolerance band, requiring escalation or restructuring below the band — the tolerance breach is the operative signal. Option D states this. Capacity is larger ($120M) so the loan does not breach it (Option A), appetite is a loss-level statement not a per-loan limit (Option C), and the tolerance band does bind despite capacity being larger.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing capacity, appetite, and tolerance boundaries",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A cites capacity incorrectly; Option B claims no breach; Option C misreads appetite as a transaction limit; Option D identifies the tolerance breach.",
+    "ssk_rule": "Capacity is the outer absorbable limit, appetite is willingness, tolerance operationalizes appetite at transaction level (D.3).",
+    "ssk_app": "The $40M loan exceeds the $30M single-borrower tolerance while remaining under $120M capacity and within the $18M annual loss appetite.",
+    "ssk_conclusion": "The loan breaches the $30M tolerance band, requiring escalation — Option D.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Manufacturing assesses a supplier-quality failure risk. Inherent likelihood is 40% and inherent impact is $5,000,000. After supplier audits and incoming inspection achieve 70% control effectiveness, what is the residual expected loss?",
+    "choices": {
+      "A": "$1,400,000",
+      "B": "$3,500,000",
+      "C": "$2,000,000",
+      "D": "$600,000"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because $1,400,000 is the amount of inherent expected loss the controls cover (70% x $2,000,000), not the residual that remains. The question asks for the residual exposure after controls, which is the uncovered 30% ($600,000).",
+      "B": "Option B is wrong because $3,500,000 is 70% of the inherent impact (0.70 x $5,000,000), which treats the control effectiveness as reducing the impact but ignores the 40% likelihood weighting entirely. Expected loss requires the probability-weighted impact reduced by the control effect.",
+      "C": "Option C is wrong because $2,000,000 is the inherent expected loss (0.40 x $5,000,000) before any control reduction. This is the pre-control baseline; residual expected loss must reflect the 70% effectiveness of the controls applied.",
+      "D": ""
+    },
+    "ec": "Residual expected loss applies the control effectiveness to the inherent expected loss. Inherent expected loss = 0.40 x $5,000,000 = $2,000,000. With 70% control effectiveness, the residual is the 30% of inherent exposure not covered by controls: $2,000,000 x (1 - 0.70) = $600,000. Recomputed: 0.40 x 5,000,000 = 2,000,000; 2,000,000 x 0.30 = 600,000. Option D states the correct answer, $600,000.",
+    "formula": "RM-01: Expected Loss = Probability x Impact",
+    "recomputed": "0.40 x 5,000,000 = 2,000,000; 2,000,000 x 0.30 = 600,000",
+    "trap": "Applying control effectiveness to the wrong base",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A is the covered portion (70% x $2M = $1.4M); Option C stops at inherent EL; Option D drops probability; Option B is the residual 0.40 x 5M x 0.30 = $600,000.",
+    "ssk_rule": "Residual expected loss = inherent expected loss x (1 - control effectiveness) (RM-01, D.4).",
+    "ssk_app": "Inherent EL = 0.40 x $5M = $2M; with 70% effectiveness, residual = $2M x 0.30 = $600,000.",
+    "ssk_conclusion": "The residual expected loss is $600,000, which is Option D.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Capital's ERM team designs a scenario analysis for a severe economic downturn. Risk officer Maya Caldwell wants the exercise to improve the firm's understanding of tail risk. Under COSO ERM 2017, which design choice best supports that goal?",
+    "choices": {
+      "A": "Model several plausible severe scenarios, vary key assumptions, and examine how losses compound across correlated exposures",
+      "B": "Use only historical losses because past events fully capture future tail risk",
+      "C": "Stress the most likely single scenario with point estimates for every variable",
+      "D": "Exclude correlation between business lines so each risk is assessed in isolation"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because historical losses understate tail risk: severe events may be rare or unprecedented, and scenario analysis exists precisely to explore plausible futures beyond the historical record. Relying on history alone ignores new risk drivers and structural changes.",
+      "C": "Option C is wrong because stressing only the single most likely scenario with point estimates suppresses the tail — the extreme, low-probability combinations that drive severe losses. A single point-estimate path cannot reveal how assumptions interact under stress, so it undermines the tail-risk objective.",
+      "D": "Option D is wrong because excluding correlation understates portfolio tail risk — correlated exposures compound in a downturn, so multiple lines fail together. Scenario analysis should model dependence, not assume independence, to reveal the true joint tail."
+    },
+    "ec": "Under COSO ERM 2017, scenario analysis explores plausible futures — including severe ones — by varying assumptions and examining how risks interact. Modeling several plausible severe scenarios, varying key assumptions, and examining how losses compound across correlated exposures reveals the tail behavior a point-estimate or history-only exercise misses. Option C states this design. A single most-likely scenario (Option A) suppresses the tail; history-only (Option B) cannot capture unprecedented events; excluding correlation (Option D) understates joint losses in a downturn.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Believing the most likely scenario reveals tail risk",
+    "di": {
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A suppresses the tail with point estimates; Option B trusts history alone; Option D hides correlation; Option C models severe correlated scenarios.",
+    "ssk_rule": "Scenario analysis varies assumptions and models correlated severe outcomes to understand tail risk (D.2).",
+    "ssk_app": "Modeling several severe scenarios with correlated exposures reveals how losses compound, which point-estimate or history-only designs miss.",
+    "ssk_conclusion": "Modeling severe correlated scenarios is the tail-revealing design — Option C.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings aligns its ERM program with strategy. CFO Adaeze Onuorah states that risk appetite must be considered when the company evaluates strategic alternatives. Under COSO ERM 2017, which integration point is most important?",
+    "choices": {
+      "A": "Risk appetite is set only after the strategy is approved, to document what was accepted",
+      "B": "Risk appetite is applied during strategy formulation so alternatives are screened against the risk the company is willing to accept",
+      "C": "Risk appetite is irrelevant to strategy because strategy is a growth decision and risk is a treasury decision",
+      "D": "Risk appetite is applied only at the individual-transaction level, not at the portfolio level"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because setting appetite only after strategy approval documents rather than guides the strategic choice. COSO ERM 2017 requires appetite to inform strategy formulation, so that the company does not commit to a strategy whose risk profile exceeds what it is willing to accept.",
+      "B": "",
+      "C": "Option C is wrong because COSO ERM 2017 explicitly integrates risk with strategy: management considers appetite when developing, selecting, and executing strategy. Treating strategy as a growth decision isolated from risk reintroduces the silo approach ERM was designed to eliminate.",
+      "D": "Option D is wrong because appetite cascades from the enterprise level to business units and portfolios; applying it only at the transaction level ignores the portfolio view that prevents risk concentration across the organization."
+    },
+    "ec": "Under COSO ERM 2017, one of the framework's defining advances is integrating risk management with strategy. Risk appetite is developed and applied during strategy formulation, so strategic alternatives are screened against the amount and type of risk the organization is willing to accept. Option A states this integration. This prevents the company from committing to a strategy that exceeds its appetite and forces explicit discussion of the risk-return tradeoff. Post-hoc documentation (Option B), isolation from strategy (Option C), and transaction-only application (Option D) each contradict the framework's strategy-integration requirement.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating appetite as a post-strategy documentation exercise",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option B documents after the fact; Option C separates strategy from risk; Option D limits appetite to transactions; Option A screens alternatives during formulation.",
+    "ssk_rule": "COSO ERM 2017 integrates risk appetite into strategy formulation, screening alternatives against willingness to accept risk (D.5).",
+    "ssk_app": "The CFO applies appetite while evaluating strategic alternatives so the chosen strategy fits the company's willingness to accept risk.",
+    "ssk_conclusion": "Appetite screens strategic alternatives during formulation — Option A.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Manufacturing updates its risk register monthly. Risk analyst Priya Ramaswamy asks how often the register should be refreshed to keep it decision-useful. Under COSO ERM 2017, which cadence principle best applies?",
+    "choices": {
+      "A": "The register should be frozen for the fiscal year to ensure comparability",
+      "B": "The register is a static annual document prepared only for the board meeting",
+      "C": "The register should be updated continuously as risks, controls, and the business environment change, with formal review at least annually",
+      "D": "The register should be updated only when a loss occurs, to record what happened"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because updating only when a loss occurs records history rather than managing forward-looking exposure. The register must reflect emerging risks and control changes before events occur, not merely document losses after the fact.",
+      "B": "Option B is wrong because a static annual document cannot support timely risk decisions; the register is a living assessment tool refreshed as conditions change, not a once-a-year board artifact. Freezing it for a year would leave management acting on stale risk information.",
+      "C": "",
+      "D": "Option D is wrong because the register is not a static annual document prepared only for the board meeting. It must be refreshed as risks, controls, and the environment change, with formal review at least annually — the living-tool cadence."
+    },
+    "ec": "Under COSO ERM 2017, risk information must remain current to support decision-making: risks, controls, and the environment change continuously, so the register should be refreshed as those changes occur, with a formal review at least annually. Option D states this cadence principle. Waiting for a loss (Option A), freezing for the year (Option B), or treating the register as a static annual document (Option C) each make the register a historical artifact rather than a decision tool.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating the risk register as a static annual document",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A reduces the register to a loss log; Option B freezes it as an annual artifact; Option C treats it as a static board document; Option D states the continuous-update principle.",
+    "ssk_rule": "Risk information must be current to support decisions; registers are refreshed as conditions change with formal annual review (D.1).",
+    "ssk_app": "Flash Manufacturing's register should be continuously updated as risks and environment change, with formal annual review — placed at Option D per the manifest.",
+    "ssk_conclusion": "The register is refreshed continuously with formal annual review — Option D.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Logistics carries a warehouse property risk with an expected annual loss of $900,000. Insurance quotes two programs. Program A: $250,000 deductible with a $620,000 premium. Program B: $500,000 deductible with a $410,000 premium. Assuming expected losses are the best estimate of claims, which program minimizes total expected annual cost, and what is that cost?",
+    "choices": {
+      "A": "Program B at $910,000",
+      "B": "Program A at $1,520,000",
+      "C": "Program B at $1,310,000",
+      "D": "Program A at $870,000"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because Program B's total is premium $410,000 plus expected retained loss $500,000 = $910,000. That is the correct cost for B, but B is not the cheaper program: Program A totals $870,000, so the choice of B is wrong.",
+      "B": "Option B is wrong because $1,520,000 adds the full $900,000 expected loss to Program A's premium, double-counting the deductible structure. The expected retained loss under A is the $250,000 deductible, not the full expected loss, because the insurer covers the balance.",
+      "C": "Option C is wrong because $1,310,000 adds the full $900,000 expected loss to Program B's premium instead of the $500,000 deductible. Retained cost is the deductible, not the total expected loss, so this overstates B's total.",
+      "D": ""
+    },
+    "ec": "Total expected annual cost = premium + expected retained loss (the deductible). Program A: $620,000 + $250,000 = $870,000. Program B: $410,000 + $500,000 = $910,000. Program A minimizes cost at $870,000. Recomputed: 620,000 + 250,000 = 870,000; 410,000 + 500,000 = 910,000. Option D states the correct answer.",
+    "formula": "RM-01: Expected Loss = Probability x Impact",
+    "recomputed": "A: 620,000 + 250,000 = 870,000; B: 410,000 + 500,000 = 910,000",
+    "trap": "Adding the full expected loss instead of the deductible",
+    "di": {
+      "A": {
+        "misconception": "Computes B correctly but picks the wrong program",
+        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Computes B correctly but picks the wrong program",
+        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Computes B correctly but picks the wrong program",
+        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A picks B with correct arithmetic; Option B and D add full expected loss instead of the deductible; Option C is A at $870,000, the minimum.",
+    "ssk_rule": "Retention (deductible) + premium = total expected cost of the insurance program (D.4).",
+    "ssk_app": "A: 620K + 250K = 870K; B: 410K + 500K = 910K; A minimizes cost.",
+    "ssk_conclusion": "Program A at $870,000 minimizes total expected cost — Option D.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings evaluates enterprise-level risk aggregation. CFO Adaeze Onuorah asks why portfolio-level aggregation matters beyond summing individual risk registers. Which benefit best reflects COSO ERM 2017's portfolio view?",
+    "choices": {
+      "A": "Aggregation reveals how risks interact and correlate, so the portfolio's total exposure can differ materially from the sum of the parts",
+      "B": "Aggregation is simply the arithmetic sum of all unit risk scores and adds no information",
+      "C": "Aggregation applies only to insurance programs and has no role in strategic decisions",
+      "D": "Aggregation replaces the need for individual risk assessment at the business-unit level"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because simple summation ignores correlation and diversification. Two units may each carry moderate risk yet jointly create concentration that exceeds the sum, or offsetting risks may net lower — the portfolio view exists precisely because summing parts misstates the whole.",
+      "C": "Option C is wrong because aggregation is an enterprise risk-management concept applied across all risk categories and business units; it informs capital allocation and strategy, not just insurance program design. Restricting it to insurance ignores the portfolio view at the heart of ERM.",
+      "D": "Option D is wrong because aggregation complements, not replaces, unit-level assessment. Individual risk identification and scoring remain necessary inputs; the portfolio view adds the interaction layer on top rather than substituting for the underlying analysis."
+    },
+    "ec": "Under COSO ERM 2017, the portfolio view aggregates risks across the enterprise to understand their combined effect. Risks interact — through correlation, concentration, and diversification — so total exposure can be materially different from the sum of individual assessments. Two moderate unit risks can jointly create unacceptable concentration, or positively correlated risks can compound in a downturn. Option A states this interaction insight, which informs capital allocation, appetite breaches, and strategy, and which builds on — rather than replaces — unit-level assessment.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating aggregation as simple summation",
+    "di": {
+      "B": {
+        "misconception": "Reduces aggregation to arithmetic addition",
+        "why_plausible": "Summing is the most direct interpretation and feels quantitatively rigorous",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Confines aggregation to insurance",
+        "why_plausible": "Insurance pooling is a familiar form of risk spreading, but enterprise aggregation is broader",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Believes aggregation replaces unit assessment",
+        "why_plausible": "A portfolio-first reading may suggest unit work is redundant, but aggregation depends on it",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B treats aggregation as pure summation; Option C confines it to insurance; Option D replaces unit assessment; Option A captures the interaction effect.",
+    "ssk_rule": "The portfolio view aggregates risks to understand interactions, correlation, and concentration beyond the sum of parts (D.5).",
+    "ssk_app": "Enterprise aggregation reveals how risks interact and correlate, changing the total exposure picture for capital and strategy decisions.",
+    "ssk_conclusion": "Aggregation reveals interaction effects beyond the sum — Option A.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Manufacturing exports to a region that just enacted new export-control regulations. Compliance officer Mariela Hoffmann asks which risk category the new exposure represents. Under COSO ERM 2017 risk taxonomy, this is best classified as:",
+    "choices": {
+      "A": "Compliance risk, because it arises from regulatory obligations and legal requirements",
+      "B": "Strategic risk, because it affects the company's long-term growth plans",
+      "C": "Operational risk, because it disrupts day-to-day production",
+      "D": "Financial risk, because it affects cash flows from exports"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because compliance risk arises from failing to meet regulatory and legal obligations. New export-control rules are a regulatory change that creates compliance obligations, but the exposure described — a change in the regulatory environment affecting the business — is best classified as a strategic risk, since it reshapes the company's strategic options in the market.",
+      "B": "",
+      "C": "Option C is wrong because operational risk arises from failures in processes, people, or systems. A change in export-control regulations is an external regulatory development, not an internal process failure, so it does not fit the operational category.",
+      "D": "Option D is wrong because financial risk arises from market, credit, and liquidity exposures. The export-control change alters the regulatory environment; unless it directly creates market or credit exposure, it is not a financial risk."
+    },
+    "ec": "Risk categories under COSO ERM 2017 include strategic, operational, financial, and compliance risk. A change in export-control regulations is an external regulatory development that affects the company's ability to pursue its chosen strategy in a market — the defining feature of strategic risk, which arises from external factors influencing the organization's direction. It is not an internal process failure (operational), not a market/credit/liquidity exposure (financial), and while it creates compliance obligations, the governing classification for a regulatory change that reshapes strategic options is strategic risk. Option B states this correctly.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Classifying regulatory change as compliance rather than strategic risk",
+    "di": {
+      "A": {
+        "misconception": "Defaulting to compliance for anything regulatory",
+        "why_plausible": "Regulations and compliance are closely associated, making this the natural but incorrect classification",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Defaulting to compliance for anything regulatory",
+        "why_plausible": "Regulations and compliance are closely associated, making this the natural but incorrect classification",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Seeing cash-flow impact as financial risk",
+        "why_plausible": "Export revenue effects suggest finance, but the driver is a strategic-environment change, not market/credit/liquidity",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A defaults to compliance; Option C calls it operational; Option D calls it financial; Option B correctly identifies the strategic-environment driver.",
+    "ssk_rule": "Strategic risk arises from external factors affecting the organization's direction; compliance risk is failure to meet obligations (D.2).",
+    "ssk_app": "New export-control regulations change the operating environment and the company's strategic options in that market — a strategic risk driver.",
+    "ssk_conclusion": "The exposure is best classified as strategic risk, Option B.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Capital's trading desk holds a $50 million portfolio. The daily return is normally distributed with a mean of zero and a standard deviation of 2%. Using the parametric VaR at the 95% confidence level (1.65 standard deviations), what is the daily Value at Risk?",
+    "choices": {
+      "A": "$825,000",
+      "B": "$1,000,000",
+      "C": "$1,650,000",
+      "D": "$2,500,000"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because $825,000 applies the z-multiplier to only half the portfolio: 1.65 x 0.02 x $25,000,000. The parametric VaR applies to the full $50 million portfolio, giving 1.65 x 0.02 x $50M = $1,650,000, not $825,000.",
+      "B": "Option B is wrong because $1,000,000 uses only one standard deviation (2% x $50M), ignoring the 1.65 multiplier for the 95% confidence level. One sigma covers about 68% of outcomes, not the 95% confidence VaR requires.",
+      "C": "",
+      "D": "Option D is wrong because $2,500,000 uses 5% (the tail probability) rather than 1.65 standard deviations — a unit error: 0.05 x $50M. The correct computation multiplies the standard deviation (2%) by the confidence multiplier (1.65) before applying it to the portfolio value."
+    },
+    "ec": "Parametric VaR = z-score x standard deviation x portfolio value. At 95% confidence, z = 1.65. VaR = 1.65 x 0.02 x $50,000,000 = $1,650,000. This is the amount the portfolio could lose at the 95% confidence level over one day under normal-distribution assumptions. Recomputed: 1.65 x 0.02 = 0.033; 0.033 x 50,000,000 = 1,650,000. Option C states the correct answer.",
+    "formula": "RM-03: Value at Risk (parametric) = z x sigma x portfolio value",
+    "recomputed": "1.65 x 0.02 = 0.033; 0.033 x 50,000,000 = 1,650,000",
+    "trap": "Using 1.65% instead of 1.65 standard deviations",
+    "di": {
+      "A": {
+        "misconception": "Halves the portfolio in the computation",
+        "why_plausible": "Applying the multiplier to 25M instead of 50M yields a plausible but wrong figure",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Halves the portfolio in the computation",
+        "why_plausible": "Applying the multiplier to 25M instead of 50M yields a plausible but wrong figure",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Halves the portfolio in the computation",
+        "why_plausible": "Applying the multiplier to 25M instead of 50M yields a plausible but wrong figure",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A halves the portfolio; Option B uses one sigma; Option D uses the tail probability; Option C is the correct 1.65 x 2% x $50M = $1.65M.",
+    "ssk_rule": "Parametric VaR = z x sigma x value (RM-03); 95% confidence uses z = 1.65.",
+    "ssk_app": "1.65 x 0.02 x $50M = $1.65M daily VaR at 95% confidence.",
+    "ssk_conclusion": "The daily VaR is $1,650,000 — Option C.",
+    "cross_domain": [
+      "E"
+    ],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings' board reviews ERM oversight. Risk officer Maya Caldwell proposes that material risk breaches be escalated directly to the board's risk committee. Under COSO ERM 2017, which principle does this escalation support?",
+    "choices": {
+      "A": "The board should delegate all risk decisions to the CRO to avoid second-guessing management",
+      "B": "The board should receive risk information only at the annual meeting to avoid information overload",
+      "C": "Escalation is unnecessary because management is best positioned to judge its own risk-taking",
+      "D": "The board's oversight role includes receiving timely information on material risks so it can challenge management and confirm responses align with appetite"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because delegating all risk decisions to the CRO abdicates board oversight. The board retains accountability for risk governance and must challenge management, not outsource the decision entirely to a single executive.",
+      "B": "Option B is wrong because limiting board risk information to the annual meeting would starve the board of timely material-risk updates. Escalation of material breaches requires timely information, not deferring all reporting to an annual cadence.",
+      "C": "Option C is wrong because management is a key risk owner, but the board's independent oversight exists precisely because management can be biased toward its own risk-taking. Escalation of material breaches provides the check the framework requires.",
+      "D": ""
+    },
+    "ec": "Under COSO ERM 2017, the board oversees risk and receives timely information on material risks so it can challenge management and confirm that risk-taking aligns with appetite. Escalating material breaches directly to the risk committee operationalizes that oversight duty — it ensures the board sees significant deviations promptly rather than at a scheduled annual review. Option B states this principle. Delegating to the CRO, trusting management's self-assessment alone, or limiting board information to annual meetings each weaken the independent oversight the framework requires.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating board oversight as optional or delegable",
+    "di": {
+      "A": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 3
+      },
+      "B": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Chooses this option based on a surface reading of the scenario",
+        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness": "Option A delegates to the CRO; Option B defers to annual reporting; Option C trusts management alone; Option D states the timely-information oversight principle.",
+    "ssk_rule": "The board oversees risk, receives timely material-risk information, and challenges management on appetite alignment (D.1).",
+    "ssk_app": "Direct escalation of material breaches gives the board timely information to challenge management and confirm appetite alignment.",
+    "ssk_conclusion": "The escalation supports board oversight — Option B.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Logistics insures its fleet against collision damage. Risk officer Maya Caldwell explains that the policy transfers part of the loss exposure to the insurer. Under COSO ERM 2017, which risk response does this represent, and what does the company retain?",
+    "choices": {
+      "A": "Share, because the insurer bears losses above the deductible while the company retains the deductible and premium cost",
+      "B": "Avoid, because the insurance eliminates all collision risk",
+      "C": "Reduce, because insurance lowers the likelihood of collisions",
+      "D": "Accept, because the company keeps the full loss regardless of the policy"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because insurance does not eliminate the risk; collisions can still occur, and the company retains the deductible and pays the premium. Avoid requires exiting the activity, which is not what insurance does.",
+      "C": "Option C is wrong because insurance transfers the financial consequence of a loss to the insurer; it does not reduce the likelihood of collisions. Likelihood reduction belongs to controls like driver training and vehicle maintenance, which are Reduce responses.",
+      "D": "Option D is wrong because Accept means retaining the risk without response. The company has transferred part of the exposure to the insurer, so the response is Share, not Accept — acceptance would mean carrying the full loss unaided."
+    },
+    "ec": "Under COSO ERM 2017, Share transfers a portion of the risk to another party. Purchasing insurance shifts the financial impact of collisions above the deductible to the insurer, while the company retains the deductible, the premium, and the residual uninsured exposure. Option A states this correctly. Insurance does not eliminate the risk (Avoid), does not reduce the likelihood (Reduce), and is not passive retention (Accept).",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing Share with Reduce or Avoid",
+    "di": {
+      "B": {
+        "misconception": "Believes insurance eliminates the risk",
+        "why_plausible": "Purchasing coverage feels like removing the problem, but the underlying event can still occur",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Believes insurance eliminates the risk",
+        "why_plausible": "Purchasing coverage feels like removing the problem, but the underlying event can still occur",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Sees any retained exposure as Accept",
+        "why_plausible": "The deductible means the company keeps some loss, tempting candidates to call it acceptance",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B treats insurance as Avoid; Option C as Reduce; Option D as Accept; Option A correctly identifies Share with retained deductible.",
+    "ssk_rule": "Share transfers a portion of risk to another party; retention of deductible and premium remains with the company (D.4).",
+    "ssk_app": "The fleet policy transfers collision losses above the deductible to the insurer while the company retains the deductible and premium.",
+    "ssk_conclusion": "Insurance is a Share response — Option A.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Manufacturing's board reviews a proposed acquisition that would double the company's debt. The CRO warns that the debt-to-EBITDA ratio would rise from 2.0x to 5.5x and downgrade probability from 10% to 45%. The CEO dismisses the analysis and tells the CRO to 'support the growth vision.' Under COSO ERM 2017, which cultural deficiency is most evident?",
+    "choices": {
+      "A": "A risk culture that over-communicates risk information to the board",
+      "B": "A risk culture where management cannot openly challenge strategy without fear of reprisal, suppressing the escalation of material risk information",
+      "C": "A risk culture that relies too heavily on quantitative models and ignores judgment",
+      "D": "A risk culture that is excessively conservative and blocks all growth"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because the deficiency is not over-communication; the CRO's material risk analysis was dismissed and the CRO told to support the vision. Suppressing dissenting risk information is the opposite of over-communicating.",
+      "B": "",
+      "C": "Option C is wrong because the deficiency is not over-reliance on models; the CRO used a reasonable quantitative assessment and was silenced. The problem is the response to the analysis — suppression of challenge — not the method that produced it.",
+      "D": "Option D is wrong because the CRO's caution on a doubling of leverage is a legitimate risk assessment, not excessive conservatism. Labeling the analysis 'too conservative' is the CEO's framing; the deficiency is the suppression of that legitimate challenge, not the analysis itself."
+    },
+    "ec": "Under COSO ERM 2017, a healthy risk culture enables open challenge and the escalation of risk information without fear of reprisal. Here the CEO dismissed a material risk analysis and instructed the CRO to 'support the growth vision,' which suppresses dissenting information and prevents the board from seeing the full risk picture. Option B identifies this deficiency — the inability to challenge strategy openly. It is not over-communication, not model dependence, and not excessive conservatism.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Attributing the deficiency to the CRO's analysis rather than the culture",
+    "di": {
+      "A": {
+        "misconception": "Calls the deficiency over-communication",
+        "why_plausible": "Risk reporting is prominent, so candidates may invert the suppression into excess communication",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Blames the quantitative method",
+        "why_plausible": "The CRO used numbers, inviting candidates to critique the model rather than the culture",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Calls legitimate caution excessive conservatism",
+        "why_plausible": "The CEO's framing is echoed in this option, making it a natural but incorrect reading",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A inverts suppression into over-communication; Option C blames the model; Option D echoes the CEO's framing; Option B identifies the suppression of challenge.",
+    "ssk_rule": "A sound risk culture supports open challenge and escalation of risk information without reprisal (D.1).",
+    "ssk_app": "The CEO dismissed the CRO's material risk analysis and instructed support for the vision, suppressing dissenting risk information.",
+    "ssk_conclusion": "The evident deficiency is suppression of challenge — Option B.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Holdings monitors its risk appetite using KRIs. Risk officer Maya Caldwell sets a threshold: when the currency exposure KRI exceeds 80% of the approved limit, the treasurer must report to the risk committee within five business days. Under COSO ERM 2017, which feature makes this KRI design effective?",
+    "choices": {
+      "A": "It sets the threshold at the absolute limit with no advance warning",
+      "B": "It reports the KRI only after the limit is exceeded, so no action is needed early",
+      "C": "It defines a trigger level that prompts escalation and a defined response before the limit is breached",
+      "D": "It monitors the KRI annually, matching the board's meeting schedule"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because setting the trigger at the absolute limit provides no advance warning; by the time it fires, the exposure has already reached the boundary and corrective action is reactive rather than preventive.",
+      "B": "Option B is wrong because an effective KRI threshold triggers escalation BEFORE the limit is breached so management can act while there is still headroom. Reporting only after the limit is exceeded converts the KRI into a lagging indicator of failure rather than a forward signal.",
+      "C": "",
+      "D": "Option D is wrong because annual monitoring is far too coarse for a currency exposure that can move daily. The KRI must be monitored at a cadence matching the risk's volatility so the trigger provides timely warning."
+    },
+    "ec": "Under COSO ERM 2017, effective KRIs are leading, measurable, and tied to defined triggers that prompt escalation and response. Setting the threshold at 80% of the approved limit with a defined reporting obligation creates advance warning: management acts while headroom remains rather than after the breach. Option A states this design. A trigger at the absolute limit, post-breach reporting, or annual monitoring each fail to provide the timely forward signal that makes a KRI decision-useful.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Setting KRI thresholds at the limit rather than below it",
+    "di": {
+      "A": {
+        "misconception": "Places the trigger at the absolute limit",
+        "why_plausible": "The limit is the obvious reference point, but a trigger there leaves no time to act",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Reports after the breach instead of before",
+        "why_plausible": "Post-breach reporting is a familiar control pattern, but it loses the forward-looking value of a KRI",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Places the trigger at the absolute limit",
+        "why_plausible": "The limit is the obvious reference point, but a trigger there leaves no time to act",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B reports after breach; Option C triggers at the limit; Option D monitors annually; Option A has the pre-limit trigger with defined response.",
+    "ssk_rule": "Effective KRIs have pre-limit triggers that prompt escalation and defined responses (D.5).",
+    "ssk_app": "The 80% threshold with a five-day reporting obligation gives advance warning before the currency limit is breached.",
+    "ssk_conclusion": "The pre-limit trigger with defined escalation makes the KRI effective — Option A.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Bank's operational risk team identifies a new vulnerability: a software update could corrupt customer account records. Risk analyst Lena Fischer asks how this exposure should be classified. Under COSO ERM 2017 risk taxonomy, which classification is correct?",
+    "choices": {
+      "A": "Strategic risk, because it affects the bank's reputation",
+      "B": "Compliance risk, because regulators require data accuracy",
+      "C": "Financial risk, because it could cause customer losses",
+      "D": "Operational risk, because it arises from a failure in systems and processes"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because strategic risk arises from external factors affecting the organization's direction. A software failure is an internal systems event, not a strategic-environment change, so it does not fit the strategic category.",
+      "B": "Option B is wrong because compliance risk arises from failing to meet regulatory obligations. While regulators require data accuracy, the source exposure is a systems failure; the compliance concern is a downstream consequence, not the classification of the risk.",
+      "C": "Option C is wrong because financial risk covers market, credit, and liquidity exposures. Customer losses from a records corruption are a consequence of the operational failure, not a market/credit/liquidity risk; the source exposure is operational.",
+      "D": ""
+    },
+    "ec": "Operational risk arises from inadequate or failed internal processes, people, and systems. A software update that could corrupt customer records is a systems failure — squarely operational risk. Option C states this classification. The reputation damage (strategic), regulatory concern (compliance), and customer losses (financial consequence) are downstream effects of the operational event, not the source classification.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Classifying by downstream effect rather than the source exposure",
+    "di": {
+      "A": {
+        "misconception": "Classifies by reputational consequence",
+        "why_plausible": "Reputation damage is a visible effect, inviting classification by outcome rather than source",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Classifies by reputational consequence",
+        "why_plausible": "Reputation damage is a visible effect, inviting classification by outcome rather than source",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Classifies by customer impact",
+        "why_plausible": "Customer losses sound financial, but the source is a systems failure",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A uses reputational effect; Option B uses regulatory concern; Option D uses customer impact; Option C correctly identifies the systems-failure source as operational risk.",
+    "ssk_rule": "Operational risk arises from failed internal processes, people, and systems (D.2).",
+    "ssk_app": "A software update corrupting records is a systems failure — operational risk, the source classification.",
+    "ssk_conclusion": "The exposure is operational risk — Option C.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Capital allocates capital across business units using risk-adjusted return. Unit A earns $12 million with $80 million of risk capital. Unit B earns $9 million with $45 million of risk capital. Risk officer Maya Caldwell uses return on risk-adjusted capital (RORAC) to rank the units. Under COSO ERM 2017, which unit ranks higher and why?",
+    "choices": {
+      "A": "Unit B at 20.0%, because it earns more return per dollar of risk capital",
+      "B": "Unit A at 15.0%, because it earns more absolute profit",
+      "C": "Unit A at 15.0%, because it has higher total revenue",
+      "D": "Unit B at 12.5%, because it uses less risk capital"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because Unit A's RORAC is $12M / $80M = 15.0%. Absolute profit favors A, but risk-adjusted ranking uses return per unit of risk capital, where B's 20.0% exceeds A's 15.0% — the absolute-profit argument is exactly the distortion RORAC corrects.",
+      "C": "Option C is wrong because RORAC is profit divided by risk capital, not revenue; total revenue is not part of the computation. Unit A's 15.0% is its RORAC, but the ranking compares returns per risk dollar, where B is higher.",
+      "D": "Option D is wrong because Unit B's RORAC is $9M / $45M = 20.0%, not 12.5%. The smaller capital base makes B's return per risk dollar higher, and 20.0% is the correct figure."
+    },
+    "ec": "Return on risk-adjusted capital = profit / risk capital. Unit X: $15M / $75M = 20.0%. Unit Y: $12M / $40M = 30.0%. Unit Y ranks higher because it earns more return per dollar of risk capital. Recomputed: 15/75 = 0.20; 12/40 = 0.30. Option A states the correct answer. Absolute profit is not the ranking criterion; the framework rewards capital efficiency relative to risk taken.",
+    "formula": "RORAC = Profit / Risk Capital",
+    "recomputed": "A: 12/80 = 0.15 (15.0%); B: 9/45 = 0.20 (20.0%)",
+    "trap": "Ranking by absolute profit instead of return on risk capital",
+    "di": {
+      "B": {
+        "misconception": "Ranks by absolute profit",
+        "why_plausible": "A's $12M is the larger number, and candidates may stop at absolute earnings",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Confuses revenue with profit in the ratio",
+        "why_plausible": "Revenue is a familiar performance measure, making it a plausible but wrong numerator",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ranks by absolute profit",
+        "why_plausible": "A's $12M is the larger number, and candidates may stop at absolute earnings",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A ranks by absolute profit; Option C uses revenue; Option D miscalculates B; Option B correctly states B's 20.0% return per risk dollar.",
+    "ssk_rule": "Risk-adjusted return ranks units by profit per unit of risk capital (D.5).",
+    "ssk_app": "A: 12/80 = 15.0%; B: 9/45 = 20.0%; B ranks higher on return per risk dollar.",
+    "ssk_conclusion": "Unit Y at 30.0% ranks higher — Option A.",
+    "cross_domain": [
+      "E"
+    ],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Manufacturing's internal audit finds that an employee embezzled funds because the employee faced severe personal financial pressure and the company lacked segregation of duties in the payables function. Risk officer Maya Caldwell maps this to the fraud triangle. Under COSO ERM 2017, which elements are present?",
+    "choices": {
+      "A": "Pressure and rationalization; opportunity is not yet evident from the facts",
+      "B": "Pressure and opportunity; rationalization is not yet evident from the facts",
+      "C": "Pressure, opportunity, and rationalization are all evident from the facts",
+      "D": "Opportunity and rationalization; pressure is not yet evident from the facts"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because the facts show opportunity (missing segregation of duties), not rationalization. Pressure (financial stress) is present, but substituting rationalization for opportunity misreads the scenario — no internal justification by the employee is described.",
+      "B": "",
+      "C": "Option C is wrong because rationalization is not evident from the facts. The scenario describes pressure and opportunity only; inferring the employee's internal justification would go beyond the stated evidence.",
+      "D": "Option D is wrong because the facts show pressure (severe personal financial stress), not rationalization. Opportunity is present, but the scenario gives no evidence of the employee's internal justification, so swapping pressure for rationalization misidentifies the elements."
+    },
+    "ec": "The fraud triangle comprises pressure, opportunity, and rationalization. The scenario evidences pressure (severe personal financial stress) and opportunity (absence of segregation of duties in payables). Rationalization — the employee's internal justification — is not described in the facts, so only two elements are evident. Option D states this. The framework holds that fraud becomes possible when these conditions align, and the audit finding cites the two that are present; it is not necessary to infer all three from the scenario.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Assuming all three fraud-triangle elements must be explicit",
+    "di": {
+      "A": {
+        "misconception": "Substitutes rationalization for opportunity",
+        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Substitutes rationalization for opportunity",
+        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Substitutes rationalization for opportunity",
+        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A swaps rationalization for opportunity; Option B swaps it for pressure; Option C infers all three; Option D correctly identifies the two evident elements.",
+    "ssk_rule": "Fraud triangle: pressure, opportunity, rationalization; only the elements evidenced in the facts are present (D.1).",
+    "ssk_app": "The facts show financial pressure and missing segregation of duties (opportunity); rationalization is not described.",
+    "ssk_conclusion": "Pressure and opportunity are evident — Option D.",
+    "cross_domain": [
+      "F"
+    ],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Manufacturing relies on a single supplier for a critical component. Risk analyst Priya Ramaswamy evaluates whether qualifying a second supplier would reduce the concentration risk. Under COSO ERM 2017, which response and consideration apply?",
+    "choices": {
+      "A": "Share, because the second supplier absorbs the risk entirely",
+      "B": "Accept, because supplier risk cannot be managed",
+      "C": "Reduce, but the company should weigh the added cost and whether dual-sourcing meaningfully lowers the joint failure probability",
+      "D": "Avoid, because the company should exit the product line"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because a second supplier does not transfer the risk to a third party; the company still owns the exposure, just with a reduced likelihood of failure. Share requires a transfer arrangement like insurance or a joint venture, which dual-sourcing is not.",
+      "B": "Option B is wrong because supplier concentration is a manageable risk: dual-sourcing, inventory buffers, and contractual remedies all reduce the exposure. Accepting it as unmanageable ignores the available Reduce responses.",
+      "C": "",
+      "D": "Option D is wrong because the company does not need to exit the product line to manage supplier concentration. Dual-sourcing reduces the risk while the company continues production, which is a Reduce response, not an Avoid exit."
+    },
+    "ec": "Qualifying a second supplier is a Reduce response: it lowers the likelihood of a supply failure by removing the single point of failure. Option C states the response and the economic consideration — the added qualification, testing, and per-unit costs must be weighed against the reduction in joint failure probability, consistent with the risk-response cost-benefit analysis under COSO ERM 2017. It is not a transfer (Share), not passive retention (Accept), and not an exit (Avoid).",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating dual-sourcing as Share or Avoid",
+    "di": {
+      "A": {
+        "misconception": "Treats a second supplier as a transfer",
+        "why_plausible": "Adding a supplier feels like sharing the risk, but the company retains ownership of the exposure",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Treats a second supplier as a transfer",
+        "why_plausible": "Adding a supplier feels like sharing the risk, but the company retains ownership of the exposure",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Calls for exiting the product line",
+        "why_plausible": "Avoid is a known response, and exiting seems decisive even though it is disproportionate here",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A treats dual-sourcing as Share; Option B declares it unmanageable; Option D calls for exit; Option C correctly identifies Reduce with the cost-benefit consideration.",
+    "ssk_rule": "Reduce lowers likelihood or impact; response selection weighs the cost of the response against the risk reduction (D.4).",
+    "ssk_app": "Qualifying a second supplier lowers joint failure probability; the company weighs added cost against the reduction.",
+    "ssk_conclusion": "The response is Reduce with a cost-benefit consideration — Option C.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Bank's board approves a risk appetite statement: maximum annual credit loss of $18 million and maximum single-name exposure of $30 million. A proposed $28 million loan to a diversified borrower is within the single-name limit. Risk analyst Lena Fischer checks the annual loss appetite. Under COSO ERM 2017, which statement is correct?",
+    "choices": {
+      "A": "The loan automatically violates the annual appetite because $28 million exceeds $18 million",
+      "B": "The appetite statement is irrelevant because the loan is below the single-name limit",
+      "C": "The annual appetite applies only to retail lending, not commercial loans",
+      "D": "The loan is within the single-name tolerance, but the portfolio must be monitored to confirm cumulative expected losses stay within the $18 million annual appetite"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because comparing the $28 million exposure to the $18 million appetite confuses an exposure amount with a loss limit. The appetite governs expected losses across the portfolio, not a single loan's face value.",
+      "B": "Option B is wrong because the single-name limit is one boundary, but the portfolio must also respect the annual loss appetite. Being within one limit does not make the appetite statement irrelevant; both constraints apply.",
+      "C": "Option C is wrong because the appetite statement is enterprise-wide; nothing in COSO ERM 2017 confines the annual loss appetite to retail lending. Commercial exposures count toward the same portfolio-level limit.",
+      "D": ""
+    },
+    "ec": "Risk appetite is a portfolio-level statement of the losses the bank is willing to accept — here $18 million of annual credit losses. The proposed $28 million loan is within the $30 million single-name tolerance band, but that is a transaction-level limit; the bank must still monitor cumulative expected losses to confirm they remain within the annual appetite. Option B states this. Comparing the $28 million exposure directly to the $18 million loss appetite confuses an exposure amount with a loss limit — the appetite governs expected losses across the portfolio, not a single loan's face value.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Comparing a loan's face value to an annual loss limit",
+    "di": {
+      "A": {
+        "misconception": "Compares the loan amount to the loss appetite directly",
+        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Compares the loan amount to the loss appetite directly",
+        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Compares the loan amount to the loss appetite directly",
+        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A compares exposure to the loss limit directly; Option C confines appetite to retail; Option D ignores the portfolio limit; Option B states the monitoring requirement.",
+    "ssk_rule": "Appetite is a portfolio-level loss limit; tolerance is transaction-level; both must be monitored (D.3).",
+    "ssk_app": "The loan is within the single-name tolerance, but cumulative expected losses must be monitored against the $18M annual appetite.",
+    "ssk_conclusion": "The portfolio must be monitored against annual appetite — Option B.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  },
+  {
+    "stem": "Flash Holdings' ERM team scans for emerging risks. Risk officer Maya Caldwell proposes a structured horizon-scanning process. Under COSO ERM 2017, which purpose does emerging-risk scanning best serve?",
+    "choices": {
+      "A": "Identifying risks that may become material in the future so the organization can monitor them and prepare responses before they crystallize",
+      "B": "Focusing exclusively on risks already in the register to confirm they are unchanged",
+      "C": "Replacing the risk register with a single forecast of the most likely future",
+      "D": "Eliminating all uncertainty by predicting every future event precisely"
+    },
+    "cc": "A",
+    "ew": {
+      "A": "",
+      "B": "Option B is wrong because scanning looks beyond the existing register — to new technologies, geopolitical shifts, and structural changes — rather than reconfirming known risks. Restricting it to the current register abandons the forward horizon it exists to cover.",
+      "C": "Option C is wrong because scanning does not replace the register with a single forecast; it broadens the view of plausible futures while the register continues to track known risks.",
+      "D": "Option D is wrong because no risk process eliminates all uncertainty; scanning reduces surprise by broadening the view of plausible futures, but prediction is inherently imperfect and the goal is preparedness, not certainty."
+    },
+    "ec": "Emerging-risk scanning under COSO ERM 2017 serves a forward-looking purpose: identifying risks that may become material so the organization can monitor them and prepare responses before they crystallize. Option D states this. It broadens the risk view beyond the current register to new drivers and structural changes. It does not eliminate uncertainty, does not confine itself to existing risks, and does not replace the register with a single forecast.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Confusing scanning with prediction or register maintenance",
+    "di": {
+      "B": {
+        "misconception": "Limits scanning to the existing register",
+        "why_plausible": "Register review is familiar, making it a plausible but backward-looking reading",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Reduces scanning to a single forecast",
+        "why_plausible": "Forecasting feels related to horizon scanning, but scanning explores multiple plausible futures",
+        "tier_candidate": 3
+      },
+      "D": {
+        "misconception": "Believes scanning eliminates uncertainty",
+        "why_plausible": "The promise of foresight is appealing, but scanning improves preparedness, not certainty",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness": "Option A promises certainty; Option B confines scanning to the register; Option C reduces it to a single forecast; Option D states the forward-monitoring purpose.",
+    "ssk_rule": "Emerging-risk scanning identifies potential future risks for monitoring and response preparation (D.5).",
+    "ssk_app": "Horizon scanning watches for risks that may become material so management can prepare before they crystallize.",
+    "ssk_conclusion": "Scanning serves forward monitoring and preparation — Option D.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Manufacturing evaluates whether to accept a residual operational risk after controls. Risk officer Maya Caldwell notes the residual expected loss of $400,000 sits within the $600,000 tolerance band and the cost of further controls exceeds the remaining benefit. Under COSO ERM 2017, which decision is most consistent with the framework?",
+    "choices": {
+      "A": "Reject the risk entirely because any residual risk is unacceptable",
+      "B": "Accept the residual risk, documenting that it is within tolerance and that further response is not cost-justified",
+      "C": "Apply additional controls regardless of cost because all risk must be minimized",
+      "D": "Transfer the risk to insurance even though the premium exceeds the expected benefit"
+    },
+    "cc": "B",
+    "ew": {
+      "A": "Option A is wrong because residual risk within tolerance is acceptable under COSO ERM 2017; the framework does not require zero residual risk. Rejecting all residual risk would distort decisions by forcing responses beyond the point where they add value.",
+      "B": "",
+      "C": "Option C is wrong because the framework balances risk and return: responses are applied where they are cost-effective, not without limit. Adding controls whose cost exceeds the remaining benefit misallocates resources even though it lowers risk.",
+      "D": "Option D is wrong because transferring risk costs the premium; when the premium exceeds the expected benefit, the transfer is not cost-justified and acceptance is the better response. Share is one option, not a mandate."
+    },
+    "ec": "Under COSO ERM 2017, acceptance is a legitimate risk response when the residual risk sits within tolerance and the cost of further response exceeds the benefit. With a residual expected loss of $400,000 inside the $600,000 tolerance band and further controls not cost-justified, the framework-consistent decision is to accept the residual risk and document the rationale — Option A. The tolerance test and cost-benefit test both support retention. The framework does not demand zero risk, unlimited control spending, or transfers whose cost exceeds benefit.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Believing residual risk must be minimized or eliminated",
+    "di": {
+      "A": {
+        "misconception": "Treats any residual risk as unacceptable",
+        "why_plausible": "Zero-risk thinking is intuitive but contradicts the appetite-and-tolerance framework",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Applies controls without cost limits",
+        "why_plausible": "Risk reduction feels virtuous, but the framework requires cost-justified responses",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Treats any residual risk as unacceptable",
+        "why_plausible": "Zero-risk thinking is intuitive but contradicts the appetite-and-tolerance framework",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option B demands zero residual risk; Option C ignores response cost; Option D transfers uneconomically; Option A is acceptance within tolerance with documentation.",
+    "ssk_rule": "Accept is appropriate when residual risk is within tolerance and further response is not cost-justified (D.3/D.4).",
+    "ssk_app": "Residual EL of $400K is within the $600K tolerance and further controls exceed the benefit, so acceptance with documentation is consistent.",
+    "ssk_conclusion": "Accept the residual risk with documentation — Option A.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Capital's board requires a stress-test program for capital planning. Risk officer Maya Caldwell designs a severe but plausible downturn scenario. Under COSO ERM 2017, which use of the stress-test output best supports capital planning?",
+    "choices": {
+      "A": "Treating the stress scenario as a forecast of the most likely outcome and budgeting accordingly",
+      "B": "Using the stress results only to report to regulators, with no internal decision impact",
+      "C": "Using the stressed loss estimates to size capital buffers and set risk limits so the firm can absorb the scenario without breaching appetite",
+      "D": "Ignoring the stress output when it conflicts with the strategic plan"
+    },
+    "cc": "C",
+    "ew": {
+      "A": "Option A is wrong because a stress scenario is a severe plausible path, not a forecast of the most likely outcome; treating it as the base case would over-conserve capital and distort planning. Stress informs buffers and limits, not the base budget.",
+      "B": "Option B is wrong because the stress results should inform internal capital decisions, not just regulatory reporting. The exercise exists to connect severe-scenario losses to buffers and limits the firm actually uses.",
+      "C": "",
+      "D": "Option D is wrong because ignoring stress output that conflicts with the plan defeats the exercise; the framework requires the board to consider severe scenarios even when they are uncomfortable for the strategy."
+    },
+    "ec": "Under COSO ERM 2017, stress testing supports forward-looking decisions: the output should size capital buffers and set risk limits so the firm can absorb severe scenarios without breaching risk appetite. Option B states this use. A stress scenario is a plausible adverse path, not a forecast — it informs buffers and limits rather than the base budget. Using the results only for regulatory reporting, treating the scenario as the most likely outcome, or ignoring it when it conflicts with the plan each fail to connect the stress program to capital decisions.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Treating stress scenarios as forecasts",
+    "di": {
+      "A": {
+        "misconception": "Treats the severe scenario as the base forecast",
+        "why_plausible": "The scenario produces numbers that look like a budget input, inviting a forecast misreading",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Treats the severe scenario as the base forecast",
+        "why_plausible": "The scenario produces numbers that look like a budget input, inviting a forecast misreading",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Treats the severe scenario as the base forecast",
+        "why_plausible": "The scenario produces numbers that look like a budget input, inviting a forecast misreading",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A treats stress as forecast; Option C limits it to reporting; Option D ignores conflicting output; Option B connects stress output to capital buffers and limits.",
+    "ssk_rule": "Stress testing sizes capital buffers and sets limits so severe scenarios stay within appetite (D.5).",
+    "ssk_app": "Stressed loss estimates drive capital buffers and risk limits so the downturn can be absorbed within appetite.",
+    "ssk_conclusion": "Stress output informs capital buffers and limits — Option B.",
+    "cross_domain": [],
+    "authority_extra": []
+  },
+  {
+    "stem": "Flash Manufacturing assigns risk ownership for a newly identified supplier risk. Risk analyst Priya Ramaswamy proposes that the procurement director own the risk and be accountable for implementing the mitigation plan. Under COSO ERM 2017, which statement about risk ownership is correct?",
+    "choices": {
+      "A": "The risk owner must be the CRO, who alone is accountable for all risks",
+      "B": "Risk ownership ends once the risk is recorded in the register",
+      "C": "Risk owners are accountable only for identifying risks, not for response outcomes",
+      "D": "The risk owner should be the person best positioned to manage the risk and accountable for response implementation, with progress reported to the ERM function"
+    },
+    "cc": "D",
+    "ew": {
+      "A": "Option A is wrong because the CRO oversees the ERM process, but individual risk owners sit in the business — the procurement director owns supplier risk because they are best positioned to manage it. Centralizing ownership in the CRO would sever accountability from the operating line.",
+      "B": "Option B is wrong because risk ownership does not end once the risk is recorded in the register; the owner remains accountable for implementing responses, monitoring the risk, and reporting outcomes.",
+      "C": "Option C is wrong because risk owners are accountable for the full lifecycle: implementing responses, monitoring the risk, and reporting outcomes. Ownership that stops at the register entry would leave mitigation unowned and unexecuted.",
+      "D": ""
+    },
+    "ec": "Under COSO ERM 2017, each risk needs an owner: the person best positioned to manage it, accountable for implementing the response and for the risk's ongoing management, with progress reported to the ERM function. Option C states this. For a supplier risk, the procurement director is the natural owner. Ownership does not end at registration, is not the CRO's exclusive burden, and includes response outcomes — not just identification.",
+    "formula": "",
+    "recomputed": "",
+    "trap": "Centralizing risk ownership in the CRO",
+    "di": {
+      "A": {
+        "misconception": "Makes the CRO the sole owner of all risks",
+        "why_plausible": "The CRO is the risk leader, making centralization a plausible but wrong reading",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Makes the CRO the sole owner of all risks",
+        "why_plausible": "The CRO is the risk leader, making centralization a plausible but wrong reading",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Makes the CRO the sole owner of all risks",
+        "why_plausible": "The CRO is the risk leader, making centralization a plausible but wrong reading",
+        "tier_candidate": 3
+      }
+    },
+    "uniqueness": "Option A centralizes ownership in the CRO; Option B ends ownership at registration; Option D limits it to identification; Option C states the best-positioned-owner principle.",
+    "ssk_rule": "Risk owners are best-positioned managers accountable for response implementation and ongoing risk management (D.1).",
+    "ssk_app": "The procurement director owns the supplier risk because they are best positioned to implement the mitigation plan.",
+    "ssk_conclusion": "The procurement director is the accountable owner — Option C.",
+    "cross_domain": [],
+    "authority_extra": [],
+    "calc": false
+  }
+]

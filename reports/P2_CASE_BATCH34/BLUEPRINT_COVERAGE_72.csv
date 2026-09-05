@@ -1,0 +1,7 @@
+Domain,DomainName,Batch1,Batch2,Batch3-4,Total,Target75,Coverage
+A,"Financial Statement Analysis",8,2,3,13,15,86.7%
+B,"Corporate Finance",8,1,3,12,15,80.0%
+C,"Decision Analysis",9,2,3,14,18,77.8%
+D,"Risk Management",6,1,3,10,8,125.0%
+E,"Investment Decisions",7,1,3,11,7,157.1%
+F,"Professional Ethics",7,2,3,12,12,100.0%

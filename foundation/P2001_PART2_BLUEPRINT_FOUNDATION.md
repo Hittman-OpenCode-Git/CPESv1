@@ -275,13 +275,13 @@ Each MCQ item is one JSON object — single-object architecture from Day 1 (elim
 | F — Professional Ethics | 15% | 12 | 60-72 |
 | **Total** | **100%** | **75** | **375-450** |
 
-### Case Pack Organization (3 packs × 25 cases)
+### Case Pack Organization (3 packs × 33/33/34 cases)
 
 | Pack | Section Distribution | Cases | Items |
 |------|---------------------|-------|-------|
-| `case_pack_p2_1.js` | A:6, B:5, C:6, D:3, E:3, F:2 | 25 | ~133 |
-| `case_pack_p2_2.js` | A:4, B:5, C:6, D:3, E:2, F:5 | 25 | ~133 |
-| `case_pack_p2_3.js` | A:5, B:5, C:6, D:2, E:2, F:5 | 25 | ~134 |
+| `case_pack_p2_1.js` | A:8, B:6, C:8, D:4, E:4, F:3 | 33 | ~176 |
+| `case_pack_p2_2.js` | A:5, B:6, C:8, D:4, E:3, F:7 | 33 | ~176 |
+| `case_pack_p2_3.js` | A:6, B:6, C:8, D:3, E:3, F:8 | 34 | ~181 |
 
 ### CaseID Format
 `CBQ2{Pack}-{Section}{Seq}` (e.g., `CBQ2-A1`, `CBQ2-B15`)
@@ -420,12 +420,13 @@ Each MCQ item is one JSON object — single-object architecture from Day 1 (elim
 ├── styles.css               (identical to Part 1)
 ├── pack_p2_a.js             (Domain A: 500 items)
 ├── pack_p2_b.js             (Domain B: 500 items)
-├── pack_p2_c.js             (Domain C: 500 items)
-├── pack_p2_d.js             (Domain D+E: 500 items)
-├── pack_p2_e.js             (Domain F + Cross: 500 items)
-├── case_pack_p2_1.js        (25 cases)
-├── case_pack_p2_2.js        (25 cases)
-├── case_pack_p2_3.js        (25 cases)
+├── pack_p2_c.js             (Domain C: 750 items)
+├── pack_p2_d.js             (Domain D: 500 items)
+├── pack_p2_e.js             (Domain E: 500 items)
+├── pack_p2_f.js             (Domain F: 500 items)
+├── case_pack_p2_1.js        (33 cases)
+├── case_pack_p2_2.js        (33 cases)
+├── case_pack_p2_3.js        (34 cases)
 ├── package.json
 ├── package-lock.json
 ├── opencode.json

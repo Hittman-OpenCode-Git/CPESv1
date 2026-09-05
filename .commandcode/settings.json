@@ -1,6 +1,8 @@
 {
   "permissions": {
     "allow": [
+      "Edit(.commandcode/scratchpad/**)",
+      "Write(.commandcode/scratchpad/**)",
       "Shell(node -e \" const fs = require('fs'); const files = ['content/cases/legacy/scored_cases.js','content/cases/legacy/scored_cases2.js','content/cases/legacy/scored_cases3.js','content/cases/legacy/scored_cases4.js','scored_cases5.js']; const results = []; for (const f of files) { const content = fs.readFileSync(f, 'utf8'); const prodCount = (content.match(/\\\"ProductionStatus\\\": \\\"Production\\\"/g) || []).length; const draftCount = (content.match(/\\\"ProductionStatus\\\": \\\"Draft\\\"/g) || []).length; const qsCount = (content.match(/\\\"question_state\\\"/g) || []).length; const prodLines = []; const lines = content.split('\\n'); lines.forEach((l,i) => { if (l.includes('\\\"ProductionStatus\\\": \\\"Production\\\"')) prodLines.push(i+1 + ': ' + l.trim()); }); results.push({ file: f, prod: prodCount, draft: draftCount, qs: qsCount, prodLines: prodLines.slice(0,5) }); } results.forEach(r => console.log(JSON.stringify(r, null, 2))); \")",
       "powershell",
       "Shell(node scripts/session65_fix_case_governance.js)",

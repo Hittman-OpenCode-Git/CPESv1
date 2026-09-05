@@ -32562,3 +32562,60 @@ test:parser 20/20 · harness ALL GATES · validate Errors 0/WARN/exit 0 (warning
 4. **§19.4 Part 2 Certification Clone Gate** — before any Part 2 cert batch flip, scan across ALL packs on (numeric-literal multiset + Topic) to catch rotation-clones that Jaccard misses. *Finding: DL-046-P2 / P2-059*.
 
 **Verification carried into the board record:** preflight 0 divergences (74/74), thorough_test 31/31, smoke PASS, focused pause+confirm verification 15/15, app.js/styles.css syntax OK, Certified pool 2,620 unchanged. Backups: `backups/app.js.bak-pauseconfirm-20260831113211`, `backups/styles.css.bak-pauseconfirm-20260831113211`.
+
+---
+
+## 2026-09-05 — DL-047 Remediation + Recertification (10 Certified Items, User-Authorized)
+
+**Type:** WRITE — Full Governance Lane. User-authorized ("remediate the affected materials and recertify") following the 2026-09-05 DL-047 read-only audit (learner-spouse challenge, both upheld).
+
+**T0:** `npm run preflight` PASS — 0 divergences, 2,620 Certified, guard 74/74. `CURRENT_BASELINES.md` §2 snapshot confirmed (2,620 pool).
+
+**Backups (§3, verified pre-write, all non-zero):** `backups/pack_a_corrected.js.bak-DL047-20260905143918` (2,350,394 B), `pack_b` (1,494,768), `pack_c` (2,191,623), `pack_d` (2,581,128), `pack_e` (2,383,111).
+
+**Method:** Per-item `Certified` → `In Audit` (delivery quarantine — pool pulls Certified-only) → surgical in-block content replacement → verify → `Certified` + `recertification_batch`/`recertification_date` stamps (original `certification_batch` preserved). Engine: byte-exact anchors with count==1 assertions, whole-item splice, two-phase commit (all items validated before any file write), post-edit re-parse; dry runs clean before every write. Per-pack change-sets of 3/4/1/1/1 objects (Rule 5 compliant, no BLOCK-AUTHORIZED needed).
+
+**Rule 4 — independent derivation notes (each key flip independently verified):**
+
+| QID | Flip | Independent derivation (verified) |
+|-----|------|-----------------------------------|
+| P1-F-009 | D→C | Late-arrival-after-decision = timeliness by definition; validity requires format/range facts, none in stem |
+| P1-E-056 | D→B | Custodian + no independent oversight = SoD failure (COSO P10); D ("required for cycle counts") is false — independence is required |
+| P1-F-054 | A→D | Metric 5 is a confirmed GAAP error (superseded 2018 indenture); known-error outranks risk-only metrics |
+| P1-EC-001 | D→A | Three-way authorize/record/reconcile split = textbook segregation of duties |
+| P1-EC-005 | B→A | Same skeleton as EC-001 → segregation of duties |
+| P1-EC-010 | C→B | "Five integrated components" of internal control = COSO IC-IF by definition |
+| P1-EC-055 | D→C | Small-firm SoD infeasible → compensating owner review (standard); D (eliminate controls) is anti-control |
+| P1-DD-022 | B intact | R-squared 0.82 → purchase orders (cause-and-effect criterion); EW-only rewrite |
+| P1B-B-102 | B intact | Direct materials purchases budget is operating; EW-only rewrite |
+| P1E-C-092 | D intact | Stem completed ($500K/$4.5M/$5M ⇒ exactly 10%, matching EC/EW facts); choice D rewritten from fragment |
+
+**Verification:** per-item asserts (state, CC, exact EW/EC text, CC-slot empty, all non-CC slots ≥ 50 chars) ALL PASS × 10 items × 2 phases; DL-047 4-screen re-run: all 10 signatures gone (B 24→16 = documented FP set; C 1→0; D 14→12 = style set); git diff confirms exactly 10 hunk clusters (one per item, zero stray); Tend `npm run pipeline` GREEN; Tend preflight 0 divergences (2,620 Certified).
+
+**Rule compliance:** Rule 1 (10×2 state flips paired to this entry) ✓; Rules 2/6 (0 DL-008/DL-026 on all 10) ✓; Rule 9 (no Yes/No choice edits except C1's affirmatively-aligned D) ✓; Rule 10 (no absent non-CC slots) ✓; Rule 11 (no CognitiveLevel changes) ✓; Rule 12 (no relabeling) ✓; Rule 13 (Part1OnlyFlag untouched) ✓; Rule 14 (QIDs untouched) ✓; Rule 4 (derivation table above) ✓; Rule 5 (batches ≤ 4) ✓.
+
+**Rule 7 incident (documented, resolved):** attempted hand-sync of `CURRENT_BASELINES.md` §1 hashes/provenance was BLOCKED ×3 by governance-guard Rule 7 (derived registry — correct block). Three companion row edits had already applied; all three REVERTED immediately (originals contain regenerate/rebuild provenance, so reverts passed). `git diff` confirms the baselines file carries only pre-existing S918-Authoring changes — my session nets to zero. Pack §1 hashes are therefore stale pending a dedicated rebuild_baselines regeneration; defect status is authoritative in `DEFECT_LIBRARY.md` DL-047 (Resolved), not in baselines §3.
+
+**Stamps note:** `recertification_batch`/`recertification_date` added to all 10 items; the em-dash in the batch string is stored as a `\u2014` escape (functionally identical when parsed — verifier asserts exact decoded value; grep for the batch key or `DL-047`, not the literal dash).
+
+**Files changed:** `content/packs/pack_{a,b,c,d,e}_corrected.js` (10 items only); `knowledge/DEFECT_LIBRARY.md` (DL-047 → Resolved + correction table); `knowledge/REVISION_HISTORY.md` (this entry). Audit/apply/verify scripts retained outside repo (`C:\Users\User\AppData\Local\Temp\opencode\dl047_*.js`, reports). NOT changed: case packs, app/UI, registries, baselines (per Rule 7).
+
+---
+
+## 2026-09-05 — DL-047 Learner-Challenge Audit: Certified Answer-Key / Explanation Contradictions (Filed, Read-Only)
+
+**Type:** READ-ONLY audit + `DEFECT_LIBRARY.md` filing (Full Governance Lane). Zero pack writes; zero `question_state`, answer-key, explanation, or scoring changes.
+
+**Trigger:** Learner challenge (user's spouse) disputed two review-screen outcomes — P1-F-009 (answered C/Timeliness, marked wrong vs D/Validity) and P1-E-056 (answered B/segregation, marked wrong vs D/"required for cycle counts"). Both challenges UPHELD against raw file evidence.
+
+**T0:** `npm run preflight` PASS — 0 divergences, 2,620/2,620 Certified (500/500/500/500/620), guard 74/74.
+
+**Method (DL-029-compliant):** 4 deterministic screens over all 5 MCQ packs via `scripts/lib/pack_parser.js` within-object extraction (2,620/2,620 parsed = preflight QID total): (1) exact-phrase fingerprints of the two contaminant texts; (2) EC lead-token echo (flag best-recall ≠ CC, recall ≥ 0.50, margin ≥ 0.40); (3) EC–stem Jaccard < 0.05; (4) EW lowercase-fragment slots. Yields 3/24/1/14, stable across a consecutive re-run (§6). Every flag adjudicated by verbatim within-object extraction; UI field mapping verified against the learner screenshots (renderer exonerated — defect is in data).
+
+**Findings → DL-047 (filed this session, `knowledge/DEFECT_LIBRARY.md`):** 10 Certified items — 7 key inversions teaching a wrong answer as correct (P1-F-009→C, P1-E-056→B, P1-F-054→D, P1-EC-001→A, P1-EC-005→A, P1-EC-010→B, P1-EC-055→C), 2 intact-key explanation contaminations (P1-DD-022, P1B-B-102), 1 unanswerable-incomplete item (P1E-C-092). All ten pass every automated gate (DL-008/DL-026/Rule 9 = 0): the pipeline has no semantic key/explanation-agreement gate. Fingerprint screens show no spread of the two source contaminant texts beyond their source items.
+
+**Files changed:** `knowledge/DEFECT_LIBRARY.md` (DL-047 appended before the entry template); `knowledge/REVISION_HISTORY.md` (this entry). No pack, case, app, or registry files touched — backup protocol not triggered (no pack writes).
+
+**Governance notes:** (a) Remediation PROPOSED only (per-item key flips + EW re-authoring, Rule-5 batches, quarantine-first; priority A7 P1-EC-055 since D-as-correct teaches control elimination) — NOT executed; needs explicit authorization. (b) `CURRENT_BASELINES.md` §3 "learner pool confirmed clean" now carries a stale-scope caveat (structural defects only) — left untouched for the dedicated re-baseline process; flagging here instead of editing. (c) Case banks excluded from the audit (different schema, outside the challenged MCQ UI scope) — residual risk noted in DL-047.
+
+**Tend:** `npm run preflight` PASS — 0 divergences, Certified 2,620 unchanged, guard 74/74. Audit scripts retained outside the repo (`C:\Users\User\AppData\Local\Temp\opencode\dl047_audit.js`, `dl047_dump.js`, `dl047_audit_report.json`, `dl047_flagdump.txt`); detection rules fully documented in DL-047 for re-implementation.

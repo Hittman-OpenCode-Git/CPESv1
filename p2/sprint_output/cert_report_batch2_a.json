@@ -1,0 +1,510 @@
+{
+  "report_metadata": {
+    "batch_id": "pack_p2_a_batch2",
+    "certifier": "Independent Blind Certifier",
+    "certification_date": "2026-09-04",
+    "items_reviewed": 15,
+    "source_file": "p2/sprint_output/pack_p2_a_batch2.js",
+    "schema_version": "1.1",
+    "methodology": "Six-dimension independent verification per P2002_CERTIFICATION_STANDARD.md §A; structural checks per P2_SCHEMA_STANDARD.md §1"
+  },
+  "items": [
+    {
+      "QuestionID": "P2-A-516",
+      "Topic": "A.9 Residual dividend model calculation",
+      "CorrectChoice": "B",
+      "independent_derived_answer": "B",
+      "calculation_verification": {
+        "formula": "Residual Dividend = NI - (Target Equity Ratio × Capital Budget)",
+        "inputs": { "NI": 55000000, "Equity_Ratio": 0.40, "Capital_Budget": 120000000, "Shares": 10000000 },
+        "equity_needed": 48000000,
+        "residual": 7000000,
+        "dps": 0.70,
+        "match_stored": true,
+        "tolerance_check": "PASS (exact match)"
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Residual = $55M - (40% × $120M) = $7M; DPS = $7M/10M = $0.70. CC=B confirmed." },
+        "Precision": { "confidence": "HIGH", "notes": "Unambiguous fact pattern; single defensible answer; all inputs in stem." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply — straightforward formula application; no definition-match inflation (DL-031 clean)." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A: correct number wrong reasoning; C: wrong capital component (debt vs equity); D: ignores capital budget. Each targets distinct misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 maps to Financial Statement Analysis dividend policy. Topic accurate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Dividend policy is Part 2 Corporate Finance / FSA. No Part 1 overlap." }
+      },
+      "overall_confidence": "HIGH",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[B] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=198 chars, C=264 chars, D=228 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=334 chars)"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-517",
+      "Topic": "A.9 Lintner's dividend smoothing model",
+      "CorrectChoice": "A",
+      "independent_derived_answer": "B",
+      "calculation_verification": {
+        "formula": "Lintner: Adjusted Dividend = Current + Speed × (Target - Current)",
+        "inputs": { "Target_ratio": 0.40, "EPS": 3.20, "Current_Div": 1.60, "Speed": 0.25 },
+        "target_dividend": 1.28,
+        "gap": -0.32,
+        "adjustment": -0.08,
+        "lintner_result": 1.52,
+        "match_stored": false,
+        "discrepancy": "CC=A ($1.28) is the TARGET dividend before adjustment. Lintner model mechanically produces $1.52 (Option B). The explanation itself calculates $1.52 but then justifies A via behavioral resistance. The question asks 'What dividend should Crestview declare?' under Lintner's model — the mechanical answer is B ($1.36 applies speed to gap, but the correct mechanical result is $1.52). Neither A nor B matches the mechanical result exactly. A is the target, not the adjusted dividend."
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=A ($1.28) is the target payout, NOT the Lintner-adjusted dividend. The explanation calculates the adjusted dividend as $1.52 but then claims A is correct due to behavioral dividend resistance. The question tests Lintner's model mechanics — the model produces $1.52, not $1.28. Additionally, the distractor_intent field INCORRECTLY labels A as a distractor (misconception='Ignores adjustment speed') when A is the marked correct answer — a schema violation." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Fact pattern is clear but the question conflates mechanical model output with behavioral dividend policy. Two defensible answers depending on interpretation." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply is appropriate for Lintner model application." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "B applies speed to gap correctly but arrives at $1.36 (not $1.52 — arithmetic error in B's choice text). C misapplies speed to EPS. D overstates resistance. Distractors are plausible but B has an internal arithmetic error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 is appropriate for dividend policy models." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Lintner's model is Part 2 financial theory. No Part 1 overlap." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[A] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (B=264 chars, C=223 chars, D=202 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=461 chars)",
+        "distractor_intent_schema": "FAIL — distractor_intent labels A as distractor but A is marked CorrectChoice"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=A is the target payout, not the Lintner-adjusted dividend. Explanation calculates $1.52 but claims A. Distractor_intent incorrectly labels A as distractor. Requires answer key correction and distractor_intent fix."
+    },
+    {
+      "QuestionID": "P2-A-518",
+      "Topic": "A.9 Stock split effects on shares and par value",
+      "CorrectChoice": "C",
+      "independent_derived_answer": "C",
+      "calculation_verification": {
+        "formula": "Stock Split: Shares × Split Ratio; Par / Split Ratio",
+        "inputs": { "Shares_outstanding": 5000000, "Split_ratio": 3, "Par_value": 10 },
+        "new_shares": 15000000,
+        "new_par": 3.33,
+        "equity_unchanged": 80000000,
+        "match_stored": true,
+        "tolerance_check": "PASS"
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "3-for-1 split: 5M × 3 = 15M shares; $10/3 = $3.33 par. Equity unchanged. CC=C confirmed." },
+        "Precision": { "confidence": "HIGH", "notes": "Unambiguous fact pattern; straightforward mechanics." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Remember — factual recall of stock split mechanics. No DL-031 inflation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A reverses mechanics; B ignores par reduction; D claims equity increases (confuses with stock dividend). Each targets distinct misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate for equity structure topics." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Stock splits are Part 2 FSA. No Part 1 overlap." }
+      },
+      "overall_confidence": "HIGH",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[C] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=193 chars, B=208 chars, D=223 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-20 in formula master — stock splits)",
+        "EC_ge200_for_Remember": "N/A (Remember level, no ≥200 char EC requirement)"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-519",
+      "Topic": "A.9 Dividend reinvestment plans DRIPs",
+      "CorrectChoice": "D",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=D claims DRIP 'eliminates the ex-dividend price drop because all dividends are reinvested.' This is FALSE — the ex-dividend price adjustment is a mechanical exchange-listing event that occurs regardless of whether dividends are reinvested or paid as cash. The stock price drops by approximately the dividend amount on the ex-date irrespective of DRIP participation. The explanation itself states 'A DRIP reinvests dividends into additional shares, reducing the company cash outflow' and 'the 3% discount means new shares are issued below market price, diluting existing shareholders' — this supports A, not D." },
+        "Precision": { "confidence": "HIGH", "notes": "Fact pattern is clear; the error is in the answer key, not ambiguity." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand is appropriate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A correctly identifies cash flow and dilution effects; B claims false price floor; C denies any impact. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DRIPs are Part 2 dividend policy. No Part 1 overlap." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[D] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=267 chars, B=231 chars, C=195 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Understand": "PASS (EC=389 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=D is factually wrong. Ex-dividend price adjustment occurs mechanically regardless of DRIP participation. Explanation supports A (cash flow reduction + dilution). Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-520",
+      "Topic": "A.9 Information content and signaling of dividends",
+      "CorrectChoice": "B",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=B invokes the 'bird-in-the-hand theory' but the question stem explicitly asks about the 'information content hypothesis.' The explanation correctly describes the information content hypothesis (Kormendi & Lipe, 1983) and states it 'explains why markets react to dividend announcements' — this supports A, not B. B is a different theory entirely. The explanation even acknowledges A provides a 'partial explanation' but then claims B 'better explains' — contradicting the question's own framing." },
+        "Precision": { "confidence": "HIGH", "notes": "The question explicitly names the information content hypothesis. Only one theory matches." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand is appropriate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B invokes bird-in-the-hand; C invokes clientele; D invokes MM. All are real dividend theories but wrong for this question." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Information content hypothesis is Part 2 financial theory." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[B] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=281 chars, C=218 chars, D=248 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Understand": "PASS (EC=397 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=B invokes bird-in-the-hand theory but the question asks about information content hypothesis. Explanation correctly describes information content hypothesis supporting A. Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-521",
+      "Topic": "A.9 Bird-in-the-hand theory of dividends",
+      "CorrectChoice": "A",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Bird-in-the-hand theory (Gordon, 1959) argues investors value certain dividends over uncertain capital gains, producing lower required return and higher P/E. Northbridge's 18x P/E vs 14x industry is consistent. CC=A confirmed." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern; one theory directly matches the P/E premium observation." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Understand is appropriate for theory identification." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B predicts opposite (tax discount); C explains demand not premium; D contradicts MM. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Dividend theory is Part 2 financial theory." }
+      },
+      "overall_confidence": "HIGH",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[A] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (B=252 chars, C=198 chars, D=241 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Understand": "PASS (EC=341 chars)"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-522",
+      "Topic": "A.9 Tax effect theory of dividends",
+      "CorrectChoice": "C",
+      "independent_derived_answer": "B",
+      "calculation_verification": {
+        "formula": "After-Tax Wealth comparison",
+        "plan_a_dividend": 5.00,
+        "plan_a_tax": 1.00,
+        "plan_a_after_tax": 4.00,
+        "plan_b_gain": 25.00,
+        "plan_b_tax": 3.75,
+        "plan_b_after_tax": 41.25,
+        "conclusion": "Plan B produces greater after-tax wealth ($41.25 vs $4.00 per share equivalent)",
+        "match_stored": false,
+        "discrepancy": "CC=C claims equivalence; explanation explicitly shows Plan B produces higher after-tax wealth and states 'The repurchase produces higher after-tax wealth due to the 5-point rate differential and deferral benefit.' B is the correct answer."
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=C claims plans are equivalent. The explanation explicitly shows Plan B ($41.25 after-tax) > Plan A ($4.00 after-tax) and states 'The repurchase produces higher after-tax wealth.' The tax differential theory (Litzenberger & Ramaswamy, 1979) predicts B is superior. CC should be B." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern with explicit tax rates and basis." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply is appropriate for tax comparison." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A favors dividends despite higher rate; C claims equivalence; D states false tax treatment. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Tax differential theory is Part 2 corporate finance." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[C] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=203 chars, B=298 chars, D=158 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=393 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=C claims equivalence but explanation shows Plan B produces higher after-tax wealth. Tax differential theory confirms B is superior. Requires answer key correction to B."
+    },
+    {
+      "QuestionID": "P2-A-523",
+      "Topic": "A.9 Agency costs and dividend policy",
+      "CorrectChoice": "D",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=D states 'attracts income-oriented investors who monitor management more closely.' The explanation describes Jensen's (1986) free cash flow hypothesis: 'Paying a special dividend reduces the cash available for such spending. If Westfield subsequently needs capital... it must raise external equity or debt — subjecting the project to market scrutiny.' This is exactly what A states. D is a secondary clientele effect, not the primary agency cost mechanism." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern; one theory directly explains the agency mechanism." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Analyze is appropriate for agency cost analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B describes mechanical ROE; C confuses dividend increase with cut; D invokes clientele. All plausible but wrong." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Agency theory is Part 2 corporate finance." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[D] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=287 chars, B=231 chars, C=242 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Analyze": "PASS (EC=341 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=D invokes clientele monitoring but explanation describes Jensen's free cash flow hypothesis supporting A. Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-524",
+      "Topic": "A.9 Covenant restrictions on dividends",
+      "CorrectChoice": "B",
+      "independent_derived_answer": "A",
+      "calculation_verification": {
+        "formula": "Max Dividend = Greater of (50% × Cumulative NI) or ($10M floor)",
+        "inputs": { "Cumulative_NI": 32000000, "Payout_pct": 0.50, "Floor": 10000000 },
+        "pct_limit": 16000000,
+        "floor": 10000000,
+        "max_dividend": 16000000,
+        "proposed": 22000000,
+        "breach": true,
+        "match_stored": false,
+        "discrepancy": "CC=B says 'No, because the $10M floor applies and the proposed $22M exceeds it but does not breach the covenant.' This is wrong — the greater of $16M and $10M is $16M, and $22M > $16M = BREACH. The explanation confirms: 'The proposed $22M dividend exceeds this maximum by $6M, constituting a covenant breach. The CFO warning is correct.' CC should be A."
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=B claims no breach, but the greater-of test yields $16M and $22M > $16M = breach. The explanation explicitly confirms the breach and states 'The CFO warning is correct.' CC should be A (Yes, breach)." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear covenant terms; unambiguous calculation." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Apply is appropriate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B incorrectly selects floor; C also selects floor; D proposes period-splitting. All test distinct errors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Loan covenant analysis is Part 2 corporate finance." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[B] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=239 chars, C=195 chars, D=238 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=267 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=B claims no breach but explanation confirms breach ($22M > $16M max). Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-525",
+      "Topic": "A.9 Growth opportunity present value GOVP",
+      "CorrectChoice": "A",
+      "independent_derived_answer": "C (approximately)",
+      "calculation_verification": {
+        "formula": "PVGO = Market Price - (EPS / r)",
+        "inputs": { "Price": 60, "EPS": 4.00, "r": 0.12 },
+        "no_growth_value": 33.33,
+        "pvgo": 26.67,
+        "match_stored": false,
+        "discrepancy": "CC=A states '$12 per share' but PVGO = $60 - $33.33 = $26.67. The explanation confirms: 'PVGO = Price - No-Growth Value = $60 - $33.33 = $26.67.' The $12 figure has no derivation. CC should be approximately C ($26.67)."
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=A states PVGO = $12 but the formula gives PVGO = $60 - ($4/0.12) = $60 - $33.33 = $26.67. The explanation confirms $26.67. The $12 figure is unexplained and incorrect. Option C's text says '$33 per share' which is also wrong (confuses no-growth value with PVGO). The correct PVGO is $26.67, which matches none of the choices exactly. CC=A is wrong." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear inputs; unambiguous formula application." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze is appropriate for PVGO decomposition." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B misinterprets valuation; C confuses PVGO with no-growth value; D uses wrong formula. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "PVGO is Part 2 corporate valuation theory." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[A] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (B=239 chars, C=195 chars, D=211 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-21 in formula master)",
+        "EC_ge200_for_Analyze": "PASS (EC=349 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=A states PVGO=$12 but formula yields $26.67 (confirmed by explanation). No choice matches correct answer. Requires answer key correction and choice text revision."
+    },
+    {
+      "QuestionID": "P2-A-526",
+      "Topic": "A.9 Free cash flow hypothesis and dividends",
+      "CorrectChoice": "C",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=C states 'board proposal is incorrect because the $100M acquisition generates more value than the $80M dividend when the acquisition's NPV exceeds the cost of external financing.' The explanation describes the free cash flow hypothesis mechanism and states 'The board's $80M dividend reduces FCF to $40M, meaning the CEO can only fund $40M internally and must raise $60M externally — subjecting the acquisition to underwriter due diligence...' This supports A (board's proposal is correct because it forces external financing discipline). C's reasoning requires an unstated assumption about NPV that the explanation does not support." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern; the error is in the answer key." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Apply is appropriate for FCF hypothesis application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B assumes all retained FCF creates value; C conditions on unstated NPV; D misapplies MM. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "FCF hypothesis is Part 2 corporate finance theory." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[C] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=286 chars, B=221 chars, D=238 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=361 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=C claims board is incorrect but explanation supports A (board's proposal forces external financing discipline). Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-527",
+      "Topic": "A.9 Effect of dividend policy on WACC",
+      "CorrectChoice": "D",
+      "independent_derived_answer": "B",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=D claims 'WACC decreases because the lower payout ratio reduces the dividend component of WACC, directly lowering the weighted average.' WACC has NO dividend component. WACC = wd×rd×(1-t) + we×re. The explanation supports B: 'retained earnings fund projects earning 12% above the 10% cost of equity, increasing retained earnings growth and potentially lowering the cost of equity.' D's reasoning is factually wrong about WACC structure." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern; the error is in the answer key." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Evaluate is appropriate for WACC impact analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A assumes higher cost of equity; C invokes MM; D misidentifies dividend as WACC component. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "WACC analysis is Part 2 corporate finance." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[D] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=258 chars, B=259 chars, C=198 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Evaluate": "PASS (EC=322 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=D claims dividend is a WACC component (factually wrong). Explanation supports B (retained earnings fund above-cost-of-equity projects). Requires answer key correction to B."
+    },
+    {
+      "QuestionID": "P2-A-528",
+      "Topic": "A.9 Target payout ratio adjustment sticky dividends",
+      "CorrectChoice": "B",
+      "independent_derived_answer": "A",
+      "calculation_verification": null,
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=B attributes the pattern to 'residual dividend policy' where 'dividends equal earnings minus capital needs, explaining the variation around the 40% target.' But the dividend data shows SMOOTH, GRADUAL increases ($1.20→$1.30→$1.30→$1.40→$1.40) — classic Lintner smoothing, not residual policy. The explanation states: 'Lintner's (1956) dividend smoothing model predicts dividends are sticky — they adjust gradually toward the target payout ratio.' This supports A, not B." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear 5-year data pattern; one theory matches the gradual adjustment." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply is appropriate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A describes dividend smoothing; C claims constant dividends; D invokes clientele. All plausible theories." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Lintner's model is Part 2 dividend policy theory." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[B] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=245 chars, C=267 chars, D=211 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=305 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=B attributes pattern to residual policy but dividend data shows Lintner smoothing (gradual, sticky dividends). Explanation confirms Lintner's model. Requires answer key correction to A."
+    },
+    {
+      "QuestionID": "P2-A-529",
+      "Topic": "A.9 Agency costs of equity versus debt",
+      "CorrectChoice": "A",
+      "independent_derived_answer": "A",
+      "calculation_verification": {
+        "formula": "D/E ratio change",
+        "inputs": { "Assets": 800, "Debt": 320, "Equity": 480, "Dividend": 40 },
+        "pre_de_ratio": 0.67,
+        "post_equity": 440,
+        "post_de_ratio": 0.73,
+        "match_stored": true
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Dividend reduces equity ($480M→$440M), increases D/E (0.67→0.73). Reduces FCF (lowering equity agency cost per Jensen 1986) but raises leverage (increasing debt agency cost). Classic agency cost tradeoff. CC=A confirmed." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear fact pattern with explicit numbers." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Apply is appropriate for agency cost tradeoff analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B dismisses agency problems; C claims debt retirement eliminates all costs; D reverses dividend effect. Strong distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Agency theory is Part 2 corporate finance." }
+      },
+      "overall_confidence": "HIGH",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[A] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (B=222 chars, C=197 chars, D=199 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-22 in formula master)",
+        "EC_ge200_for_Apply": "PASS (EC=289 chars)"
+      },
+      "certification_eligible": true,
+      "hold_reason": ""
+    },
+    {
+      "QuestionID": "P2-A-530",
+      "Topic": "A.9 Sustainable growth rate and ROE decomposition",
+      "CorrectChoice": "C",
+      "independent_derived_answer": "A",
+      "calculation_verification": {
+        "formula": "DuPont: ROE = NPM × AT × EM; SGR = ROE × Retention Ratio",
+        "inputs": { "NI": 18, "Revenue": 150, "Assets": 200, "Equity": 100, "Payout": 0.40 },
+        "npm": 0.12,
+        "asset_turnover": 0.75,
+        "equity_multiplier": 2.0,
+        "roe": 0.18,
+        "retention": 0.60,
+        "sgr": 0.108,
+        "match_stored": true,
+        "note": "All three options A, B, C, D show ROE=18% and SGR=10.80%. The question is about which decomposition correctly identifies the KEY DRIVERS."
+      },
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CC=C states 'driven solely by profitability and retention' but the explanation says 'All three DuPont drivers contribute to the SGR: improving any one increases ROE and thus SGR.' Option A correctly identifies all three drivers (NPM, AT, EM) and states they all contribute. The explanation contradicts C by affirming all three drivers matter." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear data; the issue is in which decomposition is complete." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Analyze is appropriate for DuPont decomposition." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B excludes leverage; C oversimplifies; D uses two-component DuPont. All test different decomposition approaches." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag A.9 appropriate." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DuPont analysis and SGR are Part 2 FSA." }
+      },
+      "overall_confidence": "ZERO",
+      "structural_checks": {
+        "DL008_EW_CC_empty": "PASS (EW[C] = \"\")",
+        "DL026_nonCC_EW_ge50": "PASS (A=311 chars, B=293 chars, D=284 chars)",
+        "DL021_no_absent_fields": "PASS",
+        "Part2OnlyFlag_true": "PASS",
+        "all_required_fields_present": "PASS",
+        "source_ids_resolve": "PASS (FA-21 in formula master)",
+        "EC_ge200_for_Analyze": "PASS (EC=313 chars)"
+      },
+      "certification_eligible": false,
+      "hold_reason": "ZERO confidence on Correctness: CC=C claims 'solely by profitability and retention' but explanation confirms all three DuPont drivers contribute. Requires answer key correction to A."
+    }
+  ],
+  "summary": {
+    "total_items": 15,
+    "high_confidence": 4,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "zero_confidence": 11,
+    "certification_eligible": 4,
+    "holds": 11,
+    "structural_failures": 1,
+    "eligible_qids": ["P2-A-516", "P2-A-518", "P2-A-521", "P2-A-529"],
+    "held_qids": ["P2-A-517", "P2-A-519", "P2-A-520", "P2-A-522", "P2-A-523", "P2-A-524", "P2-A-525", "P2-A-526", "P2-A-527", "P2-A-528", "P2-A-530"]
+  },
+  "pattern_analysis": {
+    "systematic_answer_key_errors": "11 of 15 items have CC marking that contradicts the item's own ExplanationCorrect. In every case, the explanation correctly describes the concept but the CC points to a different choice. This suggests a batch-level answer-key rotation or mapping error during authoring.",
+    "common_failure_mode": "The explanation text is correct and well-written, but the CorrectChoice letter was assigned to the wrong option. The correct answer is typically identifiable from the ExplanationCorrect text.",
+    "source_id_misalignment": "All 15 items cite FA-22 (Dividend Payout Ratio) as source_id, but many test concepts beyond payout ratio (Lintner model, stock splits, DRIPs, information content hypothesis, agency costs, PVGO, DuPont). Source IDs should reference more specific formula master entries where available.",
+    "distractor_intent_schema_error": "P2-A-517 labels option A as a distractor in distractor_intent when A is the marked CorrectChoice — a v1.1 schema violation."
+  },
+  "overall_verdict": "FAIL",
+  "verdict_rationale": "11 of 15 items (73.3%) carry ZERO-confidence Correctness findings where the marked CorrectChoice contradicts the item's own ExplanationCorrect text. This is a systematic answer-key mapping error, not isolated defects. Only 4 items (P2-A-516, P2-A-518, P2-A-521, P2-A-529) pass all six dimensions at HIGH confidence. The batch cannot be certified until all 11 answer-key errors are corrected and independently re-verified."
+}

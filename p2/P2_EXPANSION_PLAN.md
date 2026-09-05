@@ -137,44 +137,48 @@ Part 1 case items are effectively binary — `correctCase` returns a boolean, an
 
 ### 3.1 Design constraint
 
-Match Part 1's scale (2,545 MCQs, ~500/pack, 5 packs) **and** honor the CSO weights. Part 1 achieves both because its weights are near-uniform (15/20/20/15/15/15). Part 2's are not (20/20/25/10/10/15), so a flat 500/pack cannot be weight-faithful. Two axes must be separated:
+Honor the CSO weights with a **500-item minimum per domain** and a **750-item cap** (25% weight → 750). Part 2's CSO weights (20/20/25/10/10/15) produce a non-uniform allocation across 6 packs:
 
-- **Domain item counts** → driven by CSO weight (correctness requirement)
-- **Pack file boundaries** → driven by file size and authoring-wave ergonomics (engineering convenience)
+- **Domain item counts** → driven by CSO weight (correctness requirement) with a 500-item floor
+- **Pack file boundaries** → one domain per pack, 6 packs total
 
-P2003 conflated them. Separating them resolves the §0.1 defect.
+P2003 conflated them. The prior 5-pack layout (§3.3 superseded) attempted flat 500/pack, which under-built Domain C by 125 items. The revised 6-pack layout resolves this.
 
-### 3.2 Recommended allocation — 2,500 MCQs
+### 3.2 Recommended allocation — 3,450 MCQs (revised 2026-09-04)
 
-| Domain | CSO | Target items | Actual | Delivered weight |
-|---|---|---|---|---|
-| A Financial Statement Analysis | 20% | 500 | **500** | 20.0% |
-| B Corporate Finance | 20% | 500 | **500** | 20.0% |
-| C Business Decision Analysis | 25% | 625 | **625** | 25.0% |
-| D Enterprise Risk Management | 10% | 250 | **250** | 10.0% |
-| E Capital Investment Decisions | 10% | 250 | **250** | 10.0% |
-| F Professional Ethics | 15% | 375 | **375** | 15.0% |
-| **Total** | **100%** | **2,500** | **2,500** | **100.0%** |
+Pack sizing rule: **25% CSO weight → 750 items; 20% → 600; 15% or less → 500.** This over-indexes the highest-weight domain (C) and provides a 500-item floor for every domain, ensuring no section is thin relative to exam representation.
 
-Zero divergence. Cross-domain items are *tagged* via `CrossDomainTags` (§1.2), not allocated a phantom domain — target ~125 items (5%) carrying a secondary tag, drawn from within the counts above.
+| Domain | CSO | Sizing rule | Target items | Current | Shortfall | Delivered weight |
+|---|---|---|---|---|---|---|
+| A Financial Statement Analysis | 20% | 20% → 600 | **600** | 500 | 100 | 17.4% |
+| B Corporate Finance | 20% | 20% → 600 | **600** | 500 | 100 | 17.4% |
+| C Decision Analysis | 25% | 25% → 750 | **750** | 620 | 130 | 21.7% |
+| D Enterprise Risk Management | 10% | ≤15% → 500 | **500** | 500 | 0 | 14.5% |
+| E Capital Investment Decisions | 10% | ≤15% → 500 | **500** | 500 | 0 | 14.5% |
+| F Professional Ethics | 15% | ≤15% → 500 | **500** | 500 | 0 | 14.5% |
+| **Total** | **100%** | | **3,450** | **3,120** | **330** | **100.0%** |
 
-### 3.3 Pack file layout — 5 packs
+Note: Delivered weight no longer matches CSO weight exactly because the 500-item floor for D/E/F over-indexes those domains (10% → 14.5%). This is intentional — a minimum pool of 500 items per domain is required for viable difficulty distribution, cognitive-level spread, and certification-ready depth. The CSO weight governs *exam* representation; pool sizing governs *preparation* breadth. Cross-domain items are *tagged* via `CrossDomainTags` (§1.2), not allocated a phantom domain — target ~175 items (5%) carrying a secondary tag, drawn from within the counts above.
 
-Keeps Part 1's 5-pack shape and the existing `pack_p2_a.js`–`pack_p2_e.js` filenames.
+### 3.3 Pack file layout — 6 packs (revised 2026-09-04)
+
+The 500-item-per-pack ceiling from Part 1 no longer fits: Pack C alone is 750 items (1.5× the ceiling). Adding a 6th pack restores manageable file sizes and keeps each pack ≤ ~3.5 MB.
 
 | Pack file | Contents | Items | Est. size |
 |---|---|---|---|
-| `pack_p2_a.js` | A complete | 500 | ~2.5 MB |
-| `pack_p2_b.js` | B complete | 500 | ~2.5 MB |
-| `pack_p2_c.js` | C: `P2-C-001`–`P2-C-500` | 500 | ~2.5 MB |
-| `pack_p2_d.js` | D (250) + E (250) | 500 | ~2.5 MB |
-| `pack_p2_e.js` | F (375) + C overflow `P2-C-501`–`P2-C-625` (125) | 500 | ~2.5 MB |
+| `pack_p2_a.js` | A complete | 600 | ~3.0 MB |
+| `pack_p2_b.js` | B complete | 600 | ~3.0 MB |
+| `pack_p2_c.js` | C: `P2-C-001`–`P2-C-750` | 750 | ~3.8 MB |
+| `pack_p2_d.js` | D complete | 500 | ~2.5 MB |
+| `pack_p2_e.js` | E complete | 500 | ~2.5 MB |
+| `pack_p2_f.js` | F complete | 500 | ~2.5 MB |
+| **Total** | | **3,450** | **~17.3 MB** |
 
-Every pack is exactly 500 items, so pack-level tooling, wave planning, and the ~2.5 MB file ceiling all match Part 1. Domain C simply spans two files — which is already the accepted pattern (P1's `MCQ_BANK_A` contains `P1-B-*` QIDs; pack D holds both D and E).
+Each domain lives in exactly one pack file — no cross-file domain splits. This eliminates the C-overflow pattern from the prior 5-pack layout and simplifies all domain-keyed tooling (validators, analytics, pool builders).
 
-**QID standard amendment:** extend the C range regex from `\d{3}` to `^P2-C-(\d{3})$` with range 001–625. Update `P2003_QID_STANDARD.md` §1.2 accordingly. Sections A/B/D/E/F keep 3-digit ranges.
+**QID standard amendment:** Pack C range extends to `P2-C-001` through `P2-C-750` (4-digit padding if needed: `P2-C-0001`–`P2-C-0750`). Packs A/B extend to 600. Packs D/E/F keep 500. Update `P2003_QID_STANDARD.md` §1.2 accordingly.
 
-> Alternative if a strict "one domain per file" rule is preferred: 6 packs (A 500, B 500, C 625, D 250, E 250, F 375). Rejected as the default — it breaks the 5-pack symmetry with Part 1 for no functional gain, and pack C at 625 exceeds the size band.
+> **Prior 5-pack layout (superseded):** 5 packs × 500 with C split across `pack_p2_c.js` (500) and `pack_p2_e.js` (125 overflow). Rejected because cross-file domain splits complicate every domain-keyed tool and the 625-item C target now exceeds what a single 500-item pack can hold.
 
 ### 3.4 CBQ volume
 
@@ -294,7 +298,7 @@ Nothing else starts until this is frozen.
 |---|---|
 | 1.1 | Ratify §1 MCQ schema + §2 CBQ schema; publish `P2004_SCHEMA_STANDARD.md` |
 | 1.2 | **Migrate the 100 live items in `pack_p2_a.js`**: `Type`→`ItemStyle`, `VerificationChecks`→`VerifiedChecks`, add `UniqueConceptKey`, add `SectionName`, drop the 5 unused fields (§1.3). Backup-before-write per §3. |
-| 1.3 | Amend `P2003_QID_STANDARD.md` §1.2 for the §3.2 allocation + C 001–625 range |
+| 1.3 | Amend `P2003_QID_STANDARD.md` §1.2 for the §3.2 allocation (A 001–600, B 001–600, C 001–750, D 001–500, E 001–500, F 001–500) |
 | 1.4 | Write `P2SchemaValidator.js`; run against the migrated 100 → must be 0 errors |
 | 1.5 | Author `exam-part-registry.js` with both part definitions (config only, not yet wired) |
 | 1.6 | REVISION_HISTORY.md + DEFECT_LIBRARY.md entries for the §0.1/§0.2 defects |
@@ -307,7 +311,7 @@ Nothing else starts until this is frozen.
 |---|---|
 | 2.1 | Fork wave-planner tooling for the §3.2 allocation |
 | 2.2 | Build domain reference kits (`P2C_REFERENCE.md` is the template — formulas, traps, field order, governance rules) for B, D, E, F |
-| 2.3 | Author in 100-item waves, weight-priority order: **C (625) → A (500) → B (500) → F (375) → D (250) → E (250)**. C first because it is the heaviest domain and the current shortfall. |
+| 2.3 | Author in 100-item waves, weight-priority order: **C (750) → A (600) → B (600) → F (500) → D (500) → E (500)**. C first because it is the heaviest domain and the current shortfall (130 items). |
 | 2.4 | Per wave: `P2SchemaValidator` → `P2FormulaValidator` → governance guard → REVISION_HISTORY entry |
 | 2.5 | CBQ authoring starts after MCQ domains A/B/C reach 50% (cases reuse MCQ scenario research) |
 | 2.6 | Certification sweeps per CAQS; target ≥95% Certified |
@@ -355,20 +359,24 @@ Phase 0 (0.5d) ─┐
                                                  └─> Phase 3 INTEGRATION (4-6d) ─┴─> Phase 4 QA (3-4d)
 ```
 
-Engineering total ≈ 10–14 days excluding content authoring. Content is the long pole: 2,500 MCQs + 75 CBQs at Part 1's observed wave throughput.
+Engineering total ≈ 10–14 days excluding content authoring. Content is the long pole: 3,450 MCQs + 75 CBQs at Part 1's observed wave throughput.
 
 ---
 
 ## 6. Decisions needed before Phase 1
 
 1. **Repo strategy.** P2001 §6 says separate repo + fork app.js. The audit recommends a shared registry in this repo. Forking duplicates 7,824 lines plus 30 May modules and doubles every future fix. **Recommend: single repo, config-driven.** Needs your call — it contradicts a committed decision.
-2. **Approve the §3.2 reallocation** (C 500→625, cross-domain pack dissolved into tags), which amends P2003.
+2. **Approve the §3.2 reallocation** (3,450 MCQs across 6 packs: A 600, B 600, C 750, D 500, E 500, F 500), which amends P2003.
 3. **Approve the §0.2 `Type`→`ItemStyle` rename** on the 100 live items.
 4. **Confirm 6–8 items per CBQ** as the essay-replacement target.
 
 ---
 
 *Read-only planning artifact. No pack, case, or app files were modified. Items 1–4 above are blocking for Phase 1.*
+
+**Revision history:**
+- 2026-08-03: Initial version — 2,500 MCQs across 5 packs.
+- 2026-09-04: Revised pack sizing — 3,450 MCQs across 6 packs. Rule: 25% CSO → 750, 20% → 600, ≤15% → 500. One domain per pack file.
 
 
 

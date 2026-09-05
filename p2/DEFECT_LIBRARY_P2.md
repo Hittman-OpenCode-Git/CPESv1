@@ -698,3 +698,152 @@ Label-only relabel `"Mod-Easy"` → `"Moderate-Easy"` on all 22 items via `C:\Us
 - Fix script: `C:\Users\User\AppData\Local\Temp\opencode\fix_modeasy.js`
 - Registered Difficulty enumeration: `knowledge/TAXONOMY_REGISTRY.md` §6
 - Session entry: `knowledge/REVISION_HISTORY_P2.md` §P2-076
+
+
+---
+
+## DL-P2-017 � Flash-Wave MCQ Answer-Key Rotation Defect (141 items, 6 packs)
+
+```
+Defect ID        DL-P2-017
+Class            Content
+Domain           Answer-Key Integrity � stored CorrectChoice contradicts the item''s own ExplanationCorrect
+Severity         Critical (wrong answer key in Unprocessed candidate pool; 141 of 825 audited candidates affected)
+Detected By      Build-Time AI Verification � P2-CERT-AUDIT session (2026-09-05) full-pool answer-key audit
+Status           Resolved � all 141 items repaired (CorrectChoice flipped or choice-set repaired), independently re-audited AGREE, then certified
+```
+
+### Issue
+
+The 2026-09-04 flash-wave authoring (Packs B/C/D/E/F, QID ranges P2-B-401�500, P2-C-381�620, P2-D-336�500, P2-E-256�500, P2-F-426�500) produced items where the stored `CorrectChoice` points to a wrong/discarded letter while the item's own `ExplanationCorrect` computes and endorses the true answer. Distractor `ExplanationWrong` slots frequently contained text like *"Option A ($56,250) is the actual correct calculation"* � a systematic rotation-template artifact. In a subset the correct value was not present in the choice set at all (choice-set defect).
+
+### Scope � 141 items
+
+| Pack | Defective | Pattern |
+|------|-----------|---------|
+| B | 1 | P2-B-440 (CTA $148,000 not in set) |
+| C | 29 | P2-C-531�620 wave (13 flips + 16 choice-set repairs) |
+| D | 2 | P2-D-415 (share vs reduce verdict), P2-D-463 (ranking order) |
+| E | 96 | P2-E-256�500 (58 flips + 38 choice-set repairs) |
+| F | 13 | P2-F-429�454 (flips) |
+| **Total** | **141** | |
+
+Additional 13 items flagged **UNCLEAR** (no single defensible answer / stripped numeric literals): P2-C-534, P2-C-558, P2-C-594, P2-C-595, P2-C-607, P2-C-614, P2-E-267, P2-E-274, P2-E-279, P2-E-282, P2-E-305, P2-E-310, P2-E-311 � **all 13 remediated and certified in the follow-on P2-UNCLEAR-FIX wave (2026-09-05):** restored literals (534, 607), answer-key fixes (E-305, E-310), choice-set/distractor repairs (C-558, E-267), and full rewrites (C-594, C-595, C-614, E-274, E-279, E-282, E-311). Independent re-audit 13/13 AGREE. No UNCLEAR items remain in the pool.
+
+### Root Cause
+
+Template-rotation authoring: answer keys assigned cyclically A?B?C?D without matching the placed correct answer. The `ExplanationCorrect` field was written for the true answer but the `CorrectChoice` letter was set by position, not content. Where a fourth distractor was discarded mid-draft, the correct value was omitted from the choice set.
+
+### Detection Rule
+
+For each item, independently derive the answer from stem + choices (ignoring stored key), compare to `CorrectChoice`, and verify `ExplanationCorrect` describes the stored letter. Flag any disagreement as DL-P2-017.
+
+### Correction
+
+- **Type 1 (flip):** `CorrectChoice` ? correct letter; `ExplanationWrong[newCC]` ? `""` (DL-008); `ExplanationWrong[oldCC]` authored with choice-specific distractor text; `ExplanationCorrect` updated where it referenced a now-wrong letter.
+- **Type 2 (choice-set repair):** replace the least-plausible distractor with the exact correct value; set `CorrectChoice` to that slot; clear `ExplanationWrong[newCC]`; author `ExplanationWrong[oldCC]`.
+- All applied in =30-item batches with backup-before-write per BACKUP_PROTOCOL.md. Post-fix independent re-audit: **0 MISMATCH** across all 141 repaired items (Pack C 29/29, Pack E 96/96, F/D/B 16/16 AGREE).
+
+### Regression
+
+- `preflight_p2`: 0 divergences; governance guard 74/74 PASS
+- Re-audit of all 141 fixed items: 141/141 AGREE
+- All 141 items subsequently certified (see REVISION_HISTORY_P2.md)
+
+### References
+
+- Session: P2-CERT-AUDIT (2026-09-05), full pool 825-candidate answer-key audit
+- Related Part 1 defect class: DL-030 (CorrectChoice answer-key errors)
+
+---
+
+## DL-P2-018 � Case-Study Answer-Key and Exhibit Defects (Pack 2 Unprocessed cases)
+
+```
+Defect ID        DL-P2-018
+Class            Content / Structural
+Domain           Case-Study Answer-Key + Exhibit Integrity
+Severity         High (6 of 11 audited Unprocessed cases had answer-key or exhibit defects)
+Detected By      Build-Time AI Verification � P2-CERT-AUDIT case audit (2026-09-05)
+Status           Resolved � 5 cases repaired and certified; 1 (CBQ22-B6) held Unprocessed
+```
+
+### Issue
+
+Six of the eleven Unprocessed cases appended to `case_pack_p2_2.js` in the P2-079 wave (2026-09-04) carried answer-key or exhibit defects:
+
+| Case | Defect | Disposition |
+|------|--------|-------------|
+| CBQ22-C5 (Alpine) | Q2 max CM stored 30000 (correct 32400); Q4 shadow price $6.00 absent from choices (stored $0.00); Q5 statement C false | Repaired + certified |
+| CBQ22-C6 (Cascade) | Q2 EVPI stored 8500000 (correct 2750000); Q3 stored C (correct B � pilot EMV $9.41M < $9.5M immediate entry) | Repaired + certified |
+| CBQ22-C7 (Halcyon) | E2 exhibit "midpoint" labeled $28.50 (correct $27.50 over $22�$33 range); row values recomputed | Repaired + certified |
+| CBQ22-C8 (Precision) | E1 "Normal CM $20" contradicted variable cost ($24 ? CM $31); E2 displacement premise conflicted with capacity; full coordinated reconstruction | Repaired + certified |
+| CBQ22-A4 (Sentinel DuPont) | Q1 ROE stored 14.70 (correct 6.39); Q2 EM stored 2.13 (correct 2.04); EC used invented NI $16,905K | Repaired + certified |
+| CBQ22-B6 (Orion) | E1/E2 numeric literals stripped (bond face, preferred price, common price, investment) | **Resolved — literals restored from explanation arithmetic (P2-B6-REMEDIATE, 2026-09-05); 6/6 answers independently verified AGREE; certified** |
+
+### Root Cause
+
+Same flash-wave authoring pipeline as DL-P2-017: answer keys set without reconciling exhibit data; exhibits drafted with placeholder/stripped literals that were never populated.
+
+### Correction
+
+Per-case remediation with backup-before-write: Correct values corrected, choice sets repaired, exhibits recomputed and made internally consistent, ScenarioText updated where the narrative cited wrong figures, ECs rewritten. Five cases certified after re-audit (all items AGREE). CBQ22-B6 held Unprocessed pending author restoration of the source numeric literals.
+
+### References
+
+- Session: P2-CERT-AUDIT (2026-09-05)
+
+---
+
+## DL-P2-019 � Duplicate CaseID Instances (CBQ22-A4 / CBQ22-F4)
+
+```
+Defect ID        DL-P2-019
+Class            Structural
+Domain           Case-ID Uniqueness / Governance
+Severity         High (two pairs of duplicate CaseIDs in case_pack_p2_2.js)
+Detected By      Build-Time AI Verification � P2-CERT-AUDIT case inventory (2026-09-05)
+Status           Resolved � newer instances re-keyed to CBQ22-A6 / CBQ22-F7
+```
+
+### Issue
+
+`case_pack_p2_2.js` contained two pairs of duplicate `CaseID` values: `CBQ22-A4` (Certified "Leverage Cascade" + Unprocessed "DuPont Decomposition") and `CBQ22-F4` (Certified "FCPA and Books-and-Records" + Unprocessed "Earnings Pressure"). The P2-079 authoring wave created new cases using CaseIDs already allocated to Certified cases.
+
+### Root Cause
+
+CaseID allocation was not checked against existing pack content during authoring; the wave reused CaseIDs A4 and F4 without detecting the collision.
+
+### Correction
+
+Re-keyed the Unprocessed instances to free CaseIDs: **CBQ22-A4 (DuPont) ? CBQ22-A6**, **CBQ22-F4 (Earnings Pressure) ? CBQ22-F7**. Updated CaseID, all ItemIDs, ExhibitIDs, and ReferencedBy references within each case object. Post-fix: 0 duplicate CaseIDs across pack 2 (33 unique / 33 cases).
+
+### Regression
+
+- CaseID uniqueness: 33/33 unique (was 31 distinct / 33 cases)
+- Both re-keyed cases certified successfully
+
+---
+
+## DL-P2-020 � Orphaned Duplicate Case Files (case_pack_p2_authored.js / case_pack_p2_C4_C8.js)
+
+```
+Defect ID        DL-P2-020
+Class            Structural / Process
+Domain           Repository Hygiene � orphaned authoring artifacts
+Severity         Medium (duplicate CaseIDs exist in un-referenced files)
+Detected By      Build-Time AI Verification � P2-CERT-AUDIT case inventory (2026-09-05)
+Status           Documented � files retained, not certified, no runtime reference
+```
+
+### Issue
+
+`p2/case_pack_p2_authored.js` (5 cases) and `p2/case_pack_p2_C4_C8.js` (5 cases) contain cases whose CaseIDs (CBQ22-A4/A5/F4/F5/F6 and CBQ22-C4�C8) already exist in `case_pack_p2_2.js` (identical items for C4�C8 and 3/5 authored cases; A4/F4 differ because pack 2 holds the reviewed versions). These files are legacy authoring artifacts whose content was integrated into Pack 2.
+
+### Detection Rule
+
+No registry, validator, or runtime loader references `case_pack_p2_authored.js` or `case_pack_p2_C4_C8.js` � verified via grep across `scripts/`. They are orphaned.
+
+### Disposition
+
+Files retained as historical artifacts; **not certified** (would create duplicate CaseIDs in the learner pool). No deletion performed (per AGENTS.md �3.1, deletion requires staged authorization). Recommended action for a future cleanup session: archive both files under `p2/` or delete with explicit user authorization.

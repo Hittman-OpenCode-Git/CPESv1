@@ -1,0 +1,220 @@
+var pack_p2_a_part5 = [
+{
+  "Authorities": [
+    "ASC 260-10 (Earnings Per Share)",
+    "ASC 730-10-25 (Research and Development — expense recognition)"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Harbor Analytics' P/E of 30.0 is unjustifiably high and reflects market overvaluation driven by AI hype. Given that both companies reported identical trailing 12% EPS growth, they should trade at similar P/E multiples of approximately 18 to 22. Okonkwo should recommend Summit as the superior acquisition target based on valuation discipline alone.",
+    "B": "Harbor's higher R&D expenditure at 22% of revenue versus Summit's 6% means Harbor's reported EPS of $2.80 is artificially depressed by GAAP accounting rules that require immediate expensing of R&D under ASC 730. If R&D were capitalized, Harbor's adjusted EPS would be substantially higher, and its true P/E would be below Summit's 18.0, making Harbor the unequivocally superior acquisition regardless of growth expectations.",
+    "C": "Summit's P/E of 18.0 represents better value because lower P/E stocks have historically outperformed higher P/E stocks over long investment horizons. The forward P/E compression at Harbor from 30.0 to 21.4 confirms that the stock is overpriced, and the price will likely decline to bring the multiple in line with the industry average.",
+    "D": "The P/E differential is driven by expectations of future growth, not current earnings. Harbor's forward P/E compression (30.0 to 21.4) reflects the market's expectation of 40% near-term EPS growth ($2.80 to $3.92), while Summit's modest forward P/E decline (18.0 to 17.0) reflects expected EPS growth of only 6%. The PEG ratio (P/E divided by growth rate) provides additional evidence: Harbor's trailing PEG of 1.07 (30.0 / 28%) versus Summit's trailing PEG of 2.25 (18.0 / 8%) suggests Harbor may actually be cheaper on a growth-adjusted basis despite its higher absolute P/E multiple."
+  },
+  "CognitiveLevel": "Evaluate",
+  "CommonTrapReference": "Rejecting high-P/E stocks as overvalued based solely on the absolute multiple without analyzing the forward P/E compression, PEG ratio, and whether the embedded growth expectations are supported by the company's market position and R&D investment intensity",
+  "CorrectChoice": "D",
+  "Difficulty": "Very Difficult",
+  "DifficultyScore": 5,
+  "ExplanationCorrect": "The P/E ratio does not exist in isolation — it is a function of expected future growth, risk, and the required rate of return. The observation that two companies reported identical trailing 12% EPS growth does not mean they should trade at similar P/E multiples if their expected future growth rates diverge. Harbor's P/E of 30.0 reflects the market's expectation that its earnings will grow rapidly: consensus expects $3.92 in next-year EPS (40% growth), and the long-term growth consensus of 28% implies the company is in an early-stage, high-growth market (AI-augmented analytics). The forward P/E of 21.4 demonstrates that the market already prices in substantial near-term growth. The PEG ratio (P/E divided by expected growth rate) normalizes the P/E for growth expectations. Harbor: trailing PEG = 30.0 / 28 = 1.07; forward PEG = 21.4 / 28 = 0.76. Summit: trailing PEG = 18.0 / 8 = 2.25; forward PEG = 17.0 / 8 = 2.13. A PEG ratio near or below 1.0 is generally considered attractive, while a PEG above 2.0 suggests the stock may be expensive relative to its growth. Under ASC 260-10, EPS is a historical measure that captures past performance, while P/E multiples reflect market expectations about future earnings. The analyst's task is not to reject high-P/E stocks as overvalued but to determine whether the embedded growth expectations are reasonable given the company's market position, competitive moat, R&D investment intensity, and addressable market. Harbor's high R&D spend (22% of revenue) is not an accounting distortion — it represents genuine investment in future products that, if successful, will generate the earnings growth the market expects. Whether Harbor is actually the better acquisition depends on whether Okonkwo believes the 28% growth consensus is achievable, which requires a deep assessment of Harbor's technology, market, and competitive position — not a mechanical P/E screen.",
+  "ExplanationWrongA": "This analysis commits two errors. First, it uses trailing P/E ratios to compare companies with different expected future growth rates. P/E multiples are forward-looking: a company expected to grow EPS at 28% (Harbor) deserves a higher trailing multiple than one expected to grow at 8% (Summit). Second, the claim that identical trailing 12% growth implies equivalent future growth prospects is a statistical fallacy — a single year of growth data does not determine the long-term growth trajectory, particularly when one company is pivoting into an expanding market (AI analytics) while the other operates in a mature segment (supply-chain logistics). The dismissal of Harbor as overvalued based solely on its higher absolute P/E without evaluating the sustainability and trajectory of its growth is an incomplete analysis.",
+  "ExplanationWrongB": "This analysis makes a valid observation — under ASC 730-10-25, R&D expenditures are generally expensed as incurred, which can depress reported EPS for high-R&D companies relative to their economic earnings. However, the analysis then overreaches in two ways. First, capitalizing R&D is an analytical adjustment that requires assumptions about the useful life and amortization schedule of R&D assets — the analysis provides none of these assumptions. Second, and more critically, the assertion that capitalizing R&D would make Harbor's adjusted P/E below Summit's 18.0 is an unsupported leap. Harbor's R&D spend of 22% on an implied revenue base would need to be quantified relative to EPS, and the capitalization adjustment would need to account for both the current year's R&D (capitalized) and the amortization of prior years' capitalized R&D (expensed). Without specifying the capitalization methodology, amortization period, and the resulting adjusted EPS, the conclusion that Harbor's true P/E is below Summit's is speculation dressed as analysis. R&D capitalization adjustments can be analytically useful but must be performed with rigor, not asserted as a conclusion.",
+  "ExplanationWrongC": "The historical observation that low-P/E stocks have outperformed over long horizons (the value premium) is a broad statistical tendency across diversified portfolios, not an investment rule applicable to every individual stock comparison. Applying this generalization to a specific pair of enterprise software companies without analyzing the underlying growth economics substitutes a heuristic for analysis. The forward P/E compression at Harbor from 30.0 to 21.4 does not confirm overvaluation — it confirms that the market expects rapid earnings growth that will bring the multiple down organically as earnings catch up to the stock price. If Harbor delivers the consensus $3.92 in EPS, the stock at $84 would trade at a forward P/E of 21.4 at the same price — meaning the stock price does not need to decline for the multiple to compress; earnings growth does the work. This distinction between multiple compression from price decline and multiple compression from earnings growth is fundamental to growth investing and is entirely missed by the low-P/E heuristic.",
+  "ExplanationWrongD": "",
+  "FormulaReference": "P/E Ratio = Stock Price / EPS; Forward P/E = Stock Price / Consensus Next-Year EPS; PEG Ratio = P/E Ratio / Expected EPS Growth Rate (%)",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-020",
+  "Section": "A",
+  "Stem": "Director of Finance David Okonkwo at Northstar Capital is comparing two acquisition targets in the enterprise software industry. Harbor Analytics trades at $84 per share with trailing twelve-month earnings per share of $2.80, yielding a P/E ratio of 30.0. Summit Logistics' technology subsidiary trades at $45 per share with trailing EPS of $2.50, yielding a P/E ratio of 18.0. Both companies reported the same EPS growth rate of 12% over the past year. Okonkwo's junior analyst argues that Summit is clearly the better value because its lower P/E ratio means the market is pricing it at a discount despite equivalent growth. However, Okonkwo digs deeper and discovers that Harbor's forward P/E (based on consensus next-year EPS estimates of $3.92) is 21.4, while Summit's forward P/E (based on consensus estimates of $2.65) is 17.0. Harbor's consensus long-term growth rate is 28%, while Summit's is 8%. Okonkwo also notes that Harbor's R&D expenditure as a percentage of revenue is 22%, versus 6% at Summit. Harbor operates in the rapidly expanding AI-augmented analytics market, while Summit's technology subsidiary serves the mature supply-chain logistics software segment. Which interpretation of the P/E differential best captures the analytical implications?",
+  "Topic": "A.020 price to earnings ratio growth expectations interpretation",
+  "UniqueConceptKey": "A-020-price-to-earnings-ratio-growth-expectations-interpretation",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC=B] empty (DL-008 compliant)",
+    "Non-CC EW slots >=75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Very Difficult justified by requiring multi-dimensional P/E interpretation including forward P/E, PEG ratio, growth trajectory analysis, and R&D capitalization considerations",
+    "Independent answer derived: B correctly identifies that P/E is driven by growth expectations and uses PEG ratio to demonstrate that Harbor may be cheaper on a growth-adjusted basis",
+    "Authority ASC 260-10 correct for EPS computation; ASC 730-10-25 correct for R&D expense recognition under U.S. GAAP"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205 — Presentation of Financial Statements"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+    "A": "Apex's ROE outperforms the sector because of superior operational efficiency, as evidenced by its consistently higher asset turnover ratio of 1.50 versus the sector median of 1.25.",
+    "B": "Apex's declining net profit margin is offset by sector-leading asset turnover, and the rising equity multiplier reflects normal capital structure optimization — no corrective action is warranted.",
+    "C": "Apex's ROE is sustainable because the equity multiplier increase from 1.85 to 3.00 reflects strategic share repurchases that reduce the equity base, signaling management confidence in future earnings growth.",
+    "D": "Apex's ROE stability masks a deteriorating operating performance offset by aggressive financial leverage; the debt-to-equity ratio has risen to 2.00, approaching the covenant limit of 2.50, and the net profit margin has fallen 38% from 6.5% to 4.0% in two years."
+  },
+  "CognitiveLevel": "Evaluate",
+  "CommonTrapReference": "Focusing on headline ROE without decomposing into its three DuPont components, which can mask deteriorating operating performance behind increasing financial leverage",
+  "CorrectChoice": "D",
+  "Difficulty": "Very Difficult",
+  "DifficultyScore": 5,
+  "ExplanationCorrect": "Under the DuPont framework, ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier. Apex's 2026 ROE: 4.0% × 1.50 × 3.00 = 18.0%. While headline ROE has remained stable at 18.0% across all three years, the decomposition reveals a troubling shift in its composition: NPM has steadily declined from 6.5% to 4.0% (a 38% erosion), while EM has surged from 1.85 to 3.00 (a 62% increase). The EM of 3.00 implies a debt-to-equity ratio of EM − 1 = 2.00 (since EM = Total Assets ÷ Equity, and D/E = (Total Assets − Equity) ÷ Equity = EM − 1). This D/E of 2.00 approaches the bank covenant limit of 2.50 and represents a doubling from the 2024 level of 0.85 (EM 1.85 − 1). The asset turnover has remained flat at 1.50 — contributing nothing to ROE stability. The ROE is being propped up entirely by financial leverage while the operational core of the business is weakening. Per the DuPont analytical framework, when ROE stability is achieved through increasing leverage while profitability declines, the quality and sustainability of ROE are compromised — a conclusion Ms. Chen must communicate to the board before the covenant review.",
+  "ExplanationWrongA": "While Apex's asset turnover of 1.50 does exceed the sector median of 1.25, this 20% premium is modest relative to the net profit margin gap: Apex's NPM of 4.0% is half the sector median of 8.0%. The DuPont decomposition shows that Apex's ROE of 18.0% versus the sector's 15.0% is achieved through an equity multiplier of 3.00 (double the sector's 1.50), not through operational efficiency. The 50% NPM deficit cannot be compensated by a 20% TAT advantage — the ROE premium is leverage-driven.",
+  "ExplanationWrongB": "Apex's asset turnover of 1.50 exceeds the sector median of 1.25 by only 20%, while its net profit margin of 4.0% is 50% below the sector median of 8.0%. The magnitude of the profitability decline overwhelms the modest turnover advantage. Moreover, calling the EM surge from 1.85 to 3.00 'normal capital structure optimization' is incorrect — a 62% increase in the equity multiplier in two years, absent corresponding profit growth, indicates an unsustainable debt accumulation pattern that has driven D/E to 2.00, just 0.50 below the covenant breach threshold. Corrective action is warranted.",
+  "ExplanationWrongC": "The question contains no evidence of share repurchase activity. The equity multiplier increase from 1.85 to 3.00 — a 62% rise over two years — implies a near-doubling of debt relative to equity (D/E from 0.85 to 2.00). In a capital-intensive manufacturing company, an EM increase of this magnitude without corresponding profit growth strongly indicates rising debt, not equity reduction from buybacks. Share repurchases would also reduce total assets (cash used to buy equity), which would manifest as a changing asset turnover — but Apex's TAT remained flat at 1.50 throughout the period.",
+  "ExplanationWrongD": "",
+  "FormulaReference": "DuPont ROE Decomposition: ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-021",
+  "Section": "A",
+  "Stem": "Sarah Chen, VP of Finance at Apex Manufacturing, is reviewing the company's three-year ROE trend ahead of a debt covenant review with First Commercial Bank. Apex's ROE has remained steady at 18.0% over the past three years, while the industrial manufacturing sector median has been 15.0%. However, Ms. Chen is concerned about the quality of Apex's ROE. She has compiled the following DuPont component data:\n\n| Component | 2024 | 2025 | 2026 | Sector Median (2026) |\n|-----------|------|------|------|----------------------|\n| Net Profit Margin | 6.5% | 5.2% | 4.0% | 8.0% |\n| Total Asset Turnover | 1.50 | 1.48 | 1.50 | 1.25 |\n| Equity Multiplier | 1.85 | 2.34 | 3.00 | 1.50 |\n\nFirst Commercial Bank's covenant requires Apex to maintain a debt-to-equity ratio below 2.50. Ms. Chen must present her assessment of Apex's ROE quality to the board before the loan review next week. Which of the following is the most accurate evaluation of Apex's ROE performance?",
+  "Topic": "A.021 DuPont ROE decomposition and driver identification",
+  "UniqueConceptKey": "A-021-dupont-roe-decomposition-and-driver-identification",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires multi-year decomposition, trend analysis, covenant interpretation, and judgment about ROE quality",
+    "Independent DuPont decomposition calculation matches stored CorrectChoice",
+    "Authority citation matches tested concept — ASC 205 governs financial statement presentation and trend analysis"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205 — Presentation of Financial Statements"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Proposal Alpha, because improving net profit margin by 200 basis points has a multiplicative effect across the entire DuPont framework, yielding ROE = 9.0% × 1.80 × 1.80 = 29.2%.",
+    "B": "Proposal Beta, because inventory rationalization is the lowest-risk strategy and improves ROE to 7.0% × 2.40 × 1.80 = 30.2%, which is higher than Alpha's 29.2%.",
+    "C": "Proposal Gamma, because issuing debt to repurchase equity raises ROE to 7.0% × 2.00 × 2.25 = 31.5%, the highest projected ROE among all four proposals.",
+    "D": "Proposal Delta, because the balanced approach diversifies improvement across two DuPont components, yielding ROE = 8.0% × 2.15 × 1.80 = 31.0%, and avoids the concentration risk of single-lever strategies."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Evaluating strategic proposals based solely on ROE magnitude without considering which DuPont lever drives the improvement and the associated change in financial risk",
+  "CorrectChoice": "C",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under the DuPont framework, ROE = NPM × TAT × EM. Each proposal's projected ROE must be calculated and compared: Alpha = 9.0% × 1.80 × 1.80 = 29.2%; Beta = 7.0% × 2.40 × 1.80 = 30.2%; Gamma = 7.0% × 2.00 × 2.25 = 31.5%; Delta = 8.0% × 2.15 × 1.80 = 31.0%. Proposal Gamma yields the highest projected ROE at 31.5%, a 630 basis point improvement over the current 25.2%. However, sound DuPont analysis requires evaluating not just which proposal maximizes ROE, but which lever drives that improvement and what it implies for risk. Gamma achieves its ROE entirely through financial leverage (EM 1.80 → 2.25), which increases the debt-to-equity ratio from 0.80 to 1.25 and raises fixed financing costs. In contrast, Delta achieves nearly the same ROE (31.0%) through operational improvements to both margin and turnover without increasing financial risk. Mr. Park should present both the numerical ranking (Gamma first) and a risk-adjusted qualitative assessment so the board can make an informed choice that balances ROE maximization against financial risk tolerance.",
+  "ExplanationWrongA": "While Alpha's NPM improvement from 7.0% to 9.0% is meaningful, the offsetting decline in asset turnover from 2.00 to 1.80 (a 10% reduction) from lower sales volume partially negates the margin gain. ROE = 9.0% × 1.80 × 1.80 = 29.2%, which is 230 basis points below Gamma's 31.5%. The interaction effect between pricing and volume must be explicitly modeled — higher prices often reduce unit sales, and the net ROE effect depends on the relative magnitudes of the margin increase and turnover decline. In this case, the turnover penalty outweighs a portion of the margin benefit.",
+  "ExplanationWrongB": "Beta achieves a respectable ROE of 7.0% × 2.40 × 1.80 = 30.2% through a pure operational improvement (higher asset turnover via better inventory and working capital management). While this is an operationally attractive strategy with no increase in financial risk, the board's question asks which proposal delivers the highest projected ROE — and Beta's 30.2% falls short of Gamma's 31.5%. The controller should note Beta's operational merits but must answer the specific question asked: Gamma produces the highest ROE projection.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Delta's balanced approach yields ROE = 8.0% × 2.15 × 1.80 = 31.0%, which is second-highest among the four proposals and only 50 basis points below Gamma's 31.5%. While Delta offers a compelling risk-adjusted return by improving both margin and turnover without increasing leverage, the board's directive is to identify the single highest ROE projection. Delta's strengths lie in risk management and sustainability — not in maximizing the point estimate of ROE. The controller should present Delta as the strong alternative with superior risk characteristics but acknowledge Gamma as the numerical ROE leader.",
+  "FormulaReference": "DuPont ROE Decomposition: ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-022",
+  "Section": "A",
+  "Stem": "James Park, Controller at Meridian Retail Group, is evaluating four strategic proposals from the executive team, each claiming to maximize ROE improvement. Meridian's current financial profile is: Net Profit Margin 7.0%, Total Asset Turnover 2.00, Equity Multiplier 1.80 (ROE = 25.2%). The board meets Friday and wants a single recommendation backed by DuPont decomposition analysis. The four proposals are:\n\nProposal Alpha: Implement a premium pricing strategy expected to raise NPM to 9.0% but likely to reduce sales volume, lowering TAT to 1.80. No change to capital structure.\n\nProposal Beta: Rationalize inventory and optimize working capital to improve TAT to 2.40 with no change to margins or leverage.\n\nProposal Gamma: Issue $40 million in additional long-term debt and use the proceeds to repurchase 20% of outstanding equity shares, raising EM to 2.25. Margins and turnover are projected to remain stable.\n\nProposal Delta: A balanced approach — improve NPM to 8.0% through cost discipline, improve TAT to 2.15 through working capital optimization, and maintain current leverage.\n\nMr. Park must recommend the single proposal that delivers the highest projected ROE. Which proposal should he recommend?",
+  "Topic": "A.022 DuPont sensitivity analysis — which lever has the greatest impact",
+  "UniqueConceptKey": "A-022-dupont-sensitivity-analysis-which-lever-has-the-greatest-impact",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires calculating four ROE scenarios and interpreting the lever composition that drives each",
+    "All four ROE projections independently verified: Alpha 29.2%, Beta 30.2%, Gamma 31.5%, Delta 31.0%",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205 — Presentation of Financial Statements"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "NovaChem, because its higher net profit margin of 10.5% provides a larger absolute cushion against the projected 200 bp margin compression and indicates stronger pricing power — a qualitative advantage that high asset turnover cannot replicate under industry cost pressure.",
+    "B": "TerraForm, because its higher asset turnover of 1.50 versus NovaChem's 1.00 demonstrates superior operational efficiency in asset utilization, which is a more durable competitive advantage than pricing power over the long term.",
+    "C": "Neither company is clearly superior — their identical ROE, identical equity multipliers, and similar overall financial profiles mean they are equally positioned for the margin compression headwind.",
+    "D": "TerraForm, because when margins compress by 200 bp, its ROE will decline only modestly while NovaChem's higher-margin model is more vulnerable to input cost inflation."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Assuming that two companies with identical ROE have equivalent risk profiles without decomposing the ROE into its components and stress-testing each component",
+  "CorrectChoice": "A",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under the DuPont framework, NovaChem achieves ROE = 10.5% × 1.00 × 2.00 = 21.0%, while TerraForm achieves ROE = 7.0% × 1.50 × 2.00 = 21.0%. Applying the projected 200 bp margin compression: NovaChem ROE = (10.5% − 2.0%) × 1.00 × 2.00 = 8.5% × 2.00 = 17.0%; TerraForm ROE = (7.0% − 2.0%) × 1.50 × 2.00 = 5.0% × 3.00 = 15.0%. NovaChem's higher starting margin provides a larger absolute buffer against margin erosion: a 200 bp decline reduces NovaChem's NPM by 19% (10.5% → 8.5%) versus a 29% reduction for TerraForm (7.0% → 5.0%). More importantly, NovaChem's NPM of 10.5% exceeds the industry median of 9.0% by 150 bp, suggesting genuine pricing power or cost advantages that are structural and likely to persist, whereas TerraForm's below-median 7.0% NPM indicates it competes primarily on volume rather than differentiation — a strategy that offers no margin buffer when input costs rise. Cross-company DuPont analysis requires evaluating not just component levels but component resilience under stress scenarios.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "TerraForm's asset turnover advantage of 1.50 versus NovaChem's 1.00 (a 50% premium) reflects a fundamentally different business model — high-volume, lower-margin operations. When the projected 200 bp margin compression hits, TerraForm's already thin 7.0% NPM declines to 5.0%, producing ROE of 15.0% versus NovaChem's 17.0%. Asset turnover is not inherently more durable than pricing power — the resilience of each depends on the nature of the stress. Under input cost inflation, the high-margin competitor is structurally better protected because it can absorb cost increases without becoming unprofitable.",
+  "ExplanationWrongC": "While both companies share identical ROE (21.0%) and equity multipliers (2.00), their differing margin and turnover compositions produce fundamentally different risk profiles under the margin compression scenario. NovaChem's ROE declines 400 bp (21.0% → 17.0%) while TerraForm's declines 600 bp (21.0% → 15.0%). The gap that was zero under current conditions becomes 200 bp under stress — precisely the insight that DuPont decomposition is designed to reveal. Treating companies with identical aggregate ROE as equivalent ignores the diagnostic power of component-level analysis.",
+  "ExplanationWrongD": "The arithmetic and logic in this choice are internally inconsistent. The projected post-compression ROEs are NovaChem 17.0% and TerraForm 15.0% — NovaChem maintains the higher ROE by 200 bp. The claim that NovaChem's higher-margin model is 'more vulnerable to input cost inflation' is contrary to basic financial logic: higher-margin businesses have more room to absorb cost increases before becoming unprofitable. TerraForm's thin 7.0% margin leaves it with only 500 bp of buffer before reaching break-even, while NovaChem has 850 bp of buffer. The margin-compression analysis actually favors NovaChem.",
+  "FormulaReference": "DuPont ROE Decomposition: ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-023",
+  "Section": "A",
+  "Stem": "Elena Torres, an equity analyst at Clearwater Capital, is comparing two competitors in the specialty chemicals sector: NovaChem Industries and TerraForm Materials. Both companies reported identical ROE of 21.0% in their most recent fiscal year. However, their DuPont decompositions reveal different paths to that same ROE:\n\n| Component | NovaChem | TerraForm | Industry Median |\n|-----------|----------|-----------|-----------------|\n| Net Profit Margin | 10.5% | 7.0% | 9.0% |\n| Total Asset Turnover | 1.00 | 1.50 | 1.20 |\n| Equity Multiplier | 2.00 | 2.00 | 1.80 |\n\nMs. Torres must recommend one of the two companies for a long-only equity portfolio that prioritizes sustainable earnings growth and downside protection. Both companies face the same industry headwinds, including rising raw material costs expected to compress margins by 200 basis points industry-wide next year. Which company is the more prudent long-term investment?",
+  "Topic": "A.023 DuPont cross-company comparison using DuPont framework",
+  "UniqueConceptKey": "A-023-dupont-cross-company-comparison-using-dupont-framework",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires DuPont decomposition, stress scenario modeling, and comparative analysis of business model resilience",
+    "Post-compression ROEs independently verified: NovaChem 17.0%, TerraForm 15.0%",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 230 — Statement of Cash Flows",
+    "ASC 606 — Revenue from Contracts with Customers"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+    "A": "Earnings quality has improved because revenue grew 19.4% and net income grew 42%, indicating strong operating leverage and effective cost management.",
+    "B": "Earnings quality is neutral — while operating cash flow declined, this is typical during high-growth periods as companies invest in working capital to support expansion.",
+    "C": "Sahara's reported net income includes significant non-operating gains, while operating cash flow has weakened and receivables are expanding — together suggesting aggressive revenue recognition that may inflate reported earnings and require auditor scrutiny.",
+    "D": "Sahara's earnings quality has deteriorated severely: revenue grew 19.4% but accounts receivable ballooned 112.5%, operating cash flow collapsed 65% from $24.0M to $8.5M, DSO nearly doubled from 65 to 115 days, unbilled receivables surged 417% from $6.0M to $31.0M, and non-operating items of $10.8M exceed the entire $8.4M net income increase — meaning core operating earnings likely declined."
+  },
+  "CognitiveLevel": "Evaluate",
+  "CommonTrapReference": "Accepting reported net income at face value without comparing it to operating cash flow and examining the composition of earnings for non-recurring or non-cash items",
+  "CorrectChoice": "D",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Per ASC 230 (Statement of Cash Flows), earnings quality analysis requires comparing net income to operating cash flow to assess whether reported earnings are supported by cash generation. Sahara's OCF-to-NI ratio collapsed from 1.20 ($24.0M ÷ $20.0M) in 2025 to 0.30 ($8.5M ÷ $28.4M) in 2026 — indicating that only 30 cents of cash support each dollar of reported earnings, down from $1.20 the prior year. Revenue grew 19.4% ($180M → $215M) but A/R grew 112.5% ($32M → $68M) — a ratio of nearly 6:1 (A/R growth to revenue growth), which far exceeds what organic growth would explain. Unbilled receivables surged 417% ($6M → $31M), a classic red flag suggesting revenue may be recognized before performance obligations are complete. DSO nearly doubled (65 → 115 days). Of the $8.4M net income increase ($28.4M − $20.0M), $7.2M is a non-recurring equipment sale gain and $3.6M is a non-cash valuation allowance release — together $10.8M, exceeding the entire income increase. This means core operating earnings actually declined by approximately $2.4M ($8.4M − $10.8M). These five converging red flags constitute a severe earnings quality deterioration. Per SEC guidance on non-GAAP measures and ASC 230, Mr. Okonkwo should present this analysis to the audit committee with a recommendation for expanded audit procedures on revenue recognition and accounts receivable valuation.",
+  "ExplanationWrongA": "Revenue growth of 19.4% appears strong in isolation, but when operating cash flow collapses 65% ($24.0M → $8.5M) during the same period, the revenue growth is not being realized in cash. Accounts receivable grew 112.5% — nearly six times faster than revenue — and DSO nearly doubled to 115 days. These patterns are inconsistent with healthy growth; they suggest that reported revenue may not represent genuine completed sales or may not be collectible. Strong earnings growth must be validated by corresponding cash flow growth, which is entirely absent here.",
+  "ExplanationWrongB": "While moderate working capital investment is normal during growth, the magnitude of divergence here is extreme. A/R grew 112.5% on revenue growth of 19.4% — a ratio exceeding 5:1 that cannot be explained by growth alone. Unbilled receivables surged 417% ($6.0M → $31.0M), OCF fell 65%, and $10.8M in non-operating/non-cash items exceeds the entire $8.4M net income increase. Calling this 'neutral' and attributing the OCF decline to 'normal growth working capital investment' dramatically understates the severity of the earnings quality problem and would mislead the audit committee.",
+  "ExplanationWrongC": "This choice correctly identifies several red flags (non-operating gains, OCF weakness, A/R expansion) but its conclusion lacks the specificity and quantification required for an audit committee presentation. It does not quantify that A/R grew 6x faster than revenue, that DSO doubled, or that $10.8M of non-operating/non-cash items exceeds the entire $8.4M net income increase — meaning core operating earnings actually declined. A competent earnings quality assessment must present the magnitude of each red flag, not merely their existence, to give the audit committee an actionable basis for directing the external audit scope.",
+  "ExplanationWrongD": "",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-024",
+  "Section": "A",
+  "Stem": "CFO Michael Okonkwo of Sahara Energy Services is reviewing the company's financial statements before the annual audit. Sahara reported net income of $28.4 million for 2026, up 42% from $20.0 million in 2025. However, Mr. Okonkwo has identified several concerning items during his pre-audit review and is troubled by the quality of reported earnings. He has compiled the following data:\n\n| Item (in $ millions) | 2025 | 2026 |\n|---------------------|------|------|\n| Revenue | 180.0 | 215.0 |\n| Net Income | 20.0 | 28.4 |\n| Operating Cash Flow | 24.0 | 8.5 |\n| Accounts Receivable (net) | 32.0 | 68.0 |\n| Days Sales Outstanding (DSO) | 65 days | 115 days |\n| Unbilled Receivables | 6.0 | 31.0 |\n| Gain on Sale of Equipment | 0.0 | 7.2 |\n| Deferred Tax Asset Valuation Allowance Release | 0.0 | 3.6 |\n\nMr. Okonkwo must present his earnings quality assessment to the audit committee before the external auditors begin fieldwork. Which of the following is the most accurate evaluation of Sahara's earnings quality?",
+  "Topic": "A.024 Earnings quality — identifying red flags in reported earnings",
+  "UniqueConceptKey": "A-024-earnings-quality-identifying-red-flags-in-reported-earnings",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires integrating five earnings quality indicators, computing core vs. reported earnings, and forming an evaluative judgment",
+    "OCF/NI ratios independently verified: 2025 = 1.20, 2026 = 0.30",
+    "Core earnings decline independently verified: $8.4M increase − $10.8M non-operating items = approximately $2.4M decline",
+    "Authority citations match tested concepts"
+  ],
+  "question_state": "Certified"
+}
+];

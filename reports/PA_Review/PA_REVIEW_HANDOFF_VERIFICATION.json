@@ -1,0 +1,219 @@
+{
+  "session": "P2-PA-Review — Pack A External-Review Handoff Verification",
+  "date": "2026-09-01",
+  "orchestrator": "stewardship-orchestrator (200-Series Executive Architecture Board)",
+  "program_state": "S208 Framework v2 stewardship execution — proof that controls hold under real growth pressure",
+  "handoff": {
+    "source_file": "p2/pack_p2_a.js",
+    "source_sha256": "962b382176363e1cad7eb3e4ed2455890620d2650ff4a206976812772f68b954",
+    "source_size_bytes": 2144097,
+    "source_qids": 500,
+    "qid_range": "P2-A-001..P2-A-500",
+    "parts_location": "reports/PA_Review/",
+    "part_files": 56,
+    "part_pattern": "pack_p2_a_part01.js .. pack_p2_a_part56.js",
+    "max_bytes_per_part_limit": 40960,
+    "max_bytes_per_part_observed": 40883,
+    "max_part": "pack_p2_a_part29.js (P2-A-249..258, 10 items, 40883 bytes, 77 bytes under limit)",
+    "split_rule": "verbatim at question-object boundary — breaks between complete questions, never splits a question across parts",
+    "manifests": [
+      "reports/PA_Review/MANIFEST.md (77 lines, markdown table 56 rows + no-gap/no-dup proof)",
+      "reports/PA_Review/manifest.json (405 lines, source_sha256 + 56 part records + no_gap_no_dup + reassembly_check)"
+    ]
+  },
+  "subagent_delegation": {
+    "mode": "parallel, foreground specialist subagents per opencode.json stewardship-orchestrator permission",
+    "agents": [
+      {
+        "id": "registry-integrity",
+        "task_id": "ses_fa28a0cbbfferAqRVg1iiBYEqj",
+        "scope": "single-source-of-truth, ownership paths, duplicate registry, manifest consistency, QID continuity, reassembly sampling"
+      },
+      {
+        "id": "stewardship-inspector",
+        "task_id": "ses_fa2868bdaffeqjMPAPn7NjXdqZ",
+        "scope": "S208 6 drift categories, technical debt (DL-008/013/021/026/029/037 etc.), learner-safety, CAQS spot-check"
+      },
+      {
+        "id": "governance-validator",
+        "task_id": "ses_fa28454eefferhq5UmLbAx5AMh",
+        "scope": "14 governance-guard rules, AGENTS §18.1-18.3 mitigation effectiveness, stop conditions, scalability/sustainability"
+      },
+      {
+        "id": "drift-detector",
+        "task_id": "ses_fa282e150ffeFcrjYq9UIelQBQ",
+        "scope": "S208 Drift Detection Model — controlled drift scenarios, severity calibration, detection/response quality, provenance byte vs semantic"
+      }
+    ],
+    "board_role": "synthesis, deliverable authoring, final determination — no duplication of subagent analysis"
+  },
+  "subagent_syntheses": {
+    "registry_integrity": {
+      "verdict": "PASS",
+      "manifest_consistency": "PASS — source_file, source_sha256, source_size, total_items, total_parts, max_bytes_per_part, split_rule, all 56 part rows byte-identical between JSON and MD; extra JSON flags no_gap_no_dup/reassembly_check correctly complement MD proof section",
+      "qid_continuity": "PASS — 500/500 contiguous P2-A-001..500, sum of qid_counts = 500, all 55 inter-part boundaries contiguous (005→006 .. 491→492), spot-verified part01 head P2-A-001 and part56 tail P2-A-500",
+      "source_of_truth": "PASS — p2/pack_p2_a.js remains sole authoritative Question Registry for P2-A namespace; 56 parts are DERIVED report-tier artifacts (var pack_p2_a_partN, reports/PA_Review subtree per PROJECT_CONSTITUTION §11.2, not competing source)",
+      "duplicate_registry": "PASS — 0 duplicate ownership paths across 6 entity classes (Question/Session/Challenge/Investigation/Recommendation/Certification); Rule 3/7 not triggered",
+      "byte_size_compliance": "PASS — 56/56 ≤40960, largest 40883 (part29), smallest 28947 (part56 tail)",
+      "reassembly_sample": "PASS — sampled boundaries part01→part02 (P2-A-005→006), part02→part03 (010→011), part29 mid-pack and part56 tail verbatim vs source (Choices, ExplanationCorrect/Wrong, VerifiedChecks, question_state); manifest concatenation claim Tier-1 self-verifying",
+      "overall": "PASS — no stop conditions"
+    },
+    "stewardship_inspector": {
+      "verdict": "PASS — STEWARDSHIP COMPLIANT, 0 drift introduced",
+      "drift_categories": {
+        "DRIFT-1_duplicate_registries": "PASS — no duplicate authority, derived artifacts declared, Rule 7 not triggered",
+        "DRIFT-2_duplicate_scans": "PASS (mitigating) — ≤40KB chunking directly defeats AGENTS §18.1 prefix-truncation (2026-08-22 89/160 failure); eliminates need for repeated semantic searches",
+        "DRIFT-3_shadow_queues": "PASS — no alternative readiness/BLOCKED queue, QID regex preserved P2-A, Rule 14 clean, no competing counts",
+        "DRIFT-4_manual_workarounds": "PASS — READ-ONLY mirror, 0 question_state/CorrectChoice flips, 14 BLOCK rules preserved, no guard bypass",
+        "DRIFT-5_untracked_artifacts": "PASS — parts tracked under reports/PA_Review (enumerated, manifest-indexed), not session_packages, correct reporting tier",
+        "DRIFT-6_broken_traceability": "PASS internal / FLAG external — internal chain SHA256→QID ranges→concatenation intact; external FLAG: CURRENT_BASELINES_P2.md stale (400 QIDs / d7aa001a vs current 500 / 962b382) — pre-existing baseline staleness, not handoff defect, requires Tend re-baseline per G1-G5"
+      },
+      "technical_debt": {
+        "TD-001_DL-016": "RESOLVED — P2 Pack A single-object architecture, 0 flat ChoiceA keys, no +1 shift possible",
+        "TD-002_DL-026_DL-035": "RESOLVED — sample 5/5 items EW[CC]=='' and 3× non-CC slots ≥170 chars choice-specific; pool 0 per CURRENT_BASELINES_P2 §3; Rule 6/10 BLOCK active",
+        "TD-005_DL-012": "RESOLVED (P1) / N/A P2 — P2-A UniqueConceptKey distinct, no 5-item rotation clones",
+        "DL-008": "PASS 0 — sample 5/5 EW[CC] empty",
+        "DL-021": "PASS 0 — 4 EW keys present per item",
+        "DL-013": "PASS 0 — no boilerplate, VerifiedChecks asserts prevention",
+        "DL-029": "PASS — handoff design IS the DL-029 fix (≤40KB + whole-question + string-aware parse eliminates 75% FP)",
+        "DL-037_Rule9": "PASS 0 polarity inversions"
+      },
+      "learner_safety": "PASS — question_state Certified preserved verbatim, Part2OnlyFlag true strict boolean, QID namespace clean, 0 Certified DL-008/DL-026 in pool; read-only artifact cannot inject defective QID without passing 14 BLOCK rules",
+      "artifact_quality": "Tier 1 Exam-Ready 90-100/100 (sample P2-A-001..005): 6-dimension CAQS PASS on each (correctness, precision, difficulty calibration DS4 Analyze, distractor engineering distinct, blueprint LOSTag A.1, P2 relevance), VerifiedChecks 6-7 items, business-realistic scenarios",
+      "stop_conditions": "0/6 triggered"
+    },
+    "governance_validator": {
+      "verdict": "PASS with CONCERN — B+ (PASS with minor gap)",
+      "rule_compliance": "14/14 PASS (4 exempt transitively compliant, 10 directly verified): R1 PASS (no state change), R2 PASS (EW[CC] empty sampled), R3 PASS, R4 PASS, R5 exempt (parts not SOURCE_FILE_RE), R6 PASS, R7 PASS (not DERIVED_REGISTRY_RE), R8 PASS (not SESSION_PACKAGES_RE), R9 PASS, R10 PASS (4 EW keys present), R11 PASS (Analyze DS4 / Evaluate DS5 floors), R12 PASS (no relabel), R13 PASS (Part2OnlyFlag 500/500 true), R14 PASS (P2-A namespace clean)",
+      "mitigation_18_1": "PASS — ≤40KB defeats prefix-truncation, chunk size reference 20×36KB precedent, current 56×38KB equivalently safe; largest 40,883 directly under 40,960",
+      "handoff_protocol_18_2": "CONCERN — 3/4 PASS: (1) split ≤40KB whole-question PASS, (2) manifest with SHA256+part→QID PASS, (3) no-gap/no-dup + concat PASS, (4) control-test directive MISSING — MANIFEST.md/manifest.json lack §18.2 step-4 reviewer instruction (precedent p2_cert_review_20260824/README.md had §18.4 control test)",
+      "evidence_hierarchy_18_3": "PASS — Tier-1 chunked parts (Conclusive) + Tier-4 manifest (Inadmissible alone) correctly paired; parts are self-verifiable, not manifest-only trust",
+      "scalability_sustainability_resilience": "PASS — linear scaling (~38KB/part, ~260 parts for 2500-item target), disposable derived artifacts, contention-free read-only (no DL-019 file-lock risk), watcher.ignore reports/** correctly excluded",
+      "residual_notes": [
+        "Minor naming inconsistency: pack_p2_a_part01.js declares var pack_p2_a_part1 (missing zero-pad) vs file part01 — non-blocking",
+        "SHA256/reassembly_check claims are provisional until auditor independently runs sha256sum/cat concat vs source — handoff design makes that trivial"
+      ]
+    },
+    "drift_detector": {
+      "verdict": "CONDITIONAL PASS — B (78/100) — Strong anti-truncation, governance sync required",
+      "byte_verbatim_check": "FAIL on byte, PASS on semantic — concat len 2144427 vs source 2144097 (+330 bytes wrapper), body len 2138805 vs 2139308 (+503 indent normalization); 500/500 objects canonical-JSON identical, 0 mismatches; wrapper is var pack_p2_a_partN = [ + de-indented {, not byte slices",
+      "baseline_sync": "FAIL — CURRENT_BASELINES_P2.md Pack A hash d7aa001a / 400 QIDs vs source+manifest 962b382 / 500 QIDs — stale by +100 QIDs / difficulty re-rating session P2-068; CRITICAL per AGENTS §13.1 (Unexpected hash change, parse-count 400≠500) but latent cross-registry, not handoff-local",
+      "anti_index_failure": "A+ (98) — 56× ≤40.8KB fully indexable, QID ranges provided, whole-object boundaries — defeats 2026-08-22 ~89-item window",
+      "qid_integrity": "A (95) — 500/500 ordered, 0 dup, semantic JSON 100%, manifests consistent",
+      "manifest_quality": "B+ (88) — MD+JSON agree, sizes/counts/ranges/hash correct, missing per-part hash + control-test",
+      "provenance_byte_verbatim": "D (45) — claims reassembly_check:true byte-verbatim but delivers semantic-equivalent rewrap",
+      "traceability_registry_sync": "F (30) — baseline stale CRITICAL un-halted, un-documented in handoff",
+      "governance_registration": "C (65) — correct reports/ location, but untracked in REVISION_HISTORY_P2 / CURRENT_BASELINES_P2",
+      "scenario_S1_duplicate_registries": "Detected Y internal / N cross-registry, severity mis-calibrated (handoff LOW vs correct CRITICAL), response 2/5 — internal MD↔JSON excellent, cross-registry sync absent",
+      "scenario_S2_shadow_queues_truncation": "Detected Y if validated / N automated, severity HIGH (truncated part re-creates §18 failure), response 3/5 — prevention strong (size/count/range), detection manual without per-part hash or verifier script",
+      "scenario_S3_broken_traceability_staleSHA_rewrap": "Detected N staleSHA / Y rewrap, severity CRITICAL staleSHA / MEDIUM rewrap, response 2/5 — rewrapping not disclosed as semantic, no watcher/CI gate to re-split on edit",
+      "introduced_drift": "No QID/content drift (0/500 mismatched); mild provenance drift: wrapper rewrapping + byte-verbatim overclaim (330-byte delta) — governance-grade, not learner-facing",
+      "detection_response_aggregate": "3.2/5 — adequate for intended threat, weak for registry/traceability automation"
+    }
+  },
+  "stop_condition_evaluation": {
+    "principle_violation": {
+      "triggered": false,
+      "evidence": "0 principle violations — 6 frozen S208 principles intact, no AI correctness determination, no invented standard, no QID renumbering (Constitution Immutable Rules respected), no pack file mutation"
+    },
+    "registry_authority_conflict": {
+      "triggered": false,
+      "evidence": "p2/pack_p2_a.js remains sole authoritative Question Registry for P2-A-001..500 (verified by 3/4 subagents). reports/PA_Review/ parts are DERIVED reporting-tier excerpts, correctly not matching SOURCE_FILE_RE or DERIVED_REGISTRY_RE authority patterns. Baseline staleness (d7aa vs 962b) is a known-stale governance snapshot, not a competing authoritative claim on QID namespace"
+    },
+    "broken_traceability": {
+      "triggered": false,
+      "evidence": "QID traceability 100%: 500/500 contiguous, ordered, canonical-JSON identical 500/500, QuestionID→LOSTag→Topic→UniqueConceptKey preserved per item. Byte-concat delta (+330 wrapper, +503 body indent) is provenance wording inaccuracy, not content traceability break; QID→blueprint linkage intact for all 500. AGENTS §13.1 broken traceability requires untraceable QIDs — not met"
+    },
+    "duplicate_registry_creation": {
+      "triggered": false,
+      "evidence": "No second registry created. Manifests are indexes, not registries — do not match registry/packs, MASTER_QUESTION_REGISTRY, or CURRENT_BASELINES authority regexes. 0 entity classes duplicated (Question/Session/Challenge/Investigation/Recommendation/Certification all single-sourced)"
+    },
+    "governance_guard_not_pass": {
+      "triggered": false,
+      "evidence": "Governance guard 74/74 PASS per CURRENT_BASELINES_P2.md §2 and pack header Rules 2/6/9/10/11/13/14 active; sample 5/5 items DL-008/DL-026 clean. PA_Review parts are outside guard watch (opencode.json watcher.ignore reports/**) and SOURCE_FILE_RE-exempt — correctly not BLOCKed. No guard rule fires on handoff"
+    },
+    "identity_below_99": {
+      "triggered": false,
+      "evidence": "Identity 100% semantic: 500/500 objects canonical-JSON equal (sort_keys), QID uniqueness 500/500, parse OK 500/500. Byte identity 99.76% (330-byte wrapper delta / 2,144,097), but AGENTS §13.1 Identity is QID/question-object identity — not file-wrapper byte identity. Drift-detector semantic 100% is the authoritative metric per S208"
+    },
+    "overall_stop_status": "NO STOP — 0/6 triggered",
+    "halt_action": "none — proceed to markdown certification",
+    "informational_critical_latent": "CURRENT_BASELINES_P2.md staleness (400 vs 500, d7aa001 vs 962b382) meets §13.1 CRITICAL hash-count divergence definition and WILL cause next preflight_p2 to report 2 divergences until Tend re-baseline. This is a GOVERNANCE REFRESH requirement, not a handoff HALT, because handoff correctly publishes current truth (962b) and exposes the baseline as stale. Board records as required remediation, not as stop condition for this session"
+  },
+  "agreed_scores": {
+    "registry_integrity": "PASS",
+    "stewardship_drift": "6/6 PASS",
+    "governance_guard": "14/14 PASS (B+ with §18.2-4 gap)",
+    "drift_prevention": "B (78/100) — A+ anti-truncation, D provenance byte claim, F registry sync",
+    "learner_safety": "PASS — 0 Certified defects in pool, 0 defective QIDs deliverable",
+    "artifact_quality_sample": "Tier 1 Exam-Ready 90-100 (P2-A-001..005 CAQS 6/6 PASS)",
+    "identity": "100% semantic (500/500 canonical JSON), 99.76% byte (wrapper delta only)"
+  },
+  "final_determination": {
+    "verdict": "CONDITIONAL CERTIFICATION — HANDOFF APPROVED FOR EXTERNAL REVIEW",
+    "status": "CERTIFIED_WITH_MINOR_GAPS",
+    "halted": false,
+    "summary": "The 56-part split is verified correct, complete, and governance-compliant as Tier-1 external-review evidence per AGENTS §18. No QID/content drift, no duplicate registry, no stop condition. The handoff directly implements the §18.2 protocol that resolved the 2026-08-22 prefix-truncation failure and is approved for auditor consumption after two low-effort governance amendments (provenance wording and baseline re-baseline).",
+    "what_works": [
+      "QID integrity: 500/500 contiguous P2-A-001..500, 0 gaps/dups, ordered, whole-question boundaries — 3/4 subagents independently verified",
+      "Size compliance: 56/56 ≤40,960 bytes, largest 40,883 (77 bytes under limit) — defeats any 400KB-class prefix-truncation window",
+      "Verbatim fidelity: 500/500 objects canonical-JSON identical (0 mismatches), Part2OnlyFlag 500/500 true, EW[CC] empty, non-CC choice-specific ≥170 chars, no boilerplate (DL-008/013/021/026/037 all 0)",
+      "Source-of-truth preservation: p2/pack_p2_a.js authoritative (SHA256 962b382... pinned in both manifests), parts correctly scoped as var pack_p2_a_partN in reports/PA_Review (governance-exempt reporting tier)",
+      "Governance: 14 rules PASS, 0 BLOCK, read-only handoff introduces no DL-019 file-lock risk, scalable to packs B-F",
+      "Evidence hierarchy correct: Tier-1 parts (Conclusive) + Tier-4 manifest (ancillary) properly paired per §18.3 — auditor can self-verify via literal search, not shell hashes alone"
+    ],
+    "gaps_requiring_remediation_before_next_pack_handoff": [
+      {
+        "id": "GAP-PROV-1",
+        "severity": "MEDIUM",
+        "dimension": "Provenance wording — byte vs semantic",
+        "finding": "MANIFEST.md 'Concatenation reproduces source array body verbatim: PASS' and manifest.json 'reassembly_check: true' claim byte-verbatim, but detector measured +330 wrapper / +503 body delta because parts are re-wrapped as var pack_p2_a_partN = [ with normalized indent, not byte slices",
+        "learner_impact": "none — 500/500 semantic identical, no wrong answer risk",
+        "governance_impact": "auditor running cat parts > rebuilt && sha256sum would get 463f9dc... != 962b382... and may falsely flag tampering; §18.2 byte-proof not met",
+        "remediation": "Amend both manifests to 'reassembly_check: semantic true (canonical JSON equality 500/500 verified), byte_verbatim false — parts re-wrapped with var wrapper; wrapper delta 330 bytes; source SHA256 962b382... remains authoritative' OR regenerate true byte slices (strip only outer var…[ / ];). Add per-part sha256 column to manifest.json parts[]",
+        "acceptance": "current handoff remains usable — auditor instruction should say 'verify via QID ranges + literal search per part, not via whole-file hash'"
+      },
+      {
+        "id": "GAP-REG-1",
+        "severity": "HIGH (governance) / informational (learner)",
+        "dimension": "Baseline staleness — duplicate-registry latent",
+        "finding": "p2/CURRENT_BASELINES_P2.md Pack A row still at 400 QIDs / hash d7aa001a (2026-08-30 Tend, pre-P2-068 + difficulty re-rating), while source+manifest are 500 QIDs / 962b382 (post-P2-068, 2026-09-01). Divergence = 2 preflight divergences (hash + count) per AGENTS §13.1 CRITICAL definitions",
+        "learner_impact": "none — delivery reads p2/pack_p2_a.js directly (500), not baseline file",
+        "governance_impact": "next preflight_p2 WILL report 2 divergences until re-baselined; creates two authoritative-seeming registries with divergent truth (manifest current vs baseline stale)",
+        "remediation": "Tend re-baseline: update p2/CURRENT_BASELINES_P2.md Pack A to 500 QIDs / 962b382176363e1cad7eb3e4ed2455890620d2650ff4a206976812772f68b954 / 2144097 bytes with backup per BACKUP_PROTOCOL §3, and add REVISION_HISTORY_P2 entry citing difficulty re-rating session + PA_Review handoff. Close GAP-REG-1. No pack file write needed",
+        "acceptance": "handoff exposure of staleness is a POSITIVE — handoff is current truth; baseline is the stale artifact"
+      },
+      {
+        "id": "GAP-HAND-1",
+        "severity": "LOW",
+        "dimension": "AGENTS §18.2 step 4 — control-test directive missing",
+        "finding": "MANIFEST.md/manifest.json lack explicit auditor instruction to run control test (attach verified-item part first)",
+        "remediation": "Add reports/PA_Review/README.md with §18.4 control-test directive (copy precedent reports/review_packages/p2_cert_review_20260824/README.md): 'Control test: attach pack_p2_a_part01.js (contains P2-A-001 already verified D) — confirm literal search P2-A-001 hits line 30 before trusting any not-found result; repeat with part56 for P2-A-500'",
+        "acceptance": "gap does not invalidate evidence — auditor can still perform control test without instruction"
+      },
+      {
+        "id": "GAP-MINOR-1",
+        "severity": "LOW",
+        "dimension": "Part header naming",
+        "finding": "pack_p2_a_part01.js line 1 declares var pack_p2_a_part1 (missing zero-pad) vs file part01 — inconsistent with manifest file column",
+        "remediation": "Normalize to var pack_p2_a_part01 in future splits for reproducibility; no re-issue needed for this handoff"
+      }
+    ],
+    "directive_to_external_reviewer": {
+      "evidence_tier": "Tier 1 Conclusive — 56 chunked parts of actual file bytes (§18.3)",
+      "how_to_use": "Do NOT rely on a single 2.14MB attachment search (will prefix-truncate ~89/500 as in P2-030 precedent). Instead, use per-part literal search: grep 'P2-A-XXX' within each part file. Parts are ≤40.8KB and fully indexable per AGENTS §18.2",
+      "control_test": "Step 4 per §18.2: attach pack_p2_a_part01.js and confirm literal query 'P2-A-001' returns CFO Maria Chen current-ratio item (CorrectChoice D) before testing any disputed QID; then attach the part containing the disputed QID per part→QID table",
+      "provenance_note": "QID coverage is self-verifying (500/500 contiguous, ordered, canonical-JSON identical). Do not rely on whole-file cat+sha256 vs 962b382... for byte proof — parts are semantic-equivalent rewraps (330-byte wrapper delta). Use QID-range table + per-part literal verification as provenance",
+      "index_failure_signatures": "If a literal-ID query returns unrelated content, your tool is doing semantic retrieval not literal search — request chunked parts. If no query surfaces content past a cutoff QID, you are hitting a prefix-truncated window — switch to per-part search"
+    },
+    "next_stewardship_checkpoint": "Re-baseline p2/CURRENT_BASELINES_P2.md at next Tend (closes GAP-REG-1); amend manifests per GAP-PROV-1 and add README per GAP-HAND-1 before next pack (B-F) handoff. No re-run of governance guard or content re-authoring required",
+    "sign_off": "Executive Architecture Board — stewardship-orchestrator — 2026-09-01"
+  },
+  "stop_condition": null,
+  "status": "CERTIFIED_WITH_MINOR_GAPS",
+  "deliverables": {
+    "data_json": "reports/PA_Review/PA_REVIEW_HANDOFF_VERIFICATION.json (this file)",
+    "decision_markdown": "reports/PA_Review/PA_REVIEW_CERTIFICATION.md",
+    "pair_complete": true
+  }
+}

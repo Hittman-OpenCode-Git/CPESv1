@@ -1,0 +1,3010 @@
+{
+ "session": "P2-CERT-CASES-FINAL",
+ "date": "2026-09-05",
+ "cases_reviewed": 12,
+ "items_reviewed": 72,
+ "verdict": "FAIL",
+ "case_notes": "All 12 Unprocessed cases fully read with exhibits recomputed. Systematic defect: select items with CorrectChoice != B carry a template artifact (EW_B empty regardless; actual CC slot absent = DL-021 + empty distractor slot = DL-026) affecting 30/39 selects. Only CC=B selects are structurally clean. Case-level checks pass throughout (realism, exhibit referencing incl. one typo CBQ3-A6-Q2 in CBQ23-A6-E2 ReferencedBy, progression with minor order wrinkles A5-Q4/B6-Q3/C7-Q3, difficulty variation Moderate-Easy..Very Difficult, Part2OnlyFlag universal). No case is fully eligible; 29/72 items individually certifiable.",
+ "cases": [
+  {
+   "CaseID": "CBQ23-A5",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-A5-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. CA/CL 1,760,000/580,000 = 3.03 verified. 365-day consistent."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A5-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 301,500/5,400,000 = 5.58% verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A5-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "LOW",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "PRECISION: keyed DSO 44.0 days vs correct 44.6 (660,000/5,400,000x365); Y1 uses 365-day (36.5) but Y3 implies 360-day. Mixed day-count; a candidate computing 44.6 cannot match B. Fix: standardize 365-day (->44.6)."
+      },
+      "Precision": {
+       "confidence": "LOW",
+       "notes": "PRECISION: keyed DSO 44.0 days vs correct 44.6 (660,000/5,400,000x365); Y1 uses 365-day (36.5) but Y3 implies 360-day. Mixed day-count; a candidate computing 44.6 cannot match B. Fix: standardize 365-day (->44.6)."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A5-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 3,780,000/840,000 = 4.50 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A5-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026: EW_C absent, EW_B empty (template assumed CC=B). Fix: add EW_C=\"\" + author EW_B (>=50). Content (collections priority; +37.5% vs +12.5%) sound."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026: EW_C absent, EW_B empty (template assumed CC=B). Fix: add EW_C=\"\" + author EW_B (>=50). Content (collections priority; +37.5% vs +12.5%) sound."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A5-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026: EW_D absent, EW_B empty. Fix as Q5. Content (asset-management risk; +31.3% inventory) sound."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026: EW_D absent, EW_B empty. Fix as Q5. Content (asset-management risk; +31.3% inventory) sound."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-A5-Q3: PRECISION: keyed DSO 44.0 days vs correct 44.6 (660,000/5,400,000x365); Y1 uses 365-day (36.5) but Y3 implies 360-day. Mixed day-count; a candidate computing 44.6 cannot match B. Fix: standardize 365-day (->44.6). | CBQ23-A5-Q5: DL021+DL026: EW_C absent, EW_B empty (template assumed CC=B). Fix: add EW_C=\"\" + author EW_B (>=50). Content (collections priority; +37.5% vs +12.5%) sound. | CBQ23-A5-Q6: DL021+DL026: EW_D absent, EW_B empty. Fix as Q5. Content (asset-management risk; +31.3% inventory) sound."
+  },
+  {
+   "CaseID": "CBQ23-A6",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-A6-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 414,000/5,000,000 = 8.28% verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A6-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 5,000,000/4,100,000 = 1.22 verified (average assets)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A6-Q3",
+     "six_dimensions": {
+      "Correctness": "LOW",
+      "Precision": "LOW",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS method: averages give 1.61, year-end gives keyed 1.62; prompt specifies neither. Fix: add \"using year-end balances\" to prompt."
+      },
+      "Precision": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS method: averages give 1.61, year-end gives keyed 1.62; prompt specifies neither. Fix: add \"using year-end balances\" to prompt."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A6-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Premise inconsistent: exhibits imply prior ROE 16.60% (8.00x1.33x1.56) and current 16.24%, not stated 16.00%->12.32% (12.32% uses turnover as multiplier). Fix: recompute premise from exhibits."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A6-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=A): EW_A absent, EW_B empty. Fix as A5-Q5. Content follows Q4 driver; re-verify after Q4 fix."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=A): EW_A absent, EW_B empty. Fix as A5-Q5. Content follows Q4 driver; re-verify after Q4 fix."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A6-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D): EW_D absent, EW_B empty. Fix as A5-Q5. Content (leverage caution) sound."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D): EW_D absent, EW_B empty. Fix as A5-Q5. Content (leverage caution) sound."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-A6-Q3: AMBIGUOUS method: averages give 1.61, year-end gives keyed 1.62; prompt specifies neither. Fix: add \"using year-end balances\" to prompt. | CBQ23-A6-Q4: Premise inconsistent: exhibits imply prior ROE 16.60% (8.00x1.33x1.56) and current 16.24%, not stated 16.00%->12.32% (12.32% uses turnover as multiplier). Fix: recompute premise from exhibits. | CBQ23-A6-Q5: DL021+DL026 (CC=A): EW_A absent, EW_B empty. Fix as A5-Q5. Content follows Q4 driver; re-verify after Q4 fix. | CBQ23-A6-Q6: DL021+DL026 (CC=D): EW_D absent, EW_B empty. Fix as A5-Q5. Content (leverage caution) sound."
+  },
+  {
+   "CaseID": "CBQ23-A7",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-A7-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. DOL 10M/2M = 5.00 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A7-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. DFL 2M/1.5M = 1.33 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A7-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. DCL 10M/1.5M = 6.67 verified (also 5.00x1.33 with rounding noted)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A7-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Post DOL 13.2/2.8 = 4.71 verified; risk-up-despite-lower-DOL reasoning sound. EW slots clean (CC=B)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Distractors represent distinct misconceptions."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A7-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=A). Content verified (+$8M rev, NI 1.05->0.77M, +$1.2M interest > +$0.8M OI). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=A). Content verified (+$8M rev, NI 1.05->0.77M, +$1.2M interest > +$0.8M OI). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A7-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content sound (financing-structure framing). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content sound (financing-structure framing). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-A7-Q5: DL021+DL026 (CC=A). Content verified (+$8M rev, NI 1.05->0.77M, +$1.2M interest > +$0.8M OI). Fix EW slots. | CBQ23-A7-Q6: DL021+DL026 (CC=C). Content sound (financing-structure framing). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-A8",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-A8-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. DSO 1.2M/10Mx365 = 43.8 -> 44 verified (365-day)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A8-Q2",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: precise CCC = 43.8+48.7-31.1 = 61.4 -> 61 days, not keyed 60. EC internally contradicts (61.5 then claims 60). Fix key/EC to 61."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A8-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 14 x 27,397.26 = $383,562 verified (rounded-DSO convention stated in EC)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-A8-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Day-count inconsistency + structural: payables leg uses 360-day ($300,822) while inventory leg uses 365-day ($205,479); correct 365-day gross ~$296,677/net ~$140,677. Conclusion (inventory better) robust. Fix: recompute with 365-day + EW slots (CC=A)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A8-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=A). Content sound. Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=A). Content sound. Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-A8-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content sound (sales-volume tradeoff). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content sound (sales-volume tradeoff). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-A8-Q2: ARITHMETIC: precise CCC = 43.8+48.7-31.1 = 61.4 -> 61 days, not keyed 60. EC internally contradicts (61.5 then claims 60). Fix key/EC to 61. | CBQ23-A8-Q4: Day-count inconsistency + structural: payables leg uses 360-day ($300,822) while inventory leg uses 365-day ($205,479); correct 365-day gross ~$296,677/net ~$140,677. Conclusion (inventory better) robust. Fix: recompute with 365-day + EW slots (CC=A). | CBQ23-A8-Q5: DL021+DL026 (CC=A). Content sound. Fix EW slots. | CBQ23-A8-Q6: DL021+DL026 (CC=D). Content sound (sales-volume tradeoff). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-B3",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-B3-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. CAPM 3.20+1.42x5.50 = 11.01% verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B3-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 6.50x0.65 = 4.225 -> 4.23% verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B3-Q3",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: correct WACC = 8.68% (0.6x11.01+0.3x4.225+0.1x8.00); keyed 8.73 matches nothing; EC self-contradicts (8.68 vs 8.67 vs 8.73). Fix key/EC."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B3-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Propagated: encodes 10.73% hurdle from Q3 error (correct 10.68%/132bps). Logic sound; fix numbers."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B3-Q5",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: blended WACC = 8.52% (marginal-rate 8.66%); keyed 8.89 matches neither; EC self-contradicts. Fix key/EC + state method."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B3-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Propagated: cites 10.73% hurdle (correct 10.68%). Decision sound; fix figure. Also DL021+DL026 (CC=D)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "Propagated: cites 10.73% hurdle (correct 10.68%). Decision sound; fix figure. Also DL021+DL026 (CC=D)."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-B3-Q3: ARITHMETIC: correct WACC = 8.68% (0.6x11.01+0.3x4.225+0.1x8.00); keyed 8.73 matches nothing; EC self-contradicts (8.68 vs 8.67 vs 8.73). Fix key/EC. | CBQ23-B3-Q4: Propagated: encodes 10.73% hurdle from Q3 error (correct 10.68%/132bps). Logic sound; fix numbers. | CBQ23-B3-Q5: ARITHMETIC: blended WACC = 8.52% (marginal-rate 8.66%); keyed 8.89 matches neither; EC self-contradicts. Fix key/EC + state method. | CBQ23-B3-Q6: Propagated: cites 10.73% hurdle (correct 10.68%). Decision sound; fix figure. Also DL021+DL026 (CC=D)."
+  },
+  {
+   "CaseID": "CBQ23-B4",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-B4-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. CAPM 3.00+1.00x6.00 = 9.00% verified (beta as given)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B4-Q2",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: keyed 8.33% underivable (plain 7.97%, Hamada 8.81%); EC presents three numbers and keys the least-justified. Fix: state beta assumption, recompute key."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B4-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. PV shield 50Mx0.30 = $15M verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B4-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Net 15M-12M = $3M verified. EW clean (CC=B)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Distractors represent distinct misconceptions."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B4-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content verified (2%->10%, $2M->$12M, 5.50->6.25%). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content verified (2%->10%, $2M->$12M, 5.50->6.25%). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B4-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content verified ($7.5M shield, $2.5M net). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content verified ($7.5M shield, $2.5M net). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-B4-Q2: ARITHMETIC: keyed 8.33% underivable (plain 7.97%, Hamada 8.81%); EC presents three numbers and keys the least-justified. Fix: state beta assumption, recompute key. | CBQ23-B4-Q5: DL021+DL026 (CC=D). Content verified (2%->10%, $2M->$12M, 5.50->6.25%). Fix EW slots. | CBQ23-B4-Q6: DL021+DL026 (CC=C). Content verified ($7.5M shield, $2.5M net). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-B5",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-B5-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. DDM D1=2.08/0.06 = $34.67 -> $35 verified (forward-dividend convention; EC documents D0 alternative)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B5-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. D1=3.12/0.06 = $52.00 verified (+48.6%)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B5-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. $1.00x5M = $5,000,000 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B5-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Growth-fund clientele verified against E2. EW clean (CC=B)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Distractors represent distinct misconceptions."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B5-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content sound (clientele rebalancing). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content sound (clientele rebalancing). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B5-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content sound ($2.50 compromise). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content sound ($2.50 compromise). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-B5-Q5: DL021+DL026 (CC=D). Content sound (clientele rebalancing). Fix EW slots. | CBQ23-B5-Q6: DL021+DL026 (CC=C). Content sound ($2.50 compromise). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-B6",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-B6-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 5Mx1.0825 = $5,412,500 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B6-Q2",
+     "six_dimensions": {
+      "Correctness": "LOW",
+      "Precision": "LOW",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS: IRP-implied forward = 1.0890 vs exhibit 1.0825, making choice D (\"IRP does not hold\") numerically defensible. Fix: set forward to 1.0890. Directional content otherwise sound."
+      },
+      "Precision": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS: IRP-implied forward = 1.0890 vs exhibit 1.0825, making choice D (\"IRP does not hold\") numerically defensible. Fix: set forward to 1.0890. Directional content otherwise sound."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B6-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content verified (borrow-USD/convert/invest-EUR/settle/repay sequence). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content verified (borrow-USD/convert/invest-EUR/settle/repay sequence). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B6-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 3,335,000x5% = $166,750 verified (OCI treatment correct)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-B6-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content verified (5,069,200/3,801,900/1,267,300). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content verified (5,069,200/3,801,900/1,267,300). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-B6-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content sound (forward + natural hedge). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content sound (forward + natural hedge). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-B6-Q2: AMBIGUOUS: IRP-implied forward = 1.0890 vs exhibit 1.0825, making choice D (\"IRP does not hold\") numerically defensible. Fix: set forward to 1.0890. Directional content otherwise sound. | CBQ23-B6-Q3: DL021+DL026 (CC=C). Content verified (borrow-USD/convert/invest-EUR/settle/repay sequence). Fix EW slots. | CBQ23-B6-Q5: DL021+DL026 (CC=D). Content verified (5,069,200/3,801,900/1,267,300). Fix EW slots. | CBQ23-B6-Q6: DL021+DL026 (CC=D). Content sound (forward + natural hedge). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-C6",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-C6-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Charlie 25/1.0 = $25/hr (vs 20/20) verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C6-Q2",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: correct WACM = $38.50 (EC computes it 3 ways); keyed $86 matches nothing. EC refutes key. Fix key. (Q4 prompt already uses $38.50.)"
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C6-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content verified (Charlie $25/hr). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content verified (Charlie $25/hr). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C6-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 220,000/38.50 = 5,714 verified (prior 6,753, diff 1,039)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C6-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=A). Content sound (concentration risk). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=A). Content sound (concentration risk). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C6-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=D). Content sound (6,753->5,714 + balance). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=D). Content sound (6,753->5,714 + balance). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-C6-Q2: ARITHMETIC: correct WACM = $38.50 (EC computes it 3 ways); keyed $86 matches nothing. EC refutes key. Fix key. (Q4 prompt already uses $38.50.) | CBQ23-C6-Q3: DL021+DL026 (CC=C). Content verified (Charlie $25/hr). Fix EW slots. | CBQ23-C6-Q5: DL021+DL026 (CC=A). Content sound (concentration risk). Fix EW slots. | CBQ23-C6-Q6: DL021+DL026 (CC=D). Content sound (6,753->5,714 + balance). Fix EW slots."
+  },
+  {
+   "CaseID": "CBQ23-C7",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-C7-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Floor 58+3+4000/2000 = $63 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C7-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 70-63 = $7 verified."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C7-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Fixed-overhead irrelevance reasoning verified; sunk-vs-committed distinction sound. EW clean (CC=B)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Distractors represent distinct misconceptions."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C7-Q4",
+     "six_dimensions": {
+      "Correctness": "LOW",
+      "Precision": "LOW",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS: choices B and C both state the correct net loss of $1,000 (duplicate key). Fix: differentiate or remove one."
+      },
+      "Precision": {
+       "confidence": "LOW",
+       "notes": "AMBIGUOUS: choices B and C both state the correct net loss of $1,000 (duplicate key). Fix: differentiate or remove one."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C7-Q5",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: keyed -$28,000 underivable (\"$40,000 contribution\" fictitious); correct approx +$7,000 (140,000-61,000-68,000-4,000). EC confesses confusion. Rewrite required."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C7-Q6",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "LOW",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "INCOHERENT: EC states BE $70.50 then $78 counteroffer \"yielding $0\" (63+7.50=70.50, not 78; $78 yields +$15,000). Rewrite economics."
+      },
+      "Precision": {
+       "confidence": "LOW",
+       "notes": "INCOHERENT: EC states BE $70.50 then $78 counteroffer \"yielding $0\" (63+7.50=70.50, not 78; $78 yields +$15,000). Rewrite economics."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-C7-Q4: AMBIGUOUS: choices B and C both state the correct net loss of $1,000 (duplicate key). Fix: differentiate or remove one. | CBQ23-C7-Q5: ARITHMETIC: keyed -$28,000 underivable (\"$40,000 contribution\" fictitious); correct approx +$7,000 (140,000-61,000-68,000-4,000). EC confesses confusion. Rewrite required. | CBQ23-C7-Q6: INCOHERENT: EC states BE $70.50 then $78 counteroffer \"yielding $0\" (63+7.50=70.50, not 78; $78 yields +$15,000). Rewrite economics."
+  },
+  {
+   "CaseID": "CBQ23-C8",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-C8-Q1",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. 45,000+15,000+10,000 = $70,000 verified (depreciation correctly excluded)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Wrong-answer guidance present."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C8-Q2",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: correct 5-yr relevant cost = $355,000 (200k+5x40k-45k); keyed $155,000 excludes relevant maintenance. EC computes $355,000 then backpedals. Fix key."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C8-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content verified (depreciation irrelevant). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content verified (depreciation irrelevant). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C8-Q4",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: new annual $71,000 vs old $70,000 -> new is $1,000 MORE expensive; keyed $6,000 advantage underivable. EC flails. Rewrite required."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C8-Q5",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Independently recomputed from exhibits. Quality/liability qualitative verified. EW clean (CC=B)."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": "Single defensible answer; inputs traceable."
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": "Distractors represent distinct misconceptions."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": "Part 2 domain application."
+      }
+     },
+     "structural": "PASS",
+     "certification_eligible": true
+    },
+    {
+     "ItemID": "CBQ23-C8-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Propagated + structural (CC=D): cites financial \"cost advantage\" refuted by Q4 (new costs $1,000/yr more). Quality thrust sound; fix financial premise + EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-C8-Q2: ARITHMETIC: correct 5-yr relevant cost = $355,000 (200k+5x40k-45k); keyed $155,000 excludes relevant maintenance. EC computes $355,000 then backpedals. Fix key. | CBQ23-C8-Q3: DL021+DL026 (CC=C). Content verified (depreciation irrelevant). Fix EW slots. | CBQ23-C8-Q4: ARITHMETIC: new annual $71,000 vs old $70,000 -> new is $1,000 MORE expensive; keyed $6,000 advantage underivable. EC flails. Rewrite required. | CBQ23-C8-Q6: Propagated + structural (CC=D): cites financial \"cost advantage\" refuted by Q4 (new costs $1,000/yr more). Quality thrust sound; fix financial premise + EW slots."
+  },
+  {
+   "CaseID": "CBQ23-C9",
+   "case_level_checks": {
+    "caseid_unique": "PASS",
+    "scenario_realism": "PASS",
+    "exhibit_quality": "PASS",
+    "data_consistency": "PASS (exhibits internally consistent; item-level inconsistencies documented per item)",
+    "item_progression": "PASS",
+    "difficulty_variation": "PASS",
+    "part2onlyflag": "PASS"
+   },
+   "items": [
+    {
+     "ItemID": "CBQ23-C9-Q1",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: min TP = 30+(3,000x55)/8,000 = $50.63, not keyed $73. EC computes $50.63 twice then hand-waves. Fix key."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C9-Q2",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=C). Content verified (max = $80 external). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=C). Content verified (max = $80 external). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C9-Q3",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "MEDIUM",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "DL021+DL026 (CC=A). Content verified ($5x8,000=$40,000). Fix EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "MEDIUM",
+       "notes": "DL021+DL026 (CC=A). Content verified ($5x8,000=$40,000). Fix EW slots."
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C9-Q4",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "EC-number: correct Components net = +$195,000 (-30,000+225,000), not EC-stated $180,000 (double-counts sacrifice). Choice B decomposition correct. Fix EC figure. (EW clean, CC=B.)"
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C9-Q5",
+     "six_dimensions": {
+      "Correctness": "ZERO",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "ZERO",
+       "notes": "ARITHMETIC: corporate impact = +$235,000 (idle-capacity value), NOT keyed \"unchanged\". All four options wrong; redistribution logic fails with idle capacity. Rewrite required."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    },
+    {
+     "ItemID": "CBQ23-C9-Q6",
+     "six_dimensions": {
+      "Correctness": "HIGH",
+      "Precision": "HIGH",
+      "DifficultyCalibration": "HIGH",
+      "DistractorEngineering": "HIGH",
+      "BlueprintAlignment": "HIGH",
+      "Part2Relevance": "HIGH"
+     },
+     "dimension_notes": {
+      "Correctness": {
+       "confidence": "HIGH",
+       "notes": "Propagated + structural (CC=D): feasible range is ($50.63,$80), not ($73,$80); mechanism (negotiation) sound. Fix range + EW slots."
+      },
+      "Precision": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DifficultyCalibration": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "DistractorEngineering": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "BlueprintAlignment": {
+       "confidence": "HIGH",
+       "notes": ""
+      },
+      "Part2Relevance": {
+       "confidence": "HIGH",
+       "notes": ""
+      }
+     },
+     "structural": "FAIL",
+     "certification_eligible": false
+    }
+   ],
+   "certification_eligible": false,
+   "hold_reason": "CBQ23-C9-Q1: ARITHMETIC: min TP = 30+(3,000x55)/8,000 = $50.63, not keyed $73. EC computes $50.63 twice then hand-waves. Fix key. | CBQ23-C9-Q2: DL021+DL026 (CC=C). Content verified (max = $80 external). Fix EW slots. | CBQ23-C9-Q3: DL021+DL026 (CC=A). Content verified ($5x8,000=$40,000). Fix EW slots. | CBQ23-C9-Q4: EC-number: correct Components net = +$195,000 (-30,000+225,000), not EC-stated $180,000 (double-counts sacrifice). Choice B decomposition correct. Fix EC figure. (EW clean, CC=B.) | CBQ23-C9-Q5: ARITHMETIC: corporate impact = +$235,000 (idle-capacity value), NOT keyed \"unchanged\". All four options wrong; redistribution logic fails with idle capacity. Rewrite required. | CBQ23-C9-Q6: Propagated + structural (CC=D): feasible range is ($50.63,$80), not ($73,$80); mechanism (negotiation) sound. Fix range + EW slots."
+  }
+ ]
+}

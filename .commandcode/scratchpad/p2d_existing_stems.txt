@@ -1,0 +1,735 @@
+P2-D-001 | D.1 | false | Easy | Understand
+STEM: Apex Manufacturing's CFO identifies four risks: (1) a competitor doubling production capacity, (2) primary raw material supplier in a politically unstable region, (3) interest rates projected to rise 200 bps, and (4) new hazardous waste regulations requiring equipment installation at three plants. Risk (4) is best classified as:
+
+P2-D-002 | D.2 | false | Moderate-Easy | Understand
+STEM: Regency Industries implements ERM under COSO ERM (2017). The board completes a session defining risk appetite, approving the risk management philosophy, and establishing oversight expectations. These activities fall under which COSO ERM component?
+
+P2-D-003 | D.3 | true | Moderate | Apply
+STEM: Northgate Corporation estimates a cyberattack on its customer database has a 15% probability in the next year. If the attack occurs, financial impact is $2,400,000 including restoration, fines, and lost business. What is the expected loss?
+
+P2-D-004 | D.4 | false | Moderate | Apply
+STEM: Meridian Fabrication relies on a single overseas supplier in a region with escalating political instability. A supply disruption would cost $850,000. The CFO purchases business interruption insurance covering $800,000 of the loss for a $35,000 annual premium. This is which risk response strategy?
+
+P2-D-005 | D.5 | false | Moderate-Easy | Analyze
+STEM: Crestview Holdings reviews its ERM oversight against COSO ERM (2017). Which statement best describes the division of risk oversight between the board and management?
+
+P2-D-006 | D.2 | false | Easy | Understand
+STEM: CRO Elena Martinez identifies four exposures: (1) earthquake damage to Phoenix plant, (2) rising interest rates on floating-rate debt, (3) production line breakdown from aging equipment, (4) new EPA emissions rules requiring $12M in compliance equipment. Classify each risk correctly.
+
+P2-D-007 | D.3 | true | Moderate-Easy | Apply
+STEM: The board of Meridian Bank approved a risk appetite statement: maximum single-name credit exposure $25M, maximum daily trading VaR $5M, minimum Tier 1 capital ratio 10%. The CRO reports a proposed $30M loan to a AAA-rated borrower with a 0.02% probability of default. Which statement is correct?
+
+P2-D-008 | D.4 | true | Moderate | Apply
+STEM: CFO David Chen evaluates two property insurance programs. Atlas averages 2 claims/year at $500K each. Program A: $200K deductible, $520K premium. Program B: $500K deductible, $380K premium. Which minimizes expected annual cost?
+
+P2-D-009 | D.5 | false | Easy | Understand
+STEM: A $2.5M operational loss went undetected for 6 weeks. Investigation found: (1) supervisor approved trades without independent price verification, (2) risk management flagged the desk twice but alerts were not escalated, (3) internal audit had not reviewed trading in 22 months. Which failures correspond to which lines of defense?
+
+P2-D-010 | D.1 | false | Moderate-Easy | Understand
+STEM: CRO Sarah Novak reviews two ERM activities at Crestview Holdings. Activity X: management assesses risk severity/likelihood, prioritizes on a heat map, and develops risk responses. Activity Y: the board annually reviews whether the ERM framework and risk responses remain effective given changes in the business environment. Which COSO ERM components do X and Y represent?
+
+P2-D-011 | D.2 | false | Moderate | Analyze
+STEM: CRO James Liu presents four metrics as potential KRIs: (1) overdue compliance training certifications, (2) dollar value of operational losses booked last quarter, (3) employee turnover rate in internal audit, (4) average days to remediate control deficiencies. Which is the strongest LEADING indicator of future operational risk?
+
+P2-D-012 | D.4 | true | Moderate | Apply
+STEM: Apex Manufacturing assesses supplier quality failure risk. Inherent: likelihood 40%, impact $5M. After supplier audits and incoming inspection (70% control effectiveness), what is the residual expected loss?
+
+P2-D-013 | D.5 | false | Moderate-Easy | Understand
+STEM: Ridgeway's audit committee oversees financial reporting, internal controls, internal audit, AND ERM. A governance review recommends separating ERM from the audit committee. What is the primary rationale?
+
+P2-D-014 | D.3 | false | Difficult | Analyze
+STEM: The board asks CRO Elena Martinez: distinguish risk capacity, risk appetite, and risk tolerance with a concrete example. Which illustration is correct?
+
+P2-D-015 | D.1 | false | Difficult | Evaluate
+STEM: Crestview Energy's CEO announces doubling production through acquisitions. The board approved without reviewing ERM. The CRO shows debt-to-EBITDA would increase from 2.0x to 5.5x and downgrade probability from 10% to 45%. The CEO dismisses the analysis as 'too conservative' and tells the CRO to 'support the growth vision.' What ERM cultural deficiency is most evident?
+
+P2-D-016 | D.4 | false | Moderate | Apply
+STEM: Harborline Shipping's board reviews the risk of a single-source engine supplier whose bankruptcy would halt 40% of the fleet for up to six months. Management's plan: qualify a second supplier, increase spare-parts inventory to a 60-day buffer, and install redundant monitoring on critical engines. Which COSO ERM risk response does this plan represent?
+
+P2-D-017 | D.1 | false | Moderate-Easy | Understand
+STEM: Crestview Energy's CRO is mapping its ERM processes to COSO ERM (2017) components. Which activity belongs to the Information, Communication & Reporting component?
+
+P2-D-018 | D.2 | true | Moderate | Apply
+STEM: Northgate's CRO scores four risks on 1-5 scales for likelihood and severity: Risk 1 -- likelihood 4, severity 5; Risk 2 -- likelihood 5, severity 3; Risk 3 -- likelihood 3, severity 4; Risk 4 -- likelihood 2, severity 5. Using the standard risk-score (likelihood x severity) heat map, which risk should receive the highest priority?
+
+P2-D-019 | D.4 | false | Moderate-Easy | Understand
+STEM: Meridian Consumer Products learns that a proposed line of children's toys would require a chemical now linked to litigation in three countries. Even with redesigned packaging and warnings, the board concludes the product-line liability exposure exceeds the firm's risk appetite and the projected margin. Management decides not to launch the product. Which COSO ERM risk response is this?
+
+P2-D-020 | D.2 | true | Moderate | Apply
+STEM: Harborline's CRO models next-year supply-disruption loss with four outcomes: 60% probability of no loss ($0), 20% of a small loss ($100,000), 15% of a moderate loss ($400,000), and 5% of a severe loss ($1,000,000). What is the expected loss?
+
+P2-D-021 | D.2 | true | Difficult | Analyze
+STEM: A bank's ERM team calculates inherent operational risk for its payments system at $8,000,000 expected annual loss. After implementing two-factor authentication and transaction monitoring, residual expected loss falls to $2,000,000. The board's risk appetite for operational loss is $3,000,000 annually. Which conclusion follows?
+
+P2-D-022 | D.2 | false | Moderate | Understand
+STEM: Crestview Energy wants to identify emerging risks for its 10-year strategy. The CRO needs a technique that avoids the bias of dominant personalities in meetings and allows anonymous, iterative expert input that converges toward consensus without a single manager's view dominating. Which technique best fits?
+
+P2-D-023 | D.1 | false | Difficult | Analyze
+STEM: Two business units of Regent Corp each report a foreign-exchange exposure of $4,000,000. Unit A holds long euro positions; Unit B holds short euro positions of equal size. Evaluated separately, each unit's FX risk appears material and each hedges independently. The CRO argues this is inefficient. Why does an enterprise-level view change the risk picture?
+
+P2-D-024 | D.2 | false | Moderate | Understand
+STEM: Regent Bank's market-risk report states: 'One-day VaR at 95% confidence is $2,400,000.' Which interpretation is correct?
+
+P2-D-025 | D.4 | true | Difficult | Evaluate
+STEM: Harborline Shipping's CFO faces a supplier-concentration risk: a single engine manufacturer supplies 90% of parts, and a disruption would cost an estimated $2,000,000 in lost revenue. Three options: (1) dual-source at $100,000/year, reducing disruption probability from 12% to 2%; (2) buy business-interruption insurance at $150,000/year covering 80% of the loss; (3) accept the risk and self-insure, given a $2,000,000 cash reserve. Which recommendation is best supported?
+
+P2-D-026 | D.4 | false | Easy | Understand
+STEM: Regent Corp's board approves a high-growth acquisition that carries above-normal integration risk, concluding the expected return justifies the risk within the firm's stated risk appetite. Which COSO ERM risk response does this represent?
+
+P2-D-027 | D.5 | false | Moderate | Understand
+STEM: Crestview Holdings' board is weighing three growth strategies: expand organically, acquire a regional competitor, or enter a new international market. Under COSO ERM (2017) Principle 8, how should the board evaluate these alternatives?
+
+P2-D-028 | D.2 | false | Moderate | Understand
+STEM: Apex Manufacturing's CRO wants to assess how a sustained economic downturn, a raw-material supply shock, and a major tariff increase would each affect the company's profitability and strategy. Which risk assessment technique is most appropriate?
+
+P2-D-029 | D.2 | false | Moderate | Apply
+STEM: Northgate Corporation monitors a supplier-quality KRI with a defined threshold of 2.5%. This month the KRI reads 4.1%. What should the risk team do?
+
+P2-D-030 | D.2 | false | Moderate-Easy | Understand
+STEM: Crestview Energy's ERM team is building its risk register. Which set of fields should each register entry contain?
+
+P2-D-031 | D.1 | false | Moderate | Understand
+STEM: Regent Corp's CRO is implementing COSO ERM Principle 9. What does this principle require the organization to do?
+
+P2-D-032 | D.2 | false | Moderate | Understand
+STEM: Apex Manufacturing's CRO is deciding between quantitative and qualitative risk assessment methods. Which statement best describes the two approaches?
+
+P2-D-033 | D.1 | false | Difficult | Analyze
+STEM: Two divisions of Regent Corp both generate revenue tied to the price of the same commodity, so their revenue risks are positively correlated. Each division reports its risk independently. What should the enterprise risk assessment recognize?
+
+P2-D-034 | D.2 | false | Moderate-Easy | Understand
+STEM: Northgate Corporation is categorizing a risk stemming from an employee error, an outdated legacy system, and an upstream vendor failure. These are best classified under which operational risk categories?
+
+P2-D-035 | D.5 | false | Moderate | Understand
+STEM: Meridian Fabrication's ERM policy assigns responsibility for managing the supply-chain interruption risk. Who should own this risk?
+
+P2-D-036 | D.1 | false | Moderate | Understand
+STEM: Crestview Holdings is debating whether to adopt enterprise risk management or continue its traditional, siloed approach. What is the primary difference between ERM and traditional risk management?
+
+P2-D-037 | D.2 | false | Moderate-Easy | Understand
+STEM: Apex Manufacturing's ERM team has identified 40 risks. Under COSO ERM Principle 10, what should the team do with this list?
+
+P2-D-038 | D.2 | false | Moderate | Understand
+STEM: Crestview Energy's CRO wants to identify risks from emerging technologies and shifting regulations that have not yet affected the company. Which approach is appropriate?
+
+P2-D-039 | D.1 | false | Easy | Understand
+STEM: Which action most effectively establishes a strong enterprise risk culture?
+
+P2-D-040 | D.1 | false | Moderate | Understand
+STEM: Regent Corp completes a major acquisition that doubles its size and enters two new countries. Under COSO ERM (2017), what should the board and management do?
+
+P2-D-041 | D.4 | true | Moderate | Apply
+STEM: A bank faces an operational risk with an inherent expected annual loss of $500,000. A control system costing $40,000 per year reduces the probability of loss by 60%. What is the total expected annual cost with the control, and should management implement it?
+
+P2-D-042 | D.3 | false | Moderate | Understand
+STEM: Crestview Holdings' board is drafting its risk appetite statement. What should it contain?
+
+P2-D-043 | D.2 | false | Moderate-Easy | Understand
+STEM: Meridian Fabrication is reviewing its compliance risk management. Which statement about compliance risk is correct?
+
+P2-D-044 | D.2 | false | Moderate-Easy | Understand
+STEM: Apex Manufacturing is classifying a risk that a new competitor's disruptive technology will erode its market position, versus a risk that its production line will fail due to aging equipment. How are these two risks best classified?
+
+P2-D-045 | D.2 | false | Easy | Understand
+STEM: Northgate Corporation is assessing its exposure to a warehouse fire and a product-liability lawsuit. How is this risk best characterized and managed?
+
+P2-D-046 | D.2 | false | Moderate-Easy | Understand
+STEM: Regent Bank is cataloging its exposures to interest-rate movements, borrower defaults, and a possible shortfall in cash to meet withdrawal demands. These are best classified as which types of financial risk?
+
+P2-D-047 | D.4 | false | Moderate | Apply
+STEM: Meridian Fabrication concludes that the cost of mitigating a minor supply-delay risk exceeds the expected loss, and the risk falls within appetite. It establishes a $50,000 contingency reserve. Which statement about this risk response is correct?
+
+P2-D-048 | D.1 | false | Moderate | Apply
+STEM: A competitor's breakthrough product, a new regulation, and a change in Crestview Holdings' leadership all occur within one quarter. Under COSO ERM, how should the organization respond?
+
+P2-D-049 | D.1 | false | Moderate | Apply
+STEM: Regent Corp's board has asked the CRO to improve risk reporting. Which reporting approach is most appropriate?
+
+P2-D-050 | D.5 | false | Difficult | Evaluate
+STEM: Crestview Holdings' CRO finds that ERM exists on paper -- an annual risk report is filed -- but risk appetite does not influence strategy, and capital allocation ignores risk assessments. The CEO asks how ERM should function. What is the CRO's best recommendation?
+
+P2-D-051 | D.1 | false | Easy | Remember
+STEM: Flash's board is refreshing the ERM charter, and the Chief Risk Officer, Elena Vasquez, must present the structure of the COSO ERM (2017) framework. Which list correctly identifies the five components of COSO ERM (2017)?
+
+P2-D-052 | D.1 | false | Moderate-Easy | Understand
+STEM: At Flash's annual risk workshop, Internal Audit Director Marcus Bell asks how the COSO ERM (2017) framework differs from the COSO Internal Control (2013) framework. Which statement best describes the scope distinction?
+
+P2-D-053 | D.3 | false | Moderate-Easy | Understand
+STEM: Flash's audit committee chair asks the Chief Risk Officer to clarify how risk appetite and risk tolerance are used in Flash's ERM process. Which explanation is correct?
+
+P2-D-054 | D.2 | true | Moderate-Easy | Apply
+STEM: Flash's CRO assesses a supply-chain concentration risk: a single supplier provides a critical raw material. On Flash's 1-to-10 scale, the CRO rates the inherent risk at 8.0. Flash's dual-sourcing arrangement and inventory buffer are judged 75% effective at reducing this risk. What is the residual risk score?
+
+P2-D-055 | D.2 | true | Moderate | Apply
+STEM: Flash's risk team estimates an 8% probability that a product-liability claim arising from a defective component will be filed within the next year. If the claim occurs, the financial impact is $3,750,000, including settlements, legal costs, and recall expense. What is the expected loss for this risk?
+
+P2-D-056 | D.2 | true | Moderate | Apply
+STEM: Flash's CRO uses a 1-to-5 likelihood and impact matrix. For the risk of a major ERP implementation delay, likelihood is rated 4 (likely) and impact is rated 5 (catastrophic, because billing would halt). Risks scoring above 15 require a formal response plan. What is the risk score?
+
+P2-D-057 | D.4 | false | Moderate-Easy | Apply
+STEM: Flash's strategy team proposes acquiring a regional distributor to enter a new market. Due diligence reveals regulatory, reputational, and culture-integration risks that exceed Flash's risk appetite, and no combination of controls can bring the exposure within tolerance. Which risk response should the CRO recommend?
+
+P2-D-058 | D.4 | false | Moderate-Easy | Apply
+STEM: Flash sells $18 million of equipment annually to euro-zone customers under fixed-euro contracts. CFO Dana Osei is concerned the euro will weaken before the receivables convert to dollars. Which risk response is represented by entering into forward contracts to fix the exchange rate?
+
+P2-D-059 | D.4 | false | Moderate-Easy | Apply
+STEM: Flash's Internal Audit Director notes that a fire at the plant producing the sole source of a key subassembly would halt production for months. The CRO's team is considering installing an automated fire-suppression system and keeping a backup supplier under contract. Which risk response does this represent?
+
+P2-D-060 | D.2 | false | Easy | Remember
+STEM: Flash's CRO is building the enterprise risk register and must classify each exposure by risk category. Which of the following is best classified as a strategic risk for Flash?
+
+P2-D-061 | D.2 | false | Easy | Understand
+STEM: During the board risk session, Flash's audit committee asks the CRO to distinguish operational risk from financial risk. Which of the following exposures is best classified as a financial risk for Flash?
+
+P2-D-062 | D.5 | false | Moderate | Analyze
+STEM: Flash's CFO, Dana Osei, is comparing the four business divisions' performance. Division Northstar posts the highest ROI, but its returns are driven by volatile, high-risk contracts that exceed the board's stated risk appetite; Division Solace posts lower ROI with stable, low-risk earnings. The board asks how performance evaluation should reflect risk. Which approach is most consistent with COSO ERM (2017)?
+
+P2-D-063 | D.3 | false | Moderate | Analyze
+STEM: Flash's CRO must select a key risk indicator (KRI) for the risk that Flash becomes overly dependent on its single largest customer, which currently contributes 28% of revenue. Which KRI is most effective for monitoring this risk?
+
+P2-D-064 | D.5 | false | Moderate-Easy | Understand
+STEM: After a divisional manager was found hiding losses, Flash's new CEO wants to strengthen the enterprise's risk culture. Which action most directly establishes an effective tone at the top under COSO ERM (2017)?
+
+P2-D-065 | D.5 | false | Difficult | Evaluate
+STEM: Flash's board is weighing a growth strategy: entering two new countries in parallel within 18 months. The CRO is asked how ERM should be applied as the strategy is developed. Which approach best reflects COSO ERM (2017)?
+
+P2-D-066 | D.2 | false | Moderate | Apply
+STEM: Flash manufactures industrial fasteners across three plants. Vice President of Supply Chain Amara Diallo reports to Chief Risk Officer Daniel Osei that Flash's single-source polymer supplier suffered a plant fire and cannot deliver for eleven weeks; no qualified alternative supplier exists in that window, so Flash's assembly lines face shutdown during the gap. Under the COSO ERM 2017 risk taxonomy, how should Osei classify this exposure?
+
+P2-D-067 | D.1 | false | Moderate-Easy | Understand
+STEM: During a board orientation session, Flash Chief Risk Officer Daniel Osei walks new directors through the five components of COSO ERM (2017). He notes that this quarter Flash chartered a board-level risk committee, formalized escalation lines running from plant controllers to the audit committee, and adopted a quarterly code-of-conduct attestation cycle for all executives. To which COSO ERM component do these activities belong?
+
+P2-D-068 | D.2 | false | Easy | Remember
+STEM: At Flash's quarterly risk workshop, Chief Risk Officer Daniel Osei quizzes the leadership team on ERM vocabulary. He asks: risks arising from natural catastrophes, fires, and other accidental physical events that cause direct property damage or liability are categorized as which risk type?
+
+P2-D-069 | D.4 | false | Moderate | Apply
+STEM: Flash signed an equipment purchase contract payable six months from today in EUR 12 million. Treasurer Marcus Webb is concerned the euro may strengthen against the dollar before settlement. On Chief Risk Officer Daniel Osei's recommendation, Webb buys a six-month forward contract locking today's exchange rate with Flash's bank. Within COSO ERM's four response categories, how is this action classified?
+
+P2-D-070 | D.2 | false | Difficult | Analyze
+STEM: Flash's board asks Chief Risk Officer Daniel Osei to categorize exposures surfaced in the annual environmental scan. One entry reads: "A licensed competitor automation platform could displace an estimated 30 percent of demand for Flash's flagship fastener line within five years, threatening the viability of two of Flash's four business units." Which risk type best characterizes this exposure?
+
+P2-D-071 | D.3 | false | Moderate-Easy | Apply
+STEM: Preparing board materials, Flash Chief Risk Officer Daniel Osei asks an analyst to classify each governance statement against the correct ERM concept. One board resolution reads: "Flash is willing to accept up to a 3 percent adverse deviation in quarterly consolidated operating margin before triggering mandatory escalation to the full board." This statement expresses:
+
+P2-D-072 | D.4 | true | Very Difficult | Evaluate
+STEM: Flash's Riverside distribution center sits in a floodplain. Flash assesses a 12 percent probability of a major flood loss next year with an impact of $20 million, an expected loss of $2.4 million. CEO Ingrid Halvorsen asks Chief Risk Officer Daniel Osei to recommend one of four fully costed responses: Avoid, exiting Riverside and forfeiting $6.2 million of annual segment contribution margin; Reduce, a $300,000-per-year engineering program cutting flood probability to 3.5 percent; Share, insurance at a $1,350,000 annual premium covering the loss less a $250,000 retained deductible; or Accept, retaining the exposure. On total annual economic cost, which response should Osei recommend?
+
+P2-D-073 | D.1 | false | Moderate | Apply
+STEM: Flash announces an agreement to acquire Vega Components, roughly doubling its plant footprint and entering two countries with unfamiliar regulatory regimes. Before closing, Chief Risk Officer Daniel Osei convenes an enterprise-wide refresh of Flash's risk register, reassessing severity rankings and response plans across all four business units. Under COSO ERM (2017), which principle most directly governs Osei's action?
+
+P2-D-074 | D.5 | false | Difficult | Analyze
+STEM: Flash's enterprise strategy map lists the objective "Launch the Titan product line and reach $40 million in annual revenue within three years." Chief Risk Officer Daniel Osei must pair each strategic objective on the map with one key risk indicator reviewed monthly by the executive committee. Which KRI provides the strongest early warning specifically for the Titan objective?
+
+P2-D-075 | D.4 | true | Moderate | Apply
+STEM: Flash's Toledo plant stores solvent-based coatings. The fire-risk assessment shows a 4 percent probability of a significant fire loss in any year, with an estimated impact of $15 million if one occurs. Flash's board set a risk tolerance of $750,000 expected annual loss for any single uninsured hazard exposure, and an insurer quoted an $850,000 annual premium for full coverage. Chief Risk Officer Daniel Osei first computes the expected annual loss. What is it, and does the unmitigated exposure fall within the board's tolerance?
+
+P2-D-076 | D.3 | false | Moderate-Easy | Understand
+STEM: While onboarding newly elected directors, Flash Chief Risk Officer Daniel Osei distinguishes the related terms used throughout Flash's ERM policy. Which statement correctly distinguishes risk capacity from risk appetite?
+
+P2-D-077 | D.5 | false | Very Difficult | Evaluate
+STEM: Flash allocates $220 million of investment capital across four divisions using raw return on investment alone. Last year the division posting Flash's highest ROI also carried its largest unhedged commodity exposure, and its results collapsed mid-year. CEO Ingrid Halvorsen asks Chief Risk Officer Daniel Osei and CFO Elena Vasquez to recommend reform from three proposals: (1) keep raw ROI but cap each division's Value-at-Risk separately; (2) adopt a risk-adjusted return measure dividing divisional operating income by risk-weighted economic capital, with division-president incentives tied to it; (3) leave measurement unchanged and rely on the audit committee's annual review. Which recommendation best integrates ERM with strategy and performance?
+
+P2-D-078 | D.2 | true | Moderate | Analyze
+STEM: Chief Risk Officer Daniel Osei scores three entries in Flash's risk register on 1-to-5 scales for likelihood and severity: a legacy ERP outage (likelihood 2, severity 5), a ransomware attack on plant networks (likelihood 4, severity 5), and a forklift accident injuring workers (likelihood 4, severity 3). Using the standard heat-map convention in which risk score equals likelihood multiplied by severity, which prioritization should Osei report to Flash's audit committee?
+
+P2-D-079 | D.1 | false | Easy | Apply
+STEM: During Flash's annual governance review, board chairperson Rosa Delgado asks who holds ultimate responsibility for overseeing management's design and operation of enterprise risk management. Per COSO ERM (2017) Principle 1, the correct answer is:
+
+P2-D-080 | D.5 | true | Difficult | Apply
+STEM: After adopting risk-adjusted performance measurement, Flash assigns risk-weighted economic capital to each division. Year-end figures: North America drivetrain earned $18.4 million operating income on $92 million of economic capital; Asia-Pacific electronics earned $21.6 million on $135 million; Europe precision tools earned $12.25 million on $49 million. CFO Elena Vasquez and Chief Risk Officer Daniel Osei rank divisions on risk-adjusted return (operating income divided by economic capital) to guide next year's capital additions. Which division ranks first?
+
+P2-D-081 | D.2 | false | Difficult | Analyze
+STEM: Flash Industries' chief risk officer, Daniel Osei, asks risk analyst Becca Huang to mine five years of warranty-claim and freight-damage records for the appliance-controls division. The data show claims clustering on one connector subassembly installed during a single production quarter, with claim frequency rising about 30% per year while average severity per claim has stayed flat. Which conclusion does this pattern most supportably indicate for Flash's risk identification process?
+
+P2-D-082 | D.4 | false | Moderate | Apply
+STEM: Flash ships finished appliances nationwide through TransCarolina Logistics. While renegotiating the annual carrier agreement, general counsel Thomas Ibarra circulates draft terms to CRO Daniel Osei and asks which provision would move the financial burden of in-transit cargo losses from Flash to the carrier. Which provision accomplishes that contractual transfer?
+
+P2-D-083 | D.3 | false | Moderate-Easy | Understand
+STEM: Flash's board approves enterprise-level risk tolerances, including an $18 million ceiling on credit exposure to any single customer and a 36-hour annual ceiling on aggregate unplanned line downtime. Working from CRO Daniel Osei's implementation memo, controller Sofia Marchetti explains to newly hired analysts how these board limits relate to targets set for individual plants, product lines, and credit desks. Which statement best describes how risk tolerance cascades through Flash?
+
+P2-D-084 | D.4 | true | Very Difficult | Evaluate
+STEM: Flash plans a national launch of a Wi-Fi-enabled control module. CRO Daniel Osei tells CFO Priya Raghavan that the major firmware-recall risk carries an 8% probability of occurrence next year and a gross loss of $9,500,000 (replacement, logistics, remediation) if it strikes unmanaged. Four response packages are priced: accept - fund losses from operations; reduce - add $180,000 of burn-in testing per year, cutting occurrence probability to 5%; share - buy recall insurance with a $520,000 annual premium and a $500,000 per-event deductible; avoid - shelve the launch, forfeiting $2,100,000 of forecast annual contribution margin. On expected annual economic cost, which package should Raghavan select?
+
+P2-D-085 | D.2 | false | Moderate | Apply
+STEM: Before starting up a second packaging line at its Cedar Rapids plant, Flash convenes a pre-launch risk identification session led by CRO Daniel Osei. Which practice applies the facilitated-workshop technique as intended?
+
+P2-D-086 | D.2 | false | Easy | Remember
+STEM: During analyst onboarding, CRO Daniel Osei walks new members of Flash's risk team through the enterprise horizon-scanning calendar, including the semiannual emerging-risk scan. What is an emerging-risk scan designed to do?
+
+P2-D-087 | D.3 | false | Difficult | Analyze
+STEM: Flash's board risk appetite statement reads: 'Flash accepts operational risks up to $6,000,000 in aggregate annual expected loss; pursues financial risks consistent with holding the interest-coverage ratio at or above 2.0x; avoids regulatory risks carrying sanction potential above $250,000; and declines opportunities requiring debt service above 45% of projected operating cash flow.' CRO Daniel Osei and treasurer Alan Whitfield screen four pending proposals against the statement. Which proposal is permissible under the statement as written?
+
+P2-D-088 | D.4 | true | Moderate-Easy | Apply
+STEM: Flash insures its delivery-truck fleet. Risk manager Lena Ostrowski and CRO Daniel Osei are renewing physical-damage coverage. A major multi-vehicle incident has a 4% annual probability with a $2,000,000 claim if one occurs, and treasury policy caps retained single-event exposure at $400,000. Quotes received: $100,000 deductible at a $310,000 premium; $250,000 deductible at $262,000; $500,000 deductible at $205,000; $750,000 deductible at $150,000. Expected retained loss equals the incident probability multiplied by the deductible. Which option should Ostrowski bind?
+
+P2-D-089 | D.1 | false | Moderate | Apply
+STEM: Flash's executive committee is choosing among three growth paths: a greenfield packaging plant, a contract-manufacturing licensing deal, and a tuck-in acquisition. At CRO Daniel Osei's direction, the team builds projected risk profiles and risk-adjusted return estimates for each path and presents them alongside the strategy financials before any commitment is made. Within the COSO ERM 2017 framework, which principle does this activity directly illustrate?
+
+P2-D-090 | D.3 | true | Very Difficult | Evaluate
+STEM: A prospective private-label customer offers Flash a $14,000,000-per-year supply contract requiring $4,200,000 of incremental working capital plus a $1,500,000 peak seasonal inventory build. CFO Priya Raghavan, briefed by CRO Daniel Osei on capacity policy, reviews treasury resources: $2,600,000 of unrestricted cash above the operating minimum and a $3,000,000 undrawn committed revolver, subject to a lender covenant requiring minimum liquidity of $500,000 at all times. The customer has resisted phased deliveries before but has left pricing open. Which course of action is most defensible for Raghavan?
+
+P2-D-091 | D.4 | false | Moderate | Apply
+STEM: One big-box retailer accounts for 38% of Flash's consumer-appliance revenue. CRO Daniel Osei proposes a three-year program to broaden the customer base so that no relationship exceeds 15% of revenue, and he must classify the program within the COSO response taxonomy when presenting to CFO Priya Raghavan. Which classification and rationale are correct?
+
+P2-D-092 | D.2 | false | Difficult | Analyze
+STEM: CRO Daniel Osei has Flash's internal audit team map the inbound process at the Reno distribution hub: receiving clerks log arriving pallets into the warehouse system; quality control samples only pallets a clerk flags as suspect; and any discrepancy between paperwork and contents is emailed to a shared inbox that a supervisor reads weekly. Which insight does the map most supportably yield about where risk concentrates?
+
+P2-D-093 | D.5 | false | Moderate-Easy | Understand
+STEM: At Flash's quarterly business review, director Ingrid Halvorsen asks what the phrase 'ERM integrated with strategy' actually commits the company to, and CRO Daniel Osei is asked to explain the concept to the board's newest members. Which explanation is accurate?
+
+P2-D-094 | D.5 | false | Moderate | Apply
+STEM: Acting on CRO Daniel Osei's integration recommendation, CFO Priya Raghavan will redesign Flash's annual planning cycle so that risk assessment is built into routine decisions rather than appended after them. Which practice operationalizes that intent?
+
+P2-D-095 | D.1 | false | Easy | Remember
+STEM: During new-analyst orientation at Flash, CRO Daniel Osei quizzes the cohort on framework structure. Which list states the five components of COSO ERM 2017 (Integrating with Strategy and Performance) completely and correctly?
+
+P2-D-096 | D.1 | false | Moderate-Easy | Understand
+STEM: Flash Industries' board, acting on a recommendation from CRO Daniel Osei, charters a separate board-level risk committee alongside the existing audit committee. At the organizational meeting, directors debate which duties belong to the new risk committee rather than to the audit committee. Which duty properly belongs to Flash's board risk committee?
+
+P2-D-097 | D.2 | false | Difficult | Analyze
+STEM: Before launching its connected-fleet telematics platform, Flash convenes CRO Daniel Osei and general counsel Amara Diallo to classify the new risk register. Four entries are logged: (1) state privacy statutes impose per-record penalties for retaining driver-location data beyond consented periods; (2) plaintiffs' firms are expected to file class-action litigation if location data is sold without explicit consent; (3) a 6% swing in the Canadian dollar could raise parts costs on cross-border supply contracts; (4) a single cloud provider hosts the fleet-dashboard application, creating outage dependency. Which entries represent legal and regulatory exposure?
+
+P2-D-098 | D.4 | true | Moderate | Apply
+STEM: Flash's specialty marine-coatings line at the Tacoma plant generates $18.0 million of revenue against $11.7 million of variable costs; $2.1 million of its fixed costs are avoidable if the line closes. Pending state toxics-control regulation would add an expected $1.9 million of annual compliance and penalty cost if the line continues, and closing would trigger a one-time $5.6 million exit charge. CFO Elena Vasquez asks CRO Daniel Osei to quantify the avoidance response. Excluding the one-time charge, what is the recurring annual effect on operating income of avoiding the regulatory risk by exiting the line?
+
+P2-D-099 | D.1 | false | Easy | Remember
+STEM: Flash appoints Daniel Osei as its first Chief Risk Officer and asks him to draft his own charter for board ratification. Which statement most accurately describes the core mandate of a Chief Risk Officer within an ERM program?
+
+P2-D-100 | D.5 | false | Very Difficult | Evaluate
+STEM: Flash's board risk appetite states that consolidated return-on-equity volatility will be kept within +/-300 basis points annually, revenue from any single geography outside North America will remain below 15% of consolidated revenue, and there is zero tolerance for willful sanctions violations. CRO Daniel Osei and CFO Elena Vasquez must recommend one of two mutually exclusive acquisitions: Strategy 1, a Brazilian pump manufacturer, purchase price $85 million with $12 million of annual synergies, lifting Latin American revenue to 22% of total and projected ROE volatility to +/-420 basis points; or Strategy 2, an Ohio automation firm, price $60 million with $7 million of annual synergies, keeping Latin American revenue at 9% and ROE volatility at +/-180 basis points. Both deals show positive NPV. Which recommendation is most consistent with the board's risk appetite?
+
+P2-D-101 | D.3 | true | Moderate | Apply
+STEM: For the semiannual portfolio review, CRO Daniel Osei aggregates residual annual expected losses across Flash's three reporting units: Industrial Coatings $2.4 million, Consumer Packaging $3.1 million, and Precision Electronics $2.9 million. The board's risk appetite caps aggregate residual expected loss at $7.5 million. What conclusion should Daniel present to the executive committee?
+
+P2-D-102 | D.2 | false | Moderate-Easy | Understand
+STEM: During Flash's annual risk-taxonomy refresh meeting, CRO Daniel Osei asks controllers to sort register entries into the standard categories. One entry reads: 'A projected 150-basis-point rise in short-term benchmark rates increases interest expense on Flash's $60 million floating-rate revolver.' The other entries cover a labor stoppage idling the Columbus assembly line, proposed extended-producer-responsibility legislation imposing recycling fees, and a fire destroying finished goods at the Reno distribution center. Into which category does the interest-rate entry fall?
+
+P2-D-103 | D.5 | false | Difficult | Analyze
+STEM: Flash's Q2 integration dashboard tracks three key risk indicators reviewed by CRO Daniel Osei. Supplier on-time delivery: threshold at least 95.0%, actual 91.2%, third consecutive quarterly decline. Maintenance overtime ratio: ceiling 8.0% of straight-time hours, actual 9.4%, second consecutive quarter above ceiling. Near-miss incident reports: floor of 25 per quarter, actual 31, rising. Flash's escalation protocol mandates a remediation plan presented to the executive risk committee whenever any KRI breaches its threshold for two consecutive quarters. Which statement reflects the correct reading of the dashboard?
+
+P2-D-104 | D.4 | true | Moderate | Apply
+STEM: Flash depends on a single tooling supplier for machined fixtures used across all plants. Treasurer Marcus Webb quantifies the inherent annualized exposure at $1,350,000. The approved dual-sourcing program is expected to mitigate $810,000 of that exposure. Treasury's stated tolerance for supplier-concentration losses in this category is $750,000 per year. After the mitigation operates, what residual exposure results, and what response should CRO Daniel Osei document?
+
+P2-D-105 | D.2 | false | Easy | Remember
+STEM: Ransomware encrypts Flash's manufacturing-execution servers, halting plant-floor scheduling for four days until restoration from immutable backups. CRO Daniel Osei logs the incident in the enterprise risk register, where Flash's taxonomy maintains technology and cyber risk as a standalone category. Under that taxonomy, the incident is recorded as:
+
+P2-D-106 | D.4 | true | Very Difficult | Evaluate
+STEM: Flash's production-scheduling environment faces ransomware exposure estimated at 18% annual probability with a $2,500,000 impact. CRO Daniel Osei weighs three responses for CFO Elena Vasquez: (i) invest $700,000 in network segmentation and managed detection, cutting annual probability to 8% with impact unchanged; (ii) transfer via cyber insurance quoting a $310,000 annual premium with a $250,000 deductible retained; or (iii) accept the exposure untreated. The evaluation horizon is five years, the discount rate is 10%, and the PV annuity factor, 5 years, 10% = 3.791. Insurance is modeled as an equivalent annual cost. Which recommendation best satisfies value-maximizing risk response?
+
+P2-D-107 | D.5 | false | Moderate | Apply
+STEM: Flash pays regional sales managers solely on revenue growth with uncapped quarterly accelerators. Last year two managers loaded marginal-credit customers to reach their accelerators; days-sales-outstanding rose 14 days and bad-debt write-offs increased $1.8 million. CRO Daniel Osei tells CHRO Lauren Whitfield that the plan is manufacturing risk-taking the board's appetite does not sanction. Which redesign most directly realigns the incentive with Flash's risk appetite while preserving motivational pull?
+
+P2-D-108 | D.1 | false | Difficult | Analyze
+STEM: After a mislabeled lot reached a key customer, Flash reviewed who did what. Production supervisors had performed shift-level verification checks; CRO Daniel Osei's risk function authored the labeling-control standard, monitors related indicators, and challenges plant performance; internal audit lead Rebecca Stone tested the control's operating effectiveness and reported conclusions to the audit committee. Which statement assigns accountability consistently with the three-lines model?
+
+P2-D-109 | D.5 | false | Moderate-Easy | Understand
+STEM: Flash's board currently receives a single annual ERM report covering the full portfolio. CRO Daniel Osei proposes moving to a quarterly board risk report covering appetite utilization, top-exposure movement, and emerging themes. Which rationale best supports the change of cadence?
+
+P2-D-110 | D.3 | true | Moderate | Apply
+STEM: Flash's board appetite directs that credit exposure to any single customer stay within a tolerance equal to 3% of consolidated revenue, currently $480 million. Meridian Retail, Flash's anchor account representing all $80 million of Midwest region sales, carries $9.6 million of receivables plus $1.6 million of confirmed open orders - $11.2 million of total exposure. How much additional credit could treasurer Marcus Webb extend to Meridian while remaining inside the tolerance that CRO Daniel Osei monitors?
+
+P2-D-111 | D.4 | true | Very Difficult | Evaluate
+STEM: Flash Industries entered a pay-fixed, receive-floating interest-rate swap designated as a cash flow hedge of the variable interest payments on its $40 million term loan. At the quarterly hedge-effectiveness review, Treasurer Marcus Webb reports that the cumulative change in the swap's fair value was a gain of $340,000, while the fair value of the expected future interest payments being hedged changed by $400,000 over the same period. Flash assesses effectiveness using the dollar-offset method with an 80%-125% assessment band. Chief Risk Officer Daniel Osei asks Webb for a recommendation on whether the hedging relationship qualifies for continued hedge accounting and whether the swap program should be retained. Which recommendation is supported?
+
+P2-D-112 | D.2 | true | Moderate | Apply
+STEM: VP of Procurement Lucia Grant completed Flash's tier-1 and tier-2 supply-chain mapping for the annual risk assessment. Total annual direct-material spend is $60.0 million. Mapping shows three single-sourced inputs: a specialty polymer at $13.2 million, ductile-iron castings available from only one region at $9.6 million, and proprietary gauge tooling at $3.6 million; a further $9.0 million of spend is dual-sourced. Chief Risk Officer Daniel Osei asks Grant to quantify the single-source concentration exposure for the risk register. What percentage of direct-material spend is single-sourced?
+
+P2-D-113 | D.1 | false | Difficult | Analyze
+STEM: Chief Risk Officer Daniel Osei audits how Flash's ERM cycle actually operates. Evidence gathered: risk registers are refreshed and rescored quarterly and presented to the executive committee; last year's review produced eleven agreed improvement actions, none of which were logged, owned, or revisited; two substantial changes during the year (a plant consolidation and a new EU reporting regime) altered strategy assumptions, yet objectives and risk rankings were not re-baselined afterward. At which point does Flash's continuous-improvement loop fail?
+
+P2-D-114 | D.2 | false | Moderate-Easy | Understand
+STEM: A customer's video alleging that a Flash industrial adhesive failed in service reaches two million views within three days. Chief Risk Officer Daniel Osei asks risk analyst Naomi Park to explain, for the severity assessment, how this event becomes a reputational risk to Flash rather than merely a warranty matter. Which statement best describes the transmission path?
+
+P2-D-115 | D.5 | true | Moderate | Apply
+STEM: CFO Elena Vasquez must rank two capacity expansions competing for Flash's $12 million capital envelope; Chief Risk Officer Daniel Osei requires risk-informed evaluation using probability-weighted outcomes. Project Solstice: NPV of $6.0 million with 60% probability; NPV of -$1.5 million with 40% probability. Project Meridian: NPV of $4.2 million with 70% probability; NPV of $0.2 million with 30% probability. Which funding recommendation is supported?
+
+P2-D-116 | D.2 | false | Easy | Remember
+STEM: Sustainability controller Priya Raman is populating the climate section of Flash's risk register. Chief Risk Officer Daniel Osei reminds her of the standard taxonomy: physical risks arise from climatic events themselves, while transition risks arise from the economic, policy, legal, market, and technology shifts involved in moving toward lower-carbon operations. Which group consists entirely of transition risks?
+
+P2-D-117 | D.4 | true | Moderate | Apply
+STEM: Flash's business-continuity policy activates the secondary-supplier contingency plan for a component family when finished-goods coverage falls below 12 days of average daily shipments. Plant Manager Victor Hale reports 3,850 units of finished goods on hand and trailing average shipments of 350 units per day; inbound purchase orders of 700 units remain unconfirmed by the primary supplier. Chief Risk Officer Daniel Osei asks whether the trigger condition is met. What is the correct determination?
+
+P2-D-118 | D.1 | false | Difficult | Analyze
+STEM: Chief Risk Officer Daniel Osei gathers culture evidence for Flash's ERM maturity review: near-miss self-reports tripled within a year of introducing a no-fault reporting channel; the capital-request template routes submissions to committee only when the risk section is complete; skip-level forums regularly record challenges to senior-management assumptions; and exit interviews at the Brookfield plant repeatedly cite fear of blame for production stops. Which diagnosis is best supported by this evidence?
+
+P2-D-119 | D.3 | false | Moderate-Easy | Understand
+STEM: During objective-setting, Chief Risk Officer Daniel Osei explains risk capacity to new Flash division managers using three hard constraints: a leverage covenant capping net debt at 3.0x EBITDA, a board liquidity floor of $25 million, and insurance-program sublimits on hazard perils. One manager proposes that capacity is simply the average room remaining under the three constraints. Which statement correctly frames risk capacity?
+
+P2-D-120 | D.5 | true | Moderate | Apply
+STEM: Flash's strategy office screens new initiatives through a weighted risk gate before capital release. Dimensions and weights: market attractiveness 30%, execution capability 25%, financial return 25%, risk profile 20%; each scored 1-5. The Solaris automation proposal scores market 4, execution 3, financial 4, risk 2. Gate policy: weighted score of 3.50 or higher advances automatically; 3.00-3.49 proceeds to conditional review with a required mitigation plan; below 3.00 is declined. Chief Risk Officer Daniel Osei chairs the gate. What disposition follows from the policy?
+
+P2-D-121 | D.3 | false | Easy | Remember
+STEM: At a Flash onboarding session for new controllers, Chief Risk Officer Daniel Osei reviews vocabulary from COSO ERM 2017 before the group drafts unit-level limits. Which statement correctly states how risk tolerance relates to risk appetite?
+
+P2-D-122 | D.4 | true | Very Difficult | Evaluate
+STEM: Chief Risk Officer Daniel Osei and CFO Elena Vasquez must assemble next year's response portfolio for three Flash exposures within a $600,000 annual budget. Annualized inherent expected loss, available responses with cost and expected-loss reduction, and board tolerance (inclusive) are: FX exposure - inherent $900K; full forward program costs $220K and reduces expected loss by $700K; partial program costs $110K and reduces by $380K; tolerance $250K. Supplier failure - inherent $500K; dual-source contract costs $180K and reduces by $360K; safety-stock buffer costs $90K and reduces by $200K; tolerance $300K. Cyber intrusion - inherent $800K; managed security operations center costs $260K and reduces by $620K; awareness training alone costs $50K and reduces by $150K; tolerance $400K. Every risk must end at or below tolerance. Which portfolio should they select?
+
+P2-D-123 | D.5 | false | Moderate | Apply
+STEM: Flash's strategy policy routes initiatives involving substantial change into enhanced emerging-strategy review when any of the following holds: the enabling technology is novel to Flash, the addressable market exceeds $50 million, the payback horizon exceeds 4 years, or the initiative enters a jurisdiction with new regulations. Three proposals await routing: Helios (additive manufacturing, a technology new to Flash); Delta (a second shift extending an existing product line, familiar technology, $38 million addressable market, 2.5-year payback, current footprint); Verano (market entry where new emissions regulations take effect, familiar technology, $38 million market, 3.8-year payback). Chief Risk Officer Daniel Osei applies the policy. Which routing is correct?
+
+P2-D-124 | D.1 | false | Difficult | Analyze
+STEM: Chief Risk Officer Daniel Osei reviews Flash's three-tier risk escalation matrix after audit complaints. Observed defects: an exposure of exactly $250,000 qualifies simultaneously as Tier 2's ceiling and Tier 3's floor, and two business units resolved the conflict in opposite directions; several Tier 2 files show escalated exposures sitting unresolved for 45+ days because no tier carries a required decision deadline; and the Tier 1 ceiling of $100,000 sits below the $120,000 insurance deductible, leaving routine loss events without a workable owner. Which redesign corrects the routing failures?
+
+P2-D-125 | D.5 | false | Moderate-Easy | Understand
+STEM: Flash's board asks Chief Risk Officer Daniel Osei to present a three-stage ERM maturity roadmap. Several division managers urge starting with Monte Carlo simulation to establish analytical credibility. Which sequencing principle should guide the roadmap?
+
+P2-D-126 | D.1 | false | Easy | Understand
+STEM: During new-director orientation for Flash Industries, board member Marcus Ellington, chair of the audit committee, asks management to describe how the COSO Enterprise Risk Management framework is structurally organized. Which characterization is accurate?
+
+P2-D-127 | D.2 | true | Moderate-Easy | Apply
+STEM: Priya Nair, treasurer of Flash Components Group, is refreshing the cyber-risk entry in the enterprise risk register. The inherent assessment rates likelihood 4 and impact 5 on Flash's five-point scales, and the approved control package of multifactor authentication plus network segmentation is projected to reduce likelihood to 2 while leaving impact unchanged. Using Flash's likelihood-times-impact scoring model, what residual risk score should the register display?
+
+P2-D-128 | D.3 | false | Moderate | Apply
+STEM: Presenting a supplier-financing proposal to the risk committee, Daniel Okafor, chief financial officer of Flash Fabrication, lays out the board-approved limits beside the deal terms: total risk capacity of $40 million, aggregate risk appetite of $15 million of downside accepted in pursuit of growth, and a treasury tolerance capping counterparty variance at $2 million. The proposal exposes the treasury book to $9 million of potential counterparty loss. How should the three limits govern the decision?
+
+P2-D-129 | D.4 | true | Moderate | Analyze
+STEM: Sequencing mitigation work from the annual heat map, Sofia Marchetti, credit manager at Flash Distribution, reviews four scored entries: single-source supplier failure (likelihood 3, impact 4), foreign-currency translation swings (likelihood 5, impact 2), invoice fraud attempts (likelihood 4, impact 2), and warehouse fire (likelihood 1, impact 5). Flash policy orders urgency by composite score, with urgent treatment at 15 or above, managed mitigation from 8 to 14, and monitored acceptance below 8. Which prioritization follows the heat-map logic?
+
+P2-D-130 | D.5 | false | Difficult | Evaluate
+STEM: Screening two acquisition candidates against board risk appetite, Julian Reyes, mergers and acquisitions director for Flash Holdings, works under a documented limit forbidding concentration of more than 25% of consolidated revenue in any single regulatory regime. Target One adds $30 million of revenue but would place 45% of consolidated sales in one regulated market; Target Two adds $18 million spread across four geographies with weaker operating margins. Which recommendation is most defensible?
+
+P2-D-131 | D.2 | false | Very Difficult | Evaluate
+STEM: Closing fieldwork in procurement at Flash Retail Systems, internal auditor Grace Lindqvist documents a converging pattern: a senior buyer holds system rights both to create vendors and to approve invoices; the buyer's payroll file shows garnishments and disclosed medical debt; a saved comment in the expense module observes that everyone rounds expenses here; and duplicate payments totaling $84,000 have surfaced across six quarters. Which evaluation of the fraud-risk position is most defensible?
+
+P2-D-132 | D.1 | false | Moderate | Apply
+STEM: Each quarter, the team led by Thomas Beaumont, controller of Flash Medical Devices, re-rates every entry in the enterprise risk register against current conditions, revises treatment plans wherever ratings have moved, and circulates the refreshed profile to the executive committee. Within the COSO Enterprise Risk Management framework, which component do these reassessment and revision activities primarily execute?
+
+P2-D-133 | D.3 | false | Moderate-Easy | Remember
+STEM: While drafting the risk glossary page for the Flash Logistics onboarding portal, treasury analyst Omar Haddad needs the precise meaning of the term risk appetite. Which definition states it correctly?
+
+P2-D-134 | D.4 | false | Difficult | Analyze
+STEM: Facing a compound exposure, Priya Nair, treasurer of Flash Components Group, weighs the position created by reliance on a single overseas resin supplier: earnings carry both a supply-disruption facet and a foreign-currency payable facet. Constraints are fixed for the planning horizon: no second qualified supplier exists for at least 18 months, insurers have quoted workable premiums for contingent business-interruption coverage, and treasury policy bars derivative instruments until the new risk platform goes live next year. Which response package is internally consistent with the constraints and with sound response design?
+
+P2-D-135 | D.5 | true | Moderate | Apply
+STEM: Sizing the reserve on an $8,000,000 seasonal credit line for a wholesale customer, Sofia Marchetti, credit manager at Flash Distribution, applies Flash's standard credit-loss parameters: estimated probability of default 4% and loss given default 35%. What expected loss figure should feed the facility's pricing and reserve decision?
+
+P2-D-136 | D.1 | false | Easy | Understand
+STEM: At a Flash Energy board retreat, director Marcus Ellington asks why the COSO Enterprise Risk Management framework opens with governance and culture rather than leading with measurement tools and quantitative techniques. Which explanation is accurate?
+
+P2-D-137 | D.2 | false | Very Difficult | Analyze
+STEM: Correcting the draft risk register for Flash Commerce's European subscription launch, Elena Vasquez, senior analyst at the brokerage covering Flash, reviews five listed exposures: potential GDPR penalties for data-handling lapses; subscriber churn driven by a rival's aggressive pricing; a payment-processing outage; euro translation swings on subscription revenue; and a server-room flood at the co-location facility. Which categorical mapping is correct?
+
+P2-D-138 | D.3 | true | Moderate | Apply
+STEM: Reviewing four hedging proposals against board limits, Daniel Okafor, chief financial officer of Flash Fabrication, applies the tolerance restricting monthly deviations of FX-exposed collections to 5% of the $12,000,000 budgeted level. Projected deviations are: Proposal 1 at $450,000, Proposal 2 at $720,000, Proposal 3 at $900,000, and Proposal 4 at $1,200,000. Which determination complies with the tolerance architecture?
+
+P2-D-139 | D.4 | true | Difficult | Apply
+STEM: Assigning treatments under the published policy matrix, Thomas Beaumont, controller of Flash Medical Devices, applies response tiers keyed to composite risk scores: at 16 or above, avoid or transfer is mandatory; from 9 to 15, reduce through targeted controls; at 8 or below, accept with monitoring. The register shows legacy ERP access-sharing practice (likelihood 4, impact 4), petty-cash pilferage (likelihood 2, impact 2), vendor duplicate-payment errors (likelihood 3, impact 3), and an aging data-center UPS (likelihood 2, impact 5). Which assignment conforms to policy?
+
+P2-D-140 | D.5 | false | Moderate-Easy | Apply
+STEM: Interpreting the Monte Carlo output on year-end covenant headroom prepared for Flash Logistics, treasury analyst Omar Haddad reviews the distribution summary: the 5th percentile is $2.1 million, the median is $6.8 million, the 95th percentile is $12.4 million, and the credit agreement requires minimum liquidity of $3.0 million. Applying the simulation results, which statement is correct?
+
+P2-D-141 | D.1 | false | Easy | Understand
+STEM: While onboarding two new risk analysts, Priya Natarajan, internal auditor at Flash Components Group, sketches the COSO enterprise risk management framework that Flash adopted and wants the analysts to internalize its architecture before they touch any risk register. Which statement accurately describes how the framework's components and principles fit together?
+
+P2-D-142 | D.2 | true | Moderate-Easy | Apply
+STEM: Marcus Webb, treasurer of Flash Logistics, screens three prospective warehouse-financing commitments against the board's risk framework: single-counterparty appetite of $4.0 million, tolerance permitting positions up to 10% above appetite without board involvement, and absolute capacity of $9.0 million representing the largest loss Flash could absorb without breaching its liquidity covenant. The proposals total $3.8 million, $4.3 million, and $5.1 million. Applying the framework correctly, which conclusion governs delegated approval?
+
+P2-D-143 | D.3 | false | Moderate | Apply
+STEM: Elena Vasquez, controller of Flash Medical Devices, is tagging last quarter's risk-treatment decisions for the audit committee packet. The actions taken were: exiting a South American market after expropriation threats escalated; binding a $12 million business-interruption policy through a reinsurer-backed carrier; deploying dual authorization plus automated bank reconciliations to suppress payment fraud; and continuing to leave sub-$25,000 spot FX purchases unhedged because forward spreads exceed the expected loss avoided. Which option assigns each action to its correct response category?
+
+P2-D-144 | D.4 | false | Moderate | Analyze
+STEM: Daniel Okafor, internal auditor at Flash Packaging, is reconstructing why a regional purchasing manager steered orders to a friendly vendor for eighteen months before detection. Flash's remediation bundle contains three strands: independent verification of all vendor-master banking changes paired with duplicate-payment analytics; a bonus-clawback provision triggered by substantiated misconduct alongside recalibrated purchasing targets that remove volume cliffs; and quarterly ethics town halls with published disciplinary outcomes plus signed code-of-conduct attestations. Mapping each strand to the fraud triangle, which analysis is most defensible?
+
+P2-D-145 | D.5 | false | Difficult | Evaluate
+STEM: Flash Apparel Group's direct-to-consumer push is nine months late and $6 million over budget, while its wholesale channel posts record margins. Renata Kovacs, CFO, must recommend to the executive committee how risk oversight should engage the semiannual strategy review, given that the enterprise risk register was last refreshed eleven months ago and two of the top five rated risks - mall-anchor tenant defaults and fulfillment-labor scarcity - have materially changed shape. Which recommendation best serves the objective of integrating risk management with strategy performance review?
+
+P2-D-146 | D.1 | false | Very Difficult | Evaluate
+STEM: Alan Prescott, lead director of Flash Semiconductor's board, chairs a governance task force formed after directors learned that the chief risk officer's bonus is set by the CFO, that the CRO's written reports reach the board only after passing through the same CFO whose trading desk generates Flash's largest risk-adjusted returns, and that the full board dedicates two hours per year to risk appetite. Which redesign most strengthens the governance and culture component of Flash's ERM structure?
+
+P2-D-147 | D.2 | true | Moderate | Apply
+STEM: Sofia Lindqvist, treasury analyst at Flash Marine Services, ran a 10,000-path Monte Carlo simulation of year-end cash ahead of charter-renewal season. Output shows a 20th percentile ending-cash value of exactly $2.5 million, coincidentally equal to the minimum cash balance that Flash's revolving-credit covenant requires. The board's stated risk tolerance permits at most a 10% probability of violating any liquidity covenant in a fiscal year. Reading the simulation output correctly, what should Sofia conclude and recommend?
+
+P2-D-148 | D.3 | false | Moderate-Easy | Remember
+STEM: New risk analysts at Flash Foods keep mixing up the two exposure figures displayed beside each entry in the risk register, so Grace Chen, credit manager and acting risk coordinator, opens onboarding with the foundational distinction. Which statement correctly defines inherent risk and residual risk as those terms are used in Flash's enterprise risk assessments?
+
+P2-D-149 | D.4 | true | Difficult | Analyze
+STEM: Omar Haddad, controller of Flash Industrial Tools, is defending the supply-chain section of the risk register before the board finance committee. The single-source casting-supplier exposure scores likelihood 5 and impact 4 on the standard five-by-five scale, giving an inherent score of 20. The mitigation stack - qualified second-source tooling, thirty-day strategic inventory, and contractual capacity reservations - has been independently validated at 70% effectiveness, and the board's ceiling for residual supply-chain risk is a score of 8. Decomposing the assessment, which statement is accurate?
+
+P2-D-150 | D.5 | true | Moderate | Apply
+STEM: Jonas Meyer, treasury analyst at Flash Freight Lines, administers the key-risk-indicator dashboard feeding Monday's treasury risk committee. The protocol states that amber readings require documented escalation to the committee within five business days, red readings trigger immediate board notification, and green-but-deteriorating trends earn watchlist status with monthly commentary. Current readings: diesel cost variance versus budget is +5.2% against amber boundaries of 3% to 6%; the forward-cover ratio on next-quarter fuel purchases is 62%, inside the amber band of 50% to 70%; and days-sales-outstanding stands at 51 days against a red line of 55 days, having risen 2 days per month for two consecutive months. Which disposition complies with the protocol?
+
+P2-D-151 | D.1 | false | Easy | Understand
+STEM: At her first board dinner, Beatrice Lang, a newly seated director of Flash Beverages, questions why the risk appetite statement caps acquisition debt at a level the strategy team calls timid. Management owes her an answer grounded in the governing concepts. Which explanation is correct?
+
+P2-D-152 | D.2 | true | Very Difficult | Analyze
+STEM: Felix Grant, M&A director at Flash Robotics, has cleared three warehouse-automation targets through initial screening: Alpha at $22 million exposure with an assessed risk score of 16, Beta at $18 million scoring 12, and Gamma at $15 million scoring 17. Standing policy caps any single deal at $30 million of exposure where the score exceeds 15, and separately caps aggregate exposure to any single technology vertical at $45 million. All three targets occupy the same vision-guided-picking vertical, and sector research shows their demand shocks move together with pairwise correlation near 0.8. Analyzing the portfolio against the full framework, which conclusion is correct?
+
+P2-D-153 | D.3 | false | Moderate | Apply
+STEM: Naomi Sato, controller of Flash Office Products, is routing the quarter's residual-risk entries for approval under the tiered authority matrix: scores of 1 to 6 receive line-manager approval; 7 to 12 require divisional-VP approval with monthly monitoring; 13 to 19 require CFO sign-off plus quarterly deep-dive review; and 20 to 25 go to the CEO with notification to the board risk committee. The entries carry these residual scores: single-source packaging supplier 9; top-customer concentration 14; payroll-processing accuracy 4; and unhedged commodity basis position 21. Which routing complies with the matrix?
+
+P2-D-154 | D.4 | true | Difficult | Apply
+STEM: Victor Almeida, credit manager at Flash Building Supply, is refreshing the quarterly risk file on Meridian Builders, the account's largest contractor exposure. The committed facility stands at $2.4 million. Following the customer's deleveraging, the assessed probability of default declines from 6% to 4%, and newly pledged equipment collateral cuts the loss-given-default assumption from 55% to 45%. Recomputing the position with both updated drivers, what is the revised expected loss and its change from the prior quarter's figure?
+
+P2-D-155 | D.5 | true | Moderate-Easy | Apply
+STEM: Teresa Nolan, treasury analyst at Flash Event Venues, priced treatments for ransomware exposure on the reservation platform. Untreated, the annual probability of a material incident is 8% with an associated impact of $1.5 million. Option R installs hardened segmentation and offline backups costing $95,000 per year and cuts incident probability to 2%. Option S buys cyber insurance carrying an $85,000 annual premium with a $50,000 retention per incident, the insurer absorbing impact above the retention. Flash's third alternative is to accept the exposure untreated. On pure expected-cost grounds, which option should Flash select?
+
+P2-D-156 | D.1 | false | Easy | Understand
+STEM: Flash Components, a $420 million sensor manufacturer, is rolling out its enterprise risk register. Treasurer Maya Patel asks the finance team to separate inherent risk from residual risk for the new lithium sourcing exposure. She notes Flash faces a gross exposure of $4.5 million before any controls, and $1.8 million after existing quality audits and dual-sourcing. Which statement best distinguishes inherent and residual risk for Flash?
+
+P2-D-157 | D.2 | true | Moderate-Easy | Apply
+STEM: Flash Components ships high-value controllers through a single port. Controller Raj Mehta estimates a 15.0% probability that a 30-day port closure in the next year will cause a $800,000 expediting and penalty loss. No partial loss is expected; either the closure occurs and costs $800,000 or it does not. What is the expected loss Flash should use for risk quantification and insurance discussions?
+
+P2-D-158 | D.3 | true | Moderate | Apply
+STEM: Flash Components will need 40,000 pounds of specialty resin in Q3. The resin is $12.00 per pound today. CFO Elena Varga approves a futures hedge using contracts of 5,000 pounds each with a hedge ratio of 0.80 to balance price risk and liquidity needs. Flash will hold the contracts to maturity. How many contracts should Flash purchase to achieve the desired hedged notional, and what is that hedged notional value?
+
+P2-D-159 | D.4 | false | Moderate | Analyze
+STEM: At Flash Components, the board set risk appetite for supply-chain disruption at $3.0 million of earnings volatility per year, with risk tolerance of $4.5 million as the hard ceiling before escalation. Internal auditor Priya Desai monitors three plants: Austin shows $2.2 million volatility, Reno shows $3.8 million, and Tampa shows $5.1 million, each measured on the same earnings-volatility metric. How should Desai categorize each plant relative to appetite and tolerance?
+
+P2-D-160 | D.5 | false | Difficult | Evaluate
+STEM: Flash Components faces a new product-liability exposure: expected annual loss $600,000 if unmitigated. Risk manager Daniel Cho presents four responses: Avoid by exiting the product line (lose $400,000 contribution margin, eliminate exposure); Mitigate with added controls costing $90,000 that cut expected loss to $250,000; Transfer via insurance premium $180,000 that caps retained loss at $100,000; Accept and budget the $600,000. Flash is risk-neutral and has no strategic requirement to stay in the line. Which response minimizes total expected cost and which judgment supports it?
+
+P2-D-161 | D.1 | false | Very Difficult | Evaluate
+STEM: Flash Components suffered two control failures after the treasurer both approved vendors and released payments. Board member Alicia Grant, who chairs the audit committee, must recommend a governance fix under the Three Lines Model. Option 1 keeps combined duties with added review ($20,000, residual exposure $900,000). Option 2 segregates duties and creates independent second-line risk oversight ($150,000, residual $200,000). Option 3 outsources approval to a vendor platform ($300,000, residual $150,000). Inherent exposure is $1,400,000. Which evaluation should Grant present?
+
+P2-D-162 | D.2 | true | Moderate | Apply
+STEM: Flash Components holds a trading book valued at $5,000,000. Treasury analyst Jonah Kim estimates daily return volatility (standard deviation) of 1.20% and uses a parametric VaR with normal distribution and zero mean. One-day 95% VaR uses z = 1.65 and one-day 99% VaR uses z = 2.33. What are Flash's one-day 95% and 99% VaR in dollars, and which statement about that VaR is correct?
+
+P2-D-163 | D.3 | false | Moderate-Easy | Remember
+STEM: Credit manager Luis Ortega at Flash Components is documenting the risk-mitigation toolkit for the banker. The toolkit lists hedging with derivatives, insurance transfer, diversification across customers, and strengthening internal controls. Which statement correctly recalls how these tools map to risk management concepts?
+
+P2-D-164 | D.4 | true | Difficult | Analyze
+STEM: Flash Components runs two product lines. Stand-alone volatility is $300,000 standard deviation for Line X and $400,000 for Line Y. Treasurer Maya Patel models three correlation assumptions between the lines: +1.0, 0.0, and -0.60. She will report portfolio standard deviation as sqrt(sigma_X^2 + sigma_Y^2 + 2 x rho x sigma_X x sigma_Y). How does correlation affect portfolio risk and what should Patel conclude?
+
+P2-D-165 | D.5 | true | Moderate | Apply
+STEM: Flash Components evaluates its new credit portfolio. Portfolio return is 11.0%, risk-free rate is 3.0%, and portfolio standard deviation is 16.0%. Brian Holt, M&A director covering Flash, also notes a benchmark Sharpe of 0.45 as the hurdle. What is Flash's Sharpe ratio and how does it compare to the hurdle?
+
+P2-D-166 | D.1 | false | Easy | Understand
+STEM: Flash Components had strong written risk policies, yet traders repeatedly exceeded limits and were praised for profits. New internal auditor Sofia Reyes asks why controls failed despite documentation. Which explanation best reflects risk culture and tone at the top under COSO ERM?
+
+P2-D-167 | D.2 | true | Very Difficult | Analyze
+STEM: Flash Components ran a stress test on its $60 million receivables portfolio. Base expected loss is 1.20% ($720,000). Scenario A (mild recession) raises loss to 2.40% ($1,440,000). Scenario B (severe recession) raises loss to 4.10% ($2,460,000). Treasury analyst Jonah Kim also estimates scenario probabilities: base 70%, mild 20%, severe 10%. The CRO asks Kim to decompose what drives enterprise risk and whether the portfolio is concentrated. What should Kim conclude?
+
+P2-D-168 | D.3 | true | Moderate | Apply
+STEM: Flash Components faces a $2,000,000 property loss risk with 2.00% annual probability. An insurer offers full coverage for a $55,000 annual premium, no deductible. CFO Elena Varga estimates internal cost of capital and risk handling at the expected loss plus a $15,000 risk loading she requires for retaining volatile exposures. Should Flash purchase the insurance?
+
+P2-D-169 | D.4 | true | Difficult | Apply
+STEM: Flash Components evaluates a risky new sensor line. Expected cash flow in one year is $500,000 with risk-free rate 4.00% and a risk premium requiring a 12.00% risk-adjusted discount rate. The certainty-equivalent factor derived from utility analysis is 0.88, stated to be applied to the expected cash flow before discounting at the risk-free rate. Controller Sofia Reyes must present both methods. What are the present values under each approach?
+
+P2-D-170 | D.5 | true | Moderate-Easy | Apply
+STEM: Flash Components rates inherent risk for a cyber event at $900,000 expected loss (probability 9.00% x $10,000,000 impact). After implementing multi-factor authentication and monitoring costing $45,000 annually, the control is assessed as 70.0% effective at reducing expected loss. CFO Elena Varga needs residual expected loss and total cost of the mitigated position for the risk committee.
+
+P2-D-171 | D.1 | false | Easy | Remember
+STEM: Flash Holdings' risk officer Maya Caldwell is onboarding a new analyst. Which of the following best describes the difference between risk types in enterprise risk management?
+
+P2-D-172 | D.2 | true | Moderate-Easy | Apply
+STEM: Flash Capital's trading desk holds a position with an expected daily P&L of $0 and a daily standard deviation of $2 million. Assuming P&L is normally distributed, what is the 1-day 95% Value-at-Risk (VaR)?
+
+P2-D-173 | D.3 | false | Moderate | Apply
+STEM: Flash Manufacturing's risk officer is plotting risks on a heat map. Which axis labels are correct for a standard risk heat map?
+
+P2-D-174 | D.4 | true | Moderate | Analyze
+STEM: Flash Capital's risk officer wants to estimate the expected shortfall (ES, also called CVaR) of the trading desk at 95% confidence. The P&L distribution is normal with mean 0 and standard deviation $2M. What is the 95% ES, expressed as a positive loss amount?
+
+P2-D-175 | D.5 | false | Moderate-Easy | Understand
+STEM: Flash Industries' board, chaired by Maya Caldwell, is reviewing the risk-appetite statement. Which statement best describes the purpose of a risk-appetite statement?
+
+P2-D-176 | D.1 | true | Difficult | Analyze
+STEM: Flash International expects to receive EUR 10 million in 90 days from a European customer. The treasurer wants to hedge the FX risk using a forward contract. The current spot rate is $1.10/EUR and the 90-day forward rate is $1.12/EUR. The treasurer locks in the forward rate. What is the USD amount Flash will receive in 90 days (ignoring fees and discounting)?
+
+P2-D-177 | D.2 | true | Moderate | Apply
+STEM: Flash Multinational has a European subsidiary with net assets of EUR 50 million. The year-end spot rate is $1.10/EUR and the average rate during the year was $1.08/EUR. The subsidiary's net income for the year was EUR 4 million. Under U.S. GAAP, what is the USD translation gain/loss for the year on the subsidiary's net assets (assuming the functional currency is the euro)?
+
+P2-D-178 | D.3 | false | Moderate | Apply
+STEM: Flash Logistics faces a potential $5 million loss from a one-time operational event (a natural disaster affecting a key warehouse). The treasurer and risk officer are discussing whether to buy insurance or self-insure. Which statement is most accurate?
+
+P2-D-179 | D.4 | false | Moderate-Easy | Apply
+STEM: Flash Holdings is establishing a risk committee. Risk officer Maya Caldwell is drafting the committee charter. Which element is NOT typically included in a risk-committee charter?
+
+P2-D-180 | D.5 | true | Difficult | Evaluate
+STEM: Flash Capital's credit officer is evaluating credit-risk mitigation on a $20M loan to a corporate borrower with a BB rating. Which mitigation technique is generally the LEAST effective at reducing credit risk on a single-name corporate loan?
+
+P2-D-181 | D.1 | true | Moderate | Apply
+STEM: Flash Capital holds two assets in equal weights. Asset A has expected return 10% and standard deviation 20%. Asset B has expected return 14% and standard deviation 30%. The correlation between A and B is 0.4. What is the portfolio standard deviation (rounded to 1 decimal)?
+
+P2-D-182 | D.2 | true | Very Difficult | Evaluate
+STEM: Flash Bank is designing a stress test for its loan portfolio. The portfolio has $1 billion of loans with a current average PD of 2%, LGD of 40%, and average exposure of $100,000 per loan. The stress scenario assumes PD doubles to 4%, LGD rises to 60%, and the correlation between loans increases (so the loss distribution is fatter-tailed). Approximately what is the stressed expected loss?
+
+P2-D-183 | D.3 | false | Easy | Understand
+STEM: Flash Manufacturing's risk officer is building a risk register. Which of the following is typically included for each risk entry?
+
+P2-D-184 | D.4 | true | Difficult | Apply
+STEM: Flash Capital is computing the beta of a new position for the trading book. Risk officer Maya Caldwell notes the position has a covariance with the market of 0.0016 and the market variance is 0.0025. What is the beta?
+
+P2-D-185 | D.5 | true | Very Difficult | Analyze
+STEM: Flash Industries' ERM framework defines four risk-treatment strategies: avoid, accept, transfer, mitigate. The risk officer is categorizing each identified risk. For each of the following risks, which treatment is most appropriate? (1) Outdated IT system that is no longer supported by the vendor; (2) Routine operational risk of minor workplace injuries; (3) Foreign-currency risk on a 30-day customer invoice; (4) Compliance risk of a new regulation that conflicts with current practice.
+
+P2-D-186 | D.1 | false | Easy | Remember
+STEM: Flash Components' Helena Torres, CFO, is onboarding new risk analysts and asks which formula defines expected loss under COSO ERM Performance assessments for a single risk scenario. Which statement correctly states the expected loss calculation?
+
+P2-D-187 | D.2 | false | Easy | Understand
+STEM: Flash Energy's Priya Desai, Internal auditor, is calibrating the 1-to-5 heat map for the enterprise risk register and asks how the risk score is computed from ordinal ratings. Which definition correctly states the risk score under COSO ERM?
+
+P2-D-188 | D.3 | true | Moderate-Easy | Apply
+STEM: Flash Logistics' James Park, Controller, rates the inherent compliance risk for hazardous-material handling at 9.0 on a 1-to-10 scale. Existing training and inspection controls are judged 60% effective at reducing the exposure. What is the residual risk score using Residual Risk = Inherent Risk x (1 - Control Effectiveness)?
+
+P2-D-189 | D.4 | true | Moderate-Easy | Apply
+STEM: Flash Fabrication's Luis Hernandez, Treasurer, evaluates a $75,000 automated monitoring control for solvent-handling compliance. Without the control, violation probability is 12% on a $1,800,000 impact. With the control, probability falls to 4% on the same impact. What is the net expected benefit of the control?
+
+P2-D-190 | D.5 | false | Moderate-Easy | Understand
+STEM: Flash Mobility's Amara Okafor, Board member, asks how ERM integration with strategy differs from standalone risk management at the business-unit level. Which description best captures ERM integration under COSO ERM (2017)?
+
+P2-D-191 | D.1 | true | Moderate | Apply
+STEM: Flash Retail's Sofia Delgado, CFO, estimates recall exposure for a product line: 30% chance of no recall ($0 loss), 50% chance of a limited recall costing $200,000, and 20% chance of a full recall costing $600,000. What is the expected loss?
+
+P2-D-192 | D.2 | true | Moderate | Apply
+STEM: Flash Aerospace's Raj Patel, Senior analyst, scores a supplier-concentration risk using Flash's 1-to-5 scales. Likelihood is 4 (likely) and severity is 3 (moderate, $8M revenue at risk). The heat map requires a response plan for scores above 10. What is the risk score and required action?
+
+P2-D-193 | D.3 | true | Moderate | Apply
+STEM: Flash Consumer's Maya Nguyen, Controller, reviews the board's earnings risk appetite: target EPS $4.00 with tolerance of plus or minus 8%. The latest forecast is EPS $4.45 before any corrective action. By how much does the forecast exceed the tolerance ceiling, requiring escalation?
+
+P2-D-194 | D.4 | true | Moderate | Analyze
+STEM: Flash Precision's David Chen, Treasurer, compares two cyber-risk responses for a $2,400,000 breach exposure with 10% probability. Option X installs controls reducing probability to 3% at a cost of $85,000. Option Y purchases insurance covering 80% of any loss (retaining 20%) for a $120,000 premium, leaving probability at 10%. Total expected cost is expected retained loss plus response cost. Which option minimizes total expected cost and by what amount?
+
+P2-D-195 | D.5 | true | Moderate | Analyze
+STEM: Flash Growth's Elena Martinez, Board member, reviews a new market entry: expected NPV $8.5 million with 60% success, but failure would trigger an $11 million write-off with 40% probability and would breach the board's risk tolerance. The risk-adjusted expected value is negative if tolerance costs are included. Which integration step best reflects COSO ERM?
+
+P2-D-196 | D.1 | true | Difficult | Analyze
+STEM: Flash Holdings' Omar Farouk, Internal auditor, runs the annual risk assessment on three exposures using Flash's 1-to-5 Likelihood x Severity matrix (threshold 12 requires board escalation). Scores: Risk A 5x2=10, Risk B 4x4=16, Risk C 3x5=15. The risk committee has capacity to address two risks this quarter. Which prioritization and action are correct?
+
+P2-D-197 | D.2 | true | Difficult | Evaluate
+STEM: Flash Data's Nadia Kim, CFO, must decide whether to accept residual vendor-concentration risk after dual-sourcing controls reduce inherent exposure of 8.5 x $10M = $85M to residual 3.0 x $4M = $12M expected value, with board tolerance at $15M. A second alternative is to exit the relationship entirely at a cost of $9M in transition fees. Which judgment is most consistent with COSO ERM (2017)?
+
+P2-D-198 | D.3 | true | Difficult | Apply
+STEM: Flash Consumer's Carlos Rivera, Project manager, manages a $60M strategic initiative with board risk tolerance of plus or minus 6% on budget. The reforecast is $64.2M after scope expansion. What is the variance relative to the tolerance ceiling and what does it signal?
+
+P2-D-199 | D.4 | true | Very Difficult | Evaluate
+STEM: Flash Biopharma's Jennifer Walsh, Board member, must recommend the risk financing structure for clinical-trial liability with $4M per-claim severity and 8% annual frequency. Options: retain fully (expected $320,000), insure with $500k deductible at $210,000 premium (retaining 12.5% of severity), or insure with $250k deductible at $310,000 premium (retaining 6.25%). Which optimizes total expected cost and enterprise risk objectives?
+
+P2-D-200 | D.5 | true | Difficult | Apply
+STEM: Flash Ventures' Samuel Lee, Senior analyst, evaluates a $45M expansion expected to generate $9M annual operating income for 5 years, but failure probability 25% would strand $18M of capital. Risk-adjusted expected annual income is $6.75M before capital charge. With 8% cost of capital, does the initiative create value on a risk-adjusted basis and what is the key insight?
+
+P2-D-201 | D.1 | false | Easy | Understand
+STEM: Northstar Aerospace, a $1.8B defense components manufacturer, has just completed its annual strategy offsite. CEO Priya Desai presented a plan to double international sales within three years. The board, led by Chair Robert Hale, spent the afternoon defining the level and types of risk the company is willing to accept to pursue that growth, approving a written risk appetite statement, and clarifying oversight expectations for management. Under COSO ERM 2017, which component do these board activities most directly represent, and why does it serve as the foundation for the framework?
+
+P2-D-202 | D.2 | true | Moderate | Apply
+STEM: Harbor Freight Logistics, a national trucking and warehousing operator, faces a data-breach scenario affecting its fleet telematics platform. CRO Luis Ortega estimates a 12% probability that a breach occurs in the next year. If a breach occurs, the financial impact including notification costs, regulatory fines, and customer remediation is $2,800,000. The ERM team quantifies the risk for the heat map and for prioritizing response funding. What is the expected loss for this risk, and how should it be interpreted for prioritization?
+
+P2-D-203 | D.3 | true | Very Difficult | Evaluate
+STEM: Apex Manufacturing's payment processing platform carries an inherent operational risk estimated at $1,050,000 in expected annual loss (25% likelihood of a $4,200,000 disruption). The CRO proposes a control package costing $180,000 per year that independent testing shows reduces the likelihood of disruption by 60%, with no change to the $4,200,000 impact if a failure still occurs. The board's stated risk appetite for this process is $500,000 in expected loss. CFO Elena Torres must recommend whether to implement the controls, accept the residual, or seek additional mitigation. Which evaluation and recommendation is correct?
+
+P2-D-204 | D.4 | false | Moderate | Apply
+STEM: Regent Industries faces volatile steel prices that threaten margins on a 12-month fixed-price contract with a major customer. Treasurer Marcus Webb considers two alternatives: (1) negotiate a firm-price steel supply contract with a mill that locks the price for the year, passing price risk to the supplier for a modest premium, and (2) redesign the product to use less steel through engineering changes that lower exposure regardless of price movements. The ERM team must classify these alternatives under COSO ERM 2017 response categories and advise which risk response each represents.
+
+P2-D-205 | D.5 | false | Moderate-Easy | Understand
+STEM: Crestview Holdings pursues a strategy of aggressive international expansion. The board asks CRO Daniel Ibarra how ERM should integrate with strategy under COSO ERM 2017. Two views are offered: one holds that enterprise risk management is a separate compliance function that reports risks after strategic decisions are made, and the other holds that enterprise risk management informs strategy selection, objective-setting, and performance. The board requests the position consistent with COSO ERM 2017 principles for embedding risk in strategy and performance. Which statement is correct?
+
+P2-D-206 | D.1 | true | Difficult | Analyze
+STEM: Northgate Corporation's risk committee scores four operational risks on ordinal 1-5 scales for likelihood and severity to prioritize ERM resources. The assessments are: Risk W — likelihood 3, severity 5; Risk X — likelihood 4, severity 4; Risk Y — likelihood 5, severity 2; Risk Z — likelihood 2, severity 5. Using the standard COSO ERM heat-map Risk Score = Likelihood x Severity (RM-02), and given that both likelihood and severity matter equally in the methodology, which risk should receive the highest priority for response planning?
+
+P2-D-207 | D.2 | false | Easy | Remember
+STEM: Meridian Energy, a diversified utility pursuing a 10-year offshore wind investment along the Atlantic coast, must surface emerging regulatory, technology, and permitting risks that are not yet visible in historical loss data. CRO Sofia Reyes wants an identification technique that avoids dominance by senior executives, allows anonymous input from geographically dispersed technical and regulatory experts, and builds toward convergence through iterative rounds with controlled feedback. The team debates four approaches for this early-stage horizon scanning. Which technique best meets the CRO's criteria for anonymous, iterative, and convergent identification?
+
+P2-D-208 | D.3 | true | Very Difficult | Evaluate
+STEM: Harbor Freight Logistics models next-year warehouse disruption loss for its Memphis hub with four mutually exclusive outcomes: 55% probability of no loss ($0), 20% of a minor disruption ($80,000), 15% of a moderate disruption ($350,000), and 10% of a major disruption ($1,200,000). CFO Anika Patel asks for the expected loss to anchor insurance and contingency budgeting, noting that Expected Loss = Probability x Impact summed across outcomes captures the weighted average while still recognizing tail risk. What is the expected loss, and which interpretation correctly supports the budgeting decision?
+
+P2-D-209 | D.4 | false | Moderate | Apply
+STEM: Pillar Regional Bank's payments platform carries an inherent operational risk estimated at $4,800,000 expected loss per year. After implementing new authentication and monitoring controls, residual expected loss falls to $1,900,000. The board's risk appetite statement sets $2,500,000 as the maximum acceptable expected loss for payment operations, with a $2,000,000 tolerance band trigger for enhanced monitoring. Chief Risk Officer Amanda Kline must report whether the control environment is adequate and what the numbers imply for governance. Which conclusion is correct under COSO ERM 2017?
+
+P2-D-210 | D.1 | false | Moderate-Easy | Apply
+STEM: Crestview Holdings has strengthened board oversight and its risk assessment processes over the past year but continues to struggle to keep its dispersed business units aligned on risk information. Units use inconsistent formats, escalation time varies widely, and emerging risks are flagged unevenly. The CRO proposes a quarterly risk dashboard that reports key risk indicators, the status of risk responses in progress, and emerging risks across all units to both executive management and the board, supported by clear escalation protocols for threshold breaches. The audit committee asks which COSO ERM 2017 component this proposal most directly advances and what its purpose is within the integrated framework.
+
+P2-D-211 | D.5 | false | Moderate | Analyze
+STEM: Regent Corporation operates two divisions that each report a foreign-exchange exposure of $6,000,000. Division Alpha holds long euro receivables from export sales, while Division Beta holds short euro payables from import purchases of equal size. Evaluated separately, each division reports a material $6,000,000 exposure and proposes an independent hedge at a combined cost of $180,000. CRO Kenji Tanaka reviews the positions at the enterprise level and notes the exposures are in the same currency with opposite direction. What does the enterprise portfolio view reveal?
+
+P2-D-212 | D.2 | false | Difficult | Analyze
+STEM: CRO James Liu proposes four metrics as potential key risk indicators for operational risk in a regional banking group: (1) number of overdue compliance training certifications among front-office staff, (2) dollar value of operational losses booked last quarter, (3) employee turnover rate in the internal audit department, and (4) average days to remediate control deficiencies after identification. Management needs the metric that best predicts future risk before losses materialize, so action can be taken early. Which metric is the strongest leading indicator?
+
+P2-D-213 | D.3 | false | Difficult | Analyze
+STEM: The board of Meridian Bank asks CRO Elena Martinez to illustrate the distinctions among risk capacity, risk appetite, and risk tolerance using the bank's capital planning context. The bank holds $800,000,000 in Tier 1 capital, must maintain a 10% Tier 1 ratio, and has $6,000,000,000 in risk-weighted assets. Management's annual plan budgets $45,000,000 for expected credit losses, while the chief credit officer sets a $12,000,000 quarterly variance trigger for portfolio review. The CRO must map each figure to the correct concept and explain the ordering relationship under COSO ERM 2017.
+
+P2-D-214 | D.4 | true | Moderate | Evaluate
+STEM: Harbor Freight Logistics faces a warehouse automation risk: a 14% chance per year of a $1,600,000 disruption loss if unmitigated (expected loss $224,000). Operations proposes a monitoring and preventive-maintenance program costing $65,000 per year that would cut the disruption probability to 4%. Risk Finance prices a deductible insurance policy at $95,000 per year that would cover 85% of any loss (company retains 15%). CFO Anika Patel, balancing cost against residual exposure under COSO ERM 2017, must weigh competing alternatives and recommend the lowest total expected cost option among doing nothing, reducing the risk, or sharing it, while noting that residual risk remains in each case. Which evaluation is correct?
+
+P2-D-215 | D.5 | false | Moderate-Easy | Understand
+STEM: Crestview Holdings has embedded risk appetite into its strategic planning cycle but finds that risk reporting to the board remains fragmented and difficult to aggregate. Each business unit reports its top risks in a different format, escalation timelines vary widely, and emerging risks are inconsistently flagged, preventing a clear portfolio view for directors. The board asks CRO Daniel Ibarra what change would most advance ERM integration with strategy and performance under COSO ERM 2017, alongside consistent strategy-risk linkage and performance monitoring. Which action best represents integrated and decision-useful ERM reporting?
+
+P2-D-216 | D.4 | false | Easy | Apply
+STEM: Mariela Hoffmann, CFO of Flash Holdings, is convening the first enterprise risk workshop for the consolidated group, which includes Flash Foods, Flash Industrial, and Flash Capital. She has asked Lena Fischer, financial analyst, to draft the initial risk taxonomy. Under COSO ERM 2017, which structural choice best satisfies the requirement that a taxonomy supports consistent risk identification across business units and subsidiaries?
+
+P2-D-217 | D.5 | false | Easy | Understand
+STEM: Flash Logistics' operations team has asked treasurer Maya Caldwell to explain, in plain terms, what distinguishes risk avoidance from risk acceptance under the four-response framework used by Flash Holdings. Maya is preparing a one-page briefing. Which statement most accurately captures the conceptual difference between these two responses?
+
+P2-D-218 | D.4 | false | Moderate | Apply
+STEM: Adaeze Onuorah, controller at Flash Holdings, is designing a risk register entry for a new vendor concentration exposure in Flash Foods' cold-chain supply. The exposure stems from a single supplier providing 78% of a critical ingredient. Adaeze must populate the register's rating, owner, and response linkage. Which combination most appropriately applies COSO ERM 2017 risk-register construction principles to this exposure?
+
+P2-D-219 | D.5 | false | Moderate-Easy | Apply
+STEM: Priya Ramaswamy, senior analyst at Flash Holdings, is reviewing key risk indicators (KRIs) for Flash Tech's cloud-infrastructure exposure. Three proposed KRIs are under consideration: monthly API-error rate, weekly mean-time-to-recovery for outages, and daily count of unpatched critical CVEs. She must recommend the KRI that most directly supports ongoing monitoring of the response activity itself. Which selection best meets that expectation?
+
+P2-D-220 | D.4 | false | Easy | Understand
+STEM: Naomi Castellanos, project manager at Flash Industrial, is briefing new managers on how Flash Holdings selects an enterprise risk management framework. She wants to clarify what the COSO ERM 2017 framework specifically contributes compared with the older COSO Internal Control — Integrated Framework. Which statement most accurately captures the COSO ERM 2017 contribution?
+
+P2-D-221 | D.5 | false | Moderate | Apply
+STEM: Maya Caldwell, treasurer, is negotiating with bankers on a hedging program for Flash Industrial's USD-denominated receivables. Three structures are proposed: a forward purchase program, an at-the-money option overlay, and a natural hedge by re-pricing contracts in EUR. Each structure should be characterized by its primary risk-response type under the four-response framework. Which mapping best classifies the structures and supports an evaluation of program effectiveness?
+
+P2-D-222 | D.4 | false | Moderate | Analyze
+STEM: Mariela Hoffmann has asked Lena Fischer to analyze why Flash Capital's credit-risk register has been steadily expanding without a corresponding drop in residual loss experience. Three patterns are evident from the register: (i) risks are scored but never re-rated after response actions; (ii) KRIs are tracked but no thresholds trigger escalation; (iii) new risks are added but old risks are rarely closed. Which diagnosis best identifies the root cause and the COSO ERM 2017 component implicated?
+
+P2-D-223 | D.5 | false | Difficult | Analyze
+STEM: Flash Holdings' risk committee has received four risk-response proposals for a new geopolitical exposure arising from Flash Media's planned expansion into a high-sanctions-risk jurisdiction. The proposals are: (1) exit the market now; (2) obtain political-risk insurance; (3) engage a local joint-venture partner; (4) proceed without mitigation but disclose the exposure to investors. The committee must choose the response that best balances the four-response framework with shareholder and stakeholder expectations. Which proposal should the committee select?
+
+P2-D-224 | D.4 | false | Moderate-Easy | Apply
+STEM: Lena Fischer is drafting the risk-appetite statement for Flash Foods' cold-chain division. Mariela Hoffmann has asked that the statement specify quantitative limits on supplier-concentration risk, foreign-exchange risk on imported ingredients, and cyber-incident impact, while leaving qualitative language for reputational and regulatory risks. Which risk-appetite construction principle does this approach best satisfy?
+
+P2-D-225 | D.5 | false | Moderate | Apply
+STEM: Maya Caldwell is reviewing the control activities for Flash Capital's treasury operations, where the residual risk after hedging has been persistently high despite a costly hedging program. The control gap appears to be in monitoring rather than execution: trades settle as instructed, but the underlying exposure forecast is rarely reconciled to actuals, and counterparty limits are approved but never re-checked. Which control-activity design principle is most clearly being violated?
+
+P2-D-226 | D.4 | false | Moderate | Analyze
+STEM: Naomi Castellanos has produced three months of KRIs for Flash Industrial's plant-safety exposure. The metrics are: monthly recordable incident rate, monthly near-miss count, and quarterly safety-audit score. Incidents and near-misses have fallen but the audit score has slipped, suggesting controls are weakening despite outcome improvements. Which analytical conclusion best reflects how KRIs should be interpreted together?
+
+P2-D-227 | D.5 | false | Difficult | Evaluate
+STEM: Adaeze Onuorah is evaluating whether Flash Holdings should adopt an integrated ERM framework (COSO ERM 2017) or operate separate, parallel frameworks for credit, market, operational, and compliance risk under ISO 31000:2018. Three criteria matter to the evaluation: (i) consistency of risk language across subsidiaries, (ii) ability to optimize the portfolio of risks across the group, and (iii) cost of maintaining parallel documentation. Which recommendation best synthesizes these criteria under the frameworks' respective design philosophies?
+
+P2-D-228 | D.4 | false | Moderate | Apply
+STEM: Priya Ramaswamy is designing the risk-assessment scoring for Flash Logistics' new last-mile delivery contract with a major retailer. Three categories of risk must be assessed: (i) safety incidents involving delivery personnel, (ii) service-level failures causing retailer penalties, and (iii) fuel-price volatility affecting route economics. She must select an appropriate scoring approach for each. Which approach selection best applies the assessment principle of using methods that fit the data and the decision to be made?
+
+P2-D-229 | D.5 | false | Easy | Understand
+STEM: Lena Fischer has been asked to draft a one-paragraph plain-language description of what the COSO ERM 2017 'risk culture' element means for Flash Holdings' subsidiaries. Which description most accurately conveys the intended meaning of risk culture within Governance and Culture?
+
+P2-D-230 | D.4 | false | Difficult | Analyze
+STEM: Flash Holdings is facing a multi-vector disruption: a cyber incident at Flash Tech, an FX shock hitting Flash Industrial's receivables, and a regulatory investigation at Flash Foods. The risk committee must triage responses across subsidiaries simultaneously. The committee's chair has proposed four triage postures. Which posture best applies the COSO ERM 2017 expectation that enterprise-level review considers risk interactions and portfolio effects rather than treating each risk in isolation?
+
+P2-D-231 | D.1 | false | Easy | Apply
+STEM: Maya Caldwell, treasurer at Flash Logistics, is classifying a potential loss arising from a new customs tariff that would raise landed cost on imported components. The exposure stems from a government policy decision outside the firm's direct control. Per COSO ERM 2017 risk-type taxonomies used at Flash Holdings, into which category should Maya place this exposure?
+
+P2-D-232 | D.2 | false | Easy | Understand
+STEM: Lena Fischer, financial analyst at Flash Foods, asks what term best describes the maximum amount of variability in earnings that Flash Holdings' board is prepared to accept in pursuit of strategic objectives. Which concept should Lena use?
+
+P2-D-233 | D.3 | false | Moderate | Apply
+STEM: Flash Holdings is selecting an enterprise risk management framework. Mariela Hoffmann, the CFO, wants a framework that explicitly integrates risk into strategy setting via a portfolio view, aligns with performance through risk appetite statements, and treats risk culture as a governance element. Which framework best satisfies Mariela's design requirements?
+
+P2-D-234 | D.4 | false | Moderate-Easy | Apply
+STEM: Naomi Castellanos, project manager at Flash Industrial, is populating the risk register for a new plant retrofit. She wants to capture, for each identified risk, a short description, the owner, the likelihood, the impact, and a residual risk rating after planned responses. Which COSO ERM 201 risk-register component does this capture represent?
+
+P2-D-235 | D.5 | false | Easy | Understand
+STEM: Priya Ramaswamy, senior analyst at Flash Capital, is reviewing the four generally accepted risk response strategies. Which set of labels most accurately represents the standard categories?
+
+P2-D-236 | D.1 | false | Moderate | Apply
+STEM: Maya Caldwell, treasurer at Flash Holdings, is evaluating a proposed hedging program for FX exposure on intercompany loans. The program would use forwards to lock in functional-currency cash flows. Under COSO ERM 2017 risk-type classifications, into which category does the underlying FX exposure fall, and which response is being applied?
+
+P2-D-237 | D.2 | false | Moderate | Analyze
+STEM: Adaeze Onuorah, controller at Flash Foods, is designing a key risk indicator (KRI) for cold-chain logistics disruption. She wants the KRI to be lagging rather than leading, capturing the realized loss outcome so the board sees a clear post-event measure. Which KRI design best meets these criteria?
+
+P2-D-238 | D.3 | false | Difficult | Analyze
+STEM: Flash Holdings' board has asked Mariela Hoffmann, the CFO, to run a scenario analysis on a coordinated cyberattack plus regulatory enforcement event that simultaneously hits Flash Tech and Flash Media. The board wants to see second-order effects across subsidiaries and the resulting capital impact. The primary output of this exercise is a stress-tested view of the risk portfolio. Under COSO ERM 2017, which element does this output most directly produce and feed?
+
+P2-D-239 | D.4 | false | Moderate-Easy | Apply
+STEM: Lena Fischer, financial analyst at Flash Foods, is helping the risk team select a structure for the group risk taxonomy. She proposes organizing the taxonomy by event type (for example, regulatory, market, people, process) rather than by business unit. Which benefit is most directly achieved by an event-type taxonomy at the holding-company level?
+
+P2-D-240 | D.5 | false | Moderate | Apply
+STEM: Naomi Castellanos, project manager at Flash Industrial, is recommending property insurance for a new plant that sits in a flood-prone zone. Insurance is the standard share response. Which of the following statements best explains the residual risk that remains after the insurance policy is in force?
+
+P2-D-241 | D.1 | false | Moderate | Analyze
+STEM: Maya Caldwell, treasurer at Flash Holdings, is comparing two control activities at Flash Capital that reduce financial risk but target different stages of the loss-event chain. The first requires an independent approver before any wire above a threshold is released; the second reconciles cash balances against the bank statement each morning. Which statement most accurately classifies these two controls?
+
+P2-D-242 | D.2 | false | Difficult | Evaluate
+STEM: Flash Holdings' board is evaluating whether to expand Flash Tech into a new geographic market with elevated political and currency risk. The expansion would increase expected return but also raise enterprise-wide risk beyond the current appetite. Which board-level governance posture is most consistent with COSO ERM 2017 when a proposed strategy exceeds established risk appetite?
+
+P2-D-243 | D.3 | false | Moderate | Apply
+STEM: Adaeze Onuorah, controller at Flash Foods, is responding to a supplier-relationship breakdown that threatens continuity of a key ingredient. The supplier is the lowest-cost source; switching suppliers is feasible but raises unit cost. Under the COSO ERM 2017 four-response framework, which classification most accurately describes the response of qualifying a backup supplier and renegotiating the primary contract?
+
+P2-D-244 | D.4 | false | Easy | Understand
+STEM: Priya Ramaswamy, senior analyst at Flash Capital, is documenting the risk assessment process. She wants to understand the conceptual difference between inherent risk and residual risk. Which statement most accurately describes that difference under COSO ERM 2017?
+
+P2-D-245 | D.5 | false | Difficult | Analyze
+STEM: Flash Holdings is integrating the recently acquired Flash Media subsidiary into the group ERM program. Adaeze Onuorah, the group controller, must reconcile Flash Media's existing heat-map conventions with Flash Holdings' COSO ERM 2017-aligned approach. The acquired entity uses a five-by-five matrix, scoring likelihood on one axis and impact on the other, and color-codes cells into low, medium, and high bands. Which of the following statements most accurately evaluates the design from a COSO-aligned perspective?
+

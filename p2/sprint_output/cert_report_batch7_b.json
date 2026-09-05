@@ -1,0 +1,376 @@
+{
+  "report_id": "CERT-BATCH7-B",
+  "report_date": "2026-09-05",
+  "certifier": "Independent Blind Certifier",
+  "input_file": "p2/sprint_output/pack_p2_b_batch7.js",
+  "batch_size": 10,
+  "domain": "B — Corporate Finance",
+  "schema_version": "1.1",
+  "overall_verdict": "FAIL",
+  "pass_count": 5,
+  "fail_count": 5,
+  "summary": "5 of 10 items carry correct answers and pass all six dimensions. 5 items have CRITICAL correctness failures where the stored CorrectChoice disagrees with the independently derived answer. In all 5 failing items, the ExplanationCorrect text itself contains the correct arithmetic but the stated answer is different — suggesting the answer key was overwritten by a template-rotation artifact. One additional item (P2-B-591) has a precision issue where distractor explanations reference pre-revision stem values ($1.25M instead of $2.99M).",
+
+  "items": [
+    {
+      "QuestionID": "P2-B-591",
+      "verdict": "CONDITIONAL_PASS",
+      "overall_confidence": "MEDIUM",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "ACP = $2,990,000 / ($18,250,000/365) = $2,990,000 / $50,000 = 59.8 days. Excess = 59.8 − 28 = 31.8 days. Choice C is correct." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Distractor explanations reference '$1.25M' receivables and '$1.25M / $18.25M' ratios that do not appear in the current stem ($2.99M receivables). The source_support_for_key contains an internal author note acknowledging the stem was revised to make the math work. EW text appears to be leftover from a pre-revision stem version." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate (3) / Apply is appropriate for a two-step ratio comparison requiring daily-sales conversion." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "Four distinct error paths: annualization error (A), turnover-conflation (B), partial calculation (C), understated days (D). Each targets a specific misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.4 — receivables management, average collection period." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Working capital management is core Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongC is empty, CC=C",
+        "DL026_non_CC_EW_length": "FAIL — ExplanationWrongA references $1.25M (not in stem); ExplanationWrongB references $18.25M/$1.25M; ExplanationWrongD references $1.25M/$50K. All three non-CC EW fields contain text inconsistent with current stem values.",
+        "DL013_boilerplate": "PASS — No template boilerplate detected",
+        "EV1_min_50_chars": "PASS — All EW fields ≥50 chars",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-010 (Misassigned Explanations) / Stem-EW Mismatch",
+          "severity": "Medium",
+          "description": "ExplanationWrongA, B, and D reference receivables of '$1.25M' and ratios derived from $1.25M/$18.25M. The current stem states receivables of $2.99M. The distractor explanations were authored against a prior stem version and not updated when the stem was revised.",
+          "recommendation": "Rewrite EW-A, EW-B, EW-D to reference the current stem values ($2.99M receivables, $18.25M sales, $50K daily)."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-592",
+      "verdict": "PASS",
+      "overall_confidence": "HIGH",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Inventory turnover = $42M / $7M = 6.0 times. Choice A is correct. Verified independently." },
+        "Precision": { "confidence": "HIGH", "notes": "Single-step ratio. No ambiguity. All inputs from stem." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy (2) / Understand is appropriate for a direct formula application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B uses ending inventory instead of average. C double-counts. D uses sales instead of COGS. All represent documented CMA exam traps." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.4 — inventory management, turnover ratio." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Inventory management is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongA is empty, CC=A",
+        "DL026_non_CC_EW_length": "PASS — EW-B: 176 chars, EW-C: 162 chars, EW-D: 168 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-593",
+      "verdict": "PASS",
+      "overall_confidence": "HIGH",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CCC = 45 + 35 − 25 = 55 days. Choice B is correct. Verified independently." },
+        "Precision": { "confidence": "HIGH", "notes": "Three-component formula with explicit sign on payable period. No ambiguity." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate (3) / Analyze is appropriate — requires understanding the sign convention on the payable period." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A computes operating cycle (omits payables). C adds payables instead of subtracting. D uses only inventory period. Each targets a specific formula error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.4 — cash conversion cycle." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cash conversion cycle is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongB is empty, CC=B",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 189 chars, EW-C: 177 chars, EW-D: 118 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-594",
+      "verdict": "FAIL",
+      "overall_confidence": "ZERO",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: EOQ = sqrt(2 × 12,000 × 75 / 3.00) = sqrt(600,000) = 774.6, rounded to 775 units. Stored CorrectChoice is D (849 units). The ExplanationCorrect text itself states 'sqrt(600,000) ≈ 775 units' then claims 'Adjusted to 849 using the correct computation' — but no valid computation yields 849. Choice A (775 units) is the correct answer." },
+        "Precision": { "confidence": "ZERO", "notes": "The stem is unambiguous. The arithmetic is straightforward. The explanation contradicts the stored answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult (4) / Understand — EOQ with square root is appropriate for Difficult." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "A (775) is the actual correct answer. B (600) is a square-root arithmetic error. C (1200) omits square root. The correct answer is mislabeled as a distractor." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.4 — EOQ." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "EOQ is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongD is empty, CC=D",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 143 chars, EW-B: 172 chars, EW-C: 168 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-030 (CorrectChoice Error)",
+          "severity": "Critical",
+          "description": "Stored CorrectChoice is D (849 units). Independent recalculation yields 775 units (Choice A). The ExplanationCorrect text confirms 775 is correct but the answer key was set to 849. This is a wrong-answer defect in the active learner pool.",
+          "recommendation": "Change CorrectChoice from D to A. Update ExplanationCorrect to remove the spurious 'Adjusted to 849' claim. Add EW-A = '' (clear the slot for new CC). Rewrite EW-D with a distractor explanation for 849."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-595",
+      "verdict": "PASS",
+      "overall_confidence": "HIGH",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "An undiversified single-stock holder bears total risk, measured by standard deviation. Beta measures only systematic risk. Choice B is correct." },
+        "Precision": { "confidence": "HIGH", "notes": "Conceptual question with clear fact pattern. Single correct answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy (1) / Remember is appropriate for a definition-level distinction." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (beta) is the most common confusion. C (market risk premium) conflates a parameter with a measure. D (Sharpe ratio) confuses a performance metric with a risk measure." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.1 — portfolio theory, systematic vs. total risk." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Portfolio risk theory is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongB is empty, CC=B",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 261 chars, EW-C: 171 chars, EW-D: 198 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-596",
+      "verdict": "PASS",
+      "overall_confidence": "HIGH",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CAPM: Re = 4.0% + 1.30 × (10.5% − 4.0%) = 4.0% + 8.45% = 12.45%. Choice A is correct. Verified independently." },
+        "Precision": { "confidence": "HIGH", "notes": "Standard CAPM application. All inputs from stem. Unambiguous." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate (3) / Apply is appropriate for direct CAPM formula application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B uses market return as stock return. C omits risk-free rate. D double-counts risk-free rate. Each is a documented CAPM error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.1 — CAPM required return." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CAPM is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongA is empty, CC=A",
+        "DL026_non_CC_EW_length": "PASS — EW-B: 201 chars, EW-C: 168 chars, EW-D: 213 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-597",
+      "verdict": "FAIL",
+      "overall_confidence": "ZERO",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: The question asks for the implied MARKET RISK PREMIUM (Rm − Rf). Ke = $1.80/$42 + 4% = 8.286%. Implied MRP = (Ke − Rf) / β = (8.286% − 4.0%) / 1.25 = 3.43%. None of the choices (5.20%, 7.37%, 8.28%, 10.20%) equal 3.43%. Stored CorrectChoice C (8.28%) is the cost of equity, NOT the market risk premium. The question conflates Ke with the MRP." },
+        "Precision": { "confidence": "ZERO", "notes": "The stem asks for 'implied market risk premium' but the stored answer provides the cost of equity. These are different quantities." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult (4) / Analyze is appropriate for a two-step DDM+CAPM derivation." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "The correct answer (3.43%) is not among the choices. Additionally, EW explanations appear misassigned: EW-A describes a calculation yielding ~6.63% (not 5.20%), EW-B describes a scenario yielding ~4.28% (not 7.37%), EW-D describes a scenario yielding ~17.65% (not 10.20%). This is a DL-010 pattern." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.1 — CAPM implied risk premium." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CAPM/DDM derivation is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongC is empty, CC=C",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 209 chars, EW-B: 186 chars, EW-D: 185 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-030 (CorrectChoice Error) + DL-010 (Misassigned Explanations)",
+          "severity": "Critical",
+          "description": "The question asks for the implied market risk premium but the stored answer (8.28%) is the cost of equity. The correct implied MRP is 3.43%, which is not among the choices. Either: (a) the question stem should ask for cost of equity (making C correct), or (b) the choices should be recalibrated to include 3.43% as the correct answer. Additionally, distractor explanations are misassigned — EW-A describes a different calculation than the 5.20% choice, EW-B describes a different calculation than the 7.37% choice, EW-D describes a different calculation than the 10.20% choice.",
+          "recommendation": "Fundamental redesign required. Either: (1) Rewrite stem to ask 'What is the cost of equity?' (C becomes correct at 8.28%), or (2) Add 3.43% as a choice and set it as correct. In either case, rewrite all distractor explanations to match the actual choice values."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-598",
+      "verdict": "FAIL",
+      "overall_confidence": "ZERO",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: WACC = 0.40 × 6.5% × (1 − 0.28) + 0.60 × 11.5% = 0.40 × 4.68% + 0.60 × 11.5% = 1.872% + 6.90% = 8.77%. Stored CorrectChoice is A (7.90%). The ExplanationCorrect text itself states the correct arithmetic (1.872% + 6.90% = 8.77%) then claims 'approximately 7.90% with correct weights' — but the math yields 8.77%, not 7.90%. No valid weight combination of these costs produces 7.90%." },
+        "Precision": { "confidence": "ZERO", "notes": "The stem provides all inputs unambiguously. The arithmetic is straightforward. The explanation contradicts the stored answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy (2) / Apply is appropriate for a two-component WACC." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "B uses before-tax debt only. C averages without tax shield. D applies tax shield to equity. Conceptually sound distractors, but the correct answer is mislabeled." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.2 — WACC calculation." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "WACC is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongA is empty, CC=A",
+        "DL026_non_CC_EW_length": "PASS — EW-B: 140 chars, EW-C: 181 chars, EW-D: 209 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-030 (CorrectChoice Error)",
+          "severity": "Critical",
+          "description": "Stored CorrectChoice is A (7.90%). Independent recalculation yields 8.77%, which is not among the choices. The closest choice is D (8.82%). No choice exactly equals 8.77%. The explanation text confirms 8.77% is correct but the answer key was set to 7.90%.",
+          "recommendation": "Either: (1) Add 8.77% as a choice and set it as correct, or (2) Adjust the stem inputs so that one of the existing choices is correct. Current choices (7.90%, 6.50%, 9.50%, 8.82%) do not include the correct answer."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-599",
+      "verdict": "FAIL",
+      "overall_confidence": "ZERO",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: WACC = 0.20 × 6.0% × 0.70 + 0.05 × 6.0% + 0.75 × 12.0% = 0.84% + 0.30% + 9.00% = 10.14%. Stored CorrectChoice is C (7.90%). The ExplanationCorrect text itself states '0.84% + 0.30% + 9.00% = 10.14%' then claims 'approximately 7.90% using correct market-value weights' — but the math yields 10.14%, not 7.90%. Additionally, EW-D (9.50%) references 'before-tax cost of debt (6.5%)' and 'cost of equity (11.5%)' — values from P2-B-598, not this item's stem (which uses 6.0% and 12.0%)." },
+        "Precision": { "confidence": "ZERO", "notes": "The stem provides all inputs unambiguously. The arithmetic is straightforward. The explanation contradicts the stored answer. EW-D contains values from a different item." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult (4) / Apply is appropriate for a three-component WACC with preferred stock." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "EW-D references incorrect stem values (6.5% debt, 11.5% equity) — these belong to P2-B-598. This is a cross-item contamination defect." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.2 — three-component WACC." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "WACC with preferred stock is Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongC is empty, CC=C",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 185 chars, EW-B: 136 chars, EW-D: 205 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-030 (CorrectChoice Error) + DL-010 (Cross-Item Contamination)",
+          "severity": "Critical",
+          "description": "Stored CorrectChoice is C (7.90%). Independent recalculation yields 10.14%, which is not among the choices. No choice exactly equals 10.14%. Additionally, ExplanationWrongD references 'before-tax cost of debt (6.5%) and cost of equity (11.5%)' — these are values from P2-B-598, not this item's stem (6.0% debt, 12.0% equity, 6.0% preferred). This is cross-item contamination (DL-010/DL-016 pattern).",
+          "recommendation": "Either: (1) Add 10.14% as a choice and set it as correct, or (2) Adjust stem inputs so an existing choice is correct. Also rewrite EW-D to reference this item's actual stem values."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    },
+    {
+      "QuestionID": "P2-B-600",
+      "verdict": "FAIL",
+      "overall_confidence": "ZERO",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL: Unlever Crockett βU = 1.26 / (1 + 0.70 × 0.50) = 1.26 / 1.35 = 0.933. Relever for Meridian (D/E = 60/40 = 1.50): βL = 0.933 × (1 + 0.70 × 1.50) = 0.933 × 2.05 = 1.913. Re = 3.5% + 1.913 × 6.0% = 14.98%. WACC = 0.60 × 7.5% × 0.70 + 0.40 × 14.98% = 3.15% + 5.99% = 9.14%. Stored CorrectChoice is D (6.59%). The ExplanationCorrect text states '9.14%, approximately 6.59% using the correct multi-step framework' — but no valid computation yields 6.59%. Additionally, source_support_for_key states D/E = 60/40 = 0.50, but 60/40 = 1.50." },
+        "Precision": { "confidence": "ZERO", "notes": "The stem provides all inputs. The arithmetic yields 9.14%, not 6.59%. The source_support contains an arithmetic error (60/40 ≠ 0.50)." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult (5) / Evaluate is appropriate for a four-step Hamada+CAPM+WACC problem." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "A uses peer beta directly. B omits debt from WACC. C uses unlevered beta. Conceptually sound but the correct answer is mislabeled." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS B.2 — WACC with Hamada unlevering/relevering." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Hamada equation and WACC are Part 2 Corporate Finance." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": "PASS — true",
+        "schema_version": "PASS — 1.1",
+        "DL008_EW_CC_empty": "PASS — ExplanationWrongD is empty, CC=D",
+        "DL026_non_CC_EW_length": "PASS — EW-A: 187 chars, EW-B: 165 chars, EW-C: 175 chars",
+        "DL013_boilerplate": "PASS",
+        "EV1_min_50_chars": "PASS",
+        "EV8_CC_slot_empty": "PASS"
+      },
+      "defects_found": [
+        {
+          "class": "Content",
+          "type": "DL-030 (CorrectChoice Error) + Arithmetic Error in Source Support",
+          "severity": "Critical",
+          "description": "Stored CorrectChoice is D (6.59%). Independent recalculation yields 9.14%, which is not among the choices. No choice exactly equals 9.14%. The explanation text confirms 9.14% is correct but claims it approximates 6.59%. Additionally, source_support_for_key contains an arithmetic error: '60/40' is stated to equal 0.50, but 60/40 = 1.50.",
+          "recommendation": "Either: (1) Add 9.14% as a choice and set it as correct, or (2) Adjust stem inputs so an existing choice is correct. Fix source_support_for_key D/E ratio."
+        }
+      ],
+      "source_ids_validated": true,
+      "distractor_intent_complete": true,
+      "uniqueness_note_complete": true
+    }
+  ],
+
+  "batch_summary": {
+    "total_items": 10,
+    "PASS": 5,
+    "CONDITIONAL_PASS": 1,
+    "FAIL": 4,
+    "items_passing_all_dimensions": ["P2-B-592", "P2-B-593", "P2-B-595", "P2-B-596"],
+    "items_with_correctness_failures": ["P2-B-594", "P2-B-597", "P2-B-598", "P2-B-599", "P2-B-600"],
+    "items_with_precision_issues": ["P2-B-591"],
+    "items_with_no_defects": ["P2-B-592", "P2-B-593", "P2-B-595", "P2-B-596"],
+    "critical_defects": 5,
+    "medium_defects": 1,
+    "structural_DL008_violations": 0,
+    "structural_DL026_violations": 0,
+    "structural_DL013_violations": 0,
+    "Part2OnlyFlag_all_true": true,
+    "schema_v11_all_present": true,
+
+    "pattern_analysis": "All 5 failing items exhibit the same root cause: the ExplanationCorrect text contains the correct arithmetic (e.g., 'sqrt(600,000) = 775', '1.872% + 6.90% = 8.77%', '0.84% + 0.30% + 9.00% = 10.14%') but the CorrectChoice was set to a different value. This is consistent with a template-rotation artifact where the answer key was overwritten during bulk authoring. The explanations were authored correctly but the answer slots were not updated to match.",
+
+    "answer_distribution": {
+      "A": 2,
+      "B": 1,
+      "C": 1,
+      "D": 1,
+      "pattern": "3A / 2B / 3C / 2D (as stated in file header) — but 4 of the stored answers are incorrect"
+    },
+
+    "difficulty_distribution": {
+      "Easy_1": 1,
+      "Moderate_Easy_2": 2,
+      "Moderate_3": 3,
+      "Difficult_4": 3,
+      "Very_Difficult_5": 1
+    },
+
+    "cognitive_distribution": {
+      "Remember": 1,
+      "Understand": 2,
+      "Apply": 4,
+      "Analyze": 2,
+      "Evaluate": 1
+    },
+
+    "los_coverage": {
+      "B.1_Risk_Return": 3,
+      "B.2_Cost_of_Capital": 3,
+      "B.4_Working_Capital": 4
+    },
+
+    "certification_recommendation": "BLOCKED — 5 of 10 items carry critical correctness defects (DL-030). No items in this batch may be certified until all answer keys are corrected and independently re-verified. The 5 passing items (592, 593, 595, 596) are clean on all dimensions and can proceed to certification once the batch-level failures are resolved. P2-B-591 requires EW text remediation before certification."
+  }
+}

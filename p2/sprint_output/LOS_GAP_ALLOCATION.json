@@ -1,0 +1,111 @@
+{
+  "generated": "2026-09-05T03:20:00Z",
+  "methodology": "LOS-level deficit computation per P2_OVERNIGHT_SPRINT_PROMPT.md §3.1",
+  "packs": {
+    "A": {
+      "section": "A",
+      "domain": "Financial Statement Analysis",
+      "current_count": 500,
+      "target_count": 600,
+      "gap": 100,
+      "qid_range": "P2-A-501 to P2-A-600",
+      "los_ideal_per_los": 66,
+      "los_allocation": [
+        {"los": "A.9", "current": 25, "deficit": 41, "new_items": 41, "rationale": "Highest deficit — Financial Statement Analysis has 9 LOS, A.9 is most underrepresented"},
+        {"los": "A.8", "current": 28, "deficit": 38, "new_items": 25, "rationale": "Second-highest deficit, capped at ideal+2=68 max"},
+        {"los": "A.7", "current": 40, "deficit": 26, "new_items": 15, "rationale": "Third-highest deficit"},
+        {"los": "A.6", "current": 40, "deficit": 26, "new_items": 10, "rationale": "Fourth-highest deficit"},
+        {"los": "A.5", "current": 56, "deficit": 10, "new_items": 5, "rationale": "Moderate deficit"},
+        {"los": "A.4", "current": 64, "deficit": 2, "new_items": 4, "rationale": "Near target, small allocation"},
+        {"los": "A.2", "current": 66, "deficit": 0, "new_items": 0, "rationale": "At target"},
+        {"los": "A.3", "current": 71, "deficit": -5, "new_items": 0, "rationale": "Above target"},
+        {"los": "A.1", "current": 110, "deficit": -44, "new_items": 0, "rationale": "Well above target — no new items needed"}
+      ],
+      "difficulty_targets": {"1": 15, "2": 20, "3": 30, "4": 25, "5": 10},
+      "cognitive_targets": {"Remember": 10, "Understand": 20, "Apply": 45, "Analyze": 20, "Evaluate": 5},
+      "answer_position_targets": {"A": 25, "B": 25, "C": 25, "D": 25},
+      "batch_plan": [
+        {"batch": 1, "qids": "P2-A-501 to P2-A-515", "items": 15, "los": "A.9"},
+        {"batch": 2, "qids": "P2-A-516 to P2-A-530", "items": 15, "los": "A.9"},
+        {"batch": 3, "qids": "P2-A-531 to P2-A-545", "items": 15, "los": "A.8"},
+        {"batch": 4, "qids": "P2-A-546 to P2-A-560", "items": 15, "los": "A.8"},
+        {"batch": 5, "qids": "P2-A-561 to P2-A-575", "items": 15, "los": "A.7"},
+        {"batch": 6, "qids": "P2-A-576 to P2-A-590", "items": 15, "los": "A.6"},
+        {"batch": 7, "qids": "P2-A-591 to P2-A-600", "items": 10, "los": "A.5/A.6/A.4"}
+      ]
+    },
+    "B": {
+      "section": "B",
+      "domain": "Corporate Finance",
+      "current_count": 500,
+      "target_count": 600,
+      "gap": 100,
+      "qid_range": "P2-B-501 to P2-B-600",
+      "los_ideal_per_los": 66,
+      "los_allocation": [
+        {"los": "B.7", "current": 33, "deficit": 33, "new_items": 33, "rationale": "Highest deficit"},
+        {"los": "B.9", "current": 40, "deficit": 26, "new_items": 26, "rationale": "Second-highest deficit"},
+        {"los": "B.8", "current": 45, "deficit": 21, "new_items": 21, "rationale": "Third-highest deficit"},
+        {"los": "B.3", "current": 56, "deficit": 10, "new_items": 10, "rationale": "Moderate deficit"},
+        {"los": "B.5", "current": 56, "deficit": 10, "new_items": 10, "rationale": "Moderate deficit"},
+        {"los": "B.6", "current": 59, "deficit": 7, "new_items": 0, "rationale": "Near target"},
+        {"los": "B.1", "current": 66, "deficit": 0, "new_items": 0, "rationale": "At target"},
+        {"los": "B.4", "current": 67, "deficit": -1, "new_items": 0, "rationale": "At target"},
+        {"los": "B.2", "current": 78, "deficit": -12, "new_items": 0, "rationale": "Above target"}
+      ],
+      "difficulty_targets": {"1": 15, "2": 20, "3": 30, "4": 25, "5": 10},
+      "cognitive_targets": {"Remember": 10, "Understand": 20, "Apply": 50, "Analyze": 15, "Evaluate": 5},
+      "answer_position_targets": {"A": 25, "B": 25, "C": 25, "D": 25},
+      "batch_plan": [
+        {"batch": 1, "qids": "P2-B-501 to P2-B-515", "items": 15, "los": "B.7"},
+        {"batch": 2, "qids": "P2-B-516 to P2-B-530", "items": 15, "los": "B.7"},
+        {"batch": 3, "qids": "P2-B-531 to P2-B-545", "items": 15, "los": "B.9"},
+        {"batch": 4, "qids": "P2-B-546 to P2-B-560", "items": 15, "los": "B.9"},
+        {"batch": 5, "qids": "P2-B-561 to P2-B-575", "items": 15, "los": "B.8"},
+        {"batch": 6, "qids": "P2-B-576 to P2-B-590", "items": 15, "los": "B.8"},
+        {"batch": 7, "qids": "P2-B-591 to P2-B-600", "items": 10, "los": "B.3/B.5"}
+      ]
+    },
+    "C": {
+      "section": "C",
+      "domain": "Decision Analysis",
+      "current_count": 620,
+      "target_count": 750,
+      "gap": 130,
+      "qid_range": "P2-C-621 to P2-C-750",
+      "los_ideal_per_los": 107,
+      "los_allocation": [
+        {"los": "C.7", "current": 74, "deficit": 33, "new_items": 33, "rationale": "Highest deficit"},
+        {"los": "C.4", "current": 77, "deficit": 30, "new_items": 30, "rationale": "Second-highest deficit"},
+        {"los": "C.5", "current": 88, "deficit": 19, "new_items": 19, "rationale": "Third-highest deficit"},
+        {"los": "C.6", "current": 91, "deficit": 16, "new_items": 16, "rationale": "Fourth-highest deficit"},
+        {"los": "C.1", "current": 92, "deficit": 15, "new_items": 15, "rationale": "Fifth-highest deficit"},
+        {"los": "C.3", "current": 96, "deficit": 11, "new_items": 11, "rationale": "Sixth-highest deficit"},
+        {"los": "C.2", "current": 102, "deficit": 5, "new_items": 6, "rationale": "Near target, small allocation to fill round"}
+      ],
+      "difficulty_targets": {"1": 19, "2": 26, "3": 39, "4": 33, "5": 13},
+      "cognitive_targets": {"Remember": 6, "Understand": 20, "Apply": 65, "Analyze": 26, "Evaluate": 13},
+      "answer_position_targets": {"A": 25, "B": 25, "C": 25, "D": 25},
+      "batch_plan": [
+        {"batch": 1, "qids": "P2-C-621 to P2-C-635", "items": 15, "los": "C.7"},
+        {"batch": 2, "qids": "P2-C-636 to P2-C-650", "items": 15, "los": "C.7"},
+        {"batch": 3, "qids": "P2-C-651 to P2-C-665", "items": 15, "los": "C.4"},
+        {"batch": 4, "qids": "P2-C-666 to P2-C-680", "items": 15, "los": "C.4"},
+        {"batch": 5, "qids": "P2-C-681 to P2-C-695", "items": 15, "los": "C.5"},
+        {"batch": 6, "qids": "P2-C-696 to P2-C-710", "items": 15, "los": "C.6"},
+        {"batch": 7, "qids": "P2-C-711 to P2-C-725", "items": 15, "los": "C.1"},
+        {"batch": 8, "qids": "P2-C-726 to P2-C-740", "items": 15, "los": "C.3"},
+        {"batch": 9, "qids": "P2-C-741 to P2-C-750", "items": 10, "los": "C.2"}
+      ]
+    }
+  },
+  "case_pack_3": {
+    "current": 22,
+    "target": 34,
+    "gap": 12,
+    "section_allocation": {"A": 4, "B": 4, "C": 4},
+    "case_id_format": "CBQ23-{Section}{Seq}",
+    "items_per_case": 6,
+    "total_items": 72
+  }
+}

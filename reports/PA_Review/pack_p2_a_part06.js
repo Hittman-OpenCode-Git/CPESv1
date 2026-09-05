@@ -1,0 +1,222 @@
+var pack_p2_a_part6 = [
+{
+  "Authorities": [
+    "ASC 230 — Statement of Cash Flows"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Approve the loan — net income grew 28.6% to $12.6M, demonstrating strong earnings power and sufficient repayment capacity for the $15M term loan.",
+    "B": "Deny the loan — depreciation of $3.8M is a non-cash expense that artificially depresses operating cash flow under the indirect method, making the credit metrics appear worse than the company's true cash-generating ability.",
+    "C": "Approve with conditions — while free cash flow is negative, the $9.5M in capital expenditures represents growth investment in automation equipment manufacturing capacity that will generate future cash flows sufficient to service the loan.",
+    "D": "Deny the loan — ProTec fails both credit policy requirements: free cash flow is negative at ($6.4M) and the OCF-to-NI ratio is 0.25, far below the 0.80 threshold. The severe accrual-earnings divergence indicates reported profits are not converting to cash and the company cannot service additional debt."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Confusing the direction of the depreciation adjustment in the indirect method cash flow statement — depreciation is added back to net income, not subtracted",
+  "CorrectChoice": "D",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Per ASC 230, the statement of cash flows provides critical information about the quality of accrual-based earnings. ProTec fails both credit policy requirements: (1) Free Cash Flow = OCF − CapEx = $3.1M − $9.5M = ($6.4M), which is negative, meaning the company cannot fund its capital investment program from operations, let alone service new debt; (2) OCF-to-NI ratio = $3.1M ÷ $12.6M = 0.25, far below the 0.80 threshold — only 25 cents of cash supports each dollar of reported earnings. The accrual-earnings divergence is driven by working capital changes: accounts receivable increased by $11.8M (representing sales for which cash has not been collected), inventory grew by $6.4M (cash tied up in unsold goods), and accounts payable decreased by $3.2M (suppliers being paid faster than new credit is extended). Together, these three working capital accounts consumed $21.4M of cash ($11.8M + $6.4M + $3.2M) that accrual accounting treats as earnings. The company is essentially financing its reported profit growth through working capital expansion — a pattern that is neither sustainable nor consistent with the cash flow generation required to service a $15M term loan. Ms. Voss should recommend denial and document the cash flow analysis for the credit file.",
+  "ExplanationWrongA": "Net income growth of 28.6% to $12.6M is an accrual-based figure that has not translated into cash. Operating cash flow of only $3.1M on $12.6M of net income (OCF/NI = 0.25) is a severe red flag indicating that reported profits are essentially all tied up in receivables and inventory. The $11.8M increase in accounts receivable alone nearly equals the entire net income of $12.6M, meaning most 'earnings' exist only as uncollected customer invoices. Without cash conversion, the company cannot service a $15M term loan regardless of how strong accrual earnings appear.",
+  "ExplanationWrongB": "Depreciation is a non-cash expense that is added back to net income in the operating cash flow calculation under the indirect method per ASC 230. It does not depress OCF — it increases OCF relative to net income. ProTec's OCF of $3.1M already includes the full $3.8M depreciation add-back, meaning that without this non-cash adjustment, OCF would have been negative. The credit analyst's concern should be directed at the working capital changes ($11.8M A/R increase, $6.4M inventory increase, $3.2M A/P decrease) that are consuming $21.4M of cash despite reported profitability — not at depreciation, which is correctly treated as a non-cash add-back.",
+  "ExplanationWrongC": "While $9.5M in capital expenditures may represent growth investment, the working capital deterioration is the primary driver of the cash flow problem — not CapEx. A/R increased $11.8M, inventory grew $6.4M, and A/P decreased $3.2M, together consuming $21.4M of cash that dwarfs the $9.5M in CapEx. Even if CapEx were excluded entirely, OCF of $3.1M generates an OCF-to-NI ratio of only 0.25, which independently fails the bank's 0.80 threshold. Approving a loan based on hoped-for future returns from current investment while the borrower's core operations are consuming cash would violate prudent underwriting standards and expose the bank to elevated default risk.",
+  "ExplanationWrongD": "",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-025",
+  "Section": "A",
+  "Stem": "Lena Voss, a senior credit analyst at Midland Commercial Bank, is reviewing a $15 million term loan application from ProTec Industrial Solutions, a manufacturer of factory automation equipment. ProTec reported net income of $12.6 million for 2026, up from $9.8 million in 2025. The company's CFO, David Huang, attributes the growth to strong market demand for automation solutions. Ms. Voss has extracted the following from ProTec's financial statements and cash flow statement:\n\n| Item (in $ millions) | 2025 | 2026 |\n|---------------------|------|------|\n| Net Income | 9.8 | 12.6 |\n| Operating Cash Flow (OCF) | 14.2 | 3.1 |\n| Depreciation & Amortization | 3.5 | 3.8 |\n| Change in Accounts Receivable | (1.2) | (11.8) |\n| Change in Inventory | (0.8) | (6.4) |\n| Change in Accounts Payable | 2.5 | (3.2) |\n| Capital Expenditures | 4.0 | 9.5 |\n\nMidland's credit policy requires that borrowers demonstrate positive free cash flow and an OCF-to-net-income ratio above 0.80 in the most recent fiscal year. Ms. Voss must recommend whether to approve or deny the loan. Based on an integrated earnings quality and cash flow analysis, what should she recommend?",
+  "Topic": "A.025 Earnings quality — cash flow vs accrual earnings divergence",
+  "UniqueConceptKey": "A-025-earnings-quality-cash-flow-vs-accrual-earnings-divergence",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires computing FCF and OCF/NI ratio, interpreting working capital changes, and applying credit policy thresholds",
+    "FCF independently verified: $3.1M − $9.5M = ($6.4M)",
+    "OCF-to-NI ratio independently verified: $3.1M ÷ $12.6M = 0.246",
+    "Working capital cash consumption independently verified: $11.8M + $6.4M + $3.2M = $21.4M",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 606 — Revenue from Contracts with Customers",
+    "ASC 250 — Accounting Changes and Error Corrections"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Gross profit margin — declining from 35.0% in 2025 to 25.3% in 2026, a 970 basis point compression that would suggest severe pricing pressure or cost inflation.",
+    "B": "Accounts receivable turnover — declining from 5.00 in 2025 to 4.09 in 2026, suggesting slower collections and potential credit quality deterioration.",
+    "C": "Revenue growth rate — showing a 6.3% decline ($240M to $225M), suggesting market share losses and a contracting business, when on a comparable policy basis revenue actually grew 5.0% ($240M to $252M).",
+    "D": "Net income margin — declining from 11.7% in 2025 to 9.8% in 2026, suggesting operational inefficiency and inadequate cost control."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Comparing revenue-based ratios across periods without adjusting for changes in revenue recognition policy, which can produce directional reversals that lead to fundamentally wrong business conclusions",
+  "CorrectChoice": "C",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Per ASC 606 and ASC 250 (Accounting Changes), when a company changes its revenue recognition policy, the prior-period comparability of revenue-based metrics is compromised. The revenue growth rate is the most materially distorted ratio because it flips direction entirely: the naive comparison shows a 6.3% decline ($225M vs. $240M), which would lead the board — and any external analyst — to conclude MedTech is losing market share and the business is contracting. However, on a comparable policy basis, revenue grew 5.0% ($252M vs. $240M). An 11.3 percentage point swing that reverses the directional signal from decline to growth is more misleading than a magnitude-only distortion in other ratios. While gross margin, A/R turnover, and net income margin are all affected to some degree, none of them reverse direction — they show varying degrees of compression that are directionally consistent under either measurement basis. The revenue growth reversal is uniquely dangerous because it could trigger inappropriate strategic decisions (e.g., abandoning product lines that are actually growing) based on a measurement artifact rather than economic reality.",
+  "ExplanationWrongA": "Gross profit margin decline from 35.0% ($84M/$240M) to 25.3% ($57M/$225M) is distorted, but on a comparable basis, 2026 gross margin would be $84M/$252M = 33.3% — a decline of only 170 bp from 35.0%, not 970 bp. While the distortion is significant in magnitude (800 bp overstated decline), the direction (margin compression) is consistent under both bases. The board would correctly identify margin pressure exists, even if the magnitude is substantially overstated. The revenue growth reversal — from +5% growth to a −6.3% decline — is more damaging because it inverts the board's understanding of whether the business is expanding or contracting.",
+  "ExplanationWrongB": "A/R turnover 2025 = $240M/$48M = 5.00; 2026 = $225M/$55M = 4.09. This decline is partially a real phenomenon — the denominator ($55M A/R) includes receivables from pre-policy-change shipments that are still outstanding, creating a numerator/denominator measurement mismatch. However, even on a comparable revenue basis ($252M), A/R turnover would be 4.58 ($252M/$55M), still a decline from 5.00. Some of the deterioration is real. The A/R turnover distortion understates performance but does not reverse direction, unlike the revenue growth rate which flips from positive to negative.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Net income margin 2025 = $28M/$240M = 11.7%; 2026 = $22M/$225M = 9.8%. On a comparable revenue basis, NI margin would be approximately 8.7% ($22M/$252M) — an even lower margin. The direction (margin decline) is consistent regardless of measurement basis. While the magnitude of the distortion matters for performance evaluation, the net income margin decline is partially real (lower comparable revenue vs. higher COGS) and partially an artifact of the transition period. The revenue growth rate reversal is more damaging because it mischaracterizes the fundamental direction of the business.",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-026",
+  "Section": "A",
+  "Stem": "Patricia Okonkwo, CFO of MedTech Analytics, a healthcare software company, is preparing the 2026 annual report. Effective January 1, 2026, MedTech changed its revenue recognition policy from recognizing revenue upon product shipment (FOB shipping point) to recognizing revenue upon customer acceptance and system integration sign-off — a more conservative policy that Ms. Okonkwo believes better aligns with ASC 606's performance obligation guidance. Selected financial data:\n\n| Item (in $ millions) | 2025 (Shipment Basis) | 2026 (Acceptance Basis) |\n|---------------------|----------------------|------------------------|\n| Revenue | 240.0 | 225.0 |\n| Cost of Goods Sold | 156.0 | 168.0 |\n| Gross Profit | 84.0 | 57.0 |\n| Net Income | 28.0 | 22.0 |\n| Accounts Receivable (net) | 48.0 | 55.0 |\n\nMs. Okonkwo estimates that had the old policy remained in effect, 2026 revenue would have been approximately $252.0 million with gross profit of $84.0 million. The board has expressed alarm about the apparent revenue decline and gross margin compression and is questioning whether the management team is performing. Ms. Okonkwo must identify which ratio is most materially distorted by the policy change such that a naive year-over-year comparison would produce a misleading conclusion about MedTech's true operating performance.",
+  "Topic": "A.026 Revenue recognition policy changes and ratio distortion",
+  "UniqueConceptKey": "A-026-revenue-recognition-policy-changes-and-ratio-distortion",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires identifying which ratio distortion is most materially misleading by analyzing both magnitude and directional impact",
+    "Revenue growth rates independently verified: naive −6.3%, comparable +5.0%",
+    "Gross margin independently verified: 2025 = 35.0%, naive 2026 = 25.3%, comparable 2026 = 33.3%",
+    "Authority citations match tested concepts"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205 — Presentation of Financial Statements"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+    "A": "Stellar's elevated depreciation (11.0% vs. 8.0%) reflects its older copper infrastructure being depreciated over shorter remaining useful lives. This non-cash expense, combined with below-benchmark R&D spending (3.0% vs. 5.0%), suggests Stellar is harvesting legacy assets rather than investing in next-generation capabilities — a strategic reality the board must address before committing to the fiber upgrade.",
+    "B": "Stellar's cost of services at 52.0% versus 48.0% indicates operational inefficiency that management should address through workforce reduction and network consolidation before considering any new capital investment.",
+    "C": "Stellar's underinvestment in R&D (3.0% vs. 5.0%) and selling/marketing (14.0% vs. 18.0%) suggests the company is efficiently allocating capital away from non-essential expenditures, which is a competitive advantage in a capital-intensive industry.",
+    "D": "Stellar's business model is fundamentally broken — a net margin of 3.2% versus 6.0% means the company cannot generate adequate returns for shareholders regardless of its infrastructure choices, and the board should consider a sale or liquidation."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Treating all vertical common-size variances as evidence of operational inefficiency without distinguishing between structural cost differences inherent to the business model and addressable management failures",
+  "CorrectChoice": "A",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Vertical common-size analysis reveals that Stellar's 280 bp net margin gap relative to the industry benchmark is composed of several offsetting components. The largest single contributor is depreciation: Stellar's 11.0% versus the benchmark's 8.0% accounts for 300 bp of the gap. This elevated depreciation is structural — it reflects legacy copper infrastructure with shorter remaining useful lives and higher annual depreciation charges relative to revenue, not operational inefficiency. Importantly, depreciation is a non-cash expense, meaning Stellar's cash margins may be meaningfully healthier than its accrual margins. Cost of services (400 bp above benchmark, contributing 400 bp to the gap) reflects the inherently higher maintenance cost of rural copper networks versus urban fiber. These structural disadvantages are partially offset by lower selling/marketing (400 bp below benchmark) and interest expense that, while higher (100 bp), is consistent with the capital structure of a legacy-infrastructure operator. However, R&D spending of only 3.0% versus 5.0% is concerning — it indicates Stellar is underinvesting in the fiber and 5G technologies that will drive future revenue regardless of whether the network upgrade is approved. The vertical analysis should frame the board's decision not as 'can we afford the upgrade?' but as 'can we afford not to upgrade?' given that underinvestment in next-generation capabilities will widen the competitive gap over time.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "While cost of services is 400 bp above the benchmark, characterizing this gap simply as 'operational inefficiency' ignores the structural driver — rural copper networks have inherently higher per-dollar-of-revenue maintenance costs than urban fiber networks. A workforce reduction in rural markets could impair service quality in areas where Stellar may be the sole provider and does not address the root cause (legacy asset cost structure). Vertical analysis requires distinguishing between addressable inefficiency and structural cost differences that are inherent to the company's asset base and market position.",
+  "ExplanationWrongC": "Below-benchmark spending on R&D and selling/marketing can indicate capital discipline — or competitive withdrawal. In a technology-intensive industry like telecommunications, R&D spending significantly below industry norms is typically a warning signal of underinvestment in future capabilities. The 400 bp gap in selling/marketing is partially offset by 200 bp of higher G&A spending, meaning the apparent 'savings' are at least partially consumed by higher administrative overhead rather than redirected to more productive uses. Calling this pattern a 'competitive advantage' inverts the likely strategic reality.",
+  "ExplanationWrongD": "A 3.2% net margin is below the 6.0% benchmark, but the gap is driven primarily by non-cash depreciation (300 bp of the 280 bp gap) and structural cost differences in the rural market. The company's cash flow generation likely significantly exceeds its accrual earnings, and if its asset base is heavily depreciated, its return on invested capital (ROIC) may be substantially higher than the net margin suggests. Declaring the business model 'fundamentally broken' and recommending sale or liquidation vastly overstates the conclusion that can be drawn from vertical analysis alone without considering cash flows, asset age, and competitive positioning.",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-027",
+  "Section": "A",
+  "Stem": "Ravi Mehta, Director of Financial Planning at Stellar Communications, a mid-market telecom provider, has prepared the following vertical common-size income statement comparing Stellar to the telecommunications industry benchmark. Stellar serves primarily rural markets with older copper-based infrastructure, while the industry benchmark is dominated by urban fiber-network operators:\n\n| Income Statement Line | Stellar (2026) | Industry Benchmark |\n|----------------------|----------------|-------------------|\n| Revenue | 100.0% | 100.0% |\n| Cost of Services | 52.0% | 48.0% |\n| Gross Profit | 48.0% | 52.0% |\n| Selling & Marketing | 14.0% | 18.0% |\n| General & Administrative | 12.0% | 10.0% |\n| R&D | 3.0% | 5.0% |\n| Depreciation | 11.0% | 8.0% |\n| Operating Income | 8.0% | 11.0% |\n| Interest Expense | 3.5% | 2.5% |\n| Net Income | 3.2% | 6.0% |\n\nMr. Mehta must present his analysis to the CEO, who wants to understand why Stellar's net margin of 3.2% is nearly half the industry benchmark of 6.0% and whether the board should approve a proposed $40 million fiber network upgrade program. Which conclusion best explains Stellar's expense structure relative to the benchmark?",
+  "Topic": "A.027 Comparative analysis — vertical analysis and expense structure benchmarking",
+  "UniqueConceptKey": "A-027-comparative-analysis-vertical-analysis-and-expense-structure-ben",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires interpreting vertical common-size analysis, distinguishing structural from operational variances, and connecting expense structure to strategic investment decisions",
+    "Vertical analysis line items independently verified to sum correctly",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205 — Presentation of Financial Statements"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "The trend data confirms strong performance — revenue grew 3.4x while net income grew 1.6x, a healthy pattern where top-line growth funds strategic reinvestment for future profitability.",
+    "B": "TrendLine's performance is mixed — revenue growth is impressive but the declining ratio of gross profit to revenue in trend terms (from 100 to 82.4) indicates the company is discounting heavily to drive sales volume, which is a more serious concern than the net income trend.",
+    "C": "The divergence between revenue growth and net income growth is entirely explained by the increase in store count from 8 to 19. Each new store initially operates at a loss during its ramp-up period, which is a normal and expected pattern in retail expansion.",
+    "D": "The base year of 2022 is distorted because it reflects an owner-operated, sub-scale business with artificially low costs. When re-based to 2023, revenue grew at a 32.9% CAGR while net income grew at only 10.1% CAGR and total assets grew at 46.0% CAGR — indicating that each dollar of new asset investment generates diminishing returns and capital efficiency is deteriorating."
+  },
+  "CognitiveLevel": "Evaluate",
+  "CommonTrapReference": "Accepting management-selected base years for trend analysis without verifying that the base period is representative — an atypically favorable or unfavorable base year will distort all subsequent trend percentages",
+  "CorrectChoice": "D",
+  "Difficulty": "Very Difficult",
+  "DifficultyScore": 5,
+  "ExplanationCorrect": "Per ASC 205, horizontal/trend analysis requires careful selection of the base year. Using 2022 as the base is misleading because TrendLine was a sub-scale, owner-operated business with 8 stores, no management salary, and rent-free occupancy — costs were artificially depressed. The resulting trend percentages overstate growth and understate cost escalation. Re-basing to 2023 (the first year with a more normalized cost structure after the founder began drawing salary) reveals: Revenue CAGR 2023–2026 = (340/145)^(1/3) − 1 ≈ 32.9%; Net Income CAGR = (160/120)^(1/3) − 1 ≈ 10.1%; Total Assets CAGR = (560/180)^(1/3) − 1 ≈ 46.0%. Three critical insights emerge: (1) Assets are growing 1.4x faster than revenue (46.0% vs. 32.9%), meaning each new dollar of asset investment is generating progressively less revenue — a capital efficiency problem. (2) Assets are growing 4.6x faster than net income (46.0% vs. 10.1%), meaning the return on each incremental dollar of investment is declining. (3) The store count grew 2.4x (8→19) while assets grew 5.6x (index 100→560), implying assets per store have more than doubled — inconsistent with a simple store-expansion narrative. Mr. Dubois should recommend that Laurentian Capital not rely on management's base-year-100 presentation and instead conduct independent re-based analysis before making an investment decision.",
+  "ExplanationWrongA": "Revenue growth of 3.4x over five years appears impressive but is measured against a distorted base year when the company was essentially a hobby business with no professional overhead. When properly re-based to 2023 (the first normalized year), the revenue CAGR of 32.9% is still strong but the net income CAGR of only 10.1% indicates that costs are growing significantly faster than revenue — costs that were absent in 2022 (management salary, market-rate rent). The 'strategic reinvestment' narrative is undermined by the fact that assets have grown 5.6x while stores only grew 2.4x, implying escalating asset intensity per store rather than efficient expansion.",
+  "ExplanationWrongB": "The gross profit trend declining from 100 to 82.4 (relative terms) suggests some margin compression: 2026 GP/Revenue = 280/340 = 82.4% of the base-year gross margin. However, this represents a modest gross margin decline from approximately 35% to approximately 29% over four years — significant but not catastrophic. More importantly, this focus on gross margin alone misses the more fundamental issue: the base-year distortion that inflates all growth metrics and the capital efficiency deterioration that becomes visible only when the analysis is properly re-based. Gross margin compression is a symptom; the base-year distortion is the root analytical problem.",
+  "ExplanationWrongC": "While new store ramp-up periods are normal in retail, this does not 'entirely explain' the divergence. Store count grew 2.4x (8 to 19) while total assets grew 5.6x (index 100 to 560), meaning assets per store have more than doubled from the base period. This implies that newer stores are significantly more capital-intensive than the original stores, or that substantial investment is going to non-store assets. Additionally, the founder's salary and rent expenses (absent in 2022) affect all stores, not just new ones. The 'normal expansion' narrative fails to account for the dramatically escalating capital intensity of the business.",
+  "ExplanationWrongD": "",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-028",
+  "Section": "A",
+  "Stem": "Andre Dubois, an investment analyst at Laurentian Capital, is evaluating TrendLine Apparel, a clothing retailer that went public in 2024. The company's prospectus highlights impressive growth since its founding in 2022. Mr. Dubois has compiled the following trend analysis using 2022 as the base year (=100):\n\n| Metric | 2022 | 2023 | 2024 | 2025 | 2026 |\n|--------|------|------|------|------|------|\n| Revenue | 100 | 145 | 210 | 280 | 340 |\n| Gross Profit | 100 | 140 | 195 | 245 | 280 |\n| Net Income | 100 | 120 | 140 | 150 | 160 |\n| Total Assets | 100 | 180 | 290 | 420 | 560 |\n| Store Count | 8 stores | 10 | 14 | 17 | 19 |\n\nTrendLine's CFO attributes the divergence between revenue growth and net income growth to 'strategic investments in the store footprint and brand building.' However, Mr. Dubois has also determined that 2022 was an unusually low base year because TrendLine operated only 8 stores, the founder took no salary, and the company occupied rent-free space owned by the founder's family. By 2026, the company operates 19 stores with a full professional management team at market-rate compensation and leases. Which of the following is the most accurate evaluation of TrendLine's trend analysis?",
+  "Topic": "A.028 Comparative — horizontal/trend analysis with base-year distortions",
+  "UniqueConceptKey": "A-028-comparative-horizontaltrend-analysis-with-base-year-distortions",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by cognitive demand — requires identifying base-year distortion, independently re-basing the analysis, computing CAGRs, and evaluating capital efficiency trends",
+    "Re-based CAGRs independently verified: Revenue 32.9%, Net Income 10.1%, Total Assets 46.0%",
+    "Asset-per-store growth independently verified: store count 2.4x vs. total assets 5.6x",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 280 — Segment Reporting"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+    "A": "The peer group comparison is valid and indicates Orion is an underperformer; consolidated results are the appropriate basis for investment decisions because shareholders own the entire company, not individual segments, and segment-level comparisons can be manipulated through cost allocations.",
+    "B": "Orion's ratios should be adjusted by applying cloud software industry median multiples to all three segments to produce a comparable consolidated figure; this normalization eliminates the business mix distortion and enables a fair comparison against the software peer group.",
+    "C": "Orion should only be compared to other multi-segment conglomerates regardless of their industry composition; any pure-play comparison is inherently unreliable because consolidated ratios always embed business mix effects that cannot be disentangled.",
+    "D": "The pure-play software peer group is inappropriate for consolidated comparison because Orion's ratios reflect a blend of three distinct businesses with materially different margin structures. A segment-level analysis against relevant peers for each business line reveals that Orion's individual businesses are competitive within their respective markets, and the consolidated comparison systematically understates Orion's true competitive position."
+  },
+  "CognitiveLevel": "Evaluate",
+  "CommonTrapReference": "Trap: Peer group selection bias — comparing diversified companies to pure-play peers without segment adjustment",
+  "CorrectChoice": "D",
+  "Difficulty": "Very Difficult",
+  "DifficultyScore": 5,
+  "ExplanationCorrect": "The pure-play software peer group is inappropriate for consolidated comparison. Under ASC 280 (Segment Reporting), a diversified company's consolidated financial ratios represent the weighted average of its component businesses with different margin structures, asset intensities, and growth profiles. Comparing Orion's consolidated 20% operating margin to pure-play software peers is analytically invalid because the hardware segment (18% margin) and IT services segment (12% margin) mechanically depress the consolidated figure below what the software segment alone achieves (32%). This is not evidence of underperformance — it is evidence of an inappropriate peer group. The correct analytical framework is sum-of-the-parts: evaluate each segment against its own relevant peer group, then assess whether the consolidated entity trades at an appropriate discount or premium to the sum of its parts. Cross-sectional analysis requires peers with comparable business models, asset intensities, and margin profiles — a requirement the pure-play software peer group fundamentally violates for a diversified hardware-software-services company.",
+  "ExplanationWrongA": "Accepting the consolidated comparison without adjusting for business mix violates a fundamental principle of cross-sectional analysis: comparable companies must have comparable business models. Orion generates 40% of revenue from hardware (18% margin) and 25% from IT services (12% margin), while the peer group consists of companies deriving substantially all revenue from cloud software. This is not a comparison of like with like. ASC 280 exists precisely because segment-level information is material to investors assessing diversified enterprises, and disregarding it would mean penalizing Orion for its corporate structure rather than evaluating its business performance.",
+  "ExplanationWrongB": "Applying a uniform software-industry median multiple to all three segments disregards fundamental differences in the economic characteristics of hardware, software, and services businesses. Hardware businesses have higher asset intensity, lower margins, and different capital requirements than software businesses. Imposing software-industry benchmarks on hardware operations produces an analytically meaningless result because it assumes away the very business mix differences that the analysis should be measuring.",
+  "ExplanationWrongC": "Restricting comparison to other diversified conglomerates substitutes one selection bias for another — a conglomerate peer group would include companies in unrelated industries whose financial profiles are shaped by completely different competitive dynamics than Orion's technology-focused businesses. The presence of business mix effects does not make cross-sectional analysis impossible; it means the analysis must be conducted at the appropriate level of disaggregation. ASC 280 requires segment reporting precisely so that investors can perform segment-level comparisons against relevant peers.",
+  "ExplanationWrongD": "",
+  "FormulaReference": null,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.2",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-029",
+  "Section": "A",
+  "Stem": "Orion Technologies operates three business segments: enterprise hardware (40% of revenue, 18% operating margin), cloud software (35% of revenue, 32% operating margin), and IT services (25% of revenue, 12% operating margin). Portfolio manager David Okonkwo at NorthStar Asset Management is evaluating Orion against a peer group of five pure-play cloud software companies. On a consolidated basis, Orion's gross margin of 38%, operating margin of 20%, and return on assets of 9% all rank in the lowest quartile of this peer group. However, when David analyzes Orion's cloud software segment independently, its 32% operating margin ranks in the second quartile of the cloud software peer group, and the hardware segment's 18% margin exceeds the 14% median of hardware-focused peers. What is the most appropriate conclusion regarding the peer group comparison?",
+  "Topic": "A.029 cross-sectional comparison with peer group selection bias and business mix distortion",
+  "UniqueConceptKey": "A-029-cross-sectional-comparison-with-peer-group-selection-bias-and-bu",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by multi-layer evaluative judgment requiring segment decomposition and peer group validity assessment",
+    "Independent answer derived matches stored CorrectChoice",
+    "Authority citation matches tested concept"
+  ],
+  "question_state": "Certified"
+}
+];

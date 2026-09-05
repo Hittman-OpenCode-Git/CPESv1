@@ -1,0 +1,500 @@
+{
+  "report_id": "CERT-P2-C-BATCH2",
+  "certifier": "Independent Blind Certifier",
+  "verification_date": "2026-09-05",
+  "input_file": "p2/sprint_output/pack_p2_c_batch2.js",
+  "schema_version": "1.1",
+  "item_count": 15,
+  "domain": "C",
+  "domain_name": "Decision Analysis",
+  "los_range": "C.4",
+  "los_description": "Relevant Cost Identification and Decision Analysis",
+
+  "dimensions_checked": [
+    "Correctness",
+    "Precision",
+    "Difficulty Calibration",
+    "Distractor Engineering",
+    "Blueprint Alignment",
+    "CMA Part 2 Relevance"
+  ],
+
+  "items": [
+    {
+      "QuestionID": "P2-C-636",
+      "Topic": "C.4 Relevant cost identification",
+      "CorrectChoice": "A",
+      "StoredAnswer": "$58,000",
+      "IndependentAnswer": "$58,000",
+      "ArithmeticMatch": true,
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "CognitiveLevelConcern": "Stem requires cost identification and summation — closer to Apply than Remember. Recommend: Apply / DifficultyScore 2.",
+      "Dimensions": {
+        "Correctness": { "Confidence": "MEDIUM", "Notes": "Arithmetic correct ($26K+$20K+$8K+$4K=$58K). However, stem states $20K fixed costs 'will persist regardless of the decision' yet ExplanationCorrect labels them 'avoidable fixed' and includes them in relevant cost. The only path to $58K requires treating $20K as incremental. If $20K truly persists, correct answer would be $38K (not a choice). Recommend clarifying stem or rewording to 'avoidable fixed costs of $20,000'." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Single defensible answer if $20K treated as avoidable. Distractors target distinct error patterns (sunk cost inclusion, opportunity cost omission)." },
+        "DifficultyCalibration": { "Confidence": "MEDIUM", "Notes": "Remember/Bloom is understated — item requires cost identification and addition, not recall. Apply/2 more appropriate." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "Three distinct distractor patterns: B (sunk cost trap), C (opportunity cost omission), D (double error). Each targets a documented exam misconception." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 maps to relevant cost identification. Topic and domain correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Relevant costing is core Part 2 Decision Analysis. No Part 1 overlap." }
+      },
+      "OverallConfidence": "MEDIUM",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 473,
+        "ExplanationWrongLengths": { "B": 155, "C": 133, "D": 123 }
+      },
+      "CertificationEligible": false,
+      "BlockingIssue": "Correctness dimension MEDIUM — stem/explanation inconsistency on $20K fixed cost treatment requires editorial clarification before certification."
+    },
+    {
+      "QuestionID": "P2-C-637",
+      "Topic": "C.4 Sunk cost exclusion",
+      "CorrectChoice": "B",
+      "StoredAnswer": "$0",
+      "IndependentAnswer": "$0",
+      "ArithmeticMatch": true,
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Understand",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Old press with zero market value and sunk book value contributes $0 to differential analysis. Correct per IMA relevant costing principles." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean fact pattern — old press, zero market value, book value sunk. No ambiguity." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Understand level appropriate — candidate must understand why book value is excluded, not just recall a rule." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (book value trap), C (depreciation-as-cost trap), D (historical cost trap). All represent real candidate errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, Topic 'Sunk cost exclusion', Domain C correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Replacement decision analysis — core Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 446,
+        "ExplanationWrongLengths": { "A": 198, "C": 167, "D": 151 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-638",
+      "Topic": "C.4 Opportunity cost",
+      "CorrectChoice": "C",
+      "StoredAnswer": "$57",
+      "IndependentAnswer": "$57",
+      "ArithmeticMatch": true,
+      "Difficulty": "Mod-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "VC $50 + Opp cost $7 = $57. Forgone rent correctly included as opportunity cost." },
+        "Precision": { "Confidence": "HIGH", "Notes": "All inputs traceable. Capacity utilization with forgone rental income is unambiguous." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/2 appropriate — requires multi-step calculation including opportunity cost." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (omits opportunity cost), B (excludes variable overhead and opportunity cost), D (only direct costs). Distinct error paths." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, opportunity cost topic correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Opportunity cost analysis — Part 2 Decision Analysis." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 349,
+        "ExplanationWrongLengths": { "A": 136, "B": 143, "D": 141 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-639",
+      "Topic": "C.4 Make-or-buy decisions",
+      "CorrectChoice": "D",
+      "StoredAnswer": "Accept - buying costs $5,000 less",
+      "IndependentAnswer": "Accept - buying costs $5,000 less",
+      "ArithmeticMatch": true,
+      "Difficulty": "Mod-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Make: ($34+$21+$14)×10K + $60K avoidable FC = $750K. Buy: $74.50×10K = $745K. Saving = $5K." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Avoidable vs unavoidable FC clearly delineated. No ambiguity." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/2 — standard make-or-buy with partial FC avoidability." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (uses total unit cost), B (omits avoidable FC), C (full cost comparison). Each targets a specific error." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, make-or-buy topic correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Make-or-buy is core Part 2 Decision Analysis." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 317,
+        "ExplanationWrongLengths": { "A": 114, "B": 132, "C": 96 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-640",
+      "Topic": "C.4 Special order pricing",
+      "CorrectChoice": "A",
+      "StoredAnswer": "$140,000 profit",
+      "IndependentAnswer": "$140,000 profit",
+      "ArithmeticMatch": true,
+      "Difficulty": "Mod-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "($180-$145)×4K = $140,000. Reduced commission correctly applied ($5 vs $12)." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Capacity check: 20K capacity - 16K current = 4K available. Order fits. Fixed costs irrelevant." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/2 — requires identifying reduced VC rate and computing incremental profit." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (full selling cost), C (includes fixed costs), D (miscounts savings). All plausible." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, special order pricing correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Special order pricing with excess capacity — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 380,
+        "ExplanationWrongLengths": { "B": 127, "C": 126, "D": 114 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-641",
+      "Topic": "C.4 Make-or-buy with opportunity cost",
+      "CorrectChoice": "C",
+      "StoredAnswer": "$150,000 advantage",
+      "IndependentAnswer": "$150,000 advantage",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Make: $900K, Buy: $800K. Direct advantage $100K + opportunity benefit $50K = $150K." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Avoidable FC ($20×10K=$200K) correctly separated from allocated ($5×10K=$50K). Opportunity benefit from freed capacity clear." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/3 — two-step analysis (direct + opportunity benefit)." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (reverses opportunity benefit direction), B (includes unavoidable FC), D (omits opportunity benefit). Distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Make-or-buy with opportunity cost — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 311,
+        "ExplanationWrongLengths": { "A": 127, "B": 148, "D": 134 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-642",
+      "Topic": "C.4 Sell-or-process-further",
+      "CorrectChoice": "A",
+      "StoredAnswer": "Process further - $15,000 advantage",
+      "IndependentAnswer": "Process further - $15,000 advantage",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Incremental revenue $50K - incremental cost $35K = $15K. Joint costs sunk at split-off." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Byproduct ($15K at split-off) is red herring — correctly excluded from further-processing analysis." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/3 — requires incremental analysis with joint cost exclusion." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (includes joint costs), C (double-counts byproduct), D (arithmetic error). All distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Sell-or-process-further — Part 2 Decision Analysis." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 317,
+        "ExplanationWrongLengths": { "B": 164, "C": 151, "D": 113 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-643",
+      "Topic": "C.4 Keep-or-drop product line",
+      "CorrectChoice": "B",
+      "StoredAnswer": "Increases by $35,000",
+      "IndependentAnswer": "Increases by $35,000",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "CM $80K < avoidable FC $115K → dropping saves $35K. Allocated FC irrelevant." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clear separation of traceable vs allocated FC. Unusual scenario (CM < avoidable FC) well-crafted." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/3 — requires understanding that dropping a segment with negative segment margin improves income." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (reversed — common in other scenarios), C (ignores FC savings), D (assumes zero impact). All target real misconceptions." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Keep-or-drop / segment discontinuation — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 335,
+        "ExplanationWrongLengths": { "A": 147, "C": 137, "D": 156 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-644",
+      "Topic": "C.4 Constrained resource optimization",
+      "CorrectChoice": "A",
+      "StoredAnswer": "600 Alpha, 800 Beta - $48,000",
+      "IndependentAnswer": "600 Alpha, 800 Beta - $48,000",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Beta CM/hr $30 > Alpha $20. Beta first: 800 units. Remaining 1,200 hrs → 600 Alpha. Total $48K." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Capacity check: 800+1,200=2,000 hrs. Demand check: 800≤1,000 (Beta), 600≤800 (Alpha)." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/3 — constrained resource with CM/hr ranking." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (wrong priority), C (underutilizes), D (non-optimized mix). All test constraint optimization." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, constrained resource topic correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Theory of constraints / constrained optimization — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 290,
+        "ExplanationWrongLengths": { "B": 142, "C": 158, "D": 139 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-645",
+      "Topic": "C.4 Joint cost relevance",
+      "CorrectChoice": "A",
+      "StoredAnswer": "$108,000; process further - $15,000",
+      "IndependentAnswer": "$108,000; process further - $15,000",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Allocation: $120K/$200K × $180K = $108K. Process: $165K-$120K-$30K = $15K net advantage." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Dual-task item (allocation + incremental analysis) well-structured." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Apply/3 — requires joint cost allocation method plus further-processing decision." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (correct allocation, wrong process decision), C (wrong allocation method), D (confuses revenue with profit). Distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Joint cost allocation + sell-or-process-further — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 329,
+        "ExplanationWrongLengths": { "B": 155, "C": 139, "D": 152 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-646",
+      "Topic": "C.4 Theory of constraints",
+      "CorrectChoice": "A",
+      "StoredAnswer": "Assembly; $54,600",
+      "IndependentAnswer": "Assembly; $54,600",
+      "ArithmeticMatch": true,
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Assembly 1,500 min < demand 1,700 → bottleneck. A first: 900A + 600B = 1,500 min. CM $54,600." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Three-department process with clear bottleneck identification." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Analyze/3 — requires bottleneck identification, CM ranking, and constrained optimization." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (ignores bottleneck), C (wrong priority), D (ignores demand cap). All distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4, theory of constraints correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Theory of constraints — Part 2 Decision Analysis." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 297,
+        "ExplanationWrongLengths": { "B": 127, "C": 146, "D": 144 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-647",
+      "Topic": "C.4 Keep-or-drop with sunk cost",
+      "CorrectChoice": "A",
+      "StoredAnswer": "Decreases by $45,000",
+      "IndependentAnswer": "Decreases by $45,000",
+      "ArithmeticMatch": true,
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Analyze",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "CM $90K - avoidable FC $45K = $45K net loss from dropping. Depreciation (sunk) and allocated FC irrelevant." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Three-way cost classification (CM, avoidable traceable, sunk depreciation, allocated) well-differentiated." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Analyze/4 — requires distinguishing three cost categories in a keep-or-drop framework." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (allocated FC treated as avoidable), C (full CM impact, ignores savings), D (all traceable FC treated as relevant). All distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Keep-or-drop with embedded sunk cost — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 303,
+        "ExplanationWrongLengths": { "B": 133, "C": 132, "D": 136 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-648",
+      "Topic": "C.4 Make-or-buy with constraints",
+      "CorrectChoice": "B",
+      "StoredAnswer": "$33,000 advantage",
+      "IndependentAnswer": "$33,000 advantage",
+      "ArithmeticMatch": true,
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Analyze",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Make: $720K, Buy: $690K, Direct: $30K + Opp: $15K - Warranty: $12K = $33K." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Three adjustment factors (opportunity benefit, warranty cost, partial FC avoidability) cleanly separated." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Analyze/4 — multi-factor analysis with three adjustment terms." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (wrong direction on adjustments), C (omits opportunity benefit), D (all adjustments as costs). Distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Make-or-buy with multiple factors — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 283,
+        "ExplanationWrongLengths": { "A": 134, "C": 155, "D": 130 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-649",
+      "Topic": "C.4 Multiple relevant costs",
+      "CorrectChoice": "D",
+      "StoredAnswer": "$298,400",
+      "IndependentAnswer": "$298,400",
+      "ArithmeticMatch": true,
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Evaluate",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "CM $705K - salaries $65K - depreciation $40K - cannibalization $21.6K - equipment $320K + depreciation add-back $40K = $298,400. All five cost factors correctly identified." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Cannibalization (3,000×40%×$18=$21,600), depreciation ($320K/8=$40K), allocated FC excluded. Year-1 treatment of equipment purchase clear." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Evaluate/4 — requires judgment on multiple cost classifications including cannibalization." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (ignores cannibalization and depreciation), B (includes allocated overhead), C (omits both depreciation and cannibalization). All distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Multi-factor relevant costing — Part 2 Decision Analysis." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 359,
+        "ExplanationWrongLengths": { "A": 136, "B": 130, "C": 142 }
+      },
+      "CertificationEligible": true
+    },
+    {
+      "QuestionID": "P2-C-650",
+      "Topic": "C.4 Constrained resource optimization",
+      "CorrectChoice": "A",
+      "StoredAnswer": "600 J, 600 K - $52,200",
+      "IndependentAnswer": "600 J, 600 K - $52,200",
+      "ArithmeticMatch": true,
+      "Difficulty": "Very Difficult",
+      "DifficultyScore": 5,
+      "CognitiveLevel": "Evaluate",
+      "Dimensions": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "J: $55/3=$18.33/hr, K: $32/2=$16/hr. J first: 600J (1,800hr) + 600K (1,200hr) = 3,000hr. CM $52,200." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Demand caps verified: 600≤600 (J at full demand), 600≤800 (K). Capacity: 1,800+1,200=3,000." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Evaluate/5 — requires CM/hr ranking with demand caps and different resource requirements." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (underproduces high-CM product), C (arithmetic error — same mix, wrong total), D (exceeds demand cap). All distinct." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "LOSTag C.4 correct." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Constrained resource with demand caps — Part 2." }
+      },
+      "OverallConfidence": "HIGH",
+      "StructuralChecks": {
+        "DL008": "PASS",
+        "DL026": "PASS",
+        "Part2OnlyFlag": "PASS",
+        "ExplanationCorrectLength": 250,
+        "ExplanationWrongLengths": { "B": 157, "C": 145, "D": 119 }
+      },
+      "CertificationEligible": true
+    }
+  ],
+
+  "summary": {
+    "total_items": 15,
+    "high_confidence": 14,
+    "medium_confidence": 1,
+    "low_confidence": 0,
+    "zero_confidence": 0,
+    "certification_eligible": 14,
+    "certification_blocked": 1,
+    "all_arithmetic_verified": true,
+    "dl008_violations": 0,
+    "dl026_violations": 0,
+    "part2onlyflag_violations": 0,
+    "dl013_boilerplate": 0,
+
+    "difficulty_distribution": {
+      "Easy": 2,
+      "Mod-Easy": 3,
+      "Moderate": 6,
+      "Difficult": 3,
+      "Very Difficult": 1
+    },
+    "bloom_distribution": {
+      "Remember": 1,
+      "Understand": 1,
+      "Apply": 9,
+      "Analyze": 3,
+      "Evaluate": 1
+    },
+
+    "blocked_items": [
+      {
+        "QuestionID": "P2-C-636",
+        "reason": "Correctness dimension MEDIUM — stem states $20,000 fixed costs 'will persist regardless of the decision' but ExplanationCorrect labels them 'avoidable fixed' and includes them in the relevant cost sum. The arithmetic ($58,000) is only correct if $20,000 is treated as incremental/avoidable. Recommend: (a) rewrite stem to say '$20,000 in fixed costs that would be avoided if the machine is dropped' OR (b) rewrite explanation to remove $20,000 from relevant cost and change answer to $38,000 (but $38K is not a choice, so option (a) is preferred).",
+        "severity": "MEDIUM",
+        "remediation": "Editorial — clarify $20K fixed cost treatment in stem or explanation"
+      }
+    ],
+
+    "batch_notes": [
+      "All 15 items are single-object architecture (no dual-block metadata-content divergence).",
+      "All ExplanationWrong[CorrectChoice] slots empty (DL-008 compliant).",
+      "All non-CC ExplanationWrong slots contain substantive choice-specific text ≥50 chars (DL-026 compliant).",
+      "No DL-013 boilerplate detected in any distractor explanation.",
+      "All items carry schema_version: 1.1, source_ids, source_support_for_key, distractor_intent, uniqueness_note, source_status: RESOLVED.",
+      "All Part2OnlyFlag = true verified.",
+      "14/15 items are certification-eligible. 1 blocked pending editorial clarification.",
+      "Cognitive level distribution: 1 Remember, 1 Understand, 9 Apply, 3 Analyze, 1 Evaluate — well within Domain C targets (Remember 5%, Understand 15%, Apply 50%, Analyze 20%, Evaluate 10%).",
+      "Difficulty distribution: 2 Easy, 3 Mod-Easy, 6 Moderate, 3 Difficult, 1 Very Difficult — consistent with Domain C targets."
+    ]
+  },
+
+  "overall_verdict": "CONDITIONAL PASS",
+  "overall_verdict_notes": "14 of 15 items receive HIGH confidence across all six dimensions and are certification-eligible. One item (P2-C-636) receives MEDIUM confidence on the Correctness dimension due to a stem/explanation inconsistency on the $20,000 fixed cost treatment. The arithmetic is internally consistent ($58K is correct IF $20K is avoidable), but the stem's phrasing ('persist regardless of the decision') contradicts the explanation's treatment. This requires editorial clarification before P2-C-636 can be certified. No structural defects (DL-008, DL-026, DL-013, Part2OnlyFlag) detected across all 15 items."
+}

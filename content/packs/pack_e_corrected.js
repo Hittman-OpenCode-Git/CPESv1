@@ -25030,7 +25030,7 @@ const MCQ_BANK_E = [
       "A": "Only if profit also exceeds threshold",
       "B": "Never",
       "C": "No",
-      "D": " > 10% of "
+      "D": "Yes, because Segment A's $500,000 is 10% of the $5,000,000 total, which meets the asset test"
     },
     "CalculationItem": true,
     "Part": 1,
@@ -25043,9 +25043,11 @@ const MCQ_BANK_E = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "Stem": "Segment A assets , segment B assets . Total assets . Segment A meets 10% asset test if:",
+    "Stem": "Segment A assets $500,000, Segment B assets $4,500,000. Total combined assets of all operating segments $5,000,000. Segment A meets 10% asset test if:",
     "ExplanationCorrect": "Concept: Under ASC 280, an operating segment is reportable if it meets any of three quantitative 10% thresholds. The asset test: segment assets are 10% or more of the total combined assets of all operating segments. Since Segment A's assets equal exactly 10% of total combined assets, it meets this threshold. A segment meeting any one of the three tests (revenue, profit/loss, or assets) must be separately reported.",
     "QuestionID": "P1E-C-092",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "ItemStyle": "single-select",

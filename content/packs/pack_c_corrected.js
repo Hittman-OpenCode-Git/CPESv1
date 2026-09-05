@@ -17950,7 +17950,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "C": "Cost-benefit analysis, which weighs control costs against benefits",
       "D": "Risk acceptance, which tolerates a known exposure"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "Segregation of duties separates authorization, recordkeeping, and reconciliation responsibilities among different people to reduce the risk of error or fraud going undetected.",
     "StudyLinks": [
       {
@@ -17966,6 +17966,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-001",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -17974,10 +17976,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A correctly identifies that segregation of duties is a foundational control activity under COSO Principle 12, but it describes the control mechanism itself rather than the organizational posture toward the identified control gap. Ashford's incompatible-duty combination — the warehouse employee holding both custody of the purchasing function (creating POs) and recording authority (entering invoices) — is a segregation breakdown, but the question asks how management's response to this known gap should be evaluated under COSO. Segregation of duties describes what control was missing; the item targets the classification of the organizational failure that permitted the gap to persist. A candidate selecting this option correctly identifies the violated control principle but responds to a different question than the one posed — recognizing the mechanism without diagnosing the governance deficiency.",
-    "ExplanationWrongB": "Option B describes detective controls operating after the fact, but Ashford's root problem is preventive. Monthly transaction reviews would eventually catch a $47,000 duplicate payment, but COSO Principle 12 emphasizes that control activities should be deployed at the right point in the process. Segregation of duties is specifically designed to prevent the incompatible combination of custody (creating purchase orders) and recording (entering invoices) from being held by one person. Post-transaction review is a monitoring activity (COSO Principle 16), not a control activity substitute — and monitoring five ERP modules manually is operationally infeasible.",
-    "ExplanationWrongC": "Option C correctly identifies segregation of duties as the violated control principle but misprescribes the remediation. Segregation within the warehouse function (verifier vs. picker) addresses inventory control — not the incompatible duties between procurement and accounts payable. Ashford's loss arose because one warehouse employee could both create purchase orders and enter related invoices, enabling a self-approved duplicate payment scheme. The segregation must separate authorization (PO creation) from recording (invoice entry), not merely split duties within the receiving function. The ERP access rights matrix confirms the incompatible combination, so splitting warehouse verifier/picker roles does not address it.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Management override describes a person with authority intentionally bypassing an existing control. Ashford's three-way split is operating as designed — three separate employees authorize, record, and reconcile. No bypass occurs; the scenario demonstrates segregation of duties, not its override.",
+    "ExplanationWrongC": "Cost-benefit analysis weighs whether a control is worth implementing. Ashford already implemented the control — duties are split among three people. The question asks what concept the arrangement reflects (segregation), not whether the control was worth its cost.",
+    "ExplanationWrongD": "Risk acceptance is a deliberate documented decision to tolerate a known exposure without controls. Ashford did the opposite — it implemented a three-way segregation of authorization, recording, and reconciliation. Tolerating risk means forgoing controls, not splitting duties.",
     "question_state": "Certified",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -18155,7 +18157,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "C": "Management override, which bypasses controls",
       "D": "Risk acceptance, which tolerates a known exposure"
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "Segregation of duties separates authorization, recordkeeping, and reconciliation responsibilities among different people to reduce the risk of error or fraud going undetected.",
     "StudyLinks": [
       {
@@ -18171,6 +18173,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-005",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -18179,10 +18183,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A identifies segregation of duties as the general control objective, but the scenario focuses on the effectiveness of compensating monitoring controls rather than the segregation gap itself. The organization recognized the incompatible-duty limitation and implemented monitoring activities as compensating controls, yet the duplicate payment scheme persisted for six months undetected. Under COSO Principle 16, monitoring activities must be designed to detect control failures on a timely basis — the failure here was that neither the ongoing evaluations nor the compensating review procedures identified the scheme. Selecting segregation of duties as the answer reflects the candidate identifying the control that was absent rather than diagnosing why the controls that WERE in place failed to operate effectively.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Option C identifies a genuine deficiency — the lack of a formal internal audit function — but overstates its significance relative to other monitoring deficiencies. A formal internal audit function is one mechanism for separate evaluations (COSO Principle 16), but it is not the only one. Management can conduct separate evaluations, and many mid-sized companies use a combination of management self-assessment and external consultants. The more fundamental problem in the scenario is that NO monitoring mechanism exists — neither ongoing evaluations (embedded in operations) nor separate evaluations (conducted periodically). An internal audit charter without corresponding evaluation activity is form without substance. More critically, Option C does not address the operations-level monitoring gap that allowed the duplicate payment scheme to go undetected for six months.",
-    "ExplanationWrongD": "Option D mischaracterizes the organization's response as risk acceptance, which under COSO Principle 9 requires a deliberate, documented management decision to tolerate a known exposure without implementing additional controls. The scenario contradicts this: management recognized the segregation-of-duties gap and actively designed compensating monitoring controls to reduce residual risk. The control failure was that the compensating controls were not operating effectively — the duplicate payment scheme went undetected for six months — not that management chose to forgo controls in favor of accepting the risk. Risk acceptance is a valid risk response strategy, but labeling a failed control design as acceptance conflates the intent (implement compensating controls) with the outcome (controls did not work). A candidate selecting this option may be mistaking an ineffective control for a deliberate decision not to control.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Cost-benefit analysis evaluates whether a control justifies its cost. Emberton already bears the cost — three employees split authorization, recording, and reconciliation. The arrangement reflects segregation of duties, not a cost-benefit computation.",
+    "ExplanationWrongC": "Management override requires someone with authority bypassing an existing control. Three separate Emberton employees perform the three functions with no bypass described. The scenario shows segregation operating, not override.",
+    "ExplanationWrongD": "Risk acceptance means knowingly tolerating an exposure without implementing controls. Emberton implemented controls — separate authorization, recording, and reconciliation. The concept reflected is segregation of duties, not acceptance of risk.",
     "question_state": "Certified",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -18411,7 +18415,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "C": "The Balanced Scorecard framework",
       "D": "The Six Sigma DMAIC framework"
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "ExplanationCorrect": "The COSO framework defines internal control through five integrated components: control environment, risk assessment, control activities, information and communication, and monitoring.",
     "StudyLinks": [
       {
@@ -18427,6 +18431,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-010",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -18435,10 +18441,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A correctly identifies pressure as a fraud triangle element but misidentifies the specific pressure driver. The scenario describes a newly hired, recently divorced employee with disclosed financial difficulties and student loans — this is a financial pressure (personal debt, lifestyle needs), not a performance-related pressure tied to unrealistic sales targets. The scenario explicitly states the employee is performing well against targets, so sales quota pressure is not applicable. Distinguishing between financial pressure (personal) and performance pressure (organizational) is critical for fraud risk assessment — different pressures call for different control responses. Financial pressure is typically harder for an employer to detect and mitigate through organizational policy alone.",
-    "ExplanationWrongB": "Option B identifies COSO as the correct internal control framework in the abstract, but it selects the framework for the wrong purpose. The COSO Internal Control — Integrated Framework evaluates the design and operating effectiveness of internal controls over financial reporting, operations, and compliance. The question describes a broader governance need that extends beyond internal control assessment to encompass strategic performance measurement and enterprise risk integration. While COSO's five components are correct for internal control evaluation, the framework described in the scenario is designed for a different organizational function. A candidate selecting COSO correctly associates the number five with the most prominent framework in Part 1 Section E but does not verify that the stem's functional description of the framework's purpose aligns with COSO's scope.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Option D extends the fraud triangle to the fraud diamond but reaches the wrong conclusion. The fraud diamond adds capability (the individual's position, intelligence, and ability to execute the fraud) to the three elements of pressure, opportunity, and rationalization. The scenario's procurement manager held a position that enabled the fraud (15-year employee with system access), so capability was present. However, the controls described — vendor setup reviews and quarterly vendor master audits — address OPPORTUNITY, and the ethics certification weakly addresses RATIONALIZATION. The question asks which element the controls FAILED to address adequately, not which framework is more complete. The fraud diamond does not change the assessment that rationalization remains the least mitigated element. Psychometric screening for 'propensity for rationalization' is not a recognized or reliable control — rationalization is addressed through ethical culture, whistleblower mechanisms, and employee support, not pre-hire personality testing.",
+    "ExplanationWrongA": "The Theory of Constraints focuses on identifying and exploiting bottleneck constraints in operations. It has no five-component structure for evaluating internal control systems. Junction is assessing internal control design and effectiveness — the domain of the COSO Internal Control — Integrated Framework.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The Balanced Scorecard translates strategy into performance measures across financial, customer, process, and learning perspectives. It does not define internal control through five integrated components (control environment, risk assessment, control activities, information and communication, monitoring) — that is COSO.",
+    "ExplanationWrongD": "Six Sigma DMAIC (Define, Measure, Analyze, Improve, Control) is a process-improvement methodology, not an internal-control evaluation framework. Junction's five-component assessment of control design and operating effectiveness matches COSO, not DMAIC.",
     "question_state": "Certified",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -20721,7 +20727,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "C": "Increased owner or management review and oversight as a compensating control",
       "D": "Eliminating internal controls entirely since the company is small"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "C",
     "ExplanationCorrect": "When segregation of duties is not feasible due to limited staff, increased direct management or owner oversight can serve as a compensating control.",
     "StudyLinks": [
       {
@@ -20737,6 +20743,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-055",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20745,10 +20753,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A elevates a secondary concern above a fundamental control environment failure. The board is not independent: two directors have material consulting relationships ($180,000 each), and the CEO chairs the audit committee — a direct violation of the principle that the audit committee must be wholly independent of management. COSO Principle 2 (board independence and oversight) is violated because management (the CEO) oversees the body responsible for monitoring management. Compensation committee size is a governance best practice, not a COSO Principle 1 violation. The internal control system's foundation is compromised when the CEO sits on the committee charged with overseeing internal controls over financial reporting. This is a more severe and immediate threat to internal control than compensation committee composition.",
-    "ExplanationWrongB": "Option B correctly identifies two control environment failures but draws the wrong conclusion about their primacy, and mischaracterizes the external auditor findings. The COSO control environment contains five principles: Principle 1 (integrity and ethical values), Principle 2 (board independence), Principle 3 (authority and responsibility), Principle 4 (commitment to competence), and Principle 5 (accountability). Both the CEO-audit-committee chair conflict and the VP override of the receivables allowance are control environment failures, but they operate at different levels. The board independence failure (Principle 2) is an entity-level control environment deficiency affecting the entire internal control system. The receivables override is a process-level ethical failure under Principle 1. Under COSO's top-down approach, the entity-level deficiency is more pervasive and should be remediated first because it undermines the oversight mechanism that should catch process-level failures like the receivables override. External auditor materiality classifications do not determine the ranking of internal control deficiencies.",
-    "ExplanationWrongC": "Option C identifies increased management oversight as a compensating control, which is a valid approach under COSO when segregation of duties cannot be achieved due to limited staffing. However, management review alone is typically a detective compensating control — it identifies issues after transactions have occurred — rather than providing the preventive protection that true segregation of duties offers by structurally preventing one person from completing an incompatible combination of duties. Under COSO Principle 12, compensating controls should address the specific risk that the absent control would have mitigated, and for small organizations, the most robust approach typically combines multiple compensating controls: management review, surprise audits, mandatory vacation policies with temporary duty rotation, and independent reconciliations performed by an external party. A candidate selecting this option correctly identifies a compensating control category but does not evaluate whether management review alone is sufficient to mitigate the specific risks created by the segregation gap, particularly for cash handling where the risks of misappropriation are highest.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongA": "Fraud risk does not disappear in small companies — limited segregation actually increases misappropriation exposure. Ignoring the weakness leaves shortages and theft undetectable. COSO expects compensating controls (such as owner review) precisely when segregation is infeasible.",
+    "ExplanationWrongB": "Outsourcing accounting without oversight replaces one control gap with another — the third party's work goes unverified. A compensating control must add independent review (owner/management oversight), not merely relocate the unreviewed work outside the company.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Eliminating internal controls magnifies the weakness it claims to solve — with no segregation and no controls, errors and fraud go entirely undetected. Company size justifies scaling controls (for example direct owner review as a compensating control), never abandoning them.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",

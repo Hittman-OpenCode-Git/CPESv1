@@ -1,0 +1,598 @@
+{
+  "report": {
+    "batch": "pack_p2_b_batch1",
+    "domain": "B — Corporate Finance",
+    "los_range": "B.7",
+    "item_count": 15,
+    "certifier": "Independent Blind Certifier",
+    "verification_date": "2026-09-05",
+    "schema_version": "1.1",
+    "verdict": "FAIL",
+    "pass_count": 7,
+    "fail_count": 8,
+    "pass_rate": "46.7%"
+  },
+  "items": [
+    {
+      "QuestionID": "P2-B-501",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "Choice A text says '$35.57' but ExplanationCorrect calculates P0 = $2.52/0.07 = $36.00. The choice arithmetic descriptor ($35.57) does not match the EC-derived answer ($36.00). The $35.57 figure appears to be a rounding artifact or typo — $36.00 is the mathematically correct Gordon Growth result."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {B, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3). All present and non-empty." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['CB-11: Cost of Common Equity — Dividend Discount Model (Gordon Growth)']. Resolves in P2005_FORMULA_MASTER.json domain B formula CB-11." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings: source_id, rule_or_proposition, application_to_facts, key_conclusion. All populated." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongA is '' (CC=A slot empty)",
+        "dl026": "PASS — ExplanationWrongB (246 chars), ExplanationWrongC (227 chars), ExplanationWrongD (224 chars) all ≥50 chars",
+        "dl021": "PASS — no absent EW fields"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Choice A arithmetic text ($35.57) does not match EC's $36.00. The formula P0 = D1/(r-g) = $2.52/0.07 = $36.00 is correct. Choice A should state $36.00, not $35.57."
+      },
+      "dimension_scores": {
+        "correctness": "LOW",
+        "precision": "MEDIUM",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "LOW",
+      "certification_eligible": false,
+      "blocking_defects": ["Choice text arithmetic mismatch ($35.57 vs $36.00)"]
+    },
+    {
+      "QuestionID": "P2-B-502",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = B. EC states R_e = (D0/P0) + g = $1.92/$48.00 + 6% = 4.00% + 6.00% = 10.00%. Choice B text = '10.00%'. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['CB-11: Cost of Common Equity — Dividend Discount Model (Gordon Growth)']. Resolves in formula master CB-11." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'CB-11', rule_or_proposition references yield-plus-growth approximation." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongB is '' (CC=B slot empty)",
+        "dl026": "PASS — ExplanationWrongA (221 chars), ExplanationWrongC (215 chars), ExplanationWrongD (193 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "10.00% correctly derived from D0/P0 + g. Yield-plus-growth approximation is the standard approach for implied required return."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-503",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = C. EC states g = 11.5% - 2.88% = 8.62%, 'approximately 8.64%'. Choice C text = '8.64%'. The 0.02% difference is a rounding artifact within tolerance. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (2, 3, 1)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['CB-11: Cost of Common Equity — Dividend Discount Model (Gordon Growth)']. Resolves in formula master CB-11." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'CB-11'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongC is '' (CC=C slot empty)",
+        "dl026": "PASS — ExplanationWrongA (198 chars), ExplanationWrongB (168 chars), ExplanationWrongD (211 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "g = 11.5% - (1.80/62.50) = 11.5% - 2.88% = 8.62%. The 8.64% in Choice C is within rounding tolerance."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-504",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = A. EC states repurchase EPS = $18M/5.55M = $3.27. Choice A says 'Repurchase EPS of $3.27'. But 5.55M is WRONG: $9M/$36 = 0.25M shares repurchased; 6M - 0.25M = 5.75M shares. $18M/5.75M = $3.13, not $3.27. The arithmetic in EC contains a share-count error."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {B, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['FA-15: Earnings Per Share (EPS)']. Resolves in formula master FA-15." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'FA-15'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongA is '' (CC=A slot empty)",
+        "dl026": "PASS — ExplanationWrongB (209 chars), ExplanationWrongC (192 chars), ExplanationWrongD (206 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Arithmetic error: $9M/$36 = 250,000 shares. 6M - 0.25M = 5.75M shares. $18M/5.75M = $3.13 (not $3.27 as stated). The correct repurchase EPS is $3.13, not $3.27. Choice A's '$3.27' is wrong."
+      },
+      "dimension_scores": {
+        "correctness": "ZERO",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "blocking_defects": ["Arithmetic error: repurchase shares = 0.25M (not 0.45M); correct repurchase EPS = $3.13 not $3.27"]
+    },
+    {
+      "QuestionID": "P2-B-505",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = B ($12.0M). EC states residual = $30M - $27M = $3.0M and explicitly says 'The $12.0M in option B represents the residual after funding the 40% debt portion ($18M), which is the maximum dividend under the residual framework.' But the residual dividend formula is NI - (Equity% x Capex) = $30M - (0.60 x $45M) = $3.0M. Option A ($3.0M) matches the correct residual. Option B describes the WRONG computation. CC and EC contradict."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (2, 1, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['FA-22: Dividend Payout Ratio']. Resolves in formula master FA-22." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'FA-22'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongB is '' (CC=B slot empty)",
+        "dl026": "PASS — ExplanationWrongA (171 chars), ExplanationWrongC (191 chars), ExplanationWrongD (183 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Residual dividend = NI - (Target Equity Ratio x Capex) = $30M - (0.60 x $45M) = $30M - $27M = $3.0M. Option A is the correct answer. Option B describes an incorrect computation. CC should be A, not B."
+      },
+      "dimension_scores": {
+        "correctness": "ZERO",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "blocking_defects": ["Wrong CorrectChoice: should be A ($3.0M), not B ($12.0M). EC confirms $3.0M is correct."]
+    },
+    {
+      "QuestionID": "P2-B-506",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = B (MM irrelevance — no price effect). EC confirms MM predicts no effect. But the STEM asks 'what dividend signaling theory predicts' — signaling theory predicts a POSITIVE price reaction (Option A), not no effect. CC/EC mismatch with stem intent. If the question tests MM, stem should say 'Under MM, what happens?' not 'what does signaling theory predict?'."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Modigliani-Miller (1961) Dividend Irrelevance']. This is an authority reference, not a formula master ID. Resolves as an authority in the source catalog." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Modigliani-Miller (1961)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongB is '' (CC=B slot empty)",
+        "dl026": "PASS — ExplanationWrongA (195 chars), ExplanationWrongC (173 chars), ExplanationWrongD (183 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Stem asks 'what dividend signaling theory predicts' but CC = B (MM irrelevance, no effect). Signaling theory predicts a positive price reaction (Option A). Either the stem is wrong (should reference MM) or the CC is wrong (should be A for signaling theory)."
+      },
+      "dimension_scores": {
+        "correctness": "LOW",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "LOW",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "LOW",
+      "certification_eligible": false,
+      "blocking_defects": ["Stem asks about signaling theory but CC applies MM irrelevance — theoretical framework mismatch"]
+    },
+    {
+      "QuestionID": "P2-B-507",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = C (bird-in-the-hand). EC says bird-in-the-hand explains WHY firms smooth. But STEM asks 'explain why the dividend growth has been steady' — Lintner's model (Option A) is the direct explanation for steady dividend growth patterns. EC concedes 'Lintner's model describes the empirical pattern' — which is exactly what the stem asks for. CC should be A."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Gordon (1963) Bird-in-the-Hand Theory']. Resolves as authority reference." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Gordon (1963)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongC is '' (CC=C slot empty)",
+        "dl026": "PASS — ExplanationWrongA (193 chars), ExplanationWrongB (175 chars), ExplanationWrongD (149 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "The stem asks WHY dividends are steady while earnings fluctuate. Lintner's model (A) directly explains this phenomenon. Bird-in-the-hand (C) explains why investors VALUE stable dividends but not the mechanism that produces the pattern. CC should be A."
+      },
+      "dimension_scores": {
+        "correctness": "LOW",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "MEDIUM",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "LOW",
+      "certification_eligible": false,
+      "blocking_defects": ["Wrong CorrectChoice: Lintner's model (A) answers the stem; bird-in-the-hand (C) does not"]
+    },
+    {
+      "QuestionID": "P2-B-508",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = A. EC describes tax differential theory: dividend → immediate taxation; repurchase → deferral + potential lower rate. Choice A text aligns with EC. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {B, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Tax differential theory (Elton & Gruber, 1970)']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Elton & Gruber (1970)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongA is '' (CC=A slot empty)",
+        "dl026": "PASS — ExplanationWrongB (176 chars), ExplanationWrongC (181 chars), ExplanationWrongD (157 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "Tax differential theory correctly applied. Dividend → immediate ordinary income tax. Repurchase → capital gains tax only on realized gains, deferral advantage. Correct."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-509",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = C. EC states post-repurchase shares = 5.55M and BVPS = $180M/5.55M = $6.32. But 5.55M is WRONG: $60M/$40 = 1.5M shares repurchased; 30M - 1.5M = 28.5M shares. $180M/28.5M = $6.32. EC's share count (5.55M) is wrong but BVPS result ($6.32) is correct for 28.5M shares. Choice C text says '$7.20' which is also wrong ($180M/28.5M = $6.32). Choice A says $8.57 which is also wrong. None of the choice values match the correct $6.32."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['FA-18: Book Value per Share']. Resolves in formula master FA-18." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'FA-18'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongC is '' (CC=C slot empty)",
+        "dl026": "PASS — ExplanationWrongA (190 chars), ExplanationWrongB (166 chars), ExplanationWrongD (185 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Correct BVPS = $180M/28.5M = $6.32. Choice C says $7.20, Choice A says $8.57. Neither matches $6.32. EC's intermediate share count (5.55M) is also wrong — should be 28.5M. All arithmetic in EC and choices is contaminated by the share-count error."
+      },
+      "dimension_scores": {
+        "correctness": "ZERO",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "blocking_defects": ["Arithmetic error: post-repurchase shares = 28.5M (not 5.55M); correct BVPS = $6.32 (not $7.20 or $8.57)"]
+    },
+    {
+      "QuestionID": "P2-B-510",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = D. EC identifies commission elimination as primary universal DRIP benefit. Choice D text says 'DRIP allows shareholders to avoid brokerage commissions'. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, C} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['DRIP discount mechanism']. Resolves in source_support_for_key as DRIP mechanics. Non-formula-master source, but source_status = RESOLVED with documented source_support_for_key." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings: source_id='DRIP mechanics', rule_or_proposition, application_to_facts, key_conclusion." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongD is '' (CC=D slot empty)",
+        "dl026": "PASS — ExplanationWrongA (186 chars), ExplanationWrongB (166 chars), ExplanationWrongC (154 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "Commission elimination is the universal DRIP benefit. The 3% discount is plan-specific. Correct."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-511",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = D (MM zero-payout maximization). EC confirms MM predicts zero-payout maximizes value. But STEM asks 'under the bird-in-the-hand theory (Gordon, 1963), explain how the dividend decision affects stock valuation.' Bird-in-the-hand theory predicts HIGHER dividends → higher value (Option A). CC should be A, not D. The CC applies MM, not bird-in-the-hand."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, C} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Modigliani-Miller (1961) Dividend Irrelevance']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Modigliani-Miller (1961)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongD is '' (CC=D slot empty)",
+        "dl026": "PASS — ExplanationWrongA (198 chars), ExplanationWrongB (177 chars), ExplanationWrongC (183 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Stem asks about bird-in-the-hand theory but CC applies MM irrelevance. Bird-in-the-hand theory (Gordon, 1963) predicts higher dividends reduce perceived risk and increase valuation (Option A). CC should be A."
+      },
+      "dimension_scores": {
+        "correctness": "LOW",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "LOW",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "LOW",
+      "certification_eligible": false,
+      "blocking_defects": ["Stem asks about bird-in-the-hand theory but CC applies MM — theoretical framework mismatch"]
+    },
+    {
+      "QuestionID": "P2-B-512",
+      "verdict": "FAIL",
+      "cc_ec_mismatch": {
+        "status": "FAIL",
+        "detail": "CC = B. But STEM asks 'how dividends can REDUCE agency costs.' Option B says 'Higher dividends INCREASE agency costs' — the opposite of what the stem asks. Option A describes how dividends REDUCE agency costs (Jensen free cash flow). CC is wrong for the stem's question."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Jensen (1986) Agency Theory — Free Cash Flow']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Jensen (1986)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongB is '' (CC=B slot empty)",
+        "dl026": "PASS — ExplanationWrongA (195 chars), ExplanationWrongC (161 chars), ExplanationWrongD (188 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "FAIL",
+        "detail": "Stem asks how dividends REDUCE agency costs. Option B says dividends INCREASE agency costs — answers the wrong question. Option A correctly describes the Jensen free cash flow mechanism. CC should be A."
+      },
+      "dimension_scores": {
+        "correctness": "ZERO",
+        "precision": "LOW",
+        "difficulty_calibration": "MEDIUM",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "MEDIUM",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "blocking_defects": ["CC answers opposite of what stem asks — stem asks how dividends REDUCE agency costs, B says they INCREASE"]
+    },
+    {
+      "QuestionID": "P2-B-513",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = A. EC describes clientele effect: dividend cut → income investors sell → price declines during transition. Choice A text aligns. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {B, C, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Miller & Modigliani (1961) Clientele Effect']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Miller & Modigliani (1961)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongA is '' (CC=A slot empty)",
+        "dl026": "PASS — ExplanationWrongB (154 chars), ExplanationWrongC (176 chars), ExplanationWrongD (180 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "Clientele effect correctly applied. Dividend cut forces current clientele to sell, depressing price until new clientele emerges. Correct."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-514",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = D. EC applies MM irrelevance: payout and retention sum to 100%, distribution method irrelevant to total return. Choice D text says 'payout ratio and retention ratio always sum to 100%, so distribution method is irrelevant'. Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, C} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Modigliani-Miller (1961) Dividend Irrelevance']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Modigliani-Miller (1961)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongD is '' (CC=D slot empty)",
+        "dl026": "PASS — ExplanationWrongA (213 chars), ExplanationWrongB (204 chars), ExplanationWrongC (186 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "MM irrelevance correctly applied. Under perfect capital markets, payout policy does not affect total shareholder return."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    },
+    {
+      "QuestionID": "P2-B-515",
+      "verdict": "PASS",
+      "cc_ec_mismatch": {
+        "status": "PASS",
+        "detail": "CC = C. EC states that when dividend and capital gains tax rates are equal, tax differential theory predicts irrelevance. Choice C text says 'dividend policy is fully irrelevant because tax rates on dividends and capital gains are identical.' Consistent."
+      },
+      "distractor_intent": { "status": "PASS", "detail": "Keys = {A, B, D} = exactly 3 non-CC letters. Each has misconception, why_plausible, tier_candidate (1, 2, 3)." },
+      "source_ids": { "status": "PASS", "detail": "source_ids = ['Elton & Gruber (1970) Tax Differential Theory']. Authority reference, resolves." },
+      "source_support_for_key": { "status": "PASS", "detail": "Object with 4 non-empty strings. source_id = 'Elton & Gruber (1970)'." },
+      "dl_checks": {
+        "dl008": "PASS — ExplanationWrongC is '' (CC=C slot empty)",
+        "dl026": "PASS — ExplanationWrongA (194 chars), ExplanationWrongB (157 chars), ExplanationWrongD (173 chars) all ≥50 chars",
+        "dl021": "PASS"
+      },
+      "structural_checks": {
+        "part2OnlyFlag": "PASS — true",
+        "question_state": "Unprocessed",
+        "schema_version": "1.1",
+        "all_required_fields_present": true
+      },
+      "correctness": {
+        "status": "PASS",
+        "detail": "Tax differential theory correctly applied. Equal tax rates → irrelevance. CEO Foreman's statement is correct under equal-rate assumption."
+      },
+      "dimension_scores": {
+        "correctness": "HIGH",
+        "precision": "HIGH",
+        "difficulty_calibration": "HIGH",
+        "distractor_engineering": "HIGH",
+        "blueprint_alignment": "HIGH",
+        "part2_relevance": "HIGH"
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "blocking_defects": []
+    }
+  ],
+  "summary": {
+    "total_items": 15,
+    "passed": 7,
+    "failed": 8,
+    "pass_rate": "46.7%",
+    "passing_items": ["P2-B-502", "P2-B-503", "P2-B-508", "P2-B-510", "P2-B-513", "P2-B-514", "P2-B-515"],
+    "failing_items": ["P2-B-501", "P2-B-504", "P2-B-505", "P2-B-506", "P2-B-507", "P2-B-509", "P2-B-511", "P2-B-512"],
+    "failure_categories": {
+      "cc_ec_mismatch_or_arithmetic_error": ["P2-B-501", "P2-B-504", "P2-B-505", "P2-B-509"],
+      "stem_theoretical_framework_mismatch": ["P2-B-506", "P2-B-507", "P2-B-511", "P2-B-512"]
+    },
+    "structural_health": {
+      "dl008_violations": 0,
+      "dl026_violations": 0,
+      "dl021_violations": 0,
+      "part2OnlyFlag_all_true": true,
+      "schema_version_all_1_1": true,
+      "question_state_all_unprocessed": true
+    },
+    "dimension_summary": {
+      "source_ids_resolving": "15/15",
+      "source_support_for_key_complete": "15/15",
+      "distractor_intent_complete": "15/15",
+      "dl_compliant": "15/15"
+    }
+  }
+}

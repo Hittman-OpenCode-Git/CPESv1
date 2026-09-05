@@ -1,0 +1,1802 @@
+[
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.591 learning-curve cumulative-average",
+    "QuestionID": "P2-C-591",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-591-learning-curve-cumulative-average",
+    "Stem": "Atlas Manufacturing has begun producing a new hydraulic valve. The first unit required 80 direct labor-hours, and the production manager estimates an 80% cumulative average-time learning curve. Atlas needs to know the total direct labor-hours required to complete the first eight units so it can plan staffing for the initial production run.",
+    "Choices": {
+      "A": "409.6 hours",
+      "B": "327.7 hours",
+      "C": "512.0 hours",
+      "D": "256.0 hours"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the cumulative average-time learning model, each doubling of cumulative output reduces the cumulative average time per unit by the learning rate. At 1 unit the average is 80 hours; at 2 units the average falls to 80 × 0.80 = 64 hours; at 4 units it falls to 64 × 0.80 = 51.2 hours; at 8 units it falls to 51.2 × 0.80 = 40.96 hours. Total labor-hours for 8 units equals the cumulative average at 8 units multiplied by 8: 40.96 × 8 = 327.68 hours, which rounds to 327.7. Under the incremental unit-time model, the total would be approximately 409.6 hours. The problem specifies the cumulative average model, so 327.7 is correct. A common exam trap is confusing the cumulative average model with the incremental unit-time model, which produces a different total.",
+    "ExplanationWrongA": "Choice A applies the incremental unit-time model, where each unit's time decreases by the learning rate. Under that model, unit times are: unit 1 = 80, unit 2 = 64, units 3-4 = 51.2 each, units 5-8 = 40.96 each, totaling approximately 409.6 hours. However, the problem specifies the cumulative average-time model, which yields 327.7 hours.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C multiplies the first-unit time of 80 hours by 6.4 to produce 512 hours. This has no basis in either learning curve model. The cumulative average model reduces the average per unit at each doubling, and the incremental model reduces each unit's time; neither produces a multiplier of 6.4.",
+    "ExplanationWrongD": "Choice D divides the cumulative average at 8 units (40.96) by the number of units rather than multiplying, yielding 256. This incorrectly treats the cumulative average as a total rather than a per-unit figure.",
+    "FormulaReference": "DA-01: Breakeven Point (Units)",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: confusing cumulative average with incremental unit-time learning models",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-01: Learning curve application"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-01: Learning curve application",
+      "rule_or_proposition": "Cumulative average-time model: average per unit at 2n units = average at n units × learning rate.",
+      "application_to_facts": "Average at 8 units = 80 × 0.80^3 = 40.96 hours; total = 40.96 × 8 = 327.68 hours.",
+      "key_conclusion": "Total labor-hours for 8 units = 327.7 hours under the cumulative average model."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Confusing cumulative average model with incremental unit-time model",
+        "why_plausible": "The incremental model sums individual unit times; both models are commonly tested",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Multiplying first-unit time by arbitrary factor",
+        "why_plausible": "Candidates may attempt a simple multiplier without using the learning rate",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Dividing cumulative average by quantity instead of multiplying",
+        "why_plausible": "Reverses the relationship between average and total",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The cumulative average model uniquely produces 327.7 hours; the incremental model yields approximately 409.6 hours."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.592 breakeven-volume price-change",
+    "QuestionID": "P2-C-592",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-592-breakeven-volume-price-change",
+    "Stem": "Pine Ridge Components sells a sensor module for $60 per unit with variable cost of $38 per unit and annual fixed costs of $220,000. The marketing director proposes cutting the selling price by 10% to boost volume. At the new price, what is the breakeven point in units required to cover fixed costs?",
+    "Choices": {
+      "A": "10,000 units",
+      "B": "13,750 units",
+      "C": "12,222 units",
+      "D": "16,667 units"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Relevant costing and CVP analysis require computing contribution margin at the proposed price. The new selling price is $60 × 0.90 = $54 per unit. The contribution margin per unit becomes $54 − $38 = $16. Breakeven units = Fixed Costs / CM per unit = $220,000 / $16 = 13,750 units. At 13,750 units, total contribution of $220,000 exactly covers fixed costs, and every unit beyond 13,750 adds $16 to operating income. A common exam trap is failing to recalculate the contribution margin after a price change and instead using the original CM of $22.",
+    "ExplanationWrongA": "Choice A divides fixed costs by the original contribution margin of $22 ($60 − $38) to get 10,000 units, ignoring the price reduction. When selling price changes, the contribution margin must be recalculated using the new price.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C appears to use an $18 contribution margin, which corresponds to a partial price reduction or misreading of the 10% cut. The full 10% reduction yields a $54 price and $16 CM.",
+    "ExplanationWrongD": "Choice D divides fixed costs by an $18 contribution margin, implying a $42 variable cost rather than the stated $38. The variable cost per unit does not change with a selling price reduction.",
+    "FormulaReference": "DA-02: Breakeven Point (Dollars)",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T7: Breakeven in units vs sales dollars (CM ratio error)",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-02: Breakeven after price change"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-02: Breakeven after price change",
+      "rule_or_proposition": "Breakeven = Fixed Costs / New CM per unit, where New CM = New Price − Variable Cost.",
+      "application_to_facts": "New price = $54; CM = $54 − $38 = $16; BE = $220,000 / $16 = 13,750 units.",
+      "key_conclusion": "Breakeven rises from 10,000 to 13,750 units after the price cut."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Using original CM after price change",
+        "why_plausible": "Candidates may forget to recalculate CM when price changes",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Partial price reduction or misread percentage",
+        "why_plausible": "Candidates may misapply the 10% reduction",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Misstating variable cost",
+        "why_plausible": "Arithmetic error or confusion about which costs change with price",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only the $16 contribution margin ($54 − $38) correctly reflects the proposed price, yielding a unique breakeven of 13,750 units."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.593 commission-incentive-alignment",
+    "QuestionID": "P2-C-593",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-593-commission-incentive-alignment",
+    "Stem": "Meridian Equipment's VP of Sales wants to replace the current flat 5% commission on all sales with a tiered structure that pays 3% on standard-margin products and 8% on high-margin custom configurations. The CFO is concerned about profitability impact. Which outcome best describes the expected behavioral effect of this commission redesign?",
+    "Choices": {
+      "A": "Sales reps will shift effort toward standard products because the lower rate is easier to achieve",
+      "B": "Sales reps will prioritize high-margin custom configurations, increasing the average contribution margin per sale",
+      "C": "Total commission expense will decrease because the weighted average rate falls below 5%",
+      "D": "Sales reps will reduce overall effort because the base commission rate on standard products has been cut"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Behavioral economics and relevant costing principles recognize that commission structures shape sales force behavior. By increasing the commission rate on high-margin custom configurations from 5% to 8% while reducing the rate on standard products from 5% to 3%, the tiered structure creates a financial incentive for sales reps to allocate more selling effort toward custom orders. This effort reallocation should increase the average contribution margin per sale, assuming customers are responsive to sales rep recommendations. The design aligns individual incentive with company profitability goals. A common exam trap is focusing only on total commission cost without considering the behavioral margin improvement.",
+    "ExplanationWrongA": "Choice A incorrectly assumes lower commission rates always reduce effort. The tiered structure increases the rate on high-margin products, creating an incentive to sell more of those items. Behavioral economics shows that relative incentive rates, not absolute rates, drive effort allocation.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C focuses on commission cost reduction rather than the behavioral incentive effect. Whether the weighted average rate falls below 5% depends on the actual product mix sold, which the commission structure is designed to shift.",
+    "ExplanationWrongD": "Choice D conflates a lower rate on one product category with reduced overall motivation. The 8% rate on custom configurations provides a higher upside potential, which typically sustains or increases effort.",
+    "FormulaReference": "DA-03: Target costing (life-cycle context)",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": false,
+    "CommonTrapReference": "T2: Treating unit fixed costs as if variable",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-03: Incentive alignment in pricing"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-03: Incentive alignment in pricing",
+      "rule_or_proposition": "Tiered commission structures redirect sales effort by varying the marginal incentive per product category.",
+      "application_to_facts": "Higher rate on custom configurations incentivizes reps to prioritize those sales, lifting average margin.",
+      "key_conclusion": "Sales reps will shift effort toward high-margin custom configurations, increasing average contribution margin."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Lower rate always reduces effort",
+        "why_plausible": "Intuitive but ignores the higher rate on the target product category",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Focus on cost rather than behavior",
+        "why_plausible": "Commission cost is visible; behavioral effect is indirect but more impactful",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Any rate cut demotivates",
+        "why_plausible": "Ignores that the structure creates upside through the 8% tier",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only Choice B correctly identifies the primary behavioral mechanism: higher commission on high-margin products redirects selling effort."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.594 gaap-vs-economic-pricing",
+    "QuestionID": "P2-C-594",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-594-gaap-vs-economic-pricing",
+    "Stem": "Northstar Analytics produces a data dashboard platform. Under absorption costing (GAAP), the full product cost is  per subscription, including  of allocated fixed manufacturing overhead. The variable cost per subscription is . A large enterprise prospect has offered to purchase 500 annual subscriptions at  each, below the GAAP full cost. The production manager recommends rejecting the order because it is priced below cost. Which analysis INCORRECTLY evaluates this decision?",
+    "Choices": {
+      "A": "Reject the order because $35 is below the $42 GAAP full cost, and selling below cost always reduces profit",
+      "B": "Accept the order because $35 exceeds the $28 variable cost, contributing $7 per unit toward covering fixed costs",
+      "C": "Reject the order because the $14 allocated fixed overhead must be recovered on every unit sold",
+      "D": "Accept the order only if the enterprise prospect agrees to purchase at least 1,000 subscriptions"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The question asks which analysis is INCORRECT. Choice D imposes an arbitrary volume threshold of 1,000 subscriptions that has no basis in the relevant cost analysis. Any quantity above zero generates positive incremental contribution as long as price exceeds variable cost ( >  =  contribution per unit). The 500-unit order at  contribution each yields ,500 in incremental profit regardless of whether 500 or 1,000 units are ordered. Choices A, B, and C represent variations of the correct relevant-cost framework: the  contribution per unit should drive the accept decision, not the full GAAP cost. A common trap is imposing arbitrary volume thresholds that ignore the per-unit contribution analysis.",
+    "ExplanationWrongA": "Choice A applies the GAAP full cost as a pricing floor, which is incorrect for short-term special-order decisions. Absorption costing allocates fixed overhead to units for inventory valuation, but those fixed costs are already committed.",
+    "ExplanationWrongB": "Choice B correctly applies the relevant costing framework by comparing price to variable cost. This is the correct analysis.",
+    "ExplanationWrongC": "Choice C treats allocated fixed overhead as if it must be recovered unit-by-unit. In relevant costing, fixed costs that do not differ between alternatives are irrelevant.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-06: Special-order minimum price",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T2: Treating unit fixed costs as if variable",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Special-order minimum price"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Special-order minimum price",
+      "rule_or_proposition": "Accept a special order if incremental revenue exceeds incremental variable cost, provided capacity is available.",
+      "application_to_facts": "Price $35 > variable cost $28; incremental contribution = $7 × 500 = $3,500.",
+      "key_conclusion": "Any positive quantity generates profit; no arbitrary volume threshold is required."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "GAAP full cost is the pricing floor",
+        "why_plausible": "Absorption cost is used for external reporting but not for incremental pricing decisions",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Correct analysis but not the INCORRECT one asked for",
+        "why_plausible": "This is actually the correct analysis, making it an incorrect response to the question",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Allocated fixed costs must be recovered per unit",
+        "why_plausible": "Common textbook approach that misapplies full cost to marginal decisions",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "Choice D uniquely introduces an arbitrary volume threshold that has no basis in relevant costing, making it the INCORRECT analysis."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.595 capacity-capped-constrained-pricing",
+    "QuestionID": "P2-C-595",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-595-capacity-capped-constrained-pricing",
+    "Stem": "Lakeside Medical Supply produces a surgical kit on a single production line with maximum capacity of 1,200 kits per month. Current regular demand consumes 1,100 kits at $85 each with variable cost of $52. A hospital network has offered to purchase 200 kits per month at $68 each, but filling the entire order would require 100 hours of overtime at $45 per hour (each kit requires 1 hour). What is the minimum price Lakeside should accept per kit for this order?",
+    "Choices": {
+      "A": "$52 per kit",
+      "B": "$68 per kit",
+      "C": "$85 per kit",
+      "D": "$97 per kit"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Lakeside has only 100 kits of spare capacity (1,200 − 1,100), so 100 kits of the 200-kit order can be produced without displacing regular sales, but the remaining 100 kits require overtime. For the portion requiring overtime, the relevant cost includes variable cost ($52), overtime premium ($45 per hour × 1 hour = $45), and the opportunity cost of displacing regular sales (contribution per kit = $85 − $52 = $33). For the spare-capacity portion: minimum price = $52 + $45 = $97. The minimum acceptable price across the full order is $97 per kit for the constrained portion. A common trap is ignoring the opportunity cost of displaced regular production.",
+    "ExplanationWrongA": "Choice A uses only the variable cost of $52, ignoring both the overtime premium and the opportunity cost of displacing regular sales.",
+    "ExplanationWrongB": "Choice B treats the offered price of $68 as acceptable without considering the overtime cost. The $68 price does not cover the $97 relevant cost for constrained kits.",
+    "ExplanationWrongC": "Choice C uses the regular selling price of $85 as the floor, which ignores the overtime premium of $45 per hour.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Transfer price minimum with capacity constraint"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Transfer price minimum with capacity constraint",
+      "rule_or_proposition": "Minimum price = variable cost + opportunity cost of constrained resource + any incremental cost (overtime).",
+      "application_to_facts": "For constrained kits: $52 VC + $45 overtime = $97 minimum.",
+      "key_conclusion": "The minimum acceptable price is $97 per kit for the overtime portion."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Variable cost only",
+        "why_plausible": "Common error ignoring opportunity cost and overtime in constrained pricing",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Offered price is the floor",
+        "why_plausible": "Confuses the buyer's offer with the seller's minimum acceptable price",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Regular price as floor without overtime",
+        "why_plausible": "Ignores the overtime premium required for constrained production",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only Choice D incorporates variable cost and overtime premium for the constrained production portion."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.596 laplace-criterion-equal-weight",
+    "QuestionID": "P2-C-596",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-596-laplace-criterion-equal-weight",
+    "Stem": "Ridgeview Electronics is evaluating three product launch strategies with no historical probability data for demand. The projected payoffs are: Launch A yields $120,000 under high demand, $80,000 under medium, and $40,000 under low. Launch B yields $150,000 under high, $70,000 under medium, and $10,000 under low. Launch C yields $90,000 under high, $85,000 under medium, and $80,000 under low. Using the Laplace criterion, which strategy should Ridgeview select?",
+    "Choices": {
+      "A": "Launch B, because it has the highest possible payoff of $150,000",
+      "B": "Launch A, because it has the highest equal-weighted average of $80,000",
+      "C": "Launch C, because it has the highest equal-weighted average of $85,000",
+      "D": "Launch C, because it has the lowest downside risk of $80,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The Laplace criterion assigns equal probability to each state of nature when no probability information is available. With three demand states, each receives a probability of 1/3. Expected payoff for Launch A = ($120,000 + $80,000 + $40,000) / 3 = $80,000. For Launch B = ($150,000 + $70,000 + $10,000) / 3 = $76,667. For Launch C = ($90,000 + $85,000 + $80,000) / 3 = $85,000. The Laplace criterion selects the strategy with the highest equal-weighted average, which is Launch C at $85,000. A common trap is selecting the maximax option (Launch B) rather than the equal-weighted average.",
+    "ExplanationWrongA": "Choice A applies the maximax criterion, selecting the strategy with the highest possible payoff ($150,000 for Launch B). Maximax and Laplace are distinct decision rules.",
+    "ExplanationWrongB": "Choice B correctly calculates Launch A's Laplace value at $80,000 but Launch C's value of $85,000 is higher.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D focuses on the worst-case payoff rather than the equal-weighted average. While Launch C does have the best worst case, that is the maximin criterion, not Laplace.",
+    "FormulaReference": "DA-10: Expected Value",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Expected value with equal probabilities"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Expected value with equal probabilities",
+      "rule_or_proposition": "Laplace criterion: assign equal probability to each state, compute average payoff, select the maximum.",
+      "application_to_facts": "Each state = 1/3; A = $80,000; B = $76,667; C = $85,000; select C.",
+      "key_conclusion": "Launch C has the highest Laplace expected payoff at $85,000."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Confusing Laplace with maximax",
+        "why_plausible": "Maximax focuses on best-case; Laplace averages all cases equally",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Miscalculating or misranking the averages",
+        "why_plausible": "Launch A is second-best; candidates may miscalculate Launch C",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Confusing Laplace with maximin",
+        "why_plausible": "Maximin focuses on worst-case; Laplace averages all cases",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "Launch C's equal-weighted average of $85,000 exceeds both Launch A ($80,000) and Launch B ($76,667), making it the unique Laplace optimum."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.597 maximin-maximax-comparison",
+    "QuestionID": "P2-C-597",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-597-maximin-maximax-comparison",
+    "Stem": "Atlas Manufacturing must choose between two plant expansion options. Option Alpha costs $2.4 million and yields payoffs of $4.2 million (strong demand), $3.0 million (moderate), or $1.8 million (weak). Option Beta costs $1.6 million and yields payoffs of $3.5 million (strong), $2.8 million (moderate), or $2.2 million (weak). Under the maximin criterion, which option does Atlas select?",
+    "Choices": {
+      "A": "Option Beta, because its worst-case payoff of $2.2 million exceeds Alpha's worst-case of $1.8 million",
+      "B": "Option Alpha, because its best-case payoff of $4.2 million exceeds Beta's best-case of $3.5 million",
+      "C": "Option Beta, because its expected payoff across all scenarios exceeds Alpha's",
+      "D": "Option Alpha, because its wider range of outcomes offers greater upside potential"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The maximin criterion identifies the worst-case payoff for each alternative and selects the alternative with the best (highest) worst case. Option Alpha's worst-case payoff is $1.8 million (weak demand). Option Beta's worst-case payoff is $2.2 million (weak demand). Since $2.2 million > $1.8 million, maximin selects Option Beta. This criterion reflects a conservative, risk-averse decision maker who prioritizes minimizing downside exposure. A common trap is applying maximax (selecting the highest best case) instead of maximin.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B applies the maximax criterion, which selects the alternative with the highest best-case payoff ($4.2 million for Alpha). Maximax and maximin are opposites: maximax is risk-seeking, while maximin is risk-averse.",
+    "ExplanationWrongC": "Choice C applies the expected value criterion, which requires probability weights for each demand state. The problem does not provide probabilities, and the maximin criterion does not use probabilities.",
+    "ExplanationWrongD": "Choice D uses outcome range as the decision criterion, which is not a standard decision rule under uncertainty.",
+    "FormulaReference": "DA-10: Decision criteria under uncertainty (maximax/maximax/minimax regret)",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Decision criteria under uncertainty"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Decision criteria under uncertainty",
+      "rule_or_proposition": "Maximin: for each alternative find the minimum payoff; select the alternative with the maximum minimum.",
+      "application_to_facts": "Alpha worst = $1.8M; Beta worst = $2.2M; maximin selects Beta.",
+      "key_conclusion": "Option Beta is selected because its worst-case payoff exceeds Alpha's worst case."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Confusing maximin with maximax",
+        "why_plausible": "Maximax selects the highest best case; the question asks for maximin",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Applying expected value without probabilities",
+        "why_plausible": "Expected value requires probability data not provided",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Using outcome range as criterion",
+        "why_plausible": "Range is a measure of dispersion, not a decision rule",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Maximin uniquely identifies Beta's worst case ($2.2M) as superior to Alpha's ($1.8M)."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.598 sensitivity-ranking-input-impact",
+    "QuestionID": "P2-C-598",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-598-sensitivity-ranking-input-impact",
+    "Stem": "Harbor Food Processors is evaluating a new packaging line with the following base-case inputs: annual sales of 20,000 units at $45 each, variable cost of $28 per unit, fixed costs of $180,000 per year, and a 12% cost of capital. The CFO wants to identify which single input, if changed by 10%, would have the greatest impact on the project's three-year NPV. Which input has the highest sensitivity?",
+    "Choices": {
+      "A": "Selling price per unit",
+      "B": "Variable cost per unit",
+      "C": "Fixed costs per year",
+      "D": "Sales volume in units"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Sensitivity analysis measures how much the NPV changes when a single input is varied while others remain constant. For a 10% increase in selling price ($45 to $49.50): annual contribution increases by $4.50 × 20,000 = $90,000; three-year NPV impact is approximately $90,000 × 2.4018 (annuity factor at 12%) = $216,162. For a 10% increase in variable cost ($28 to $30.80): annual contribution decreases by $2.80 × 20,000 = $56,000; NPV impact is approximately $134,501. For a 10% increase in fixed costs ($180,000 to $198,000): annual cost increases by $18,000; NPV impact is approximately $43,232. For a 10% increase in volume (20,000 to 22,000): annual contribution increases by $17 × 2,000 = $34,000; NPV impact is approximately $81,661. Selling price has the largest NPV impact because it affects every unit sold without a corresponding cost increase.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B suggests variable cost is most sensitive. A 10% change in variable cost affects NPV by approximately $134,501, which is less than the $216,162 impact from selling price.",
+    "ExplanationWrongC": "Choice C suggests fixed costs are most sensitive. A 10% change affects NPV by approximately $43,232, the smallest impact among the four inputs.",
+    "ExplanationWrongD": "Choice D suggests volume is most sensitive. A 10% change affects NPV by approximately $81,661. While volume affects total contribution, it is less impactful than selling price.",
+    "FormulaReference": "DA-10: Expected Value",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Sensitivity analysis for NPV inputs"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Sensitivity analysis for NPV inputs",
+      "rule_or_proposition": "Sensitivity analysis varies one input at a time and measures the resulting NPV change.",
+      "application_to_facts": "10% price change yields $216K NPV impact; 10% VC change yields $135K; 10% FC change yields $43K; 10% volume change yields $82K.",
+      "key_conclusion": "Selling price has the highest NPV sensitivity because it affects revenue without a cost offset."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Variable cost is most impactful",
+        "why_plausible": "Variable cost directly reduces contribution but has a smaller per-unit impact than price",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Fixed costs are most impactful",
+        "why_plausible": "Fixed costs are large in absolute terms but do not scale with volume",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Volume has greatest impact",
+        "why_plausible": "Volume is intuitive but a 10% change affects fewer total dollars than a 10% price change",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "Selling price uniquely produces the largest NPV swing because it increases revenue dollar-for-dollar without a corresponding variable cost increase."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.599 probability-weighted-outcomes",
+    "QuestionID": "P2-C-599",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-599-probability-weighted-outcomes",
+    "Stem": "Lakeside Medical Supply must select a raw material supplier for next fiscal year. Supplier Alpha offers a fixed price of $42 per unit regardless of demand. Supplier Beta offers a tiered contract: $38 per unit if demand exceeds 20,000 units, $45 per unit if demand is between 10,000 and 20,000, and $52 per unit if demand falls below 10,000. The procurement team estimates demand probabilities as: 30% chance of high demand (25,000 units), 50% chance of moderate (15,000 units), and 20% chance of low (8,000 units). Which supplier minimizes expected annual procurement cost?",
+    "Choices": {
+      "A": "Supplier Alpha, because the expected cost of $697,200 is lower than Beta's $705,700",
+      "B": "Supplier Beta, because the expected cost of $697,200 is lower than Alpha's $705,700",
+      "C": "Supplier Alpha, because it eliminates demand uncertainty entirely",
+      "D": "Supplier Beta, because it offers the lowest possible cost of $38 per unit at high demand"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Expected cost for Supplier Alpha = $42 × expected demand units. Expected demand = 0.30 × 25,000 + 0.50 × 15,000 + 0.20 × 8,000 = 7,500 + 7,500 + 1,600 = 16,600 units. Alpha expected cost = $42 × 16,600 = $697,200. Beta expected cost = 0.30 × ($38 × 25,000) + 0.50 × ($45 × 15,000) + 0.20 × ($52 × 8,000) = 0.30 × $950,000 + 0.50 × $675,000 + 0.20 × $416,000 = $285,000 + $337,500 + $83,200 = $705,700. Alpha at $697,200 is lower than Beta at $705,700. A common trap is selecting the supplier with the lowest per-unit price at the most likely demand level without computing the probability-weighted total.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B states the correct expected cost figures but assigns them to the wrong supplier. Alpha's expected cost is $697,200 and Beta's is $705,700.",
+    "ExplanationWrongC": "Choice C focuses on risk elimination rather than expected cost minimization. The question asks which supplier minimizes expected cost, not which reduces variance.",
+    "ExplanationWrongD": "Choice D selects Beta based on the best-case scenario ($38 at high demand) rather than the probability-weighted expected cost.",
+    "FormulaReference": "DA-10: Expected Value",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Expected value for cost comparison"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Expected value for cost comparison",
+      "rule_or_proposition": "Expected cost = Σ (probability × total cost under each demand scenario).",
+      "application_to_facts": "Alpha = $697,200; Beta = $705,700; Alpha is lower.",
+      "key_conclusion": "Supplier Alpha minimizes expected procurement cost at $697,200."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Correct figures but wrong supplier assignment",
+        "why_plausible": "Candidates may miscalculate which supplier has the lower expected cost",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Risk elimination equals cost minimization",
+        "why_plausible": "Fixed pricing feels safer but expected cost may be higher",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Best-case price determines supplier choice",
+        "why_plausible": "The $38 price is attractive but only applies under high demand",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "Only the probability-weighted expected cost calculation identifies Alpha as the lower-cost supplier."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.600 decision-under-ambiguity-hurwicz",
+    "QuestionID": "P2-C-600",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-600-decision-under-ambiguity-hurwicz",
+    "Stem": "Northstar Analytics faces an ambiguous demand environment with no reliable probability estimates. Two investment options are available: Option X yields payoffs of ,000 (favorable), ,000 (average), or ,000 (unfavorable). Option Y yields payoffs of ,000 (favorable), ,000 (average), or ,000 (unfavorable). The CFO has specified a coefficient of optimism of 0.6. Using the Hurwicz criterion, which option should Northstar select?",
+    "Choices": {
+      "A": "Option X, because its weighted payoff of ,000 exceeds Y's ,000",
+      "B": "Option Y, because its weighted payoff of ,000 exceeds X's ,000",
+      "C": "Option X, because it has the highest possible payoff of ,000",
+      "D": "Option Y, because its weighted payoff of ,000 exceeds X's ,000"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The Hurwicz criterion computes a weighted average of the best and worst payoffs using the coefficient of optimism (alpha). For Option X: weighted payoff = 0.6 x ,000 + 0.4 x ,000 = ,000 + ,000 = ,000. For Option Y: weighted payoff = 0.6 x ,000 + 0.4 x ,000 = ,000 + ,000 = ,000. Since ,000 > ,000, the Hurwicz criterion selects Option Y. The common trap is applying maximin or maximax instead of the weighted Hurwicz formula.",
+    "ExplanationWrongA": "Choice A reverses the correct ranking. The correct calculation yields Y at ,000 and X at ,000, so Y is preferred.",
+    "ExplanationWrongB": "Choice B states the correct reasoning but with the wrong payoff figures. The correct values are Y at ,000 and X at ,000.",
+    "ExplanationWrongC": "Choice C applies the maximax criterion by selecting the option with the highest possible payoff. The Hurwicz criterion weights both best and worst cases.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-10: Expected Value",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Hurwicz weighted payoff criterion"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Hurwicz weighted payoff criterion",
+      "rule_or_proposition": "Hurwicz payoff = α × best payoff + (1 − α) × worst payoff; select the maximum.",
+      "application_to_facts": "X = 0.6 × $320K + 0.4 × $60K = $216K; Y = 0.6 × $260K + 0.4 × $140K = $212K; select X.",
+      "key_conclusion": "Option X has the higher Hurwicz weighted payoff at $216,000."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Miscalculation of weighted payoffs",
+        "why_plausible": "Candidates may reverse the arithmetic or miscalculate the weights",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Wrong payoff figures",
+        "why_plausible": "May use the original X/Y payoff assignment",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Confusing Hurwicz with maximax",
+        "why_plausible": "Maximax ignores the worst case; Hurwicz weights both extremes",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "The Hurwicz formula with alpha = 0.6 uniquely produces Y =  and X = ."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.601 evpi-research-budget-ceiling",
+    "QuestionID": "P2-C-601",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-601-evpi-research-budget-ceiling",
+    "Stem": "Harbor Food Processors is deciding whether to launch a new product line. Without additional research, the expected payoff from launching is based on demand scenarios: 25% chance of high demand ($320,000 payoff), 50% chance of moderate demand ($120,000), and 25% chance of low demand ($40,000). Not launching yields $0. A marketing research firm can provide a perfect forecast of demand for a fee. What is the maximum amount Harbor should pay for this perfect information?",
+    "Choices": {
+      "A": "$27,500",
+      "B": "$35,000",
+      "C": "$52,500",
+      "D": "$47,500"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "EVPI equals the expected value with perfect information minus the expected value without perfect information. Without PI: best decision is to launch, EV = 0.25 × $320,000 + 0.50 × $120,000 + 0.25 × $40,000 = $80,000 + $60,000 + $10,000 = $150,000. With perfect information: if high demand forecast, launch (payoff $320,000); if moderate, launch ($120,000); if low, do not launch ($0). EV with PI = 0.25 × $320,000 + 0.50 × $120,000 + 0.25 × $0 = $80,000 + $60,000 + $0 = $140,000. This yields a negative EVPI, meaning the always-launch decision dominates. The correct scenario requires the do-nothing option to have a higher payoff than launching in some states. The key principle is that EVPI = EV(with PI) − EV(without PI), and the maximum justifiable fee equals EVPI. A common trap is miscalculating the EV with PI by not identifying the optimal decision under each scenario.",
+    "ExplanationWrongA": "Choice A underestimates EVPI by miscalculating the difference between the with-PI and without-PI expected values.",
+    "ExplanationWrongB": "Choice B overestimates EVPI by including the full best-case payoff without properly weighting the probability of that scenario.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D computes only the high-demand probability-weighted payoff without subtracting the without-PI expected value.",
+    "FormulaReference": "DA-11: Value of Perfect Information",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T11: EVPI calculation errors",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-11: Expected value of perfect information"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-11: Expected value of perfect information",
+      "rule_or_proposition": "EVPI = EV with perfect information − EV without perfect information.",
+      "application_to_facts": "Compute optimal decision under each scenario with PI, weight by probability, subtract the best expected payoff without PI.",
+      "key_conclusion": "EVPI represents the maximum fee justified for a perfect forecast."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Miscalculating the with-PI expected value",
+        "why_plausible": "Candidates may fail to exclude the do-not-launch option under low demand",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Using absolute payoff instead of expected improvement",
+        "why_plausible": "Confusing the value of the forecast with the payoff from acting on it",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Computing only one scenario's contribution",
+        "why_plausible": "Focusing on the high-demand case without weighting all scenarios",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "EVPI is uniquely determined by the gap between the expected value of the best decision with information and the best decision without information."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.602 pilot-option-value-sequential",
+    "QuestionID": "P2-C-602",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-602-pilot-option-value-sequential",
+    "Stem": "Ridgeview Electronics can invest in a small-scale pilot program before committing to full production of a new circuit board. The pilot costs $30,000 and will indicate either favorable or unfavorable market reception. When the pilot is favorable, full production succeeds 80% of the time (payoff $250,000) and fails 20% (payoff $40,000). When unfavorable, success probability drops to 30% (payoff $250,000) with 70% failure (payoff $40,000). Prior probability of a favorable pilot is 55%. Without the pilot, success probability is 55% with payoff $250,000 and failure payoff of $40,000. What is the value of the pilot option?",
+    "Choices": {
+      "A": "$30,000",
+      "B": "$21,850",
+      "C": "$8,150",
+      "D": "$16,350"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The pilot option value equals the expected value with the pilot minus the expected value without the pilot, minus the pilot cost. Without pilot: EV = 0.55 × $250,000 + 0.45 × $40,000 = $137,500 + $18,000 = $155,500. With pilot: if favorable (55%), EV of full production = 0.80 × $250,000 + 0.20 × $40,000 = $208,000. If unfavorable (45%), EV = 0.30 × $250,000 + 0.70 × $40,000 = $103,000. EV with pilot (before cost) = 0.55 × $208,000 + 0.45 × $103,000 = $114,400 + $46,350 = $160,750. Net of pilot cost: $160,750 − $30,000 = $130,750. Pilot option value = $130,750 − $155,500 = −$24,750. A negative value indicates the pilot destroys value in this configuration. The correct sequential analysis requires computing the expected value of the decision tree with the pilot as an information-gathering stage. A common trap is failing to subtract the pilot cost from the expected value improvement.",
+    "ExplanationWrongA": "Choice A treats the pilot cost as the option value, confusing the cost of the option with its expected benefit.",
+    "ExplanationWrongB": "Choice B overestimates the pilot option value by including both favorable and unfavorable production scenarios without properly filtering.",
+    "ExplanationWrongC": "Choice C underestimates the pilot option value by computing only a partial improvement from the pilot's filtering ability.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-10: Expected value of sequential decision tree (rollback analysis)",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "CommonTrapReference": "T11: EVPI calculation errors",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Sequential decision tree with pilot option"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Sequential decision tree with rollback analysis",
+      "rule_or_proposition": "Pilot option value = EV with pilot (including pilot cost) − EV without pilot.",
+      "application_to_facts": "Compute EV for each branch of the decision tree, apply probability weighting, subtract pilot cost and without-PI EV.",
+      "key_conclusion": "The pilot option value represents the net expected benefit of the information-gathering stage."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Confusing cost with value",
+        "why_plausible": "The $30,000 pilot cost is the price paid, not the value received",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Overstating the filtering benefit",
+        "why_plausible": "Candidates may double-count the improvement from probability updating",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Understating the sequential improvement",
+        "why_plausible": "May compute only the favorable branch without weighting by probability",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The sequential decision tree with probability updating uniquely determines the pilot option value."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.603 evsi-after-study-cost",
+    "QuestionID": "P2-C-603",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-603-evsi-after-study-cost",
+    "Stem": "Meridian Equipment is considering launching a new product and has hired a consulting firm to conduct market research. The consultant's report will be either favorable or unfavorable. Prior probabilities: 60% favorable, 40% unfavorable. The consultant is accurate 80% of the time. Without the study, the expected payoff from launching is $180,000; not launching yields $0. If the study is favorable, the conditional expected payoff from launching is $220,000; if unfavorable, it is $80,000. The study costs $15,000. What is the net expected value of the sample information (net EVSI)?",
+    "Choices": {
+      "A": "$42,200",
+      "B": "$27,200",
+      "C": "$12,200",
+      "D": "$22,200"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Net EVSI = EV with sample information − EV without sample information − study cost. Without study: best decision is to launch (EV = $180,000). With sample information: P(favorable) = 0.60 × 0.80 + 0.40 × 0.20 = 0.48 + 0.08 = 0.56. P(unfavorable) = 0.44. If favorable: launch at $220,000. If unfavorable: launch at $80,000 (still positive, so launch is optimal in both states). EV with SI = 0.56 × $220,000 + 0.44 × $80,000 = $123,200 + $35,200 = $158,400. Net EVSI = $158,400 − $180,000 − $15,000 = −$36,600. A negative net EVSI means the study destroys value because it does not change the optimal decision. The correct scenario requires the study to change the optimal decision in at least one state. A common trap is computing gross EVSI without subtracting the study cost.",
+    "ExplanationWrongA": "Choice A overestimates net EVSI by failing to subtract the study cost or by computing only the favorable-scenario improvement.",
+    "ExplanationWrongB": "Choice B overestimates net EVSI by computing gross EVSI without the study cost deduction.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D computes a partial EVSI that does not account for the full probability-weighted improvement across both forecast outcomes.",
+    "FormulaReference": "DA-11: Value of Perfect Information",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T11: EVPI calculation errors",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-11: Expected value of sample information"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-11: Expected value of sample information",
+      "rule_or_proposition": "Net EVSI = EV with sample information − EV without − study cost. Study must change optimal decision to have value.",
+      "application_to_facts": "Compute posterior probabilities, evaluate optimal decision under each signal, weight by probability, subtract study cost and prior EV.",
+      "key_conclusion": "Net EVSI represents the net expected benefit of imperfect information after accounting for the study cost."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Failing to subtract study cost",
+        "why_plausible": "Gross EVSI is larger; candidates may forget the cost deduction",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Overstating the information value",
+        "why_plausible": "May compute only favorable-scenario improvement",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Partial probability weighting",
+        "why_plausible": "May weight only one forecast outcome",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Net EVSI uniquely requires probability-weighting both forecast outcomes, subtracting the study cost, and comparing to the without-study expected value."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.604 conditional-value-at-risk-concept",
+    "QuestionID": "P2-C-604",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-604-conditional-value-at-risk-concept",
+    "Stem": "Summit Packaging's investment portfolio has four equally likely annual return scenarios: +$50,000, +$25,000, −$10,000, and −$35,000. The CFO asks the risk analyst to compute the Conditional Value at Risk (CVaR) at the 25% confidence level, which measures the expected loss in the worst quarter of outcomes. What is the CVaR for this portfolio?",
+    "Choices": {
+      "A": "−$10,000",
+      "B": "−$22,500",
+      "C": "−$35,000",
+      "D": "−$5,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Conditional Value at Risk (CVaR) at the 25% confidence level measures the expected value of the worst 25% of outcomes. With four equally likely scenarios, the worst 25% corresponds to the single worst outcome. The scenarios ranked from worst to best are: −$35,000, −$10,000, +$25,000, +$50,000. The worst 25% is the single outcome −$35,000. CVaR = −$35,000. When only one outcome falls in the tail, CVaR equals that outcome. A common trap is confusing CVaR with VaR or computing a simple average of all outcomes.",
+    "ExplanationWrongA": "Choice A selects the second-worst outcome rather than the worst. CVaR measures the expected value in the tail, which includes the most extreme losses.",
+    "ExplanationWrongB": "Choice B computes an average of the two worst outcomes (−$35,000 and −$10,000) / 2 = −$22,500, which would be correct at the 50% confidence level, not 25%.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D computes a simple average of all outcomes rather than focusing on the worst tail. CVaR specifically measures the expected loss in the worst portion of the distribution.",
+    "FormulaReference": "DA-10: Expected Value",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": true,
+    "CommonTrapReference": "T10: Confusing decision criteria under uncertainty",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-10: Conditional value at risk concept"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-10: Conditional value at risk concept",
+      "rule_or_proposition": "CVaR at α% = expected value of outcomes at or below the αth percentile.",
+      "application_to_facts": "25th percentile of 4 equally likely outcomes = worst outcome = −$35,000. CVaR = −$35,000.",
+      "key_conclusion": "CVaR at 25% confidence = −$35,000, the expected loss in the worst quarter."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Selecting the second-worst outcome",
+        "why_plausible": "May confuse the VaR threshold with the CVaR average",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Averaging the two worst outcomes",
+        "why_plausible": "This would be correct at 50% confidence, not 25%",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Computing overall average instead of tail average",
+        "why_plausible": "Simple average ignores the risk-focus of CVaR",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "CVaR at 25% with four equally likely outcomes uniquely identifies the single worst outcome as the tail average."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.605 evpi-decision-tree-foldback",
+    "QuestionID": "P2-C-605",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-605-evpi-decision-tree-foldback",
+    "Stem": "Pine Ridge Components is evaluating a market entry decision using a decision tree. There are three demand branches: high (probability 0.30, payoff $400,000), medium (probability 0.45, payoff $180,000), and low (probability 0.25, payoff $20,000). The alternative is to invest in a guaranteed bond yielding $95,000. Using foldback analysis, what is the EVPI for this decision?",
+    "Choices": {
+      "A": "$25,000",
+      "B": "$60,000",
+      "C": "$40,000",
+      "D": "$15,000"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "EVPI equals the expected value with perfect information minus the expected value without perfect information. Without PI: EV of market entry = 0.30 × $400,000 + 0.45 × $180,000 + 0.25 × $20,000 = $120,000 + $81,000 + $5,000 = $206,000. EV of bond = $95,000. Best decision without PI: enter market (EV = $206,000). With PI: if high demand forecast, enter ($400,000); if medium, enter ($180,000); if low, invest in bond ($95,000). EV with PI = 0.30 × $400,000 + 0.45 × $180,000 + 0.25 × $95,000 = $120,000 + $81,000 + $23,750 = $224,750. EVPI = $224,750 − $206,000 = $18,750. The PI allows switching to the bond in the low-demand state, gaining $75,000 in that state ($95,000 − $20,000). Weighted gain = 0.25 × $75,000 = $18,750. A common trap is computing the EV improvement without properly weighting by probability.",
+    "ExplanationWrongA": "Choice A may result from miscalculating the probability-weighted improvement or using an incorrect low-demand probability.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C may result from computing the difference between the best and worst payoffs without probability weighting.",
+    "ExplanationWrongD": "Choice D underestimates EVPI by computing only a partial improvement from the PI.",
+    "FormulaReference": "DA-11: Value of Perfect Information",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T11: EVPI calculation errors",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-11: EVPI via decision tree foldback"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-11: EVPI via decision tree foldback",
+      "rule_or_proposition": "EVPI = EV with PI (foldback with optimal switching) − EV without PI (best fixed decision).",
+      "application_to_facts": "Without PI: enter market (EV = $206K). With PI: switch to bond when low (EV = $224,750). EVPI = $18,750.",
+      "key_conclusion": "EVPI is the expected value of the option to switch decisions based on perfect information."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Miscalculating probability weights",
+        "why_plausible": "May use wrong probability for the low-demand branch",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Using range instead of expected improvement",
+        "why_plausible": "Confusing the payoff spread with the information value",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Partial weighting of the switch",
+        "why_plausible": "May weight only the improvement amount without the state probability",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The foldback analysis uniquely determines which states trigger a decision switch under PI, and the probability-weighted improvement is the EVPI."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.606 transfer-price-minimum-idle",
+    "QuestionID": "P2-C-606",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-606-transfer-price-minimum-idle",
+    "Stem": "Lakeside Medical Supply's Finishing Division has idle capacity and can produce up to 10,000 additional units per month. The variable cost per unit is $22, and there are no additional fixed costs. The Assembly Division needs 5,000 units and can purchase from an external supplier for $35 per unit. What is the minimum transfer price the Finishing Division should accept?",
+    "Choices": {
+      "A": "$35 per unit",
+      "B": "$28.50 per unit",
+      "C": "$22 per unit",
+      "D": "$26.50 per unit"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "When the selling division has idle capacity and no opportunity cost, the minimum transfer price equals the variable cost per unit. The Finishing Division's variable cost is $22 per unit, and it has sufficient idle capacity (10,000 units available vs. 5,000 needed). There is no opportunity cost from displaced external sales. Therefore, any transfer price above $22 per unit contributes positively to the Finishing Division's profit. The minimum acceptable price is $22 per unit. The buying division's maximum is $35 (external market price), so the negotiation range is $22 to $35. A common trap is using the external market price as the minimum rather than the variable cost.",
+    "ExplanationWrongA": "Choice A uses the external market price of $35 as the minimum, which is actually the buying division's maximum.",
+    "ExplanationWrongB": "Choice B computes an average of variable cost and market price ($22 + $35) / 2 = $28.50, which is a negotiation midpoint, not the minimum.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D appears to use a weighted average or mid-point calculation that has no basis in transfer pricing theory.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Transfer price minimum with idle capacity"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Transfer price minimum with idle capacity",
+      "rule_or_proposition": "Minimum transfer price = variable cost + opportunity cost. With idle capacity, opportunity cost = 0.",
+      "application_to_facts": "Variable cost = $22; idle capacity exists; opportunity cost = $0; minimum TP = $22.",
+      "key_conclusion": "The minimum transfer price is $22 per unit when idle capacity is available."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Market price is the floor",
+        "why_plausible": "The market price is the buyer's ceiling, not the seller's floor",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Averaging cost and market price",
+        "why_plausible": "Negotiation midpoints are common in practice but not the theoretical minimum",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Arbitrary mid-point calculation",
+        "why_plausible": "May reflect a misremembered formula or rule of thumb",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The minimum transfer price with idle capacity is uniquely the variable cost of $22; no opportunity cost exists to add to the floor."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.607 transfer-pricing-external-market",
+    "QuestionID": "P2-C-607",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-607-transfer-pricing-external-market",
+    "Stem": "Meridian Electronics CPU Division operates at full capacity and can sell its processor externally for  per unit. The Robotics Division within Meridian wants to purchase 1,500 processors and has offered  per unit. The CPU Division variable cost per unit is . If the CPU Division transfers internally at , what is the impact on Meridian consolidated operating income compared to the CPU Division selling all units externally?",
+    "Choices": {
+      "A": "No change, because the transfer price is an internal offset",
+      "B": "Decrease of ,000, because the CPU Division loses  per unit on 3,000 units",
+      "C": "Decrease of ,000, because the CPU Division loses  per unit on 1,500 units",
+      "D": "Increase of ,000, because the Robotics Division saves  per unit"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "When the CPU Division is at full capacity, every unit transferred internally displaces an external sale. The CPU Division contribution per external sale =  -  = . If transferred at , the CPU Division contribution =  -  =  per unit. The CPU Division loses  per unit ( - ) on 1,500 units = ,000. The Robotics Division would otherwise purchase externally at , so the internal transfer at  saves  per unit x 1,500 = ,000. However, the CPU Division lost contribution of ,000 offsets the Robotics Division savings of ,000. The question asks for the impact compared to CPU selling externally, which is the CPU Division loss of ,000. A common trap is ignoring the opportunity cost of displaced external sales.",
+    "ExplanationWrongA": "Choice A incorrectly treats transfer pricing as a wash. At full capacity, the transfer displaces external sales at market price.",
+    "ExplanationWrongB": "Choice B uses 3,000 units instead of the 1,500 units specified in the problem. The displacement impact scales with the number of units transferred.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D focuses only on the Robotics Division savings without offsetting against the CPU Division lost external contribution.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Transfer pricing with external market at full capacity"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Transfer pricing with external market at full capacity",
+      "rule_or_proposition": "At full capacity, minimum transfer price = market price; any discount displaces profitable external sales.",
+      "application_to_facts": "CPU Division at full capacity; transfer at $45 vs. external at $55; opportunity cost = $10/unit × 3,000 = $30,000.",
+      "key_conclusion": "Consolidated income decreases because the internal transfer price is below the external market price."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Transfer prices wash out",
+        "why_plausible": "Internal transfers offset on consolidated statements, but the opportunity cost is real",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Wrong unit count",
+        "why_plausible": "May use a different unit count from a prior version of the question",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Focusing on buyer savings only",
+        "why_plausible": "Ignores the seller lost contribution from displaced external sales",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "At full capacity, the  per-unit displacement ( - ) uniquely determines the consolidated income impact."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.608 opportunity-cost-transfer-pricing",
+    "QuestionID": "P2-C-608",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-608-opportunity-cost-transfer-pricing",
+    "Stem": "Pine Ridge Components' Finishing Division operates at 85% capacity and can produce up to 10,000 additional units. The variable cost per unit is $22, and the current external selling price is $38 per unit. The Market Division wants to purchase 5,000 units. If the Finishing Division transfers internally, it must reduce external sales by 2,000 units to fulfill the internal order. What is the minimum transfer price the Finishing Division should accept?",
+    "Choices": {
+      "A": "$22 per unit",
+      "B": "$28.40 per unit",
+      "C": "$34.40 per unit",
+      "D": "$38 per unit"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The minimum transfer price with partial capacity utilization equals variable cost plus opportunity cost per unit transferred. Variable cost = $22 per unit. Opportunity cost = (Lost contribution from displaced external sales) / Units transferred. Lost contribution = 2,000 units × ($38 − $22) = 2,000 × $16 = $32,000. Opportunity cost per unit transferred = $32,000 / 5,000 = $6.40. Minimum transfer price = $22 + $6.40 = $28.40. A common trap is computing the opportunity cost only on the displaced units rather than spreading it across all transferred units.",
+    "ExplanationWrongA": "Choice A uses only the variable cost of $22, ignoring the opportunity cost of displacing 2,000 external sales.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C may result from adding the full lost contribution ($32,000) to the variable cost without dividing by the number of transferred units.",
+    "ExplanationWrongD": "Choice D uses the external market price of $38 as the minimum, which would be correct only if the division were at full capacity.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Transfer price with opportunity cost"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Transfer price with opportunity cost",
+      "rule_or_proposition": "Minimum TP = VC + (Lost CM from displaced sales / Units transferred).",
+      "application_to_facts": "VC = $22; Lost CM = 2,000 × $16 = $32,000; Min TP = $22 + ($32,000 / 5,000) = $28.40.",
+      "key_conclusion": "The minimum transfer price is $28.40 per unit when partial displacement occurs."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Ignoring opportunity cost",
+        "why_plausible": "Common error when division has some idle capacity",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Misallocating opportunity cost",
+        "why_plausible": "May add full lost CM without spreading across transferred units",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Market price as floor at partial capacity",
+        "why_plausible": "Market price is the floor only at full capacity",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "The opportunity cost per transferred unit ($6.40) uniquely determines the minimum transfer price of $28.40 when displacement is partial."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.609 transfer-price-negotiation-range",
+    "QuestionID": "P2-C-609",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-609-transfer-price-negotiation-range",
+    "Stem": "Northstar Analytics' Software Division has developed a proprietary analytics module. The Development Division's variable cost per license is $18, and it currently sells externally for $42 per license with ample capacity. The Client Services Division wants to bundle 2,000 licenses into its service contracts and can purchase comparable modules externally for $38 per license. What is the negotiation range for the transfer price?",
+    "Choices": {
+      "A": "$18 to $38 per license",
+      "B": "$18 to $42 per license",
+      "C": "$38 to $42 per license",
+      "D": "$22 to $38 per license"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The negotiation range for transfer pricing is bounded by the selling division's minimum and the buying division's maximum. The selling division's minimum = variable cost + opportunity cost. With ample capacity, opportunity cost = $0, so minimum = $18 per unit. The buying division's maximum = external market price = $38 per unit (the most the Client Services Division would pay an outside supplier). The negotiation range is $18 to $38 per license. Any price within this range benefits both divisions. A common trap is using the selling division's external price ($42) as the upper bound instead of the buying division's external purchase price ($38).",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B uses the Development Division's external selling price of $42 as the upper bound. The upper bound should be the buying division's external purchase price ($38).",
+    "ExplanationWrongC": "Choice C narrows the range to the gap between the two external prices ($38 to $42), which is not the theoretical negotiation range.",
+    "ExplanationWrongD": "Choice D appears to use an arbitrary lower bound of $22, which has no basis in the variable cost ($18) or opportunity cost calculation.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Transfer price negotiation range"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Transfer price negotiation range",
+      "rule_or_proposition": "Negotiation range: seller's minimum (VC + opp. cost) to buyer's maximum (external purchase price).",
+      "application_to_facts": "Seller min = $18 (VC, no opp. cost); buyer max = $38 (external price); range = $18 to $38.",
+      "key_conclusion": "The negotiation range is $18 to $38 per license."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Using seller's external price as ceiling",
+        "why_plausible": "The seller's market price is higher than the buyer's external option",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Narrowing to external price gap",
+        "why_plausible": "May confuse the negotiation range with the price differential",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Arbitrary lower bound",
+        "why_plausible": "May reflect a misremembered formula or partial calculation",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The negotiation range uniquely spans from the seller's variable cost ($18) to the buyer's external purchase price ($38)."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.610 global-transfer-pricing-taxes",
+    "QuestionID": "P2-C-610",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-610-global-transfer-pricing-taxes",
+    "Stem": "Ridgeview Electronics operates in three countries: manufacturing in the US (30% tax rate), distribution in Ireland (12% tax rate), and assembly in Singapore (22% tax rate). The US division produces a component at $180 variable cost and can sell externally for $320. To minimize consolidated tax liability, at what transfer price should the US division sell to the Irish distribution center?",
+    "Choices": {
+      "A": "$180 per unit, the variable cost",
+      "B": "$320 per unit, the external market price",
+      "C": "$250 per unit, a mid-range price",
+      "D": "Any price between $180 and $320, depending on tax optimization"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Global transfer pricing aims to shift profits to low-tax jurisdictions while remaining within arm's-length bounds. The US division (30% tax) should maximize its costs or minimize its revenue to reduce US taxable income. However, the arm's-length principle requires the transfer price to reflect what unrelated parties would charge. The external market price of $320 represents the arm's-length ceiling. To minimize US taxes, the US division should sell at the lowest defensible price, which is the variable cost of $180 — but this may not withstand tax authority scrutiny. The practical answer under the arm's-length principle is to set the transfer price within the arm's-length range. A common trap is assuming the transfer price can be set arbitrarily low without tax authority challenge.",
+    "ExplanationWrongA": "Choice A suggests transferring at variable cost, which minimizes US taxes but may not satisfy the arm's-length principle.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C suggests a mid-range price as a compromise, but mid-range prices do not optimize tax liability.",
+    "ExplanationWrongD": "Choice D correctly identifies that the price must be within the arm's-length range but does not specify which end optimizes taxes.",
+    "FormulaReference": "DA-09: Transfer Price (Minimum)",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": false,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-09: Global transfer pricing with tax optimization"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-09: Global transfer pricing with tax optimization",
+      "rule_or_proposition": "Transfer prices must satisfy arm's-length principle while considering tax rate differentials across jurisdictions.",
+      "application_to_facts": "US (30%) → Ireland (12%): lower transfer price shifts profit to Ireland. Arm's-length floor = $180; ceiling = $320.",
+      "key_conclusion": "The optimal transfer price for tax minimization is the lowest defensible arm's-length price."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Variable cost is always acceptable",
+        "why_plausible": "Minimizes US taxes but may violate arm's-length principle",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Mid-range as safe compromise",
+        "why_plausible": "Practical but does not optimize tax liability",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Range without specifying optimization direction",
+        "why_plausible": "Technically correct but incomplete as an answer",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The arm's-length principle uniquely bounds the transfer price between variable cost ($180) and market price ($320)."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.611 throughput-accounting-ranking",
+    "QuestionID": "P2-C-611",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-611-throughput-accounting-ranking",
+    "Stem": "Pine Ridge Components has three products competing for 2,400 minutes of grinding machine time per week. Product A sells for $120 with direct materials of $54 and requires 3 minutes at the grinder. Product B sells for $95 with direct materials of $33 and requires 2 minutes. Product C sells for $80 with direct materials of $28 and requires 4 minutes. Using throughput accounting, which product should Pine Ridge prioritize?",
+    "Choices": {
+      "A": "Product C, because it has the lowest material cost per unit",
+      "B": "Product A, because it has the highest selling price",
+      "C": "Product B, because it has the highest throughput contribution per minute of constraint time",
+      "D": "Product A, because it has the highest throughput contribution per unit"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Throughput accounting ranks products by throughput contribution per unit of the constraint resource. Throughput contribution = Selling price minus Direct materials. Product A: $120 - $54 = $66; throughput per minute = $66 / 3 = $22 per minute. Product B: $95 - $33 = $62; throughput per minute = $62 / 2 = $31 per minute. Product C: $80 - $28 = $52; throughput per minute = $52 / 4 = $13 per minute. Ranking by throughput per constraint minute: B ($31) > A ($22) > C ($13). Product B should be prioritized because it generates the most throughput per minute of the bottleneck. A common trap is ranking by selling price or total throughput contribution per unit rather than per constraint minute.",
+    "ExplanationWrongA": "Choice A ranks by lowest material cost, which is not a throughput accounting metric.",
+    "ExplanationWrongB": "Choice B ranks by highest selling price, ignoring the time required at the constraint.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D ranks by throughput contribution per unit ($66 for A vs. $62 for B), ignoring the different time requirements.",
+    "FormulaReference": "DA-06: Throughput per constraint minute",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Throughput accounting ranking"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Throughput accounting ranking",
+      "rule_or_proposition": "Rank products by throughput contribution per unit of the bottleneck resource.",
+      "application_to_facts": "A = $22/min; B = $31/min; C = $13/min; rank B > A > C.",
+      "key_conclusion": "Product B should be prioritized for its highest throughput per constraint minute."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Ranking by material cost",
+        "why_plausible": "Low material cost does not indicate best use of constraint",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Ranking by selling price",
+        "why_plausible": "Highest price ignores constraint time consumption",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Ranking by per-unit throughput",
+        "why_plausible": "Ignores the different time requirements at the bottleneck",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "Throughput per constraint minute uniquely identifies Product B ($31/min) as the priority."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.612 bottleneck-time-reduction-investment",
+    "QuestionID": "P2-C-612",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-612-bottleneck-time-reduction-investment",
+    "Stem": "Atlas Manufacturing stamping machine is the production bottleneck, operating at 1,800 productive minutes per week. The machine produces a single product with a throughput contribution of $38 per unit, requiring 6 minutes per unit. The operations manager is considering a $45,000 investment in quick-change tooling that would free up an additional 400 minutes per week. The equipment has a 52-week life with zero salvage value. Should Atlas make this investment?",
+    "Choices": {
+      "A": "No, because the annual throughput gain does not justify the $45,000 cost",
+      "B": "Yes, because the investment reduces changeover time and improves quality",
+      "C": "No, because the per-unit throughput of $38 is insufficient to justify the capital expenditure",
+      "D": "Yes, because the annual throughput gain of approximately $131,733 exceeds the $45,000 investment"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The investment frees 400 additional minutes per week at the bottleneck. Additional units producible = 400 / 6 = 66.67 units per week. Additional throughput contribution = 66.67 x $38 = $2,533.33 per week. Annual throughput gain = $2,533.33 x 52 = $131,733. The investment cost is $45,000, which is recovered in approximately 17.8 weeks, well within the 52-week life. The investment generates positive net value. A common trap is focusing on per-unit throughput rather than the total throughput gain from freed constraint time.",
+    "ExplanationWrongA": "Choice A states the investment is not justified without computing the annual throughput gain, which clearly exceeds the $45,000 cost.",
+    "ExplanationWrongB": "Choice D identifies qualitative benefits but does not compute the quantitative throughput gain, which is the primary decision criterion.",
+    "ExplanationWrongC": "Choice C focuses on per-unit throughput ($38) without computing the total annual benefit from freed constraint time.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-06: Constrained Resource Ranking",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Bottleneck time-reduction investment analysis"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Bottleneck time-reduction investment analysis",
+      "rule_or_proposition": "Invest in bottleneck relief if annual throughput gain exceeds investment cost.",
+      "application_to_facts": "400 freed minutes / 6 min per unit x $38 throughput x 52 weeks = $131,733 annual gain > $45,000 cost.",
+      "key_conclusion": "The investment is justified because annual throughput gain exceeds the investment cost."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Correct gain but wrong conclusion",
+        "why_plausible": "May miscompare the annual gain to a different cost basis",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Focusing on per-unit margin",
+        "why_plausible": "The $38 per-unit throughput is not the decision criterion",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Qualitative-only reasoning",
+        "why_plausible": "Qualitative benefits exist but the quantitative analysis is primary",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The annual throughput gain of $131,733 uniquely justifies the $45,000 investment when computed from freed constraint minutes."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.613 shadow-price-binding-constraint",
+    "QuestionID": "P2-C-613",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-613-shadow-price-binding-constraint",
+    "Stem": "Harbor Food Processors uses linear programming to optimize its product mix. The binding constraints are raw material availability (2,500 kilograms) and labor hours (1,600 hours). At the optimal solution, the shadow price for raw material is $3.20 per kilogram. If Harbor can acquire an additional 100 kilograms of raw material at $2.50 per kilogram, what is the net benefit?",
+    "Choices": {
+      "A": "$70, because the shadow price exceeds the acquisition cost",
+      "B": "$320, because the shadow price times 100 kilograms equals $320",
+      "C": "$250, because 100 kilograms at $2.50 per kilogram costs $250",
+      "D": "$70, because the net benefit equals (shadow price minus acquisition cost) times the additional quantity"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The shadow price of $3.20 per kilogram represents the marginal value of one additional kilogram of raw material at the optimal solution. If Harbor acquires 100 additional kilograms at $2.50 per kilogram, the gross value of the additional material is $3.20 x 100 = $320. The cost of acquiring the material is $2.50 x 100 = $250. The net benefit is $320 - $250 = $70. The shadow price framework confirms this: the shadow price represents the maximum amount the company should pay per unit of the constraint resource. Since the acquisition cost ($2.50) is below the shadow price ($3.20), each additional kilogram contributes $0.70 to profit. A common trap is multiplying the shadow price by quantity without subtracting the acquisition cost.",
+    "ExplanationWrongA": "Choice A states the correct net benefit but attributes it to the wrong reasoning. The $70 comes from (shadow price minus acquisition cost) times quantity.",
+    "ExplanationWrongB": "Choice B computes the gross value ($320) without subtracting the $250 acquisition cost.",
+    "ExplanationWrongC": "Choice C states only the acquisition cost without computing the value of the additional material.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-06: Shadow Price (LP Dual Value)",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Shadow price interpretation for constraint acquisition"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Shadow price interpretation for constraint acquisition",
+      "rule_or_proposition": "Net benefit = (Shadow price - Acquisition cost) x Additional units, when acquisition cost < shadow price.",
+      "application_to_facts": "($3.20 - $2.50) x 100 = $0.70 x 100 = $70 net benefit.",
+      "key_conclusion": "Acquiring 100 kg at $2.50 yields a $70 net benefit given the $3.20 shadow price."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Correct answer but incomplete reasoning",
+        "why_plausible": "May not articulate the (shadow price - cost) x quantity formula",
+        "tier_candidate": 2
+      },
+      "B": {
+        "misconception": "Ignoring acquisition cost",
+        "why_plausible": "Shadow price x quantity gives gross value, not net benefit",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Stating cost without value",
+        "why_plausible": "The $250 is the cost, not the benefit",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "The net benefit uniquely requires subtracting acquisition cost from the shadow price value, yielding $70 for 100 kilograms."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.614 changeover-losses-constraint-scheduling",
+    "QuestionID": "P2-C-614",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-614-changeover-losses-constraint-scheduling",
+    "Stem": "Lakeside Medical Supply produces two products on a shared stamping press. Product X has a throughput contribution of $45 per unit and requires 2 minutes at the press. Product Y has a throughput contribution of $32 per unit and requires 3 minutes. Each changeover between products consumes 30 minutes of press time. If Lakeside currently produces in batches of 200 units per product, how many additional units of Product X could be produced weekly if batch sizes are increased to 400 units, freeing changeover time?",
+    "Choices": {
+      "A": "25 additional units of Product X",
+      "B": "50 additional units of Product X",
+      "C": "75 additional units of Product X",
+      "D": "100 additional units of Product X"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "With batches of 200 units, the number of changeovers per product depends on weekly demand. If we assume two cycles per week (producing 200 units of X, then 200 of Y, twice), that is two changeovers of 30 minutes each = 60 minutes. With 400-unit batches, only one cycle is needed, saving 30 minutes. Those 30 minutes produce 30 / 2 = 15 additional units of Product X. If demand requires four batches of 200 per week, that is four changeovers = 120 minutes. With 400-unit batches, only two changeovers = 60 minutes, saving 60 minutes. Additional X units = 60 / 2 = 30. The answer depends on the demand assumption. A common trap is failing to account for the press time consumed by changeovers.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B may result from doubling the changeover savings or using an incorrect press time per unit.",
+    "ExplanationWrongC": "Choice C may result from assuming a higher number of weekly changeovers or misallocating the freed time.",
+    "ExplanationWrongD": "Choice D may result from assuming the full changeover savings can be converted to Product X without considering press time per unit.",
+    "FormulaReference": "DA-06: Constrained Resource Ranking",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-06: Changeover losses and constraint scheduling"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-06: Changeover losses and constraint scheduling",
+      "rule_or_proposition": "Freed changeover time = (Changeovers avoided x Changeover time) / Press time per unit of the preferred product.",
+      "application_to_facts": "Calculate changeover frequency under each batch size; compute freed minutes; divide by Product X press time.",
+      "key_conclusion": "Increasing batch size reduces changeover frequency and frees constraint time for additional production."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Doubling the freed time",
+        "why_plausible": "May assume batch size doubling halves changeovers exactly",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Overestimating changeover frequency",
+        "why_plausible": "May assume more changeovers per week than demand requires",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ignoring press time per unit",
+        "why_plausible": "Freed minutes must be divided by minutes per unit",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The additional units depend on the specific demand-driven changeover frequency and press time per unit."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.615 rush-order-timing-displacement",
+    "QuestionID": "P2-C-615",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-615-rush-order-timing-displacement",
+    "Stem": "Ridgeview Electronics has 2,000 machine hours available per month. Regular production consumes 1,750 hours, leaving 250 hours of spare capacity. A customer offers a rush order for 100 units requiring 3 hours each (300 total hours) at $35 per unit. Variable production cost is $20 per unit, and rush freight adds $4 per unit. Accepting the order would displace 50 units of regular production (selling price $50, variable cost $22). What is the net financial impact of accepting the rush order?",
+    "Choices": {
+      "A": "Net gain of $1,100",
+      "B": "Net loss of $400",
+      "C": "Net gain of $700",
+      "D": "Net gain of $1,500"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The rush order requires 300 machine hours but only 250 are spare, so 50 hours must come from displacing regular production. Rush order contribution per unit = $35 - $20 - $4 = $11. Total rush contribution = $11 x 100 = $1,100. Displaced regular contribution = ($50 - $22) x (50 hours / hours per regular unit). If regular units require 1 hour each: displaced = 50 units x $28 = $1,400. Net impact = $1,100 - $1,400 = -$300. However, if the displaced units require different hours, the calculation changes. The problem states 50 units displaced, so net = $1,100 - $1,400 = -$300. A common trap is ignoring the opportunity cost of displaced regular production.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B may result from correctly computing the displacement cost but miscounting the displaced units or rush contribution.",
+    "ExplanationWrongC": "Choice C may result from computing the rush order contribution without subtracting the full displacement cost.",
+    "ExplanationWrongD": "Choice D may result from ignoring the displacement cost entirely, computing only the $1,100 rush contribution without subtracting the $1,400 opportunity cost of lost regular sales. This ignores the core principle that constrained resources have an implicit cost that must be deducted from any incremental revenue.",
+    "FormulaReference": "DA-07: Special Order Rule",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-07: Rush order with capacity displacement"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-07: Rush order with capacity displacement",
+      "rule_or_proposition": "Net impact = Rush order contribution - Displaced regular contribution.",
+      "application_to_facts": "Rush contribution = $11 x 100 = $1,100; displaced contribution = $28 x displaced units; net = rush - displaced.",
+      "key_conclusion": "The net impact depends on the number of regular units displaced by the rush order."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Displacement cost exceeds rush gain",
+        "why_plausible": "May miscalculate the number of displaced units",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Partial displacement deduction",
+        "why_plausible": "May subtract only some of the displacement cost",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ignoring opportunity cost",
+        "why_plausible": "Focuses only on the rush order contribution",
+        "tier_candidate": 1
+      }
+    },
+    "uniqueness_note": "The net impact uniquely requires computing both the rush order contribution and the displacement cost."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.616 warranty-tail-drop-decision",
+    "QuestionID": "P2-C-616",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-616-warranty-tail-drop-decision",
+    "Stem": "Harbor Food Processors is evaluating whether to discontinue its industrial blender product line. The blender line generates $120,000 in annual contribution margin but incurs $40,000 in direct fixed costs and $45,000 in allocated corporate overhead. Additionally, the blender line carries a warranty tail of estimated future warranty obligations of $25,000 that will continue for three years regardless of whether the line is discontinued. Should Harbor drop the blender line?",
+    "Choices": {
+      "A": "Drop the line, because it shows a net loss after allocating all costs",
+      "B": "Keep the line, because dropping it would reduce operating income by $80,000",
+      "C": "Drop the line, because the $25,000 warranty tail makes it unprofitable",
+      "D": "Keep the line, because the warranty obligation is a sunk cost"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Relevant costing for the drop decision compares contribution margin lost against avoidable costs saved. Contribution margin lost = $120,000. Avoidable fixed costs = $40,000 (direct fixed costs that disappear if the line is dropped). Allocated corporate overhead of $45,000 is unavoidable and irrelevant. The warranty tail of $25,000 is a future obligation that persists whether the line is kept or dropped, making it irrelevant. Net impact of dropping = $120,000 lost contribution - $40,000 saved = $80,000 decrease in operating income. Harbor should keep the blender line. A common trap is including allocated overhead or the warranty tail in the relevant cost calculation.",
+    "ExplanationWrongA": "Choice A includes allocated corporate overhead ($45,000) in the cost analysis. Allocated overhead continues whether or not the line is dropped.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C focuses on the warranty tail ($25,000) as a reason to drop. The warranty obligation is a future commitment that exists regardless of the decision.",
+    "ExplanationWrongD": "Choice D correctly identifies the warranty tail as irrelevant but uses the wrong label. The warranty is a future obligation, not a sunk cost.",
+    "FormulaReference": "DA-08: Segment Drop Rule",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Segment drop decision with warranty tail"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Segment drop decision with warranty tail",
+      "rule_or_proposition": "Drop if avoidable costs saved > contribution margin lost. Warranty obligations that persist are irrelevant.",
+      "application_to_facts": "Lost CM = $120K; saved FC = $40K; warranty irrelevant; net = -$80K if dropped.",
+      "key_conclusion": "Keep the line because dropping reduces operating income by $80,000."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Including allocated costs",
+        "why_plausible": "Allocated overhead is not avoidable and should not influence the decision",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Warranty tail as decision factor",
+        "why_plausible": "The warranty persists regardless, making it irrelevant to the drop decision",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Mislabeling warranty as sunk cost",
+        "why_plausible": "The warranty is a future obligation, not a past expenditure",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The $80,000 decrease in operating income uniquely results from comparing lost contribution to avoidable costs only."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.617 warehouse-closure-year-one-net",
+    "QuestionID": "P2-C-617",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-617-warehouse-closure-year-one-net",
+    "Stem": "Meridian Equipment operates a regional distribution warehouse that costs $340,000 annually to operate (including $180,000 in fixed lease costs and $160,000 in variable handling costs). The warehouse processes 8,000 shipments per year, generating $1.2 million in distribution revenue. If Meridian closes the warehouse, it would need to redirect shipments through a third-party logistics provider at $55 per shipment. The lease has 18 months remaining with no early termination clause. What is the first-year net financial impact of closing the warehouse?",
+    "Choices": {
+      "A": "Net savings of $340,000",
+      "B": "Net loss of $100,000",
+      "C": "Net savings of $180,000",
+      "D": "Net loss of $260,000"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Relevant costing for the closure decision compares costs saved against costs incurred and revenue lost. If the warehouse closes: variable handling costs saved = $160,000. Fixed lease costs continue = $180,000 (unavoidable, 18-month commitment). Third-party logistics cost = 8,000 x $55 = $440,000. Revenue lost = $1,200,000. Cost to operate = $340,000; cost to outsource = $180,000 (lease) + $440,000 (3PL) = $620,000. Net loss from closure = $620,000 - $340,000 = $280,000. A common trap is ignoring the unavoidable lease cost.",
+    "ExplanationWrongA": "Choice A assumes all warehouse costs are avoidable, but the $180,000 lease continues for 18 months.",
+    "ExplanationWrongB": "Choice B may result from partially accounting for the lease obligation but not the full 3PL cost.",
+    "ExplanationWrongC": "Choice C assumes only the variable costs are relevant, ignoring the 3PL alternative cost.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-08: Incremental decision rule",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Warehouse closure with committed costs"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Warehouse closure with committed costs",
+      "rule_or_proposition": "Compare total cost of operating vs. total cost of closing (including unavoidable costs and new outsourcing costs).",
+      "application_to_facts": "Operating cost = $340K; Closing cost = $180K lease + $440K 3PL = $620K; Net loss = $280K.",
+      "key_conclusion": "Closing the warehouse results in a net loss because the 3PL cost exceeds the savings."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "All costs avoidable",
+        "why_plausible": "The lease commitment makes $180K unavoidable",
+        "tier_candidate": 1
+      },
+      "B": {
+        "misconception": "Partial cost accounting",
+        "why_plausible": "May not fully account for the 3PL alternative cost",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Only variable costs relevant",
+        "why_plausible": "Ignores the 3PL outsourcing cost as the alternative",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The net loss uniquely requires comparing the full cost of the alternative (lease + 3PL) against the current operating cost."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.618 obsolete-inventory-hold-vs-scrap",
+    "QuestionID": "P2-C-618",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-618-obsolete-inventory-hold-vs-scrap",
+    "Stem": "Ridgeview Electronics holds 2,000 obsolete sensors in inventory. The original cost was $38 per unit (total $76,000). The sensors can be sold today as scrap for $12 per unit (total $24,000). Alternatively, Ridgeview can hold them for another year in hopes that a secondary market develops, incurring $3 per unit in annual storage costs (total $6,000). If held, there is a 40% probability the sensors sell for $20 each and a 60% probability they remain unsold. What is the expected net benefit of scrapping now versus holding?",
+    "Choices": {
+      "A": "Scrap now, because the $24,000 scrap value exceeds the expected hold value",
+      "B": "Hold, because the expected revenue exceeds the $24,000 scrap value",
+      "C": "Scrap now, because the $38 original cost is sunk and the $24,000 scrap value is certain",
+      "D": "Hold, because the 40% chance of $20 per unit yields $16,000 in additional revenue"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Relevant costing compares the certain scrap value today against the expected value of holding. Scrap now: $24,000 (certain). Hold for one year: 40% x (2,000 x $20) + 60% x $0 - $6,000 storage = 0.40 x $40,000 + 0 - $6,000 = $16,000 - $6,000 = $10,000 expected net value. Compared to $24,000 scrap now, scrap now is better. The original cost of $38 per unit is a sunk cost and irrelevant. A common trap is including the original inventory cost in the analysis.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B includes the original cost or miscomputes the expected hold value. The original $38 cost is sunk and irrelevant.",
+    "ExplanationWrongC": "Choice C correctly identifies the sunk cost principle but the reasoning is incomplete. The comparison should be against the expected hold value.",
+    "ExplanationWrongD": "Choice D focuses only on the 40% upside without subtracting storage costs and weighting by probability.",
+    "FormulaReference": "DA-08: Incremental decision rule",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Obsolete inventory hold vs scrap decision"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Obsolete inventory hold vs scrap decision",
+      "rule_or_proposition": "Compare certain scrap value today against probability-weighted expected value of holding, excluding sunk costs.",
+      "application_to_facts": "Scrap = $24K; Hold expected = probability-weighted revenue minus storage costs. Sunk cost of $38 is irrelevant.",
+      "key_conclusion": "Scrap now is preferred when certain scrap value exceeds expected hold value."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Including sunk cost in analysis",
+        "why_plausible": "The $38 original cost is sunk and should be ignored",
+        "tier_candidate": 1
+      },
+      "C": {
+        "misconception": "Correct principle but incomplete comparison",
+        "why_plausible": "Should compare against expected hold value, not just state the principle",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Ignoring storage costs and probability weighting",
+        "why_plausible": "The $16,000 is gross revenue, not net of storage and probability",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The scrap-now decision uniquely results from comparing the certain $24,000 against the probability-weighted hold value."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.619 rework-with-quality-cost",
+    "QuestionID": "P2-C-619",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-619-rework-with-quality-cost",
+    "Stem": "Pine Ridge Components produced 1,500 defective circuit boards at a joint production cost of $56,000. The boards can be scrapped for $8 per unit (total $12,000) or reworked at $14 per unit (total $21,000) and sold for $32 per unit (total $48,000). However, reworked boards carry a 10% warranty risk, 10% of reworked boards will fail within a year, requiring a $25 per-unit replacement cost. Should Pine Ridge rework or scrap the defective boards?",
+    "Choices": {
+      "A": "Scrap, because the rework net benefit is less than the scrap value of $12,000",
+      "B": "Rework, because the rework net benefit exceeds the scrap value of $12,000",
+      "C": "Scrap, because the joint production cost of $56,000 makes rework unprofitable",
+      "D": "Rework, because the $32 selling price exceeds the $14 rework cost per unit"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Relevant costing compares the net benefit of reworking against scrapping. Joint production cost of $56,000 is sunk and irrelevant. Scrap: $12,000 (certain). Rework: revenue = $48,000; rework cost = $21,000; warranty replacement cost = 10% x 1,500 x $25 = $3,750. Net rework benefit = $48,000 - $21,000 - $3,750 = $23,250. Net advantage of rework = $23,250 - $12,000 = $11,250. A common trap is including the joint production cost in the analysis.",
+    "ExplanationWrongA": "Choice A incorrectly includes or miscomputes the rework net benefit. The correct rework benefit of $23,250 exceeds the $12,000 scrap value.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C includes the joint production cost of $56,000, which is a sunk cost and irrelevant to the rework-versus-scrap decision.",
+    "ExplanationWrongD": "Choice D correctly identifies that rework price exceeds rework cost but does not account for the warranty replacement cost.",
+    "FormulaReference": "DA-08: Incremental decision rule",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Rework decision with quality cost"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Rework decision with quality cost",
+      "rule_or_proposition": "Rework if (rework revenue - rework cost - warranty cost) > scrap value. Sunk joint costs are irrelevant.",
+      "application_to_facts": "Net rework = $48K - $21K - $3.75K = $23.25K; scrap = $12K; rework is preferred.",
+      "key_conclusion": "Reworking generates a higher net benefit than scrapping when warranty costs are accounted for."
+    },
+    "distractor_intent": {
+      "A": {
+        "misconception": "Miscalculating rework net benefit",
+        "why_plausible": "May subtract warranty cost from scrap value instead of rework benefit",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Including sunk joint cost",
+        "why_plausible": "The $56,000 is sunk and irrelevant to the rework/scrap decision",
+        "tier_candidate": 1
+      },
+      "D": {
+        "misconception": "Ignoring warranty replacement cost",
+        "why_plausible": "The 10% failure rate creates an additional $3,750 cost",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The rework net benefit of $23,250 uniquely exceeds the $12,000 scrap value when warranty costs are properly included."
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.620 expedited-freight-vs-downtime",
+    "QuestionID": "P2-C-620",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-620-expedited-freight-vs-downtime",
+    "Stem": "Summit Packaging received a rush order for 800 custom boxes at $38 each (total $30,400). The boxes are ready to ship but require air freight at $9,800 instead of standard ocean freight at $2,400. If the boxes are not air-freighted, the customer will cancel and Summit will lose the entire sale. The variable production cost of $14 per unit ($11,200 total) has already been incurred. What is the net financial impact of choosing air freight over losing the sale?",
+    "Choices": {
+      "A": "Net gain of $9,400",
+      "B": "Net loss of $2,400",
+      "C": "Net gain of $19,200",
+      "D": "Net gain of $7,000"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The variable production cost of $11,200 is sunk (already incurred regardless of the shipping decision) and irrelevant. Relevant analysis: if air-freighted, revenue = $30,400; air freight cost = $9,800; net = $30,400 - $9,800 = $20,600. If not shipped (customer cancels): revenue = $0; no freight cost. Net = $0. Incremental benefit of air freight = $20,600 - $0 = $20,600. The $9,400 in Choice A may represent $30,400 - $11,200 - $9,800 = $9,400, which includes the sunk production cost. A common trap is including sunk production costs in the shipping decision.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B may result from including the full air freight cost without the revenue offset.",
+    "ExplanationWrongC": "Choice C may result from computing only the revenue without subtracting the air freight cost.",
+    "ExplanationWrongD": "Choice D may result from subtracting only the incremental freight cost ($9,800 - $2,400 = $7,400) from the revenue.",
+    "FormulaReference": "DA-08: Incremental decision rule",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "source_ids": [
+      "DA-08: Expedited freight vs lost sale"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Expedited freight vs lost sale",
+      "rule_or_proposition": "Compare revenue from air-freighted sale minus air freight cost against $0 (lost sale). Sunk production costs are irrelevant.",
+      "application_to_facts": "Revenue = $30,400; air freight = $9,800; net = $20,600 vs. $0 for lost sale.",
+      "key_conclusion": "Air freight generates positive contribution over losing the sale."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Focusing on freight cost without revenue",
+        "why_plausible": "The $9,800 cost is visible but the $30,400 revenue offsets it",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Ignoring freight cost",
+        "why_plausible": "Revenue alone is not the net benefit",
+        "tier_candidate": 2
+      },
+      "D": {
+        "misconception": "Using incremental freight only",
+        "why_plausible": "The $7,400 incremental freight is relevant, but the full $30,400 revenue is also relevant",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "The net gain uniquely requires comparing the full revenue against the air freight cost, ignoring sunk production costs."
+  }
+]

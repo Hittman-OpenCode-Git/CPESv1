@@ -2,16 +2,16 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-08-30 01:17:49
-  Source hash: 637bb08f
+  Last generated: 2026-09-05 18:44:15
+  Source hash: f135d51d
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-08-30 01:17:49
-**Source Hash:** `637bb08f`
-**Total Questions:** 3020
+**Generated:** 2026-09-05 18:44:15
+**Source Hash:** `f135d51d`
+**Total Questions:** 3045
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
 > Source of truth: the five pack source files (`content/packs/pack_*_corrected.js`)
@@ -24,9 +24,9 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Questions | 3020 |
+| Total Questions | 3045 |
 | Scored (CAQS available) | 0 |
-| Not Yet Scored | 3020 |
+| Not Yet Scored | 3045 |
 | Exam-Ready (≥90) | 0 |
 | Acceptable (70–89) | 0 |
 | Needs Work (50–69) | 0 |
@@ -36,10 +36,10 @@
 
 | Section | Domain | Total | With Validator Findings |
 |---------|--------|------:|----------------------:|
-| C | Performance Management | 468 | 76 |
-| E | Internal Controls | 453 | 83 |
+| C | Performance Management | 473 | 76 |
+| E | Internal Controls | 463 | 83 |
 | I | I | 492 | 60 |
-| P | P | 1168 | 194 |
+| P | P | 1178 | 194 |
 | T | T | 439 | 97 |
 
 ---
@@ -3068,6 +3068,31 @@
 | CBQ5-F3-Q3 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-F3-Q4 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-F3-Q5 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q1 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q2 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q3 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q4 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q5 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q1 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q2 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q3 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q4 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q5 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C4-Q1 | P | Material Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C4-Q2 | P | Material Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C4-Q3 | P | Labor Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C4-Q4 | P | Variance Interpretation | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C4-Q5 | P | Variance Investigation | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D4-Q1 | C | Job Order Costing | Moderate | Job order costing; Overhead application; Under- and over-applied overhead | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D4-Q2 | C | Job Order Costing | Moderate | Job order costing; Overhead application; Under- and over-applied overhead | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D4-Q3 | C | Overhead Application | Moderate | Job order costing; Overhead application; Under- and over-applied overhead | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D4-Q4 | C | Overhead Application | Moderate | Job order costing; Overhead application; Under- and over-applied overhead | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D4-Q5 | C | Overhead Allocation | Moderate | Job order costing; Overhead application; Under- and over-applied overhead | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B4-Q1 | P | Sales Budget | Difficult | Master budget preparation; Sales budget; Production budget; Cash budget | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B4-Q2 | P | Production Budget | Difficult | Master budget preparation; Sales budget; Production budget; Cash budget | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B4-Q3 | P | Direct Materials Budget | Difficult | Master budget preparation; Sales budget; Production budget; Cash budget | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B4-Q4 | P | Cash Budget | Difficult | Master budget preparation; Sales budget; Production budget; Cash budget | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B4-Q5 | P | Master Budget | Difficult | Master budget preparation; Sales budget; Production budget; Cash budget | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 
 ---
 
@@ -9801,20 +9826,20 @@ Questions that triggered one or more validator errors or warnings:
 ## Validator Suite Summary
 
 - **Repository Validator**: PASS (0 errors, 0 warnings, 6ms)
-- **Metadata Validator**: WARN (0 errors, 4 warnings, 640ms)
-- **Blueprint Validator**: WARN (0 errors, 70 warnings, 275ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 2ms)
-- **Difficulty Validator**: WARN (0 errors, 39 warnings, 298ms)
-- **Reference Validator**: WARN (0 errors, 159 warnings, 210ms)
-- **Explanation Validator**: WARN (0 errors, 24 warnings, 1448ms)
-- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 36ms)
-- **PsychometricValidator**: WARN (0 errors, 1662 warnings, 1417ms)
+- **Metadata Validator**: WARN (0 errors, 4 warnings, 615ms)
+- **Blueprint Validator**: WARN (0 errors, 70 warnings, 155ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 1ms)
+- **Difficulty Validator**: WARN (0 errors, 39 warnings, 233ms)
+- **Reference Validator**: WARN (0 errors, 159 warnings, 189ms)
+- **Explanation Validator**: WARN (0 errors, 24 warnings, 475ms)
+- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 41ms)
+- **PsychometricValidator**: WARN (0 errors, 1662 warnings, 1671ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-08-30 01:17:49
-  Source hash: 637bb08f
-  Questions: 3020
+  Registry regenerated on 2026-09-05 18:44:15
+  Source hash: f135d51d
+  Questions: 3045
   To regenerate: node scripts/generate_registry.js
 -->

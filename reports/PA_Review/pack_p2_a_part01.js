@@ -1,0 +1,220 @@
+var pack_p2_a_part1 = [
+{
+  "Authorities": [
+    "ASC 470-10-45",
+    "ASC 205-10"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Meridian's reported current ratio of 1.85 exceeds the covenant floor by 23%, providing a comfortable margin. The reclassification was approved by the lender, making the extended debt a legitimate long-term obligation under ASC 470-10. The industry comparison at 2.20 is secondary; the covenant is the binding constraint.",
+    "B": "Meridian's current ratio of 1.85 is 0.35 below the industry average of 2.20, indicating a structural liquidity deficiency that should be the lender's primary concern. Ms. Chen should recommend negotiating a permanent covenant amendment rather than relying on classification changes.",
+    "C": "Meridian's true current ratio is 1.37 because the reclassification was undertaken solely to satisfy the covenant, which violates the substance-over-form principle. ASC 470-10 does not protect reclassifications motivated by covenant compliance. Ms. Chen should report the covenant violation.",
+    "D": "Meridian technically complies with the 1.50 covenant under ASC 470-10 since the lender extended the maturity beyond one year. However, the current ratio overstates liquidity quality — the 0.48 improvement from 1.37 to 1.85 resulted entirely from a balance sheet classification change, not from operating cash generation or working capital improvement. Ms. Chen should disclose the pre-reclassification ratio of 1.37 so the lender can independently evaluate Meridian's underlying liquidity position."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Treating a reported ratio as definitive without investigating the quality of the numerator and denominator — classification changes can materially alter ratios without any change in economic liquidity.",
+  "CorrectChoice": "D",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under ASC 470-10-45, debt scheduled to mature within one year is classified as current. When a lender extends the maturity beyond one year before the balance sheet date, reclassification to long-term is appropriate. Meridian's reported current ratio of 1.85 ($18.5M / $10.0M) reflects this reclassification. However, a complete liquidity analysis requires examining ratio quality. The 0.48 improvement from 1.37 to 1.85 derives entirely from the classification decision ($3.5M removed from current liabilities), not from any improvement in operating liquidity or cash generation. At the pre-reclassification level of $18.5M / $13.5M = 1.37, Meridian is 8.7% below the 1.50 covenant floor. Under ASC 205-10, financial statements should provide information useful for decision-making; presenting only the post-reclassification ratio obscures the economic reality that Meridian had insufficient current assets to cover its obligations before the extension. The appropriate analytical approach is to present both ratios and let the lender assess whether the extension constitutes a durable improvement in liquidity.",
+  "ExplanationWrongA": "This assessment accepts the reported 1.85 at face value without examining how the ratio was achieved. The 23% margin above the covenant floor exists only because $3.5M was removed from current liabilities through reclassification; pre-reclassification, Meridian would be at 1.37, or 8.7% below the covenant floor. An analyst who reports only the post-reclassification ratio without disclosing the pre-reclassification figure omits material information about liquidity quality. The lender's credit decision should be informed by both the reported ratio and the ratio that would prevail absent the classification change.",
+  "ExplanationWrongB": "This assessment dismisses a binding contractual covenant in favor of an industry benchmark. Meridian's covenant requires a current ratio of 1.50, not parity with the industry average of 2.20. While 1.85 is below the industry average, this does not constitute a covenant violation, nor does it independently establish a structural liquidity deficiency — many companies operate with current ratios below industry averages without financial distress. The more immediate analytical concern is that the 1.85 ratio is fragile, dependent on a classification decision whose economic substance the lender should independently evaluate.",
+  "ExplanationWrongC": "This assessment incorrectly asserts that ASC 470-10 does not permit reclassification when motivated by covenant compliance. ASC 470-10-45 draws the current versus long-term classification boundary based on the contractual maturity date at the balance sheet date, not on management's motivation or intent. If the lender has legally extended the maturity beyond one year, the debt is properly classified as long-term regardless of why the extension was negotiated. The substance-over-form principle does not override explicit GAAP classification criteria. The reclassification is GAAP-compliant; the analytical issue is disclosure adequacy, not reporting compliance.",
+  "ExplanationWrongD": "",
+  "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-001",
+  "Section": "A",
+  "Stem": "CFO Maria Chen must certify to Meridian Manufacturing's lender that the company complies with a loan covenant requiring a minimum current ratio of 1.50. Meridian reports current assets of $18.5M and current liabilities of $10.0M, yielding a current ratio of 1.85. During Q4, Meridian reclassified $3.5M of short-term notes payable to long-term debt after the lender agreed in writing to extend the maturity by 15 months. Without this reclassification, current liabilities would be $13.5M and the current ratio would be 1.37. The industry average current ratio is 2.20. Before certifying compliance, which analytical assessment should Ms. Chen present to the lender?",
+  "Topic": "A.001 Current Ratio — covenant compliance and classification quality analysis",
+  "UniqueConceptKey": "A-001-current-ratio-covenant-compliance-and-classification-quality-ana",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by multi-layer analytical reasoning required: technical compliance + ratio quality + disclosure obligation",
+    "Independent answer derived: 1.85 reported, 1.37 pre-reclassification, both below industry 2.20, covenant at 1.50 — B correctly identifies technical compliance while demanding quality disclosure",
+    "Authority citations match tested concept: ASC 470-10-45 for debt classification, ASC 205-10 for decision-useful information"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205-10",
+    "ASC 330-10"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Pacific Rim's current ratio of 2.16 outperforms the industry average of 2.05, demonstrating strong overall liquidity. The quick ratio is less relevant for a wholesale distributor because carrying substantial inventory is inherent to the business model. The credit line should be approved with standard terms.",
+    "B": "Pacific Rim's quick ratio of 0.61 is 47% below the industry average of 1.15, indicating that only $0.61 of liquid assets backs each $1.00 of current liability. The company cannot meet its short-term obligations without relying on inventory conversion, which is unreliable for consumer electronics. The credit line should be declined.",
+    "C": "The divergence between the current ratio and quick ratio is a reporting anomaly — these ratios should move in tandem for a distributor with stable inventory policies. Pacific Rim likely has a misclassification in its current liabilities or an inventory valuation error. Ms. Reeves should request restated financials before making a recommendation.",
+    "D": "The divergence between the current ratio of 2.16 and the quick ratio of 0.61 reveals that inventory constitutes 68.4% of current assets ($14.5M / $21.2M). The quick ratio of 0.61, well below the industry norm of 1.15, signals that Pacific Rim's liquidity depends overwhelmingly on inventory whose liquidation value is 30–40% below carrying value. Ms. Reeves should investigate inventory turnover rates, product mix aging, and obsolescence reserves, and should consider structuring any credit line with a borrowing base tied to eligible receivables rather than inventory."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Relying on the current ratio alone without examining the composition of current assets — high inventory can inflate the current ratio while masking severe near-term illiquidity.",
+  "CorrectChoice": "D",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under ASC 205-10, financial statement analysis requires interpreting relationships among multiple ratios to form a complete assessment of financial position. The current ratio of 2.16 ($21.2M / $9.8M) suggests adequate coverage, but the quick ratio of 0.61 (($1.8M + $4.2M) / $9.8M = $6.0M / $9.8M) reveals that Pacific Rim holds only 61 cents in cash and receivables for every dollar of current liabilities. The gap is driven by inventory: $14.5M represents 68.4% of current assets. For consumer electronics — a category subject to rapid technological obsolescence and 30–40% liquidation discounts — inventory-dependent liquidity is materially weaker than the current ratio alone suggests. Under ASC 330-10, inventory must be reported at lower of cost or net realizable value, meaning the book value may overstate the cash that inventory can generate in a liquidity stress scenario. The analytically sound response is to investigate inventory quality metrics (turnover, aging, NRV adequacy) and to structure credit against the more reliably liquid receivable base via a borrowing-base formula tied to eligible receivables.",
+  "ExplanationWrongA": "This analysis treats the current ratio as sufficient evidence for credit approval without investigating why the quick ratio diverges so sharply from the industry norm. A current ratio above the industry average can coexist with severe near-term liquidity stress when current assets are heavily concentrated in slow-converting or value-volatile inventory. For a lender extending a revolving credit facility, the borrower's ability to convert assets to cash within the operating cycle is essential — relying solely on the current ratio without examining asset composition constitutes an incomplete and potentially misleading credit analysis.",
+  "ExplanationWrongB": "This analysis prematurely recommends declining the credit line without exploring structural mitigants. While the quick ratio of 0.61 represents a genuine liquidity concern, responsible credit analysis should evaluate whether the risk can be managed through loan structuring — such as a borrowing base formula tied to eligible receivables (which are more liquid than inventory), a higher interest rate commensurate with risk, or a requirement to maintain a minimum quick ratio as a financial covenant. Declining outright may cause the bank to forgo a profitable relationship that could be safely accommodated with appropriate credit enhancements.",
+  "ExplanationWrongC": "This analysis incorrectly characterizes the ratio divergence as a reporting anomaly requiring restatement. The current ratio and quick ratio frequently diverge — especially for inventory-intensive businesses — because the quick ratio excludes inventory from the numerator. The divergence is not an accounting error; it is an economically meaningful signal that inventory dominates the current asset structure. Pacific Rim's financial statements may be perfectly accurate under GAAP; the divergence itself is the analytical information that Ms. Reeves must interpret, not an indication that the financials are defective.",
+  "ExplanationWrongD": "",
+  "FormulaReference": "Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) / Current Liabilities",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-002",
+  "Section": "A",
+  "Stem": "Pacific Rim Distributors, a wholesale electronics supplier, has applied to NorthCrest Bank for a $3.0M revolving line of credit. Credit Analyst Sarah Reeves reviews the latest quarter: cash of $1.8M, accounts receivable of $4.2M, inventory of $14.5M, prepaid expenses of $0.7M, and current liabilities of $9.8M. The current ratio is 2.16 versus an industry average of 2.05, but the quick ratio is 0.61 versus an industry average of 1.15. Pacific Rim's inventory consists primarily of consumer electronics — a category where liquidation typically recovers 60–70% of book value due to rapid obsolescence. Ms. Reeves must recommend credit terms to the loan committee. Which analysis correctly interprets the ratio divergence?",
+  "Topic": "A.002 Quick Ratio — divergence from Current Ratio in inventory-intensive firm",
+  "UniqueConceptKey": "A-002-quick-ratio-divergence-from-current-ratio-in-inventory-intensive",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by multi-layer analysis: ratio calculation, composition decomposition, industry comparison, liquidation value adjustment, credit structuring recommendation",
+    "Independent answer derived: CR=2.16 (above industry 2.05), QR=0.61 (far below industry 1.15), inventory=68.4% of CA — D is the only answer that investigates further before deciding",
+    "Authority citations match: ASC 205-10 for analytical interpretation, ASC 330-10 for inventory valuation"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205-30"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Apex's cash ratio of 0.375 ($2.7M / $7.2M) already signaled thin liquidity before the customer bankruptcy. For the five-day crisis window, available cash and securities of $2.7M are $1.4M short of the $4.1M in immediate obligations. Even if Mr. Park initiates a credit line draw immediately, the three-day processing delay creates a 1–2 day gap during which obligations come due but credit line funds remain inaccessible. Mr. Park should urgently negotiate extended payment terms with the two suppliers and request same-day funding from the bank to bridge the timing gap.",
+    "B": "Apex's cash ratio of 0.375 is near the industry median for capital equipment manufacturers and does not signal a crisis by itself. The accounts receivable portfolio, even after writing off the bankrupt customer's $2.03M, retains $3.77M in performing receivables that can be factored within 48 hours. Apex can meet its obligations without drawing the credit line and without supplier concessions.",
+    "C": "With $2.7M in cash and securities plus a committed $4.0M credit facility, Apex has $6.7M in total near-term resources against $7.2M in current liabilities — a coverage ratio of 0.93. While not ideal, this is sufficient to meet the $4.1M in urgent obligations because the credit line can be accessed well before the five-day payroll and supplier deadlines expire.",
+    "D": "The cash ratio is the wrong analytical tool for Apex's situation because the liquidity stress is caused by a discrete event — a single customer bankruptcy — rather than an ongoing operational deficiency. Mr. Park should instead focus on the current ratio of 2.5 and quick ratio of 1.18, both of which confirm that Apex has adequate liquidity to absorb the receivable write-off without external financing or payment renegotiation."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Confusing aggregate resource coverage with intra-period liquidity — a company can be solvent in the aggregate yet illiquid on a specific date due to timing mismatches between cash outflows and funding availability.",
+  "CorrectChoice": "A",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "The cash ratio — (Cash + Marketable Securities) / Current Liabilities — measures the ability to satisfy obligations using only the most liquid assets. Apex's cash ratio of 0.375 = ($2.1M + $0.6M) / $7.2M means only 37.5 cents in immediately available funds backs each dollar of current liability, a position that was precarious even before the customer bankruptcy. For the five-day crisis window, the analysis must assess timing: $4.1M in obligations ($1.8M payroll + $2.3M suppliers) versus $2.7M immediately available, yielding a $1.4M shortfall. The $4.0M credit facility does not eliminate this gap because the bank's three-day processing period means funds arrive no earlier than day three, while payroll may be due on day one or two. Under ASC 205-30, management must evaluate whether the entity can meet obligations as they become due — not merely whether aggregate resources exceed aggregate obligations. Mr. Park's immediate options — negotiating supplier payment extensions and requesting expedited bank funding — directly address the timing mismatch that the cash ratio exposes but that broader liquidity ratios conceal.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This analysis relies on receivables factoring as a liquidity solution but substantially underestimates the execution risk. Factoring $3.77M in receivables typically requires due diligence, documentation, and funding timelines of 5–10 business days, not the 48 hours assumed. Moreover, after a major customer declares bankruptcy, factors may perceive elevated portfolio risk and either discount the remaining receivables more heavily or decline to purchase them entirely. The cash ratio of 0.375 is the most conservative and timing-sensitive measure of Apex's ability to satisfy obligations — relying on uncommitted factoring arrangements introduces contingent liquidity risk incompatible with the five-day payment deadline.",
+  "ExplanationWrongC": "This analysis confuses resource availability with resource accessibility. While the $4.0M credit line is contractually committed, the three-day processing delay means Apex cannot access those funds on days zero through two. The $4.1M in urgent obligations may begin coming due immediately — payroll processing typically requires funds to be available in the disbursement account on payday, not three days later. Aggregating all resources and comparing them to all obligations over the full five-day window obscures the critical intra-period timing mismatch. A company can appear solvent on an aggregated basis yet still default on a specific payment due before funding becomes available.",
+  "ExplanationWrongD": "This analysis incorrectly dismisses the cash ratio as irrelevant to an acute liquidity event. Under ASC 205-30, when assessing whether an entity can satisfy obligations as they come due, the cash ratio — which isolates the most immediately available resources — is precisely the relevant metric. The current ratio of 2.5 includes $9.4M in inventory (slow-converting CNC equipment components) and the quick ratio of 1.18 includes $5.8M in receivables, $2.03M of which is now worthless. Neither inventory nor impaired receivables can satisfy a payroll obligation due in three days. The discrete nature of the triggering event does not render cash analysis irrelevant; it is the very event that demonstrates why only cash and cash equivalents matter in an acute liquidity crisis.",
+  "FormulaReference": "Cash Ratio = (Cash + Marketable Securities) / Current Liabilities",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-003",
+  "Section": "A",
+  "Stem": "Apex Machine Tools, a CNC equipment manufacturer, faces an acute liquidity crisis. Its largest customer, representing 35% of accounts receivable ($2.03M of $5.8M total), unexpectedly filed for Chapter 7 bankruptcy with no anticipated recovery. Within five business days, Apex must fund a $1.8M payroll and pay $2.3M to two critical component suppliers. Apex holds $2.1M in cash and $0.6M in marketable securities that can be liquidated immediately. Current liabilities total $7.2M. Apex has a committed $4.0M revolving credit facility, but the bank requires three business days to process a draw request. Controller James Park must assess whether Apex can meet its immediate obligations without disrupting operations. What does the cash ratio analysis reveal about Apex's position?",
+  "Topic": "A.003 Cash Ratio — acute short-term solvency assessment under timing pressure",
+  "UniqueConceptKey": "A-003-cash-ratio-acute-short-term-solvency-assessment-under-timing-pre",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by layered analysis: cash ratio calculation, intra-period timing assessment, bankruptcy impact on receivables, credit line accessibility timing, going concern evaluation",
+    "Independent answer derived: cash ratio = 2.7/7.2 = 0.375, 5-day obligations = 4.1M vs 2.7M available = 1.4M shortfall, credit line timing gap confirmed — A correctly identifies the timing problem",
+    "Authority citation matches: ASC 205-30 for going concern and ability to meet obligations as they become due"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 205-10"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "The $7M working capital increase, combined with 6% revenue growth, demonstrates that Northstar is generating sufficient operating liquidity to support expansion. The current ratio of 2.00 remains healthy, and the modest CCC increase is attributable to the revenue-COGS growth differential, which should normalize as new store inventory stabilizes.",
+    "B": "The accounts payable increase of $5M (11.1%) versus COGS growth of 8.0% signals that Northstar is systematically stretching supplier payments to fund its working capital needs. This strategy will damage supplier relationships, increase the cost of goods sold as suppliers raise prices to compensate, and ultimately compress gross margins.",
+    "C": "The $7M working capital increase is a warning signal, not a strength. Inventory grew 6.6% while COGS grew 8.0%, and receivables grew 9.5% while revenue grew only 6.0% — both asset categories are outpacing the activity that should drive them. The 11-day CCC deterioration ($7M in additional working capital tied up for 11 more days of the operating cycle) represents cash consumed by lengthening asset conversion, not cash generated by operations.",
+    "D": "Northstar's working capital growth is unsustainable because it depends entirely on supplier financing. The $5M increase in accounts payable accounts for 71% of the $7M working capital increase, confirming that the company is unable to fund its operating cycle internally and must rely on trade credit to maintain liquidity."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Interpreting a working capital increase as an unqualified positive — working capital growth driven by inventory accumulation and receivable elongation consumes cash and signals operating inefficiency, not improved liquidity.",
+  "CorrectChoice": "C",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under ASC 205-10, financial statement analysis requires examining not just the direction of changes but their composition and drivers. Northstar's $7M increase in working capital appears positive at the headline level, but decomposition reveals concerning signals. Inventory grew 6.6% (from $91M to $97M) against COGS growth of 8.0% — the inventory growth rate is not per se excessive relative to COGS, but days inventory outstanding rose from 95 to 105 days, indicating inventory is turning more slowly. Receivables grew 9.5% ($21M to $23M) while revenue grew only 6.0% — the ratio of receivable growth to revenue growth exceeds 1.0, suggesting either extended credit terms or slower collections. The $5M payable increase is the largest single contributor to the working capital improvement. The 11-day CCC deterioration (64 to 71 days) means Northstar must finance 11 additional days of the operating cycle — consuming cash rather than generating it. A treasurer analyzing working capital quality must distinguish between working capital growth driven by operating efficiency (higher turnover, faster collections) and growth driven by asset build-up and cycle elongation. Northstar's trend falls in the latter category and warrants investigation of inventory composition and collection policies.",
+  "ExplanationWrongA": "This assessment treats the $7M working capital increase as categorically positive without examining whether the growth reflects operating efficiency or cycle elongation. A working capital increase that derives from inventory building faster than COGS and receivables growing faster than revenue consumes cash — it does not generate it. The current ratio decline from 2.04 to 2.00, while modest, corroborates the direction of deterioration. Attributing the CCC increase to a revenue-COGS growth differential that 'should normalize' is speculative without evidence of a specific, temporary cause for the inventory build-up.",
+  "ExplanationWrongB": "This analysis isolates the accounts payable increase and interprets it as systematic payment stretching without considering the full context. Payables grew 11.1%, but this figure must be evaluated against COGS growth of 8.0% and the overall operating cycle. While the payable growth rate exceeds COGS growth (suggesting longer payment terms), the more complete analytical story is that all three operating working capital components — inventory, receivables, and payables — are elongating, with inventory and receivables consuming more cash than payables are providing. Focusing solely on payables misses the broader pattern of operating cycle deterioration.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "This analysis attributes 71% of the working capital increase to the payable increase alone, but this calculation ignores that the $7M net increase is the result of multiple offsetting changes: inventory (+$6M), receivables (+$2M), payables (+$5M), and other current items (+$3M in other CA, +$1M net in other CL). The payable increase of $5M is the largest single component, but characterizing the entire increase as dependent on supplier financing overstates the case and oversimplifies the decomposition. The more precise analytical concern is that all three operating components are elongating, indicating a systemic working capital efficiency problem rather than a narrow supplier-financing dependency.",
+  "FormulaReference": "Cash Conversion Cycle = DIO + DSO - DPO",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-004",
+  "Section": "A",
+  "Stem": "Northstar Retail Holdings operates 42 department stores across the Midwest. Treasurer David Okonkwo presents the board with year-over-year working capital data. Current assets grew $11M to $230M, driven by a $6M inventory increase (to $97M) and a $2M receivables increase (to $23M). Current liabilities grew $4M to $115M, reflecting a $5M increase in accounts payable (to $50M) partially offset by a $1M decrease in other current liabilities. Working capital increased $7M to $115M. Revenue grew 6% to $520M, while COGS grew 8% to $338M. Mr. Okonkwo notes that the cash conversion cycle lengthened from 64 to 71 days, inventory days outstanding rose from 95 to 105 days, and the current ratio declined from 2.04 to 2.00. Which conclusion about the quality of Northstar's working capital trend is best supported?",
+  "Topic": "A.004 Working Capital — composition quality and operating cycle decomposition",
+  "UniqueConceptKey": "A-004-working-capital-composition-quality-and-operating-cycle-decompos",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by requirement to decompose a net working capital change into its components and evaluate the quality of each driver against underlying activity growth rates",
+    "Independent answer derived: inventory growth 6.6% vs COGS 8.0% (OK but DIO rose), AR growth 9.5% vs revenue 6.0% (red flag), AP growth 11.1% vs COGS 8.0% (stretch signal), CCC +11 days — C correctly identifies composition quality problem",
+    "Authority citation matches: ASC 205-10 for decision-useful financial statement analysis"
+  ],
+  "question_state": "Certified"
+},
+{
+  "Authorities": [
+    "ASC 230-10",
+    "ASC 205-10"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+    "A": "Harbor's current ratio of 1.95 and quick ratio of 1.10 provide sufficient evidence of adequate liquidity for the financing application. The operating cash flow ratio decline is temporary — the AR build reflects a deliberate credit policy to win large-hospital contracts, and the inventory build supports a strategic product launch. Both should normalize within two quarters.",
+    "B": "The operating cash flow ratio is not a liquidity measure — it measures cash flow adequacy, which is a solvency concept. For the equipment financing application, Ms. Kapoor should rely on the current and quick ratios, which directly measure the relationship between liquid assets and near-term obligations. The operating cash flow ratio belongs in a separate cash flow adequacy analysis.",
+    "C": "Harbor's operating cash flow decline is a serious warning signal that the current ratio of 1.95 masks. With operating cash flow of only $2.1M against $20.0M in current liabilities, Harbor lacks the cash generation capacity to service the proposed $12M equipment financing. Ms. Kapoor should recommend deferring the financing until operating cash flow recovers to at least the industry median.",
+    "D": "The divergence between accrual-based ratios (current ratio 1.95, quick ratio 1.10) and the operating cash flow ratio (0.105, down from 0.270) reveals that Harbor's reported liquidity is materially weaker than accrual measures suggest. The operating cash flow ratio of 0.105 means operating cash flow covers only 10.5% of current liabilities — less than one-third of the prior year's 27.0% and far below the industry median of 35.0%. The $4.8M AR build and $2.3M inventory build consumed $7.1M in operating cash that accrual accounting does not capture as a liquidity drain. Ms. Kapoor should present both accrual and cash-flow-based liquidity measures to the lender and explain the working capital investment driving the divergence."
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Relying exclusively on balance-sheet-based liquidity ratios when significant working capital investment consumes operating cash — the current and quick ratios classify receivables and inventory as 'liquid' assets without revealing the cash consumed to build them.",
+  "CorrectChoice": "D",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Under ASC 230-10, the statement of cash flows provides information about an entity's cash receipts and cash payments during a period — information that accrual-based balance sheet ratios cannot supply. The operating cash flow ratio (Operating Cash Flow / Current Liabilities = $2.1M / $20.0M = 0.105) measures the extent to which current liabilities are covered by cash generated from core operations. Harbor's ratio of 0.105 compares unfavorably to its prior-year 0.270 and the industry median of 0.350, indicating a material deterioration in cash-based liquidity. The key analytical insight is that accrual-based ratios (current ratio of 1.95, quick ratio of 1.10) reflect the balance sheet at a point in time and include non-cash working capital accounts — receivables and inventory — as liquid assets. But the $4.8M AR increase (+90-day hospital terms) and $2.3M inventory build together consumed $7.1M in operating cash that the current and quick ratios count as assets without revealing the cash consumption required to build them. A complete liquidity analysis under ASC 205-10 requires presenting both accrual-based and cash-flow-based measures and explaining the working capital movements that cause them to diverge.",
+  "ExplanationWrongA": "This assessment dismisses the 61% decline in the operating cash flow ratio (0.270 to 0.105) as temporary without adequate evidence. The 90-day hospital payment terms are a structural change in the receivables portfolio, not a one-time event — if these large-hospital contracts are recurring, the extended collection cycle will persist. The new product line inventory may or may not normalize within two quarters, depending on market acceptance. A lender evaluating a $12M equipment financing will reasonably question whether a company whose operating cash flow covers only 10.5% of current liabilities has the cash generation capacity to service additional debt. Characterizing these as temporary without providing supporting evidence — such as expected contract payment schedules or inventory sell-through projections — is analytically insufficient.",
+  "ExplanationWrongB": "This analysis incorrectly asserts that the operating cash flow ratio is not a liquidity measure. The operating cash flow ratio directly relates cash generated from operations to current liabilities — it is a cash-based liquidity measure recognized in financial statement analysis literature alongside accrual-based ratios. Distinguishing 'liquidity' from 'cash flow adequacy' as mutually exclusive categories is a false dichotomy: the ability to generate cash from operations is integral to an entity's capacity to satisfy current obligations as they mature. Under ASC 230-10, the statement of cash flows is a required financial statement precisely because accrual-based measures alone do not provide a complete picture of liquidity.",
+  "ExplanationWrongC": "This analysis reaches a premature conclusion — recommending deferral of the $12M financing — without evaluating the full context. The $7.1M in working capital investment (AR +$4.8M, inventory +$2.3M) represents a deliberate strategic allocation: winning large-hospital contracts and launching a new product line. If these investments are expected to generate incremental operating cash flow in future periods, the current OCF ratio of 0.105 may not be representative of Harbor's sustainable cash generation capacity. The analytically appropriate response is to present the divergence between accrual and cash-flow measures to the lender with an explanation of the working capital investments, not to recommend deferral without evaluating the expected return on those investments.",
+  "ExplanationWrongD": "",
+  "FormulaReference": "Operating Cash Flow Ratio = Operating Cash Flow / Current Liabilities",
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "QuestionID": "P2-A-005",
+  "Section": "A",
+  "Stem": "Harbor Healthcare Supply distributes medical devices to hospitals and clinics. Director of Finance Priya Kapoor is reviewing the company's liquidity position ahead of a $12M equipment financing application. Accrual-based metrics appear stable: the current ratio is 1.95 (current assets $39.0M, current liabilities $20.0M) and the quick ratio is 1.10. However, Harbor's operating cash flow was only $2.1M for the fiscal year, down from $5.4M the prior year. The decline is driven by a $4.8M increase in accounts receivable (several large hospital systems extended payment terms to 90 days) and a $2.3M inventory build (new product line launch). The operating cash flow ratio is 0.105 versus 0.270 in the prior year and an industry median of 0.35. Ms. Kapoor must assess whether the accrual-based ratios accurately represent Harbor's liquidity. Which analytical conclusion is most appropriate?",
+  "Topic": "A.005 Operating Cash Flow Ratio — divergence from accrual-based liquidity measures",
+  "UniqueConceptKey": "A-005-operating-cash-flow-ratio-divergence-from-accrual-based-liquidit",
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥75 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified by multi-dimensional analysis: accrual vs cash-based ratio comparison, working capital cash consumption decomposition, divergence explanation, lender communication strategy",
+    "Independent answer derived: OCF ratio = 2.1/20.0 = 0.105, prior year 5.4/20.0 = 0.270, industry 0.350, AR build $4.8M + inventory $2.3M = $7.1M cash consumed — B correctly identifies the divergence and its drivers",
+    "Authority citations match: ASC 230-10 for cash flow information, ASC 205-10 for complete analytical presentation"
+  ],
+  "question_state": "Certified"
+}
+];

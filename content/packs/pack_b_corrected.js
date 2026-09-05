@@ -3250,6 +3250,8 @@
     "ExplanationCorrect": "Operating budgets include sales, production, direct materials, direct labor, overhead, and S&A budgets. Capital, cash, and budgeted balance sheet are financial budgets.",
     "SourceDescription": "Original CMA Part 1 exam-style practice.",
     "QuestionID": "P1B-B-102",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "question_state": "Certified",
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
@@ -3268,10 +3270,10 @@
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
     ],
-    "ExplanationWrongA": "The cash budget is a financial budget, not an operating budget. Operating budgets include sales, production, direct materials, direct labor, overhead, and selling and administrative expense budgets.",
+    "ExplanationWrongA": "The capital expenditure budget plans long-term asset investments — it is a financial budget, not an operating budget. Operating budgets (sales, production, direct materials, direct labor, overhead, selling and administrative) plan day-to-day operations.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "The budgeted balance sheet is a financial budget. Operating budgets focus on the day-to-day operations of the business, while financial budgets plan for financial resources and position.",
-    "ExplanationWrongD": "While the sales budget is an operating budget, this list incorrectly excludes other operating budgets that are equally essential to the master budget process.",
+    "ExplanationWrongC": "The cash budget plans cash receipts and disbursements — it is a financial budget alongside the capital budget and budgeted balance sheet. The direct materials purchases budget (choice B) is the operating budget in this list.",
+    "ExplanationWrongD": "The budgeted balance sheet projects financial position — it is a financial budget, not an operating budget. Operating budgets drive the budgeted income statement; the direct materials purchases budget belongs to that operating set.",
     "DifficultyScore": 2,
     "CognitiveLevel": "Remember"
   },

@@ -1,6 +1,6 @@
 # Validation Report Summary
 
-**Generated:** 2026-08-30T01:17:47.481Z
+**Generated:** 2026-09-05T18:44:14.571Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
@@ -8,14 +8,14 @@
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
 | Repository Validator | PASS | 0 | 0 | 6ms |
-| Metadata Validator | WARN | 0 | 4 | 640ms |
-| Blueprint Validator | WARN | 0 | 70 | 275ms |
-| Part 2 Blueprint Validator | WARN | 0 | 1 | 2ms |
-| Difficulty Validator | WARN | 0 | 39 | 298ms |
-| Reference Validator | WARN | 0 | 159 | 210ms |
-| Explanation Validator | WARN | 0 | 24 | 1448ms |
-| Case Integrity Validator | WARN | 0 | 10 | 36ms |
-| PsychometricValidator | WARN | 0 | 1662 | 1417ms |
+| Metadata Validator | WARN | 0 | 4 | 615ms |
+| Blueprint Validator | WARN | 0 | 70 | 155ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 1ms |
+| Difficulty Validator | WARN | 0 | 39 | 233ms |
+| Reference Validator | WARN | 0 | 159 | 189ms |
+| Explanation Validator | WARN | 0 | 24 | 475ms |
+| Case Integrity Validator | WARN | 0 | 10 | 41ms |
+| PsychometricValidator | WARN | 0 | 1662 | 1671ms |
 
 **Total Errors:** 0
 **Total Warnings:** 1969
@@ -32,7 +32,7 @@
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 640ms
+**Duration:** 615ms
 **Statistics:**
 - Cases Checked: 75
 **Warnings:**
@@ -43,7 +43,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 275ms
+**Duration:** 155ms
 **Statistics:**
 - Cases Checked: 75
 - Cross-Domain Cases: 2
@@ -127,7 +127,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 2ms
+**Duration:** 1ms
 **Statistics:**
 - P2 MCQ Packs Found: 0
 - P2 Case Packs Found: 0
@@ -138,7 +138,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 298ms
+**Duration:** 233ms
 **Statistics:**
 - Cases Checked: 75
 - Items Checked: 400
@@ -195,7 +195,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 210ms
+**Duration:** 189ms
 **Statistics:**
 - Cases Checked: 75
 - Total References: 0
@@ -364,15 +364,15 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 1448ms
+**Duration:** 475ms
 **Statistics:**
 - MCQ Questions Checked: 2620
 - Case Items Checked: 400
 - Questions with Placeholder Explanations: 0
 - Fields with Placeholder Text: 0
 - Short Explanations (<50 chars): 20
-- Correct Explanation Avg Length: 527
-- Wrong Explanation Avg Length: 345
+- Correct Explanation Avg Length: 526
+- Wrong Explanation Avg Length: 344
 **Warnings:**
 - content/packs/pack_e_corrected.js [225] (P1E-E-004): ExplanationCorrect is short (48 chars)
 - content/packs/pack_e_corrected.js [231] (P1E-E-010): ExplanationCorrect is short (47 chars)
@@ -401,7 +401,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 36ms
+**Duration:** 41ms
 **Statistics:**
 - Total Cases Checked: 75
 - Total Items Checked: 400
@@ -428,7 +428,7 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 1417ms
+**Duration:** 1671ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2120
 - AbsoluteLanguageValidator.findings: 794

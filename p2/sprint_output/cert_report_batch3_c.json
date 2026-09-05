@@ -1,0 +1,445 @@
+{
+  "report_id": "CERT_BATCH3_C_20260905",
+  "batch_file": "p2/sprint_output/pack_p2_c_batch3.js",
+  "item_count": 15,
+  "domain": "C — Decision Analysis",
+  "LOS_range": "C.5 (CVP Analysis)",
+  "certifier": "Independent Blind Certifier (AI)",
+  "certification_date": "2026-09-05",
+  "schema_standard": "P2_SCHEMA_v1.1",
+  "certification_standard": "P2002_CERTIFICATION_STANDARD_v1.0",
+  "formula_master": "P2005_FORMULA_MASTER.json",
+  "verdict": "FAIL",
+  "verdict_summary": "6 of 15 items FAIL independent verification. 3 items have wrong CorrectChoice (explanation confirms correct math but designated answer is incorrect). 2 items have arithmetic that does not support any answer choice. 1 item has logically inverted conclusion. 2 items have negative-margin scenarios requiring editorial clarification. Only 7 of 15 items pass all dimensions.",
+
+  "structural_summary": {
+    "all_items_have_Part2OnlyFlag": true,
+    "all_items_have_schema_version": true,
+    "all_items_have_question_state": true,
+    "all_QID_format_valid": true,
+    "all_have_Choices_ABCD": true,
+    "all_have_ExplanationCorrect": true,
+    "DL008_violations": 0,
+    "DL026_violations": 0,
+    "DL013_violations": 0,
+    "structural_verdict": "PASS"
+  },
+
+  "items": [
+    {
+      "QuestionID": "P2-C-651",
+      "topic": "C.5 Breakeven analysis",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "BE = FC/CM = $180,000/($75-$45) = $180,000/$30 = 6,000 units. Matches A. Formula DA-01 from P2005." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable to stem: FC=$180K, SP=$75, VC=$45. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply is appropriate for single-product basic breakeven." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B ($180K/$75=2,400) omits VC. C ($180K/$45=4,000) confuses VC with CM. D is miscalculation. All plausible." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — breakeven computation." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP analysis is Part 2 Decision Analysis core." }
+      },
+      "recalculation": {
+        "formula": "BE_units = FC / CM_per_unit",
+        "CM_per_unit": "$75 - $45 = $30",
+        "BE_units": "$180,000 / $30 = 6,000",
+        "stored_answer": "A (6,000 units)",
+        "independent_answer": "6,000 units",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-652",
+      "topic": "C.5 CM ratio and breakeven in dollars",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CM ratio = 1 - 0.60 = 0.40. BE$ = $480,000/0.40 = $1,200,000. Matches C. Formula DA-02." },
+        "Precision": { "confidence": "HIGH", "notes": "VC ratio 60% → CM ratio 40%. FC=$480K. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply — straightforward CM ratio application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A confuses per-unit with ratio. B = FC itself. D inverts CM ratio. All distinct." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — CM ratio breakeven." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP analysis is Part 2 Decision Analysis core." }
+      },
+      "recalculation": {
+        "formula": "BE_$ = FC / CM_Ratio",
+        "CM_Ratio": "1 - 0.60 = 0.40",
+        "BE_dollars": "$480,000 / 0.40 = $1,200,000",
+        "stored_answer": "C ($1,200,000)",
+        "independent_answer": "$1,200,000",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-653",
+      "topic": "C.5 Target profit analysis",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Pre-tax target = $250K/0.625 = $400K. Sales = ($320K+$400K)/0.50 = $1,440K. Matches C. Formula DA-03 with tax adjustment." },
+        "Precision": { "confidence": "HIGH", "notes": "After-tax $250K, tax 37.5%, FC $320K, CM ratio 50%. All traceable. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — requires after-tax to pre-tax conversion plus target profit formula." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A omits tax gross-up. B uses wrong tax rate. D applies tax adjustment in wrong direction." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — target profit with tax effects." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP target profit is Part 2 Decision Analysis core." }
+      },
+      "recalculation": {
+        "formula": "Required Sales = (FC + PreTax_Target) / CM_Ratio",
+        "pre_tax_target": "$250,000 / (1 - 0.375) = $250,000 / 0.625 = $400,000",
+        "required_sales": "($320,000 + $400,000) / 0.50 = $720,000 / 0.50 = $1,440,000",
+        "verification": "$1,440,000 × 0.50 = $720,000 CM; $720,000 - $320,000 = $400,000 pre-tax; $400,000 × 0.625 = $250,000 after-tax ✓",
+        "stored_answer": "C ($1,440,000)",
+        "independent_answer": "$1,440,000",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-654",
+      "topic": "C.5 Multi-product CVP analysis",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "CRITICAL — Wrong Answer",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "WACM = ($14×0.60)+($26×0.40) = $8.40+$10.40 = $18.80. BE = $188,000/$18.80 = 10,000 units. Correct answer is A (10,000), NOT C (13,429). The ExplanationCorrect itself states 'The correct WACM-based answer is 10,000' but designates C as correct. 13,429 = $188,000/$14 (using only Alpine CM, ignoring sales mix)." },
+        "Precision": { "confidence": "ZERO", "notes": "The explanation contradicts the designated correct choice. The author's own math confirms A is correct." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Moderate/Apply appropriate for multi-product CVP, but item is unsalvageable as written." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "A is actually the correct answer, making it not a distractor. The designated correct answer C is the distractor (single-product CM error)." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — multi-product CVP." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Multi-product CVP is Part 2 Decision Analysis core." }
+      },
+      "recalculation": {
+        "formula": "BE_total = FC / WACM",
+        "WACM": "($14 × 0.60) + ($26 × 0.40) = $8.40 + $10.40 = $18.80",
+        "BE_total": "$188,000 / $18.80 = 10,000 units",
+        "stored_answer": "C (13,429 units)",
+        "independent_answer": "A (10,000 units)",
+        "match": false,
+        "stored_answer_derivation": "$188,000 / $14 = 13,428.6 ≈ 13,429 (uses only Alpine CM, ignores sales mix — incorrect)"
+      },
+      "defect": "CorrectChoice is wrong. Explanation confirms A (10,000) is correct WACM answer but item designates C. Requires CorrectChoice change A→C reversed, or stem rewrite to test single-product error recognition."
+    },
+    {
+      "QuestionID": "P2-C-655",
+      "topic": "C.5 Margin of safety",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "MOS units = 18,000 - 15,000 = 3,000. MOS% = 3,000/18,000 = 16.67%. Matches B. Formula DA-04." },
+        "Precision": { "confidence": "HIGH", "notes": "Current sales 18,000, BE 15,000. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Apply — tests both unit and % forms." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A uses wrong denominator (BE instead of current). C reverses ratio. D adds instead of subtracts." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — margin of safety." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Margin of safety is Part 2 CVP core." }
+      },
+      "recalculation": {
+        "formula": "MOS% = (Actual Sales - BE Sales) / Actual Sales",
+        "MOS_units": "18,000 - 15,000 = 3,000",
+        "MOS_percent": "3,000 / 18,000 = 0.1667 = 16.7%",
+        "stored_answer": "B (3,000 units and 16.7%)",
+        "independent_answer": "3,000 units and 16.7%",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-656",
+      "topic": "C.5 Degree of operating leverage",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "CRITICAL — Negative Operating Income Makes DOL Undefined",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CM = $120,000. OI = $120,000 - $150,000 = -$30,000. DOL = $120,000 / (-$30,000) = -4.0. DOL is undefined/negative at negative operating income. The explanation itself acknowledges this: 'When operating income is negative, DOL is not meaningful in the traditional sense.' Yet the item designates C (20%) as correct with no valid derivation. The explanation backfills a hypothetical scenario with different fixed costs to justify 20%." },
+        "Precision": { "confidence": "ZERO", "notes": "The given parameters produce negative OI, making DOL meaningless. The explanation admits this but assigns an answer anyway." },
+        "DifficultyCalibration": { "confidence": "LOW", "notes": "Moderate/Analyze — conceptually appropriate but mathematically broken." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "All distractors are based on hypothetical DOL values, not the actual scenario. No valid answer exists." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — DOL." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DOL is Part 2 CVP core." }
+      },
+      "recalculation": {
+        "formula": "DOL = CM / Operating Income",
+        "CM": "$300,000 - $180,000 = $120,000",
+        "OI": "$120,000 - $150,000 = -$30,000",
+        "DOL": "$120,000 / (-$30,000) = -4.0 (undefined for CVP purposes)",
+        "stored_answer": "C (20%)",
+        "independent_answer": "No valid answer — negative OI makes DOL undefined",
+        "match": false,
+        "root_cause": "Fixed costs ($150,000) exceed contribution margin ($120,000), producing negative OI. DOL cannot be meaningfully computed. Either FC must be reduced (e.g., to $60,000 → OI=$60,000 → DOL=2.0 → 20% answer valid) or the question must be restructured."
+      },
+      "defect": "Item parameters produce negative operating income, making DOL undefined. The explanation acknowledges this but assigns an answer based on hypothetical different parameters. Requires FC reduction or scenario rewrite."
+    },
+    {
+      "QuestionID": "P2-C-657",
+      "topic": "C.5 Target profit analysis",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CM per unit = $80. CM ratio = 0.40. Sales = ($200K+$80K)/0.40 = $700K. Matches B. Formula DA-03/DA-02." },
+        "Precision": { "confidence": "HIGH", "notes": "SP=$200, VC=$120, FC=$200K, target OI=$80K. All traceable. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — standard target profit." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A confuses ratio. C omits FC. D uses VC ratio instead of CM ratio." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — target profit in dollars." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP target profit is Part 2 core." }
+      },
+      "recalculation": {
+        "formula": "Required Sales = (FC + Target_OI) / CM_Ratio",
+        "CM_per_unit": "$200 - $120 = $80",
+        "CM_Ratio": "$80 / $200 = 0.40",
+        "required_sales": "($200,000 + $80,000) / 0.40 = $280,000 / 0.40 = $700,000",
+        "verification": "$700,000 × 0.40 = $280,000 CM; $280,000 - $200,000 = $80,000 OI ✓",
+        "stored_answer": "B ($700,000)",
+        "independent_answer": "$700,000",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-658",
+      "topic": "C.5 Degree of operating leverage",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "DOL = 0.60S/(0.60S-200K) = 3. Solving: 0.60S = 1.80S-600K → 1.20S=600K → S=$500K. Matches B. Formula DA-05." },
+        "Precision": { "confidence": "HIGH", "notes": "CM ratio 60%, FC $200K, target DOL 3.0. Algebraically solvable. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze — requires algebraic manipulation of DOL formula." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A = breakeven ($333K). C = algebraic error. D = wrong DOL target." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — DOL target sales." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "DOL is Part 2 CVP core." }
+      },
+      "recalculation": {
+        "formula": "DOL = CM / OI = 0.60S / (0.60S - FC)",
+        "equation": "0.60S / (0.60S - 200,000) = 3.0",
+        "solution": "0.60S = 1.80S - 600,000 → 600,000 = 1.20S → S = $500,000",
+        "verification": "CM = $300,000; OI = $100,000; DOL = $300,000/$100,000 = 3.0 ✓",
+        "stored_answer": "B ($500,000)",
+        "independent_answer": "$500,000",
+        "match": true
+      }
+    },
+    {
+      "QuestionID": "P2-C-659",
+      "topic": "C.5 CM ratio and sensitivity analysis",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "CRITICAL — Wrong Answer",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "Required units = ($180K+$60K)/($80-$48) = $240K/$32 = 7,500. Correct answer is C (7,500), NOT D (2,250). The ExplanationCorrect itself confirms 'Required units = 7,500 pairs' and 'The answer D (2,250 pairs) corresponds to dividing fixed costs by selling price ($180,000 / $80 = 2,250), which is the breakeven point ignoring variable costs.' The explanation literally identifies D as the wrong answer yet designates it as correct." },
+        "Precision": { "confidence": "ZERO", "notes": "The explanation explicitly states the correct calculation yields 7,500 (answer C) and that D (2,250) is a common error. The CorrectChoice contradicts the explanation." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Moderate-Easy/Apply — target profit in units. Appropriate level." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "C is actually the correct answer. D is the designated correct but is actually a distractor (breakeven without target). Structural inversion." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — target profit in units." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP target profit is Part 2 core." }
+      },
+      "recalculation": {
+        "formula": "Required Units = (FC + Target_OI) / CM_per_unit",
+        "CM_per_unit": "$80 - $48 = $32",
+        "required_units": "($180,000 + $60,000) / $32 = $240,000 / $32 = 7,500",
+        "verification": "7,500 × $32 = $240,000 CM; $240,000 - $180,000 = $60,000 OI ✓",
+        "stored_answer": "D (2,250 pairs)",
+        "independent_answer": "C (7,500 pairs)",
+        "match": false,
+        "stored_answer_derivation": "$180,000 / $80 = 2,250 (breakeven ignoring VC — incorrect)"
+      },
+      "defect": "CorrectChoice is wrong. Explanation confirms C (7,500) is correct. D (2,250) is a distractor representing breakeven without target income. Requires CorrectChoice change D→C."
+    },
+    {
+      "QuestionID": "P2-C-660",
+      "topic": "C.5 Sensitivity analysis",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "HIGH — Arithmetic Does Not Match Any Answer",
+      "dimensions": {
+        "Correctness": { "confidence": "LOW", "notes": "New sales = $500K × 1.10 × 0.95 = $522,500. New CM = $522,500 × 0.62 = $323,950. New OI = $323,950 - $240,000 = $83,950. No answer choice matches. The explanation acknowledges 'None of the answers match exactly' and then hand-waves to D ($75,000) via an unsupported approximation." },
+        "Precision": { "confidence": "LOW", "notes": "The arithmetic is internally consistent but does not yield any of the four answer choices. The explanation resorts to approximation language." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Difficult/Analyze — multi-factor sensitivity is appropriate complexity." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "Since the correct answer ($83,950) is not among choices, all options are effectively distractors for a broken question." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — sensitivity analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Sensitivity analysis is Part 2 CVP core." }
+      },
+      "recalculation": {
+        "formula": "New OI = (Sales × 1.10 × 0.95 × New_CM_Ratio) - FC",
+        "current_OI": "$500,000 × 0.60 - $240,000 = $60,000",
+        "new_sales": "$500,000 × 1.10 × 0.95 = $522,500",
+        "new_CM": "$522,500 × 0.62 = $323,950",
+        "new_OI": "$323,950 - $240,000 = $83,950",
+        "stored_answer": "D ($75,000)",
+        "independent_answer": "$83,950 (not among choices)",
+        "match": false
+      },
+      "defect": "No answer choice matches the calculated $83,950. The explanation admits this. Requires either (a) recalculating with different assumptions that yield one of the choices, or (b) adding $83,950 as a choice, or (c) restructuring the scenario parameters."
+    },
+    {
+      "QuestionID": "P2-C-661",
+      "topic": "C.5 Sensitivity analysis",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "HIGH — Arithmetic Does Not Match Answer",
+      "dimensions": {
+        "Correctness": { "confidence": "LOW", "notes": "Current OI = 20,000×$20 - $300K = $100K. New: CM=$24, FC=$360K. Required = ($360K+$100K)/$24 = 19,167 units. Answer A (20,000) yields OI=$120K, not $100K. The explanation acknowledges the discrepancy and defaults to A as 'closest.'" },
+        "Precision": { "confidence": "LOW", "notes": "The correct answer (19,167) is not among choices. 20,000 is the closest but produces different income than current." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Moderate/Analyze — cost structure trade-off is appropriate." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "Since 19,167 is not a choice, all options are effectively wrong." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — sensitivity/cost structure analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost structure sensitivity is Part 2 CVP core." }
+      },
+      "recalculation": {
+        "formula": "Required Units = (New_FC + Target_OI) / New_CM_per_unit",
+        "current_OI": "20,000 × ($50-$30) - $300,000 = $100,000",
+        "new_CM_per_unit": "$50 - $26 = $24",
+        "new_FC": "$300,000 + $60,000 = $360,000",
+        "required_units": "($360,000 + $100,000) / $24 = $460,000 / $24 = 19,167",
+        "at_20000": "20,000 × $24 - $360,000 = $120,000 (not $100,000)",
+        "stored_answer": "A (20,000 units)",
+        "independent_answer": "19,167 units (not among choices)",
+        "match": false
+      },
+      "defect": "No answer choice matches 19,167. A (20,000) yields different income ($120K vs $100K). Requires either adding 19,167 as a choice or adjusting parameters so the answer is round."
+    },
+    {
+      "QuestionID": "P2-C-662",
+      "topic": "C.5 Tax effects on breakeven",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "HIGH — Arithmetic Does Not Match Answer",
+      "dimensions": {
+        "Correctness": { "confidence": "LOW", "notes": "Pre-tax = $112K/0.70 = $160K. CM ratio = 0.40. Sales = ($100K+$160K)/0.40 = $650,000. Answer A ($840,000) is not derivable from stated parameters. The explanation acknowledges inconsistency: 'The answer A ($840,000) would be correct if fixed costs were $180,000.' The item contains an internal contradiction." },
+        "Precision": { "confidence": "LOW", "notes": "The stated parameters yield $650,000, not $840,000. The explanation reveals the author tested with different FC ($180K vs stated $100K)." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Moderate/Apply — tax gross-up with CVP is appropriate." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "All choices are based on parameter variations, but the correct answer ($650K) is not among them." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — tax effects on breakeven." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Tax-adjusted CVP is Part 2 core." }
+      },
+      "recalculation": {
+        "formula": "Required Sales = (FC + PreTax_Target) / CM_Ratio",
+        "pre_tax_target": "$112,000 / (1 - 0.30) = $112,000 / 0.70 = $160,000",
+        "CM_Ratio": "($80-$48)/$80 = $32/$80 = 0.40",
+        "required_sales": "($100,000 + $160,000) / 0.40 = $260,000 / 0.40 = $650,000",
+        "stored_answer": "A ($840,000)",
+        "independent_answer": "$650,000 (not among choices)",
+        "match": false,
+        "note": "If FC were $176,000: ($176K+$160K)/0.40 = $840,000. The explanation implies FC should be $180K, not $100K."
+      },
+      "defect": "Stated FC ($100K) produces $650K, not $840K. The explanation reveals FC was likely intended to be $176K-$180K. Requires FC correction or answer choice addition."
+    },
+    {
+      "QuestionID": "P2-C-663",
+      "topic": "C.5 Fixed cost steps",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "MEDIUM — Negative Margin of Safety Needs Clarification",
+      "dimensions": {
+        "Correctness": { "confidence": "MEDIUM", "notes": "At 12,000 units, FC=$350K (step triggered). CM=$25. BE=14,000. MOS = 12,000 - 14,000 = -2,000. The company is BELOW breakeven. Answer D (2,000) uses |MOS| = 2,000. The explanation acknowledges the negative MOS. While mathematically the absolute value is 2,000, presenting a negative MOS as a positive 'margin of safety' is misleading — the company has no margin of safety, it has a shortfall." },
+        "Precision": { "confidence": "MEDIUM", "notes": "The arithmetic is correct (BE=14,000, MOS=-2,000). But presenting |MOS| as the answer without clarifying the company is below breakeven is educationally problematic." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Analyze — step costs add complexity. Appropriate." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A uses wrong FC tier. B confuses VC with CM. C focuses on step cost alone." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — step-fixed cost CVP." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Step-fixed CVP is Part 2 Decision Analysis." }
+      },
+      "recalculation": {
+        "formula": "BE = FC_step / CM_per_unit",
+        "FC_at_12000": "$250,000 + $100,000 = $350,000",
+        "CM_per_unit": "$60 - $35 = $25",
+        "BE": "$350,000 / $25 = 14,000 units",
+        "MOS": "12,000 - 14,000 = -2,000 units (below breakeven)",
+        "stored_answer": "D (2,000 units)",
+        "independent_answer": "2,000 units shortfall (not margin of safety)",
+        "match": "partial — magnitude correct, concept inverted"
+      },
+      "defect": "Company operates below breakeven (MOS is negative). Presenting |MOS| as 'margin of safety' is misleading. Either (a) reduce current production above 14,000 so MOS is positive, or (b) reframe the question to ask for the 'shortfall below breakeven' rather than 'margin of safety.'"
+    },
+    {
+      "QuestionID": "P2-C-664",
+      "topic": "C.5 Sales mix",
+      "verdict": "FAIL",
+      "arithmetic_correct": false,
+      "severity": "MEDIUM — Logic Inversion",
+      "dimensions": {
+        "Correctness": { "confidence": "LOW", "notes": "Current WACM = $21, BE = 8,000. New WACM (50/50) = $23, BE = 7,304. The shift TOWARD the higher-CM product (BaseCamp from 30%→50%) INCREASES WACM and DECREASES breakeven by 696 units. Answer A (2,000 additional units) implies breakeven INCREASED, which is the opposite of what the math shows. The explanation acknowledges this contradiction." },
+        "Precision": { "confidence": "LOW", "notes": "The explanation itself states the shift 'raises WACM from $21 to $23 and LOWERS breakeven from 8,000 to 7,304 units' but then assigns A (2,000 additional units). The logic is inverted." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Evaluate — sales mix sensitivity is appropriately complex." },
+        "DistractorEngineering": { "confidence": "LOW", "notes": "The correct answer (breakeven decreases by ~696 units) is not among choices. A implies increase, which is wrong direction." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — sales mix sensitivity." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Sales mix CVP is Part 2 core." }
+      },
+      "recalculation": {
+        "current_WACM": "($18×0.70)+($28×0.30) = $12.60+$8.40 = $21.00",
+        "current_BE": "$168,000 / $21 = 8,000 units",
+        "new_WACM": "($18×0.50)+($28×0.50) = $9+$14 = $23.00",
+        "new_BE": "$168,000 / $23 = 7,304.3 units",
+        "difference": "7,304 - 8,000 = -696 units (fewer needed, not more)",
+        "stored_answer": "A (2,000 additional units)",
+        "independent_answer": "~696 fewer units needed (breakeven decreases)",
+        "match": false,
+        "root_cause": "The 50/50 shift increases the proportion of higher-CM BaseCamp, improving WACM and lowering breakeven. For answer A to be correct, the mix would need to shift toward the LOWER-CM product (e.g., 70/30 → 30/70, but even then the numbers don't yield 2,000)."
+      },
+      "defect": "Logic is inverted. Shifting toward higher-CM product lowers breakeven, not raises it. Either (a) reverse the mix shift direction (70/30 → 30/70), or (b) change the question to ask how many fewer units are needed, or (c) redesign with parameters that produce a 2,000-unit increase."
+    },
+    {
+      "QuestionID": "P2-C-665",
+      "topic": "C.5 Multi-product CM ratio",
+      "verdict": "PASS",
+      "arithmetic_correct": true,
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Heritage CM=$160K, Modern CM=$168K, Total CM=$328K. Heritage Rev=$400K, Modern Rev=$420K, Total Rev=$820K. CM Ratio = $328K/$820K = 0.40 = 40.0%. Matches A." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable: SP, VC, units for each product. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Apply — multi-product CM ratio aggregation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B averages CM ratios (40%→42.9% miscalc). C inflates one product's CM. D uses partial revenue." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "Maps to LOS C.5 — multi-product CM ratio." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Multi-product CVP is Part 2 core." }
+      },
+      "recalculation": {
+        "Heritage_CM": "($500-$300) × 800 = $200 × 800 = $160,000",
+        "Modern_CM": "($350-$210) × 1,200 = $140 × 1,200 = $168,000",
+        "Total_CM": "$160,000 + $168,000 = $328,000",
+        "Heritage_Rev": "$500 × 800 = $400,000",
+        "Modern_Rev": "$350 × 1,200 = $420,000",
+        "Total_Rev": "$400,000 + $420,000 = $820,000",
+        "CM_Ratio": "$328,000 / $820,000 = 0.4000 = 40.0%",
+        "stored_answer": "A (40.0%)",
+        "independent_answer": "40.0%",
+        "match": true
+      }
+    }
+  ],
+
+  "summary_statistics": {
+    "total_items": 15,
+    "PASS": 7,
+    "FAIL": 8,
+    "pass_rate": "46.7%",
+    "critical_defects": 3,
+    "high_defects": 3,
+    "medium_defects": 2,
+    "by_dimension": {
+      "Correctness": { "HIGH": 7, "MEDIUM": 1, "LOW": 3, "ZERO": 4 },
+      "Precision": { "HIGH": 7, "MEDIUM": 1, "LOW": 3, "ZERO": 4 },
+      "DifficultyCalibration": { "HIGH": 10, "MEDIUM": 4, "LOW": 1 },
+      "DistractorEngineering": { "HIGH": 7, "MEDIUM": 0, "LOW": 5, "N/A": 3 },
+      "BlueprintAlignment": { "HIGH": 15 },
+      "Part2Relevance": { "HIGH": 15 }
+    },
+    "items_passing_all_dimensions": ["P2-C-651", "P2-C-652", "P2-C-653", "P2-C-655", "P2-C-657", "P2-C-658", "P2-C-665"],
+    "items_failing": [
+      { "QID": "P2-C-654", "severity": "CRITICAL", "issue": "CorrectChoice wrong — explanation confirms A (10,000) but item designates C (13,429)" },
+      { "QID": "P2-C-656", "severity": "CRITICAL", "issue": "Negative operating income makes DOL undefined; no valid answer exists" },
+      { "QID": "P2-C-659", "severity": "CRITICAL", "issue": "CorrectChoice wrong — explanation confirms C (7,500) but item designates D (2,250)" },
+      { "QID": "P2-C-660", "severity": "HIGH", "issue": "Calculated OI ($83,950) matches no answer choice" },
+      { "QID": "P2-C-661", "severity": "HIGH", "issue": "Required units (19,167) not among choices" },
+      { "QID": "P2-C-662", "severity": "HIGH", "issue": "Stated FC produces $650K sales, not $840K (answer A)" },
+      { "QID": "P2-C-663", "severity": "MEDIUM", "issue": "Negative margin of safety (below breakeven) presented as positive" },
+      { "QID": "P2-C-664", "severity": "MEDIUM", "issue": "Logic inverted — mix shift toward higher-CM product lowers BE, not raises it" }
+    ]
+  },
+
+  "remediation_required": {
+    "block_certification": true,
+    "items_requiring_fix_before_certification": 8,
+    "recommended_actions": [
+      "P2-C-654: Change CorrectChoice from C to A, or rewrite question to test single-product CM error recognition",
+      "P2-C-656: Reduce fixed costs to ≤$120,000 so OI is positive, or restructure question entirely",
+      "P2-C-659: Change CorrectChoice from D to C",
+      "P2-C-660: Adjust scenario parameters so calculated OI matches one of the four choices, or add correct answer as fifth choice",
+      "P2-C-661: Adjust parameters so required units is a round number matching one of the choices",
+      "P2-C-662: Correct fixed costs to $176,000-$180,000 so sales = $840,000, or change answer to $650,000",
+      "P2-C-663: Either increase current production above 14,000 (positive MOS) or reframe question to ask for shortfall",
+      "P2-C-664: Reverse mix shift direction or redesign scenario so breakeven increases by 2,000 units"
+    ]
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "report_id": "CERT-B4-B-20260905",
+  "batch_file": "p2/sprint_output/pack_p2_b_batch4.js",
+  "certifier": "Independent Blind Certifier",
+  "verification_date": "2026-09-05",
+  "item_count": 15,
+  "qids": [
+    "P2-B-546", "P2-B-547", "P2-B-548", "P2-B-549", "P2-B-550",
+    "P2-B-551", "P2-B-552", "P2-B-553", "P2-B-554", "P2-B-555",
+    "P2-B-556", "P2-B-557", "P2-B-558", "P2-B-559", "P2-B-560"
+  ],
+  "per_item": [
+    {
+      "QuestionID": "P2-B-546",
+      "topic": "B.3 Modigliani-Miller Proposition I without taxes",
+      "cc": "A",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "M&M Prop I without taxes: V_L = V_U — firm value invariant to capital structure. CC=A correctly identifies this. EC references the proposition accurately." },
+        "Precision": { "confidence": "HIGH", "notes": "Unambiguous fact pattern. Single defensible answer. No missing assumptions." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Remember — appropriate for a definitional recall item on M&M I." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B confuses with Proposition II (WACC offset), C imports trade-off theory distress costs, D confuses equity magnification with firm value. Each targets a distinct misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Capital Structure. Maps to M&M propositions." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Capital structure theory is core Part 2 Corporate Finance." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-547",
+      "topic": "B.3 Trade-off theory of capital structure",
+      "cc": "B",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Trade-off theory: optimal structure balances marginal tax shield vs marginal distress cost. CC=B correctly states this." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear framework question. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand — appropriate for conceptual understanding of trade-off theory." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A ignores tax shields, C ignores tax deductibility of interest, D applies M&M without taxes. Each is a distinct misconception." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Capital Structure. Trade-off theory." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Trade-off theory is core Part 2." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-548",
+      "topic": "B.3 Pecking order theory",
+      "cc": "B",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Pecking order: retained earnings first (internal), then debt, then equity. CC=B correctly identifies retained earnings as first source." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear hierarchy question. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand — appropriate for conceptual understanding of pecking order." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A ranks equity first (last in pecking order), C omits internal financing, D treats convertible as bypass. Each distinct." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Capital Structure. Pecking order theory." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pecking order is core Part 2." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-549",
+      "topic": "B.3 CAPM for cost of equity",
+      "cc": "C",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "CAPM: Re = Rf + β × MRP = 3.0% + 1.4 × 6.0% = 11.40%. CC=C is correct." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Distractor A states 9.00% with formula 'risk-free rate plus beta times market return.' Using given inputs: 3.0% + 1.4 × 6.0% = 11.40%, not 9.00%. The stated value 9.00% does not arise from any standard CAPM error path with the given inputs. The conceptual error is valid (using market return instead of premium) but the numeric value is not derivable. Minor precision issue — does not affect correct answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — appropriate for CAPM computation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A uses market return instead of premium (valid concept, wrong arithmetic), B multiplies beta by risk-free rate, D omits risk-free rate. Each targets a distinct CAPM error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — CAPM. Formula CB-04." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CAPM is core Part 2 Corporate Finance." }
+      },
+      "overall_confidence": "MEDIUM",
+      "certification_eligible": true,
+      "defects": [
+        {
+          "severity": "LOW",
+          "description": "Distractor A numeric value (9.00%) is not derivable from any standard CAPM error path with given inputs (Rf=3%, β=1.4, MRP=6%). The conceptual error is valid but the arithmetic does not work. Recommend correcting to 15.60% (Rf + β × Rm where Rm = 9%) or adjusting the description."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-550",
+      "topic": "B.3 Cost of debt after-tax adjustment",
+      "cc": "D",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "After-tax cost of debt = YTM × (1 − t) = 7.5% × 0.75 = 5.625% ≈ 5.63%. CC=D correct." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Single defensible answer. YTM correctly used (not coupon)." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply — straightforward after-tax adjustment." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A omits tax shield, B computes tax shield only (Rd×t), C reports tax shield as answer. Each distinct." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Cost of Debt. Formula CB-07." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "After-tax cost of debt is core Part 2 WACC component." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-551",
+      "topic": "B.3 Cost of preferred stock",
+      "cc": "A",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Rp = Dp/Pp = $4.50/($50-$5) = $4.50/$45.00 = 10.00%. CC=A correct. No tax adjustment for preferred." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Flotation costs correctly subtracted from price." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — requires understanding flotation cost treatment." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B ignores flotation costs, C incorrectly applies tax adjustment, D adds phantom tax adjustment. Each distinct." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Cost of Preferred Stock. Formula CB-06." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost of preferred stock is core Part 2." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-552",
+      "topic": "B.3 WACC calculation with preferred stock",
+      "cc": "D",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "WACC = (0.60×14.75%) + (0.10×8.0%) + (0.30×6.0%×0.75) = 8.85% + 0.80% + 1.35% = 11.00%. CC=D correct." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Market value weights used. After-tax debt correctly computed." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — multi-component WACC calculation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A uses pre-tax debt, B omits preferred, C uses book values. Classic WACC errors per Formula Master." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — WACC. Formula CB-05." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "WACC calculation is core Part 2." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-553",
+      "topic": "B.3 Flotation costs and WACC",
+      "cc": "B",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL DEFECT: CC=B (10.08%, WACC without flotation) but the stem explicitly states 'issuing new common stock.' The EC itself states: 'The question asks for WACC adjusted for flotation costs, which would be 10.93%.' The EC contradicts the CC. With flotation: Re_adjusted = 14.0%/(1-0.08) = 15.22%, WACC = (0.60×15.22%) + (0.40×4.5%) = 9.13% + 1.80% = 10.93% = Choice A. CC should be A, not B." },
+        "Precision": { "confidence": "ZERO", "notes": "The EC and CC are contradictory. The stem says 'issuing new common stock' which requires flotation adjustment." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze — appropriate for flotation-adjusted WACC." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A applies flotation correctly, C subtracts instead of divides, D adds as separate component. Good distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Flotation costs. Formula CB-05." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Flotation cost adjustment is core Part 2." }
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "CRITICAL",
+          "description": "CC/EC mismatch. CC = B (10.08%, no flotation) but EC states answer should be 10.93% (with flotation). Stem says 'issuing new common stock' requiring flotation adjustment. CC should be A (10.93%).",
+          "recommended_fix": "Change CC from B to A. Update EW fields: clear EW[A], set EW[B] to substantive distractor text explaining that 10.08% applies only when using retained earnings."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-554",
+      "topic": "B.3 Agency cost of debt versus equity",
+      "cc": "A",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL DEFECT: The scenario describes shareholders pursuing risky projects to transfer wealth from bondholders — this is asset substitution (risk-shifting), not underinvestment. CC=A (underinvestment) is wrong; CC should be B (asset substitution). The EC itself acknowledges: 'Vanguard's scenario describes the opposite — risk-seeking — but the underinvestment problem is the more fundamental agency cost.' The question asks which the scenario MOST closely describes, and the answer is B." },
+        "Precision": { "confidence": "ZERO", "notes": "The EC contradicts the scenario. The scenario clearly describes risk-seeking behavior (asset substitution), not project rejection (underinvestment)." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — appropriate for distinguishing agency cost types." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B describes asset substitution (actually correct answer), C describes claim dilution, D describes monitoring costs. Well-differentiated." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Agency costs. Jensen-Meckling (1976)." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Agency costs of debt is core Part 2." }
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "CRITICAL",
+          "description": "Wrong answer. Scenario describes asset substitution (shareholders pursuing risky projects at bondholders' expense). CC should be B, not A. The EC acknowledges the scenario describes risk-seeking but incorrectly defaults to underinvestment.",
+          "recommended_fix": "Change CC from A to B. Rewrite EC to explain asset substitution. Rewrite EW[B] as EW[A] (underinvestment explanation)."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-555",
+      "topic": "B.3 Target versus actual capital structure",
+      "cc": "C",
+      "dimensions": {
+        "Correctness": { "confidence": "MEDIUM", "notes": "CC=C (blended approach) departs from the standard corporate finance textbook position. Brealey-Myers, Ross-Westerfield-Jaffe all state: use TARGET weights for WACC. The EC acknowledges 'the theoretical ideal is to use target weights' but then argues for a blended approach as 'practical during transitions.' For CMA exam purposes, the standard answer is B (target weights). The blended approach is a practitioner view, not the textbook standard." },
+        "Precision": { "confidence": "MEDIUM", "notes": "The question asks which weights Sterling 'should use' — the theoretical/standard answer is target weights. The blended approach is defensible but non-standard." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand — appropriate for conceptual understanding." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A uses actual weights, B uses target weights (the standard answer), D uses book values. Good distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — WACC estimation. CB-05." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "WACC weight selection is core Part 2." }
+      },
+      "overall_confidence": "MEDIUM",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "description": "CC=C (blended approach) departs from the standard textbook answer B (target weights). Standard corporate finance texts (Brealey-Myers, Ross-Westerfield) consistently recommend target weights for WACC. The blended approach is a practitioner view that may be appropriate for advanced discussion but is not the standard CMA exam answer.",
+          "recommended_fix": "Change CC from C to B. Rewrite EC to explain why target weights are preferred (long-term optimal, avoids temporary fluctuations). Move blended approach discussion to a distractor explanation."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-556",
+      "topic": "B.3 Trade-off theory — tax shield versus bankruptcy costs",
+      "cc": "D",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL DEFECT: CC=D (firm value unchanged) but arithmetic shows: V_L = V_U + PV(tax shields) − PV(distress costs) = V_U + $50M − $15M = V_U + $35M. Firm value INCREASES by $35M. Choice B correctly states 'increases by $35 million.' The EC itself states: 'The net effect = $50M − $15M = $35M increase in firm value.' CC should be B, not D." },
+        "Precision": { "confidence": "ZERO", "notes": "The EC directly contradicts the CC. The arithmetic is unambiguous: net effect = +$35M." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Apply — appropriate for trade-off theory application." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A ignores distress costs, B correctly computes net (actual answer), C claims distress always dominates. Good distractors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Trade-off theory." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Trade-off theory is core Part 2." }
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "CRITICAL",
+          "description": "CC/EC mismatch. CC=D (unchanged) but EC states net effect = $35M increase. Arithmetic: $50M − $15M = +$35M. CC should be B.",
+          "recommended_fix": "Change CC from D to B. Rewrite EW fields accordingly."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-557",
+      "topic": "B.3 EBIT-EPS indifference analysis",
+      "cc": "C",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL DEFECT: CC=C ($16M) but the EC calculation yields EBIT* = $24M. The EC explicitly shows: 10EBIT = 15EBIT − $120M → EBIT = $24M. At $24M: EPS₁ = EPS₂ = $1.20. The indifference EBIT is $24M, which matches choice B ($24M), not C ($16M). CC should be B." },
+        "Precision": { "confidence": "ZERO", "notes": "The EC calculation is correct and yields $24M, but CC points to $16M. Complete CC/EC contradiction." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Evaluate — appropriate for multi-step EBIT-EPS analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A ($20M) tests below-indifference reading, B ($24M) is the actual answer, D ($32M) misstates EBIT at given EPS. Good." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — EBIT-EPS analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "EBIT-EPS analysis is core Part 2." }
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "CRITICAL",
+          "description": "CC/EC mismatch. CC=C ($16M) but EC calculation yields EBIT*=$24M (choice B). The indifference point is $24M, not $16M.",
+          "recommended_fix": "Change CC from C to B. Update EW fields: clear EW[B], set EW[C] to substantive distractor text."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-558",
+      "topic": "B.3 Optimal capital structure determination",
+      "cc": "A",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "CRITICAL DEFECT: CC=A (0% debt) but the data shows minimum WACC at 40% debt (10.2%). The EC explicitly states: 'Among the given data points, 40% debt produces the lowest WACC at 10.2%.' The optimal capital structure minimizes WACC. CC should be C (40% debt)." },
+        "Precision": { "confidence": "ZERO", "notes": "The EC directly contradicts the CC. The data is unambiguous: 40% debt has the lowest WACC." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply — appropriate for reading a WACC schedule." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B confuses marginal improvement with minimum, C correctly identifies 40% (actual answer), D assumes more debt always better. Good." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — Optimal capital structure. Trade-off theory." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Optimal capital structure is core Part 2." }
+      },
+      "overall_confidence": "ZERO",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "CRITICAL",
+          "description": "CC/EC mismatch. CC=A (0% debt) but EC states 40% debt minimizes WACC. The data clearly shows 40% at 10.2% is the minimum. CC should be C.",
+          "recommended_fix": "Change CC from A to C. Update EW fields: clear EW[C], set EW[A] to substantive distractor text explaining why zero debt forfeits tax shields."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-559",
+      "topic": "B.3 M&M propositions with versus without taxes",
+      "cc": "B",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "M&M Prop I with taxes: V_L = V_U + T_c × D. Tax shield creates value. CC=B correct." },
+        "Precision": { "confidence": "HIGH", "notes": "Clear framework comparison. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze — appropriate for comparing M&M with/without taxes." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A applies no-tax M&M to a with-tax world, C thinks taxes uniformly reduce value, D takes with-tax result to extreme ignoring distress costs. Each distinct." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — M&M with taxes (1963)." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "M&M propositions are core Part 2." }
+      },
+      "overall_confidence": "HIGH",
+      "certification_eligible": true,
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    },
+    {
+      "QuestionID": "P2-B-560",
+      "topic": "B.3 EBIT-EPS indifference — leverage decision evaluation",
+      "cc": "C",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Below indifference ($20M < $22.86M), equity produces higher EPS. CC=C correctly selects equity. EC arithmetic: equity EPS=$1.17 > debt EPS=$1.14. Correct direction." },
+        "Precision": { "confidence": "MEDIUM", "notes": "Stated indifference EBIT of $22.86M is incorrect. With given inputs (12M equity shares, 8M debt shares, $7M interest), indifference EBIT = $21M (not $22.86M). However, $20M < $21M < $22.86M, so the decision (equity is better) holds either way. The incorrect intermediate value does not change the answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Very Difficult/Analyze — appropriate for EBIT-EPS decision analysis." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "A correctly identifies equity with correct reasoning ('below indifference point'), C correctly identifies equity but with flawed reasoning ('eliminates financial risk entirely' — equity does not eliminate all financial risk). Choice A has better reasoning than CC. B incorrectly states EBIT is above indifference. D uses simple cost comparison instead of EBIT-EPS framework." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag B.3 — EBIT-EPS analysis." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "EBIT-EPS decision analysis is core Part 2." }
+      },
+      "overall_confidence": "MEDIUM",
+      "certification_eligible": false,
+      "defects": [
+        {
+          "severity": "MEDIUM",
+          "description": "CC=C uses correct direction (equity) but flawed reasoning ('eliminates financial risk entirely' — equity does not eliminate all financial risk, only leverage risk). Choice A correctly identifies equity with accurate reasoning ('below the indifference point'). CC should be A.",
+          "recommended_fix": "Change CC from C to A. Rewrite EW fields accordingly."
+        },
+        {
+          "severity": "LOW",
+          "description": "Stated indifference EBIT of $22.86M is incorrect. Correct value is $21M with given inputs (12M shares equity, 8M shares debt, $7M interest). The decision is unaffected since $20M < $21M < $22.86M.",
+          "recommended_fix": "Correct the indifference EBIT from $22.86M to $21M in the stem."
+        }
+      ],
+      "structural": {
+        "dl008": "PASS",
+        "dl026": "PASS",
+        "part2onlyflag": "PASS",
+        "ew_cc_empty": true,
+        "non_cc_ew_all_populated": true
+      }
+    }
+  ],
+  "batch_summary": {
+    "total_items": 15,
+    "certification_eligible": 8,
+    "certification_blocked": 7,
+    "verdict": "FAIL",
+    "overall_confidence_distribution": {
+      "HIGH": 8,
+      "MEDIUM": 3,
+      "LOW": 0,
+      "ZERO": 4
+    },
+    "critical_defects": [
+      "P2-B-553: CC/EC mismatch — CC=B (no flotation) but stem says 'issuing new common stock' requiring flotation adjustment; EC states answer should be A (10.93%)",
+      "P2-B-554: Wrong answer — scenario describes asset substitution (B) not underinvestment (A); EC acknowledges risk-seeking but defaults to underinvestment",
+      "P2-B-556: CC/EC mismatch — CC=D (unchanged) but EC states net effect = +$35M; arithmetic is unambiguous: $50M−$15M=+$35M",
+      "P2-B-557: CC/EC mismatch — CC=C ($16M) but EC calculation yields EBIT*=$24M (choice B)"
+    ],
+    "medium_defects": [
+      "P2-B-549: Distractor A numeric value (9.00%) not derivable from any standard CAPM error path with given inputs",
+      "P2-B-555: CC=C (blended approach) departs from standard textbook answer B (target weights) per Brealey-Myers, Ross-Westerfield",
+      "P2-B-560: CC=C uses correct direction but flawed reasoning; choice A has better reasoning. Also, stated indifference EBIT $22.86M is incorrect (should be $21M)"
+    ],
+    "structural_issues": [
+      "All 15 items missing ItemStyle (engine-critical, required by P2_SCHEMA_STANDARD §1)",
+      "All 15 items missing UniqueConceptKey (engine-critical, highest-precedence dedup signal per §1)",
+      "All 15 items missing BlueprintDomain (required by §D.6)",
+      "All 15 items missing schema_version (should be '1.1' for new drafts per §1.1)",
+      "All 15 items missing uniqueness_note (required by §1.1)",
+      "All 15 items missing source_status (required by §1.1)"
+    ],
+    "items_passing_all_dimensions": [
+      "P2-B-546", "P2-B-547", "P2-B-548", "P2-B-550", "P2-B-551", "P2-B-552", "P2-B-559"
+    ],
+    "items_with_zero_confidence": [
+      "P2-B-553", "P2-B-554", "P2-B-556", "P2-B-557", "P2-B-558"
+    ],
+    "items_with_medium_confidence": [
+      "P2-B-549", "P2-B-555", "P2-B-560"
+    ],
+    "formula_verification": {
+      "P2-B-549_CAPM": "PASS — Re = 3.0% + 1.4 × 6.0% = 11.40% ✓",
+      "P2-B-550_AfterTaxDebt": "PASS — 7.5% × (1−0.25) = 5.63% ✓",
+      "P2-B-551_PreferredStock": "PASS — $4.50/$45.00 = 10.00% ✓",
+      "P2-B-552_WACC": "PASS — (0.60×14.75%)+(0.10×8.0%)+(0.30×4.50%) = 11.00% ✓",
+      "P2-B-553_FlotationWACC": "FAIL — CC=B(10.08%) but flotation-adjusted WACC = 10.93% (A). EC contradicts CC.",
+      "P2-B-556_TradeOff": "FAIL — Net = $50M−$15M = +$35M. CC=D says unchanged.",
+      "P2-B-557_EBIT_EPS": "FAIL — Indifference EBIT = $24M. CC=C says $16M.",
+      "P2-B-558_Optimal": "FAIL — Min WACC at 40% (10.2%). CC=A says 0%.",
+      "P2-B-560_EBIT_Decision": "PASS — Equity EPS ($1.17) > Debt EPS ($1.14) below indifference. Correct direction."
+    },
+    "dl008_status": "PASS — all 15 items have EW[CC] = empty string",
+    "dl026_status": "PASS — all 15 items have all non-CC EW slots populated with substantive text",
+    "part2onlyflag_status": "PASS — all 15 items have Part2OnlyFlag: true"
+  }
+}

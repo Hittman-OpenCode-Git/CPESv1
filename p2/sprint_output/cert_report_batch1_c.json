@@ -1,0 +1,451 @@
+{
+  "report_id": "CERT-P2-C-BATCH1",
+  "certifier": "Independent Blind Certifier",
+  "verification_date": "2026-09-05",
+  "batch_file": "p2/sprint_output/pack_p2_c_batch1.js",
+  "batch_header_claim": "2E / 3ME / 5M / 3D / 2VD | R1/U3/Ap7/An3/Ev1 | 4A/4B/4C/3D, max streak 2",
+  "items_total": 15,
+  "schema_version": "1.1",
+
+  "items": [
+    {
+      "QuestionID": "P2-C-621",
+      "Topic": "target-costing-maximum-allowable-cost",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Target cost = $180 × 0.75 = $135.00. Verified: margin on selling price, not cost. Formula and authority (IMA SMA relevant costing) correct." },
+        "Precision": { "confidence": "HIGH", "notes": "Unambiguous fact pattern. Single defensible answer. All inputs from stem." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Remember appropriate for definition-recall of target costing formula." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B ($144 = markup-on-cost error), C ($45 = profit-not-cost), D ($180 = market price). All distinct misconceptions, tier_candidate values consistent." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7 — pricing decisions. Domain C Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Target costing is Part 2 Decision Analysis. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-622",
+      "Topic": "skimming-vs-penetration-pricing-strategy",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Skimming is correct for temporary differentiation + strong early demand + limited competitive window. Conceptual item; no arithmetic to verify." },
+        "Precision": { "confidence": "HIGH", "notes": "All three skimming conditions explicitly stated in stem and matched in EC." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand appropriate — requires matching scenario to pricing strategy framework." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (penetration = network effects/cost advantage, absent here), C (cost-plus ignores market dynamics), D (uniform = leaves value uncaptured). Distinct traps." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7 — pricing decisions. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pricing strategy is Part 2 Decision Analysis. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-623",
+      "Topic": "price-elasticity-revenue-impact",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: %ΔQ = E × %ΔP = -2.0 × 15% = -30%. Revenue factor = 1.15 × 0.70 = 0.805. Revenue decrease = 19.5%. Matches CC=A exactly." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Formula: DA-03 elasticity framework. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Apply appropriate — straightforward elasticity calculation." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B (E=-1.0 error), C (correct Q but wrong revenue direction), D (E=-0.5 error). Each targets a distinct miscalculation." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Elasticity/revenue analysis is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Price elasticity is Part 2 Decision Analysis. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-624",
+      "Topic": "cost-based-vs-market-based-pricing",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Conceptual item. Cost-based pricing guarantees cost recovery and target return. $500 × 1.20 = $600 cost-plus price verified. Statement B correctly describes the advantage." },
+        "Precision": { "confidence": "HIGH", "notes": "Stem provides clear cost structure ($500 full cost, 20% target return). B uniquely supports cost-based pricing." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate-Easy/Understand appropriate — conceptual comparison of pricing approaches." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (always superior = overstatement), C (ignore competitors = impractical), D (market price = profit-maximizing =不一定). Distinct misconceptions." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Cost-plus pricing framework is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost-based pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-625",
+      "Topic": "cost-plus-pricing-variable-cost-base",
+      "Verdict": "FAIL — Arithmetic Inconsistency (Stem vs. CC/EC)",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "STEM says 40% markup on variable cost. $300 × 1.40 = $420. CC is D ($360), which equals $300 × 1.20 (20% markup). EC source_support_for_key explicitly states 'markup = 20%' contradicting the stem's 40%. The stem, CC, and EC are mutually inconsistent. The stem's 40% markup yields $420, which is distractor B — meaning the correct answer per the stem's own numbers is a distractor." },
+        "Precision": { "confidence": "LOW", "notes": "Fact pattern is internally contradictory. The 40% in the stem produces $420, not $360." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Moderate/Apply is appropriate for the concept, but the arithmetic error makes difficulty irrelevant." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "Distractor analysis assumes the 20% markup (matching CC), but the stem says 40%. If the stem is correct, B ($420) is the answer and D is wrong. If CC is correct, the stem should say 20%." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Variable-cost-plus pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost-plus pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": [
+        "CRITICAL: Stem states '40% markup on variable cost' but CC=$360 requires 20% markup ($300×1.20=$360). EC source_support_for_key confirms 'markup = 20%'. Stem and answer are arithmetically incompatible.",
+        "Resolution required: Either change stem from 40% to 20%, or change CC from D($360) to B($420) and update all explanation fields."
+      ]
+    },
+    {
+      "QuestionID": "P2-C-626",
+      "Topic": "product-mix-pricing-constraint-optimization",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: CM/hr: A=$45/3=$15, B=$60/5=$12, C=$36/2=$18. Product C highest CM/hr. CC=C verified. Formula DA-06 (constrained resource optimization) correctly cited." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Constraint (600 machine hours) clearly stated. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply appropriate — requires ranking by CM per constrained resource, not CM per unit." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (CM/unit without constraint), B (highest CM/unit = lowest CM/hr), D (ignore constraint). Classic constrained-resource traps." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Constrained resource optimization is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Theory of constraints is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-627",
+      "Topic": "bundle-pricing-cannibalization-analysis",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: Without bundle: 0.50×($800-$320)+0.30×($600-$240)+0.20×($400-$160) = $240+$108+$48 = $396. With bundle: $1,200-($320+$240+$160) = $480. Incremental = $480-$396 = $84. CC=D verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs traceable. Cannibalization concept correctly applied. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply appropriate — multi-step bundle analysis." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (bundle CM only, ignores cannibalization), B (baseline not increment), C (revenue diff not contribution). Distinct errors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Bundle pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Bundle pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-628",
+      "Topic": "dynamic-pricing-profit-maximization",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc at all 4 price points: $150→$100K, $140→$112K, $130→$116K, $120→$112K. CC=A ($130, $116K) verified as maximum." },
+        "Precision": { "confidence": "HIGH", "notes": "All 4 price-demand pairs given. Formula: (P-VC)×Q-FC. Unambiguous." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply appropriate — requires profit computation at multiple price points." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B (highest price = lowest profit), C (highest volume = not highest profit), D ($140 = same as $120). Each targets a specific intuition error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Dynamic pricing / profit maximization is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pricing optimization is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-629",
+      "Topic": "special-order-pricing-excess-capacity",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: ($55-$40)×3,000 = $45,000. Excess capacity = 10,000-7,000 = 3,000 (no displacement). CC=B verified." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Fixed costs irrelevant (unaffected). Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Moderate/Apply appropriate — incremental analysis with excess capacity." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (regular price $75 instead of special $55), C (revenue not contribution), D (regular price × qty, no cost). Each targets a specific error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Special order pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Special order pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-630",
+      "Topic": "transfer-pricing-minimum-full-capacity",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: Min TP = VC + OC = $35 + ($90-$8-$35) = $35 + $47 = $82. Alternatively: NRV from external = $90-$8 = $82. CC=C verified. Formula DA-09 correctly cited." },
+        "Precision": { "confidence": "HIGH", "notes": "Full capacity clearly stated. Avoidable selling cost ($8) correctly identified. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze appropriate — requires opportunity cost reasoning at full capacity." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (VC only = idle capacity error), B ($90 gross = ignores avoidable selling cost), D (arbitrary average). Classic transfer pricing traps." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Transfer pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Transfer pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-631",
+      "Topic": "value-based-pricing-customer-willingness",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Conceptual item. Value-based pricing maximum = total economic value to customer = $450,000 annual savings. CC=D correct. EC clearly distinguishes theoretical maximum from practical competitive price." },
+        "Precision": { "confidence": "HIGH", "notes": "Question asks for maximum price under value-based pricing, not optimal competitive price. D uniquely answers this." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze appropriate — requires distinguishing value ceiling from competitive price." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (market-based = competitor avg), B (partial capture = not max), C (cost-based floor). Each targets a different pricing approach error." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Value-based pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Value-based pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-632",
+      "Topic": "price-discrimination-segment-optimization",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: Corporate demand P=500-0.5Q → TR=500Q-0.5Q² → MR=500-Q. Set MR=MC: 500-Q=100 → Q=400. P=500-0.5(400)=$300. CC=A verified." },
+        "Precision": { "confidence": "HIGH", "notes": "Linear demand function clearly specified. MR derived correctly. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Difficult/Analyze appropriate — requires calculus-based MR derivation and profit-maximization logic." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "B (segment confusion/incorrect MR), C (Q reported as P), D (MR=0 revenue max instead of MR=MC profit max). Distinct calculus/optimization errors." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Price discrimination / segment optimization is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Pricing / microeconomics is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-C-633",
+      "Topic": "life-cycle-costing-absorption-vs-full",
+      "Verdict": "FAIL — Arithmetic Inconsistency (Stem vs. CC/EC) + Phantom Cost in EC",
+      "dimensions": {
+        "Correctness": { "confidence": "LOW", "notes": "Independent recalc from stem: Dev=$90M, Prod=$22K×30K=$660M, Mktg=$10M×6=$60M. Total=$810M. Per unit=$810M/30K=$27,000. CC is C ($28,000) — off by $1,000/unit. EC explanation introduces 'service = $2M×6=$12M' which is NOT stated in the stem. The $28,000 answer requires a phantom $12M service cost not present in the problem." },
+        "Precision": { "confidence": "LOW", "notes": "Stem provides three cost categories (development, production, marketing/support). EC introduces a fourth (service) not in the stem. Arithmetic does not reconcile without the phantom cost." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Very Difficult/Evaluate may be appropriate for the concept, but the arithmetic error undermines the item." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "Distractor analysis is reasonable (A=absorption, B=dev+prod only) but the correct answer itself is arithmetically inconsistent with the stem." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Life-cycle costing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Life-cycle costing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": [
+        "CRITICAL: Stem costs sum to $810M/$30K = $27,000/unit. CC is $28,000. EC introduces phantom 'service = $2M×6 = $12M' not stated in stem.",
+        "Resolution required: Either (a) add the $2M/year service cost to the stem and recalculate, or (b) change CC to $27,000 and update all explanation fields.",
+        "Note: If the author intended $28,000, the stem must include the service cost. As written, the item is internally inconsistent."
+      ]
+    },
+    {
+      "QuestionID": "P2-C-634",
+      "Topic": "cost-plus-full-cost-with-opportunity",
+      "Verdict": "FAIL — Arithmetic Inconsistency (Stem vs. CC/EC)",
+      "dimensions": {
+        "Correctness": { "confidence": "ZERO", "notes": "STEM says '20% return on full cost'. $500 × 1.20 = $600. CC is C ($620), which equals $500 × 1.24 (24% return). EC explicitly states '24% return' and 'Selling price = $500 × 1.24 = $620'. The stem, CC, and EC are mutually inconsistent. The stem's 20% return yields $600 (distractor B), meaning the correct answer per the stem's own numbers is a distractor." },
+        "Precision": { "confidence": "LOW", "notes": "Fact pattern is internally contradictory. The 20% in the stem produces $600, not $620." },
+        "DifficultyCalibration": { "confidence": "MEDIUM", "notes": "Very Difficult/Understand — the concept is sound but the arithmetic error makes difficulty irrelevant." },
+        "DistractorEngineering": { "confidence": "MEDIUM", "notes": "Distractor analysis assumes the 24% return (matching CC), but the stem says 20%. If the stem is correct, B ($600) is the answer and C is wrong. If CC is correct, the stem should say 24%." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Cost-plus pricing is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "Cost-plus pricing is Part 2. No Part 1 overlap." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": [
+        "CRITICAL: Stem states '20% return on full cost' but CC=$620 requires 24% return ($500×1.24=$620). EC source_support_for_key confirms 'target return = 24%'. Stem and answer are arithmetically incompatible.",
+        "Resolution required: Either change stem from 20% to 24%, or change CC from C($620) to B($600) and update all explanation fields."
+      ]
+    },
+    {
+      "QuestionID": "P2-C-635",
+      "Topic": "marginal-analysis-pricing-breakeven",
+      "Verdict": "PASS",
+      "dimensions": {
+        "Correctness": { "confidence": "HIGH", "notes": "Independent recalc: CM/unit = FC/BE = $180K/9K = $20. SP = VC + CM = $22 + $20 = $42. CC=B verified. Formula DA-01 (breakeven) correctly cited and reversed." },
+        "Precision": { "confidence": "HIGH", "notes": "All inputs from stem. Breakeven condition clearly defined. Single defensible answer." },
+        "DifficultyCalibration": { "confidence": "HIGH", "notes": "Easy/Apply appropriate — straightforward breakeven rearrangement." },
+        "DistractorEngineering": { "confidence": "HIGH", "notes": "A (CM only, not SP), C (VC only = zero contribution), D (incorrect CM/cost base). Each targets a specific step omission." },
+        "BlueprintAlignment": { "confidence": "HIGH", "notes": "LOSTag C.7. Breakeven analysis is Decision Analysis. Correct." },
+        "Part2Relevance": { "confidence": "HIGH", "notes": "CVP / breakeven is Part 2 (also Part 1, but Part 2 tests at higher level). Correct." }
+      },
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "EW_CC_empty": true,
+        "NonCC_EW_nonempty": true,
+        "distractor_intent_keys_match": true,
+        "source_ids_resolving": true,
+        "source_support_for_key_complete": true,
+        "uniqueness_note_present": true,
+        "schema_version_1_1": true
+      },
+      "issues": []
+    }
+  ],
+
+  "summary": {
+    "total_items": 15,
+    "PASS": 12,
+    "FAIL": 3,
+    "pass_rate": "80.0%",
+
+    "difficulty_distribution_actual": {
+      "Easy": { "count": 2, "items": ["P2-C-621", "P2-C-635"] },
+      "Moderate-Easy": { "count": 4, "items": ["P2-C-622", "P2-C-623", "P2-C-624", "P2-C-631"] },
+      "Moderate": { "count": 5, "items": ["P2-C-625", "P2-C-626", "P2-C-627", "P2-C-628", "P2-C-629"] },
+      "Difficult": { "count": 2, "items": ["P2-C-630", "P2-C-632"] },
+      "Very Difficult": { "count": 2, "items": ["P2-C-633", "P2-C-634"] }
+    },
+    "difficulty_distribution_header_claim": "2E / 3ME / 5M / 3D / 2VD",
+    "difficulty_distribution_mismatch": "Header claims 3 ME but actual is 4; header claims 3D but actual is 2. Counts differ.",
+
+    "cognitive_level_distribution_actual": {
+      "Remember": { "count": 1, "items": ["P2-C-621"] },
+      "Understand": { "count": 3, "items": ["P2-C-622", "P2-C-624", "P2-C-634"] },
+      "Apply": { "count": 8, "items": ["P2-C-623", "P2-C-625", "P2-C-626", "P2-C-627", "P2-C-628", "P2-C-629", "P2-C-635"] },
+      "Analyze": { "count": 3, "items": ["P2-C-630", "P2-C-631", "P2-C-632"] },
+      "Evaluate": { "count": 1, "items": ["P2-C-633"] }
+    },
+
+    "answer_distribution": {
+      "A": { "count": 4, "items": ["P2-C-621", "P2-C-623", "P2-C-631", "P2-C-632"] },
+      "B": { "count": 4, "items": ["P2-C-622", "P2-C-624", "P2-C-629", "P2-C-635"] },
+      "C": { "count": 4, "items": ["P2-C-626", "P2-C-630", "P2-C-633", "P2-C-634"] },
+      "D": { "count": 3, "items": ["P2-C-625", "P2-C-627", "P2-C-628"] }
+    },
+    "answer_balance_note": "4A/4B/4C/3D — within ±1 of even distribution (3.75 each). No streak > 2.",
+
+    "structural_compliance": {
+      "Part2OnlyFlag_all_true": true,
+      "EW_CC_empty_all": true,
+      "NonCC_EW_nonempty_all": true,
+      "distractor_intent_complete_all": true,
+      "source_ids_resolving_all": true,
+      "source_support_complete_all": true,
+      "uniqueness_note_all": true,
+      "schema_version_1_1_all": true
+    },
+
+    "defects_found": [
+      {
+        "QuestionID": "P2-C-625",
+        "defect_class": "Arithmetic Inconsistency",
+        "severity": "CRITICAL",
+        "description": "Stem says 40% markup on $300 VC → $420, but CC is D=$360 (requires 20% markup). EC source_support_for_key confirms 'markup = 20%'. Stem and answer are incompatible."
+      },
+      {
+        "QuestionID": "P2-C-633",
+        "defect_class": "Arithmetic Inconsistency + Phantom Cost",
+        "severity": "CRITICAL",
+        "description": "Stem costs sum to $27,000/unit ($810M/30K). CC is $28,000. EC introduces phantom 'service = $2M×6=$12M' not in stem."
+      },
+      {
+        "QuestionID": "P2-C-634",
+        "defect_class": "Arithmetic Inconsistency",
+        "severity": "CRITICAL",
+        "description": "Stem says 20% return on $500 FC → $600, but CC is C=$620 (requires 24% return). EC explicitly states '24% return'. Stem and answer are incompatible."
+      }
+    ],
+
+    "certification_eligibility": "BLOCKED — 3 items carry CRITICAL arithmetic inconsistencies (P2-C-625, P2-C-633, P2-C-634). These items cannot be certified until the stem/CC/EC inconsistencies are resolved. The 12 PASS items are structurally and arithmetically sound.",
+
+    "batch_header_distribution_accuracy": "INACCURATE — header claims '2E / 3ME / 5M / 3D / 2VD' but actual is '2E / 4ME / 5M / 2D / 2VD'. The ME and D counts are swapped."
+  }
+}

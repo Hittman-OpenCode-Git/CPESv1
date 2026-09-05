@@ -1,0 +1,919 @@
+{
+  "report_id": "CERT-BATCH6-A-20260905",
+  "batch_file": "p2/sprint_output/pack_p2_a_batch6.js",
+  "total_items": 15,
+  "certifier": "INDEPENDENT_BLIND",
+  "verification_date": "2026-09-05",
+  "items": [
+    {
+      "QuestionID": "P2-A-576",
+      "Topic": "A.6 Hyperinflation accounting IAS 29",
+      "CC": "A",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongA",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 0,
+        "EW_B_len": 156,
+        "EW_C_len": 133,
+        "EW_D_len": 138,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 352,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY — must be non-empty array with IDs resolving to formula master or P2 authority catalog",
+        "source_support_for_key": "IAS 29 requires restatement of nonmonetary items using a general price index while monetary items remain at nominal values.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object with {source_id, rule_or_proposition, application_to_facts, key_conclusion}. Got string.",
+        "distractor_intent": {
+          "B": "Incorrectly claims all items restated and OCI treatment",
+          "C": "Reverses the monetary/nonmonetary treatment",
+          "D": "Incorrect inflation threshold"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Keys are plain strings, not objects with {misconception, why_plausible, tier_candidate}. Each value must be an object.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests IAS 29 hyperinflation accounting fundamentals."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "IAS 29 restatement of nonmonetary items via general price index, monetary items at nominal, P&L recognition — correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Single defensible answer. 120% > 100% threshold. No missing assumptions." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Easy/Remember is appropriate for IAS 29 basic recall. Threshold and treatment are factual." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (all items/restated + OCI), C (reversal), D (wrong threshold) each target distinct misconceptions." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — IAS 29 hyperinflation accounting." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "IAS 29 is Part 2 Financial Statement Analysis material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty array — must contain non-empty IDs resolving to source catalog",
+        "source_support_for_key: string instead of required object {source_id, rule_or_proposition, application_to_facts, key_conclusion}",
+        "distractor_intent: plain strings instead of required objects {misconception, why_plausible, tier_candidate}"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-577",
+      "Topic": "A.6 Current cost depreciation calculation",
+      "CC": "B",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongB",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 130,
+        "EW_B_len": 0,
+        "EW_C_len": 146,
+        "EW_D_len": 106,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 345,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Current cost depreciation = $800,000 replacement cost / 8 years total useful life = $100,000 per year.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Uses historical cost instead of replacement cost",
+          "C": "Incorrectly uses remaining life",
+          "D": "Uses historical cost with remaining life"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects with {misconception, why_plausible, tier_candidate}.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests current cost depreciation calculation mechanics."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Replacement cost / total useful life = $100,000. Correct under current cost accounting (SFAC 89, IAS 16)." },
+        "Precision": { "Confidence": "HIGH", "Notes": "$800K/8 = $100K. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Easy/Apply is appropriate — single-step division, no judgment needed." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (historical cost), C (remaining life), D (historical + remaining) each target a specific formula error." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — current cost accounting for PPE." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Current cost depreciation is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-578",
+      "Topic": "A.6 Real return versus nominal return",
+      "CC": "C",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongC",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 126,
+        "EW_B_len": 107,
+        "EW_C_len": 0,
+        "EW_D_len": 122,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 310,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Real Rate = Nominal Rate - Expected Inflation = 10.5% - 6.0% = 4.5%.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Adds instead of subtracting",
+          "B": "Selects the inflation rate instead of computing real return",
+          "D": "Assumes nominal rate already reflects real return"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests Fisher equation application for real versus nominal return analysis."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Fisher equation: Real ≈ Nominal - Inflation = 10.5% - 6.0% = 4.5%. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Simple subtraction, single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate-Easy/Apply — application of formula to simple values." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (adds), B (wrong variable), D (assumes no adjustment) — each a distinct conceptual error." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — real vs nominal return analysis." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Fisher equation is Part 2 financial analysis material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-579",
+      "Topic": "A.6 Inflation impact on times interest earned",
+      "CC": "A",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongA",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 0,
+        "EW_B_len": 143,
+        "EW_C_len": 139,
+        "EW_D_len": 130,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 418,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "TIE improves from 4.0x to 4.72x because fixed interest becomes smaller relative to inflated operating income.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "B": "Mathematically incorrect - operating income increases not decreases",
+          "C": "Incorrectly assumes symmetric inflation impact",
+          "D": "Incorrectly assumes interest expense increases with inflation"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests understanding of how fixed interest expense interacts with inflation-driven revenue and cost changes."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Original TIE = $800K/$200K = 4.0x. New TIE = $944K/$200K = 4.72x. Correct calculation." },
+        "Precision": { "Confidence": "HIGH", "Notes": "All inputs traceable: sales +12%, COGS +8%, interest fixed. Single answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate/Analyze — requires comparing before/after ratios and interpreting." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (direction error), C (symmetric assumption), D (interest inflation assumption) — distinct errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — inflation impact on financial ratios." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "TIE ratio under inflation is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-580",
+      "Topic": "A.6 Purchasing power risk assessment",
+      "CC": "D",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongD",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 167,
+        "EW_B_len": 209,
+        "EW_C_len": 119,
+        "EW_D_len": 0,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 349,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Net monetary assets = $3,000,000 - $2,500,000 = $500,000. Purchasing power loss = $500,000 x 5% = $25,000.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Misclassifies net monetary position as liability",
+          "B": "Correct calculation but incorrectly assumes nonmonetary offset",
+          "C": "Incorrectly assumes neutral monetary position"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests purchasing power risk assessment combining monetary position analysis with nonmonetary asset considerations."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Monetary assets = $3M (cash $1M + AR $2M); monetary liabilities = $2.5M (AP $1.2M + mortgage $1.3M). Net = $500K. Loss = $25K. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clear classification of monetary vs nonmonetary items. Single answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate/Apply — classification + calculation." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (wrong position), B (wrong offset assumption), C (wrong neutral assumption) — distinct errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — purchasing power risk and monetary position." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Purchasing power risk is Part 2 inflation accounting." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-581",
+      "Topic": "A.6 Current cost versus historical cost depreciation difference",
+      "CC": "B",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongB",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 118,
+        "EW_B_len": 0,
+        "EW_C_len": 113,
+        "EW_D_len": 96,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 356,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Historical: $500,000 / 10 = $50,000. Current cost: $900,000 / 10 = $90,000. Difference: $40,000.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Incorrectly states historical cost depreciation as $60,000",
+          "C": "Incorrectly states current cost depreciation as $100,000",
+          "D": "Ignores historical cost depreciation entirely"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests comparative depreciation calculation between current cost and historical cost methods."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "HC depr = $500K/10 = $50K. CC depr = $900K/10 = $90K. Diff = $40K. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean arithmetic, single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate/Apply — two calculations then difference." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (wrong HC), C (wrong CC), D (ignores HC entirely) — distinct calculation errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — current vs historical cost comparison." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Current cost depreciation is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-582",
+      "Topic": "A.6 General versus specific price changes",
+      "CC": "C",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongC",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 101,
+        "EW_B_len": 125,
+        "EW_C_len": 0,
+        "EW_D_len": 142,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 358,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Current cost accounting uses specific replacement cost, not the general price index.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Confuses current cost with constant dollar accounting",
+          "B": "Suggests averaging - not permitted under either method",
+          "D": "Incorrectly attributes CPI usage to current cost accounting"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests the distinction between general price-level and specific price changes in accounting measurement."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Current cost uses specific replacement cost (25%), not CPI (15%). Correct under SFAC 5/89." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean conceptual question, single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate-Easy/Understand — requires distinguishing two measurement approaches." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (constant dollar confusion), B (averaging), D (CPI misattribution) — distinct conceptual errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — current cost vs general price-level accounting." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Measurement attribute distinction is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-583",
+      "Topic": "A.6 Inflation-adjusted ROI calculation",
+      "CC": "A",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongA",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 0,
+        "EW_B_len": 141,
+        "EW_C_len": 149,
+        "EW_D_len": 119,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 372,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Nominal ROI = $280,000 / $2,000,000 = 14%. Real ROI approximately equals 14% - 6% = 8%.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "B": "Incorrectly states real exceeds nominal",
+          "C": "Incorrectly adjusts asset base downward",
+          "D": "Incorrectly claims ROI is unaffected by inflation"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests inflation-adjusted ROI calculation and the relationship between nominal and real returns."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Nominal ROI = 14%. Real ≈ 14% - 6% = 8%. Historical cost understates assets → overstates nominal ROI. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean Fisher approximation. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate/Analyze — requires comparing nominal vs real and understanding asset base distortion." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (direction error), C (wrong adjustment), D (no-effect claim) — distinct analytical errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — inflation impact on ROI measurement." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Inflation-adjusted ROI is Part 2 financial analysis." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-584",
+      "Topic": "A.6 Monetary versus nonmonetary item classification",
+      "CC": "B",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongB",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 178,
+        "EW_B_len": 0,
+        "EW_C_len": 196,
+        "EW_D_len": 147,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 346,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Monetary items have fixed nominal values (cash, receivables, payables, bonds = $1,200,000). Nonmonetary items change with price levels (inventory, equipment = $900,000).",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Excludes payables and bonds from monetary",
+          "C": "Incorrectly includes inventory as monetary and bonds as nonmonetary",
+          "D": "Incorrectly classifies inventory and equipment as monetary"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests classification of balance sheet items as monetary or nonmonetary for inflation accounting purposes."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Monetary: cash $200K + AR $350K + AP $250K + bonds $400K = $1.2M. Nonmonetary: inventory $400K + equipment $500K = $900K. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clear-cut monetary/nonmonetary classification. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate/Apply — requires correct classification of 6 items." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (excludes liabilities), C (wrong inventory/bonds), D (wrong direction) — distinct classification errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — monetary vs nonmonetary classification." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Classification is Part 2 inflation accounting." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-585",
+      "Topic": "A.6 Inflation impact on working capital analysis",
+      "CC": "D",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongD",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 155,
+        "EW_B_len": 133,
+        "EW_C_len": 150,
+        "EW_D_len": 0,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 364,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Receivables inflate with sales prices while inventory at historical cost understates replacement needs, creating a distorted working capital picture.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Focuses only on inventory, missing the compositional distortion",
+          "B": "Incorrectly assumes receivables offset inventory understatement",
+          "C": "Incorrectly assumes symmetric inflation impact"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests understanding of how inflation distorts working capital analysis through different treatment of monetary and nonmonetary current items."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "AR inflates (monetary), inventory stays at historical cost (nonmonetary), creating compositional distortion. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Conceptual analysis with clear reasoning. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Moderate-Easy/Understand — requires understanding how different items react to inflation." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (single item focus), B (wrong offset), C (symmetric assumption) — distinct analytical errors." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — inflation impact on working capital." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Working capital inflation distortion is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-586",
+      "Topic": "A.6 Price index adjustment for PPE",
+      "CC": "C",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongC",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 139,
+        "EW_B_len": 163,
+        "EW_C_len": 0,
+        "EW_D_len": 128,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 326,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Restated cost = $1,200,000 x (160/120) = $1,600,000. Depreciation = $1,600,000 / 12 = $133,333.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Incorrectly claims historical cost is retained",
+          "B": "Correct numbers but wrong mechanism (replacement cost vs price index)",
+          "D": "Incorrectly averages original and adjusted amounts"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests price index adjustment mechanics for PPE under general price-level accounting."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "Restated cost = $1.2M x (160/120) = $1.6M. Depr = $1.6M/12 = $133,333. Correct under SFAC 89/APB 3." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean arithmetic. B has same numbers but wrong mechanism — C is the only correct answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Difficult/Apply — requires index ratio calculation + understanding mechanism distinction." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (no restatement), B (right numbers/wrong mechanism), D (averaging) — B is a particularly strong distractor." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — general price-level adjustment for PPE." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Price index adjustment is Part 2 inflation accounting." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-587",
+      "Topic": "A.6 Impact on financial statement comparability",
+      "CC": "A",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongA",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 0,
+        "EW_B_len": 155,
+        "EW_C_len": 127,
+        "EW_D_len": 128,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 354,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "Different inflation accounting methods create comparability issues because historical cost understates assets while current cost restates them to current values.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "B": "Incorrectly states current cost produces higher asset turnover",
+          "C": "Incorrectly assumes symmetric inflation impact across methods",
+          "D": "Incorrectly states current cost always reduces profitability"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Evaluates the comparative analysis challenge created by different inflation accounting methods."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "HC understates assets → inflated ROA. CC restates → meaningful comparison. Direct comparison unreliable. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Conceptual analysis with clear logic. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Difficult/Evaluate — requires judgment about cross-company comparability." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "B (wrong direction), C (symmetric assumption), D (always-reduces claim) — each a distinct analytical error." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — comparability under different accounting methods." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "Cross-method comparability is Part 2 financial analysis." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-588",
+      "Topic": "A.6 Foreign currency inflation adjustments",
+      "CC": "B",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongB",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 156,
+        "EW_B_len": 0,
+        "EW_C_len": 168,
+        "EW_D_len": 121,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 361,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "IAS 29 requires restatement for inflation before translation when the economy is hyperinflationary, regardless of functional currency.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Describes translation without the mandatory restatement step",
+          "C": "Incorrectly exempts local currency functional currency",
+          "D": "Incorrectly limits restatement to specific items"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests the intersection of IAS 29 inflation accounting and IAS 21 foreign currency translation."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "IAS 29 requires restatement THEN translation for hyperinflationary economies. 200% > 100% threshold. Correct." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Two-step process clearly established. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Very Difficult/Apply — requires understanding intersection of two standards." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (skip restatement), C (exemption claim), D (partial restatement) — each targets a specific standard confusion." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — IAS 29 + IAS 21 intersection." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "IAS 29/21 interaction is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-589",
+      "Topic": "A.6 Inventory layer measurement under inflation",
+      "CC": "D",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongD",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 176,
+        "EW_B_len": 181,
+        "EW_C_len": 101,
+        "EW_D_len": 0,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 376,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "LIFO COGS = 8,000 x $22 = $176,000. FIFO COGS = 5,000 x $20 + 3,000 x $22 = $166,000. Difference = $10,000.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Correct COGS but mischaracterizes the layer difference as a holding gain",
+          "B": "Incorrectly uses oldest costs for LIFO",
+          "C": "Incorrectly computes LIFO COGS"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests LIFO inventory layer measurement and its interaction with inflation-driven cost differences."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "LIFO COGS = 8K x $22 = $176K. FIFO = 5K x $20 + 3K x $22 = $166K. Difference $10K reduces taxable income. Correct under ASC 330/IAS 2." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clean LIFO/FIFO comparison. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Very Difficult/Analyze — multi-step calculation plus interpretation of tax deferral effect." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (wrong characterization of difference), B (wrong LIFO method), C (wrong calculation) — A is a subtle, well-crafted distractor." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — LIFO inventory measurement under inflation." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "LIFO/FIFO under inflation is Part 2 financial analysis." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    },
+    {
+      "QuestionID": "P2-A-590",
+      "Topic": "A.6 Hyperinflation financial statement presentation",
+      "CC": "C",
+      "EC_CC_match": true,
+      "structural_checks": {
+        "Part2OnlyFlag": true,
+        "Part2OnlyFlag_TYPE": "boolean",
+        "EW_CC_empty": true,
+        "EW_CC_field": "ExplanationWrongC",
+        "EW_CC_value": "",
+        "DL_008_clean": true,
+        "EW_A_len": 148,
+        "EW_B_len": 148,
+        "EW_C_len": 0,
+        "EW_D_len": 153,
+        "DL_026_clean": true,
+        "ExplanationCorrect_len": 369,
+        "ExplanationCorrect_above_50": true,
+        "DL_021_clean": true
+      },
+      "schema_v1_1_checks": {
+        "schema_version": "1.1",
+        "source_ids": [],
+        "source_ids_PASS": false,
+        "source_ids_issue": "EMPTY",
+        "source_support_for_key": "IAS 29 requires nonmonetary items like PPE to be restated using a general price index. Monetary items are not restated.",
+        "source_support_for_key_type": "string",
+        "source_support_for_key_PASS": false,
+        "source_support_for_key_issue": "Must be object. Got string.",
+        "distractor_intent": {
+          "A": "Incorrectly claims monetary liability is restated",
+          "B": "Incorrectly claims equity is restated",
+          "D": "Incorrectly claims retained earnings is directly restated"
+        },
+        "distractor_intent_keys_correct": true,
+        "distractor_intent_structure_PASS": false,
+        "distractor_intent_issue": "Plain strings instead of objects.",
+        "source_status": "RESOLVED",
+        "uniqueness_note": "Tests identification of which financial statement components require IAS 29 restatement."
+      },
+      "six_dimension": {
+        "Correctness": { "Confidence": "HIGH", "Notes": "PPE is nonmonetary → restated via general price index. Monetary items (debt, equity) not restated. RE is residual. Correct under IAS 29." },
+        "Precision": { "Confidence": "HIGH", "Notes": "Clear classification question. Single defensible answer." },
+        "DifficultyCalibration": { "Confidence": "HIGH", "Notes": "Difficult/Understand — requires understanding which items are restated and why." },
+        "DistractorEngineering": { "Confidence": "HIGH", "Notes": "A (monetary liability), B (monetary equity), D (residual item) — each targets a different misclassification." },
+        "BlueprintAlignment": { "Confidence": "HIGH", "Notes": "Maps to A.6 — IAS 29 restatement identification." },
+        "Part2Relevance": { "Confidence": "HIGH", "Notes": "IAS 29 identification is Part 2 material." }
+      },
+      "overall_confidence": "HIGH",
+      "six_dim_PASS": true,
+      "FINAL_VERDICT": "FAIL",
+      "failure_reasons": [
+        "source_ids: empty",
+        "source_support_for_key: string instead of object",
+        "distractor_intent: plain strings instead of objects"
+      ]
+    }
+  ],
+  "summary": {
+    "total_items": 15,
+    "PASS": 0,
+    "FAIL": 15,
+    "PASS_rate": "0%",
+    "six_dimension_all_HIGH": true,
+    "EC_CC_match_all": true,
+    "DL_008_all_clean": true,
+    "DL_026_all_clean": true,
+    "DL_021_all_clean": true,
+    "Part2OnlyFlag_all_true": true,
+    "schema_v1_1结构性_defects": {
+      "source_ids_empty": 15,
+      "source_support_for_key_wrong_type": 15,
+      "distractor_intent_wrong_type": 15
+    },
+    "items_with_calculation": 8,
+    "items_conceptual": 7,
+    "difficulty_distribution": {
+      "Easy": 2,
+      "Moderate-Easy": 3,
+      "Moderate": 5,
+      "Difficult": 4,
+      "Very_Difficult": 1
+    },
+    "bloom_distribution": {
+      "Remember": 1,
+      "Understand": 3,
+      "Apply": 9,
+      "Analyze": 2,
+      "Evaluate": 0
+    },
+    "certification_verdict": "FAIL — all 15 items fail schema v1.1 structural requirements",
+    "root_cause": "All 15 items use v1.0 legacy field formats for source_ids (empty array), source_support_for_key (plain string instead of object), and distractor_intent (plain strings instead of objects with misconception/why_plausible/tier_candidate). The six-dimension verification is HIGH across all items, but schema v1.1 structural compliance is mandatory per P2_SCHEMA_STANDARD.md §1.1.",
+    "remediation_required": [
+      "source_ids: populate with IDs resolving to formula master (e.g., FA-08 for TIE, CB-01 for Fisher equation) or P2 authority catalog",
+      "source_support_for_key: convert each from string to object with {source_id, rule_or_proposition, application_to_facts, key_conclusion}",
+      "distractor_intent: convert each value from string to object with {misconception, why_plausible, tier_candidate}"
+    ]
+  }
+}

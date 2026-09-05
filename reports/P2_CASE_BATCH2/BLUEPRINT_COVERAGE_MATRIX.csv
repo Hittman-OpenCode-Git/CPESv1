@@ -1,0 +1,7 @@
+Domain,DomainName,Batch1Cases,Batch2Cases,TotalCases,Target75Scale,CoveragePct
+A,Financial Statement Analysis,11,2,13,15,86.7%
+B,Corporate Finance,11,1,12,15,80.0%
+C,Decision Analysis,12,2,14,18,77.8%
+D,Risk Management,9,1,10,8,125.0%
+E,Investment Decisions,10,1,11,7,157.1%
+F,Professional Ethics,10,2,12,12,100.0%

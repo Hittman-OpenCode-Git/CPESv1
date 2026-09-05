@@ -15208,6 +15208,8 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-DD-022",
+    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_date": "2026-09-05",
     "CalculationItem": true,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -15216,10 +15218,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "$20,000 may result from using an incorrect activity rate (e.g., $120,000 / 6,000 orders) or multiplying the correct rate by the wrong number of orders. The correct approach: rate = $120,000 / 2,400 = $50 per order; Product A = 600 x $50 = $30,000.",
+    "ExplanationWrongA": "The $40-per-item rate is a computational output, not a selection criterion — and minimizing the rate does not minimize over-costing risk. ABC driver selection is governed by cause-and-effect strength: purchase orders (R-squared 0.82) explain resource consumption far better than line items (0.47). Selecting by lowest rate reverses ABC design logic.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "$50,000 is the activity rate per order ($120,000 / 2,400), not the total overhead assigned to Product A. The rate must be multiplied by Product A's order volume (600) to arrive at the assigned cost of $30,000.",
-    "ExplanationWrongD": "this is the total cost pool, not the amount assigned to Product A. ABC assigns costs based on each product's consumption of the activity driver.",
+    "ExplanationWrongC": "Economic significance does not establish the cause-and-effect relationship ABC requires. The dollar value of purchases does not explain purchasing-department resource consumption — transaction volume does (R-squared 0.82 for purchase orders). Decision-relevance of a measure is not the driver-selection criterion.",
+    "ExplanationWrongD": "A lower activity rate signals nothing about cost efficiency or representational quality — rates are outputs of pool divided by driver quantity. Choosing line items because $40 looks efficient confuses the measurement result with the measurement criterion. The criterion is explanatory power (R-squared), which favors purchase orders.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply"
