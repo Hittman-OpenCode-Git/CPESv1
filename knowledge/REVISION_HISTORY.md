@@ -32602,6 +32602,67 @@ test:parser 20/20 · harness ALL GATES · validate Errors 0/WARN/exit 0 (warning
 
 ---
 
+## 2026-09-05 — Live-Pool Cleanup Program: All Documented Defects Remediated (User-Authorized)
+
+**Type:** WRITE — Full Governance Lane. User directive: "clean up the content in all of these documented issues. This is live data. No questions should be in use that have known defects." Operating policy for the session: quarantine-first (any live item with a confirmed defect leaves delivery before/during repair).
+
+**T0:** `npm run preflight` PASS — 0 divergences, 2,620 Certified, guard 74/74. Baselines §2 snapshot confirmed.
+
+**Backups (§3, all verified non-zero pre-write):** `pack_e…bak-DL046-20260905152439`, `pack_{c,d}…bak-DL012-20260905152943`, `pack_b…bak-DL010-20260905152943`, `pack_{e,b}…bak-EV18/DL009-20260905153818`, `pack_e…bak-EC098-20260905154604`.
+
+### Phase 0 — Pool-wide measurement (all Certified unless noted)
+
+- **DL-013 residue:** exact-template boilerplate on 8 Certified items (EC-051/053/056/057/059/063/064/065), short-form 0; all-states counts identical. (2026-07-23 "851 fields" figure superseded.)
+- **DL-012 scope:** all 150 EC/ED items Certified (live). Proposal files absent from repo → independent reconstruction (stem-Jaccard ≥ 0.78 + identical choice-value multiset): **11 residual families (29 items)**, 121 solo — intervening waves had differentiated the rest.
+- **DL-008:** 0 pool-wide, ALL states (reconciles the stale "175 remaining" header).
+- **Distributions vs CAQS §6:** DS 1/2/3/4/5 = 504/557/984/509/66 (targets 15/20/30/25/10%) — Moderate-heavy, VD-light; CL R/U/App/An/Ev = 96/947/1085/291/201 (targets 5/15/40/25/15%) — Understand-heavy, HO-light. Gap-closure requires authoring per AGENTS.md §17.3 (no relabeling); no quarantine action (composition gap, not item defects).
+- **Validator warnings on Certified MCQ:** Explanation 18, AbsoluteLanguage 709, Ambiguity 394, DistractorSimilarity 360 (all WARN-class; 0 ERROR-class at T0).
+- **DL-010 generalized screen:** 253 flags → strongest 48 fully read → **5 confirmed** (below); 43 clean FPs (sign-flip variance shared-vocabulary artifact); 204 weaker flags unread (low-yield tail, documented).
+- **DL-009:** 108 citing items tabled; 16 suspects read → 1 confirmed (P1B-F-120 "Under ASC 350" for data integrity), 15 legitimate contrast/context citations.
+
+### Execution ledger (quarantine → fix → verify → recertify; per-pack batches ≤ 14; two-phase-commit engine, exact-match assertions, dry-runs clean)
+
+| Workstream | Items | Disposition |
+|---|---|---|
+| DL-046 | P1E-A-024 | Choice C reconstructed "Only antidilutive securities" (tail + EW_C confirm); key D intact; Certified + stamps |
+| DL-010 (new) | P1-DC-038, P1-FC-043 (×2 slots), P1-FC-048 (transposed pair), P1-BD-032, P1-CD-073 | Choice-specific rewrites; keys intact; Certified + stamps |
+| DL-012 | 18 clones → **Archived** (C: EC-001/005/010/030/050/051/053/055/057/059/062/063/064/065; D: ED-001/014/036/046), state-only per §9.2; 11 seeds retained (EC-004/008/028/049/052/060/061, ED-002/015/040/050; ED-036/046 decided on EW richness). Traveling defects documented reactivation-gated (EC-030 key inversion; EC-050 EW mismatches; 7× DL-013 boilerplate) |
+| DL-012 seeds | EC-061 (EW_C duplicate→control-risk refutation), EC-056 (EW_C boilerplate→board-independence refutation) | Repaired + Certified + stamps |
+| DL-013 | 7 of 8 residue archived via DL-012; EC-056 repaired | Blocking scope 0 pool-wide |
+| EV-18 + DL-009 | 18 thin Pack-E ECs enriched to mini-lessons; P1B-F-120 "Under ASC 350" → COSO-only | All Certified + stamps |
+| EC-098 self-catch | First post-fix pipeline run FAILED (1 MathematicalValidator error — my own enrichment tripped DL-001's equals/variance pattern; statement was correct but flaggable). Rephrased, re-verified, recertified | Pipeline re-run GREEN |
+
+**Post-fix pool:** 2,602 Certified (500/500/486/496/620) + 18 Archived. Fresh SHA-256 (for the future regeneration run): A `890EB3B1…F72434FBC1` (2,349,080 B), B `F16A83F5…8D5BE8C034` (1,495,182), C `B9610DDC…46CE102` (2,183,798), D `60F3C228…9694F1CB8` (2,581,703), E `05FA1213…1383C8BAF` (2,389,503).
+
+### Library reconciliation (DEFECT_LIBRARY.md — source file, hand-editable)
+
+DL-008 → Resolved (reconciled, 0 pool-wide); DL-009 → Resolved (108 adjudicated, 1 fix); DL-010 → monitored-class (5 fixes + screen record); DL-012 → Resolved (archival table); DL-013 → Resolved (blocking scope, 0); DL-035 → resolved-in-fact (0 empty Certified slots; S816–S818 unnecessary); DL-036 → Resolved; DL-039/040/041 → Resolved (headers synced to in-entry S133 records); DL-043 → program complete; DL-046 (P1) → Resolved. Left accurately Open: DL-003/004/005 (warning-tracked), DL-014/015 (low-priority), DL-026/028/029/045 (process/monitoring), DL-031/032 (authoring-track).
+
+### Rule compliance
+
+Rules 1 (all state flips paired to this entry), 2/6 (0 DL-008/DL-026 on every touched item, verified), 4 (key flips: none in this wave except DL-047 carryover — intact-key work needs no derivation notes; EC-030's inversion rides into archive documented), 5 (batches ≤ 14), 7 (baselines untouched — 3 blocked hand-sync attempts reverted, git-verified net-zero), 9/10/11/12/13/14 (clean — no Yes/No edits, no absent slots, no CL/flag/QID changes).
+
+### Incidents & lessons (no content impact — all caught by assertions or verification)
+
+1. **Phase-sequencing confusion (mine):** mid-session I misnarrated which phases had executed; an independent census script proved all items Certified+correct (no DL-019 — every phase-1/2 verification passed; trust verification artifacts over narration).
+2. **Pack-infix lesson:** P1-DC = Pack C, P1-CD/P1-BD = Pack D — three spec misassignments caught by record-count assertions pre-write.
+3. **Engine bugs (2):** arg-ordering crash + missing ccNew expectation — both failed safe (no writes).
+4. **Mojibake anchors:** older library entries store `â€”/Ã—/Â§` byte sequences; anchors must match the stored form (verified via Read output).
+5. **PowerShell:** never `node -e` with regex/quotes (parser mangles); script files only.
+6. **rebuild_baselines.js is stale** (resolves root-level paths that no longer exist post-restructuring — would write FILE_NOT_FOUND/0s). Did NOT run. Baselines regeneration needs a path-modernized script in a dedicated session; hashes/counts above are its inputs.
+
+### Accepted residual (explicitly not quarantined — warnings/composition, not correctness defects)
+
+DL-003/004/005 warning tiers (strong absolutes verified 0 genuine on Certified; rest legitimate-use residual); DL-010 weaker-204 tail; DL-031/032 distribution gaps (authoring-track per §17.3); DL-014/015; DL-026/028/029/045; case banks (different schema, unaudited this program).
+
+### Tend gates
+
+`npm run pipeline` GREEN — 0 errors (MathematicalValidator back to 0), warnings 1,952→1,663 area pre-existing classes only; registry rebuilt (3,045 rows). Preflight: all packs parse, guard 74/74, **1 authorized reconciled divergence** (2602 vs 2620 baseline = the 18 DL-012 archivels; census-verified 2602 Certified + 18 Archived). Baselines file regeneration pending (dedicated session).
+
+**Files changed:** `content/packs/pack_{b,c,d,e}_corrected.js` (30 objects touched: 1 DL-046 fix, 5 DL-010 fixes, 18 archivels, 2 seed repairs, 19 EV/DL-009 enrichments, 1 EC-098 rephrase); `knowledge/DEFECT_LIBRARY.md` (reconciliation above); `knowledge/REVISION_HISTORY.md` (this entry). Audit/fix scripts retained outside repo (`C:\Users\User\AppData\Local\Temp\opencode\dl_*.js`). NOT changed: case packs, app/UI, registries (pipeline-regenerated only), baselines (Rule 7).
+
+---
+
 ## 2026-09-05 — DL-047 Learner-Challenge Audit: Certified Answer-Key / Explanation Contradictions (Filed, Read-Only)
 
 **Type:** READ-ONLY audit + `DEFECT_LIBRARY.md` filing (Full Governance Lane). Zero pack writes; zero `question_state`, answer-key, explanation, or scoring changes.

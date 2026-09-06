@@ -368,7 +368,7 @@ Class            Structural
 Domain           Explanation Slot Error (EV8 â€” CAQS v1.0 Â§4.4)
 Severity         High (learner-safety risk when Certified â€” wrong-answer explanation displayed in correct-answer slot; upgraded from 2026-07-22 "Low" after full-pool severity reassessment 2026-07-23)
 Detected By      Build-Time AI Verification (Sub-batch 2A Wave 1, 2026-07-22); full-pool sweep (2026-07-23)
-Status           **Open — 175 remaining in Pack C (discovered 2026-07-23 corrective session).** Prior 6-agent orchestration claimed "0 remaining across all 5 packs" but a 2026-07-23 Tier 0 corrective session found 175 DL-008 items in Pack C (174 Certified + 1 MISSING: P1-BC-094) — likely DL-019 concurrent-write overwrite: the DL-013/certification wave restored pre-cleared EW[CC] fields. Additionally, all 175 items are affected by a systematic CorrectChoice rotation artifact (CC ≠ EC for 74.1%), making simple EW[CC] clear unsafe. See `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md` for full evidence ledger. Validator gap (ExplanationValidator.js:180) fixed. Governance guard Rule 2 BLOCK active.
+Status           Resolved — reconciled 2026-09-05 (0 pool-wide, all states; see Learner-Safety Status). Prior 6-agent orchestration claimed "0 remaining across all 5 packs" but a 2026-07-23 Tier 0 corrective session found 175 DL-008 items in Pack C (174 Certified + 1 MISSING: P1-BC-094) — likely DL-019 concurrent-write overwrite: the DL-013/certification wave restored pre-cleared EW[CC] fields. Additionally, all 175 items are affected by a systematic CorrectChoice rotation artifact (CC ≠ EC for 74.1%), making simple EW[CC] clear unsafe. See `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md` for full evidence ledger. Validator gap (ExplanationValidator.js:180) fixed. Governance guard Rule 2 BLOCK active.
 ```
 
 ### Affected
@@ -454,7 +454,7 @@ For Bucket 3 (misattributed): re-attribute to correct ExplanationWrong slot.
 
 ### Learner-Safety Status
 
-**OPEN for Pack C.** 175 items (174 Certified + 1 MISSING: P1-BC-094) carry DL-008 as of 2026-07-23 (discovered by Tier 0 corrective session). Packs A, B, D, E confirmed 0 remaining (0 Certified). All 174 Certified Pack C items are in the active learner delivery pool with non-empty EW[CC] — additionally affected by a systematic CorrectChoice rotation artifact (129 of 174 have CC ≠ EC best match, making simple EW[CC] clear unsafe). Pack C items are quarantined (Tier 1) pending a CorrectChoice audit. Full report: `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md`.
+**RESOLVED — reconciled 2026-09-05.** Canonical-parser within-object rescan (same-object CC+EW extraction, DL-029-compliant) finds **0 DL-008 pool-wide across all states and all 5 packs** — run twice on separate sessions (DL-047 audit + 2026-09-05 cleanup) with stable counts, plus a Certified-only rescan at 0. The 2026-07-23 "175 remaining" figure is superseded: later waves re-remediated Pack C without a corresponding library update (S896 closed 59 pre-existing instances pool-wide; S133 closed the 9-item Pack D Section B cluster; Rule 2 BLOCK prevents recurrence). P1-BC-094 (the MISSING item in the 2026-07-23 count) carries no DL-008 in current files. Learner-pool exposure: 0. Historical record of the 2026-07-23 Tier 0 corrective session: `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md`.
 
 **Validator gap fixed:** `ExplanationValidator.js` line 180 was patched (Agent 1) to flag non-empty `ExplanationWrong[CorrectChoice]` as errors. Previously the validator silently skipped non-empty slots at the CorrectChoice position.
 
@@ -478,7 +478,7 @@ Domain           Authority Citation
 Severity         High (correctness defect â€” candidates learn wrong authoritative reference)
 Category         Incorrect ASC authority citation
 Detected By      Build-Time AI Verification (Sub-batch 2A Wave 3 â€” P1-A-012, expanded to P1-BC-065)
-Status           Open
+Status           Resolved — full-citation-table adjudication 2026-09-05 (108 citing items; 1 fix applied; rest legitimate)
 ```
 
 **Question IDs:** P1-A-012, P1-BC-065 area
@@ -538,6 +538,10 @@ Scan all pack files for cited ASC references (total: 483 across 5 packs). Cross-
 
 All 30 occurrences (3 per question Ã— 10 questions) corrected. Zero regressions on validator suite. Remaining 473 ASC citations across packs A/B/D/E were verified as correct during the DL-009 scan completed earlier.
 
+### 2026-09-05 Amendment — Full-Citation-Table Adjudication
+
+All 108 citing items extracted (QID/Topic/CC/ASC citations) and reviewed. Original instances confirmed fixed in current files (P1-A-012 cites ASC 450 correctly with detailed subsections; P1-BC-065 carries no ASC citation). 16 suspects read in full: 15 adjudicated clean — contrast/contextual citations that correctly invoke a standard to refute or characterize a choice (e.g., ASC 810 consolidation threshold to refute full consolidation on equity-method items AC-012/014; ASC 330 systematic-and-rational allocation language on ABB/capacity items B-006/B-064; ASC 606 to characterize revenue propositions in planning/quality/metadata stems B-028/C-010/F-055; ASC 606+326 substantive application on F-S06). 1 confirmed: P1B-F-120 EC cited "Under ASC 350" for ML training-data integrity — ASC 350 does not govern input-data integrity; repaired to COSO-only framing and recertified 2026-09-05 (no key change, 1 object, backup `pack_b_corrected.js.bak-DL009-20260905153818`). Residual: none known.
+
 ---
 
 ## DL-010 â€” Misassigned Choice Explanations
@@ -548,7 +552,7 @@ Class            Structural / Content (hybrid)
 Domain           Explanation Assignment
 Severity         High
 Detected By      Build-Time AI Verification (Sub-batch 2B Wave 2 â€” P1-A-029)
-Status           Open
+Status           Open — monitored class; all confirmed instances remediated (see 2026-09-05 amendment; no automated semantic gate exists)
 ```
 
 **Category:** Misassigned choice explanations
@@ -624,6 +628,10 @@ During the DL-043 Batch 1 remediation, a systematic misassignment cluster surfac
 
 **Cross-check note:** the P1-CD-068/044/072/075 cluster shares the P1-CD-xxx template family that produced the DL-043 near-duplicate distractors — both defect classes trace to the same rotation-template pipeline.
 
+### 2026-09-05 Amendment — Generalized-Screen Adjudication + 5 Fixes
+
+Keyword-recall screen (per non-CC EW slot: own-choice recall < 0.25 with another-choice recall ≥ 0.5) over all Certified items yielded 253 flags. Strongest 48 (own == 0, best ≥ 0.8, best ≠ CC) read in full → 5 confirmed, all remediated + recertified 2026-09-05 with choice-specific texts (keys intact, 5 objects across 2 packs): P1-DC-038 EW_D (truncated text describing choice A); P1-FC-043 EW_A (RPA/keystroke fusion) + EW_B (describes choice D); P1-FC-048 EW_B/EW_C transposed pair; P1-BD-032 EW_B (duplicates A's refutation); P1-CD-073 EW_C (describes choice B). 43/48 adjudicated clean — sign-flip variance items whose correct "amount-right-direction-wrong" texts share section vocabulary ("unfavorable"/amounts), a systematic screen artifact. Remaining 204 weaker flags unread (low-yield tail: best < 0.8 or own > 0). Screen script preserved for future runs. Plus DL-047 Group-B confirmations (P1-DD-022, P1B-B-102 — remediated + recertified).
+
 ---
 
 ## DL-011 — Reserved (Intentionally Skipped — Numbering Gap)
@@ -653,7 +661,7 @@ Class            Structural
 Domain           Clone Redundancy
 Severity         Medium
 Detected By      Section E Population Scan (2026-07-22)
-Status           Open â€” documented, not remediated
+Status           Resolved — 18 clones archived 2026-09-05 (see Remediation Status)
 Category         Template-generated clone waste
 ```
 
@@ -690,15 +698,15 @@ Batch cap: <=28 items per governance-guard Rule 5. Backup-before-write: mandator
 
 Three scans were run before the count stabilized at 140 clones. The original finding report (128) had an arithmetic error (56+56â‰ 128) and an undercount. The first background agent (138) miscounted Groups 1 and 15. The definitive scan (BG Agent 3, 150 items / 140 clones) is authoritative.
 
-### Open Decisions
+### Open Decisions — RESOLVED 2026-09-05
 
-- Option A (Archive) vs. Option B (Re-key `UniqueConceptKey`)
-- Group 1 seed: EC-003 (template, prior selection) vs. EC-004 (custom distractors, 302-char EC, recommended)
-- See `reports/remediation/DL012_REMEDIATION_PROPOSAL.md` Â§9 for full comparison
+- Option A (Archive) selected per user-authorized live-pool cleanup directive (Archived = out of delivery, content preserved per §9.2, reversible).
+- Reconstruction was required: the proposal files are absent from the repo, and intervening waves differentiated most original groups. Current-architecture scan (stem-Jaccard ≥ 0.78 + identical choice-value multiset, the AGENTS.md §19.4 rotation-gate family) found 11 residual families (29 items), not 28 — 121/150 scope items are now solo (genuinely differentiated). Seeds picked by richest EC + clean EWs (ED-036/040 and ED-046/050 decided on EW richness over the EC-length tie-break).
+- Group-1 debate moot: EC-003's stem diverged (supplier-sanctions scenario); the surviving SoD-skeleton family (EC-001/004/005) seeded EC-004.
 
 ### Remediation Status
 
-**Not executed.** The 4-batch write plan, backup protocol, and governance guard compliance are all documented and verified. Pack C and D are BLOCKED from any edit per `reports/session_status/SESSION_STATUS_2026-07-22.md` Â§3.3 until all risks are resolved.
+**EXECUTED 2026-09-05.** 18 clones archived, state-only (Certified → Archived; content untouched per §9.2): Pack C — EC-001, EC-005, EC-010, EC-030, EC-050, EC-051, EC-053, EC-055, EC-057, EC-059, EC-062, EC-063, EC-064, EC-065; Pack D — ED-001, ED-014, ED-036, ED-046. 11 seeds retained (EC-004/008/028/049/052/060/061, ED-002/015/040/050). Traveling defects ride into archive (reactivation-gated, documented here): EC-030 (key inversion stored-D/true-B + foreign EWs), EC-050 (EW_A/EW_D mismatches), EC-051/053/057/059/063/064/065 (DL-013 boilerplate slots). Pool: 2,602 Certified (500/500/486/496/620). Backups: `pack_c/d_corrected.js.bak-DL012-20260905152943`. Superseded fixes: EC-001/005/010/055 (DL-047 remediations absorbed by archival — correctness work preserved in seed counterparts).
 
 ### Regression Test
 
@@ -723,7 +731,7 @@ Class            Content
 Domain           Explanation Quality
 Severity         High (educational quality â€” learners receive generic, non-instructional feedback)
 Detected By      Build-Time AI Verification (DL-007 segmentation scan, 2026-07-22; scope corrected 2026-07-23)
-Status           In Progress — 1,736 of 2,587 fields cleared (67.1%). Section A fully remediated. Section C fully remediated and confirmed 0 by fresh boundary-safe rescan (2026-07-23). Sections B and D confirmed clean in all remediated packs (A, C, D) by fresh rescan. Remaining: **366 QIDs, 851 fields (authoritative)** — Pack A (94/238: A-residual/B/C/E), Pack C (159/357: D/E/F), Pack D (113/256: E/F). Zero Certified items affected.
+Status           Resolved — certification-blocking scope closed 2026-09-05 (template 0 + short-form 0 pool-wide; see closeout below).
 Category         Template-generated boilerplate distractor explanations
 ```
 
@@ -834,6 +842,10 @@ DL-007 was originally filed as a single-instance defect (P1-A-022) and marked Re
 - Pack A Section A residual: 2 items (P1-A-044, P1-A-064) with 5 fields — edge cases missed by prior sweeps
 
 **Count stability:** The 851 field total was confirmed by 5 independent boundary-safe per-section scans. No counting instability observed. Full plan: `reports/remediation/DL013_REMAINING_1713_REMEDIATION_PROPOSAL.md`.
+
+### 2026-09-05 Closeout — Blocking scope resolved
+
+Exact-template screen (both-half conjunction) over all 5 packs found 8 Certified items (EC-051/053/056/057/059/063/064/065 — the 2026-07-23 "851 fields" figure is superseded; intervening waves cleared the rest without a library update); short-form screen found 0; all-states counts identical (no non-Certified residue). Disposition: 7 archived via the DL-012 disposition of the same date (EC-051/053/057/059/063/064/065 — boilerplate rides into archive, documented in DL-012); EC-056 (unique Meridian board-independence scenario, S58-upgraded) repaired choice-specific + recertified. Post: template 0, short-form 0 pool-wide, all states. Deferred Segments 2/4/6 editorial enhancement (generic-but-accurate texts) remains non-blocking future work, not a certification defect.
 
 ---
 
@@ -2767,7 +2779,7 @@ Class            Structural / Governance
 Domain           Governance Guard Coverage Gap — Certification Pipeline
 Severity         High (39 Certified items in active learner pool carry empty distractor EW slots)
 Detected By      Build-Time AI Verification (S812 Repeatability Review — Board G-L)
-Status           Open — documented, Rule 6 deployed (S814), content remediation pending (S816-S818)
+Status           Resolved-in-fact 2026-09-05 — 0 Certified empty-slot items pool-wide (see Resolved)
 ```
 
 **Question IDs:** 39 items across Pack C (28) and Pack D (11), all Domain F, all `question_state: "Certified"` (certified via S853 WAVE_A, 2026-07-27)
@@ -2845,7 +2857,7 @@ After remediation:
 
 ### Resolved
 
-Not yet. Rule 6 deployed (S814). Content remediation pending (S816-S818).
+Resolved-in-fact 2026-09-05: canonical-parser scan (empty OR absent non-CC EW slot on Certified) finds 0 items pool-wide — the 39 S853-wave items now carry filled, choice-specific distractor slots (filled by intervening certification waves; no S816–S818 wave proved necessary). Template-boilerplate screen on the same cohort: 0. Rule 6 BLOCK remains deployed as prevention. No S816–S818 remediation outstanding.
 
 ### Cross-References
 
@@ -2867,7 +2879,7 @@ Class            Process / Methodology
 Domain           Pipeline Consistency — Readiness Routing Divergence
 Severity         Medium (no learner impact — 40 Certified items misclassified as BLOCKED by one tool)
 Detected By      Build-Time AI Verification (S812 Repeatability Review — Board A-F)
-Status           Open — documented, root cause identified, correction pending (C2 artifact reuse targeted S819-S820)
+Status           Resolved — Migration 3 executed 2026-08-24 (see in-entry amendment)
 ```
 
 **Question IDs:** 40 items: P1-E-R01 through P1-E-R40 (Pack E R-series, all `question_state: "Certified"`)
@@ -3128,7 +3140,7 @@ Class            Structural / Content (hybrid)
 Domain           Explanation Slot Error — rotation-artifact DL-008 cluster
 Severity         HIGH (learner-safety — 9 Certified items in Tier 1 delivery with non-empty ExplanationWrong[CorrectChoice])
 Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01 — Function-constructor within-object scan)
-Status           Open — discovered, not remediated
+Status           Resolved — S133 2026-08-01 (see Resolved section in-entry)
 Category         Rotation-artifact cluster missed by prior DL-008 closeout
 ```
 
@@ -3207,7 +3219,7 @@ Class            Structural / Governance
 Domain           Metadata Registry Gap — unregistered governance state
 Severity         MEDIUM (governance invisibility + runtime delivery exposure; no content error)
 Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01)
-Status           Open — discovered, not remediated
+Status           Resolved — S133 2026-08-01 (see Resolved section in-entry)
 Category         Registry/standard divergence from S899 authoring practice
 ```
 
@@ -3270,7 +3282,7 @@ Class            Structural
 Domain           Metadata Completeness
 Severity         MEDIUM (metadata-incomplete Certified items in Tier 1 learner pool)
 Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01)
-Status           Open — discovered, not remediated
+Status           Resolved — S133 2026-08-01 (see Resolved section in-entry)
 Category         Metadata field absence on Certified items
 ```
 
@@ -3411,7 +3423,7 @@ Class            Pedagogical
 Domain           Distractor Distinctness (logical equivalence / restatement duplication)
 Severity         Medium (psychometric — reduces effective choices; also flagged as "too easy to rule out" in learner practice)
 Detected By      User-reported exam practice feedback (all modules, 2026-08-23); scoped by automated audit
-Status           Open — remediation Batch 1 in progress (duplicate pairs first)
+Status           Program complete 2026-08-23 (Batches 1–4 closed; see Batch 4 progress in-entry)
 ```
 
 **Files:** all 5 Part 1 packs; worst cluster in Pack E supplemental items (S-series).
@@ -3572,7 +3584,7 @@ Class            Content
 Domain           Semantic Accuracy — Distractor Text Integrity
 Severity         High (Certified item presents a malformed answer choice to learners)
 Detected By      Build-Time AI Verification — evidence-gathering probe during the DL-026 enrichment wave (2026-08-24)
-Status           Open — discovered during the DL-026 wave; outside that wave's authorized scope
+Status           Resolved — choice C reconstructed + recertified 2026-09-05 (see Resolved)
 Category         Truncated/garbled choice text surviving certification
 ```
 
@@ -3595,6 +3607,10 @@ For each parsed item, flag any Choice[A–D] value whose trimmed length is less 
 ### Remediation Path
 
 Reconstruct the intended option from topic context (diluted-EPS scope — the sibling options are "Only common shares" / "Only preferred stock" / "Convertible securities and options if dilutive", so C was plausibly a third scope variant), then re-verify the item end-to-end before any further state change.
+
+### Resolved
+
+2026-09-05 — Choice C reconstructed as "Only antidilutive securities" (the surviving " securities" tail; EW_C's "antidilutive securities are excluded" confirms the intended scope-variant; completes the only-common / only-preferred / only-antidilutive / convertible-if-dilutive set). Key D intact (verified correct). Quarantine → fix → verify → Certified + `recertification_batch`/`recertification_date` stamps. Backup: `pack_e_corrected.js.bak-DL046-20260905152439`. Related observation (non-blocking): Pack E leading-space choice pattern (`" work to date"`, `" costs incurred"`, `" manufacturing costs"`) — cosmetic DL-046-family marker; only E-C-092 rose to defect (repaired under DL-047).
 
 ---
 

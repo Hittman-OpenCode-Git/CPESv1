@@ -8,7 +8,7 @@
       "Question Packs": 5,
       "Case Banks": 5
     },
-    "duration": 6,
+    "duration": 2,
     "confidence": 100
   },
   {
@@ -24,7 +24,7 @@
     "statistics": {
       "Cases Checked": 75
     },
-    "duration": 615,
+    "duration": 181,
     "confidence": 100
   },
   {
@@ -113,7 +113,7 @@
       "Domain: Planning, Budgeting, and Forecasting": 12,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 155,
+    "duration": 127,
     "confidence": 100
   },
   {
@@ -129,7 +129,7 @@
       "P2 Items Checked": 0,
       "P2 Cases Checked": 0
     },
-    "duration": 1,
+    "duration": 0,
     "confidence": 100
   },
   {
@@ -191,7 +191,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 37
     },
-    "duration": 233,
+    "duration": 170,
     "confidence": 100
   },
   {
@@ -365,7 +365,7 @@
       "Orphan Exhibits (unreferenced)": 115,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 189,
+    "duration": 122,
     "confidence": 100
   },
   {
@@ -373,41 +373,23 @@
     "status": "WARN",
     "errors": [],
     "warnings": [
-      "content/packs/pack_e_corrected.js [225] (P1E-E-004): ExplanationCorrect is short (48 chars)",
-      "content/packs/pack_e_corrected.js [231] (P1E-E-010): ExplanationCorrect is short (47 chars)",
-      "content/packs/pack_e_corrected.js [257] (P1E-F-006): ExplanationCorrect is short (42 chars)",
-      "content/packs/pack_e_corrected.js [260] (P1E-F-009): ExplanationCorrect is short (49 chars)",
-      "content/packs/pack_e_corrected.js [261] (P1E-F-010): ExplanationCorrect is short (48 chars)",
-      "content/packs/pack_e_corrected.js [264] (P1E-F-013): ExplanationCorrect is short (44 chars)",
-      "content/packs/pack_e_corrected.js [265] (P1E-F-014): ExplanationCorrect is short (46 chars)",
-      "content/packs/pack_e_corrected.js [270] (P1E-F-019): ExplanationCorrect is short (47 chars)",
-      "content/packs/pack_e_corrected.js [272] (P1E-F-021): ExplanationCorrect is short (49 chars)",
-      "content/packs/pack_e_corrected.js [275] (P1E-F-024): ExplanationCorrect is short (40 chars)",
-      "content/packs/pack_e_corrected.js [328] (P1E-C-050): ExplanationCorrect is short (45 chars)",
-      "content/packs/pack_e_corrected.js [348] (P1E-D-043): ExplanationCorrect is short (45 chars)",
-      "content/packs/pack_e_corrected.js [399] (P1E-E-064): ExplanationCorrect is short (42 chars)",
-      "content/packs/pack_e_corrected.js [421] (P1E-F-058): ExplanationCorrect is short (30 chars)",
-      "content/packs/pack_e_corrected.js [429] (P1E-F-066): ExplanationCorrect is short (47 chars)",
-      "content/packs/pack_e_corrected.js [443] (P1E-C-069): ExplanationCorrect is short (49 chars)",
-      "content/packs/pack_e_corrected.js [497] (P1E-C-098): ExplanationCorrect is short (47 chars)",
-      "content/packs/pack_e_corrected.js [498] (P1E-C-099): ExplanationCorrect is short (47 chars)",
       "[content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 355: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.",
       "[content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 1814: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.",
       "[content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 4720: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.",
       "content/cases/legacy/scored_cases2.js[2] item[3] (CBQ2-B1): Explanation is short (27 chars)",
       "content/cases/legacy/scored_cases3.js[2] item[4] (CBQ3-B1): Explanation is short (45 chars)",
-      "20 explanations are shorter than the recommended 50-character minimum."
+      "2 explanations are shorter than the recommended 50-character minimum."
     ],
     "statistics": {
       "MCQ Questions Checked": 2620,
       "Case Items Checked": 400,
       "Questions with Placeholder Explanations": 0,
       "Fields with Placeholder Text": 0,
-      "Short Explanations (<50 chars)": 20,
-      "Correct Explanation Avg Length": 526,
+      "Short Explanations (<50 chars)": 2,
+      "Correct Explanation Avg Length": 528,
       "Wrong Explanation Avg Length": 344
     },
-    "duration": 475,
+    "duration": 407,
     "confidence": 100
   },
   {
@@ -439,7 +421,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 41,
+    "duration": 35,
     "confidence": 100
   },
   {
@@ -972,6 +954,7 @@
       "[AbsoluteLanguageValidator] P1E-A-014 Choice C: \"Classify as a finance lease because all three conditions — lease term meets the major part threshold, purchase option, and specialized nature — are present. All three must be met for a finance lease\" — contains absolute language \"must\"",
       "[AbsoluteLanguageValidator] P1E-A-024 Choice A: \"Only common shares\" — contains absolute language \"only/exclusively\"",
       "[AbsoluteLanguageValidator] P1E-A-024 Choice B: \"Only preferred stock\" — contains absolute language \"only/exclusively\"",
+      "[AbsoluteLanguageValidator] P1E-A-024 Choice C: \"Only antidilutive securities\" — contains absolute language \"only/exclusively\"",
       "[AbsoluteLanguageValidator] P1E-A-028 Choice A: \"Comprehensive income is $2,035,000 — net income is the primary driver of the $2,035K result. The foreign currency translation loss of $340K is the largest OCI component but represents only 16.2% of net income's magnitude\" — contains absolute language \"only/exclusively\"",
       "[AbsoluteLanguageValidator] P1E-A-028 Choice C: \"Comprehensive income = $2,715,000 because OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income\" — contains absolute language \"only/exclusively\"",
       "[AbsoluteLanguageValidator] P1E-A-028 Choice D: \"Comprehensive income = $2,410,000 — the pension prior service credit ($180K) is reported as a liability reduction and does not flow through OCI. Only the AFS gain ($95K) and FX loss ($340K) affect comprehensive income, producing net OCI of +$310K\" — contains absolute language \"only/exclusively\"",
@@ -2112,8 +2095,8 @@
     ],
     "statistics": {
       "AbsoluteLanguageValidator.questionsScanned": 2120,
-      "AbsoluteLanguageValidator.findings": 794,
-      "AbsoluteLanguageValidator.pattern.only/exclusively": 680,
+      "AbsoluteLanguageValidator.findings": 795,
+      "AbsoluteLanguageValidator.pattern.only/exclusively": 681,
       "AbsoluteLanguageValidator.pattern.must": 76,
       "AbsoluteLanguageValidator.pattern.exactly": 21,
       "AbsoluteLanguageValidator.pattern.no-other/exception/alternative": 7,
@@ -2134,9 +2117,9 @@
       "MathematicalValidator.falsePositiveRate": "0%",
       "modules": 5,
       "totalErrors": 0,
-      "totalWarnings": 1662
+      "totalWarnings": 1663
     },
-    "duration": 1671,
+    "duration": 1228,
     "confidence": 100
   }
 ]

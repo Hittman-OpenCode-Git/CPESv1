@@ -1,38 +1,38 @@
 # Validation Report Summary
 
-**Generated:** 2026-09-05T18:44:14.571Z
+**Generated:** 2026-09-05T19:46:41.093Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 6ms |
-| Metadata Validator | WARN | 0 | 4 | 615ms |
-| Blueprint Validator | WARN | 0 | 70 | 155ms |
-| Part 2 Blueprint Validator | WARN | 0 | 1 | 1ms |
-| Difficulty Validator | WARN | 0 | 39 | 233ms |
-| Reference Validator | WARN | 0 | 159 | 189ms |
-| Explanation Validator | WARN | 0 | 24 | 475ms |
-| Case Integrity Validator | WARN | 0 | 10 | 41ms |
-| PsychometricValidator | WARN | 0 | 1662 | 1671ms |
+| Repository Validator | PASS | 0 | 0 | 2ms |
+| Metadata Validator | WARN | 0 | 4 | 181ms |
+| Blueprint Validator | WARN | 0 | 70 | 127ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 0ms |
+| Difficulty Validator | WARN | 0 | 39 | 170ms |
+| Reference Validator | WARN | 0 | 159 | 122ms |
+| Explanation Validator | WARN | 0 | 6 | 407ms |
+| Case Integrity Validator | WARN | 0 | 10 | 35ms |
+| PsychometricValidator | WARN | 0 | 1663 | 1228ms |
 
 **Total Errors:** 0
-**Total Warnings:** 1969
+**Total Warnings:** 1952
 **Overall Status:** WARN
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 6ms
+**Duration:** 2ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 615ms
+**Duration:** 181ms
 **Statistics:**
 - Cases Checked: 75
 **Warnings:**
@@ -43,7 +43,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 155ms
+**Duration:** 127ms
 **Statistics:**
 - Cases Checked: 75
 - Cross-Domain Cases: 2
@@ -127,7 +127,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 1ms
+**Duration:** 0ms
 **Statistics:**
 - P2 MCQ Packs Found: 0
 - P2 Case Packs Found: 0
@@ -138,7 +138,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 233ms
+**Duration:** 170ms
 **Statistics:**
 - Cases Checked: 75
 - Items Checked: 400
@@ -195,7 +195,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 189ms
+**Duration:** 122ms
 **Statistics:**
 - Cases Checked: 75
 - Total References: 0
@@ -364,44 +364,26 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 475ms
+**Duration:** 407ms
 **Statistics:**
 - MCQ Questions Checked: 2620
 - Case Items Checked: 400
 - Questions with Placeholder Explanations: 0
 - Fields with Placeholder Text: 0
-- Short Explanations (<50 chars): 20
-- Correct Explanation Avg Length: 526
+- Short Explanations (<50 chars): 2
+- Correct Explanation Avg Length: 528
 - Wrong Explanation Avg Length: 344
 **Warnings:**
-- content/packs/pack_e_corrected.js [225] (P1E-E-004): ExplanationCorrect is short (48 chars)
-- content/packs/pack_e_corrected.js [231] (P1E-E-010): ExplanationCorrect is short (47 chars)
-- content/packs/pack_e_corrected.js [257] (P1E-F-006): ExplanationCorrect is short (42 chars)
-- content/packs/pack_e_corrected.js [260] (P1E-F-009): ExplanationCorrect is short (49 chars)
-- content/packs/pack_e_corrected.js [261] (P1E-F-010): ExplanationCorrect is short (48 chars)
-- content/packs/pack_e_corrected.js [264] (P1E-F-013): ExplanationCorrect is short (44 chars)
-- content/packs/pack_e_corrected.js [265] (P1E-F-014): ExplanationCorrect is short (46 chars)
-- content/packs/pack_e_corrected.js [270] (P1E-F-019): ExplanationCorrect is short (47 chars)
-- content/packs/pack_e_corrected.js [272] (P1E-F-021): ExplanationCorrect is short (49 chars)
-- content/packs/pack_e_corrected.js [275] (P1E-F-024): ExplanationCorrect is short (40 chars)
-- content/packs/pack_e_corrected.js [328] (P1E-C-050): ExplanationCorrect is short (45 chars)
-- content/packs/pack_e_corrected.js [348] (P1E-D-043): ExplanationCorrect is short (45 chars)
-- content/packs/pack_e_corrected.js [399] (P1E-E-064): ExplanationCorrect is short (42 chars)
-- content/packs/pack_e_corrected.js [421] (P1E-F-058): ExplanationCorrect is short (30 chars)
-- content/packs/pack_e_corrected.js [429] (P1E-F-066): ExplanationCorrect is short (47 chars)
-- content/packs/pack_e_corrected.js [443] (P1E-C-069): ExplanationCorrect is short (49 chars)
-- content/packs/pack_e_corrected.js [497] (P1E-C-098): ExplanationCorrect is short (47 chars)
-- content/packs/pack_e_corrected.js [498] (P1E-C-099): ExplanationCorrect is short (47 chars)
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 355: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 1814: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 4720: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - content/cases/legacy/scored_cases2.js[2] item[3] (CBQ2-B1): Explanation is short (27 chars)
 - content/cases/legacy/scored_cases3.js[2] item[4] (CBQ3-B1): Explanation is short (45 chars)
-- 20 explanations are shorter than the recommended 50-character minimum.
+- 2 explanations are shorter than the recommended 50-character minimum.
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 41ms
+**Duration:** 35ms
 **Statistics:**
 - Total Cases Checked: 75
 - Total Items Checked: 400
@@ -428,11 +410,11 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 1671ms
+**Duration:** 1228ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2120
-- AbsoluteLanguageValidator.findings: 794
-- AbsoluteLanguageValidator.pattern.only/exclusively: 680
+- AbsoluteLanguageValidator.findings: 795
+- AbsoluteLanguageValidator.pattern.only/exclusively: 681
 - AbsoluteLanguageValidator.pattern.must: 76
 - AbsoluteLanguageValidator.pattern.exactly: 21
 - AbsoluteLanguageValidator.pattern.no-other/exception/alternative: 7
@@ -453,7 +435,7 @@
 - MathematicalValidator.falsePositiveRate: 0%
 - modules: 5
 - totalErrors: 0
-- totalWarnings: 1662
+- totalWarnings: 1663
 **Warnings:**
 - [AbsoluteLanguageValidator] P1-A-001 Choice B: "Classify it as noncurrent solely because management expects renewal" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-A-005 Choice D: "Two performance obligations — the hardware-plus-installation as one obligation (since the hardware must be installed to function) and the software-plus-maintenance as a second obligation (since the software updates and support are ongoing services). The bundled pricing makes individual separation impractical." — contains absolute language "must"
@@ -980,6 +962,7 @@
 - [AbsoluteLanguageValidator] P1E-A-014 Choice C: "Classify as a finance lease because all three conditions — lease term meets the major part threshold, purchase option, and specialized nature — are present. All three must be met for a finance lease" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1E-A-024 Choice A: "Only common shares" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-024 Choice B: "Only preferred stock" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-024 Choice C: "Only antidilutive securities" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-028 Choice A: "Comprehensive income is $2,035,000 — net income is the primary driver of the $2,035K result. The foreign currency translation loss of $340K is the largest OCI component but represents only 16.2% of net income's magnitude" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-028 Choice C: "Comprehensive income = $2,715,000 because OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-028 Choice D: "Comprehensive income = $2,410,000 — the pension prior service credit ($180K) is reported as a liability reduction and does not flow through OCI. Only the AFS gain ($95K) and FX loss ($340K) affect comprehensive income, producing net OCI of +$310K" — contains absolute language "only/exclusively"

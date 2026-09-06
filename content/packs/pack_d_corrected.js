@@ -5584,6 +5584,8 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-BD-032",
+    "recertification_batch": "DL-010 Remediation Recertification",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -5593,7 +5595,7 @@ var MCQ_BANK_D = [
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Standard costs supplement actual cost records rather than replace them. Actual records are necessary for computing variances, preparing financial statements, and validating standard cost assumptions. A company that eliminated actual records could not measure whether its standards were attainable or accurate.",
-    "ExplanationWrongB": "Standard costs do not replace the need for actual cost records. Actual cost data is essential for computing cost variances, preparing GAAP-compliant financial statements, and evaluating whether predetermined standards are realistic. A company using standard costs must still track actual costs to measure deviations and assess performance.",
+    "ExplanationWrongB": "Standard costs cannot eliminate future price fluctuations — market prices move regardless of internal benchmarks. Standards provide a fixed reference so variances reveal price changes; they do not prevent them.",
     "ExplanationWrongC": "Standard costs are internal management tools used for planning, control, and variance analysis. External financial statements under GAAP must report actual historical costs, not predetermined standards. Standard costs facilitate internal decision-making but do not determine what appears in published financial reports.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
@@ -12724,6 +12726,8 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-CD-073",
+    "recertification_batch": "DL-010 Remediation Recertification",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -12734,7 +12738,7 @@ var MCQ_BANK_D = [
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Activity-based costing assigns overhead costs to products and services based on the activities and cost drivers that consume resources. It is a cost allocation methodology, not a company-wide philosophy that makes quality and continuous improvement the shared responsibility of every employee, which defines total quality management.",
-    "ExplanationWrongC": "Activity-based costing assigns overhead costs to products based on activities and cost drivers. It is a cost accounting methodology, not a management philosophy. TQM is a comprehensive approach emphasizing continuous improvement and customer focus at every level of the organization.",
+    "ExplanationWrongC": "Zero-based budgeting justifies expenses from zero each period — a budgeting process, not a company-wide quality philosophy. Ashvale's continuous-improvement, customer-satisfaction culture shared by every employee is total quality management.",
     "ExplanationWrongD": "Standard costing sets benchmarks for input costs. It does not measure customer profitability, which compares net contribution per customer after customer-specific costs.",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -17945,7 +17949,7 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-ED-001",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -18608,7 +18612,7 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-ED-014",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -19740,7 +19744,7 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-ED-036",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20260,7 +20264,7 @@ var MCQ_BANK_D = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-ED-046",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",

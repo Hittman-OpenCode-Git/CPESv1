@@ -16054,6 +16054,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-DC-038",
+    "recertification_batch": "DL-010 Remediation Recertification",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -16065,7 +16067,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongA": "The Theory of Constraints identifies the bottleneck that limits system throughput. The five focusing steps are: identify the constraint, exploit the constraint, subordinate everything else to the constraint, elevate the constraint, and repeat. Non-bottleneck resources should produce only what the bottleneck can process.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Standard costing measures cost performance through variance analysis. The Theory of Constraints focuses on identifying the system bottleneck and maximizing throughput through that constraint. TOC prioritizes throughput over cost reduction and accepts non-bottleneck idle time as necessary.",
-    "ExplanationWrongD": "This option reflects a misunderstanding of theory of constraints throughput. The choice \"Absorption costing, which allocates all fixed overhead to pr\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+    "ExplanationWrongD": "Zero-based budgeting resets every account to zero each period — a budgeting methodology, not a costing philosophy. Millbrook's bottleneck focus is the theory of constraints, which maximizes throughput at the limiting resource.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand"
@@ -17980,7 +17982,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "Management override describes a person with authority intentionally bypassing an existing control. Ashford's three-way split is operating as designed — three separate employees authorize, record, and reconcile. No bypass occurs; the scenario demonstrates segregation of duties, not its override.",
     "ExplanationWrongC": "Cost-benefit analysis weighs whether a control is worth implementing. Ashford already implemented the control — duties are split among three people. The question asks what concept the arrangement reflects (segregation), not whether the control was worth its cost.",
     "ExplanationWrongD": "Risk acceptance is a deliberate documented decision to tolerate a known exposure without controls. Ashford did the opposite — it implemented a three-way segregation of authorization, recording, and reconciliation. Tolerating risk means forgoing controls, not splitting duties.",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-EC-001 (DL-012 rotation clone)"
@@ -18187,7 +18189,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "Cost-benefit analysis evaluates whether a control justifies its cost. Emberton already bears the cost — three employees split authorization, recording, and reconciliation. The arrangement reflects segregation of duties, not a cost-benefit computation.",
     "ExplanationWrongC": "Management override requires someone with authority bypassing an existing control. Three separate Emberton employees perform the three functions with no bypass described. The scenario shows segregation operating, not override.",
     "ExplanationWrongD": "Risk acceptance means knowingly tolerating an exposure without implementing controls. Emberton implemented controls — separate authorization, recording, and reconciliation. The concept reflected is segregation of duties, not acceptance of risk.",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-EC-005 (DL-012 rotation clone)"
@@ -18445,7 +18447,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "",
     "ExplanationWrongC": "The Balanced Scorecard translates strategy into performance measures across financial, customer, process, and learning perspectives. It does not define internal control through five integrated components (control environment, risk assessment, control activities, information and communication, monitoring) — that is COSO.",
     "ExplanationWrongD": "Six Sigma DMAIC (Define, Measure, Analyze, Improve, Control) is a process-improvement methodology, not an internal-control evaluation framework. Junction's five-component assessment of control design and operating effectiveness matches COSO, not DMAIC.",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-EC-010 (DL-012 rotation clone)"
@@ -19469,7 +19471,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "Option B describes the benefit of independence — objective detection of errors — but this describes the outcome of independence rather than the control principle it serves. Under COSO Principle 12, segregation of duties and independent verification are control activities that reduce the risk that one person can both perpetrate and conceal an error or irregularity. Independence in bank reconciliation specifically implements the principle that the person performing the control should not have been involved in the transactions being verified, creating an organizational separation of duties. The question asks for the principle behind independence, not its operational result. Furthermore, an independent reconciliation can only detect discrepancies between recorded transactions and the bank statement — it does not address the completeness assertion or transactions that bypassed the recording system entirely. A candidate selecting this option correctly identifies what independence achieves but does not connect it to the COSO control activity principle it implements.",
     "ExplanationWrongC": "Option C correctly identifies a strategic board action but mislabels it. The April board meeting discussion of 'acceptable worst-case outcomes' across all major initiatives represents the board articulating risk appetite — the aggregate level of risk the organization is willing to accept. Expanding the credit facility to accommodate the Latin American entry is a financing decision that enables the strategy, not a risk tolerance threshold. Risk tolerance is the acceptable variation around specific objectives (e.g., 'we accept that any single market entry may lose up to $3 million'), not the financing authorization that enables the entry. The $5 million credit facility increase is a resource allocation — it creates capacity but does not bound acceptable losses.",
     "ExplanationWrongD": "",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
     "upgrade_note": "S899 Phase 1 — Evaluate/Very Difficult replacement for archived P1-EC-030 (DL-012 rotation clone)"
@@ -20484,7 +20486,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-050",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20536,7 +20538,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-051",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20639,7 +20641,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-053",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20757,7 +20759,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "Outsourcing accounting without oversight replaces one control gap with another — the third party's work goes unverified. A compensating control must add independent review (owner/management oversight), not merely relocate the unreviewed work outside the company.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Eliminating internal controls magnifies the weakness it claims to solve — with no segregation and no controls, errors and fraud go entirely undetected. Company size justifies scaling controls (for example direct owner review as a compensating control), never abandoning them.",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-EC-055 (DL-012 rotation clone)"
@@ -20797,6 +20799,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-056",
+    "recertification_batch": "DL-012 Seed Repair and DL-013 Residue Remediation",
+    "recertification_date": "2026-09-05",
     "question_state": "Certified",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -20808,7 +20812,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "The compensation committee structure is a governance concern, but it is not the most severe deficiency described. Under COSO Principle 1, management override of financial reporting controls—the VP unilaterally changing the bad debt allowance by $170,000—is the most frequently cited internal control weakness in fraud cases. A weak compensation committee does not cause financial misstatement directly; management override does.",
     "ExplanationWrongB": "Risk assessment identifies and analyzes specific threats to achieving objectives. While risk assessment is important, the stem explicitly describes board and executive emphasis on integrity and ethical behavior. Under COSO, this is the defining characteristic of the control environment—the foundation for all other components—often referred to as \"tone at the top.\"",
-    "ExplanationWrongC": "Option C (Risk assessment, which identifies specific threats) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongC": "The risk-assessment process did not fail here — the formula's adequacy is not the issue. The deficiency is governance: the VP overrode the control and the non-independent board approved it. A better formula would still be overridden without independent oversight. The most severe failure is the board independence structure that lets a management override stand.",
     "ExplanationWrongD": "",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -20849,7 +20853,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-057",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20953,7 +20957,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-059",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21055,6 +21059,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-061",
+    "recertification_batch": "DL-012 Seed Repair and DL-013 Residue Remediation",
+    "recertification_date": "2026-09-05",
     "question_state": "Certified",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -21066,7 +21072,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Detection risk relates to the auditor's procedures failing to detect a material misstatement. The stem describes the susceptibility of an account to misstatement before considering controls, which is the definition of inherent risk.",
-    "ExplanationWrongC": "Detection risk relates to the auditor's procedures failing to detect a material misstatement. The stem asks about susceptibility before considering controls—inherent risk. Under the audit risk model, inherent risk is assessed first, then control risk, then detection risk is set based on the desired level of audit risk.",
+    "ExplanationWrongC": "Control risk is the risk that controls fail to prevent or detect misstatement. The stem asks about susceptibility BEFORE considering controls — that timing defines inherent risk, not control risk. Control risk only enters once controls are evaluated.",
     "ExplanationWrongD": "Business risk is broader operating or strategic risk, not the audit-risk component tied to assertion susceptibility.",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember"
@@ -21105,7 +21111,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-062",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21156,7 +21162,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-063",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21207,7 +21213,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-064",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21258,7 +21264,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-065",
-    "question_state": "Certified",
+    "question_state": "Archived",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -23874,6 +23880,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-FC-043",
+    "recertification_batch": "DL-010 Remediation Recertification",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -23882,8 +23890,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Choice A is incorrect because robotic process automation (RPA) automates repetitive, rules-based tasks by mimicking human keystrokes and mouse clicks across software applications. The Sagebrook scenario involves creating a shared, tamper-resistant record across multiple parties — a distributed trust and immutability requirement that RPA does not address. A candidate may confuse any automation technology with the specific consensus and integrity capabilities of blockchain. — it is more vulnerable to unilateral alteration and lacks the distributed trust mechanism that makes blockchain suitable for shared records among parties who may not fully trust each other. A candidate may confuse the outcome (tamper-resistance) with the architectural means (decentralization across multiple nodes).",
-    "ExplanationWrongB": "Choice B is incorrect because a tool used exclusively for data visualization presents information through charts, graphs, and dashboards for human interpretation. The scenario describes creating a shared, tamper-resistant record across multiple parties — a data integrity and distributed trust requirement that visualization tools do not address. A candidate may confuse the presentation layer of data with the cryptographic integrity layer provided by blockchain.",
+    "ExplanationWrongA": "A centralized database controlled by one party is the opposite of blockchain's architecture — it creates a single point of control and unilateral-alteration risk. Ridgeline needs distributed trust across multiple parties, which requires a decentralized ledger with consensus, not central control.",
+    "ExplanationWrongB": "Automating manual keystrokes (robotic process automation) improves task efficiency but creates no shared tamper-resistant record. Ridgeline's goal is multi-party distributed trust and immutability — an integrity architecture, not task automation.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Data visualization tools present data graphically through charts, dashboards, and interactive displays — they help communicate insights but do not create tamper-resistant transaction records. A candidate may conflate different technology categories under generic labels. The stem describes blockchain's distributed ledger characteristic, which is fundamentally about decentralized trust and immutability, not about graphical presentation of data.",
     "question_state": "Certified",
@@ -24099,6 +24107,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-FC-048",
+    "recertification_batch": "DL-010 Remediation Recertification",
+    "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -24108,8 +24118,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Network bandwidth measures data transmission speed and capacity — it is an IT infrastructure metric, not a data quality dimension. The stem describes measuring correctness, completeness, and consistency of data values, which are core data quality dimensions. A candidate may confuse technical infrastructure metrics with data quality assessment, but they serve entirely different measurement purposes.",
-    "ExplanationWrongB": "Choice B is incorrect because file storage capacity measures the amount of data that can be stored, not the quality of that data. The stem describes measuring whether data values are correct, complete, and consistent — dimensions of data quality, which is independent of storage volume. A candidate may confuse how much data can be stored with how reliable and accurate that data is.",
-    "ExplanationWrongC": "Choice C is incorrect because software licensing costs reflect the expense of acquiring rights to use software, not the quality of the data managed by that software. The stem describes measuring whether data values are correct, complete, and consistent — dimensions of data quality that are independent of software procurement costs. A candidate may confuse the cost of technology tools with the quality attributes of the data those tools process.",
+    "ExplanationWrongB": "Software licensing costs reflect procurement expense, not data quality. Waverly is measuring correctness, completeness, and consistency of data values — quality attributes independent of what the software cost.",
+    "ExplanationWrongC": "File storage capacity measures how much data can be stored, not how correct, complete, or consistent it is. Quality dimensions assess the reliability of values, independent of storage volume.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,

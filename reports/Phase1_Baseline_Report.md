@@ -88,7 +88,7 @@ All case items are properly linked to parent cases. ✓
 ## Recommendations
 
 1. **Enrich metadata** — Add Bloom's Level to 0 items and DifficultyScore to 0 items
-2. **Expand explanations** — 18 items have explanations under 50 characters
+2. **Expand explanations** — 0 items have explanations under 50 characters
 3. **Add formula references** — Only 38 of 770 calculation items have FormulaReference populated
 4. **Begin domain-by-domain audit** — Start with Section A (External Financial Reporting Decisions) as the highest-coverage domain
 

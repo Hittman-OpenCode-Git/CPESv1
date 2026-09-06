@@ -2,14 +2,14 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-09-05 18:44:15
+  Last generated: 2026-09-05 19:46:42
   Source hash: f135d51d
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-09-05 18:44:15
+**Generated:** 2026-09-05 19:46:42
 **Source Hash:** `f135d51d`
 **Total Questions:** 3045
 
@@ -36,11 +36,11 @@
 
 | Section | Domain | Total | With Validator Findings |
 |---------|--------|------:|----------------------:|
-| C | Performance Management | 473 | 76 |
+| C | Performance Management | 473 | 75 |
 | E | Internal Controls | 463 | 83 |
-| I | I | 492 | 60 |
-| P | P | 1178 | 194 |
-| T | T | 439 | 97 |
+| I | I | 492 | 58 |
+| P | P | 1178 | 192 |
+| T | T | 439 | 89 |
 
 ---
 
@@ -2071,7 +2071,7 @@
 | P1E-A-021 | E | E-A.021 Cumulative preferred | Moderate-Easy | P1-A.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-022 | E | E-A.022 Cost method treasury | Moderate | P1-A.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-023 | E | E-A.023 Basic EPS formula | Moderate | P1-A.6 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-A-024 | E | E-A.024 Diluted EPS scope | Moderate | P1-A.6 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-A-024 | E | E-A.024 Diluted EPS scope | Moderate | P1-A.6 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-A-025 | E | E-A.025 Deferred tax liability | Moderate | P1-A.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-026 | E | E-A.026 Valuation allowance | Moderate-Easy | P1-A.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-027 | E | E-A.027 Direct method cash received | Moderate | P1-A.3 Cash flow statement | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2273,13 +2273,13 @@
 | P1E-E-001 | I | E-E.001 COSO five components | Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-002 | I | E-E.002 Control environment | Moderate-Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-003 | I | E-E.003 Risk assessment COSO | Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-E-004 | I | E-E.004 Control activities | Easy | P1-E.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-004 | I | E-E.004 Control activities | Easy | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-005 | I | E-E.005 Segregation of duties | Moderate-Easy | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-006 | I | E-E.006 Information and communication | Moderate-Easy | P1-E.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-E-007 | I | E-E.007 Monitoring COSO | Easy | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-E-008 | I | E-E.008 COSO ERM strategy | Moderate-Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-009 | I | E-E.009 Risk appetite | Moderate-Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-E-010 | I | E-E.010 Inherent risk | Easy | P1-E.1 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-E-010 | I | E-E.010 Inherent risk | Easy | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-E-011 | I | E-E.011 Residual risk | Moderate-Easy | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-E-012 | I | E-E.012 Fraud triangle | Easy | P1-E.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-013 | I | E-E.013 Preventive control | Difficult | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2305,25 +2305,25 @@
 | P1E-F-003 | T | E-F.003 Prescriptive analytics output analysis | Moderate | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-004 | T | E-F.004 Big data four Vs | Easy | P1-F.2 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-F-005 | T | E-F.005 Big data platform evaluation | Difficult | P1-F.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-006 | T | E-F.006 Big data velocity | Easy | P1-F.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-006 | T | E-F.006 Big data velocity | Easy | P1-F.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-007 | T | E-F.007 Big data variety | Moderate-Easy | P1-F.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-008 | T | E-F.008 Structured data | Easy | P1-F.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-009 | T | E-F.009 Unstructured data | Moderate-Easy | P1-F.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
-| P1E-F-010 | T | E-F.010 Data warehouse | Easy | P1-F.3 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
+| P1E-F-009 | T | E-F.009 Unstructured data | Moderate-Easy | P1-F.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-F-010 | T | E-F.010 Data warehouse | Easy | P1-F.3 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-F-011 | T | E-F.011 ETL | Moderate-Easy | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-012 | T | E-F.012 ERP system evaluation | Difficult | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-013 | T | E-F.013 RPA | Easy | P1-F.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
-| P1E-F-014 | T | E-F.014 Blockchain | Easy | P1-F.3 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-013 | T | E-F.013 RPA | Easy | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-F-014 | T | E-F.014 Blockchain | Easy | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-015 | T | E-F.015 Cloud service model evaluation | Difficult | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-016 | T | E-F.016 Cybersecurity investment prioritization | Difficult | P1-F.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-F-017 | T | E-F.017 Phishing | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-018 | T | E-F.018 Multi-factor authentication | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
-| P1E-F-019 | T | E-F.019 Continuous auditing | Moderate | P1-F.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-019 | T | E-F.019 Continuous auditing | Moderate | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-020 | T | E-F.020 CAATs | Easy | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-021 | T | E-F.021 Data mining | Easy | P1-F.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-021 | T | E-F.021 Data mining | Easy | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-022 | T | E-F.022 Data visualization effectiveness analysis | Moderate | P1-F.1 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-F-023 | T | E-F.023 NIST CSF maturity evaluation | Difficult | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-024 | T | E-F.024 GDPR | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-F-024 | T | E-F.024 GDPR | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-F-025 | T | E-F.025 Data governance policy evaluation | Difficult | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-026 | T | E-F.026 IoT | Easy | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-027 | T | E-F.027 COBIT | Moderate-Easy | P1-E.5 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
@@ -2376,7 +2376,7 @@
 | P1E-C-047 | P | E-C.047 Customer profitability analysis | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-048 | P | E-C.048 Quality cost index | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-C-049 | P | E-C.049 Benchmarking definition | Difficult | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-C-050 | P | E-C.050 Analytics variance analysis | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-C-050 | P | E-C.050 Analytics variance analysis | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-051 | P | E-C.051 Standard cost purpose | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-C-052 | P | E-C.052 Sales variance interpretation | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 11 | — | Not Scored |
 | P1E-C-053 | P | E-C.053 DuPont ROI | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2396,7 +2396,7 @@
 | P1E-D-040 | C | E-D.040 NRV joint cost method | Moderate | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-041 | C | E-D.041 JIT definition | Moderate | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-042 | C | E-D.042 Lean manufacturing | Easy | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-D-043 | C | E-D.043 TOC bottleneck | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-D-043 | C | E-D.043 TOC bottleneck | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-044 | C | E-D.044 Throughput accounting | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-045 | C | E-D.045 Throughput operating expenses | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-D-046 | C | E-D.046 Constraint management | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2447,7 +2447,7 @@
 | P1E-E-061 | I | E-E.061 Entity-level controls | Easy | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-062 | I | E-E.062 Activity-level controls | Moderate | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-063 | I | E-E.063 SOX 906 | Moderate | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-E-064 | I | E-E.064 PCAOB | Moderate | P1-E.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-064 | I | E-E.064 PCAOB | Moderate | P1-E.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-065 | I | E-E.065 COSO principle 5 | Moderate | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-038 | T | E-F.038 Analytics internal audit | Moderate | P1-F.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-039 | T | E-F.039 EDP auditing | Moderate | P1-E.5 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
@@ -2469,7 +2469,7 @@
 | P1E-F-055 | T | E-F.055 Database backup | Easy | P1-F.4 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-F-056 | T | E-F.056 BI system | Moderate-Easy | P1-F.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-F-057 | T | E-F.057 Ransomware | Easy | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-F-058 | T | E-F.058 Computer virus | Moderate-Easy | P1-F.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-058 | T | E-F.058 Computer virus | Moderate-Easy | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-059 | T | E-F.059 Social engineering | Easy | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-060 | T | E-F.060 Penetration testing | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-061 | T | E-F.061 Vulnerability assessment | Moderate | P1-F.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2477,7 +2477,7 @@
 | P1E-F-063 | T | E-F.063 Hot site | Easy | P1-E.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-064 | T | E-F.064 Cold site | Moderate | P1-E.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-065 | T | E-F.065 Business continuity recovery prioritizatio | Difficult | P1-F.5 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
-| P1E-F-066 | T | E-F.066 Recovery time objective | Moderate | P1-E.5 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-F-066 | T | E-F.066 Recovery time objective | Moderate | P1-E.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-067 | T | E-F.067 Recovery point objective | Moderate | P1-E.5 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-068 | T | E-F.068 Blockchain audit | Moderate | P1-F.3 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-F-069 | T | E-F.069 Smart contracts | Moderate-Easy | P1-F.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2491,7 +2491,7 @@
 | P1E-C-066 | P | E-C.066 Strategy map cause-effect | Moderate-Easy | P1-C.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-067 | P | E-C.067 Performance prism | Moderate-Easy | P1-C.2 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-C-068 | P | E-C.068 Quality function deployment | Moderate-Easy | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-C-069 | P | E-C.069 Statistical process control | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-C-069 | P | E-C.069 Statistical process control | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-070 | P | E-C.070 Pareto analysis | Moderate | P1-C.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-071 | P | E-C.071 Root cause analysis | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-C-072 | P | E-C.072 Variance significance | Moderate | P1-C.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2545,8 +2545,8 @@
 | P1E-C-095 | P | E-C.095 Standard cost card | Easy | P1-C.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1E-C-096 | P | E-C.096 Ideal standards term | Easy | P1-C.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-C-097 | P | E-C.097 Practical standards | Easy | P1-C.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
-| P1E-C-098 | P | E-C.098 Unfavorable cost variance | Easy | P1-C.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
-| P1E-C-099 | P | E-C.099 Favorable revenue variance | Moderate-Easy | P1-C.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
+| P1E-C-098 | P | E-C.098 Unfavorable cost variance | Easy | P1-C.1 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-C-099 | P | E-C.099 Favorable revenue variance | Moderate-Easy | P1-C.1 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-C-100 | P | E-C.100 Budgeting behavioral aspects | Easy | P1-B.2 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
 | P1-E-R01 | I | E-R01 segregation of duties — incompatible functio | Moderate-Easy | P1-E.1.e Control Activities | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1-E-R02 | I | E-R02 COSO framework — three categories of objecti | Easy | P1-E.1.b Internal Control Framework (COSO 2013) | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -7531,9 +7531,10 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Moderate
 **CAQS:** Not scored
 
-**Validator Warnings (2):**
+**Validator Warnings (3):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-A-024 Choice A: "Only common shares" — contains absolute language "only/exclusively"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-A-024 Choice B: "Only preferred stock" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-A-024 Choice C: "Only antidilutive securities" — contains absolute language "only/exclusively"
 
 ---
 
@@ -8478,18 +8479,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-E-004
-
-**Topic:** E-E.004 Control activities
-**Section:** Internal Controls
-**Difficulty:** Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [225] (P1E-E-004): ExplanationCorrect is short (48 chars)
-
----
-
 ### P1E-E-006
 
 **Topic:** E-E.006 Information and communication
@@ -8523,8 +8512,7 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Easy
 **CAQS:** Not scored
 
-**Validator Warnings (2):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [231] (P1E-E-010): ExplanationCorrect is short (47 chars)
+**Validator Warnings (1):**
 - [PsychometricValidator] [DistractorSimilarityValidator] P1E-E-010: Choices A and D (distractor-distractor) share high similarity (100%)
 
 ---
@@ -8578,30 +8566,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-F-006
-
-**Topic:** E-F.006 Big data velocity
-**Section:** Technology and Analytics
-**Difficulty:** Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [257] (P1E-F-006): ExplanationCorrect is short (42 chars)
-
----
-
-### P1E-F-009
-
-**Topic:** E-F.009 Unstructured data
-**Section:** Technology and Analytics
-**Difficulty:** Moderate-Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [260] (P1E-F-009): ExplanationCorrect is short (49 chars)
-
----
-
 ### P1E-F-010
 
 **Topic:** E-F.010 Data warehouse
@@ -8609,34 +8573,9 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Easy
 **CAQS:** Not scored
 
-**Validator Warnings (3):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [261] (P1E-F-010): ExplanationCorrect is short (48 chars)
+**Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-F-010 Choice B: "Current transactions only" — contains absolute language "only/exclusively"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-F-010 Choice C: "Only external data" — contains absolute language "only/exclusively"
-
----
-
-### P1E-F-013
-
-**Topic:** E-F.013 RPA
-**Section:** Technology and Analytics
-**Difficulty:** Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [264] (P1E-F-013): ExplanationCorrect is short (44 chars)
-
----
-
-### P1E-F-014
-
-**Topic:** E-F.014 Blockchain
-**Section:** Technology and Analytics
-**Difficulty:** Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [265] (P1E-F-014): ExplanationCorrect is short (46 chars)
 
 ---
 
@@ -8666,30 +8605,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-F-019
-
-**Topic:** E-F.019 Continuous auditing
-**Section:** Technology and Analytics
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [270] (P1E-F-019): ExplanationCorrect is short (47 chars)
-
----
-
-### P1E-F-021
-
-**Topic:** E-F.021 Data mining
-**Section:** Technology and Analytics
-**Difficulty:** Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [272] (P1E-F-021): ExplanationCorrect is short (49 chars)
-
----
-
 ### P1E-F-022
 
 **Topic:** E-F.022 Data visualization effectiveness analysis
@@ -8710,8 +8625,7 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Moderate
 **CAQS:** Not scored
 
-**Validator Warnings (2):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [275] (P1E-F-024): ExplanationCorrect is short (40 chars)
+**Validator Warnings (1):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-F-024 Choice D: "Only financial data" — contains absolute language "only/exclusively"
 
 ---
@@ -8917,18 +8831,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-C-050
-
-**Topic:** E-C.050 Analytics variance analysis
-**Section:** Performance Management
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [328] (P1E-C-050): ExplanationCorrect is short (45 chars)
-
----
-
 ### P1E-C-051
 
 **Topic:** E-C.051 Standard cost purpose
@@ -9010,18 +8912,6 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (1):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-D-038 Choice B: "Using actual costs only" — contains absolute language "only/exclusively"
-
----
-
-### P1E-D-043
-
-**Topic:** E-D.043 TOC bottleneck
-**Section:** Cost Management
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [348] (P1E-D-043): ExplanationCorrect is short (45 chars)
 
 ---
 
@@ -9238,18 +9128,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-E-064
-
-**Topic:** E-E.064 PCAOB
-**Section:** Internal Controls
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [399] (P1E-E-064): ExplanationCorrect is short (42 chars)
-
----
-
 ### P1E-F-039
 
 **Topic:** E-F.039 EDP auditing
@@ -9329,18 +9207,6 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
-### P1E-F-058
-
-**Topic:** E-F.058 Computer virus
-**Section:** Technology and Analytics
-**Difficulty:** Moderate-Easy
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [421] (P1E-F-058): ExplanationCorrect is short (30 chars)
-
----
-
 ### P1E-F-062
 
 **Topic:** E-F.062 IT continuity
@@ -9363,18 +9229,6 @@ Questions that triggered one or more validator errors or warnings:
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-F-065 Choice B: "The general ledger, because financial reporting systems must receive the highest priority in business continuity plan" — contains absolute language "must"
 - [PsychometricValidator] [AmbiguityValidator] P1E-F-065 Choice B: "The general ledger, because financial reporting systems must receive the highest priority in business continuity plan" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
-
----
-
-### P1E-F-066
-
-**Topic:** E-F.066 Recovery time objective
-**Section:** Technology and Analytics
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [429] (P1E-F-066): ExplanationCorrect is short (47 chars)
 
 ---
 
@@ -9442,18 +9296,6 @@ Questions that triggered one or more validator errors or warnings:
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-C-067 Choice A: "Only customer satisfaction" — contains absolute language "only/exclusively"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-C-067 Choice C: "Only financial measures" — contains absolute language "only/exclusively"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-C-067 Choice D: "Only shareholder returns" — contains absolute language "only/exclusively"
-
----
-
-### P1E-C-069
-
-**Topic:** E-C.069 Statistical process control
-**Section:** Performance Management
-**Difficulty:** Moderate
-**CAQS:** Not scored
-
-**Validator Warnings (1):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [443] (P1E-C-069): ExplanationCorrect is short (49 chars)
 
 ---
 
@@ -9788,8 +9630,7 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Easy
 **CAQS:** Not scored
 
-**Validator Warnings (3):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [497] (P1E-C-098): ExplanationCorrect is short (47 chars)
+**Validator Warnings (2):**
 - [PsychometricValidator] [AmbiguityValidator] P1E-C-098: Choices A and C have high word overlap (100%) — may fail to discriminate
 - [PsychometricValidator] [DistractorSimilarityValidator] P1E-C-098: Choices A and C (distractor-distractor) share high similarity (100%)
 
@@ -9802,8 +9643,7 @@ Questions that triggered one or more validator errors or warnings:
 **Difficulty:** Moderate-Easy
 **CAQS:** Not scored
 
-**Validator Warnings (3):**
-- [Explanation Validator] content/packs/pack_e_corrected.js [498] (P1E-C-099): ExplanationCorrect is short (47 chars)
+**Validator Warnings (2):**
 - [PsychometricValidator] [AmbiguityValidator] P1E-C-099: Choices A and C have high word overlap (100%) — may fail to discriminate
 - [PsychometricValidator] [DistractorSimilarityValidator] P1E-C-099: Choices A and C (distractor-distractor) share high similarity (100%)
 
@@ -9825,20 +9665,20 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 6ms)
-- **Metadata Validator**: WARN (0 errors, 4 warnings, 615ms)
-- **Blueprint Validator**: WARN (0 errors, 70 warnings, 155ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 1ms)
-- **Difficulty Validator**: WARN (0 errors, 39 warnings, 233ms)
-- **Reference Validator**: WARN (0 errors, 159 warnings, 189ms)
-- **Explanation Validator**: WARN (0 errors, 24 warnings, 475ms)
-- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 41ms)
-- **PsychometricValidator**: WARN (0 errors, 1662 warnings, 1671ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 2ms)
+- **Metadata Validator**: WARN (0 errors, 4 warnings, 181ms)
+- **Blueprint Validator**: WARN (0 errors, 70 warnings, 127ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 0ms)
+- **Difficulty Validator**: WARN (0 errors, 39 warnings, 170ms)
+- **Reference Validator**: WARN (0 errors, 159 warnings, 122ms)
+- **Explanation Validator**: WARN (0 errors, 6 warnings, 407ms)
+- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 35ms)
+- **PsychometricValidator**: WARN (0 errors, 1663 warnings, 1228ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-09-05 18:44:15
+  Registry regenerated on 2026-09-05 19:46:42
   Source hash: f135d51d
   Questions: 3045
   To regenerate: node scripts/generate_registry.js
