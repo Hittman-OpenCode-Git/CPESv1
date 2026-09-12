@@ -2141,6 +2141,8 @@ const ExamSessionManager = {
         e.preventDefault();
         let mode = $('mode').value;
         let secs = this.sectionsSelected();
+        // Debug: log selected sections
+        console.log('[ExamSessionManager.start] Selected sections:', secs);
         let c = this.getCounts();
         let dist = this.getDifficultyDistribution();
         let seen = [];
@@ -2151,8 +2153,16 @@ const ExamSessionManager = {
         // Build tiered pool (cached per pack selection)
         let tieredPool = this.getMCQPool();
         // Filter flat pool to selected sections
+        let flatFiltered = (tieredPool.flat || []).filter(q => secs.includes(q.Section));
+        // Debug: count questions per section
+        let sectionCounts = {};
+        for (let q of flatFiltered) { sectionCounts[q.Section] = (sectionCounts[q.Section] || 0) + 1; }
+        console.log('[ExamSessionManager.start] Questions per section after filter:', sectionCounts);
+        if (Object.keys(sectionCounts).length === 0) {
+            console.warn('[ExamSessionManager.start] WARNING: No questions found for selected sections!', {secs, totalInPool: tieredPool.flat?.length});
+        }
         let sectionPool = {
-            flat: (tieredPool.flat || []).filter(q => secs.includes(q.Section)),
+            flat: flatFiltered,
             byTier: {},
             counts: tieredPool.counts || { certified: 0, bestUnprocessed: 0, unprocessed: 0 },
             packsKey: tieredPool.packsKey
@@ -2239,6 +2249,7 @@ const ExamSessionManager = {
 
     sectionsSelected() {
         let secs = [...document.querySelectorAll('input[name="section"]:checked')].map(x => x.value);
+        console.log('[ExamSessionManager.sectionsSelected] Checked sections:', secs);
         return secs.length ? secs : ['A', 'B', 'C', 'D', 'E', 'F'];
     },
 

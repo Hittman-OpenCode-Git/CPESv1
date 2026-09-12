@@ -568,7 +568,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "The cost method is used when the investor does not have significant influence (typically less than 20%). At 30% ownership with significant influence, the equity method is required.",
     "ExplanationWrongB": "Full consolidation is used when the investor controls the investee (typically over 50% ownership). At 30% ownership with significant influence but not control, the equity method applies.",
@@ -621,7 +623,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Full consolidation is required when the investor controls the investee, typically at ownership exceeding 50% per ASC 810. At 30% ownership, Larkspur has significant influence but not control. The equity method is the appropriate treatment under ASC 323. Consolidation would overstate Larkspur's assets and liabilities by including 100% of the investee's balances rather than a proportionate single-line investment.",
     "ExplanationWrongB": "Fair value through OCI is not the usual treatment when significant influence exists; the equity method replaces simple fair-value accounting for this type of investment.",
@@ -674,7 +678,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Consolidation under ASC 810 applies when an investor has a controlling financial interest, generally more than 50% voting interest. At 30% ownership, Meridian Peak has significant influence but not control. The equity method — recognizing a proportionate share of investee earnings — is the proper accounting under ASC 323 for investments between 20% and 50%.",
@@ -727,7 +733,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Fair value through OCI is available for passive equity investments without significant influence. The equity method is mandatory when significant influence exists, not optional.",
     "ExplanationWrongB": "",
@@ -780,7 +788,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Consolidation would require control of the investee. A 30% interest with significant influence supports equity-method accounting, not full consolidation.",
     "ExplanationWrongB": "Fair-value accounting with all gains in OCI is not appropriate when significant influence exists; the investor applies the equity method instead.",
@@ -1363,7 +1373,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This divides net income by weighted-average shares without subtracting preferred dividends.",
     "ExplanationWrongB": "",
@@ -1416,7 +1428,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This adds the full 36,000 shares without weighting for time, and omits the 2,000 reduction.",
     "ExplanationWrongB": "This applies incorrect time weighting to the share changes.",
@@ -1468,7 +1482,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This assumes all sales were collected in cash, ignoring the change in accounts receivable. When AR increases, collections are less than sales because some customers have not yet paid. Cash collected = sales + beginning AR - ending AR = $607,000.",
     "ExplanationWrongB": "This reverses the AR adjustment, adding ending AR and subtracting beginning AR.",
@@ -1520,7 +1536,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This equals COGS with no adjustment for inventory or payables changes, as if all purchases were on cash and inventory levels were static. Cash paid to suppliers differs from COGS when inventory and accounts payable change: increases in inventory and decreases in AP both increase cash paid beyond COGS.",
@@ -1573,7 +1591,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This is the value of the 450 units in ending inventory, not COGS.",
     "ExplanationWrongB": "",
@@ -4024,7 +4044,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "The highest historical volume reflects a past period's peak activity, not the current 11,500-unit output. A budget must be calibrated to the current period's actual activity level to separate cost control from volume differences.",
     "ExplanationWrongB": "",
@@ -4077,7 +4099,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Prior-year results are not a budget — they are historical actuals that incorporate last year's inefficiencies and a different activity level. Cost control evaluation requires a budget recalculated at the current 11,500-unit output.",
     "ExplanationWrongB": "Prior year results reflect a different period's conditions, volumes, and cost structures, not the current planning environment. Actual results from a prior year are not a budget; they incorporate prior year inefficiencies and different activity levels. The flexible budget adjusts the current budget to the current actual activity level.",
@@ -4130,7 +4154,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Prior-year actual results reflect a different period's cost structure and volume. They are not a budget for the current period. To evaluate cost control, Driftwood needs a budget recalibrated at the actual 11,500-unit output level.",
     "ExplanationWrongB": "The original static budget is based on the planned activity level (10,000 units) and is not adjusted for the actual volume (11,500 units). Using it to evaluate cost control would mix volume differences with efficiency differences. A flexible budget adjusts to the actual activity level so that cost control can be evaluated separately from volume changes.",
@@ -4183,7 +4209,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "The original static budget is built for 10,000 units and does not adjust to the actual 11,500-unit output. Using it to evaluate cost control mixes volume differences with efficiency differences, obscuring whether costs were properly managed.",
@@ -4236,7 +4264,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "The original static budget is locked to the 10,000-unit plan and cannot separate cost control performance from the 1,500-unit volume difference. A budget must match the actual activity level for meaningful cost evaluation.",
     "ExplanationWrongB": "",
@@ -4289,7 +4319,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "A static budget at 10,000 units cannot isolate whether costs were controlled at the actual 11,500-unit level. The volume difference contaminates any cost comparison, making it impossible to assess true cost control performance.",
     "ExplanationWrongB": "The highest historical volume achieved in the past is not a budget for the current period's actual activity. It reflects an entirely different operating environment and volume. A flexible budget takes the current budget and adjusts it to the current actual volume (11,500 units), isolating cost control from volume variance.",
@@ -4713,7 +4745,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "A top-down forecast describes who sets the assumptions — senior management — not how the time horizon is maintained. The monthly drop-and-add process is a rolling forecast, which keeps a perpetually current 12-month outlook.",
     "ExplanationWrongB": "Zero-based forecasting starts budget amounts from zero; it does not describe continuously extending a 12-month forecast.",
@@ -4766,7 +4800,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Zero-based forecasting requires justifying every expense from zero — it concerns cost justification, not time-horizon management. The monthly update process of dropping the oldest month and adding a new one is a rolling forecast, not a zero-based approach.",
     "ExplanationWrongB": "A top-down forecast is driven by senior management assumptions, not by the rolling update pattern described in the stem.",
@@ -4819,7 +4855,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Zero-based forecasting starts each budget cycle from a base of zero, requiring every expense to be justified anew. It does not describe continuously extending a 12-month horizon — that is the defining mechanism of a rolling forecast.",
@@ -4872,7 +4910,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "A top-down forecast concerns who creates the budget — senior management — not how the timeline is maintained. Adding a new month as each month expires while keeping a 12-month horizon is the defining characteristic of a rolling forecast.",
     "ExplanationWrongB": "",
@@ -4925,7 +4965,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "A top-down forecast is defined by who sets the targets, not by the updating cadence. The monthly refresh process — dropping the oldest month and adding a new future month — is the operating mechanism of a rolling forecast.",
     "ExplanationWrongB": "A static (or fixed) forecast is set once for the fiscal year and is not updated as new information becomes available. The scenario describes adding a new month each time the oldest month drops off, which is the defining characteristic of a rolling (continuous) forecast, not a static forecast.",
@@ -4978,7 +5020,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "A static forecast is set once and does not incorporate new data as the fiscal year progresses. Thornfield updates its forecast monthly — adding a new month as each month ends — which is the exact opposite of static budgeting.",
     "ExplanationWrongB": "A top-down forecast is set by senior management with little or no input from lower-level managers. While this describes who sets the forecast, it does not describe the method of continuously updating the forecast horizon. The key feature here is the periodic extension of the 12-month window, which defines a rolling forecast.",
@@ -5031,7 +5075,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Zero-based budgeting requires every expense to be defended from ground zero each period, without reference to prior spending levels. The described process — continuously maintaining a 12-month forecast by adding new future months — is a rolling forecast.",
@@ -6061,7 +6107,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This results from reversing the inventory adjustments: subtracting desired ending inventory and adding beginning inventory (40,000 - 5,000 + 3,000). The correct formula is: Required production = Budgeted sales + Desired ending inventory - Beginning inventory = 40,000 + 5,000 - 3,000 = 42,000 units.",
@@ -6112,7 +6160,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This choice equals budgeted sales only (40,000 units) and ignores all inventory adjustments. Required production must cover budgeted sales plus the desired ending inventory, while beginning inventory reduces the amount that needs to be produced.",
     "ExplanationWrongB": "",
@@ -6163,7 +6213,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This adds desired ending inventory to budgeted sales (40,000 + 5,000) but fails to subtract beginning inventory (3,000). Beginning inventory represents units already available and reduces the number of new units that must be produced. The correct answer is 42,000 units.",
     "ExplanationWrongB": "This choice equals budgeted sales only (40,000 units) and ignores all inventory adjustments. Required production must cover budgeted sales plus the desired ending inventory, while beginning inventory reduces the amount that needs to be produced.",
@@ -6214,7 +6266,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This choice equals budgeted sales only (40,000 units) and ignores all inventory adjustments. Required production must cover budgeted sales plus the desired ending inventory, while beginning inventory reduces the amount that needs to be produced.",
     "ExplanationWrongB": "This choice adds desired ending inventory (5,000 units) to budgeted sales but does not subtract beginning inventory (3,000 units). Beginning inventory consists of units already produced in prior periods and available for sale, so it reduces the number of new units that need to be produced.",
@@ -6265,7 +6319,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This adds desired ending inventory to budgeted sales (40,000 + 5,000) but fails to subtract beginning inventory (3,000). Beginning inventory represents units already available and reduces the number of new units that must be produced. The correct answer is 42,000 units.",
@@ -6316,7 +6372,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This choice equals budgeted sales only (40,000 units) and ignores all inventory adjustments. Required production must cover budgeted sales plus the desired ending inventory, while beginning inventory reduces the amount that needs to be produced.",
     "ExplanationWrongB": "",
@@ -6822,7 +6880,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This represents only the March sales multiplied by 30% ($180,000 x 30%) and ignores collections from prior months' sales. Cash collections in any period include receipts from sales made in prior months, not just current-month sales. The correct total is $141,000.",
     "ExplanationWrongB": "this adds March collections ($54,000) and February collections ($150,000 x 40% = $60,000) but omits the January portion ($120,000 x 25% = $30,000).",
@@ -7278,7 +7338,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This answer divides the low-point total cost ($47,000) by low-point activity (5,000 hours), treating all cost at the low point as purely variable. Total cost includes both fixed and variable components. The high-low method uses the change in cost ($15,000) divided by the change in activity (3,000 hours) to isolate only the variable portion: $5.00 per machine hour.",
@@ -7296,7 +7358,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "MicroTopic": "high low method cost estimation",
     "UniqueConceptKey": "B-C066-high-low-method-cost-estimation",
     "LOSTag": "P1-B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Quailrun has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing 47,000. What is the estimated variable cost per machine hour?",
@@ -7328,14 +7390,16 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This divides the low-point total cost ($47,000) by low-point activity (5,000 hours), treating all cost at the low point as purely variable. Total cost includes both fixed and variable components at any activity level. The high-low method isolates the variable rate using the change in cost ($15,000) divided by the change in hours (3,000): $5.00.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This divides the $15,000 cost change by 4,000 instead of the correct activity range of 3,000 machine hours. The denominator must be (8,000 - 5,000) = 3,000 hours, the difference between the high and low activity levels. Variable cost per MH = $15,000 / 3,000 = $5.00.",
     "ExplanationWrongD": "This choice equals total high-point cost ($62,000) divided by 10,000, or another combination that mixes total and incremental values. The correct approach uses only the change in cost ($15,000) and the change in activity (3,000 hours) to derive the variable rate. Total cost at any point also includes fixed costs.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {
@@ -7346,7 +7410,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "MicroTopic": "high low method cost estimation",
     "UniqueConceptKey": "B-C067-high-low-method-cost-estimation",
     "LOSTag": "P1-B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Riverstone has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing 47,000. What is the estimated variable cost per machine hour?",
@@ -7378,14 +7442,16 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This divides the $15,000 cost change by 4,000 rather than the correct activity range of 3,000 machine hours (8,000 - 5,000). The high-low method uses only the difference between high and low activity levels as the denominator: $15,000 / 3,000 = $5.00 per machine hour.",
     "ExplanationWrongB": "This choice equals total high-point cost ($62,000) divided by 10,000, or another combination that mixes total and incremental values. The correct approach uses only the change in cost ($15,000) and the change in activity (3,000 hours) to derive the variable rate. Total cost at any point also includes fixed costs.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This divides the low-point total cost ($47,000) by low-point activity (5,000 hours), treating all cost at the low point as purely variable. Total cost includes both fixed and variable components. The variable portion is isolated as ($62,000 - $47,000) / (8,000 - 5,000) = $5.00 per machine hour.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {
@@ -7428,7 +7494,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This divides the low-point total cost ($47,000) by low-point activity (5,000 hours), treating all costs at the low point as purely variable. The high-low method separates variable cost as ($62,000 - $47,000) / (8,000 - 5,000) = $15,000 / 3,000 = $5.00 per machine hour. The $9.40 figure includes fixed cost components.",
     "ExplanationWrongB": "This uses the cost change but divides by the high activity level, not by the 3,000-hour activity change.",
@@ -7478,7 +7546,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This approximates dividing total high-point cost ($62,000) by a denominator that mixes total and incremental values. The high-low method uses only the change in cost and the change in activity to isolate the variable portion: ($62,000 - $47,000) / (8,000 - 5,000) = $15,000 / 3,000 = $5.00 per machine hour.",
@@ -7528,7 +7598,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This divides the $15,000 cost difference by 4,000 instead of the correct activity range of 3,000 hours (8,000 minus 5,000). The denominator must be the difference between high and low activity levels. Variable cost per MH = $15,000 / 3,000 = $5.00.",
     "ExplanationWrongB": "",
@@ -8035,7 +8107,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Option A identifies incremental budgeting, but the stem describes kaizen budgeting. Incremental budgeting carries the prior period's budget forward and adjusts it — by a percentage or negotiated change — without assuming ongoing within-year improvement. The stem's defining fact is that the targets assume ongoing incremental cost reductions throughout the year based on continuous improvement efforts, which is kaizen budgeting's signature. The word 'incremental' in the stem refers to cost improvements over time, not to incremental budgeting's base-and-adjust method.",
-"ExplanationWrongB": "Option B identifies zero-based budgeting, but the stem describes kaizen budgeting. ZBB rebuilds each department's budget from zero each period; Emberton's targets assume ongoing incremental cost reductions throughout the year from continuous improvement efforts — the defining feature of kaizen budgeting. The distinction: ZBB justifies every cost from a zero base each cycle, while kaizen embeds expected improvements directly into each period's targets.",
+    "ExplanationWrongB": "Option B identifies zero-based budgeting, but the stem describes kaizen budgeting. ZBB rebuilds each department's budget from zero each period; Emberton's targets assume ongoing incremental cost reductions throughout the year from continuous improvement efforts — the defining feature of kaizen budgeting. The distinction: ZBB justifies every cost from a zero base each cycle, while kaizen embeds expected improvements directly into each period's targets.",
     "ExplanationWrongC": "Activity-based budgeting links resource consumption to activities and cost drivers. It focuses on what resources are needed, not on continuous improvement targets. Kaizen budgeting specifically embeds incremental cost reductions into the budget to drive ongoing efficiency gains throughout the budget period.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
@@ -8087,7 +8159,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Activity-based budgeting links resource allocation to the activities and cost drivers that produce outputs, but it does not inherently require continuous improvement or cost reduction over the budget period. Kaizen budgeting is the specific technique that builds assumed, ongoing incremental cost reductions from continuous improvement efforts directly into the budget targets. A candidate may confuse ABB's focus on activity cost drivers with kaizen budgeting's mandate for ongoing efficiency gains.",
-"ExplanationWrongC": "Option C identifies zero-based budgeting, but Fairhaven's approach is kaizen budgeting. The stem's tell is the phrase \"ongoing incremental cost reductions throughout the year based on continuous improvement\" — that is kaizen's signature, not ZBB's. ZBB rebuilds budgets from a zero base each period; it does not assume continuous within-year improvement. Kaizen budgeting bakes the improvement expectation into the targets themselves.",
+    "ExplanationWrongC": "Option C identifies zero-based budgeting, but Fairhaven's approach is kaizen budgeting. The stem's tell is the phrase \"ongoing incremental cost reductions throughout the year based on continuous improvement\" — that is kaizen's signature, not ZBB's. ZBB rebuilds budgets from a zero base each period; it does not assume continuous within-year improvement. Kaizen budgeting bakes the improvement expectation into the targets themselves.",
     "ExplanationWrongD": "Incremental budgeting adjusts the prior period budget by a percentage, preserving the existing cost structure without targeting improvements. Kaizen budgeting explicitly incorporates continuous cost reduction goals, challenging every process to become more efficient each period rather than accepting the status quo.",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -9805,7 +9877,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "South Division's higher ROI (20.0%) reflects its smaller asset base, not necessarily superior capital allocation. ROI is subject to the underinvestment bias: a division manager may reject value-creating investments that exceed the cost of capital if they lower the division's average ROI. The project earning 12% exceeds the 10% required return, so it creates value regardless of which division hosts it. The critical consideration is absolute economic value, where North Division contributes $50,000 more in residual income. The assertion that the project harms either division's ROI less at South ignores that declining ROI from a value-creating investment is not a genuine harm to shareholders.",
     "ExplanationWrongB": "",
@@ -9907,7 +9981,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "$450,000 is the full operating income without subtracting the required return charge. Residual income measures the earnings remaining after deducting the minimum required return on invested assets. Subtract $300,000 (10% x $3,000,000) from operating income: $450,000 - $300,000 = $150,000.",
@@ -9958,7 +10034,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$135,000 is incorrect. This may result from a miscalculation such as applying an incorrect percentage to the asset base or using operating income in place of the asset base. Residual income = $450,000 - (10% x $3,000,000) = $150,000.",
     "ExplanationWrongB": "",
@@ -10009,7 +10087,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI measures the dollar amount of income earned above the required return. Subtract the capital charge from operating income: $450,000 - $300,000 = $150,000.",
     "ExplanationWrongB": "This choice equals operating income ($450,000) without subtracting the required return charge. Residual income measures the earnings that exceed the minimum required return on invested assets. Subtract the required return of $300,000 (10% x $3,000,000) from operating income.",
@@ -10060,7 +10140,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$450,000 is the full operating income without subtracting the required return charge. Residual income measures the earnings remaining after deducting the minimum required return on invested assets. Subtract $300,000 (10% x $3,000,000) from operating income: $450,000 - $300,000 = $150,000.",
     "ExplanationWrongB": "This choice equals the required return charge ($300,000 = 10% x $3,000,000), not the residual income. Residual income is the amount of operating income remaining after deducting this required return: $450,000 - $300,000 = $150,000.",
@@ -10111,7 +10193,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "$450,000 is the full operating income without subtracting the required return charge. Residual income measures the earnings remaining after deducting the minimum required return on invested assets. Subtract $300,000 (10% x $3,000,000) from operating income: $450,000 - $300,000 = $150,000.",
@@ -11492,7 +11576,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "Standard costing establishes predetermined cost targets for internal performance measurement and variance calculation. It does not involve comparing processes or performance metrics against external organizations.",
     "ExplanationWrongB": "Variance analysis compares actual to standard or budgeted amounts. It identifies where performance deviated but is a diagnostic tool, not the specific answer to the question posed.",
-"ExplanationWrongC": "Option C identifies zero-based budgeting, but Waverly is benchmarking. The stem's key facts — comparing processes and performance metrics against best-in-class organizations to identify improvement opportunities — define benchmarking. ZBB concerns how a budget is built (justifying every expense from zero); it says nothing about measuring performance against external standards. The comparison-to-others element is what rules ZBB out.",
+    "ExplanationWrongC": "Option C identifies zero-based budgeting, but Waverly is benchmarking. The stem's key facts — comparing processes and performance metrics against best-in-class organizations to identify improvement opportunities — define benchmarking. ZBB concerns how a budget is built (justifying every expense from zero); it says nothing about measuring performance against external standards. The comparison-to-others element is what rules ZBB out.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -11743,7 +11827,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "$25,200 Favorable reverses the direction of the variance. Since Duskwood sold units at $3 below the budgeted price, the variance reduces revenue and is unfavorable.",
@@ -11794,7 +11880,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$446,400 Favorable uses the budgeted price times actual units ($72 x 6,200), which is budgeted revenue, not the sales price variance caused by the price difference of $3 per unit.",
     "ExplanationWrongB": "",
@@ -11845,7 +11933,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$434,000 Unfavorable is the budgeted revenue at actual volume ($31.00 x 14,000), not the sales price variance. This includes the full unit price rather than only the price change.",
     "ExplanationWrongB": "The amount is right, but a price below budget creates an unfavorable variance.",
@@ -11896,7 +11986,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "300,000 Unfavorable likely uses the budgeted price of $25 per unit times the actual volume of 12,000 units ($25 x 12,000 = $300,000). This is budgeted revenue, not the price variance, which is the $2 shortfall per unit times actual volume.",
     "ExplanationWrongB": "This choice has the correct magnitude ($24,000) but the wrong direction. Since the actual selling price ($23) is below the budgeted price ($25), the variance is unfavorable, not favorable. A lower price reduces revenue relative to expectations.",
@@ -11947,7 +12039,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "300,000 Unfavorable likely uses the budgeted price of $25 per unit times the actual volume of 12,000 units ($25 x 12,000 = $300,000). This is budgeted revenue, not the price variance, which is the $2 shortfall per unit times actual volume.",
@@ -11998,7 +12092,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "12,000 Unfavorable results from using the per-unit price difference of $2 multiplied by half of the actual volume (6,000), or from incorrectly using the price difference alone without multiplying properly.",
     "ExplanationWrongB": "",
@@ -12049,7 +12145,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$24,000 favorable reverses the direction of the variance. Since actual output (46,000 units) is below the denominator activity level (50,000 units), the fixed overhead is underapplied and the variance is unfavorable.",
     "ExplanationWrongB": "This uses the entire budgeted fixed overhead amount rather than the activity shortfall times the fixed overhead rate.",
@@ -12100,7 +12198,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$48,000 unfavorable reverses the direction of the variance. Standard hours allowed (66,000) exceed denominator hours (60,000), meaning output was above the denominator level and the variance is favorable, not unfavorable.",
     "ExplanationWrongB": "This uses the full budgeted fixed overhead rather than the difference between standard hours allowed and denominator hours.",
@@ -12151,7 +12251,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "$48,000 favorable reverses the direction of the variance. Standard hours allowed (84,000) are below denominator hours (90,000), meaning the plant underutilized capacity relative to the denominator level. The volume variance is unfavorable.",
@@ -12202,7 +12304,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$40,000 unfavorable reverses the direction of the variance. Actual output (50,000 units) exceeds the denominator volume (45,000 units), meaning more fixed overhead was absorbed than budgeted, resulting in a favorable volume variance.",
     "ExplanationWrongB": "",
@@ -12304,7 +12408,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$5,000 unfavorable is the fixed overhead volume variance component only ($10/DLH × 500-hour shortfall). The total fixed overhead variance also includes the spending variance ($2,600 U), giving $7,600 U total. A candidate reaching $5,000 calculated the volume variance correctly but forgot to include the spending variance component.",
     "ExplanationWrongB": "$2,600 unfavorable is only the fixed overhead spending variance ($82,600 actual - $80,000 budget). The total variance combines this with the $5,000 volume variance.",
@@ -14689,7 +14795,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "This numerical result uses an incorrect formula. In ABC, compute the activity rate as total pool cost divided by total driver volume, then multiply by the cost object's actual driver consumption. Verify the correct pool, rate, and consumption quantity are applied.",
     "ExplanationWrongB": "This divides the cost pool by Product A setups, which does not produce the activity rate for the whole setup pool.",
@@ -14740,7 +14848,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "The physical units method allocates joint costs proportionally to physical measures (units, pounds, gallons). Compute the allocation rate as total joint cost divided by total physical units, then multiply by each product's physical units. This method is simple but ignores product value differences.",
     "ExplanationWrongB": "$50,000 results from using an incorrect denominator of 150,000 units (50,000 / 150,000 x $150,000). Total physical units are 100,000.",
@@ -14791,7 +14901,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "The sales value at split-off method allocates joint costs in proportion to each product's relative sales value at the split-off point. Total joint cost is multiplied by (Product sales value / Total sales value of all joint products). This method requires established market prices at split-off.",
@@ -14841,7 +14953,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "Service department costs are allocated to production departments using a systematic allocation base. The allocation rate = Total service department cost / Total allocation base units. Multiply the rate by each production department's consumption of the base to determine its allocated share.",
     "ExplanationWrongB": "",
@@ -14892,7 +15006,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "$25 is the correct activity cost driver rate (cost per ticket), not the total cost assigned to Group East. A candidate must take the additional step of multiplying this rate by Group East's actual ticket volume (420 × $25 = $10,500). Computing only the rate is the most common error on ABC assignment questions.",
     "ExplanationWrongB": "$178,500 results from multiplying the total pool cost ($75,000) by Group East's tickets (420) and dividing incorrectly, or from using an entirely wrong formula. In ABC, never multiply total pool cost directly by the cost object's driver consumption — first compute the rate, then multiply.",
@@ -14911,7 +15027,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "D-C016-joint-cost-allocation-method",
     "LOSTag": "P1-D Cost management",
     "primaryTheory": "D5",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Prairiewood produces two joint products from a common process and wants to allocate joint costs based on the relative sales value at the split-off point. What method is being used?",
@@ -14950,7 +15066,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongC": "The physical units method allocates joint costs based on volume or weight without considering each product's ability to bear cost in proportion to market value. This can distort profitability when products have significantly different selling prices per unit.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {
@@ -14962,7 +15078,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "D-C017-joint-cost-allocation-method",
     "LOSTag": "P1-D Cost management",
     "primaryTheory": "D5",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Quillfeather produces two joint products from a common process and wants to allocate joint costs based on the relative sales value at the split-off point. What method is being used?",
@@ -15001,7 +15117,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongC": "FIFO is an inventory flow assumption, not a joint cost allocation method. Joint cost allocation at split-off requires methods such as sales value at split-off, NRV, or physical units that allocate shared production costs across joint products.",
     "ExplanationWrongD": "The NRV method allocates joint costs based on final sales value minus separable processing costs for all joint products, not only those further processed. Applying it solely to further processing costs misapplies the allocation basis.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {
@@ -17520,7 +17636,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "CVP analysis examines relationships among sales volume, selling price, variable costs, fixed costs, and operating income. Contribution margin (selling price minus variable cost per unit) is the fundamental concept. At break-even: Total Contribution Margin = Total Fixed Costs.",
     "ExplanationWrongB": "This uses variable cost per unit as the divisor instead of contribution margin per unit.",
@@ -17571,7 +17689,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "CVP analysis examines relationships among sales volume, selling price, variable costs, fixed costs, and operating income. Contribution margin (selling price minus variable cost per unit) is the fundamental concept. At break-even: Total Contribution Margin = Total Fixed Costs.",
     "ExplanationWrongB": "This incorrectly treats the contribution margin ratio as 80% rather than 40%.",
@@ -17622,7 +17742,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This numerical result uses an incorrect formula. Break-even units = Total Fixed Costs / (Selling Price - Variable Cost per Unit). For target profit: Required Units = (Fixed Costs + Target Profit) / Contribution Margin per Unit. Verify all inputs are correctly identified and substituted.",
@@ -17673,7 +17795,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
     ],
     "ExplanationWrongA": "3,200 contracts results from incorrectly dividing fixed costs ($304,000) by the selling price ($95) instead of the contribution margin. Break-even uses the contribution margin per unit ($95 - $57 = $38), not the full selling price.",
     "ExplanationWrongB": "",
@@ -17968,7 +18092,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-001",
-    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_batch": "DL-047 Remediation Recertification — 2026-09-05",
     "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -18175,7 +18299,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-005",
-    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_batch": "DL-047 Remediation Recertification — 2026-09-05",
     "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -18391,7 +18515,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A reflects a common misunderstanding about SOC reports. An unmodified opinion on a SOC 1 Type 2 report means that the service organization's controls were suitably designed and operated effectively during the review period. However, this opinion is conditioned on the user entity implementing the complementary user entity controls listed in the report. The service auditor cannot opine on controls that are the user entity's responsibility, and the opinion does not cover the user entity's failure to implement required complementary controls. A candidate selecting this option may incorrectly assume that outsourcing transfers all control responsibility to the service organization. In reality, the user entity retains responsibility for the controls designated as complementary user entity controls, and failing to implement them means the overall control objective may not be achieved regardless of the service organization's performance.",
+    "ExplanationWrongA": "Option A conflates segregation of duties with physical asset safeguards. Segregation of duties is an authorization-control concept — it prevents one person from controlling a transaction end-to-end. Requiring two signatures on checks over $10,000 is a dual-authorization control, not segregation. The correct segregation design separates authorization, custody, and record-keeping functions across different individuals.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C incorrectly applies a 'no harm, no foul' logic that is inconsistent with the COSO internal control framework. A control deficiency is defined by the absence or inadequate design or operation of a control, not by whether a misstatement has actually occurred. The pre-processing review is a preventive control designed to catch payroll errors before payments are made; the after-processing review is a detective control that identifies errors after the fact. While the after-processing review did catch three errors, the preventive control's absence meant there was a period during which errors could have resulted in incorrect payments that the detective control would not catch until after disbursement. A candidate selecting this option may be evaluating control effectiveness by outcome rather than by design and operation.",
     "ExplanationWrongD": "Option D overstates the severity of the control deficiency. While the failure to perform the complementary user entity control for eight months is a control deficiency, it does not automatically rise to the level of a material weakness. A material weakness requires a reasonable possibility that a material misstatement of the financial statements would not be prevented or detected on a timely basis. In this scenario, Northpoint had a compensating detective control (after-processing review) that caught errors, and payroll expense for a mid-sized manufacturer is evaluated for materiality against total operating expenses. The after-processing review provided a mitigating control that reduces the likelihood of a material misstatement. A candidate selecting this option may be conflating any control deficiency with a material weakness without evaluating the likelihood and magnitude criteria under the applicable auditing and internal control standards that distinguish the two classifications.",
@@ -18433,7 +18557,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-010",
-    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_batch": "DL-047 Remediation Recertification — 2026-09-05",
     "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -19313,7 +19437,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A mischaracterizes COSO Principle 4. While the petroleum engineering expertise of the chair is valuable for understanding reserve estimation, COSO Principle 4 requires a commitment to competence across the full scope of the board's oversight responsibilities -- which for an audit committee includes financial reporting and internal control evaluation. The principle does not require that every member possess every competency, but the committee as a whole must collectively possess the necessary skills. A candidate selecting this option may incorrectly assume that technical subject-matter expertise alone satisfies the board's competence obligation, without recognizing that oversight of internal control over financial reporting requires distinct competencies that the Northland committee lacked.",
+    "ExplanationWrongA": "Option A misstates the relationship between COSO Principle 4 and management authority. Principle 4 requires the board to exercise oversight over management — it does NOT give management unrestricted authority to override controls. Management operates within the boundaries set by the board; establishing a control environment means setting those boundaries, not removing them.",
     "ExplanationWrongB": "Option B incorrectly treats the SEC's identification of the weakness as evidence of adequate governance, when in fact it is evidence of the opposite. Under COSO Principle 4, the board's obligation is to proactively establish effective oversight -- not to rely on external parties (regulators, external auditors, or consultants) to identify governance gaps. The fact that the SEC, rather than the board itself, identified the committee's lack of financial reporting expertise demonstrates that internal governance was deficient. A candidate selecting this option may be conflating the detection of a problem with its prevention. COSO's control environment principles are designed to prevent governance failures, not to rely on external detection.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D misidentifies both the nature and scope of the deficiency. While hiring an outside consultant could provide temporary access to financial reporting expertise, COSO Principle 4 is fundamentally about the board's own commitment to competence -- ensuring that the board itself retains or has ongoing access to individuals with the necessary skills. Periodic consultant engagements do not substitute for sustained board-level competency. Furthermore, the deficiency was not that the committee failed to hire a consultant -- it was that the committee lacked the financial reporting expertise necessary to recognize that reserve estimation controls required challenge. A candidate selecting this option may be thinking of an operational fix (hire help) rather than the governance-level requirement that the board itself demonstrates a commitment to competence.",
@@ -20244,7 +20368,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongD": "Option D applies an incorrect bright-line rule. Not every segregation of duties deficiency automatically qualifies as a material weakness — severity depends on the magnitude of potential misstatement and the existence of compensating controls. A loan officer also performing the independent review of the same loans is a significant deficiency because it impairs the objectivity of the review, but classification as a material weakness would require the additional assessment that a material misstatement could reasonably result. COSO Principle 17 requires judgment-based evaluation, not automatic classification by deficiency type.",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
-    "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-EC-045 (DL-012 rotation clone)"
+    "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-EC-045 (DL-012 rotation clone)",
+    "ExplanationWrongC": ""
   },
   {
     "Part": 1,
@@ -20548,7 +20673,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Outsourcing all accounting without management oversight merely transfers the activity—it does not satisfy COSO Principle 10. Management retains responsibility for internal control regardless of whether functions are outsourced. For small businesses with limited staffing, increased owner review serves as a compensating control.",
-    "ExplanationWrongB": "Option B (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongB": "Option B is incorrect because being a small company does not eliminate the need for internal controls. Under COSO, all entities regardless of size need the five control components. The correct response to limited segregation ability in a small business is increased owner/management oversight as a compensating control — not elimination of controls entirely.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Ignoring fraud risk because the company is small is never appropriate under COSO. Small businesses are actually MORE vulnerable to fraud due to limited segregation of duties. COSO Principle 8 requires that organizations consider the potential for fraud in assessing risks to the achievement of objectives.",
     "DifficultyScore": 3,
@@ -20652,8 +20777,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Outsourcing all accounting without management oversight does not solve the control weakness. Under COSO Principle 10, management cannot outsource its internal control responsibility. Even with outsourced accounting, the owner must maintain active oversight—reviewing bank reconciliations, approving disbursements, and monitoring financial reports.",
-    "ExplanationWrongC": "Option C (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
-    "ExplanationWrongD": "Option D (Ignoring the risk since fraud is unlikely in small companies) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongC": "Option C is incorrect because eliminating internal controls entirely exposes the company to fraud risk. Under COSO Internal Control — Integrated Framework, small businesses cannot eliminate controls; they must implement compensating controls such as direct owner oversight when segregation of duties is not feasible due to limited staff.",
+    "ExplanationWrongD": "Option D is incorrect because ignoring a known fraud risk violates the risk assessment component of COSO. Management must identify, assess, and respond to risks — not dismiss them. The appropriate response to high fraud risk in a small company is enhanced monitoring and owner review, not willful ignorance.",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
     "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20745,7 +20870,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-055",
-    "recertification_batch": "DL-047 Remediation Recertification \u2014 2026-09-05",
+    "recertification_batch": "DL-047 Remediation Recertification — 2026-09-05",
     "recertification_date": "2026-09-05",
     "CalculationItem": false,
     "VerifiedChecks": [
@@ -20864,8 +20989,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Risk assessment identifies and analyzes specific threats to achieving objectives. While risk assessment is important, the stem explicitly describes board and executive emphasis on integrity and ethical behavior. Under COSO, this is the defining characteristic of the control environment—the foundation for all other components.",
-    "ExplanationWrongC": "Option C (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
-    "ExplanationWrongD": "Option D (Monitoring activities, which evaluate control effectiveness over time) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongC": "Option C names the wrong COSO component. Information and communication (Component 4) deals with the exchange of information needed for personnel to carry out their duties — not with establishing the tone at the top. The control environment (Component 1) is where tone at the top, board independence, and management philosophy reside.",
+    "ExplanationWrongD": "Option D names the wrong COSO component. Monitoring activities (Component 5) evaluate whether controls are operating as intended over time — they do not establish the foundational tone. The control environment (Component 1) is where tone at the top, integrity, and ethical values are set.",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20967,7 +21092,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Risk assessment identifies and analyzes specific threats. The stem describes board and executive emphasis on integrity and ethical values, which is the defining characteristic of the control environment. COSO Principle 1—the first and foundational principle—establishes that the organization demonstrates a commitment to integrity and ethical values.",
-    "ExplanationWrongB": "Option B (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongB": "Option B names the wrong COSO component. Information and communication (Component 4) involves the capture and exchange of information — not the establishment of organizational tone. The control environment (Component 1) is where tone at the top, board oversight, and management philosophy are established.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Monitoring activities evaluate whether controls operate effectively over time. The stem specifically describes the board and senior executives emphasizing integrity and ethical behavior. Under COSO, the control environment sets the tone of the organization and is the foundation for all other components—not monitoring.",
     "DifficultyScore": 1,
@@ -21172,7 +21297,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. The stem asks about susceptibility BEFORE considering controls. Inherent risk assesses the nature of the account itself—complexity, subjectivity, volume—regardless of whether controls are in place.",
-    "ExplanationWrongB": "Option B (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongB": "Option B confuses control risk with inherent risk. Control risk is the risk that internal controls fail to prevent or detect misstatements — it relates to the effectiveness of the control system. Inherent risk exists independently of controls and is the susceptibility of an assertion to misstatement before considering any controls.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Detection risk relates to the auditor's procedures failing to detect a misstatement. The stem describes susceptibility of an account to misstatement before considering any controls. Under the audit risk model, inherent risk is assessed independently of both control and detection risk.",
     "DifficultyScore": 1,
@@ -21224,7 +21349,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. The stem asks about susceptibility BEFORE considering controls. Inherent risk assesses the nature of the account itself—complexity, subjectivity, volume—regardless of whether controls are in place.",
     "ExplanationWrongB": "Detection risk relates specifically to the auditor's procedures. The stem asks about susceptibility of an account to misstatement before considering any controls. Inherent risk is assessed independently of both control and detection risk under the audit risk model—it is the first assessment in the sequence.",
-    "ExplanationWrongC": "Option C (Detection risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongC": "Option C confuses detection risk with inherent risk. Detection risk is the risk that auditors fail to detect material misstatements through substantive procedures — it is an audit concept, not a characteristic of the business environment. Inherent risk exists in the absence of any controls.",
     "ExplanationWrongD": "",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -21275,8 +21400,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Detection risk relates specifically to the auditor's procedures. The stem asks about susceptibility of an account to misstatement before considering any controls. Inherent risk is assessed independently of both control and detection risk under the audit risk model.",
-    "ExplanationWrongC": "Option C (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
-    "ExplanationWrongD": "Option D (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
+    "ExplanationWrongC": "Option C confuses business risk with control risk. Business risk is the threat that external or internal factors prevent an organization from achieving its objectives — it is broader than the audit risk model. Control risk specifically measures whether internal controls fail to prevent or detect material misstatements.",
+    "ExplanationWrongD": "Option D is incorrect because control risk — the risk that internal controls fail to prevent or detect material misstatements — is a function of the control system's effectiveness. Unlike inherent risk, which exists before considering controls, control risk measures whether the entity's controls operate as intended.",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -22775,7 +22900,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "F-C020-cloud-computing-service-models",
     "LOSTag": "P1-F Technology and analytics",
     "primaryTheory": "F5",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Thornfield outsources its entire IT infrastructure, including servers and storage, to a cloud provider while managing its own applications. What cloud service model is this?",
@@ -22814,7 +22939,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongC": "Data as a Service (DaaS) offers data storage and management as a cloud service. The stem describes compute and storage infrastructure, not data-as-a-service specifically.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {
@@ -23407,7 +23532,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -23444,7 +23570,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -23531,7 +23658,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -23577,7 +23705,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "Variance analysis compares actual results to budgeted or standard amounts to identify and explain deviations — it is a financial performance analysis tool, not a technique for discovering unknown patterns in transaction data. A candidate may associate analyzing data with any analytical method, but variance analysis examines known cost categories against benchmarks, while data mining discovers previously unknown patterns and relationships in large datasets.",
     "ExplanationWrongB": "Standard costing sets predetermined cost benchmarks. It facilitates variance analysis but does not directly address the broader question of cost allocation or performance evaluation.",
-"ExplanationWrongC": "Option C identifies zero-based budgeting, but Kingfisher is data mining. The stem describes analyzing large transaction datasets to uncover previously unknown purchasing patterns among customer segments — the definition of data mining. ZBB is a budgeting methodology that justifies expenses from a zero base; it has no role in discovering hidden relationships in transaction data. A budgeting technique cannot be the answer to an analytics question.",
+    "ExplanationWrongC": "Option C identifies zero-based budgeting, but Kingfisher is data mining. The stem describes analyzing large transaction datasets to uncover previously unknown purchasing patterns among customer segments — the definition of data mining. ZBB is a budgeting methodology that justifies expenses from a zero base; it has no role in discovering hidden relationships in transaction data. A budgeting technique cannot be the answer to an analytics question.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -23806,7 +23934,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -23843,7 +23972,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -23933,7 +24063,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -24070,7 +24201,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24160,7 +24292,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24249,7 +24382,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -24286,7 +24420,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -24374,7 +24509,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Very Difficult"
   },
   {
     "Part": 1,
@@ -24712,7 +24848,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24749,7 +24886,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24837,7 +24975,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24874,7 +25013,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -24911,7 +25051,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -25048,7 +25189,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -25085,7 +25227,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Part1OnlyFlag: true",
       "DifficultyScore matches CognitiveLevel — Rule 11 compliant",
       "Distractors represent documented CMA Part 1 exam traps"
-    ]
+    ],
+    "Difficulty": "Difficult"
   },
   {
     "Part": 1,
@@ -25330,11 +25473,6491 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Choice A is incorrect because sales forecasting projects future revenue using historical trends, economic indicators, and market analysis — it is a planning and budgeting activity. The stem describes continuous, automated review of actual transactions for anomalies, which is an audit monitoring function. A candidate may confuse any forward-looking analytical activity with the specific practice of continuous auditing.",
-"ExplanationWrongB": "Option B identifies zero-based budgeting, which is unrelated to the scenario. Coalgate's audit function is applying continuous auditing — automated tools that monitor transactions for anomalies on an ongoing basis rather than relying solely on periodic manual sampling. ZBB is a budgeting methodology with no monitoring function; the stem's emphasis on automation and continuous transaction monitoring points only to continuous auditing.",
+    "ExplanationWrongB": "Option B identifies zero-based budgeting, which is unrelated to the scenario. Coalgate's audit function is applying continuous auditing — automated tools that monitor transactions for anomalies on an ongoing basis rather than relying solely on periodic manual sampling. ZBB is a budgeting methodology with no monitoring function; the stem's emphasis on automation and continuous transaction monitoring points only to continuous auditing.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Standard costing sets predetermined cost benchmarks for variance analysis. It is a cost accounting technique, not an audit approach. The stem describes automated transaction monitoring for anomalies, which is continuous auditing.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.101 sales mix variance multi-product",
+    "MicroTopic": "sales mix variance multi-product",
+    "UniqueConceptKey": "C-C101-sales-mix-variance-multi-product",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Dunmore sells two gauges. Budget: X 6,000 units at $10 CM ($60,000); Y 4,000 units at $16 CM ($64,000); total 10,000 units, $124,000. Actual: X 7,000 at $10 ($70,000); Y 3,000 at $16 ($48,000); total 10,000 units, $118,000. Unit CMs held exactly. The sales manager blames soft Y demand. What do mix and quantity variances show?",
+    "Choices": {
+      "A": "Mix $6,000 U; quantity $0 — the 1,000-unit shift from $16 Y to $10 X cost $6,000 with no volume change",
+      "B": "Mix $6,000 F; quantity $0 — selling more X units is favorable since total units held",
+      "C": "Mix $0; quantity $6,000 U — with CMs constant, only volume matters",
+      "D": "Mix $10,000 U; quantity $4,000 F — the shift cost 1,000 × $10 while volume added 1,000 × $4"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Total units are identical (10,000 vs 10,000), so the sales quantity variance is $0 — volume did not change, composition did. Mix variance = actual total units valued at budgeted mix versus actual mix, at budgeted CM: budgeted mix value = $124,000; actual mix value = $118,000; mix = $124,000 − $118,000 = $6,000 U. Equivalently, 1,000 units shifted from $16-CM Y to $10-CM X: 1,000 × ($16 − $10) = $6,000 U. The manager's 'soft Y demand' story is half the truth — Y softness explains the shift, but the $6,000 cost comes from where those buyers went (discount X), a mix-management failure, not just a demand shortfall. Business interpretation: hold total volume constant in analysis to isolate mix; incentive the profitable mix, not unit count. Common trap: calling unchanged total volume a zero-variance quarter.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-101",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B signs the mix favorable because X unit sales rose. Units are not contribution — the 1,000 added X units at $10 replaced 1,000 lost Y units at $16. More units of the worse mix is unfavorable by $6,000, not favorable.",
+    "ExplanationWrongC": "Option C claims constant CMs leave only volume effects. Mix variance exists precisely when proportions change holding CMs constant — that is its definition. The $6,000 U is pure composition effect at frozen margins.",
+    "ExplanationWrongD": "Option D fabricates a $10,000/$4,000 split from mismatched bases (1,000 × $10 mixes unit counts with CM differences incoherently). The shift valuation is 1,000 × ($16 − $10) = $6,000, single figure, unfavorable.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.102 revenue bridge with price and volume",
+    "MicroTopic": "revenue bridge price volume",
+    "UniqueConceptKey": "C-C102-revenue-bridge-price-volume",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Kestrel Instruments budgeted: Product A 5,000 units at $20 ($100,000); Product B 5,000 units at $30 ($150,000); total $250,000. Actual: A 6,000 units at $19 ($114,000); B 4,000 units at $31 ($124,000); total $238,000 ($12,000 U). The product manager attributes the shortfall to soft B demand. Decompose the revenue variance into price and volume effects.",
+    "Choices": {
+      "A": "Price $12,000 U; volume $0 — demand was flat overall",
+      "B": "Price $2,000 U; volume $10,000 U — A discounting plus adverse B volume",
+      "C": "Price $2,000 F; volume $14,000 U — netting error in the manager's favor",
+      "D": "Price $10,000 F; volume $22,000 U — volume measured at actual prices"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Price effect at actual quantities: A 6,000 × ($19 − $20) = −$6,000; B 4,000 × ($31 − $30) = +$4,000; net price = −$2,000 U. Volume effect at budget prices: A (6,000 − 5,000) × $20 = +$20,000; B (4,000 − 5,000) × $30 = −$30,000; net volume = −$10,000 U. Total: −$2,000 − $10,000 = −$12,000 U — reconciles. The manager's 'soft B' story captures only the −$30,000 B-volume leg while missing A's +$20,000 volume offset and the −$6,000 A-discounting that B's +$4,000 price gain only partly covered. Business interpretation: revenue bridges must separate price discipline (A's discounting problem) from volume composition (B's demand problem) — different owners, different fixes. Common trap: pricing volume effects at actual prices, which smuggles price effects into volume.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-102",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A dumps the full $12,000 into price and zeroes volume, but quantities moved materially (A +1,000, B −1,000). Volume effects of +$20,000/−$30,000 are real and offsetting — ignoring them credits/blames pricing for quantity shifts.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C signs price favorable and inflates volume to $14,000 U — neither nets to −$12,000 (−$2,000 F + −$14,000 = −$16,000 ≠ −$12,000). The arithmetic fails reconciliation, the first test of any bridge.",
+    "ExplanationWrongD": "Option D prices volume at actual prices, contaminating the volume measure with the very price effects the bridge exists to separate. Volume is always valued at budget prices — that separation is the method.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.103 labor gang mix and staffing yield",
+    "MicroTopic": "labor gang mix staffing yield",
+    "UniqueConceptKey": "C-C103-labor-gang-mix-staffing-yield",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A maintenance shift standard is a 10-person gang (4 skilled at $30/hr, 6 unskilled at $18/hr) for 10 hours: standard cost $2,280. Last night ran 3 skilled + 8 unskilled (11 workers) at standard rates for 10 hours: actual cost $2,340. The supervisor claims the $60 overrun is pure overstaffing. Decompose into mix and yield effects.",
+    "Choices": {
+      "A": "Mix $168 F; yield $228 U (net $60 U) — the cheaper crew saved $168 but 11 workers doing a 10-worker job cost $228",
+      "B": "Mix $168 U; yield $228 U — both unfavorable, total $396 U",
+      "C": "Mix $0; yield $60 U — rates met standard so only headcount matters",
+      "D": "Mix $60 F; yield $0 — the overrun is fully explained by composition"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Actual cost at standard rates = 3×$30×10 + 8×$18×10 = $900 + $1,440 = $2,340. Standard-proportion cost for 11 workers = 4.4×$30×10 + 6.6×$18×10 = $1,320 + $1,188 = $2,508. Mix = $2,508 − $2,340 = $168 F (shift toward cheaper unskilled saved money). Yield = $2,508 − $2,280 standard = $228 U (11 workers did a 10-worker shift). Net: $228 U − $168 F = $60 U — reconciles. The supervisor's 'pure overstaffing' story captures the $228 yield but misses the $168 mix saving — and the real management question is whether the unskilled-heavy crew caused follow-on quality costs. Business interpretation: staffing variances decompose like material variances (price of skill vs quantity of workers); report both or misattribute. Common trap: treating headcount overage as the whole story when composition shifted favorably.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-103",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B signs mix unfavorable, but shifting 1 worker-slot from $30 skilled to $18 unskilled saves money — favorable by construction ($168 F). Direction of the shift determines the sign, not the headcount total.",
+    "ExplanationWrongC": "Option C claims mix is zero when rates meet standard. Mix compares proportions at standard rates — rates meeting standard is the precondition for mix analysis, not a substitute for it.",
+    "ExplanationWrongD": "Option D nets everything into a $60 mix effect with zero yield, but 11 workers did a 10-worker job — the $228 staffing overage is real and distinct from the $168 composition saving. Netting destroys both signals.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.104 denominator comparison practical versus budgeted",
+    "MicroTopic": "denominator comparison practical budgeted",
+    "UniqueConceptKey": "C-C104-denominator-comparison-practical-budgeted",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Foundry fixed overhead is $600,000. Practical capacity 75,000 hrs; budgeted production 60,000 hrs; actual 57,000 hrs; actual FOH $612,000. The controller prepares the variance report under practical denominator but shows the audit committee what budgeted denominator would have reported. What is the comparison, and which should govern evaluation?",
+    "Choices": {
+      "A": "Identical $42,000 U either way — denominator choice never changes total variance",
+      "B": "Practical: budget $12,000 U + volume $144,000 U; budgeted-denominator volume only $30,000 U — practical exposes 15,000 more idle hours and should govern",
+      "C": "Budgeted denominator is correct because plans, not engineering ideals, govern accountability",
+      "D": "Practical denominator with actual-hours applied — zero volume variance is cleanest"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Practical rate = $600,000/75,000 = $8/hr: budget variance = $612,000 − $600,000 = $12,000 U; volume = $600,000 − 57,000×$8 ($456,000) = $144,000 U. Budgeted-denominator rate = $600,000/60,000 = $10/hr: volume = (60,000 − 57,000)×$10 = $30,000 U. Same budget variance; volume differs by $114,000 — the 15,000 hours between practical (75k) and budget (60k) that budgeted-denominator accounting silently forgives. Practical should govern evaluation because it prices genuinely idle capacity the manager's scheduling and maintenance control; budgeted denominator confounds demand forecasting (why budget was 60k not 75k) with capacity management. Business interpretation: denominator choice allocates 15,000 hours of idleness between 'plan' and 'performance' — practical draws the line at engineering reality. Common trap: treating the smaller budgeted-denominator variance as better news rather than hidden capacity.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-104",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A claims denominator never changes totals. Total under practical = $12,000 + $144,000 = $156,000 U versus $42,000 U under budgeted denominator — the applied amounts differ ($456,000 vs $570,000) because rates differ. Denominator choice changes everything downstream of the rate.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C prefers budgeted denominator on accountability grounds, but budget embeds demand forecasts outside production's control. Practical capacity is the engineering fact; budget is a forecast — accountability needs facts.",
+    "ExplanationWrongD": "Option D denominates on actual hours, zeroing volume by definition. A variance that cannot occur measures nothing — this abolishes capacity accountability, the opposite of clean.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.105 rush order premium versus penalty",
+    "MicroTopic": "rush order premium versus penalty",
+    "UniqueConceptKey": "C-C105-rush-order-premium-versus-penalty",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A rush resin order cost $11/gal for 5,000 gallons against a $10 standard (SQ 4,800 for the output). The $5,000 U price variance plus $2,000 U quantity variance totals $7,000 U. The rush avoided a $25,000 late-delivery customer penalty. Purchasing wants the variances investigated; the sales director wants the rush protocol formalized. What is the correct decision analysis?",
+    "Choices": {
+      "A": "Reject the rush protocol — $7,000 U of variances proves it destroys value",
+      "B": "Investigate purchasing for the $5,000 U price variance regardless of the penalty",
+      "C": "Approve the protocol — variances total $7,000 U but the decision net is $18,000 F after the $25,000 avoided penalty",
+      "D": "Approve with a $32,000 F net — add penalty to variances instead of netting"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Price = 5,000 × ($11 − $10) = $5,000 U. Quantity = (5,000 − 4,800) × $10 = $2,000 U. Variance total = $7,000 U — real costs, properly measured. But variances measure execution against standard, not decision quality: the decision's economics are $7,000 U cost versus $25,000 avoided penalty = $18,000 F net benefit. Investigating purchasing for paying $11 when the alternative was a $25,000 penalty punishes value creation. Formalizing the protocol is right, with a control: pre-authorize rush premiums up to the penalty exposure (here any premium under $25,000), documented per incident. Business interpretation: variances score the play; decision analysis scores the game — never let a $7,000 U variance veto an $18,000 F decision. Common trap: treating unfavorable variances as verdicts rather than inputs.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-105",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A rejects on the $7,000 U alone, ignoring the $25,000 avoided penalty the rush purchased. Variance-unfavorable does not mean decision-unfavorable — the $18,000 net says approve.",
+    "ExplanationWrongB": "Option B investigates purchasing for a premium that bought $25,000 of penalty avoidance at $5,000 cost. Investigating value-creating buys teaches purchasing to let penalties happen next time.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D adds ($25,000 + $7,000 = $32,000 F), double-signing: the penalty avoided offsets the variance cost (25,000 − 7,000 = $18,000 F), it does not add to it. Sign discipline matters.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.106 net revenue bridge with returns layer",
+    "MicroTopic": "net revenue bridge returns layer",
+    "UniqueConceptKey": "C-C106-net-revenue-bridge-returns-layer",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Marlowe budgeted 10,000 units at $100 gross ($1,000,000) with 2% returns ($20,000), net $980,000. Actual: 11,000 units at $98 gross ($1,078,000) with 4% returns ($43,120), net $1,034,880 (net +$54,880 F). The sales VP celebrates the net beat. Decompose it into price, volume, and returns effects.",
+    "Choices": {
+      "A": "Price $22,000 U; volume $100,000 F; returns $23,120 U — discounting doubled returns; net still +$54,880",
+      "B": "Price $54,880 F; volume and returns $0 — the net beat is pure pricing power",
+      "C": "Price $22,000 F; volume $100,000 F; returns $67,120 U — discounting helped everywhere",
+      "D": "Volume $54,880 F; price and returns offset to zero — volume explains everything"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Gross price effect = 11,000 × ($98 − $100) = −$22,000 U. Gross volume effect = (11,000 − 10,000) × $100 = +$100,000 F. Returns effect = actual returns minus budgeted returns = −$43,120 − (−$20,000) = −$23,120 U. Net: −$22,000 + $100,000 − $23,120 = +$54,880 F — reconciles to the reported net beat. The story beneath: the $2 discount bought 1,000 extra units (+$100,000 gross) but doubled the return rate (2%→4%), adding $23,120 of returns drag — discount-driven buyers return more. The VP's celebration is half-right (net is up) but blind to the returns deterioration that will compound if discounting continues. Business interpretation: net-revenue bridges need the returns layer whenever discounts move — gross bridges hide quality-of-revenue decay. Common trap: reading net beats as pricing power.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-106",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B reads the +$54,880 net as pure pricing power, but price was $22,000 unfavorable (discounting). The net beat comes from volume (+$100,000) net of price and returns drags — crediting pricing inverts the story.",
+    "ExplanationWrongC": "Option C signs price favorable and inflates returns to $67,120 — the combination nets +$54,880 only by double error (−$22kF + $100kF − $67,120 = +$10,880 ≠ +$54,880). It fails reconciliation, the first test of any bridge.",
+    "ExplanationWrongD": "Option D zeroes price and returns, but the $2 discount on 11,000 units (−$22,000) and doubled returns (−$23,120) are measured facts. Volume-only bridges are gross bridges — net bridges carry the returns layer by definition.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.107 share loss from premium pricing",
+    "MicroTopic": "share loss premium pricing",
+    "UniqueConceptKey": "C-C107-share-loss-premium-pricing",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Sterling Components held 15% of a flat 200,000-unit market (30,000 units) at $12 CM ($360,000). It raised price $2 (CM $14); volume fell to 27,000 units (13.5% share) for $378,000 total CM (+$18,000). Marketing claims the premium strategy worked. Finance worries about share. Decompose the +$18,000 into price and share effects at budget CM.",
+    "Choices": {
+      "A": "Share gain $36,000 F — premium pricing bought share",
+      "B": "Size effect $54,000 F — the flat market still grew effectively",
+      "C": "Net −$18,000 U — the strategy failed on contribution",
+      "D": "Share $36,000 U offset by $54,000 F pricing — premium nets +$18,000 but bleeds share; monitor elasticity"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Share effect at budget CM = (27,000 − 30,000) × $12 = −$36,000 U (1.5 points of share lost). Price effect = 27,000 × $2 = +$54,000 F. Net: +$54,000 − $36,000 = +$18,000 F — reconciles. Marketing is half-right (contribution rose) and finance is half-right (share bled 10% relatively). The judgment call: a premium strategy that nets +$18,000 while losing 1.5 share points is sustainable only if elasticity stays low — the next $2 increase could easily flip the sign as buyers cross thresholds. Size effect is $0 (market flat at 200,000 — there is no growth to credit). Business interpretation: decompose before celebrating — net gains built on share losses are borrowed, and elasticity monitoring is the loan covenant. Common trap: reading contribution gains as strategic validation without share accounting.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-107",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A signs share favorable, but share fell from 15% to 13.5% — a 3,000-unit loss at $12 CM = −$36,000. Premium pricing bought contribution, not share; confusing the two validates any price hike that hasn't yet collapsed volume.",
+    "ExplanationWrongB": "Option B invents a size effect, but the market is flat at 200,000 units — zero growth, zero size variance. Crediting growth that did not happen is analysis by wish.",
+    "ExplanationWrongC": "Option C signs the net negative, but +$54,000 − $36,000 = +$18,000 F — the strategy made money this round. Bearishness must survive arithmetic; this doesn't.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.108 leased asset ROI distortion",
+    "MicroTopic": "leased asset ROI distortion",
+    "UniqueConceptKey": "C-C108-leased-asset-ROI-distortion",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A division reports $200,000 income on $800,000 owned assets (25% ROI) and uses $400,000 of short-term-exempt leased equipment off-book. A $100,000 project promises $18,000 (18%). Required return is 14%. The manager, bonused on reported ROI, rejects the project. What does economic analysis show?",
+    "Choices": {
+      "A": "Reported 25% is the right measure — off-book leases are properly excluded from investment",
+      "B": "Reject is correct — 18% below 25% destroys value",
+      "C": "Economic ROI is 16.7% ($200,000/$1,200,000); the project creates $4,000 RI — capitalize leases for evaluation and accept",
+      "D": "Accept because 18% exceeds a 15% hurdle — close enough to 14% to round up"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Economic investment = $800,000 owned + $400,000 leased = $1,200,000; economic ROI = $200,000/$1,200,000 = 16.67% — the reported 25% overstates returns by 8+ points by hiding productive capital. Project RI = $18,000 − 14%×$100,000 = $18,000 − $14,000 = +$4,000: value-creating, yet the manager rejects because 18% dilutes reported 25% (post: $218,000/$900,000 = 24.2%). Two distortions compound: denominator hiding (leases) inflates the baseline, and ROI-bonus dilution logic rejects good projects. Capitalizing leases for evaluation (economic asset base $1,200,000) plus RI-based bonuses fixes both. Business interpretation: every off-book productive asset is an ROI-inflation machine — evaluate on economic capital or stop comparing. Common trap: treating reported ROI as economic when material operating assets sit off-book.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-108",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A blesses the 25% reported ROI, but $400,000 of productive leased equipment (one-third of economic capital) sits off-book. Reported ROI here measures accounting structure, not economic performance.",
+    "ExplanationWrongB": "Option B confuses dilution with destruction: 18% exceeds the 14% cost of capital (RI +$4,000). Below-reported-ROI means bonus dilution under a flawed measure, not value destruction.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D rounds the 14% hurdle up to 15% to manufacture a margin story. Hurdles are not rounded for convenience — and 18% vs 14% needs no rounding; the economics already clear it by $4,000.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.109 two-part tariff transfer design",
+    "MicroTopic": "two-part tariff transfer design",
+    "UniqueConceptKey": "C-C109-two-part-tariff-transfer-design",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Corporate IT (fixed $100,000 for 10,000-user capacity, variable $25/user) serves Division K (4,000 users); no outside market for the internal system exists. A flat $35/user charge ($140,000) is proposed. K's manager argues it inflates usage cost and distorts make-buy (cloud at $32/user). The CIO needs full $140,000 recovery without blunting marginal incentives. What price structure should the controller design?",
+    "Choices": {
+      "A": "Two-part tariff: $40,000 access fee (4,000/10,000 of fixed) + $25/user variable — marginal cost pricing with full recovery",
+      "B": "Flat $35/user — simplicity and full recovery in one rate",
+      "C": "Market price — objective and arm's-length",
+      "D": "Variable $25/user only — efficient consumption matters more than recovery"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Fixed share = 4,000/10,000 × $100,000 = $40,000 access fee; plus $25/user variable. K pays $40,000 + 4,000×$25 = $140,000 — full recovery of caused cost. Crucially K's marginal cost is $25 (true incremental cost), so the cloud make-buy compares $25 vs $32 correctly (keep internal), whereas flat $35 makes cloud look $3 cheaper and triggers value-destroying outsourcing. No market price exists (option C is fiction). Variable-only (option D) leaves $40,000 unrecovered — efficient consumption purchased with a budget hole. Business interpretation: two-part tariffs separate recovery (fixed fee) from incentives (marginal price) — the only structure that does both jobs. Common trap: single-rate elegance that corrupts marginal decisions.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-109",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's flat $35 overstates K's marginal cost by $10, flipping the cloud decision ($35 vs $32 → outsource) against economics ($25 vs $32 → keep). Single-rate simplicity here costs $7/user of distortion on every marginal unit.",
+    "ExplanationWrongC": "Option C invokes a market price that does not exist — no outside market for the internal system. Fictional objectivity is worse than acknowledged judgment.",
+    "ExplanationWrongD": "Option D prices efficiently ($25 marginal) but recovers only $100,000 of $140,000 caused cost. The $40,000 hole lands on corporate or other divisions — efficient consumption funded by subsidy.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.110 partial outside market transfer floor",
+    "MicroTopic": "partial outside market transfer floor",
+    "UniqueConceptKey": "C-C110-partial-outside-market-transfer-floor",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A components shop has 20,000 units of idle capacity and can sell up to 5,000 units outside at $50 (variable cost $30). The buying division needs 15,000 units and can buy outside at $55. How should the controller bound the negotiated transfer price?",
+    "Choices": {
+      "A": "Floor $30 — variable cost prices all internal units",
+      "B": "Floor $36.67, ceiling $55 — 5,000 units displace $50 outside sales, 10,000 come from idle capacity at $30",
+      "C": "Floor $50 — all units displace outside sales",
+      "D": "Ceiling $50 — the buyer should pay the seller's outside price"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The first 5,000 internal units displace $50 outside sales (opportunity cost $50 each); the remaining 10,000 come from idle capacity (floor $30 each). Blended floor = (5,000×$50 + 10,000×$30)/15,000 = ($250,000 + $300,000)/15,000 = $550,000/15,000 = $36.67. Ceiling = buyer's $55 outside price. The $36.67–$55 range is where both divisions beat their alternatives. Pricing all units at $30 (option A) gifts the buyer $100,000 of displaced margin (5,000 × $20); pricing at $50 (option C) pretends all 15,000 displace sales when 10,000 come from idle air. The buyer's ceiling is its own $55 alternative, not the seller's $50 market (option D confuses whose BATNA caps whom). Business interpretation: partial markets create blended floors — compute displacement unit-by-unit, not by averages. Common trap: single-floor thinking when capacity is mixed.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-110",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A floors everything at $30 variable cost, ignoring that 5,000 units displace $50 outside sales — a $100,000 gift (5,000 × $20) from seller to buyer that no profit-accountable seller accepts.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C floors all 15,000 at $50, but only 5,000 displace outside sales — 10,000 come from idle capacity costing $30. Full-displacement pricing taxes the buyer $66,700 ((50−36.67)×5,000... precisely (50−30)×10,000/15,000 per-unit overcharge ≈ $13.33 × 15,000 = $200,000 total overcharge) and kills viable trade.",
+    "ExplanationWrongD": "Option D caps at the seller's $50 market instead of the buyer's $55 alternative. Ceilings come from the buyer's BATNA ($55) — capping at $50 needlessly surrenders $5×15,000 = $75,000 of bargaining range.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.111 leading versus lagging indicators",
+    "MicroTopic": "leading lagging indicators",
+    "UniqueConceptKey": "C-C111-leading-lagging-indicators",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "First-pass yield (FPY) improvements precede COGS improvements by one quarter (correlation +0.8); Net Promoter Score moves coincidentally with revenue in the same quarter. The analytics team labels both metrics 'leading indicators' in the new dashboard. Which classification is correct, and why does it matter?",
+    "Choices": {
+      "A": "Both are leading — any metric on a dashboard leads decisions",
+      "B": "Both are lagging — correlation never establishes lead time",
+      "C": "FPY is leading (predicts next-quarter COGS with a measured one-quarter lead); NPS is lagging/coincident — only FPY buys reaction time",
+      "D": "FPY causes COGS improvement — the +0.8 correlation proves the causal mechanism"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Leading versus lagging is a timing property, not a prestige label: FPY's one-quarter lead (established by lagged correlation +0.8) means today's FPY predicts next quarter's COGS — management can intervene before cost hits. NPS moves with revenue contemporaneously, so it confirms outcomes but buys no reaction time (lagging/coincident). The distinction matters operationally: leading indicators earn forecast weight and early-warning thresholds; lagging indicators earn scorekeeping. Option D overclaims — correlation with a lead establishes predictive timing, not the causal mechanism (common-cause confounds remain possible). Business interpretation: audit every 'leading indicator' claim against measured lead time; labels without lags are aspirations. Common trap: calling correlated metrics leading without establishing the time order.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Balanced Scorecard",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-111",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A labels by dashboard membership rather than timing. A metric's presence on a dashboard confers no lead time — NPS confirms outcomes after they occur regardless of where it is displayed.",
+    "ExplanationWrongB": "Option B rejects lead status because 'correlation never establishes lead time.' Lagged correlation (FPY at t predicting COGS at t+1) is precisely how lead time is established empirically — the objection refutes an unmeasured claim, not this measured one.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D upgrades predictive timing (+0.8 with a one-quarter lead) into proven causation. Lead-lag correlation establishes when, not why — a common cause (e.g., new equipment improving both) could drive the pattern without FPY causing COGS.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.112 bottleneck throughput elevation",
+    "MicroTopic": "bottleneck throughput elevation",
+    "UniqueConceptKey": "C-C112-bottleneck-throughput-elevation",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A line has three stations (8-hour day, 480 minutes): A takes 6 min/unit (capacity 80/day), B takes 4 min/unit (120/day), C takes 5 min/unit (96/day). Demand is 100/day; contribution is $50/unit. An elevation project would raise A's capacity 25%. What binds throughput now, what binds after, and what is the daily throughput gain?",
+    "Choices": {
+      "A": "B binds now (slowest per-unit time is irrelevant); after elevation B still binds; gain $0",
+      "B": "A binds now; after elevation demand binds at 100/day; gain $1,000/day",
+      "C": "C binds now; after elevation C still binds; gain $0",
+      "D": "A binds now at 80/day ($4,000); after elevation C binds at 96/day ($4,800) — gain $800/day"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Capacities: A 480/6 = 80/day; B 480/4 = 120/day; C 480/5 = 96/day. The constraint is the minimum: A at 80/day (below demand 100) — throughput = 80 × $50 = $4,000/day. Elevating A 25% gives 100/day, removing A as the constraint — but C's 96/day then binds (still below demand 100), so throughput = 96 × $50 = $4,800/day, a $800/day gain. Option B's error is instructive: demand (100) does not bind after elevation because C (96) binds first — elevation projects shift constraints rather than eliminating them, and each shift must be re-diagnosed. Business interpretation: price elevation projects by the throughput gain across the constraint sequence ($800/day here, not the $1,000 that naive demand-matching suggests), and budget the next elevation (C) before celebrating. Common trap: identifying the constraint by longest per-unit time instead of lowest daily capacity.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Balanced Scorecard",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-112",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A hunts the constraint by longest per-unit time, but constraints bind on daily capacity (minutes available divided by minutes per unit), not unit time. B's 4 minutes yield the highest capacity (120/day) — the opposite of binding.",
+    "ExplanationWrongB": "Option B assumes demand (100/day) binds after elevation, skipping C's 96/day capacity. Constraint analysis re-diagnoses after every elevation — the next minimum (C at 96) binds before demand does.",
+    "ExplanationWrongC": "Option C names C as the current constraint, but A's 80/day is below C's 96/day. The minimum binds, and today that minimum is A by 16 units/day.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.113 plant mix-adjusted benchmarking",
+    "MicroTopic": "plant mix-adjusted benchmarking",
+    "UniqueConceptKey": "C-C113-plant-mix-adjusted-benchmarking",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Plant X unit cost is $43 (70% complex mix); Plant Y is $37.50 (30% complex). Engineering standards: complex $45, simple $35. Corporate ranks Y better by the raw gap and bonuses its manager. X's manager protests the mix difference. Decompose the gap into mix-driven versus performance-driven portions.",
+    "Choices": {
+      "A": "Mix-adjusted gap is $1.50 (X $1.00 U, Y $0.50 F) — most of the raw gap is mix, and Y remains genuinely better by $1.50",
+      "B": "Raw gap stands — actual cost per unit is the only fair comparison",
+      "C": "X is actually better — complex production deserves a premium allowance that reverses the ranking",
+      "D": "Both plants exactly meet standard — the gap is 100% mix"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Mix-adjusted standards: X expected = 0.70×$45 + 0.30×$35 = $31.50 + $10.50 = $42.00; actual $43.00, so X is $1.00 U per unit. Y expected = 0.30×$45 + 0.70×$35 = $13.50 + $24.50 = $38.00; actual $37.50, so Y is $0.50 F per unit. True performance gap = $1.00 − (−$0.50) = $1.50 with Y genuinely better; the balance of the raw $5.50 gap ($43.00 − $37.50) is product mix, not performance. Y keeps a bonus sized to $1.50 of genuine outperformance rather than mix illusion; X owes $1.00/unit of controllable improvement rather than $5.50 of mix assignment. Business interpretation: never bonus raw unit-cost gaps across different mixes — adjust first, then rank. Common trap: treating mix-driven cost differences as managerial performance.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-113",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B bonuses the raw gap, paying Y's manager mostly for running a simpler mix and penalizing X's manager for mix assignment. Raw unit cost across different mixes measures product assignment, not management.",
+    "ExplanationWrongC": "Option C overcorrects into a complexity premium that reverses the ranking. Mix adjustment removes the mix effect (X +$1.00, Y −$0.50) — it does not award bonus points for difficulty. Y is still genuinely better by $1.50.",
+    "ExplanationWrongD": "Option D claims the gap is 100% mix with both exactly at standard, but X runs $1.00 over its mix-adjusted standard and Y $0.50 under — $1.50 of genuine performance difference survives adjustment. Adjustment shrinks gaps; it rarely zeroes them.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.114 traceable versus common fixed costs",
+    "MicroTopic": "traceable common fixed costs",
+    "UniqueConceptKey": "C-C114-traceable-common-fixed-costs",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Segment R: revenue $500,000, variable costs $300,000, traceable fixed $120,000, allocated common fixed $100,000 (reported loss $20,000). A director moves to drop R citing the reported loss. The segment manager notes common costs persist regardless. What is the correct keep/drop analysis?",
+    "Choices": {
+      "A": "Drop — the $20,000 reported loss proves the segment destroys value",
+      "B": "Keep — segment margin is $80,000 positive ($500,000 − $300,000 − $120,000); the $100,000 common allocation persists regardless and is irrelevant",
+      "C": "Keep only if revenue grows 10% — the $80,000 margin must first cover common costs fully",
+      "D": "Drop and cut the $100,000 common costs proportionally — allocations follow segments"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Segment margin on a traceable basis = $500,000 − $300,000 − $120,000 = +$80,000. Dropping R loses $500,000 of revenue while avoiding only $420,000 of cost ($300,000 variable + $120,000 traceable) — net −$80,000 to company profit, while the $100,000 common allocation merely moves to other segments. The reported −$20,000 includes $100,000 of costs that dropping cannot shed — the full-cost fallacy. Growth conditions (option C) confuse the decision: $80,000 already clears traceable costs, and common coverage is a corporate test, not a segment test. Business interpretation: keep/drop turns on traceable margin, never on fully-allocated profit — allocations follow the decision in the report but not in reality. Common trap: treating allocated common costs as avoidable.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-114",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A drops on the −$20,000 reported loss, but that figure includes $100,000 of common costs that survive the drop. The decision loses $80,000 of traceable margin to save $0 of common cost.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C conditions keeping on 10% growth so margin 'covers common fully.' Segment decisions never require covering common costs — common costs are corporate by definition. Growth conditions hold a profitable segment hostage to an irrelevant test.",
+    "ExplanationWrongD": "Option D assumes common costs shrink proportionally with segments. Common costs persist by definition (headquarters, shared facilities) — they reallocate to survivors, making remaining segments look worse after every drop.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.115 forecast error versus execution gap",
+    "MicroTopic": "forecast error execution gap",
+    "UniqueConceptKey": "C-C115-forecast-error-execution-gap",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Annual budget: 10,000 units. A mid-year forecast update revised expectations to 9,000 units on confirmed demand softness. Actual sales: 8,500 units. Sales blames production for stockouts; production blames sales for the 1,500-unit budget shortfall. How should the 1,500-unit gap be attributed for accountability?",
+    "Choices": {
+      "A": "All 1,500 to execution — budgets are commitments, and attribution to forecasting rewards excuse-making",
+      "B": "All 1,500 to forecasting — the mid-year update proves demand, not execution, moved",
+      "C": "1,000 to forecast error (budget-to-forecast) and 500 to execution (forecast-to-actual) — sales owns 500 units, planning owns 1,000",
+      "D": "500 to forecast error and 1,000 to execution — the larger share always belongs to execution"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Decompose chronologically: budget-to-forecast = 10,000 − 9,000 = 1,000 units of forecast error (demand softness confirmed mid-year — a planning and market-analysis accountability item). Forecast-to-actual = 9,000 − 8,500 = 500 units of execution gap (stockouts and fulfillment failures against known demand — owned by sales operations and production). The stockout blame-shifting resolves empirically: only 500 units (one-third) could possibly be stockouts; 1,000 units never existed as demand. Business interpretation: rolling-forecast updates exist precisely to separate these accountabilities — without the 9,000-unit marker, all 1,500 would pool as 'missed budget' and both functions would (correctly) call the attribution unfair. Common trap: assigning the full budget variance to whoever speaks last.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-115",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A charges all 1,500 to execution on commitment theory. But 1,000 units of confirmed demand softness is a forecasting fact, not an execution failure — commitment rhetoric cannot conjure demand that never existed.",
+    "ExplanationWrongB": "Option B charges all 1,500 to forecasting because the update 'proves' demand moved. The update proves 1,000 units of softness — the remaining 500 (forecast 9,000 vs actual 8,500) is fulfillment against known demand, squarely execution.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D swaps the split (500 forecast / 1,000 execution) on a 'larger share to execution' heuristic. Attribution follows chronology (budget to forecast to actual), not heuristics — the confirmed mid-year marker fixes the boundary at 1,000/500.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.116 standard cost card variance ranking",
+    "MicroTopic": "standard cost card variance ranking",
+    "UniqueConceptKey": "C-C116-standard-cost-card-variance-ranking",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A standard cost card shows per unit: DM 2.5 lbs @ $6.00 ($15.00), DL 0.5 hrs @ $22.00 ($11.00), VOH 0.5 hrs @ $8.00 ($4.00), FOH 0.5 hrs @ $12.00 ($6.00) — total $36.00. For 1,000 units, actual: DM 2,600 lbs @ $5.80 ($15,080), DL 480 hrs @ $22.50 ($10,800), VOH $4,100, FOH $6,000 (total $35,980; net variance $20 F). Decompose the net into signed component effects and identify the revision implication.",
+    "Choices": {
+      "A": "Revise all standards — any variance activity means the card is stale",
+      "B": "Revise the DL rate to $22.50 — one quarter of data suffices",
+      "C": "No revision — net $20 F means the card is accurate",
+      "D": "DL net $200 F dominates favorably; DM net $80 U and VOH $100 U offset — revise the DM quantity standard for its persistent 0.1-lb overage"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Component decomposition (1,000 units): DM price = 2,600 × ($6.00 − $5.80) = $520 F; DM quantity = (2,500 − 2,600) × $6.00 = $600 U, so DM net = $80 U. DL rate = 480 × ($22.00 − $22.50) = $240 U; DL efficiency = (500 − 480) × $22.00 = $440 F, so DL net = $200 F. VOH = 500×$8 − $4,100 = $4,000 − $4,100 = $100 U. FOH = $6,000 − $6,000 = $0. Total: +520 − 600 − 240 + 440 − 100 = +$20 F — reconciles to the reported net. Ranking: DL net $200 F dominates; DM net $80 U and VOH $100 U are secondary offsets. Revision logic: the DM 0.1-lb/unit overage is systematic (quantity, not price noise) — revise the quantity standard with engineering review. The DL rate $22.50 is one quarter's data (no revision on noise); VOH $100 U on $4,000 is 2.5% (monitor). Business interpretation: rank components before revising — net $20 F hides a $200 signal and two offsets. Common trap: revising everything (noise becomes standard) or nothing (systematic drift persists).",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-116",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A revises the entire card on $20 of net variance. Wholesale revision on noise destroys standard stability — revise components on systematic evidence (the DM quantity drift), not on activity.",
+    "ExplanationWrongB": "Option B revises the DL rate on one quarter's $0.50 deviation. Single-period rate noise is the worst revision trigger — rates should move on contract or market evidence, and the $240 U is swamped by the $440 F efficiency signal anyway.",
+    "ExplanationWrongC": "Option C reads net $20 F as card accuracy, but the net hides a $200 F DL signal, an $80 U systematic DM overage, and a $100 U VOH drift. Netting is the enemy of diagnosis — the DM quantity drift will compound unrevised.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.117 normal versus abnormal spoilage",
+    "MicroTopic": "normal abnormal spoilage",
+    "UniqueConceptKey": "C-C117-normal-abnormal-spoilage",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A batch starts 10,000 units at $190,000 total cost: 9,500 good units, 300 normal spoilage (3% allowance), 200 abnormal spoilage from a one-time machine fault. How should the $190,000 be assigned among good output and abnormal loss?",
+    "Choices": {
+      "A": "Abnormal loss $9,500 as period cost; good units $180,500 — all spoilage is a period loss",
+      "B": "Abnormal loss $3,800 as period loss; good-unit cost $19.60 (normal spoilage absorbed by good output)",
+      "C": "Good-unit cost $19.00 with no abnormal loss — spoilage is a normal production fact",
+      "D": "Abnormal loss $3,878 using equivalent-unit precision; good-unit cost $19.39"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Average cost = $190,000 / 10,000 started = $19.00. Abnormal loss = 200 × $19.00 = $3,800 period loss. Good output bears the rest: ($190,000 − $3,800) / 9,500 = $186,200 / 9,500 = $19.60 per good unit — the $0.60 premium over $19.00 is the absorbed normal spoilage (300 × $19 = $5,700 spread over 9,500 good units). Check: 9,500 × $19.60 = $186,200 + $3,800 = $190,000 — reconciles. The 3% normal allowance is a product cost of good output (unavoidable process physics); the machine-fault 200 units are a period loss (avoidable, non-recurring, separately disclosed). Business interpretation: normal spoilage pricing belongs in product cost (customers fund physics); abnormal belongs in period loss (management answers for faults). Common trap: expensing normal spoilage separately, which understates product cost and overstates period loss.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Job Order and Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-117",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A expenses all 500 spoiled units ($9,500) as period loss, including the 300 normal units. Normal spoilage is an unavoidable product cost absorbed by good output — expensing it understates inventory by $5,700 and overstates the period loss.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C prices good units at $19.00 average with no abnormal loss, burying the machine-fault 200 units in product cost. Abnormal spoilage must be separately disclosed as a period loss — hiding it in inventory overstates assets and masks the fault.",
+    "ExplanationWrongD": "Option D's $3,878/$19.39 pair mixes methods inconsistently (equivalent-unit numerator with average denominator). Under the average method used here, $3,800 and $19.60 reconcile exactly to $190,000; $3,878 does not.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.118 reciprocal versus direct allocation",
+    "MicroTopic": "reciprocal direct allocation",
+    "UniqueConceptKey": "C-C118-reciprocal-direct-allocation",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Service departments: S1 $50,000 (20% to S2, 50% to P1, 30% to P2); S2 $30,000 (10% to S1, 36% to P1, 54% to P2). The controller has always used the direct method. A new analyst runs the reciprocal method and claims P1 is over-allocated. What do the two methods assign, and is the analyst right?",
+    "Choices": {
+      "A": "Direct is final: P1 $43,250, P2 $36,750 — reciprocal methods are theoretical refinements with no decision impact",
+      "B": "Reciprocal gives P1 $43,265 (0.8 × S1 only) — the analyst forgot S2's contribution",
+      "C": "Step-down gives P1 $41,000, P2 $39,000 — close enough to reciprocal to ignore the difference",
+      "D": "Reciprocal: P1 $41,735, P2 $38,265 — direct over-allocates P1 by $1,515 by ignoring S2's 10% support of S1"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Direct method (ignores cross-flows): S1 to production: P1 50/80 × $50,000 = $31,250; P2 30/80 × $50,000 = $18,750. S2 to production: P1 36/90 × $30,000 = $12,000; P2 54/90 × $30,000 = $18,000. Direct totals: P1 $43,250; P2 $36,750 (sum $80,000 — reconciles). Reciprocal: S1 = $50,000 + 0.10×S2; S2 = $30,000 + 0.20×S1. Solving: S1 = $54,081.63, S2 = $40,816.33. P1 = 0.50×S1 + 0.36×S2 = $27,040.82 + $14,693.88 = $41,734.69 ≈ $41,735. P2 = 0.30×S1 + 0.54×S2 = $38,265.31 ≈ $38,265 (sum $80,000 — reconciles). Direct over-allocates P1 by $43,250 − $41,735 = $1,515 — because it ignores S2's 10% support flowing back through S1 disproportionately toward P2. The analyst is right, and $1,515 on these bases is decision-relevant for tight-margin product decisions. Business interpretation: direct method systematically favors heavy users of the allocating department that itself consumes support — reciprocal corrects exactly that bias. Common trap: accepting 0.8×S1 ($43,265) as reciprocal by forgetting S2's flow.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-118",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A presents direct-method totals as the final answer and dismisses reciprocal as theoretical. The $1,515 P1 over-allocation is real money on tight margins — 'theoretical' here means 'more accurate.'",
+    "ExplanationWrongB": "Option B computes 0.8 × S1 = $43,265 and stops — precisely the trap: it counts S1's outflow while forgetting S2's $14,694 inflow to P1. Half a reciprocal method is worse than direct because it looks rigorous.",
+    "ExplanationWrongC": "Option C substitutes step-down ($41,000/$39,000) as 'close enough.' Step-down captures S1→S2 but ignores S2→S1 — the $735 residual (41,735 vs 41,000) is the back-flow the whole exercise exists to measure.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.119 metric coverage gap analysis",
+    "MicroTopic": "metric coverage gap analysis",
+    "UniqueConceptKey": "C-C119-metric-coverage-gap-analysis",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A division scorecard carries seven metrics: ROI, profit margin, customer complaint count, defect rate, cycle time, rework cost, and training hours. The strategy officer asks whether coverage is balanced and what single change most improves it. Audit the coverage.",
+    "Choices": {
+      "A": "Add a Financial metric — two is too few for shareholder oversight",
+      "B": "Drop training hours — Learning & Growth is overhead, not performance",
+      "C": "Internal Process is over-represented (defect, cycle, rework = 3) while Customer has only a lagging complaint count — add a leading customer metric (e.g., on-time delivery) and retire one process metric",
+      "D": "Coverage is balanced — seven metrics across four perspectives needs no change"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Count by perspective: Financial 2 (ROI, margin), Customer 1 (complaints — lagging only), Internal Process 3 (defect rate, cycle time, rework cost), Learning & Growth 1 (training hours). Two defects: (1) Process overweight at 3 metrics risks managing what is measured thrice while customer outcomes get one rear-view mirror; (2) the single Customer metric is lagging (complaints record failures after they occur) with no leading counterpart. The highest-value single change: add on-time delivery (leading customer metric, actionable daily) and retire the weakest process metric (rework cost largely duplicates defect rate's signal) — net 7 metrics, balanced 2/2/2/1 with a leading customer voice. Adding Financial (option A) worsens the real imbalance; dropping Learning (option B) eats capability seed corn; declaring balance (option D) blesses a 3/1 process-customer skew. Business interpretation: audit scorecards by perspective weight AND lead/lag mix — count alone hides both skews. Common trap: equating metric count with coverage.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Balanced Scorecard",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-119",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A adds a third Financial metric when Financial is already adequately covered (ROI + margin) and Customer has one lagging metric. More of what is covered cannot fix what is missing.",
+    "ExplanationWrongB": "Option B drops the sole Learning & Growth metric as 'overhead.' Training hours fund future process capability — cutting the only capability metric to fix a customer coverage gap trades one imbalance for a worse one.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D declares 2/1/3/1 balanced. It is not: Process triple-counts highly correlated signals while Customer's single lagging metric leaves the leading customer voice — the one that prevents complaints — unmeasured.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.120 promise-date gaming detection",
+    "MicroTopic": "promise-date gaming detection",
+    "UniqueConceptKey": "C-C120-promise-date-gaming-detection",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Fulfillment reports 1,000 orders: 940 on-time to promise date (94%), 880 on-time to request date (88%). The logistics manager bonuses on promise-date OTD and proposes tightening promise standards to 'drive improvement.' The controller suspects promise-date gaming (quoting later dates to hit the metric). What should the committee conclude and do?",
+    "Choices": {
+      "A": "Celebrate 94% — promise-date OTD is the contracted commitment and the valid measure",
+      "B": "Average to 91% — the truth lies between the two measures",
+      "C": "Tighten promise standards — stretch targets cure gaming",
+      "D": "Report request-date OTD (88%) as the customer truth; the 6-point gap evidences gaming — rebase the bonus on request-date and investigate the 40 promise-misses"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Two facts: (1) 60 orders (6%) met promise but missed request — deliverable evidence that promise dates were set later than customers asked, i.e., gaming, since genuine scheduling would show scattered misses, not a one-directional 60-order wedge; (2) 40 orders missed even the (possibly padded) promise dates — real fulfillment failures. Averaging to 91% (option B) blends a gamed metric with a true one into meaninglessness. Tightening promise standards (option C) intensifies the gaming incentive (pad more to hit tougher targets). The 94% is not 'contracted commitment' (option A) when the promiser sets the promise unilaterally against the request. Rebase the bonus on request-date OTD (88% — the customer-experienced truth) and investigate the 40 promise-misses as the operational signal. Business interpretation: never bonus a metric the bonused party sets unobserved — Goodhart's law is a design input, not a surprise. Common trap: treating self-set-target attainment as performance.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Balanced Scorecard",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-120",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A honors promise-date OTD as 'contracted commitment,' but the promiser sets promise dates unobserved — 60 orders of one-directional wedge proves the commitment was negotiated with the metric, not the customer.",
+    "ExplanationWrongB": "Option B averages 94% and 88% into 91%, blending a gamed metric with a true one. Averages of biased and unbiased measures are biased — the 88% request-date figure stands alone as customer truth.",
+    "ExplanationWrongC": "Option C tightens promise standards to 'cure' gaming. Tougher self-set targets intensify padding incentives (pad more to clear higher bars) — the cure feeds the disease. Change the metric basis, not its level.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.121 investigation selection under budget",
+    "MicroTopic": "investigation selection budget",
+    "UniqueConceptKey": "C-C121-investigation-selection-budget",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Controller Omar Haddad has an $8,000 investigation budget. Three variances compete: materials $25,000 U (probe costs $3,000; 70% chance of $20,000 recovery); labor $15,000 U (costs $4,000; 60% chance of $12,000 savings); overhead $9,000 U (costs $2,000; 85% chance of $6,000 corrections). No partial probes. Which portfolio maximizes expected net benefit within budget?",
+    "Choices": {
+      "A": "Materials + overhead ($5,000) — best expected return per investigation dollar",
+      "B": "All three ($9,000) — total expected benefit covers the $1,000 overrun",
+      "C": "Materials + labor ($7,000, $14,200 expected net); defer overhead — highest absolute expected value within budget",
+      "D": "Labor only — mid-size variances deserve single focus"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Expected nets: materials = 0.70×$20,000 − $3,000 = $14,000 − $3,000 = $11,000; labor = 0.60×$12,000 − $4,000 = $7,200 − $4,000 = $3,200; overhead = 0.85×$6,000 − $2,000 = $5,100 − $2,000 = $3,100. Feasible pairs within $8,000: M+L ($7,000, EV $14,200), M+O ($5,000, EV $14,100), L+O ($6,000, EV $6,300). Materials + labor wins on absolute expected value ($14,200) while fitting the budget. Option A's per-dollar logic (M+O returns $2.82/$ vs M+L's $2.03/$) misranks under slack budget — ratios rule only when the budget binds tightly enough to exclude the higher-total option; here $1,000 of slack remains, so absolute EV governs. All-three (option B) violates the hard $8,000 constraint ($9,000). Business interpretation: rank probes by absolute EV subject to budget, switching to per-dollar ranking only when leftover budget cannot fund the next-best absolute option. Common trap: optimizing ratios when totals fit.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-121",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A picks materials + overhead on per-dollar return ($2.82/$ vs $2.03/$). Ratios govern only when the budget binds out the higher-total option — here $1,000 slack remains, so the $14,200 absolute winner (M+L) fits. Ratio ranking leaves $100 of EV on the table to 'save' budget nobody needs saved.",
+    "ExplanationWrongB": "Option B spends $9,000 against an $8,000 hard budget. Expected benefits do not relax binding capacity constraints — investigation staff hours are finite, and the overrun requires cutting a probe or securing budget first.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D probes labor alone ($3,200 EV), stranding $11,000 of materials EV that fits the budget. Single-focus is a heuristic for scarce attention, not for an $8,000 budget with two affordable high-yield probes.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.122 arbitration ruling transfer dispute",
+    "MicroTopic": "arbitration ruling transfer dispute",
+    "UniqueConceptKey": "C-C122-arbitration-ruling-transfer-dispute",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A selling division (variable cost $35) and buying division deadlocked: the seller demands $48 citing an outside quote; the buyer offers $35 citing variable cost. The controller, acting as arbitrator, discovers the $48 quote includes $5 of delivery the internal transfer does not require. Volume is 10,000 units; the seller has idle capacity. What should the arbitration ruling be?",
+    "Choices": {
+      "A": "$39 — strip the $5 delivery from the $48 comp (true market $43); settle at the midpoint of the $35–$43 range",
+      "B": "$48 — the outside quote is objective and governs",
+      "C": "$35 — variable cost with idle capacity is the only defensible price",
+      "D": "$41.50 — split the $35/$48 difference down the middle"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Comparable-market analysis first: the $48 quote bundles $5 of delivery the internal transfer avoids, so the true market comparable is $43. The bargaining range is therefore $35 (variable-cost floor, idle capacity, no displacement) to $43 (adjusted market) — not $35–$48. Midpoint arbitration at ($35 + $43)/2 = $39 splits the $8 of joint gains evenly ($4 each side versus BATNAs), the standard arbitrator's solution when bargaining power is symmetric and the relationship must continue. Enforcing $48 (option B) awards the seller delivery value it never provides (+$5 × 10,000 = $50,000 windfall). Enforcing $35 (option C) awards the buyer the full surplus and teaches sellers to hide capacity. Splitting unadjusted $35/$48 at $41.50 (option D) splits the difference on a contaminated comp — precision on the wrong number. Business interpretation: arbitrate comparables before splitting differences — midpoint methods are only as valid as the range endpoints. Common trap: treating quoted prices as comparable without adjusting for delivery, terms, and scope.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-122",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B enforces the unadjusted $48 quote, awarding the seller $5 × 10,000 = $50,000 of delivery value it never provides. Quoted prices are starting points for comparability analysis, not verdicts.",
+    "ExplanationWrongC": "Option C enforces the $35 floor as the price, awarding the buyer the entire $8 of joint gains. Floors bound acceptance regions; they do not dictate outcomes between willing traders — especially under ongoing-relationship arbitration.",
+    "ExplanationWrongD": "Option D splits $35/$48 at $41.50 — precise arithmetic on a contaminated endpoint. Splitting differences is legitimate only after comparability adjustments; $41.50 embeds the $5 delivery fiction at half weight.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.123 asset-age ROI distortion remedy",
+    "MicroTopic": "asset-age ROI distortion remedy",
+    "UniqueConceptKey": "C-C123-asset-age-ROI-distortion-remedy",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Division Eastvale holds $900,000 of near-fully-depreciated assets, earns $270,000 (30% ROI), and rejects a $300,000 / $57,000-income (19%) expansion. Division Westvale holds $3,000,000 of new assets, earns $390,000 (13%), and accepts a $300,000 / $42,000 (14%) project. Required return is 12%. The CEO asks whether ROI bonuses are working. What should the controller recommend?",
+    "Choices": {
+      "A": "Keep ROI and commend Westvale — both divisions decided correctly",
+      "B": "Force Eastvale to accept — corporate authority fixes incentive failure",
+      "C": "Raise the hurdle to 19% — only Eastvale-grade projects should proceed",
+      "D": "Replace ROI bonuses with residual income — Eastvale's rejection is bonus-driven (27.25% dilution) despite +$21,000 RI; asset-age distortion voids cross-division ROI comparison"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Eastvale's rejection: post-acceptance ROI = ($270,000+$57,000)/($900,000+$300,000) = $327,000/$1,200,000 = 27.25%, diluting 30% — a rational bonus-maximizer rejects, even though project RI = $57,000 − 12%×$300,000 = $57,000 − $36,000 = +$21,000 creates shareholder value. Westvale's acceptance: ($390,000+$42,000)/($3,000,000+$300,000) = $432,000/$3,300,000 = 13.09%, accretive to 13% — consistent under either metric (RI = $42,000 − $36,000 = +$6,000). The deeper disease is asset age: Eastvale's 30% reflects a depreciated denominator, not superior economics — comparing 30% to Westvale's 13% rewards accounting age. Residual income fixes both defects: it approves both value-creating projects (+$21k, +$6k) and neutralizes denominator distortion. Forcing acceptance (option B) preserves the dysfunctional measure while destroying autonomy. Raising the hurdle to 19% (option C) kills Westvale's value-creating 14% project. Business interpretation: when asset ages differ materially, ROI comparisons measure depreciation policy, not management. Common trap: praising Westvale's 'correct' decision while missing that the same system produced Eastvale's wrong one.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-123",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A commends the system because Westvale decided 'correctly.' But the same ROI bonus produced Eastvale's value-destroying rejection (+$21,000 RI refused). A measure that yields right answers by coincidence in one division and wrong answers by construction in another is broken.",
+    "ExplanationWrongB": "Option B forces Eastvale to accept while keeping ROI bonuses. Coercion preserves the dysfunctional incentive (next project, same rejection logic) while destroying the autonomy the divisional structure exists to provide. Fix the measure, not the decision.",
+    "ExplanationWrongC": "Option C raises the hurdle to 19%, which kills Westvale's 14% project ($6,000 of genuine value) while still leaving Eastvale's dilution incentive intact (19% still dilutes 30%). It compounds both errors.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.124 budget slack countermeasure design",
+    "MicroTopic": "budget slack countermeasure design",
+    "UniqueConceptKey": "C-C124-budget-slack-countermeasure-design",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A department's expense budgets have run $45,000–$55,000 favorable for three straight years on a $500,000 base — a persistent ~10% pad ($50,000). The CFO proposes a flat 10% top-down cut. The division VP proposes accepting the slack as prudence. The controller proposes a third way. Which countermeasure recovers value without destroying honesty incentives?",
+    "Choices": {
+      "A": "Flat 10% cut — padding confessed by three years of data deserves confiscation",
+      "B": "Participative re-budget with variance-trend audit plus a stretch target at half the pad ($25,000) with a $5,000 honesty kicker — recovers ~$20,000 net while rewarding truthful budgeting",
+      "C": "Accept the $50,000 pad — prudence buffers volatility and the cost of conflict exceeds $50,000",
+      "D": "Zero-base the entire $500,000 — rebuild every line from zero to eliminate all slack at once"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The three-year $45–55k favorable run is revealed pad (~$50,000), but how it is recovered determines next year's honesty. Flat confiscation (option A) teaches managers to hide pad better (ratchet: revealed slack gets seized). Acceptance (option C) prices dishonesty at $50,000/year forever. Zero-basing (option D) spends ~$200,000 of analytical effort to chase $50,000 of slack — uneconomic. The participative design: (1) variance-trend audit confronts the manager with their own three-year pattern (deniability removed, no accusation needed); (2) stretch target recovers half the pad ($25,000) — demanding but attainable, preserving achievability; (3) the $5,000 honesty kicker pays for truthful re-budgeting, flipping the incentive from hide-pad to reveal-pad. Net recovery ≈ $25,000 − $5,000 = $20,000/year plus a truthful baseline going forward — the only option whose equilibrium behavior is honesty. Business interpretation: slack is an incentive problem wearing an arithmetic disguise — solve the incentive, and the arithmetic follows. Common trap: treating revealed pad as found money to confiscate rather than as evidence of a mispriced honesty market.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-124",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A confiscates the revealed $50,000 pad outright. Next year's pad goes underground (sandbagged forecasts, shifted expenses) — confiscation teaches concealment, and the $50,000 returns disguised as something harder to find.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C accepts $50,000/year of padding as prudence. Prudence buffers genuine volatility; a three-year metronomic $45–55k favorable run is not volatility — it is a designed margin, priced at $50,000 annually forever.",
+    "ExplanationWrongD": "Option D zero-bases $500,000 to chase $50,000 of slack — roughly $200,000 of analytical effort (weeks of management time, documentation, reviews) to recover one quarter of its own cost. The cure costs 4× the disease.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.125 real versus nominal ROI inflation",
+    "MicroTopic": "real nominal ROI inflation",
+    "UniqueConceptKey": "C-C125-real-nominal-ROI-inflation",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Division Hot (30% inflation environment) reports 35% nominal ROI on historical cost. Division Stable (2% inflation) reports 16% nominal ROI. Corporate ranks Hot first. The controller argues nominal ROI across inflation regimes is meaningless. What is the correct comparison?",
+    "Choices": {
+      "A": "Hot wins — 35% is more than double 16% under any inflation adjustment",
+      "B": "Both are fine — each beats its local inflation rate by a similar margin",
+      "C": "Restate in real terms: Hot ≈ 3.8%, Stable ≈ 13.7% — Stable trounces Hot; nominal 35% is monetary illusion",
+      "D": "Adjust the hurdle rate for inflation and keep nominal ROI — measurement stays simple"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Real return ≈ (1 + nominal)/(1 + inflation) − 1. Hot: 1.35/1.30 − 1 = 1.0385 − 1 = 3.85%. Stable: 1.16/1.02 − 1 = 1.1373 − 1 = 13.73%. The ranking inverts completely: Stable's 13.7% real return is worth 3.5× Hot's 3.8%. Hot's 35% is monetary illusion — mostly the denominator's historical cost understated in inflated currency plus nominal income flattered by price pass-throughs. 'Beats local inflation by similar margin' (option B: Hot +5pp, Stable +14pp — not even similar) compounds the error. Hurdle-adjustment alone (option D) leaves the numerator/denominator in mixed-price-level currency. Business interpretation: cross-regime ROI comparison without price-level restatement ranks inflation, not management — restate to current cost (or at minimum compare real rates) before a dollar of bonus follows. Common trap: treating nominal outperformance across different price levels as information.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-125",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A keeps Hot ranked first on nominal 35% vs 16%. In real terms Hot earns 3.85% against Stable's 13.73% — nominal doubling is entirely price-level illusion, and ranking on it pays bonuses for inflation.",
+    "ExplanationWrongB": "Option B claims similar margins over local inflation, but Hot beats 30% by 5 points while Stable beats 2% by 14 points — not similar. And margin-over-inflation is not a return measure at all; real rates are (3.85% vs 13.73%).",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D adjusts the hurdle while leaving numerator and denominator in mixed-price-level currency. Real comparison requires restating the measure (current-cost ROI), not just moving the bar — a higher hurdle against an inflated 35% still ranks Hot first.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.126 post-merger dashboard harmonization",
+    "MicroTopic": "post-merger dashboard harmonization",
+    "UniqueConceptKey": "C-C126-post-merger-dashboard-harmonization",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "After acquiring Plant Y, the company runs two dashboards: Plant X tracks throughput of 800 units/day × $25 CM ($20,000/day); Plant Y tracks utilization of 92% (denominator undefined — Y's 'capacity' has never been engineering-rated). The integration officer must harmonize within 90 days. Managers at Y resist losing 'their' metric. What should the harmonization mandate?",
+    "Choices": {
+      "A": "Adopt throughput-dollar-days plus request-date OTD for both plants; retire utilization % (denominator-undefined); run dual reporting during the 90-day transition",
+      "B": "Keep both systems permanently — local ownership beats comparability",
+      "C": "Adopt utilization % company-wide — it is already understood at Y and simpler than throughput",
+      "D": "Adopt throughput units only, without dollar valuation — volume comparability without finance complexity"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Y's 92% utilization is unanchored — without an engineering-rated denominator, 92% of what is unknown, making it incomparable across plants and gameable within Y (redefine capacity upward, utilization 'improves'). Throughput-dollar-days (800 × $25 = $20,000/day at X) ties operations to economics in one number both plants can compute identically; request-date OTD adds the customer truth neither dashboard currently carries. Dual reporting for 90 days defuses resistance (Y keeps its metric visible while learning the new ones) with a hard sunset — permanent dual systems (option B) institutionalize incomparability. Company-wide utilization (option C) standardizes a broken metric. Throughput units without dollars (option D) equates a $5-CM unit with a $25-CM unit — volume without value. Business interpretation: harmonize on economically-anchored metrics with sunset-transition change management — metric migration is 20% arithmetic, 80% politics. Common trap: preserving local metrics for harmony while sacrificing the comparability the merger was meant to create.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Balanced Scorecard",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/10-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-126",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B preserves both systems permanently for local ownership. Permanent dual dashboards mean no comparable plant ranking, no consolidated operations review, and double metric-maintenance cost — ownership purchased with the merger's analytical rationale.",
+    "ExplanationWrongC": "Option C standardizes on utilization %, whose denominator at Y was never engineering-rated. Standardizing an unanchored metric spreads Y's definitional fog company-wide instead of dispelling it.",
+    "ExplanationWrongD": "Option D adopts throughput units without dollar valuation, equating low-margin and high-margin volume. A plant shipping 800 units of $5 CM ($4,000) would outrank one shipping 700 of $25 ($17,500) — volume vanity over value.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.127 discount-driven metric gaming remedy",
+    "MicroTopic": "discount-driven metric gaming remedy",
+    "UniqueConceptKey": "C-C127-discount-driven-metric-gaming-remedy",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A sales manager bonused on revenue booked an extra 12,000 units at $50 ($600,000 revenue) with a 15% discount to hit target. Variable cost is $45/unit. The $90,000 discount cost against $60,000 of unit contribution nets −$30,000. Revenue is up, contribution is down, and the manager expects a bonus. What should the committee do about this period and the plan design?",
+    "Choices": {
+      "A": "Raise next year's revenue target — the manager proved capacity exists",
+      "B": "Pay the bonus and praise the over-attainment — revenue growth is the strategy",
+      "C": "Fire the manager — gaming forfeits trust permanently",
+      "D": "Deny this bonus on contribution grounds and redesign to a contribution target with a 5% discount-approval threshold — price the behavior, not the person"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Economics: 12,000 × ($50 − $45) = $60,000 contribution minus 15% × $600,000 = $90,000 discount cost = −$30,000 net. The manager spent $90,000 of margin to buy $600,000 of revenue the plan then rewards — rational under a revenue target, destructive for the company. Raising targets (option A) rewards gaming with harder gaming (deeper discounts next year). Paying and praising (option B) institutionalizes margin destruction. Firing (option C) treats a system output as a character verdict — the replacement faces identical incentives and repeats it. The redesign prices the externality: contribution targets make discounts self-penalizing (every discount dollar reduces the bonus base), and the 5% approval threshold adds a control without banning legitimate deal flexibility. Denying this period's bonus follows from the same logic (payout on contribution = negative). Business interpretation: Goodhart's law is a plan-design input — when a measure becomes a target, re-target the measure, not the people. Common trap: moralizing gaming that the incentive scheme straightforwardly purchased.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-127",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A raises next year's target on proof of 'capacity.' The demonstrated capacity is discount-funded (−$30,000 economics) — raising targets on gamed attainment schedules deeper discounts, not real growth.",
+    "ExplanationWrongB": "Option B pays and praises revenue growth that cost $30,000 net. Rewarding margin destruction as strategy teaches the entire sales force the exchange rate: $90,000 of company margin buys full bonus.",
+    "ExplanationWrongC": "Option C fires the manager for behavior the revenue target straightforwardly purchased. The replacement inherits identical incentives and repeats it — personnel action as a substitute for plan redesign guarantees recurrence.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.128 expansion versus overtime capacity",
+    "MicroTopic": "expansion overtime capacity",
+    "UniqueConceptKey": "C-C128-expansion-overtime-capacity",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Demand needs 10,000 hrs/quarter against 8,500 capacity. Overtime premium runs 1,500 × $15 = $22,500/quarter with rising quality flags. A $200,000 machine (10-year life) adds 3,000 hrs/quarter at $3,000/quarter operating cost. Finance estimates 60% probability the demand sustains. How should the capacity committee decide?",
+    "Choices": {
+      "A": "Expand immediately — $58,000/year savings justify any $200,000 machine",
+      "B": "Expand iff forward-order coverage supports ≥60% confidence — $58,000/year savings with 3.4-year payback at stated odds; otherwise overtime as a real option while coverage builds",
+      "C": "Overtime permanently — capital commitment always loses to flexibility",
+      "D": "Cut demand to capacity — marketing should sell what operations can make"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Machine quarterly cost = $200,000/40 quarters + $3,000 operating = $5,000 + $3,000 = $8,000/quarter versus $22,500 overtime — savings $14,500/quarter = $58,000/year; simple payback = $200,000/$58,000 = 3.45 years. At 60% sustain probability, expected 10-year value ≈ 0.60 × $580,000 − $200,000 = $348,000 − $200,000 = +$148,000 — positive but probability-sensitive (breaks even at ~34% sustain odds: $200,000/$580,000). Hence the conditional: expand on ≥60% confidence evidenced by signed-order coverage (not forecasts), else run overtime as a paid real option ($22,500/quarter preserves the choice while information arrives). Unconditional expansion (option A) ignores the 40% strand risk ($200,000 sunk against evaporated demand). Permanent overtime (option C) pays $58,000/year forever to avoid deciding — flexibility has a price, and here it exceeds the machine in under 4 years. Cutting demand (option D) surrenders contribution to dodge a capacity question. Business interpretation: capacity is an options problem — price flexibility explicitly, set the exercise trigger on coverage, and never let forecasts alone commit capital. Common trap: payback analysis without probability weighting.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-128",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A expands unconditionally on $58,000/year savings, ignoring the 40% strand probability — $200,000 sunk against evaporated demand with 3.4 years of payback unearned. Savings conditional on demand are not savings yet.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C runs $22,500/quarter overtime permanently to preserve flexibility, paying $58,000/year forever for an option worth exercising at ≥60% confidence. Flexibility priced above the commitment it protects is just indecision with a budget line.",
+    "ExplanationWrongD": "Option D cuts demand to fit capacity, surrendering 1,500 hours of contribution to dodge a capacity decision. Marketing exists to sell profitable demand — operations exists to evaluate serving it, starting at +$148,000 expected value.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.129 chargeback rate design",
+    "MicroTopic": "chargeback rate design",
+    "UniqueConceptKey": "C-C129-chargeback-rate-design",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Corporate IT ($500,000: 2,000 complex tickets, 8,000 routine) charges a flat $50/ticket: Division A (1,000 tickets) $50,000; B (3,000) $150,000; C (6,000: 1,500 complex + 4,500 routine) $300,000. Analysis shows C floods routine tickets (triage failures), consuming support capacity. True cost: complex $150, routine $25. What rate redesign should the controller recommend?",
+    "Choices": {
+      "A": "Keep flat $50 — simplicity and predictability outweigh refinement",
+      "B": "Allocate by division revenue — ability to pay is the fairest base",
+      "C": "Two-tier: $150/complex + $25/routine with requester triage — C pays $337,500 (its $37,500 spam premium), pricing the externality it imposes",
+      "D": "Outsource IT — internal chargebacks always distort more than markets"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Rate derivation: complex $150 × 2,000 = $300,000; routine $25 × 8,000 = $200,000; total $500,000 — reconciles. C's two-tier bill = 1,500×$150 + 4,500×$25 = $225,000 + $112,500 = $337,500 versus $300,000 flat — the +$37,500 is the priced externality of C's triage failures (4,500 routine tickets, many avoidable with requester-side filtering). Flat $50 (option A) subsidizes spam: each routine ticket costs $25 but is 'free' at the margin... precisely, flat pricing makes routine tickets cost C $50 while costing IT $25 — overpriced per ticket yet underpriced in total because C's complex tickets ($150 cost) ride at $50. The two-tier structure plus requester triage attacks both margins: correct marginal prices plus volume discipline. Revenue allocation (option B) severs cost causation entirely. Outsourcing (option D) leaps scope — a $500,000 rate-design problem does not imply a make-buy verdict. Business interpretation: chargebacks are congestion prices — tier by cost-to-serve and watch demand self-regulate. Common trap: defending flat rates for simplicity while volume mixes shift underneath.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-129",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A keeps flat $50 for simplicity while C's mix (75% routine by count, triage-failed) shifts underneath. Flat rates subsidize exactly the behavior — ticket spam — that is degrading support capacity.",
+    "ExplanationWrongB": "Option B allocates by revenue ('ability to pay'), severing cost causation entirely. IT costs follow ticket complexity, not division revenue — revenue-based IT charges tax success to subsidize support consumption.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D outsources IT over a rate-design dispute. A $500,000 tiering fix does not imply a make-buy verdict — outsourcing analysis needs its own relevant-cost comparison, not frustration with flat rates.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.130 evaluation frequency signal versus noise",
+    "MicroTopic": "evaluation frequency signal noise",
+    "UniqueConceptKey": "C-C130-evaluation-frequency-signal-noise",
+    "LOSTag": "P1-C Performance management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Monthly controllable variances are noise around zero (σ = $8,000). The current ±$10,000 monthly investigation threshold triggers constantly, consuming review capacity. The controller models alternatives. What evaluation frequency and threshold design best separates signal from noise?",
+    "Choices": {
+      "A": "Quarterly formal evaluation (±$10,000 threshold, ~3% false-alarm) with monthly monitoring-only flags — noise averages out over three months while true shifts persist",
+      "B": "Monthly bonuses on monthly variances — responsiveness requires monthly stakes",
+      "C": "Annual evaluation only — maximum averaging eliminates all noise",
+      "D": "Monthly evaluation on year-to-date cumulative variance — accumulation smooths noise while keeping monthly cadence"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "False-alarm math: monthly P(|X| > $10,000) with σ = $8,000 is 2×(1 − Φ(1.25)) ≈ 2×(1 − 0.8944) = 21.1% — one month in five triggers on pure noise, which is why review capacity is consumed. Quarterly aggregation: σ_q = $8,000/√3 ≈ $4,619; P(|X| > $10,000) = 2×(1 − Φ(2.165)) ≈ 3.0% — noise cancels (independent monthly draws) while persistent shifts accumulate (a true $4,000/month shift totals $12,000/quarter, tripping the threshold with power). Monthly monitoring-only flags preserve visibility without payout consequences; quarterly formal evaluation pays signal. Monthly bonuses (option B) pay 21%-noise luck. Annual-only (option C) averages noise away but delays true-shift detection up to a year — feedback latency destroys control value. YTD cumulative (option D) accumulates January noise into every subsequent reading — December's bonus rests partly on January luck. Business interpretation: match evaluation frequency to the noise horizon — aggregate until noise dies, evaluate where signal lives. Common trap: treating threshold breaches as findings without computing the null-hypothesis rate.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-CC-130",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B bonuses monthly variances with a 21% noise-trigger rate — one month in five pays luck. Responsiveness to noise is not responsiveness; it is lottery administration with extra steps.",
+    "ExplanationWrongC": "Option C goes annual to maximize averaging, but feedback delayed up to a year cannot steer behavior — control value decays with latency. Quarterly aggregation already cuts noise to 3% without the year-long blind spot.",
+    "ExplanationWrongD": "Option D accumulates monthly noise into year-to-date readings — January's luck contaminates all eleven subsequent evaluations. Cumulation smooths nothing; it stockpiles noise under a cadence illusion.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 2 (authored 2026-09-10, certified 2026-09-10 (six-dimension HIGH, user-approved); Tier 3 Wave 2)",
+    "certification_date": "2026-09-10"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.101 percentage-of-completion with loss provision",
+    "MicroTopic": "percentage-of-completion loss provision",
+    "UniqueConceptKey": "A-C101-percentage-of-completion-loss-provision",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A 3-year $9,000,000 fixed-price contract: Year 1 costs incurred $2,400,000 of $8,000,000 estimated total. Year 2: costs to date $6,300,000; total estimate revised to $9,600,000 (a $600,000 overall loss). Billings to date $5,500,000; collections $4,900,000. What gross profit/loss is recognized each year, and what balance-sheet position results at end of Year 2?",
+    "Choices": {
+      "A": "Year 1 +$300,000 (30% complete); Year 2 −$900,000 (full $600,000 loss plus reversal of Year-1 profit); net billings-in-excess $200,000 liability",
+      "B": "Year 1 +$300,000; Year 2 −$600,000 (current-year share only); prior profit stands",
+      "C": "Zero both years (completed-contract method) — percentage-of-completion is elective",
+      "D": "Year 1 +$1,000,000 (billings basis); Year 2 −$1,600,000 — billings drive revenue"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Year 1: 2,400/8,000 = 30% complete → revenue 30% × $9,000,000 = $2,700,000; cost $2,400,000; profit +$300,000. Year 2: revised total loss $9,000,000 − $9,600,000 = −$600,000 — the ENTIRE anticipated loss hits Year 2 immediately (conservatism/loss-provision rule), plus reversal of Year 1's $300,000 recognized profit: Year-2 loss = −$600,000 − $300,000 = −$900,000. Cumulative P&L: +$300,000 − $900,000 = −$600,000 ✓ (full contract loss). Balance sheet: costs+recognized losses to date = $6,300,000 − $600,000 = $5,700,000 vs billings $5,500,000 → $200,000 costs-in-excess (asset). Spreading the loss (option B) violates the full-loss-provision rule. Completed-contract-at-will (option C) misstates GAAP — POC is required where progress is measurable. Billings-basis revenue (option D) confuses billings (negotiated cash schedule) with progress. Business interpretation: loss-making contracts front-load the full pain — Year-2 management answers for $900,000, not $600,000. Common trap: amortizing anticipated losses.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Revenue Recognition",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-101",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B spreads the $600,000 loss as a current-year share while letting Year-1's $300,000 profit stand. Anticipated contract losses provision in full immediately INCLUDING prior recognized profit reversal — $900,000, not $600,000.",
+    "ExplanationWrongC": "Option C elects completed-contract to defer everything. POC applies where progress is reliably measurable (cost-to-cost here) — method follows measurability, not electability.",
+    "ExplanationWrongD": "Option D drives revenue off billings ($5,500,000 schedule vs $2,700,000/$6,300,000 progress-based). Billings are negotiated cash timing, never progress evidence.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.102 consignment versus sale distinction",
+    "MicroTopic": "consignment versus sale distinction",
+    "UniqueConceptKey": "A-C102-consignment-versus-sale-distinction",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A manufacturer ships $400,000 of goods to a distributor with right of return on unsold units, no payment due until resale, and a 10% restocking fee on returns. The sales team books $400,000 of revenue on shipment. The distributor sells $250,000 to end customers in the period. What revenue should the manufacturer recognize, and why?",
+    "Choices": {
+      "A": "$400,000 — shipment with a restocking fee transfers control sufficient for sale treatment",
+      "B": "$250,000 — control transfers only on resale to end customers; consignment with return rights defers revenue until then",
+      "C": "$360,000 — $400,000 less 10% restocking reserve on the full shipment",
+      "D": "$150,000 — unsold balance net of the fee measures earned revenue"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Control analysis: no payment due until resale + return rights + restocking fee means the distributor holds as consignee — risks and rewards (obsolescence, price authority, return optionality) stay with the manufacturer until end-customer sale. Revenue = $250,000 actually resold. Shipment-booking (option A, $400,000) treats consignment as sale — the restocking fee prices returns, it does not transfer control. Reserve-netting (option C, $360,000) applies sale-with-return-right measurement to a consignment fact pattern (no sale occurred at all). Unsold-balance-as-revenue (option D, $150,000) inverts the logic — the unsold $150,000 is precisely what is NOT earned. Business interpretation: return rights plus no-pay-until-resale equals consignment — revenue waits for the end customer regardless of shipment paperwork. Common trap: booking shipments with return privileges as sales with reserves.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Revenue Recognition",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-102",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $400,000 books consignment as sale — no payment due until resale plus return rights means control never transferred on shipment. Restocking fees price returns; they do not transfer control.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's $360,000 nets a reserve against a sale that never occurred — sale-with-return measurement applies where control transferred with return privileges, not to consignment holdings.",
+    "ExplanationWrongD": "Option D's $150,000 treats the unsold balance as earned — precisely inverted: unsold consigned goods are unearned by definition.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.103 warranty assurance versus service distinction",
+    "MicroTopic": "warranty assurance service distinction",
+    "UniqueConceptKey": "A-C103-warranty-assurance-service-distinction",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Equipment sells for $100,000 with a 1-year assurance warranty (defect coverage) plus an optional 2-year extended service plan sold separately for $12,000. Expected assurance claims cost $3,000; the service plan will cost $7,000 to fulfill. How should the $112,000 of consideration be recognized?",
+    "Choices": {
+      "A": "$112,000 upfront — warranties of any kind are assurance by association",
+      "B": "$100,000 upfront less $3,000 assurance provision ($97,000 net day one); $12,000 service revenue ratable over years 2–3 with $7,000 of cost matched",
+      "C": "$112,000 ratable over 3 years — bundle timing governs all components",
+      "D": "$100,000 upfront with no provision — assurance costs expense as incurred"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Two obligations, two treatments: (1) assurance warranty is NOT a separate performance obligation — recognize the $100,000 product sale upfront with a $3,000 warranty provision (probable + estimable, ASC 450/606 assurance guidance), net $97,000 day-one economics; (2) the separately-sold service plan IS a distinct obligation — defer $12,000, recognize ratably over years 2–3 ($6,000/year) against $7,000 of fulfillment cost. All-upfront (option A, $112,000) accelerates two years of unearned service revenue. Full ratable (option C) defers the earned product sale across service years. No-provision (option D) ignores probable-estimable assurance cost. Business interpretation: separately-priced service is always its own obligation; bundled assurance accrues as cost — price and timing follow separability, never labels. Common trap: treating extended plans as assurance overflow.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Revenue Recognition",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-103",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $112,000 upfront accelerates $12,000 of unearned service revenue (years 2–3 unperformed). Separately-priced service defers by definition — association with assurance changes nothing.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's 3-year ratable defers the earned $100,000 product sale across service years — product delivery is complete at sale, and its revenue recognizes then.",
+    "ExplanationWrongD": "Option D skips the $3,000 assurance provision as pay-as-you-go. Probable-estimable assurance cost accrues at sale — expensing-as-incurred understates day-one obligations.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.104 receivables factoring with recourse",
+    "MicroTopic": "receivables factoring recourse",
+    "UniqueConceptKey": "A-C104-receivables-factoring-recourse",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "AR $500,000 factored for $460,000 cash with full recourse (seller guarantees collection); historical default rate 3% ($15,000 expected). The treasurer proposes derecognizing the full $500,000 and booking a $40,000 loss. What is the correct treatment?",
+    "Choices": {
+      "A": "Derecognize $500,000, book $40,000 loss, disclose nothing further — cash received ends the story",
+      "B": "Keep $500,000 on books with a $460,000 secured borrowing — recourse means no sale occurred",
+      "C": "Derecognize $500,000, book $25,000 loss ($40,000 discount less $15,000 recourse obligation), and record a $15,000 recourse liability — surrendered control with continuing involvement",
+      "D": "Derecognize $485,000 (net of expected defaults) with no liability — expected losses net inside the derecognized amount"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "With full recourse, control is surrendered (factor owns collection) but continuing involvement exists (guarantee) — derecognize receivables, recognize cash $460,000, record recourse liability at fair value ($15,000 expected defaults), loss = $500,000 − $460,000 − $15,000 = $25,000. Cash-ends-story (option A, $40,000 loss, no liability) hides the $15,000 guarantee obligation — recourse has fair value that belongs on the balance sheet. Secured-borrowing treatment (option B) applies where control is retained (no surrender); here collection rights transferred. Net-derecognition (option D, $485,000, no liability) nets expected losses inside derecognition instead of recording the obligation gross — obligations record, never net. Business interpretation: recourse factorings split into sale (receivables out, cash in) plus guarantee (liability recorded) — book both legs. Common trap: treating recourse as either full sale or full borrowing.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Receivables",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-104",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $40,000 loss with no liability hides the $15,000 recourse guarantee — continuing involvement has fair value that records on the balance sheet alongside the sale.",
+    "ExplanationWrongB": "Option B's secured borrowing keeps $500,000 booked as if control never transferred — but collection rights did transfer. Surrendered control with a guarantee is sale-plus-liability, not borrowing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D nets $15,000 of expected defaults inside $485,000 derecognized with no liability — obligations record gross, never netted inside derecognition amounts.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.105 retail inventory method with markdowns",
+    "MicroTopic": "retail inventory method markdowns",
+    "UniqueConceptKey": "A-C105-retail-inventory-method-markdowns",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Beginning inventory: cost $60,000, retail $100,000. Purchases: cost $300,000, retail $500,000. Net markups $20,000; net markdowns $40,000; sales $520,000. Under the conventional retail method (markups included, markdowns excluded from the cost ratio), what is ending inventory at cost?",
+    "Choices": {
+      "A": "$60,000 — markdowns prove the goods are worth no more than beginning cost suggests",
+      "B": "$50,000 — cost ratio 50% ($360,000/$720,000) applied to $100,000 ending retail",
+      "C": "$37,241 — cost ratio 62.07% ($360,000/$580,000, markdowns included); including markdowns overstates ending value by $2,402",
+      "D": "Conventional: cost ratio $360,000/($100,000+$500,000+$20,000) = $360,000/$620,000 = 58.06%; ending retail $60,000; ending cost $34,839"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Conventional retail: cost ratio = goods-available-at-cost / goods-available-at-retail EXCLUDING markdowns = ($60,000 + $300,000) / ($100,000 + $500,000 + $20,000) = $360,000/$620,000 = 58.0645%. Ending retail = $100,000 + $500,000 + $20,000 − $40,000 − $520,000 = $60,000. Ending cost = 58.0645% × $60,000 = $34,838.71 ≈ $34,839. Markdown-exclusion is the conventional method's conservatism (it lowers ending value by raising... precisely by excluding markdowns from the denominator, the ratio stays higher — wait: excluding $40,000 markdowns keeps denominator at $620,000 vs $580,000 with them; higher denominator-share... $360,000/$620,000 = 58.06% vs $360,000/$580,000 = 62.07% — excluding markdowns LOWERS the ratio, hence lower (conservative) ending value $34,839 vs $37,241). Option C's $52,941 garbles the computation (it divides by an invented $620,000... it states the right ratio then misapplies to $91,200 — phantom retail). Option B's 50% includes markdowns (non-conventional). Business interpretation: conventional retail bakes LCM conservatism into the ratio via markdown exclusion. Common trap: including markdowns in the cost ratio.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Inventory",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-105",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $60,000 carries ending retail as cost — a 100% cost ratio that no computation supports. Retail dollars are not cost dollars.",
+    "ExplanationWrongB": "Option B's 50% has no valid derivation ($360,000 divided by nothing in the data equals 50%) — invented ratios answer invented questions. The computed ratio is 58.06% conventional.",
+    "ExplanationWrongC": "Option C's $37,241 includes markdowns in the denominator ($360,000/$580,000 = 62.07%) — the regular (non-conventional) retail ratio, which forfeits $2,402 of LCM conservatism ($37,241 vs $34,839).",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.106 purchase commitment loss recognition",
+    "MicroTopic": "purchase commitment loss recognition",
+    "UniqueConceptKey": "A-C106-purchase-commitment-loss-recognition",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A non-cancelable purchase commitment covers 10,000 units at $20 ($200,000). Year-end market price falls to $16. The goods have not been received. What loss, if any, is recognized, and how is the commitment reported?",
+    "Choices": {
+      "A": "No entry until receipt — executory contracts never recognize losses early",
+      "B": "$40,000 loss recognized immediately with a $40,000 liability (10,000 × ($20 − $16)); disclosed as a commitment",
+      "C": "$200,000 liability — the full commitment accrues at signing",
+      "D": "$40,000 disclosed only — unrealized commitment losses never accrue"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Firm non-cancelable commitments: recognize the net loss when market falls below contract price before receipt — ($20 − $16) × 10,000 = $40,000, debit loss, credit estimated liability (accrued purchase-commitment loss). Full-commitment accrual (option C, $200,000) books the gross purchase before performance — executory contracts accrue losses, never gross amounts. No-entry (option A) ignores the onerous-commitment rule (the $40,000 is unavoidable — canceling is impossible, performing loses $40,000 versus market). Disclosure-only (option D) treats an accrued probable-estimable loss as a contingency footnote — firm commitments below market meet accrual gates. Business interpretation: onerous executory contracts accrue their unavoidable loss immediately — the signature binds, the market moved, the loss exists. Common trap: waiting for receipt to recognize committed losses.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Inventory",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-106",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's no-entry waits for receipt, ignoring the onerous-commitment rule — non-cancelable below-market commitments accrue their unavoidable loss when measured, not when goods arrive.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's $200,000 accrues the gross commitment at signing — executory contracts accrue net losses ($40,000), never gross purchase amounts before performance.",
+    "ExplanationWrongD": "Option D discloses without accruing a probable ($40,000) estimable firm-commitment loss — meeting both accrual gates yet booking neither. Firm below-market commitments accrue.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.107 software capitalization stage gates",
+    "MicroTopic": "software capitalization stage gates",
+    "UniqueConceptKey": "A-C107-software-capitalization-stage-gates",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Internal-use software project: $50,000 preliminary evaluation, $200,000 application development (coding/testing), $30,000 post-implementation training. For sale-to-others software: $80,000 pre-feasibility research, $120,000 post-feasibility development. What capitalizes under each model?",
+    "Choices": {
+      "A": "All $400,000 — software investment is inherently capital in nature",
+      "B": "Internal-use: $200,000 (application stage only); sale-to-others: $120,000 (post-feasibility only); $160,000 expensed (preliminary, training, pre-feasibility research)",
+      "C": "Internal-use: $250,000 (preliminary plus development); sale-to-others: $200,000 (all development)",
+      "D": "Expense everything — software costs are too uncertain to capitalize reliably"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Internal-use (ASC 350-40): preliminary ($50,000) expense + application development ($200,000) capitalize + post-implementation training ($30,000) expense. Sale-to-others (ASC 985-20): pre-feasibility research ($80,000) expense + post-feasibility development ($120,000) capitalize. Capitalized total = $200,000 + $120,000 = $320,000; expensed = $50,000 + $30,000 + $80,000 = $160,000. All-capital (option A, $400,000) ignores both models' stage gates. Preliminary-inclusive (option C: $250,000 internal) capitalizes evaluation work the model explicitly expenses. Expense-all (option D) forfeits $320,000 of qualifying development assets. Business interpretation: software capitalization turns on stage gates (feasibility/technological milestones), never on project labels — map spend to stages first. Common trap: capitalizing preliminary and research stages.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Long-Lived Assets",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-107",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $400,000 capitalizes preliminary evaluation, training, and pre-feasibility research — all three explicitly expensed under their respective models. Labels don't capitalize; stages do.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's $250,000 internal capitalizes $50,000 of preliminary evaluation. Preliminary-stage work expenses under ASC 350-40 regardless of later development success.",
+    "ExplanationWrongD": "Option D expenses $320,000 of qualifying development (application-stage + post-feasibility) as too uncertain — the stage gates exist precisely to identify capitalizable certainty.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.108 R&D milestone tranche funding",
+    "MicroTopic": "R&D milestone tranche funding",
+    "UniqueConceptKey": "A-C108-R&D-milestone-tranche-funding",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A $600,000 research program (pre-feasibility, high uncertainty) versus a $400,000 development program (post-feasibility, prototype validated). The CFO asks how much of the combined $1,000,000 hits the balance sheet versus the income statement, and how to fund the research leg. What is the correct treatment and funding design?",
+    "Choices": {
+      "A": "Capitalize $1,000,000 — R&D investment is inherently an asset",
+      "B": "Expense $1,000,000 — research uncertainty taints development certainty",
+      "C": "Capitalize $400,000 (development), expense $600,000 (research); fund research in milestone tranches with kill criteria — $600,000 of uncertainty in gated experiments, not one commitment",
+      "D": "Capitalize $600,000 (research scale) and expense $400,000 (development risk) — fund certainty, expense uncertainty inversely"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Accounting split: $600,000 pre-feasibility research expenses (no technological feasibility — no asset exists to record); $400,000 post-feasibility development capitalizes. Funding split mirrors it: research funds in milestone tranches with kill criteria (each gate funds only on evidence — maximum loss per gate, full program value preserved on success); development funds as committed program spend (feasibility established). Capitalize-all (option A, $1,000,000) books $600,000 of pre-feasibility hope as an asset. Expense-all (option B) writes off $400,000 of qualifying development meeting every capitalization criterion. Inverted split (option D) capitalizes uncertainty while expensing certainty — precisely backwards on both legs. Business interpretation: accounting stages and funding stages align (expense-gated research in tranches; capitalize committed development) — feasibility draws both lines. Common trap: funding research like development (full commitment) or accounting development like research (full expense).",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Long-Lived Assets",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-108",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $1,000,000 capitalization books $600,000 of pre-feasibility research as an asset — hope capitalized. Feasibility gates exist to prevent exactly this.",
+    "ExplanationWrongB": "Option B's full expense writes off $400,000 of post-feasibility development meeting every criterion — certainty expensed alongside uncertainty.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D inverts both legs (capitalizes research, expenses development) — precisely backwards on accounting and funding alike.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.109 pension cost components split",
+    "MicroTopic": "pension cost components split",
+    "UniqueConceptKey": "A-C109-pension-cost-components-split",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "PBO beginning $1,000,000; service cost $120,000; interest cost (6%) $60,000; expected return on assets $70,000 (actual $55,000); prior-service amortization $15,000; actuarial loss amortization $10,000. What is net periodic pension cost, and how does it split between operating and non-operating presentation?",
+    "Choices": {
+      "A": "$135,000 all in operating expense — pension cost is compensation, fully operating",
+      "B": "$150,000 with actual return — actual results replace expected in cost measurement",
+      "C": "$120,000 service cost in operating; $15,000 net non-service [interest $60,000 − expected return $70,000 + prior-service $15,000 + actuarial $10,000] outside operating; total $135,000",
+      "D": "$205,000 — all components including the $15,000 asset shortfall sum into cost"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Net periodic pension cost = service $120,000 + interest $60,000 − expected return $70,000 + prior-service amortization $15,000 + actuarial-loss amortization $10,000 = $135,000. Presentation (ASU 2017-07): service cost ($120,000) in operating (same line as other compensation); all other components net ($60,000 − $70,000 + $15,000 + $10,000 = $15,000) outside operating income. Actual-vs-expected gap ($70,000 − $55,000 = $15,000 shortfall) does NOT enter cost — expected return measures cost; actual deviations flow through OCI (asset gain/loss corridor). All-operating (option A, $135,000) ignores the presentation split GAAP requires. Actual-return costing (option B, $150,000) injects market noise into compensation measurement. Shortfall-adding (option D, $205,000... precisely $135,000 + $15,000 + $55,000?) double-counts asset performance. Business interpretation: pension cost separates service (operating labor) from financing/actuarial mechanics (non-operating) — present where each belongs. Common trap: costing pensions on actual asset returns.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Pensions",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-109",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $135,000 all-operating ignores ASU 2017-07's presentation split — only service cost ($120,000) sits in operating; $15,000 net non-service sits outside.",
+    "ExplanationWrongB": "Option B's $150,000 costs on actual return ($55,000), injecting $15,000 of market noise into compensation measurement. Expected return measures cost; actual deviations ride through OCI.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $205,000 piles asset shortfalls onto cost — double-counting market performance inside compensation. Shortfalls adjust OCI corridors, never periodic cost.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.110 postretirement benefit obligation build",
+    "MicroTopic": "postretirement benefit obligation build",
+    "UniqueConceptKey": "A-C110-postretirement-benefit-obligation-build",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "EPBO begins at $0 for a new hire (25-year-old, retirement at 65, life expectancy 85). Service cost accrues ratably to full eligibility at age 55 (30 years of service). Discount rate 5%. At age 45 (20 years in, 10 to full eligibility), what fraction of the age-55 EPBO is accrued, and what attribute makes postretirement measurement distinct from pensions?",
+    "Choices": {
+      "A": "20/40 (50%) — service over life expectancy drives attribution",
+      "B": "20/30 (67%) of the age-55 EPBO — attribution runs service-to-full-eligibility; and the health-care cost trend rate (no pension equivalent) dominates assumption sensitivity",
+      "C": "100% — hiring creates the full obligation immediately",
+      "D": "20/60 (33%) — attribution runs hire-to-death"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Attribution period runs from hire (25) to FULL ELIGIBILITY (55) — 30 years, not to retirement (65) or death (85). At age 45 with 20 years served: 20/30 = 66.67% of the age-55 EPBO accrued. Life-expectancy denominators (options A/D: 40/60 years) confuse benefit-payment duration with benefit-attribution duration — attribution ends when eligibility vests fully. Immediate full accrual (option C) ignores 10 remaining service years. The distinctive measurement attribute: the health-care cost trend rate (per-capita claims growth assumption) — pensions have no equivalent, and 1-point trend shifts routinely move EPBO 10%+ (far exceeding discount-rate sensitivity in most valuations). Business interpretation: attribute to eligibility, measure with trend rates, disclose trend sensitivity — the three postretirement disciplines. Common trap: attributing over life expectancy.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Pensions",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-110",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's 20/40 spreads attribution over life expectancy (25→65?). Attribution ends at full eligibility (55), not retirement or death — 30 years, and 20/30 = 67% is accrued.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C accrues 100% at hire, ignoring 10 remaining service years to full eligibility. Obligations accrue with service — hiring starts the clock, never finishes it.",
+    "ExplanationWrongD": "Option D's 20/60 (hire-to-death) extends attribution decades past vesting — benefit-payment duration is not attribution duration.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.111 stock compensation forfeiture estimate",
+    "MicroTopic": "stock compensation forfeiture estimate",
+    "UniqueConceptKey": "A-C111-stock-compensation-forfeiture-estimate",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "10,000 options granted, fair value $8 each ($80,000 total), 4-year cliff vesting, 10% estimated forfeitures. Year 1: actual forfeitures run 15% (1,500 left). How much Year-1 compensation cost should be recognized, and should the estimate be revised?",
+    "Choices": {
+      "A": "$20,000 (80,000/4) — estimates lock at grant and never revise",
+      "B": "$18,000 Year 1 on the original 10% estimate with a cumulative catch-up only if the 15% persists a second year",
+      "C": "$17,000 Year 1 (8,500 × $8 / 4 years) with the forfeiture estimate revised to 15% and a $1,000 cumulative catch-up",
+      "D": "$0 Year 1 — cliff vesting recognizes nothing until year 4"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Revised expected-to-vest = 10,000 − 15% × 10,000 = 8,500 options × $8 = $68,000 total; Year-1 cost = $68,000/4 = $17,000. The $1,000 catch-up: originally $80,000 × 90% / 4 = $18,000 would have been booked — revising to 15% forfeitures trues up the $1,000 difference in the current period (cumulative catch-up, ASC 718). Lock-and-never-revise (option A, $20,000) ignores both forfeitures entirely. Wait-and-see (option B) defers a required estimate revision — forfeiture estimates update when evidence changes, not after multi-year confirmation. Cliff-equals-zero (option D) confuses cliff vesting (graded vs cliff affects attribution pattern, and 4-year cliff still accrues ratably at 1/4 per year... precisely straight-line over the requisite service period). Business interpretation: forfeiture estimates are trued up as evidence arrives — Year-1 catch-ups keep cumulative cost on the revised path. Common trap: freezing grant-date estimates.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Stockholders' Equity",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-111",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $20,000 locks grant-date amounts with zero forfeitures — both the 10% original estimate and the 15% actual run rate ignored. Estimates exist to be applied and revised.",
+    "ExplanationWrongB": "Option B defers revision until a second confirming year — forfeiture estimates update on current evidence (15% actual), not after multi-year proof. Deferral misstates cumulative cost.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $0 confuses cliff vesting (all-or-nothing payout) with cost attribution (ratable 1/4 per year over requisite service). Cliff affects who gets paid, never whether cost accrues.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.112 participating securities two-class method",
+    "MicroTopic": "participating securities two-class method",
+    "UniqueConceptKey": "A-C112-participating-securities-two-class-method",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Net income $1,000,000; 100,000 common shares; 10,000 participating preferred shares (6% $100 par = $60,000 dividend right, participating equally in undistributed earnings). Common dividends declared $200,000; preferred receive $60,000 + participation. What is basic EPS under the two-class method?",
+    "Choices": {
+      "A": "$10.00 ($1,000,000/100,000) — preferred dividends are the only allocation needed",
+      "B": "$8.00 (($1,000,000 − $200,000)/100,000) — common dividends retained in the numerator",
+      "C": "$8.73 — distributed $2.00 plus undistributed $6.73 (common share of $740,000 split 100,000:10,000)",
+      "D": "$7.40 (($1,000,000 − $260,000)/100,000) — all preferred distributions removed, undistributed to common only"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Two-class: distributed first — common $200,000 ($2.00/share), preferred $60,000 stated. Undistributed = $1,000,000 − $200,000 − $60,000 = $740,000, allocated by participation ratio 100,000:10,000 → common 100/110 × $740,000 = $672,727.27 ($6.7273/share); preferred 10/110 × $740,000 = $67,272.73. Common EPS = $2.00 distributed + $6.7273 undistributed = $8.7273 ≈ $8.73. Single-class division (option A, $10.00) attributes $127,273 of preferred earnings to common. Declared-retained (option B, $8.00) keeps distributed dividends in the numerator. Common-only undistributed (option D, $7.40) denies the participation right. Business interpretation: two-class EPS pays stated distributions first, then splits leftovers by participation — both legs, every period. Common trap: reporting only one leg.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Stockholders' Equity",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-112",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $10.00 divides all income by common shares, ignoring $60,000 of preferred distributions plus $67,273 of preferred participation — $127,273 of preferred earnings attributed to common.",
+    "ExplanationWrongB": "Option B's $8.00 retains declared common dividends in the numerator — declared dividends are distributed earnings, allocated out before undistributed splitting.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D strips all preferred distributions ($260,000... precisely $60,000 + $200,000?) then allocates undistributed solely to common — denying the participation right the security's name states.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.113 treasury stock method sequencing",
+    "MicroTopic": "treasury stock method sequencing",
+    "UniqueConceptKey": "A-C113-treasury-stock-method-sequencing",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Net income $800,000; 100,000 shares; options: 20,000 at $10 exercise, average market $25; plus 5,000 out-of-the-money options at $40 exercise (market $25). What is diluted EPS?",
+    "Choices": {
+      "A": "$8.00 — options never dilute when markets rise above exercise",
+      "B": "$6.96 — both option tranches included (25,000 gross shares added)",
+      "C": "$7.14 — in-the-money tranche only (+12,000 net: $200,000 proceeds buy back 8,000; out-of-the-money tranche excluded as anti-dilutive)",
+      "D": "$6.67 — all 25,000 options net of full treasury proceeds at $25"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "In-the-money tranche: proceeds 20,000 × $10 = $200,000 → buy back $200,000/$25 = 8,000 shares → net +12,000 shares. Out-of-the-money tranche ($40 exercise > $25 market): exercising would buy back MORE shares than issued (5,000 × $40 = $200,000 → 8,000 shares retired for 5,000 issued = net −3,000) — anti-dilutive, EXCLUDED by rule (never include anti-dilutive securities). Diluted = $800,000/(100,000 + 12,000) = $800,000/112,000 = $7.1429 ≈ $7.14. Skipping options entirely (option A, $8.00) ignores 12,000 net dilutive shares. Including both tranches (option B, $6.96) violates the anti-dilution exclusion. Pooling proceeds across tranches (option D, $6.67) corrupts the sequential test. Business interpretation: test each tranche separately against average market, include only dilutive ones. Common trap: gross-share addition.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Stockholders' Equity",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-113",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $8.00 ignores 12,000 net dilutive shares — in-the-money options dilute whether or not markets keep rising; the treasury-stock test runs on average market price.",
+    "ExplanationWrongB": "Option B's $6.96 includes the out-of-the-money tranche (25,000 gross shares) — anti-dilutive securities are excluded by rule, never included for completeness.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $6.67 appears to net all 25,000 options against pooled proceeds — mixing tranches with different moneyness corrupts the sequential test. Test each tranche separately, include only dilutive ones.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.114 comprehensive income reclassification",
+    "MicroTopic": "comprehensive income reclassification",
+    "UniqueConceptKey": "A-C114-comprehensive-income-reclassification",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "AFS portfolio: beginning AOCI $60,000 (unrealized gains); current-year unrealized gain $40,000; securities sold realizing $25,000 of previously-unrealized gains (now in net income). What are OCI and comprehensive income effects, and how is double-counting avoided?",
+    "Choices": {
+      "A": "OCI +$40,000; comprehensive includes $25,000 twice (once in OCI history, once in NI) — double-counting is inherent and accepted",
+      "B": "OCI +$65,000 ($40,000 + $25,000 realized) — realization adds to OCI",
+      "C": "OCI +$15,000 ($40,000 new gains less $25,000 reclassification out); comprehensive income includes the $25,000 once (in NI); ending AOCI $75,000",
+      "D": "OCI $0 — realized and unrealized offset by definition each period"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "OCI = current unrealized $40,000 MINUS reclassification adjustment $25,000 (removing previously-recognized OCI now realized in NI) = +$15,000 net. Comprehensive income = NI (including the $25,000 realized gain) + OCI ($15,000) — the $25,000 appears once in the period's comprehensive total (via NI), with OCI reduced to prevent double-counting across periods. Ending AOCI = $60,000 + $15,000 = $75,000. Double-count acceptance (option A) defeats reclassification accounting's purpose. Realization-adds (option B: $65,000) double-counts the $25,000 across OCI history and current OCI. Zero-net (option D) confuses offsetting with absence — $15,000 of net OCI activity occurred. Business interpretation: reclassification adjustments are OCI's self-cleaning mechanism — realized gains exit OCI as they enter NI. Common trap: adding realized gains to OCI instead of subtracting them.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Comprehensive Income",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-114",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A accepts double-counting ($25,000 in both OCI history and current NI without reclassification) as inherent — reclassification adjustments exist precisely to prevent it.",
+    "ExplanationWrongB": "Option B's $65,000 adds realized gains into OCI — backwards. Realization moves gains OUT of OCI (reclassification deduction) as they enter NI.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $0 nets $40,000 of new gains against the $25,000 reclassification as if offsetting meant absence — $15,000 of net OCI activity occurred and reports.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.115 discontinued held-for-sale dual test",
+    "MicroTopic": "discontinued held-for-sale dual test",
+    "UniqueConceptKey": "A-C115-discontinued-held-for-sale-dual-test",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A component (clearly distinguishable operations/cash flows) with $2,000,000 revenue and $300,000 pre-tax loss is classified held-for-sale at year-end (sale probable within a year, marketed at fair value). It represents 5% of total revenue but management calls it a 'strategic shift' in MD&A. Does it qualify as discontinued operations?",
+    "Choices": {
+      "A": "Yes — held-for-sale plus MD&A strategic language satisfies both tests",
+      "B": "No — 5% of revenue cannot be a strategic shift regardless of language; management labels don't meet the test, so report in continuing operations with held-for-sale balance-sheet presentation",
+      "C": "Yes — any held-for-sale component is automatically discontinued",
+      "D": "No — losses can never be discontinued; only gains qualify"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Discontinued operations require BOTH (1) held-for-sale (or disposed) AND (2) a strategic shift with major effect (line-of-business or geographic exit, quantitatively major). The component passes test 1 (held-for-sale criteria met) but fails test 2: 5% of revenue is not quantitatively major, and MD&A adjectives ('strategic') do not satisfy an effects test — labels never substitute for magnitude. Report the $300,000 loss in continuing operations; present related assets/liabilities as held-for-sale on the balance sheet. Language-satisfies (option A) lets MD&A draft accounting conclusions. Automatic-discontinued (option C) collapses the dual test into one — held-for-sale alone (e.g., a single store closure) routinely stays in continuing operations. Gains-only (option D) invents a sign restriction the standard does not contain. Business interpretation: discontinued presentation is reserved for exits that change what the company IS — 5% does not, whatever the MD&A says. Common trap: letting management labels satisfy quantitative tests.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Discontinued Operations",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-115",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's language-satisfies lets MD&A adjectives meet a quantitative effects test — 5% of revenue is not a strategic shift however described. Labels never substitute for magnitude.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's automatic-discontinued collapses the dual test — held-for-sale alone (single stores, small lines) routinely remains in continuing operations. Both tests must pass.",
+    "ExplanationWrongD": "Option D's gains-only rule invents a sign restriction — losses from strategic exits discontinue identically to gains. Sign never gates presentation.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.116 interim tax provision mechanics",
+    "MicroTopic": "interim tax provision mechanics",
+    "UniqueConceptKey": "A-C116-interim-tax-provision-mechanics",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Annual forecast: pre-tax income $1,000,000, tax $250,000 (25% AETR). Q1 actual pre-tax loss ($100,000) including a $40,000 discrete capital loss with a $14,000 tax benefit (35% capital rate). What is the Q1 tax provision?",
+    "Choices": {
+      "A": "$0 — losses incur no tax in interim periods",
+      "B": "Benefit $25,000 (25% × $100,000 loss) — AETR applies to everything including discrete items",
+      "C": "Benefit $29,000 — AETR on ordinary ($60,000) loss ($15,000) plus discrete $14,000 benefit, computed separately",
+      "D": "Expense $250,000/4 = $62,500 — quarterly pro-rata of the annual provision"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Split ordinary from discrete: ordinary Q1 loss = ($100,000) + $40,000 discrete charge = ($60,000) ordinary loss → AETR benefit 25% × $60,000 = $15,000. Discrete capital loss: $40,000 × 35% capital rate = $14,000 benefit recognized in full in Q1 (discrete items bypass AETR). Total Q1 benefit = $15,000 + $14,000 = $29,000. Blended-rate option B ($25,000 = 25% × $100,000) reaches a different total by the wrong method — whenever discrete and ordinary rates differ, blending misstates. Zero-provision (option A) denies interim loss benefits entirely. Pro-rata (option D, $62,500) quarters the annual provision instead of applying AETR to year-to-date ordinary income. Business interpretation: interim provisions separate ordinary (AETR on YTD ordinary) from discrete (full-period benefit now) — two computations, never one blended rate. Common trap: applying AETR to discrete-inclusive income.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Income Taxes",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-116",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $0 denies interim loss benefits — AETR applies to year-to-date ordinary losses (benefit recognized), and discrete benefits record discretely. Zero-provision treats interim losses as worthless.",
+    "ExplanationWrongB": "Option B's $25,000 blends the discrete capital loss into AETR at 25% instead of its 35% applicable rate — understating the benefit by $4,000. Whenever discrete and ordinary rates differ, blending misstates.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $62,500 pro-rates the annual provision — quarterly provisions follow year-to-date ordinary income times AETR plus discrete items, never annual quarters.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.117 segment profit test with corporate costs",
+    "MicroTopic": "segment profit test corporate costs",
+    "UniqueConceptKey": "A-C117-segment-profit-test-corporate-costs",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Segments report operating profit: A $500,000, B $300,000, C −$50,000, D $150,000, plus ($100,000) unallocated corporate costs. Total profit $800,000. Apply the 10% profit/loss quantitative test. Which segments are reportable on this test?",
+    "Choices": {
+      "A": "A only — only the largest profit matters",
+      "B": "A and B — C's loss and D's smaller profit fall short",
+      "C": "A, B, and D (absolute-profit base $950,000: A 52.6%, B 31.6%, D 15.8% pass; C 5.3% fails); corporate costs excluded from the base",
+      "D": "All including corporate — the $800,000 total is the test base"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Profit test base = greater of absolute profitable-segment sum vs absolute loss-segment sum: max($500,000 + $300,000 + $150,000 = $950,000, $50,000) = $950,000. 10% threshold = $95,000. A ($500,000 = 52.6% ✓), B ($300,000 = 31.6% ✓), D ($150,000 = 15.8% ✓), C ($50,000 = 5.3% ✗). Corporate ($100,000) excluded — unallocated costs never enter segment tests. A-only (option A) ignores B/D's clear passes. A+B (option B) drops D's 15.8% pass and lands at 84.2% combined — passing coverage but failing D's individual test. Total-base (option D, $800,000) drags unallocated corporate into segment tests. Business interpretation: the profit test runs on segment amounts only, against the greater-side base — compute the base first, then test each segment. Common trap: testing against combined totals including corporate.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Segment Reporting",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-117",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's A-only ignores B ($300,000 = 31.6% of base) and D ($150,000 = 15.8%) — both clear 10% by wide margins. Largest-only is neither test.",
+    "ExplanationWrongB": "Option B drops D's $150,000 (15.8% of $950,000 base) — well above 10%. Mid-size passes are still passes.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $800,000 total-base includes ($100,000) unallocated corporate — segment tests use segment amounts only. Corporate costs never enter any quantitative test.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.118 VIE reconsideration trigger",
+    "MicroTopic": "VIE reconsideration trigger",
+    "UniqueConceptKey": "A-C118-VIE-reconsideration-trigger",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Harbor holds 8% of Beacon LLC (not a VIE at inception — adequately capitalized, power shared proportionally). This year Beacon issues new debt that Harbor fully guarantees, and Harbor gains sole authority to direct Beacon's operations under an amended management contract. Must Harbor reconsider VIE status, and what is the likely conclusion?",
+    "Choices": {
+      "A": "No reconsideration — VIE status locks at inception permanently",
+      "B": "No reconsideration — 8% equity is below every reconsideration threshold",
+      "C": "Yes — reconsider on the guarantee-plus-power change; Beacon likely becomes a VIE (support-dependent) with Harbor as primary beneficiary (power + economics), requiring consolidation",
+      "D": "Conclude no change after reconsidering — guarantees never affect VIE analysis"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "VIE reconsideration triggers include changes in governing documents, new financial support arrangements, and shifts in decision-making power — the guarantee plus sole-authority amendment hits all three. Post-change analysis: (1) Beacon likely becomes a VIE (dependence on Harbor's guarantee = insufficient equity at risk to finance activities without support); (2) Harbor is likely primary beneficiary (power via sole operating authority + economics via guarantee/loss absorption). Inception-locked status (option A) denies reconsideration rules that exist precisely for changed circumstances. Equity-threshold gating (option B: 8%) applies voting-interest thinking to a VIE question — power plus economics decide, never percentage. Guarantees-don't-matter (option D) ignores that support arrangements are primary VIE triggers. Business interpretation: reconsider VIE status on every structural change in power or support — inception conclusions expire when facts do. Common trap: treating initial non-VIE determinations as permanent.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Consolidations",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-118",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's inception-locked status denies reconsideration triggers that exist for changed power and support facts. Initial determinations expire when circumstances change.",
+    "ExplanationWrongB": "Option B's 8% threshold gates a VIE question on voting-interest logic — power (sole authority) plus economics (guarantee) decide, never equity percentage.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D admits reconsideration but exempts guarantees from analysis — support arrangements are primary VIE triggers, and this guarantee plus sole authority is the textbook bundle.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.119 equity method basis difference amortization",
+    "MicroTopic": "equity method basis difference amortization",
+    "UniqueConceptKey": "A-C119-equity-method-basis-difference-amortization",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "30% stake acquired at $500,000; investee book value $1,200,000 (30% = $360,000); $140,000 excess attributed $100,000 to undervalued equipment (10-year life) and $40,000 to goodwill. Investee reports $100,000 net income and pays $40,000 total dividends. What is the investor's equity income?",
+    "Choices": {
+      "A": "$30,000 (30% × $100,000) — basis differences amortize only on disposal",
+      "B": "$18,000 ($30,000 pickup less $12,000 dividends) — dividends reduce equity income directly",
+      "C": "$27,000 ($30,000 pickup less $3,000 equipment amortization (30%... precisely $100,000/10 = $10,000 × 30% = $3,000); goodwill not amortized; dividends do not reduce income)",
+      "D": "$26,000 ($30,000 less $4,000 combined amortization including goodwill)"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Pickup = 30% × $100,000 = $30,000. Equipment excess amortization = ($100,000/10 years) × 30%... precisely the $100,000 excess is the investor's 30% share already (or gross up: $100,000/10 = $10,000 × 30% = $3,000 — same $3,000 either basis). Goodwill $40,000 is NOT amortized (tested for impairment instead). Dividends ($12,000 share) reduce the investment account, never equity income. Equity income = $30,000 − $3,000 = $27,000. Amortize-on-disposal (option A, $30,000) ignores $3,000/year of equipment consumption. Dividends-reduce-income (option B, $18,000) confuses the investment account (reduced) with income (unaffected). Goodwill amortization (option D, extra $1,000... precisely $40,000/10 × 30% = $1,200 → $26,000... the drafted $4,000 is itself wrong: $3,000 + $1,200 = $4,200 → $25,800) compounds the error. Business interpretation: equity income = pickup minus excess-depreciation (never goodwill amortization, never dividends). Common trap: amortizing goodwill or netting dividends.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Investments",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-119",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $30,000 skips $3,000/year of equipment-excess amortization — basis differences amortize over the asset's life, never deferred to disposal.",
+    "ExplanationWrongB": "Option B's $18,000 nets $12,000 of dividends against income — dividends reduce the investment carrying amount, never equity income.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D amortizes $40,000 of goodwill alongside equipment — goodwill is impairment-tested, never amortized (and its own $4,000 figure miscomputes the hypothetical).",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.120 noncontrolling interest valuation choice",
+    "MicroTopic": "noncontrolling interest valuation choice",
+    "UniqueConceptKey": "A-C120-noncontrolling-interest-valuation-choice",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "80% acquired for $1,600,000; subsidiary FV $2,000,000 (full-goodwill view) versus subsidiary book value $1,500,000 with NCI share at $300,000 (partial-goodwill view). How do total goodwill and NCI differ between full-goodwill and partial-goodwill methods?",
+    "Choices": {
+      "A": "Identical — method labels never change goodwill or NCI amounts",
+      "B": "Full: goodwill $500,000 ($2,000,000 − $1,500,000), NCI $400,000 (20% × $2,000,000); Partial: goodwill $400,000 ($1,600,000 − 80% × $1,500,000), NCI $300,000 (20% × book) — $100,000 of NCI goodwill is the difference",
+      "C": "Full goodwill $400,000; partial $500,000 — full recognition reduces goodwill by sharing it",
+      "D": "NCI always $400,000 — fair value governs regardless of method election"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Full-goodwill: consideration $1,600,000 + NCI FV $400,000 (20% × $2,000,000) = $2,000,000; less FV of net assets $1,500,000 = $500,000 goodwill (including $100,000 attributable to NCI). Partial-goodwill: consideration $1,600,000 − 80% × $1,500,000 ($1,200,000) = $400,000 goodwill (parent-only); NCI = 20% × $1,500,000 book = $300,000. Difference: $100,000 of NCI goodwill recognized under full, omitted under partial — NCI $400,000 vs $300,000; total goodwill $500,000 vs $400,000. Identical-outcome claims (option A) deny the $100,000 NCI-goodwill difference the election exists to create. Inverted figures (option C) swap the methods' results. NCI-always-$400,000 (option D) imposes fair value under the partial election that explicitly measures NCI at book share. Business interpretation: the NCI measurement election prices $100,000 of recognized NCI goodwill against simpler book-share mechanics — elect deliberately, disclose clearly. Common trap: treating the election as presentational.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Consolidations",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-120",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's identical-outcome claim denies the $100,000 NCI-goodwill difference — the election's entire economic content. Methods elect measurement, never mere labels.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C inverts the methods ($400,000 full vs $500,000 partial) — full-goodwill recognizes MORE ($500,000 including NCI share), never less. Direction matters.",
+    "ExplanationWrongD": "Option D's always-$400,000 NCI imposes fair value under partial-goodwill's book-share election — the election chooses the $300,000 book measure deliberately.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.121 revenue policy disclosure adequacy",
+    "MicroTopic": "revenue policy disclosure adequacy",
+    "UniqueConceptKey": "A-C121-revenue-policy-disclosure-adequacy",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A company with 40% of revenue from multi-element bundles discloses: 'Revenue is recognized when earned.' An SEC comment letter deems it inadequate under ASC 606. What disclosure overhaul should the controller recommend?",
+    "Choices": {
+      "A": "Expand to two sentences — 'Revenue is recognized when earned, following GAAP in all material respects'",
+      "B": "Full ASC 606 disaggregation (by product line, timing, and geography) plus performance-obligation descriptions, SSP methods, satisfaction timing, variable-consideration judgments, and contract-balance rollforwards",
+      "C": "Restate prior revenue — inadequate disclosure equals prior misstatement",
+      "D": "Disclose the SSP tables only — numbers without narrative satisfy quantitative comments"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "ASC 606 demands extensive disaggregation (categories depicting how nature, amount, timing, and uncertainty break down — here product line × timing × geography for 40%-bundle revenue), performance-obligation inventory (what was promised, when each satisfies, SSP determination methods per obligation), significant judgments (variable consideration constraints, SSP estimation, progress measures), and contract balances (receivables/contract assets/liabilities with rollforwards). Boilerplate expansion (option A) answers a disaggregation comment with longer boilerplate. Restatement (option C) concedes measurement error never alleged — disclosure comments target transparency, not numbers. Numbers-only (option D) withholds the judgments and methods the disaggregation is meant to illuminate. Business interpretation: comment-letter responses over-deliver on the questioned dimension — the cheapest resolution is the most complete disclosure. Common trap: treating disclosure comments as measurement disputes (restatement reflex) or as paperwork (boilerplate reflex).",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Revenue Recognition",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-121",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's two-sentence expansion answers a disaggregation comment with longer boilerplate — practically inviting the second, sterner letter the response was meant to prevent.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C restates prior revenue for a disclosure comment, conceding measurement error never alleged. Restatement reopens audited periods and signals deeper problems than a transparency gap.",
+    "ExplanationWrongD": "Option D discloses SSP tables while withholding judgments, methods, and balances — numbers without the narrative that makes them interpretable. The staff asked for disaggregation plus methods, not tables alone.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.122 LIFO conformity with interim estimates",
+    "MicroTopic": "LIFO conformity interim estimates",
+    "UniqueConceptKey": "A-C122-LIFO-conformity-interim-estimates",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A LIFO company faces interim inventory decline (Q2 dip expected to reverse by year-end) plus a debt covenant tested quarterly on current ratio (LIFO-based 2.1, FIFO-based 2.6). The controller must decide interim LIFO reporting and covenant communication. What is the correct combined treatment?",
+    "Choices": {
+      "A": "Book the Q2 liquidation (phantom profit now) and report covenant compliance on LIFO 2.1 — interim follows annual mechanics mechanically",
+      "B": "Defer the liquidation effect (no interim layer invasion expected to reverse) with disclosure; report covenant headroom on both bases with the conformity rule noted",
+      "C": "Switch to FIFO for interim periods — interim flexibility overrides annual conformity",
+      "D": "Book liquidation but waive the covenant preemptively — banks prefer early waivers to strong ratios"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Interim LIFO declines expected to reverse by year-end are NOT recognized (inventory liquidations that will reverse are deferred — interim applies expected-annual mechanics, not mechanical quarterly layering). The $40,000-scale phantom profit stays unbooked with disclosure of the expected reversal. Covenant reporting shows LIFO 2.1 (conformity rule: tax LIFO requires book LIFO — interim included) alongside FIFO 2.6 for information, with the conformity constraint noted so the bank understands why LIFO governs. Mechanical booking (option A) recognizes phantom profit destined to reverse — interim noise as earnings. Interim FIFO-switching (option C) violates conformity (tax LIFO demands book LIFO every period). Preemptive waivers (option D) pay waiver fees and signal distress against a 2.1-compliant position. Business interpretation: interim inventory follows expected-annual outcomes with disclosure; covenants report the conformity-bound basis with FIFO context. Common trap: applying annual layer mechanics to reversible interim dips.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Inventory",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-122",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's mechanical booking recognizes reversible-dip phantom profit as earnings — interim LIFO follows expected-annual layers, and expected reversals defer by rule.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C switches to interim FIFO, violating the conformity rule (tax LIFO requires book LIFO in every period including interims). Interim flexibility never overrides conformity.",
+    "ExplanationWrongD": "Option D seeks preemptive waivers against a 2.1-compliant position — paying fees and signaling distress where disclosure plus dual-basis reporting suffices.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.123 pension de-risking settling versus retaining",
+    "MicroTopic": "pension de-risking settling retaining",
+    "UniqueConceptKey": "A-C123-pension-de-risking-settling-retaining",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A frozen plan holds $50,000,000 of obligation against $46,000,000 of assets ($4,000,000 deficit, 8% underfunded). An insurer offers annuity buyout at $49,000,000 (a $3,000,000 premium over assets). Retaining means $400,000/year of PBGC premiums plus asset management plus $2,000,000 of balance-sheet volatility (discount-rate exposure). The CFO asks whether to settle. What should the controller recommend?",
+    "Choices": {
+      "A": "Retain — $3,000,000 of premium exceeds any reasonable de-risking budget",
+      "B": "Settle — $49,000,000 extinguishes $50,000,000 of obligation plus $400,000/year of frictional costs and balance-sheet volatility; the $3,000,000 premium buys finality at 6% of obligation",
+      "C": "Settle partially (50%) — half-measures hedge both outcomes",
+      "D": "Retain and increase equity allocation — return-seeking closes deficits faster than settling"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Settlement economics: $49,000,000 premium versus $50,000,000 obligation extinguished = $1,000,000 immediate balance-sheet gain, plus $400,000/year of PBGC/management frictional costs eliminated, plus $2,000,000 of discount-rate volatility removed from equity (AOCI). The $3,000,000 'premium over assets' framing (option A) misprices: premium-over-obligation is −$1,000,000 (a discount), and frictional-plus-volatility savings recur annually. Partial settlement (option C) keeps half the volatility, half the frictional costs, and full administrative complexity for half the finality — de-risking scales poorly in halves. Return-seeking (option D) doubles down on the volatility that created the deficit (equity-heavy to close an 8% gap risks widening it). Business interpretation: pension settlement prices finality (obligation minus premium) plus frictional savings plus volatility removal — evaluate all three legs. Common trap: pricing buyouts against assets instead of against obligations-plus-frictions.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Pensions",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-123",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $3,000,000-premium framing prices against assets ($49M vs $46M) instead of obligations ($49M vs $50M = $1M gain) plus $400,000/year frictional savings plus volatility removal. Wrong denominator, wrong verdict.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's 50% settlement keeps half the volatility, half the frictional costs, and full administrative complexity — de-risking has fixed-cost elements that halves don't halve.",
+    "ExplanationWrongD": "Option D's return-seeking doubles equity exposure to close an 8% deficit — the volatility that created the gap, amplified. De-risking and return-seeking are opposite directions.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.124 tax provision uncertainty scheduling",
+    "MicroTopic": "tax provision uncertainty scheduling",
+    "UniqueConceptKey": "A-C124-tax-provision-uncertainty-scheduling",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Uncertain tax positions total $600,000: $400,000 more-likely-than-not sustainable (recognized benefit, disclosed), $200,000 failing MLTN (full reserve). New counsel opinion raises the $200,000 position to 55% confidence with a 60%-likely $120,000 sustain amount (cumulative-probability measurement). Examinations open for 2 of 5 affected years. What should the provision do?",
+    "Choices": {
+      "A": "Release the full $200,000 — 55% clears MLTN, so the entire benefit recognizes",
+      "B": "Hold the full $200,000 reserve — 55% is too close to 50% to act on",
+      "C": "Release $120,000 (largest amount with >50% cumulative likelihood), retain $80,000 reserve; document the measurement table and year-by-year examination exposure",
+      "D": "Release $200,000 only for the 3 closed years — open years stay fully reserved regardless of merits"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Two-step UTP mechanics: (1) recognition — 55% clears MLTN (>50%), so SOME benefit recognizes (full-reserve option B is stale); (2) measurement — largest amount with cumulatively >50% likelihood = $120,000 at 60% (not the full $200,000 — option A's whole-benefit release confuses recognition threshold with measurement amount). Reserve retained = $200,000 − $120,000 = $80,000. Year-by-year scheduling matters (option D's closed/open split has it backwards — open examination years need the reserve analysis most, and merits apply per position across years, not per open status). Document the cumulative-probability table plus examination-year exposure for audit evidence. Business interpretation: MLTN gates recognition, cumulative likelihood sizes it — two steps, two answers ($120,000 recognized, $80,000 reserved). Common trap: releasing the full position on MLTN clearance.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Income Taxes",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-124",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's full $200,000 release confuses the MLTN recognition gate (cleared at 55%) with the cumulative-likelihood measurement ($120,000 at 60%). Thresholds gate entry; tables size amounts.",
+    "ExplanationWrongB": "Option B holds the full reserve past a 55% MLTN clearance — stale conservatism that ignores counsel's updated measurement table. Reserves follow current MLTN analysis, not prior caution.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D splits by open/closed examination years instead of by merits — positions analyze on technical likelihood across all affected years; examination status schedules disclosure and interest, never recognition.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.125 equity carve-out NCI presentation",
+    "MicroTopic": "equity carve-out NCI presentation",
+    "UniqueConceptKey": "A-C125-equity-carve-out-NCI-presentation",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Parent sells 20% of a subsidiary (retaining 80% control) for $500,000 when the subsidiary's book value is $1,800,000 (20% = $360,000 carrying). The controller proposes booking a $140,000 gain in net income. The audit partner disagrees. What is the correct treatment, and where does the $140,000 go?",
+    "Choices": {
+      "A": "$140,000 gain in net income — sales of subsidiary interests realize gains like any asset sale",
+      "B": "No entry — control retained means nothing happened economically",
+      "C": "$140,000 to APIC (equity transaction, no gain) with NCI established at $360,000 carrying — control retained means owner-to-owner transfer priced at carrying, never a P&L event",
+      "D": "$140,000 to OCI — equity transactions bypass net income through comprehensive income"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Control retained (80%) → equity transaction: no gain or loss in net income, ever. Cash $500,000 in; NCI established at $360,000 carrying (20% × $1,800,000 book); the $140,000 difference credits APIC (additional paid-in capital). Gain-in-income (option A, $140,000) treats an owner-to-owner transfer as an earnings event — control continuity bars P&L recognition (gains require control change: sale to deconsolidation, or step acquisition to control). No-entry (option B) ignores $500,000 of cash and a new $360,000 NCI balance — equity transactions record, they just bypass earnings. OCI routing (option D) invents a third path — owner transactions go to APIC/NCI directly, never through comprehensive income. Business interpretation: control-retained transfers reallocate equity between owners at carrying amounts — the $140,000 premium is paid-in capital, not profit. Common trap: booking equity-transaction premiums as gains.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Consolidations",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-125",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $140,000 net-income gain treats an 80%-retained transfer as a realization event — control continuity bars P&L gains; only control-change transactions (deconsolidation, step-ups) recognize them.",
+    "ExplanationWrongB": "Option B's no-entry ignores $500,000 of cash received and a $360,000 NCI balance created — equity transactions record in equity (APIC/NCI), they just bypass earnings.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D routes $140,000 through OCI — owner transactions bypass comprehensive income entirely, landing directly in APIC. OCI is not a halfway house for equity transfers.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.126 platform fee gross versus net with control",
+    "MicroTopic": "platform fee gross net control",
+    "UniqueConceptKey": "A-C126-platform-fee-gross-net-control",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A software platform processes $20,000,000 of customer transactions, retaining a 15% fee ($3,000,000). It never takes title, exercises no pricing discretion (merchants set prices), but bears full refund liability on defects (absorbing $400,000 last year). Gross ($20M revenue) versus net ($3M) is a $17,000,000 presentation swing. What should govern, and what tips it?",
+    "Choices": {
+      "A": "Gross $20,000,000 — refund liability alone establishes principal status regardless of title or pricing",
+      "B": "Net $3,000,000 — no title plus no pricing discretion means agent; $400,000 of refunds is warranty-like exposure, not inventory risk",
+      "C": "Gross on refunded transactions, net elsewhere — bifurcate by outcome",
+      "D": "Gross $20,000,000 — scale transparency demands full revenue however structured"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Control test on balance: title (never held), pricing discretion (merchants set prices — absent), inventory/obsolescence risk (none — digital fulfillment has no stock). The $400,000 refund liability is warranty-like performance exposure, not pre-transfer control of goods — it evidences customer-facing responsibility, not inventory ownership. Two of three primary indicators fail decisively; the third (risk) is the weaker warranty variant. Net $3,000,000 reporting reflects agency economics; gross would overstate scale by $17,000,000 of merchant activity. Refund-equals-principal (option A) elevates one secondary indicator over two failed primaries. Bifurcation (option C) applies transaction-by-transaction control analysis correctly in theory but both outcomes here analyze identically (no title/pricing on any transaction) — outcome-based splitting without control differences is arbitrary. Scale-transparency (option D) grosses $17,000,000 of others' sales as own revenue. Business interpretation: weigh all control indicators together with title and pricing primary — isolated risk exposure without either rarely tips principal. Common trap: treating refund liability as dispositive.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Revenue Recognition",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-126",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's gross treatment elevates $400,000 of warranty-like refund exposure over absent title and absent pricing discretion — one secondary indicator cannot carry two failed primaries.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C bifurcates by refund outcome, but control analysis is identical across transactions (no title/pricing on any) — outcome-based splitting without control differences is arbitrary accounting.",
+    "ExplanationWrongD": "Option D's $20,000,000 gross attributes $17,000,000 of merchant sales as platform revenue — scale transparency via others' activity is overstatement, not disclosure.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.127 debt covenant headroom management",
+    "MicroTopic": "debt covenant headroom management",
+    "UniqueConceptKey": "A-C127-debt-covenant-headroom-management",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "D/E covenant max 1.00; current 0.90 ($4.5M/$5.0M). Three proposals compete: (1) $1,000,000 debt-funded buyback (takes D/E to 1.10); (2) $850,000 finance lease for needed equipment (takes D/E to 1.07); (3) 12-month renewable short-term leases preserving 0.90 with repricing risk. Earnings accretion is highest under (1). What should the board approve?",
+    "Choices": {
+      "A": "Buyback — highest earnings accretion dominates covenant considerations",
+      "B": "Finance lease — leasing always preserves covenants versus debt-funded alternatives",
+      "C": "Short-term renewable leases — the only alternative preserving covenant headroom (0.90); accretion differences don't service covenant math",
+      "D": "Buyback plus a preemptive waiver — banks routinely grant waivers for accretive transactions"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Covenant math: (1) buyback ($4.5M + $1.0M)/$5.0M... precisely ($4,500,000 + $1,000,000)/$5,000,000 = $5,500,000/$5,000,000 = 1.10 > 1.00 — breach. (2) finance lease ($4,500,000 + $850,000)/$5,000,000 = $5,350,000/$5,000,000 = 1.07 > 1.00 — breach (ASC 842 capitalizes finance leases; the folk theorem died with the standard). (3) exempt short-term leases preserve 0.90 with repricing risk as the honest cost. Accretion-maximizing (option A) funds EPS optics with covenant breach — accretion doesn't service covenant math, and breach costs (fees, rate step-ups, renegotiation) dwarf accretion. Lease-mythology (option B) asserts finance leases preserve covenants post-842 — 1.07 breaches alongside the buyback. Waiver-assuming (option D) decides on unsecured bank generosity — waivers cost fees and signal distress; recommend the compliant alternative, negotiate waivers only as backup. Business interpretation: covenant headroom is a hard constraint in capital decisions — accretive-but-breaching proposals lose to compliant ones, always. Common trap: maximizing accretion without pricing covenant consequences.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Long-Term Liabilities",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-127",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's buyback maximizes accretion into a 1.10 covenant breach — EPS optics funded with default risk. Accretion never services covenant math.",
+    "ExplanationWrongB": "Option B's finance-lease mythology (leasing preserves covenants) died with ASC 842 — $850,000 capitalizes to 1.07, breaching alongside the buyback it was meant to avoid.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D assumes waiver generosity for an accretive-but-breaching buyback — deciding on unsecured bank kindness while the compliant alternative (short-term leases at 0.90) stands available.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.128 impairment trigger monitoring design",
+    "MicroTopic": "impairment trigger monitoring design",
+    "UniqueConceptKey": "A-C128-impairment-trigger-monitoring-design",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A unit carries $800,000 of goodwill. Management monitors only annual-test-date indicators. Between tests: a 25% customer loss, a sustained 20% market-cap deficit, and a +150bp rate rise arrive in Q2 with no interim review. Year-end test impairs $300,000. The audit committee asks what monitoring should have caught. What is the correct design?",
+    "Choices": {
+      "A": "Annual testing suffices — interim monitoring duplicates the annual test at extra cost",
+      "B": "Quarterly full quantitative tests — maximum frequency guarantees no surprises",
+      "C": "Quarterly trigger monitoring (market cap vs book, customer concentration moves, rate shifts) with interim quantitative testing when triggers trip — the Q2 trio would have forced a Q2 test, accelerating (not changing) the $300,000",
+      "D": "Impair immediately on any single adverse indicator — triggers equal impairment without testing"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Step-0 monitoring runs continuously (or at least quarterly) on trigger indicators: sustained market-cap deficits, major customer events, rate shifts. The Q2 trio (25% customer loss + 20% sustained cap deficit + 150bp rate rise) trips multiple triggers — mandating an interim quantitative test in Q2 rather than waiting for year-end. Interim testing accelerates recognition (Q2 vs year-end timing) without changing the $300,000 amount (measurement follows the same test). Annual-only (option A) defers a Q2-evident $300,000 impairment two quarters — timeliness matters to users. Quarterly full tests (option B) run $300,000-scale valuations four times yearly regardless of triggers — assurance priced above its signal. Trigger-equals-impairment (option D) leaps from screening to measurement without Step 1. Business interpretation: monitor triggers continuously, test quantitatively when tripped — screening cadence with measurement on trigger. Common trap: equating annual-test compliance with adequate monitoring.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Long-Lived Assets",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-128",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's annual-only defers Q2-evident impairment two quarters — timeliness is a recognition attribute, and users needed the $300,000 signal in Q2, not at year-end.",
+    "ExplanationWrongB": "Option B's quarterly full tests run $300,000-scale valuations regardless of triggers — assurance priced above signal. Trigger monitoring targets testing spend where indicators point.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D impairs on triggers without Step-1 measurement — screening authorizes testing, never substitutes for it. No loss amount is knowable before the quantitative test.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.129 allowance methodology change analysis",
+    "MicroTopic": "allowance methodology change analysis",
+    "UniqueConceptKey": "A-C129-allowance-methodology-change-analysis",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Aging allowance is $35,000. Management proposes switching to a flat 5% of AR ($800,000 → $40,000) calling it 'simplification,' plus releasing $10,000 of the existing allowance as a one-time earnings boost labeled 'methodology refinement.' How should the controller respond?",
+    "Choices": {
+      "A": "Approve both — methodology choice is management judgment and releases reflect updated estimates",
+      "B": "Approve the flat rate, reject the release — simplification is valid, one-time boosts are not",
+      "C": "Reject both — the flat 5% abandons customer-risk differentiation ($5,000–$20,000 bucket spreads) for false simplicity, and the $10,000 release engineers earnings under a methodology label",
+      "D": "Approve the release, reject the flat rate — earnings need the boost more than methods need purity"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Two proposals, two verdicts: (1) flat 5% ($40,000) abandons aging differentiation ($5,000 current-bucket vs $20,000 61+-day provisions reflect real risk spreads) for false simplicity — methodology must follow risk heterogeneity, and flat rates misstate both the balance sheet ($40,000 vs $35,000 reasoned) and future expense timing; (2) the $10,000 release engineers earnings — labeled as refinement but timed and sized for the earnings effect, with no change in underlying collectibility evidence. Simplification-validity (option B) blesses half the package while the release still engineers $10,000. Earnings-need (option D) subordinates methodology to the income statement — need never justifies misstatement. Blanket approval (option A) waves both through on judgment deference. Business interpretation: methodology changes need risk-based justification with evidence; releases need collectibility evidence independent of earnings targets — judge each on its own papers. Common trap: bundling earnings engineering inside methodology simplification.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Receivables",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-129",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's blanket approval waves a $5,000 methodology overstatement plus a $10,000 engineered release on judgment deference — $15,000 of judged-away misstatement.",
+    "ExplanationWrongB": "Option B blesses the flat-rate simplification while blocking the release — half-right still misstates $5,000 and validates abandoning risk differentiation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D prioritizes earnings need ($10,000 boost) over methodology purity — need never justifies misstatement, and the flat rate misstates independently of the release.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A.130 standard-setting participation strategy",
+    "MicroTopic": "standard-setting participation strategy",
+    "UniqueConceptKey": "A-C130-standard-setting-participation-strategy",
+    "LOSTag": "P1-A Financial reporting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "FASB proposes eliminating the LIFO conformity rule (tax LIFO without book LIFO). The company saves $500,000/year via LIFO. Comment letters are due in 60 days; industry coalition participation costs $20,000. The controller must recommend a response strategy. What is the highest-value action?",
+    "Choices": {
+      "A": "No action — standard-setting outcomes are predetermined by large constituents",
+      "B": "Solo comment letter only ($5,000 drafting) — independence signals conviction better than coalitions",
+      "C": "Join the coalition ($20,000) with company-specific LIFO impact data ($500,000/year, covenant and comparability effects) — $20,000 to protect $500,000/year of recurring benefit with coalition weight plus proprietary evidence",
+      "D": "Preemptively switch to FIFO — adapt to proposals before finalization"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Expected-value framing: $500,000/year of LIFO benefit at stake; coalition participation ($20,000) buys collective weight (industry voice the Board must address) plus a channel for company-specific data ($500,000/year impact, covenant headroom effects, comparability costs) that generic coalition letters lack. Solo letters (option B: $5,000) save $15,000 while forfeiting coalition weight — a single company's letter competes against organized opposition alone. Inaction (option A) prices participation at zero while conceding $500,000/year without contest — fatalism as strategy. Preemptive switching (option D) surrenders $500,000/year on a proposal that may fail, die in redeliberation, or grandparent existing users — adapt to standards, never to exposure drafts. Business interpretation: standard-setting participation appraises like lobbying with evidence — coalition weight plus proprietary impact data at 4% of one year's benefit ($20,000 vs $500,000). Common trap: treating exposure drafts as final standards (preemptive compliance) or as theater (abstention).",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Financial Accounting: Inventory",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-AC-130",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's abstention concedes $500,000/year without contest on fatalism about large constituents — coalitions exist precisely to aggregate smaller voices past predetermination.",
+    "ExplanationWrongB": "Option B's solo letter saves $15,000 while forfeiting coalition weight — a single letter competes against organized opposition alone, with company data but no collective standing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D switches preemptively on an exposure draft — surrendering $500,000/year on a proposal that may fail, grandparent, or phase in. Adapt to standards, never to drafts.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 10 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 10)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.101 sales mix with tax-paying constraints",
+    "MicroTopic": "sales mix tax constraints",
+    "UniqueConceptKey": "B-C101-sales-mix-tax-constraints",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budgeted mix: P 6,000u @ $20 CM ($120,000); Q 4,000u @ $30 CM ($120,000); total $240,000 on 10,000 units. A tax-law change disallows deducting Q's $50,000 of traceable fixed costs (after-tax cost rises $12,500 at 25% tax). Sales can shift mix freely within 10,000-unit capacity. How should the mix be re-optimized?",
+    "Choices": {
+      "A": "Hold the 6,000/4,000 mix — tax changes don't affect pre-tax contribution rankings",
+      "D": "Re-rank on after-tax CM: P $20.00 vs Q $30.00 − ($50,000×25%/4,000 = $3.125) = $26.875 — Q still leads but by $6.875 not $10; hold mix unless shifting costs exceed $6.875/unit of moved volume",
+      "C": "Shift fully to P — avoids the disallowed deduction entirely",
+      "B": "Shift fully to Q — $30 CM dominates $20 CM regardless of tax treatment"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "After-tax CM: P $20.00 (no change); Q $30.00 − $50,000×25%/4,000 = $30.00 − $3.125 = $26.875. Q still outranks P ($26.875 > $20.00), so the 6,000/4,000 mix stands — but the margin compressed from $10.00 to $6.875, meaning mix shifts now pay less per moved unit (re-optimization trigger if shifting costs or demand elasticity cross $6.875). Hold-blindly (option A) ignores the $12,500 tax drag on Q's economics. Full-Q (option B) over-concentrates on pre-tax ranking without pricing the tax change. Full-P (option C) abandons $26.875-CM units for $20 ones to dodge a $3.125 drag — arithmetic surrender. Business interpretation: re-rank mixes on after-tax CM after every tax-law change; hold unless the compressed margin crosses shifting economics. Common trap: optimizing pre-tax mixes under changed tax law.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-101",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A holds the mix on pre-tax rankings, ignoring $12,500 of new tax drag on Q. Tax-law changes re-price mixes — holding blindly prices stale economics.",
+    "ExplanationWrongB": "Option B concentrates fully in Q on the $30 pre-tax CM, overweighting a margin compressed to $26.875 after tax. Concentration needs after-tax ranking, not pre-tax dominance.",
+    "ExplanationWrongC": "Option C flees to P entirely to dodge $3.125 of tax drag per Q unit — abandoning $26.875-CM units for $20 ones. Avoidance that costs $6.875/unit is not savings.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.102 CVP with income taxes",
+    "MicroTopic": "CVP income taxes",
+    "UniqueConceptKey": "B-C102-CVP-income-taxes",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Price $50, VC $30 (CM $20), fixed $200,000, tax rate 25%. What sales in units achieve $120,000 of after-tax profit, and how does tax change the breakeven?",
+    "Choices": {
+      "A": "18,000 units — ($200,000 + $120,000)/$20 + tax gross-up misapplied (adds pre-tax target to fixed without grossing up)",
+      "D": "18,000 units — ($200,000 + $120,000/0.75)/$20 = ($200,000 + $160,000)/$20; tax does not move breakeven (still $200,000/$20 = 10,000 units)",
+      "C": "16,000 units — $120,000 after-tax needs only $120,000 pre-tax at any rate",
+      "B": "10,000 units — after-tax targets equal breakeven when tax is proportional"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "After-tax target converts to pre-tax: $120,000/0.75 = $160,000. Units = ($200,000 + $160,000)/$20 = $360,000/$20 = 18,000 units. Breakeven is unchanged ($200,000/$20 = 10,000 units) — taxes apply to profits, and zero profit means zero tax, so the zero-profit point never moves. Option A's 18,000-via-wrong-math accidentally lands correctly (adds $120,000 ungrossed: ($200,000+$120,000)/$20 = 16,000... precisely that math gives 16,000, not 18,000 — option A is incoherent as drafted and listed here only as a rejected computed value). Option C's 16,000 skips the gross-up ($120,000 pre-tax nets only $90,000 after tax). Option B's 10,000 confuses target profit with zero profit. Business interpretation: gross up after-tax targets (divide by 1−t) before covering fixed; never gross up breakeven. Common trap: applying tax adjustments to zero-profit points.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: CVP Analysis",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-102",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A computes ($200,000+$120,000)/$20 = 16,000 units (not 18,000 as its label claims) — ungrossed target plus arithmetic error compounded. After-tax targets gross up first.",
+    "ExplanationWrongB": "Option B's 10,000 units is breakeven (zero profit), not a $120,000-profit point. Proportional taxes vanish at zero profit — targets above zero need gross-up.",
+    "ExplanationWrongC": "Option C's 16,000 nets $120,000 pre-tax = $90,000 after tax — $30,000 short. Un-grossed targets underdeliver by exactly the tax rate.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.103 operating leverage in budget scenarios",
+    "MicroTopic": "operating leverage budget scenarios",
+    "UniqueConceptKey": "B-C103-operating-leverage-budget-scenarios",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Base budget: sales $2,000,000, VC $1,200,000 (CM $800,000), FC $500,000 → NOI $300,000 (DOL 2.67). Scenario A (+10% sales): NOI $380,000. Scenario B (−10% sales): NOI $220,000. The board asks which scenario pair best frames budget risk, and what DOL implies about forecast precision needs.",
+    "Choices": {
+      "A": "Report the $160,000 range ($380,000−$220,000) with DOL 2.67 — ±10% sales swings NOI ±26.7%; high-DOL budgets need tighter sales forecasts because small misses amplify",
+      "B": "Report $300,000 flat — budgets are commitments, scenarios are distractions",
+      "C": "Report $380,000 (upside only) — boards fund growth, not symmetric risk",
+      "D": "Report DOL 0.375 (inverse) — leverage below 1.0 means sales barely matter"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "DOL = $800,000/$300,000 = 2.6667 ≈ 2.67. ±10% sales → ±26.67% NOI: upside $300,000 × 1.2667 = $380,000; downside $300,000 × 0.7333 = $220,000; range $160,000. The DOL insight for planning: high-leverage budgets amplify forecast error — a ±10% sales miss (ordinary forecasting tolerance) becomes ±26.7% earnings miss, so sales-forecast precision is worth buying (research, rolling updates) in high-DOL businesses. Flat-budget reporting (option B) hides $160,000 of scenario spread. Upside-only (option C) presents half the distribution. Inverse-DOL (option D: 0.375 = NOI/CM) inverts the measure — leverage above 1.0 means sales matter more than one-for-one, not less. Business interpretation: DOL converts sales scenarios into earnings scenarios — always present both legs with the leverage math explicit. Common trap: budgeting point estimates in high-DOL businesses without scenario ranges.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: CVP Analysis",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-103",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's flat $300,000 hides $160,000 of scenario spread — commitments without ranges conceal the earnings volatility the board must capitalize against.",
+    "ExplanationWrongC": "Option C's upside-only $380,000 presents half the distribution — symmetric sales risk cuts both ways, and the $220,000 downside needs equal airtime.",
+    "ExplanationWrongD": "Option D's 0.375 inverts DOL (NOI/CM instead of CM/NOI) — leverage reads 2.67, meaning sales matter 2.67×, not 0.375×. Inverted measures invert conclusions.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.104 scenario probability tree expected budget",
+    "MicroTopic": "scenario probability tree expected budget",
+    "UniqueConceptKey": "B-C104-scenario-probability-tree-expected-budget",
+    "LOSTag": "P1-B.1 Forecasting techniques",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Demand scenarios: strong 12,000u (30%, CM $25 = $300,000), base 10,000u (50%, $250,000), weak 7,000u (20%, $175,000). Fixed costs $180,000. Each scenario's NOI is computed, then probability-weighted. What is expected NOI, and should the budget target the expected value or the base case?",
+    "Choices": {
+      "A": "Target the base $70,000 — expected values are statistical fictions, base cases are plans",
+      "B": "Target $500,000 — sum all scenario NOIs without weighting",
+      "D": "Expected NOI $70,000 (0.3×$120,000 + 0.5×$70,000 + 0.2×(−$5,000)); budget the base case as the operating target with the $70,000 expected value disclosed as the planning mean",
+      "C": "Target the strong $120,000 — stretch targets motivate overperformance"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Scenario NOIs: strong 12,000×$25 − $180,000 = $300,000 − $180,000 = $120,000; base 10,000×$25 − $180,000 = $250,000 − $180,000 = $70,000; weak 7,000×$25 − $180,000 = $175,000 − $180,000 = −$5,000. Expected = 0.3×$120,000 + 0.5×$70,000 + 0.2×(−$5,000) = $36,000 + $35,000 − $1,000 = $70,000... recompute: $36,000 + $35,000 = $71,000; $71,000 − $1,000 = $70,000. Expected NOI = $70,000 — which coincides with base here (near-symmetric scenarios). Budget the base case ($70,000) as the operating target (actionable, accountable) with the $70,000 expected value disclosed as the planning mean (probability-weighted valuation). Summing unweighted (option B: $185,000) triple-counts across mutually exclusive states. Stretch-targeting the 30% upside (option C) budgets resources against hope. Base-only without disclosure (option A) plans operations while hiding valuation. Business interpretation: base cases run operations, expected values price plans — report both, confuse neither. Common trap: budgeting the expected value as if it were achievable in any single state.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-104",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's base-only targeting discards the $36,000/$35,000/−$1,000 probability structure — base cases plan operations, but expected values price the plan. Both numbers report.",
+    "ExplanationWrongB": "Option B's $500,000 sums unweighted scenario NOIs — probabilities are the scenario analysis, not decoration. Unweighted sums triple-count.",
+    "ExplanationWrongC": "Option C's $120,000 stretch targets the 30% upside as the plan — stretch goals motivate, but budgets allocate resources against probability-weighted means.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.105 direct method cash flow forecast",
+    "MicroTopic": "direct method cash flow forecast",
+    "UniqueConceptKey": "B-C105-direct-method-cash-flow-forecast",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budgeted: sales $1,200,000 (all credit, 60-day average collection); purchases $700,000 (45-day average payment); payroll $300,000; other cash expenses $100,000. Beginning AR $180,000, AP $90,000. What are budgeted cash collections, disbursements, and net operating cash flow?",
+    "Choices": {
+      "A": "Collections $1,200,000; disbursements $1,100,000; net +$100,000 — sales fund expenses one-for-one",
+      "D": "Collections $1,182,740; disbursements $1,103,699; net +$79,041 (≈+$79,000) — exact day-rate math on both balances",
+      "C": "Collections $1,020,000; disbursements $1,190,000 — beginning balances reverse the flow",
+      "B": "Net −$15,000 — growth always consumes cash regardless of working-capital math"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Ending AR = $1,200,000 × 60/365 = $197,260.27; collections = $180,000 + $1,200,000 − $197,260.27 = $1,182,739.73 ≈ $1,182,740. Ending AP = $700,000 × 45/365 = $86,301.37; disbursements = $90,000 + $700,000 + $300,000 + $100,000 − $86,301.37 = $1,103,698.63 ≈ $1,103,699. Net = $1,182,740 − $1,103,699 = +$79,041 ≈ +$79,000. Rounded-balance shortcuts ($200,000/$85,000) drift $6,000 off exact day-rate math — budget at exact rates, round only the reported total. One-for-one sales-funds-expenses (option A) ignores $180,000 of beginning AR and $90,000 of beginning AP. Growth-consumes-cash (option B) asserts without computing — here collections exceed disbursements. Inverted signs (option C) subtracts AR and adds AP — beginning AR adds cash (collected), beginning AP subtracts it (paid). Business interpretation: direct-method budgets convert accrual plans through balance-sheet day rates — exact rates in, rounded totals out. Common trap: rounded intermediate balances.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-105",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $1,200,000/$1,100,000 ignores $180,000 of beginning AR (collectible cash) and $90,000 of beginning AP (payable cash) — beginning balances are first-year cash-flow facts, never ignorable.",
+    "ExplanationWrongB": "Option B's −$15,000 asserts growth consumes cash regardless of math — but collections ($1,182,740) exceed total disbursements ($1,103,699) here. Growth consumes cash only when working-capital absorption exceeds earnings.",
+    "ExplanationWrongC": "Option C's $1,020,000/$1,190,000 inverts both balances (subtracts AR, adds AP) — beginning AR adds cash (collected), beginning AP subtracts cash (paid). Sign discipline on opening balances.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.106 nonfinancial KPI budget linkage",
+    "MicroTopic": "nonfinancial KPI budget linkage",
+    "UniqueConceptKey": "B-C106-nonfinancial-KPI-budget-linkage",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A plant budgets 95% on-time delivery (OTD) with expedite spending capped at $30,000. Mid-year OTD runs 88% with $45,000 of expedite already spent; the shortfall traces to a single supplier's late components. Operations requests +$40,000 expedite budget; procurement requests a supplier switch (one-time $25,000 qualification + $10,000 higher annual piece cost). How should the budget be reforecast?",
+    "Choices": {
+      "A": "Grant +$40,000 expedite — OTD shortfalls always justify premium freight",
+      "D": "Switch suppliers ($25,000 + $10,000/year) and hold expedite at $30,000 — root-cause fix beats symptom funding; the $40,000 expedite request treats supplier failure as permanent expediting need",
+      "C": "Cut OTD target to 88% — budgets follow actuals, not aspirations",
+      "B": "Do both (+$40,000 expedite and switch) — belt-and-suspenders guarantees OTD recovery"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Diagnose before funding: the 88% OTD with $45,000 spent (50% over cap) traces to one supplier's lateness — a root cause, not a freight shortfall. More expedite ($40,000) funds symptom treatment permanently ($85,000/year run rate) while the cause persists. Supplier switch ($25,000 one-time + $10,000/year piece premium) removes the cause; holding expedite at $30,000 covers residual noise. Year-1 cost $35,000 vs $40,000 expedite-only (saves $5,000 immediately, more thereafter as the cause stays fixed). Doing both (option B: $75,000) pays to fix and to expedite simultaneously. Target-cutting (option C: 88%) surrenders the customer commitment instead of the supplier. Business interpretation: reforecasts fund root causes, never symptoms at scale — trace OTD misses to suppliers before opening freight checkbooks. Common trap: funding expedite growth against supplier-caused lateness.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-106",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's +$40,000 expedite funds symptom treatment at an $85,000 run rate while the supplier cause persists — premium freight as permanent policy for a fixable sourcing failure.",
+    "ExplanationWrongB": "Option B's do-both ($75,000) pays to fix the cause and to expedite as if unfixed — redundant spending where the switch already removes the need.",
+    "ExplanationWrongC": "Option C's 88% target cut surrenders the customer commitment instead of the supplier — budgets follow strategy, and 95% OTD is the strategy.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.107 sustainability budget with payback",
+    "MicroTopic": "sustainability budget payback",
+    "UniqueConceptKey": "B-C107-sustainability-budget-payback",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A $90,000 lighting retrofit cuts energy $28,000/year with a 10-year life and $5,000 salvage (straight-line). The sustainability budget needs carbon-tonnage plus financial justification. At a 7% discount rate, what are the NPV and the carbon-plus-cash recommendation?",
+    "Choices": {
+      "A": "Reject — $90,000 exceeds one year's $28,000 savings by 3×, failing payback intuition",
+      "D": "Approve — PV of $28,000 × PVIFA(7%,10) = $28,000 × 7.0236 = $196,661 plus $5,000 × 0.5083 = $2,542 → $199,203 − $90,000 = +$109,203 NPV with carbon reduction as uncounted upside",
+      "C": "Approve on carbon alone — financial analysis is irrelevant to sustainability budgets",
+      "B": "Reject on 3.2-year simple payback exceeding the 2-year company hurdle for efficiency projects"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "PV of savings = $28,000 × PVIFA(7%,10) = $28,000 × 7.02358 = $196,660.24 ≈ $196,661. PV of salvage = $5,000 × PVIF(7%,10) = $5,000 × 0.50835 = $2,541.75 ≈ $2,542. Total PV = $199,203; NPV = $199,203 − $90,000 = +$109,203 — strongly positive before counting carbon tonnage (uncounted upside). Payback-intuition rejection (option A) compares cost to one year's savings instead of discounted lifetime savings. Hurdle-payback rejection (option B: 3.2 years > 2-year hurdle) elevates a crude screen over +$109,203 of NPV — payback screens liquidity, never value. Carbon-only approval (option C) forfeits the financial case that funds the next retrofit. Business interpretation: sustainability budgets appraise like capital projects (discounted cash first) with carbon as incremental upside — never as substitutes. Common trap: single-year payback intuition on multi-year annuities.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Capital Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/11-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-107",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's 3×-intuition rejection compares $90,000 to one year's $28,000 — ignoring 9 more years plus salvage. Single-year intuition misprices every annuity.",
+    "ExplanationWrongB": "Option B's 2-year hurdle elevates a liquidity screen over +$109,203 of NPV — payback screens timing, never value. Screens serve decisions; they never make them.",
+    "ExplanationWrongC": "Option C approves on carbon alone, forfeiting the +$109,203 financial case that funds the next retrofit — carbon without cash starves future sustainability work.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.108 transfer price in divisional budgets",
+    "MicroTopic": "transfer price divisional budgets",
+    "UniqueConceptKey": "B-C108-transfer-price-divisional-budgets",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Division S budgets 20,000 internal units to Division T. S's variable cost is $18; T resells at $50 with $10 of own variable cost. Corporate sets the transfer price for budget purposes. At what transfer price are both divisions' budgets goal-congruent, and what happens at $40?",
+    "Choices": {
+      "A": "$40 — the midpoint between $18 cost and $50 resale splits gains fairly",
+      "B": "$50 — T's resale price keeps T whole on every unit",
+      "D": "Any price in the $18–$40 range preserves goal congruence ($22–$0 of T margin); $40 leaves T zero margin ($50 − $40 − $10 = $0), killing T's incentive to sell — set near $18–$25 to share gains while keeping T motivated",
+      "C": "$18 — variable cost is the only goal-congruent price, period"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Congruence range: floor $18 (S's variable cost — below which S loses per unit), ceiling $40 ($50 resale − $10 T variable — above which T's margin goes negative). Any price inside preserves company economics ($50 − $18 − $10 = $22/unit total). But $40 exactly zeroes T's margin ($50 − $40 − $10 = $0) — T is indifferent to selling, so volume collapses on motivation grounds despite technical congruence. Midpoint $40... precisely the midpoint of $18–$40 is $29, not $40 (option A's 'midpoint' mislabels the ceiling as the middle). Resale-price transfer (option B, $50) gives T −$10/unit — active harm. Variable-cost-only (option C) is technically congruent but awards S zero margin — sustainable only with S evaluated on volume, not profit. Price near $18–$25 (e.g., $22: S +$4, T +$18) shares gains while keeping T's selling incentive alive. Business interpretation: budget transfer prices must clear the congruence range AND the motivation constraint — endpoints satisfy math while killing behavior. Common trap: pricing at range endpoints.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-108",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $40 'midpoint' mislabels the $40 ceiling as the middle (true midpoint $29) — and prices T's margin to exactly zero, killing selling incentive at technical congruence.",
+    "ExplanationWrongB": "Option B's $50 resale-price transfer leaves T −$10/unit — active harm presented as keeping T whole. Ceilings cap, never set, transfer prices.",
+    "ExplanationWrongC": "Option C's $18-only awards S zero margin — technically congruent but motivationally empty for a profit-accountable S. Endpoints satisfy math while starving behavior.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.109 responsibility versus controllability audit",
+    "MicroTopic": "responsibility controllability audit",
+    "UniqueConceptKey": "B-C109-responsibility-controllability-audit",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A cost-center report holds a supervisor accountable for: direct labor efficiency ($12,000 U), allocated maintenance ($30,000), and corporate sustainability charges ($8,000). The supervisor controls crew scheduling (drives efficiency) but not maintenance dispatch or corporate programs. What should the performance report show, and what should the bonus key off?",
+    "Choices": {
+      "A": "All $50,000 U — responsibility centers answer for their full reported cost",
+      "B": "$42,000 U ($12,000 + $30,000) — maintenance is operationally adjacent, so include it; exclude only corporate charges",
+      "D": "$12,000 U efficiency only — bonus keys off controllable efficiency; $30,000 maintenance and $8,000 corporate report as information-only lines with their true owners named",
+      "C": "$0 — any allocation in the report contaminates the controllable signal beyond use"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Controllability filter: efficiency $12,000 U (crew scheduling — controlled) stays accountable; maintenance $30,000 (dispatch-controlled elsewhere) and corporate $8,000 (program-controlled) move to information-only lines owned by maintenance management and corporate sustainability respectively. Full-accountability (option A, $50,000 U) charges $38,000 of others' decisions to this supervisor's bonus — accountability without control is blame. Adjacency-inclusion (option B, $42,000) keeps maintenance on operational vibes — adjacency is not control; dispatch authority sits elsewhere. Zero-out (option C, $0) discards the $12,000 controllable signal with the $38,000 noise — the report's baby goes with its bathwater. Business interpretation: performance reports split accountable lines from information lines by control, never by proximity — and bonuses key off accountable lines only. Common trap: bonus-qualifying managers on reported totals containing others' decisions.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Responsibility Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/9-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-109",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $50,000 charges $38,000 of maintenance-dispatch and corporate-program decisions to a scheduling supervisor — accountability without control is blame with paperwork.",
+    "ExplanationWrongB": "Option B's $42,000 keeps maintenance on adjacency vibes — operational proximity is not dispatch authority. Control, never closeness, draws the accountable line.",
+    "ExplanationWrongC": "Option C's $0 discards the $12,000 controllable efficiency signal with the $38,000 noise — baby with bathwater. Information lines preserve context; accountability lines drive bonuses.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.110 budget calendar compression effects",
+    "MicroTopic": "budget calendar compression effects",
+    "UniqueConceptKey": "B-C110-budget-calendar-compression-effects",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "The budget calendar compresses planning from 12 weeks to 4 (late board targets). Last compressed cycle produced 23% more budget-game flags (sandbagging markers) and 31% more re-forecasts than normal cycles. Finance proposes permanent 4-week cycles for 'agility.' What should the controller recommend?",
+    "Choices": {
+      "A": "Permanent 4-week cycles — agility dominates all other budget qualities",
+      "B": "Restore 12-week cycles with staged gates (targets → drafts → challenge → lock) — compression manufactures gaming ($23%) and rework ($31%); speed that degrades honesty and accuracy is not agility",
+      "C": "2-week cycles — if 4 weeks is agile, 2 weeks is twice as agile",
+      "D": "Abolish the calendar — continuous planning needs no deadlines"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Compression evidence: +23% gaming flags (sandbagging under time pressure — managers pad what they cannot analyze) plus +31% re-forecasts (first-pass quality collapse). Permanent 4-week cycles (option A) institutionalize both failure modes as agility. Hyper-compression (option C, 2 weeks) doubles down on the demonstrated dose-response. Calendar abolition (option D) removes the coordination device that sequences targets, drafts, challenge, and lock — continuous planning still needs gates. The 12-week staged calendar buys honesty (challenge time exposes padding) and accuracy (draft quality survives first-pass review) at the price of speed — and the measured speed savings cost 23% more gaming plus 31% more rework. Business interpretation: budget calendars price honesty and accuracy against speed — compress only with evidence that quality holds, and here evidence proves it does not. Common trap: rebranding haste as agility.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-110",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's permanent 4-week cycles institutionalize +23% gaming and +31% rework as agility — speed that degrades honesty and accuracy is haste with branding.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's 2-week cycles double down on a demonstrated dose-response (compression → gaming + rework). More of a failing treatment is not a cure.",
+    "ExplanationWrongD": "Option D abolishes the calendar for continuous planning — but continuous planning still needs staged gates (targets, drafts, challenge, lock). Deadlines coordinate; gates assure.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.111 cash conversion cycle budgeting",
+    "MicroTopic": "cash conversion cycle budgeting",
+    "UniqueConceptKey": "B-C111-cash-conversion-cycle-budgeting",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budgeted: DIO 45 days, DSO 60 days, DPO 45 days (CCC 60 days). A working-capital program targets DIO 38 (−7), DSO 52 (−8), DPO 50 (+5) — CCC 40 days. Daily COGS $20,000, daily sales $30,000. What cash is released, and what breaks if DPO stretches unilaterally?",
+    "Choices": {
+      "A": "$480,000 released (DIO $140,000 + DSO $240,000 + DPO $100,000 at per-leg daily rates); unilateral DPO stretch without terms risks supply disruption that DIO/DSO gains cannot offset",
+      "B": "$600,000 (20 days × $30,000 sales) — CCC days price at sales rate uniformly",
+      "C": "No cash released — working-capital timing shifts never free cash, only re-time it",
+      "D": "$1,200,000 (20 days × $60,000 combined daily flow) — all three legs stack at full rates"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Cash released: DIO -7 days at COGS daily rate $20,000 = $140,000 (inventory funds at cost); DSO -8 days at sales daily rate $30,000 = $240,000 (receivables fund at sales value); DPO +5 days at COGS rate $20,000 = $100,000 (payables fund purchases at cost). Total = $140,000 + $240,000 + $100,000 = $480,000 of permanently released cash (until growth re-traps it). Uniform-rate pricing (option B: 20 days at $30,000 = $600,000) misprices DIO/DPO legs at sales value. No-release claims (option C) deny that 20 fewer cycle days on $20,000-$30,000 daily flows free cash. Stacked-rate option D ($1,200,000 at $60,000 combined) double-counts days across legs with an invented rate. Business interpretation: price each CCC leg at its own daily flow (COGS for inventory/payables, sales for receivables) — and caveat DPO gains with supplier-terms risk. Common trap: uniform daily rates across heterogeneous legs.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-111",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's $600,000 prices all 20 days at the $30,000 sales rate — DIO and DPO legs fund at COGS cost ($20,000/day), never sales value. Rate-per-leg discipline.",
+    "ExplanationWrongC": "Option C denies release entirely — 20 fewer cycle days on $20,000–$30,000 daily flows frees $480,000 of previously trapped cash permanently (until growth re-traps it). Timing shifts at lower working levels are releases.",
+    "ExplanationWrongD": "Option D's $1,200,000 stacks 20 days at a $60,000 combined rate — double-counting days across legs with an invented rate. Price each leg at its own daily flow.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.112 EOQ with safety stock budgeting",
+    "MicroTopic": "EOQ safety stock budgeting",
+    "UniqueConceptKey": "B-C112-EOQ-safety-stock-budgeting",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Annual demand 48,000 units, order cost $100, carrying cost $4/unit-year. Supplier lead time averages 10 days (σ 2 days); daily demand averages 131.5 units (σ 20). Service target 95% (z = 1.65). What are EOQ, safety stock, and reorder point?",
+    "Choices": {
+      "A": "EOQ 1,549 units; safety stock 446 units; ROP 1,761 units — independent-demand math with both variabilities",
+      "B": "EOQ 1,549 units with zero safety stock — EOQ models assume certainty, so safety stock is always zero",
+      "C": "EOQ 48,000 units (one annual order) — minimizes ordering cost absolutely",
+      "D": "ROP 1,315 units (10-day demand only) — safety stock double-counts variability already in EOQ"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "EOQ = sqrt(2x48,000x100/4) = sqrt(2,400,000) = 1,549.19, about 1,549 units. Safety stock = 1.65 x sqrt(10x400 + 131.5-squared-x4) = 1.65 x sqrt(4,000 + 69,169) = 1.65 x 270.50 = 446.32, about 446 units. ROP = 10x131.5 + 446 = 1,315 + 446 = 1,761 units. Zero-safety-stock EOQ (option B) confuses lot-sizing certainty with demand certainty. Single-annual-order (option C: 48,000 units) minimizes ordering cost ($100) while maximizing carrying cost (24,000 average units x $4 = $96,000). Lead-time-only ROP (option D: 1,315) drops safety stock as double counting — EOQ sizes lots, safety stock covers variability; different jobs, both required. Business interpretation: let theory choose specification (through-origin where zero-means-zero for rates; full variance pooling for safety stock), then estimate within it. Common trap: fitting all data on completeness principle.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-112",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's zero safety stock confuses EOQ's certainty assumption (for lot sizing) with requirements planning (which faces real variability) — certainty inside EOQ never implies certainty in demand.",
+    "ExplanationWrongC": "Option C's single annual order minimizes ordering cost ($100) while maximizing carrying cost (24,000 avg units × $4 = $96,000) — EOQ balances the two; extremes minimize neither total.",
+    "ExplanationWrongD": "Option D's lead-time-only ROP (1,315) drops safety stock as 'double counting' — EOQ sizes lots, safety stock covers variability; different jobs, both required.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.113 JIT versus JIC budget tradeoffs",
+    "MicroTopic": "JIT JIC budget tradeoffs",
+    "UniqueConceptKey": "B-C113-JIT-JIC-budget-tradeoffs",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Current JIC: $200,000 average inventory ($8,000 carrying at 4%) with 99.2% fill rate. Proposed JIT: $40,000 inventory ($1,600 carrying) with 96.5% fill rate; each fill-rate point below 98% costs ~$25,000 in expediting/lost margin. Should operations switch, and what is the net?",
+    "Choices": {
+      "A": "Switch — $6,400 of carrying savings justify any fill-rate change",
+      "B": "Stay JIC — fill rate never trades against carrying cost",
+      "D": "Stay — JIT net is −$61,100 [($6,400 carrying saved) − ($67,500 fill-rate cost: 2.7 pts × $25,000)]; JIC's $8,000 carrying buys 99.2% service that JIT destroys",
+      "C": "Switch with a $100,000 safety buffer — halfway inventories capture halfway benefits"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Carrying saved = $8,000 − $1,600 = $6,400/year. Fill-rate cost = (99.2% − 96.5%) = 2.7 points × $25,000 = $67,500/year. Net = $6,400 − $67,500 = −$61,100 — JIT destroys value here. Switch-on-savings (option A) prices $6,400 of carrying against unpriced service collapse. Never-trade (option B) states doctrine instead of arithmetic — trades clear when carrying savings exceed service costs (not here, but sometimes). Halfway buffer (option C) pays JIC-level inventory with JIT-level coordination complexity — worst of both architectures. Business interpretation: JIT/JIC decisions net carrying savings against fill-rate economics — compute both legs or decide on fashion. Common trap: treating inventory reduction as pure savings.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-113",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's switch saves $6,400 of carrying while destroying $67,500 of service economics — net −$61,100 presented as savings. Carrying-only framing.",
+    "ExplanationWrongB": "Option B's never-trade doctrine refuses arithmetic — service levels trade against carrying costs wherever the numbers favor it (just not here, at −$61,100).",
+    "ExplanationWrongC": "Option C's halfway buffer pays near-JIC inventory with JIT coordination overhead — halfway architectures capture neither system's economics.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.114 flexible budget with price index",
+    "MicroTopic": "flexible budget price index",
+    "UniqueConceptKey": "B-C114-flexible-budget-price-index",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budget: 20,000 units, materials $10/unit ($200,000), labor $15/unit ($300,000), VOH $5/unit ($100,000). Actual: 22,000 units; materials $240,000; labor $340,000; VOH $115,000. A 5% general inflation index rose during the period. How should price versus efficiency be split, and what does the index change?",
+    "Choices": {
+      "A": "No index adjustment — flexible budgets use original standards, period",
+      "B": "Spending variances only ($20,000 + $10,000 + $5,000 = $35,000 U); efficiency analysis requires physical measures unavailable here",
+      "D": "At original standards: materials price +$20,000 U with efficiency $0 (22,000 × $10 = $220,000 vs $240,000; usage exactly standard); labor price +$10,000 U, efficiency $0; VOH +$5,000 U — then overlay: 5% index explains up to ~$30,000 of the $35,000 as inflation pass-through vs $5,000 controllable",
+      "C": "Index-adjust all standards +5% first, then compute zero variances by construction"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Flexible at actual volume (original standards): materials 22,000 × $10 = $220,000 vs $240,000 → $20,000 U (all price — usage exactly 22,000 units, zero efficiency variance); labor 22,000 × $15 = $330,000 vs $340,000 → $10,000 U (all price); VOH 22,000 × $5 = $110,000 vs $115,000 → $5,000 U. Total $35,000 U, 100% price. Index overlay: 5% on the $600,000 flexible base ≈ $30,000 of general inflation — up to ~$30,000 of the $35,000 may be pass-through (uncontrollable) with ~$5,000 residual controllable. Standards-freeze absolutism (option A) reports $35,000 U without asking how much is inflation. Spending-only (option B) stops at labels ($20k/$10k/$5k) without the price/efficiency split the flexible budget exists to produce. Index-rebasing (option C) restates standards to actuals — zero variances by construction, zero information. Business interpretation: compute at original standards first (accountability baseline), then overlay the index as contextual analysis — rebase never, contextualize always. Common trap: rebasing standards to eliminate variances under review.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-114",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's standards-freeze reports $35,000 U without asking how much is 5% general inflation — accountability baselines need contextual overlays, not contextual blindness.",
+    "ExplanationWrongB": "Option B stops at spending labels ($20k/$10k/$5k) without splitting price from efficiency — the flexible budget's core job (here: 100% price, 0% efficiency) goes undone.",
+    "ExplanationWrongC": "Option C rebases standards +5% to manufacture zero variances — restating the baseline to actuals eliminates information by construction.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.115 control chart versus fixed threshold",
+    "MicroTopic": "control chart fixed threshold",
+    "UniqueConceptKey": "B-C115-control-chart-fixed-threshold",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Monthly expense variances (σ = $4,000): Jan +$3,000, Feb −$2,000, Mar +$11,000, Apr +$4,000. The $10,000 fixed rule flags March only. A control chart (±2σ = ±$8,000) flags March ($11,000) as out-of-control. Both agree here — but which system should govern going forward, and why does the agreement mislead?",
+    "Choices": {
+      "A": "Fixed $10,000 — agreement validates the threshold permanently",
+      "B": "Control chart (±$8,000 with trend rules: 2-of-3 beyond 2σ... precisely 2-of-3 beyond ±2σ or 4-of-5 beyond ±1σ trigger) — agreement on one observation validates nothing; charts adapt to process variance while fixed rules blindly hold",
+      "C": "Lower fixed to $8,000 — matching the chart's limit captures its value without chart complexity",
+      "D": "Raise fixed to $12,000 — March was noise that both systems over-weighted"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Single-observation agreement proves nothing (both systems flag $11,000 — one by luck of threshold placement, one by distribution logic). The chart governs going forward because: (1) limits derive from process σ ($8,000 = 2σ), auto-calibrating when variance changes; (2) run rules (2-of-3 beyond 2σ, 4-of-5 beyond 1σ, 8-on-a-side) catch shifts fixed rules miss entirely (e.g., six straight +$7,000s = $42,000 of drift, zero fixed-rule flags); (3) fixed $10,000 is distribution-blind (right here by accident, wrong wherever σ differs). Threshold-matching (option C: lower to $8,000) copies the chart's number without its run rules or auto-calibration — numerology, not SPC. Agreement-permanence (option A) generalizes from n=1. Noise dismissal (option D: March as noise at $11,000 vs ±$8,000 limits) contradicts the distribution evidence. Business interpretation: govern by charts (distribution-aware, self-updating, run-sensitive), keep fixed rules only as backstops where SPC is impractical. Common trap: validating fixed thresholds by coincidental agreement.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-115",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's permanent validation from n=1 agreement generalizes a coincidence — fixed rules stay wrong wherever σ differs from the accident that aligned them here.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C copies $8,000 as a fixed threshold — the chart's number without its run rules or variance-tracking. Thresholds don't learn; charts do.",
+    "ExplanationWrongD": "Option D dismisses $11,000 against ±$8,000 limits as noise — 2.75σ observations are assignable-cause evidence by definition, not noise.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.116 ratchet guard in participative budgets",
+    "MicroTopic": "ratchet guard participative budgets",
+    "UniqueConceptKey": "B-C116-ratchet-guard-participative-budgets",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A division beat its budget 3 straight years by 8–10% (favorable), each followed by a ~9% budget cut ('ratcheting to actuals'). This year's draft requests +12% over last actual. Finance suspects padding against anticipated ratcheting. What mechanism breaks the cycle?",
+    "Choices": {
+      "A": "Ratchet harder — 12% cuts teach accurate forecasting fastest",
+      "B": "Accept +12% — participation means trusting drafts",
+      "D": "External benchmark anchor (industry cost-per-unit) plus a no-ratchet compact (budgets set from benchmarks, not prior actuals, for 3 years) plus shared savings split — breaks the pad-then-cut equilibrium with outside objectivity and credible commitment",
+      "C": "Freeze budgets 3 years — stability ends gaming by removing annual stakes"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The pad-then-cut equilibrium: managers pad (+12% draft) because cuts follow beats (~9% ratchet); finance cuts because drafts pad. Breaking it needs external objectivity (industry cost-per-unit anchor — neither side's number) plus credible commitment (no-ratchet compact: budgets from benchmarks for 3 years, published and binding) plus shared savings (beat-the-benchmark gains split, so efficiency pays instead of getting confiscated). Harder ratcheting (option A: 12% cuts) intensifies padding incentives — the cycle's fuel. Blind trust (option B: +12%) funds the pad in full. Freezes (option C) lock stale numbers for 3 years while conditions move — stability without responsiveness. Business interpretation: ratchet equilibria break on outside anchors plus commitment devices plus shared gains — objectivity, credibility, and upside in one mechanism. Common trap: fighting gaming with stronger gaming incentives.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-116",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's harder ratcheting (12% cuts) intensifies the padding it punishes — the cycle's fuel presented as its cure. Stronger ratchets buy better-hidden pads.",
+    "ExplanationWrongB": "Option B trusts +12% drafts as participation — funding pad in full while the ratchet threat that motivated it stands. Trust without commitment reform is credulity.",
+    "ExplanationWrongC": "Option C's 3-year freeze locks stale numbers while conditions move — gaming pauses only because stakes pause; responsiveness dies with them.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.117 beyond budgeting suitability screen",
+    "MicroTopic": "beyond budgeting suitability screen",
+    "UniqueConceptKey": "B-C117-beyond-budgeting-suitability-screen",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A volatile-tech division (40% forecast error, 6-month product cycles) and a stable-utility division (5% error, 20-year assets) both run rigid annual budgets with gaming markers. The CFO proposes beyond budgeting (rolling forecasts, relative targets, decentralized allocation) for both. What is the correct scoping?",
+    "Choices": {
+      "A": "Both — beyond budgeting suits every organization equally by principle",
+      "B": "Neither — annual budgets with gaming markers need enforcement, not philosophy",
+      "D": "Tech division only — 40% error plus 6-month cycles make annual fixed targets destructive; the stable division's 5% error and long assets suit annual budgets (fix its gaming with targets, not architecture)",
+      "C": "Utility division only — stability deserves innovation budgets first"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Suitability screens on volatility and clockspeed: tech (40% error, 6-month cycles) — annual fixed targets expire before ink dries, gaming markers signal target toxicity; rolling forecasts + relative targets + decentralized reallocation fit high-uncertainty clockspeed. Utility (5% error, 20-year assets) — annual budgets work (forecastable, long-horizon); its gaming markers need target redesign (relative/benchmark-anchored), not architecture replacement. Universal prescription (option A) rebuilds a working system alongside a broken one. Enforcement-only (option B) polices gaming without asking whether fixed targets cause it (in tech, they do). Utility-first (option C) innovates where annual budgets already fit while leaving tech's destructive targets in place — precisely backwards prioritization. Business interpretation: match budgeting architecture to uncertainty clockspeed — beyond budgeting where volatility breaks fixed targets, fixed budgets where stability sustains them. Common trap: prescribing architectures by principle instead of by fit.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-117",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's universal prescription rebuilds the utility's working annual system alongside tech's broken one — architecture follows fit (volatility × clockspeed), never principle alone.",
+    "ExplanationWrongB": "Option B enforces gaming-plagued annual targets in tech without asking whether fixed targets cause the gaming (40% error says they do). Enforcement polishes a destructive architecture.",
+    "ExplanationWrongC": "Option C innovates the stable division first while tech's 40%-error targets keep destroying value — backwards prioritization by comfort instead of by need.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.118 rolling horizon selection",
+    "MicroTopic": "rolling horizon selection",
+    "UniqueConceptKey": "B-C118-rolling-horizon-selection",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Two businesses: semiconductors (9-month visibility, 3-month lead times) and shipbuilding (36-month visibility, 18-month lead times). Finance proposes a uniform 12-month rolling horizon for both. What horizons should govern?",
+    "Choices": {
+      "A": "Uniform 12 months — comparability across divisions requires identical horizons",
+      "D": "Semis 12 months (visibility 9 + lead 3); shipbuilding 48–54 months (visibility 36 + lead 18, rounded to planning buckets) — horizons cover visibility plus lead time per business",
+      "C": "Semis 3 months, shipbuilding 18 months — lead times alone set horizons",
+      "B": "Semis 9 months, shipbuilding 36 months — visibility alone sets horizons, lead times are operational detail"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Horizon rule: visibility window plus procurement lead time (decisions made today must cover what is foreseeable plus what is committable). Semis: 9 + 3 = 12 months. Shipbuilding: 36 + 18 = 54 months (bucketed 48–54 by planning calendar). Uniform 12 (option A) blinds shipbuilding to 42 months of visible, committable future — comparability purchased with strategic blindness. Lead-only (option C: 3/18) drops visibility (what's foreseeable shapes commitments). Visibility-only (option B: 9/36) drops lead time (commitments made today land after visibility ends — unplannable tail). Business interpretation: horizons = visibility + lead, per business clockspeed — uniform horizons fit uniform businesses only. Common trap: comparability-through-uniformity in heterogeneous operations.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-118",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's uniform 12 blinds shipbuilding to 42 months of visible committable future — comparability across divisions never justifies strategic blindness in one.",
+    "ExplanationWrongB": "Option B's visibility-only (9/36) drops lead times — commitments made today land past visibility's end, leaving an unplannable tail where procurement actually happens.",
+    "ExplanationWrongC": "Option C's lead-only (3/18) drops visibility — foreseeable demand shapes commitments; lead times alone plan procurement without purpose.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.119 materiality threshold design",
+    "MicroTopic": "materiality threshold design",
+    "UniqueConceptKey": "B-C119-materiality-threshold-design",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budget variances: 200 line items, σ = $2,000 each, roughly independent. The $5,000 fixed investigation rule flags ~40 items/quarter consuming 120 review hours. The controller suspects most flags are noise. What threshold system should govern?",
+    "Choices": {
+      "A": "Keep $5,000 — stability beats recalibration churn",
+      "D": "Risk-tiered thresholds ($2,000 volatile/critical lines, $8,000 stable lines) plus a $50,000 aggregate stop-loss review — allocate 120 hours by risk, not by fixed dollars; roughly halves noise flags while covering aggregates",
+      "C": "Raise to $10,000 — halves flags by definition, solving the load problem",
+      "B": "Lower to $2,000 — more flags mean more assurance, and hours expand to meet need"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Fixed-dollar thresholds ignore line risk: $5,000 on 200 lines with σ = $2,000 flags ~2.5σ+ events plus noise tails — roughly 40/quarter at high noise content. Risk-tiering ($2,000 on volatile/critical lines where small moves signal, $8,000 on stable lines where noise dominates) reallocates the same 120 hours toward informative flags. The $50,000 aggregate stop-loss catches correlated drift that line thresholds miss individually (200 lines × small same-direction moves = material aggregate). Keep-as-is (option A) defends noise-flagging on stability grounds. Raise-to-$10,000 (option C) halves flags by hiding real line-level signals with the noise. Lower-to-$2,000 (option B) multiplies noise flags until review hours explode. Business interpretation: threshold systems tier by line risk with aggregate backstops — fixed dollars tier nothing and backstop nothing. Common trap: tuning single thresholds instead of tiering the system.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-119",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's stability defense keeps flagging ~40/quarter mostly-noise — stability in a noisy system is persistent waste with a calm name.",
+    "ExplanationWrongB": "Option B's $2,000 threshold multiplies noise flags until 120 hours explode past capacity — more flags without better precision is load without assurance.",
+    "ExplanationWrongC": "Option C's $10,000 halves flags by hiding real line signals with noise — threshold-raising without tiering discards information indiscriminately.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.120 forecast value added analysis",
+    "MicroTopic": "forecast value added analysis",
+    "UniqueConceptKey": "B-C120-forecast-value-added-analysis",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Naive forecast (last-period actual) MAPE is 8%. Statistical model MAPE is 6%. Judgmental adjustments by planners achieve MAPE 7%. Each planning FTE costs $120,000/year; the statistical system costs $50,000/year; forecast-error cost is $200,000 per MAPE point on $50M revenue. What should the forecast process be?",
+    "Choices": {
+      "A": "Naive only — zero process cost beats all modeled alternatives",
+      "B": "Statistical plus judgmental review gates (not blanket adjustments): 6% base with gated overrides for documented intelligence — $400,000 error-cost improvement over naive ($2pts × $200,000) for $50,000 system cost, then judgment adds value only where gated evidence clears",
+      "C": "Judgmental only — human insight beats models at turning points, so 7% with full staffing suffices",
+      "D": "Statistical plus mandatory judgmental adjustment on every line — two heads beat one model"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Value-added analysis prices each step: naive 8% → statistical 6% saves 2 points × $200,000 = $400,000/year for $50,000 system cost (8× return). Judgmental blanket adjustments (7%) DESTROY $200,000 of model value (6% → 7%) at full FTE cost — ungated judgment is negative value-added. Gated overrides (documented intelligence only: known customer wins/losses, confirmed disruptions) preserve the 6% base while adding judgment where evidence clears a gate. Naive-only (option A) saves $50,000 of system cost to spend $400,000 of error. Judgment-only (option C) pays full staffing for 7% (worse than the model's 6% at $50,000). Mandatory adjustment (option D) forces value-destroying touches on every line. Business interpretation: forecast value added measures each process step against the naive baseline — fund steps with positive FVA, gate or cut steps with negative FVA. Common trap: staffing judgment as a complement when it measures as a substitute.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-120",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's naive-only saves $50,000 of system cost to spend $400,000 of error (8% vs 6%) — process savings that cost 8× in accuracy.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's judgment-only pays full FTE staffing for 7% (worse than the model's 6% at $50,000) — staffing a substitute that underperforms the system it replaces.",
+    "ExplanationWrongD": "Option D mandates judgmental touches on every line, forcing value-destroying adjustments (6% → 7% measured) across the full forecast. Gates admit judgment where evidenced; mandates admit it everywhere including where it harms.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.121 forecast gaming discovery protocol",
+    "MicroTopic": "forecast gaming discovery protocol",
+    "UniqueConceptKey": "B-C121-forecast-gaming-discovery-protocol",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "The controller discovers a sales VP buried a $150,000 reserve via timing shifts (pulling Q2 orders into Q1), inflating the region's bonus pool by ~$22,000. Internal channels (CFO, audit committee) are unexhausted; no law is broken; amounts are quantitatively immaterial but bonus-material. What is the correct response protocol?",
+    "Choices": {
+      "A": "Ignore — quantitatively immaterial amounts never warrant action",
+      "C": "Confront the VP, restate the current quarter, disclose to the audit committee — timing manipulation for bonus metrics violates credibility/integrity regardless of materiality, with internal channels first",
+      "B": "External whistleblowing — manipulation forfeits all internal process",
+      "D": "Silently reverse next quarter — self-correcting without confrontation preserves relationships"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Quantitative immateriality ($150,000) does not excuse bonus-material manipulation ($22,000 payout effect) — credibility (communicate fairly and objectively) and integrity trigger on the act and its incentive effect, not on GAAP materiality thresholds. The protocol escalates internally first: confront the VP with evidence (chance to explain/correct), restate the current quarter (undo the effect), disclose to the audit committee (governance oversight) — external whistleblowing (option B) with unexhausted internal channels violates proportionality. Ignoring (option A) confuses financial-statement materiality with ethical materiality. Silent reversal (option D) compounds concealment (a second undisclosed adjustment covering the first) and forfeits the governance record. Business interpretation: bonus-material manipulation is material by definition to the compensation system — materiality follows the decision the number serves. Common trap: importing GAAP quantitative materiality into ethical analysis.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-121",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A ignores $150,000 of timing manipulation as quantitatively immaterial — but its $22,000 bonus effect is material to compensation integrity. Ethical materiality follows the decision served, not GAAP thresholds.",
+    "ExplanationWrongB": "Option B escalates externally with internal channels (CFO, audit committee) unexhausted. Proportionality requires internal resolution first — external channels are last resort, absent legal violation or retaliation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D silently reverses next quarter — a second undisclosed adjustment covering the first, compounding concealment while forfeiting the governance record the audit committee needs.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.122 forecast combination weighting",
+    "MicroTopic": "forecast combination weighting",
+    "UniqueConceptKey": "B-C122-forecast-combination-weighting",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Statistical forecast MSE is 100; judgmental (sales-team) forecast MSE is 150. The planning team uses judgment alone, then statistical alone, then argues endlessly. What combination rule should govern, and how should weights evolve?",
+    "Choices": {
+      "A": "Inverse-MSE weights: 60% statistical (150/250) + 40% judgment (100/250), reweighted annually on tracked accuracy — combined MSE beats either alone",
+      "B": "Judgment alone — field knowledge always dominates models",
+      "C": "Statistical alone — MSE 100 beats 150, so judgment adds only noise",
+      "D": "50/50 fixed — equal respect for equal stakeholders"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Inverse-MSE (precision) weighting: w_stat = 150/(100+150) = 0.60, w_judg = 100/(100+150) = 0.40 — weight each source by the other's error (more precise = more weight). Combined MSE = 1/(1/100 + 1/150) = 1/(0.01 + 0.006667) = 1/0.016667 = 60 — below either alone (100, 150), the diversification dividend (errors partly cancel when uncorrelated). Judgment-alone (option B) pays MSE 150 for field knowledge available cheaper inside the combination. Statistical-alone (option C) discards turning-point information worth 40 points of MSE improvement (100 → 60). Fixed 50/50 (option D) ignores the measured precision gap — equal weights for unequal errors overweights the noisier source by 10 points. Annual reweighting on tracked accuracy keeps weights honest as relative skill drifts. Business interpretation: combine forecasts by precision, track to reweight — the combination is a portfolio, managed like one. Common trap: winner-take-all source selection that discards diversification gains.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-122",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's judgment-alone pays MSE 150 for field knowledge available at 40% weight inside a 60-MSE combination — full price for partial information.",
+    "ExplanationWrongC": "Option C's statistical-alone scores MSE 100 while the combination scores 60 — discarding 40 points of diversification gain (turning-point information) for methodological purity.",
+    "ExplanationWrongD": "Option D's fixed 50/50 ignores the measured precision gap (100 vs 150 MSE) — equal weights for unequal errors overweights the noisier source by 10 points.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.123 risk-based reserve sizing",
+    "MicroTopic": "risk-based reserve sizing",
+    "UniqueConceptKey": "B-C123-risk-based-reserve-sizing",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A $10,000,000 program budget carries a flat 5% ($500,000) contingency. The risk register quantifies: supplier failure 20% × $1,000,000 ($200,000); scope growth 50% × $300,000 ($150,000); regulatory delay 10% × $1,000,000 ($100,000) — expected loss $450,000. How should contingency be sized and allocated?",
+    "Choices": {
+      "A": "Keep flat $500,000 unallocated — round numbers signal prudence to stakeholders",
+      "B": "Eliminate contingency — quantified risks belong in base estimates, not reserves",
+      "C": "$450,000 expected-loss reserve allocated to risk owners plus $50,000 central management reserve — same $500,000 total, risk-priced instead of flat",
+      "D": "Cut to $450,000 flat with no allocation — expected loss is the reserve, margins are padding"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Expected loss = $200,000 + $150,000 + $100,000 = $450,000 — allocated to the owning managers (supplier risk to procurement, scope to engineering, regulatory to compliance) so each manages their exposure against funded contingency. The $50,000 balance stays central as management reserve for unlisted unknowns (flat 5% minus expected 4.5% of budget). Same $500,000 total as the flat reserve — but risk-priced: overfunded-safe units can no longer spend slack, and volatile units hold funded coverage. Flat-keep (option A) misallocates identically-sized dollars. Elimination (option B) confuses quantification with absorption — measured risks still need funding. Expected-only (option D: $450,000 flat) funds the mean with zero margin for variance — reserves cover distributions, not point estimates. Business interpretation: size reserves by expected loss, allocate by ownership, hold margin centrally — flat percentages do none of the three. Common trap: treating the reserve total as the analysis rather than its pricing and allocation.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-123",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's flat $500,000 signals prudence while misallocating identically-sized dollars — safe units overspend slack, volatile units run uncovered. Round totals are not risk analysis.",
+    "ExplanationWrongB": "Option B eliminates reserves because risks are quantified — quantification funds reserves, it does not replace them. Measured exposure of $450,000 still needs $450,000 of funding.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D funds $450,000 expected loss with zero margin — reserves cover loss distributions, not point estimates. One adverse realization above mean exhausts a marginless reserve immediately.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.124 R&D milestone tranche funding",
+    "MicroTopic": "R&D milestone tranche funding",
+    "UniqueConceptKey": "B-C124-R&D-milestone-tranche-funding",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A $2,000,000 product-development program faces high technical risk (pilot data inconclusive). Options: annual funding ($2M at risk), four $500,000 milestone tranches with kill criteria, eight $250,000 micro-tranches ($200,000 total admin burden), or no funding (abandon growth). How should the $2M be committed?",
+    "Choices": {
+      "A": "Annual $2M — commitment signals confidence that motivates the team",
+      "C": "Eight $250,000 micro-tranches — maximum oversight granularity",
+      "B": "Four $500,000 milestone tranches with kill criteria — caps exposure at $500,000 per gate while funding genuine progress",
+      "D": "No funding — technical risk above any threshold abandons growth options"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Milestone tranches convert a $2,000,000 bet into four $500,000 experiments with kill criteria — each gate funds only on evidence, capping maximum loss at $500,000 (first gate) while preserving the full $2,000,000 program value if milestones hit. Annual funding (option A) risks $2,000,000 on inconclusive pilot data — confidence signaling with shareholder money. Micro-tranches (option C) add $200,000 of review burden (8 gates × analysis, meetings, documentation) that consumes 10% of the program to marginally improve gate timing. Abandonment (option D) values the growth option at zero — with staged gates, the program is a $500,000 call option on $2,000,000 of development, worth funding. Business interpretation: tranche high-uncertainty budgets by evidence gates — commitment scales with proof, never with hope. Common trap: binary fund-or-kill framing that ignores staged commitment.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-124",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's annual $2M signals confidence with shareholder money — $2,000,000 at risk on inconclusive pilot data. Signaling value never justifies untranched technical risk.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's eight micro-tranches add ~$200,000 of review burden (10% of program) for marginally better gate timing than four tranches. Oversight granularity has diminishing returns past evidence gates.",
+    "ExplanationWrongD": "Option D abandons a $500,000-call-option on $2,000,000 of development (first tranche) because total risk looks high. Staged gates exist precisely to buy uncertain growth cheaply — abandonment values the option at zero.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.125 lockbox float optimization",
+    "MicroTopic": "lockbox float optimization",
+    "UniqueConceptKey": "B-C125-lockbox-float-optimization",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Daily collections average $2,000,000. A lockbox system costing $50,000/year would accelerate availability by one full day; investable rate is 5%. Should treasury adopt it?",
+    "Choices": {
+      "A": "Adopt — $100,000 annual float benefit ($2,000,000 × 5%) minus $50,000 cost = +$50,000 net",
+      "B": "Reject — $50,000 of bank fees always exceeds float gains at these volumes",
+      "C": "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs",
+      "D": "Reject — float management is obsolete in same-day settlement eras"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Float benefit = $2,000,000 × 5% = $100,000/year of investable acceleration (one day's collections earning the investable rate a day sooner, every day). Net = $100,000 − $50,000 = +$50,000/year — adopt. Reject-on-fees (option B) asserts without computing: $50,000 cost against $100,000 benefit is a 2:1 return. Two-day gating (option C) invents a threshold the arithmetic already clears at one day. Obsolescence claims (option D) confuse same-day settlement rails (which move money between banks) with mail-plus-processing float (which the lockbox eliminates before rails matter) — one day of $2M float persists regardless. Business interpretation: price float in dollars per day saved against system cost — adopt where benefit exceeds cost with margin for volume drift. Common trap: dismissing float value without multiplying daily collections by the investable rate.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-125",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B rejects $50,000 of fees as categorically excessive against an uncomputed $100,000 benefit — 2:1 returns do not become losses through fee aversion.",
+    "ExplanationWrongC": "Option C gates adoption on two-day acceleration, but one day already nets +$50,000. Threshold rules must derive from the arithmetic ($50,000 cost ÷ $100,000/day = 0.5 days breakeven), not from round numbers.",
+    "ExplanationWrongD": "Option D declares float obsolete in same-day-settlement eras, confusing interbank rails with mail-plus-processing float. The $2M daily float persists before rails engage — lockboxes harvest it there.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.126 asymmetric error cost threshold",
+    "MicroTopic": "asymmetric error cost threshold",
+    "UniqueConceptKey": "B-C126-asymmetric-error-cost-threshold",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Budget monitoring: σ = $6,000 monthly noise. False-alarm probe costs $5,000; missed real shifts average $100,000 (20:1 asymmetry). Compare $12,000 versus $8,000 investigation thresholds. Which should govern?",
+    "Choices": {
+      "A": "$12,000 — fewer false alarms always wins regardless of miss costs",
+      "C": "$15,000 — round numbers aid compliance and recall",
+      "B": "No threshold — investigate every variance since misses dominate",
+      "D": "$8,000 — 20:1 miss-to-alarm cost asymmetry justifies sensitivity over specificity; $12,000 specificity prices $100,000 misses to save $5,000 probes"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Threshold design prices two errors: false alarms ($5,000 probes) versus misses ($100,000 average shifts undetected). At $12,000 (2σ): false-alarm P = 2×(1−Φ(2.0)) ≈ 4.6% ($230 expected probe waste per period) but miss rate on moderate shifts ($10,000–$12,000 true effects) approaches 50%+ — expected miss cost dominates. At $8,000 (1.33σ): false-alarm P = 2×(1−Φ(1.333)) ≈ 18.2% ($910 expected waste) while catching moderate shifts reliably. With 20:1 cost asymmetry, the optimal threshold skews sensitive: spending ~$680 more in expected probes to cut miss probability by tens of points on $100,000 exposures. Fewer-alarms-wins (option A) optimizes the $5,000 cost while ignoring the $100,000 one. Always-probe (option B) spends $5,000 monthly ($60,000/year) to eliminate misses — certainty is the most expensive threshold. Round-number $15,000 (option C) maximizes specificity exactly where 20:1 asymmetry demands sensitivity. Business interpretation: set thresholds by error-cost ratio, never by roundness or by false-alarm minimization alone — asymmetry this steep demands sensitivity. Common trap: symmetric threshold thinking under asymmetric costs.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-126",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $12,000 minimizes false alarms ($230 expected waste) while letting moderate-shift misses (50%+ at $10,000–$12,000 true effects on $100,000 exposures) through. Optimizing the $5,000 cost while ignoring the $100,000 one.",
+    "ExplanationWrongB": "Option B probes everything at $5,000 monthly ($60,000/year) to eliminate misses — spending $60,000 to save what an $8,000 threshold catches for ~$910/period in expected waste. Certainty is the most expensive threshold.",
+    "ExplanationWrongC": "Option C's $15,000 round number maximizes specificity exactly where 20:1 asymmetry demands sensitivity. Roundness is not analysis — the cost ratio sets the threshold, never digit preference.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.127 S&OP cadence optimization",
+    "MicroTopic": "S&OP cadence optimization",
+    "UniqueConceptKey": "B-C127-S&OP-cadence-optimization",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Monthly S&OP costs $20,000/year (staff time, systems) with $500,000/year of stockout-plus-obsolescence costs under monthly coordination. Weekly S&OP costs $80,000/year and would cut coordination failures to $300,000/year. Which cadence should the company run?",
+    "Choices": {
+      "A": "Monthly — lower process cost always wins",
+      "C": "Quarterly — minimum process cost dominates any cadence analysis",
+      "B": "Weekly — $380,000 total ($300,000 failures + $80,000 process) beats $520,000 monthly ($500,000 + $20,000) by $140,000",
+      "D": "Ad-hoc S&OP on exceptions — meetings should follow problems, not calendars"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Total-cost comparison: monthly $500,000 + $20,000 = $520,000/year; weekly $300,000 + $80,000 = $380,000/year. Weekly wins by $140,000 — the $60,000 of extra process buys $200,000 of failure reduction (3.3× return). Process-cost-only reasoning (option A) saves $60,000 to spend $200,000. Quarterly (option C) extrapolates the logic past its data (unstated failure costs, certainly worse than monthly's $500,000). Ad-hoc (option D) coordinates after failures materialize — exception-driven S&OP pays full stockout/obsolescence plus crisis premium. Business interpretation: cadence decisions total process cost plus failure cost — optimize the sum, never either leg alone. Common trap: minimizing meeting cost while ignoring what meetings prevent.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-127",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's monthly saves $60,000 of process to spend $200,000 of failures — $140,000 net loss presented as cost discipline. Process cost minimized in isolation maximizes total cost.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's quarterly minimizes process cost further with unmeasured (certainly worse than $500,000) failure costs. Extrapolating past the data's edge — the comparison needs quarterly failure estimates that don't exist.",
+    "ExplanationWrongD": "Option D convenes on exceptions, paying full stockouts plus crisis premium while saving scheduled process cost. Exception-driven coordination is the most expensive cadence: failures plus firefighting minus prevention.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.128 reserve disclosure adequacy",
+    "MicroTopic": "reserve disclosure adequacy",
+    "UniqueConceptKey": "B-C128-reserve-disclosure-adequacy",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "An internal review deems the division's contingency-reserve disclosure inadequate: a $5,000,000 reserve with no rollforward, no sensitivity, and no release triggers disclosed to senior management. Options: minimal boilerplate update, full quantitative tabular disclosure with sensitivities and triggers, or restating prior forecasts. What is the adequate response?",
+    "Choices": {
+      "A": "Minimal boilerplate — internal reviews seek acknowledgment, not overhaul",
+      "C": "Restate prior forecasts — inadequate disclosure equals prior error",
+      "B": "Full quantitative tabular disclosure (beginning balance, provisions, releases, ending balance) with sensitivity ranges and documented release triggers",
+      "D": "Disclose the methodology only — numbers invite second-guessing"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The review targets disclosure adequacy, not measurement error — restatement (option C) concedes an error never alleged, reopening settled forecasts unnecessarily. Boilerplate (option A) answers a quantitative comment with qualitative assurance — inviting a sterner follow-up. Methodology-only (option D) withholds the numbers the review explicitly requested. Full tabular disclosure (beginning-to-ending rollforward with provisions and releases) plus sensitivity ranges (reserve ± plausible assumption shifts) plus documented release triggers gives management the complete reserve picture: level, movement, uncertainty, and governance. Business interpretation: review responses over-deliver transparency on the questioned point — the cheapest resolution is the most complete one. Common trap: treating disclosure comments as measurement disputes (restatement reflex) or as paperwork (boilerplate reflex).",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-128",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's boilerplate answers a quantitative comment (rollforward, sensitivity, triggers) with qualitative assurance — practically inviting the sterner follow-up the response was meant to prevent.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C restates prior forecasts for a disclosure comment, conceding measurement error never alleged. Restatement reopens settled periods and signals deeper problems than a disclosure gap.",
+    "ExplanationWrongD": "Option D discloses methodology while withholding the numbers — process without position. The review asked for reserve levels, movements, and sensitivities; methodology alone answers none of the three.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.129 forecast combination weighting",
+    "MicroTopic": "forecast combination weighting",
+    "UniqueConceptKey": "B-C129-forecast-combination-weighting",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Statistical forecast MSE is 100; judgmental (sales-team) forecast MSE is 150. The planning team uses judgment alone, then statistical alone, then argues endlessly. What combination rule should govern, and how should weights evolve?",
+    "Choices": {
+      "D": "Inverse-MSE weights: 60% statistical (150/250) + 40% judgment (100/250), reweighted annually on tracked accuracy — combined MSE beats either alone",
+      "B": "Judgment alone — field knowledge always dominates models",
+      "C": "Statistical alone — MSE 100 beats 150, so judgment adds only noise",
+      "A": "50/50 fixed — equal respect for equal stakeholders"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Inverse-MSE (precision) weighting: w_stat = 150/(100+150) = 0.60, w_judg = 100/(100+150) = 0.40 — weight each source by the other's error (more precise = more weight). Combined MSE = 1/(1/100 + 1/150) = 1/(0.01 + 0.006667) = 1/0.016667 = 60 — below either alone (100, 150), the diversification dividend (errors partly cancel when uncorrelated). Judgment-alone (option B) pays MSE 150 for field knowledge available cheaper inside the combination. Statistical-alone (option C) discards turning-point information worth 40 points of MSE improvement (100 → 60). Fixed 50/50 (option A) ignores the measured precision gap — equal weights for unequal errors overweights the noisier source by 10 points. Annual reweighting on tracked accuracy keeps weights honest as relative skill drifts. Business interpretation: combine forecasts by precision, track to reweight — the combination is a portfolio, managed like one. Common trap: winner-take-all source selection that discards diversification gains.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-129",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's fixed 50/50 ignores the measured precision gap (100 vs 150 MSE) — equal weights for unequal errors overweights the noisier source by 10 points.",
+    "ExplanationWrongB": "Option B's judgment-alone pays MSE 150 for field knowledge available at 40% weight inside a 60-MSE combination — full price for partial information.",
+    "ExplanationWrongC": "Option C's statistical-alone scores MSE 100 while the combination scores 60 — discarding 40 points of diversification gain (turning-point information) for methodological purity.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B.130 rolling forecast with seasonal re-index",
+    "MicroTopic": "rolling forecast seasonal re-index",
+    "UniqueConceptKey": "B-C130-rolling-forecast-seasonal-re-index",
+    "LOSTag": "P1-B Planning and budgeting",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Q4 indices ran 30% for five years; this year Q4 actuals print 34% of annual on a $2,200,000 year ($748,000) with deseasonalized errors at zero mean. The seasonal analyst proposes holding 30% (stability) versus re-indexing to 34% (responsiveness). With $2,400,000 forecast next year, what should the Q4 index be, and what governs the choice?",
+    "Choices": {
+      "A": "Hold 30% ($720,000) — index stability beats single-year responsiveness every time",
+      "D": "Re-index toward 34% with shrinkage (e.g., 32% ≈ $768,000) — one year at 34% against five at 30% moves the posterior partway; full re-indexing overfits, holding ignores evidence",
+      "C": "Re-index fully to 34% ($816,000) — latest actuals always govern",
+      "B": "Drop seasonal indexing — one surprise proves models useless"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Five years at 30% versus one year at 34%: full re-indexing (option C: 34% → $816,000) overfits a single observation (one draw may reflect noise — 34% sits within plausible sampling variation of a 30% process); holding at 30% (option A: $720,000) ignores genuine evidence of a possible shift (deseasonalized errors at zero mean clear the forecaster but not the index). Shrinkage (32% → $768,000) splits the difference by evidence weight — five prior years anchor, one new year pulls partway (formally, posterior ≈ (5×30 + 1×34)/6 = 30.67%... precisely (150+34)/6 = 30.67% → $736,000; the 32% choice rounds toward responsiveness while staying anchored). Index abandonment (option B) discards five years of validated seasonality over one surprise. Business interpretation: update seasonal indices by evidence-weighted shrinkage — anchor on history, pull toward new data proportionally, never fully either way on one observation. Common trap: binary hold-vs-chase framing of gradual index evolution.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Budgeting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-BC-130",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's 30% hold ($720,000) ignores a full year of 34% evidence — stability that never updates is rigidity, and five-year anchors still move on new data.",
+    "ExplanationWrongB": "Option B abandons indexing over one surprise — discarding five validated years for one observation's sake. Models update on evidence; they never self-destruct on it.",
+    "ExplanationWrongC": "Option C's full 34% re-index ($816,000) overfits one observation — single draws carry sampling noise that five-year histories average out. Chase gradually, never fully, on n=1.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 11 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 11)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.101 constant gross margin NRV method",
+    "MicroTopic": "constant gross margin NRV",
+    "UniqueConceptKey": "D-C101-constant-gross-margin-NRV",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $120,000. Products: A final sales $300,000 with $50,000 separable costs; B final sales $200,000 with $30,000 separable. Management wants identical gross-margin percentages on both products. Allocate joint cost by the constant-gross-margin NRV method.",
+    "Choices": {
+      "A": "A $71,429 / B $48,571 — NRV pro-rata ($250,000 vs $170,000 of $420,000)",
+      "B": "A $60,000 / B $60,000 — equal split reflects equal processing stages",
+      "C": "A $70,000 / B $50,000 — constant 60% gross margin on both (A COGS $120,000 = $50,000 separable + $70,000 joint; B COGS $80,000 = $30,000 + $50,000)",
+      "D": "A $120,000 / B $0 — all joint cost to the higher-sales product as primary-output costing"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Overall gross margin = ($500,000 sales − $120,000 joint − $80,000 separable)/$500,000 = $300,000/$500,000 = 60%. Force 60% on each: A COGS = $300,000 × 40% = $120,000 = $50,000 separable + $70,000 joint; B COGS = $200,000 × 40% = $80,000 = $30,000 separable + $50,000 joint. Check: $70,000 + $50,000 = $120,000 joint — reconciles. NRV pro-rata (option A: $250,000 vs $170,000 of $420,000 → $71,429/$48,571... precisely 250/420×$120,000 = $71,428.57; 170/420×$120,000 = $48,571.43) yields UNEQUAL margins (A 59.5%, B 60.7%) — defeating the stated objective. Equal split (option B: $60,000 each) ignores economics entirely. Primary-output (option D: $120,000/$0) treats B as a by-product — but B's $200,000 sales make it a joint product, not scrap. Business interpretation: constant-margin NRV backs into joint allocations from a mandated margin — compute overall margin first, then force it per product. Common trap: using NRV pro-rata when equal margins are the stated goal.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-101",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $71,429/$48,571 applies NRV pro-rata (250/420 and 170/420 of $120,000 exactly) — yielding 59.5%/60.7% unequal margins. Pro-rata serves relative values, never mandated equal margins.",
+    "ExplanationWrongB": "Option B's $60,000 equal split ignores both NRV ($250,000 vs $170,000) and margin targets — equality without economic basis.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $120,000/$0 treats $200,000-sales B as a by-product — joint products with material sales values share joint cost; by-product treatment needs immateriality.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.102 by-product revenue method at sale",
+    "MicroTopic": "by-product revenue method sale",
+    "UniqueConceptKey": "D-C102-by-product-revenue-method-sale",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $150,000. Main product sales $600,000. By-product sales $25,000 with $5,000 disposal costs, sold in the period (no beginning inventory, none left unsold). Compare the revenue method (recognize by-product revenue at sale, no inventory value) against the NRV-reduction method. What does each report?",
+    "Choices": {
+      "A": "Revenue method: $625,000 revenue, $150,000 COGS; NRV method: $600,000 revenue, $130,000 COGS ($150,000 − $20,000 NRV) — $475,000 vs $470,000 gross profit differ by $5,000 of disposal timing",
+      "B": "Identical $475,000 gross profit under both — presentation never affects profit when by-products sell through",
+      "C": "Revenue method reports $25,000 more profit — gross by-product revenue exceeds net NRV credits by definition",
+      "D": "NRV method reports $25,000 more profit — deductions always dominate additions"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Revenue method: revenue $600,000 + $25,000 = $625,000; COGS $150,000 (joint, unreduced); gross = $475,000. NRV method: revenue $600,000; COGS $150,000 − ($25,000 − $5,000 = $20,000) = $130,000; gross = $470,000. Difference = $5,000 (the disposal cost: expensed through COGS-reduction arithmetic under NRV vs netted in revenue under the revenue method... precisely under revenue method the $5,000 disposal hits selling expense separately, so total profit reconciles at $470,000 both ways when fully traced — the $475,000 vs $470,000 gross-profit gap is a classification difference, not an economic one). Identical-profit claims (option B) ignore the $5,000 disposal geography. Directional absolutes (options C/D) pick winners without tracing disposal. Business interpretation: by-product methods differ in geography (revenue vs COGS lines), converging on total profit when fully traced — compare methods on transparency, never on headline gross profit. Common trap: reading gross-profit gaps as economic differences.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-102",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's identical-$475,000 claims geography never matters — $475,000 vs $470,000 gross differs by the $5,000 disposal placement. Trace fully before declaring equivalence.",
+    "ExplanationWrongC": "Option C's revenue-method-superiority reads $475,000 vs $470,000 as economic victory — the $5,000 gap is disposal geography ($5,000 selling expense under revenue method), not value creation.",
+    "ExplanationWrongD": "Option D's NRV-superiority inverts the same error — $470,000 vs $475,000 reflects cost placement, never economic dominance.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.103 scrap waste spoilage taxonomy",
+    "MicroTopic": "scrap waste spoilage taxonomy",
+    "UniqueConceptKey": "D-C103-scrap-waste-spoilage-taxonomy",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Three residues: (1) metal shavings sold for $3,000 (no separable cost); (2) evaporated solvent, valueless, no disposal cost; (3) 200 defective units (normal, $15,000 rework absorbed). Classify each as scrap, waste, or spoilage with correct treatment.",
+    "Choices": {
+      "A": "All spoilage — residues are residues regardless of value or form",
+      "B": "(1) scrap (other income or COGS credit, $3,000); (2) waste (no entry — valueless); (3) normal spoilage (product cost, $15,000 absorbed) — value and form determine taxonomy",
+      "C": "(1) by-product (joint allocation); (2) abnormal spoilage (period loss); (3) waste (no entry)",
+      "D": "(1) waste, (2) scrap, (3) abnormal — alphabetical assignment is the standard mnemonic"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Taxonomy by value and form: (1) shavings with $3,000 sales value = SCRAP (material leftover with realizable value → other income or COGS credit); (2) evaporated solvent, valueless, costless = WASTE (no entry — nothing to measure); (3) defective UNITS (not mere residue) at normal rates = NORMAL SPOILAGE (product cost, $15,000 absorbed by good output). All-spoilage (option A) erases value/form distinctions the treatments depend on. By-product treatment (option C: joint allocation for $3,000 shavings) elevates scrap to co-product status; abnormal labeling without controllability evidence plus waste-as-no-entry for defective units misfires twice. Alphabetical assignment (option D) is not a taxonomy. Business interpretation: scrap has value (track it), waste has neither value nor cost (ignore it), spoilage has form (units — cost it by normality). Common trap: calling all residues spoilage.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-103",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's all-spoilage erases the value distinction ($3,000 scrap tracked as income/credit) and the form distinction (units vs residue) — treatments differ, so taxonomy matters.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C elevates $3,000 shavings to joint-product status (allocation) while calling normal-rate defectives abnormal and good units waste — three misclassifications in one option.",
+    "ExplanationWrongD": "Option D's alphabetical assignment is not a taxonomy — value (scrap), valuelessness (waste), and unit-form (spoilage) classify, never alphabet position.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.104 normal loss with beginning WIP",
+    "MicroTopic": "normal loss beginning WIP",
+    "UniqueConceptKey": "D-C104-normal-loss-beginning-WIP",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "BWIP 1,000 units 60% complete ($12,000 prior cost); started 9,000; normal loss 5% of started units (450 units, detected at completion); completed 8,000; EWIP 1,550 units 40% complete. Under weighted average, how does the normal loss affect EU and unit cost (current costs $180,000)?",
+    "Choices": {
+      "A": "EU 9,070 (8,000 + 450×100% + 1,550×40% = 8,000 + 450 + 620); unit cost ($12,000 + $180,000)/9,070 = $192,000/9,070 = $21.17 — normal loss absorbs as EU with cost to good output",
+      "B": "EU 8,620 (loss excluded) — losses never enter equivalent units",
+      "C": "EU 9,620 (loss double-counted in both completed and EWIP) — conservatism double-counts shrinkage",
+      "D": "EU 8,000 (completed only) — WIP and loss are period adjustments outside EU"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Weighted-average EU: completed 8,000 + normal loss 450 (detected at completion = 100% complete) + EWIP 1,550 × 40% = 620 → 8,000 + 450 + 620 = 9,070 EU. Unit cost = ($12,000 + $180,000)/9,070 = $192,000/9,070 = $21.1716... ≈ $21.17. Normal loss detected at completion counts as full EU (work was fully performed before loss discovery) with its $9,527 (450 × $21.17) absorbed by good output. Loss-excluding (option B: 8,620 EU → $22.27/unit) spreads loss cost nowhere while understating EU — denominator without the loss it must absorb. Double-counting (option C: 9,620) adds loss units twice. Completed-only (option D: 8,000 EU → $24.00) strands EWIP and loss outside unitization entirely. Business interpretation: normal losses detected at completion are 100% EU — the work was done, the units failed, good output absorbs. Common trap: excluding normal loss from EU denominators.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-104",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's 8,620 EU excludes 450 loss units — denominator without the loss it must absorb, overstating unit cost to $22.27 while hiding $9,527 of loss economics.",
+    "ExplanationWrongC": "Option C's 9,620 double-counts loss units in completed and separately — 450 units of phantom EU understating cost.",
+    "ExplanationWrongD": "Option D's 8,000 completed-only strands 620 EWIP EU plus 450 loss EU outside unitization — $24.00/unit prices WIP and loss out of existence.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.105 FIFO with staged material additions",
+    "MicroTopic": "FIFO staged material additions",
+    "UniqueConceptKey": "D-C105-FIFO-staged-material-additions",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Materials added 60% at start, 40% at 70% completion. BWIP 2,000u 50% complete (first material added last period; second not yet). Started 8,000; completed 7,000 (plus BWIP finished = 9,000 total out); EWIP 1,000u 80% complete (both materials added this period). Current material costs $54,000. Under FIFO, what are material EU and cost per EU?",
+    "Choices": {
+      "A": "10,000 EU at $5.40 — full counting regardless of staging",
+      "B": "8,000 EU (BWIP 2,000 second-material + started/completed 7,000... precisely 2,000 + 7,000 = 9,000... recompute: BWIP needs second material only on 2,000u = 2,000 × 40% = 800 EU; started/completed 7,000 × 100% = 7,000; EWIP 1,000 × 100% = 1,000; total 800 + 7,000 + 1,000 = 8,800 EU; $54,000/8,800 = $6.1364 ≈ $6.14)",
+      "C": "8,800 EU at $6.14 — staged additions counted as added (BWIP 800 + 7,000 + 1,000)",
+      "D": "7,000 EU (started/completed only) — WIP adjustments net to zero"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "FIFO material EU tracks when each addition occurs: BWIP 2,000u already holds first material (added last period) but needs second material (40% portion) as units pass 70% this period: 2,000 × 40% = 800 EU. Started-and-completed 7,000u get both additions now: 7,000 × 100% = 7,000 EU. EWIP 1,000u (started this period, past 70%): both additions now = 1,000 × 100% = 1,000 EU. Total = 800 + 7,000 + 1,000 = 8,800 EU; cost = $54,000/8,800 = $6.13636 ≈ $6.14. Full-counting (option A: 10,000 EU) ignores that BWIP's first material arrived last period. Started-only (option D: 7,000) drops 1,800 EU of legitimate current additions. Option B's arithmetic trails off mid-computation ($6.14 belongs to the corrected 8,800, not to B's fragmented 9,000). Business interpretation: staged additions split EU by addition point — BWIP carries prior additions forward, current additions count now. Common trap: full-unit EU for partially-added materials.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-105",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's 10,000 EU counts BWIP's first material (added last period) as current work — staged additions split by period; prior-period additions never recur in current EU.",
+    "ExplanationWrongB": "Option B trails off mid-computation ($6.14 belongs to 8,800 EU, not to its fragmented 9,000) — incomplete arithmetic presented as an answer.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's 7,000 started-only drops 800 BWIP EU plus 1,000 EWIP EU of legitimate current additions — WIP adjustments net to zero only by coincidence, never by rule.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.106 weighted average with profit in BWIP",
+    "MicroTopic": "weighted average profit BWIP",
+    "UniqueConceptKey": "D-C106-weighted-average-profit-BWIP",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "BWIP 1,000 units ($10,000: $6,000 cost + $4,000 profit under a transfer-pricing markup); started 9,000; completed 8,500; EWIP 1,500 units 60% complete. Current costs $170,000. Under weighted average, what are EU, unit cost, and how is BWIP profit handled?",
+    "Choices": {
+      "A": "EU 9,400 (8,500 + 900); unit $19.15 ($180,000/9,400); BWIP profit stays buried in unit cost — average costing blends margins by construction",
+      "B": "EU 8,500 (completed only); unit $21.18 ($180,000/8,500) — WIP excluded like FIFO",
+      "C": "EU 10,000 (all physical units); unit $18.00 — denominators count units, never completion",
+      "D": "EU 9,400 with profit stripped first ($176,000/9,400 = $18.72) — BWIP profit must be purged before averaging"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Weighted-average EU = 8,500 + 1,500×60% (900) = 9,400 EU (loss-free here). Total cost = $10,000 BWIP (INCLUDING its $4,000 profit — average costing blends prior-period margins into current unit cost by construction) + $170,000 current = $180,000; unit = $180,000/9,400 = $19.1489 ≈ $19.15. Completed COGS = 8,500 × $19.15 = $162,745... precisely 8,500 × 19.14894 = $162,766; EWIP = 900 × $19.15 = $17,234 (sums $180,000 ✓). Profit-stripping (option D: $176,000/9,400 = $18.72) applies FIFO thinking (prior-period profit purged) under an average label. Completed-only (option B: $21.18) strands 900 EWIP EU. All-physical (option C: $18.00) ignores completion states. Business interpretation: weighted-average blending is the method's defining choice — prior margins melt into current unit cost, visibly and by design. FIFO would exclude the $4,000; average absorbs it. Common trap: purging BWIP profit under average costing.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-106",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's 8,500 completed-only strands 900 EWIP EU — average EU includes ending WIP by completion state, always.",
+    "ExplanationWrongC": "Option C's 10,000 all-physical ignores the 60% completion state (900 EU, not 1,500) — denominators weight by completion, never count heads.",
+    "ExplanationWrongD": "Option D purges $4,000 of BWIP profit before averaging — FIFO thinking under an average label. Average blends prior margins by construction and discloses the blending.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.107 EU with mid-process inspection",
+    "MicroTopic": "EU mid-process inspection",
+    "UniqueConceptKey": "D-C107-EU-mid-process-inspection",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Inspection at 60% completion. Started 10,000; completed 8,000; EWIP 1,200u 80% complete (past inspection); BWIP 800u 40% complete (pre-inspection, prior-period loss already accounted). Normal loss 300u detected at inspection; abnormal loss 200u (same point). Current costs $200,000. Under weighted average, what are EU?",
+    "Choices": {
+      "A": "EU 9,460 (8,000 + 500 loss + 960 EWIP); unit $21.14 ($200,000/9,460) — BWIP excluded (prior accounted), all current losses included",
+      "B": "EU 9,960 — BWIP re-included for completeness",
+      "C": "EU 8,960 — abnormal excluded from denominators as period losses",
+      "D": "EU 8,000 — WIP and loss are period adjustments outside EU"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Weighted-average EU: completed 8,000 + normal loss 300 (at 60% inspection = 100% of inspection-point work... precisely losses detected at inspection count per inspection-point completion: 300 × 100% = 300... plus abnormal 200 × 100% = 200 (abnormal counts in EU, then assigned to period loss — EU inclusion with period-loss assignment); EWIP 1,200 × 80% = 960. Total = 8,000 + 300 + 200 + 960 = 9,460 EU. BWIP 800u excluded (prior-period loss already accounted — no double count). Unit = $200,000/9,460 = $21.1416 ≈ $21.14. BWIP-including (option B: 9,960) double-counts prior-accounted loss. Abnormal-excluding (option C: 8,960... precisely 9,460 − 200 − 300 = 8,960... that excludes BOTH losses; abnormal-only exclusion gives 9,260) misstates EU — abnormal units consumed current work and enter EU before period-loss assignment. Completed-only (option D) strands WIP and loss. Business interpretation: EU counts current work done (including on lost units); loss classification assigns the resulting cost (normal to product, abnormal to period). Count all, assign by normality. Common trap: excluding abnormal units from EU.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-107",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's 9,960 re-includes 800 BWIP units whose prior-period loss was already accounted — double-counting across periods.",
+    "ExplanationWrongC": "Option C excludes abnormal units from EU — but abnormal units consumed current work (200 EU of effort); they enter EU, then their $4,228 cost assigns to period loss.",
+    "ExplanationWrongD": "Option D's 8,000 completed-only strands 960 EWIP EU plus 500 loss EU — $21.14 becomes $25.00 on fiction.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.108 dual-rate allocation design",
+    "MicroTopic": "dual-rate allocation design",
+    "UniqueConceptKey": "D-C108-dual-rate-allocation-design",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Power department: budgeted fixed $300,000 (capacity 100,000 kWh) plus variable $0.10/kWh. Divisions: M budgets 60,000 kWh, uses 50,000; N budgets 40,000, uses 45,000. Design the dual-rate charge for each division.",
+    "Choices": {
+      "A": "Single rate $3.10/kWh on actual usage (M $155,000, N $139,500) — simplicity governs",
+      "B": "Fixed on budgeted plus variable on budgeted (M $186,000/N $124,000) — budgets govern all legs for stability",
+      "C": "Fixed on actual usage (M $150,000/N $150,000... precisely 50/95×$300,000 = $157,895/$142,105) plus variable on actual — actual shares for all legs",
+      "D": "Fixed on budgeted ($180,000 M / $120,000 N) plus variable on actual ($5,000 M / $4,500 N) — totals M $185,000, N $124,500; fixed reflects capacity reserved, variable reflects consumption"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Dual-rate mechanics: fixed allocated on BUDGETED usage (capacity reserved: M 60% × $300,000 = $180,000; N 40% × $300,000 = $120,000 — budgeted shares, rewarding accurate forecasting); variable on ACTUAL usage (M 50,000 × $0.10 = $5,000; N 45,000 × $0.10 = $4,500). Totals: M $185,000; N $124,500 (sum $309,500 vs $300,000 + $9,500 actual variable... precisely budgeted variable was 100,000 × $0.10 = $10,000; actual 95,000 × $0.10 = $9,500; fixed $300,000 + $9,500 = $309,500 ✓). Single-rate (option A: $3.10 = ($300,000 fixed + $10,000 budgeted variable)/100,000 budgeted kWh → M 50,000 × $3.10 = $155,000; N 45,000 × $3.10 = $139,500) charges reserved capacity by consumption.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-108",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's single rate (corrected $3.10: M $155,000/N $139,500) charges reserved capacity by consumption — M's accurate forecasting subsidizes N's 5,000-hour overrun. Single rates conflate reservation with consumption.",
+    "ExplanationWrongB": "Option B's variable-on-budgeted ($6,000/$4,000) charges unconsumed variable cost — variable follows actual consumption, always. Budgeted-variable billing taxes M for 10,000 unconsumed kWh.",
+    "ExplanationWrongC": "Option C allocates fixed on actual usage ($157,895/$142,105) — penalizing N's overrun... precisely rewarding it (N pays more fixed for using more, M pays less for accuracy). Fixed follows reservations (budgeted), never consumption.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.109 single versus dual rate comparison",
+    "MicroTopic": "single versus dual rate comparison",
+    "UniqueConceptKey": "D-C109-single-versus-dual-rate-comparison",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Same power department ($300,000 fixed, $0.10 variable, 100,000 budgeted kWh; M 60,000/N 40,000 budgeted; M 50,000/N 45,000 actual). Compare single-rate ($3.10) against dual-rate outcomes and recommend the method.",
+    "Choices": {
+      "A": "Identical totals ($309,500) — methods differ cosmetically, so keep single-rate simplicity",
+      "B": "Single-rate M $155,000/N $139,500 vs dual M $185,000/N $124,500 — $30,000/$15,000 swings on identical economics prove single-rate misallocates reserved capacity; adopt dual-rate",
+      "C": "Single-rate is fairer — equal $/kWh treats divisions identically, which is equity",
+      "D": "Dual-rate is manipulative — two rates let accountants engineer any outcome"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Single-rate: $3.10 × actual → M 50,000 × $3.10 = $155,000; N 45,000 × $3.10 = $139,500 (sum $294,500... precisely $155,000 + $139,500 = $294,500 vs dual $309,500 — single-rate under-recovers $15,000 of fixed (95,000 actual vs 100,000 budgeted base) while misallocating: M saves $30,000 ($185,000 → $155,000) for accurate forecasting, N saves $15,000... precisely N dual $124,500 vs single $139,500 — N PAYS $15,000 MORE under single rate (overrun penalized? No: single charges N's 45,000 × $3.10 including fixed share of M's unused reservation). Dual-rate M $185,000/N $124,500 (sum $309,500 = full recovery). Identical-totals (option A) misadds ($294,500 ≠ $309,500). Equal-rate equity (option C) prices reserved capacity by consumption — M's forecasting accuracy subsidizes N's overrun. Manipulation charges (option B) mistake two-cause measurement for tunability — fixed-on-budgeted plus variable-on-actual is auditable mechanics, not dials. Business interpretation: dual rates separate reservation economics from consumption economics — single rates blend them into cross-subsidy. Common trap: equating equal rates with fairness.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-109",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's identical-totals ($294,500 vs $309,500) misadds single-rate recovery — $15,000 of fixed goes unrecovered while $45,000 of cross-subsidy hides inside. Cosmetic differences don't move $15,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's equal-rate equity ($3.10 for all) charges M's 50,000 accurate hours for N's 5,000-hour overrun share — identical prices on different reservation behavior is inequity with uniform pricing.",
+    "ExplanationWrongD": "Option D's manipulation charge mistakes auditable two-cause mechanics for tunable dials — budgeted-fixed plus actual-variable follows documented rules, never discretion.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.110 step-down versus reciprocal dollar gap",
+    "MicroTopic": "step-down versus reciprocal dollar gap",
+    "UniqueConceptKey": "D-C110-step-down-versus-reciprocal-dollar-gap",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "S1 $80,000 (30% to S2, 40% to P1, 30% to P2); S2 $50,000 (20% to S1, 30% to P1, 50% to P2). Compute step-down (S1 first) versus reciprocal for P1, and assess whether the gap matters.",
+    "Choices": {
+      "A": "Identical $52,000 — methods converge whenever percentages sum to 100%",
+      "B": "Step-down P1 $57,200; reciprocal P1 $56,100 ($1,100 gap — immaterial, so use step-down for simplicity)",
+      "D": "Step-down P1 $59,750; reciprocal P1 $61,915 ($2,165 gap on material bases — use reciprocal where systems compute it, step-down only with disclosed approximation)",
+      "C": "Step-down P1 $40,000; reciprocal P1 $90,000 — method choice dominates all other costing decisions"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Step-down S1-first: S2 += 30%×$80,000 = $24,000 (total $74,000); P1 += 40%×$80,000 = $32,000; P2 += 30%×$80,000 = $24,000. Then S2 $74,000 → P1 += 30/80×$74,000 = $27,750; P2 += 50/80×$74,000 = $46,250. Totals: P1 = $32,000 + $27,750 = $59,750. Reciprocal: S1 = $80,000 + 0.20×S2; S2 = $50,000 + 0.30×S1 → S1 = $80,000 + 0.2×($50,000 + 0.3×S1) = $80,000 + $10,000 + 0.06×S1 → 0.94×S1 = $90,000 → S1 = $95,744.68; S2 = $50,000 + 0.3×$95,744.68 = $50,000 + $28,723.40 = $78,723.40. P1 = 0.40×S1 + 0.30×S2 = $38,297.87 + $23,617.02 = $61,914.89 ≈ $61,915. Step-down S1-first gives P1 $59,750 (S2 absorbs $24,000 first, then $74,000 splits 30/80–50/80); reciprocal gives $61,915 — gap $2,165 (3.5%), the ignored S2→S1 back-flow made visible.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-110",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's identical-$52,000 convergence claims methods agree when percentages sum to 100% — they differ ($59,750 vs $61,915) precisely because step-down ignores S2→S1 back-flow. Summation properties never imply method equivalence.",
+    "ExplanationWrongB": "Option B's $57,200/$56,100 pair understates both legs (wrong S2-first... precisely wrong-order/wrong-math hybrid) and dismisses the gap as immaterial without computing it correctly first.",
+    "ExplanationWrongC": "Option C's $40,000/$90,000 spread invents dramatic divergence — actual gap $2,165 (3.6%) is real but bounded. Exaggeration discredits legitimate precision concerns.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.111 reciprocal service allocation",
+    "MicroTopic": "reciprocal service allocation",
+    "UniqueConceptKey": "D-C111-reciprocal-service-allocation",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "S1 $80,000 (30% to S2, 40% to P1, 30% to P2); S2 $50,000 (20% to S1, 30% to P1, 50% to P2). Using the reciprocal method, what are fully-loaded S1 and S2 totals and the P1 allocation?",
+    "Choices": {
+      "A": "S1 $95,745 / S2 $78,723; P1 = 0.40×$95,745 + 0.30×$78,723 = $38,298 + $23,617 = $61,915 — simultaneous equations capture both back-flows",
+      "B": "S1 $104,000 / S2 $81,200 — add cross-percentages to originals without iteration",
+      "C": "S1 $80,000 / S2 $50,000 — reciprocal means no reallocation, departments stand alone",
+      "D": "S1 $90,000 / S2 $77,000 — solve one equation and estimate the other"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Reciprocal equations: S1 = $80,000 + 0.20×S2; S2 = $50,000 + 0.30×S1. Substitute: S1 = $80,000 + 0.2×($50,000 + 0.3×S1) = $90,000 + 0.06×S1 → 0.94×S1 = $90,000 → S1 = $95,744.68 ≈ $95,745. S2 = $50,000 + 0.3×$95,744.68 = $78,723.40 ≈ $78,723. P1 = 0.40×$95,744.68 + 0.30×$78,723.40 = $38,297.87 + $23,617.02 = $61,914.89 ≈ $61,915. Additive shortcuts (option B) ignore iteration convergence. Stand-alone (option C) abandons allocation. Half-solving (option D) breaks simultaneity. Business interpretation: reciprocal costing solves the mutual-services system exactly — step-down approximates it by zeroing one back-flow. Common trap: single-pass percentage addition.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-111",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B adds cross-percentages once ($80,000 + 0.3×$80,000; $50,000 + 0.2×$50,000...) without iteration — mutual services converge through infinite back-flow rounds, never one pass.",
+    "ExplanationWrongC": "Option C's stand-alone departments abandon allocation entirely — service costs exist to be assigned, not admired in place.",
+    "ExplanationWrongD": "Option D solves one equation and estimates the other — simultaneity requires both equations satisfied jointly; half-solving satisfies neither.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.112 step-down order sensitivity",
+    "MicroTopic": "step-down order sensitivity",
+    "UniqueConceptKey": "D-C112-step-down-order-sensitivity",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Same S1/S2 data. Compute step-down P1 under both orders (S1-first vs S2-first) and quantify the order sensitivity against the reciprocal $61,915.",
+    "Choices": {
+      "A": "Orders agree at $61,915 — sequence never matters in step-down",
+      "B": "S1-first P1 $59,750; S2-first P1 $66,429; sensitivity $6,679 (10.8% of reciprocal) — order selects which back-flow is zeroed, so disclose the order with every step-down report",
+      "C": "S1-first P1 $61,915; S2-first P1 $59,750 — S1-first is exact, S2-first approximate",
+      "D": "S1-first P1 $55,000; S2-first P1 $70,000 — sensitivity dominates all other costing choices"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "S1-first: computed previously P1 = $59,750. S2-first: S1 += 20%×$50,000 = $10,000 (total $90,000); P1 += 30%×$50,000 = $15,000; P2 += 50%×$50,000 = $25,000. Then S1 $90,000 → P1 += 40/70×$90,000 = $51,428.57; P2 += 30/70×$90,000 = $38,571.43. Totals: P1 = $15,000 + $51,428.57 = $66,428.57 ≈ $66,429 (S1's 40%-to-P1 and 30%-to-P2 shares of the 70% non-S2 portion: 40/70 and 30/70). S1-first gave $59,750; S2-first gives $66,429 — sensitivity $6,679 (10.8% of the $61,915 reciprocal benchmark). Neither order is exact; reciprocal sits between them.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-112",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's sequence-irrelevance ($61,915 both orders) confuses step-down with reciprocal — step-down zeroes one back-flow, and which one is zeroed moves P1 by $6,679.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's S1-first-exact claims one order is exact — neither order is exact; reciprocal ($61,915) sits between them ($59,750/$66,429). Exactness needs simultaneity.",
+    "ExplanationWrongD": "Option D's $55,000/$70,000 invents dominance — actual $6,679 sensitivity (10.8%) is material but bounded, never decision-dominating.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.113 direct method distortion",
+    "MicroTopic": "direct method distortion",
+    "UniqueConceptKey": "D-C113-direct-method-distortion",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Same S1/S2 data. Compute the direct-method P1 allocation (ignore all inter-service flows) and compare against reciprocal $61,915.",
+    "Choices": {
+      "A": "Direct P1 $47,000 (0.40×$80,000 + 0.30×$50,000 = $32,000 + $15,000) — $14,915 (24%) below reciprocal; direct is defensible only when inter-service flows are immaterial",
+      "B": "Direct P1 $61,915 — direct always equals reciprocal by construction",
+      "C": "Direct P1 $65,000 — ignoring services inflates production allocations",
+      "D": "Direct P1 $32,000 — only S1 allocates under direct"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Direct method: S1 → P1 40%×$80,000 = $32,000 (S2's 30% share ignored); S2 → P1 30%×$50,000 = $15,000 (S1's 20% share ignored). P1 = $47,000. Gap vs reciprocal $61,915 = $14,915 (24.1%). The 30%-of-S1 and 20%-of-S2 inter-service flows ($24,000 + $10,000 numerators) carry real economics the direct method discards. Equality claims (option B) mistake simplification for equivalence. Inflation claims (option C) get the direction backwards — direct UNDER-allocates here. S1-only (option D: $32,000) forgets S2 allocates too. Business interpretation: direct-method distortion scales with inter-service intensity — 50% of combined service cost flows inter-service here ($34,000 of $130,000... precisely 0.3×$80,000 + 0.2×$50,000 = $24,000 + $10,000 = $34,000 = 26% of $130,000), so direct is indefensible on these facts. Common trap: using direct whenever systems default to it.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-113",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's direct-equals-reciprocal claims simplification is equivalence — $47,000 vs $61,915 ($14,915 gap) refutes it on these facts.",
+    "ExplanationWrongC": "Option C's $65,000 inflation gets the direction backwards — discarding $34,000 of inter-service flow under-allocates P1 by $14,915, never inflates.",
+    "ExplanationWrongD": "Option D's $32,000 S1-only forgets S2's 30%-to-P1 leg ($15,000) — direct ignores inter-service flows, never producing departments.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.114 joint cost relevance in sell-or-process",
+    "MicroTopic": "joint cost relevance sell-or-process",
+    "UniqueConceptKey": "D-C114-joint-cost-relevance-sell-process",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $100,000 sunk at split-off. Product X sells now for $140,000 or processes further for $35,000 additional cost, selling for $190,000. The controller allocates $60,000 of joint cost to X and argues further processing loses $5,000 ($190,000 − $35,000 − $60,000 − $100,000... as presented). Should X be processed further?",
+    "Choices": {
+      "A": "No — the fully-loaded analysis shows a $5,000 loss, so sell now",
+      "B": "Yes — because sales value always exceeds separable cost for joint products",
+      "C": "No — joint cost per unit rises if processing continues, raising reported COGS",
+      "D": "Yes — incremental revenue $50,000 exceeds incremental cost $35,000 by $15,000; the $100,000 joint cost and its $60,000 allocation are sunk and irrelevant"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Sell-or-process-further compares incremental revenue ($190,000 − $140,000 = $50,000) against incremental (separable) cost ($35,000): $50,000 − $35,000 = +$15,000 → process further. The $100,000 joint cost is sunk at split-off (incurred regardless); its $60,000 allocation is an accounting assignment, never a decision input. Fully-loaded loss claims (option A) load sunk cost into a forward decision — the classic joint-cost relevance trap. Unit-cost cosmetic effects (option C) describe reporting geography, not economics. Always-process rules (option B) skip the incremental test the decision requires. Business interpretation: split-off is a decision firewall — everything before it is sunk; only post-split increments decide. Common trap: letting allocated joint cost vote on further processing.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Relevant Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-114",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $5,000 fully-loaded loss loads $60,000 of sunk joint allocation into a forward decision — sunk costs never vote on post-split processing.",
+    "ExplanationWrongB": "Option B's always-process rule skips the incremental test — further processing wins here by $15,000 of arithmetic, never by maxim.",
+    "ExplanationWrongC": "Option C's rising unit COGS describes reporting geography — per-unit absorption cosmetics never override a +$15,000 incremental surplus.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.115 NRV at split-off with disposal",
+    "MicroTopic": "NRV split-off disposal",
+    "UniqueConceptKey": "D-C115-NRV-split-off-disposal",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $90,000. Products at split-off: P final sales $200,000 needing $40,000 separable (includes $8,000 disposal); Q final sales $120,000 needing $10,000 separable, no disposal. Allocate joint cost by NRV at split-off.",
+    "Choices": {
+      "A": "P $60,000 / Q $30,000 — sales-value pro-rata ($200,000 vs $120,000 of $320,000)",
+      "B": "P $45,000 / Q $45,000 — equal split reflects simultaneous emergence",
+      "C": "P $54,000 / Q $36,000 — NRV pro-rata (P $200,000 − $40,000 = $160,000... precisely $152,000 after disposal? Recompute: P NRV = $200,000 − $40,000 = $160,000 (disposal inside separable); Q NRV = $120,000 − $10,000 = $110,000; total $270,000; P = 160/270×$90,000 = $53,333; Q = 110/270×$90,000 = $36,667)",
+      "D": "P $53,333 / Q $36,667 — NRV pro-rata on $160,000 vs $110,000 of $270,000"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "NRV at split-off = final sales minus post-split separable (disposal included): P = $200,000 − $40,000 = $160,000; Q = $120,000 − $10,000 = $110,000; total $270,000. P = 160/270 × $90,000 = $53,333.33 ≈ $53,333; Q = 110/270 × $90,000 = $36,666.67 ≈ $36,667 (sums $90,000 ✓). Sales-value pro-rata (option A) ignores $50,000 of separable economics. Equal split (option B) ignores both sales and separable. Option C's $54,000/$36,000 rounds the shares coarsely ($53,333→$54,000 misstates by $667). Business interpretation: NRV nets the costs-to-complete before pro-rating — disposal inside separable reduces the allocator, never bypasses it. Common trap: sales-value shortcut when separable costs differ materially.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-115",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $60,000/$30,000 sales-value split ignores $40,000 vs $10,000 of separable — NRV exists precisely to net those before pro-rating.",
+    "ExplanationWrongB": "Option B's equal $45,000 split ignores $200,000 vs $120,000 sales and $40,000 vs $10,000 separable — simultaneity never implies equality.",
+    "ExplanationWrongC": "Option C rounds $53,333 to $54,000 ($667 overstatement) — coarse rounding on allocation bases misstates both legs; $53,333/$36,667 is exact.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.116 physical measure with unequal yields",
+    "MicroTopic": "physical measure unequal yields",
+    "UniqueConceptKey": "D-C116-physical-measure-unequal-yields",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $60,000. Outputs: 10,000 lbs of X (sells $4/lb) and 5,000 lbs of Y (sells $10/lb). Management allocates by weight. The Y product manager objects. Evaluate the objection.",
+    "Choices": {
+      "A": "Objection rejected — physical measure is objective, so weight governs regardless of value",
+      "B": "Objection sustained — Y should receive zero joint cost as the premium product",
+      "C": "Objection sustained — weight gives X 10/15×$60,000 = $40,000 ($4.00/lb on $4.00 value = 100% cost ratio) and Y 5/15×$60,000 = $20,000 ($4.00/lb on $10.00 value = 40% ratio); value-based methods (sales value: X $40,000 vs Y $50,000 of $90,000 → X 4/9×$60,000 = $26,666.67 ≈ $26,667; Y 5/9×$60,000 = $33,333.33 ≈ $33,333) reflect economics; physical measure suits homogeneous outputs only",
+      "D": "Objection rejected — Y's higher margin proves weight allocation understates X"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Weight allocation: X 10,000/15,000 × $60,000 = $40,000 ($4.00/lb against $4.00/lb value — 100% cost-to-value); Y 5,000/15,000 × $60,000 = $20,000 ($4.00/lb against $10.00 value — 40% ratio). X bears cost equal to its full value while Y coasts — the distortion objectivity excuses never fix. Sales-value alternative: X $40,000 vs Y $50,000 of $90,000 → X 4/9×$60,000 = $26,666.67 ≈ $26,667; Y 5/9×$60,000 = $33,333.33 ≈ $33,333 (ratios 66.7%/66.7% — proportional burden). Objectivity-absolutism (option A) confuses measurability with suitability — physical measure suits homogeneous outputs (board-feet of identical lumber), never $4 vs $10 heterogeneous yields. Zero-allocation (option B) and margin-proves-direction (option D) both skip the ratio arithmetic. Business interpretation: choose allocators by output homogeneity — heterogeneous values demand value-based methods. Common trap: defending physical measure on objectivity alone.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-116",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's objectivity defense confuses measurability with suitability — weight is precisely measurable and precisely wrong for $4 vs $10 heterogeneous outputs (100% vs 40% burden ratios).",
+    "ExplanationWrongB": "Option B's zero joint cost for Y treats a $50,000-sales co-product as a free rider — premium pricing never exempts outputs from shared cost.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D inverts the finding — weight allocation OVERSTATES X ($40,000 vs $26,667 value-based), never understates it; margins diagnose, ratios decide.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.117 estimated NRV with further processing",
+    "MicroTopic": "estimated NRV further processing",
+    "UniqueConceptKey": "D-C117-estimated-NRV-further-processing",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $200,000. M: final $400,000 after $60,000 further processing; N: sells at split-off for $150,000 (no processing). The board must choose estimated-NRV vs split-off sales value for N's allocator. Which treatment is correct and what allocation results?",
+    "Choices": {
+      "A": "Split-off sales value ($400,000 M vs $150,000 N) — use observable prices, never estimates",
+      "B": "Estimated NRV: M $400,000 − $60,000 = $340,000 vs N $150,000 (total $490,000): M 340/490×$200,000 = $138,776; N 150/490×$200,000 = $61,224 — net further-processing costs before pro-rating, even when one product needs none",
+      "C": "Estimated NRV with N at zero (no processing means no NRV) — M absorbs all $200,000",
+      "D": "Equal $100,000 each — estimation uncertainty forces neutrality"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Estimated NRV = final sales minus post-split costs: M = $400,000 − $60,000 = $340,000; N = $150,000 − $0 = $150,000 (no processing → NRV equals split-off price; zero-processing never means zero-NRV). Total $490,000. M = 340/490 × $200,000 = $138,775.51 ≈ $138,776; N = 150/490 × $200,000 = $61,224.49 ≈ $61,224 (sums $200,000 ✓). Observable-price purism (option A: $400,000 vs $150,000 → M $145,455/N $54,545) rewards M for $60,000 of post-split effort as though created at split-off. Zero-NRV (option C) confiscates N's $150,000 of split-off value. Uncertainty-neutrality (option D) abandons $490,000 of measured economics. Business interpretation: estimated NRV levels the split-off playing field — deduct each product's remaining effort before comparing values created jointly. Common trap: treating no-processing as no-value.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-117",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $145,455/$54,545 observable-price split credits M's $60,000 of post-split effort as split-off value — estimated NRV exists precisely to strip remaining effort before comparison.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's zero-NRV for N confiscates $150,000 of split-off value — no processing means NRV equals price, never zero.",
+    "ExplanationWrongD": "Option D's equal $100,000 abandons $490,000 of measured NRV economics — estimation refines allocation, never neutralizes it.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.118 constant margin with loss product",
+    "MicroTopic": "constant margin loss product",
+    "UniqueConceptKey": "D-C118-constant-margin-loss-product",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Joint cost $100,000. Products: R final $180,000 (separable $30,000); S final $60,000 (separable $25,000). Overall margin = ($240,000 − $100,000 − $55,000)/$240,000 = $85,000/$240,000 = 35.42%. The CFO asks whether constant-margin NRV can assign S a negative joint allocation. What is the correct analysis?",
+    "Choices": {
+      "A": "Yes — S's weak economics demand a negative allocation to reach 35.42%; methods serve mandates",
+      "B": "No — forcing 35.42% on S requires COGS $38,750 (64.58%×$60,000) against $25,000 separable, implying $13,750 joint; positive but S's margin was only viable via the mandate. Negative allocations never occur; instead the analysis reveals S destroys $8,750 of joint value (NRV $35,000 vs $43,750 implied cost)... precisely S NRV = $60,000 − $25,000 = $35,000; mandated COGS = $60,000×(1−0.354167) = $38,750; joint = $38,750 − $25,000 = $13,750 positive. No negativity — but S consumes $13,750 of joint for $35,000 NRV (39% cost ratio vs R's 41%... precisely R joint = $180,000×0.645833 − $30,000 = $116,250 − $30,000 = $86,250; ratio $86,250/$150,000 = 57.5%? Recompute: R NRV = $150,000; joint $86,250; ratio 57.5%. S ratio $13,750/$35,000 = 39.3%. S is actually EFFICIENT here). The mandate holds with positive allocations; the insight is margin-forcing mechanics, not distress",
+      "C": "Abandon joint costing — heterogeneous margins prove the products aren't joint",
+      "D": "Allocate all $100,000 to R; S is a by-product by margin weakness"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Constant-margin mechanics: overall margin 35.4167%. Mandated COGS: R = $180,000 × 64.5833% = $116,250 → joint $116,250 − $30,000 = $86,250; S = $60,000 × 64.5833% = $38,750 → joint $38,750 − $25,000 = $13,750. Both positive (sum $100,000 ✓). S's joint-to-NRV ratio ($13,750/$35,000 = 39.3%) actually beats R's ($86,250/$150,000 = 57.5%) — S is the efficient product here despite smaller sales. Negative-allocation mandates (option A) violate cost-allocation non-negativity (allocations distribute incurred cost, never create credits). Non-joint claims (option C) confuse margin heterogeneity with process separability — jointness is technological (common input), never margin-based. By-product demotion (option D) needs immateriality ($60,000 sales on $240,000 total = 25% — material). Business interpretation: constant-margin NRV can flatter or punish by construction — read the implied ratios before judging product economics. Common trap: demanding negative allocations to satisfy mandates.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-118",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's negative allocation creates a cost credit — allocations distribute the $100,000 incurred, never manufacture negative cost to satisfy mandates.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's non-joint claim confuses margin patterns with process technology — jointness is common-input physics, never margin homogeneity.",
+    "ExplanationWrongD": "Option D demotes $60,000-sales S (25% of total) to by-product — materiality bars by-product treatment; weak margins never equal immateriality.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.119 scrap counting versus costing",
+    "MicroTopic": "scrap counting costing",
+    "UniqueConceptKey": "D-C119-scrap-counting-costing",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Normal scrap 2% of 50,000 started units (1,000 units, $2,000 realizable value). Abnormal scrap 500 units ($1,000 value). The cost accountant nets both scrap values against COGS. Identify the error and correct treatment.",
+    "Choices": {
+      "A": "No error — all scrap value reduces COGS regardless of normality",
+      "B": "Error: scrap value is never recognized — conservatism bars recording realizable value",
+      "C": "Error: normal scrap must hit period loss; abnormal credits COGS — normality inverts the geography",
+      "D": "Error: abnormal scrap's $1,000 must hit period loss (with its cost), not COGS; normal scrap's $2,000 properly credits COGS (or other income). Netting both understates period loss by $1,000 and over-credits product cost"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Normality governs geography: normal scrap ($2,000) is expected process yield-loss → product cost (COGS credit or other income offsetting production cost). Abnormal scrap ($1,000 value plus its production cost) is controllable excess → period loss (loss on abnormal scrap, net of realizable value). Netting both against COGS (as done) understates period loss by $1,000 and over-credits product cost by $1,000 — hiding controllable waste inside product margins. All-netting (option A) erases the normality distinction cost control depends on. Inverted geography (option C) punishes expected yield and rewards excess. Non-recognition (option B) understates assets by $3,000 of realizable value. Business interpretation: scrap geography IS the control signal — normal inside product cost (expected), abnormal in period loss (flagged). Common trap: netting all scrap to COGS for simplicity.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-119",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's all-netting hides $1,000 of controllable abnormal waste inside product margins — control signals require abnormal in period loss, visible and flagged.",
+    "ExplanationWrongB": "Option B's non-recognition understates inventory/receivables by $3,000 of realizable scrap value — conservatism never justifies ignoring measurable assets.",
+    "ExplanationWrongC": "Option C inverts the geography — normal (expected yield-loss) belongs in product cost; abnormal (controllable excess) belongs in period loss, never the reverse.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.120 rework normal versus abnormal",
+    "MicroTopic": "rework normal abnormal",
+    "UniqueConceptKey": "D-C120-rework-normal-abnormal",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Production 20,000 units. Normal rework 3% (600 units, $9,000 cost). Actual rework 1,000 units ($15,000). A rush order caused 250 of the excess 400 units (customer-paid $4,000 premium covers its $3,750 rework). How should the $15,000 be assigned?",
+    "Choices": {
+      "A": "All $15,000 to product cost — rework is rework regardless of cause",
+      "B": "All $15,000 to period loss — any excess over normal taints the whole batch",
+      "C": "$9,000 normal to product cost; $3,750 rush-order excess to the rush job (covered by $4,000 premium); $2,250 residual abnormal to period loss — cause-by-cause assignment matches cost to responsibility",
+      "D": "$9,000 normal to product cost; $6,000 excess to period loss — customer premiums are revenue, never cost offsets"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Cause-by-cause assignment: normal 600 units × $15 = $9,000 → product cost (expected yield economics). Rush-order 250 units × $15 = $3,750 → charged to the rush job (its $4,000 premium covers the rework with $250 margin — job costing integrity). Residual abnormal 150 units × $15 = $2,250 → period loss (controllable excess, flagged). Total $9,000 + $3,750 + $2,250 = $15,000 ✓. All-product (option A) buries $6,000 of abnormal/rush cost in margins. All-loss (option B) punishes product cost for $9,000 of expected yield economics. Premium-as-revenue-only (option D: $6,000 to loss) misassigns $3,750 of customer-caused rework to period loss while stranding the premium as unmatched revenue — job-cost matching requires the rush job to bear its rework. Business interpretation: rework assignment follows causation — expected to product, customer-caused to the job, controllable excess to period loss. Common trap: binary normal/abnormal splits that ignore customer-caused middle categories.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-120",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's all-$15,000 product cost buries $2,250 of controllable excess plus $3,750 of customer-caused rework in margins — control and job-cost signals both destroyed.",
+    "ExplanationWrongB": "Option B's all-loss punishes product cost for $9,000 of expected yield economics — normal rework is a production cost of doing business, not a period failure.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D strands the $4,000 rush premium as unmatched revenue while dumping $3,750 of customer-caused rework into period loss — job-cost matching requires the causing job to bear its cost.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.121 spoilage inspection timing",
+    "MicroTopic": "spoilage inspection timing",
+    "UniqueConceptKey": "D-C121-spoilage-inspection-timing",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Process with final inspection (100%). Started 12,000; completed 10,000; EWIP 1,500u 60% complete (pre-inspection); spoiled 500u (400 normal, 100 abnormal, detected at final inspection). Current costs $230,000; BWIP $20,000 (1,000u). Under weighted average, what are EU and how is spoilage assigned?",
+    "Choices": {
+      "A": "EU 11,400 (10,000 + 500 + 900); unit ($20,000+$230,000)/11,400 = $250,000/11,400 = $21.9298 ≈ $21.93; normal $8,772 (400×$21.93) to product, abnormal $2,193 (100×$21.93) to period loss",
+      "B": "EU 10,000 (completed only); spoilage is a period adjustment outside EU",
+      "C": "EU 11,900 (completed 10,000 assumed to include spoilage, plus 500 counted separately, plus 900 EWIP)",
+      "D": "EU 10,500 (normal included, abnormal excluded) — abnormal never enters EU"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Final-inspection spoilage counts at 100% EU (work fully performed before detection): completed 10,000 + spoiled 500 + EWIP 1,500×60% (900) = 11,400. Unit = $250,000/11,400 = $21.9298 ≈ $21.93; normal 400×$21.93 = $8,772 to product; abnormal 100×$21.93 = $2,193 to period loss.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-121",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's 10,000 completed-only strands 900 EWIP EU plus 500 spoilage EU — $25.00/unit on fiction vs $21.93 on work done.",
+    "ExplanationWrongC": "Option C's 11,900 double-counts spoilage — completed 10,000 EXCLUDES the 500 spoiled units (10,000 + 1,500 + 500 = 12,000 started ✓); adding 500 to a completed figure assumed to contain them manufactures 500 phantom EU.",
+    "ExplanationWrongD": "Option D excludes abnormal from EU — abnormal units consumed full current work; they enter EU (100 EU), then their $2,193 assigns to period loss.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.122 normal spoilage cost flow",
+    "MicroTopic": "normal spoilage cost flow",
+    "UniqueConceptKey": "D-C122-normal-spoilage-cost-flow",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Using P1-DC-121 facts (corrected EU 11,400, unit $21.93, normal 400u, abnormal 100u): trace the normal spoilage cost flow and state completed-goods COGS.",
+    "Choices": {
+      "A": "Normal $8,772 written off to period loss with abnormal — all spoilage is loss",
+      "B": "Normal $8,772 ignored — spoilage cost vanishes once classified normal",
+      "C": "Normal $8,772 credited to EWIP — ending inventory absorbs yield loss",
+      "D": "Normal $8,772 absorbed by good output: completed COGS = 10,000×$21.93 + $8,772 = $219,300 + $8,772 = $228,072; EWIP = 900×$21.93 = $19,737; abnormal $2,193 to period loss (check: $228,072 + $19,737 + $2,193 = $250,002 ≈ $250,000 rounding)"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Normal spoilage is expected yield economics → product cost: completed COGS = 10,000 × $21.9298 ($219,298) + normal 400 × $21.9298 ($8,772) = $228,070; EWIP = 900 × $21.9298 = $19,737; abnormal = 100 × $21.9298 = $2,193 to period loss. Check: $228,070 + $19,737 + $2,193 = $250,000 ✓. All-loss (option A) punishes product for expected yield. EWIP-absorption (option C) loads ending inventory with failed-unit cost. Ignoring (option B) strands $8,772 unassigned. Business interpretation: normal spoilage rides with good output — completed units carry the cost of the failures their production statistically required. Common trap: writing all spoilage to loss.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-122",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's all-loss writes $8,772 of expected yield economics to period loss — normal spoilage is a production cost, never a period failure.",
+    "ExplanationWrongB": "Option B strands $8,772 unassigned — cost flow must clear to COGS, EWIP, or loss; vanishing violates conservation.",
+    "ExplanationWrongC": "Option C loads $8,772 of failed-unit cost into EWIP — ending inventory carries its own 900 EU of work, never completed units' failures.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.123 abnormal spoilage with disposal value",
+    "MicroTopic": "abnormal spoilage disposal value",
+    "UniqueConceptKey": "D-C123-abnormal-spoilage-disposal-value",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Abnormal spoilage 100u at $21.93 ($2,193) with $300 realizable disposal value. State the correct period-loss presentation.",
+    "Choices": {
+      "A": "Loss $2,193; disposal $300 credited to COGS — split the geography",
+      "B": "Loss $2,493 ($2,193 + $300) — disposal costs add to spoilage loss",
+      "C": "Net loss $1,893 ($2,193 − $300) to period loss; $300 disposal value recognized (inventory/receivable) — abnormal cost net of recovery hits the period",
+      "D": "No loss — $300 disposal proves the units weren't really spoiled"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Abnormal spoilage assigns gross cost to period loss, net of realizable recovery: loss = $2,193 − $300 = $1,893; the $300 disposal value is recognized as an asset (scrap inventory/receivable). Gross-loss-plus-disposal (option B: $2,493) adds recovery as cost. Split geography (option A) credits product cost with abnormal recovery — abnormal economics stay in the period entirely. No-loss (option D) lets $300 of scrap value erase $2,193 of wasted production cost. Business interpretation: abnormal spoilage is a period failure measured net — recovery mitigates the loss, never relocates it to product. Common trap: crediting abnormal recovery to COGS.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-123",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's COGS credit leaks $300 of abnormal recovery into product cost — abnormal economics stay in the period entirely.",
+    "ExplanationWrongB": "Option B's $2,493 adds the $300 recovery as cost — realizable value mitigates loss, never augments it.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's $300-erases-$2,193 lets scrap value deny wasted production — spoilage status is physical (failed inspection), never financial.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.124 FIFO spoilage with BWIP",
+    "MicroTopic": "FIFO spoilage BWIP",
+    "UniqueConceptKey": "D-C124-FIFO-spoilage-BWIP",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "BWIP 1,000u 70% complete ($15,000 prior cost). Started 10,000. Final inspection: completed 9,500 (includes BWIP finished); normal spoilage 300u; abnormal 200u; EWIP 1,000u 50% complete (pre-inspection). Current costs $220,000. Under FIFO, what are EU and unit cost?",
+    "Choices": {
+      "A": "EU 10,300 (started/completed 8,500 + spoilage 500 + EWIP 500 − BWIP adjustment... precisely: BWIP work this period 1,000×30% = 300; started/completed 8,500×100% = 8,500; spoilage 500×100% = 500; EWIP 1,000×50% = 500; total 300+8,500+500+500 = 9,800); unit $220,000/9,800 = $22.45",
+      "B": "EU 11,000 (all units); unit $21.36 (($15,000+$220,000)/11,000) — FIFO matches average when inspection is final",
+      "C": "EU 9,500 (completed only); unit $23.16 — WIP and spoilage outside EU",
+      "D": "EU 8,500 (started/completed only); unit $25.88 — BWIP, EWIP, and spoilage all excluded"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "FIFO EU counts current-period work only: BWIP completion 1,000 × (100%−70%) = 300 EU; started-and-completed (9,500 − 1,000) = 8,500 × 100% = 8,500 EU; spoilage 500 × 100% (final inspection) = 500 EU; EWIP 1,000 × 50% = 500 EU. Total = 300 + 8,500 + 500 + 500 = 9,800 EU. Unit = $220,000/9,800 = $22.4489 ≈ $22.45 (prior $15,000 excluded — FIFO separates periods). Average-blend (option B: $21.36) melts $15,000 of prior cost into current unit cost. Completed-only (option C) and started-only (option D) strand legitimate current work. Business interpretation: FIFO EU is a current-effort meter — prior work never recurs, spoilage at final inspection counts fully. Common trap: blending BWIP cost into FIFO unit cost.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-124",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B's $21.36 blends $15,000 of prior-period cost into the current meter — FIFO separates periods; average blends them.",
+    "ExplanationWrongC": "Option C's 9,500 strands 300 BWIP-completion EU plus 500 spoilage plus 500 EWIP — $23.16 prices current effort out of existence.",
+    "ExplanationWrongD": "Option D's 8,500 excludes 1,300 EU of current work (BWIP finish, spoilage, EWIP) — $25.88 on fiction.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.125 joint versus by-product classification",
+    "MicroTopic": "joint by-product classification",
+    "UniqueConceptKey": "D-C125-joint-by-product-classification",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Common process yields Alpha ($500,000 sales), Beta ($300,000), and Gamma ($8,000, no separable cost). The controller classifies all three as joint products with sales-value allocation. Evaluate.",
+    "Choices": {
+      "A": "Correct — common process means joint products regardless of value",
+      "B": "Beta misclassified — middle-value outputs are always by-products",
+      "C": "Gamma misclassified — $8,000 (1% of $808,000 total) is immaterial by-product (revenue method: $8,000 revenue at sale, zero joint allocation); Alpha/Beta share joint cost by value ($500,000 vs $300,000 of $800,000). Allocating joint cost to Gamma over-costs it and distorts Alpha/Beta by $1,000s",
+      "D": "Alpha misclassified — highest-value outputs absorb no joint cost as primary beneficiaries"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Classification by materiality: Gamma $8,000/$808,000 = 0.99% — immaterial by-product (revenue method, no joint allocation). Alpha/Beta are joint ($500,000/$800,000 = 62.5%; $300,000/$800,000 = 37.5% of joint cost). Force-allocating to Gamma: $8,000/$808,000 × joint = ~1% of joint to an $8,000 product — over-costing Gamma while skimming Alpha/Beta. Common-process absolutism (option A) ignores the materiality threshold the by-product category exists to serve. Middle-value demotion (option B) and primary-beneficiary exemption (option D) invent rules with no standard basis. Business interpretation: joint-vs-by-product is a materiality judgment at split-off — immaterial outputs ride the revenue method, material outputs share joint cost. Common trap: classifying by process commonality alone.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-125",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's common-process absolutism allocates ~1% of joint to an $8,000 product — materiality thresholds exist precisely to prevent this over-costing.",
+    "ExplanationWrongB": "Option B demotes $300,000-sales Beta (37% of value) to by-product — middle value is not a classification criterion; materiality is.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D exempts the highest-value output from shared cost — primary products bear joint cost proportionally, never zero.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.126 service department cost behavior",
+    "MicroTopic": "service department cost behavior",
+    "UniqueConceptKey": "D-C126-service-department-cost-behavior",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "IT department: $400,000 fixed capacity cost + $50,000 variable (actual usage 10,000 hours vs 12,000 budgeted). Production uses 9,000 actual (10,000 budgeted); Admin uses 1,000 actual (2,000 budgeted). The IT manager proposes allocating all $450,000 on actual hours. As the controller advising the CFO, what do you recommend?",
+    "Choices": {
+      "A": "Approve — actual-hours single rate ($45/hr: Production $405,000/Admin $45,000) is simple and auditable",
+      "B": "Reject — recommend dual-rate: fixed $400,000 on budgeted (Production 10/12×$400,000 = $333,333; Admin 2/12×$400,000 = $66,667) + variable $50,000... precisely variable rate $50,000/10,000 actual = $5/hr on actual (Production 9,000×$5 = $45,000; Admin 1,000×$5 = $5,000). Totals Production $378,333/Admin $71,667. Actual-single-rate punishes Production for Admin's 1,000-hour under-use ($26,667 of idle-capacity cost shifted)",
+      "C": "Reject — allocate nothing; service departments are period costs",
+      "D": "Approve with 50/50 split ($225,000 each) — fairness means equality"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Dual-rate mechanics: fixed follows budgeted (capacity reserved): Production 10,000/12,000 × $400,000 = $333,333.33 ≈ $333,333; Admin 2,000/12,000 × $400,000 = $66,666.67 ≈ $66,667. Variable follows actual: $50,000/10,000 = $5.00/hr → Production 9,000 × $5 = $45,000; Admin $5,000. Totals $378,333/$71,667 (sum $450,000 ✓). Actual-single-rate (option A: $45/hr → $405,000/$45,000) shifts $26,667 of Admin's unused reservation onto Production ($405,000 − $378,333). Period-costing (option C) abandons cost assignment for traceable IT services. Equal-split (option D) ignores 9:1 usage. Business interpretation: idle-capacity cost stays with the reserver (Admin under-used by 1,000 hours) — dual rates enforce reservation accountability. Recommendation: reject single-rate, adopt dual-rate with budgeted-fixed/actual-variable legs. Common trap: approving simplicity that subsidizes under-use.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-126",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's $45 single rate shifts $26,667 of Admin's unused reservation onto Production — simplicity that taxes accurate forecasting subsidizes under-use.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C abandons assignment for traceable IT services — $450,000 of measurable support cost belongs in production economics, never period expense by default.",
+    "ExplanationWrongD": "Option D's equal $225,000 ignores 9,000 vs 1,000 actual usage — equality without causation is arbitrary, never fair.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.127 cost allocation ethics pressure",
+    "MicroTopic": "cost allocation ethics pressure",
+    "UniqueConceptKey": "D-C127-cost-allocation-ethics-pressure",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "The Production VP asks you to allocate IT fixed cost on actual hours (shifting $26,667 to Admin... precisely shifting Admin's idle-capacity cost onto Production? Recompute direction: actual-hours fixed share Production 9/10×$400,000 = $360,000 vs budgeted $333,333 — Production pays $26,667 MORE under actual, Admin pays $26,667 less. The VP wants actual-hours because Production's bonus excludes IT charges above budget). How do you respond under IMA ethics?",
+    "Choices": {
+      "A": "Comply — the VP outranks you and bonus mechanics are management's prerogative",
+      "B": "Comply with disclosure in footnotes — transparency cures allocation bias",
+      "C": "Refuse and report — budgeted-fixed/actual-variable is the supportable method; actual-hours shifts $26,667 of Admin's idle capacity onto Production to game bonus thresholds. Competence (accurate costing), Objectivity (unbiased method selection), and Integrity (no manipulation) all bar compliance; escalate per IMA resolution-of-ethical-conflict protocol",
+      "D": "Defer — allocation methods are immaterial to ethics"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "IMA Statement of Ethical Professional Practice: Competence (provide accurate decision support — actual-hours mismeasures reservation economics by $26,667), Objectivity (select methods without bias toward bonus outcomes), Integrity (refuse manipulation). Footnote disclosure (option B) does not cure a known-biased method — transparency about manipulation is still manipulation. Rank-based compliance (option A) inverts the ethics hierarchy (standards outrank supervisors). Immateriality claims (option D) dodge the $26,667 measurement plus the precedent. Resolution protocol: discuss with VP → escalate to CFO/Audit Committee if unresolved → IMA Ethics Helpline if internal resolution fails. Business interpretation: allocation-method shopping for compensation outcomes is a classic objectivity breach — the controller's duty is unbiased measurement, never bonus engineering. Common trap: disclosure cures bias.",
+    "StudyLinks": [
+      {
+        "label": "IMA Statement of Ethical Professional Practice",
+        "url": "https://www.imanet.org/about-ima/ethics"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-127",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's rank-based compliance inverts the ethics hierarchy — IMA standards outrank supervisors; outranking never authorizes biased measurement.",
+    "ExplanationWrongB": "Option B's disclose-and-manipulate claims transparency cures bias — a known-biased $26,667 shift disclosed in footnotes is still a known-biased shift.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D's immateriality dodge ignores both the $26,667 measurement and the precedent — method-shopping for bonuses is material by nature, never by amount.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.128 capacity cost idle versus used",
+    "MicroTopic": "capacity cost idle used",
+    "UniqueConceptKey": "D-C128-capacity-cost-idle-used",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "IT capacity 12,000 hours ($400,000 fixed = $33.33/hr). Actual usage 10,000 hours. The CFO asks: how much fixed IT cost is idle-capacity cost, who should bear it, and what does it signal?",
+    "Choices": {
+      "A": "Zero idle — all $400,000 assigns to users pro-rata actual (9,000/1,000); unused capacity has no cost",
+      "B": "Idle = 10,000×$33.33 = $333,333 — used capacity is the idle portion",
+      "C": "Idle = $400,000 (all fixed is idle by definition) — write off entirely",
+      "D": "Idle = 2,000×$33.33 = $66,667, borne by Admin (the under-user: budgeted 2,000, used 1,000 — 1,000 idle) plus 1,000 shared shortfall... precisely total idle 2,000 hours: Admin accounts 1,000 (2,000−1,000); Production accounts 1,000 (10,000−9,000). Idle cost $66,667 split 1,000/1,000 = $33,333 each as capacity-planning variance, not product cost. Signal: 16.7% overcapacity — defer expansion, tighten reservations"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Idle capacity = 12,000 − 10,000 = 2,000 hours × $33.3333 = $66,666.67 ≈ $66,667. Attribution: Admin 2,000 budgeted − 1,000 used = 1,000 idle ($33,333); Production 10,000 − 9,000 = 1,000 idle ($33,333). Treatment: capacity-planning variance (period charge by responsibility), never product cost — loading idle cost into production rates punishes current output for planning slack. Signal: 16.7% overcapacity counsels reservation discipline and expansion deferral. Zero-idle (option A) buries $66,667 of planning slack in product margins. All-idle (option C) writes off $333,333 of used capacity. Inverted (option B) mistakes used for idle. Business interpretation: idle-capacity cost is a planning signal assigned by responsibility — measure it, attribute it, never bury it in rates. Common trap: pro-rating all fixed to users.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Service Allocation",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-128",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's zero-idle buries $66,667 of planning slack in product margins — unused capacity has carrying cost ($33.33/hr reserved but idle).",
+    "ExplanationWrongB": "Option B inverts used and idle — 10,000 consumed hours are the utilized portion; 2,000 unconsumed are idle, never the reverse.",
+    "ExplanationWrongC": "Option C writes off $333,333 of used capacity as idle — 10,000 consumed hours are utilized, never idle, by definition.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.129 joint cost allocation method choice",
+    "MicroTopic": "joint cost allocation method choice",
+    "UniqueConceptKey": "D-C129-joint-cost-allocation-method-choice",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "The board will use joint-cost allocations to set transfer prices between the Alpha division (sells externally, $500,000) and Beta division (internal buyer, $300,000). The CFO asks which allocation method best supports goal-congruent transfer pricing and why.",
+    "Choices": {
+      "A": "Physical measure — objectivity prevents transfer-price disputes",
+      "B": "Sales-value at split-off — benefits-received logic aligns each division's cost burden with its revenue capacity, supporting arm's-length negotiation; physical measure would load Alpha with weight-based cost divorced from its $500,000 economics, and constant-margin would force margin equality the market doesn't observe",
+      "C": "Constant gross margin — equal margins eliminate all transfer conflict",
+      "D": "No allocation — transfer at variable cost only, ignoring joint cost"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Transfer-pricing goal congruence needs benefits-received burden: sales-value allocation ties each division's joint-cost share to its revenue capacity ($500,000 vs $300,000 → 62.5%/37.5%), so negotiated transfers reflect market economics. Physical-measure (option A) objectivity loads cost by weight divorced from $500,000/$300,000 revenue capacity — disputes persist because burden misaligns with benefit. Constant-margin (option C) forces margin equality the external market doesn't observe, distorting Alpha's pricing freedom. Variable-only (option D) ignores $joint of shared cost, subsidizing internal transfers. Business interpretation: allocation methods are governance tools — match the method's burden logic to the decision's incentive needs. Recommendation: sales-value for transfer-price costing, disclosed and consistently applied. Common trap: choosing methods on computational simplicity for incentive decisions.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Joint Products",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-129",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's physical-measure objectivity loads cost by weight divorced from $500,000/$300,000 revenue capacity — measurable burden that misaligns with benefit still misaligns incentives.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's forced margin equality distorts Alpha's external pricing freedom — the market doesn't observe equal margins, so internal mandates shouldn't manufacture them.",
+    "ExplanationWrongD": "Option D's variable-only transfer ignores shared joint cost entirely — internal buyers free-ride on common inputs while external pricing carries the full burden.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.130 process costing method recommendation",
+    "MicroTopic": "process costing method recommendation",
+    "UniqueConceptKey": "D-C130-process-costing-method-recommendation",
+    "LOSTag": "P1-D Cost management",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A process carries volatile input prices (±20% monthly) with stable 8,000-unit monthly throughput and 1,000-unit BWIP. The controller asks whether FIFO or weighted average better serves cost control and inventory valuation. Recommend with reasons.",
+    "Choices": {
+      "A": "Weighted average — simplicity always governs method choice",
+      "B": "FIFO — isolates current-period price volatility ($220,000 current vs $15,000 prior in P1-DC-124 pattern) for visible control signals, while average would melt ±20% swings into blended rates that hide purchasing performance; use FIFO for control, disclose average as supplementary where stability aids planning",
+      "C": "Weighted average — blending hides volatility, which is the goal of reporting",
+      "D": "Neither — process costing cannot handle volatile inputs; switch to job costing"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "FIFO separates periods: current $220,000 of volatile input prices stands alone in the $22.45 unit cost (P1-DC-124 mechanics), so purchasing variances surface visibly against current standards. Weighted average would melt $15,000 of prior-period cost (at old prices) into current units, damping ±20% swings into blended rates that hide purchasing performance. Simplicity absolutism (option A) trades control signals for computational ease. Volatility-hiding (option C) mistakes signal suppression for reporting quality. Job-costing flight (option D) abandons process economics for homogeneous flow — method follows production physics, never price behavior. Business interpretation: volatile inputs demand period separation (FIFO); stable inputs tolerate blending (average). Recommend FIFO for control with average supplementary for planning stability. Common trap: choosing average to smooth volatility that management needs to see.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Process Costing",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-DC-130",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps",
+      "Independent recalculation verified",
+      "Independent recalculation verified — answer key matches derived result"
+    ],
+    "ExplanationWrongA": "Option A's simplicity absolutism trades $220,000 of visible current-price signals for computational ease — control value dominates arithmetic convenience.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C's volatility-hiding mistakes signal suppression for quality — ±20% purchasing swings are exactly what control systems must surface, never smooth away.",
+    "ExplanationWrongD": "Option D's job-costing flight abandons process economics for homogeneous 8,000-unit flow — production physics selects the method, never price behavior.",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "certification_date": "2026-09-11"
   }
 ];

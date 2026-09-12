@@ -2,16 +2,16 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-09-05 19:46:42
-  Source hash: f135d51d
+  Last generated: 2026-09-12 20:12:04
+  Source hash: 4dcda7b7
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-09-05 19:46:42
-**Source Hash:** `f135d51d`
-**Total Questions:** 3045
+**Generated:** 2026-09-12 20:12:04
+**Source Hash:** `4dcda7b7`
+**Total Questions:** 3495
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
 > Source of truth: the five pack source files (`content/packs/pack_*_corrected.js`)
@@ -24,9 +24,9 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Questions | 3045 |
+| Total Questions | 3495 |
 | Scored (CAQS available) | 0 |
-| Not Yet Scored | 3045 |
+| Not Yet Scored | 3495 |
 | Exam-Ready (≥90) | 0 |
 | Acceptable (70–89) | 0 |
 | Needs Work (50–69) | 0 |
@@ -36,10 +36,10 @@
 
 | Section | Domain | Total | With Validator Findings |
 |---------|--------|------:|----------------------:|
-| C | Performance Management | 473 | 75 |
-| E | Internal Controls | 463 | 83 |
-| I | I | 492 | 58 |
-| P | P | 1178 | 192 |
+| C | Performance Management | 543 | 80 |
+| E | Internal Controls | 583 | 110 |
+| I | I | 532 | 76 |
+| P | P | 1398 | 254 |
 | T | T | 439 | 89 |
 
 ---
@@ -544,10 +544,70 @@
 | P1-F-073 | T | F.073 optical character recognition invoice | Easy | P1-F Technology and analytics | pack_a_corrected.js | 0 | 1 | — | Not Scored |
 | P1-F-074 | T | F.074 workflow automation approval | Moderate-Easy | P1-F Technology and analytics | pack_a_corrected.js | 0 | 1 | — | Not Scored |
 | P1-F-075 | T | F.075 electronic records retention | Moderate-Easy | P1-F Technology and analytics | pack_a_corrected.js | 0 | 1 | — | Not Scored |
-| P1-B-025 | P | B.025 beyond budgeting — evaluating beyond budgeti |  | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 2 | — | Not Scored |
-| P1-B-034 | P | B.034 budgetary slack — detecting and analyzing bu |  | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 1 | — | Not Scored |
-| P1-B-046 | P | B.046 rolling forecast — evaluating transition fro |  | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 1 | — | Not Scored |
-| P1-B-096 | P | B.096 participative budgeting — analyzing goal con |  | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-B-025 | P | B.025 beyond budgeting — evaluating beyond budgeti | Very Difficult | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 2 | — | Not Scored |
+| P1-B-034 | P | B.034 budgetary slack — detecting and analyzing bu | Difficult | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-B-046 | P | B.046 rolling forecast — evaluating transition fro | Very Difficult | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-B-096 | P | B.096 participative budgeting — analyzing goal con | Difficult | P1-B.2 Budgeting concepts | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-076 | E | A.076 multi-element SSP allocation | Difficult | P1-A.2 Revenue recognition | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-087 | E | A.087 GAAP versus IFRS operating classification | Moderate | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-077 | E | A.077 inventory NRV write-down | Difficult | P1-A.3 Inventory valuation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-078 | E | A.078 bond premium amortization trajectory | Difficult | P1-A.6 Liabilities | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-079 | E | A.079 diluted EPS sequencing | Difficult | P1-A.7 Equity | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-080 | E | A.080 indirect cash flow multi-adjustment | Difficult | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-081 | E | A.081 goodwill impairment simplified test | Difficult | P1-A.5 Intangible assets | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-082 | E | A.082 lease classification multi-test | Difficult | P1-A.6 Liabilities | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-083 | E | A.083 significant influence indicators | Difficult | P1-A.7 Equity | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-084 | E | A.084 inventory error counterbalancing | Difficult | P1-A.3 Inventory valuation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-085 | E | A.085 allowance methods reconciliation | Difficult | P1-A.2 Revenue recognition | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-086 | E | A.086 asset exchange commercial substance | Difficult | P1-A.4 Long-lived assets | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-088 | E | A.088 DuPont leverage selection with risk | Difficult | P1-A.8 Financial ratios | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-089 | E | A.089 contingency recognition matrix | Difficult | P1-A.6 Liabilities | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-090 | E | A.090 LIFO liquidation phantom profit | Difficult | P1-A.3 Inventory valuation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-091 | E | A.091 DTA valuation allowance | Difficult | P1-A.9 Income taxes | pack_a_corrected.js | 0 | 2 | — | Not Scored |
+| P1-A-092 | E | A.092 segment reporting thresholds | Difficult | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-093 | E | A.093 fair value hierarchy classification | Difficult | P1-A.8 Financial ratios | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-094 | E | A.094 subsequent events type I versus II | Difficult | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-095 | E | A.095 error estimate principle changes | Difficult | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-096 | E | A.096 principal versus agent judgment | Very Difficult | P1-A.2 Revenue recognition | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-097 | E | A.097 inventory method covenant tradeoff | Very Difficult | P1-A.3 Inventory valuation | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-098 | E | A.098 lease versus buy covenant analysis | Very Difficult | P1-A.6 Liabilities | pack_a_corrected.js | 0 | 2 | — | Not Scored |
+| P1-A-099 | E | A.099 goodwill trigger qualitative assessment | Very Difficult | P1-A.5 Intangible assets | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-A-100 | E | A.100 expected-loss transition treatment | Very Difficult | P1-A.2 Revenue recognition | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-101 | E | A.101 bond refunding NPV decision | Very Difficult | P1-A.6 Liabilities | pack_a_corrected.js | 0 | 2 | — | Not Scored |
+| P1-A-102 | E | A.102 overhaul versus betterment split | Very Difficult | P1-A.4 Long-lived assets | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-103 | E | A.103 dividend signal versus covenant analysis | Very Difficult | P1-A.7 Equity | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-104 | E | A.104 dilution overhang quality assessment | Very Difficult | P1-A.7 Equity | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-A-105 | E | A.105 OCI versus net income boundary | Very Difficult | P1-A.1 Financial statements | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-101 | P | C.101 material price variance responsibility | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-102 | P | C.102 labor rate versus efficiency interaction | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-103 | P | C.103 variable overhead spending versus efficiency | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-104 | P | C.104 fixed overhead budget versus volume | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-105 | P | C.105 sales price versus volume variance | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-106 | P | C.106 sales mix versus quantity variance | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-107 | P | C.107 market size versus share variance | Very Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-108 | P | C.108 flexible budget performance report | Very Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-109 | P | C.109 standard revision versus variance | Very Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-110 | P | C.110 variance investigation decision | Difficult | P1-C.1 Cost and variance measures | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-111 | P | C.111 responsibility center classification | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-112 | P | C.112 controllable margin construction | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-113 | P | C.113 ROI versus residual income conflict | Very Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-114 | P | C.114 ROI manipulation versus economics | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 2 | — | Not Scored |
+| P1-C-115 | P | C.115 transfer pricing with excess capacity | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-116 | P | C.116 transfer pricing at full capacity | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-117 | P | C.117 dual transfer pricing ethics | Very Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-118 | P | C.118 balanced scorecard cause and effect | Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-119 | P | C.119 leading versus lagging indicators | Very Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-120 | P | C.120 benchmarking parity versus advantage | Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-121 | P | C.121 partial productivity diagnosis | Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-122 | P | C.122 ROI denominator timing choice | Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-123 | P | C.123 book value versus current cost ROI | Very Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 1 | — | Not Scored |
+| P1-C-124 | P | C.124 allocated service cost controllability | Very Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-125 | P | C.125 scorecard weight gaming | Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-126 | P | C.126 KPI selection for strategy | Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-127 | P | C.127 nonfinancial trade-off quantification | Very Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-128 | P | C.128 performance reporting ethics pressure | Very Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-129 | P | C.129 controllability principle in evaluation | Very Difficult | P1-C.2 Responsibility centers | pack_a_corrected.js | 0 | 0 | — | Not Scored |
+| P1-C-130 | P | C.130 performance system redesign synthesis | Very Difficult | P1-C.3 Performance evaluation | pack_a_corrected.js | 0 | 1 | — | Not Scored |
 | P1B-A-076 | E | B-A.076 revenue recognition - performance obligati | Moderate-Easy | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-A-077 | E | B-A.077 transaction price allocation | Moderate | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-A-078 | E | B-A.078 over-time revenue recognition | Moderate | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
@@ -555,7 +615,7 @@
 | P1B-A-080 | E | B-A.080 licenses revenue recognition | Moderate-Easy | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 1 | — | Not Scored |
 | P1B-A-081 | E | B-A.081 contract costs | Moderate-Easy | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-A-082 | E | B-A.082 principal vs agent ASC 606 | Difficult | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
-| P1B-A-083 | E | B-A.083 point-in-time vs over-time | Moderate | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-083 | E | B-A.083 point-in-time vs over-time | Easy | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-A-084 | E | B-A.084 current vs noncurrent classification | Moderate | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-A-085 | E | B-A.085 intangible classification ASC 350 ASC 805 | Difficult | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 2 | — | Not Scored |
 | P1B-A-086 | E | B-A.086 equity components calculation | Difficult | P1-A.1 Financial statements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
@@ -968,7 +1028,7 @@
 | P1B-E-143 | I | B-E.143 ICFR | Easy | Internal Control Over Financial Reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-E-144 | I | B-E.144 business continuity planning | Easy | Business Continuity Planning | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-E-145 | I | B-E.145 Sarbanes-Oxley Act | Moderate-Easy | Sarbanes-Oxley Act Requirements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
-| P1B-E-146 | I | B-E.146 COSO Internal Control | Moderate | COSO Internal Control — Integrated Framework | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-146 | I | B-E.146 COSO Internal Control | Easy | COSO Internal Control — Integrated Framework | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-E-147 | I | B-E.147 fraud prevention | Easy | Fraud Prevention and Detection | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-E-148 | I | B-E.148 control activities | Easy | Control Activities — Documentation | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-E-149 | I | B-E.149 Sarbanes-Oxley Act | Moderate | Sarbanes-Oxley Act Requirements | pack_b_corrected.js | 0 | 0 | — | Not Scored |
@@ -1048,6 +1108,126 @@
 | P1B-F-148 | T | B-F.148 RPA | Difficult | Robotic Process Automation | pack_b_corrected.js | 0 | 1 | — | Not Scored |
 | P1B-F-149 | T | B-F.149 privacy regulations | Moderate | Privacy Regulations (GDPR, CCPA) | pack_b_corrected.js | 0 | 0 | — | Not Scored |
 | P1B-F-150 | T | B-F.150 data analytics | Easy | Data Analytics Types | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-201 | P | B-B.201 regression sales forecast decomposition | Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-202 | P | B-B.202 production budget with inventory policy | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-203 | P | B-B.203 direct materials purchases budget | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-204 | P | B-B.204 direct labor budget with learning curve | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-205 | P | B-B.205 manufacturing overhead budget decompositio | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-206 | P | B-B.206 cash collections timing pattern | Difficult | P1-B.2 Cash budgeting and forecasting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-207 | P | B-B.207 cash budget borrowing increments | Difficult | P1-B.2 Cash budgeting and forecasting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-208 | P | B-B.208 flexible budget price and efficiency split | Difficult | P1-B.2 Flexible budgets | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-209 | P | B-B.209 embedded slack quantification | Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-210 | P | B-B.210 rolling forecast volume and FX update | Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-211 | P | B-B.211 kaizen target feasibility | Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 3 | — | Not Scored |
+| P1B-B-212 | P | B-B.212 activity-based versus traditional budgetin | Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-213 | P | B-B.213 learning curve labor budget | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-214 | P | B-B.214 zero-based rank-order funding | Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-215 | P | B-B.215 pro-forma cash flow integration | Difficult | P1-B.2 Financial budgets | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-216 | P | B-B.216 forecast coordination failure costing | Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 3 | — | Not Scored |
+| P1B-B-217 | P | B-B.217 flexible budget with step-fixed cost | Difficult | P1-B.2 Flexible budgets | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-218 | P | B-B.218 cash shortfall responsibility attribution | Difficult | P1-B.2 Cash budgeting and forecasting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-219 | P | B-B.219 forecast bias detection and correction | Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-220 | P | B-B.220 budget manual compliance finding | Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-221 | P | B-B.221 forecast investigation portfolio | Very Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-222 | P | B-B.222 forecast source arbitration | Very Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-223 | P | B-B.223 growth versus slack budget remedy | Very Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-224 | P | B-B.224 participative budget gaming guard | Very Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-225 | P | B-B.225 real versus nominal growth comparison | Very Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-226 | P | B-B.226 forecast ownership hybrid design | Very Difficult | P1-B.1 Forecasting techniques | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-227 | P | B-B.227 investigation threshold design | Very Difficult | P1-B.2 Budgetary control | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-228 | P | B-B.228 forecast process integration design | Very Difficult | P1-B.2 Operating budgets | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-B-229 | P | B-B.229 contingency reserve transparency | Very Difficult | P1-B.2 Budgeting methodologies | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-B-230 | P | B-B.230 evaluation cadence for noisy metrics | Very Difficult | P1-B.2 Budgetary control | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-C-201 | P | B-C.201 quality-adjusted price comparison | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-C-202 | P | B-C.202 overtime root attribution | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-203 | P | B-C.203 revenue mix with discount layer | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-C-204 | P | B-C.204 thin outside market transfer floor | Difficult | P1-C Transfer pricing | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-205 | P | B-C.205 training to margin causal chain | Difficult | P1-C Balanced scorecard | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-206 | P | B-C.206 forecast error MAPE versus bias | Difficult | P1-C Performance evaluation | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-207 | P | B-C.207 scope-adjusted benchmark target | Difficult | P1-C Benchmarking | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-C-208 | P | B-C.208 chargeback fixed variable split | Difficult | P1-C Responsibility accounting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-C-209 | P | B-C.209 investigation threshold with base rates | Difficult | P1-C Variance investigation | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-C-210 | P | B-C.210 measures system overhaul recommendation | Very Difficult | P1-C Performance evaluation | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-D-151 | C | B-D.151 high-low across cost step | Difficult | P1-D Cost estimation | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-D-152 | C | B-D.152 through-origin regression commissions | Difficult | P1-D Cost estimation | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-D-153 | C | B-D.153 batch rework normal abnormal split | Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 3 | — | Not Scored |
+| P1B-D-154 | C | B-D.154 transferred-in FIFO layering | Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-D-155 | C | B-D.155 unused capacity reporting | Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-D-156 | C | B-D.156 by-product deduction allocation | Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-D-157 | C | B-D.157 sales mix with machine constraint | Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-D-158 | C | B-D.158 keep versus drop with shared spillover | Very Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-D-159 | C | B-D.159 target gap functional assignment | Very Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-D-160 | C | B-D.160 shop costing method selection | Very Difficult | P1-D Cost management | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-151 | I | B-E.151 monitoring design revenue controls | Difficult | Monitoring | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-E-152 | I | B-E.152 ERP role conflict compensation | Difficult | Segregation of Duties | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-153 | I | B-E.153 access recertification findings | Difficult | Information and Communication | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-E-154 | I | B-E.154 fraud triangle diagnosis | Difficult | Fraud Prevention | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-E-155 | I | B-E.155 reliance on internal audit | Difficult | Monitoring | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-E-156 | I | B-E.156 hotline metrics interpretation | Difficult | Information and Communication | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-157 | I | B-E.157 control rationalization review | Very Difficult | Control Activities | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-158 | I | B-E.158 cyber control investment with breach math | Very Difficult | Monitoring | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-E-159 | I | B-E.159 retaliation risk program design | Very Difficult | Information and Communication | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-E-160 | I | B-E.160 continuous monitoring investment | Very Difficult | Monitoring | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-151 | E | B-A.151 debt issuance cost presentation | Difficult | P1-A.6 Liabilities | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-152 | E | B-A.152 bond sinking fund accounting | Difficult | P1-A.6 Liabilities | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-153 | E | B-A.153 serial bond interest schedule | Difficult | P1-A.6 Liabilities | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-154 | E | B-A.154 convertible debt with beneficial conversio | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-155 | E | B-A.155 lease with residual guarantee | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-A-156 | E | B-A.156 sale-leaseback gain deferral | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-157 | E | B-A.157 pension curtailment gain recognition | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-A-158 | E | B-A.158 pension settlement threshold | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 3 | — | Not Scored |
+| P1B-A-159 | E | B-A.159 stock split versus dividend | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-160 | E | B-A.160 quasi-reorganization deficit reset | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 3 | — | Not Scored |
+| P1B-A-161 | E | B-A.161 non-troubled modification yield recalc | Difficult | P1-A.6 Liabilities | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-A-162 | E | B-A.162 HTM transfer to AFS | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-A-163 | E | B-A.163 debt security OTTI split | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-164 | E | B-A.164 OCI pickup in equity method | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-165 | E | B-A.165 step acquisition remeasurement | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-166 | E | B-A.166 deconsolidation retained interest | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-167 | E | B-A.167 FX remeasurement versus translation | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-168 | E | B-A.168 hyperinflationary restatement | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-169 | E | B-A.169 interim LIFO liquidation expectation | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-170 | E | B-A.170 gross profit method with markup | Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-171 | E | B-A.171 joint method selection for decisions | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-172 | E | B-A.172 by-product presentation choice | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-173 | E | B-A.173 staged inspection spoilage policy | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-174 | E | B-A.174 backflush adoption decision | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-A-175 | E | B-A.175 throughput versus ABC strategy | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-176 | E | B-A.176 life-cycle pricing with learning | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-177 | E | B-A.177 target costing with learning spillover | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-178 | E | B-A.178 going-concern assessment with plans | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-A-179 | E | B-A.179 impairment grouping determination | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-A-180 | E | B-A.180 lease term judgment renewal | Very Difficult | P1-A Financial reporting | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-211 | P | B-C.211 material mix variance | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-212 | P | B-C.212 material yield with price change | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-213 | P | B-C.213 labor mix yield variance | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-214 | P | B-C.214 overhead mix effects | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-215 | P | B-C.215 sales quantity versus budget share | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-216 | P | B-C.216 cost of quality trend evaluation | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-C-217 | P | B-C.217 overtime premium variance ownership | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-218 | P | B-C.218 scrap variance price versus usage | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 1 | — | Not Scored |
+| P1B-C-219 | P | B-C.219 nonfinancial performance triangulation | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-220 | P | B-C.220 benchmarking target ratchet ethics | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-221 | P | B-C.221 sales returns variance | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-222 | P | B-C.222 step-fixed flex distortion | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-223 | P | B-C.223 denominator capacity choice | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 2 | — | Not Scored |
+| P1B-C-224 | P | B-C.224 committed cost controllability horizon | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-225 | P | B-C.225 KPI threshold gaming | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-226 | P | B-C.226 productivity with quality adjustment | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-227 | P | B-C.227 overtime make versus hire decision | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-228 | P | B-C.228 rework disposition economics | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-229 | P | B-C.229 customer mix profitability | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-230 | P | B-C.230 service transfer pricing | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-231 | P | B-C.231 joint variance ownership matrix | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-232 | P | B-C.232 standard cost revision timing | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-233 | P | B-C.233 performance measure controllability audit | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-234 | P | B-C.234 relative performance evaluation | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-235 | P | B-C.235 stretch target calibration | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-236 | P | B-C.236 variance autopsy cadence | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-237 | P | B-C.237 forecast accuracy accountability | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-238 | P | B-C.238 performance dialogue quality | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-239 | P | B-C.239 budgetary slack detection | Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 0 | — | Not Scored |
+| P1B-C-240 | P | B-C.240 continuous improvement standard | Very Difficult | P1-C Variance analysis | pack_b_corrected.js | 0 | 1 | — | Not Scored |
 | P1-AC-001 | E | A.001 bond premium amortization | Moderate-Easy | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AC-002 | E | A.002 bond premium amortization | Easy | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AC-003 | E | A.003 bond premium amortization | Moderate-Easy | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1188,8 +1368,8 @@
 | P1-BC-063 | P | B.063 learning curve forecasting | Moderate | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-BC-064 | P | B.064 learning curve forecasting | Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-BC-065 | P | B.065 high low method cost estimation | Moderate-Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-BC-066 | P | B.066 high low method cost estimation | Moderate | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-BC-067 | P | B.067 high low method cost estimation | Moderate | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-066 | P | B.066 high low method cost estimation | Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-067 | P | B.067 high low method cost estimation | Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-BC-068 | P | B.068 high low method cost estimation | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-BC-069 | P | B.069 high low method cost estimation | Moderate-Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-BC-070 | P | B.070 high low method cost estimation | Moderate-Easy | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1338,8 +1518,8 @@
 | P1-DC-013 | C | D.013 joint cost allocation sales value method | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DC-014 | C | D.014 support department cost allocation machine h | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DC-015 | C | D.015 activity based costing cost driver | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-DC-016 | C | D.016 joint cost allocation method | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-DC-017 | C | D.017 joint cost allocation method | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-016 | C | D.016 joint cost allocation method | Easy | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-017 | C | D.017 joint cost allocation method | Easy | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DC-018 | C | D.018 joint cost allocation method | Easy | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DC-019 | C | D.019 joint cost allocation method | Moderate | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DC-020 | C | D.020 joint cost allocation method | Moderate-Easy | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1492,7 +1672,7 @@
 | P1-FC-017 | T | F.017 system integration — API security governance | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-018 | T | F.018 cybersecurity governance — incident response | Very Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-019 | T | F.019 digital transformation governance — technolo | Very Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-020 | T | F.020 cloud computing service models | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-020 | T | F.020 cloud computing service models | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-021 | T | F.021 data visualization dashboard design for KPI  | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-022 | T | F.022 data visualization — misleading chart axis t | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-023 | T | F.023 data visualization — correlation vs causatio | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1504,50 +1684,170 @@
 | P1-FC-029 | T | F.029 Cybersecurity — CIA triad ransomware evaluat | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-030 | T | F.030 cybersecurity — CIA trade-offs in remote wor | Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-031 | T | F.031 big data characteristics volume velocity var | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-032 | T | F.032 big data — veracity challenge in social medi |  | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-033 | T | F.033 big data — velocity challenge in real-time f |  | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-032 | T | F.032 big data — veracity challenge in social medi | Difficult | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-033 | T | F.033 big data — velocity challenge in real-time f | Difficult | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-034 | T | F.034 Big data — 3Vs capability investment | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-035 | T | F.035 big data — variety challenge in integrating  |  | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-035 | T | F.035 big data — variety challenge in integrating  | Difficult | F.3.a. Big data characteristics — volume, velocity, variety, veracity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-036 | T | F.036 data mining pattern discovery | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-037 | T | F.037 data mining — clustering vs classification f | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-038 | T | F.038 data mining — association rule mining for tr | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-039 | T | F.039 data mining — overfitting and model validati | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-040 | T | F.040 data mining — outlier detection for anomaly  | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-041 | T | F.041 blockchain — evaluating distributed ledger f |  | P1-F.3.a Technology-enabled finance transformation | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-042 | T | F.042 blockchain — smart contract evaluation for s |  | P1-F.3.a Emerging technology evaluation for finance processes | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-041 | T | F.041 blockchain — evaluating distributed ledger f | Very Difficult | P1-F.3.a Technology-enabled finance transformation | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-042 | T | F.042 blockchain — smart contract evaluation for s | Very Difficult | P1-F.3.a Emerging technology evaluation for finance processes | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-043 | T | F.043 blockchain distributed ledger | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-044 | T | F.044 blockchain — evaluating blockchain vs. centr |  | F.4.c. Blockchain and distributed ledger technology in accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-044 | T | F.044 blockchain — evaluating blockchain vs. centr | Very Difficult | F.4.c. Blockchain and distributed ledger technology in accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-045 | T | F.045 blockchain distributed ledger | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-046 | T | F.046 data governance — root cause analysis of dat | Very Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-047 | T | F.047 data quality — analyzing completeness vs. ac |  | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-047 | T | F.047 data quality — analyzing completeness vs. ac | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-048 | T | F.048 data quality dimensions accuracy completenes | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-049 | T | F.049 data quality — analyzing timeliness degradat |  | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-049 | T | F.049 data quality — analyzing timeliness degradat | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-050 | T | F.050 data quality dimensions accuracy completenes | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-051 | T | F.051 AI — evaluating supervised vs. unsupervised  |  | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-052 | T | F.052 AI — evaluating algorithmic bias risk in cre |  | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-051 | T | F.051 AI — evaluating supervised vs. unsupervised  | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-052 | T | F.052 AI — evaluating algorithmic bias risk in cre | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-053 | T | F.053 artificial intelligence machine learning | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-054 | T | F.054 AI — evaluating explainability vs. accuracy  |  | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-054 | T | F.054 AI — evaluating explainability vs. accuracy  | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-055 | T | F.055 AI/ML governance — model bias evaluation | Very Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-056 | T | F.056 cybersecurity — spear-phishing wire transfer | Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-057 | T | F.057 cybersecurity — vishing (voice phishing) tar | Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-058 | T | F.058 cybersecurity phishing social engineering | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-059 | T | F.059 cybersecurity — business email compromise (B | Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-060 | T | F.060 cybersecurity — security awareness training  | Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-061 | T | F.061 ERP — master data governance during system i |  | P1-F.1.b ERP system governance and master data management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-062 | T | F.062 ERP — segregation of duties conflict detecti |  | P1-F.1.c ERP system controls and segregation of duties | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-061 | T | F.061 ERP — master data governance during system i | Difficult | P1-F.1.b ERP system governance and master data management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-062 | T | F.062 ERP — segregation of duties conflict detecti | Difficult | P1-F.1.c ERP system controls and segregation of duties | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-063 | T | F.063 erp system integration benefits | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-064 | T | F.064 ERP — interface reconciliation failure analy |  | P1-F.1.c ERP system controls and interface integrity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-065 | T | F.065 ERP — change management and regression testi |  | P1-F.1.b ERP system implementation and change management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-066 | T | F.066 data architecture — evaluating data lake vs. |  | P1-F.2.a Data governance framework and architecture | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-064 | T | F.064 ERP — interface reconciliation failure analy | Difficult | P1-F.1.c ERP system controls and interface integrity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-065 | T | F.065 ERP — change management and regression testi | Difficult | P1-F.1.b ERP system implementation and change management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-066 | T | F.066 data architecture — evaluating data lake vs. | Difficult | P1-F.2.a Data governance framework and architecture | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-067 | T | F.067 Data architecture — lake vs warehouse select | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-068 | T | F.068 data lake vs data warehouse | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-069 | T | F.069 data architecture — schema-on-read vs schema |  | P1-F.2.a Data architecture and governance decisions | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-070 | T | F.070 data architecture — data lineage and traceab |  | P1-F.2.b Data quality, lineage, and metadata management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-069 | T | F.069 data architecture — schema-on-read vs schema | Difficult | P1-F.2.a Data architecture and governance decisions | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-070 | T | F.070 data architecture — data lineage and traceab | Difficult | P1-F.2.b Data quality, lineage, and metadata management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-071 | T | F.071 technology-enabled continuous auditing — eva | Very Difficult | P1-F.5 Technology-enabled Auditing | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-072 | T | F.072 technology-enabled continuous auditing — exc | Very Difficult | P1-F.5 Technology-enabled Auditing | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-073 | T | F.073 technology enabled continuous auditing | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-074 | T | F.074 technology enabled continuous auditing | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-075 | T | F.075 technology enabled continuous auditing | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-101 | P | C.101 sales mix variance multi-product | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-102 | P | C.102 revenue bridge with price and volume | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-103 | P | C.103 labor gang mix and staffing yield | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-104 | P | C.104 denominator comparison practical versus budg | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-105 | P | C.105 rush order premium versus penalty | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-106 | P | C.106 net revenue bridge with returns layer | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-107 | P | C.107 share loss from premium pricing | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-108 | P | C.108 leased asset ROI distortion | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-109 | P | C.109 two-part tariff transfer design | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-110 | P | C.110 partial outside market transfer floor | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-111 | P | C.111 leading versus lagging indicators | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-112 | P | C.112 bottleneck throughput elevation | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-113 | P | C.113 plant mix-adjusted benchmarking | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-114 | P | C.114 traceable versus common fixed costs | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-115 | P | C.115 forecast error versus execution gap | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-116 | P | C.116 standard cost card variance ranking | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-117 | P | C.117 normal versus abnormal spoilage | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-118 | P | C.118 reciprocal versus direct allocation | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-119 | P | C.119 metric coverage gap analysis | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-120 | P | C.120 promise-date gaming detection | Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-121 | P | C.121 investigation selection under budget | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-122 | P | C.122 arbitration ruling transfer dispute | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-123 | P | C.123 asset-age ROI distortion remedy | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-124 | P | C.124 budget slack countermeasure design | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-125 | P | C.125 real versus nominal ROI inflation | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-126 | P | C.126 post-merger dashboard harmonization | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-127 | P | C.127 discount-driven metric gaming remedy | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-128 | P | C.128 expansion versus overtime capacity | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-129 | P | C.129 chargeback rate design | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CC-130 | P | C.130 evaluation frequency signal versus noise | Very Difficult | P1-C Performance management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-101 | E | A.101 percentage-of-completion with loss provision | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-102 | E | A.102 consignment versus sale distinction | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-103 | E | A.103 warranty assurance versus service distinctio | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-104 | E | A.104 receivables factoring with recourse | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-105 | E | A.105 retail inventory method with markdowns | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-106 | E | A.106 purchase commitment loss recognition | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-107 | E | A.107 software capitalization stage gates | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-108 | E | A.108 R&D milestone tranche funding | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-109 | E | A.109 pension cost components split | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-110 | E | A.110 postretirement benefit obligation build | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-111 | E | A.111 stock compensation forfeiture estimate | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-112 | E | A.112 participating securities two-class method | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-113 | E | A.113 treasury stock method sequencing | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-114 | E | A.114 comprehensive income reclassification | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-115 | E | A.115 discontinued held-for-sale dual test | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-116 | E | A.116 interim tax provision mechanics | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-117 | E | A.117 segment profit test with corporate costs | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-118 | E | A.118 VIE reconsideration trigger | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-119 | E | A.119 equity method basis difference amortization | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-120 | E | A.120 noncontrolling interest valuation choice | Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-121 | E | A.121 revenue policy disclosure adequacy | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-122 | E | A.122 LIFO conformity with interim estimates | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-123 | E | A.123 pension de-risking settling versus retaining | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-124 | E | A.124 tax provision uncertainty scheduling | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-125 | E | A.125 equity carve-out NCI presentation | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-126 | E | A.126 platform fee gross versus net with control | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-127 | E | A.127 debt covenant headroom management | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-128 | E | A.128 impairment trigger monitoring design | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-129 | E | A.129 allowance methodology change analysis | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AC-130 | E | A.130 standard-setting participation strategy | Very Difficult | P1-A Financial reporting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-101 | P | B.101 sales mix with tax-paying constraints | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-102 | P | B.102 CVP with income taxes | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-103 | P | B.103 operating leverage in budget scenarios | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-104 | P | B.104 scenario probability tree expected budget | Difficult | P1-B.1 Forecasting techniques | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-105 | P | B.105 direct method cash flow forecast | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-106 | P | B.106 nonfinancial KPI budget linkage | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-107 | P | B.107 sustainability budget with payback | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-108 | P | B.108 transfer price in divisional budgets | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-109 | P | B.109 responsibility versus controllability audit | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-110 | P | B.110 budget calendar compression effects | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-111 | P | B.111 cash conversion cycle budgeting | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-112 | P | B.112 EOQ with safety stock budgeting | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-113 | P | B.113 JIT versus JIC budget tradeoffs | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-114 | P | B.114 flexible budget with price index | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-115 | P | B.115 control chart versus fixed threshold | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-116 | P | B.116 ratchet guard in participative budgets | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-117 | P | B.117 beyond budgeting suitability screen | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-118 | P | B.118 rolling horizon selection | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-119 | P | B.119 materiality threshold design | Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-120 | P | B.120 forecast value added analysis | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-121 | P | B.121 forecast gaming discovery protocol | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-122 | P | B.122 forecast combination weighting | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-123 | P | B.123 risk-based reserve sizing | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-124 | P | B.124 R&D milestone tranche funding | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-125 | P | B.125 lockbox float optimization | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-126 | P | B.126 asymmetric error cost threshold | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-127 | P | B.127 S&OP cadence optimization | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-128 | P | B.128 reserve disclosure adequacy | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-129 | P | B.129 forecast combination weighting | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-BC-130 | P | B.130 rolling forecast with seasonal re-index | Very Difficult | P1-B Planning and budgeting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-101 | C | D.101 constant gross margin NRV method | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-102 | C | D.102 by-product revenue method at sale | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-103 | C | D.103 scrap waste spoilage taxonomy | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-104 | C | D.104 normal loss with beginning WIP | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-105 | C | D.105 FIFO with staged material additions | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-106 | C | D.106 weighted average with profit in BWIP | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-107 | C | D.107 EU with mid-process inspection | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-108 | C | D.108 dual-rate allocation design | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-109 | C | D.109 single versus dual rate comparison | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-110 | C | D.110 step-down versus reciprocal dollar gap | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-111 | C | D.111 reciprocal service allocation | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-112 | C | D.112 step-down order sensitivity | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-113 | C | D.113 direct method distortion | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-114 | C | D.114 joint cost relevance in sell-or-process | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-115 | C | D.115 NRV at split-off with disposal | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-116 | C | D.116 physical measure with unequal yields | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-117 | C | D.117 estimated NRV with further processing | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-118 | C | D.118 constant margin with loss product | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-119 | C | D.119 scrap counting versus costing | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-120 | C | D.120 rework normal versus abnormal | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-121 | C | D.121 spoilage inspection timing | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-122 | C | D.122 normal spoilage cost flow | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-123 | C | D.123 abnormal spoilage with disposal value | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-124 | C | D.124 FIFO spoilage with BWIP | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-125 | C | D.125 joint versus by-product classification | Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-126 | C | D.126 service department cost behavior | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-127 | C | D.127 cost allocation ethics pressure | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-128 | C | D.128 capacity cost idle versus used | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-129 | C | D.129 joint cost allocation method choice | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DC-130 | C | D.130 process costing method recommendation | Very Difficult | P1-D Cost management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-001 | E | A.001 accounts receivable factoring | Moderate-Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-002 | E | A.002 accounts receivable factoring | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-003 | E | A.003 accounts receivable factoring | Moderate-Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -1579,10 +1879,10 @@
 | P1-AD-029 | E | A.029 asset retirement obligation | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-030 | E | A.030 asset retirement obligation | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-031 | E | A.031 subsequent events recognized | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-032 | E | A.032 subsequent events recognized | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-033 | E | A.033 subsequent events recognized | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-034 | E | A.034 subsequent events recognized | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-035 | E | A.035 subsequent events recognized | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-032 | E | A.032 subsequent events recognized | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-033 | E | A.033 subsequent events recognized | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-034 | E | A.034 subsequent events recognized | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-035 | E | A.035 subsequent events recognized | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-036 | E | A.036 bond issuance costs | Moderate-Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-037 | E | A.037 bond issuance costs | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-038 | E | A.038 bond issuance costs | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -1599,8 +1899,8 @@
 | P1-AD-049 | E | A.049 inventory consignment | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-050 | E | A.050 inventory consignment | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-051 | E | A.051 convertible preferred stock | Moderate-Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-052 | E | A.052 convertible preferred stock | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-AD-053 | E | A.053 convertible preferred stock | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-052 | E | A.052 convertible preferred stock | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-053 | E | A.053 convertible preferred stock | Easy | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-054 | E | A.054 basic EPS calculation preferred dividends | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-055 | E | A.055 diluted EPS calculation convertible | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-AD-056 | E | A.056 straight-line depreciation partial year | Moderate | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -1813,10 +2113,10 @@
 | P1-CD-088 | P | C.088 total variable overhead variance decompositi | Moderate-Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-089 | P | C.089 value based management EVA linkage | Moderate | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-090 | P | C.090 value based management EVA calculation | Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-CD-091 | P | C.091 value based management EVA linkage | Moderate | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-091 | P | C.091 value based management EVA linkage | Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-092 | P | C.092 value based management EVA linkage | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-093 | P | C.093 EVA NOPAT components and adjustments | Moderate-Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-CD-094 | P | C.094 value based management EVA linkage | Moderate | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-094 | P | C.094 value based management EVA linkage | Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-095 | P | C.095 segment reporting decision usefulness | Easy | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-096 | P | C.096 segment reporting decision usefulness | Moderate | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-CD-097 | P | C.097 segment reporting decision usefulness | Moderate | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -1991,12 +2291,12 @@
 | P1-FD-016 | T | F.016 cloud saas subscription model | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-017 | T | F.017 cloud saas subscription model | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-018 | T | F.018 cloud computing — SaaS vs on-premise regulat | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-019 | T | F.019 cloud — evaluating SaaS vs. on-premise ERP f |  | P1-F.3 Technology-Enabled Finance Transformation — cloud ERP evaluation and IT investment analysis | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-019 | T | F.019 cloud — evaluating SaaS vs. on-premise ERP f | Very Difficult | P1-F.3 Technology-Enabled Finance Transformation — cloud ERP evaluation and IT investment analysis | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-020 | T | F.020 cloud saas subscription model | Moderate | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-021 | T | F.021 AI/ML governance — overfitting and bias dete | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-022 | T | F.022 predictive model overfitting risk | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-023 | T | F.023 predictive analytics — detecting overfitting |  | P1-F.4 Data Analytics — predictive modeling and model validation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-024 | T | F.024 predictive analytics — training data represe |  | P1-F.4 Data Analytics — model risk management and concept drift | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-023 | T | F.023 predictive analytics — detecting overfitting | Difficult | P1-F.4 Data Analytics — predictive modeling and model validation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-024 | T | F.024 predictive analytics — training data represe | Difficult | P1-F.4 Data Analytics — model risk management and concept drift | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-025 | T | F.025 AI/ML governance — model validation overfitt | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-026 | T | F.026 internet of things iot sensors | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-027 | T | F.027 internet of things iot sensors | Moderate-Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -2008,31 +2308,31 @@
 | P1-FD-033 | T | F.033 data breach incident response plan | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-034 | T | F.034 data quality investigation applied | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-035 | T | F.035 data breach incident response plan | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-036 | T | F.036 structured vs. unstructured data — integrati |  | P1-F.2 Data governance — structured and unstructured data integration for decision-making | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-037 | T | F.037 unstructured data — social media risk monito |  | P1-F.2 Data governance — unstructured data channels and regulatory compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-038 | T | F.038 structured vs. unstructured data — combining |  | P1-F.4 Data analytics — combining structured and unstructured data for pattern detection | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-039 | T | F.039 unstructured data — analyzing board meeting  |  | P1-F.4 Data analytics — unstructured text analytics for risk identification | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-036 | T | F.036 structured vs. unstructured data — integrati | Difficult | P1-F.2 Data governance — structured and unstructured data integration for decision-making | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-037 | T | F.037 unstructured data — social media risk monito | Difficult | P1-F.2 Data governance — unstructured data channels and regulatory compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-038 | T | F.038 structured vs. unstructured data — combining | Difficult | P1-F.4 Data analytics — combining structured and unstructured data for pattern detection | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-039 | T | F.039 unstructured data — analyzing board meeting  | Difficult | P1-F.4 Data analytics — unstructured text analytics for risk identification | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-040 | T | F.040 structured vs unstructured data | Moderate-Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-041 | T | F.041 cybersecurity — authentication — multi-facto | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-042 | T | F.042 digital signature authentication — evaluatin |  | P1-F.5 Cybersecurity and information system controls — authentication and non-repudiation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-042 | T | F.042 digital signature authentication — evaluatin | Very Difficult | P1-F.5 Cybersecurity and information system controls — authentication and non-repudiation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-043 | T | F.043 digital signature authentication | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-044 | T | F.044 digital signature: analyzing non-repudiation | Difficult | P1-F.4.a Cybersecurity: threats, controls, and business continuity | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-045 | T | F.045 MDM — evaluating golden record strategy for  |  | P1-F.2 Data Governance — master data management strategy and architecture | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-045 | T | F.045 MDM — evaluating golden record strategy for  | Difficult | P1-F.2 Data Governance — master data management strategy and architecture | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-046 | T | F.046 technology governance: evaluating IT governa | Very Difficult | P1-F.5.a IT governance and risk management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-047 | T | F.047 data governance — master data management str | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-048 | T | F.048 MDM — supplier master data governance after  |  | P1-F.2 Data Governance — data quality dimensions and remediation strategy | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-048 | T | F.048 MDM — supplier master data governance after  | Difficult | P1-F.2 Data Governance — data quality dimensions and remediation strategy | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-049 | T | F.049 master data management concept | Moderate-Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-050 | T | F.050 master data management concept | Moderate | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-051 | T | F.051 RPA — bot lifecycle governance for financial |  | P1-F.3 Technology-Enabled Finance Transformation — RPA governance and SOX compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-052 | T | F.052 automation — evaluating attended vs. unatten |  | P1-F.3 Technology-Enabled Finance Transformation — automation control design and SOX compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-053 | T | F.053 automation — bot exception handling when sou |  | P1-F.3 Technology-Enabled Finance Transformation — RPA exception handling and financial controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-051 | T | F.051 RPA — bot lifecycle governance for financial | Very Difficult | P1-F.3 Technology-Enabled Finance Transformation — RPA governance and SOX compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-052 | T | F.052 automation — evaluating attended vs. unatten | Difficult | P1-F.3 Technology-Enabled Finance Transformation — automation control design and SOX compliance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-053 | T | F.053 automation — bot exception handling when sou | Difficult | P1-F.3 Technology-Enabled Finance Transformation — RPA exception handling and financial controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-054 | T | F.054 automation bot governance oversight | Moderate-Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-055 | T | F.055 automation governance — RPA bot credential u | Very Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-056 | T | F.056 NLP sentiment analysis — earnings call trans |  | P1-F.3 Data analytics tools — technology-enabled finance transformation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-057 | T | F.057 NLP automated contract review — ASC 842 leas |  | P1-F.3 Technology-enabled finance transformation — automated contract analysis | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-058 | T | F.058 NLP AP invoice data extraction — error rate  |  | P1-F.3 Technology-enabled finance transformation — automated data capture controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-056 | T | F.056 NLP sentiment analysis — earnings call trans | Difficult | P1-F.3 Data analytics tools — technology-enabled finance transformation | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-057 | T | F.057 NLP automated contract review — ASC 842 leas | Difficult | P1-F.3 Technology-enabled finance transformation — automated contract analysis | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-058 | T | F.058 NLP AP invoice data extraction — error rate  | Difficult | P1-F.3 Technology-enabled finance transformation — automated data capture controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-059 | T | F.059 natural language processing use case | Moderate-Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-060 | T | F.060 NLP chatbot vs. human analyst — management i |  | P1-F.3 Technology-enabled finance transformation — AI-augmented decision support | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-060 | T | F.060 NLP chatbot vs. human analyst — management i | Difficult | P1-F.3 Technology-enabled finance transformation — AI-augmented decision support | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-061 | T | F.061 cybersecurity — NIST CSF-based risk assessme | Difficult | P1-F.4 Cybersecurity | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-062 | T | F.062 cybersecurity — third-party vendor risk asse | Difficult | P1-F.4 Cybersecurity | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-063 | T | F.063 cybersecurity — vulnerability scanning frequ | Difficult | P1-F.4 Cybersecurity | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -2048,6 +2348,96 @@
 | P1-FD-073 | T | F.073 data retention policy compliance | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-074 | T | F.074 data retention policy compliance | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-075 | T | F.075 data retention policy compliance | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-101 | P | C.101 direct materials variance decomposition | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-102 | P | C.102 labor variance with overtime premium split | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-103 | P | C.103 variable overhead spending versus efficiency | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-104 | P | C.104 fixed overhead denominator choice | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-105 | P | C.105 materials mix and yield variances | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-106 | P | C.106 sales price and volume variance bridge | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-107 | P | C.107 market size and share variance | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-108 | P | C.108 ROI versus residual income conflict | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-109 | P | C.109 transfer pricing with excess capacity | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-110 | P | C.110 transfer pricing without excess capacity | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-111 | P | C.111 balanced scorecard perspective classificatio | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-112 | P | C.112 OEE decomposition diagnosis | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-113 | P | C.113 benchmarking scale adjustment | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-114 | P | C.114 controllable performance report evaluation | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-115 | P | C.115 planning versus operational variances | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-116 | P | C.116 outdated standard revision decision | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-117 | P | C.117 quality cost tradeoff in variances | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-118 | P | C.118 service allocation effect on ROI | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-119 | P | C.119 balanced scorecard cause effect break | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-120 | P | C.120 manufacturing cycle efficiency | Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-121 | P | C.121 variance investigation portfolio | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-122 | P | C.122 transfer pricing policy recommendation | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-123 | P | C.123 performance measure redesign asset age | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-124 | P | C.124 overhead disposition proration | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-125 | P | C.125 denominator utilization distortion | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-126 | P | C.126 allocation base change fairness | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-127 | P | C.127 incentive plan controllability design | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-128 | P | C.128 scorecard reweighting for strategy shift | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-129 | P | C.129 outsourcing benchmark scope adjustment | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-CD-130 | P | C.130 denominator level fairness | Very Difficult | P1-C Performance management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-076 | E | A.076 bond discount amortization | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-077 | E | A.077 falling-price method comparison | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-078 | E | A.078 equity pickup with dividend and impairment | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-079 | E | A.079 installment sale default and repossession | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-080 | E | A.080 equity issuance costs and treasury | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-081 | E | A.081 retained earnings bridge with correction | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-082 | E | A.082 intercompany profit elimination | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-083 | E | A.083 VIE primary beneficiary test | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-084 | E | A.084 debt restructuring gain measurement | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-085 | E | A.085 extinguishment with unamortized premium | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-086 | E | A.086 asset retirement obligation measurement | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-087 | E | A.087 troubled debt restructuring gain | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-088 | E | A.088 dollar-value LIFO layer | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-089 | E | A.089 extinguishment with premium | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-090 | E | A.090 treasury stock transactions | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-091 | E | A.091 DTA valuation allowance | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-092 | E | A.092 segment reporting thresholds | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-093 | E | A.093 fair value hierarchy classification | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-094 | E | A.094 subsequent events type I versus II | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-095 | E | A.095 error estimate principle changes | Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-096 | E | A.096 freight intermediary gross versus net | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-097 | E | A.097 domestic LIFO with IFRS subsidiary | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-098 | E | A.098 short-term lease exemption strategy | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-099 | E | A.099 multi-factor trigger weighing | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-100 | E | A.100 allowance regime change analysis | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-101 | E | A.101 refunding with issuance cost load | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-102 | E | A.102 component approach overhaul split | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-103 | E | A.103 payout signaling with growth needs | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-104 | E | A.104 conversion trigger monitoring | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-AD-105 | E | A.105 hedge design effectiveness review | Very Difficult | P1-A Financial reporting | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-076 | C | D.076 high-low with outlier exclusion | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-077 | C | D.077 regression output interpretation | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-078 | C | D.078 job cost underapplied disposition | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-079 | C | D.079 FIFO equivalent units with BWIP | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-080 | C | D.080 average costing with spoilage layers | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-081 | C | D.081 ABC cross-subsidy reveal | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-082 | C | D.082 joint cost NRV allocation | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-083 | C | D.083 step-down order selection effect | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-084 | C | D.084 multi-product breakeven mix | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-085 | C | D.085 special order with displacement | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-086 | C | D.086 make-or-buy with lease opportunity | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-087 | C | D.087 sell-or-process joint irrelevance | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-088 | C | D.088 constrained resource ranking | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-089 | C | D.089 markup margin conversion | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-090 | C | D.090 target cost gap allocation | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-091 | C | D.091 operating leverage risk comparison | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-092 | C | D.092 margin of safety with step cost | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-093 | C | D.093 commission structure crossover | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-094 | C | D.094 relevant range step planning | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-095 | C | D.095 by-product presentation equivalence | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-096 | C | D.096 cost structure choice under uncertainty | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-097 | C | D.097 ABC adoption investment decision | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-098 | C | D.098 outsourcing with quality and release value | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-099 | C | D.099 penetration versus skim with capacity | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-100 | C | D.100 overtime versus machine investment | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-101 | C | D.101 joint continuation decision | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-102 | C | D.102 standard-setting evidence selection | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-103 | C | D.103 service base blended design | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-104 | C | D.104 quality program investment appraisal | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-DD-105 | C | D.105 lease versus buy after-tax | Very Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-001 | E | E-A.001 Balance sheet purpose | Difficult | P1-A.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-A-002 | E | E-A.002 Current asset identification | Moderate-Easy | P1-A.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-A-003 | E | E-A.003 Accounting equation | Moderate | P1-A.1 Financial statements | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2392,7 +2782,7 @@
 | P1E-C-063 | P | E-C.063 EVA vs residual income | Moderate-Easy | P1-C.2 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-C-064 | P | E-C.064 Nonfinancial measures importance | Moderate-Easy | P1-C.3 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-038 | C | E-D.038 Backflush costing | Difficult | P1-D.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
-| P1E-D-039 | C | E-D.039 Sales value method | Moderate | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-D-039 | C | E-D.039 Sales value method | Easy | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-040 | C | E-D.040 NRV joint cost method | Moderate | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-041 | C | E-D.041 JIT definition | Moderate | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-D-042 | C | E-D.042 Lean manufacturing | Easy | P1-D.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
@@ -2427,7 +2817,7 @@
 | P1E-E-041 | I | E-E.041 Access controls | Easy | P1-E.2 | pack_e_corrected.js | 0 | 2 | — | Not Scored |
 | P1E-E-042 | I | E-E.042 Authorization controls | Moderate-Easy | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-043 | I | E-E.043 Verification controls | Easy | P1-E.2 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| P1E-E-044 | I | E-E.044 Internal audit charter | Moderate | P1-E.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-044 | I | E-E.044 Internal audit charter | Easy | P1-E.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-045 | I | E-E.045 Internal audit reporting | Moderate-Easy | P1-E.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
 | P1E-E-046 | I | E-E.046 Operational audit | Moderate-Easy | P1-E.4 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-E-047 | I | E-E.047 Compliance audit | Moderate-Easy | P1-E.4 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
@@ -2668,6 +3058,66 @@
 | P1E-E-S08 | I | E-S08 IT general controls access management termin | Difficult | P1-E.2 Internal controls | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-S06 | T | F-S06 data governance MDM customer master inconsis | Difficult | P1-F.2 Data governance | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-S07 | T | F-S07 cloud computing service model IaaS PaaS SaaS | Difficult | P1-F.1 Information systems | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-101 | P | E-B.101 seasonal index construction | Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-102 | P | E-B.102 production with defect rate | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-103 | P | E-B.103 quantity discount break | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-104 | P | E-B.104 shift differential costing | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-105 | P | E-B.105 mixed cost separation with outlier | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-106 | P | E-B.106 early-pay discount economics | Difficult | P1-B.2 Cash budgeting and forecasting | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-107 | P | E-B.107 compensating balance effective rate | Difficult | P1-B.2 Cash budgeting and forecasting | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-108 | P | E-B.108 flexible performance with price discipline | Difficult | P1-B.2 Flexible budgets | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-109 | P | E-B.109 slack strata quantification | Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-110 | P | E-B.110 cannibalization-adjusted launch forecast | Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-118 | P | E-B.118 payroll calendar disbursement spike | Difficult | P1-B.2 Cash budgeting and forecasting | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-119 | P | E-B.119 seasonal bias decomposition | Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-120 | P | E-B.120 grant cost allowability screen | Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-111 | P | E-B.111 teardown gap closure | Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-112 | P | E-B.112 driver rate revision decision | Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-113 | P | E-B.113 cumulative-average learning budget | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-114 | P | E-B.114 ZBB package lifecycle review | Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-115 | P | E-B.115 pro-forma with equity flows | Difficult | P1-B.2 Financial budgets | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-116 | P | E-B.116 internal demand planning mandate | Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-B-117 | P | E-B.117 multi-step fixed cost flexing | Difficult | P1-B.2 Flexible budgets | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-121 | P | E-B.121 intermittent demand method selection | Very Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-122 | P | E-B.122 reforecast cadence cost benefit | Very Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-123 | P | E-B.123 risk-based reserve sizing | Very Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-124 | P | E-B.124 R&D milestone tranche funding | Very Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-B-125 | P | E-B.125 budget gaming discovery protocol | Very Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-126 | P | E-B.126 lockbox float optimization | Very Difficult | P1-B.2 Cash budgeting and forecasting | pack_e_corrected.js | 0 | 3 | — | Not Scored |
+| P1E-B-127 | P | E-B.127 asymmetric error cost threshold | Very Difficult | P1-B.2 Budgetary control | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-128 | P | E-B.128 S&OP cadence optimization | Very Difficult | P1-B.2 Operating budgets | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-129 | P | E-B.129 reserve disclosure adequacy | Very Difficult | P1-B.2 Budgeting methodologies | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-B-130 | P | E-B.130 forecast combination weighting | Very Difficult | P1-B.1 Forecasting techniques | pack_e_corrected.js | 0 | 2 | — | Not Scored |
+| P1E-E-101 | I | E-E.101 segregation matrix with IT override | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-102 | I | E-E.102 walkthrough exception triage | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-103 | I | E-E.103 preventive detective mix costing | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-104 | I | E-E.104 authorization limit structuring | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-105 | I | E-E.105 reconciliation break aging | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 4 | — | Not Scored |
+| P1E-E-106 | I | E-E.106 physical inventory surprise counts | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-107 | I | E-E.107 HR termination pay continuation | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-108 | I | E-E.108 outsourced payroll SOC reliance | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-109 | I | E-E.109 change management emergency path | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-110 | I | E-E.110 backup restore test gaps | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-111 | I | E-E.111 privileged access recertification | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-112 | I | E-E.112 vendor master file controls | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-113 | I | E-E.113 journal entry testing thresholds | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-114 | I | E-E.114 exception reporting design | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-115 | I | E-E.115 control self-assessment bias | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-116 | I | E-E.116 fraud response sequencing | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-117 | I | E-E.117 data classification handling | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-118 | I | E-E.118 tone at the top measurement | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-119 | I | E-E.119 control deficiency aggregation | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-120 | I | E-E.120 management review precision | Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-121 | I | E-E.121 control cost benefit with residual risk | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-122 | I | E-E.122 fraud program investment with deterrence | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-123 | I | E-E.123 access remediation with productivity guard | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-124 | I | E-E.124 monitoring mix optimization | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
+| P1E-E-125 | I | E-E.125 ethics versus compliance program scope | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 3 | — | Not Scored |
+| P1E-E-126 | I | E-E.126 investigation independence design | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-127 | I | E-E.127 control automation business case | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 1 | — | Not Scored |
+| P1E-E-128 | I | E-E.128 GRC platform consolidation decision | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-129 | I | E-E.129 control maturity roadmap sequencing | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
+| P1E-E-130 | I | E-E.130 assurance mapping coordination | Very Difficult | P1-E.1 | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ-A1-Q1 | E | Revenue recognition | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ-A1-Q2 | E | Contract liabilities | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ-A1-Q3 | E | Revenue recognition | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
@@ -3068,16 +3518,16 @@
 | CBQ5-F3-Q3 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-F3-Q4 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-F3-Q5 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q1 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q2 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q3 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q4 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q5 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q1 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q2 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q3 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q4 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q5 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A3-Q1 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A3-Q2 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A3-Q3 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A3-Q4 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A3-Q5 | E | Revenue Recognition | Difficult | Revenue recognition; Contract liabilities; Variable consideration | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A4-Q1 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A4-Q2 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A4-Q3 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A4-Q4 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A4-Q5 | E | Inventory Valuation | Moderate | Inventory valuation; Lower of cost or net realizable value; Inventory write-downs | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ3-C4-Q1 | P | Material Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ3-C4-Q2 | P | Material Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ3-C4-Q3 | P | Labor Variances | Difficult | Standard costing; Material variances; Labor variances; Overhead variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
@@ -5064,7 +5514,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1-F-053 Choice C: "R&D (Department 6) represents the highest governance risk — with only 27% certified-source usage and 8 different uncertified data sources, R&D is making product investment decisions on the least governed data in the organization" — contains absolute language "only/exclusively"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-F-053 Choice D: " departments except HR (which has 92% certified-source usage) represent significant governance risk — the governance committee should mandate certified-source-only policies and stale-report archival across five departments simultaneously" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-F-053 Choice D: "departments except HR (which has 92% certified-source usage) represent significant governance risk — the governance committee should mandate certified-source-only policies and stale-report archival across five departments simultaneously" — contains absolute language "only/exclusively"
 
 ---
 
@@ -5302,7 +5752,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Topic:** B.025 beyond budgeting — evaluating beyond budgeting vs. traditional annual budgeting
 **Section:** Planning, Budgeting, and Forecasting
-**Difficulty:** 
+**Difficulty:** Very Difficult
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
@@ -5315,7 +5765,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Topic:** B.034 budgetary slack — detecting and analyzing budgetary slack in decentralized organizations
 **Section:** Planning, Budgeting, and Forecasting
-**Difficulty:** 
+**Difficulty:** Difficult
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
@@ -5327,11 +5777,351 @@ Questions that triggered one or more validator errors or warnings:
 
 **Topic:** B.046 rolling forecast — evaluating transition from static annual budget to rolling forecast
 **Section:** Planning, Budgeting, and Forecasting
-**Difficulty:** 
+**Difficulty:** Very Difficult
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1-B-046 Choice B: "Implement a hybrid model — a 5-quarter rolling forecast for internal resource allocation and operational management, supplemented by a fixed annual budget prepared once per year exclusively for external earnings guidance communication to analysts." — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-079
+
+**Topic:** A.079 diluted EPS sequencing
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-079 Choice B: "$2.19 — bonds only; options are immaterial and skipped" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-086
+
+**Topic:** A.086 asset exchange commercial substance
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-086 Choice B: "No gain — exchanges never recognize gains until cash is received" — contains absolute language "never"
+
+---
+
+### P1-A-088
+
+**Topic:** A.088 DuPont leverage selection with risk
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-088 Choice C: "Pull margin — adds 3.33 ROE points at $30,000 with no balance-sheet risk; leverage adds 4.0 points but prices distress risk at zero, and turnover adds only 1.5" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-089
+
+**Topic:** A.089 contingency recognition matrix
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-089 Choice D: "Disclose all four without accruing — litigation outcomes are never estimable enough" — contains absolute language "never"
+
+---
+
+### P1-A-091
+
+**Topic:** A.091 DTA valuation allowance
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-091 Choice A: "$0 allowance — NOLs are statutory rights, always fully realizable" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-091 Choice C: "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-092
+
+**Topic:** A.092 segment reporting thresholds
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-092 Choice B: "A only — only the largest segment matters" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-094
+
+**Topic:** A.094 subsequent events type I versus II
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-094 Choice B: "Disclose both without adjusting — subsequent events never adjust issued-pending statements" — contains absolute language "never"
+
+---
+
+### P1-A-096
+
+**Topic:** A.096 principal versus agent judgment
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-096 Choice C: "Gross only if physical possession exceeds 30 days — control requires custody duration" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-097
+
+**Topic:** A.097 inventory method covenant tradeoff
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-097 Choice B: "LIFO always — $500,000 of tax savings dominates any reporting consideration" — contains absolute language "always"
+
+---
+
+### P1-A-098
+
+**Topic:** A.098 lease versus buy covenant analysis
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-098 Choice B: "Five-year finance lease — leasing always preserves covenants versus buying" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-098 Choice D: "Twelve-month renewable leases (short-term exempt) — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-099
+
+**Topic:** A.099 goodwill trigger qualitative assessment
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-099 Choice D: "Wait a year — triggers must persist four quarters before testing" — contains absolute language "must"
+
+---
+
+### P1-A-101
+
+**Topic:** A.101 bond refunding NPV decision
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-101 Choice B: "Do not refund — call premiums always destroy refunding economics" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-101 Choice C: "Refund only if rates fall below 3% — 5% is insufficient improvement" — contains absolute language "only/exclusively"
+
+---
+
+### P1-A-105
+
+**Topic:** A.105 OCI versus net income boundary
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-105 Choice B: "All $270,000 to net income — comprehensive income distinctions are presentational only" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-102
+
+**Topic:** C.102 labor rate versus efficiency interaction
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-102 Choice B: "Net $13,000 F only — favorable is favorable, no further analysis needed" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-103
+
+**Topic:** C.103 variable overhead spending versus efficiency
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-103 Choice C: "Total $18,000 U only — decomposition adds no information for overhead" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-105
+
+**Topic:** C.105 sales price versus volume variance
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-105 Choice D: "Net $52,000 F only — revenue beat means the discount worked" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-107
+
+**Topic:** C.107 market size versus share variance
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-107 Choice D: "Net +$72,000 F only — decomposition adds nothing once the total is known" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-110
+
+**Topic:** C.110 variance investigation decision
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-110 Choice D: "Investigate only if controllable — determine controllability first, then decide" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-111
+
+**Topic:** C.111 responsibility center classification
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-111 Choice A: "(1) cost, (2) revenue, (3) profit (not investment — no capital authority), (4) investment. Error: charging (1) and (2) with total profit including uncontrollable HQ allocations violates controllability — evaluate each only on controllable margin; allocated HQ costs belong in no center's performance report (economic income measurement shows them separately)" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-112
+
+**Topic:** C.112 controllable margin construction
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-112 Choice B: "Controllable margin = $2,000,000 − $1,100,000 − $300,000 = $600,000 judges the manager (revenues, variable, controllable fixed). Contribution $900,000 ($2,000,000 − $1,100,000) shown above it; direct committed $200,000 and HQ $150,000 shown below the performance line for economic context only. Manager answers for $600,000, not $250,000" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-113
+
+**Topic:** C.113 ROI versus residual income conflict
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-113 Choice D: "Overrule: project RI = $56,000 − 0.12×$400,000 = $56,000 − $48,000 = +$8,000 (creates value); new division ROI = ($300,000+$56,000)/($1,500,000+$400,000) = $356,000/$1,900,000 = 18.74% (diluted but still above hurdle). ROI punishes value-creating investment whenever project return sits between hurdle and current ROI — adopt residual income for decisions (bonus on RI), report ROI only as a ratio diagnostic" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-114
+
+**Topic:** C.114 ROI manipulation versus economics
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-114 Choice B: "Endorse (a) only — maintenance can wait a year" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-114 Choice C: "Endorse (c) only — the expansion creates $8,000 of RI while (a) borrows $60,000 from next year at breakdown risk and (b) destroys pipeline value; manage ROI with multi-year RI and maintenance covenants, not single-period ratios" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-117
+
+**Topic:** C.117 dual transfer pricing ethics
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-117 Choice B: "Adopt for decision-making with eyes open: dual pricing preserves both divisions' goal congruence (S keeps $50 economics, B faces $45 make-buy truth) at the cost of $5/unit of phantom corporate profit that requires elimination in consolidation (sum of divisional profits overstates company profit until the $5/unit subsidy is backed out). Use only with consolidation adjustments, sunset review, and disclosure to both managers that the spread is a corporate subsidy, not earned margin" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-120
+
+**Topic:** C.120 benchmarking parity versus advantage
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-120 Choice D: "Decompose first: $42 vs $40 median = $2 parity gap (close via process discipline — close it this year); $40 vs $34 = $6 structural gap (scale/vintage-driven — price it, plan multi-year capital/technology response, do not demand it from operations). Target: $40 this year (parity) + funded roadmap toward $34 (advantage). Median-only (option A) institutionalizes permanent $6 disadvantage; best-only (option B) demands structural change from operating budgets; hold (option C) ignores both signals" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-121
+
+**Topic:** C.121 partial productivity diagnosis
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-121 Choice C: "Neither partial decides alone — compute total productivity with dollar weights: if labor $20/hr and materials $6/lb, Year 1 cost = 20,000×$20 + 40,000×$6 = $400,000 + $240,000 = $640,000 ($64/unit); Year 2 = 18,000×$20 + 44,000×$6 = $360,000 + $264,000 = $624,000 ($62.40/unit) → genuine $16,000 gain. Partial productivities diagnose (labor saved $40,000, materials cost $24,000 extra); only the dollar-weighted total judges. Single-partial verdicts (options A/B) crown whichever input flatters the claimant" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-122
+
+**Topic:** C.122 ROI denominator timing choice
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-122 Choice D: "Average $1,500,000 (20.0%) — income was earned across the year while the base changed mid-year; averaging matches the period's earnings to the period's capital employed. Beginning-base credits a full year of earnings against pre-expansion capital (overstates); ending-base charges a full year against post-expansion capital the manager held only half the year (understates). Disclose the convention consistently" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-123
+
+**Topic:** C.123 book value versus current cost ROI
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-123 Choice A: "Rank on current-cost ROI: old ($150,000/$1,000,000 = 15%) ties new (15%) — book ROI rewards asset age (depreciation shrinks the denominator while income persists), punishing new investment and shielding incumbents. For capital allocation, compare current-cost returns (or RI on current cost); report book ROI only with asset-age disclosure. Recommendation: tie on economics — fund the higher-RI opportunity, and stop ranking managers by depreciation schedules" — contains absolute language "only/exclusively"
+
+---
+
+### P1-C-130
+
+**Topic:** C.130 performance system redesign synthesis
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1-C-130 Choice B: "Switch to revenue-only evaluation — simplicity ends gaming at once" — contains absolute language "only/exclusively"
 
 ---
 
@@ -7016,7 +7806,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (4):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-095 Choice A: " members must be certified public accountants" — contains absolute language "must"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-095 Choice A: "members must be certified public accountants" — contains absolute language "must"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-095 Choice B: "The audit committee chair must be the CEO" — contains absolute language "must"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-095 Choice C: "All members must be independent of management" — contains absolute language "must"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-095 Choice D: "The audit committee must include at least one government representative" — contains absolute language "must"
@@ -7404,6 +8194,641 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (1):**
 - [PsychometricValidator] [AmbiguityValidator] P1B-F-148 Choice B: "Deficiency B (Unlogged Transaction Overrides) — 47 transactions totaling $892,000 bypassed the SAP approval workflow in a single quarter, representing actual (not theoretical) financial statement impact; the absence of compensating detective controls means management cannot identify which bypassed transactions may be inappropriate" — contains vague qualifier matching /\bmay\b/
+
+---
+
+### P1B-B-203
+
+**Topic:** B-B.203 direct materials purchases budget
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-203 Choice B: "86,000 lbs ($430,000) — production need only; inventory policies net to zero" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-206
+
+**Topic:** B-B.206 cash collections timing pattern
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-206 Choice B: "$542,000 — $360,000 January + $150,000 December + $32,000 November; 2% never arrives" — contains absolute language "never"
+
+---
+
+### P1B-B-208
+
+**Topic:** B-B.208 flexible budget price and efficiency split
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-208 Choice D: "Fixed spending $0 — fixed costs never vary, so the $2,000 is volume" — contains absolute language "never"
+
+---
+
+### P1B-B-209
+
+**Topic:** B-B.209 embedded slack quantification
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-209 Choice B: "Slack is $50,000 — only the growth increment is suspect" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-210
+
+**Topic:** B-B.210 rolling forecast volume and FX update
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-210 Choice C: "Revenue $1,700,000 with COGS held at $1,200,000 — update sales only, costs follow annually" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-211
+
+**Topic:** B-B.211 kaizen target feasibility
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice A: "Never — kaizen shaves pennies, not the $10 gap" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-212
+
+**Topic:** B-B.212 activity-based versus traditional budgeting
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-212 Choice C: "ABB equals traditional at all volumes — methods differ only in presentation" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-214
+
+**Topic:** B-B.214 zero-based rank-order funding
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-214 Choice C: "Cut P1 — even compliance packages must share the pain" — contains absolute language "must"
+
+---
+
+### P1B-B-215
+
+**Topic:** B-B.215 pro-forma cash flow integration
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-215 Choice B: "OCF $250,000; ending $170,000 — add back depreciation only" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-216
+
+**Topic:** B-B.216 forecast coordination failure costing
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-216 Choice A: "$40,000 — the stockout is the only real loss; excess material will be used eventually" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-216 Choice B: "$20,000 — the excess material is the only incremental cost; stockouts are hypothetical" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-216 Choice D: "$60,000 — $40,000 lost CM plus $20,000 excess-material exposure; a single frozen forecast must drive all three schedules" — contains absolute language "must"
+
+---
+
+### P1B-B-221
+
+**Topic:** B-B.221 forecast investigation portfolio
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-221 Choice D: "Labor only — mid-size exposures deserve single focus" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-222
+
+**Topic:** B-B.222 forecast source arbitration
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-222 Choice C: "$2,100,000 — statistical models always dominate judgmental pipelines" — contains absolute language "always"
+
+---
+
+### P1B-B-223
+
+**Topic:** B-B.223 growth versus slack budget remedy
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-223 Choice C: "Raise the screen to 19% — only Eastvale-grade initiatives should proceed" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-226
+
+**Topic:** B-B.226 forecast ownership hybrid design
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-226 Choice C: "Finance-owned model only — unbiased beats informed-but-biased" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-228
+
+**Topic:** B-B.228 forecast process integration design
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-228 Choice D: "Production dictates — capacity is the only hard constraint, so its number governs" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-B-230
+
+**Topic:** B-B.230 evaluation cadence for noisy metrics
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-230 Choice A: "Quarterly formal evaluation (±$15,000 threshold, ~3% false-alarm) with monthly monitoring-only flags — aggregation kills noise while true shifts accumulate" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-230 Choice C: "Annual evaluation only — maximum averaging eliminates all noise" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-C-201
+
+**Topic:** B-C.201 quality-adjusted price comparison
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-201 Choice C: "Tie — defect differentials always offset price differentials exactly" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-201 Choice D: "Y wins at $82,609 versus X at $88,000 — X must buy 11,000 lbs at full price" — contains absolute language "must"
+
+---
+
+### P1B-C-203
+
+**Topic:** B-C.203 revenue mix with discount layer
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-203 Choice D: "Mix nets $0 — composition shifts always self-cancel" — contains absolute language "always"
+
+---
+
+### P1B-C-207
+
+**Topic:** B-C.207 scope-adjusted benchmark target
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-207 Choice B: "No target — cross-company comparisons are never valid across size classes" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-207 Choice D: "$11.70 — the attainable $0.80 efficiency portion only ($12.50 − $0.80); the $1.90 scale advantage is out of reach" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-C-208
+
+**Topic:** B-C.208 chargeback fixed variable split
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-208 Choice B: "Variable $30 only — fixed capacity is corporate's problem, not divisions'" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-C-209
+
+**Topic:** B-C.209 investigation threshold with base rates
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-209 Choice B: "Probe — large absolute dollars always justify investigation regardless of limits" — contains absolute language "always"
+
+---
+
+### P1B-C-210
+
+**Topic:** B-C.210 measures system overhaul recommendation
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-210 Choice C: "BSC only ($40,000) — one tool at a time, starting with the cheapest" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-210 Choice D: "Defer until ROI drops — fix systems only under performance distress" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-D-151
+
+**Topic:** B-D.151 high-low across cost step
+**Section:** Cost Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-151 Choice C: "Post-step only VC $4.00 with no fixed — steps eliminate fixed baselines" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-D-152
+
+**Topic:** B-D.152 through-origin regression commissions
+**Section:** Cost Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-152 Choice A: "With intercept ($0.67k + 4.67%) — intercepts always improve fit and belong in budgets" — contains absolute language "always"
+
+---
+
+### P1B-D-153
+
+**Topic:** B-D.153 batch rework normal abnormal split
+**Section:** Cost Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-153 Choice C: "Job $120,000; $13,000 period loss — rework never attaches to jobs" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-D-153 Choice A: "Job $128,000 ($120,000 + $8,000 normal); $5,000 abnormal period loss — normal rework attaches, abnormal expenses" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-D-153 Choice D: "Job $125,000 — abnormal attaches, normal expenses (rework symmetry)" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+
+---
+
+### P1B-D-154
+
+**Topic:** B-D.154 transferred-in FIFO layering
+**Section:** Cost Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-154 Choice B: "TI 7,000 EU ($10.00); DM 7,800 ($5.77); conv 8,600 ($6.40) — current-period work only" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-154 Choice D: "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in always uses average method" — contains absolute language "always"
+
+---
+
+### P1B-D-157
+
+**Topic:** B-D.157 sales mix with machine constraint
+**Section:** Cost Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-157 Choice C: "Produce B only — highest unit CM captures the constraint best" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-157 Choice D: "Optimal mix ignores demands — rank purely by CM/hr and produce top-ranked only" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-E-151
+
+**Topic:** B-E.151 monitoring design revenue controls
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-151 Choice B: "Quarterly self-assessments only — management's own review is the most efficient monitoring" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-151 Choice C: "Annual external audit only — independent testing subsumes all monitoring" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-E-153
+
+**Topic:** B-E.153 access recertification findings
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-153 Choice D: "Disable only the 5 privileged accounts — standard orphans pose no exploitable risk" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-E-154
+
+**Topic:** B-E.154 fraud triangle diagnosis
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-154 Choice A: "Low risk — single indicators never suffice, and $12,000 is immaterial" — contains absolute language "never"
+
+---
+
+### P1B-E-155
+
+**Topic:** B-E.155 reliance on internal audit
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-155 Choice B: "Rely nowhere — external auditors must reperform everything for independence" — contains absolute language "must"
+
+---
+
+### P1B-E-158
+
+**Topic:** B-E.158 cyber control investment with breach math
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-158 Choice B: "Buy cyber-insurance only ($180,000 premium, $5,000,000 cap with ransomware sublimit $2,000,000) — transfer beats prevention" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-E-160
+
+**Topic:** B-E.160 continuous monitoring investment
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-160 Choice D: "Defer until deficiencies rise — invest in monitoring only under demonstrated failure" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-151
+
+**Topic:** B-A.151 debt issuance cost presentation
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-151 Choice D: "$100,000 immediate expense — issuance friction never benefits future periods" — contains absolute language "never"
+
+---
+
+### P1B-A-152
+
+**Topic:** B-A.152 bond sinking fund accounting
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-152 Choice C: "$200,000 restricted asset (sinking fund) plus $4,000 extinguishment gain ($52,000 − $48,000); repurchases beyond deposits reduce debt only when delivered to trustee" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-155
+
+**Topic:** B-A.155 lease with residual guarantee
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-155 Choice A: "PV of $100,000 × 5 only ($421,236) — guarantees are contingent and excluded until paid" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-155 Choice D: "PV of $50,000 guarantee only ($37,365) — payments net against guaranteed residual" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-157
+
+**Topic:** B-A.157 pension curtailment gain recognition
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-157 Choice A: "$300,000 gain in OCI — curtailments never touch net income until settlement" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-157 Choice D: "$80,000 loss — prior-service write-offs always dominate curtailment economics" — contains absolute language "always"
+
+---
+
+### P1B-A-158
+
+**Topic:** B-A.158 pension settlement threshold
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice A: "No settlement — lump sums under $500,000 never trigger regardless of cost ratios" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-159
+
+**Topic:** B-A.159 stock split versus dividend
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-159 Choice C: "Split: memo only (200,000 × $5 par = $1,000,000 common; APIC/RE untouched; total equity unchanged); 100% dividend: split treatment in substance — large stock dividends (>20–25%) use par-value capitalization like splits ($1,000,000 common, RE down $1,000,000), NOT market value" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-160
+
+**Topic:** B-A.160 quasi-reorganization deficit reset
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-160 Choice C: "Eliminate $900,000 of deficit against APIC (zeroing APIC), carry forward a $300,000 deficit; disclose the fresh-start date with dated retained earnings ('from [date]') for up to 10 years — quasi-reorgs reset only to available surplus with full transparency" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-160 Choice D: "Quasi-reorganizations are prohibited — deficits must clear through future earnings only" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-160 Choice D: "Quasi-reorganizations are prohibited — deficits must clear through future earnings only" — contains absolute language "must"
+
+---
+
+### P1B-A-161
+
+**Topic:** B-A.161 non-troubled modification yield recalc
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-161 Choice C: "Defer the $20,000 of unamortized issuance costs — write-offs never survive modifications" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-161 Choice D: "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying plus unamortized costs) — non-substantial, non-troubled modifications adjust yield, never recognize gains" — contains absolute language "never"
+
+---
+
+### P1B-A-162
+
+**Topic:** B-A.162 HTM transfer to AFS
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-162 Choice A: "No entry — transfers between categories are presentational only" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-162 Choice C: "Debit investment $30,000, credit net income $30,000 — fair-value changes always hit earnings on transfer" — contains absolute language "always"
+
+---
+
+### P1B-A-164
+
+**Topic:** B-A.164 OCI pickup in equity method
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-164 Choice B: "Nothing — OCI belongs to the investee's equity, never the investor's statements" — contains absolute language "never"
+
+---
+
+### P1B-A-166
+
+**Topic:** B-A.166 deconsolidation retained interest
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-166 Choice B: "Gain $130,000 (retained fair value only) — cash proceeds are return of capital, not gain" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-173
+
+**Topic:** B-A.173 staged inspection spoilage policy
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-173 Choice D: "Move to stage-1 inspection — saves 7 × ($120 − $30 − $2) = 7 × $88 = $616 of wasted downstream cost per 100 starts (net of $200 inspection); spoilage stays normal (absorbed) with earlier detection improving the rate itself" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+
+---
+
+### P1B-A-174
+
+**Topic:** B-A.174 backflush adoption decision
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-174 Choice C: "Adopt partially — backflush raw materials only, track WIP conventionally for control" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-174 Choice D: "Defer until WIP grows — backflush suits only material-WIP operations by definition" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-A-179
+
+**Topic:** B-A.179 impairment grouping determination
+**Section:** External Financial Reporting Decisions
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-179 Choice B: "Test Store 7 jointly with the region — individual stores never qualify as groups" — contains absolute language "never"
+
+---
+
+### P1B-C-216
+
+**Topic:** B-C.216 cost of quality trend evaluation
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-216 Choice C: "Total-only view suffices — $500,000 saved is $500,000 saved regardless of mix" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-C-218
+
+**Topic:** B-C.218 scrap variance price versus usage
+**Section:** Performance Management
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-218 Choice A: "Netting suffices — $6,000 standard vs actual cost is the only comparison that matters" — contains absolute language "only/exclusively"
+
+---
+
+### P1B-C-223
+
+**Topic:** B-C.223 denominator capacity choice
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-223 Choice A: "Normal capacity — budgeted volume is the honest denominator" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-223 Choice D: "Normal: rate $12.50, applied 38,000×$12.50 = $475,000, volume variance $500,000−$475,000 = $25,000 U. Practical: rate $10.00, applied $380,000, volume variance $120,000 U ($20,000 planned idle 10,000×$10 + $20,000 unplanned 2,000×$10). Recommend practical capacity: it separates planned idle capacity ($100,000 — visible capacity-planning signal) from operational shortfall ($20,000), prices products at long-run attainable cost ($10.00 vs $12.50 loaded with planned idleness), and stops demand drops from inflating unit cost. Normal buries $100,000 of planned idleness in every unit" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+
+---
+
+### P1B-C-240
+
+**Topic:** B-C.240 continuous improvement standard
+**Section:** Performance Management
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-240 Choice B: "Both right, split the report: kaizen variance ($0.44 U vs the $47.06 moving target — improvement pace slipped this quarter) AND year-over-year achievement ($2.50 F vs $50.00 base — genuine 5% gain) — the $0.44 U measures pace against commitment, the $2.50 F measures distance traveled. Report both with distinct responses (pace slip → diagnose this quarter's kaizen events; 5% gain → recognize cumulative progress). Static-only (option A) hides pace slippage inside cumulative glory; kaizen-only (option C) hides 5% achievement inside a $0.44 scolding; abandonment (option D) surrenders both signals. Design: moving target for pace accountability + fixed base for achievement recognition — demoralization comes from single-lens reporting, not from high standards" — contains absolute language "only/exclusively"
 
 ---
 
@@ -9663,23 +11088,436 @@ Questions that triggered one or more validator errors or warnings:
 
 ---
 
+### P1E-B-101
+
+**Topic:** E-B.101 seasonal index construction
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-101 Choice A: "Q4 $600,000 (30% of $2,000,000); revised shares sum to 96% before Q4 — indices must sum to 1.00, so Q4 takes the 34% residual ($748,000 on $2.2M), not a stale 30%" — contains absolute language "must"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-101 Choice C: "Q4 $600,000 — annual revisions never change quarterly shares" — contains absolute language "never"
+
+---
+
+### P1E-B-102
+
+**Topic:** E-B.102 production with defect rate
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-102 Choice D: "30,500 — defects are a production variance, never a budget input" — contains absolute language "never"
+
+---
+
+### P1E-B-103
+
+**Topic:** E-B.103 quantity discount break
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-103 Choice D: "Order 9,500 and renegotiate — tiers are always negotiable, so analysis is moot" — contains absolute language "always"
+
+---
+
+### P1E-B-105
+
+**Topic:** E-B.105 mixed cost separation with outlier
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-105 Choice B: "Regression on all four — more data always beats selective data" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-105 Choice D: "Exclude the hurricane point; VC $6.00 with no fixed component — intercepts are unreliable, so report variable only" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-106
+
+**Topic:** E-B.106 early-pay discount economics
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-106 Choice A: "Keep — discounts always accelerate cash worth more than their cost" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-106 Choice D: "Keep — DSO deterioration always exceeds discount savings" — contains absolute language "always"
+
+---
+
+### P1E-B-107
+
+**Topic:** E-B.107 compensating balance effective rate
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-107 Choice A: "The 6% loan — lower stated rate always wins" — contains absolute language "always"
+
+---
+
+### P1E-B-108
+
+**Topic:** E-B.108 flexible performance with price discipline
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-108 Choice D: "Fixed spending $0 — fixed costs never vary, so the $3,000 is volume" — contains absolute language "never"
+
+---
+
+### P1E-B-109
+
+**Topic:** E-B.109 slack strata quantification
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-109 Choice B: "Slack is $100,000 — only the growth increment is suspect" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-110
+
+**Topic:** E-B.110 cannibalization-adjusted launch forecast
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-110 Choice B: "$225,000 net ($300,000 − $75,000) — forecasts must net cannibalization; require cannibalization schedules on all launch forecasts going forward" — contains absolute language "must"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-110 Choice D: "$75,000 — only the cannibalized portion is forecastable with confidence" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-118
+
+**Topic:** E-B.118 payroll calendar disbursement spike
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-118 Choice B: "$3,115,384 — salary $1,500,000 plus hourly $1,615,384 (two normal months $923,076 plus one spike month $692,308); budget the calendar, not the average" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+
+---
+
+### P1E-B-120
+
+**Topic:** E-B.120 grant cost allowability screen
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-120: Choices B and C have high word overlap (71%) — may fail to discriminate
+- [PsychometricValidator] [DistractorSimilarityValidator] P1E-B-120: Choices B and C (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+
+---
+
+### P1E-B-112
+
+**Topic:** E-B.112 driver rate revision decision
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-112 Choice B: "Hold $30 — one period never justifies revision" — contains absolute language "never"
+
+---
+
+### P1E-B-113
+
+**Topic:** E-B.113 cumulative-average learning budget
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-113 Choice C: "Units 1,001–2,000: 10,000 hrs (repeat lot 1); learning applies only after 4,000 units" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-116
+
+**Topic:** E-B.116 internal demand planning mandate
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-116 Choice A: "Voluntary — autonomy always beats mandated internal trade" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-116 Choice B: "No policy — internal demand is soft information, never plannable" — contains absolute language "never"
+
+---
+
+### P1E-B-122
+
+**Topic:** E-B.122 reforecast cadence cost benefit
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-122 Choice C: "Static annual — process costs always exceed their benefits at these scales" — contains absolute language "always"
+
+---
+
+### P1E-B-125
+
+**Topic:** E-B.125 budget gaming discovery protocol
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-125 Choice A: "Ignore — quantitatively immaterial amounts never warrant action" — contains absolute language "never"
+
+---
+
+### P1E-B-126
+
+**Topic:** E-B.126 lockbox float optimization
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice B: "Reject — $50,000 of bank fees always exceeds float gains at these volumes" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-127
+
+**Topic:** E-B.127 asymmetric error cost threshold
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-127 Choice A: "$12,000 — fewer false alarms always wins regardless of miss costs" — contains absolute language "always"
+
+---
+
+### P1E-B-128
+
+**Topic:** E-B.128 S&OP cadence optimization
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-128 Choice A: "Monthly — lower process cost always wins" — contains absolute language "always"
+
+---
+
+### P1E-B-129
+
+**Topic:** E-B.129 reserve disclosure adequacy
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-129 Choice D: "Disclose the methodology only — numbers invite second-guessing" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-B-130
+
+**Topic:** E-B.130 forecast combination weighting
+**Section:** Planning, Budgeting, and Forecasting
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (2):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-130 Choice B: "Judgment alone — field knowledge always dominates models" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-130 Choice C: "Statistical alone — MSE 100 beats 150, so judgment adds only noise" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-103
+
+**Topic:** E-E.103 preventive detective mix costing
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-103 Choice B: "Detective — cheaper sticker price always wins under budget constraint" — contains absolute language "always"
+
+---
+
+### P1E-E-105
+
+**Topic:** E-E.105 reconciliation break aging
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (4):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-105 Choice A: "Oldest first mechanically — age always outranks amount" — contains absolute language "always"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-105 Choice B: "Largest first mechanically — amount always outranks age" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-105: Choices A and B have high word overlap (83%) — may fail to discriminate
+- [PsychometricValidator] [DistractorSimilarityValidator] P1E-E-105: Choices A and B (distractor-distractor) share high similarity (75%)
+
+---
+
+### P1E-E-106
+
+**Topic:** E-E.106 physical inventory surprise counts
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-106 Choice A: "Annual full count only — one complete count beats partial ones" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-107
+
+**Topic:** E-E.107 HR termination pay continuation
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-107 Choice D: "Continue pay pending manager confirmation — termination records may be erroneous" — contains vague qualifier matching /\bmay\b/
+
+---
+
+### P1E-E-111
+
+**Topic:** E-E.111 privileged access recertification
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-111 Choice D: "Disable only the 2 shared accounts — individually-assigned unjustified accounts pose no exploitable risk" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-114
+
+**Topic:** E-E.114 exception reporting design
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-114 Choice C: "Tier into critical (auto-escalate ~10), review (~40), and informational (dashboard-only ~250) with rule-tuning feedback from reviewer dispositions — precision through triage, not thresholding" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-116
+
+**Topic:** E-E.116 fraud response sequencing
+**Section:** Internal Controls
+**Difficulty:** Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-116 Choice D: "Wait for the financial trail — preliminary evidence never justifies action" — contains absolute language "never"
+
+---
+
+### P1E-E-121
+
+**Topic:** E-E.121 control cost benefit with residual risk
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-121 Choice C: "Approve the $90,000 preventive only — detective analytics duplicate prevention's benefit" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-122
+
+**Topic:** E-E.122 fraud program investment with deterrence
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-122 Choice C: "Hotline only ($30,000) — single cheapest tool captures most benefit" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-124
+
+**Topic:** E-E.124 monitoring mix optimization
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "never"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "must"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice D: "Double analytics to $140,000 — more technology always improves coverage proportionally" — contains absolute language "always"
+
+---
+
+### P1E-E-125
+
+**Topic:** E-E.125 ethics versus compliance program scope
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (3):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-125 Choice A: "Compliance-only — rules plus tracking cover all enforceable obligations at 60% of cost" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-125 Choice B: "Compliance-plus-ethics — 70% gray-area incidence means rules-only programs miss most issues; the $80,000 increment buys dilemma capacity where violations actually originate" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-125 Choice C: "Ethics-only — values make rules redundant, so drop compliance for pure culture" — contains absolute language "only/exclusively"
+
+---
+
+### P1E-E-127
+
+**Topic:** E-E.127 control automation business case
+**Section:** Internal Controls
+**Difficulty:** Very Difficult
+**CAQS:** Not scored
+
+**Validator Warnings (1):**
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-127 Choice D: "Defer until error rates worsen — automate only under demonstrated crisis" — contains absolute language "only/exclusively"
+
+---
+
 ## Validator Suite Summary
 
 - **Repository Validator**: PASS (0 errors, 0 warnings, 2ms)
-- **Metadata Validator**: WARN (0 errors, 4 warnings, 181ms)
-- **Blueprint Validator**: WARN (0 errors, 70 warnings, 127ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 0ms)
-- **Difficulty Validator**: WARN (0 errors, 39 warnings, 170ms)
-- **Reference Validator**: WARN (0 errors, 159 warnings, 122ms)
-- **Explanation Validator**: WARN (0 errors, 6 warnings, 407ms)
-- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 35ms)
-- **PsychometricValidator**: WARN (0 errors, 1663 warnings, 1228ms)
+- **Metadata Validator**: WARN (0 errors, 4 warnings, 254ms)
+- **Blueprint Validator**: WARN (0 errors, 70 warnings, 133ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 1ms)
+- **Difficulty Validator**: WARN (0 errors, 39 warnings, 137ms)
+- **Reference Validator**: WARN (0 errors, 159 warnings, 154ms)
+- **Explanation Validator**: WARN (0 errors, 6 warnings, 491ms)
+- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 34ms)
+- **Case Identity Validator**: PASS (0 errors, 0 warnings, 36ms)
+- **PsychometricValidator**: WARN (0 errors, 1896 warnings, 1371ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-09-05 19:46:42
-  Source hash: f135d51d
-  Questions: 3045
+  Registry regenerated on 2026-09-12 20:12:04
+  Source hash: 4dcda7b7
+  Questions: 3495
   To regenerate: node scripts/generate_registry.js
 -->

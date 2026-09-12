@@ -16,11 +16,11 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 
 const PACKS = [
-  { file: "content/packs/pack_a_corrected.js", label: "Pack A", expectedQIDs: 500 },
-  { file: "content/packs/pack_b_corrected.js", label: "Pack B", expectedQIDs: 500 },
-  { file: "content/packs/pack_c_corrected.js", label: "Pack C", expectedQIDs: 500 },
-  { file: "content/packs/pack_d_corrected.js", label: "Pack D", expectedQIDs: 500 },
-  { file: "content/packs/pack_e_corrected.js", label: "Pack E", expectedQIDs: 620 },
+  { file: "content/packs/pack_a_corrected.js", label: "Pack A", expectedQIDs: 560 }, // Tier 3 Waves 4+14: +30 P1-A-076..105 +30 Unprocessed P1-C-101..130 (2026-09-11)
+  { file: "content/packs/pack_b_corrected.js", label: "Pack B", expectedQIDs: 620 }, // Tier 3 Waves 3+8+12+15: +30 BB +30 tails +30 BA +30 Certified P1B-C-211..240 (2026-09-11)
+  { file: "content/packs/pack_c_corrected.js", label: "Pack C", expectedQIDs: 620 }, // Tier 3 Waves 2+10+11+13: +30 CC +30 AC +30 BC +30 Unprocessed P1-DC-101..130 (2026-09-11)
+  { file: "content/packs/pack_d_corrected.js", label: "Pack D", expectedQIDs: 590 }, // Tier 3 Waves 1+5+6: +30 P1-CD-101..130 +30 P1-AD-076..105 +30 Unprocessed P1-DD-076..105 (2026-09-10)
+  { file: "content/packs/pack_e_corrected.js", label: "Pack E", expectedQIDs: 680 }, // Tier 3 Waves 7+9: +30 P1E-B-101..130 +30 Unprocessed P1E-E-101..130 (2026-09-11)
 ];
 
 const BASELINES_PATH = path.join(ROOT, "knowledge", "CURRENT_BASELINES.md");

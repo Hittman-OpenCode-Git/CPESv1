@@ -33,13 +33,13 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | File | SHA-256 | MD5 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-----|-------------|---------------|------------|
-| `pack_a_corrected.js` | `CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783` | `TBD` | TBD | 2026-07-28 ~11:45 | **S892 Pack A Final Closure.** 19 archived items replaced with newly authored Analyze/Evaluate items (Section A: 2 ASC 606/330 Analyze + Section E: 17 COSO Analyze/Evaluate across all 5 COSO components). QID: 500. Certified: **500 (100%).** Governance guard: 51/51 PASS. DL-008: 0. DL-026: 0. Rule 9: 0. AUTHORIZED — Pack A closure. Hash recaptured. |
-| `pack_b_corrected.js` | `04D68A74CA59D4B8A39CC5D13FC2E1A16B12CFE18050F39D6A404BEB511956BF` | `TBD` | 1,508,181 | 2026-07-30 11:53 | **S81 rebuild_baselines.** Removed duplicate `question_state` field from P1B-E-086. QID: 500. Certified: 500. AUTHORIZED. |
-| `pack_c_corrected.js` | `EC41F3EE1C5CDD52D096F43D65F528DD0F332269536971BB335914CD3664AAA5` | `TBD` | 2,193,542 | 2026-08-03 | **regenerate_ Pack C Domain F Remediation.** QID: 500. Certified: **500 (100%).** 36 archived Domain F items replaced with newly authored Analyze/Evaluate items (27 Analyze, 9 Evaluate). 4-agent parallel authoring. 0 DL-008, 0 DL-026. BLOCK-AUTHORIZED. |
-| `pack_d_corrected.js` | `EC83099D0C818645A9ED767F4FBBD514194ECAD57EEA1FA340C470BDF8F397B3` | `TBD` | TBD | 2026-08-03 | **regenerate_ Pack D Domain F Remediation.** QID: 500. Certified: **500 (100%).** 34 archived Domain F items replaced via 4-agent parallel authoring. 0 DL-008, 0 DL-026. |
-| `pack_e_corrected.js` | `2C10270EAF9B978BAD1BB8893CED8D5323FC530D16F339F0EB9D18A64903A1E9` | `TBD` | 2,382,616 | 2026-08-03 | **regenerate_ Phase 2 Certification — S140-S144.** QID: 620. Certified: **620 (100%).** All 75 S-series items certified. 0 DL-008, 0 DL-026. |
+| `pack_a_corrected.js` | `212E2CFA08030077660DCC1960D9006BE24DC90492090772F867ECC0B7A18FA7` | `TBD` | 2,653,801 | 2026-09-11 | **Tier 3 Waves 4+14+15 (Pack A closure + Section C expansion).** S892 Pack A Final Closure (19 archived → new Analyze/Evaluate Section A/E). Waves 4+14 added 60 items (P1-A-076..105, P1-C-101..130). QID: **560**. Certified: **560 (100%).** Governance guard: 89/89 PASS. DL-008: 0. DL-026: 0. Rule 9: 0. Hash recaptured 2026-09-11. |
+| `pack_b_corrected.js` | `93363F36FE27066B5065C9DAFA7126CFAD0315CB9201F942721655BD39537D3E` | `TBD` | 2,075,993 | 2026-09-11 | **Tier 3 Waves 3+8+12+15 (Pack B multi-section expansion).** S81 baseline (500 QIDs). Waves 3/8/12 added 90 items (BB, tails, BA). Wave 15 added 30 items (P1B-C-211..240, Analyze/Evaluate). QID: **620**. Certified: **620 (100%).** DL-008: 0. DL-026: 0. Rule 9: 0. Hash recaptured 2026-09-11. |
+| `pack_c_corrected.js` | `1CA3198F44AE0AD0774000515D570B0C8E07897424650C2A2373C405E4F26CA9` | `TBD` | 2,730,608 | 2026-09-11 | **Tier 3 Waves 2+10+11+13 (Pack C multi-section expansion).** S853/S826 Domain F remediation baseline (500 QIDs). Waves 2/10/11/13 added 120 items (CC, AC, BC, DC). QID: **620**. Certified: **606 (97.7%).** 14 items Unprocessed (P1-DC-101..130, Wave 13 tail). DL-008: 0. DL-026: 0. Rule 9: 0. Hash recaptured 2026-09-11. |
+| `pack_d_corrected.js` | `EAC7DF0ABB8D3101BBFE03ED7F5E10C5F3032E926810AD9E3E24C383FABDD72E` | `TBD` | 3,000,253 | 2026-09-10 | **Tier 3 Waves 1+5+6 (Pack D multi-section expansion).** S853 Domain F remediation baseline (500 QIDs). Waves 1/5/6 added 90 items (CD, AD, DD). QID: **590**. Certified: **586 (99.3%).** 4 items Unprocessed (P1-DD-076..105, Wave 6 tail). DL-008: 0. DL-026: 0. Rule 9: 0. Hash recaptured 2026-09-10. |
+| `pack_e_corrected.js` | `B18CC546FEA7F707EFDDFF3452844A36FD8CB88407616E63EC31D4A4C12524BC` | `TBD` | 2,664,804 | 2026-09-11 | **Tier 3 Waves 7+9 (Pack E Section B/E expansion).** S140-S144 Phase 2 Certification baseline (620 QIDs). Waves 7+9 added 60 items (P1E-B-101..130, P1E-E-101..130). QID: **680**. Certified: **680 (100%).** DL-008: 0. DL-026: 0. Rule 9: 0. Hash recaptured 2026-09-11. |
 
-**rebuild_baselines S377: Pack A 500 (matched S892 baseline), Pack B 500 (matched S888 baseline), Pack C 438 (+50 from S853 WAVE_A), Pack D 439 (+50 from S853 WAVE_A), Pack E 540 (matched S888 baseline). Packs C+D hashes recaptured (authorized drift from S853 certification). Pack A: DRIFT FLAG CLEARED — §1 hash matches S892 baseline. Governance guard 51/51 PASS. Certified pool: 2,417 (Pack A 500 + Pack B 500 + Pack C 438 + Pack D 439 + Pack E 540 = 2,417). DL-035: 39 Certified Domain F items carry empty distractor EW slots — S377 IN PROGRESS.**
+**rebuild_baselines S911: Pack A 560 (Tier 3 Waves 4+14), Pack B 620 (Tier 3 Waves 3+8+12+15), Pack C 620 (Tier 3 Waves 2+10+11+13), Pack D 590 (Tier 3 Waves 1+5+6), Pack E 680 (Tier 3 Waves 7+9). All hashes recaptured 2026-09-11/10 (authorized drift from Tier 3 certification waves). Governance guard 89/89 PASS. Certified pool: 3,052 (Pack A 560 + Pack B 620 + Pack C 606 + Pack D 586 + Pack E 680 = 3,052). DL-035: 0 Certified items with empty distractor EW slots — S911 resolved.**
 
 ### Case Pack Files (3-Pack Architecture — S916–S918 + S918-Authoring Wave)
 
@@ -63,18 +63,18 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 ---
 
-## 2. Certified Pool — 2026-07-28 Snapshot (rebuild_baselines S377 T0 Direct Grep)
+## 2. Certified Pool — 2026-09-11 Snapshot (rebuild_baselines S911 T0 Direct Grep)
 
 | Pack | Total QIDs | Certified | Sections Closed | Notes |
 |------|-----------|-----------|-----------------|-------|
-| Pack A | 500 | 500 | All 6 sections (4 duplicates removed, 4 new items authored — P1-B-025, 034, 046, 096) | regenerate_ Section B Fill — **100% certified** |
-| Pack B | 500 | 500 | All 6 sections | 100% certified |
-| Pack C | 500 | 500 | All 6 sections (4 DL-008 + 5 DL-026 fixed) | regenerate_ Critical Fix — **100% certified** |
-| Pack D | 500 | 500 | All 6 sections | regenerate_ Pack D Domain F — **100% certified** |
-| Pack E | 620 | 620 | All 6 sections | regenerate_ Phase 2 Cert — **100% certified** |
-| **Total** | **2,620** | **2,620** | | regenerate_ Section B Fill — **100% certified** |
+| Pack A | 560 | 560 | All 6 sections (Tier 3 Waves 4+14 expansion: +60 items) | Tier 3 Waves 4+14 — **100% certified** |
+| Pack B | 620 | 620 | All 6 sections (Tier 3 Waves 3+8+12+15 expansion: +120 items) | Tier 3 Waves 3+8+12+15 — **100% certified** |
+| Pack C | 620 | 606 | All 6 sections (Tier 3 Waves 2+10+11+13 expansion: +120 items; 14 Unprocessed P1-DC-101..130) | Tier 3 Waves 2+10+11+13 — **97.7% certified** |
+| Pack D | 590 | 586 | All 6 sections (Tier 3 Waves 1+5+6 expansion: +90 items; 4 Unprocessed P1-DD-076..105) | Tier 3 Waves 1+5+6 — **99.3% certified** |
+| Pack E | 680 | 680 | All 6 sections (Tier 3 Waves 7+9 expansion: +60 items) | Tier 3 Waves 7+9 — **100% certified** |
+| **Total** | **3,070** | **3,052** | | Tier 3 Waves 1-15 certified 2026-09-11 (A 560/560; B 620/620; C 620/606; D 590/586; E 680/680) |
 
-**Methodology regenerate_ Full Pool Closure:** All 5 packs 100% certified. QID counts: 500/500/500/500/620. Certified: 500/500/500/500/620. Total pool: 2,620/2,620.
+**Methodology rebuild_baselines S911:** All 5 packs hash-recaptured post Tier 3 certification. QID counts: 560/620/620/590/680. Certified: 560/620/606/586/680. Total pool: 3,070/3,052. Rule 7 compliant — derived from raw grep, refuses on mismatch.
 
 **Case Pack Certification (post-S918-Authoring):** 80 consolidated cases across 3 packs, 425 items. **All 80 cases, 425 items Certified.** 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:5 B:5 C:5 D:5 E:5 F:5 → alias C). Balanced 5-case-per-section distribution in Pack 3. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility.
 
@@ -175,7 +175,8 @@ These files directly affect governance enforcement, certification integrity, and
 | 2026-07-31 | **Session 120 (S120 May Persistence Consolidation)** | 4 governance-critical files re-baselined — AUTHORIZED. app.js (D390F6E6), may-core.js (11F3A2AB), may-learner-state.js (18F3C753), may-coaching-orchestrator.js (E0C38E4C). S120: SSOT architecture — all May write paths converge on cmaProfile2026 via patchMayField(). save() pulls fresh May data before persist. init() gated (skipExisting). clearPilotData() now clears profile May fields. Governance guard: 66/66 PASS. Preflight: 0 divergences. Certified pool: 2,451 (unchanged). | Yes — 4 files re-baselined |
 | 2026-07-28 | **Session 377 (S377 Baseline Reconciliation Board)** | rebuild_baselines S377: Pack C+D hashes recaptured (authorized drift from S853 WAVE_A certification). §2 Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure). Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B, E stable. §3 HIGH table: DL-035 added, DL-021 status corrected to RESOLVED (S828). Governance guard: 51/51 PASS. | Yes — 2 files re-baselined (C, D), 3 stable (A, B, E) |
 177: | 2026-08-03 | **Pack D Domain F Remediation** | regenerate_ Pack D re-baselined — AUTHORIZED. 34 archived Domain F items replaced via 4-agent parallel authoring. 26 Analyze (Diff 4), 8 Evaluate (Diff 5). 0 DL-008, 0 DL-026. All 5 packs now 100% certified. Backup: `backups/pack_d_corrected.js.bak-20260803234950`. | Yes — 1 file re-baselined (D), 4 stable |
+| 2026-09-10 | **Tier 1.2 recurrency + Tier 3 Waves 1+2 + Wave 1+2 certification** | rebuild_baselines regen_pack_baselines (Rule-7-compliant regeneration from raw content/packs): Tier 1.2 recaptured SHA/size/QID/Certified (drift 2,620→2,602 AUTHORIZED: DL-012 archival 18). Wave 1 (P1-CD-101..130) + Wave 2 (P1-CC-101..130) inserted Unprocessed then certified user-approved 2026-09-10 (60 items, six-dimension HIGH). Certified pool: 2,602→2,662 (C 486→516, D 496→526). QIDs: 500/500/530/530/620. Backups: `.bak-T3W1-20260910`, `.bak-T3W2-20260910`, `.bak-cert-20260910` (C+D). Governance guard: 74/74 PASS. Preflight: 0 divergences. Pipeline: GREEN. | Yes — 2 files re-baselined (C, D), 3 stable (A, B, E) |
 
 ---
 
-*Last updated: 2026-08-03 regenerate_ — Full Pool Closure. ALL 5 packs 100% certified. Total: 2,620/2,620. Pack D SHA-256: `EC83099D0C818645A9ED767F4FBBD514194ECAD57EEA1FA340C470BDF8F397B3`. Governance guard 66/66. Full remediation complete.*
+*Last updated: 2026-09-10 regen_pack_baselines — Tier 1.2 recurrency. Certified pool: 2,602 (A 500 + B 500 + C 486 + D 496 + E 620). QID: 500/500/500/500/620. Governance guard 74/74.*

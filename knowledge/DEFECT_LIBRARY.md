@@ -227,7 +227,19 @@ Detected By      DistractorSimilarityValidator
 Status           Has Findings â€” 450 Warnings
 ```
 
-**Result:** 450 distractor-similarity warnings across 2,500 MCQ questions. Notable high-severity findings:
+**Result (original scan):** 450 distractor-similarity warnings across 2,500 MCQ questions. Notable high-severity findings:
+
+### 2026-09-10 Amendment — 100%-pair triage closeout (0 rewrites)
+
+Fresh pipeline measurement: 142 high + 275 moderate pairs (417 flagged) across 46 distinct QIDs with
+100% pairs (B:22, E:23, D:1). Per-item human review of all 46 full choice sets: **46/46 legitimate
+parallel-structure distractors, 0 true redundancies, 0 rewrites.** Jaccard-on-word-sets is blind to
+direction (debit/credit, U/F), negation, sequence order, magnitude, and account-side — the exact
+dimensions these items test (journal-entry direction traps, classification matrices, U/F permutation
+matrices, formula-component permutations, sequence orderings). Unadjudicated Jaccard output is
+inadmissible as rewrite evidence (DL-045). Full per-item verdicts: `reports/DL005_TRIAGE_CLOSEOUT.md`;
+backlog: `reports/DL005_100pct_backlog.json`. Residual risk, if any, is in the 275 moderate pairs —
+lower yield than the cleared 100% set. Validator untouched (governance-critical stability).
 - Numerous 100% identical distractors (e.g., P1B-C-194 B/D, P1B-D-092 A/D, P1B-D-136 A/C, P1-DC-069 all pairs)
 - Multiple questions with all 6 pairs > 50% similarity (e.g., P1B-D-088, P1-BC-065â€“070, P1E-A-003, P1E-C-003/004)
 - Pack E has the highest concentration of similarity issues
@@ -2601,7 +2613,20 @@ After recalibration:
 
 ### Resolved
 
-Not yet.
+Partially resolved 2026-09-10 — 17 true definition-match items reclassified Moderate/3 → Easy/1
+(P1B-A-083, P1B-E-146, P1-BC-066/067, P1-DC-016/017, P1-FC-020, P1-AD-032/033/034/035/052/053,
+P1-CD-091/094, P1E-D-039, P1E-E-044; all Remember/Understand, CognitiveLevel preserved per Rule 12;
+backups `.bak-dl031-20260909200000`; REVISION_HISTORY.md 2026-09-10 entry).
+
+### 2026-09-10 Amendment — Broader-triage closeout (252-flag containment screen)
+
+Pool-wide stratified measurement supersedes the "~500 items" Session-700 extrapolation: the
+unstratified stem↔correct-answer containment screen systematically flags Apply calculation items
+(input numbers necessarily appear in the stem; containment ≈ 1.0 is expected). Stratified by
+cognitive level (Remember/Understand + containment > 0.6), yield is exactly the 17 items above.
+Residual difficulty-label risk, if any, is per-item distractor-sophistication judgment, not a
+500-item backlog. Unstratified containment screens are inadmissible as defect evidence (DL-045).
+Full analysis: `reports/DL031_BROAD_TRIAGE_CLOSEOUT.md`; candidates: `reports/DL031_true_definition_match.json`.
 
 ---
 
@@ -2668,7 +2693,23 @@ Target the CAQS §6.1 distribution post-recalibration.
 
 ### Resolved
 
-Not yet.
+Not yet — amended 2026-09-10 (original zero-variance defect remediated pre-session; tails gap remains).
+
+### 2026-09-10 Amendment — Current-distribution audit (both banks measured, Function-constructor parse)
+
+The Session-700 "Moderate: 100%" state no longer exists in any current file. Measured 2026-09-10:
+
+| Bank | Items | Easy | Mod-Easy | Moderate | Difficult | V.Difficult |
+|------|-------|------|----------|----------|-----------|-------------|
+| legacy (75 cases, validator scope) | 400 | 3 (0.75%) | 65 (16%) | 118 (29.5%) | 214 (53.5%) | 0 |
+| case_pack (78-unique cases, loaded-but-unfed) | 425 | 9 (2.1%) | 65 (15%) | 130 (31%) | 221 (52%) | 0 |
+
+Demand-consistency scan (strict signals — Difficult+Remember/Understand+no-calc; Easy+EValuate+calc):
+**0 mismatches both directions** (scripts/scan_dl032_mismatch.js; reports/DL032_demand_mismatch.json).
+Labels are demand-consistent; mass downlabeling to hit the 25% Difficult target would be
+portfolio-driven relabeling (AGENTS.md §17 / Rule-12 analog) and is NOT authorized. Tails gap
+(Easy ≈1% vs 15%; Very Difficult 0% vs 10%) requires authoring new items, not relabeling.
+Full audit: `reports/DL032_AUDIT_2026-09-10.md`. Integrity finding from same audit → DL-048.
 
 ---
 
@@ -3792,6 +3833,88 @@ Post-fix verification: per-item asserts (state, CC, exact EW/EC text, CC-slot em
 - DL-029 (within-object extraction methodology — no forward-scan; CC read from same object as EW)
 - DL-045 (positive-evidence doctrine — per-item pack:line evidence above; deterministic screen yields; QID lists)
 - REVISION_HISTORY.md: 2026-09-05 DL-047 audit entry (this session)
+
+---
+
+## DL-048 — Duplicate CaseIDs Across case_pack Files (CBQ3-A1/A2)
+
+```
+Defect ID        DL-048
+Class            Structural
+Domain           Identity Integrity — Duplicate CaseID
+Severity         Medium (integrity violation with no runtime delivery today; future-loader double-delivery hazard)
+Detected By      Build-Time AI Verification — DL-032 case-bank audit (2026-09-10)
+Status           Resolved — renumbered 2026-09-10 (see Resolved)
+```
+
+**Case IDs:** CBQ3-A1, CBQ3-A2 (5 items each; 10 items affected across 2 LIVE files)
+
+**Files:** `content/cases/case_pack_2_corrected.js`, `content/cases/case_pack_3_corrected.js`
+
+### 2026-09-10 Amendment — Scope correction via CaseIdentityValidator gate proof
+
+First gate run flagged 75 cross-file duplicates; triage showed 73 are legacy(archived)↔live overlaps
+expected by S916-consolidation design (legacy banks ARCHIVED per CURRENT_BASELINES.md; content
+preserved, not live). Gate corrected to live-bank-only errors before pipeline wiring. TRUE defect
+scope: exactly the 2 within-live duplicates above (proven by gate: 2 errors, 0 FPs). The 73 archived
+overlaps are informational statistics, not defects. Validator: `scripts/validators/CaseIdentityValidator.js`
+(wired into `npm run pipeline`; pipeline FAILs honestly on these 2 errors until disposition).
+
+### Issue
+
+CBQ3-A1 and CBQ3-A2 exist in BOTH `case_pack_2_corrected.js` and `case_pack_3_corrected.js`
+(5 items each per file). The case_pack bank therefore holds 80 cases but only 78 unique CaseIDs.
+Duplicate CaseIDs violate the constitution's immutable rule (AI SHALL NOT reuse IDs) and break the
+`getCasePool()` dedupe assumption (`app/app.js:2521` dedupes by CaseID — last-write-wins would
+silently drop one copy once a loader consumes these globals).
+
+### Root Cause
+
+case_pack_3 appears to have been authored as a superset/remaster overlapping case_pack_2's CBQ3-A
+series without an ID-collision check. Legacy bank (75 unique) vs case_pack bank (78 unique, 75
+overlapping + 3 new: CBQ3-C4/D4/B4) was never reconciled; no authoritative-bank decision exists.
+
+### Current Containment
+
+- **No runtime delivery:** `CASE_PACK_1/2/3` globals are loaded by `index_updated.html:125-127` but
+  `getCasePool()` (`app/app.js:2459+`) reads `CASE_BANK_*` / `MIGRATED_CASE_BASE_*` /
+  `ENHANCED_CASE_BANK*` — never `CASE_PACK_*`. Duplicates cannot reach learners today.
+- **No validator coverage:** no existing check asserts cross-file CaseID uniqueness.
+
+### Detection Rule
+
+Across all case files, assert `count(distinct CaseID) === count(cases)`. Any duplicate → flag DL-048.
+
+### Correction (proposed, NOT executed — human disposition required)
+
+Options: (a) archive the newer duplicate of each pair (content preserved per §9.2); (b) merge/renumber
+one copy with a new CaseID (constitution-compliant — new ID, no reuse); (c) designate one bank
+authoritative (legacy vs case_pack consolidation) and retire the other. All options need explicit
+user authorization per AGENTS.md §2 (read-only default) and §3.1 staged authorization if files are removed.
+
+### Regression Test
+
+After disposition: cross-file CaseID uniqueness holds (80→78 or 78-unique confirmed); both banks
+parse; `npm run pipeline` green; no QID/CaseID silently dropped (count reconciliation).
+
+### Cross-References
+
+- DL-032 2026-09-10 amendment (audit that surfaced this finding)
+- DL-044 (legacy case-bank corruption; delivery-layer verdict — same unfed-loader family)
+- DL-045 (registry-first ID allocation — DL-048 allocated by scanning highest existing Part-1 ID: DL-047)
+- Constitution §7 immutable rule: AI SHALL NOT reuse IDs / delete case studies
+- `reports/DL032_AUDIT_2026-09-10.md`
+
+### Resolved
+
+2026-09-10 — Disposition executed per user authorization ("Renumber S918 copies"). `case_pack_3_corrected.js`
+CBQ3-A1→**CBQ3-A3** (Revenue Recognition Under ASC 606), CBQ3-A2→**CBQ3-A4** (Inventory Valuation and
+LCNRV): 38 span-bounded replacements (CaseID + 5 ItemIDs + 2 ExhibitIDs + Exhibit.CaseID +
+ReferencedBy per case; Dependencies all null). Pre-asserts (exactly 1 element per ID) + post-asserts
+(0 old-ID occurrences; 30/30 unique; 152 items) all PASS. Backup: `.bak-DL048-20260910`.
+CaseIdentityValidator gate: 2 errors → 0; `npm run pipeline` GREEN (10 validators, 0 errors).
+case_pack bank now 80 cases / 80 unique. New IDs CBQ3-A3/A4 verified globally unique across all 8
+case files. No content changes (IDs only); question_state/Certified untouched.
 
 ---
 
