@@ -1829,12 +1829,23 @@ const SessionPersistence = {
         try { return JSON.parse(localStorage.getItem(this.CHECKPOINT_KEY) || '[]'); } catch (e) { return []; }
     },
 
+    // Pause-aware restore validity: a persisted pause gap must not count as
+    // elapsed when deciding whether a saved session is still live. Otherwise a
+    // session paused longer than its remaining time would be refused restore
+    // entirely (no recovery offered) even though its active clock never expired.
+    _activeElapsedSec(sn) {
+        let gap = 0;
+        if (sn && sn.session && sn.session.paused && sn.session._pausedAt) {
+            gap = Math.max(0, Date.now() - sn.session._pausedAt);
+        }
+        return Math.floor((Date.now() - sn.session.start - gap) / 1000);
+    },
     _restoreFromCheckpoints() {
         const cps = this._getCheckpoints();
         for (let i = cps.length - 1; i >= 0; i--) {
             const sn = cps[i];
             if (sn && sn.session && !sn.session.completed && !sn.session.submitted) {
-                const elapsed = Math.floor((Date.now() - sn.session.start) / 1000);
+                const elapsed = this._activeElapsedSec(sn);
                 if (elapsed < sn.session.duration) {
                     state.session = sn.session;
                     state.calcDisplay = sn.calcDisplay || '0';
@@ -1902,7 +1913,7 @@ const SessionPersistence = {
                     }
                 }
                 if (sn.session && !sn.session.completed && !sn.session.submitted) {
-                    const elapsed = Math.floor((Date.now() - sn.session.start) / 1000);
+                    const elapsed = this._activeElapsedSec(sn);
                     if (elapsed < sn.session.duration) {
                         state.session = sn.session;
                         state.calcDisplay = sn.calcDisplay || '0';
@@ -2229,7 +2240,6 @@ const ExamSessionManager = {
             _mcqGatePassed: false,
             timerWarnings: [],
             paused: false,
-            pausedElapsed: 0,
             tierCounts: tierCounts,
             tierPoolCounts: tieredPool.counts
         };
@@ -2705,6 +2715,12 @@ const ExamSessionManager = {
             this.startAutoSave();
             AnalyticsCollector.logEvent('session_resume', {});
         }
+        // Persist the pause transition immediately: auto-save is stopped while
+        // paused, so without this a reload/tab-close during pause would restore
+        // a stale unpaused snapshot and the entire pause gap would count as
+        // elapsed (timer drain / force-submit on resume). The snapshot carries
+        // paused + _pausedAt on pause, and the folded start epoch on resume.
+        try { SessionPersistence.saveImmediate(); } catch (e) {}
         this.render();
     },
 
@@ -4051,7 +4067,6 @@ const NavigationController = {
             _mcqGatePassed: true,
             timerWarnings: [],
             paused: false,
-            pausedElapsed: 0,
             tierCounts: {},
             tierPoolCounts: {},
             recoverySource: {
@@ -5791,6 +5806,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (state.session.paused && state.session._pausedAt) {
                 state.session.start += (Date.now() - state.session._pausedAt);
                 state.session._pausedAt = null;
+            } else if (state.session.paused) {
+                // Legacy/corrupt snapshot: paused with no pause anchor. The pause
+                // duration is unknowable, so re-anchor the pause to right now and
+                // STAY paused (overlay renders; the timer tick early-returns while
+                // paused). This guarantees no time burns before the user explicitly
+                // resumes, instead of silently counting unknown time as elapsed.
+                state.session._pausedAt = Date.now();
             }
             ExamSessionManager.render();
             ExamSessionManager.startTimer();

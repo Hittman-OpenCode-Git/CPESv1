@@ -550,6 +550,122 @@ async function main() {
   await w1bExamStateAssert("W1-B Practice", false);
   await clearForNextScenario();
 
+  // ── W1-D: Pause-clock integrity (timer pause bug regression) ──────
+  // The pause-clock rule (§19.1): elapsed time must exclude paused time on
+  // EVERY resume path. The 2026-08-31 fix covered in-memory resume, but pause()
+  // never persisted the paused state and auto-save stops while paused — so a
+  // reload/tab-close during pause restored a stale unpaused snapshot and the
+  // whole pause gap counted as elapsed (timer drain / force-submit on resume).
+  // This block reproduces exactly that: pause, wait, reload, resume, and
+  // asserts the clock did not move.
+  async function remainingSecs() {
+    return page.evaluate(() => {
+      try { return ExamSessionManager.remaining(); } catch (e) { return -999; }
+    });
+  }
+  await startSession("mcq", false);
+  const w1dBefore = await remainingSecs();
+  w1dBefore > 0
+    ? pass("W1-D Pause clock: session started with positive remaining (" + w1dBefore + "s)")
+    : fail("W1-D Pause clock: session did not start (remaining=" + w1dBefore + ")");
+  // Pause in-page (no reload yet): overlay must appear, clock must freeze.
+  const w1dPauseBtn = await page.$("#pauseBtn");
+  if (!w1dPauseBtn) { fail("W1-D Pause clock: pause button absent, cannot pause"); }
+  else {
+    await w1dPauseBtn.click();
+    await page.waitForTimeout(2500);
+    const w1dOverlay = await page.$("#resumeBtn");
+    w1dOverlay
+      ? pass("W1-D Pause clock: pause overlay shown")
+      : fail("W1-D Pause clock: pause overlay missing after pause");
+    const w1dFrozen = await remainingSecs();
+    (w1dFrozen >= w1dBefore - 1)
+      ? pass("W1-D Pause clock: in-memory pause froze the clock (" + w1dBefore + "s -> " + w1dFrozen + "s)")
+      : fail("W1-D Pause clock: clock drained while paused (" + w1dBefore + "s -> " + w1dFrozen + "s)");
+    // Reload DURING pause (the reported recurrence): persisted snapshot must
+    // carry paused + _pausedAt so recovery folds the whole gap.
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(4000);
+    await page.evaluate(() => {
+      try {
+        if (window.GuidedTour) GuidedTour.stop(false);
+        const ov = document.getElementById("guidedTourOverlay");
+        if (ov) ov.remove();
+      } catch (e) { /* not available */ }
+    });
+    const w1dRecBtn = await page.$("#recoveryResume");
+    if (!w1dRecBtn) { fail("W1-D Pause clock: recovery modal did not appear after reload-during-pause"); }
+    else {
+      await w1dRecBtn.click();
+      await page.waitForTimeout(2500);
+      const w1dOverlayAfter = await page.$("#resumeBtn");
+      w1dOverlayAfter
+        ? pass("W1-D Pause clock: session still paused after restore (no silent unpause)")
+        : fail("W1-D Pause clock: session silently unpaused on restore (pause state lost)");
+      const w1dAfter = await remainingSecs();
+      // Allow 2s slop for tick boundaries across the reload round-trip.
+      (w1dAfter >= w1dBefore - 2)
+        ? pass("W1-D Pause clock: reload-during-pause preserved the clock (" + w1dBefore + "s -> " + w1dAfter + "s)")
+        : fail("W1-D Pause clock: RELOAD-DURING-PAUSE DRAINED THE CLOCK (" + w1dBefore + "s -> " + w1dAfter + "s)");
+      // Explicit resume must also preserve the clock and dismiss the overlay.
+      // (Measure immediately pre-click so the budget covers only this step's
+      // real unpaused time + one tick boundary — not cumulative slop.)
+      const w1dPreResume = await remainingSecs();
+      if (w1dOverlayAfter) { await w1dOverlayAfter.click(); await page.waitForTimeout(1500); }
+      const w1dFinal = await remainingSecs();
+      const w1dGone = await page.$("#resumeBtn");
+      (w1dFinal >= w1dPreResume - 2 && !w1dGone)
+        ? pass("W1-D Pause clock: explicit resume preserved clock and dismissed overlay (" + w1dPreResume + "s -> " + w1dFinal + "s)")
+        : fail("W1-D Pause clock: explicit resume broke clock/overlay (remaining=" + w1dPreResume + "s -> " + w1dFinal + "s, overlay=" + (!!w1dGone) + ")");
+    }
+  }
+  await clearForNextScenario();
+
+  // ── W1-D2: Pause-aware restore validity (paused-longer-than-remaining) ──
+  // A session paused longer than its remaining time must STILL be offered for
+  // recovery: restore validity must exclude the persisted pause gap, otherwise
+  // the user loses the entire in-progress session (no modal at all).
+  await startSession("mcq", false);
+  const w1d2PauseBtn = await page.$("#pauseBtn");
+  if (!w1d2PauseBtn) { fail("W1-D2 Restore validity: pause button absent, cannot pause"); }
+  else {
+    await w1d2PauseBtn.click();
+    await page.waitForTimeout(1000);
+    // Simulate an overnight pause: keep only ~10s of ACTIVE elapsed but push
+    // RAW elapsed past duration (pause gap 6000s > 5400s default duration).
+    // Pre-fix restore() used raw elapsed and refused recovery entirely.
+    await page.evaluate(() => {
+      try {
+        const s = state.session;
+        s._pausedAt = Date.now() - 6000 * 1000;
+        s.start = s._pausedAt - 10 * 1000;
+        SessionPersistence.saveImmediate();
+      } catch (e) {}
+    });
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(4000);
+    await page.evaluate(() => {
+      try {
+        if (window.GuidedTour) GuidedTour.stop(false);
+        const ov = document.getElementById("guidedTourOverlay");
+        if (ov) ov.remove();
+      } catch (e) { /* not available */ }
+    });
+    const w1d2RecBtn = await page.$("#recoveryResume");
+    if (!w1d2RecBtn) { fail("W1-D2 Restore validity: NO recovery offered for paused-longer-than-remaining session (session lost)"); }
+    else {
+      pass("W1-D2 Restore validity: recovery offered despite raw elapsed exceeding duration");
+      await w1d2RecBtn.click();
+      await page.waitForTimeout(2500);
+      const w1d2Left = await remainingSecs();
+      const w1d2Overlay = await page.$("#resumeBtn");
+      (w1d2Left > 0 && w1d2Overlay)
+        ? pass("W1-D2 Restore validity: clock alive after restore (" + w1d2Left + "s) and still paused")
+        : fail("W1-D2 Restore validity: dead clock or silent unpause after restore (remaining=" + w1d2Left + ", overlay=" + (!!w1d2Overlay) + ")");
+    }
+  }
+  await clearForNextScenario();
+
   // ── W1-C: Tour framework presence + first-step render ──────────
   // (Full geometry matrix covered by scripts/tour_diagnostic.js.)
   await clearForNextScenario();

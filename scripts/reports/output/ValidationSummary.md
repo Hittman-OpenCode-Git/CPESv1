@@ -1,38 +1,39 @@
 # Validation Report Summary
 
-**Generated:** 2026-09-05T19:46:41.093Z
+**Generated:** 2026-09-13T00:12:09.935Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 2ms |
-| Metadata Validator | WARN | 0 | 4 | 181ms |
-| Blueprint Validator | WARN | 0 | 70 | 127ms |
-| Part 2 Blueprint Validator | WARN | 0 | 1 | 0ms |
-| Difficulty Validator | WARN | 0 | 39 | 170ms |
-| Reference Validator | WARN | 0 | 159 | 122ms |
-| Explanation Validator | WARN | 0 | 6 | 407ms |
-| Case Integrity Validator | WARN | 0 | 10 | 35ms |
-| PsychometricValidator | WARN | 0 | 1663 | 1228ms |
+| Repository Validator | PASS | 0 | 0 | 5ms |
+| Metadata Validator | WARN | 0 | 4 | 863ms |
+| Blueprint Validator | WARN | 0 | 70 | 240ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 2ms |
+| Difficulty Validator | WARN | 0 | 39 | 376ms |
+| Reference Validator | WARN | 0 | 159 | 217ms |
+| Explanation Validator | WARN | 0 | 6 | 642ms |
+| Case Integrity Validator | WARN | 0 | 10 | 42ms |
+| Case Identity Validator | PASS | 0 | 0 | 154ms |
+| PsychometricValidator | WARN | 0 | 1896 | 1773ms |
 
 **Total Errors:** 0
-**Total Warnings:** 1952
+**Total Warnings:** 2185
 **Overall Status:** WARN
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 2ms
+**Duration:** 5ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 181ms
+**Duration:** 863ms
 **Statistics:**
 - Cases Checked: 75
 **Warnings:**
@@ -43,7 +44,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 127ms
+**Duration:** 240ms
 **Statistics:**
 - Cases Checked: 75
 - Cross-Domain Cases: 2
@@ -127,7 +128,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 0ms
+**Duration:** 2ms
 **Statistics:**
 - P2 MCQ Packs Found: 0
 - P2 Case Packs Found: 0
@@ -138,7 +139,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 170ms
+**Duration:** 376ms
 **Statistics:**
 - Cases Checked: 75
 - Items Checked: 400
@@ -195,7 +196,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 122ms
+**Duration:** 217ms
 **Statistics:**
 - Cases Checked: 75
 - Total References: 0
@@ -364,15 +365,15 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 407ms
+**Duration:** 642ms
 **Statistics:**
-- MCQ Questions Checked: 2620
+- MCQ Questions Checked: 3070
 - Case Items Checked: 400
 - Questions with Placeholder Explanations: 0
 - Fields with Placeholder Text: 0
 - Short Explanations (<50 chars): 2
-- Correct Explanation Avg Length: 528
-- Wrong Explanation Avg Length: 344
+- Correct Explanation Avg Length: 589
+- Wrong Explanation Avg Length: 320
 **Warnings:**
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 355: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 1814: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
@@ -383,7 +384,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 35ms
+**Duration:** 42ms
 **Statistics:**
 - Total Cases Checked: 75
 - Total Items Checked: 400
@@ -408,34 +409,72 @@
 - Duplicate choices found in cases: CBQ-B1, CBQ2-B1, CBQ2-D3, CBQ3-A2, CBQ4-A2, CBQ4-C1, CBQ4-B2, CBQ5-B2
 - Placeholder choices found in cases: CBQ3-E2
 
+### Case Identity Validator
+**Status:** PASS
+**Duration:** 154ms
+**Statistics:**
+- content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
+- content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
+- content/cases/case_pack_1_corrected.js :: Difficult: 64 (45.4%)
+- content/cases/case_pack_1_corrected.js :: Easy: 3 (2.1%)
+- content/cases/case_pack_2_corrected.js :: Moderate: 37 (28.0%)
+- content/cases/case_pack_2_corrected.js :: Difficult: 85 (64.4%)
+- content/cases/case_pack_2_corrected.js :: Moderate-Easy: 10 (7.6%)
+- content/cases/case_pack_3_corrected.js :: Moderate: 57 (37.5%)
+- content/cases/case_pack_3_corrected.js :: Difficult: 72 (47.4%)
+- content/cases/case_pack_3_corrected.js :: Moderate-Easy: 17 (11.2%)
+- content/cases/case_pack_3_corrected.js :: Easy: 6 (3.9%)
+- content/cases/legacy/scored_cases.js :: Moderate-Easy: 35 (38.9%)
+- content/cases/legacy/scored_cases.js :: Moderate: 18 (20.0%)
+- content/cases/legacy/scored_cases.js :: Difficult: 34 (37.8%)
+- content/cases/legacy/scored_cases.js :: Easy: 3 (3.3%)
+- content/cases/legacy/scored_cases2.js :: Moderate-Easy: 4 (5.1%)
+- content/cases/legacy/scored_cases2.js :: Moderate: 29 (37.2%)
+- content/cases/legacy/scored_cases2.js :: Difficult: 45 (57.7%)
+- content/cases/legacy/scored_cases3.js :: Moderate-Easy: 7 (8.9%)
+- content/cases/legacy/scored_cases3.js :: Moderate: 19 (24.1%)
+- content/cases/legacy/scored_cases3.js :: Difficult: 53 (67.1%)
+- content/cases/legacy/scored_cases4.js :: Moderate: 25 (32.1%)
+- content/cases/legacy/scored_cases4.js :: Difficult: 46 (59.0%)
+- content/cases/legacy/scored_cases4.js :: Moderate-Easy: 7 (9.0%)
+- content/cases/legacy/scored_cases5.js :: Moderate: 27 (36.0%)
+- content/cases/legacy/scored_cases5.js :: Difficult: 36 (48.0%)
+- content/cases/legacy/scored_cases5.js :: Moderate-Easy: 12 (16.0%)
+- Total Cases Checked: 155
+- Unique CaseIDs: 80
+- Total Items Checked: 825
+- Duplicate CaseIDs (live bank): 0
+- Archived↔Live Overlaps (expected, S916): 75
+- Score/Label Mismatches: 0
+
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 1228ms
+**Duration:** 1773ms
 **Statistics:**
-- AbsoluteLanguageValidator.questionsScanned: 2120
-- AbsoluteLanguageValidator.findings: 795
-- AbsoluteLanguageValidator.pattern.only/exclusively: 681
-- AbsoluteLanguageValidator.pattern.must: 76
-- AbsoluteLanguageValidator.pattern.exactly: 21
+- AbsoluteLanguageValidator.questionsScanned: 2450
+- AbsoluteLanguageValidator.findings: 1019
+- AbsoluteLanguageValidator.pattern.only/exclusively: 790
+- AbsoluteLanguageValidator.pattern.must: 90
+- AbsoluteLanguageValidator.pattern.exactly: 31
 - AbsoluteLanguageValidator.pattern.no-other/exception/alternative: 7
-- AbsoluteLanguageValidator.pattern.always: 2
-- AbsoluteLanguageValidator.pattern.never: 6
-- AbsoluteLanguageValidator.pattern.impossible: 2
-- AmbiguityValidator.questionsScanned: 2120
-- AmbiguityValidator.findings: 481
-- AmbiguityValidator.vagueQualifierHits: 188
-- DistractorSimilarityValidator.questionsScanned: 2120
-- DistractorSimilarityValidator.highSimilarityPairs: 142
-- DistractorSimilarityValidator.moderateSimilarityPairs: 275
-- DistractorSimilarityValidator.totalFlagged: 417
-- ExplanationConsistencyValidator.questionsScanned: 2120
+- AbsoluteLanguageValidator.pattern.never: 51
+- AbsoluteLanguageValidator.pattern.always: 47
+- AbsoluteLanguageValidator.pattern.impossible: 3
+- AmbiguityValidator.questionsScanned: 2450
+- AmbiguityValidator.findings: 496
+- AmbiguityValidator.vagueQualifierHits: 197
+- DistractorSimilarityValidator.questionsScanned: 2450
+- DistractorSimilarityValidator.highSimilarityPairs: 143
+- DistractorSimilarityValidator.moderateSimilarityPairs: 279
+- DistractorSimilarityValidator.totalFlagged: 422
+- ExplanationConsistencyValidator.questionsScanned: 2450
 - ExplanationConsistencyValidator.findings: 0
-- MathematicalValidator.questionsScanned: 2120
+- MathematicalValidator.questionsScanned: 2450
 - MathematicalValidator.findings: 0
 - MathematicalValidator.falsePositiveRate: 0%
 - modules: 5
 - totalErrors: 0
-- totalWarnings: 1663
+- totalWarnings: 1896
 **Warnings:**
 - [AbsoluteLanguageValidator] P1-A-001 Choice B: "Classify it as noncurrent solely because management expects renewal" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-A-005 Choice D: "Two performance obligations — the hardware-plus-installation as one obligation (since the hardware must be installed to function) and the software-plus-maintenance as a second obligation (since the software updates and support are ongoing services). The bundled pricing makes individual separation impractical." — contains absolute language "must"
@@ -600,7 +639,7 @@
 - [AbsoluteLanguageValidator] P1-F-047 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-F-052 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-F-053 Choice C: "R&D (Department 6) represents the highest governance risk — with only 27% certified-source usage and 8 different uncertified data sources, R&D is making product investment decisions on the least governed data in the organization" — contains absolute language "only/exclusively"
-- [AbsoluteLanguageValidator] P1-F-053 Choice D: " departments except HR (which has 92% certified-source usage) represent significant governance risk — the governance committee should mandate certified-source-only policies and stale-report archival across five departments simultaneously" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-053 Choice D: "departments except HR (which has 92% certified-source usage) represent significant governance risk — the governance committee should mandate certified-source-only policies and stale-report archival across five departments simultaneously" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-F-054 Choice B: "Adjusted EBITDA (Metric 2) — the restructuring charges classification depends on a single SharePoint file maintained by an executive assistant with verbal-only VP review and no formal approval workflow or changelog, creating a risk that items are misclassified as 'one-time' and EBITDA is inflated" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-F-054 Choice C: "Operating Expenses (Metric 4) — 14 of 47 business rules exist only as 'business knowledge' in the ETL developer's head, creating a key-person dependency where 30% of the OpEx calculation logic is undocumented and unreplicable if the developer leaves" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-F-055 Choice B: "Revenue subledger (System-3) — with only 60% lineage coverage and revenue recognition logic existing only in undocumented ETL code, this system fails the CFO's traceability requirement for the most material financial statement line item" — contains absolute language "only/exclusively"
@@ -625,6 +664,38 @@
 - [AbsoluteLanguageValidator] P1-B-025 Choice D: "Implement beyond-budgeting principles exclusively for the sales and marketing divisions while maintaining traditional annual budgeting for manufacturing, finance, and administration." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-B-034 Choice B: "The low cross-sectional standard deviation in budget-beating rates, which is only 1.6% across five divisions with fundamentally different cost structures, customer bases, and competitive environments." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-B-046 Choice B: "Implement a hybrid model — a 5-quarter rolling forecast for internal resource allocation and operational management, supplemented by a fixed annual budget prepared once per year exclusively for external earnings guidance communication to analysts." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-079 Choice B: "$2.19 — bonds only; options are immaterial and skipped" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-086 Choice B: "No gain — exchanges never recognize gains until cash is received" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-A-088 Choice C: "Pull margin — adds 3.33 ROE points at $30,000 with no balance-sheet risk; leverage adds 4.0 points but prices distress risk at zero, and turnover adds only 1.5" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-089 Choice D: "Disclose all four without accruing — litigation outcomes are never estimable enough" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-A-091 Choice A: "$0 allowance — NOLs are statutory rights, always fully realizable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-091 Choice C: "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-092 Choice B: "A only — only the largest segment matters" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-094 Choice B: "Disclose both without adjusting — subsequent events never adjust issued-pending statements" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-A-096 Choice C: "Gross only if physical possession exceeds 30 days — control requires custody duration" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-097 Choice B: "LIFO always — $500,000 of tax savings dominates any reporting consideration" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-098 Choice B: "Five-year finance lease — leasing always preserves covenants versus buying" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-098 Choice D: "Twelve-month renewable leases (short-term exempt) — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-099 Choice D: "Wait a year — triggers must persist four quarters before testing" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-A-101 Choice B: "Do not refund — call premiums always destroy refunding economics" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-101 Choice C: "Refund only if rates fall below 3% — 5% is insufficient improvement" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-105 Choice B: "All $270,000 to net income — comprehensive income distinctions are presentational only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-102 Choice B: "Net $13,000 F only — favorable is favorable, no further analysis needed" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-103 Choice C: "Total $18,000 U only — decomposition adds no information for overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-105 Choice D: "Net $52,000 F only — revenue beat means the discount worked" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-107 Choice D: "Net +$72,000 F only — decomposition adds nothing once the total is known" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-110 Choice D: "Investigate only if controllable — determine controllability first, then decide" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-111 Choice A: "(1) cost, (2) revenue, (3) profit (not investment — no capital authority), (4) investment. Error: charging (1) and (2) with total profit including uncontrollable HQ allocations violates controllability — evaluate each only on controllable margin; allocated HQ costs belong in no center's performance report (economic income measurement shows them separately)" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-112 Choice B: "Controllable margin = $2,000,000 − $1,100,000 − $300,000 = $600,000 judges the manager (revenues, variable, controllable fixed). Contribution $900,000 ($2,000,000 − $1,100,000) shown above it; direct committed $200,000 and HQ $150,000 shown below the performance line for economic context only. Manager answers for $600,000, not $250,000" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-113 Choice D: "Overrule: project RI = $56,000 − 0.12×$400,000 = $56,000 − $48,000 = +$8,000 (creates value); new division ROI = ($300,000+$56,000)/($1,500,000+$400,000) = $356,000/$1,900,000 = 18.74% (diluted but still above hurdle). ROI punishes value-creating investment whenever project return sits between hurdle and current ROI — adopt residual income for decisions (bonus on RI), report ROI only as a ratio diagnostic" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-114 Choice B: "Endorse (a) only — maintenance can wait a year" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-114 Choice C: "Endorse (c) only — the expansion creates $8,000 of RI while (a) borrows $60,000 from next year at breakdown risk and (b) destroys pipeline value; manage ROI with multi-year RI and maintenance covenants, not single-period ratios" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-117 Choice B: "Adopt for decision-making with eyes open: dual pricing preserves both divisions' goal congruence (S keeps $50 economics, B faces $45 make-buy truth) at the cost of $5/unit of phantom corporate profit that requires elimination in consolidation (sum of divisional profits overstates company profit until the $5/unit subsidy is backed out). Use only with consolidation adjustments, sunset review, and disclosure to both managers that the spread is a corporate subsidy, not earned margin" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-120 Choice D: "Decompose first: $42 vs $40 median = $2 parity gap (close via process discipline — close it this year); $40 vs $34 = $6 structural gap (scale/vintage-driven — price it, plan multi-year capital/technology response, do not demand it from operations). Target: $40 this year (parity) + funded roadmap toward $34 (advantage). Median-only (option A) institutionalizes permanent $6 disadvantage; best-only (option B) demands structural change from operating budgets; hold (option C) ignores both signals" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-121 Choice C: "Neither partial decides alone — compute total productivity with dollar weights: if labor $20/hr and materials $6/lb, Year 1 cost = 20,000×$20 + 40,000×$6 = $400,000 + $240,000 = $640,000 ($64/unit); Year 2 = 18,000×$20 + 44,000×$6 = $360,000 + $264,000 = $624,000 ($62.40/unit) → genuine $16,000 gain. Partial productivities diagnose (labor saved $40,000, materials cost $24,000 extra); only the dollar-weighted total judges. Single-partial verdicts (options A/B) crown whichever input flatters the claimant" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-122 Choice D: "Average $1,500,000 (20.0%) — income was earned across the year while the base changed mid-year; averaging matches the period's earnings to the period's capital employed. Beginning-base credits a full year of earnings against pre-expansion capital (overstates); ending-base charges a full year against post-expansion capital the manager held only half the year (understates). Disclose the convention consistently" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-123 Choice A: "Rank on current-cost ROI: old ($150,000/$1,000,000 = 15%) ties new (15%) — book ROI rewards asset age (depreciation shrinks the denominator while income persists), punishing new investment and shielding incumbents. For capital allocation, compare current-cost returns (or RI on current cost); report book ROI only with asset-age disclosure. Recommendation: tie on economics — fund the higher-RI opportunity, and stop ranking managers by depreciation schedules" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-130 Choice B: "Switch to revenue-only evaluation — simplicity ends gaming at once" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1B-A-104 Choice C: "As an investing activity only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1B-A-104 Choice D: "As a financing activity only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1B-A-108 Choice C: "Only when lease payments are made" — contains absolute language "only/exclusively"
@@ -692,7 +763,7 @@
 - [AbsoluteLanguageValidator] P1B-D-142 Choice C: "No, because fixed costs must be covered" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1B-D-145 Choice C: "No, because joint costs must be considered" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1B-E-094 Choice B: "Internal auditors focus primarily on detecting fraud, while external auditors only review tax compliance" — contains absolute language "only/exclusively"
-- [AbsoluteLanguageValidator] P1B-E-095 Choice A: " members must be certified public accountants" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-095 Choice A: "members must be certified public accountants" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1B-E-095 Choice B: "The audit committee chair must be the CEO" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1B-E-095 Choice C: "All members must be independent of management" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1B-E-095 Choice D: "The audit committee must include at least one government representative" — contains absolute language "must"
@@ -723,6 +794,75 @@
 - [AbsoluteLanguageValidator] P1B-F-141 Choice A: "Finding 4 (GDPR Immutability Conflict) is the only genuine adoption blocker — node governance can be addressed by providing cooperative IT support, and Findings 1 and 2 are clearly not blockers based on the quantitative data provided" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1B-F-141 Choice C: "No findings are genuine adoption blockers — all four concerns can be addressed through project planning: throughput is adequate, energy costs are negligible, cooperatives can be provided with IT support, and personal data can be stored off-chain with only hashes recorded on-chain to satisfy GDPR" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1B-F-142 Choice B: "Reviewing the control only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-203 Choice B: "86,000 lbs ($430,000) — production need only; inventory policies net to zero" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-206 Choice B: "$542,000 — $360,000 January + $150,000 December + $32,000 November; 2% never arrives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-208 Choice D: "Fixed spending $0 — fixed costs never vary, so the $2,000 is volume" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-209 Choice B: "Slack is $50,000 — only the growth increment is suspect" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-210 Choice C: "Revenue $1,700,000 with COGS held at $1,200,000 — update sales only, costs follow annually" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-211 Choice A: "Never — kaizen shaves pennies, not the $10 gap" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-212 Choice C: "ABB equals traditional at all volumes — methods differ only in presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-214 Choice C: "Cut P1 — even compliance packages must share the pain" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-B-215 Choice B: "OCF $250,000; ending $170,000 — add back depreciation only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-216 Choice A: "$40,000 — the stockout is the only real loss; excess material will be used eventually" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-216 Choice B: "$20,000 — the excess material is the only incremental cost; stockouts are hypothetical" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-216 Choice D: "$60,000 — $40,000 lost CM plus $20,000 excess-material exposure; a single frozen forecast must drive all three schedules" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-B-221 Choice D: "Labor only — mid-size exposures deserve single focus" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-222 Choice C: "$2,100,000 — statistical models always dominate judgmental pipelines" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-B-223 Choice C: "Raise the screen to 19% — only Eastvale-grade initiatives should proceed" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-226 Choice C: "Finance-owned model only — unbiased beats informed-but-biased" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-228 Choice D: "Production dictates — capacity is the only hard constraint, so its number governs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-230 Choice A: "Quarterly formal evaluation (±$15,000 threshold, ~3% false-alarm) with monthly monitoring-only flags — aggregation kills noise while true shifts accumulate" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-230 Choice C: "Annual evaluation only — maximum averaging eliminates all noise" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-201 Choice C: "Tie — defect differentials always offset price differentials exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-201 Choice D: "Y wins at $82,609 versus X at $88,000 — X must buy 11,000 lbs at full price" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-C-203 Choice D: "Mix nets $0 — composition shifts always self-cancel" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-207 Choice B: "No target — cross-company comparisons are never valid across size classes" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-C-207 Choice D: "$11.70 — the attainable $0.80 efficiency portion only ($12.50 − $0.80); the $1.90 scale advantage is out of reach" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-208 Choice B: "Variable $30 only — fixed capacity is corporate's problem, not divisions'" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-209 Choice B: "Probe — large absolute dollars always justify investigation regardless of limits" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-210 Choice C: "BSC only ($40,000) — one tool at a time, starting with the cheapest" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-210 Choice D: "Defer until ROI drops — fix systems only under performance distress" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-151 Choice C: "Post-step only VC $4.00 with no fixed — steps eliminate fixed baselines" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-152 Choice A: "With intercept ($0.67k + 4.67%) — intercepts always improve fit and belong in budgets" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-D-153 Choice C: "Job $120,000; $13,000 period loss — rework never attaches to jobs" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-D-154 Choice B: "TI 7,000 EU ($10.00); DM 7,800 ($5.77); conv 8,600 ($6.40) — current-period work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-154 Choice D: "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in always uses average method" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-D-157 Choice C: "Produce B only — highest unit CM captures the constraint best" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-157 Choice D: "Optimal mix ignores demands — rank purely by CM/hr and produce top-ranked only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-151 Choice B: "Quarterly self-assessments only — management's own review is the most efficient monitoring" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-151 Choice C: "Annual external audit only — independent testing subsumes all monitoring" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-153 Choice D: "Disable only the 5 privileged accounts — standard orphans pose no exploitable risk" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-154 Choice A: "Low risk — single indicators never suffice, and $12,000 is immaterial" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-E-155 Choice B: "Rely nowhere — external auditors must reperform everything for independence" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-158 Choice B: "Buy cyber-insurance only ($180,000 premium, $5,000,000 cap with ransomware sublimit $2,000,000) — transfer beats prevention" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-160 Choice D: "Defer until deficiencies rise — invest in monitoring only under demonstrated failure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-151 Choice D: "$100,000 immediate expense — issuance friction never benefits future periods" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-152 Choice C: "$200,000 restricted asset (sinking fund) plus $4,000 extinguishment gain ($52,000 − $48,000); repurchases beyond deposits reduce debt only when delivered to trustee" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-155 Choice A: "PV of $100,000 × 5 only ($421,236) — guarantees are contingent and excluded until paid" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-155 Choice D: "PV of $50,000 guarantee only ($37,365) — payments net against guaranteed residual" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-157 Choice A: "$300,000 gain in OCI — curtailments never touch net income until settlement" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-157 Choice D: "$80,000 loss — prior-service write-offs always dominate curtailment economics" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-A-158 Choice A: "No settlement — lump sums under $500,000 never trigger regardless of cost ratios" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-159 Choice C: "Split: memo only (200,000 × $5 par = $1,000,000 common; APIC/RE untouched; total equity unchanged); 100% dividend: split treatment in substance — large stock dividends (>20–25%) use par-value capitalization like splits ($1,000,000 common, RE down $1,000,000), NOT market value" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-160 Choice C: "Eliminate $900,000 of deficit against APIC (zeroing APIC), carry forward a $300,000 deficit; disclose the fresh-start date with dated retained earnings ('from [date]') for up to 10 years — quasi-reorgs reset only to available surplus with full transparency" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-160 Choice D: "Quasi-reorganizations are prohibited — deficits must clear through future earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-160 Choice D: "Quasi-reorganizations are prohibited — deficits must clear through future earnings only" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-A-161 Choice C: "Defer the $20,000 of unamortized issuance costs — write-offs never survive modifications" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-161 Choice D: "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying plus unamortized costs) — non-substantial, non-troubled modifications adjust yield, never recognize gains" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-162 Choice A: "No entry — transfers between categories are presentational only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-162 Choice C: "Debit investment $30,000, credit net income $30,000 — fair-value changes always hit earnings on transfer" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-A-164 Choice B: "Nothing — OCI belongs to the investee's equity, never the investor's statements" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-A-166 Choice B: "Gain $130,000 (retained fair value only) — cash proceeds are return of capital, not gain" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-174 Choice C: "Adopt partially — backflush raw materials only, track WIP conventionally for control" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-174 Choice D: "Defer until WIP grows — backflush suits only material-WIP operations by definition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-179 Choice B: "Test Store 7 jointly with the region — individual stores never qualify as groups" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-C-216 Choice C: "Total-only view suffices — $500,000 saved is $500,000 saved regardless of mix" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-218 Choice A: "Netting suffices — $6,000 standard vs actual cost is the only comparison that matters" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-240 Choice B: "Both right, split the report: kaizen variance ($0.44 U vs the $47.06 moving target — improvement pace slipped this quarter) AND year-over-year achievement ($2.50 F vs $50.00 base — genuine 5% gain) — the $0.44 U measures pace against commitment, the $2.50 F measures distance traveled. Report both with distinct responses (pace slip → diagnose this quarter's kaizen events; 5% gain → recognize cumulative progress). Static-only (option A) hides pace slippage inside cumulative glory; kaizen-only (option C) hides 5% achievement inside a $0.44 scolding; abandonment (option D) surrenders both signals. Design: moving target for pace accountability + fixed base for achievement recognition — demoralization comes from single-lens reporting, not from high standards" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-AD-011 Choice D: "As a noncash adjustment only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-AD-012 Choice C: "As a noncash adjustment only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-AD-013 Choice C: "As a noncash adjustment only" — contains absolute language "only/exclusively"
@@ -952,6 +1092,75 @@
 - [AbsoluteLanguageValidator] P1-FD-065 Choice D: "The only adequate response is to replace the ERP system with one that permits independent third-party penetration testing on production. The vendor's restriction creates a SOX-significant deficiency that cannot be remediated through compensating controls because no clone, vendor test, or monitoring can substitute for direct independent testing of the live financial reporting system." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-FD-067 Choice B: "Recommend funding only the portion of the investment supported by quantifiable benefits ($120,000) and defer the remainder until intangible benefits can be measured." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-FD-072 Choice D: "The deletion could only constitute spoliation if the court ultimately rules against Vertex Dynamics and finds that the deleted emails would have materially harmed the plaintiff's case." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-102 Choice D: "Rate variance $9,000 U — only the base-rate difference counts since overtime was pre-authorized" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-105 Choice C: "Mix $0; yield $212 U — with prices at standard, only yield matters" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-110 Choice D: "$58 — the seller must recover the full outside contribution on diverted units, so no mutually beneficial price exists" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-CD-112 Choice B: "Availability is the top lever — downtime is always the binding constraint on stamping presses" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-113 Choice B: "No target — cross-company comparisons are never valid across size classes" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CD-113 Choice C: "$4.20 — the attainable $0.60 efficiency portion only, excluding the $1.10 scale advantage Crestline cannot replicate" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-118 Choice C: "Under direct both miss 15%; the method only changes margins, never outcomes" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CD-118 Choice C: "Under direct both miss 15%; the method only changes margins, never outcomes" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-119 Choice C: "Between Learning and Process — 40% more training with zero cycle-efficiency gain means capability investment never reached operations; fix transfer before funding more hours" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CD-121 Choice C: "Investigate DL efficiency only — labor variances always deserve priority as the largest controllable cost" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-121 Choice C: "Investigate DL efficiency only — labor variances always deserve priority as the largest controllable cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-122 Choice C: "Mandate variable cost — guarantees internal trade happens, which is always goal-congruent" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-123 Choice C: "Raise the hurdle to 20% — only projects beating Old's standards should proceed" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-124 Choice C: "Prorate $6,000 to WIP, $12,000 to FG, $42,000 to COGS — 6% of total cost is material, so inventory must carry its share" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-CD-125 Choice B: "Rank both equally — volume variances never reflect managerial performance" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CD-127 Choice D: "No bonus plan — divisional bonuses never survive allocation disputes, so pay salary only" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CD-127 Choice D: "No bonus plan — divisional bonuses never survive allocation disputes, so pay salary only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-128 Choice B: "Financial 100 — efficiency is ultimately margin, so measure only margin" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-130 Choice B: "Budgeted — $50,000 U against plan is the only fair managerial signal" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-077 Choice A: "Identical — method choice never matters when prices fall steadily" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-080 Choice B: "All $200,000 credited to equity — shareholder transactions never touch earnings" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-082 Choice B: "Eliminate $200,000 of sales and $160,000 of COGS only — ending inventory needs no adjustment once sales eliminate" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-083 Choice B: "No — guarantees are disclosed, never consolidation triggers" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-083 Choice C: "Yes only if Harbor acquires 51% — voting control remains the sole trigger" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-084 Choice D: "Borrower defers $80,000 as a liability contra — gains on own debt are never income" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-085 Choice A: "$20,000 loss — premium paid over face is always a loss" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-087 Choice D: "Borrower defers $80,000 as a liability contra — gains on own debt are never income" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-088 Choice D: "$100,000 — LIFO never adds layers in inflation" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-089 Choice A: "$20,000 loss — premium paid over face is always a loss" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-091 Choice A: "$0 allowance — NOLs are statutory rights, always fully realizable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-091 Choice C: "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-092 Choice B: "A only — only the largest segment matters" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-094 Choice B: "Disclose both without adjusting — subsequent events never adjust issued-pending statements" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AD-096 Choice C: "Gross only for ocean freight, net for air — mode determines control" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-098 Choice B: "Five-year finance lease — leasing always preserves covenants versus buying" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-098 Choice D: "Twelve-month renewable leases with evergreen renewal history and disclosed intent — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90, with repricing risk disclosed" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-099 Choice B: "Yes — regulation plus churn together always clear MLTN" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-101 Choice B: "Do not refund — call premiums plus write-offs always destroy refunding economics" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-101 Choice C: "Refund only if rates fall below 3% — 5% is insufficient improvement" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-105 Choice A: "OCI $300,000; nothing to earnings — swaps always fully effective by design" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AD-105 Choice C: "Earnings $300,000; OCI $0 — fair-value changes always hit earnings immediately" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-076 Choice C: "VC $4.00 with no fixed component — high-low only estimates variable rates" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-077 Choice C: "Intercept $45,000 is the true fixed cost — intercepts always measure fixed cost regardless of t-statistics" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-078 Choice B: "Gross profit $20,000 — underapplied overhead is a period variance, never job cost" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-078 Choice C: "Prorate the $2,000 across WIP, FG, and COGS — all underapplied amounts must be prorated" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-DD-079 Choice C: "9,100 EU counting EWIP as whole units — completion percentages apply only to BWIP" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-079 Choice D: "9,100 EU; $10.00/EU — current-period work only (1,200 to finish BWIP + 7,000 started/completed + 900 EWIP)" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-080 Choice A: "$12.00/EU with abnormal absorbed — spoilage never separates" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-081 Choice D: "Setups are irrelevant — only inspection hours drive overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-083 Choice B: "Order never matters — step-down is order-invariant by construction" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-086 Choice C: "Buy — outsourcing always wins with a lower headline price" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-088 Choice D: "Produce B only — highest unit CM captures the constraint best" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-093 Choice A: "Switch — higher rates always motivate more sales than salaries" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-093 Choice D: "Cut salaries only — keep 5% and take $250,000 salaries unilaterally" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-094 Choice C: "Cut volume to 10,000 — plans must fit capacity, not vice versa" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-DD-095 Choice A: "Method 1 is more profitable — lower COGS always wins" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-096 Choice A: "Fixed — lower variable cost always wins across volumes" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-096 Choice D: "Variable only for the low state — switch structures by scenario" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-097 Choice B: "Reject — $120,000 of analysis overhead can never justify itself" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-097 Choice C: "Partial ABC (setups only) — half the system at half the cost captures the insight" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-098 Choice C: "Outsource only the defect-free portion — split production by quality tier" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-099 Choice D: "Delay pricing until capacity expands — never price into constraints" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-100 Choice A: "Overtime forever — capital commitment always loses to flexibility" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-101 Choice C: "Continue only if NRV covers joint plus separable in full — partial coverage destroys value" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-101 Choice D: "Shut down the lower-NRV product line only — $180,000 cannot carry its share" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-104 Choice B: "Invest without limit — quality spending always pays" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-104 Choice D: "Prevention only, cut all appraisal to zero — inspection never adds value" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-104 Choice D: "Prevention only, cut all appraisal to zero — inspection never adds value" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-105 Choice C: "Buy on pre-tax $500,000 vs $420,000 — lease wins, so buy reasoning must be wrong somewhere" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1E-A-001 Choice C: "Present using a classified balance sheet with assets except inventory classified as current, since only inventory is tied to the extended operating cycle" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-005 Choice C: "Write down only the finished goods inventory by $42,000 because LCNRV does not apply to raw materials or WIP — these are measured at cost until the finished product is sold" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-006 Choice C: "Adopt LIFO for tax reporting only, retaining FIFO for financial reporting — this captures the tax savings without reducing reported earnings. The LIFO conformity rule only applies to public companies" — contains absolute language "only/exclusively"
@@ -1202,6 +1411,49 @@
 - [AbsoluteLanguageValidator] P1E-E-S06 Choice C: "The control system is conditionally effective for financial reporting purposes only, because the strong control environment and risk assessment components can compensate for the deficiencies in Information & Communication and Monitoring." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-E-S07 Choice C: "The swap violates only the 'zero tolerance for compliance risk' dimension because the missing ISDA CSA documentation creates a documentary non-compliance, but the credit exposure to a BBB-rated counterparty remains within the moderate credit risk appetite." — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-F-S07 Choice B: "IaaS, because it provides the bank with maximum control over all security layers. The bank can implement its own encryption key management exclusively, retain direct control over all system and OS-level logs for examiner access, and build an immutable audit trail into its application layer. The higher operational burden is the necessary cost of full FFIEC compliance." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-101 Choice A: "Q4 $600,000 (30% of $2,000,000); revised shares sum to 96% before Q4 — indices must sum to 1.00, so Q4 takes the 34% residual ($748,000 on $2.2M), not a stale 30%" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-B-101 Choice C: "Q4 $600,000 — annual revisions never change quarterly shares" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-102 Choice D: "30,500 — defects are a production variance, never a budget input" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-103 Choice D: "Order 9,500 and renegotiate — tiers are always negotiable, so analysis is moot" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-105 Choice B: "Regression on all four — more data always beats selective data" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-105 Choice D: "Exclude the hurricane point; VC $6.00 with no fixed component — intercepts are unreliable, so report variable only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-106 Choice A: "Keep — discounts always accelerate cash worth more than their cost" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-106 Choice D: "Keep — DSO deterioration always exceeds discount savings" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-107 Choice A: "The 6% loan — lower stated rate always wins" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-108 Choice D: "Fixed spending $0 — fixed costs never vary, so the $3,000 is volume" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-109 Choice B: "Slack is $100,000 — only the growth increment is suspect" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-110 Choice B: "$225,000 net ($300,000 − $75,000) — forecasts must net cannibalization; require cannibalization schedules on all launch forecasts going forward" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-B-110 Choice D: "$75,000 — only the cannibalized portion is forecastable with confidence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-112 Choice B: "Hold $30 — one period never justifies revision" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-113 Choice C: "Units 1,001–2,000: 10,000 hrs (repeat lot 1); learning applies only after 4,000 units" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-116 Choice A: "Voluntary — autonomy always beats mandated internal trade" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-116 Choice B: "No policy — internal demand is soft information, never plannable" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-122 Choice C: "Static annual — process costs always exceed their benefits at these scales" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-125 Choice A: "Ignore — quantitatively immaterial amounts never warrant action" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-126 Choice B: "Reject — $50,000 of bank fees always exceeds float gains at these volumes" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-127 Choice A: "$12,000 — fewer false alarms always wins regardless of miss costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-128 Choice A: "Monthly — lower process cost always wins" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-129 Choice D: "Disclose the methodology only — numbers invite second-guessing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-130 Choice B: "Judgment alone — field knowledge always dominates models" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-130 Choice C: "Statistical alone — MSE 100 beats 150, so judgment adds only noise" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-103 Choice B: "Detective — cheaper sticker price always wins under budget constraint" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-E-105 Choice A: "Oldest first mechanically — age always outranks amount" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-E-105 Choice B: "Largest first mechanically — amount always outranks age" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-E-106 Choice A: "Annual full count only — one complete count beats partial ones" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-111 Choice D: "Disable only the 2 shared accounts — individually-assigned unjustified accounts pose no exploitable risk" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-114 Choice C: "Tier into critical (auto-escalate ~10), review (~40), and informational (dashboard-only ~250) with rule-tuning feedback from reviewer dispositions — precision through triage, not thresholding" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-116 Choice D: "Wait for the financial trail — preliminary evidence never justifies action" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-E-121 Choice C: "Approve the $90,000 preventive only — detective analytics duplicate prevention's benefit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-122 Choice C: "Hotline only ($30,000) — single cheapest tool captures most benefit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-E-124 Choice D: "Double analytics to $140,000 — more technology always improves coverage proportionally" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-E-125 Choice A: "Compliance-only — rules plus tracking cover all enforceable obligations at 60% of cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-125 Choice B: "Compliance-plus-ethics — 70% gray-area incidence means rules-only programs miss most issues; the $80,000 increment buys dilemma capacity where violations actually originate" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-125 Choice C: "Ethics-only — values make rules redundant, so drop compliance for pure culture" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-127 Choice D: "Defer until error rates worsen — automate only under demonstrated crisis" — contains absolute language "only/exclusively"
 - [AmbiguityValidator] P1-A-014 Choice D: "Finance lease. The present value of lease payments plus the bargain purchase option exercise price ($2,462,000) equals 72.4% of the building's fair value. Substantially all (typically 90%+) of the fair value of the underlying asset — the present value criterion is NOT met. However, the bargain purchase option independently triggers finance lease classification under ASC 842-10-25-2(d). The initial ROU asset and lease liability equal $2,462,000." — contains vague qualifier matching /\btypical(?:ly)?\b/
 - [AmbiguityValidator] P1-A-016 Choice B: "Consolidate Axion under the VIE model. As the primary beneficiary of a VIE, Ridgeview has both (a) the power to direct the activities that most significantly impact Axion's economic performance (through board veto rights, budget authority, and the manufacturing services agreement) and (b) the obligation to absorb losses or the right to receive benefits that could be significant to Axion (through the $4,500,000 loan guarantee). The 45% equity ownership is secondary to the VIE analysis." — contains vague qualifier matching /\bcould be\b/
 - [AmbiguityValidator] P1-A-024 Choice A: "Cash equivalents: items 1, 2, 3, 5. Short-term investment: item 4 only. Items 1 and 5 are T-bills (original maturities ≤ 3 months), item 2 commercial paper has 120-day original maturity exceeding 3 months but was purchased near maturity, and item 3 money market funds are typically cash equivalents with the redemption gate being a disclosure item rather than a classification matter when the fund is above the 30% threshold." — contains vague qualifier matching /\btypical(?:ly)?\b/
@@ -1425,6 +1677,11 @@
 - [AmbiguityValidator] P1B-F-120 Choice D: "Employees may learn to describe expenses using terminology that triggers preferential classification by the model, creating a new category of control risk not addressed by existing expense policy training or compliance monitoring." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1B-F-136 Choice D: "The responsibility cannot be determined without reviewing the specific terms of Meridian's AWS Enterprise Support agreement, which may include additional security monitoring obligations beyond the standard shared responsibility model" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1B-F-148 Choice B: "Deficiency B (Unlogged Transaction Overrides) — 47 transactions totaling $892,000 bypassed the SAP approval workflow in a single quarter, representing actual (not theoretical) financial statement impact; the absence of compensating detective controls means management cannot identify which bypassed transactions may be inappropriate" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-D-153 Choice A: "Job $128,000 ($120,000 + $8,000 normal); $5,000 abnormal period loss — normal rework attaches, abnormal expenses" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-D-153 Choice D: "Job $125,000 — abnormal attaches, normal expenses (rework symmetry)" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-A-173 Choice D: "Move to stage-1 inspection — saves 7 × ($120 − $30 − $2) = 7 × $88 = $616 of wasted downstream cost per 100 starts (net of $200 inspection); spoilage stays normal (absorbed) with earlier detection improving the rate itself" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-C-223 Choice A: "Normal capacity — budgeted volume is the honest denominator" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-C-223 Choice D: "Normal: rate $12.50, applied 38,000×$12.50 = $475,000, volume variance $500,000−$475,000 = $25,000 U. Practical: rate $10.00, applied $380,000, volume variance $120,000 U ($20,000 planned idle 10,000×$10 + $20,000 unplanned 2,000×$10). Recommend practical capacity: it separates planned idle capacity ($100,000 — visible capacity-planning signal) from operational shortfall ($20,000), prices products at long-run attainable cost ($10.00 vs $12.50 loaded with planned idleness), and stops demand drops from inflating unit cost. Normal buries $100,000 of planned idleness in every unit" — contains vague qualifier matching /\bnormal(?:ly)?\b/
 - [AmbiguityValidator] P1-AD-061: Choices B and C have high word overlap (78%) — may fail to discriminate
 - [AmbiguityValidator] P1-AD-065: Choices C and D have high word overlap (78%) — may fail to discriminate
 - [AmbiguityValidator] P1-AD-066: Choices B and C have high word overlap (71%) — may fail to discriminate
@@ -1444,11 +1701,11 @@
 - [AmbiguityValidator] P1-BD-041 Choice D: "Ask the board to defer the decision until after Q3 results are available, since budgets are forecasts and the actual numbers may change" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1-BD-052 Choice D: "James should evaluate the trade-off using incremental analysis — the discount order saves $8,800 in purchase price but incurs incremental carrying costs. The 7,300 excess lbs represent 0.73 months of consumption at normal production rates. The incremental carrying cost is approximately $334 (3,650 lbs average excess × $3.05/lb × 18% / 12 months × 2.3 months until consumption). The net benefit of approximately $8,466 strongly favors the discount order, provided Redcliff has sufficient storage capacity and the resin's specifications will not change before the excess is consumed." — contains vague qualifier matching /\bnormal(?:ly)?\b/
 - [AmbiguityValidator] P1-BD-053 Choice C: "Challenge the desired ending inventory — 9,500 lbs exceeds Duskgrove's normal 15-day safety stock by approximately 2,800 lbs (normal consumption of 85,000 lbs/year = ~7,100 lbs/month, so 15 days = ~3,550 lbs plus buffer). Reducing ending inventory to 6,700 lbs would allow purchasing 40,700 lbs — 30,000 from North and 10,700 from South — reducing total cost without meaningfully increasing stockout risk." — contains vague qualifier matching /\bnormal(?:ly)?\b/
-- [AmbiguityValidator] P1-BD-065 Choice B: " S&A costs are variable because they support selling activity — the sales managers could be reassigned if revenue declines, the lease has a 30-day cancellation clause, and depreciation continues regardless of volume but is allocated per unit" — contains vague qualifier matching /\bcould be\b/
+- [AmbiguityValidator] P1-BD-065 Choice B: "S&A costs are variable because they support selling activity — the sales managers could be reassigned if revenue declines, the lease has a 30-day cancellation clause, and depreciation continues regardless of volume but is allocated per unit" — contains vague qualifier matching /\bcould be\b/
 - [AmbiguityValidator] P1-BD-065 Choice C: "Variable costs: commissions and shipping. Fixed costs: salaries, lease, depreciation. The VP's proposal adds $170,000 fixed against $600,000 incremental revenue — at a typical 35% contribution margin ($210,000), the incremental managers would contribute $40,000 after covering S&A costs, so the expansion should be approved" — contains vague qualifier matching /\btypical(?:ly)?\b/
 - [AmbiguityValidator] P1-BD-068 Choice C: "Sales commissions, credit card fees, shipping to customers, and customer service salaries — customer service costs may appear fixed ($44,000 quarter) but should be classified as variable because the number of customer inquiries likely correlates with sales volume, and the historical data may not capture the full range of volume extremes." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1-BD-073 Choice D: "Neither model is adequate — the MAD values of 47.5 and 60.0 on a base of approximately 1,200-1,300 units represent 3.7-4.6% error rates, which exceed the typical 2% accuracy threshold for production planning. Marcus should recommend developing a new forecasting approach" — contains vague qualifier matching /\btypical(?:ly)?\b/
-- [AmbiguityValidator] P1-BD-075 Choice D: " of the three methods — MAPE differences of 2.9%, 3.2%, and 4.1% are within normal forecasting tolerance for a $2.4 million monthly product line. Thomas should select the simplest method (moving average) to minimize computational burden and modeling complexity, as the marginal accuracy improvement does not justify the additional complexity." — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-BD-075 Choice D: "of the three methods — MAPE differences of 2.9%, 3.2%, and 4.1% are within normal forecasting tolerance for a $2.4 million monthly product line. Thomas should select the simplest method (moving average) to minimize computational burden and modeling complexity, as the marginal accuracy improvement does not justify the additional complexity." — contains vague qualifier matching /\bnormal(?:ly)?\b/
 - [AmbiguityValidator] P1-BD-079 Choice C: "Defer investigation until Q2 results are available. A single quarter's variance could be random; trend analysis across multiple periods provides more reliable evidence." — contains vague qualifier matching /\bcould be\b/
 - [AmbiguityValidator] P1-BD-088 Choice D: "The $95,000 direct labor variance in total — because labor is typically the second-largest cost category after materials in manufacturing, and a 26% unfavorable rate on the labor budget signals that the standard labor rates and staffing model need recalibration independent of the Q2 purchasing decision" — contains vague qualifier matching /\btypical(?:ly)?\b/
 - [AmbiguityValidator] P1-BD-089 Choice D: "Reject the discount — Lockwood would still need to borrow $5,000 in May even with the discount" — contains vague qualifier matching /\bmay\b/
@@ -1524,6 +1781,12 @@
 - [AmbiguityValidator] P1-FD-063 Choice A: "Quarterly scanning is adequate because the MTtE statistic is an industry average that may not apply to financial services, where payment portals typically sit behind multiple security layers. The 11-day exploitation was an outlier — had the scan been monthly, it still would not have detected the vulnerability in time. The real failing was not scan frequency but patch management: the vulnerability was disclosed for 11 days without being patched." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1-FD-065 Choice C: "The exclusion of ERP financial modules from independent penetration testing is a material control gap because neither the network penetration test nor the vendor's self-commissioned test provides independent validation of the application-layer security of the systems that process, store, and report financial data. The compensating approach should be a three-part strategy: (1) contract for penetration testing on a non-production ERP clone that mirrors the production configuration and contains representative but synthetic financial data, (2) review the vendor's penetration test methodology, scope, and findings for completeness — specifically confirming the test covered the GL, AP, and AR modules — and (3) implement expanded application-layer logging and continuous monitoring in the production environment, including real-time alerts on unusual database queries, privileged user access patterns, and configuration changes to the ERP financial modules, to detect exploitation attempts that the clone-based testing may miss due to environmental differences between the test and production instances." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1-FD-072 Choice B: "The deletion may constitute spoliation under FRCP 37(e) because a duty to preserve electronically stored information (ESI) arises when litigation is reasonably anticipated — which is at minimum the date of filing — and the 3-day gap in hold implementation represents a failure to take reasonable preservation steps." — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-CD-101: Choices C and D have high word overlap (73%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-104: Choices A and C have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-106: Choices A and D have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-106: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1-DD-080 Choice C: "$12.00/EU; abnormal loss $4,800; good-unit cost $12.80 (normal absorbed by good output)" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-094 Choice D: "$220,000 — the 10,000-unit relevant-range edge triggers the $40,000 step; average-cost projections understate by $10,000 here (and mislead generally)" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
 - [AmbiguityValidator] P1E-A-006 Choice B: "Retain FIFO because the net income reduction under LIFO would negatively affect the company's P/E ratio and may trigger compensation clawbacks tied to earnings targets — the tax savings are not worth the earnings impact" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1E-A-008: Choices A and D have high word overlap (100%) — may fail to discriminate
 - [AmbiguityValidator] P1E-A-014 Choice B: "Classify as a finance lease because the lease term covers the major part (80%) of the asset's remaining economic life, which is one of the five ASC 842 criteria — only one criterion must be met for finance lease classification. The 15% purchase option may also constitute a bargain if fair value at exercise date is expected to exceed the option price, further supporting finance lease treatment" — contains vague qualifier matching /\bmay\b/
@@ -1683,6 +1946,10 @@
 - [AmbiguityValidator] P1E-C-S11 Choice D: "Use residual income as the primary basis and allocate the larger bonus pool to Division X ($400,000 RI versus $250,000). However, also examine DuPont components: Division Y's profit margin of 12.5% substantially exceeds Division X's 8.0%, indicating operational efficiency that warrants separate recognition and may justify targeted investment to grow Division Y's asset base." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1E-D-S12: Choices B and C have high word overlap (100%) — may fail to discriminate
 - [AmbiguityValidator] P1E-E-S08 Choice C: "All three findings are logical access control deficiencies within the IT general controls domain. The most critical deficiency is Finding 3 because system administrator privileges provide unrestricted access to all ERP modules and data, and the 18-month absence of review combined with personnel who have changed roles means the organization cannot assert that access remains appropriate." — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1E-B-118 Choice B: "$3,115,384 — salary $1,500,000 plus hourly $1,615,384 (two normal months $923,076 plus one spike month $692,308); budget the calendar, not the average" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-B-120: Choices B and C have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1E-E-105: Choices A and B have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1E-E-107 Choice D: "Continue pay pending manager confirmation — termination records may be erroneous" — contains vague qualifier matching /\bmay\b/
 - [DistractorSimilarityValidator] P1-A-018: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-A-025: Choices A and B (distractor-distractor) share moderate similarity (59%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-A-044: Choices A and D (distractor-distractor) share moderate similarity (58%) — may reduce discrimination
@@ -1913,6 +2180,9 @@
 - [DistractorSimilarityValidator] P1-DD-042: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-DD-043: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-DD-045: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-104: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-111: Choices C and D (distractor-distractor) share moderate similarity (55%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-077: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-008: Choices A and D (distractor-distractor) share high similarity (100%)
 - [DistractorSimilarityValidator] P1E-A-015: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-017: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
@@ -2100,3 +2370,5 @@
 - [DistractorSimilarityValidator] P1E-B-S13: Choices A and C (distractor-distractor) share high similarity (78%)
 - [DistractorSimilarityValidator] P1E-B-S13: Choices B and C (distractor-distractor) share moderate similarity (68%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-D-S12: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-B-120: Choices B and C (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-E-105: Choices A and B (distractor-distractor) share high similarity (75%)

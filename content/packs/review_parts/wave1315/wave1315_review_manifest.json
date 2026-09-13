@@ -1,0 +1,304 @@
+{
+  "reviewId": "wave1315",
+  "title": "Tier 3 Waves 13-15 third-party review pack (90 items)",
+  "protocol": "AGENTS.md §18.2 (parts ≤40KB; part→QID manifest; no-gap/no-dup proof; control test)",
+  "createdUTC": "2026-09-12T21:46:21Z",
+  "sources": {
+    "A": {
+      "file": "content/packs/pack_a_corrected.js",
+      "sha256": "212e2cfa08030077660dcc1960d9006be24dc90492090772f867ecc0b7a18fa7",
+      "bytes": 2653801
+    },
+    "B": {
+      "file": "content/packs/pack_b_corrected.js",
+      "sha256": "93363f36fe27066b5065c9dafa7126cfad0315cb9201f942721655bd39537d3e",
+      "bytes": 2075993
+    },
+    "C": {
+      "file": "content/packs/pack_c_corrected.js",
+      "sha256": "1ca3198f44ae0ad0774000515d570b0c8e07897424650c2a2373c405e4f26ca9",
+      "bytes": 2730608
+    }
+  },
+  "groups": [
+    "Wave 13 (Pack C Sec D): P1-DC-101..130 (Pack C)",
+    "Wave 14 (Pack A Sec C): P1-C-101..130 (Pack A)",
+    "Wave 15 (Pack B Sec C): P1B-C-211..240 (Pack B)"
+  ],
+  "totalQuestions": 90,
+  "totalParts": 11,
+  "partSizeTarget": 40960,
+  "distributions": {
+    "correctChoice": {
+      "A": 24,
+      "B": 23,
+      "C": 22,
+      "D": 21
+    },
+    "cognitiveLevel": {
+      "Analyze": 59,
+      "Evaluate": 31
+    },
+    "difficultyScore": {
+      "4": 58,
+      "5": 32
+    },
+    "questionState": {
+      "Certified": 90
+    }
+  },
+  "parts": [
+    {
+      "part": 1,
+      "file": "wave1315_part_001.js",
+      "qidRange": "P1-DC-101–P1-DC-109",
+      "questionCount": 9,
+      "sizeBytes": 40168,
+      "sha256": "52c889641563c31f0f1f2f1c4d8bc22d9940a2ccb02e0cdc3afb232178a72eae",
+      "qids": [
+        "P1-DC-101",
+        "P1-DC-102",
+        "P1-DC-103",
+        "P1-DC-104",
+        "P1-DC-105",
+        "P1-DC-106",
+        "P1-DC-107",
+        "P1-DC-108",
+        "P1-DC-109"
+      ],
+      "groups": [
+        "Wave 13 (Pack C Sec D)"
+      ]
+    },
+    {
+      "part": 2,
+      "file": "wave1315_part_002.js",
+      "qidRange": "P1-DC-110–P1-DC-118",
+      "questionCount": 9,
+      "sizeBytes": 38807,
+      "sha256": "05270d2b8c43356eebdb329563cfba16317b8712ddab9846bf905337699a8ce9",
+      "qids": [
+        "P1-DC-110",
+        "P1-DC-111",
+        "P1-DC-112",
+        "P1-DC-113",
+        "P1-DC-114",
+        "P1-DC-115",
+        "P1-DC-116",
+        "P1-DC-117",
+        "P1-DC-118"
+      ],
+      "groups": [
+        "Wave 13 (Pack C Sec D)"
+      ]
+    },
+    {
+      "part": 3,
+      "file": "wave1315_part_003.js",
+      "qidRange": "P1-DC-119–P1-DC-127",
+      "questionCount": 9,
+      "sizeBytes": 38166,
+      "sha256": "a2fb6b4218cbbd9c4b7c617f1e99918ee9c00b88f7872052b531332907d5a369",
+      "qids": [
+        "P1-DC-119",
+        "P1-DC-120",
+        "P1-DC-121",
+        "P1-DC-122",
+        "P1-DC-123",
+        "P1-DC-124",
+        "P1-DC-125",
+        "P1-DC-126",
+        "P1-DC-127"
+      ],
+      "groups": [
+        "Wave 13 (Pack C Sec D)"
+      ]
+    },
+    {
+      "part": 4,
+      "file": "wave1315_part_004.js",
+      "qidRange": "P1-DC-128–P1-C-106",
+      "questionCount": 9,
+      "sizeBytes": 40738,
+      "sha256": "be0ea46d769aba0e5d15df27b523c7744a8c428884b068b7762914803f9b1a3b",
+      "qids": [
+        "P1-DC-128",
+        "P1-DC-129",
+        "P1-DC-130",
+        "P1-C-101",
+        "P1-C-102",
+        "P1-C-103",
+        "P1-C-104",
+        "P1-C-105",
+        "P1-C-106"
+      ],
+      "groups": [
+        "Wave 13 (Pack C Sec D)",
+        "Wave 14 (Pack A Sec C)"
+      ]
+    },
+    {
+      "part": 5,
+      "file": "wave1315_part_005.js",
+      "qidRange": "P1-C-107–P1-C-114",
+      "questionCount": 8,
+      "sizeBytes": 37724,
+      "sha256": "d3b98a460ffb88a5d1193bd4228b9771ff7b63487079d79d2dd55c26612308a9",
+      "qids": [
+        "P1-C-107",
+        "P1-C-108",
+        "P1-C-109",
+        "P1-C-110",
+        "P1-C-111",
+        "P1-C-112",
+        "P1-C-113",
+        "P1-C-114"
+      ],
+      "groups": [
+        "Wave 14 (Pack A Sec C)"
+      ]
+    },
+    {
+      "part": 6,
+      "file": "wave1315_part_006.js",
+      "qidRange": "P1-C-115–P1-C-122",
+      "questionCount": 8,
+      "sizeBytes": 38222,
+      "sha256": "1f4dbcf3c873269827fd85bcbfb1f4863067feb5df8783d5ccfe195cdbe50392",
+      "qids": [
+        "P1-C-115",
+        "P1-C-116",
+        "P1-C-117",
+        "P1-C-118",
+        "P1-C-119",
+        "P1-C-120",
+        "P1-C-121",
+        "P1-C-122"
+      ],
+      "groups": [
+        "Wave 14 (Pack A Sec C)"
+      ]
+    },
+    {
+      "part": 7,
+      "file": "wave1315_part_007.js",
+      "qidRange": "P1-C-123–P1-C-130",
+      "questionCount": 8,
+      "sizeBytes": 40705,
+      "sha256": "3e4ff3305d7eab0508a7fa2eb1732e4af060221bb2051bfde2b50510632c6ab8",
+      "qids": [
+        "P1-C-123",
+        "P1-C-124",
+        "P1-C-125",
+        "P1-C-126",
+        "P1-C-127",
+        "P1-C-128",
+        "P1-C-129",
+        "P1-C-130"
+      ],
+      "groups": [
+        "Wave 14 (Pack A Sec C)"
+      ]
+    },
+    {
+      "part": 8,
+      "file": "wave1315_part_008.js",
+      "qidRange": "P1B-C-211–P1B-C-218",
+      "questionCount": 8,
+      "sizeBytes": 37321,
+      "sha256": "b80947f66add4bb52aca7edbc304475247900acd51e37f35c02e05736bb72ab7",
+      "qids": [
+        "P1B-C-211",
+        "P1B-C-212",
+        "P1B-C-213",
+        "P1B-C-214",
+        "P1B-C-215",
+        "P1B-C-216",
+        "P1B-C-217",
+        "P1B-C-218"
+      ],
+      "groups": [
+        "Wave 15 (Pack B Sec C)"
+      ]
+    },
+    {
+      "part": 9,
+      "file": "wave1315_part_009.js",
+      "qidRange": "P1B-C-219–P1B-C-226",
+      "questionCount": 8,
+      "sizeBytes": 39840,
+      "sha256": "ba8ca6920e4c957955abfe9e2b07d56ab3a5da42f3ca7a31661149705e08bd45",
+      "qids": [
+        "P1B-C-219",
+        "P1B-C-220",
+        "P1B-C-221",
+        "P1B-C-222",
+        "P1B-C-223",
+        "P1B-C-224",
+        "P1B-C-225",
+        "P1B-C-226"
+      ],
+      "groups": [
+        "Wave 15 (Pack B Sec C)"
+      ]
+    },
+    {
+      "part": 10,
+      "file": "wave1315_part_010.js",
+      "qidRange": "P1B-C-227–P1B-C-234",
+      "questionCount": 8,
+      "sizeBytes": 38788,
+      "sha256": "be20a729fa1c3eebe0ab3a6f260876caf747a5446f53d94516f3576933ae1ba8",
+      "qids": [
+        "P1B-C-227",
+        "P1B-C-228",
+        "P1B-C-229",
+        "P1B-C-230",
+        "P1B-C-231",
+        "P1B-C-232",
+        "P1B-C-233",
+        "P1B-C-234"
+      ],
+      "groups": [
+        "Wave 15 (Pack B Sec C)"
+      ]
+    },
+    {
+      "part": 11,
+      "file": "wave1315_part_011.js",
+      "qidRange": "P1B-C-235–P1B-C-240",
+      "questionCount": 6,
+      "sizeBytes": 30786,
+      "sha256": "2dddb755ddb3649ce05510aa42b1012655f747790da459bfcd5c3dc0c33f37da",
+      "qids": [
+        "P1B-C-235",
+        "P1B-C-236",
+        "P1B-C-237",
+        "P1B-C-238",
+        "P1B-C-239",
+        "P1B-C-240"
+      ],
+      "groups": [
+        "Wave 15 (Pack B Sec C)"
+      ]
+    }
+  ],
+  "verification": {
+    "qidCoverage90of90": true,
+    "noDuplicates": true,
+    "deepEqualVsLivePacks": "90/90",
+    "allPartsAtOrUnder40KB": true,
+    "allPartsAtOrUnder30Objects": true,
+    "byteMatch": true,
+    "byteMatchNote": "Parts are item-grouped standalone files (pack_c precedent), not raw byte slices; equivalence is proven per-item deep-equal (parsed part object JSON == live pack object JSON) for 90/90 plus exact QID coverage with zero gaps/dups."
+  },
+  "controlTest": {
+    "file": "wave1315_part_001.js",
+    "qids": [
+      "P1-DC-101",
+      "P1-DC-102",
+      "P1-DC-103"
+    ],
+    "instruction": "Attach this part first; confirm the tool finds the first listed QID literally and returns its full object before reviewing the rest."
+  }
+}

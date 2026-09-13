@@ -30408,9 +30408,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Joint cost $150,000. Main product sales $600,000. By-product sales $25,000 with $5,000 disposal costs, sold in the period (no beginning inventory, none left unsold). Compare the revenue method (recognize by-product revenue at sale, no inventory value) against the NRV-reduction method. What does each report?",
     "Choices": {
       "A": "Revenue method: $625,000 revenue, $150,000 COGS; NRV method: $600,000 revenue, $130,000 COGS ($150,000 − $20,000 NRV) — $475,000 vs $470,000 gross profit differ by $5,000 of disposal timing",
-      "B": "Identical $475,000 gross profit under both — presentation never affects profit when by-products sell through",
+      "B": "Identical $475,000 gross profit under both — presentation does not affect profit when by-products sell through",
       "C": "Revenue method reports $25,000 more profit — gross by-product revenue exceeds net NRV credits by definition",
-      "D": "NRV method reports $25,000 more profit — deductions always dominate additions"
+      "D": "NRV method reports $25,000 more profit — deductions dominate additions"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Revenue method: revenue $600,000 + $25,000 = $625,000; COGS $150,000 (joint, unreduced); gross = $475,000. NRV method: revenue $600,000; COGS $150,000 − ($25,000 − $5,000 = $20,000) = $130,000; gross = $470,000. Difference = $5,000 (the disposal cost: expensed through COGS-reduction arithmetic under NRV vs netted in revenue under the revenue method... precisely under revenue method the $5,000 disposal hits selling expense separately, so total profit reconciles at $470,000 both ways when fully traced — the $475,000 vs $470,000 gross-profit gap is a classification difference, not an economic one). Identical-profit claims (option B) ignore the $5,000 disposal geography. Directional absolutes (options C/D) pick winners without tracing disposal. Business interpretation: by-product methods differ in geography (revenue vs COGS lines), converging on total profit when fully traced — compare methods on transparency, never on headline gross profit. Common trap: reading gross-profit gaps as economic differences.",
@@ -30446,6 +30446,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -30516,7 +30518,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "BWIP 1,000 units 60% complete ($12,000 prior cost); started 9,000; normal loss 5% of started units (450 units, detected at completion); completed 8,000; EWIP 1,550 units 40% complete. Under weighted average, how does the normal loss affect EU and unit cost (current costs $180,000)?",
     "Choices": {
       "A": "EU 9,070 (8,000 + 450×100% + 1,550×40% = 8,000 + 450 + 620); unit cost ($12,000 + $180,000)/9,070 = $192,000/9,070 = $21.17 — normal loss absorbs as EU with cost to good output",
-      "B": "EU 8,620 (loss excluded) — losses never enter equivalent units",
+      "B": "EU 8,620 (loss excluded) — losses do not enter equivalent units",
       "C": "EU 9,620 (loss double-counted in both completed and EWIP) — conservatism double-counts shrinkage",
       "D": "EU 8,000 (completed only) — WIP and loss are period adjustments outside EU"
     },
@@ -30554,6 +30556,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -30625,7 +30629,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "EU 9,400 (8,500 + 900); unit $19.15 ($180,000/9,400); BWIP profit stays buried in unit cost — average costing blends margins by construction",
       "B": "EU 8,500 (completed only); unit $21.18 ($180,000/8,500) — WIP excluded like FIFO",
-      "C": "EU 10,000 (all physical units); unit $18.00 — denominators count units, never completion",
+      "C": "EU 10,000 (all physical units); unit $18.00 — denominators count units, not completion",
       "D": "EU 9,400 with profit stripped first ($176,000/9,400 = $18.72) — BWIP profit must be purged before averaging"
     },
     "CorrectChoice": "A",
@@ -30662,6 +30666,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -30947,7 +30953,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Same S1/S2 data. Compute step-down P1 under both orders (S1-first vs S2-first) and quantify the order sensitivity against the reciprocal $61,915.",
     "Choices": {
-      "A": "Orders agree at $61,915 — sequence never matters in step-down",
+      "A": "Orders agree at $61,915 — sequence does not matter in step-down",
       "B": "S1-first P1 $59,750; S2-first P1 $66,429; sensitivity $6,679 (10.8% of reciprocal) — order selects which back-flow is zeroed, so disclose the order with every step-down report",
       "C": "S1-first P1 $61,915; S2-first P1 $59,750 — S1-first is exact, S2-first approximate",
       "D": "S1-first P1 $55,000; S2-first P1 $70,000 — sensitivity dominates all other costing choices"
@@ -30986,6 +30992,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31002,7 +31010,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Same S1/S2 data. Compute the direct-method P1 allocation (ignore all inter-service flows) and compare against reciprocal $61,915.",
     "Choices": {
       "A": "Direct P1 $47,000 (0.40×$80,000 + 0.30×$50,000 = $32,000 + $15,000) — $14,915 (24%) below reciprocal; direct is defensible only when inter-service flows are immaterial",
-      "B": "Direct P1 $61,915 — direct always equals reciprocal by construction",
+      "B": "Direct P1 $61,915 — direct equals reciprocal by construction",
       "C": "Direct P1 $65,000 — ignoring services inflates production allocations",
       "D": "Direct P1 $32,000 — only S1 allocates under direct"
     },
@@ -31040,6 +31048,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31056,7 +31066,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Joint cost $100,000 sunk at split-off. Product X sells now for $140,000 or processes further for $35,000 additional cost, selling for $190,000. The controller allocates $60,000 of joint cost to X and argues further processing loses $5,000 ($190,000 − $35,000 − $60,000 − $100,000... as presented). Should X be processed further?",
     "Choices": {
       "A": "No — the fully-loaded analysis shows a $5,000 loss, so sell now",
-      "B": "Yes — because sales value always exceeds separable cost for joint products",
+      "B": "Yes — because sales value exceeds separable cost for joint products",
       "C": "No — joint cost per unit rises if processing continues, raising reported COGS",
       "D": "Yes — incremental revenue $50,000 exceeds incremental cost $35,000 by $15,000; the $100,000 joint cost and its $60,000 allocation are sunk and irrelevant"
     },
@@ -31094,6 +31104,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31217,7 +31229,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Joint cost $200,000. M: final $400,000 after $60,000 further processing; N: sells at split-off for $150,000 (no processing). The board must choose estimated-NRV vs split-off sales value for N's allocator. Which treatment is correct and what allocation results?",
     "Choices": {
-      "A": "Split-off sales value ($400,000 M vs $150,000 N) — use observable prices, never estimates",
+      "A": "Split-off sales value ($400,000 M vs $150,000 N) — use observable prices, not estimates",
       "B": "Estimated NRV: M $400,000 − $60,000 = $340,000 vs N $150,000 (total $490,000): M 340/490×$200,000 = $138,776; N 150/490×$200,000 = $61,224 — net further-processing costs before pro-rating, even when one product needs none",
       "C": "Estimated NRV with N at zero (no processing means no NRV) — M absorbs all $200,000",
       "D": "Equal $100,000 each — estimation uncertainty forces neutrality"
@@ -31256,6 +31268,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31326,7 +31340,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Normal scrap 2% of 50,000 started units (1,000 units, $2,000 realizable value). Abnormal scrap 500 units ($1,000 value). The cost accountant nets both scrap values against COGS. Identify the error and correct treatment.",
     "Choices": {
       "A": "No error — all scrap value reduces COGS regardless of normality",
-      "B": "Error: scrap value is never recognized — conservatism bars recording realizable value",
+      "B": "Error: scrap value is not recognized — conservatism bars recording realizable value",
       "C": "Error: normal scrap must hit period loss; abnormal credits COGS — normality inverts the geography",
       "D": "Error: abnormal scrap's $1,000 must hit period loss (with its cost), not COGS; normal scrap's $2,000 properly credits COGS (or other income). Netting both understates period loss by $1,000 and over-credits product cost"
     },
@@ -31364,6 +31378,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31382,7 +31398,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "All $15,000 to product cost — rework is rework regardless of cause",
       "B": "All $15,000 to period loss — any excess over normal taints the whole batch",
       "C": "$9,000 normal to product cost; $3,750 rush-order excess to the rush job (covered by $4,000 premium); $2,250 residual abnormal to period loss — cause-by-cause assignment matches cost to responsibility",
-      "D": "$9,000 normal to product cost; $6,000 excess to period loss — customer premiums are revenue, never cost offsets"
+      "D": "$9,000 normal to product cost; $6,000 excess to period loss — customer premiums are revenue, not cost offsets"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Cause-by-cause assignment: normal 600 units × $15 = $9,000 → product cost (expected yield economics). Rush-order 250 units × $15 = $3,750 → charged to the rush job (its $4,000 premium covers the rework with $250 margin — job costing integrity). Residual abnormal 150 units × $15 = $2,250 → period loss (controllable excess, flagged). Total $9,000 + $3,750 + $2,250 = $15,000 ✓. All-product (option A) buries $6,000 of abnormal/rush cost in margins. All-loss (option B) punishes product cost for $9,000 of expected yield economics. Premium-as-revenue-only (option D: $6,000 to loss) misassigns $3,750 of customer-caused rework to period loss while stranding the premium as unmatched revenue — job-cost matching requires the rush job to bear its rework. Business interpretation: rework assignment follows causation — expected to product, customer-caused to the job, controllable excess to period loss. Common trap: binary normal/abnormal splits that ignore customer-caused middle categories.",
@@ -31418,6 +31434,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31436,7 +31454,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "EU 11,400 (10,000 + 500 + 900); unit ($20,000+$230,000)/11,400 = $250,000/11,400 = $21.9298 ≈ $21.93; normal $8,772 (400×$21.93) to product, abnormal $2,193 (100×$21.93) to period loss",
       "B": "EU 10,000 (completed only); spoilage is a period adjustment outside EU",
       "C": "EU 11,900 (completed 10,000 assumed to include spoilage, plus 500 counted separately, plus 900 EWIP)",
-      "D": "EU 10,500 (normal included, abnormal excluded) — abnormal never enters EU"
+      "D": "EU 10,500 (normal included, abnormal excluded) — abnormal does not enter EU"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Final-inspection spoilage counts at 100% EU (work fully performed before detection): completed 10,000 + spoiled 500 + EWIP 1,500×60% (900) = 11,400. Unit = $250,000/11,400 = $21.9298 ≈ $21.93; normal 400×$21.93 = $8,772 to product; abnormal 100×$21.93 = $2,193 to period loss.",
@@ -31472,6 +31490,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31650,7 +31670,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Common process yields Alpha ($500,000 sales), Beta ($300,000), and Gamma ($8,000, no separable cost). The controller classifies all three as joint products with sales-value allocation. Evaluate.",
     "Choices": {
       "A": "Correct — common process means joint products regardless of value",
-      "B": "Beta misclassified — middle-value outputs are always by-products",
+      "B": "Beta misclassified — middle-value outputs are by-products",
       "C": "Gamma misclassified — $8,000 (1% of $808,000 total) is immaterial by-product (revenue method: $8,000 revenue at sale, zero joint allocation); Alpha/Beta share joint cost by value ($500,000 vs $300,000 of $800,000). Allocating joint cost to Gamma over-costs it and distorts Alpha/Beta by $1,000s",
       "D": "Alpha misclassified — highest-value outputs absorb no joint cost as primary beneficiaries"
     },
@@ -31688,6 +31708,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   },
   {
@@ -31919,7 +31941,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "A process carries volatile input prices (±20% monthly) with stable 8,000-unit monthly throughput and 1,000-unit BWIP. The controller asks whether FIFO or weighted average better serves cost control and inventory valuation. Recommend with reasons.",
     "Choices": {
-      "A": "Weighted average — simplicity always governs method choice",
+      "A": "Weighted average — simplicity governs method choice",
       "B": "FIFO — isolates current-period price volatility ($220,000 current vs $15,000 prior in P1-DC-124 pattern) for visible control signals, while average would melt ±20% swings into blended rates that hide purchasing performance; use FIFO for control, disclose average as supplementary where stability aids planning",
       "C": "Weighted average — blending hides volatility, which is the goal of reporting",
       "D": "Neither — process costing cannot handle volatile inputs; switch to job costing"
@@ -31958,6 +31980,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
     "certification_batch": "Tier 3 Wave 13 (authored 2026-09-11, certified 2026-09-11 (six-dimension HIGH, user-approved); Tier 3 Wave 13)",
+    "recertification_batch": "Tier 3 Wave 13 DL-003 remediation (13 verified-TP slots)",
+    "recertification_date": "2026-09-13",
     "certification_date": "2026-09-11"
   }
 ];
