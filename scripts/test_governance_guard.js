@@ -208,6 +208,92 @@ function countQuestions(text) {
   return q + i;
 }
 
+// ── R15-R19 mirrors (must match .opencode/plugins/governance-guard.js) ──
+
+const ADMISSIBILITY_RE = /stratified|context review|adjudicated|triage|candidate-list|independently derived/i;
+const HYGIENE_MIN_LEN = 8;
+// R18 narrowing mirror (2026-09-10 patch): leading currency/grouping/sign run exempt.
+const HYGIENE_LEAD_EXEMPT_RE = /^[$\u20AC\u00A3\u00A5%(-]+/;
+
+function findFragmentViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  const letters = ['A', 'B', 'C', 'D'];
+  for (const obj of objects) {
+    const cc = obj.CorrectChoice;
+    if (!cc || !/^[A-D]$/.test(cc)) continue;
+    const qid = obj.QuestionID || '(unknown)';
+    for (const L of letters) {
+      if (L === cc) continue;
+      const ewKey = 'ExplanationWrong' + L;
+      const val = obj[ewKey];
+      if (typeof val !== 'string' || val.length === 0) continue;
+      const trimmed = val.trim();
+      if (/^[a-z]/.test(trimmed)) {
+        violations.push({ qid, slot: L, snippet: trimmed.substring(0, 100) });
+      }
+    }
+  }
+  return violations;
+}
+
+function findUnstampedCertViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  for (const obj of objects) {
+    if (obj.question_state !== 'Certified') continue;
+    if (!obj.CorrectChoice) continue;
+    const qid = obj.QuestionID || '(unknown)';
+    const hasBatch = obj.certification_batch || obj.recertification_batch;
+    const hasDate = obj.certification_date || obj.recertification_date;
+    if (!hasBatch || !hasDate) {
+      const missing = (!hasBatch ? 'batch' : '') + (!hasBatch && !hasDate ? '+' : '') + (!hasDate ? 'date' : '');
+      violations.push({ qid, reason: `Certified without ${missing} stamp` });
+    }
+  }
+  return violations;
+}
+
+function findChoiceHygieneViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  for (const obj of objects) {
+    if (!obj.CorrectChoice) continue;
+    const qid = obj.QuestionID || '(unknown)';
+    const choices = obj.Choices;
+    if (!choices || typeof choices !== 'object') continue;
+    for (const [letter, value] of Object.entries(choices)) {
+      if (typeof value !== 'string') continue;
+      if (value.length === 0) continue;
+      const trimmed = value.trim();
+      if (trimmed !== value) {
+        violations.push({ qid, choice: letter, reason: 'leading/trailing whitespace', snippet: value.substring(0, 60) });
+      } else if (trimmed.length < HYGIENE_MIN_LEN) {
+        violations.push({ qid, choice: letter, reason: `fragment (trimmed length ${trimmed.length} < ${HYGIENE_MIN_LEN})`, snippet: trimmed.substring(0, 60) });
+      } else if (/^[^A-Za-z0-9]/.test(trimmed.replace(HYGIENE_LEAD_EXEMPT_RE, ''))) {
+        violations.push({ qid, choice: letter, reason: 'non-alphanumeric start (orphan fragment)', snippet: trimmed.substring(0, 60) });
+      }
+    }
+  }
+  return violations;
+}
+
+function findDuplicateCaseIDViolations(text) {
+  const seen = new Map();
+  const dupes = new Map();
+  const re = /"CaseID"\s*:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(text || '')) !== null) {
+    const id = m[1];
+    if (seen.has(id)) {
+      dupes.set(id, (dupes.get(id) || 1) + 1);
+    } else {
+      seen.set(id, true);
+    }
+  }
+  return [...dupes.entries()].map(([caseId, extra]) => ({ caseId, count: extra + 1 }));
+}
+
 // ── Test helpers ───────────────────────────────────────────────
 
 let pass = 0;
@@ -230,7 +316,7 @@ function assert(condition, msg) {
 
 // ── Test cases ─────────────────────────────────────────────────
 
-console.log("\n=== TEST SUITE: Governance Guard Plugin v3.0 (S913 Rule 9) ===\n");
+console.log("\n=== TEST SUITE: Governance Guard Plugin v6.0 (R15-R19) ===\n");
 
 // ── RULE 2: DL-008 detection (upgraded — object-boundary extraction) ──
 console.log("RULE 2 — ExplanationWrong[CorrectChoice] detection (object-boundary v2)\n");
@@ -1077,6 +1163,168 @@ test("Rule 4: SOURCE_FILE_RE detects all pack and case files (P1 + P2)", () => {
   assert(!SOURCE_FILE_RE.test("app.js"));
   assert(!SOURCE_FILE_RE.test("styles.css"));
   assert(!SOURCE_FILE_RE.test("pack_p2_g.js")); // only a-f
+});
+
+// ── RULES 15-19 (2026-09-10 board: DL-047/046/048/045 prevention) ──
+console.log("\nRULE 15 — Misfiled explanation-fragment text (DL-047 fingerprint)\n");
+
+test("Rule 15 BLOCK — distractor EW starting lowercase (P1-F-009 pattern)", () => {
+  const text = `{
+    "QuestionID": "P1-F-009",
+    "CorrectChoice": "D",
+    "ExplanationWrongC": "because the data arrive after managers need them for pricing decisions",
+    "ExplanationWrongA": "Validity checks address format errors.",
+    "ExplanationWrongB": "Completeness addresses missing records."
+  }`;
+  const v = findFragmentViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].slot === "C", `Expected slot C, got ${v[0].slot}`);
+});
+
+test("Rule 15 PASS — genuine distractor explanations start uppercase", () => {
+  const text = `{
+    "QuestionID": "P1-A-001",
+    "CorrectChoice": "D",
+    "ExplanationWrongA": "Option A confuses job-order with process costing.",
+    "ExplanationWrongB": "Option B omits the salvage value.",
+    "ExplanationWrongC": "Option C divides by the wrong life."
+  }`;
+  const v = findFragmentViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+console.log("\nRULE 16 — Certification provenance stamp\n");
+
+test("Rule 16 BLOCK — Certified without batch+date stamps", () => {
+  const text = `{
+    "QuestionID": "P1-A-002",
+    "CorrectChoice": "A",
+    "question_state": "Certified"
+  }`;
+  const v = findUnstampedCertViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+});
+
+test("Rule 16 BLOCK — Certified with batch but no date", () => {
+  const text = `{
+    "QuestionID": "P1-A-003",
+    "CorrectChoice": "B",
+    "question_state": "Certified",
+    "certification_batch": "S999"
+  }`;
+  const v = findUnstampedCertViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+});
+
+test("Rule 16 PASS — Certified with batch+date stamps", () => {
+  const text = `{
+    "QuestionID": "P1-A-004",
+    "CorrectChoice": "C",
+    "question_state": "Certified",
+    "certification_batch": "S999",
+    "certification_date": "2026-09-10"
+  }`;
+  const v = findUnstampedCertViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 16 PASS — recertification stamps accepted", () => {
+  const text = `{
+    "QuestionID": "P1-F-009",
+    "CorrectChoice": "C",
+    "question_state": "Certified",
+    "recertification_batch": "DL047-20260905",
+    "recertification_date": "2026-09-05"
+  }`;
+  const v = findUnstampedCertViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+console.log("\nRULE 17 — Heuristic-screen admissibility note\n");
+
+test("Rule 17: ADMISSIBILITY_RE detects evidence-basis notes", () => {
+  assert(ADMISSIBILITY_RE.test("stratified by cognitive level, context review done"), "Should match admissibility note");
+  assert(!ADMISSIBILITY_RE.test("rewrite all choices per containment screen"), "Bare heuristic basis must NOT match");
+});
+
+console.log("\nRULE 18 — Choice-text hygiene floor (DL-046 family)\n");
+
+test("Rule 18 BLOCK — leading-whitespace choice", () => {
+  const text = `{
+    "QuestionID": "P1B-B-133",
+    "CorrectChoice": "A",
+    "Choices": { "A": "departments share costs", "B": " costs incurred this period", "C": "cash budget total", "D": "static budget variance" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].choice === "B", `Expected choice B, got ${v[0].choice}`);
+});
+
+test("Rule 18 BLOCK — orphan fragment choice (DL-046 securities pattern)", () => {
+  const text = `{
+    "QuestionID": "P1E-A-024",
+    "CorrectChoice": "D",
+    "Choices": { "A": "Only common shares outstanding", "B": "Only preferred stock issued", "C": " securities", "D": "Convertible securities and options if dilutive" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].choice === "C", `Expected choice C, got ${v[0].choice}`);
+});
+
+test("Rule 18 PASS — clean choices", () => {
+  const text = `{
+    "QuestionID": "P1-A-005",
+    "CorrectChoice": "A",
+    "Choices": { "A": "Recognize revenue when control transfers", "B": "Defer revenue until cash is collected", "C": "Recognize revenue at contract signing", "D": "Net revenue against cost of sales" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 18 PASS — dollar-leading amounts exempt (R18 narrowing)", () => {
+  const text = `{
+    "QuestionID": "P1-A-003",
+    "CorrectChoice": "A",
+    "Choices": { "A": "$225,000 license fee allocation", "B": "$211,000 implementation cost", "C": "$201,000 support contract", "D": "$172,000 training expense" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 18 PASS — parenthesized negative + enumeration exempt", () => {
+  const text = `{
+    "QuestionID": "P1B-D-141",
+    "CorrectChoice": "A",
+    "Choices": { "A": "($10,000) disadvantage to buy the component", "B": "($5,000) disadvantage to buy the component", "C": "(1) Material weakness, (2) Significant deficiency", "D": "Make the component in-house instead" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 18 BLOCK — genuine non-exempt symbol start still fires", () => {
+  const text = `{
+    "QuestionID": "P1E-C-092",
+    "CorrectChoice": "D",
+    "Choices": { "A": "Segment A exceeds the threshold", "B": "Segment B exceeds the threshold", "C": "Both segments exceed the threshold", "D": "> 10% of combined total assets" }
+  }`;
+  const v = findChoiceHygieneViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].choice === "D", `Expected choice D, got ${v[0].choice}`);
+});
+
+console.log("\nRULE 19 — Duplicate CaseID within change-set (DL-048)\n");
+
+test("Rule 19 BLOCK — duplicate CaseID in change-set", () => {
+  const text = `{ "CaseID": "CBQ3-A1", "Title": "One" }\n{ "CaseID": "CBQ3-A1", "Title": "Two" }`;
+  const v = findDuplicateCaseIDViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].caseId === "CBQ3-A1", `Expected CBQ3-A1, got ${v[0].caseId}`);
+});
+
+test("Rule 19 PASS — distinct CaseIDs", () => {
+  const text = `{ "CaseID": "CBQ3-A1", "Title": "One" }\n{ "CaseID": "CBQ3-A2", "Title": "Two" }`;
+  const v = findDuplicateCaseIDViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
 });
 
 // ── Summary ────────────────────────────────────────────────────

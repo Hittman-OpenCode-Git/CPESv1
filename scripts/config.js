@@ -119,6 +119,21 @@ module.exports = {
     ],
 
     //==========================================================================
+    // Consolidated Case Packs (3-pack architecture — S916-S918)
+    // Consumed by CaseIdentityValidator for cross-file CaseID uniqueness (DL-048).
+    //==========================================================================
+
+    casePackBanks: [
+
+        "content/cases/case_pack_1_corrected.js",
+
+        "content/cases/case_pack_2_corrected.js",
+
+        "content/cases/case_pack_3_corrected.js"
+
+    ],
+
+    //==========================================================================
     // Knowledge Library
     //==========================================================================
 
@@ -403,6 +418,8 @@ module.exports = {
         "ExplanationValidator",
 
         "CaseIntegrityValidator",
+
+        "CaseIdentityValidator",
 
         "PsychometricValidator"
 

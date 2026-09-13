@@ -2,9 +2,10 @@
  * Governance Guard Plugin — CMA Part 1 & Part 2 Exam Simulator
  *
  * Enforces governance rules at tool-execution level.
- * Rules 1-14 are all BLOCK level (S221 upgrade).
+ * Rules 1-19 are all BLOCK level (S221 upgrade; R15-R19 added 2026-09-10).
  *
- * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021),
+ * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021,
+ *             DL-047, DL-046, DL-048, DL-045),
  *             P2_SCHEMA_STANDARD.md (Rule 13, Rule 14)
  *
  * RULE 1  (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
@@ -21,11 +22,29 @@
  * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive relabeling without content change) — S121
  * RULE 13 (BLOCK) — Part2OnlyFlag must be true on every P2 MCQ item (P2 schema enforcement)
  * RULE 14 (BLOCK) — Cross-part QID boundary — P1-QIDs blocked in P2 packs and vice versa
+ * RULE 15 (BLOCK) — Misfiled explanation-fragment text in distractor slots (DL-047 fingerprint)
+ * RULE 16 (BLOCK) — Certification provenance stamp required on →Certified writes
+ * RULE 17 (BLOCK) — Heuristic-screen admissibility note required on mass choice rewrites (DL-045 doctrine)
+ * RULE 18 (BLOCK) — Choice-text hygiene floor (DL-046 family: whitespace/fragment)
+ * RULE 19 (BLOCK) — Duplicate CaseID within a change-set (DL-048 intra-batch gate)
  */
 
 const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
 const RECOMPUTED_RE = /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i;
 const MAX_QUESTIONS = 30;
+
+// RULE 17: mass choice-rewrite admissibility — change-set must cite its evidence basis
+const ADMISSIBILITY_RE = /stratified|context review|adjudicated|triage|candidate-list|independently derived/i;
+// RULE 18: choice-text hygiene floor (DL-046 family)
+const HYGIENE_MIN_LEN = 8;
+// R18 narrowing (2026-09-10 patch): leading currency / grouping / sign runs are
+// legitimate choice openers — pool census of all 2,692 Certified items found the
+// only non-alphanumeric starts are $ (963: dollar amounts), ( (19: parenthesized
+// negatives, "(1)…" enumerations, "(AQ-SQ) formulas"), - (2: negative amounts),
+// every one verified legitimate. Strip that run before the alphanumeric check.
+// Whitespace + length clauses are unchanged and already cover the DL-046
+// fragment pattern (" securities").
+const HYGIENE_LEAD_EXEMPT_RE = /^[$\u20AC\u00A3\u00A5%(-]+/;
 
 const P1_SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js)$/i;
 const P2_SOURCE_FILE_RE = /^pack_p2_[a-f]\.js$/i;
@@ -241,6 +260,101 @@ export const GovernanceGuard = async ({ client }) => {
       }
     }
     return violations;
+  }
+
+  /** RULE 15 — Misfiled explanation-fragment text (DL-047 fingerprint).
+   *  A non-empty distractor EW slot whose trimmed text starts with a lowercase
+   *  letter is a justification continuation filed in a wrong-answer slot
+   *  (precedent: P1-F-009 EW_C "because the data arrive after managers…").
+   *  Deterministic, ~0 FP: genuine distractor explanations start uppercase. */
+  function findFragmentViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    const letters = ['A', 'B', 'C', 'D'];
+    for (const obj of objects) {
+      const cc = obj.CorrectChoice;
+      if (!cc || !/^[A-D]$/.test(cc)) continue;
+      const qid = obj.QuestionID || '(unknown)';
+      for (const L of letters) {
+        if (L === cc) continue;
+        const ewKey = 'ExplanationWrong' + L;
+        const val = obj[ewKey];
+        if (typeof val !== 'string' || val.length === 0) continue;
+        const trimmed = val.trim();
+        if (/^[a-z]/.test(trimmed)) {
+          violations.push({ qid, slot: L, snippet: trimmed.substring(0, 100) });
+        }
+      }
+    }
+    return violations;
+  }
+
+  /** RULE 16 — Certification provenance stamp required on →Certified writes.
+   *  Every object carrying question_state "Certified" must also carry a batch
+   *  stamp (certification_batch or recertification_batch) AND a date stamp
+   *  (certification_date or recertification_date). Backfill-on-touch: touching
+   *  a legacy unstamped Certified item requires adding stamps. */
+  function findUnstampedCertViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    for (const obj of objects) {
+      if (obj.question_state !== 'Certified') continue;
+      if (!obj.CorrectChoice) continue; // MCQ scope; case items use a different schema
+      const qid = obj.QuestionID || '(unknown)';
+      const hasBatch = obj.certification_batch || obj.recertification_batch;
+      const hasDate = obj.certification_date || obj.recertification_date;
+      if (!hasBatch || !hasDate) {
+        const missing = (!hasBatch ? 'batch' : '') + (!hasBatch && !hasDate ? '+' : '') + (!hasDate ? 'date' : '');
+        violations.push({ qid, reason: `Certified without ${missing} stamp` });
+      }
+    }
+    return violations;
+  }
+
+  /** RULE 18 — Choice-text hygiene floor (DL-046 family).
+   *  Flags: leading/trailing whitespace, trimmed length < 8, or first
+   *  character not alphanumeric (orphan fragments like " securities"). */
+  function findChoiceHygieneViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    for (const obj of objects) {
+      if (!obj.CorrectChoice) continue;
+      const qid = obj.QuestionID || '(unknown)';
+      const choices = obj.Choices;
+      if (!choices || typeof choices !== 'object') continue;
+      for (const [letter, value] of Object.entries(choices)) {
+        if (typeof value !== 'string') continue;
+        if (value.length === 0) continue;
+        const trimmed = value.trim();
+        if (trimmed !== value) {
+          violations.push({ qid, choice: letter, reason: 'leading/trailing whitespace', snippet: value.substring(0, 60) });
+        } else if (trimmed.length < HYGIENE_MIN_LEN) {
+          violations.push({ qid, choice: letter, reason: `fragment (trimmed length ${trimmed.length} < ${HYGIENE_MIN_LEN})`, snippet: trimmed.substring(0, 60) });
+        } else if (/^[^A-Za-z0-9]/.test(trimmed.replace(HYGIENE_LEAD_EXEMPT_RE, ''))) {
+          violations.push({ qid, choice: letter, reason: 'non-alphanumeric start (orphan fragment)', snippet: trimmed.substring(0, 60) });
+        }
+      }
+    }
+    return violations;
+  }
+
+  /** RULE 19 — Duplicate CaseID within a change-set (DL-048 intra-batch gate).
+   *  Cross-file uniqueness is enforced by CaseIdentityValidator at pipeline
+   *  time; this blocks the duplicate from being authored in one change-set. */
+  function findDuplicateCaseIDViolations(text) {
+    const seen = new Map();
+    const dupes = new Map();
+    const re = /"CaseID"\s*:\s*"([^"]+)"/g;
+    let m;
+    while ((m = re.exec(text || '')) !== null) {
+      const id = m[1];
+      if (seen.has(id)) {
+        dupes.set(id, (dupes.get(id) || 1) + 1);
+      } else {
+        seen.set(id, true);
+      }
+    }
+    return [...dupes.entries()].map(([caseId, extra]) => ({ caseId, count: extra + 1 }));
   }
 
   /** Count QuestionID + ItemID markers in text */
@@ -481,6 +595,98 @@ export const GovernanceGuard = async ({ client }) => {
           "P2- prefixed QIDs must only appear in P2 packs (pack_p2_[a-f].js)\n" +
           "with \"Part\": 2. P1- prefixed QIDs must not appear in P2 packs.\n" +
           "Each exam part is a separate content domain."
+        );
+      }
+
+      // ── RULE 15: BLOCK misfiled explanation-fragment text (DL-047 fingerprint) ──
+      const fragments = findFragmentViolations(checkText);
+      if (fragments.length > 0) {
+        const lines = fragments
+          .map(v => `  ${v.qid} ExplanationWrong${v.slot}: "${v.snippet}..."`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 15 — BLOCKED (misfiled explanation fragment)\n` +
+          `${fragments.length} distractor ExplanationWrong slot(s) start with a lowercase letter:\n` +
+          `${lines}\n\n` +
+          "Per DL-047: a lowercase-starting EW slot is a justification continuation\n" +
+          "filed in a wrong-answer slot (precedent: P1-F-009 EW_C \"because the\n" +
+          "data arrive after managers…\"). Genuine distractor explanations start\n" +
+          "uppercase. Rewrite the slot with choice-specific refutation, or record\n" +
+          "an independent-derivation adjudication with a BLOCK-AUTHORIZED marker.\n" +
+          "Broader semantic agreement (EC lead-recall vs CorrectChoice) must be\n" +
+          "human-adjudicated before any →Certified flip (DL-047 4-screen protocol)."
+        );
+      }
+
+      // ── RULE 18: BLOCK choice-text hygiene violations (DL-046 family) ──
+      const hygiene = findChoiceHygieneViolations(checkText);
+      if (hygiene.length > 0) {
+        const lines = hygiene
+          .map(v => `  ${v.qid} Choice ${v.choice}: ${v.reason} — "${v.snippet}..."`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 18 — BLOCKED (choice-text hygiene)\n` +
+          `${hygiene.length} choice(s) fail the hygiene floor:\n` +
+          `${lines}\n\n` +
+          "Per DL-046: every Choice value must be trimmed, ≥8 characters, and\n" +
+          "start with an alphanumeric character (a leading $€£¥%(- run — dollar\n" +
+          "amounts, parenthesized negatives, enumerations — is exempt).\n" +
+          "Trim whitespace, reconstruct\n" +
+          "orphan fragments from topic context, and re-verify before certifying."
+        );
+      }
+
+      // ── RULE 19: BLOCK duplicate CaseID within a change-set (DL-048) ──
+      const dupeCases = findDuplicateCaseIDViolations(scopeContent);
+      if (dupeCases.length > 0) {
+        const lines = dupeCases
+          .map(v => `  ${v.caseId} appears ${v.count}x in this change-set`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 19 — BLOCKED (duplicate CaseID)\n` +
+          `${lines}\n\n` +
+          "Per DL-048 and Constitution §7 (AI SHALL NOT reuse IDs): CaseIDs must\n" +
+          "be unique across live banks. Allocate the new ID registry-first\n" +
+          "(scan DEFECT_LIBRARY.md for the highest ID; check CaseIdentityValidator)\n" +
+          "before authoring. Cross-file duplicates are additionally caught by\n" +
+          "scripts/validators/CaseIdentityValidator.js at pipeline time."
+        );
+      }
+
+      // ── RULE 16: BLOCK →Certified writes without provenance stamps ──
+      const unstamped = findUnstampedCertViolations(checkText);
+      if (unstamped.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
+        const lines = unstamped
+          .map(v => `  ${v.qid}: ${v.reason}`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 16 — BLOCKED (certification provenance stamp)\n` +
+          `${unstamped.length} Certified item(s) lack provenance stamps:\n` +
+          `${lines}\n\n` +
+          "Every →Certified write must carry certification_batch + certification_date\n" +
+          "(remediation re-certs: preserve the original and add recertification_batch\n" +
+          "+ recertification_date). Backfill-on-touch: adding stamps to a legacy\n" +
+          "unstamped item is part of the same change-set. Override only with a\n" +
+          "BLOCK-AUTHORIZED marker and a REVISION_HISTORY.md entry explaining why."
+        );
+      }
+
+      // ── RULE 17: BLOCK mass choice rewrites without admissibility note (DL-045) ──
+      const isSourceFileForR17 = SOURCE_FILE_RE.test(basename(filePath));
+      const touchesChoices = /"Choices"\s*:/.test(newContent || '');
+      if (isSourceFileForR17 && touchesChoices && countQuestions(scopeContent) >= 3 &&
+          !ADMISSIBILITY_RE.test(scopeContent) && !BLOCK_AUTH_RE.test(scopeContent)) {
+        throw new Error(
+          `GOVERNANCE RULE 17 — BLOCKED (heuristic-screen admissibility)\n` +
+          `Change-set rewrites Choices on ${countQuestions(scopeContent)} question object(s) with no\n` +
+          "evidence-basis note.\n\n" +
+          "Per DL-045 doctrine and DL-031/DLC-043 precedent, unstratified screens\n" +
+          "(containment, absolute-term, polarity, Jaccard) are inadmissible as\n" +
+          "rewrite evidence. The change-set must cite its basis with one of:\n" +
+          "  stratified | context review | adjudicated | triage | candidate-list |\n" +
+          "  independently derived\n" +
+          "Single/double-item fixes (<3 objects) are exempt. Bulk rewrites without\n" +
+          "stratification must instead carry a BLOCK-AUTHORIZED marker."
         );
       }
 

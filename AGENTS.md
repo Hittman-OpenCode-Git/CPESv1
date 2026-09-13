@@ -9,7 +9,7 @@
 
 ## 1. Governance Guard Plugin — Registered, Do Not Re-Litigate
 
-The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` (563 lines) and listed in `opencode.json` under `"plugin"`. It enforces 14 rules, all at BLOCK level (upgraded S221). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
+The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` and listed in `opencode.json` under `"plugin"`. It enforces 19 rules, all at BLOCK level (upgraded S221; R15–R19 added 2026-09-10). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
 
 | Rule | Level | Behavior |
 |------|-------|----------|
@@ -27,8 +27,13 @@ The `governance-guard` plugin is registered at `.opencode/plugins/governance-gua
 | RULE 12 | **BLOCK** | Cognitive-First Assignment (cognitive relabeling without content change prohibition) — S121 |
 | RULE 13 | **BLOCK** | Part2OnlyFlag must be strictly boolean true on every P2 MCQ item (P2 schema enforcement) |
 | RULE 14 | **BLOCK** | Cross-part QID boundary: P1- QIDs blocked in P2 packs; P2- QIDs blocked in P1 packs |
+| RULE 15 | **BLOCK** | Misfiled explanation-fragment text in distractor slots — lowercase-starting EW slot (DL-047 fingerprint, P1-F-009 pattern) |
+| RULE 16 | **BLOCK** | Certification provenance stamp required on →Certified writes — certification_batch+date (or recertification_batch+date); backfill-on-touch |
+| RULE 17 | **BLOCK** | Heuristic-screen admissibility — mass choice rewrites (≥3 objects) must cite evidence basis (stratified / context review / adjudicated / triage / candidate-list / independently derived) or carry BLOCK-AUTHORIZED (DL-045 doctrine) |
+| RULE 18 | **BLOCK** | Choice-text hygiene floor — trimmed, ≥8 chars, alphanumeric start after exempt leading `$€£¥%(-` run (dollar amounts, parenthesized negatives, enumerations; DL-046 family: whitespace/fragment) |
+| RULE 19 | **BLOCK** | Duplicate CaseID within a change-set (DL-048 intra-batch gate; cross-file enforced by CaseIdentityValidator) |
 
-**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (74 tests, all validated; run via `npm run preflight`).
+**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (89 tests, all validated; run via `npm run preflight`).
 
 ---
 
