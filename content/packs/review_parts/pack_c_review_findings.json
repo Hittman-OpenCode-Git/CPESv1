@@ -1,0 +1,1145 @@
+{
+  "summary": {
+    "totalItems": 500,
+    "totalFindings": 124,
+    "byDefectClass": {
+      "DL-031": 92,
+      "DL-013": 12,
+      "DL-010-STRUCT": 1,
+      "DL-047": 1,
+      "STRUCT": 18
+    },
+    "bySeverity": {
+      "Low": 92,
+      "Medium": 12,
+      "High": 2,
+      "Critical": 18
+    },
+    "bySection": {
+      "A": 8,
+      "B": 46,
+      "C": 27,
+      "D": 3,
+      "E": 15,
+      "F": 25
+    }
+  },
+  "findings": [
+    {
+      "qid": "P1-AC-016",
+      "part": 2,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Prairiewood performs its annual goodwill impairment test for\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-017",
+      "part": 2,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quillfeather performs its annual goodwill impairment test fo\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-018",
+      "part": 2,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Rosewood performs its annual goodwill impairment test for a \" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-019",
+      "part": 3,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Silverton performs its annual goodwill impairment test for a\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-020",
+      "part": 3,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Thornfield performs its annual goodwill impairment test for \" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-026",
+      "part": 3,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"A company reports net income of $340,000 and paid preferred \" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-027",
+      "part": 3,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"A company began the year with 120,000 common shares outstand\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-AC-030",
+      "part": 4,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Beginning inventory was 400 units at $15 each. The company p\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-008",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Hearthstone uses regression analysis on five years of histor\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-009",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Ironvale uses regression analysis on five years of historica\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-010",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Junction uses regression analysis on five years of historica\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-011",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Kestrel uses regression analysis on five years of historical\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-012",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Larkspur uses regression analysis on five years of historica\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-013",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Meridian Peak uses regression analysis on five years of hist\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-014",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Nightingale uses regression analysis on five years of histor\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-015",
+      "part": 10,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Oakhurst updates its 12-month forecast every month by adding\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-016",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Prairiewood updates its 12-month forecast every month by add\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-017",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quillfeather updates its 12-month forecast every month by ad\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-018",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Rosewood updates its 12-month forecast every month by adding\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-019",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Silverton updates its 12-month forecast every month by addin\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-020",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Thornfield updates its 12-month forecast every month by addi\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-021",
+      "part": 11,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Underwood updates its 12-month forecast every month by addin\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-035",
+      "part": 13,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Jasperfield projects a cash shortfall in the upcoming quarte\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-037",
+      "part": 13,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Larkwood projects a cash shortfall in the upcoming quarter b\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-038",
+      "part": 13,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Millbrook projects a cash shortfall in the upcoming quarter \" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-039",
+      "part": 13,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Northgate projects a cash shortfall in the upcoming quarter \" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-040",
+      "part": 13,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Oleander projects a cash shortfall in the upcoming quarter b\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-053",
+      "part": 15,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Duskwood's senior executives set budget targets and impose t\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-054",
+      "part": 15,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Everfern's senior executives set budget targets and impose t\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-055",
+      "part": 15,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Falconridge's senior executives set budget targets and impos\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-057",
+      "part": 15,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Hartwell's senior executives set budget targets and impose t\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-058",
+      "part": 15,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Ivorygate's senior executives set budget targets and impose \" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-065",
+      "part": 16,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Poplarwood has highest activity of 8,000 machine hours costi\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-066",
+      "part": 16,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quailrun has highest activity of 8,000 machine hours costing\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-067",
+      "part": 16,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Riverstone has highest activity of 8,000 machine hours costi\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-068",
+      "part": 16,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Stonebrook has highest activity of 8,000 machine hours costi\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-069",
+      "part": 16,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Thistledown has highest activity of 8,000 machine hours cost\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-070",
+      "part": 17,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Umbercrest has highest activity of 8,000 machine hours costi\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-077",
+      "part": 17,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Brightpoint sets budget targets that assume ongoing incremen\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-078",
+      "part": 17,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Cedarline sets budget targets that assume ongoing incrementa\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-079",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Driftwood sets budget targets that assume ongoing incrementa\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-080",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Emberton sets budget targets that assume ongoing incremental\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-081",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Fairhaven sets budget targets that assume ongoing incrementa\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-083",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Hearthstone calculates a three-month moving average of sales\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-084",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Ironvale calculates a three-month moving average of sales to\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-086",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Kestrel calculates a three-month moving average of sales to \" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-087",
+      "part": 18,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Larkspur calculates a three-month moving average of sales to\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-088",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Meridian Peak calculates a three-month moving average of sal\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-089",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Nightingale models several scenarios in its budget by changi\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-090",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Oakhurst models several scenarios in its budget by changing \" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-091",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Prairiewood models several scenarios in its budget by changi\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-092",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quillfeather models several scenarios in its budget by chang\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-093",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Rosewood models several scenarios in its budget by changing \" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-BC-094",
+      "part": 19,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Silverton models several scenarios in its budget by changing\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-017",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quillfeather has operating income of 450,000, average operat\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-018",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Rosewood has operating income of 450,000, average operating \" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-019",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Silverton has operating income of 450,000, average operating\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-020",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Thornfield has operating income of 450,000, average operatin\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-021",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Underwood has operating income of 450,000, average operating\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-022",
+      "part": 22,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Vesper's divisions negotiate a transfer price between the ma\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-024",
+      "part": 23,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Yarrow's divisions negotiate a transfer price between the ma\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-025",
+      "part": 23,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Zenith Bay's divisions negotiate a transfer price between th\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-026",
+      "part": 23,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Ashgrove's divisions negotiate a transfer price between the \" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-027",
+      "part": 23,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Birchwood's divisions negotiate a transfer price between the\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-028",
+      "part": 23,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Copperline's divisions negotiate a transfer price between th\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-054",
+      "part": 26,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Everfern sold a premium configuration at a higher price than\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-056",
+      "part": 26,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Glenmoor budgeted to sell units at 25 each but actually sold\" / Difficulty: Moderate-Easy",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-057",
+      "part": 26,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Hartwell budgeted to sell units at 25 each but actually sold\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-058",
+      "part": 26,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Ivorygate budgeted to sell units at 25 each but actually sol\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-059",
+      "part": 26,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"A plant budgets $300,000 of fixed manufacturing overhead for\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-061",
+      "part": 27,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Fixed manufacturing overhead is budgeted at $720,000 for 90,\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-064",
+      "part": 27,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Hillside's budgeted fixed manufacturing overhead is $80,000 \" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-089",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Nightingale tracks on-time delivery rate and customer satisf\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-091",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Prairiewood tracks on-time delivery rate and customer satisf\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-092",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Quillfeather tracks on-time delivery rate and customer satis\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-093",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Rosewood tracks on-time delivery rate and customer satisfact\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-094",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Silverton tracks on-time delivery rate and customer satisfac\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-095",
+      "part": 30,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Thornfield sets transfer prices for a product with an active\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-097",
+      "part": 31,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Vesper sets transfer prices for a product with an active ext\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-099",
+      "part": 31,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Yarrow sets transfer prices for a product with an active ext\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-CC-100",
+      "part": 31,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Zenith Bay sets transfer prices for a product with an active\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-DC-052",
+      "part": 37,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Cliffside sets standard costs at the start of the year and i\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-DC-054",
+      "part": 37,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Everfern sets standard costs at the start of the year and in\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-DC-055",
+      "part": 37,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Falconridge sets standard costs at the start of the year and\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-EC-009",
+      "part": 40,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongA",
+      "evidence": "Matches /incorrectly (assume|believe|think|select)/i: \"Option A reflects a common misunderstanding about SOC reports. An unmodified opi\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-019",
+      "part": 41,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Novara Financial Services operates three business lines — re\" / Difficulty: Moderate",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-EC-027",
+      "part": 42,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongA",
+      "evidence": "Matches /incorrectly (assume|believe|think|select)/i: \"Option A mischaracterizes COSO Principle 4. While the petroleum engineering expe\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-038",
+      "part": 44,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Meridian Healthcare Solutions, a regional healthcare service\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-EC-045",
+      "part": 44,
+      "defectClass": "DL-010-STRUCT",
+      "severity": "High",
+      "location": "ExplanationWrongC",
+      "evidence": "Field ExplanationWrongC is absent from object",
+      "recommendation": "Add ExplanationWrongC as empty string"
+    },
+    {
+      "qid": "P1-EC-051",
+      "part": 45,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongB",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option B (Eliminating internal controls entirely since the company is small) rep\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-053",
+      "part": 45,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongC",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option C (Eliminating internal controls entirely since the company is small) rep\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-053",
+      "part": 45,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongD",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option D (Ignoring the risk since fraud is unlikely in small companies) represen\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-057",
+      "part": 46,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongC",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option C (Information and communication, which relays data throughout the entity\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-057",
+      "part": 46,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongD",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option D (Monitoring activities, which evaluate control effectiveness over time)\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-059",
+      "part": 46,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongB",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option B (Information and communication, which relays data throughout the entity\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-063",
+      "part": 46,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongB",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option B (Control risk) represents a plausible misconception. Under CMA Part 1 a\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-064",
+      "part": 46,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongC",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option C (Detection risk) represents a plausible misconception. Under CMA Part 1\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-065",
+      "part": 47,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongC",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option C (Business risk) represents a plausible misconception. Under CMA Part 1 \"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-EC-065",
+      "part": 47,
+      "defectClass": "DL-013",
+      "severity": "Medium",
+      "location": "ExplanationWrongD",
+      "evidence": "Matches /represents a plausible misconception/i: \"Option D (Control risk) represents a plausible misconception. Under CMA Part 1 a\"",
+      "recommendation": "Rewrite as choice-specific explanation"
+    },
+    {
+      "qid": "P1-FC-022",
+      "part": 50,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Controller James Okonkwo is reviewing the board presentation\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-028",
+      "part": 51,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Blackwood Distribution, a wholesale distributor with $340 mi\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-030",
+      "part": 51,
+      "defectClass": "DL-047",
+      "severity": "High",
+      "location": "ExplanationCorrect",
+      "evidence": "References Choice b but CorrectChoice=D",
+      "recommendation": "Fix explanation to reference Choice D"
+    },
+    {
+      "qid": "P1-FC-032",
+      "part": 51,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-033",
+      "part": 51,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-035",
+      "part": 52,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-038",
+      "part": 52,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Internal Auditor Karim Hassan is investigating procurement i\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-039",
+      "part": 52,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Data Scientist Amara Osei presents a predictive credit risk \" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-041",
+      "part": 52,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-042",
+      "part": 52,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-044",
+      "part": 53,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-047",
+      "part": 53,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-049",
+      "part": 53,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-051",
+      "part": 53,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-052",
+      "part": 53,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-054",
+      "part": 54,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-055",
+      "part": 54,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Pinnacle Community Bank deployed an ML-powered loan approval\" / Difficulty: Very Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-061",
+      "part": 54,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-062",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-064",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-065",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-066",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-067",
+      "part": 55,
+      "defectClass": "DL-031",
+      "severity": "Low",
+      "location": "Difficulty",
+      "evidence": "Stem: \"Apex Manufacturing's CFO James Okonkwo requires consolidated\" / Difficulty: Difficult",
+      "recommendation": "Consider reclassifying to Easy"
+    },
+    {
+      "qid": "P1-FC-069",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    },
+    {
+      "qid": "P1-FC-070",
+      "part": 55,
+      "defectClass": "STRUCT",
+      "severity": "Critical",
+      "location": "Difficulty",
+      "evidence": "Field Difficulty is missing",
+      "recommendation": "Add required field Difficulty"
+    }
+  ]
+}

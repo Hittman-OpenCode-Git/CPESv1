@@ -1,0 +1,10 @@
+const fs = require('fs');
+const src = fs.readFileSync('./scripts/tier3_wave13a2.js', 'utf8');
+const qi = src.indexOf('"QuestionID": "P1-DC-108"');
+console.log('qi', qi);
+const o = src.lastIndexOf('  {', qi);
+console.log('objStart', o, 'snippet:', JSON.stringify(src.slice(o, o + 60)));
+console.log('CC:B count in file:', (src.match(/"CorrectChoice": "B"/g) || []).length);
+const block = src.slice(o, src.indexOf('  {', qi + 30));
+console.log('block has CC:B:', block.includes('"CorrectChoice": "B"'));
+console.log('block tail:', JSON.stringify(block.slice(-200)));

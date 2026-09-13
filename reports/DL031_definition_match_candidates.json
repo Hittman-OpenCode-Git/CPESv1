@@ -1,0 +1,12 @@
+[
+  {
+    "QuestionID": "P1E-C-092",
+    "pack": "pack_e_corrected.js",
+    "currentDifficulty": "Moderate",
+    "currentScore": 3,
+    "cognitiveLevel": "Apply",
+    "overlap": 0.5,
+    "stemPreview": "Segment A assets $500,000, Segment B assets $4,500,000. Total combined assets of all operating segments $5,000,000. Segm",
+    "correctText": "Yes, because Segment A's $500,000 is 10% of the $5,000,000 total, which meets the asset test"
+  }
+]

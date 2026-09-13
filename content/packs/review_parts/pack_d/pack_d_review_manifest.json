@@ -1,0 +1,1162 @@
+{
+  "sourceFile": "content/packs/pack_d_corrected.js",
+  "sourceSHA256": "60f3c22831801ecb3839ac5da7615f115ef94819d987a37423b3dbd9694f1cb8",
+  "totalQuestions": 500,
+  "totalParts": 72,
+  "partSizeTarget": 40000,
+  "parts": [
+    {
+      "part": 1,
+      "file": "pack_d_part_001.js",
+      "qidRange": "P1-AD-001–P1-AD-007",
+      "questionCount": 7,
+      "sizeBytes": 24284,
+      "qids": [
+        "P1-AD-001",
+        "P1-AD-002",
+        "P1-AD-003",
+        "P1-AD-004",
+        "P1-AD-005",
+        "P1-AD-006",
+        "P1-AD-007"
+      ]
+    },
+    {
+      "part": 2,
+      "file": "pack_d_part_002.js",
+      "qidRange": "P1-AD-008–P1-AD-014",
+      "questionCount": 7,
+      "sizeBytes": 24159,
+      "qids": [
+        "P1-AD-008",
+        "P1-AD-009",
+        "P1-AD-010",
+        "P1-AD-011",
+        "P1-AD-012",
+        "P1-AD-013",
+        "P1-AD-014"
+      ]
+    },
+    {
+      "part": 3,
+      "file": "pack_d_part_003.js",
+      "qidRange": "P1-AD-015–P1-AD-021",
+      "questionCount": 7,
+      "sizeBytes": 24909,
+      "qids": [
+        "P1-AD-015",
+        "P1-AD-016",
+        "P1-AD-017",
+        "P1-AD-018",
+        "P1-AD-019",
+        "P1-AD-020",
+        "P1-AD-021"
+      ]
+    },
+    {
+      "part": 4,
+      "file": "pack_d_part_004.js",
+      "qidRange": "P1-AD-022–P1-AD-028",
+      "questionCount": 7,
+      "sizeBytes": 24061,
+      "qids": [
+        "P1-AD-022",
+        "P1-AD-023",
+        "P1-AD-024",
+        "P1-AD-025",
+        "P1-AD-026",
+        "P1-AD-027",
+        "P1-AD-028"
+      ]
+    },
+    {
+      "part": 5,
+      "file": "pack_d_part_005.js",
+      "qidRange": "P1-AD-029–P1-AD-035",
+      "questionCount": 7,
+      "sizeBytes": 25330,
+      "qids": [
+        "P1-AD-029",
+        "P1-AD-030",
+        "P1-AD-031",
+        "P1-AD-032",
+        "P1-AD-033",
+        "P1-AD-034",
+        "P1-AD-035"
+      ]
+    },
+    {
+      "part": 6,
+      "file": "pack_d_part_006.js",
+      "qidRange": "P1-AD-036–P1-AD-042",
+      "questionCount": 7,
+      "sizeBytes": 24095,
+      "qids": [
+        "P1-AD-036",
+        "P1-AD-037",
+        "P1-AD-038",
+        "P1-AD-039",
+        "P1-AD-040",
+        "P1-AD-041",
+        "P1-AD-042"
+      ]
+    },
+    {
+      "part": 7,
+      "file": "pack_d_part_007.js",
+      "qidRange": "P1-AD-043–P1-AD-049",
+      "questionCount": 7,
+      "sizeBytes": 25734,
+      "qids": [
+        "P1-AD-043",
+        "P1-AD-044",
+        "P1-AD-045",
+        "P1-AD-046",
+        "P1-AD-047",
+        "P1-AD-048",
+        "P1-AD-049"
+      ]
+    },
+    {
+      "part": 8,
+      "file": "pack_d_part_008.js",
+      "qidRange": "P1-AD-050–P1-AD-056",
+      "questionCount": 7,
+      "sizeBytes": 23701,
+      "qids": [
+        "P1-AD-050",
+        "P1-AD-051",
+        "P1-AD-052",
+        "P1-AD-053",
+        "P1-AD-054",
+        "P1-AD-055",
+        "P1-AD-056"
+      ]
+    },
+    {
+      "part": 9,
+      "file": "pack_d_part_009.js",
+      "qidRange": "P1-AD-057–P1-AD-063",
+      "questionCount": 7,
+      "sizeBytes": 25511,
+      "qids": [
+        "P1-AD-057",
+        "P1-AD-058",
+        "P1-AD-059",
+        "P1-AD-060",
+        "P1-AD-061",
+        "P1-AD-062",
+        "P1-AD-063"
+      ]
+    },
+    {
+      "part": 10,
+      "file": "pack_d_part_010.js",
+      "qidRange": "P1-AD-064–P1-AD-070",
+      "questionCount": 7,
+      "sizeBytes": 25184,
+      "qids": [
+        "P1-AD-064",
+        "P1-AD-065",
+        "P1-AD-066",
+        "P1-AD-067",
+        "P1-AD-068",
+        "P1-AD-069",
+        "P1-AD-070"
+      ]
+    },
+    {
+      "part": 11,
+      "file": "pack_d_part_011.js",
+      "qidRange": "P1-AD-071–P1-BD-002",
+      "questionCount": 7,
+      "sizeBytes": 35338,
+      "qids": [
+        "P1-AD-071",
+        "P1-AD-072",
+        "P1-AD-073",
+        "P1-AD-074",
+        "P1-AD-075",
+        "P1-BD-001",
+        "P1-BD-002"
+      ]
+    },
+    {
+      "part": 12,
+      "file": "pack_d_part_012.js",
+      "qidRange": "P1-BD-003–P1-BD-009",
+      "questionCount": 7,
+      "sizeBytes": 53542,
+      "qids": [
+        "P1-BD-003",
+        "P1-BD-004",
+        "P1-BD-005",
+        "P1-BD-006",
+        "P1-BD-007",
+        "P1-BD-008",
+        "P1-BD-009"
+      ]
+    },
+    {
+      "part": 13,
+      "file": "pack_d_part_013.js",
+      "qidRange": "P1-BD-010–P1-BD-016",
+      "questionCount": 7,
+      "sizeBytes": 54884,
+      "qids": [
+        "P1-BD-010",
+        "P1-BD-011",
+        "P1-BD-012",
+        "P1-BD-013",
+        "P1-BD-014",
+        "P1-BD-015",
+        "P1-BD-016"
+      ]
+    },
+    {
+      "part": 14,
+      "file": "pack_d_part_014.js",
+      "qidRange": "P1-BD-017–P1-BD-023",
+      "questionCount": 7,
+      "sizeBytes": 59393,
+      "qids": [
+        "P1-BD-017",
+        "P1-BD-018",
+        "P1-BD-019",
+        "P1-BD-020",
+        "P1-BD-021",
+        "P1-BD-022",
+        "P1-BD-023"
+      ]
+    },
+    {
+      "part": 15,
+      "file": "pack_d_part_015.js",
+      "qidRange": "P1-BD-024–P1-BD-030",
+      "questionCount": 7,
+      "sizeBytes": 53407,
+      "qids": [
+        "P1-BD-024",
+        "P1-BD-025",
+        "P1-BD-026",
+        "P1-BD-027",
+        "P1-BD-028",
+        "P1-BD-029",
+        "P1-BD-030"
+      ]
+    },
+    {
+      "part": 16,
+      "file": "pack_d_part_016.js",
+      "qidRange": "P1-BD-031–P1-BD-037",
+      "questionCount": 7,
+      "sizeBytes": 36603,
+      "qids": [
+        "P1-BD-031",
+        "P1-BD-032",
+        "P1-BD-033",
+        "P1-BD-034",
+        "P1-BD-035",
+        "P1-BD-036",
+        "P1-BD-037"
+      ]
+    },
+    {
+      "part": 17,
+      "file": "pack_d_part_017.js",
+      "qidRange": "P1-BD-038–P1-BD-044",
+      "questionCount": 7,
+      "sizeBytes": 43643,
+      "qids": [
+        "P1-BD-038",
+        "P1-BD-039",
+        "P1-BD-040",
+        "P1-BD-041",
+        "P1-BD-042",
+        "P1-BD-043",
+        "P1-BD-044"
+      ]
+    },
+    {
+      "part": 18,
+      "file": "pack_d_part_018.js",
+      "qidRange": "P1-BD-045–P1-BD-051",
+      "questionCount": 7,
+      "sizeBytes": 26653,
+      "qids": [
+        "P1-BD-045",
+        "P1-BD-046",
+        "P1-BD-047",
+        "P1-BD-048",
+        "P1-BD-049",
+        "P1-BD-050",
+        "P1-BD-051"
+      ]
+    },
+    {
+      "part": 19,
+      "file": "pack_d_part_019.js",
+      "qidRange": "P1-BD-052–P1-BD-058",
+      "questionCount": 7,
+      "sizeBytes": 44627,
+      "qids": [
+        "P1-BD-052",
+        "P1-BD-053",
+        "P1-BD-054",
+        "P1-BD-055",
+        "P1-BD-056",
+        "P1-BD-057",
+        "P1-BD-058"
+      ]
+    },
+    {
+      "part": 20,
+      "file": "pack_d_part_020.js",
+      "qidRange": "P1-BD-059–P1-BD-065",
+      "questionCount": 7,
+      "sizeBytes": 32575,
+      "qids": [
+        "P1-BD-059",
+        "P1-BD-060",
+        "P1-BD-061",
+        "P1-BD-062",
+        "P1-BD-063",
+        "P1-BD-064",
+        "P1-BD-065"
+      ]
+    },
+    {
+      "part": 21,
+      "file": "pack_d_part_021.js",
+      "qidRange": "P1-BD-066–P1-BD-072",
+      "questionCount": 7,
+      "sizeBytes": 41571,
+      "qids": [
+        "P1-BD-066",
+        "P1-BD-067",
+        "P1-BD-068",
+        "P1-BD-069",
+        "P1-BD-070",
+        "P1-BD-071",
+        "P1-BD-072"
+      ]
+    },
+    {
+      "part": 22,
+      "file": "pack_d_part_022.js",
+      "qidRange": "P1-BD-073–P1-BD-079",
+      "questionCount": 7,
+      "sizeBytes": 36582,
+      "qids": [
+        "P1-BD-073",
+        "P1-BD-074",
+        "P1-BD-075",
+        "P1-BD-076",
+        "P1-BD-077",
+        "P1-BD-078",
+        "P1-BD-079"
+      ]
+    },
+    {
+      "part": 23,
+      "file": "pack_d_part_023.js",
+      "qidRange": "P1-BD-080–P1-BD-086",
+      "questionCount": 7,
+      "sizeBytes": 46860,
+      "qids": [
+        "P1-BD-080",
+        "P1-BD-081",
+        "P1-BD-082",
+        "P1-BD-083",
+        "P1-BD-084",
+        "P1-BD-085",
+        "P1-BD-086"
+      ]
+    },
+    {
+      "part": 24,
+      "file": "pack_d_part_024.js",
+      "qidRange": "P1-BD-087–P1-BD-093",
+      "questionCount": 7,
+      "sizeBytes": 53771,
+      "qids": [
+        "P1-BD-087",
+        "P1-BD-088",
+        "P1-BD-089",
+        "P1-BD-090",
+        "P1-BD-091",
+        "P1-BD-092",
+        "P1-BD-093"
+      ]
+    },
+    {
+      "part": 25,
+      "file": "pack_d_part_025.js",
+      "qidRange": "P1-BD-094–P1-BD-100",
+      "questionCount": 7,
+      "sizeBytes": 51294,
+      "qids": [
+        "P1-BD-094",
+        "P1-BD-095",
+        "P1-BD-096",
+        "P1-BD-097",
+        "P1-BD-098",
+        "P1-BD-099",
+        "P1-BD-100"
+      ]
+    },
+    {
+      "part": 26,
+      "file": "pack_d_part_026.js",
+      "qidRange": "P1-CD-001–P1-CD-007",
+      "questionCount": 7,
+      "sizeBytes": 27849,
+      "qids": [
+        "P1-CD-001",
+        "P1-CD-002",
+        "P1-CD-003",
+        "P1-CD-004",
+        "P1-CD-005",
+        "P1-CD-006",
+        "P1-CD-007"
+      ]
+    },
+    {
+      "part": 27,
+      "file": "pack_d_part_027.js",
+      "qidRange": "P1-CD-008–P1-CD-014",
+      "questionCount": 7,
+      "sizeBytes": 24489,
+      "qids": [
+        "P1-CD-008",
+        "P1-CD-009",
+        "P1-CD-010",
+        "P1-CD-011",
+        "P1-CD-012",
+        "P1-CD-013",
+        "P1-CD-014"
+      ]
+    },
+    {
+      "part": 28,
+      "file": "pack_d_part_028.js",
+      "qidRange": "P1-CD-015–P1-CD-021",
+      "questionCount": 7,
+      "sizeBytes": 25755,
+      "qids": [
+        "P1-CD-015",
+        "P1-CD-016",
+        "P1-CD-017",
+        "P1-CD-018",
+        "P1-CD-019",
+        "P1-CD-020",
+        "P1-CD-021"
+      ]
+    },
+    {
+      "part": 29,
+      "file": "pack_d_part_029.js",
+      "qidRange": "P1-CD-022–P1-CD-028",
+      "questionCount": 7,
+      "sizeBytes": 23966,
+      "qids": [
+        "P1-CD-022",
+        "P1-CD-023",
+        "P1-CD-024",
+        "P1-CD-025",
+        "P1-CD-026",
+        "P1-CD-027",
+        "P1-CD-028"
+      ]
+    },
+    {
+      "part": 30,
+      "file": "pack_d_part_030.js",
+      "qidRange": "P1-CD-029–P1-CD-035",
+      "questionCount": 7,
+      "sizeBytes": 24959,
+      "qids": [
+        "P1-CD-029",
+        "P1-CD-030",
+        "P1-CD-031",
+        "P1-CD-032",
+        "P1-CD-033",
+        "P1-CD-034",
+        "P1-CD-035"
+      ]
+    },
+    {
+      "part": 31,
+      "file": "pack_d_part_031.js",
+      "qidRange": "P1-CD-036–P1-CD-042",
+      "questionCount": 7,
+      "sizeBytes": 23465,
+      "qids": [
+        "P1-CD-036",
+        "P1-CD-037",
+        "P1-CD-038",
+        "P1-CD-039",
+        "P1-CD-040",
+        "P1-CD-041",
+        "P1-CD-042"
+      ]
+    },
+    {
+      "part": 32,
+      "file": "pack_d_part_032.js",
+      "qidRange": "P1-CD-043–P1-CD-049",
+      "questionCount": 7,
+      "sizeBytes": 28806,
+      "qids": [
+        "P1-CD-043",
+        "P1-CD-044",
+        "P1-CD-045",
+        "P1-CD-046",
+        "P1-CD-047",
+        "P1-CD-048",
+        "P1-CD-049"
+      ]
+    },
+    {
+      "part": 33,
+      "file": "pack_d_part_033.js",
+      "qidRange": "P1-CD-050–P1-CD-056",
+      "questionCount": 7,
+      "sizeBytes": 25149,
+      "qids": [
+        "P1-CD-050",
+        "P1-CD-051",
+        "P1-CD-052",
+        "P1-CD-053",
+        "P1-CD-054",
+        "P1-CD-055",
+        "P1-CD-056"
+      ]
+    },
+    {
+      "part": 34,
+      "file": "pack_d_part_034.js",
+      "qidRange": "P1-CD-057–P1-CD-063",
+      "questionCount": 7,
+      "sizeBytes": 27240,
+      "qids": [
+        "P1-CD-057",
+        "P1-CD-058",
+        "P1-CD-059",
+        "P1-CD-060",
+        "P1-CD-061",
+        "P1-CD-062",
+        "P1-CD-063"
+      ]
+    },
+    {
+      "part": 35,
+      "file": "pack_d_part_035.js",
+      "qidRange": "P1-CD-064–P1-CD-070",
+      "questionCount": 7,
+      "sizeBytes": 32320,
+      "qids": [
+        "P1-CD-064",
+        "P1-CD-065",
+        "P1-CD-066",
+        "P1-CD-067",
+        "P1-CD-068",
+        "P1-CD-069",
+        "P1-CD-070"
+      ]
+    },
+    {
+      "part": 36,
+      "file": "pack_d_part_036.js",
+      "qidRange": "P1-CD-071–P1-CD-077",
+      "questionCount": 7,
+      "sizeBytes": 29025,
+      "qids": [
+        "P1-CD-071",
+        "P1-CD-072",
+        "P1-CD-073",
+        "P1-CD-074",
+        "P1-CD-075",
+        "P1-CD-076",
+        "P1-CD-077"
+      ]
+    },
+    {
+      "part": 37,
+      "file": "pack_d_part_037.js",
+      "qidRange": "P1-CD-078–P1-CD-084",
+      "questionCount": 7,
+      "sizeBytes": 22515,
+      "qids": [
+        "P1-CD-078",
+        "P1-CD-079",
+        "P1-CD-080",
+        "P1-CD-081",
+        "P1-CD-082",
+        "P1-CD-083",
+        "P1-CD-084"
+      ]
+    },
+    {
+      "part": 38,
+      "file": "pack_d_part_038.js",
+      "qidRange": "P1-CD-085–P1-CD-091",
+      "questionCount": 7,
+      "sizeBytes": 25021,
+      "qids": [
+        "P1-CD-085",
+        "P1-CD-086",
+        "P1-CD-087",
+        "P1-CD-088",
+        "P1-CD-089",
+        "P1-CD-090",
+        "P1-CD-091"
+      ]
+    },
+    {
+      "part": 39,
+      "file": "pack_d_part_039.js",
+      "qidRange": "P1-CD-092–P1-CD-098",
+      "questionCount": 7,
+      "sizeBytes": 25197,
+      "qids": [
+        "P1-CD-092",
+        "P1-CD-093",
+        "P1-CD-094",
+        "P1-CD-095",
+        "P1-CD-096",
+        "P1-CD-097",
+        "P1-CD-098"
+      ]
+    },
+    {
+      "part": 40,
+      "file": "pack_d_part_040.js",
+      "qidRange": "P1-CD-099–P1-DD-005",
+      "questionCount": 7,
+      "sizeBytes": 30533,
+      "qids": [
+        "P1-CD-099",
+        "P1-CD-100",
+        "P1-DD-001",
+        "P1-DD-002",
+        "P1-DD-003",
+        "P1-DD-004",
+        "P1-DD-005"
+      ]
+    },
+    {
+      "part": 41,
+      "file": "pack_d_part_041.js",
+      "qidRange": "P1-DD-006–P1-DD-012",
+      "questionCount": 7,
+      "sizeBytes": 23303,
+      "qids": [
+        "P1-DD-006",
+        "P1-DD-007",
+        "P1-DD-008",
+        "P1-DD-009",
+        "P1-DD-010",
+        "P1-DD-011",
+        "P1-DD-012"
+      ]
+    },
+    {
+      "part": 42,
+      "file": "pack_d_part_042.js",
+      "qidRange": "P1-DD-013–P1-DD-019",
+      "questionCount": 7,
+      "sizeBytes": 23391,
+      "qids": [
+        "P1-DD-013",
+        "P1-DD-014",
+        "P1-DD-015",
+        "P1-DD-016",
+        "P1-DD-017",
+        "P1-DD-018",
+        "P1-DD-019"
+      ]
+    },
+    {
+      "part": 43,
+      "file": "pack_d_part_043.js",
+      "qidRange": "P1-DD-020–P1-DD-026",
+      "questionCount": 7,
+      "sizeBytes": 29609,
+      "qids": [
+        "P1-DD-020",
+        "P1-DD-021",
+        "P1-DD-022",
+        "P1-DD-023",
+        "P1-DD-024",
+        "P1-DD-025",
+        "P1-DD-026"
+      ]
+    },
+    {
+      "part": 44,
+      "file": "pack_d_part_044.js",
+      "qidRange": "P1-DD-027–P1-DD-033",
+      "questionCount": 7,
+      "sizeBytes": 20840,
+      "qids": [
+        "P1-DD-027",
+        "P1-DD-028",
+        "P1-DD-029",
+        "P1-DD-030",
+        "P1-DD-031",
+        "P1-DD-032",
+        "P1-DD-033"
+      ]
+    },
+    {
+      "part": 45,
+      "file": "pack_d_part_045.js",
+      "qidRange": "P1-DD-034–P1-DD-040",
+      "questionCount": 7,
+      "sizeBytes": 26160,
+      "qids": [
+        "P1-DD-034",
+        "P1-DD-035",
+        "P1-DD-036",
+        "P1-DD-037",
+        "P1-DD-038",
+        "P1-DD-039",
+        "P1-DD-040"
+      ]
+    },
+    {
+      "part": 46,
+      "file": "pack_d_part_046.js",
+      "qidRange": "P1-DD-041–P1-DD-047",
+      "questionCount": 7,
+      "sizeBytes": 25388,
+      "qids": [
+        "P1-DD-041",
+        "P1-DD-042",
+        "P1-DD-043",
+        "P1-DD-044",
+        "P1-DD-045",
+        "P1-DD-046",
+        "P1-DD-047"
+      ]
+    },
+    {
+      "part": 47,
+      "file": "pack_d_part_047.js",
+      "qidRange": "P1-DD-048–P1-DD-054",
+      "questionCount": 7,
+      "sizeBytes": 35471,
+      "qids": [
+        "P1-DD-048",
+        "P1-DD-049",
+        "P1-DD-050",
+        "P1-DD-051",
+        "P1-DD-052",
+        "P1-DD-053",
+        "P1-DD-054"
+      ]
+    },
+    {
+      "part": 48,
+      "file": "pack_d_part_048.js",
+      "qidRange": "P1-DD-055–P1-DD-061",
+      "questionCount": 7,
+      "sizeBytes": 23810,
+      "qids": [
+        "P1-DD-055",
+        "P1-DD-056",
+        "P1-DD-057",
+        "P1-DD-058",
+        "P1-DD-059",
+        "P1-DD-060",
+        "P1-DD-061"
+      ]
+    },
+    {
+      "part": 49,
+      "file": "pack_d_part_049.js",
+      "qidRange": "P1-DD-062–P1-DD-068",
+      "questionCount": 7,
+      "sizeBytes": 27559,
+      "qids": [
+        "P1-DD-062",
+        "P1-DD-063",
+        "P1-DD-064",
+        "P1-DD-065",
+        "P1-DD-066",
+        "P1-DD-067",
+        "P1-DD-068"
+      ]
+    },
+    {
+      "part": 50,
+      "file": "pack_d_part_050.js",
+      "qidRange": "P1-DD-069–P1-DD-075",
+      "questionCount": 7,
+      "sizeBytes": 27527,
+      "qids": [
+        "P1-DD-069",
+        "P1-DD-070",
+        "P1-DD-071",
+        "P1-DD-072",
+        "P1-DD-073",
+        "P1-DD-074",
+        "P1-DD-075"
+      ]
+    },
+    {
+      "part": 51,
+      "file": "pack_d_part_051.js",
+      "qidRange": "P1-ED-001–P1-ED-007",
+      "questionCount": 7,
+      "sizeBytes": 42421,
+      "qids": [
+        "P1-ED-001",
+        "P1-ED-002",
+        "P1-ED-003",
+        "P1-ED-004",
+        "P1-ED-005",
+        "P1-ED-006",
+        "P1-ED-007"
+      ]
+    },
+    {
+      "part": 52,
+      "file": "pack_d_part_052.js",
+      "qidRange": "P1-ED-008–P1-ED-014",
+      "questionCount": 7,
+      "sizeBytes": 41996,
+      "qids": [
+        "P1-ED-008",
+        "P1-ED-009",
+        "P1-ED-010",
+        "P1-ED-011",
+        "P1-ED-012",
+        "P1-ED-013",
+        "P1-ED-014"
+      ]
+    },
+    {
+      "part": 53,
+      "file": "pack_d_part_053.js",
+      "qidRange": "P1-ED-015–P1-ED-021",
+      "questionCount": 7,
+      "sizeBytes": 49211,
+      "qids": [
+        "P1-ED-015",
+        "P1-ED-016",
+        "P1-ED-017",
+        "P1-ED-018",
+        "P1-ED-019",
+        "P1-ED-020",
+        "P1-ED-021"
+      ]
+    },
+    {
+      "part": 54,
+      "file": "pack_d_part_054.js",
+      "qidRange": "P1-ED-022–P1-ED-028",
+      "questionCount": 7,
+      "sizeBytes": 45320,
+      "qids": [
+        "P1-ED-022",
+        "P1-ED-023",
+        "P1-ED-024",
+        "P1-ED-025",
+        "P1-ED-026",
+        "P1-ED-027",
+        "P1-ED-028"
+      ]
+    },
+    {
+      "part": 55,
+      "file": "pack_d_part_055.js",
+      "qidRange": "P1-ED-029–P1-ED-035",
+      "questionCount": 7,
+      "sizeBytes": 48609,
+      "qids": [
+        "P1-ED-029",
+        "P1-ED-030",
+        "P1-ED-031",
+        "P1-ED-032",
+        "P1-ED-033",
+        "P1-ED-034",
+        "P1-ED-035"
+      ]
+    },
+    {
+      "part": 56,
+      "file": "pack_d_part_056.js",
+      "qidRange": "P1-ED-036–P1-ED-042",
+      "questionCount": 7,
+      "sizeBytes": 43977,
+      "qids": [
+        "P1-ED-036",
+        "P1-ED-037",
+        "P1-ED-038",
+        "P1-ED-039",
+        "P1-ED-040",
+        "P1-ED-041",
+        "P1-ED-042"
+      ]
+    },
+    {
+      "part": 57,
+      "file": "pack_d_part_057.js",
+      "qidRange": "P1-ED-043–P1-ED-049",
+      "questionCount": 7,
+      "sizeBytes": 56874,
+      "qids": [
+        "P1-ED-043",
+        "P1-ED-044",
+        "P1-ED-045",
+        "P1-ED-046",
+        "P1-ED-047",
+        "P1-ED-048",
+        "P1-ED-049"
+      ]
+    },
+    {
+      "part": 58,
+      "file": "pack_d_part_058.js",
+      "qidRange": "P1-ED-050–P1-ED-056",
+      "questionCount": 7,
+      "sizeBytes": 66970,
+      "qids": [
+        "P1-ED-050",
+        "P1-ED-051",
+        "P1-ED-052",
+        "P1-ED-053",
+        "P1-ED-054",
+        "P1-ED-055",
+        "P1-ED-056"
+      ]
+    },
+    {
+      "part": 59,
+      "file": "pack_d_part_059.js",
+      "qidRange": "P1-ED-057–P1-ED-063",
+      "questionCount": 7,
+      "sizeBytes": 59912,
+      "qids": [
+        "P1-ED-057",
+        "P1-ED-058",
+        "P1-ED-059",
+        "P1-ED-060",
+        "P1-ED-061",
+        "P1-ED-062",
+        "P1-ED-063"
+      ]
+    },
+    {
+      "part": 60,
+      "file": "pack_d_part_060.js",
+      "qidRange": "P1-ED-064–P1-ED-070",
+      "questionCount": 7,
+      "sizeBytes": 49341,
+      "qids": [
+        "P1-ED-064",
+        "P1-ED-065",
+        "P1-ED-066",
+        "P1-ED-067",
+        "P1-ED-068",
+        "P1-ED-069",
+        "P1-ED-070"
+      ]
+    },
+    {
+      "part": 61,
+      "file": "pack_d_part_061.js",
+      "qidRange": "P1-ED-071–P1-FD-002",
+      "questionCount": 7,
+      "sizeBytes": 32147,
+      "qids": [
+        "P1-ED-071",
+        "P1-ED-072",
+        "P1-ED-073",
+        "P1-ED-074",
+        "P1-ED-075",
+        "P1-FD-001",
+        "P1-FD-002"
+      ]
+    },
+    {
+      "part": 62,
+      "file": "pack_d_part_062.js",
+      "qidRange": "P1-FD-003–P1-FD-009",
+      "questionCount": 7,
+      "sizeBytes": 49267,
+      "qids": [
+        "P1-FD-003",
+        "P1-FD-004",
+        "P1-FD-005",
+        "P1-FD-006",
+        "P1-FD-007",
+        "P1-FD-008",
+        "P1-FD-009"
+      ]
+    },
+    {
+      "part": 63,
+      "file": "pack_d_part_063.js",
+      "qidRange": "P1-FD-010–P1-FD-016",
+      "questionCount": 7,
+      "sizeBytes": 46857,
+      "qids": [
+        "P1-FD-010",
+        "P1-FD-011",
+        "P1-FD-012",
+        "P1-FD-013",
+        "P1-FD-014",
+        "P1-FD-015",
+        "P1-FD-016"
+      ]
+    },
+    {
+      "part": 64,
+      "file": "pack_d_part_064.js",
+      "qidRange": "P1-FD-017–P1-FD-023",
+      "questionCount": 7,
+      "sizeBytes": 41459,
+      "qids": [
+        "P1-FD-017",
+        "P1-FD-018",
+        "P1-FD-019",
+        "P1-FD-020",
+        "P1-FD-021",
+        "P1-FD-022",
+        "P1-FD-023"
+      ]
+    },
+    {
+      "part": 65,
+      "file": "pack_d_part_065.js",
+      "qidRange": "P1-FD-024–P1-FD-030",
+      "questionCount": 7,
+      "sizeBytes": 43869,
+      "qids": [
+        "P1-FD-024",
+        "P1-FD-025",
+        "P1-FD-026",
+        "P1-FD-027",
+        "P1-FD-028",
+        "P1-FD-029",
+        "P1-FD-030"
+      ]
+    },
+    {
+      "part": 66,
+      "file": "pack_d_part_066.js",
+      "qidRange": "P1-FD-031–P1-FD-037",
+      "questionCount": 7,
+      "sizeBytes": 49704,
+      "qids": [
+        "P1-FD-031",
+        "P1-FD-032",
+        "P1-FD-033",
+        "P1-FD-034",
+        "P1-FD-035",
+        "P1-FD-036",
+        "P1-FD-037"
+      ]
+    },
+    {
+      "part": 67,
+      "file": "pack_d_part_067.js",
+      "qidRange": "P1-FD-038–P1-FD-044",
+      "questionCount": 7,
+      "sizeBytes": 45047,
+      "qids": [
+        "P1-FD-038",
+        "P1-FD-039",
+        "P1-FD-040",
+        "P1-FD-041",
+        "P1-FD-042",
+        "P1-FD-043",
+        "P1-FD-044"
+      ]
+    },
+    {
+      "part": 68,
+      "file": "pack_d_part_068.js",
+      "qidRange": "P1-FD-045–P1-FD-051",
+      "questionCount": 7,
+      "sizeBytes": 41405,
+      "qids": [
+        "P1-FD-045",
+        "P1-FD-046",
+        "P1-FD-047",
+        "P1-FD-048",
+        "P1-FD-049",
+        "P1-FD-050",
+        "P1-FD-051"
+      ]
+    },
+    {
+      "part": 69,
+      "file": "pack_d_part_069.js",
+      "qidRange": "P1-FD-052–P1-FD-058",
+      "questionCount": 7,
+      "sizeBytes": 45894,
+      "qids": [
+        "P1-FD-052",
+        "P1-FD-053",
+        "P1-FD-054",
+        "P1-FD-055",
+        "P1-FD-056",
+        "P1-FD-057",
+        "P1-FD-058"
+      ]
+    },
+    {
+      "part": 70,
+      "file": "pack_d_part_070.js",
+      "qidRange": "P1-FD-059–P1-FD-065",
+      "questionCount": 7,
+      "sizeBytes": 55351,
+      "qids": [
+        "P1-FD-059",
+        "P1-FD-060",
+        "P1-FD-061",
+        "P1-FD-062",
+        "P1-FD-063",
+        "P1-FD-064",
+        "P1-FD-065"
+      ]
+    },
+    {
+      "part": 71,
+      "file": "pack_d_part_071.js",
+      "qidRange": "P1-FD-066–P1-FD-072",
+      "questionCount": 7,
+      "sizeBytes": 39175,
+      "qids": [
+        "P1-FD-066",
+        "P1-FD-067",
+        "P1-FD-068",
+        "P1-FD-069",
+        "P1-FD-070",
+        "P1-FD-071",
+        "P1-FD-072"
+      ]
+    },
+    {
+      "part": 72,
+      "file": "pack_d_part_072.js",
+      "qidRange": "P1-FD-073–P1-FD-075",
+      "questionCount": 3,
+      "sizeBytes": 11859,
+      "qids": [
+        "P1-FD-073",
+        "P1-FD-074",
+        "P1-FD-075"
+      ]
+    }
+  ],
+  "verification": {
+    "reconstructedCount": 500,
+    "countMatch": true,
+    "byteMatch": true
+  }
+}
