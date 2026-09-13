@@ -2829,11 +2829,12 @@ var casePackP2_1 = [
         "Type": "table",
         "Title": "Exhibit 2 - Condensed Income Statements",
         "Purpose": "Provides sales, operating income, interest, tax, and net income for both fiscal years consumed by margin, DuPont, and coverage computations.",
-        "ReferencedBy": [
+          "ReferencedBy": [
           "CBQ21-A3-Q1",
           "CBQ21-A3-Q2",
           "CBQ21-A3-Q3",
           "CBQ21-A3-Q4",
+          "CBQ21-A3-Q5",
           "CBQ21-A3-Q6"
         ],
         "Headers": [
@@ -7046,7 +7047,7 @@ var casePackP2_1 = [
         "Prompt": "Match payout concept to Orchard",
         "Correct": {
           "Residual $3.00": "14-8=6/2M — earnings minus investments",
-          "Repurchase 200k": " accretion ~$0.20 — P/E vs funding",
+          "Repurchase 200k": "accretion $0.78 — EPS rises from $7.00 to $7.78 as share count drops 10% while earnings stay flat",
           "Stable $2.00": " smooth, signals — retain $4M buffer",
           "SGR link": " retention  (1-payout/14) × ROE"
         },
@@ -7074,7 +7075,7 @@ var casePackP2_1 = [
         ],
         "RightItems": [
           "14-8=6/2M — earnings minus investments",
-          " accretion ~$0.20 — P/E vs funding",
+          "accretion $0.78 — EPS rises from $7.00 to $7.78 as share count drops 10% while earnings stay flat",
           " smooth, signals — retain $4M buffer",
           " retention  (1-payout/14) × ROE"
         ]

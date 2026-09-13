@@ -847,3 +847,87 @@ No registry, validator, or runtime loader references `case_pack_p2_authored.js` 
 ### Disposition
 
 Files retained as historical artifacts; **not certified** (would create duplicate CaseIDs in the learner pool). No deletion performed (per AGENTS.md �3.1, deletion requires staged authorization). Recommended action for a future cleanup session: archive both files under `p2/` or delete with explicit user authorization.
+
+---
+
+## DL-P2-021 — Pack C Certified Items with Sub-Floor Distractor ExplanationWrong Slots (DL-026 Class)
+
+```
+Defect ID        DL-P2-021
+Class            Structural
+Domain           Explanation Slot Error — distractor ExplanationWrong field < 50 chars
+Severity         Medium (educational quality — learners receive thin feedback on incorrect choices)
+Detected By      Build-Time AI Verification (Session P2-080, 2026-09-06)
+Status           Resolved — both slots enriched to ≥50 choice-specific chars, re-verified 2026-09-06
+```
+
+**Question IDs:** P2-C-717, P2-C-745 (both `question_state: "Certified"`, certified in P2-CERT-WAVE 2026-09-06)
+
+**File:** `p2/pack_p2_c.js`
+
+### Issue
+
+Two Certified Pack C items had non-CorrectChoice ExplanationWrong slots containing fewer than 50 characters, violating DL-026 / governance-guard Rule 6 (non-CC ExplanationWrong slots must be present and ≥ 50 chars, choice-specific). Both items had `CorrectChoice: "C"` and the deficient slot was `ExplanationWrongD`.
+
+| Item | Slot | Before (len) | Text |
+|------|------|--------------|------|
+| P2-C-717 | EW_D | 44 chars | "20% is unrelated to the correct calculation." |
+| P2-C-745 | EW_D | 42 chars | "2.50 is not derivable from the given data." |
+
+The items' `VerifiedChecks` arrays included the claim `"Non-CC EW slots >= 50 chars"` — a false attestation that this remediation corrects.
+
+### Root Cause
+
+Items were authored and certified in the P2-CERT-WAVE (2026-09-06) with distractor explanations that dismissed the wrong choice without explaining the specific misconception. The certification gate's structural checks (governance-guard Rule 6) either did not fire or were bypassed for these items.
+
+### Pattern
+
+```
+"ExplanationWrongD": "<generic dismissal < 50 chars>"
+```
+
+Correct pattern: choice-specific explanation ≥ 50 chars identifying the misconception and contrasting with the correct approach.
+
+### Detection Rule
+
+```
+For each question Q:
+  let cc = Q.CorrectChoice;
+  for each letter L in {A, B, C, D}:
+    if L != cc AND Q["ExplanationWrong" + L] is present:
+      if Q["ExplanationWrong" + L].length < 50:
+        flag DL-026 / DL-P2-021
+```
+
+### Correction (Session P2-080, 2026-09-06)
+
+1. **P2-C-717 EW_D** (CC=C, topic: DOL/CVP):
+   - Before: `"20% is unrelated to the correct calculation."` (44 chars)
+   - After: `"20% would require a DOL of 1.33 or a 1:1 sales-to-income ratio; the correct DOL is 3.0 ($300K/$100K), yielding 45%."` (107 chars)
+   - Verification: DOL = CM/OI = $300,000/$100,000 = 3.0; 3.0 × 15% = 45% ✓
+
+2. **P2-C-745 EW_D** (CC=C, topic: DOL/CVP):
+   - Before: `"2.50 is not derivable from the given data."` (42 chars)
+   - After: `"2.50 has no derivation from the given figures; CM=$300K ($500K-$200K), OI=$100K ($300K-$200K), DOL=$300K/$100K=3.00."` (114 chars)
+   - Verification: CM = $500K-$200K = $300K; OI = $300K-$200K = $100K; DOL = $300K/$100K = 3.00 ✓
+
+### Regression Test
+
+- Re-scan `p2/pack_p2_c.js` (750 items):
+  - QID count: 750 (stable)
+  - DL-008: 0
+  - DL-026: 0 (all non-CC EW slots ≥ 50 chars, choice-specific)
+  - Part2OnlyFlag: 750/750 true
+  - Certified: 750/750
+- `node --check` PASS
+- `validate:p2` — 0 base-schema errors
+- `preflight_p2.js` — 0 divergences, guard 74/74 PASS
+
+### Cross-References
+
+- REVISION_HISTORY_P2.md: Session P2-080 entry (backup `p2/pack_p2_c.js.bak-20260906143000`, 2,741,929 B)
+- Governance guard Rule 6 (DL-026 BLOCK) — active and verified
+
+---
+
+## Template for New Entries

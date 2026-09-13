@@ -312,7 +312,7 @@ var pack_p2_d_questions = [
     "BlueprintDomain": "Risk Management",
     "CalculationItem": true,
     "Choices": {
-      "A": "Program A: $520K + (2x$200K) = $920K total. Lower deductible means lower retained losses.",
+      "A": "Program B: $380K + (2x$500K) = $1,380K total. The lower premium is outweighed by higher retained losses.",
       "B": "Program B — the lower $380K premium minimizes fixed costs.",
       "C": "Program A total: $520K+$400K=$920K. Program B total: $380K+$1M=$1,380K. A saves $460K. The $140K higher premium buys $600K in expected insurer payments.",
       "D": "Both programs have equal expected cost — insurance markets price the trade-off efficiently."
@@ -323,7 +323,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "ExplanationCorrect": "Total expected cost = Premium + Expected Retained Losses. Retained = min(claim, deductible). Claims ($500K) exceed both deductibles: A = 2x$200K=$400K, total=$520K+$400K=$920K. B = 2x$500K=$1M, total=$380K+$1M=$1,380K. A saves $460K/year. The marginal trade is favorable: $140K additional premium buys $600K in claim payments. Decision must compare total cost, not premium alone.",
-    "ExplanationWrongA": "A does save $460K overall — the computation confirms A is cheaper.",
+    "ExplanationWrongA": "B costs $380,000 + $1,000,000 = $1,380,000 total, $460,000 more than A. The $140,000 premium saving is outweighed by $600,000 of extra retained loss once deductibles are applied to both $500,000 claims.",
     "ExplanationWrongB": "The lower premium alone is not the right criterion. B saves $140K in premium but costs $600K MORE in retained losses — a net $460K disadvantage. Total cost drives the decision.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Insurance markets do not always price trade-offs at parity. Loading factors create situations where one program is clearly cheaper for a specific insured.",
@@ -345,7 +345,9 @@ var pack_p2_d_questions = [
       "Difficulty justified",
       "Independent: A=$920K. B=$1,380K. A saves $460K.",
       "Authority citations match"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
+],
     "question_state": "Certified"
   },
   {
@@ -446,7 +448,7 @@ var pack_p2_d_questions = [
       "A": "Dollar value of operational losses — directly measures materialized risk.",
       "B": "Days to remediate — measures speed of fixing problems, a leading indicator of future control effectiveness.",
       "C": "Employee turnover in internal audit — turnover in a control function causes control failures.",
-      "D": "Overdue compliance training certifications. Leading indicators predict future risk before losses occur. Untrained employees are more likely to violate policies or commit errors — precursors that management can address proactively."
+      "D": "Overdue compliance training certifications."
     },
     "CognitiveLevel": "Analyze",
     "CommonTrapReference": "Confusing leading indicators (predictive) with lagging indicators (historical)",
@@ -476,7 +478,9 @@ var pack_p2_d_questions = [
       "Difficulty justified",
       "Independent: Overdue training=leading (precursor). Losses=lagging (already materialized).",
       "Authority citations match"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "question_state": "Certified"
   },
   {
@@ -487,7 +491,7 @@ var pack_p2_d_questions = [
     "CalculationItem": true,
     "Choices": {
       "A": "Residual likelihood=12%, impact=$1.5M, expected loss=$60,000.",
-      "B": "Residual likelihood=40% x (1-0.70)=12%. Impact=$5M unchanged (controls reduce probability, not financial consequence if failure occurs). Expected residual loss=12% x $5M=$600,000.",
+      "B": "Residual likelihood=12%, impact=$5M, expected loss=$600,000.",
       "C": "Residual likelihood=40%, impact=$5M x (1-0.70)=$1.5M, expected=$600,000.",
       "D": "Residual=inherent. Controls are unproven without statistical process control data."
     },
@@ -519,7 +523,9 @@ var pack_p2_d_questions = [
       "Difficulty justified",
       "Independent: Residual likelihood=12%, impact=$5M, expected=$600K.",
       "Authority citations match"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+],
     "question_state": "Certified"
   },
   {
@@ -3807,8 +3813,8 @@ var pack_p2_d_questions = [
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Ranking deductibles on premium alone before applying the retained-exposure cap",
     "CorrectChoice": "D",
-    "Difficulty": "Moderate-Easy",
-    "DifficultyScore": 2,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
     "ExplanationCorrect": "Expected-loss arithmetic (probability x impact, RM-01) prices the retained layer of each quote, and the treasury cap screens eligibility before any cost comparison. Retained expected loss: $100,000 x 0.04 = $4,000; $250,000 x 0.04 = $10,000; $500,000 x 0.04 = $20,000; $750,000 x 0.04 = $30,000. Total expected annual cost: $310,000 + $4,000 = $314,000; $262,000 + $10,000 = $272,000; $205,000 + $20,000 = $225,000; $150,000 + $30,000 = $180,000. However, the $500,000 and $750,000 structures retain single-event exposure above the $400,000 policy cap, so they are ineligible however attractive their totals look. Among eligible options, the $250,000 deductible at $272,000 beats the $100,000 structure by $42,000 per year, making it the binding choice: the lowest all-in cost that respects Flash's retention tolerance while keeping the insurer absorbing layers above a quarter million dollars per event.",
     "ExplanationWrongA": "The $100,000 deductible is compliant and correctly priced at $314,000, but it is the expensive end of the eligible range - $42,000 per year above the $250,000 structure. Binding it sacrifices real premium savings for protection Flash's own tolerance policy says it does not need, since retention up to $400,000 per event is authorized.",
     "ExplanationWrongB": "The $500,000 deductible posts the tempting $225,000 total, yet it retains $500,000 of single-event exposure - $100,000 past the treasury cap. Cost rank-ordering before the eligibility screen is the classic deductible-design error; the cap disqualifies this quote regardless of where its all-in figure lands among the four quotes.",
@@ -3829,10 +3835,12 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW slots >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Difficulty justified: two-step computation with eligibility screen fits Moderate-Easy Apply",
+      "Difficulty justified: two-step computation with eligibility screen fits Moderate Apply",
       "Recomputed twice: 310,000+0.04x100,000=314,000; 262,000+0.04x250,000=272,000; 205,000+0.04x500,000=225,000; 150,000+0.04x750,000=180,000; 500K/750K breach 400K cap",
       "Authorities match"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "question_state": "Certified",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
@@ -5450,7 +5458,7 @@ var pack_p2_d_questions = [
       "D": "Eliminate Tier 1 handling so all exposures route directly to division or group levels."
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Sound escalation architecture under COSO ERM 2017 Principles 18-19 (leveraging information and technology, communicating risk information) requires unambiguous ownership at every exposure level, time-bound decisions, and thresholds compatible with the loss-financing structure. Choice D supplies all three: contiguous half-open ranges eliminate the $250,000 double-claim that produced contradictory unit behavior; per-tier decision deadlines end the 45-day idling; and anchoring the Tier 1 ceiling at the $120,000 deductible restores an owner for routine losses. The alternatives patch one symptom each while preserving the structural flaws - A leaves the overlap and missing deadlines intact, B adjusts levels without fixing logic, and C amputates a tier rather than repairing boundaries.",
+    "ExplanationCorrect": "Sound escalation architecture under COSO ERM 2017 Principles 18-19 (leveraging information and technology, communicating risk information) requires unambiguous ownership at every exposure level, time-bound decisions, and thresholds compatible with the loss-financing structure. Choice B supplies all three: contiguous half-open ranges eliminate the $250,000 double-claim that produced contradictory unit behavior; per-tier decision deadlines end the 45-day idling; and anchoring the Tier 1 ceiling at the $120,000 deductible restores an owner for routine losses. The alternatives patch one symptom each while preserving the structural flaws - A leaves the overlap and missing deadlines intact, C adjusts levels without fixing logic, and D amputates a tier rather than repairing boundaries.",
     "ExplanationWrongA": "Choice A fixes only the deductible mismatch and leaves the ambiguous $250,000 boundary and absent decision deadlines untouched. Partial remediation ignoring two of three documented defects cannot restore routing integrity; conflicting units would still resolve overlaps arbitrarily and escalations would still idle.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C recalibrates threshold levels for inflation without changing their structure. Overlapping endpoints, missing deadlines, and the deductible mismatch all survive a uniform shift; repainting levels mistakes parameter drift for design failure and leaves every complaint mechanism intact.",
@@ -5463,7 +5471,9 @@ var pack_p2_d_questions = [
       "Difficulty justified: Difficult-4 - Analyze of three interacting design defects with selection among partial and structural fixes",
       "Conceptual item - no computation to independently recompute",
       "Authorities match"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "question_state": "Certified",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
@@ -7377,14 +7387,14 @@ var pack_p2_d_questions = [
     "Stem": "Flash Components ran a stress test on its $60 million receivables portfolio. Base expected loss is 1.20% ($720,000). Scenario A (mild recession) raises loss to 2.40% ($1,440,000). Scenario B (severe recession) raises loss to 4.10% ($2,460,000). Treasury analyst Jonah Kim also estimates scenario probabilities: base 70%, mild 20%, severe 10%. The CRO asks Kim to decompose what drives enterprise risk and whether the portfolio is concentrated. What should Kim conclude?",
     "Choices": {
       "A": "Enterprise risk is driven equally by each scenario because three scenarios contribute one-third each by construction",
-      "B": "Expected loss across scenarios is $1,038,000 and the severe tail beyond the mean is $1,422,000, so Flash is exposed to concentration that consistent provisioning at the $720,000 base would leave uncovered",
+      "B": "Expected loss across scenarios is $720,000 and the severe tail beyond the mean is $1,740,000, so base provisioning already covers the stress mean",
       "C": "Probability-weighted expected loss is $1,038,000 with tail exposure $1,422,000 above the mean in the severe scenario, so Kim should recommend a larger buffer and limit increases tied to stress results",
       "D": "Stress testing is unnecessary because expected loss equals base loss and provisioning at $1,440,000 covers the severe scenario automatically"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Probability-weighted expected loss = 0.70 x $720,000 + 0.20 x $1,440,000 + 0.10 x $2,460,000 = $504,000 + $288,000 + $246,000 = $1,038,000. This is $318,000 above the base $720,000, showing base provisioning understates mean risk when stress is weighted. Severe tail beyond the mean = $2,460,000 - $1,038,000 = $1,422,000, revealing concentration. Business interpretation: Kim should advise the CRO Flash needs a buffer above $720,000 toward $1,038,000 for the mean and capital/liquidity to cover the $1,422,000 tail spike, plus tighter limits on cyclical exposures. Common trap is ignoring probabilities or treating base loss as the weighted mean.",
     "ExplanationWrongA": "Choice A spreads risk evenly one-third per scenario. The misconception is ignoring probability weighting and dollar magnitudes. Scenario contributions are 48.6% base ($504k), 27.7% mild ($288k), 23.7% severe ($246k) of the $1,038,000 mean, not one-third each, and tail impact is dominated by the severe $2.46M outcome.",
-    "ExplanationWrongB": "Choice B correctly computes the $1,038,000 mean and $1,422,000 tail but stops at diagnosis without recommendation. The misconception is that identifying the gap is sufficient. Analysis must also attribute concentration to cyclical customers and recommend a buffer, limit framework, and contingency funding per COSO ERM stress-testing use.",
+    "ExplanationWrongB": "Choice B mistakes the $720,000 base loss for the probability-weighted mean ($1,038,000) and nets the severe outcome against the base ($2,460,000 - $720,000 = $1,740,000) instead of against the mean ($1,422,000). Base provisioning covers only the unweighted base case, not the weighted mean or the tail.",
     "ExplanationWrongD": "Choice D dismisses stress testing as unnecessary and claims base equals weighted mean with $1,440,000 covering severe. The misconception is equating base loss $720,000 with the $1,038,000 probability-weighted mean and assuming mild-recession loss covers severe $2,460,000. Neither is true and leaves Flash under-provisioned by over $1 million in the tail.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
@@ -7407,7 +7417,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "ExplanationWrongC": "",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
@@ -7468,7 +7480,7 @@ var pack_p2_d_questions = [
     "Choices": {
       "A": "CE PV $461,538 and risk-adjusted PV $454,545, showing the risk premium is small",
       "B": "Certainty-equivalent PV $423,077 and risk-adjusted PV $446,429, and both correctly place CE as $440,000 / 1.04 = $423,077 and risk-adjusted as $500,000 / 1.12 = $446,429, so the methods differ because CE and discount calibration imply different risk pricing",
-      "C": "Both methods give ,769 because certainty equivalent and risk-adjusted discount produce identical results when calibrated consistently",
+      "C": "Both methods give $480,769 because certainty equivalent and risk-adjusted discount produce identical results when calibrated consistently",
       "D": "Certainty-equivalent PV $550,000 derived by adding the risk premium to the cash flow before discounting"
     },
     "CorrectChoice": "B",
@@ -7497,7 +7509,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+],
     "ExplanationWrongB": "",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
@@ -7697,11 +7711,11 @@ var pack_p2_d_questions = [
       "D": "$5.00M (twice VaR)"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Expected Shortfall (ES) at 95% confidence is the expected loss given that the loss exceeds the 95% VaR. For a normal distribution, ES_95 = sigma x phi(z) / (1 - Phi(z)) where z = 1.645, phi is the standard normal density, and Phi is the CDF. phi(1.645) = 0.1031, 1 - Phi(1.645) = 0.05. So ES_95 = 2 x 0.1031 / 0.05 = 2 x 2.063 = 4.13. So ES_95 = $4.13M. Choice C at $4.13M is the correct ES. The ES is approximately 25.5% higher than VaR (4.13/3.29 = 1.255) for normal distributions at 95%, reflecting the heavier tail beyond VaR. 's an underestimate. ES exceeds VaR by about 25.5% at 95% confidence for a normal distribution (ES/VaR = 1.255). The answer C is the closest. Business interpretation: risk officer Maya Caldwell should report ES as a complement to VaR; ES captures the average loss in the tail (which is always worse than VaR), addressing VaR's well-known limitation of not distinguishing among tail outcomes.",
+    "ExplanationCorrect": "Expected Shortfall (ES) at 95% confidence is the expected loss given that the loss exceeds the 95% VaR. For a normal distribution, ES_95 = sigma x phi(z) / (1 - Phi(z)) where z = 1.645, phi is the standard normal density, and Phi is the CDF. phi(1.645) = 0.1031, 1 - Phi(1.645) = 0.05. So ES_95 = 2 x 0.1031 / 0.05 = 2 x 2.063 = 4.13. So ES_95 = $4.13M. Choice C at $4.13M is the correct ES. The ES is approximately 25.5% higher than VaR (4.13/3.29 = 1.255) for normal distributions at 95%, reflecting the heavier tail beyond VaR. ES exceeds VaR by about 25.5% at 95% confidence for a normal distribution (ES/VaR = 1.255). Business interpretation: risk officer Maya Caldwell should report ES as a complement to VaR; ES captures the average loss in the tail (which is always worse than VaR), addressing VaR's well-known limitation of not distinguishing among tail outcomes.",
     "ExplanationWrongA": "Choice A = VaR. ES is typically at least as large as VaR for a continuous distribution because ES is the expected loss given loss exceeds VaR, which is a more severe measure. Equating ES to VaR is incorrect.",
-    "ExplanationWrongB": "Choice B = standard deviation. ES is a tail-loss measure, not the standard deviation. For a normal distribution, ES is approximately 2.5% higher than the corresponding VaR, not equal to sigma.",
+    "ExplanationWrongB": "Choice B = standard deviation. ES is a tail-loss measure, not the standard deviation. For a normal distribution, ES exceeds VaR by about 25.5% at 95% confidence (4.13/3.29 = 1.256).",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "Choice D = 2 x VaR, the rule of thumb for sub-Gaussian distributions. For normal distributions, ES is approximately 1.06 x VaR (a few percent above), not 2 x. The 2 x rule applies to distributions with much heavier tails than normal.",
+    "ExplanationWrongD": "Choice D = 2 x VaR, the rule of thumb for sub-Gaussian distributions. For normal distributions, ES is approximately 1.26 x VaR (about 25.5% above), not 2 x. The 2 x rule applies to distributions with much heavier tails than normal.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Analyze",
@@ -7722,7 +7736,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + named stakeholder (stakeholder present)"
-    ]
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+]
   },
   {
     "Part": 2,
@@ -7829,10 +7845,10 @@ var pack_p2_d_questions = [
       "C": "Translation gain of $5.0M (50M x (1.10 - 1.00))",
       "D": "No translation gain/loss; the subsidiary is consolidated at the year-end rate"
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "Under U.S. GAAP (ASC 830), when the functional currency is the foreign currency (here, EUR), assets and liabilities are translated at the year-end spot rate ($1.10/EUR), and revenues and expenses are translated at the average rate ($1.08/EUR) or the spot rate at the transaction date. The translation adjustment (cumulative translation adjustment, or CTA) is reported in other comprehensive income (OCI) and reflects the change in the USD value of the net assets. The translation gain/loss on the net assets is the change in the year-end rate applied to net assets: 50M x (1.10 - 1.08) = $1.0M gain (if rates rose). The sign is a gain because the EUR strengthened against the USD. Business interpretation: CFO Adaeze Onuorah should expect a $1.0M translation gain in OCI, which does not affect reported net income but does affect comprehensive income and equity.",
-    "ExplanationWrongA": "Choice A = $1.0M gain, the correct magnitude but framed as a translation gain without noting the OCI treatment. The $1.0M goes to OCI, not net income, which is a key disclosure point.",
-    "ExplanationWrongB": "",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reports a $1.0M translation loss, but a strengthening euro on a euro-functional subsidiary produces a gain: EUR 50M x ($1.10 - $1.08) = $1.0M gain, reported in OCI as a cumulative translation adjustment per ASC 830, not in net income. The error misreads the rate direction.",
     "ExplanationWrongC": "Choice C = $5.0M, the answer if the rate difference is $0.10 instead of $0.02. The year-end rate is $1.10 and the average is $1.08, so the difference is $0.02, not $0.10.",
     "ExplanationWrongD": "Choice D = no translation. Every foreign-currency-functional subsidiary has a translation adjustment in OCI; there is no scenario where the translation adjustment is zero unless rates are unchanged.",
     "Difficulty": "Moderate",
@@ -7855,7 +7871,11 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + named stakeholder (stakeholder present)"
-    ]
+    ,
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
+,
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
+]
   },
   {
     "Part": 2,
@@ -8002,12 +8022,12 @@ var pack_p2_d_questions = [
     "Stem": "Flash Capital holds two assets in equal weights. Asset A has expected return 10% and standard deviation 20%. Asset B has expected return 14% and standard deviation 30%. The correlation between A and B is 0.4. What is the portfolio standard deviation (rounded to 1 decimal)?",
     "Choices": {
       "A": "20.0%",
-      "B": "Approximately 20.7%",
+      "B": "Approximately 21.1%",
       "C": "25.0%",
       "D": "30.0%"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Portfolio variance = wA^2 x sigmaA^2 + wB^2 x sigmaB^2 + 2 x wA x wB x sigmaA x sigmaB x rho(A,B). With wA = wB = 0.5: variance = 0.25 x 0.04 + 0.25 x 0.09 + 2 x 0.25 x 0.20 x 0.30 x 0.4 = 0.01 + 0.0225 + 0.012 = 0.0445. Portfolio standard deviation = sqrt(0.0445) = 0.2109 = 21.1%. The closest answer is B (20.7%); 21.1% is within rounding. Recomputed independently: 0.25 x 0.04 = 0.01; 0.25 x 0.09 = 0.0225; 2 x 0.25 x 0.20 x 0.30 x 0.4 = 0.012; sum = 0.0445; sqrt = 0.2109 = 21.1%. Business interpretation: senior analyst Priya Ramaswamy should report portfolio standard deviation of 21.1%, which is lower than the weighted average of individual standard deviations (25%) because of the diversification benefit from the less-than-perfect correlation.",
+    "ExplanationCorrect": "Portfolio variance = wA^2 x sigmaA^2 + wB^2 x sigmaB^2 + 2 x wA x wB x sigmaA x sigmaB x rho(A,B). With wA = wB = 0.5: variance = 0.25 x 0.04 + 0.25 x 0.09 + 2 x 0.25 x 0.20 x 0.30 x 0.4 = 0.01 + 0.0225 + 0.012 = 0.0445. Portfolio standard deviation = sqrt(0.0445) = 0.2109 = 21.1%. The answer is B (21.1%). Recomputed independently: 0.25 x 0.04 = 0.01; 0.25 x 0.09 = 0.0225; 2 x 0.25 x 0.20 x 0.30 x 0.4 = 0.012; sum = 0.0445; sqrt = 0.2109 = 21.1%. Business interpretation: senior analyst Priya Ramaswamy should report portfolio standard deviation of 21.1%, which is lower than the weighted average of individual standard deviations (25%) because of the diversification benefit from the less-than-perfect correlation.",
     "ExplanationWrongA": "Choice A = 20.0%, the simple average of the individual standard deviations. The portfolio SD is not the simple average; it depends on the correlation, and at correlation < 1, the portfolio SD is less than the weighted average.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C = 25.0%, the weighted average of the individual SDs. The portfolio SD is less than the weighted average when the correlation is below 1 (diversification benefit).",
@@ -8032,7 +8052,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + named stakeholder (stakeholder present)"
-    ]
+    ,
+      "Choice value independently recomputed 2026-09-07 (Batch 2 remediation)"
+]
   },
   {
     "Part": 2,
@@ -8178,14 +8200,14 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-185-enterprise-risk-treatments",
     "Stem": "Flash Industries' ERM framework defines four risk-treatment strategies: avoid, accept, transfer, mitigate. The risk officer is categorizing each identified risk. For each of the following risks, which treatment is most appropriate? (1) Outdated IT system that is no longer supported by the vendor; (2) Routine operational risk of minor workplace injuries; (3) Foreign-currency risk on a 30-day customer invoice; (4) Compliance risk of a new regulation that conflicts with current practice.",
     "Choices": {
-      "A": "(1) Mitigate by upgrading; (2) Accept; (3) Transfer via forward; (4) Mitigate by changing practice",
+      "A": "(1) Transfer to the vendor by demanding indefinite support for the outdated system; (2) Transfer minor injuries via first-dollar insurance coverage; (3) Avoid all foreign sales to eliminate the 30-day invoice exposure; (4) Accept the fine as a cost of doing business",
       "B": "(1) Mitigate by upgrading; (2) Accept; (3) Mitigate via forward hedge or accept; (4) Avoid or mitigate by changing practice to comply",
       "C": "(1) Transfer to vendor; (2) Mitigate via safety training; (3) Accept; (4) Accept the fine",
       "D": "All four risks should be mitigated, regardless of the cost-benefit analysis"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "The four risk-treatment strategies apply differently to each risk. (1) Outdated IT: typically mitigated (upgrade the system) or avoided (decommission the process); the choice depends on cost-benefit. (2) Routine minor injuries: typically accepted as a cost of operations, with mitigation via safety training where cost-effective. (3) 30-day FX risk on an invoice: can be mitigated via a 30-day forward hedge, or accepted if the firm has a natural hedge or the exposure is small. (4) New regulation: typically mitigated by changing practice to comply, or avoided by exiting the conflicting activity. There is no single 'correct' answer because the optimal treatment depends on the firm's risk appetite, the cost-benefit, and the alternatives; the answer B captures the typical approach. Business interpretation: risk officer Lena Fischer should apply the COSO ERM treatment framework to each identified risk, with explicit rationale and a designated owner.",
-    "ExplanationWrongA": "Choice A's treatment of (4) as 'mitigate by changing practice' is correct, but the blanket application of 'mitigate' to (3) ignores the option to accept small exposures. The optimal treatment for a 30-day invoice exposure depends on the firm's hedging policy; some firms accept small exposures as a cost of operations.",
+    "ExplanationWrongA": "Choice A misassigns every leg: the vendor cannot be forced to support an obsolete system indefinitely, so no counterparty accepts the transfer; first-dollar coverage for minor injuries is uneconomic transfer; avoiding all foreign sales destroys value to eliminate a hedgeable 30-day exposure; and accepting a fine for a conflicting regulation invites legal liability rather than managing the risk.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C's treatment of (1) as 'transfer to vendor' is unusual; vendor support is typically not a transferable risk. The vendor already supports the system; transferring would require a different vendor or a service contract, which is closer to mitigation than pure transfer.",
     "ExplanationWrongD": "Choice D claims all risks should be mitigated regardless of cost-benefit. The cost-benefit analysis is central to the ERM framework; mitigation is not necessarily the optimal treatment. Some risks are best accepted (e.g., low-likelihood, low-impact), and some are best transferred (e.g., via insurance or hedges).",
@@ -8209,7 +8231,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + named stakeholder (stakeholder present)"
-    ]
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+]
   },
   {
     "Part": 2,
@@ -8598,7 +8622,7 @@ var pack_p2_d_questions = [
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Total expected cost = Expected retained loss + Response cost using Expected Loss = Probability x Impact per RM-01. Option X: 0.03 x $2,400,000 = $72,000 retained + $85,000 = $157,000 total. Option Y: retains 20% of impact: 0.20 x $2,400,000 = $480,000; 0.10 x $480,000 = $48,000 expected retained + $120,000 premium = $168,000 total. X is cheaper by $11,000. Business interpretation: David Chen should recommend the control that reduces probability because it yields lower total expected cost despite higher perceived upfront risk, but must validate the 3% residual probability through testing before relying on the $11,000 advantage.",
-    "ExplanationWrongA": "Choice A misstates comparison by looking only at upfront cost. Premium $55,000 versus control $85,000 suggests Y is cheaper by $30,000, but total cost must add expected retained loss: X $72,000 + $85,000 = $157,000 versus Y $48,000 + $120,000 = $168,000, so Y is $11,000 more expensive, not cheaper.",
+    "ExplanationWrongA": "Choice A misstates comparison by looking only at upfront cost. Upfront cost alone ($120,000 premium versus $85,000 control) suggests Y is cheaper by $35,000, but total cost must add expected retained loss: X $72,000 + $85,000 = $157,000 versus Y $48,000 + $120,000 = $168,000, so Y is $11,000 more expensive, not cheaper.",
     "ExplanationWrongC": "Choice C assumes insurance pricing equals actuarial reduction. Market loading and retained exposure make totals differ: $157,000 versus $168,000 shows X dominates by $11,000. Equality would require precise parity between premium and mitigation, which Flash's quotes do not exhibit.",
     "ExplanationWrongD": "Choice D overstates effectiveness by assuming the control eliminates risk entirely. Reducing probability to 3% still leaves $72,000 expected retained loss, so total is $157,000, not $85,000. Elimination would require probability near zero, which no control achieves.",
     "Difficulty": "Moderate",
@@ -8624,7 +8648,9 @@ var pack_p2_d_questions = [
       "Work: 0.03x2,400,000=72,000+85,000=157,000; 0.10x480,000=48,000+120,000=168,000; difference 11,000",
       "Authorities match",
       "Stem names Flash + stakeholder David Chen, Treasurer"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "ExplanationWrongB": ""
   },
   {
@@ -9910,17 +9936,17 @@ var pack_p2_d_questions = [
     "Choices": {
       "A": "Do nothing and accept the $224,000 expected loss, because no upfront cost is incurred and the probability is modest",
       "B": "Reduce the risk via the monitoring program, because total expected cost of $129,000 ($65,000 program + $64,000 residual expected loss at 4% x $1,600,000) is the lowest among the alternatives when weighing the trade-off between cost and residual risk",
-      "C": "Share the risk via insurance at $95,000 premium, because insurance eliminates the risk and $95,000 is lower than $129,000",
+      "C": "Share the risk via insurance: $95,000 premium plus $33,600 retained expected loss = $128,600 total, the lowest of the three alternatives",
       "D": "Reduce the risk via the monitoring program at $65,000, because any probability reduction dominates the decision regardless of cost comparison"
     },
-    "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, risk response selection requires weighing competing alternatives and evaluating the trade-off between response cost and residual risk. Total Expected Cost = Response Cost + Residual Expected Loss (RM-01: Expected Loss = Probability x Impact), and Residual Risk = Inherent Risk - Controls Mitigation (RM-03) is never zero, so the best option balances cost against remaining exposure. Compute: Accept = $0 + 0.14 x $1,600,000 = $224,000. Reduce (monitoring): residual 4% x $1,600,000 = $64,000; total = $65,000 + $64,000 = $129,000. Share (insurance): premium $95,000 plus retained 15% x 0.14 x $1,600,000 = $33,600; total = $128,600. Reduce at $129,000 and Share at $128,600 are essentially equivalent on cost, but weighing the competing alternatives, Reduce lowers the frequency of operational interruption itself while Share compensates only after a disruption. Patel should recommend Reduce as the operational risk response that addresses root cause, or present both as near-equivalent with a qualitative preference for prevention when weighing the trade-off. The evaluation demonstrates that the best option is determined by total expected cost and the balance between upfront investment and residual exposure, not by premium alone.",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under COSO ERM 2017, risk response selection requires weighing competing alternatives via total expected cost = response cost + residual expected loss (RM-01: Expected Loss = Probability x Impact), recognizing residual risk is never zero (RM-03). Compute: Accept = $0 + 0.14 x $1,600,000 = $224,000. Reduce (monitoring): residual 4% x $1,600,000 = $64,000; total = $65,000 + $64,000 = $129,000. Share (insurance): premium $95,000 plus retained 15% x 0.14 x $1,600,000 = $33,600; total = $128,600. Share at $128,600 is the lowest total expected cost, $400 below Reduce and $95,400 below Accept. Patel should recommend Share, noting that residual risk remains through the 15% retention. Insurance does not eliminate the risk, but on total-cost grounds it is the best option.",
     "ExplanationWrongA": "Accept retains the full $224,000 expected loss, which exceeds both the Reduce total of $129,000 (0.04 x $1,600,000 = $64,000 plus $65,000) and the Share total near $128,600. Zero upfront cost does not make acceptance the best option when mitigation costs are well below expected-loss savings. Acceptance is warranted only when weighing the trade-off shows savings do not justify the investment.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Sharing does not eliminate risk; the company retains 15% of every loss, so residual expected loss of $33,600 (0.15 x $224,000) remains. The $95,000 premium plus retained $33,600 gives total expected cost near $128,600, essentially tied with Reduce, not a dominant elimination. Insurance compensates after a loss but does not reduce the probability of disruption, unlike monitoring — a key distinction when weighing competing alternatives.",
+    "ExplanationWrongB": "Reduce totals $65,000 + (4% x $1,600,000) = $129,000, which exceeds Share’s $128,600. Monitoring lowers disruption frequency — a real operational benefit — but on the stem’s lowest-total-expected-cost criterion, Reduce costs $400 more than Share.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "A probability reduction does not dominate regardless of cost; COSO ERM response selection requires weighing the trade-off via total expected cost comparison of competing alternatives. Reduce is preferred here because $129,000 total cost is lower than Accept at $224,000 and essentially equivalent to Share, not because any reduction is inherently the best option irrespective of its price.",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
     "CalculationItem": true,
     "ItemStyle": "single-select",
@@ -9938,8 +9964,8 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "RM-01: Expected Loss = Probability x Impact",
       "rule_or_proposition": "Total expected cost = response cost + residual expected loss (probability x impact after response); the best option is selected by weighing competing alternatives and the trade-off between cost and residual risk within appetite.",
-      "application_to_facts": "Accept = $224,000; Reduce = $65,000 + 0.04x$1,600,000 = $129,000; Share = $95,000 + 0.15x$224,000 approx $128,600; Reduce offers prevention of disruption and near-lowest total cost, supporting the recommendation after weighing competing alternatives.",
-      "key_conclusion": "Reduce via monitoring gives total $129,000, the most defensible risk response on cost plus operational trade-off grounds, so Option B is correct."
+      "application_to_facts": "Accept = $224,000; Reduce = $65,000 + 0.04x$1,600,000 = $129,000; Share = $95,000 + 0.15x$224,000 approx $128,600; Share gives the lowest total at $128,600, supporting the recommendation after weighing competing alternatives; the 15% retention means residual risk remains.",
+      "key_conclusion": "Share via insurance gives total $128,600, the lowest total expected cost, so Option C is correct."
     },
     "distractor_intent": {
       "A": {
@@ -9947,9 +9973,9 @@ var pack_p2_d_questions = [
         "why_plausible": "No upfront cost is salient and candidates anchor on avoiding expenditure",
         "tier_candidate": 1
       },
-      "C": {
-        "misconception": "Believes insurance eliminates retained risk",
-        "why_plausible": "Insurance language suggests elimination and premium alone looks lower than Reduce total",
+      "B": {
+        "misconception": "Treats operational prevention as decisive despite higher total cost",
+        "why_plausible": "Monitoring lowers disruption frequency, which feels superior even at $400 higher total cost",
         "tier_candidate": 2
       },
       "D": {
@@ -9958,7 +9984,7 @@ var pack_p2_d_questions = [
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A is wrong because acceptance retains $224,000 which exceeds Reduce and Share totals; Option C is wrong because 15% retention remains and total is tied not eliminated; Option D is wrong because weighing the trade-off via cost-benefit comparison, not reduction alone, determines the best option.",
+    "uniqueness_note": "Option A is wrong because acceptance retains $224,000; Option B is wrong because Reduce totals $129,000, above Share; Option D is wrong because cost-benefit comparison, not reduction alone, determines the best option; Option C states the lowest-cost Share evaluation.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -9966,10 +9992,12 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008 compliant)",
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
-      "Difficulty justified by total-expected-cost comparison requiring residual calculation and weighing competing alternatives (Moderate, Evaluate)",
-      "Independent answer derived: Accept $224,000; Reduce $65,000 + $64,000 = $129,000; Share $95,000 + $33,600 approx $128,600 -> Reduce/Share near tie, Reduce preferred for prevention when weighing trade-off",
+      "Difficulty justified by total-expected-cost comparison requiring residual calculation and weighing competing alternatives (Difficult, Evaluate)",
+      "Independent answer derived and recomputed: Accept $224,000; Reduce $129,000; Share $128,600 -> Share lowest; Option C correct",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
+],
     "CrossDomainTags": [],
     "certification_date": "2026-08-30",
     "certification_batch": "P2-069"
@@ -10091,7 +10119,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level framework selection at DS2",
       "Authority citations match tested concept: COSO ERM 2017 Principle 4 and ISO 31000:2018 Clause 6.2"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10103,17 +10133,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "The organization defines and applies a risk taxonomy at a level of detail and with the structure that supports consistent risk identification (COSO ERM 2017, Principle 4)."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct concept — hierarchical taxonomy with shared definitions and owners."
-      },
       "B": {
-        "misconception": "Mistaking a flat list of risks for a taxonomy."
+        "misconception": "Mistaking a flat list of risks for a taxonomy.",
+        "why_plausible": "Collecting every mentioned risk feels comprehensive, but completeness without hierarchy cannot support consistent identification",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believing legacy terminology can coexist without defeating consistent identification."
+        "misconception": "Believing legacy terminology can coexist without defeating consistent identification.",
+        "why_plausible": "Preserving familiar terms feels pragmatic during transition, but dual vocabularies defeat comparability",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Conflating presentation aesthetics with structural ownership of the taxonomy."
+        "misconception": "Conflating presentation aesthetics with structural ownership of the taxonomy.",
+        "why_plausible": "A polished one-pager impresses the committee, but presentation cannot substitute for owned definitions",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem introduces a multi-subsidiary taxonomy design scenario. Choice A is the only hierarchically structured, definitionally anchored taxonomy; B tests the glossary misconception; C tests the legacy-preservation misconception; D tests the presentation-over-structure misconception.",
@@ -10166,7 +10199,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level conceptual contrast at DS1",
       "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10179,16 +10214,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Mistaking acceptance as also involving exit of the activity."
-      },
-      "B": {
-        "misconception": "Correct concept — avoidance removes activity; acceptance retains activity and bears loss."
+        "misconception": "Mistaking acceptance as also involving exit of the activity.",
+        "why_plausible": "Both statements mention exit, so skimming suggests symmetry — but acceptance retains the activity",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Mistaking tactical/strategic timing for the avoidance/acceptance distinction."
+        "misconception": "Mistaking tactical/strategic timing for the avoidance/acceptance distinction.",
+        "why_plausible": "Tactical/strategic language sounds sophisticated, yet the framework draws no such line",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Mapping the framework onto risk-type categories rather than activity/loss dimensions."
+        "misconception": "Mapping the framework onto risk-type categories rather than activity/loss dimensions.",
+        "why_plausible": "Currency examples are memorable, but responses apply across all risk types",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem frames a conceptual briefing for logistics staff. Choice B is the only statement that contrasts activity elimination with retained-activity acceptance; A tests the activity-exit conflation; C tests the time-horizon conflation; D tests the risk-type restriction error.",
@@ -10239,7 +10277,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level register construction at DS3",
       "Authority citations match tested concept: COSO ERM 2017 risk identification and assessment components"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10251,16 +10291,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Mistakenly collapsing likelihood and impact into one combined score."
+        "misconception": "Mistakenly collapsing likelihood and impact into one combined score.",
+        "why_plausible": "A single score looks decisive, but collapsing dimensions loses the information responses need",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Deferring rating until incidents occur and avoiding owner assignment."
-      },
-      "C": {
-        "misconception": "Correct concept — ratings scaled to data availability, named owner, response linked."
+        "misconception": "Deferring rating until incidents occur and avoiding owner assignment.",
+        "why_plausible": "Waiting for incidents feels data-driven, but the register must prioritize risks before they materialize",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Rating everything maximum and escalating status quo as a substitute for action."
+        "misconception": "Rating everything maximum and escalating status quo as a substitute for action.",
+        "why_plausible": "Maximum ratings plus escalation look diligent, but unanalyzed extremes with status-quo action manage nothing",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem gives a concrete vendor-concentration scenario at Flash Foods. Choice C is the only option combining data-appropriate rating scales, function-specific ownership, and a response link; A tests scoring collapse; B tests deferral; D tests 'panic-rate and escalate'.",
@@ -10312,7 +10355,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level KRI selection at DS2",
       "Authority citations match tested concept: COSO ERM 2017 review and revision component"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -10324,17 +10369,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Selecting the most controllable activity as the sole KRI."
+        "misconception": "Selecting the most controllable activity as the sole KRI.",
+        "why_plausible": "Controllability is attractive, but the question asks what monitors response performance, not what is easiest to control",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Assuming that more indicators are always better regardless of focus."
+        "misconception": "Assuming that more indicators are always better regardless of focus.",
+        "why_plausible": "Comprehensiveness feels safe, but bundling sidesteps the specific response-monitoring decision",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Choosing the easiest-to-retrieve metric rather than the most diagnostic."
+        "misconception": "Choosing the easiest-to-retrieve metric rather than the most diagnostic.",
+        "why_plausible": "Dashboard availability is convenient, but ease of retrieval does not make a metric diagnostic",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct concept — mean-time-to-recovery is the lagging KRI that monitors response effectiveness."
-      }
     },
     "uniqueness_note": "Stem asks specifically which KRI monitors the response activity itself. Choice D identifies the lagging response-performance KRI; A tests controllability-only thinking; B tests 'more is better'; C tests ease-of-retrieval thinking.",
     "CrossDomainTags": [],
@@ -10387,7 +10435,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level framework contribution at DS1",
       "Authority citations match tested concept: COSO ERM 2017 (five components, twenty principles) versus COSO Internal Control 2013"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10399,17 +10449,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "COSO ERM 2017 provides an enterprise-wide framework with five components and twenty principles that integrate risk with strategy and performance, building on but extending the Internal Control — Integrated Framework (COSO ERM 2017, Executive Summary)."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct concept — broadened scope, five components, twenty principles, strategy/performance linkage."
-      },
       "B": {
-        "misconception": "Reversing scope by narrowing ERM to financial-reporting certification."
+        "misconception": "Reversing scope by narrowing ERM to financial-reporting certification.",
+        "why_plausible": "A certification form sounds rigorous, but ERM broadens scope rather than narrowing it",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believing ERM replaces internal control frameworks entirely."
+        "misconception": "Believing ERM replaces internal control frameworks entirely.",
+        "why_plausible": "One framework for everything sounds efficient, but ERM complements rather than replaces internal control",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Moving risk ownership to internal audit rather than line management."
+        "misconception": "Moving risk ownership to internal audit rather than line management.",
+        "why_plausible": "Centralization sounds tidy, but ownership sits with line management, not assurance",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem asks for the contribution of COSO ERM 2017 over the Internal Control framework. Choice A captures broadened scope and component/principle structure; B tests scope reversal; C tests replacement misconception; D tests ownership misplacement.",
@@ -10461,7 +10514,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level mapping of instruments to response types at DS3",
       "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10474,16 +10529,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Mislabeling a forward as reduction and an option as sharing."
-      },
-      "B": {
-        "misconception": "Correct concept — forward is sharing, option is reduction, re-pricing is avoidance."
+        "misconception": "Mislabeling a forward as reduction and an option as sharing.",
+        "why_plausible": "Pricing language around forwards misleads: forwards transfer outcomes rather than lowering likelihood",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Mislabeling a forward as acceptance rather than counterparty transfer."
+        "misconception": "Mislabeling a forward as acceptance rather than counterparty transfer.",
+        "why_plausible": "Passively retain misreads the forward, which actively transfers the FX outcome to a counterparty",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Mislabeling a forward as avoidance rather than recognizing re-pricing as avoidance."
+        "misconception": "Mislabeling a forward as avoidance rather than recognizing re-pricing as avoidance.",
+        "why_plausible": "Exiting the market and re-pricing sound similar, but only re-pricing removes the USD activity",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem provides three concrete hedging structures for FX exposure. Choice B is the only correct three-way mapping (sharing / reduction / avoidance); A, C, and D each contain two mislabelings that confuse transfer with reduction, retention, or elimination.",
@@ -10535,7 +10593,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level diagnosis at DS3",
       "Authority citations match tested concept: COSO ERM 2017 Review and Revision component"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10547,16 +10607,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Diagnosing an identification gap when symptoms show identification is functioning."
+        "misconception": "Diagnosing an identification gap when symptoms show identification is functioning.",
+        "why_plausible": "Empty-register imagery is vivid, but the symptoms show identification works — ratings and KRIs exist",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Diagnosing an assessment gap when ratings exist but are not refreshed."
-      },
-      "C": {
-        "misconception": "Correct concept — Review and Revision component covers re-rating and KRI escalation."
+        "misconception": "Diagnosing an assessment gap when ratings exist but are not refreshed.",
+        "why_plausible": "Unrefreshed ratings look like no assessment, but assessment happened once and was never repeated",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Diagnosing a reporting gap when the gap is in review/revision."
+        "misconception": "Diagnosing a reporting gap when the gap is in review/revision.",
+        "why_plausible": "Board-reporting language distracts, but the failures are re-rating and escalation linkage",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem gives three concrete register symptoms. Choice C correctly routes the diagnosis to Review and Revision; A, B, and D each misattribute the gap to a different component, testing the examinee's ability to distinguish similar-sounding components.",
@@ -10609,7 +10672,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level response balancing at DS4",
       "Authority citations match tested concept: COSO ERM 2017 risk response and information/communication components"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10622,17 +10687,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Defaulting to avoidance whenever exposure can be eliminated."
+        "misconception": "Defaulting to avoidance whenever exposure can be eliminated.",
+        "why_plausible": "Full elimination feels decisive, but sanctions exposure can be managed within appetite at lower cost",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treating political-risk insurance as a complete answer for sanctions exposure."
+        "misconception": "Treating political-risk insurance as a complete answer for sanctions exposure.",
+        "why_plausible": "Insurance is the textbook answer for confiscation, but sanctions create compliance burdens insurance cannot cover",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Defaulting to sharing without considering compliance burden or appetite."
+        "misconception": "Defaulting to sharing without considering compliance burden or appetite.",
+        "why_plausible": "Local partners help operationally, but sharing does not resolve the sanctions-compliance burden or appetite question",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct concept — acceptance with disclosure is defensible when expected loss is below mitigation cost and within appetite."
-      }
     },
     "uniqueness_note": "Stem gives four numbered proposals and a sanctions-risk context. Choice D selects acceptance-with-disclosure based on expected-loss/cost comparison; A tests avoidance reflex; B tests insurance-textbook reflex; C tests sharing reflex without appetite analysis.",
     "CrossDomainTags": [],
@@ -10685,7 +10753,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level appetite-statement design at DS2",
       "Authority citations match tested concept: COSO ERM 2017 risk appetite articulation and ISO 31000:2018 Clause 6.2"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10697,17 +10767,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "Risk appetite is articulated at a level of detail appropriate to the category, with quantitative limits where feasible and qualitative narrative where quantification is not cost-effective (COSO ERM 2017, risk appetite component)."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct concept — quantitative where feasible, qualitative where not."
-      },
       "B": {
-        "misconception": "Collapsing all categories into one group-wide metric."
+        "misconception": "Collapsing all categories into one group-wide metric.",
+        "why_plausible": "One number for everything looks elegant, but categories need different precision",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Forcing qualitative-only because boards cannot understand numbers."
+        "misconception": "Forcing qualitative-only because boards cannot understand numbers.",
+        "why_plausible": "Board-comprehension concerns are real, yet measurable thresholds strengthen escalation when the board is sophisticated",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treating appetite as a quarterly forecast instead of a strategic anchor."
+        "misconception": "Treating appetite as a quarterly forecast instead of a strategic anchor.",
+        "why_plausible": "Market-responsiveness sounds prudent, but appetite anchors strategy and capital allocation",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem specifies three quantitative limits and two qualitative categories. Choice A defends the mixed structure; B tests single-metric thinking; C tests qualitative-only thinking; D tests forecast thinking.",
@@ -10759,7 +10832,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level control-activity design at DS3",
       "Authority citations match tested concept: COSO ERM 2017 control activities component and COSO Internal Control 2013"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10772,16 +10847,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Demanding zero-loss controls regardless of cost-benefit."
-      },
-      "B": {
-        "misconception": "Correct concept — preventive plus detective controls covering execution and monitoring."
+        "misconception": "Demanding zero-loss controls regardless of cost-benefit.",
+        "why_plausible": "Zero-loss thinking feels responsible, but controls must pass cost-benefit tests",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Restricting controls to the transaction level and excluding monitoring."
+        "misconception": "Restricting controls to the transaction level and excluding monitoring.",
+        "why_plausible": "Transaction focus feels concrete, but the gap is monitoring — forecast reconciliation and limit re-checks",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Collapsing segregation of duties by having executors perform their own controls."
+        "misconception": "Collapsing segregation of duties by having executors perform their own controls.",
+        "why_plausible": "Self-checking sounds accountable, but executors cannot objectively control their own transactions",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem gives a treasury scenario where execution works but monitoring fails. Choice B identifies the missing preventive+detective, execution+monitoring mix; A tests zero-loss thinking; C tests transaction-only thinking; D tests segregation collapse.",
@@ -10833,7 +10911,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level KRI panel interpretation at DS3",
       "Authority citations match tested concept: COSO ERM 2017 review and revision component"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10845,16 +10925,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Trusting outcome KRIs only and ignoring control-quality KRIs."
+        "misconception": "Trusting outcome KRIs only and ignoring control-quality KRIs.",
+        "why_plausible": "Falling counts feel conclusive, but outcomes can improve while controls decay",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Dismissing audit-score slippage as merely lagging."
-      },
-      "C": {
-        "misconception": "Correct concept — outcome and leading-control KRIs must be interpreted jointly."
+        "misconception": "Dismissing audit-score slippage as merely lagging.",
+        "why_plausible": "Attention-based dismissal is tempting, yet audit slippage signals weakening controls",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Removing near-miss counts as alleged noise."
+        "misconception": "Removing near-miss counts as alleged noise.",
+        "why_plausible": "Lean panels appeal, but near-misses are the leading signal that predicts incidents",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem presents a divergence between outcome and control KRIs. Choice C captures joint interpretation; A tests outcome-only thinking; B tests dismissive control-KRI thinking; D tests near-miss devaluing.",
@@ -10908,7 +10991,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Evaluate-level framework synthesis at DS4",
       "Authority citations match tested concept: COSO ERM 2017 integrated design and ISO 31000:2018 tailoring principles"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10920,17 +11005,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "An integrated enterprise risk management framework supports common language, cross-risk portfolio decisions, and unified documentation (COSO ERM 2017, Executive Summary)."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct concept — integrated framework addresses all three criteria."
-      },
       "B": {
-        "misconception": "Believing ISO 31000 forbids integration across categories."
+        "misconception": "Believing ISO 31000 forbids integration across categories.",
+        "why_plausible": "ISO’s process orientation is real, but nothing in ISO 31000 forbids integration",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Arbitrarily limiting integration to strategic risks."
+        "misconception": "Arbitrarily limiting integration to strategic risks.",
+        "why_plausible": "Scoping integration to strategy sounds focused, but enterprise scope is the point",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Rejecting recognized frameworks in favor of bespoke construction."
+        "misconception": "Rejecting recognized frameworks in favor of bespoke construction.",
+        "why_plausible": "Framework debates breed skepticism, but recognized frameworks beat bespoke construction",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem gives three explicit evaluation criteria. Choice A satisfies all three with the integrated framework; B misreads ISO 31000; C fragments the framework; D rejects recognized frameworks. Choice A and Choice C deliberately both reference COSO/ISO so the examinee must compare integration scope, not merely framework name recognition.",
@@ -10983,7 +11071,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level method selection at DS3",
       "Authority citations match tested concept: COSO ERM 2017 risk assessment component and ISO 31000:2018 Clause 6.3"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10996,16 +11086,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Forcing quantitative scoring regardless of data fit."
-      },
-      "B": {
-        "misconception": "Correct concept — qualitative where data/contextual, quantitative where data supports."
+        "misconception": "Forcing quantitative scoring regardless of data fit.",
+        "why_plausible": "Numbers feel rigorous, but scoring must fit data availability and the decision",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Forcing qualitative scoring even where quantitative data is reliable."
+        "misconception": "Forcing qualitative scoring even where quantitative data is reliable.",
+        "why_plausible": "Newness cautions against quantification, but fuel volatility has reliable history",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Abandoning assessment in favor of intuition for new exposures."
+        "misconception": "Abandoning assessment in favor of intuition for new exposures.",
+        "why_plausible": "First-year humility is understandable, but intuition is not an assessment method",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem gives three distinct risk categories in one contract. Choice B varies method by category; A and C each test one-method-fits-all errors; D tests intuition substitution. The three distractors each pair a different error mode with one of the named categories.",
@@ -11056,7 +11149,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level conceptual definition at DS1",
       "Authority citations match tested concept: COSO ERM 2017 Governance and Culture component"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -11068,16 +11163,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Reducing culture to a single quarterly index."
+        "misconception": "Reducing culture to a single quarterly index.",
+        "why_plausible": "An index looks measurable, but culture is lived behavior, not a quarterly score",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Reducing culture to an internal-audit charter signature."
-      },
-      "C": {
-        "misconception": "Correct concept — shared attitudes, behaviors, and values with board oversight."
+        "misconception": "Reducing culture to an internal-audit charter signature.",
+        "why_plausible": "A signed charter looks like evidence, but paper does not shape daily decisions",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Reducing culture to training-hours metric for regulator reporting."
+        "misconception": "Reducing culture to training-hours metric for regulator reporting.",
+        "why_plausible": "Training hours are countable, but attendance does not equal attitudes and values",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Stem asks for a plain-language description. Choice C captures the behavior-based, board-supported definition; A, B, and D each test a single-metric or single-document reduction of culture.",
@@ -11130,7 +11228,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level portfolio triage at DS4",
       "Authority citations match tested concept: COSO ERM 2017 Review and Revision and Information/Communication/Reporting components and ISO 31000:2018 Clause 6.6"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -11143,17 +11243,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Sequencing subsidiary responses before cross-subsidiary review, missing interactions."
+        "misconception": "Sequencing subsidiary responses before cross-subsidiary review, missing interactions.",
+        "why_plausible": "Subsidiary autonomy feels orderly, but sequencing misses cross-subsidiary interactions",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Bypassing committee governance by routing to a single officer."
+        "misconception": "Bypassing committee governance by routing to a single officer.",
+        "why_plausible": "A single decision-maker is fast, but bypassing governance destroys coordinated oversight",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Deferring all responses to the annual cycle."
+        "misconception": "Deferring all responses to the annual cycle.",
+        "why_plausible": "Patience feels prudent, but simultaneous events cannot wait for the annual cycle",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct concept — enterprise-level review with dependency mapping and prioritization."
-      }
     },
     "uniqueness_note": "Stem presents three concurrent exposures across subsidiaries. Choice D selects the enterprise-level, interaction-aware posture; A tests subsidiary-sequencing thinking; B tests single-officer bypass; C tests annual-cycle deferral.",
     "CrossDomainTags": [],
@@ -11206,7 +11309,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level taxonomy placement at DS2",
       "Authority citations match tested concept: COSO ERM 2017 risk taxonomy"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -11217,17 +11322,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "Risk types and classifications — strategic, operational, financial, compliance, reputational"
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct: identifies external policy as strategic positioning risk"
-      },
       "B": {
-        "misconception": "Confuses the existence of a law with a compliance failure by the firm"
+        "misconception": "Confuses the existence of a law with a compliance failure by the firm",
+        "why_plausible": "Sovereign involvement suggests compliance, but the firm breaches no obligation — position shifts",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Confuses downstream margin impact with the source-of-loss classification"
+        "misconception": "Confuses downstream margin impact with the source-of-loss classification",
+        "why_plausible": "Margin compression is real, but classification follows the source (policy), not the P&L effect",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats any logistics-adjacent event as operational rather than strategic"
+        "misconception": "Treats any logistics-adjacent event as operational rather than strategic",
+        "why_plausible": "Logistics proximity misleads: execution is unaffected, strategy is",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Tests strategic risk from external policy. No other P2-D-231 item covers the same source; choices B, C, and D each target a distinct alternate risk category.",
@@ -11280,7 +11388,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level recall of tolerance definition at DS1",
       "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -11292,16 +11402,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Substitutes capacity (resource ceiling) for tolerance (willingness to vary)"
-      },
-      "B": {
-        "misconception": "Correct: tolerance is the board's acceptable variation around objectives"
+        "misconception": "Substitutes capacity (resource ceiling) for tolerance (willingness to vary)",
+        "why_plausible": "Ceilings feel like the question’s maximum variability, but capacity is absorbability, not willingness",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Substitutes appetite (broad willingness) for tolerance (measurable variation)"
+        "misconception": "Substitutes appetite (broad willingness) for tolerance (measurable variation)",
+        "why_plausible": "Appetite is the better-known term, but the question asks variation around objectives",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Confuses a control threshold with a governance-level concept"
+        "misconception": "Confuses a control threshold with a governance-level concept",
+        "why_plausible": "Triggers sound related, but a control threshold is not a governance concept",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Targets the tolerance vs appetite vs capacity distinction. Choices A, C, and D each test a separate nearby concept.",
@@ -11353,7 +11466,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level framework selection at DS3",
       "Authority citations match tested concept: COSO ERM 2017"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -11365,16 +11480,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Picks ISO 31000 without recognizing its lighter culture and portfolio-view treatment"
+        "misconception": "Picks ISO 31000 without recognizing its lighter culture and portfolio-view treatment",
+        "why_plausible": "ISO’s principles approach is genuine, but culture-as-governance plus portfolio view is COSO ERM 2017’s signature",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treats a banking prudential standard as a general enterprise framework"
-      },
-      "C": {
-        "misconception": "Correct: names COSO ERM 2017 and matches each design requirement"
+        "misconception": "Treats a banking prudential standard as a general enterprise framework",
+        "why_plausible": "Capital rules sound enterprise-grade, but Basel III governs banks, not diversified holdings",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Conflates internal control over financial reporting with enterprise risk management"
+        "misconception": "Conflates internal control over financial reporting with enterprise risk management",
+        "why_plausible": "SOX is familiar, but financial-reporting control is narrower than enterprise risk",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Framework selection anchored on three COSO ERM 2017 design requirements. Distractors A, B, and D test framework-scope misjudgments.",
@@ -11426,7 +11544,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level COSO element mapping at DS2",
       "Authority citations match tested concept: COSO ERM 2017"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -11438,17 +11558,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Mistakes a data-capture artifact for a culture principle"
+        "misconception": "Mistakes a data-capture artifact for a culture principle",
+        "why_plausible": "Owner fields feel cultural, but a data artifact is information, not tone",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treats a static register as a monitoring process"
+        "misconception": "Treats a static register as a monitoring process",
+        "why_plausible": "Entries change over time, but a static record is not the monitoring process",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Confuses downstream rating use with the register's COSO element"
+        "misconception": "Confuses downstream rating use with the register's COSO element",
+        "why_plausible": "Ratings feed prioritization, but the register’s COSO element is communication of formatted data",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct: register is the information/communication artifact"
-      }
     },
     "uniqueness_note": "Anchored on mapping a register to the COSO element. Distractors A, B, and C each test a different element-misassignment.",
     "CrossDomainTags": [],
@@ -11500,7 +11623,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level recall of four categories at DS1",
       "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -11511,17 +11636,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "Standard risk response categories: avoid, reduce, share, accept"
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct: standard avoid, reduce, share, accept"
-      },
       "B": {
-        "misconception": "Substitutes 'eliminate' and 'retain' for the canonical labels"
+        "misconception": "Substitutes 'eliminate' and 'retain' for the canonical labels",
+        "why_plausible": "Retain/transfer language is common, but eliminate is not a canonical response",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Uses 'refuse' and 'hedge' which are not top-level categories"
+        "misconception": "Uses 'refuse' and 'hedge' which are not top-level categories",
+        "why_plausible": "Hedge/refuse sound operational, but neither is a top-level framework category",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Uses 'escalate' which is reporting, not a response"
+        "misconception": "Uses 'escalate' which is reporting, not a response",
+        "why_plausible": "Escalation matters, but it is reporting, not one of the four responses",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Targets recall of the four canonical responses. Distractors B, C, and D each use different synonym/tactic substitutions.",
@@ -11542,7 +11670,7 @@ var pack_p2_d_questions = [
     "Stem": "Maya Caldwell, treasurer at Flash Holdings, is evaluating a proposed hedging program for FX exposure on intercompany loans. The program would use forwards to lock in functional-currency cash flows. Under COSO ERM 2017 risk-type classifications, into which category does the underlying FX exposure fall, and which response is being applied?",
     "Choices": {
       "A": "Strategic risk; response is avoidance, because locking the rate removes the strategic optionality of the FX position.",
-      "B": "Financial risk; response is reduction (control activity), because forwards lower the likelihood and impact of adverse FX moves on cash flows.",
+      "B": "Financial risk; response is sharing, because the forward transfers the currency outcome to the counterparty while the intercompany position is retained.",
       "C": "Compliance risk; response is acceptance, because IFRS 7 disclosures accept residual FX risk for transparency.",
       "D": "Operational risk; response is sharing, because forwards share the FX outcome with a derivative counterparty bank."
     },
@@ -11560,13 +11688,13 @@ var pack_p2_d_questions = [
       "IFRS 7"
     ],
     "FormulaReference": null,
-    "CommonTrapReference": "Treating hedging as avoidance, sharing, or compliance rather than reduction of financial risk",
-    "DecisionTreeReference": "D.1 -> financial (market) -> D.5 -> reduce via control activity (hedge)",
-    "ExplanationCorrect": "FX exposure on intercompany loans is a market-price-driven risk, which COSO ERM 2017 classifies as financial risk. Using forwards to lock in functional-currency cash flows is a control activity that lowers both the likelihood of an adverse FX move and the impact on reported cash flows — a classic 'reduce' response under COSO and ISO 31000. Sharing typically requires contractual transfer (for example, insurance) rather than a derivative offset. Avoidance would require exiting the FX exposure, not hedging it. Compliance risk relates to rule adherence, which is separate from the source-of-loss and response choice. The correct answer names both the classification and the response and applies them to the scenario before contrasting the wrong pairings.",
-    "ExplanationWrongA": "FX exposure is market-driven and classified as financial risk under COSO, not strategic. The hedge is a reduce response, not avoidance; the firm still holds the underlying intercompany position.",
+    "CommonTrapReference": "Treating hedging as avoidance, reduction, or compliance rather than sharing of financial risk",
+    "DecisionTreeReference": "D.1 -> financial (market) -> D.5 -> share via forward (hedge)",
+    "ExplanationCorrect": "FX exposure on intercompany loans is a market-price-driven risk, which COSO ERM 2017 classifies as financial risk. Using forwards to lock in functional-currency cash flows transfers the currency outcome to the derivative counterparty while the company retains the underlying intercompany position — a Share response. A forward does not change the likelihood of FX moves; it offsets the consequence. Avoidance would require exiting the exposure, acceptance would leave it unhedged, and operational risk concerns process failures rather than market moves.",
+    "ExplanationWrongA": "FX exposure is market-driven financial risk under COSO, not strategic. The forward shares the currency outcome with the counterparty rather than exiting the position, so it is not avoidance; the firm retains the underlying intercompany exposure.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Compliance risk concerns adherence to laws and regulations. IFRS 7 disclosure requirements do not change the source-of-loss classification or convert the hedge into acceptance of the underlying FX risk.",
-    "ExplanationWrongD": "Operational risk concerns internal process or execution failures, not market-driven FX moves. Forwards offset the exposure but do not transfer the loss to a counterparty in the contractual sense of sharing.",
+    "ExplanationWrongD": "Operational risk concerns internal process or execution failures, not market-driven FX moves. Although forwards do share the FX outcome with the counterparty bank, the underlying exposure here is market-driven financial risk, not operational — classification follows the source exposure.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -11574,7 +11702,11 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level classification+response pairing at DS3",
       "Authority citations match tested concept: COSO ERM 2017 financial risk"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -11582,23 +11714,26 @@ var pack_p2_d_questions = [
     "source_status": "RESOLVED",
     "source_support_for_key": {
       "source_id": "D.1",
-      "rule_or_proposition": "Financial risk includes market-driven exposures such as FX; reduce is a control-activity response"
+      "rule_or_proposition": "Financial risk includes market-driven exposures such as FX; share transfers the currency outcome via forwards"
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misclassifies FX as strategic and mislabels hedge as avoidance"
-      },
-      "B": {
-        "misconception": "Correct: financial risk, reduce via control activity"
+        "misconception": "Misclassifies FX as strategic and mislabels hedge as avoidance",
+        "why_plausible": "Strategic framing plus avoidance sounds coherent, but FX is market-driven and the position is retained",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misclassifies as compliance and confuses disclosure with acceptance"
+        "misconception": "Misclassifies as compliance and confuses disclosure with acceptance",
+        "why_plausible": "IFRS 7 disclosure is real, but reporting does not convert market risk into compliance risk",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misclassifies as operational and confuses derivative offset with contractual sharing"
+        "misconception": "Misclassifies as operational and confuses derivative offset with contractual sharing",
+        "why_plausible": "Counterparty involvement suggests sharing for the wrong reason — the error is the operational classification",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Pairs classification with response for an FX hedge. Distractors A, C, and D each combine a wrong classification with a wrong response label.",
+    "uniqueness_note": "Pairs classification with response for an FX hedge. Distractors A and C combine a wrong classification with a wrong response label; D pairs the sharing response with the wrong (operational) classification.",
     "CrossDomainTags": [],
     "pedagogical_cluster": "D.1/D.5 risk-type plus response pairing",
     "hold_reason": "",
@@ -11648,7 +11783,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level lagging-KRI design at DS3",
       "Authority citations match tested concept: COSO ERM 2017 monitoring"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -11660,16 +11797,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats a predictive process measure as if it were a realized loss outcome"
+        "misconception": "Treats a predictive process measure as if it were a realized loss outcome",
+        "why_plausible": "Schedule completion predicts failures, so it feels like a loss measure — but it is a leading process metric, not realized loss",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treats a process closure rate as if it were a realized loss outcome"
-      },
-      "C": {
-        "misconception": "Correct: inventory write-off is a realized loss measure"
+        "misconception": "Treats a process closure rate as if it were a realized loss outcome",
+        "why_plausible": "Closure rates feel like outcomes, but they measure process, not dollars lost",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats a structural asset-age metric as a realized loss measure"
+        "misconception": "Treats a structural asset-age metric as a realized loss measure",
+        "why_plausible": "Asset age correlates with failure, yet correlation is not a realized-loss amount",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on lagging KRI selection. Distractors A, B, and D each test a different leading-indicator misclassification.",
@@ -11721,7 +11861,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level element mapping at DS4",
       "Authority citations match tested concept: COSO ERM 2017"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -11733,17 +11875,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Maps the scenario output to strategy-setting rather than to portfolio review"
+        "misconception": "Maps the scenario output to strategy-setting rather than to portfolio review",
+        "why_plausible": "Scenario outputs do inform strategy eventually, but the direct product is a portfolio-validity test",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Maps the scenario output to performance variance rather than to portfolio review"
+        "misconception": "Maps the scenario output to performance variance rather than to portfolio review",
+        "why_plausible": "Variance review uses performance data, but a multi-shock scenario tests portfolio validity, not budget variance",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Maps the scenario output to reporting rather than to portfolio review"
+        "misconception": "Maps the scenario output to reporting rather than to portfolio review",
+        "why_plausible": "A report is produced, but the COSO element fed is Review and Revision, not the reporting component",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct: scenario output supports Review and Revision"
-      }
     },
     "uniqueness_note": "Tests the element-level placement of scenario output. Distractors A, B, and C each point to a different COSO element.",
     "CrossDomainTags": [],
@@ -11795,7 +11940,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level taxonomy benefit at DS2",
       "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -11806,17 +11953,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "Event-type taxonomy supports consistent aggregation of similar exposures for a portfolio view"
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct: enables aggregation for portfolio view"
-      },
       "B": {
-        "misconception": "Claims taxonomy eliminates duplication, which it does not"
+        "misconception": "Claims taxonomy eliminates duplication, which it does not",
+        "why_plausible": "Shared event types do reduce duplicate labels, but units can still face the same event simultaneously",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Confuses management taxonomy with PCAOB audit mandates"
+        "misconception": "Confuses management taxonomy with PCAOB audit mandates",
+        "why_plausible": "Auditor satisfaction matters, but no PCAOB mandate governs management taxonomies",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Suggests taxonomy replaces KRIs, which it does not"
+        "misconception": "Suggests taxonomy replaces KRIs, which it does not",
+        "why_plausible": "Categories organize risks, but monitoring still needs KRIs — categories do not watch themselves",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on the event-type benefit rationale. Distractors B, C, and D each present a different unsupported claim.",
@@ -11869,7 +12019,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level residual-risk explanation at DS3",
       "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -11881,16 +12033,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats residual as equal to the original exposure"
-      },
-      "B": {
-        "misconception": "Correct: residual = exposure less the transferred portion"
+        "misconception": "Treats residual as equal to the original exposure",
+        "why_plausible": "The distribution is unchanged, which tempts equating residual with original — but deductible, limits, and exclusions carve out the retained portion",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Reduces residual to insurer credit risk only"
+        "misconception": "Reduces residual to insurer credit risk only",
+        "why_plausible": "Insurer failure is a real secondary risk, but it is not the definition of residual",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Reduces residual to a tax-adjusted premium measure"
+        "misconception": "Reduces residual to a tax-adjusted premium measure",
+        "why_plausible": "Tax effects are real arithmetic, but residual is about retained exposure, not premium tax shields",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on the definition of residual risk after insurance. Distractors A, C, and D each test a different misreading.",
@@ -11943,7 +12098,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level control-type contrast at DS3",
       "Authority citations match tested concept: COSO Internal Control and ERM"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -11955,16 +12112,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Claims both are detective and prevention is impossible"
+        "misconception": "Claims both are detective and prevention is impossible",
+        "why_plausible": "Treasury review language suggests detection everywhere, but the approver blocks release — prevention",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Claims both are preventive, ignoring timing of detection"
-      },
-      "C": {
-        "misconception": "Correct: approval is preventive, reconciliation is detective"
+        "misconception": "Claims both are preventive, ignoring timing of detection",
+        "why_plausible": "Cash protection sounds preventive throughout, but reconciliation finds discrepancies after settlement",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Swaps the labels: marks approval as detective and reconciliation as preventive"
+        "misconception": "Swaps the labels: marks approval as detective and reconciliation as preventive",
+        "why_plausible": "Initiation-vs-settlement timing confuses: approval precedes release (preventive), reconciliation follows it (detective)",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on the preventive/detective distinction. Distractors A, B, and D each present a different mislabeling pattern.",
@@ -12016,7 +12176,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Evaluate-level board governance at DS4",
       "Authority citations match tested concept: COSO ERM 2017 risk appetite"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -12027,17 +12189,20 @@ var pack_p2_d_questions = [
       "rule_or_proposition": "When a strategy exceeds risk appetite, the board aligns by revising strategy, response, or appetite before approval"
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct: requires alignment via strategy, response, or appetite revision"
-      },
       "B": {
-        "misconception": "Treats an appetite breach as auto-approved on return grounds"
+        "misconception": "Treats an appetite breach as auto-approved on return grounds",
+        "why_plausible": "Return-justifies-risk is a business instinct, but appetite breaches require redesign, response, or recalibration",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misroutes the appetite decision to internal auditors"
+        "misconception": "Misroutes the appetite decision to internal auditors",
+        "why_plausible": "Assurance sounds relevant to conflicts, but appetite-vs-strategy is a board governance decision",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Substitutes personal indemnification for proper governance alignment"
+        "misconception": "Substitutes personal indemnification for proper governance alignment",
+        "why_plausible": "Personal accountability sounds strong, but indemnification cannot substitute for enterprise alignment",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on the board's role when strategy exceeds appetite. Distractors B, C, and D each present a different governance failure mode.",
@@ -12090,7 +12255,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level response classification at DS3",
       "Authority citations match tested concept: COSO ERM 2017 risk response"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -12102,16 +12269,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misclassifies dual sourcing as avoidance of the activity"
-      },
-      "B": {
-        "misconception": "Correct: reduce via redundancy and stronger contract"
+        "misconception": "Misclassifies dual sourcing as avoidance of the activity",
+        "why_plausible": "Reduced dependence feels like exit, but the activity continues with redundancy — Reduce, not Avoid",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misclassifies backup supplier as contractual sharing"
+        "misconception": "Misclassifies backup supplier as contractual sharing",
+        "why_plausible": "A second supplier feels like transfer, but no counterparty absorbs the loss — redundancy lowers likelihood/impact",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misclassifies deliberate new controls as passive acceptance"
+        "misconception": "Misclassifies deliberate new controls as passive acceptance",
+        "why_plausible": "Living with cost sounds like acceptance, but deliberate new controls are active response",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on response categorization for supply continuity. Distractors A, C, and D each test a different mislabeling.",
@@ -12164,7 +12334,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level definition distinction at DS1",
       "Authority citations match tested concept: COSO ERM 2017"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -12176,16 +12348,19 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Reverses the two terms"
+        "misconception": "Reverses the two terms",
+        "why_plausible": "Swapped definitions are an easy slip under pressure — inherent is pre-response, residual post-response",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Collapses the two into a single concept"
-      },
-      "C": {
-        "misconception": "Correct: inherent before, residual after response"
+        "misconception": "Collapses the two into a single concept",
+        "why_plausible": "One framework tempts one term, but COSO separates the before/after measurement points",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Limits inherent risk to financial-statement assertions only"
+        "misconception": "Limits inherent risk to financial-statement assertions only",
+        "why_plausible": "Financial-statement familiarity narrows the concept, but inherent risk spans the enterprise",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Anchored on the inherent-vs-residual definition. Distractors A, B, and D each test a different misreading.",
@@ -12238,7 +12413,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level framework evaluation at DS4",
       "Authority citations match tested concept: COSO ERM 2017"
-    ],
+    ,
+      "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
+],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -12250,17 +12427,20 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Claims a fixed grid size is mandated by COSO"
+        "misconception": "Claims a fixed grid size is mandated by COSO",
+        "why_plausible": "Prescriptive grids feel standard-like, but COSO sets no fixed matrix size",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Conflates assessment band names with response categories"
+        "misconception": "Conflates assessment band names with response categories",
+        "why_plausible": "Response labels are memorable, but assessment bands need not mirror response categories",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Claims color coding is prohibited by COSO"
+        "misconception": "Claims color coding is prohibited by COSO",
+        "why_plausible": "Numeric aggregation concerns are real, but colors with defined bands aggregate via the register",
+        "tier_candidate": 3
       },
-      "D": {
-        "misconception": "Correct: design is acceptable if linked to appetite and applied consistently"
-      }
     },
     "uniqueness_note": "Anchored on evaluating a heat-map design under COSO. Distractors A, B, and C each present a different false mandate claim.",
     "CrossDomainTags": [],
@@ -12288,7 +12468,7 @@ var pack_p2_d_questions = [
       "D": "Inherent risk is used only for compliance reporting and has no role in prioritizing risk responses"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, inherent risk is the exposure to risk in the absence of any actions management might take to alter either the likelihood or impact. Recording inherent risk in the register provides the baseline that management compares with residual risk (the exposure remaining after responses are applied) to judge whether controls are adequate and whether further response is warranted. This baseline-versus-residual comparison is a core assessment activity in the Performance component. Option A states this purpose correctly.",
+    "ExplanationCorrect": "Under COSO ERM 2017, inherent risk is the exposure to risk in the absence of any actions management might take to alter either the likelihood or impact. Recording inherent risk in the register provides the baseline that management compares with residual risk (the exposure remaining after responses are applied) to judge whether controls are adequate and whether further response is warranted. This baseline-versus-residual comparison is a core assessment activity in the Performance component. Option B states this purpose correctly.",
     "ExplanationWrongA": "Option A is wrong because inherent risk is a forward-looking exposure assessment made before controls, not a record of losses already incurred. Realized losses are historical events captured in operational loss data; the register's inherent-risk column describes what could happen absent controls, which is the basis for response prioritization.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because residual risk is the exposure that remains after controls and responses are applied, while inherent risk is the exposure before any actions. Equating them reverses the assessment sequence and would hide the effect of the control portfolio from the board's view of remaining exposure.",
@@ -12312,7 +12492,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Inherent risk is the exposure absent any management actions; residual risk is the exposure remaining after responses, and the two are compared to judge control adequacy.",
       "application_to_facts": "The register lists inherent exposure before controls so management can compare it against residual risk and decide whether responses are adequate — the baseline-versus-residual comparison central to the Performance component.",
-      "key_conclusion": "Recording inherent risk provides the pre-control baseline for judging control adequacy, making Option A correct."
+      "key_conclusion": "Recording inherent risk provides the pre-control baseline for judging control adequacy, making Option B correct."
     },
     "distractor_intent": {
       "A": {
@@ -12326,12 +12506,12 @@ var pack_p2_d_questions = [
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats inherent risk as a backward-looking record of realized losses",
-        "why_plausible": "The word 'record' in the register context suggests historical accounting rather than forward-looking exposure",
+        "misconception": "Confines the register to compliance reporting",
+        "why_plausible": "Legal framing feels sufficient; candidates miss that the register drives response prioritization",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option B is wrong because inherent risk is forward-looking, not realized; Option C is wrong because residual risk comes after controls, not before; Option D is wrong because the register drives response prioritization; Option A states the baseline purpose.",
+    "uniqueness_note": "Option A is wrong because inherent risk is forward-looking, not realized; Option C is wrong because it equates inherent with residual risk; Option D is wrong because it confines the register to compliance reporting; Option B states the baseline purpose.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12342,7 +12522,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12394,18 +12576,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes appetite approval for Performance execution",
+        "why_plausible": "Board approval is salient, but approving appetite is governance, not risk assessment-and-response",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes framework-fit testing for Performance",
+        "why_plausible": "Audit testing feels assess-y, but testing framework fit is Review and Revision",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes disclosure review for Performance",
+        "why_plausible": "Loss-event review sounds responsive, but backward-looking disclosure checks are reporting, not assessment-and-response",
         "tier_candidate": 2
       }
     },
@@ -12420,7 +12602,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12452,7 +12636,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Remember",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -12472,22 +12656,22 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Stops after probability-weighting the exposure",
+        "why_plausible": "$48,000 feels complete, but expected loss also applies the 60% LGD",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats conditional loss as expected loss",
+        "why_plausible": "$720,000 is vivid, but it ignores the 4% default probability",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Inverts the probability",
+        "why_plausible": "96% survival feels relevant, but expectation weights the 4% loss outcome",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A omits LGD (48,000); Option C uses conditional loss without probability weighting (720,000); Option D inverts the probability (1,152,000); Option B is the full PD x EAD x LGD chain (28,800).",
+    "uniqueness_note": "Option B omits LGD ($48,000 is expected exposure only); Option C uses conditional loss without probability weighting ($720,000); Option D inverts the probability ($1,152,000); Option A is the full PD x EAD x LGD chain ($28,800).",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12498,7 +12682,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12522,11 +12710,11 @@ var pack_p2_d_questions = [
       "D": "It eliminates the need for risk tolerance bands because it fixes a single company-wide number"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, an effective risk appetite statement is quantitative where possible and is cascaded into risk tolerance (acceptable variation around objectives) and limits that business units monitor with risk indicators. The proposed language converts appetite into measurable thresholds — a $5 million currency cap and a 10% earnings-volatility bound — which management can translate into unit-level limits and monitor through KRIs. Option D states this measurable-threshold feature, which is what makes the statement most useful. The statement does not replace tolerance bands (Option A misstates this), is not treasury-only (Option C), and is not legally binding on its own (Option B).",
-    "ExplanationWrongA": "Option A is wrong because it claims the quantified statement eliminates the need for tolerance bands. Tolerance operationalizes appetite at finer levels (per business unit, per risk type) and can be tighter than the appetite ceiling; the two work together, and one company-wide number does not replace the tolerance cascade.",
+    "ExplanationCorrect": "Under COSO ERM 2017, an effective risk appetite statement is quantitative where possible and is cascaded into risk tolerance (acceptable variation around objectives) and limits that business units monitor with risk indicators. The proposed language converts appetite into measurable thresholds — a $5 million currency cap and a 10% earnings-volatility bound — which management can translate into unit-level limits and monitor through KRIs. Option B states this measurable-threshold feature, which is what makes the statement most useful. The statement does not replace tolerance bands (Option D misstates this), is not treasury-only (Option C), and is not legally binding on its own (Option A).",
+    "ExplanationWrongD": "Option D is wrong because it claims the quantified statement eliminates the need for tolerance bands. Tolerance operationalizes appetite at finer levels (per business unit, per risk type) and can be tighter than the appetite ceiling; the two work together, and one company-wide number does not replace the tolerance cascade.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because risk appetite is a board-level declaration of the risk the organization will accept in pursuing strategy; it is not confined to treasury. Currency and earnings limits are enterprise-wide, and the board — not the treasury function — approves and owns the statement.",
-    "ExplanationWrongD": "Option D is wrong because a risk appetite statement is not legally binding and does not automatically cap all risk-taking. It expresses the board's willingness to accept risk; management implements it through limits, tolerances, and monitoring, and the statement is a governance declaration, not a statute.",
+    "ExplanationWrongA": "Option A is wrong because a risk appetite statement is not legally binding and does not automatically cap all risk-taking. It expresses the board's willingness to accept risk; management implements it through limits, tolerances, and monitoring, and the statement is a governance declaration, not a statute.",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -12546,26 +12734,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Effective appetite statements are quantitative and cascade into tolerance bands and limits monitored by indicators (D.3).",
       "application_to_facts": "The $5M currency cap and 10% volatility bound give management measurable thresholds to cascade into unit limits and KRI monitoring.",
-      "key_conclusion": "The measurable-threshold structure is the useful feature, making Option D correct."
+      "key_conclusion": "The measurable-threshold structure is the useful feature, making Option B correct."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats quantification as legal force",
+        "why_plausible": "Numbers feel binding, but a statement binds only through governance, not arithmetic",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confines appetite to treasury",
+        "why_plausible": "Currency language dominates, but the statement cascades enterprise-wide with board review",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats one number as replacing tolerance",
+        "why_plausible": "A single figure feels sufficient, but bands operationalize appetite",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A misstates tolerance elimination; Option B claims legal binding; Option C confines appetite to treasury; Option D is the measurable-threshold feature.",
+    "uniqueness_note": "Option A claims legal binding; Option B is the measurable-threshold feature; Option C confines appetite to treasury; Option D misstates tolerance elimination.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12576,7 +12764,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12600,7 +12792,7 @@ var pack_p2_d_questions = [
       "D": "Accept"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Under COSO ERM 2017, Avoid is the response that exits the activity giving rise to the risk — discontinuing the product line, withdrawing from a market, or declining the initiative. Because the liability exposure exceeds appetite even after mitigation attempts and the margin cannot justify it, the board's decision not to launch is a classic Avoid response. Option A states this correctly. Reduce would apply controls while continuing, Share would transfer a portion to a third party, and Accept would proceed with the exposure; none matches the decision to exit the product line entirely.",
+    "ExplanationCorrect": "Under COSO ERM 2017, Avoid is the response that exits the activity giving rise to the risk — discontinuing the product line, withdrawing from a market, or declining the initiative. Because the liability exposure exceeds appetite even after mitigation attempts and the margin cannot justify it, the board's decision not to launch is a classic Avoid response. Option C states this correctly. Reduce would apply controls while continuing, Share would transfer a portion to a third party, and Accept would proceed with the exposure; none matches the decision to exit the product line entirely.",
     "ExplanationWrongA": "Option A is wrong because Share transfers part of the risk to another party — insurance, hedging, or a joint venture — while the company retains some exposure. The scenario describes complete withdrawal from the product line, not a transfer of a portion of the risk to a third party.",
     "ExplanationWrongB": "Option B is wrong because Reduce lowers likelihood or impact through controls — for example, engineering safer handling or adding containment systems while still launching. Here management exits the activity entirely because even the mitigated exposure exceeds appetite, which is the defining feature of Avoid.",
     "ExplanationWrongC": "",
@@ -12624,26 +12816,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Avoid exits the activity giving rise to the risk; Reduce, Share, and Accept retain or transfer varying portions of the exposure (D.4).",
       "application_to_facts": "Management discontinued the product line entirely because even mitigated liability exceeded appetite — withdrawal from the activity, not control, transfer, or retention.",
-      "key_conclusion": "The decision to not launch is Avoid, making Option A correct."
+      "key_conclusion": "The decision to not launch is Avoid, making Option C correct."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Thinks any mitigation effort means Reduce",
-        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "misconception": "Treats exiting as sharing",
+        "why_plausible": "Cessation feels like transfer, but Share moves a portion to a counterparty while Avoid exits",
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Thinks any mitigation effort means Reduce",
-        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "misconception": "Treats continued operation as sharing",
+        "why_plausible": "Ongoing controls feel shared, but no counterparty accepts exposure",
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Thinks any mitigation effort means Reduce",
-        "why_plausible": "The redesigned handling language suggests control activities, but the final decision to exit makes it Avoid",
+        "misconception": "Treats retention as sharing",
+        "why_plausible": "Bearing the full loss feels distributed, but acceptance retains everything",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A is Avoid (exit the activity); Option B describes continued operation with controls; Option C transfers risk; Option D retains the risk; the exit decision defines Avoid.",
+    "uniqueness_note": "Option A transfers a portion of the risk (Share); Option B describes continued operation with controls (Reduce); Option C is Avoid (exit the activity); Option D retains the risk (Accept); the exit decision defines Avoid.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12654,7 +12846,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12678,7 +12874,7 @@ var pack_p2_d_questions = [
       "D": "Average driver hours per week and percentage of trucks with overdue maintenance"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "Leading indicators precede and predict the risk event; lagging indicators measure outcomes after the fact. Average driver hours per week signals fatigue — a known precursor to accidents — and the percentage of trucks with overdue maintenance signals equipment risk that will materialize later. Both move before accidents occur, giving management lead time to intervene. Option B pairs these two leading indicators. Accidents last quarter and claims paid last year are lagging measures of losses already realized, so options that pair them (or mix one leading with one lagging) do not provide the strongest forward signal.",
+    "ExplanationCorrect": "Leading indicators precede and predict the risk event; lagging indicators measure outcomes after the fact. Average driver hours per week signals fatigue — a known precursor to accidents — and the percentage of trucks with overdue maintenance signals equipment risk that will materialize later. Both move before accidents occur, giving management lead time to intervene. Option D pairs these two leading indicators. Accidents last quarter and claims paid last year are lagging measures of losses already realized, so options that pair them (or mix one leading with one lagging) do not provide the strongest forward signal.",
     "ExplanationWrongA": "Option A is wrong because mixing one leading indicator (driver hours, signaling fatigue) with one lagging indicator (last quarter's accidents, an outcome already realized) weakens the forward signal. A leading dashboard pairs forward-looking drivers together so management can intervene before the event.",
     "ExplanationWrongB": "Option B is wrong because it mixes a leading indicator (overdue maintenance) with a lagging one (claims paid). The strongest leading pair combines fatigue and maintenance backlog, both of which precede accidents.",
     "ExplanationWrongC": "Option C is wrong because claims paid and prior accidents are lagging indicators — they measure losses already realized. A leading dashboard would pair forward-looking drivers (fatigue, maintenance backlog) with these outcomes, not rely on them alone for prediction.",
@@ -12702,7 +12898,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Leading KRIs precede the risk event and provide intervention lead time; lagging KRIs measure realized outcomes (D.2).",
       "application_to_facts": "Driver hours (fatigue) and overdue maintenance (equipment) precede accidents, while prior accidents and claims measure realized losses.",
-      "key_conclusion": "The leading pair is driver hours plus overdue maintenance, making Option B correct."
+      "key_conclusion": "The leading pair is driver hours plus overdue maintenance, making Option D correct."
     },
     "distractor_intent": {
       "A": {
@@ -12716,12 +12912,12 @@ var pack_p2_d_questions = [
         "tier_candidate": 2
       },
       "C": {
-        "misconception": "Mixes a leading and a lagging indicator",
-        "why_plausible": "One forward and one backward measure dilutes the leading signal and does not form the strongest pair",
+        "misconception": "Treats two lagging outcomes as predictive",
+        "why_plausible": "Claims and prior accidents feel informative, but realized losses cannot provide leading insight",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option B pairs the two leading indicators (driver hours, overdue maintenance); Option A and D mix leading with lagging; Option C uses two lagging indicators.",
+    "uniqueness_note": "Option D pairs the two leading indicators (driver hours, overdue maintenance); Options A and B mix leading with lagging; Option C uses two lagging indicators.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12732,7 +12928,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12748,7 +12946,7 @@ var pack_p2_d_questions = [
     "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "D-252-heat-map-prioritization-likelihood-severity",
-    "Stem": "Flash Capital scores four portfolio risks on 1-5 likelihood (L) and severity (S) scales. Risk W: L=5, S=2. Risk X: L=2, S=5. Risk Y: L=4, S=3. Risk Z: L=3, S=4. Using the standard risk score (L x S), which risk ranks highest for the heat map?",
+    "Stem": "Flash Capital scores four portfolio risks on 1-5 likelihood (L) and severity (S) scales. Risk W: L=5, S=2. Risk X: L=2, S=5. Risk Y: L=4, S=3. Risk Z: L=3, S=4. Using the standard risk score (L x S), which risk ranks highest for the heat map? If two risks tie on Risk Score, rank the one with higher severity first.",
     "Choices": {
       "A": "Risk Z, score 12",
       "B": "Risk X, score 10",
@@ -12756,7 +12954,7 @@ var pack_p2_d_questions = [
       "D": "Risk W, score 10"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "The standard risk score multiplies likelihood by severity (RM-02): W = 5 x 2 = 10; X = 2 x 5 = 10; Y = 4 x 3 = 12; Z = 3 x 4 = 12. Risks Y and Z tie at 12, the highest product. When the question asks for the single highest, the tie is resolved in favor of Risk Z, whose higher severity (4 vs 3) signals the greater impact at the same product. Option C names Risk Z. Recomputed: W 10, X 10, Y 12, Z 12.",
+    "ExplanationCorrect": "The standard risk score multiplies likelihood by severity (RM-02): W = 5 x 2 = 10; X = 2 x 5 = 10; Y = 4 x 3 = 12; Z = 3 x 4 = 12. Risks Y and Z tie at 12, the highest product. When the question asks for the single highest, the tie is resolved in favor of Risk Z, whose higher severity (4 vs 3) signals the greater impact at the same product. Option A names Risk Z. Recomputed: W 10, X 10, Y 12, Z 12.",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because Risk X scores 2 x 5 = 10. A product of 10 is below 12, so Risk X cannot rank highest; multiplying likelihood by severity (not adding) is the correct heat-map operation.",
     "ExplanationWrongC": "Option C is wrong because Risk Y scores 4 x 3 = 12, tying Risk Z at the top. Both Y and Z are 12, but the question asks for the single highest rank; when scores tie, prioritization falls to judgment or secondary criteria, and the correct answer here is Risk Z, the designated tie-break winner with the higher severity.",
@@ -12764,7 +12962,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.3",
     "BlueprintDomain": "Risk Management",
@@ -12780,7 +12978,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk Score = Likelihood x Severity (RM-02); heat-map priority follows the product.",
       "application_to_facts": "Products: W=10, X=10, Y=12, Z=12; the tie at 12 is resolved in favor of Z (severity 4).",
-      "key_conclusion": "Risk Z (12) ranks highest, making Option C correct."
+      "key_conclusion": "Risk Z (12) ranks highest, making Option A correct."
     },
     "distractor_intent": {
       "B": {
@@ -12799,7 +12997,7 @@ var pack_p2_d_questions = [
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A computes 12 but names Y; Option B and D score 10 (not max); Option C names Z, the designated tie-break winner with higher severity; scores verified by multiplication.",
+    "uniqueness_note": "Option C computes 12 but names Y; Option B and D score 10 (not max); Option A names Z, the designated tie-break winner with higher severity; scores verified by multiplication.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12810,7 +13008,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12834,7 +13036,7 @@ var pack_p2_d_questions = [
       "D": "First line: risk management; Second line: internal audit; Third line: compliance"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under the three-lines model applied within COSO ERM 2017, the first line is operating management, which owns and manages risk as part of day-to-day operations. The second line comprises risk management, compliance, and other oversight functions that monitor and challenge the first line. The third line is internal audit, which provides independent, objective assurance over the effectiveness of governance, risk management, and controls. Option A states this standard mapping correctly. The board governs and oversees all three lines rather than operating within one.",
+    "ExplanationCorrect": "Under the three-lines model applied within COSO ERM 2017, the first line is operating management, which owns and manages risk as part of day-to-day operations. The second line comprises risk management, compliance, and other oversight functions that monitor and challenge the first line. The third line is internal audit, which provides independent, objective assurance over the effectiveness of governance, risk management, and controls. Option B states this standard mapping correctly. The board governs and oversees all three lines rather than operating within one.",
     "ExplanationWrongA": "Option A is wrong because it reverses the model: internal audit is the third line (independent assurance), not the first. Operating management owns and manages risk day to day and is the first line; placing audit first misstates who has primary risk ownership.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because the board oversees the entire system rather than operating as a line of defense. First line is operating management, second is oversight functions like risk and compliance, third is internal audit; the board sits above the model as the governing body.",
@@ -12857,8 +13059,8 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Three lines: operating management (1st), risk/compliance oversight (2nd), internal audit assurance (3rd); board governs (D.1).",
-      "application_to_facts": "The board asked for the correct mapping; Option A states operations, oversight, assurance in order.",
-      "key_conclusion": "Option A is the correct three-lines mapping."
+      "application_to_facts": "The board asked for the correct mapping; Option B states operations, oversight, assurance in order.",
+      "key_conclusion": "Option B is the correct three-lines mapping."
     },
     "distractor_intent": {
       "A": {
@@ -12867,17 +13069,17 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Places internal audit in the first line",
-        "why_plausible": "Audit involvement is prominent, and candidates may front-load it rather than recognizing operating management's ownership",
+        "misconception": "Places the board inside a line of defense",
+        "why_plausible": "Board oversight is prominent, but the board governs rather than operating within a line",
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Places internal audit in the first line",
-        "why_plausible": "Audit involvement is prominent, and candidates may front-load it rather than recognizing operating management's ownership",
+        "misconception": "Scrambles risk, audit, and compliance across lines",
+        "why_plausible": "All three functions appear, inviting misassignment of first-line ownership",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option B reverses audit and operations; Option C places the board inside a line; Option D scrambles risk/audit/compliance; Option A states the standard operations-oversight-assurance mapping.",
+    "uniqueness_note": "Option A reverses audit and operations; Option C places the board inside a line; Option D scrambles risk/audit/compliance; Option B states the standard operations-oversight-assurance mapping.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12888,7 +13090,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12912,7 +13116,7 @@ var pack_p2_d_questions = [
       "D": "It breaches risk appetite, so the bank must immediately divest all other credit exposure"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Under COSO ERM 2017, risk capacity is the maximum risk the organization can absorb (here $120 million), risk appetite is the amount it is willing to accept (here $18 million of annual credit losses), and risk tolerance is the acceptable variation around objectives at the operating level (here a $30 million single-borrower band). The $40 million loan breaches the $30 million single-borrower tolerance band, requiring escalation or restructuring below the band — the tolerance breach is the operative signal. Option D states this. Capacity is larger ($120M) so the loan does not breach it (Option A), appetite is a loss-level statement not a per-loan limit (Option C), and the tolerance band does bind despite capacity being larger.",
+    "ExplanationCorrect": "Under COSO ERM 2017, risk capacity is the maximum risk the organization can absorb (here $120 million), risk appetite is the amount it is willing to accept (here $18 million of annual credit losses), and risk tolerance is the acceptable variation around objectives at the operating level (here a $30 million single-borrower band). The $40 million loan breaches the $30 million single-borrower tolerance band, requiring escalation or restructuring below the band — the tolerance breach is the operative signal. Option C states this. Capacity is larger ($120M) so the loan does not breach it (Option A), appetite is a loss-level statement not a per-loan limit (Option D), and the tolerance band does bind despite capacity being larger.",
     "ExplanationWrongA": "Option A is wrong because risk capacity is the maximum the organization can absorb ($120 million); $40 million is well below it. Capacity defines the outer survival limit, not the operating limit, so the loan does not breach capacity and capacity does not itself mandate decline.",
     "ExplanationWrongB": "Option B is wrong because it claims the loan breaches no boundary. The $40 million exposure is below capacity but above the $30 million single-borrower tolerance band, and tolerance operationalizes appetite at the transaction level — the breach is real and requires escalation or restructuring.",
     "ExplanationWrongC": "",
@@ -12936,26 +13140,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Capacity is the outer absorbable limit, appetite is willingness, tolerance operationalizes appetite at transaction level (D.3).",
       "application_to_facts": "The $40M loan exceeds the $30M single-borrower tolerance while remaining under $120M capacity and within the $18M annual loss appetite.",
-      "key_conclusion": "The loan breaches the $30M tolerance band, requiring escalation — Option D."
+      "key_conclusion": "The loan breaches the $30M tolerance band, requiring escalation — Option C."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Compares exposure to capacity instead of tolerance",
+        "why_plausible": "$120M capacity dwarfs the loan, but the operative test is the $30M single-borrower band",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats capacity headroom as blanket approval",
+        "why_plausible": "Being below capacity feels sufficient, but tolerance bands still bind",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Compares a loan face value to an annual loss limit",
+        "why_plausible": "$40M against $18M confuses exposure with expected loss",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A cites capacity incorrectly; Option B claims no breach; Option C misreads appetite as a transaction limit; Option D identifies the tolerance breach.",
+    "uniqueness_note": "Option A cites capacity incorrectly; Option B claims no breach; Option D misreads appetite as a transaction limit; Option C identifies the tolerance breach.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -12966,7 +13170,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12998,7 +13206,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.4",
     "BlueprintDomain": "Risk Management",
@@ -13018,18 +13226,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Stops at a partially-adjusted figure",
+        "why_plausible": "$1.4M reflects incomplete adjustment; residual likelihood (12%) must still weight the impact",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Multiplies effectiveness by impact instead of the residual rate",
+        "why_plausible": "70% x $5M keeps the controlled-away portion",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Halves the impact without basis",
+        "why_plausible": "No stated control halves $5M; controls reduce likelihood to 12%, not impact to $2M",
         "tier_candidate": 2
       }
     },
@@ -13044,7 +13252,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13068,7 +13278,7 @@ var pack_p2_d_questions = [
       "D": "Exclude correlation between business lines so each risk is assessed in isolation"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Under COSO ERM 2017, scenario analysis explores plausible futures — including severe ones — by varying assumptions and examining how risks interact. Modeling several plausible severe scenarios, varying key assumptions, and examining how losses compound across correlated exposures reveals the tail behavior a point-estimate or history-only exercise misses. Option C states this design. A single most-likely scenario (Option A) suppresses the tail; history-only (Option B) cannot capture unprecedented events; excluding correlation (Option D) understates joint losses in a downturn.",
+    "ExplanationCorrect": "Under COSO ERM 2017, scenario analysis explores plausible futures — including severe ones — by varying assumptions and examining how risks interact. Modeling several plausible severe scenarios, varying key assumptions, and examining how losses compound across correlated exposures reveals the tail behavior a point-estimate or history-only exercise misses. Option A states this design. A single most-likely scenario (Option C) suppresses the tail; history-only (Option B) cannot capture unprecedented events; excluding correlation (Option D) understates joint losses in a downturn.",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because historical losses understate tail risk: severe events may be rare or unprecedented, and scenario analysis exists precisely to explore plausible futures beyond the historical record. Relying on history alone ignores new risk drivers and structural changes.",
     "ExplanationWrongC": "Option C is wrong because stressing only the single most likely scenario with point estimates suppresses the tail — the extreme, low-probability combinations that drive severe losses. A single point-estimate path cannot reveal how assumptions interact under stress, so it undermines the tail-risk objective.",
@@ -13092,26 +13302,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Scenario analysis varies assumptions and models correlated severe outcomes to understand tail risk (D.2).",
       "application_to_facts": "Modeling several severe scenarios with correlated exposures reveals how losses compound, which point-estimate or history-only designs miss.",
-      "key_conclusion": "Modeling severe correlated scenarios is the tail-revealing design — Option C."
+      "key_conclusion": "Modeling severe correlated scenarios is the tail-revealing design — Option A."
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Trusts history as complete",
+        "why_plausible": "Past losses are concrete, but history alone cannot reveal unseen tails",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats a point estimate as tail analysis",
+        "why_plausible": "A single scenario feels rigorous, but tail risk needs severe correlated variation",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Isolates risks to simplify",
+        "why_plausible": "Isolation feels clean, but compounding across correlated exposures is the point",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A suppresses the tail with point estimates; Option B trusts history alone; Option D hides correlation; Option C models severe correlated scenarios.",
+    "uniqueness_note": "Option C suppresses the tail with point estimates; Option B trusts history alone; Option D hides correlation; Option A models severe correlated scenarios.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -13122,7 +13332,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13146,7 +13360,7 @@ var pack_p2_d_questions = [
       "D": "Risk appetite is applied only at the individual-transaction level, not at the portfolio level"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, one of the framework's defining advances is integrating risk management with strategy. Risk appetite is developed and applied during strategy formulation, so strategic alternatives are screened against the amount and type of risk the organization is willing to accept. Option A states this integration. This prevents the company from committing to a strategy that exceeds its appetite and forces explicit discussion of the risk-return tradeoff. Post-hoc documentation (Option B), isolation from strategy (Option C), and transaction-only application (Option D) each contradict the framework's strategy-integration requirement.",
+    "ExplanationCorrect": "Under COSO ERM 2017, one of the framework's defining advances is integrating risk management with strategy. Risk appetite is developed and applied during strategy formulation, so strategic alternatives are screened against the amount and type of risk the organization is willing to accept. Option B states this integration. This prevents the company from committing to a strategy that exceeds its appetite and forces explicit discussion of the risk-return tradeoff. Post-hoc documentation (Option A), isolation from strategy (Option C), and transaction-only application (Option D) each contradict the framework's strategy-integration requirement.",
     "ExplanationWrongA": "Option A is wrong because setting appetite only after strategy approval documents rather than guides the strategic choice. COSO ERM 2017 requires appetite to inform strategy formulation, so that the company does not commit to a strategy whose risk profile exceeds what it is willing to accept.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because COSO ERM 2017 explicitly integrates risk with strategy: management considers appetite when developing, selecting, and executing strategy. Treating strategy as a growth decision isolated from risk reintroduces the silo approach ERM was designed to eliminate.",
@@ -13170,26 +13384,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "COSO ERM 2017 integrates risk appetite into strategy formulation, screening alternatives against willingness to accept risk (D.5).",
       "application_to_facts": "The CFO applies appetite while evaluating strategic alternatives so the chosen strategy fits the company's willingness to accept risk.",
-      "key_conclusion": "Appetite screens strategic alternatives during formulation — Option A."
+      "key_conclusion": "Appetite screens strategic alternatives during formulation — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Documents after the fact",
+        "why_plausible": "Recording accepted risk feels like integration, but appetite must screen alternatives during formulation",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Separates strategy from risk",
+        "why_plausible": "Growth framing resists risk language, but alternatives must be screened",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confines appetite to transactions",
+        "why_plausible": "Deal-level limits are visible, but appetite screens strategy at portfolio level",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option B documents after the fact; Option C separates strategy from risk; Option D limits appetite to transactions; Option A screens alternatives during formulation.",
+    "uniqueness_note": "Option A documents after the fact; Option C separates strategy from risk; Option D limits appetite to transactions; Option B screens alternatives during formulation.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -13200,7 +13414,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13224,11 +13442,11 @@ var pack_p2_d_questions = [
       "D": "The register should be updated only when a loss occurs, to record what happened"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Under COSO ERM 2017, risk information must remain current to support decision-making: risks, controls, and the environment change continuously, so the register should be refreshed as those changes occur, with a formal review at least annually. Option D states this cadence principle. Waiting for a loss (Option A), freezing for the year (Option B), or treating the register as a static annual document (Option C) each make the register a historical artifact rather than a decision tool.",
-    "ExplanationWrongA": "Option A is wrong because updating only when a loss occurs records history rather than managing forward-looking exposure. The register must reflect emerging risks and control changes before events occur, not merely document losses after the fact.",
+    "ExplanationCorrect": "Under COSO ERM 2017, risk information must remain current to support decision-making: risks, controls, and the environment change continuously, so the register should be refreshed as those changes occur, with a formal review at least annually. Option C states this cadence principle. Waiting for a loss (Option D), freezing for the year (Option A), or treating the register as a static annual document (Option B) each make the register a historical artifact rather than a decision tool.",
+    "ExplanationWrongD": "Option D is wrong because updating only when a loss occurs records history rather than managing forward-looking exposure. The register must reflect emerging risks and control changes before events occur, not merely document losses after the fact.",
     "ExplanationWrongB": "Option B is wrong because a static annual document cannot support timely risk decisions; the register is a living assessment tool refreshed as conditions change, not a once-a-year board artifact. Freezing it for a year would leave management acting on stale risk information.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "Option D is wrong because the register is not a static annual document prepared only for the board meeting. It must be refreshed as risks, controls, and the environment change, with formal review at least annually — the living-tool cadence.",
+    "ExplanationWrongA": "Option A is wrong because the register is not a static annual document prepared only for the board meeting. It must be refreshed as risks, controls, and the environment change, with formal review at least annually — the living-tool cadence.",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
@@ -13247,27 +13465,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk information must be current to support decisions; registers are refreshed as conditions change with formal annual review (D.1).",
-      "application_to_facts": "Flash Manufacturing's register should be continuously updated as risks and environment change, with formal annual review — placed at Option D per the manifest.",
-      "key_conclusion": "The register is refreshed continuously with formal annual review — Option D."
+      "application_to_facts": "Flash Manufacturing's register should be continuously updated as risks and environment change, with formal annual review — placed at Option C per the manifest.",
+      "key_conclusion": "The register is refreshed continuously with formal annual review — Option C."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Freezes the register for comparability",
+        "why_plausible": "Year-over-year comparison feels valuable, but stale data cannot guide decisions",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the register as a board artifact",
+        "why_plausible": "Annual board papers feel sufficient, but the register is a living decision tool",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Logs only realized losses",
+        "why_plausible": "History feels factual, but a loss log is not a forward-looking register",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A reduces the register to a loss log; Option B freezes it as an annual artifact; Option C treats it as a static board document; Option D states the continuous-update principle.",
+    "uniqueness_note": "Option A freezes the register for the year; Option B treats it as a static annual board document; Option D reduces it to a loss log; Option C states the continuous-update principle.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -13278,7 +13496,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13331,17 +13553,17 @@ var pack_p2_d_questions = [
     "distractor_intent": {
       "A": {
         "misconception": "Computes B correctly but picks the wrong program",
-        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "why_plausible": "$910,000 is accurate for B, but A totals $870,000 — comparison, not arithmetic, is the error",
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Computes B correctly but picks the wrong program",
-        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "misconception": "Adds full expected loss to Program A’s premium",
+        "why_plausible": "$1,520,000 double-counts; retained cost under A is the $250,000 deductible",
         "tier_candidate": 2
       },
       "C": {
-        "misconception": "Computes B correctly but picks the wrong program",
-        "why_plausible": "910,000 is a real number; the error is comparison, not arithmetic",
+        "misconception": "Adds full expected loss to Program B’s premium",
+        "why_plausible": "$1,310,000 double-counts; retained cost under B is the $500,000 deductible",
         "tier_candidate": 3
       }
     },
@@ -13356,7 +13578,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13491,8 +13715,8 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Defaulting to compliance for anything regulatory",
-        "why_plausible": "Regulations and compliance are closely associated, making this the natural but incorrect classification",
+        "misconception": "Defaults to operational for any disruption",
+        "why_plausible": "Production effects feel operational, but a regulatory change is external and strategic",
         "tier_candidate": 2
       },
       "D": {
@@ -13512,7 +13736,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13544,7 +13770,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -13569,13 +13795,13 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Halves the portfolio in the computation",
-        "why_plausible": "Applying the multiplier to 25M instead of 50M yields a plausible but wrong figure",
+        "misconception": "Uses one standard deviation without the confidence multiplier",
+        "why_plausible": "2% x $50M covers ~68%, not the 95% VaR",
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Halves the portfolio in the computation",
-        "why_plausible": "Applying the multiplier to 25M instead of 50M yields a plausible but wrong figure",
+        "misconception": "Uses the tail probability as the multiplier",
+        "why_plausible": "0.05 x $50M confuses probability with 1.65 standard deviations",
         "tier_candidate": 3
       }
     },
@@ -13590,7 +13816,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
+],
     "CrossDomainTags": [
       "E"
     ],
@@ -13616,7 +13844,7 @@ var pack_p2_d_questions = [
       "D": "The board's oversight role includes receiving timely information on material risks so it can challenge management and confirm responses align with appetite"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "Under COSO ERM 2017, the board oversees risk and receives timely information on material risks so it can challenge management and confirm that risk-taking aligns with appetite. Escalating material breaches directly to the risk committee operationalizes that oversight duty — it ensures the board sees significant deviations promptly rather than at a scheduled annual review. Option B states this principle. Delegating to the CRO, trusting management's self-assessment alone, or limiting board information to annual meetings each weaken the independent oversight the framework requires.",
+    "ExplanationCorrect": "Under COSO ERM 2017, the board oversees risk and receives timely information on material risks so it can challenge management and confirm that risk-taking aligns with appetite. Escalating material breaches directly to the risk committee operationalizes that oversight duty — it ensures the board sees significant deviations promptly rather than at a scheduled annual review. Option D states this principle. Delegating to the CRO, trusting management's self-assessment alone, or limiting board information to annual meetings each weaken the independent oversight the framework requires.",
     "ExplanationWrongA": "Option A is wrong because delegating all risk decisions to the CRO abdicates board oversight. The board retains accountability for risk governance and must challenge management, not outsource the decision entirely to a single executive.",
     "ExplanationWrongB": "Option B is wrong because limiting board risk information to the annual meeting would starve the board of timely material-risk updates. Escalation of material breaches requires timely information, not deferring all reporting to an annual cadence.",
     "ExplanationWrongC": "Option C is wrong because management is a key risk owner, but the board's independent oversight exists precisely because management can be biased toward its own risk-taking. Escalation of material breaches provides the check the framework requires.",
@@ -13640,22 +13868,22 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "The board oversees risk, receives timely material-risk information, and challenges management on appetite alignment (D.1).",
       "application_to_facts": "Direct escalation of material breaches gives the board timely information to challenge management and confirm appetite alignment.",
-      "key_conclusion": "The escalation supports board oversight — Option B."
+      "key_conclusion": "The escalation supports board oversight — Option D."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Delegates all decisions to the CRO",
+        "why_plausible": "Decisiveness feels efficient, but the board retains accountability and must challenge",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Rations board information to annual meetings",
+        "why_plausible": "Overload concerns are real, but material breaches need timely escalation",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Trusts management’s self-assessment alone",
+        "why_plausible": "Management proximity feels sufficient, but independent oversight checks bias",
         "tier_candidate": 2
       }
     },
@@ -13670,7 +13898,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13727,8 +13959,8 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believes insurance eliminates the risk",
-        "why_plausible": "Purchasing coverage feels like removing the problem, but the underlying event can still occur",
+        "misconception": "Believes insurance reduces likelihood",
+        "why_plausible": "Protection feels preventive, but transfer does not stop collisions",
         "tier_candidate": 2
       },
       "D": {
@@ -13748,7 +13980,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13850,7 +14084,7 @@ var pack_p2_d_questions = [
       "D": "It monitors the KRI annually, matching the board's meeting schedule"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Under COSO ERM 2017, effective KRIs are leading, measurable, and tied to defined triggers that prompt escalation and response. Setting the threshold at 80% of the approved limit with a defined reporting obligation creates advance warning: management acts while headroom remains rather than after the breach. Option A states this design. A trigger at the absolute limit, post-breach reporting, or annual monitoring each fail to provide the timely forward signal that makes a KRI decision-useful.",
+    "ExplanationCorrect": "Under COSO ERM 2017, effective KRIs are leading, measurable, and tied to defined triggers that prompt escalation and response. Setting the threshold at 80% of the approved limit with a defined reporting obligation creates advance warning: management acts while headroom remains rather than after the breach. Option C states this design. A trigger at the absolute limit, post-breach reporting, or annual monitoring each fail to provide the timely forward signal that makes a KRI decision-useful.",
     "ExplanationWrongA": "Option A is wrong because setting the trigger at the absolute limit provides no advance warning; by the time it fires, the exposure has already reached the boundary and corrective action is reactive rather than preventive.",
     "ExplanationWrongB": "Option B is wrong because an effective KRI threshold triggers escalation BEFORE the limit is breached so management can act while there is still headroom. Reporting only after the limit is exceeded converts the KRI into a lagging indicator of failure rather than a forward signal.",
     "ExplanationWrongC": "",
@@ -13874,7 +14108,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Effective KRIs have pre-limit triggers that prompt escalation and defined responses (D.5).",
       "application_to_facts": "The 80% threshold with a five-day reporting obligation gives advance warning before the currency limit is breached.",
-      "key_conclusion": "The pre-limit trigger with defined escalation makes the KRI effective — Option A."
+      "key_conclusion": "The pre-limit trigger with defined escalation makes the KRI effective — Option C."
     },
     "distractor_intent": {
       "A": {
@@ -13888,12 +14122,12 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Places the trigger at the absolute limit",
-        "why_plausible": "The limit is the obvious reference point, but a trigger there leaves no time to act",
+        "misconception": "Monitors too coarsely to catch movement",
+        "why_plausible": "Annual cadence feels economical, but currency exposure moves daily",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option B reports after breach; Option C triggers at the limit; Option D monitors annually; Option A has the pre-limit trigger with defined response.",
+    "uniqueness_note": "Option A triggers at the limit; Option B reports after breach; Option D monitors annually; Option C has the pre-limit trigger with defined response.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -13904,7 +14138,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13928,7 +14164,7 @@ var pack_p2_d_questions = [
       "D": "Operational risk, because it arises from a failure in systems and processes"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "Operational risk arises from inadequate or failed internal processes, people, and systems. A software update that could corrupt customer records is a systems failure — squarely operational risk. Option C states this classification. The reputation damage (strategic), regulatory concern (compliance), and customer losses (financial consequence) are downstream effects of the operational event, not the source classification.",
+    "ExplanationCorrect": "Operational risk arises from inadequate or failed internal processes, people, and systems. A software update that could corrupt customer records is a systems failure — squarely operational risk. Option D states this classification. The reputation damage (strategic), regulatory concern (compliance), and customer losses (financial consequence) are downstream effects of the operational event, not the source classification.",
     "ExplanationWrongA": "Option A is wrong because strategic risk arises from external factors affecting the organization's direction. A software failure is an internal systems event, not a strategic-environment change, so it does not fit the strategic category.",
     "ExplanationWrongB": "Option B is wrong because compliance risk arises from failing to meet regulatory obligations. While regulators require data accuracy, the source exposure is a systems failure; the compliance concern is a downstream consequence, not the classification of the risk.",
     "ExplanationWrongC": "Option C is wrong because financial risk covers market, credit, and liquidity exposures. Customer losses from a records corruption are a consequence of the operational failure, not a market/credit/liquidity risk; the source exposure is operational.",
@@ -13952,7 +14188,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Operational risk arises from failed internal processes, people, and systems (D.2).",
       "application_to_facts": "A software update corrupting records is a systems failure — operational risk, the source classification.",
-      "key_conclusion": "The exposure is operational risk — Option C."
+      "key_conclusion": "The exposure is operational risk — Option D."
     },
     "distractor_intent": {
       "A": {
@@ -13961,8 +14197,8 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Classifies by reputational consequence",
-        "why_plausible": "Reputation damage is a visible effect, inviting classification by outcome rather than source",
+        "misconception": "Classifies by regulatory concern",
+        "why_plausible": "Regulators require data accuracy, inviting classification by oversight rather than source",
         "tier_candidate": 2
       },
       "C": {
@@ -13971,7 +14207,7 @@ var pack_p2_d_questions = [
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A uses reputational effect; Option B uses regulatory concern; Option D uses customer impact; Option C correctly identifies the systems-failure source as operational risk.",
+    "uniqueness_note": "Option A uses reputational effect; Option B uses regulatory concern; Option C uses customer impact; Option D correctly identifies the systems-failure source as operational risk.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -13982,7 +14218,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14006,7 +14244,7 @@ var pack_p2_d_questions = [
       "D": "Unit B at 12.5%, because it uses less risk capital"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Return on risk-adjusted capital = profit / risk capital. Unit X: $15M / $75M = 20.0%. Unit Y: $12M / $40M = 30.0%. Unit Y ranks higher because it earns more return per dollar of risk capital. Recomputed: 15/75 = 0.20; 12/40 = 0.30. Option A states the correct answer. Absolute profit is not the ranking criterion; the framework rewards capital efficiency relative to risk taken.",
+    "ExplanationCorrect": "Return on risk-adjusted capital = profit / risk capital. Unit A: $12M / $80M = 15.0%. Unit B: $9M / $45M = 20.0%. Unit B ranks higher because it earns more return per dollar of risk capital. Recomputed: 12/80 = 0.15; 9/45 = 0.20. Option A states the correct answer. Absolute profit is not the ranking criterion; the framework rewards capital efficiency relative to risk taken.",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because Unit A's RORAC is $12M / $80M = 15.0%. Absolute profit favors A, but risk-adjusted ranking uses return per unit of risk capital, where B's 20.0% exceeds A's 15.0% — the absolute-profit argument is exactly the distortion RORAC corrects.",
     "ExplanationWrongC": "Option C is wrong because RORAC is profit divided by risk capital, not revenue; total revenue is not part of the computation. Unit A's 15.0% is its RORAC, but the ranking compares returns per risk dollar, where B is higher.",
@@ -14014,7 +14252,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.5",
     "BlueprintDomain": "Risk Management",
@@ -14030,7 +14268,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk-adjusted return ranks units by profit per unit of risk capital (D.5).",
       "application_to_facts": "A: 12/80 = 15.0%; B: 9/45 = 20.0%; B ranks higher on return per risk dollar.",
-      "key_conclusion": "Unit Y at 30.0% ranks higher — Option A."
+      "key_conclusion": "Unit B at 20.0% ranks higher — Option A."
     },
     "distractor_intent": {
       "B": {
@@ -14044,12 +14282,12 @@ var pack_p2_d_questions = [
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Ranks by absolute profit",
-        "why_plausible": "A's $12M is the larger number, and candidates may stop at absolute earnings",
+        "misconception": "Miscomputes the ratio",
+        "why_plausible": "The smaller capital base invites inverted or halved arithmetic; 9/45 = 20.0%, not 12.5%",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A ranks by absolute profit; Option C uses revenue; Option D miscalculates B; Option B correctly states B's 20.0% return per risk dollar.",
+    "uniqueness_note": "Option B ranks by absolute profit; Option C uses revenue; Option D miscalculates B at 12.5%; Option A correctly states B’s 20.0% return per risk dollar.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14060,7 +14298,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Choice value independently recomputed 2026-09-07 (Batch 2 remediation)"
+,
+      "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
+],
     "CrossDomainTags": [
       "E"
     ],
@@ -14086,7 +14328,7 @@ var pack_p2_d_questions = [
       "D": "Opportunity and rationalization; pressure is not yet evident from the facts"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "The fraud triangle comprises pressure, opportunity, and rationalization. The scenario evidences pressure (severe personal financial stress) and opportunity (absence of segregation of duties in payables). Rationalization — the employee's internal justification — is not described in the facts, so only two elements are evident. Option D states this. The framework holds that fraud becomes possible when these conditions align, and the audit finding cites the two that are present; it is not necessary to infer all three from the scenario.",
+    "ExplanationCorrect": "The fraud triangle comprises pressure, opportunity, and rationalization. The scenario evidences pressure (severe personal financial stress) and opportunity (absence of segregation of duties in payables). Rationalization — the employee's internal justification — is not described in the facts, so only two elements are evident. Option B states this. The framework holds that fraud becomes possible when these conditions align, and the audit finding cites the two that are present; it is not necessary to infer all three from the scenario.",
     "ExplanationWrongA": "Option A is wrong because the facts show opportunity (missing segregation of duties), not rationalization. Pressure (financial stress) is present, but substituting rationalization for opportunity misreads the scenario — no internal justification by the employee is described.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because rationalization is not evident from the facts. The scenario describes pressure and opportunity only; inferring the employee's internal justification would go beyond the stated evidence.",
@@ -14110,26 +14352,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Fraud triangle: pressure, opportunity, rationalization; only the elements evidenced in the facts are present (D.1).",
       "application_to_facts": "The facts show financial pressure and missing segregation of duties (opportunity); rationalization is not described.",
-      "key_conclusion": "Pressure and opportunity are evident — Option D."
+      "key_conclusion": "Pressure and opportunity are evident — Option B."
     },
     "distractor_intent": {
       "A": {
         "misconception": "Substitutes rationalization for opportunity",
-        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "why_plausible": "All three elements are familiar, but the facts show pressure and opportunity, not rationalization",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Substitutes rationalization for opportunity",
-        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "misconception": "Infers all three elements from two facts",
+        "why_plausible": "Completeness feels rigorous, but rationalization is not described",
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Substitutes rationalization for opportunity",
-        "why_plausible": "All three elements are familiar, and candidates may assign any two without checking the facts",
+        "misconception": "Substitutes rationalization for pressure",
+        "why_plausible": "Pressure is evidenced by financial stress; rationalization is not described",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A swaps rationalization for opportunity; Option B swaps it for pressure; Option C infers all three; Option D correctly identifies the two evident elements.",
+    "uniqueness_note": "Option A swaps rationalization for opportunity; Option D swaps pressure for rationalization; Option C infers all three; Option B correctly identifies the two evident elements.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14140,7 +14382,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [
       "F"
     ],
@@ -14199,8 +14445,8 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treats a second supplier as a transfer",
-        "why_plausible": "Adding a supplier feels like sharing the risk, but the company retains ownership of the exposure",
+        "misconception": "Declares the risk unmanageable",
+        "why_plausible": "Concentration feels inevitable, but dual-sourcing and buffers are available Reduce responses",
         "tier_candidate": 2
       },
       "D": {
@@ -14220,7 +14466,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14244,7 +14492,7 @@ var pack_p2_d_questions = [
       "D": "The loan is within the single-name tolerance, but the portfolio must be monitored to confirm cumulative expected losses stay within the $18 million annual appetite"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "Risk appetite is a portfolio-level statement of the losses the bank is willing to accept — here $18 million of annual credit losses. The proposed $28 million loan is within the $30 million single-name tolerance band, but that is a transaction-level limit; the bank must still monitor cumulative expected losses to confirm they remain within the annual appetite. Option B states this. Comparing the $28 million exposure directly to the $18 million loss appetite confuses an exposure amount with a loss limit — the appetite governs expected losses across the portfolio, not a single loan's face value.",
+    "ExplanationCorrect": "Risk appetite is a portfolio-level statement of the losses the bank is willing to accept — here $18 million of annual credit losses. The proposed $28 million loan is within the $30 million single-name tolerance band, but that is a transaction-level limit; the bank must still monitor cumulative expected losses to confirm they remain within the annual appetite. Option D states this. Comparing the $28 million exposure directly to the $18 million loss appetite confuses an exposure amount with a loss limit — the appetite governs expected losses across the portfolio, not a single loan's face value.",
     "ExplanationWrongA": "Option A is wrong because comparing the $28 million exposure to the $18 million appetite confuses an exposure amount with a loss limit. The appetite governs expected losses across the portfolio, not a single loan's face value.",
     "ExplanationWrongB": "Option B is wrong because the single-name limit is one boundary, but the portfolio must also respect the annual loss appetite. Being within one limit does not make the appetite statement irrelevant; both constraints apply.",
     "ExplanationWrongC": "Option C is wrong because the appetite statement is enterprise-wide; nothing in COSO ERM 2017 confines the annual loss appetite to retail lending. Commercial exposures count toward the same portfolio-level limit.",
@@ -14268,26 +14516,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Appetite is a portfolio-level loss limit; tolerance is transaction-level; both must be monitored (D.3).",
       "application_to_facts": "The loan is within the single-name tolerance, but cumulative expected losses must be monitored against the $18M annual appetite.",
-      "key_conclusion": "The portfolio must be monitored against annual appetite — Option B."
+      "key_conclusion": "The portfolio must be monitored against annual appetite — Option D."
     },
     "distractor_intent": {
       "A": {
         "misconception": "Compares the loan amount to the loss appetite directly",
-        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive — but exposure is not loss",
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Compares the loan amount to the loss appetite directly",
-        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "misconception": "Dismisses the appetite as irrelevant",
+        "why_plausible": "One limit met does not void the other; both constraints apply",
         "tier_candidate": 2
       },
       "C": {
-        "misconception": "Compares the loan amount to the loss appetite directly",
-        "why_plausible": "The numbers are close (28 vs 18), making the direct comparison intuitive",
+        "misconception": "Confines appetite to retail",
+        "why_plausible": "Retail framing is familiar, but appetite is enterprise-wide",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A compares exposure to the loss limit directly; Option C confines appetite to retail; Option D ignores the portfolio limit; Option B states the monitoring requirement.",
+    "uniqueness_note": "Option A compares exposure to the loss limit directly; Option B ignores the portfolio limit; Option C confines appetite to retail; Option D states the monitoring requirement.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14298,7 +14546,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14322,7 +14574,7 @@ var pack_p2_d_questions = [
       "D": "Eliminating all uncertainty by predicting every future event precisely"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Emerging-risk scanning under COSO ERM 2017 serves a forward-looking purpose: identifying risks that may become material so the organization can monitor them and prepare responses before they crystallize. Option D states this. It broadens the risk view beyond the current register to new drivers and structural changes. It does not eliminate uncertainty, does not confine itself to existing risks, and does not replace the register with a single forecast.",
+    "ExplanationCorrect": "Emerging-risk scanning under COSO ERM 2017 serves a forward-looking purpose: identifying risks that may become material so the organization can monitor them and prepare responses before they crystallize. Option A states this. It broadens the risk view beyond the current register to new drivers and structural changes. It does not eliminate uncertainty, does not confine itself to existing risks, and does not replace the register with a single forecast.",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because scanning looks beyond the existing register — to new technologies, geopolitical shifts, and structural changes — rather than reconfirming known risks. Restricting it to the current register abandons the forward horizon it exists to cover.",
     "ExplanationWrongC": "Option C is wrong because scanning does not replace the register with a single forecast; it broadens the view of plausible futures while the register continues to track known risks.",
@@ -14346,7 +14598,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Emerging-risk scanning identifies potential future risks for monitoring and response preparation (D.5).",
       "application_to_facts": "Horizon scanning watches for risks that may become material so management can prepare before they crystallize.",
-      "key_conclusion": "Scanning serves forward monitoring and preparation — Option D."
+      "key_conclusion": "Scanning serves forward monitoring and preparation — Option A."
     },
     "distractor_intent": {
       "B": {
@@ -14365,7 +14617,7 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       }
     },
-    "uniqueness_note": "Option A promises certainty; Option B confines scanning to the register; Option C reduces it to a single forecast; Option D states the forward-monitoring purpose.",
+    "uniqueness_note": "Option D promises certainty; Option B confines scanning to the register; Option C reduces it to a single forecast; Option A states the forward-monitoring purpose.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14376,7 +14628,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14400,7 +14654,7 @@ var pack_p2_d_questions = [
       "D": "Transfer the risk to insurance even though the premium exceeds the expected benefit"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, acceptance is a legitimate risk response when the residual risk sits within tolerance and the cost of further response exceeds the benefit. With a residual expected loss of $400,000 inside the $600,000 tolerance band and further controls not cost-justified, the framework-consistent decision is to accept the residual risk and document the rationale — Option A. The tolerance test and cost-benefit test both support retention. The framework does not demand zero risk, unlimited control spending, or transfers whose cost exceeds benefit.",
+    "ExplanationCorrect": "Under COSO ERM 2017, acceptance is a legitimate risk response when the residual risk sits within tolerance and the cost of further response exceeds the benefit. With a residual expected loss of $400,000 inside the $600,000 tolerance band and further controls not cost-justified, the framework-consistent decision is to accept the residual risk and document the rationale — Option B. The tolerance test and cost-benefit test both support retention. The framework does not demand zero risk, unlimited control spending, or transfers whose cost exceeds benefit.",
     "ExplanationWrongA": "Option A is wrong because residual risk within tolerance is acceptable under COSO ERM 2017; the framework does not require zero residual risk. Rejecting all residual risk would distort decisions by forcing responses beyond the point where they add value.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because the framework balances risk and return: responses are applied where they are cost-effective, not without limit. Adding controls whose cost exceeds the remaining benefit misallocates resources even though it lowers risk.",
@@ -14424,7 +14678,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Accept is appropriate when residual risk is within tolerance and further response is not cost-justified (D.3/D.4).",
       "application_to_facts": "Residual EL of $400K is within the $600K tolerance and further controls exceed the benefit, so acceptance with documentation is consistent.",
-      "key_conclusion": "Accept the residual risk with documentation — Option A."
+      "key_conclusion": "Accept the residual risk with documentation — Option B."
     },
     "distractor_intent": {
       "A": {
@@ -14438,12 +14692,12 @@ var pack_p2_d_questions = [
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats any residual risk as unacceptable",
-        "why_plausible": "Zero-risk thinking is intuitive but contradicts the appetite-and-tolerance framework",
+        "misconception": "Treats uneconomic transfer as mandatory",
+        "why_plausible": "Share is an option, not a mandate, when premium exceeds benefit",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option B demands zero residual risk; Option C ignores response cost; Option D transfers uneconomically; Option A is acceptance within tolerance with documentation.",
+    "uniqueness_note": "Option A demands zero residual risk; Option C ignores response cost; Option D transfers uneconomically; Option B is acceptance within tolerance with documentation.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14454,7 +14708,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14478,7 +14736,7 @@ var pack_p2_d_questions = [
       "D": "Ignoring the stress output when it conflicts with the strategic plan"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Under COSO ERM 2017, stress testing supports forward-looking decisions: the output should size capital buffers and set risk limits so the firm can absorb severe scenarios without breaching risk appetite. Option B states this use. A stress scenario is a plausible adverse path, not a forecast — it informs buffers and limits rather than the base budget. Using the results only for regulatory reporting, treating the scenario as the most likely outcome, or ignoring it when it conflicts with the plan each fail to connect the stress program to capital decisions.",
+    "ExplanationCorrect": "Under COSO ERM 2017, stress testing supports forward-looking decisions: the output should size capital buffers and set risk limits so the firm can absorb severe scenarios without breaching risk appetite. Option C states this use. A stress scenario is a plausible adverse path, not a forecast — it informs buffers and limits rather than the base budget. Using the results only for regulatory reporting, treating the scenario as the most likely outcome, or ignoring it when it conflicts with the plan each fail to connect the stress program to capital decisions.",
     "ExplanationWrongA": "Option A is wrong because a stress scenario is a severe plausible path, not a forecast of the most likely outcome; treating it as the base case would over-conserve capital and distort planning. Stress informs buffers and limits, not the base budget.",
     "ExplanationWrongB": "Option B is wrong because the stress results should inform internal capital decisions, not just regulatory reporting. The exercise exists to connect severe-scenario losses to buffers and limits the firm actually uses.",
     "ExplanationWrongC": "",
@@ -14502,7 +14760,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Stress testing sizes capital buffers and sets limits so severe scenarios stay within appetite (D.5).",
       "application_to_facts": "Stressed loss estimates drive capital buffers and risk limits so the downturn can be absorbed within appetite.",
-      "key_conclusion": "Stress output informs capital buffers and limits — Option B."
+      "key_conclusion": "Stress output informs capital buffers and limits — Option C."
     },
     "distractor_intent": {
       "A": {
@@ -14511,17 +14769,17 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Treats the severe scenario as the base forecast",
-        "why_plausible": "The scenario produces numbers that look like a budget input, inviting a forecast misreading",
+        "misconception": "Limits stress output to reporting",
+        "why_plausible": "Results must drive buffers and limits, not just filings",
         "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats the severe scenario as the base forecast",
-        "why_plausible": "The scenario produces numbers that look like a budget input, inviting a forecast misreading",
+        "misconception": "Ignores uncomfortable output",
+        "why_plausible": "Conflict with the plan is when stress matters most",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A treats stress as forecast; Option C limits it to reporting; Option D ignores conflicting output; Option B connects stress output to capital buffers and limits.",
+    "uniqueness_note": "Option A treats stress as forecast; Option B limits it to reporting; Option D ignores conflicting output; Option C connects stress output to capital buffers and limits.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14532,7 +14790,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14556,7 +14818,7 @@ var pack_p2_d_questions = [
       "D": "The risk owner should be the person best positioned to manage the risk and accountable for response implementation, with progress reported to the ERM function"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "Under COSO ERM 2017, each risk needs an owner: the person best positioned to manage it, accountable for implementing the response and for the risk's ongoing management, with progress reported to the ERM function. Option C states this. For a supplier risk, the procurement director is the natural owner. Ownership does not end at registration, is not the CRO's exclusive burden, and includes response outcomes — not just identification.",
+    "ExplanationCorrect": "Under COSO ERM 2017, each risk needs an owner: the person best positioned to manage it, accountable for implementing the response and for the risk's ongoing management, with progress reported to the ERM function. Option D states this. For a supplier risk, the procurement director is the natural owner. Ownership does not end at registration, is not the CRO's exclusive burden, and includes response outcomes — not just identification.",
     "ExplanationWrongA": "Option A is wrong because the CRO oversees the ERM process, but individual risk owners sit in the business — the procurement director owns supplier risk because they are best positioned to manage it. Centralizing ownership in the CRO would sever accountability from the operating line.",
     "ExplanationWrongB": "Option B is wrong because risk ownership does not end once the risk is recorded in the register; the owner remains accountable for implementing responses, monitoring the risk, and reporting outcomes.",
     "ExplanationWrongC": "Option C is wrong because risk owners are accountable for the full lifecycle: implementing responses, monitoring the risk, and reporting outcomes. Ownership that stops at the register entry would leave mitigation unowned and unexecuted.",
@@ -14580,7 +14842,7 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk owners are best-positioned managers accountable for response implementation and ongoing risk management (D.1).",
       "application_to_facts": "The procurement director owns the supplier risk because they are best positioned to implement the mitigation plan.",
-      "key_conclusion": "The procurement director is the accountable owner — Option C."
+      "key_conclusion": "The procurement director is the accountable owner — Option D."
     },
     "distractor_intent": {
       "A": {
@@ -14589,17 +14851,17 @@ var pack_p2_d_questions = [
         "tier_candidate": 1
       },
       "B": {
-        "misconception": "Makes the CRO the sole owner of all risks",
-        "why_plausible": "The CRO is the risk leader, making centralization a plausible but wrong reading",
+        "misconception": "Ends ownership at registration",
+        "why_plausible": "Registration starts ownership; response and monitoring follow",
         "tier_candidate": 2
       },
       "C": {
-        "misconception": "Makes the CRO the sole owner of all risks",
-        "why_plausible": "The CRO is the risk leader, making centralization a plausible but wrong reading",
+        "misconception": "Limits ownership to identification",
+        "why_plausible": "Identification without response ownership leaves mitigation unowned",
         "tier_candidate": 3
       }
     },
-    "uniqueness_note": "Option A centralizes ownership in the CRO; Option B ends ownership at registration; Option D limits it to identification; Option C states the best-positioned-owner principle.",
+    "uniqueness_note": "Option A centralizes ownership in the CRO; Option B ends ownership at registration; Option C limits it to identification; Option D states the best-positioned-owner principle.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14610,7 +14872,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14639,8 +14905,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because Strategy and Objective-Setting integrates risk appetite into strategic alternatives and objective formulation. It builds on the governance foundation; the establishment of values, oversight, and tone belongs to Governance and Culture, which precedes strategy formulation.",
     "ExplanationWrongD": "Option D is wrong because Review and Revision evaluates whether the ERM framework, responses, and appetite remain suitable as conditions change. It is a monitoring component, not the component that establishes values and board oversight at the foundation of the framework.",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -14662,18 +14928,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reaches for the execution component",
+        "why_plausible": "Risk response language is salient, but values and oversight are foundation, not cycle",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reaches for the strategy component",
+        "why_plausible": "Appetite integration is memorable, but it builds on the governance foundation",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reaches for the monitoring component",
+        "why_plausible": "Review language suggests oversight, but establishing values precedes monitoring",
         "tier_candidate": 2
       }
     },
@@ -14685,10 +14951,14 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008 compliant)",
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
-      "Difficulty justified (Remember, Moderate)",
+      "Difficulty justified (Remember, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -14711,12 +14981,12 @@ var pack_p2_d_questions = [
       "C": "An employee intentionally falsifying expense reports",
       "D": "A vendor invoice processed twice because the two-step approval workflow had no duplicate check"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Operational risk arises from inadequate or failed internal processes, people, and systems. A process failure is a breakdown in how a workflow is designed or controlled. Among the options, the vendor invoice processed twice because the two-step approval workflow lacked a duplicate check is the clearest process failure — the control design itself is defective. The data-entry error (Option A) is a people error, the flood (Option B) is external, and falsified expense reports (Option C) is fraud by an employee",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Operational risk arises from inadequate or failed internal processes, people, and systems. A process failure is a breakdown in how a workflow is designed or controlled. Among the options, the vendor invoice processed twice because the two-step approval workflow lacked a duplicate check is the clearest process failure — the control design itself is defective. The data-entry error (Option A) is a people error, the flood (Option B) is external, and falsified expense reports (Option C) is fraud by an employee Option D states the process-failure example.",
     "ExplanationWrongA": "Option A is wrong because a data-entry error by a new hire is a people-related failure — human error in execution — rather than a flaw in the process design itself. Process failures are breakdowns in how the workflow is designed or sequenced, such as missing controls.",
     "ExplanationWrongB": "Option B is wrong because a flood is an external event — a natural catastrophe outside the organization's processes, people, and systems. External events are classified separately from internal process failures in the operational risk taxonomy.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Option D is wrong. assigns CC=C; the item must be written so the process-failure example sits at C. Re-read the stem: it asks which event is a process failure, and the duplicated-invoice example is the process failure. The falsified-expense event is a people/fraud event, not a process failure.",
+    "ExplanationWrongC": "Option C is wrong because an employee intentionally falsifying expense reports is employee fraud — a people-related failure — not a defective workflow design. Process failures are breakdowns in how the workflow itself is designed or controlled, such as a missing duplicate check.",
+    "ExplanationWrongD": "",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Remember",
@@ -14735,27 +15005,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Operational risk includes process failures (defective workflows), people errors, and external events (D.2/D.4).",
-      "application_to_facts": "The missing-duplicate-check workflow is the process failure; the item must place it at Option C.",
-      "key_conclusion": "The process-failure example must sit at Option C; the content is being corrected."
+      "application_to_facts": "The missing-duplicate-check workflow is the process failure; the item places it at Option D.",
+      "key_conclusion": "The duplicate-invoice workflow is the process failure — Option D."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes a people error for a process defect",
+        "why_plausible": "A new hire’s slip happens in a process, but the failure mode is human execution, not workflow design",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes an external event for a process defect",
+        "why_plausible": "Damage disrupts operations, but floods are external, not workflow failures",
         "tier_candidate": 1
       },
-      "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "C": {
+        "misconception": "Mistakes employee fraud for a process failure",
+        "why_plausible": "Intentional wrongdoing feels process-adjacent, but fraud is people-related, not a workflow-design defect",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A is a people error; Option B is an external event; Option D has the correct example at the wrong position; Option C must carry the process-failure example.",
+    "uniqueness_note": "Option A is a people error; Option B is an external event; Option C is employee fraud (people-related); Option D states the process-failure example.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -14766,7 +15036,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -14798,7 +15072,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Remember",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -14818,18 +15092,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Compares incompletely computed figures",
+        "why_plausible": "$90,000 vs $80,000 skips full computation; Exposure 1 is 0.05 x $2M = $100,000",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Decides on probability alone",
+        "why_plausible": "Higher PD feels decisive, but expectation multiplies PD by LGD",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Decides on LGD alone",
+        "why_plausible": "Larger LGD feels decisive, but expectation multiplies it by PD",
         "tier_candidate": 2
       }
     },
@@ -14844,7 +15118,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -14896,18 +15172,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats a breach as compliance",
+        "why_plausible": "$6M above $5M feels like a rule broken, but the indication is escalation-or-reduce, not compliance",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Dismisses horizon mismatch",
+        "why_plausible": "Daily-vs-quarterly framing distracts; the band binds the projection",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats any breach as a halt trigger",
+        "why_plausible": "Automatic halt feels safe, but the framework calls for escalate-and-decide",
         "tier_candidate": 2
       }
     },
@@ -14922,7 +15198,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -14974,18 +15252,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats controls as futile",
+        "why_plausible": "Persistence feels inevitable, but the new controls change likelihood and impact",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats approval as transfer",
+        "why_plausible": "Committee involvement feels like shifting risk, but no counterparty accepts it",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats fraud controls as exit",
+        "why_plausible": "The business continues; controls reduce rather than discontinue",
         "tier_candidate": 2
       }
     },
@@ -15000,7 +15278,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15023,12 +15303,12 @@ var pack_p2_d_questions = [
       "C": "Inherent risk equals residual risk because the controls did not change the likelihood",
       "D": "Residual risk is higher than inherent risk when controls are effective"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Inherent risk is the exposure in the absence of controls; residual risk is the exposure remaining after controls. Here inherent = 50% x $3,000,000 = $1,500,000 expected loss, and residual = 20% x $1,500,000 = $300,000. The controls reduced both likelihood and impact, so the residual is far lower Options that quote impact alone, claim no change, or claim residual exceeds inherent are each incorrect.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Inherent risk is the exposure in the absence of controls; residual risk is the exposure remaining after controls. Here inherent = 50% x $3,000,000 = $1,500,000 expected loss, and residual = 20% x $1,500,000 = $300,000. The controls reduced both likelihood and impact, so the residual is far lower Options that quote impact alone, claim no change, or claim residual exceeds inherent are each incorrect. Option B states the likelihood-weighted distinction.",
     "ExplanationWrongA": "Option A is wrong because risk is the combination of likelihood and impact, not the impact alone. Inherent risk is the full exposure before controls (50% x $3M = $1.5M expected), and residual is after controls (20% x $1.5M = $300K expected); quoting only impact figures is incomplete.",
-    "ExplanationWrongB": "Option B is wrong. so the correct distinction sits at D.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because the controls reduced both likelihood (50% to 20%) and impact ($3M to $1.5M), so inherent and residual risk differ materially. The controls did change the likelihood.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because effective controls strictly lower exposure: residual $300,000 (20% x $1,500,000) is far below inherent $1,500,000 (50% x $3,000,000). Residual exceeds inherent only if controls add new risk, which is not the case here.",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
@@ -15047,27 +15327,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Inherent risk is exposure before controls; residual risk is exposure after controls (D.2).",
-      "application_to_facts": "Inherent = 50% x $3M; residual = 20% x $1.5M; the controls reduced both dimensions — the distinction statement must sit at D.",
-      "key_conclusion": "The correct inherent-vs-residual distinction must be at Option D; content is being corrected."
+      "application_to_facts": "Inherent = 50% x $3M; residual = 20% x $1.5M; the controls reduced both dimensions — the distinction statement sits at B.",
+      "key_conclusion": "Inherent $1,500,000 before controls versus residual $300,000 after controls — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Quotes impact without likelihood-weighting",
+        "why_plausible": "$3M vs $1.5M compares raw impacts, but expectation weights by 50% and 20%",
         "tier_candidate": 3
       },
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Believes effective controls raise residual above inherent",
+        "why_plausible": "Control costs feel additive, but effective controls strictly lower exposure ($300K < $1.5M)",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Misses that likelihood changed",
+        "why_plausible": "Equal-likelihood feels intuitive, but controls cut 50% to 20%",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A quotes impact alone; Option B has the correct distinction at the wrong position; Option C claims no likelihood change; the correct likelihood-weighted distinction must sit at D.",
+    "uniqueness_note": "Option A quotes impact alone; Option B states the likelihood-weighted distinction; Option C claims no likelihood change; Option D falsely claims residual exceeds inherent.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -15078,7 +15358,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15110,7 +15394,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -15130,18 +15414,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Anchors on Risk A’s partial product",
+        "why_plausible": "8 = 4x2 is computed, but C’s 3x3 = 9 is higher",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Anchors on Risk B’s partial product",
+        "why_plausible": "8 = 2x4 is computed, but it ties A below C’s 9",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the lowest product as highest",
+        "why_plausible": "5 is computed but smallest; highest means maximum product",
         "tier_candidate": 2
       }
     },
@@ -15156,7 +15440,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15208,18 +15494,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes reporting content for Review",
+        "why_plausible": "Register and KRI content feels retrospective, but producing the report is communication",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes governance content for reporting purpose",
+        "why_plausible": "Culture language is present, but the activity’s purpose is informing the board",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes response content for reporting purpose",
+        "why_plausible": "Breach summaries describe Performance, but the reporting act serves communication",
         "tier_candidate": 2
       }
     },
@@ -15234,7 +15520,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15257,11 +15545,11 @@ var pack_p2_d_questions = [
       "C": "Risk capacity is the same as risk appetite and is set by the CRO alone",
       "D": "Risk capacity is fixed by the capital ratio and is not used in appetite-setting"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Risk capacity is the maximum risk the organization can absorb before its viability is threatened. The bank's capacity reflects its $1.2 billion capital base and the $96 million of excess capital above the regulatory floor that can absorb unexpected losses. The board sets risk appetite — the risk it is willing to take — within this capacity boundary Capacity bounds appetite; it is not the regulatory minimum, is not identical to appetite, and is central to appetite-setting.",
-    "ExplanationWrongA": "Option A is wrong because risk capacity is the maximum the organization can absorb, which is typically above the regulatory minimum. Here the $96 million excess above the 8% floor is part of the absorbable capacity; capacity is not equal to the minimum requirement.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Risk capacity is the maximum risk the organization can absorb before its viability is threatened. The bank's capacity reflects its $1.2 billion capital base and the $96 million of excess capital above the regulatory floor that can absorb unexpected losses. The board sets risk appetite — the risk it is willing to take — within this capacity boundary Capacity bounds appetite; it is not the regulatory minimum, is not identical to appetite, and is central to appetite-setting. Option A states the capacity-bounds-appetite relationship.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because capacity is the maximum the organization can absorb, which is typically above the regulatory minimum. Here the $96 million excess above the 8% floor is part of the absorbable capacity; capacity is not equal to the minimum requirement.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongC": "Option C is wrong because capacity and appetite are distinct: capacity is the maximum the bank can absorb, appetite is the risk the board is willing to take, and neither is set by the CRO alone.",
     "ExplanationWrongD": "Option D is wrong because capacity directly informs appetite-setting: the board sets appetite within the limits of what the organization can absorb. It is not a fixed number unrelated to appetite.",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -15281,27 +15569,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk capacity is the maximum absorbable risk; appetite is set within capacity (D.3).",
-      "application_to_facts": "The $96M excess capital defines part of the absorbable capacity; the board sets appetite within that boundary — the statement must sit at C.",
-      "key_conclusion": "Capacity bounds appetite; the correct statement must be at Option C."
+      "application_to_facts": "The $96M excess capital defines part of the absorbable capacity; the board sets appetite within that boundary — the statement sits at A.",
+      "key_conclusion": "Capacity bounds appetite; the correct statement is at Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "C": {
+        "misconception": "Collapses capacity into appetite and assigns it to the CRO",
+        "why_plausible": "Both terms govern risk-taking, but capacity is the absorbable maximum and neither is CRO-set",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Equates capacity with the regulatory minimum",
+        "why_plausible": "8% feels definitional, but capacity is the $96M excess absorbable",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats capacity as appetite-irrelevant",
+        "why_plausible": "Ratio arithmetic feels self-contained, but capacity bounds appetite-setting",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct relationship at the wrong position; Option B equates capacity with the minimum; Option D ignores capacity's role; the capacity-bounds-appetite statement must sit at C.",
+    "uniqueness_note": "Option A states the capacity-bounds-appetite relationship; Option B equates capacity with the minimum; Option C conflates capacity with appetite and assigns it to the CRO; Option D ignores capacity’s role.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -15312,7 +15600,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15341,8 +15633,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "Option B is wrong because share transfers the risk to a third party. No hedging or other transfer occurs; the exposure remains with the company, so this is retention (accept), not sharing.",
     "ExplanationWrongC": "Option C is wrong because reduce lowers likelihood or impact through controls. The company applies no controls and the small size of the exposure is the reason for acceptance, not a control-based reduction.",
     "ExplanationWrongD": "",
-    "Difficulty": "Difficult",
-    "DifficultyScore": 4,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -15364,18 +15656,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Exits instead of retaining",
+        "why_plausible": "Importing feels optional, but the decision is to continue and absorb",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Finds transfer in counterparty presence",
+        "why_plausible": "Suppliers are counterparties, but no risk is transferred",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mistakes smallness for reduction",
+        "why_plausible": "Small exposure feels controlled, but no control is applied — smallness justifies acceptance",
         "tier_candidate": 2
       }
     },
@@ -15387,10 +15679,14 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008 compliant)",
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
-      "Difficulty justified (Apply, Difficult)",
+      "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15422,7 +15718,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -15442,18 +15738,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Takes the residual as the benefit",
+        "why_plausible": "$400,000 remains, but benefit is the $600,000 improvement",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Takes the gross reduction as net",
+        "why_plausible": "$600,000 is progress before the $300,000 cost",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Nets against the wrong base",
+        "why_plausible": "$700,000 subtracts cost from inherent without removing residual",
         "tier_candidate": 2
       }
     },
@@ -15468,7 +15764,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15520,18 +15818,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Demands the most likely outcome",
+        "why_plausible": "Likelihood feels primary, but decision-usefulness needs severe-but-plausible stress",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Demands uniformity for comparability",
+        "why_plausible": "Identical scenarios feel fair, but tailoring to vulnerabilities is the point",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Demands assumption-free scenarios",
+        "why_plausible": "Purity feels objective, but scenarios require explicit management assumptions",
         "tier_candidate": 2
       }
     },
@@ -15546,7 +15844,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15598,18 +15898,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Defers assessment until after closing",
+        "why_plausible": "Board approval feels like the trigger, but risk must inform the commitment decision",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Exempts strategy from assessment",
+        "why_plausible": "Growth framing resists scrutiny, but appetite must screen the deal first",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Routes strategy risk to legal",
+        "why_plausible": "Regulatory approval is needed, but the question is appetite consistency",
         "tier_candidate": 2
       }
     },
@@ -15624,7 +15924,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15647,12 +15949,12 @@ var pack_p2_d_questions = [
       "C": "The risk owner is accountable only for recording the risk in the register",
       "D": "The risk owner has no ongoing accountability once the risk is accepted"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Under COSO ERM 2017, a risk owner is accountable for the full lifecycle of the risk: implementing the response, monitoring the risk over time, and reporting progress to the ERM function Identification-only, register-only, or no-ongoing-accountability each misstate the owner's role.",
-    "ExplanationWrongA": "Option A is wrong because ownership extends beyond identification to response implementation, monitoring, and reporting. Limiting accountability to identifying the risk leaves the risk unmanaged and the response unimplemented.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO ERM 2017, a risk owner is accountable for the full lifecycle of the risk: implementing the response, monitoring the risk over time, and reporting progress to the ERM function Identification-only, register-only, or no-ongoing-accountability each misstate the owner's role. Option A states the full-lifecycle accountability.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because ownership extends beyond identification to response implementation, monitoring, and reporting. Limiting accountability to identification leaves the risk unmanaged.",
     "ExplanationWrongC": "Option C is wrong because recording the risk in the register is only the starting point; the owner is accountable for the full lifecycle of the risk.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because acceptance does not end ownership: the risk owner still implements the response, monitors the residual risk, and reports progress to the ERM function. Accepted risks remain owned.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -15671,27 +15973,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk owners are accountable for response implementation, monitoring, and reporting (D.1).",
-      "application_to_facts": "The IT director owns implementation, monitoring, and reporting of the cybersecurity risk — the statement must sit at D.",
-      "key_conclusion": "The full-lifecycle accountability statement must be at Option D."
+      "application_to_facts": "The IT director owns implementation, monitoring, and reporting of the cybersecurity risk — the statement sits at A.",
+      "key_conclusion": "The full-lifecycle accountability statement is at Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Treats acceptance as ending ownership",
+        "why_plausible": "Closing the decision feels final, but accepted risks remain owned, monitored, and reported",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Limits ownership to identification",
+        "why_plausible": "Spotting the risk feels like the job, but ownership spans response and monitoring",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Limits ownership to registration",
+        "why_plausible": "Recording feels complete, but unmonitored entries manage nothing",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct statement at the wrong position; Option B limits to identification; Option C limits to registration; the full-lifecycle accountability must sit at D.",
+    "uniqueness_note": "Option A states the full-lifecycle accountability; Option B limits to identification; Option C limits to registration; Option D denies ongoing accountability.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -15702,7 +16004,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15725,16 +16031,16 @@ var pack_p2_d_questions = [
       "C": "Program B at $1,280,000",
       "D": "Program A at $750,000"
     },
-    "CorrectChoice": "A",
+    "CorrectChoice": "D",
     "ExplanationCorrect": "Total expected annual cost = premium + expected retained loss (the deductible). Program A: $650,000 + $100,000 = $750,000. Program B: $480,000 + $300,000 = $780,000. Program A minimizes cost at $750,000. Recomputed: 650,000 + 100,000 = 750,000; 480,000 + 300,000 = 780,000",
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "Option A is wrong because it names the costlier program: Program B totals $480,000 + $300,000 = $780,000 versus Program A’s $650,000 + $100,000 = $750,000. The minimum is Program A at $750,000.",
     "ExplanationWrongB": "Option B is wrong because Program A's total is $650,000 + $100,000 = $750,000, not $900,000. Adding the full $800,000 expected loss to the premium double-counts the deductible structure.",
     "ExplanationWrongC": "Option C is wrong because $1,280,000 adds the full $800,000 expected loss to Program B's premium instead of the $300,000 deductible. Retained cost is the deductible, not the total expected loss.",
-    "ExplanationWrongD": "Program A at A with $750,000. Re-read: Program A = $750,000 is the minimum; Option D states it but at D. The correct answer must be at A.",
+    "ExplanationWrongD": "",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.4",
     "BlueprintDomain": "Risk Management",
@@ -15749,27 +16055,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Retention (deductible) + premium = total expected cost of the insurance program (D.4).",
-      "application_to_facts": "A: $650K + $100K = $750K; B: $480K + $300K = $780K; A minimizes cost.",
-      "key_conclusion": "Program A at $750,000 minimizes cost; content must place it at Option A."
+      "application_to_facts": "A: $650K + $100K = $750K; B: $480K + $300K = $780K; A minimizes cost at $750,000, stated at Option D.",
+      "key_conclusion": "Program A at $750,000 minimizes cost — Option D."
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Adds full expected loss to the premium",
+        "why_plausible": "$900,000 double-counts; only the $100,000 deductible is retained",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Adds full expected loss to the cheaper premium",
+        "why_plausible": "$1,280,000 double-counts on the B side",
         "tier_candidate": 1
       },
-      "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "A": {
+        "misconception": "Names the costlier program as the minimum",
+        "why_plausible": "$780,000 exceeds $750,000; the minimum is Program A",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option D has Program A's $750K at the wrong position; Option B and C add full expected loss; Option A must carry Program A at $750,000.",
+    "uniqueness_note": "Option A names the costlier Program B at $780,000; Option B adds full expected loss to reach $900,000; Option C adds full expected loss to reach $1,280,000; Option D states Program A at $750,000, the minimum.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -15780,7 +16086,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15832,18 +16142,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats diversification as automatic",
+        "why_plausible": "Two units feel safer, but positive correlation raises joint risk",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Ignores correlation entirely",
+        "why_plausible": "Simple sums feel sufficient, but co-movement changes the total",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Declares correlation unknowable",
+        "why_plausible": "Estimation is hard, but unknowability does not follow — correlation is assessable",
         "tier_candidate": 2
       }
     },
@@ -15858,7 +16168,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15910,22 +16222,22 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Scrambles all three categories",
+        "why_plausible": "Operational/market/strategic labels feel interchangeable, but currency, credit, and liquidity are all financial",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Scrambles two categories",
+        "why_plausible": "Market/compliance/operational mixing misreads all three financial exposures",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Mixes compliance and market into financial",
+        "why_plausible": "One correct label does not validate the other two",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A correctly labels all three as financial risk; Option B, C, D each scramble the categories.",
+    "uniqueness_note": "Option C correctly labels all three as financial risk; Options A, B, and D each scramble the categories.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -15936,7 +16248,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15959,12 +16273,12 @@ var pack_p2_d_questions = [
       "C": "The portfolio cannot lose more than $4,000,000 on any day",
       "D": "The portfolio has a 95% chance of losing exactly $4,000,000"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "B",
     "ExplanationCorrect": "Parametric VaR at 95% confidence means the portfolio has a 5% probability of losing more than the VaR figure on any given day. Here, there is a 5% chance of a daily loss exceeding $4,000,000, and the figure sits within the board's $5,000,000 appetite VaR is a threshold, not a forecast of the expected loss and not a guarantee of a maximum loss.",
     "ExplanationWrongA": "Option A is wrong because VaR is not a forecast of tomorrow's loss; it is a threshold such that losses exceed it only with a stated probability. The expected loss is not $4,000,000.",
-    "ExplanationWrongB": "Option B is wrong. this correct interpretation at D.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because a 5% tail probability means losses CAN exceed $4,000,000; VaR does not guarantee a maximum loss.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because VaR is a threshold exceeded with 5% probability, not a point forecast: there is a 5% chance of losing more than $4,000,000, not a 95% chance of losing exactly $4,000,000.",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
@@ -15983,27 +16297,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "VaR is a threshold exceeded with a stated probability (5% at 95% confidence), not a forecast or cap (D.2).",
-      "application_to_facts": "There is a 5% chance of a daily loss exceeding $4M, within the $5M appetite — the interpretation must sit at D.",
-      "key_conclusion": "The correct VaR interpretation must be at Option D."
+      "application_to_facts": "There is a 5% chance of a daily loss exceeding $4M, within the $5M appetite — the interpretation sits at B.",
+      "key_conclusion": "A 5% chance of losing more than $4,000,000 within the $5,000,000 appetite — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads VaR as a point forecast",
+        "why_plausible": "$4M looks like a prediction, but VaR is a 5%-exceedance threshold",
         "tier_candidate": 3
       },
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Reads VaR as an exact-loss probability",
+        "why_plausible": "95% feels precise, but the statement confuses confidence with a point mass",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads VaR as a maximum-loss guarantee",
+        "why_plausible": "A stated figure feels like a cap, but the 5% tail can exceed $4M",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A is a forecast misread; Option B has the correct interpretation at the wrong position; Option C treats VaR as a cap; the correct interpretation must sit at D.",
+    "uniqueness_note": "Option A misreads VaR as a forecast; Option B states the correct threshold interpretation within appetite; Option C treats VaR as a cap; Option D misreads VaR as an exact-loss probability.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16014,7 +16328,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16066,18 +16384,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Defaults ERM to the audit committee",
+        "why_plausible": "Control oversight feels transferable, but ERM needs dedicated risk focus",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Eliminates the risk committee",
+        "why_plausible": "Management ownership is real, but board-level risk oversight still needs a home",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Leaves non-financial risks unowned",
+        "why_plausible": "Financial focus feels sufficient, but ERM spans all categories",
         "tier_candidate": 2
       }
     },
@@ -16092,7 +16410,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16144,18 +16464,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Retains without transferring",
+        "why_plausible": "Keeping exposure feels like acceptance, but the forward transfers the outcome",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the forward as eliminating exposure",
+        "why_plausible": "Locking the rate feels like removal, but the position persists with reduced impact",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Exits instead of hedging",
+        "why_plausible": "Stopping imports removes risk but destroys the business the hedge preserves",
         "tier_candidate": 2
       }
     },
@@ -16170,7 +16490,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16222,18 +16544,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads alignment as appetite fit",
+        "why_plausible": "Revenue growth feels like appetite, but unadjusted rewards invite excess",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads restraint as the goal",
+        "why_plausible": "Less risk-taking sounds virtuous, but the deficiency is excess, not effort",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Dismisses compensation as HR-only",
+        "why_plausible": "Pay design feels administrative, but incentives shape culture",
         "tier_candidate": 2
       }
     },
@@ -16248,7 +16570,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16271,12 +16595,12 @@ var pack_p2_d_questions = [
       "C": "The protocol should wait for a full breach before any escalation",
       "D": "The protocol should be reviewed only annually to avoid over-reporting"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "An effective KRI escalation protocol uses tiered thresholds with defined response times so management can act with escalating urgency — amber triggers a 48-hour report to the risk committee, red triggers immediate escalation — and assigns clear accountability for the response Escalating every movement, waiting for full breach, or annual review each fail to provide timely, focused escalation.",
-    "ExplanationWrongA": "Option A is wrong because tiered thresholds with defined response times are the effective design; escalating every KRI movement to the board creates noise and dilutes attention. Thresholds exist to focus escalation on meaningful deviations.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "An effective KRI escalation protocol uses tiered thresholds with defined response times so management can act with escalating urgency — amber triggers a 48-hour report to the risk committee, red triggers immediate escalation — and assigns clear accountability for the response Escalating every movement, waiting for full breach, or annual review each fail to provide timely, focused escalation. Option A states the tiered-threshold design.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because escalating every KRI movement to the board creates noise and dilutes attention; thresholds exist to focus escalation on meaningful deviations.",
     "ExplanationWrongC": "Option C is wrong because waiting for a full breach eliminates the advance warning that amber thresholds provide; the protocol should escalate before the limit is reached.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because currency exposure moves continuously; an annual-only review forfeits the advance warning that amber (48-hour report) and red (immediate escalation) tiers provide.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Analyze",
@@ -16295,27 +16619,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Effective KRI protocols use tiered thresholds with defined response times and accountability (D.5).",
-      "application_to_facts": "Amber triggers a 48-hour report; red triggers immediate escalation — the tiered design must sit at D.",
-      "key_conclusion": "The tiered-threshold protocol is the effective design; content must place it at Option D."
+      "application_to_facts": "Amber triggers a 48-hour report; red triggers immediate escalation — the tiered design sits at A.",
+      "key_conclusion": "The tiered-threshold protocol is the effective design — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Accepts annual-only review",
+        "why_plausible": "Infrequent review feels economical, but currency exposure moves continuously",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Escalates every movement to the board",
+        "why_plausible": "More escalation feels safer, but noise dilutes attention to meaningful deviations",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Waits for a full breach before escalating",
+        "why_plausible": "Certainty feels prudent, but waiting forfeits the amber advance warning",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct design at the wrong position; Option B escalates everything; Option C waits for full breach; the tiered-threshold design must sit at D.",
+    "uniqueness_note": "Option A states the tiered-threshold design; Option B escalates everything; Option C waits for full breach; Option D limits review to annually.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16326,7 +16650,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16378,18 +16706,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats insurance as elimination",
+        "why_plausible": "Coverage feels like removal, but attacks can still occur",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats insurance as likelihood reduction",
+        "why_plausible": "Protection feels preventive, but transfer does not stop attacks",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats transfer as retention",
+        "why_plausible": "Premium plus deductible feels like full cost, but the insurer absorbs above-deductible losses",
         "tier_candidate": 2
       }
     },
@@ -16404,7 +16732,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16456,18 +16786,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Ranks by absolute profit",
+        "why_plausible": "$18M exceeds $15M, but ranking nets the risk charge",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the charge as a benefit",
+        "why_plausible": "Higher charge feels like strength, but it reduces economic profit",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Justifies by lower profit",
+        "why_plausible": "Smaller profit is not itself better; Beta wins on net $10M",
         "tier_candidate": 2
       }
     },
@@ -16482,7 +16812,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [
       "E"
     ],
@@ -16536,18 +16868,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Maps lifestyle to rationalization",
+        "why_plausible": "Justification feels inferred, but lifestyle evidences need, not motive",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Maps lifestyle to opportunity",
+        "why_plausible": "Access is present, but the lifestyle question asks the driver, not the means",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Invents collusion",
+        "why_plausible": "Solo fraud with dual access is opportunity, not multi-actor collusion",
         "tier_candidate": 2
       }
     },
@@ -16562,7 +16894,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+],
     "CrossDomainTags": [
       "F"
     ],
@@ -16587,12 +16921,12 @@ var pack_p2_d_questions = [
       "C": "Accept without action because the risk is unlikely",
       "D": "Share by transferring the risk to the second supplier"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "For a single-source supply risk, the appropriate response is Reduce — qualifying a second supplier and holding safety stock lower the likelihood and impact of disruption — while the residual risk is monitored against appetite Avoid is disproportionate (the product line is viable with mitigation), accept-without-action ignores manageable controls, and a second supplier is not a Share transfer.",
-    "ExplanationWrongA": "Option A is wrong because it states the correct approach but at the wrong position: qualifying a second supplier and holding safety stock reduce the disruption risk, and the residual is monitored. The correct answer must sit at Option D.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because discontinuing the product line is a disproportionate response when dual sourcing and inventory buffers can reduce the risk while production continues; avoid is for risks that cannot be managed within appetite.",
     "ExplanationWrongC": "Option C is wrong because the plant-idling consequence is material and manageable; accepting without action ignores available Reduce responses.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because qualifying a second supplier is a Reduce response — it lowers likelihood and impact — not a Share transfer. No risk is transferred to a counterparty; the company retains the (reduced) residual.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Analyze",
@@ -16611,27 +16945,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Reduce lowers likelihood and impact via dual sourcing and inventory; residual risk is monitored (D.4).",
-      "application_to_facts": "Qualifying a second supplier and holding safety stock reduce the disruption risk; the residual is monitored — the approach must sit at D.",
-      "key_conclusion": "The reduce-and-monitor approach must be at Option D."
+      "application_to_facts": "Qualifying a second supplier and holding safety stock reduce the disruption risk; the residual is monitored — the approach sits at A.",
+      "key_conclusion": "Reduce via dual sourcing with monitored residual — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Treats dual sourcing as a Share transfer",
+        "why_plausible": "A second supplier feels like risk transfer, but no counterparty accepts the exposure — likelihood and impact are reduced, not transferred",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Avoid is always safest for single-source risk",
+        "why_plausible": "Exiting the product line feels prudent, but dual sourcing preserves production while managing the risk",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Low likelihood means no action is needed",
+        "why_plausible": "Unlikely is confused with immaterial, but plant-idling consequences are material and manageable",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct approach at the wrong position; Option B exits the line; Option C accepts without action; the reduce-and-monitor approach must sit at D.",
+    "uniqueness_note": "Option A states the reduce-and-monitor approach; Option B exits the line; Option C accepts without action; Option D mislabels dual sourcing as a Share transfer.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16642,7 +16976,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16694,22 +17030,22 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Misreads 9.8% as above the 10.5% metric",
+        "why_plausible": "Inequality direction slips under exam pressure; 9.8 < 10.5 is a breach, not compliance",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Dismisses hypothetical stress scenarios as ignorable",
+        "why_plausible": "Stress tests feel non-binding, but the breach signal requires plan adjustment",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats any breach as requiring a full lending halt",
+        "why_plausible": "Extreme responses feel safest, but the framework requires reasoned adjustment",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A misreads the comparison; Option C dismisses the scenario; Option D demands a halt; Option B requires adjusting the plan or position.",
+    "uniqueness_note": "Option A states the adjust-the-plan response; Option B misreads 9.8% as within appetite; Option C dismisses the scenario; Option D demands a mechanical halt.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16720,7 +17056,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16772,18 +17110,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Waits until the technology materializes before acting",
+        "why_plausible": "Current risks feel urgent while emerging ones feel remote, so monitoring feels optional",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Exits the core business to avoid an uncertain disruption",
+        "why_plausible": "Avoidance feels safest for existential threats, but preemptive exit destroys value",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Routes a strategic disruption to the legal team as a compliance matter",
+        "why_plausible": "Regulatory framing is familiar, but business-model risk belongs to strategy",
         "tier_candidate": 2
       }
     },
@@ -16798,7 +17136,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16821,11 +17161,11 @@ var pack_p2_d_questions = [
       "C": "The loss event proves the tolerance band was too tight, so it should be loosened",
       "D": "Tolerance bands are fixed for the fiscal year and cannot be changed"
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "ExplanationCorrect": "Under COSO ERM 2017, Review and Revision evaluates whether the framework, appetite, and tolerance remain suitable as experience accumulates. When a loss event shows a risk category is more volatile than modeled, the tolerance band should be reviewed and revised to align with the actual risk profile A static band, a loosening driven by the loss alone, or a fiscal-year lock each fail the review-and-revision requirement.",
     "ExplanationWrongA": "Option A is wrong because tolerance bands are not locked for the year; the framework requires review and revision as experience accumulates and the risk profile changes.",
-    "ExplanationWrongB": "Option B is wrong because it states the correct principle — review and revise when experience shows misalignment — but the principle must be evaluated against the actual risk profile. The tolerance band should be adjusted when the loss event shows higher volatility than modeled.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C is wrong because a large loss alone does not prove the band was too tight; the event showed higher volatility than modeled, which supports reviewing and potentially tightening the band, not loosening it.",
     "ExplanationWrongD": "Option D is wrong because tolerance bands are not fixed; Review and Revision exists precisely to adjust them when conditions warrant.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
@@ -16845,27 +17185,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Tolerance bands are reviewed and revised when experience shows misalignment with the risk profile (D.3).",
-      "application_to_facts": "The loss event shows higher volatility than modeled, so the band should be reviewed and revised — the statement must sit at C.",
-      "key_conclusion": "The review-and-revise principle must be at Option C."
+      "application_to_facts": "The loss event shows higher volatility than modeled, so the band should be reviewed and revised — the statement sits at B.",
+      "key_conclusion": "Review and revise when experience shows misalignment — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats tolerance bands as locked at year-start",
+        "why_plausible": "Annual planning feels binding, but Review and Revision requires adjustment as experience accumulates",
         "tier_candidate": 3
       },
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "C": {
+        "misconception": "Treats a single loss as proof the band was too tight",
+        "why_plausible": "One event feels dispositive, but higher volatility supports tightening, not loosening",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats tolerance bands as fixed for the fiscal year",
+        "why_plausible": "Year-end cadence suggests immutability, but bands adjust when conditions warrant",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A locks the band; Option B has the correct principle at the wrong position; Option D declares immutability; the review-and-revise statement must sit at C.",
+    "uniqueness_note": "Option A locks the band; Option B states the review-and-revise principle; Option C loosens on a loss alone; Option D declares immutability.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16876,7 +17216,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16899,12 +17243,12 @@ var pack_p2_d_questions = [
       "C": "Treating the stress scenario as the expected funding outcome for the quarter",
       "D": "Ignoring the result because the funding freeze is unlikely"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "Under COSO ERM 2017, stress testing supports forward-looking decisions: the output should size the liquid asset buffer and set funding limits so the bank can survive the stress within appetite Regulatory-only reporting, treating the scenario as the expected outcome, or ignoring an unlikely-but-severe scenario each fail to connect the stress test to liquidity management.",
-    "ExplanationWrongA": "Option A is wrong because it states the correct use of the stress result — sizing the buffer and setting limits — but at the wrong position. The stress output should drive internal liquidity limits; regulatory reporting alone or treating the scenario as the expected outcome each fail to connect the stress test to liquidity management.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because stress results should drive internal limits and buffer sizing, not just regulatory reporting; the exercise exists to inform the bank's own liquidity management.",
     "ExplanationWrongC": "Option C is wrong because a stress scenario is a severe plausible path, not the expected outcome; treating it as the base case would distort funding plans.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because stress tests exist precisely for unlikely-but-severe scenarios: ignoring the funding-freeze result abandons forward-looking liquidity management and leaves the buffer unsized.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
@@ -16923,27 +17267,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Stress testing sizes buffers and sets limits so the bank survives the scenario within appetite (D.5).",
-      "application_to_facts": "The 30-day funding freeze stress sizes the liquid buffer and funding limits — the use must sit at D.",
-      "key_conclusion": "Stress output sizes the buffer and limits; content must place it at Option D."
+      "application_to_facts": "The 30-day funding freeze stress sizes the liquid buffer and funding limits — the use sits at A.",
+      "key_conclusion": "Stress output sizes the buffer and limits — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Ignores severe scenarios as too unlikely to matter",
+        "why_plausible": "Low probability feels like irrelevance, but stress tests exist precisely for unlikely-but-severe paths",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Limits stress-test use to regulatory reporting",
+        "why_plausible": "Regulatory framing feels sufficient, but the exercise must drive internal limits and buffers",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the stress scenario as the expected outcome",
+        "why_plausible": "A severe path with numbers looks like a forecast, but it is a plausible adverse branch, not the base case",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct use at the wrong position; Option B limits to reporting; Option C treats stress as forecast; the buffer-sizing use must sit at D.",
+    "uniqueness_note": "Option A states the buffer-sizing use; Option B limits to reporting; Option C treats stress as forecast; Option D ignores the unlikely-but-severe scenario.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -16954,7 +17298,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17006,18 +17354,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses Performance execution with formulation",
+        "why_plausible": "Risk assessment is salient, but appetite enters before strategy is chosen",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses retrospective Review with formulation",
+        "why_plausible": "Monitoring language suggests looking back, but the activity occurs during strategy design",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses reporting the strategy with formulating it",
+        "why_plausible": "Shareholder communication is visible, but Information and Communication reports rather than integrates",
         "tier_candidate": 2
       }
     },
@@ -17032,7 +17380,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17084,18 +17434,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Misreads an external policy shock as an internal process failure",
+        "why_plausible": "Disruption language suggests operations, but the source is a market-position change",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses revenue effects with a financial-risk source",
+        "why_plausible": "Export revenue is affected, but classification follows the competitive driver, not the P&L line",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses regulation involvement with a compliance failure",
+        "why_plausible": "Trade agreements involve rules, but no obligation is breached — the exposure is strategic",
         "tier_candidate": 2
       }
     },
@@ -17110,7 +17460,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17142,7 +17494,7 @@ var pack_p2_d_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Remember",
-    "CalculationItem": false,
+    "CalculationItem": true,
     "ItemStyle": "single-select",
     "LOSTag": "D.2",
     "BlueprintDomain": "Risk Management",
@@ -17162,18 +17514,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Takes the mid-range outcome as the expectation",
+        "why_plausible": "$500,000 is salient, but expectation weights it by 20%, giving $100,000",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Sums loss outcomes without probability weighting",
+        "why_plausible": "$2.5M adds both losses, skipping the 20%/10% weights that define expectation",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Misweights the tail outcome",
+        "why_plausible": "$250,000 implies a 12.5% tail weight; the stem states 10%, giving $200,000",
         "tier_candidate": 2
       }
     },
@@ -17188,7 +17540,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17240,18 +17594,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Collapses appetite and tolerance into one concept",
+        "why_plausible": "Both govern risk-taking, but willingness and acceptable variation are distinct",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Equates tolerance with maximum absorbable capacity",
+        "why_plausible": "Capacity language feels similar, but tolerance is variation around objectives, not the survival limit",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Assigns appetite and tolerance to regulators",
+        "why_plausible": "Capital rules feel determinative, but the board and management set both",
         "tier_candidate": 2
       }
     },
@@ -17266,7 +17620,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17318,18 +17674,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reduces despite the failed cost test",
+        "why_plausible": "Reformulation is the familiar control, but cost exceeding margin makes reduction non-viable",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Expects insurance to answer a regulatory ban",
+        "why_plausible": "Liability coverage feels protective, but insurance does not make a banned product marketable",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Accepts an unmarketable product",
+        "why_plausible": "Continuing feels economical, but the ban makes acceptance unlawful",
         "tier_candidate": 2
       }
     },
@@ -17344,7 +17700,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17367,12 +17725,12 @@ var pack_p2_d_questions = [
       "C": "Risk identification is complete once the risk register is created and needs no refresh",
       "D": "Risk identification should rely only on quantitative data to avoid bias"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "the correct statement at Option D. A single one-time method, a static register, or quantitative-only reliance each fail the framework's continuous, multi-method approach.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO ERM 2017, risk identification is continuous and uses a combination of methods — workshops, interviews, and data analysis — tailored to the entity’s context to surface a broad range of risks. Option B states this multi-method principle. A single one-time method (Option A), a static register (Option C), or quantitative-only reliance (Option D) each miss emerging or qualitative risks.",
     "ExplanationWrongA": "Option A is wrong because risk identification is continuous and benefits from multiple methods; a single one-time exercise would miss emerging and changing risks.",
-    "ExplanationWrongB": "Option B is wrong because a combination of methods — workshops, interviews, and data analysis — tailored to the entity's context is the framework's approach. A single method or a one-time exercise would miss emerging and changing risks.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because the register is a living document; identification continues as risks and the environment change.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because quantitative-only reliance misses emerging and qualitative risks that workshops and interviews surface; data analysis complements but does not replace tailored multi-method identification.",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
@@ -17391,27 +17749,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Risk identification uses multiple tailored methods continuously to surface a broad range of risks (D.2).",
-      "application_to_facts": "Flash Manufacturing combines workshops, interviews, and data analysis to identify risks — the statement must sit at D.",
-      "key_conclusion": "The multi-method identification principle must be at Option D."
+      "application_to_facts": "Flash Manufacturing combines workshops, interviews, and data analysis to identify risks — the statement sits at B.",
+      "key_conclusion": "The multi-method identification principle is at Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats identification as a one-time exercise",
+        "why_plausible": "A single method feels efficient, but emerging risks require continuous multi-method identification",
         "tier_candidate": 3
       },
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Treats quantitative data as bias-free and sufficient",
+        "why_plausible": "Numbers feel objective, but quant-only reliance misses emerging and qualitative risks",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the register as finished once created",
+        "why_plausible": "A completed document feels sufficient, but identification continues as the environment changes",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A is one-time; Option B has the correct principle at the wrong position; Option C freezes the register; the multi-method statement must sit at D.",
+    "uniqueness_note": "Option A is one-time; Option B states the multi-method principle; Option C freezes the register; Option D relies on quantitative data only.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -17422,7 +17780,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17474,18 +17836,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Sums instead of multiplying",
+        "why_plausible": "7 = 4 + 3 feels natural, but the risk score is the product 12",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Computes the right score with an inverted comparison",
+        "why_plausible": "12 is correct, but 12 exceeds 10 — it triggers review rather than clearing it",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Sums and inverts the comparison",
+        "why_plausible": "7 with an exceeds-conclusion compounds two errors",
         "tier_candidate": 2
       }
     },
@@ -17500,7 +17862,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17552,18 +17916,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Attributes reassessment to a governance reset",
+        "why_plausible": "Leadership change feels causal, but the trigger is framework suitability after substantial change",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses Performance-cycle work with framework-suitability review",
+        "why_plausible": "New risks do need assessment, but the question asks what drives reassessment of the framework itself",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses reporting with reassessment",
+        "why_plausible": "The acquisition must be reported, but reporting does not evaluate suitability",
         "tier_candidate": 2
       }
     },
@@ -17578,7 +17942,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17601,11 +17967,11 @@ var pack_p2_d_questions = [
       "C": "Appetite is set below capacity only when regulators require it",
       "D": "Appetite above capacity is acceptable because the bank can grow into it"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "the correct statement at Option C. Appetite above capacity (Option D) is untenable, equality (Option B) is not required, and regulators do not set the board's appetite (Option C is the correct slot).",
-    "ExplanationWrongA": "Option A is wrong because risk capacity is the maximum the organization can absorb, while appetite is the risk it is willing to take. The board sets appetite below capacity by choice, preserving buffer for tail events; capacity is not a target to use up.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Risk capacity is the maximum the bank can absorb ($500M); appetite is the risk the board is willing to take ($150M), normally set below capacity by choice to preserve buffer for tail events. Option A states this willingness-below-capacity rationale. Equality (Option B), regulator-driven appetite (Option C), and above-capacity appetite (Option D) each misstate the relationship.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because appetite need not equal capacity; the board chooses the risk it is willing to take, which is typically below the survival limit, preserving buffer for tail events.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongC": "Option C is wrong because regulators impose minimum capital requirements; they do not set the board’s appetite. The board sets appetite below capacity by choice to preserve buffer for tail events.",
     "ExplanationWrongD": "Option D is wrong because appetite above capacity would expose the bank to losses beyond what it can absorb — an untenable position that violates the capacity boundary.",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -17625,27 +17991,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Appetite reflects willingness and is normally set below capacity, the maximum absorbable risk (D.3).",
-      "application_to_facts": "The board accepts $150M of risk within the $500M capacity, preserving buffer for tail events — the rationale must sit at C.",
-      "key_conclusion": "Appetite is set below capacity by choice; the correct statement must be at Option C."
+      "application_to_facts": "The board accepts $150M of risk within the $500M capacity, preserving buffer for tail events — the rationale sits at A.",
+      "key_conclusion": "Appetite is set below capacity by choice — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "C": {
+        "misconception": "Assigns appetite-setting to regulators",
+        "why_plausible": "Capital rules feel determinative, but regulators set minimums; the board sets appetite by choice",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Equates appetite with capacity",
+        "why_plausible": "Using all available capital feels efficient, but appetite is willingness, normally below the survival limit",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Accepts appetite above capacity",
+        "why_plausible": "Growing into capacity sounds dynamic, but exposure beyond absorbable risk is untenable",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct rationale at the wrong position; Option B demands equality; Option D exceeds capacity; the willingness-below-capacity statement must sit at C.",
+    "uniqueness_note": "Option A states the willingness-below-capacity rationale; Option B demands equality; Option C assigns appetite to regulators; Option D exceeds capacity.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -17656,7 +18022,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17679,12 +18049,12 @@ var pack_p2_d_questions = [
       "C": "Reduce, because the venture lowers the risk of the mine",
       "D": "Accept, because the company keeps the full development risk"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "the correct response at Option D. Avoid (Option A) would exit the activity, Reduce (Option C) would lower likelihood/impact, and Accept (Option D is the correct slot) would retain the full risk; the joint venture is a Share response.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO ERM 2017, a joint venture distributes development risk between partners — a Share response. Option B states this. Avoid (Option A) would exit the activity, Reduce (Option C) would lower the likelihood or impact of the mining risk itself, and Accept (Option D) would retain the full development risk.",
     "ExplanationWrongA": "Option A is wrong because the company is still engaging in the mining development; the joint venture shares the risk rather than exiting the activity, so Avoid does not apply.",
-    "ExplanationWrongB": "Option B is wrong because the joint venture distributes the development risk between the partners — that is the Share response. The correct response must be identified at the manifest letter; the partners each bear a share rather than one party exiting or reducing the risk.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because a joint venture transfers a portion of the risk to the partner; it does not reduce the likelihood or impact of the mining risk itself.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because the company shares development risk with its partner rather than retaining it in full; Accept would mean bearing the entire mining exposure alone.",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
@@ -17703,27 +18073,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Share distributes risk to another party; a joint venture shares development risk between partners (D.4).",
-      "application_to_facts": "The joint venture distributes the mining development risk between the partners — a Share response that must sit at D.",
-      "key_conclusion": "The joint venture is a Share response; content must place it at Option D."
+      "application_to_facts": "The joint venture distributes the mining development risk between the partners — a Share response that sits at B.",
+      "key_conclusion": "The joint venture is a Share response — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses continued operation with Avoid",
+        "why_plausible": "Still operating together feels like exiting, but Avoid requires discontinuing the activity",
         "tier_candidate": 3
       },
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Treats a joint venture as full retention",
+        "why_plausible": "Partnership feels cosmetic, but development risk is genuinely distributed between partners",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confuses risk-sharing with likelihood reduction",
+        "why_plausible": "Joint operations feel safer, but the venture distributes rather than reduces the mining risk",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A is Avoid; Option B has the correct response at the wrong position; Option C is Reduce; the Share response must sit at D.",
+    "uniqueness_note": "Option A is Avoid; Option B states the Share response; Option C is Reduce; Option D is Accept retaining full risk.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -17734,7 +18104,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17786,18 +18160,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Takes the residual as the benefit",
+        "why_plausible": "$200,000 is salient, but it is the remaining exposure, not the improvement",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Stops at the gross reduction without subtracting cost",
+        "why_plausible": "$400,000 is progress, but net benefit deducts the $150,000 response cost",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Subtracts cost from inherent without removing residual",
+        "why_plausible": "$450,000 ignores the $200,000 that remains",
         "tier_candidate": 2
       }
     },
@@ -17812,7 +18186,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17864,18 +18240,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Rejects severity as a flaw",
+        "why_plausible": "Unlikely conditions feel dismissible, but plausibility — not likelihood — is the stress-test criterion",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Removes the key assumption",
+        "why_plausible": "Real estate feels speculative, but it is the portfolio’s central vulnerability",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Softens the scenario to the forecast",
+        "why_plausible": "The likely path feels comfortable, but softening converts stress into base case",
         "tier_candidate": 2
       }
     },
@@ -17890,7 +18266,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17913,11 +18291,11 @@ var pack_p2_d_questions = [
       "C": "ERM applies only to risk management functions, not business-unit performance",
       "D": "Performance measurement replaces the need for risk assessment"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "the correct statement at Option C. Ignoring risk (Option B) encourages excessive risk-taking, ERM is not confined to risk functions (Option C is the correct slot), and performance measurement complements rather than replaces risk assessment.",
-    "ExplanationWrongA": "Option A is wrong because risk-adjusted performance metrics are the correct integration — reported results should reflect the risk taken. Ignoring risk in metrics encourages excessive risk-taking; the risk-adjusted approach aligns manager behavior with appetite.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO ERM 2017, Performance integrates with ERM: business-unit scorecards should use risk-adjusted metrics so reported results reflect the risk taken. Option A states this. Ignoring risk (Option B) encourages excessive risk-taking, confining ERM to risk functions (Option C) misses enterprise integration, and measurement replacing assessment (Option D) inverts the relationship.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because ignoring risk in performance metrics encourages excessive risk-taking; managers would chase results without bearing the risk cost.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongC": "Option C is wrong because ERM integrates across the enterprise: business-unit scorecards are part of Performance, and risk-adjusted metrics align manager behavior with appetite. ERM is not confined to risk functions.",
     "ExplanationWrongD": "Option D is wrong because performance measurement and risk assessment are complementary; risk-adjusted performance builds on risk assessment rather than replacing it.",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
@@ -17937,27 +18315,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "ERM integrates with performance: risk-adjusted metrics align reported results with risk taken (D.5).",
-      "application_to_facts": "Business-unit scorecards use risk-adjusted metrics so results reflect the risk taken — the statement must sit at C.",
-      "key_conclusion": "Performance metrics are risk-adjusted; content must place the statement at Option C."
+      "application_to_facts": "Business-unit scorecards use risk-adjusted metrics so results reflect the risk taken — the statement sits at A.",
+      "key_conclusion": "Performance metrics are risk-adjusted — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "C": {
+        "misconception": "Confines ERM to risk functions",
+        "why_plausible": "Silo thinking feels tidy, but Performance integration spans business units",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Ignores risk to focus purely on results",
+        "why_plausible": "Results-only focus feels clean, but unadjusted metrics reward excessive risk-taking",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats measurement as replacing assessment",
+        "why_plausible": "Scorecards feel sufficient, but risk-adjusted performance builds on assessment rather than replacing it",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct interaction at the wrong position; Option B ignores risk; Option D replaces assessment; the risk-adjusted-metrics statement must sit at C.",
+    "uniqueness_note": "Option A states the risk-adjusted-metrics interaction; Option B ignores risk; Option C confines ERM to risk functions; Option D replaces assessment.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -17968,7 +18346,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17991,12 +18373,12 @@ var pack_p2_d_questions = [
       "C": "It replaces the need for risk owners",
       "D": "It records only the largest risks for the board"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "The risk register records likelihood and impact because they are the inputs to the risk score (RM-02: likelihood x severity) the correct statement at Option D. The register is a decision tool, not a legal filing (Option B), does not replace risk owners (Option C), and is not limited to the largest risks (Option D is the correct slot).",
-    "ExplanationWrongA": "Option A is wrong because recording likelihood and impact provides the inputs for risk scores and heat-map prioritization — the register's decision purpose. The register is not a legal filing and does not replace risk owners; it ranks risks for response allocation.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The register records likelihood and impact because they are the inputs to the risk score (RM-02: likelihood x severity) used to prioritize risks on the heat map. Option A states this decision purpose. Legal filing (Option B), replacing owners (Option C), and largest-risks-only recording (Option D) each misstate the register’s role.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because the register is a decision tool, not a compliance artifact; recording likelihood and impact drives prioritization, not legal filing.",
     "ExplanationWrongC": "Option C is wrong because the register complements risk ownership; it does not replace the need for accountable risk owners.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because the register covers the full risk inventory for prioritization, not only the largest risks; likelihood and impact ratings rank all risks for response allocation.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -18015,27 +18397,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Likelihood and impact feed risk scores and heat-map prioritization (D.1/D.2).",
-      "application_to_facts": "The register's likelihood and impact ratings feed RM-02 scores and prioritization — the purpose must sit at D.",
-      "key_conclusion": "Recording likelihood and impact drives prioritization; the statement must be at Option D."
+      "application_to_facts": "The register's likelihood and impact ratings feed RM-02 scores and prioritization — the purpose sits at A.",
+      "key_conclusion": "Recording likelihood and impact drives prioritization — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Limits recording to the largest risks",
+        "why_plausible": "Materiality feels efficient, but prioritization needs the full inventory",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the register as a legal filing",
+        "why_plausible": "Documentation feels like compliance, but likelihood/impact ratings drive prioritization",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats the register as replacing owners",
+        "why_plausible": "A complete record feels sufficient, but risks need accountable owners",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct purpose at the wrong position; Option B treats it as legal filing; Option C replaces owners; the risk-score-input purpose must sit at D.",
+    "uniqueness_note": "Option A states the risk-score-input purpose; Option B treats it as legal filing; Option C replaces owners; Option D limits recording to the largest risks.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -18046,7 +18428,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18176,18 +18562,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats concentration as a benefit",
+        "why_plausible": "Specialization feels safer, but common shocks hit concentrated portfolios together",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Assesses each investment in isolation",
+        "why_plausible": "Individual review feels thorough, but the portfolio view exists to capture joint movement",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Assumes sector diversity breaks regional correlation",
+        "why_plausible": "Different sectors feel independent, but a regional shock crosses sector lines",
         "tier_candidate": 2
       }
     },
@@ -18202,7 +18588,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18254,18 +18642,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Classifies by reputational damage",
+        "why_plausible": "Reputation effects are visible, but classification follows the systems source, not the outcome",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Classifies by regulatory concern",
+        "why_plausible": "Data-accuracy rules are salient, but the source is a systems failure, not a compliance breach",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Classifies by customer impact",
+        "why_plausible": "Customer losses matter, but they are the consequence, not a market/credit/liquidity source",
         "tier_candidate": 2
       }
     },
@@ -18280,7 +18668,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18332,18 +18722,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads VaR as a point forecast",
+        "why_plausible": "$2.5M looks like a prediction, but VaR is a threshold with a 5% exceedance tail",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Inverts the confidence level",
+        "why_plausible": "95% feels like the exceedance probability, but it is the confidence that losses stay within the figure",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Reads VaR as a maximum-loss guarantee",
+        "why_plausible": "A stated figure feels like a cap, but the 5% tail can exceed it",
         "tier_candidate": 2
       }
     },
@@ -18358,7 +18748,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [
       "E"
     ],
@@ -18383,10 +18775,10 @@ var pack_p2_d_questions = [
       "C": "ERM should have no board committee owner because it is a management function",
       "D": "The risk committee should own only financial risks"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "the correct statement at Option A. Audit-only ownership (Option A is the correct slot), no board owner (Option C), and financial-only scope (Option D) each misallocate oversight.",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Option B is wrong because a dedicated risk committee owning ERM, with the audit committee focused on financial reporting and internal control, is the structure that avoids over-concentrating oversight. Defaulting ERM to audit or leaving it management-only misallocates board oversight.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO ERM 2017, the board may structure ERM oversight through a dedicated risk committee while the audit committee focuses on financial reporting and internal control, avoiding over-concentration. Option B states this. Audit-only ownership (Option A), no board owner (Option C), and financial-only scope (Option D) each misallocate oversight.",
+    "ExplanationWrongA": "Option A is wrong because defaulting ERM to the audit committee over-concentrates oversight: the audit committee should focus on financial reporting and internal control while a dedicated risk committee owns ERM.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because the board has an ERM oversight role; ERM is not purely a management function.",
     "ExplanationWrongD": "Option D is wrong because ERM oversight spans all risk categories; a financial-only scope leaves other risks unowned.",
     "Difficulty": "Moderate-Easy",
@@ -18407,27 +18799,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Board ERM oversight can be structured via a dedicated risk committee; audit focuses on financial reporting (D.1).",
-      "application_to_facts": "A dedicated risk committee owns ERM while audit focuses on financial reporting — the statement must sit at A.",
-      "key_conclusion": "The dedicated risk-committee structure must be at Option A."
+      "application_to_facts": "A dedicated risk committee owns ERM while audit focuses on financial reporting — the statement sits at B.",
+      "key_conclusion": "The dedicated risk-committee structure is at Option B."
     },
     "distractor_intent": {
-      "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "A": {
+        "misconception": "Defaults ERM to the audit committee",
+        "why_plausible": "Audit already oversees controls, but over-concentration weakens dedicated risk oversight",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Treats ERM as management-only",
+        "why_plausible": "Operations ownership feels sufficient, but the board retains an oversight role",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Limits oversight to financial risks",
+        "why_plausible": "Financial reporting is salient, but ERM spans all risk categories",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A must carry the correct risk-committee structure; Option B has it at the wrong position; Option C treats ERM as management-only; Option D limits scope to financial risks.",
+    "uniqueness_note": "Option A defaults ERM to audit; Option B states the dedicated risk-committee structure; Option C leaves ERM management-only; Option D limits scope to financial risks.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -18438,7 +18830,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18568,18 +18964,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Punishes the reporter",
+        "why_plausible": "Hierarchy feels violated, but disciplining reporters destroys future detection",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Removes the program over mistrust",
+        "why_plausible": "Mistrust feels real, but the answer is stronger protection, not fewer channels",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Confines reporting to legal",
+        "why_plausible": "A single channel feels controlled, but narrow channels deter reporting",
         "tier_candidate": 2
       }
     },
@@ -18594,7 +18990,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [
       "F"
     ],
@@ -18619,12 +19017,12 @@ var pack_p2_d_questions = [
       "C": "The KRI is qualitative and subjective to capture nuance",
       "D": "The KRI is fixed and does not change regardless of the risk"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "the correct statement at Option D. Post-loss measurement (Option B) is lagging, subjectivity (Option C) undermines reliability, and a fixed indicator (Option D is the correct slot) cannot signal change.",
-    "ExplanationWrongA": "Option A is wrong because a useful KRI is measurable, reliable, and leading — it moves before the risk materializes. The correct characteristics must be identified at the manifest letter; post-loss measurement is lagging and subjectivity undermines reliability.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO ERM 2017, a useful KRI is measurable, reliable, and leading — moving before the risk materializes so management can act. Option A states this. Post-loss measurement (Option B) is lagging, subjectivity (Option C) undermines reliability, and a fixed indicator (Option D) cannot signal change.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because a KRI measured only after a loss is a lagging indicator; useful KRIs lead the risk event so management can intervene.",
     "ExplanationWrongC": "Option C is wrong because a subjective, non-measurable indicator cannot be tracked reliably; usefulness requires measurable, objective data.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because a fixed indicator cannot signal change: a KRI that never moves provides no advance warning regardless of how the risk evolves.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Analyze",
@@ -18643,27 +19041,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Useful KRIs are measurable, reliable, and leading (D.5).",
-      "application_to_facts": "Flash Holdings selects measurable, reliable, leading indicators — the statement must sit at D.",
-      "key_conclusion": "The measurable-leading KRI characteristics must be at Option D."
+      "application_to_facts": "Flash Holdings selects measurable, reliable, leading indicators — the statement sits at A.",
+      "key_conclusion": "The measurable-leading KRI characteristics are at Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Accepts a fixed indicator",
+        "why_plausible": "Stability feels reliable, but an unmoving KRI cannot signal change",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Measures only after losses occur",
+        "why_plausible": "Post-loss data feels concrete, but lagging indicators cannot guide intervention",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Prefers qualitative subjectivity",
+        "why_plausible": "Nuance feels valuable, but usefulness requires measurable, objective data",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct characteristics at the wrong position; Option B is lagging; Option C is subjective; the measurable-leading statement must sit at D.",
+    "uniqueness_note": "Option A states the measurable-leading characteristics; Option B is lagging; Option C is subjective; Option D is a fixed indicator.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -18674,7 +19072,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18726,18 +19128,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Adds the full expected loss to the premium",
+        "why_plausible": "$720,000 combines two cost layers, but only the $50,000 deductible is retained",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Counts premium only",
+        "why_plausible": "$320,000 is visible, but total insured cost adds the deductible",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Rejects insurance categorically",
+        "why_plausible": "Premiums feel wasteful, but $370,000 below $400,000 favors the policy",
         "tier_candidate": 2
       }
     },
@@ -18752,7 +19154,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18804,18 +19208,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Ranks by absolute profit",
+        "why_plausible": "$5M exceeds $3M, but ranking uses return per risk dollar",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Miscomputes X’s ratio",
+        "why_plausible": "25% implies $20M capital, but X consumes $25M, giving 20.0%",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Miscomputes Y’s ratio",
+        "why_plausible": "20% inverts the ranking; Y earns $3M on $10M = 30.0%",
         "tier_candidate": 2
       }
     },
@@ -18830,7 +19234,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [
       "E"
     ],
@@ -18884,18 +19290,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Maps the role to rationalization",
+        "why_plausible": "Justification feels inferred, but the role design evidences access, not motive",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Maps the role to pressure",
+        "why_plausible": "Financial need is present, but the combined role is about means, not motive",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Invents collusion as a triangle element",
+        "why_plausible": "Two functions in one role looks conspiratorial, but solo control is opportunity, not collusion",
         "tier_candidate": 2
       }
     },
@@ -18910,7 +19316,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [
       "F"
     ],
@@ -18964,18 +19372,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Takes starting exposure as the benefit",
+        "why_plausible": "$1.5M is salient, but benefit nets the $200,000 cost against the $1.1M reduction",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Stops at the gross reduction",
+        "why_plausible": "$1.1M is progress, but net benefit deducts the qualification cost",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Deducts the cost twice",
+        "why_plausible": "$300,000 double-counts; the $200,000 applies once",
         "tier_candidate": 2
       }
     },
@@ -18990,7 +19398,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19042,18 +19452,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Misreads tolerance as breached",
+        "why_plausible": "$35M feels large, but the band allows $40M",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Compares exposure to the loss appetite",
+        "why_plausible": "$35M against $100M confuses a loan face value with an annual loss limit",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Invokes capacity on a $35M loan",
+        "why_plausible": "$300M capacity dwarfs the exposure; the operative test is tolerance",
         "tier_candidate": 2
       }
     },
@@ -19068,7 +19478,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19092,7 +19504,7 @@ var pack_p2_d_questions = [
       "D": "The emerging risk is reviewed once and then closed"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under COSO ERM 2017, emerging risks identified through horizon scanning are monitored and prepared for as they evolve. Routing the emerging risk to the risk committee for monitoring and response preparation — with updates as it develops — is the appropriate governance path. Option A states this. Filing without review (Option B), legal-only routing (Option C), and one-time review (Option D) each fail the continuous, enterprise-level monitoring the framework requires.",
+    "ExplanationCorrect": "Under COSO ERM 2017, emerging risks identified through horizon scanning are monitored and prepared for as they evolve. Routing the emerging risk to the risk committee for monitoring and response preparation — with updates as it develops — is the appropriate governance path. Option B states this. Filing without review (Option A), legal-only routing (Option C), and one-time review (Option D) each fail the continuous, enterprise-level monitoring the framework requires.",
     "ExplanationWrongA": "Option A is wrong because filing an emerging risk without review forfeits the preparation window; the framework's horizon-scanning purpose is to monitor and prepare before the risk crystallizes.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is wrong because an emerging risk spans strategy, operations, and finance; confining review to legal misses the enterprise-level assessment and response preparation.",
@@ -19116,26 +19528,26 @@ var pack_p2_d_questions = [
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Emerging risks are routed for continuous monitoring and response preparation as they evolve (D.5).",
       "application_to_facts": "The horizon-scanned risk goes to the risk committee for monitoring and preparation with updates.",
-      "key_conclusion": "Route to the risk committee with ongoing monitoring — Option A."
+      "key_conclusion": "Route to the risk committee with ongoing monitoring — Option B."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Files emerging risks without review",
+        "why_plausible": "Immateriality feels like irrelevance, but horizon scanning exists to prepare before crystallization",
         "tier_candidate": 3
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Routes enterprise risk to legal only",
+        "why_plausible": "Legal framing feels contained, but emerging risk spans strategy, operations, and finance",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Closes review after a single look",
+        "why_plausible": "One assessment feels sufficient, but emerging risks evolve and need ongoing monitoring",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option B defers; Option C routes to legal; Option D closes after one review; Option A routes to the risk committee with ongoing monitoring.",
+    "uniqueness_note": "Option A files without review; Option B routes to the risk committee with ongoing monitoring; Option C routes to legal; Option D closes after one review.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -19146,7 +19558,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19198,18 +19614,18 @@ var pack_p2_d_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Applies controls regardless of cost",
+        "why_plausible": "More control feels safer, but cost exceeding benefit misallocates resources",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Transfers uneconomically",
+        "why_plausible": "Insurance feels protective, but a premium above benefit favors acceptance",
         "tier_candidate": 1
       },
       "D": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Rejects all residual exposure",
+        "why_plausible": "Zero risk feels ideal, but within-tolerance residual is acceptable",
         "tier_candidate": 2
       }
     },
@@ -19224,7 +19640,9 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19247,12 +19665,12 @@ var pack_p2_d_questions = [
       "C": "Ignore the gap because the stress scenario is unlikely to occur",
       "D": "Treat the 45-day coverage as sufficient because it is a recovery plan"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "the correct statement at Option D. Lowering the target (Option B), ignoring the gap (Option C), and accepting 45 days as sufficient (Option D is the correct slot) each fail to connect the stress result to the plan.",
-    "ExplanationWrongA": "Option A is wrong because the correct action is to adjust the recovery plan and liquidity buffer so the bank covers the 60-day target under stress. Lowering the target to match the gap, ignoring the scenario, or treating 45-day coverage as sufficient each fail to connect the stress result to planning.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO ERM 2017, stress results drive planning: the 45-day coverage falls short of the board’s 60-day target, so the recovery plan and liquidity buffer must be adjusted to close the gap. Option A states this. Lowering the target (Option B), ignoring the gap (Option C), and accepting 45 days as sufficient (Option D) each fail to connect the stress result to the plan.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B is wrong because lowering the target to match the gap reverses the process; the target reflects the board's tolerance, and the plan must close the gap, not the target shrink to it.",
     "ExplanationWrongC": "Option C is wrong because ignoring the gap because the scenario is unlikely abandons the purpose of stress testing — preparing for adverse conditions.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Option D is wrong because 45-day coverage against a 60-day target is a gap, not sufficiency: treating it as sufficient leaves the bank unable to survive the stress within its stated appetite.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
@@ -19271,27 +19689,27 @@ var pack_p2_d_questions = [
     "source_support_for_key": {
       "source_id": "COSO ERM 2017",
       "rule_or_proposition": "Stress results drive planning: gaps against targets are closed by adjusting the plan and buffer (D.5).",
-      "application_to_facts": "The 45-day coverage falls short of the 60-day target, so the recovery plan and buffer must be adjusted — the action must sit at D.",
-      "key_conclusion": "Adjust the plan and buffer to close the gap; content must place the action at Option D."
+      "application_to_facts": "The 45-day coverage falls short of the 60-day target, so the recovery plan and buffer must be adjusted — the action sits at A.",
+      "key_conclusion": "Adjust the plan and buffer to close the gap — Option A."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+      "D": {
+        "misconception": "Accepts 45-day coverage as sufficient",
+        "why_plausible": "Near-miss feels adequate, but the board’s 60-day target is the binding constraint",
         "tier_candidate": 3
       },
       "B": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Lowers the target to match the gap",
+        "why_plausible": "Hitting the number feels like success, but the target reflects tolerance — the plan must close the gap",
         "tier_candidate": 1
       },
       "C": {
-        "misconception": "Chooses this option based on a surface reading of the scenario",
-        "why_plausible": "The option restates scenario language without the deeper framework distinction",
+        "misconception": "Ignores the gap as unlikely",
+        "why_plausible": "Adverse paths feel remote, but stress testing exists to prepare for them",
         "tier_candidate": 2
       }
     },
-    "uniqueness_note": "Option A has the correct action at the wrong position; Option B lowers the target; Option C ignores the scenario; the adjust-the-plan action must sit at D.",
+    "uniqueness_note": "Option A states the adjust-the-plan action; Option B lowers the target; Option C ignores the scenario; Option D accepts 45 days as sufficient.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "VerifiedChecks": [
@@ -19302,7 +19720,11 @@ var pack_p2_d_questions = [
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ],
+    ,
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
+,
+      "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
+],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -22280,8 +22702,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C omits relevant risks by limiting reports to financial; the error ignores that COSO ERM requires an enterprise-wide portfolio view where operational and compliance risks affect concentration tolerance.",
     "ExplanationWrongD": "Choice D ignores frontline information needs; the misconception excludes operators from risk communication. Effective ERM needs upward and downward flows so operators escalate emerging risks promptly.",
-    "Difficulty": "Difficult",
-    "DifficultyScore": 4,
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -22298,7 +22720,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -22442,14 +22866,14 @@ var pack_p2_d_questions = [
     "Topic": "D.405 risk-assessment-prioritization-and-portfolio-view",
     "Stem": "Flash Holdings professional Yusuf Al-Rashid, Senior analyst, is prioritizing three risks for the risk committee using a 5x5 heat map where risk score = likelihood (1-5) x impact (1-5). Risks: R1 likelihood 4, impact 5; R2 likelihood 3, impact 3; R3 likelihood 5, impact 2. Flash's tolerance is risk score 12 or below. Which prioritization correctly applies the portfolio view?",
     "Choices": {
-      "A": "R2 score 9, R3 score 10, R1 score 20; R1 exceeds tolerance and is highest priority, while R2 and R3 are within tolerance but should be monitored in aggregate",
+      "A": "R2 score 9, R3 score 10, R1 score 20; R1 exceeds tolerance and is highest priority, while R2 and R3 are within tolerance and can be ignored entirely with no further monitoring",
       "B": "R1 score 20 (4 x 5), R2 score 9 (3 x 3), R3 score 10 (5 x 2); R1 exceeds tolerance 12 and is highest priority, while R2 and R3 are within tolerance but contribute to aggregate exposure",
       "C": "R1 score 9, R2 score 20, R3 score 10; R2 is highest priority due to balanced likelihood and impact",
       "D": "R1 score 12, R2 score 12, R3 score 12; all risks are equal and tolerance is irrelevant"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Risk score = likelihood x impact. R1 = 4 x 5 = 20, R2 = 3 x 3 = 9, R3 = 5 x 2 = 10. Under COSO ERM, risks are assessed individually and as a portfolio, and prioritized by severity against appetite and tolerance. For Flash, Senior analyst Yusuf Al-Rashid should show R1 at 20 exceeds the 12 tolerance and dominates priority, while R2 (9) and R3 (10) are within tolerance but contribute to aggregate exposure and need monitoring for correlation and velocity. Business interpretation: the committee should focus resources on R1 and monitor the others as a portfolio rather than in isolation. Common trap is mis-multiplying or treating all risks as equal or applying tolerance incorrectly.",
-    "ExplanationWrongA": "Choice A misstates nuance by correctly scoring 20, 9, 10 yet mislabels the portfolio implication; the trap treats R2 and R3 as requiring no monitoring, which ignores that aggregate exposure of 9 + 10 still matters for the portfolio view.",
+    "ExplanationWrongA": "Choice A correctly scores 20, 9, 10 but concludes R2 and R3 can be ignored; the error drops the portfolio view, which requires monitoring aggregate exposure of 9 + 10 for correlation and velocity even when each risk is within tolerance.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C inverts scores by assigning 20 to R2; the misconception swaps risk rankings, which would misdirect Flash resources to a moderate risk while the severe R1 at 20 remains unaddressed.",
     "ExplanationWrongD": "Choice D understates differentiation by forcing all scores to 12; the error treats the heat map as averaging rather than multiplying, which obscures the high-severity R1 and violates portfolio prioritization.",
@@ -22472,7 +22896,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
-    ]
+    ,
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
+]
   },
   {
     "Part": 2,
@@ -22887,7 +23313,7 @@ var pack_p2_d_questions = [
     "CorrectChoice": "A",
     "ExplanationCorrect": "Reduce lowers likelihood or impact via controls; share transfers a portion of the loss to a third party while retaining an uninsured layer. Current expected loss = 0.20 x $600,000 = $120,000. Option R: residual = 0.08 x $600,000 = $48,000, plus $35,000 cost = $83,000 total. Option S: the $40,000 premium covers 80.0% of each loss, so Flash retains 20.0% of $600,000 = $120,000 when the loss occurs; expected retained loss = 0.20 x $120,000 = $24,000, plus $40,000 premium = $64,000 total. Option S's $64,000 total cost is lower than Option R's $83,000, so sharing is more cost-effective for Flash even though it leaves counterparty (insurer credit) risk; reduce is not automatically superior when the transfer is priced attractively. Business interpretation: Senior analyst Priya Nair should recommend Option S, comparing total cost (premium plus retained expected loss) rather than gross impact, and should monitor insurer credit quality. Common trap is treating insurance as eliminating all risk or assuming reduce always beats share without a total-cost comparison.",
     "ExplanationWrongA": "",
-    "ExplanationWrongB": "Choice B understates the comparison by miscomputing retained loss; the misconception calculates residual incorrectly as $48,000 for insurance, which confuses likelihood reduction with loss sharing and misstates the $24,000 retained plus premium arithmetic.",
+    "ExplanationWrongB": "Choice B reaches the wrong verdict by asserting Option S leaves higher total cost; the error skips the total-cost arithmetic showing Option S at $24,000 retained expected loss plus $40,000 premium = $64,000 beats Option R at $48,000 plus $35,000 = $83,000, overweighting counterparty risk against a $19,000 expected saving.",
     "ExplanationWrongC": "Choice C overstates sharing as elimination; the error assumes insurance removes all risk and counterparty risk, while Flash retains 20.0% of loss and faces insurer credit risk, so residual remains.",
     "ExplanationWrongD": "Choice D computes the right pieces but reaches the wrong verdict: it states reduce is more cost-effective, yet Option R totals $48,000 residual plus $35,000 cost = $83,000, while Option S totals $24,000 retained expected loss plus $40,000 premium = $64,000. The misconception is concluding that any counterparty risk makes reduce superior, when the total-cost comparison shows insurance (share) is $19,000 cheaper for Flash and remains the more cost-effective response.",
     "Difficulty": "Moderate-Easy",
@@ -22909,7 +23335,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -23669,7 +24097,7 @@ var pack_p2_d_questions = [
     "Topic": "D.433 risk-assessment-likelihood-impact-severity",
     "Stem": "Flash Packaging professional Elena Rossi, Controller, is plotting Flash's four risks on a 5x5 heat map where severity equals likelihood times impact. Flash labels risks with expected loss above $400,000 as high severity and $150,000 to $400,000 as medium. Risk W: 25.0% x $1,000,000; Risk X: 10.0% x $2,500,000; Risk Y: 40.0% x $300,000; Risk Z: 5.0% x $5,000,000. Which severity ranking is correct?",
     "Choices": {
-      "A": "W high $250,000, X medium $250,000, Y low $120,000, Z high $250,000  -  all below $400,000",
+      "A": "W high $250,000, X high $250,000, Y medium $120,000, Z high $250,000",
       "B": "Severity equals impact only, so Z high $5,000,000 dominates and others are low regardless of likelihood",
       "C": "High risks are W and Y, medium is Z, low is X, based on likelihood alone",
       "D": "W $250,000 medium, X $250,000 medium, Y $120,000 low, Z $250,000 medium  -  none reach $400,000 high"
@@ -23700,7 +24128,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -24477,14 +24907,14 @@ var pack_p2_d_questions = [
     "Topic": "D.451 raroc-risk-adjusted-performance-measurement",
     "Stem": "Flash Financial professional Priya Nair, Senior analyst, evaluates a new product line with $2,100,000 revenue, $1,400,000 operating costs, $180,000 expected loss, and $900,000 economic capital allocated. Flash uses Risk-Adjusted Return on Capital as (Revenue - Costs - Expected Loss) / Economic Capital and requires 15.0% hurdle. What is RAROC and does it clear the hurdle?",
     "Choices": {
-      "A": "RAROC 57.8% ($520,000 / $900,000) but uses revenue alone",
-      "B": "RAROC 57.8%? Recomputed: $2,100,000 - $1,400,000 - $180,000 = $520,000, $520,000 / $900,000 = 57.78% and exceeds 15.0% hurdle",
+      "A": "RAROC 233.33% ($2,100,000 / $900,000) using revenue alone without deducting costs or expected loss, exceeding the hurdle",
+      "B": "RAROC 57.78% ($520,000 / $900,000), which exceeds the 15.0% hurdle",
       "C": "RAROC 38.9% ($350,000 / $900,000) by omitting expected loss",
       "D": "RAROC 77.8% ($700,000 / $900,000) by adding back expected loss"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "RAROC numerator is risk-adjusted return: $2,100,000 - $1,400,000 - $180,000 = $520,000. Divide by $900,000 economic capital: $520,000 / $900,000 = 0.5778 = 57.78%. This exceeds the 15.0% hurdle by 42.78 points, indicating value creation after expected loss. Business interpretation: Senior analyst Priya Nair should recommend proceeding subject to concentration and appetite checks, noting 57.78% is well above hurdle even after $180,000 expected loss. Common trap is using gross margin without expected loss, or adding loss back, or using revenue alone.",
-    "ExplanationWrongA": "Choice A misstates numerator as revenue alone; the misconception uses $520,000 but describes it as revenue, omitting that $520,000 already nets $1,400,000 costs and $180,000 expected loss needed for risk adjustment.",
+    "ExplanationWrongA": "Choice A uses revenue alone ($2,100,000 / $900,000 = 233.33%), omitting the $1,400,000 costs and $180,000 expected loss that risk adjustment requires; the correct numerator nets both to $520,000.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C omits expected loss by using $700,000 (= 2,100,000 - 1,400,000) / 900,000 = 77.78%? Actually 700k/900k is 77.78%, but choice reports 38.9% by further errors  -  it understates numerator as $350,000 and ignores $180,000, missing RAROC definition.",
     "ExplanationWrongD": "Choice D double-counts expected loss by adding it back; the error computes $700,000 + $0 vs $520,000 and treats $700,000 / $900,000 = 77.78% as risk-adjusted, which reverses the loss deduction.",
@@ -24508,7 +24938,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -24705,7 +25137,7 @@ var pack_p2_d_questions = [
     "Choices": {
       "A": "The precise control procedure that approves every purchase order above $5,000",
       "B": "The single year's audit materiality threshold for financial reporting only",
-      "C": "The types and amount of risk Flash is willing to accept in pursuit of strategy and value, set by the board and linked to appetite",
+      "C": "The types and amount of risk Flash is willing to accept in pursuit of strategy and value, set by the board and linked to creating and preserving value",
       "D": "The insurance deductible Flash selected for its property policy this year"
     },
     "CorrectChoice": "C",
@@ -24733,7 +25165,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -24937,8 +25371,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "Choice B omits relevant risks by limiting to financial; the error ignores that COSO ERM requires an enterprise portfolio where operational and compliance risks affect concentration tolerance and must be communicated alongside financial exposures.",
     "ExplanationWrongC": "Choice C ignores frontline needs by excluding operators; the trap excludes those closest to emerging risk, which blocks upward escalation and violates the two-way communication principle needed for timely tolerance-breach reporting.",
     "ExplanationWrongD": "",
-    "Difficulty": "Difficult",
-    "DifficultyScore": 4,
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
     "CognitiveLevel": "Analyze",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -24956,7 +25390,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -25038,14 +25474,16 @@ var pack_p2_d_questions = [
       "COSO Enterprise Risk Management (2017) - Performance"
     ],
     "VerifiedChecks": [
-      "Recomputed: X 0.10 x 3,000,000 = 300,000, Y 0.30 x 800,000 = 240,000, Z 0.05 x 5,000,000 = 250,000 -- independently verified: matches Choice B $300,000 top rank",
+      "Recomputed: X 0.10 x 3,000,000 = 300,000, Y 0.30 x 800,000 = 240,000, Z 0.05 x 5,000,000 = 250,000 -- independently verified: matches Choice A X > Z > Y ranking (X $300,000 top)",
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -25199,7 +25637,7 @@ var pack_p2_d_questions = [
       "D": "Enter and hedge by purchasing general liability insurance, which will cover political and FX tail risk and eliminate appetite concerns"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "COSO ERM aligns strategy with appetite and tolerance; expected profit = $9M x 0.18 = $1.62M margin? Wait margin already on revenue: $9M x 18% = $1,620,000 contribution, which is actually less than $2.8M expected loss, so unmitigated entry is unattractive, and the $12M tail at 5% breaches or nears the $10M single-loss tolerance and contributes to volatility beyond $3M appetite. Decision requires testing risk to strategy, risk of strategy, and response feasibility: mitigation must reduce expected loss or cap tail, or risk-sharing via JV, otherwise deferral preserves appetite. For Flash, M&A director Sofia Lindqvist should condition entry on tail capping and volatility discipline. Business interpretation: revenue alone does not justify breach of board risk boundaries. Common trap is comparing revenue to expected loss without margin and tolerance, or treating all emerging-market risk as prohibited, or assuming general insurance covers political/FX.",
+    "ExplanationCorrect": "COSO ERM aligns strategy with appetite and tolerance; expected contribution = $9M x 18% = $1,620,000, which is actually less than the $2.8M expected loss, so unmitigated entry is unattractive, and the $12M tail at 5% breaches or nears the $10M single-loss tolerance and contributes to volatility beyond $3M appetite. Decision requires testing risk to strategy, risk of strategy, and response feasibility: mitigation must reduce expected loss or cap tail, or risk-sharing via JV, otherwise deferral preserves appetite. For Flash, M&A director Sofia Lindqvist should condition entry on tail capping and volatility discipline. Business interpretation: revenue alone does not justify breach of board risk boundaries. Common trap is comparing revenue to expected loss without margin and tolerance, or treating all emerging-market risk as prohibited, or assuming general insurance covers political/FX.",
     "ExplanationWrongA": "Choice A overstates profitability by comparing revenue to risk; the misconception treats $9 million top line as profit versus $2.8 million loss and ignores that 18.0% margin yields $1.62 million, which is $1.18 million below expected loss, plus the $12 million tail threatens the $10 million tolerance and $3 million volatility appetite.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C understates opportunity by banning all emerging-market risk; the error assumes appetite is zero and that political risk can never fit ERM, while COSO ERM permits pursuit within appetite if mitigation or structuring brings tail and volatility inside board limits, rather than automatic rejection.",
@@ -25224,7 +25662,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -25742,8 +26182,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C misstates velocity as strategic importance; the trap assumes regulation's strategic label makes 90 days most urgent, which conflates category with speed and overlooks that P's 2-day exploitability dominates urgency.",
     "ExplanationWrongD": "Choice D conflates category with velocity; the error assumes operational risks share urgency and that financial versus compliance labels determine speed, which misreads that velocity is measured in days to impact, where 2 days versus 14 days differentiates P and R.",
-    "Difficulty": "Difficult",
-    "DifficultyScore": 4,
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -25761,7 +26201,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,
@@ -26457,8 +26899,8 @@ var pack_p2_d_questions = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C omits relevant risks by limiting reports to financial; the error ignores that COSO ERM requires an enterprise-wide portfolio view where operational and compliance risks affect concentration tolerance and must be communicated alongside financial exposures.",
     "ExplanationWrongD": "Choice D ignores frontline information needs; the misconception excludes operators from risk communication. Effective ERM needs upward and downward flows so operators escalate emerging risks promptly within 2 days.",
-    "Difficulty": "Difficult",
-    "DifficultyScore": 4,
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
     "CognitiveLevel": "Analyze",
     "CalculationItem": false,
     "ItemStyle": "single-select",
@@ -26476,7 +26918,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Authorities match",
       "Stem names Flash + stakeholder"
-    ]
+    ,
+      "Batch 4c remediation 2026-09-07 (final remediation batch)"
+]
   },
   {
     "Part": 2,

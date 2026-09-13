@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-09-05 — P2-UNCLEAR-FIX wave: all 13 UNCLEAR MCQs remediated (restored literals, choice-set repairs, full rewrites) and certified. Pool now **3,118/3,120 Certified (0 Unprocessed, 2 Archived)**. Prior: **Updated:** 2026-09-05 — Session P2-CERT-AUDIT: full-pool answer-key audit + remediation + certification. Pool now **3,105 Certified MCQs (3,120 total, 13 UNCLEAR held, 2 Archived)** and **87 Certified cases (88 total, 1 held)**. 141 flash-wave answer-key defects repaired (DL-P2-017); 6 Pack 2 cases remediated + 10 certified (DL-P2-018); duplicate CaseIDs re-keyed (DL-P2-019); orphaned case files documented (DL-P2-020). Prior: 2026-09-04 — Session P2-079 Pack C authoring wave: +90 MCQs (3 batches × 30, P2-C-531–620, Unprocessed, schema v1.1, 0 errors). Pool now **2,970 MCQs (2,293 Certified / 675 Unprocessed / 2 Archived)**. Pack C: 380→620 (remaining to target: 130, P2-C-621–750). **2026-08-26 — Session P2-065 certification wave: +360 MCQs (12 batches × 30) + 9 cases (3 batches × 3). Pool then **1,340 MCQs (1,338 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. **2026-08-28 — Session P2-067 certification wave: +210 Unprocessed→Certified** (all remaining non-Archived MCQs). Pool now **1,565 MCQs (1,563 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. One pre-flip metadata recalibration applied (P2-E-210: VD/DS5 → Difficult/DS4 per Rule 12). All P2-067 flips carry `certification_session: 'P2-067'`, `certification_date: '2026-08-28'`. **2026-08-30 — Session P2-068 Wave 1 authoring: +90 MCQs (15×6 packs, Unprocessed, schema v1.1, 0 errors)**. Pool then **1,655 MCQs (1,563 Certified / 90 Unprocessed / 2 Archived)**. **Sessions P2-074/P2-075 — Waves 2&amp;3 authoring: +180 MCQs (waves ×90) and +9 cases.** **2026-08-30 — Session P2-076 certification wave: 90 Unprocessed→Certified MCQs (all wave-3 items) + 9 Unprocessed→Certified cases; 22-item `Mod-Easy`→`Moderate-Easy` label defect fixed (DL-P2-016).** Pool now **1,835 MCQs (1,833 Certified / 0 Unprocessed / 2 Archived)** and **45 cases (45 Certified / 0 Non-Certified)**. All P2-076 MCQs carry `certification_batch: 'P2-076'`, `certification_date: '2026-08-30'`; cases carry `certification_session: 'P2-076'`. Post-Tend verification: `preflight_p2.js` 0 divergences + 74/74 governance guard PASS; `validate:p2` 0 errors (90 v1.1 PASS; 1,565 grandfathered; 180 migration-required report-only). **2026-09-02 — Session P2-PA-REMED: Pack A thorough certification remediation (4 batches ≤30): +100 QIDs 400→500, answer diversity D 17.6%→23.2% (88→116) C 22.4%→25% (112→125) B 31.2%→28% (156→140) A 28.8%→23.8% (144→119) χ² 22.88→2.74, max streak 10→4, per-100 401-500 C10→22 D4→27, V11 30 MIGRATION_REQUIRED→0 (A-371..400), duplicate Topic/UCK 8→0 (A-433..440), UCK format 42→0, Topic format 30→0, LOSTag A.10 10→0 (→A.1 100→110), DS mismatch 2→0. Pool now 1,935 MCQs (1,933 Certified / 0 Unprocessed / 2 Archived). Preflight 0 divergences, guard 74/74, validate:p2 Pack A 0 errors V11 PASS45.**
+**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,450/3,450 Certified (0 Unprocessed, 0 Archived)** and **100/100 cases Certified**. Prior: 2026-09-05 — P2-UNCLEAR-FIX wave: all 13 UNCLEAR MCQs remediated (restored literals, choice-set repairs, full rewrites) and certified. Pool now **3,118/3,120 Certified (0 Unprocessed, 2 Archived)**. Prior: **Updated:** 2026-09-05 — Session P2-CERT-AUDIT: full-pool answer-key audit + remediation + certification. Pool now **3,105 Certified MCQs (3,120 total, 13 UNCLEAR held, 2 Archived)** and **87 Certified cases (88 total, 1 held)**. 141 flash-wave answer-key defects repaired (DL-P2-017); 6 Pack 2 cases remediated + 10 certified (DL-P2-018); duplicate CaseIDs re-keyed (DL-P2-019); orphaned case files documented (DL-P2-020). Prior: 2026-09-04 — Session P2-079 Pack C authoring wave: +90 MCQs (3 batches × 30, P2-C-531–620, Unprocessed, schema v1.1, 0 errors). Pool now **2,970 MCQs (2,293 Certified / 675 Unprocessed / 2 Archived)**. Pack C: 380→620 (remaining to target: 130, P2-C-621–750). **2026-08-26 — Session P2-065 certification wave: +360 MCQs (12 batches × 30) + 9 cases (3 batches × 3). Pool then **1,340 MCQs (1,338 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. **2026-08-28 — Session P2-067 certification wave: +210 Unprocessed→Certified** (all remaining non-Archived MCQs). Pool now **1,565 MCQs (1,563 Certified / 0 Unprocessed / 2 Archived)** and **33 cases (33 Certified / 0 Non-Certified)**. One pre-flip metadata recalibration applied (P2-E-210: VD/DS5 → Difficult/DS4 per Rule 12). All P2-067 flips carry `certification_session: 'P2-067'`, `certification_date: '2026-08-28'`. **2026-08-30 — Session P2-068 Wave 1 authoring: +90 MCQs (15×6 packs, Unprocessed, schema v1.1, 0 errors)**. Pool then **1,655 MCQs (1,563 Certified / 90 Unprocessed / 2 Archived)**. **Sessions P2-074/P2-075 — Waves 2&amp;3 authoring: +180 MCQs (waves ×90) and +9 cases.** **2026-08-30 — Session P2-076 certification wave: 90 Unprocessed→Certified MCQs (all wave-3 items) + 9 Unprocessed→Certified cases; 22-item `Mod-Easy`→`Moderate-Easy` label defect fixed (DL-P2-016).** Pool now **1,835 MCQs (1,833 Certified / 0 Unprocessed / 2 Archived)** and **45 cases (45 Certified / 0 Non-Certified)**. All P2-076 MCQs carry `certification_batch: 'P2-076'`, `certification_date: '2026-08-30'`; cases carry `certification_session: 'P2-076'`. Post-Tend verification: `preflight_p2.js` 0 divergences + 74/74 governance guard PASS; `validate:p2` 0 errors (90 v1.1 PASS; 1,565 grandfathered; 180 migration-required report-only). **2026-09-02 — Session P2-PA-REMED: Pack A thorough certification remediation (4 batches ≤30): +100 QIDs 400→500, answer diversity D 17.6%→23.2% (88→116) C 22.4%→25% (112→125) B 31.2%→28% (156→140) A 28.8%→23.8% (144→119) χ² 22.88→2.74, max streak 10→4, per-100 401-500 C10→22 D4→27, V11 30 MIGRATION_REQUIRED→0 (A-371..400), duplicate Topic/UCK 8→0 (A-433..440), UCK format 42→0, Topic format 30→0, LOSTag A.10 10→0 (→A.1 100→110), DS mismatch 2→0. Pool now 1,935 MCQs (1,933 Certified / 0 Unprocessed / 2 Archived). Preflight 0 divergences, guard 74/74, validate:p2 Pack A 0 errors V11 PASS45.**
 **Preflight script:** `scripts/preflight_p2.js` (read-only T0/Tend gate; cross-checks counts here)
 
 **2026-09-04 — Portfolio Target Amendment (user-authorized):** New pool targets ratified — **3,450 MCQs (A=600, B=600, C=750, D=500, E=500, F=500)** and **100 cases (Pack 1=33, Pack 2=33, Pack 3=34)**. Supersedes prior 2,500-MCQ / 75-case allocation. Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500. Per-pack Section QID ranges re-allocated in this session; current authoritative QID-range table at §5.
@@ -13,13 +13,13 @@
 
 | Pack | File | Target QIDs | Current QIDs | Certified | Unprocessed | Archived | Hash (SHA256, post-Tend) |
 |------|------|-------------|-------------|-----------|-------------|----------|--------------------------|
-| A | p2/pack_p2_a.js | **600** | 500 | 500 | 0 | 0 | `1744824eeaa17506c0a3971e70a361c15cbf3fed4fead1cf4856572a46b33c88` |
-| B | p2/pack_p2_b.js | **600** | 500 | 500 | 0 | 0 | `fb94df527cb6d74b081fbf21bd5a3653cc7b9539f61f9826f827641df8eb188a` |
-| C | p2/pack_p2_c.js | **750** | 620 | 612 | 6 | 2 (C-198, C-199) | `fe360d0d7d6e62c9670937d9c6b7ef1afab047b8b5457ac826d72d301fbf9fc3` |
+| A | p2/pack_p2_a.js | **600** | 600 | 600 | 0 | 0 | `dd7691705ffa300df35880e21da623ca566e60b7e319530edd8f15df77dd2f6d` |
+| B | p2/pack_p2_b.js | **600** | 600 | 600 | 0 | 0 | `ca9ce785b25b42bf0fea858a090eae80a9ba87d8db8127e6c6227d0c38f229ca` |
+| C | p2/pack_p2_c.js | **750** | 750 | 750 | 0 | 0 | `05a68f4b67a6994545651d9997f9e0afa25df65ade008b98f8d4f04eaa412674` |
 | D | p2/pack_p2_d.js | **500** | 500 | 500 | 0 | 0 | `b4fd8c36f237c2e7c8a69ca843a1ca1c96009d339df8cd216c230b1938da8997` |
-| E | p2/pack_p2_e.js | **500** | 500 | 493 | 7 | 0 | `7db173dfaa115c0f151aa8e47739b8bc0c3b87fa520f79ee862f0bc92f49ac03` |
+| E | p2/pack_p2_e.js | **500** | 500 | 500 | 0 | 0 | `766e313871b3d12fe8e169c50978ce1312a81ed8558029e65f1008d18b0cb9a0` |
 | F | p2/pack_p2_f.js | **500** | 500 | 500 | 0 | 0 | `a5a4ec3e0386e932291466df9506fabb4bc56c4b3a16b0abdf2bea62f99559e2` |
-| **Total** | | **3,450** | **3,120** | **3,118** | **0** | **2** | |
+| **Total** | | **3,450** | **3,450** | **3,450** | **0** | **0** | |
 
 *2026-09-05 — P2-CERT-AUDIT certification wave: +812 MCQs certified (B +100, C +234, D +165, E +238, F +75). All 141 answer-key defects (DL-P2-017) repaired before flip; 13 UNCLEAR items held Unprocessed (P2-C-534/558/594/595/607/614, P2-E-267/274/279/282/305/310/311). Certified total 3,105.*
 
@@ -29,8 +29,8 @@
 |------|--------------|---------------|-----------|---------------|
 | p2/case_pack_p2_1.js | 33 | 33 | 33 | 0 |
 | p2/case_pack_p2_2.js | 33 | 33 | 33 | 0 |
-| p2/case_pack_p2_3.js | 34 | 22 | 22 | 0 |
-| **Total** | **100** | **88** | **88** | **0** |
+| p2/case_pack_p2_3.js | 34 | 34 | 34 | 0 |
+| **Total** | **100** | **100** | **100** | **0** |
 
 *2026-09-05 — P2-CERT-AUDIT case wave: 10 Pack 2 Unprocessed cases certified (C4, C5, C6, C7, C8, A5, A6, F5, F6, F7) in 2 batches of 5 after answer-key/exhibit remediation (DL-P2-018) and duplicate-CaseID re-key (DL-P2-019: CBQ22-A4→A6, CBQ22-F4→F7). CBQ22-B6 remediated and certified in the follow-on P2-B6-REMEDIATE wave (2026-09-05): stripped literals restored from explanation arithmetic (bonds , preferred .98/400K/.50, common .00, project /.2M), 6/6 answer keys independently verified AGREE. Pool-wide **88/88 cases Certified**. Orphaned files `case_pack_p2_authored.js` / `case_pack_p2_C4_C8.js` documented (DL-P2-020), not certified.*
 
@@ -102,13 +102,13 @@ Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500.
 
 | Section | Domain | CSO Weight | Range | Target Count | Current Count | Gap |
 |---------|--------|-----------|-------|-------------|---------------|-----|
-| A | Financial Statement Analysis | 20% | P2-A-001–600 | **600** | 500 | 100 |
-| B | Corporate Finance | 20% | P2-B-001–600 | **600** | 500 | 100 |
-| C | Decision Analysis | 25% | P2-C-001–750 | **750** | 620 | 130 |
+| A | Financial Statement Analysis | 20% | P2-A-001–600 | **600** | 600 | 0 |
+| B | Corporate Finance | 20% | P2-B-001–600 | **600** | 600 | 0 |
+| C | Decision Analysis | 25% | P2-C-001–750 | **750** | 750 | 0 |
 | D | Enterprise Risk Management | 10% | P2-D-001–500 | **500** | 500 | 0 |
 | E | Capital Investment Decisions | 10% | P2-E-001–500 | **500** | 500 | 0 |
 | F | Professional Ethics | 15% | P2-F-001–500 | **500** | 500 | 0 |
-| **Total** | | **100%** | | **3,450** | **2,970** | **330** |
+| **Total** | | **100%** | | **3,450** | **3,450** | **0** |
 
 ---
 

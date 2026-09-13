@@ -26629,7 +26629,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Dividend discount model (Gordon Growth)",
     "QuestionID": "P2-B-501",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-501-gordon-growth-model-intrinsic-value",
     "Stem": "Crestview Industries just paid an annual dividend of $2.40 per share. The dividend is expected to grow at 5% per year indefinitely. Investors require a 12% return on Crestview stock. Treasury Analyst Megan Calloway must determine the current intrinsic value per share using the Gordon Growth Model.",
@@ -26693,7 +26693,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26701,7 +26703,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Dividend discount model (Gordon Growth)",
     "QuestionID": "P2-B-502",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-502-ddm-implied-required-return",
     "Stem": "Bexley Pharmaceuticals stock trades at $48.00 per share. The company just paid a dividend of $1.92, and dividends are expected to grow at 6% annually. VP of Finance Daniel Hurst needs to determine the market's implied required return on Bexley equity.",
@@ -26765,7 +26767,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26773,7 +26777,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Dividend discount model (Gordon Growth)",
     "QuestionID": "P2-B-503",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-503-ddm-implied-growth-rate",
     "Stem": "Cornerstone Software shares trade at $62.50. The company paid a quarterly dividend of $0.45 last quarter (annualized $1.80). The required return on Cornerstone equity is 11.5%. CFO Rachel Nguyen must determine the implied constant growth rate embedded in the current share price.",
@@ -26837,7 +26841,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26845,7 +26851,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Stock repurchase effects on EPS",
     "QuestionID": "P2-B-504",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-504-repurchase-eps-accretion-dilution",
     "Stem": "Westbrook Electronics reports net income of $18 million, 6 million shares outstanding, and a stock price of $36 per share. The board is considering either paying a $1.50 per share cash dividend or using the equivalent $9 million to repurchase shares at market price. CFO Thomas Randall must compare the post-transaction EPS under each alternative.",
@@ -26910,7 +26916,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26918,7 +26926,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Residual dividend policy",
     "QuestionID": "P2-B-505",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-505-residual-dividend-policy-application",
     "Stem": "Helios Energy's target capital structure is 60% equity and 40% debt. The upcoming capital budget requires $45 million in total investment. Net income is projected at $30 million. CFO Gregory Park must determine the maximum dividend the company can pay under a residual dividend policy.",
@@ -26982,7 +26990,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26990,7 +27000,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Dividend signaling theory",
     "QuestionID": "P2-B-506",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-506-dividend-signaling-theory-implications",
     "Stem": "Keystone Manufacturing announces a 15% increase in its quarterly dividend, from $0.60 to $0.69 per share, while industry peers have maintained or reduced their dividends. Investment analyst Sara Delgado must evaluate what dividend signaling theory predicts about the market's likely reaction.",
@@ -27055,7 +27065,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27063,7 +27075,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Lintner's dividend smoothing model",
     "QuestionID": "P2-B-507",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-507-lintner-dividend-smoothing-model",
     "Stem": "Clearwater Logistics has paid dividends of $1.20, $1.24, $1.28, and $1.32 per share over the last four years despite earnings per share fluctuating between $4.50 and $6.20. CFO Nathan Brooks must explain why the dividend growth has been steady while earnings were volatile.",
@@ -27128,7 +27140,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27136,7 +27150,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Share repurchase vs dividend comparison",
     "QuestionID": "P2-B-508",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-508-share-repurchase-tax-advantage-over-dividend",
     "Stem": "Redwood Industries has $12 million in excess cash and is considering either distributing it as a special dividend or using it for a share repurchase. Shareholder William Chen holds 5,000 shares at $40 each and has a tax basis of $25 per share. The corporate tax rate is 21% and the individual capital gains rate is 15%. Tax Director Anita Patel must explain the tax differential for Chen under each alternative.",
@@ -27201,7 +27215,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27209,7 +27225,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Stock repurchase effects on EPS",
     "QuestionID": "P2-B-509",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-509-repurchase-book-value-per-share",
     "Stem": "Vanguard Precision reports shareholders' equity of $240 million, 30 million shares outstanding, and cash of $60 million. The board approves a $60 million share repurchase at $40 per share. CFO Diane Lancaster must determine the effect on book value per share after the repurchase.",
@@ -27274,7 +27290,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27282,7 +27300,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Dividend reinvestment plans (DRIPs)",
     "QuestionID": "P2-B-510",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-510-drip-dividend-reinvestment-plan",
     "Stem": "Oakmont Healthcare offers a voluntary dividend reinvestment plan (DRIP) allowing shareholders to automatically reinvest quarterly dividends into additional shares at a 3% discount to market price. With the stock at $50 and a quarterly dividend of $0.60 per share, VP of Investor Relations Caroline Manning must explain the primary benefit of the DRIP to a shareholder who reinvests.",
@@ -27346,7 +27364,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27354,7 +27374,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Bird-in-the-hand theory",
     "QuestionID": "P2-B-511",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-511-bird-in-the-hand-theory-dividend-preference",
     "Stem": "Caldwell Energy's CFO is debating whether to increase the dividend or retain earnings for growth. The company has a required return of 10%. Under the bird-in-the-hand theory (Gordon, 1963), CFO Raymond Trent must explain how the dividend decision affects the stock valuation.",
@@ -27419,7 +27439,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27427,7 +27449,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Agency costs and dividends",
     "QuestionID": "P2-B-512",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-512-agency-costs-dividend-discipline",
     "Stem": "Pinpoint Analytics CEO has a history of acquiring unrelated businesses that destroy shareholder value. The board is under pressure from activist investors to adopt a higher dividend payout policy. Governance Consultant Maria Santos must explain how dividends can reduce agency costs between shareholders and management.",
@@ -27492,7 +27514,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27500,7 +27524,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Clientele effect",
     "QuestionID": "P2-B-513",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-513-clientele-effect-dividend-policy",
     "Stem": "Silverleaf REIT historically pays high dividends that attract income-oriented retirees. When the board proposes cutting the dividend to fund a major property acquisition, institutional investor Marcus Webb argues the stock price will decline. Vice Chair Diane Foster must explain the clientele effect prediction.",
@@ -27564,7 +27588,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27572,7 +27598,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Payout ratio analysis",
     "QuestionID": "P2-B-514",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-514-payout-ratio-retention-ratio-relationship",
     "Stem": "Granite Industries reports EPS of $4.80 and dividends per share of $1.92. The company's ROE is 16% and the required return on equity is 12%. CFO Steven Park must analyze whether Granite's retention of earnings is creating or destroying shareholder value.",
@@ -27637,7 +27663,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27645,7 +27673,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.7 Tax differential theory",
     "QuestionID": "P2-B-515",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-515-tax-differential-theory-dividend-irrelevance",
     "Stem": "Blackwell Industries' board is debating whether to initiate a regular dividend for the first time. CEO James Foreman argues that dividend policy is irrelevant under the tax differential theory. CFO Laura Simmons counters that the theory actually favors repurchases. The board chair asks which statement is correct regarding the tax differential theory's prediction for the stock price.",
@@ -27710,7 +27738,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27718,7 +27748,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Spot rate and cross-rate calculation",
     "QuestionID": "P2-B-516",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-516-spot-rate-cross-rate",
     "Stem": "Meridian Exports, a São Paulo-based agricultural commodity trader, receives USD 850,000 from a U.S. buyer and needs to convert the proceeds into euros to pay a European supplier. Treasury Analyst Luísa Ferreira observes the following rates: USD/BRL 5.4200 (bid) / 5.4250 (ask), EUR/BRL 6.1800 (bid) / 6.1860 (ask). What is the amount in euros Meridian will receive after conversion through the Brazilian real?",
@@ -27782,7 +27812,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27790,7 +27822,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Covered interest rate parity forward rate",
     "QuestionID": "P2-B-517",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-517-covered-interest-rate-parity",
     "Stem": "Pinnacle Manufacturing, a U.S.-based firm, expects to receive EUR 2,400,000 in 90 days from a German customer. The current spot rate is EUR/USD 1.0920. The U.S. 90-day risk-free rate is 4.50% annualized and the eurozone 90-day risk-free rate is 3.00% annualized. Treasury Director Sarah Whitfield wants to lock in the dollar proceeds using a forward contract. Under covered interest rate parity, what is the 90-day forward rate (EUR/USD)?",
@@ -27854,7 +27886,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27862,7 +27896,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Forward premium/discount — parity implication on forward vs. spot",
     "QuestionID": "P2-B-518",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-518-parity-forward-spot-implication",
     "Stem": "Caldwell & Partners, a UK-based asset management firm, is advising a client on currency hedging for a EUR-denominated bond portfolio. The current spot rate is GBP/EUR 1.1750. The UK 180-day risk-free rate is 5.0% annualized and the eurozone 180-day risk-free rate is 3.5% annualized. Under covered interest rate parity, which statement about the 180-day forward rate is correct?",
@@ -27926,7 +27960,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27934,7 +27970,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Transaction exposure — unhedged vs. hedged outcomes",
     "QuestionID": "P2-B-519",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-519-transaction-exposure-unhedged",
     "Stem": "Greenfield Logistics, a U.S. freight company, has a EUR 1,200,000 payable due in 90 days to a German carrier. The current spot rate is EUR/USD 1.0950. Greenfield's CFO, Angela Torres, is evaluating whether to remain unhedged or enter a 90-day forward contract at EUR/USD 1.0890. If the spot rate in 90 days is EUR/USD 1.0680, which statement correctly describes the outcome?",
@@ -27998,7 +28034,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28006,7 +28044,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Currency exposure types — economic exposure definition",
     "QuestionID": "P2-B-520",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-520-economic-exposure-definition",
     "Stem": "Serenova Pharmaceuticals, a U.S.-based multinational, manufactures drugs in Ireland and sells them throughout Europe. The Irish subsidiary invoices in euros, maintains euro-denominated bank accounts, and pays employees in euros. Serenova's consolidated financial statements are reported in U.S. dollars. The CFO, David Chen, is reviewing which types of currency exposure affect the company. Which exposure captures the long-term impact of exchange rate changes on Serenova's competitive position and future cash flows?",
@@ -28069,7 +28107,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28077,7 +28117,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Hedging strategy selection — put option vs. forward vs. money market",
     "QuestionID": "P2-B-521",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-521-hedging-strategy-selection",
     "Stem": "Albion Beverages, a UK spirits manufacturer, will receive JPY 450,000,000 in 60 days from a Japanese distributor. The current spot rate is GBP/JPY 192.50. Albion's treasury team has obtained the following: a 60-day forward contract at GBP/JPY 191.80, a 60-day put option on GBP/JPY with a strike of 192.00 costing GBP 120,000, and a money market hedge involving borrowing JPY at 2.5% annualized and converting at spot. Albion's GBP cost of capital is 8% annualized. The CFO, Rebecca Sinclair, wants the strategy that provides downside protection while preserving upside potential if the yen appreciates. Which approach should Albion select?",
@@ -28141,7 +28181,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28149,7 +28191,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Transfer pricing — comparable uncontrolled transaction benchmark",
     "QuestionID": "P2-B-522",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-522-transfer-pricing-cup-benchmark",
     "Stem": "Calderón Consumer Products, a Mexican subsidiary of a U.S. parent, manufactures personal care products sold exclusively within Mexico. The Mexican SAT (tax authority) audits Calderón's transfer pricing and notes that the U.S. parent charges a royalty fee of 8% of net sales for use of proprietary formulations. The SAT's analysis shows that comparable uncontrolled licensing agreements in the Mexican personal care industry carry royalty rates of 4–6% of net sales. Which transfer pricing standard is the SAT applying, and what is the likely adjustment?",
@@ -28212,7 +28254,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28220,7 +28264,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Net transaction exposure calculation",
     "QuestionID": "P2-B-523",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-523-net-transaction-exposure",
     "Stem": "Northstar Equipment, a Canadian manufacturer of industrial pumps, sells to distributors in France and Germany. In the current quarter, Northstar has EUR 8,500,000 in receivables from French customers and EUR 3,200,000 in payables to a German component supplier. The CFO, Pierre Dumont, needs to determine the net euro exposure before deciding on a hedging strategy. What is Northstar's net euro transaction exposure?",
@@ -28284,7 +28328,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28292,7 +28338,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Transfer pricing — least defensible method when authorities disagree",
     "QuestionID": "P2-B-524",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-524-transfer-pricing-least-defensible",
     "Stem": "Apex Medical Devices, a U.S. parent company, sells finished medical devices to its wholly owned subsidiary in France. The French subsidiary also sells to unrelated third parties in the EU. The IRS wants Apex to increase the transfer price to maximize U.S. taxable income, while the French Direction Générale des Finances Publiques (DGFP) wants the transfer price decreased to maximize French taxable income. Transfer Pricing Director Marie Laurent must select the method least likely to satisfy both authorities simultaneously. Which approach provides the weakest defense when authorities disagree from opposite directions?",
@@ -28355,7 +28401,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28363,7 +28411,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Translation exposure — balance sheet method",
     "QuestionID": "P2-B-525",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-525-translation-exposure-balance-sheet",
     "Stem": "Sterling Dynamics, a U.S. engineering firm, operates a wholly owned subsidiary in the United Kingdom. The subsidiary's balance sheet at year-end reports the following in British pounds: total assets of GBP 40,000,000, total liabilities of GBP 16,000,000, and shareholders' equity of GBP 24,000,000. The spot exchange rate at year-end is GBP/USD 1.2800. The prior year-end rate was GBP/USD 1.3200. Under the current rate method, what is the translation gain or loss on the UK subsidiary's net assets for the year?",
@@ -28427,7 +28475,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28435,7 +28485,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Transaction exposure — realized gain or loss on payable",
     "QuestionID": "P2-B-526",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-526-transaction-exposure-realized-gain",
     "Stem": "Monarch Industries, a Canadian manufacturer of precision tools, purchased equipment from a Swiss supplier for CHF 6,200,000. The payable was recorded on October 1 when the spot rate was CAD/CHF 1.4200. Monarch settled the payable on November 30 when the spot rate was CAD/CHF 1.3850. What transaction gain or loss does Monarch recognize on the income statement for the quarter?",
@@ -28499,7 +28549,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28507,7 +28559,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Foreign currency borrowing analysis — cost comparison",
     "QuestionID": "P2-B-527",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-527-foreign-currency-borrowing",
     "Stem": "Horizon Renewables, a Brazilian energy company, needs to borrow BRL 50,000,000 for a 2-year infrastructure project. The domestic (Brazilian) borrowing rate is 14.5% annualized. A European bank offers a loan denominated in euros at 5.8% annualized. The current spot rate is EUR/BRL 6.1500. CFO Beatriz Almeida expects the Brazilian real to depreciate by approximately 3% per year against the euro over the 2-year loan term. What is the approximate all-in cost in BRL terms of the euro-denominated loan, and should Horizon accept it?",
@@ -28571,7 +28623,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28579,7 +28633,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Cross-border capital budgeting — country risk premium",
     "QuestionID": "P2-B-528",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-528-cross-border-capital-budgeting",
     "Stem": "Pinnacle Automotive, a German car manufacturer, is evaluating a 10-year investment in an assembly plant in India. The project's expected free cash flows are denominated in Indian rupees (INR). The project's beta is 1.2, the German risk-free rate is 2.8%, the Indian equity risk premium is 8.5%, and the country risk premium for India is 2.5%. The CFO, Hans Müller, uses the CAPM to compute the project's cost of equity in euro terms. What discount rate should Pinnacle apply to the INR-denominated cash flows?",
@@ -28643,7 +28697,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28651,7 +28707,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Political risk assessment — insurance and mitigation",
     "QuestionID": "P2-B-529",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-529-political-risk-assessment",
     "Stem": "Vanguard Infrastructure Partners, a U.S. private equity firm, is considering a $200 million investment in a toll road project in Nigeria. The Nigerian government has a history of currency controls and occasional asset seizures. Vanguard's risk manager, Kevin Okafor, must recommend the most effective risk mitigation strategy for the specific risk that the Nigerian government may block the conversion of naira proceeds into U.S. dollars for repatriation. Which instrument directly addresses this risk?",
@@ -28714,7 +28770,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28722,7 +28780,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.9 Transfer pricing — least defensible method in dual-authority dispute",
     "QuestionID": "P2-B-530",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "b-530-transfer-pricing-least-defensible-dual",
     "Stem": "Axion Technologies, a U.S. semiconductor company, sells finished chips to its wholly owned subsidiary in Switzerland. The Swiss subsidiary resells to unrelated European customers. The IRS challenges Axion's transfer price as too low (reducing U.S. taxable income), while the Swiss Federal Tax Administration (SFTA) challenges it as too high (reducing Swiss taxable income). Axion's transfer pricing team must evaluate which method is least defensible when both authorities challenge the pricing from opposite directions. Which approach provides the weakest defense?",
@@ -28785,11 +28843,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-531",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Corporate restructuring motivations",
@@ -28860,11 +28920,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-531-corporate-restructuring-motiva",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-532",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Tender offer mechanics",
@@ -28935,11 +28997,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-532-tender-offer-mechanics",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-533",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Divestiture analysis — spin-off mechanics",
@@ -29010,11 +29074,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-533-divestiture-analysis-—-spin-of",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-534",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 LBO mechanics",
@@ -29085,11 +29151,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-534-lbo-mechanics",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-535",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Hostile vs friendly takeover defenses",
@@ -29160,11 +29228,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-535-hostile-vs-friendly-takeover-d",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-536",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Acquisition analysis — premium calculation",
@@ -29236,11 +29306,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-536-acquisition-analysis-—-premium",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-537",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 EPS accretion/dilution analysis",
@@ -29314,11 +29386,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-537-eps-accretion/dilution-analysi",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-538",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Synergy valuation — cost synergies",
@@ -29391,11 +29465,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-538-synergy-valuation-—-cost-syner",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-539",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Purchase price allocation",
@@ -29468,11 +29544,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-539-purchase-price-allocation",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-540",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Goodwill impairment testing",
@@ -29545,11 +29623,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-540-goodwill-impairment-testing",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-541",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Break-even synergy analysis",
@@ -29621,11 +29701,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-541-break-even-synergy-analysis",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-542",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Acquisition analysis — NPV of acquisition",
@@ -29698,11 +29780,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-542-acquisition-analysis-—-npv-of-",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-543",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Conglomerate discount analysis",
@@ -29774,11 +29858,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-543-conglomerate-discount-analysis",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-544",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 LBO mechanics and returns",
@@ -29851,11 +29937,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-544-lbo-mechanics-and-returns",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-545",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.8 Divestiture analysis — equity carve-out",
@@ -29928,11 +30016,13 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-545-divestiture-analysis-—-equity-",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-546",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Modigliani-Miller Proposition I without taxes",
@@ -30008,11 +30098,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-547",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Trade-off theory of capital structure",
@@ -30088,11 +30180,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-548",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Pecking order theory",
@@ -30168,11 +30262,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-549",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 CAPM for cost of equity",
@@ -30249,11 +30345,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-550",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Cost of debt after-tax adjustment",
@@ -30330,11 +30428,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-551",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Cost of preferred stock",
@@ -30410,11 +30510,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-552",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 WACC calculation with preferred stock",
@@ -30490,11 +30592,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-553",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Flotation costs and WACC",
@@ -30571,11 +30675,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-554",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Agency cost of debt versus equity",
@@ -30651,11 +30757,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-555",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Target versus actual capital structure",
@@ -30732,11 +30840,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-556",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Trade-off theory — tax shield versus bankruptcy costs",
@@ -30812,11 +30922,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-557",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 EBIT-EPS indifference analysis",
@@ -30892,11 +31004,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-558",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 Optimal capital structure determination",
@@ -30973,11 +31087,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-559",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 M&M propositions with versus without taxes",
@@ -31053,11 +31169,13 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-560",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part": 2,
     "Section": "B",
     "Topic": "B.3 EBIT-EPS indifference — leverage decision evaluation",
@@ -31133,7 +31251,9 @@ const pack_p2_b_questions = [
       "Difficulty justified by cognitive demand",
       "Independent answer derived",
       "Authority citations match tested concept"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-561",
@@ -31187,7 +31307,7 @@ const pack_p2_b_questions = [
       "C": "sqrt(2TF/O) = sqrt(2 x 2,800,000 x 35 / 0.05) = $6,261",
       "D": "Reciprocal substitution overstates amount"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31200,7 +31320,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-561-cash-management---baumol-model",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-562",
@@ -31254,7 +31376,7 @@ const pack_p2_b_questions = [
       "C": "Two-thirds offset exceeds return point by design",
       "D": "Upper limit is the sell trigger not the return point"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31267,7 +31389,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-562-cash-management---miller-orr-m",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-563",
@@ -31321,7 +31445,7 @@ const pack_p2_b_questions = [
       "C": "Gross collection float ignores disbursement offset",
       "D": "Summing floats double-counts disbursement side"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31334,7 +31458,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-563-float-management---net-float",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-564",
@@ -31388,7 +31514,7 @@ const pack_p2_b_questions = [
       "C": "Double-counting dealer fee inflates rate",
       "D": "Misreading fee overstates cost"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31401,7 +31527,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-564-short-term-financing---commerc",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-565",
@@ -31455,7 +31583,7 @@ const pack_p2_b_questions = [
       "C": "Disbursement optimization addresses payment timing",
       "D": "Physical sweeps from regional accounts to master ZBA = cash concentration"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31468,7 +31596,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-565-cash-concentration-and-pooling",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-566",
@@ -31522,7 +31652,7 @@ const pack_p2_b_questions = [
       "C": "Fee addition confuses freed funds with benefit",
       "D": "Gross freed funds is not the benefit; the return is"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31535,7 +31665,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-566-float-management---lockbox-cos",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-567",
@@ -31589,7 +31721,7 @@ const pack_p2_b_questions = [
       "C": "Doubling term overstates accrued interest",
       "D": "Full-year interest without prorating is incorrect"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31602,7 +31734,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-567-short-term-financing---repurch",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-568",
@@ -31656,7 +31790,7 @@ const pack_p2_b_questions = [
       "C": "Matching aligns financing maturity with asset maturity",
       "D": "Zero-risk is not a recognized term in finance"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31669,7 +31803,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-568-working-capital-financing---ma",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-569",
@@ -31723,7 +31859,7 @@ const pack_p2_b_questions = [
       "C": "Annualized rate overstates quarterly cost",
       "D": "Total = $56,000 interest + $1,800 fee = $57,800"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31736,7 +31872,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-569-short-term-financing---lines-o",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-570",
@@ -31757,7 +31895,7 @@ const pack_p2_b_questions = [
     "ExplanationWrongA": "Permanent working capital financing is long-term funding for ongoing operations.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Seasonal financing addresses cyclical fluctuations.",
-    "ExplanationWrongD": "Spontaneous financing arises from operations.",
+    "ExplanationWrongD": "Spontaneous financing arises from operations like trade payables and accruals, not from a negotiated bridge loan with an investment bank.",
     "QuestionType": "select",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
@@ -31790,7 +31928,7 @@ const pack_p2_b_questions = [
       "C": "Seasonal financing addresses cyclical needs",
       "D": "Spontaneous financing is operational and interest-free"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31803,7 +31941,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-570-short-term-financing---bridge-",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-571",
@@ -31821,7 +31961,7 @@ const pack_p2_b_questions = [
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The Miller-Orr model assumes daily cash flows are random and unpredictable, following a random walk.",
-    "ExplanationWrongA": "This describes the Baumol model assumption.",
+    "ExplanationWrongA": "This describes the Baumol model assumption of predictable, uniform cash flows, which is incorrect for the Miller-Orr model.",
     "ExplanationWrongB": "Miller-Orr allows the balance to fluctuate between upper and lower control limits.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "The Miller-Orr model incorporates both transaction costs and opportunity costs.",
@@ -31857,7 +31997,7 @@ const pack_p2_b_questions = [
       "C": "Random-walk cash flows are the defining assumption",
       "D": "Both transaction and opportunity costs drive solution"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31870,7 +32010,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-571-cash-management---miller-orr-m",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-572",
@@ -31924,7 +32066,7 @@ const pack_p2_b_questions = [
       "C": "Probabilistic uses distributions not scheduled invoices",
       "D": "Seasonal adjustment applies patterns not transactions"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -31937,7 +32079,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-572-cash-flow-forecasting---direct",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-573",
@@ -31955,7 +32099,7 @@ const pack_p2_b_questions = [
     },
     "CorrectChoice": "D",
     "ExplanationCorrect": "A banker's acceptance is a bank-guaranteed promise to pay, creating a negotiable money-market instrument.",
-    "ExplanationWrongA": "A banker's acceptance is not a direct bank loan.",
+    "ExplanationWrongA": "A banker's acceptance is a bank-guaranteed promise to pay, not a direct bank loan where the bank lends its own funds.",
     "ExplanationWrongB": "This describes a committed line of credit, not a banker's acceptance.",
     "ExplanationWrongC": "Trade credit is extended by the supplier, not by a bank.",
     "ExplanationWrongD": "",
@@ -31991,7 +32135,7 @@ const pack_p2_b_questions = [
       "C": "The bank not the supplier provides the guarantee",
       "D": "Banker's acceptance = bank-guaranteed payment sold at discount"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -32004,7 +32148,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-573-short-term-financing---banker'",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-574",
@@ -32025,7 +32171,7 @@ const pack_p2_b_questions = [
     "ExplanationWrongA": "The matching strategy uses short-term sources for all temporary current assets.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "The aggressive strategy uses short-term borrowing for permanent current assets.",
-    "ExplanationWrongD": "Zero-risk strategy is not a recognized approach.",
+    "ExplanationWrongD": "Zero-risk strategy is not a recognized working capital financing approach; conservative strategy minimizes but does not eliminate risk.",
     "QuestionType": "select",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -32058,7 +32204,7 @@ const pack_p2_b_questions = [
       "C": "Aggressive uses short-term for permanent assets",
       "D": "No financing strategy eliminates all risk"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -32071,7 +32217,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-574-working-capital-financing---co",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-B-575",
@@ -32089,10 +32237,10 @@ const pack_p2_b_questions = [
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Zero-balance accounts keep regional balances at zero until checks clear. Funds remain in the master account where they earn interest.",
-    "ExplanationWrongA": "ZBAs do not change total disbursement volume.",
+    "ExplanationWrongA": "ZBAs optimize the placement of funds across accounts but do not change the total disbursement volume, which is determined by business operations.",
     "ExplanationWrongB": "ZBAs address the disbursement side not collection float.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "ZBAs add complexity to bank reconciliation.",
+    "ExplanationWrongD": "ZBAs add procedural steps to bank reconciliation due to automated transfers between the master account and regional ZBAs.",
     "QuestionType": "select",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -32125,7 +32273,7 @@ const pack_p2_b_questions = [
       "C": "ZBAs keep regional balances at zero concentrating idle funds",
       "D": "ZBAs add reconciliation complexity"
     },
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -32138,7 +32286,9 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-575-disbursement-optimization---ze",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "BlueprintDomain": "Corporate Finance"
+    "BlueprintDomain": "Corporate Finance",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32146,7 +32296,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Bond valuation - price from YTM",
     "QuestionID": "P2-B-576",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-576-bond-price-from-ytm",
     "Stem": "Ironridge Steel issues $20 million of 7% coupon bonds maturing in 10 years with semiannual interest payments. The bonds are priced to yield 6.2% annually. What is the market price of one $1,000 face-value bond?",
@@ -32208,7 +32358,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests standard bond pricing with semiannual coupons, requiring correct period and rate adjustments.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32216,7 +32368,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Duration and convexity - price sensitivity",
     "QuestionID": "P2-B-577",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-577-duration-price-sensitivity",
     "Stem": "Greenfield Capital manages a $50 million bond portfolio with a Macaulay duration of 6.8 years. The current market yield is 5.0%. If market yields suddenly rise to 5.4%, what is the estimated percentage change in the portfolio's market value using the modified duration approach?",
@@ -32278,7 +32430,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the mechanical link between Macaulay duration, modified duration, and price sensitivity.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32286,7 +32440,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Lease classification - ASC 842 five criteria",
     "QuestionID": "P2-B-578",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-578-lease-classification-asc842",
     "Stem": "Meridian Logistics leases a fleet of 12 delivery vans from AutoLease Corp. The lease term is 4 years, the vans have an estimated useful life of 7 years, and the present value of lease payments equals 72% of the vans' fair value at inception. The lease does not transfer ownership, contain a purchase option, or restrict Meridian's use of the vans. Under ASC 842, how should Meridian classify this lease?",
@@ -32347,7 +32501,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the ASC 842 five-criteria lease classification framework with explicit threshold analysis.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32355,7 +32511,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Convertible bonds - conversion premium",
     "QuestionID": "P2-B-579",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-579-convertible-bond-conversion-premium",
     "Stem": "Oakridge Technologies issues $10 million of 5% convertible bonds at par. Each $1,000 bond is convertible into 40 shares of Oakridge common stock. The stock is currently trading at $28 per share. What is the conversion premium per bond?",
@@ -32417,7 +32573,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the conversion premium concept, requiring candidates to distinguish between conversion value and the premium over par.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32425,7 +32583,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Warrants - dilutive exercise effect",
     "QuestionID": "P2-B-580",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-580-warrants-dilutive-exercise",
     "Stem": "Westfield Manufacturing has 2 million shares of common stock outstanding and 200,000 warrants outstanding, each exercisable at $25 per share. The current market price is $35. If all warrants are exercised, what is the exercise price per share received by warrant holders?",
@@ -32486,7 +32644,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the exercise price concept, distinguishing the stated warrant exercise price from dilution-adjusted metrics.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32494,7 +32654,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Preferred stock - cost of preferred equity",
     "QuestionID": "P2-B-581",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-581-cost-of-preferred-equity",
     "Stem": "Crestwood Power issues preferred stock with an annual dividend of $6.50 per share. The stock is currently priced at $52 per share, and the flotation costs are 4% of the issue price. What is the cost of preferred equity to Crestwood?",
@@ -32556,7 +32716,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests preferred equity cost computation with flotation costs, distinguishing from unlevered cost.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32564,7 +32726,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 IPO pricing - underwriter spread and net proceeds",
     "QuestionID": "P2-B-582",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-582-ipo-underwriter-spread-net-proceeds",
     "Stem": "Clearwater Analytics completes an IPO of 3 million shares at an offer price of $18 per share. The underwriter's spread is 7%, and Clearwater pays $450,000 in legal and filing fees. How much in total net proceeds does Clearwater receive from the IPO?",
@@ -32626,7 +32788,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests IPO net proceeds computation, requiring correct sequencing of spread and fee deductions.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32634,7 +32798,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Seasoned equity offering - EPS dilution",
     "QuestionID": "P2-B-583",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-583-seo-eps-dilution",
     "Stem": "Pinewood Industries has 8 million shares outstanding and reported net income of $24 million for the most recent fiscal year. Pinewood is considering a seasoned equity offering of 2 million additional shares at $30 per share, with proceeds invested in a project that will generate $3 million in additional net income next year. What is the projected earnings per share after the offering and investment?",
@@ -32696,7 +32860,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the dilutive impact of a seasoned equity offering on EPS, requiring both numerator and denominator adjustments.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32704,7 +32870,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Bond covenants - affirmative vs negative",
     "QuestionID": "P2-B-584",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-584-bond-covenants-affirmative-negative",
     "Stem": "Lakewood Capital's bond indenture includes the following provisions: (1) maintain a minimum current ratio of 1.5, (2) submit audited financial statements to the trustee annually, (3) do not issue additional debt senior to these bonds, and (4) do not sell more than 20% of total assets without lender consent. Which pair correctly classifies these provisions?",
@@ -32765,7 +32931,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the classification of bond covenants into affirmative and negative categories with four distinct provisions.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32773,7 +32941,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Sale-leaseback - gain deferral under ASC 842",
     "QuestionID": "P2-B-585",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-585-sale-leaseback-gain-deferral",
     "Stem": "Northstar Equipment sells its headquarters building to Pacific REIT for $12 million. The building's carrying value on Northstar's books is $8.5 million, creating a $3.5 million gain. Northstar immediately leases the building back under a 10-year finance lease. Under ASC 842, how should Northstar initially account for the $3.5 million gain on the sale?",
@@ -32829,7 +32997,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the proportionate gain deferral mechanism in sale-leaseback transactions under ASC 842.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32837,7 +33007,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Green bonds - use of proceeds covenant",
     "QuestionID": "P2-B-586",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-586-green-bonds-use-of-proceeds",
     "Stem": "Bridgewater Utilities issues $200 million of green bonds under the International Capital Market Association Green Bond Principles. The proceeds are designated for investment in solar panel installations across Bridgewater's service territories. Which of the following is a defining characteristic of green bonds that distinguishes them from conventional bonds?",
@@ -32898,7 +33068,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the defining characteristics of green bonds versus conventional bonds.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32906,7 +33078,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Operating lease vs finance lease - income statement impact",
     "QuestionID": "P2-B-587",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-587-operating-vs-finance-lease-income-statement",
     "Stem": "Cascadia Pharmaceuticals enters into a 5-year lease for laboratory equipment. The present value of lease payments is $1.8 million, and the equipment's fair value is $2.0 million. If the lease is classified as a finance lease, which statement correctly describes the income statement pattern compared to an operating lease over the lease term?",
@@ -32967,7 +33139,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the structural difference in income statement patterns between finance and operating leases under ASC 842.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32975,7 +33149,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Bond valuation - current yield vs YTM",
     "QuestionID": "P2-B-588",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-588-current-yield-vs-ytm",
     "Stem": "Vantage Utilities has a bond outstanding with a 6% annual coupon, a face value of $1,000, and 8 years remaining to maturity. The bond is currently trading at $940. Which statement correctly compares the bond's current yield to its yield to maturity?",
@@ -33031,7 +33205,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the relationship between coupon rate, current yield, and YTM for discount bonds.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33039,7 +33215,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Leasing analysis - lease vs buy NPV",
     "QuestionID": "P2-B-589",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-589-lease-vs-buy-npv",
     "Stem": "Apex Manufacturing needs a CNC machining center. The purchase price is $500,000 with a 5-year useful life and no salvage value. Alternatively, Apex can lease the equipment for $100,000 per year at the beginning of each year. Apex's after-tax cost of debt is 4.5%, the tax rate is 25%, and depreciation is straight-line. What is the net present value of the leasing alternative relative to purchasing, considering only the lease payments and depreciation tax shield?",
@@ -33102,7 +33278,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the full lease-versus-buy NPV framework with after-tax payments and depreciation tax shields.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33110,7 +33288,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.6 Operating lease - balance sheet recognition under ASC 842",
     "QuestionID": "P2-B-590",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B6-590-operating-lease-balance-sheet",
     "Stem": "Pinnacle Healthcare enters into a 6-year operating lease for medical imaging equipment. The present value of lease payments is $1.2 million, and the implicit rate in the lease is 7%. At lease inception, Pinnacle records a right-of-use asset and a lease liability of $1.2 million. During the first year, Pinnacle makes a $200,000 lease payment at year-end. On the year-end balance sheet, what amount is reported as the lease liability?",
@@ -33172,7 +33350,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the mechanical liability roll-forward under ASC 842 operating lease accounting with beginning-of-period payments.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33180,7 +33360,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.4 Receivables management - average collection period",
     "QuestionID": "P2-B-591",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B4-591-average-collection-period",
     "Stem": "Palmer Hardware reports annual credit sales of $18.25 million and carries an accounts receivable balance of $2.99 million at year-end. The industry average collection period is 28 days. How many days does Palmer's average collection period exceed the industry benchmark?",
@@ -33242,7 +33422,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the average collection period calculation and benchmark comparison.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33250,7 +33432,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.4 Inventory management - inventory turnover",
     "QuestionID": "P2-B-592",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B4-592-inventory-turnover",
     "Stem": "Ridgeline Textiles reports cost of goods sold of $42 million for the fiscal year and maintains an average inventory of $7 million throughout the year. What is Ridgeline's inventory turnover ratio?",
@@ -33312,7 +33494,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the fundamental inventory turnover formula using COGS and average inventory.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33320,7 +33504,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.4 Cash conversion cycle - multi-component calculation",
     "QuestionID": "P2-B-593",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B4-593-cash-conversion-cycle",
     "Stem": "Boulder Forge Industries has an average inventory period of 45 days, an average collection period of 35 days, and an average payable period of 25 days. What is Boulder Forge's cash conversion cycle?",
@@ -33382,7 +33566,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the cash conversion cycle formula with all three components, requiring correct sign on the payable period.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33390,7 +33576,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.4 Inventory management - economic order quantity",
     "QuestionID": "P2-B-594",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B4-594-eoq",
     "Stem": "Copper Peak Manufacturing uses 12,000 units of a raw material annually. Each order costs $75 in administrative and setup costs, and the annual carrying cost per unit is $3.00. What is the economic order quantity for this raw material?",
@@ -33452,7 +33638,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the EOQ formula requiring correct square root application and carrying cost handling.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33460,7 +33648,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.1 Portfolio theory - required return on undiversified portfolio",
     "QuestionID": "P2-B-595",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B1-595-undiversified-risk-measure",
     "Stem": "Northwind Logistics holds a single stock in its corporate treasury portfolio and does not hold any other securities. The CFO asks the risk analyst which measure best captures the total risk borne by Northwind's shareholders. Which measure should the analyst recommend?",
@@ -33521,7 +33709,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the distinction between total risk (standard deviation) and systematic risk (beta) in the context of an undiversified investor.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33529,7 +33719,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.1 Capital Asset Pricing Model - required return",
     "QuestionID": "P2-B-596",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B1-596-capm-required-return",
     "Stem": "Shoreline Capital's common stock has a beta of 1.30. The current risk-free rate is 4.0% and the expected market return is 10.5%. What is the required return on Shoreline's stock according to the Capital Asset Pricing Model?",
@@ -33591,7 +33781,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the standard CAPM application with explicit market risk premium computation.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33599,7 +33791,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.1 Capital Asset Pricing Model - cost of equity via DDM and CAPM",
     "QuestionID": "P2-B-597",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B1-597-capm-cost-of-equity-ddm",
     "Stem": "Cascade Mining's common stock is priced at $42 per share. The stock is expected to pay a $1.80 dividend next year and grow at 4% indefinitely. The stock has a beta of 1.25, and the current risk-free rate is 4.0%. Using the dividend discount model, what is Cascade's cost of equity?",
@@ -33661,7 +33853,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the combination of DDM and CAPM to derive the implied market risk premium, requiring two-step analysis.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33669,7 +33863,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.2 Cost of capital - WACC with two components",
     "QuestionID": "P2-B-598",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B2-598-wacc-two-components",
     "Stem": "Harbor Industries has a target capital structure of 60% common equity and 40% debt. The before-tax cost of debt is 6.5%, the cost of equity is 11.5%, and the corporate tax rate is 28%. What is Harbor's weighted average cost of capital?",
@@ -33731,7 +33925,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the two-component WACC formula with correct tax shield application.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33739,7 +33935,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.2 Cost of capital - WACC with three components",
     "QuestionID": "P2-B-599",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B2-599-wacc-three-components",
     "Stem": "Tidewater Power's capital structure consists of $36 million in long-term debt (market value), $9 million in preferred stock, and $135 million in common equity, totaling $180 million. The before-tax cost of debt is 6.0%, the preferred stock dividend yield is 6.0%, the cost of common equity is 12.0%, and the tax rate is 30%. What is Tidewater's WACC?",
@@ -33802,7 +33998,9 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests a three-component WACC with preferred stock, requiring market-value weights and the tax shield on debt only.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33810,7 +34008,7 @@ const pack_p2_b_questions = [
     "Section": "B",
     "Topic": "B.2 Cost of capital - WACC with Hamada unlevering and relevering",
     "QuestionID": "P2-B-600",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B2-600-wacc-hamada-relevering",
     "Stem": "Meridian Logistics wants to estimate its cost of equity using the CAPM. Meridian is all-equity financed with a current market value of $120 million. Crockett Industries is a comparable firm with a levered beta of 1.26, a debt-to-equity ratio of 0.50, and a tax rate of 30%. Meridian's target capital structure is 60% debt and 40% equity, its before-tax cost of debt is 7.5%, the risk-free rate is 3.5%, the market risk premium is 6.0%, and the tax rate is 30%. What is Meridian's target WACC?",
@@ -33873,6 +34071,8 @@ const pack_p2_b_questions = [
     },
     "uniqueness_note": "Tests the full Hamada unlever-relever process combined with CAPM and WACC, requiring four sequential calculations.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   }
 ];

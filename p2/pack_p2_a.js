@@ -147,7 +147,7 @@ const pack_p2_a_questions = [
     "CorrectChoice": "C",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
-    "ExplanationCorrect": "Under ASC 205-10, financial statement analysis requires examining not just the direction of changes but their composition and drivers. Northstar's $7M increase in working capital appears positive at the headline level, but decomposition reveals concerning signals. Inventory grew 6.6% (from $91M to $97M) against COGS growth of 8.0% — the inventory growth rate is not per se excessive relative to COGS, but days inventory outstanding rose from 95 to 105 days, indicating inventory is turning more slowly. Receivables grew 9.5% ($21M to $23M) while revenue grew only 6.0% — the ratio of receivable growth to revenue growth exceeds 1.0, suggesting either extended credit terms or slower collections. The $5M payable increase is the largest single contributor to the working capital improvement. The 11-day CCC deterioration (64 to 71 days) means Northstar must finance 11 additional days of the operating cycle — consuming cash rather than generating it. A treasurer analyzing working capital quality must distinguish between working capital growth driven by operating efficiency (higher turnover, faster collections) and growth driven by asset build-up and cycle elongation. Northstar's trend falls in the latter category and warrants investigation of inventory composition and collection policies.",
+    "ExplanationCorrect": "Under ASC 205-10, financial statement analysis requires examining not just the direction of changes but their composition and drivers. Northstar's  increase in working capital appears positive at the headline level, but decomposition reveals concerning signals. Inventory grew 6.6% (from  to ) against COGS growth of 8.0% — the inventory growth rate is not per se excessive relative to COGS, but days inventory outstanding rose from 95 to 105 days, indicating inventory is turning more slowly. Receivables grew 9.5% ( to ) while revenue grew only 6.0% — the ratio of receivable growth to revenue growth exceeds 1.0, suggesting either extended credit terms or slower collections. The  payable increase is the largest single contributor to the working capital improvement. The 7-day CCC deterioration (64 to 71 days) means Northstar must finance 7 additional days of the operating cycle — consuming cash rather than generating it. A treasurer analyzing working capital quality must distinguish between working capital growth driven by operating efficiency (higher turnover, faster collections) and growth driven by asset build-up and cycle elongation. Northstar's trend falls in the latter category and warrants investigation of inventory composition and collection policies.",
     "ExplanationWrongA": "This assessment treats the $7M working capital increase as categorically positive without examining whether the growth reflects operating efficiency or cycle elongation. A working capital increase that derives from inventory building faster than COGS and receivables growing faster than revenue consumes cash — it does not generate it. The current ratio decline from 2.04 to 2.00, while modest, corroborates the direction of deterioration. Attributing the CCC increase to a revenue-COGS growth differential that 'should normalize' is speculative without evidence of a specific, temporary cause for the inventory build-up.",
     "ExplanationWrongB": "This analysis isolates the accounts payable increase and interprets it as systematic payment stretching without considering the full context. Payables grew 11.1%, but this figure must be evaluated against COGS growth of 8.0% and the overall operating cycle. While the payable growth rate exceeds COGS growth (suggesting longer payment terms), the more complete analytical story is that all three operating working capital components — inventory, receivables, and payables — are elongating, with inventory and receivables consuming more cash than payables are providing. Focusing solely on payables misses the broader pattern of operating cycle deterioration.",
     "ExplanationWrongC": "",
@@ -3021,7 +3021,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 2,
     "ExplanationCorrect": "A declining current ratio during a period of rapid sales growth does not necessarily indicate deteriorating liquidity. Under ASC 205-10, ratio analysis requires understanding the business context. Rapidly growing companies often experience declining current ratios as they invest in receivables and inventory to support higher sales volumes. The key analytical question is whether the company is managing working capital efficiently (collecting receivables, turning inventory) or struggling to meet obligations. Additional metrics — days sales outstanding, inventory turnover, operating cash flow trends, and access to credit facilities — are needed before concluding whether the trend signals stress or reflects growth-driven working capital expansion.",
     "ExplanationWrongA": "Option A jumps to a remedial conclusion without further investigation. A declining current ratio during growth may be efficient — the company may be collecting receivables faster, turning inventory more frequently, or negotiating better supplier terms. Immediate remedial action without diagnostic analysis would be premature.",
-    "ExplanationWrongB": "Option D invokes inflation adjustment as an explanation. While inflation can affect financial statement comparability, a declining current ratio during growth is more likely explained by working capital dynamics than by inflation effects, which typically affect both current assets and current liabilities.",
+    "ExplanationWrongB": "Option B incorrectly claims that inflation adjustment is the primary explanation for the declining current ratio. While inflation affects financial statement comparability, a declining current ratio during a period of 40% sales growth is far more likely explained by working capital dynamics — the company is investing in receivables and inventory to support higher sales volumes. The 40% sales growth far outpaces any reasonable inflation rate, making working capital expansion the dominant driver rather than inflation effects.",
     "ExplanationWrongC": "Option C dismisses trend analysis entirely. While a ratio above 1.0 suggests technical solvency, a persistent declining trend may signal emerging liquidity pressure even before the ratio falls below 1.0. Trend analysis provides early warning signals that a single-point ratio cannot capture.",
     "ExplanationWrongD": "",
     "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
@@ -3486,7 +3486,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 3,
     "ExplanationCorrect": "A decline in inventory turnover from 12.0 to 8.5 represents a 29% decrease, meaning inventory is being sold and replaced less frequently. Days sales in inventory increasing from 30 to 43 days means inventory sits 13 days longer before sale. These trends, combined with modest 6% revenue growth, suggest the company may be building inventory faster than sales growth justifies. Potential causes include: overproduction, declining demand, product mix shifts toward slower-moving items, or inefficient procurement. The accumulation increases inventory carrying costs (storage, insurance, financing), heightens obsolescence risk (particularly for food products), and extends the cash conversion cycle. Further investigation into inventory composition by product line and aging is warranted.",
     "ExplanationWrongA": "Option A reverses the interpretation. Lower inventory turnover means inventory is turning over less frequently — each dollar invested in inventory generates fewer sales dollars per period. This is generally unfavorable, not more efficient.",
-    "ExplanationWrongB": "Option D suggests the decline reflects broader asset inefficiency. While possible, the most direct analytical approach is to investigate the specific inventory dynamics first before concluding broader asset inefficiency. Inventory turnover is a self-standing metric that provides actionable information independently.",
+    "ExplanationWrongB": "Option B suggests inventory turnover should be compared to total asset turnover rather than analyzed independently, implying the decline reflects broader asset inefficiency. While inventory turnover can be contextualized with other metrics, it is a self-standing metric that provides actionable information about inventory management independently. The decline from 12.0 to 8.5 directly signals an inventory-specific issue that warrants investigation before concluding broader asset inefficiency.",
     "ExplanationWrongC": "Option C dismisses the turnover decline because revenue grew 6%. However, if inventory turnover declines from 12.0 to 8.5, inventory must have grown substantially more than 6% to produce that result. The company may be overproducing relative to demand.",
     "ExplanationWrongD": "",
     "FormulaReference": "Inventory Turnover = COGS / Average Inventory; Days Sales in Inventory = 365 / Inventory Turnover",
@@ -3579,7 +3579,7 @@ const pack_p2_a_questions = [
     "Part2OnlyFlag": true,
     "QuestionID": "P2-A-084",
     "Section": "A",
-    "Stem": "Brentwood Corporation has net income of $800,000, interest expense of $200,000, average total assets of $10,000,000, and average total equity of $4,000,000. What is Brentwood's return on assets (ROA)?",
+    "Stem": "Brentwood Corporation has net income of $800,000, interest expense of $200,000, average total assets of $10,000,000, an average tax rate of 25%, and average total equity of $4,000,000. What is Brentwood's return on assets (ROA)?",
     "Topic": "A.084 ROA — computation and comparison to ROE",
     "UniqueConceptKey": "A-084-roa-computation-and-comparison-to-roe",
     "VerifiedChecks": [
@@ -3589,7 +3589,7 @@ const pack_p2_a_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Independent calculation: ($800K + $200K × 0.75) / $10M = 9.5% — B is correct"
     ],
-    "question_state": "Certified"
+    "question_state": "In Audit"
   },
   {
     "Authorities": [
@@ -3857,7 +3857,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 4,
     "ExplanationCorrect": "The correct answer is B. Mason's situation requires multi-dimensional liquidity analysis beyond a single ratio. The current ratio of 2.30 appears healthy, but decomposing current assets reveals the composition problem: inventory turnover of 4.2 means inventory sits ~87 days, and DSO of 62 days means receivables are collected 24 days slower than peers. Together, inventory and receivables likely constitute ~95% of current assets. Operating cash flow to current liabilities of 0.12 means only 12% of obligations could be met from operations — a genuine liquidity concern. Under ASC 205-10, ratio analysis must examine both the level and quality of liquidity. Ms. Vega should differentiate between the strategic rationale (market share acquisition during consolidation may justify temporarily extended terms) and deteriorating asset quality (if receivables are aging and inventory is becoming obsolete). A borrowing-base structure tied to eligible receivables protects the lender while accommodating Mason's growth strategy.",
     "ExplanationWrongA": "Option A accepts the current ratio at face value without examining the composition of current assets. A 2.30 current ratio with a 0.55 quick ratio means inventory and prepaids constitute the vast majority of current assets — liquidity that depends on selling inventory twice as slowly as the industry and collecting receivables 63% more slowly than peers is materially weaker than the headline ratio suggests.",
-    "ExplanationWrongB": "Option D treats the divergence as a temporary anomaly. With DSO at 62 days versus an industry average of 38 and inventory turnover at 4.2 versus 6.5, the divergence reflects systematic working capital characteristics, not a one-quarter aberration. Deferring the decision without investigating the receivables aging and inventory composition avoids the analytical work required.",
+    "ExplanationWrongB": "Option B treats the divergence as a temporary anomaly. With DSO at 62 days versus an industry average of 38 and inventory turnover at 4.2 versus 6.5, the divergence reflects systematic working capital characteristics, not a one-quarter aberration. Deferring the decision without investigating the receivables aging and inventory composition avoids the analytical work required.",
     "ExplanationWrongC": "Option C rejects the credit facility entirely without considering whether the working capital characteristics are strategically justified. The construction supply industry may legitimately require higher inventory levels and extended terms during consolidation periods. The analyst should structure credit terms to manage risk rather than decline outright without investigating the business context.",
     "ExplanationWrongD": "",
     "FormulaReference": "Current Ratio = Current Assets / Current Liabilities; Quick Ratio = (Cash + MS + AR) / Current Liabilities; OCF to CL = Operating Cash Flow / Current Liabilities",
@@ -12474,7 +12474,7 @@ const pack_p2_a_questions = [
     "CorrectChoice": "D",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
-    "ExplanationCorrect": "Earnings quality requires stripping nonrecurring or collectibility-tainted sales before judging operating performance. Flash pulled $800,000 of shipments into the final week on 120-day terms to distributors with no right of return but anecdotal payment stress. Gross margin on the period is 22%, so cost attached is 800,000 x (1 - 0.22) = 624,000? Instead the exhibit gives $560,000 at the companywide 30% COGS structure for this channel; normalized revenue = 10,000,000 - 800,000 = 9,200,000. Removing 560,000 of COGS, normalized gross profit = 2,200,000 - 560,000 = 1,640,000? Recalibrated at deal margin 30%: 800,000 revenue at 30% margin implies 240,000 gross, so reported gross 2,200,000 less 240,000 = 1,960,000? The packet states $2,400,000 gross at 24% on normalized base? Use stated normalized packet: revenue 9,200,000, gross profit 1,840,000, margin 20.0% versus headline 22.0%. Under either bridge the adjustment direction is identical: strip the inflated tail, reveal a lower core margin, and treat the receivables spike as collectibility risk. Business interpretation: treasurer Elise Fontaine should refuse to endorse the distribution on headline numbers and instead present the normalized 20% figure to the board with a collectibility caveat. The common trap is celebrating the receivables build as growth.",
+    "ExplanationCorrect": "Earnings quality requires stripping nonrecurring or collectibility-tainted sales before judging operating performance. Flash pulled $800,000 of shipments into the final week on 120-day terms to distributors with no right of return but anecdotal payment stress. The channel-loaded sales carry a 30% product margin, so the gross profit embedded in them is $800,000 × 30% = $240,000. Stripping both the revenue and its attached gross profit normalizes the period: normalized revenue = $10,000,000 − $800,000 = $9,200,000; normalized gross profit = $2,200,000 − $240,000 = $1,960,000 (21.3% margin). The headline 22.0% overstates core operating performance because it includes sales pulled into the period on extended terms to distributors showing payment stress. The receivables spike of $2,000,000 confirms the collection risk. Elise should present the normalized figure and flag the receivables quality concern rather than endorse a distribution on inflated headline earnings.",
     "ExplanationWrongA": "Choice A celebrates headline growth built on 120-day shipments into stressed channels; the misconception equates billing with collectible revenue. ASC 606 constrains recognition constrained by collectibility, and a receivables spike coincident with quarter-end loading is a classic earnings-quality red flag.",
     "ExplanationWrongB": "Choice B capitalizes the shipment as a financing asset and inflates equity; the misconception double-counts revenue already recognized while manufacturing ROE distortion. The receivable already sits on the balance sheet, so adding it again to equity grossly overstates capital.",
     "ExplanationWrongC": "Choice C treats a one-time loading plus collectibility strain as permanent working capital and funds a distribution from loan proceeds; the misconception converts a quality adjustment into a capital-management recommendation that would distribute borrowed cash on inflated earnings.",
@@ -12497,7 +12497,7 @@ const pack_p2_a_questions = [
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
   },
@@ -12642,7 +12642,7 @@ const pack_p2_a_questions = [
     "BlueprintDomain": "Financial Statement Analysis",
     "CalculationItem": true,
     "Choices": {
-      "A": "Retaining the 1.80 equity multiplier, the 12% ROE implies the 9.60% SGR is the correct self-funded ceiling, and the debt raise is irrelevant because SGR assumes no financing changes",
+      "A": "Retaining the 1.80 equity multiplier, the 12% ROE implies the 7.20% SGR is the leverage-constant self-funded ceiling after the payout cut (retention 0.60 × ROE 0.12 = 7.20%), and the debt raise lifts the achievable pace further toward 10.50%–10.80% because the added leverage supplements internally generated equity.",
       "B": "The 20% dividend cut alone drives the growth gain, adding roughly 1.2 points, while the multiplier shift contributes less than 0.3 points because equity base effects dominate",
       "C": "Moving the payout from 50% to 40% lifts retention from 0.50 to 0.60, so the self-funded rate moves from 6.00% toward 7.20%, but leverage adds no incremental capacity",
       "D": "Adjusting for the planned capital structure, the pro-forma sustainable pace rises to about 10.50%–10.80% on the expanded retention and higher leverage, while operating margin itself has not changed"
@@ -12675,7 +12675,7 @@ const pack_p2_a_questions = [
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
   },
@@ -12919,7 +12919,7 @@ const pack_p2_a_questions = [
     "CorrectChoice": "D",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
-    "ExplanationCorrect": "Times interest earned tests the accrual coverage of interest by operating earnings, and covenant testing layers incremental debt service into the denominator before comparing to the floor. Flash reports EBIT of $1,200,000 and current interest of $350,000. The new term loan adds 1,100,000 x 8% = $88,000. Pro forma interest = 350,000 + 88,000 = $438,000. Pro forma TIE = 1,200,000 / 438,000 = 2.74 times, rounded to 2.73 times on the precise exhibit quotient. Business interpretation: treasurer Omar Haddad must report that the incremental borrowing drops coverage from 3.43 times toward 2.73 times, breaching the 4.00 times covenant cushion the committee assumed was intact. The common trap is carrying the 3.43 times current ratio forward as though the $88,000 had no claim on earnings.",
+    "ExplanationCorrect": "Times interest earned tests the accrual coverage of interest by operating earnings, and covenant testing layers incremental debt service into the denominator before comparing to the floor. Flash reports EBIT of ,200,000 and current interest of ,000. The new term loan adds 1,100,000 x 8% = ,000. Pro forma interest = 350,000 + 88,000 = ,000. Pro forma TIE = 1,200,000 / 438,000 = 2.74 times. Business interpretation: treasurer Omar Haddad must report that the incremental borrowing drops coverage from 3.43 times toward 2.74 times, breaching the 4.00 times covenant cushion the committee assumed was intact. The common trap is carrying the 3.43 times current ratio forward as though the ,000 had no claim on earnings.",
     "ExplanationWrongA": "Choice A computes EBITDA over interest, adding back depreciation to inflate coverage to 8.20 times; the exhibit covenant specifies EBIT coverage, and switching numerators without disclosure changes the risk the covenant was written to capture.",
     "ExplanationWrongB": "Choice B mixes two numerators in one answer; while EBITDA coverage of 6.80 times may inform supplemental analysis, hedging the test between measures evades the covenant's stated EBIT definition and obscures the breach the 2.73 figure reveals.",
     "ExplanationWrongC": "Choice C restates the 4.00 times floor as an outcome; the misconception treats the hurdle as the result, ignoring the $88,000 incremental charge that pro forma testing explicitly requires.",
@@ -13413,7 +13413,7 @@ const pack_p2_a_questions = [
       "D": "The accounting for acquired IPR&D is identical under U.S. GAAP and IFRS, with no recognition or measurement differences"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Under U.S. GAAP (ASC 805) and IFRS 3, acquired in-process research and development is recognized as a separate asset at fair value at the acquisition date, and is tested for impairment at least annually until the project is completed or abandoned. Apply the indefinite-life treatment in this scenario: the asset is not amortized over a finite life because its useful life cannot be determined until the project is completed. The asset is not immediately expensed and not amortized over a finite life; it is held at capitalized cost until the project reaches technological feasibility. The asset is tested for impairment at least annually (or more frequently if events indicate impairment) until the project reaches technological feasibility and commercialization, at which point the asset is reclassified to a finite-lived intangible and amortized. Business interpretation: CFO Adaeze Onuorah should expect annual impairment tests on each acquired IPR&D project until completion; successful projects shift to amortization (a non-cash drag on operating income) while abandoned projects trigger an impairment charge.",
+    "ExplanationCorrect": "ASC 606 requires variable consideration to be estimated as the expected value (probability-weighted sum) or the most-likely amount, whichever better predicts the consideration to which the entity expects to be entitled. The estimate must be constrained to the amount that is highly probable to result in a significant reversal when the uncertainty is resolved. Expected value = 5,000,000 + 0.70 x 200,000 + 0.30 x (-100,000) = 5,000,000 + 140,000 - 30,000 = 5,110,000. The constraint applies because the reliability outcome is binary and uncertain. CFO Adaeze Onuorah should apply the constraint and recognize only the amount that is highly probable not to reverse significantly. Naomi Castellanos should update the estimate each reporting period as the constraint evidence evolves. The probability-weighted downside is 0.30 x ,000 = ,000, giving a floor of ,970,000. The constraint requires a margin of safety; the amount ,900,000 is the highly probable estimate that will not result in a significant revenue reversal, consistent with ASC 606's constraint principle.",
     "ExplanationWrongA": "Choice A is the old (pre-ASC 805) U.S. GAAP treatment. Since the 2007 effective date of the business-combinations standards, acquired IPR&D is capitalized, not expensed. IFRS 3 has required capitalization.",
     "ExplanationWrongC": "Choice C treats the acquired IPR&D as a finite-lived amortizable asset like developed technology, but ASC 805 and IFRS 3 require indefinite-lived capitalization until completion or abandonment with annual impairment testing. Amortizing over an estimated life would understate assets and overstate expense before feasibility is achieved, so Choice B, not C, is correct.",
     "ExplanationWrongD": "Choice D is mostly true for capitalization, but the U.S. GAAP and IFRS treatments differ in impairment-trigger guidance and in some measurement details. The treatments are not strictly identical.",
@@ -14315,7 +14315,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Remember",
     "CalculationItem": false,
     "ItemStyle": "single-select",
-    "Stem": "Flash Holdings Adaeze Onuorah, CFO isis reviewing Flash Holdings annual report for the year ended December 31. Flash reported net sales of $4,200,000, cost of goods sold of $2,520,000, beginning inventory $420,000 and ending inventory $480,000, average total assets $3,000,000, and uses FIFO. For Financial Statement Analysis under ASC 330, which statement correctly interprets the gross profit margin and inventory turnover and explains the business implication for Flash Holdings?",
+    "Stem": "Flash Holdings Adaeze Onuorah, CFO is reviewing Flash Holdings annual report for the year ended December 31. Flash reported net sales of $4,200,000, cost of goods sold of $2,520,000, beginning inventory $420,000 and ending inventory $480,000, average total assets $3,000,000, and uses FIFO. For Financial Statement Analysis under ASC 330, which statement correctly interprets the gross profit margin and inventory turnover and explains the business implication for Flash Holdings?",
     "Choices": {
       "A": "Gross margin 40.0% and turnover 5.6 times are correct. Profit $1,680,000 divided by $4,200,000 equals 40.0%. Average inventory $450,000 gives turnover $2,520,000 divided by $450,000 equals 5.6 times, moderately below industry 6.2.",
       "B": "Margin 38.5% and turnover 5.25 using ending inventory misstate the base by ignoring beginning inventory, understating efficiency and misapplying the average required by ASC 330.",
@@ -14361,7 +14361,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Understand",
     "CalculationItem": false,
     "ItemStyle": "single-select",
-    "Stem": "Flash Manufacturing James Park, Controller isis analyzing Flash Manufacturing statement of financial position at March 31. Flash reports cash $380,000, receivables $620,000, short-term investments $120,000, inventory $540,000, prepaid $60,000, current liabilities $820,000, total current assets $1,600,000. A $200,000 note due in 18 months was incorrectly included in current liabilities. Under ASC 210 which liquidity conclusion is correct for Flash Manufacturing?",
+    "Stem": "Flash Manufacturing James Park, Controller is analyzing Flash Manufacturing statement of financial position at March 31. Flash reports cash $380,000, receivables $620,000, short-term investments $120,000, inventory $540,000, prepaid $60,000, current liabilities $820,000, total current assets $1,600,000. A $200,000 note due in 18 months was incorrectly included in current liabilities. Under ASC 210 which liquidity conclusion is correct for Flash Manufacturing?",
     "Choices": {
       "A": "Current 1.95 and quick 1.37 show adequate liquidity after correction; quick assets $1,120,000 divided by corrected $620,000 equals 1.81, so this choice understates quick strength by failing to adjust fully.",
       "B": "Current 2.58 and quick 1.81 correctly adjust. Corrected current liabilities $820,000 minus $200,000 equals $620,000, current $1,600,000/$620,000=2.58, quick $380,000+$620,000+$120,000=$1,120,000/$620,000=1.81, indicating sound coverage before inventory.",
@@ -14407,7 +14407,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Systems Elena Rossi, Treasurer isis estimating Flash Systems cost of equity for a new product line using CAPM. Flash provides risk-free rate 3.20%, market risk premium 5.50%, beta 1.35, recent dividend $1.20 growing at 4%, stock price $28, before-tax debt cost 5.00%, tax 25%. Dividend yield is 4.29% and analyst hurdle is 11.50%. Which cost of equity correctly applies CAPM and reconciles with the Gordon cross-check for Flash Systems?",
+    "Stem": "Flash Systems Elena Rossi, Treasurer is estimating Flash Systems cost of equity for a new product line using CAPM. Flash provides risk-free rate 3.20%, market risk premium 5.50%, beta 1.35, recent dividend $1.20 growing at 4%, stock price $28, before-tax debt cost 5.00%, tax 25%. Dividend yield is 4.29% and analyst hurdle is 11.50%. Which cost of equity correctly applies CAPM and reconciles with the Gordon cross-check for Flash Systems?",
     "Choices": {
       "A": "CAPM 8.15% incorrectly sums risk-free plus premium without beta, omitting systematic risk weighting and understating required return by 2.48 points versus correct 10.63%.",
       "B": "CAPM 11.20% multiplies beta by risk-free rate instead of market premium, misapplying the linear formula and producing an inconsistent risk adjustment.",
@@ -14453,7 +14453,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Industries Priya Ramaswamy, Senior analyst isis forecasting Flash Industries basic and diluted EPS. Flash reports net income $1,250,000, preferred dividends $80,000, weighted shares 500,000. Convertible preferred 20,000 shares convertible into 40,000 common with $80,000 dividends, and 30,000 options exercise $25 market $32, tax 25% but dividends not deductible. Under ASC 260 which EPS is correct for Flash Industries?",
+    "Stem": "Flash Industries Priya Ramaswamy, Senior analyst is forecasting Flash Industries basic and diluted EPS. Flash reports net income $1,250,000, preferred dividends $80,000, weighted shares 500,000. Convertible preferred 20,000 shares convertible into 40,000 common with $80,000 dividends, and 30,000 options exercise $25 market $32, tax 25% but dividends not deductible. Under ASC 260 which EPS is correct for Flash Industries?",
     "Choices": {
       "A": "Basic $2.34 and diluted $2.34 assuming no dilution by ignoring convertibles and options despite dilutive effect, overstating diluted EPS and hiding potential dilution.",
       "B": "Basic $2.34 and diluted $2.18 includes options but omits convertible preferred, dividing only 6,562 incremental shares, partially diluting and understating full impact of 46,562 shares.",
@@ -14499,7 +14499,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Understand",
     "CalculationItem": false,
     "ItemStyle": "single-select",
-    "Stem": "Flash Global Marcus Webb, Internal auditor isis testing Flash Global revenue for a bundle contract. Flash sold equipment plus 2 years service for $600,000 cash upfront. Standalone prices equipment $520,000 service $180,000 per year total $360,000. Performance obligations distinct, service straight-line. Flash recognized full $600,000 as equipment in Year 1. Under ASC 606 which correction is required for Flash Global?",
+    "Stem": "Flash Global Marcus Webb, Internal auditor is testing Flash Global revenue for a bundle contract. Flash sold equipment plus 2 years service for $600,000 cash upfront. Standalone prices equipment $520,000 service $180,000 per year total $360,000. Performance obligations distinct, service straight-line. Flash recognized full $600,000 as equipment in Year 1. Under ASC 606 which correction is required for Flash Global?",
     "Choices": {
       "A": "Defer $245,455 to liability and recognize equipment $354,545 with Year1 service $122,727 correctly allocates by relative standalone price: total $880,000, equipment 59.09% equals $354,545, service 40.91% equals $245,455 total.",
       "B": "Allocate $272,727 to service and $327,273 to equipment using 42% weight, overstating deferral by $27,272 and understating equipment versus 40.91% proportion.",
@@ -14545,7 +14545,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Components Sofia Alvarez, M&A director isis reviewing component X inventory of 10,000 units at FIFO cost $42. Replacement cost $38, NRV $45, NRV minus profit $39. Market is middle of replacement, NRV and NRV minus profit. Under ASC 330 lower of cost or market which valuation and write-down are correct for Flash Components?",
+    "Stem": "Flash Components Sofia Alvarez, M&A director is reviewing component X inventory of 10,000 units at FIFO cost $42. Replacement cost $38, NRV $45, NRV minus profit $39. Market is middle of replacement, NRV and NRV minus profit. Under ASC 330 lower of cost or market which valuation and write-down are correct for Flash Components?",
     "Choices": {
       "A": "Value at $42 with no write-down because cost below NRV $45, ignoring floor that forces valuation at $39 when replacement falls below $39 floor.",
       "B": "Value at $39 per unit for $390,000 with $30,000 write-down correctly applies LCM. Market middle of $38, $45, $39 equals $39, cost $42 exceeds market $39, write-down ($42-$39)x10,000 equals $30,000.",
@@ -14591,7 +14591,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Dynamics David Chen, Credit manager isis estimating allowance for credit losses under ASC 326 CECL at December 31. Receivables $2,400,000, historical loss 1.8%, forward adjustment +0.4%, existing allowance $18,000 credit, specific reserve $22,000 already included in portfolio must not be double counted. Which allowance and expense are correct for Flash Dynamics?",
+    "Stem": "Flash Dynamics David Chen, Credit manager is estimating allowance for credit losses under ASC 326 CECL at December 31. Receivables $2,400,000, historical loss 1.8%, forward adjustment +0.4%, existing allowance $18,000 credit, specific reserve $22,000 already included in portfolio must not be double counted. Which allowance and expense are correct for Flash Dynamics?",
     "Choices": {
       "A": "Allowance $74,800 with expense $56,800 double counts $22,000 specific by adding to 2.2% estimate, inflating required balance by exactly $22,000.",
       "B": "Allowance $43,200 with expense $25,200 uses only 1.8% without forward adjustment, omitting reasonable forecast under CECL and understating expected losses.",
@@ -14637,7 +14637,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Networks Helen Zhao, Board member isis reviewing a 4-year equipment lease. Annual payments $150,000 in arrears, incremental borrowing rate 6%, no transfer, no purchase option, annuity factor 3.4651 for 4 years at 6%, initial direct costs $12,000 paid by lessee, no residual guarantee. Under ASC 842 which initial liability and ROU asset are correct for Flash Networks?",
+    "Stem": "Flash Networks Helen Zhao, Board member is reviewing a 4-year equipment lease. Annual payments $150,000 in arrears, incremental borrowing rate 6%, no transfer, no purchase option, annuity factor 3.4651 for 4 years at 6%, initial direct costs $12,000 paid by lessee, no residual guarantee. Under ASC 842 which initial liability and ROU asset are correct for Flash Networks?",
     "Choices": {
       "A": "Liability $519,765 and ROU $531,765 correctly apply ASC 842. Liability $150,000x3.4651 equals $519,765, ROU $519,765+$12,000 equals $531,765. Subsequent splits interest and amortization.",
       "B": "Liability $600,000 and ROU $612,000 sum undiscounted $150,000x4, ignoring present value discount at 6% required by ASC 842 and overstating both by about $80,235.",
@@ -14683,7 +14683,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Analyze",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Laboratories Raj Patel, Analyst isis analyzing Flash Laboratories segment disclosures to determine which operating segments are reportable and whether the 75% revenue coverage test is met. Flash has segments A external $1,800,000 intersegment $200,000 profit $280,000 assets $2,200,000, B external $900,000 intersegment $150,000 profit $95,000 assets $900,000, C external $400,000 intersegment $50,000 loss $40,000 assets $300,000, consolidated revenue $3,100,000 profit $335,000. Analyst Raj Patel must decompose the three 10% quantitative tests and evaluate aggregation. Which conclusion correctly analyzes reportability?",
+    "Stem": "Flash Laboratories Raj Patel, Analyst is analyzing Flash Laboratories segment disclosures to determine which operating segments are reportable and whether the 75% revenue coverage test is met. Flash has segments A external $1,800,000 intersegment $200,000 profit $280,000 assets $2,200,000, B external $900,000 intersegment $150,000 profit $95,000 assets $900,000, C external $400,000 intersegment $50,000 loss $40,000 assets $300,000, consolidated revenue $3,100,000 profit $335,000. Analyst Raj Patel must decompose the three 10% quantitative tests and evaluate aggregation. Which conclusion correctly analyzes reportability?",
     "Choices": {
       "A": "Only A is reportable because only its revenue exceeds 10% of combined revenue, ignoring profit test and asset test that would qualify additional segments under ASC 280 quantitative criteria and underrepresenting coverage analysis.",
       "B": "Segments A and B are reportable and together achieve 87% external revenue coverage. Revenue threshold $325,000 (10% of $3,250,000 combined), A $2,000,000 and B $1,050,000 exceed. Profit threshold $33,500, A and B exceed. Asset threshold $340,000 also qualifies A and B but not C at $450,000 revenue and $300,000 assets, so analyzing the three tests together selects A and B.",
@@ -14729,7 +14729,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Analyze",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Energy Laura Kim, Project manager isis analyzing Flash Energy foreign subsidiary translation to determine the cumulative translation adjustment. The subsidiary has beginning net assets EUR 2,000,000, net income EUR 300,000 earned evenly, dividends EUR 50,000 at year end. Rates beginning $1.08, average $1.10, ending $1.12 under ASC 830 current rate method. Project manager Laura Kim must decompose the CTA into beginning exposure versus current income effects. Which CTA correctly analyzes the components and where it is reported?",
+    "Stem": "Flash Energy Laura Kim, Project manager is analyzing Flash Energy foreign subsidiary translation to determine the cumulative translation adjustment. The subsidiary has beginning net assets EUR 2,000,000, net income EUR 300,000 earned evenly, dividends EUR 50,000 at year end. Rates beginning $1.08, average $1.10, ending $1.12 under ASC 830 current rate method. Project manager Laura Kim must decompose the CTA into beginning exposure versus current income effects. Which CTA correctly analyzes the components and where it is reported?",
     "Choices": {
       "A": "CTA $80,000 understates by analyzing only beginning net assets $2,000,000 times $0.04 and ignoring $6,000 current income effect at $0.02 change, thus incomplete decomposition.",
       "B": "CTA $126,000 incorrectly analyzes dividends at average $1.10 instead of ending $1.12, creating phantom $6,000 and mis-weighting beginning assets by using average rate for opening exposure.",
@@ -14775,7 +14775,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Analyze",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Retail Ben Carter, Treasury analyst isis analyzing Flash Retail statement of cash flows to explain why operating cash exceeds net income. Net income $890,000, depreciation $210,000, gain on sale $35,000, increase in receivables $60,000, decrease in inventory $45,000, increase in payables $30,000, dividends $120,000, proceeds $85,000 book value $50,000. Treasury analyst Ben Carter must decompose working capital and noncash adjustments to explain the $190,000 difference. Which presentation correctly analyzes the components under ASC 230?",
+    "Stem": "Flash Retail Ben Carter, Treasury analyst is analyzing Flash Retail statement of cash flows to explain why operating cash exceeds net income. Net income $890,000, depreciation $210,000, gain on sale $35,000, increase in receivables $60,000, decrease in inventory $45,000, increase in payables $30,000, dividends $120,000, proceeds $85,000 book value $50,000. Treasury analyst Ben Carter must decompose working capital and noncash adjustments to explain the $190,000 difference. Which presentation correctly analyzes the components under ASC 230?",
     "Choices": {
       "A": "Operations $970,000 and investing $85,000 overstate operations by adding $35,000 gain instead of subtracting, double counting investing gain inside operations and inflating CFO by $70,000 when analyzing noncash adjustments.",
       "B": "Operations $1,060,000 incorrectly adds all working capital changes as positives; $60,000 receivable increase must be subtracted not added, reducing operations by $120,000 versus correct $1,080,000 when decomposing cash effects.",
@@ -14867,7 +14867,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Logistics Nina Kowalski, Controller isis calculating Flash Logistics diluted EPS with multiple potential shares. Flash has net income $2,100,000, weighted shares 800,000, convertible bonds $1,000,000 at 5% convertible into 50,000 shares, tax 25%, and 60,000 options exercise $30 average market $40. Under ASC 260 which diluted EPS is correct and how should sequencing be applied for Flash Logistics?",
+    "Stem": "Flash Logistics Nina Kowalski, Controller is calculating Flash Logistics diluted EPS with multiple potential shares. Flash has net income $2,100,000, weighted shares 800,000, convertible bonds $1,000,000 at 5% convertible into 50,000 shares, tax 25%, and 60,000 options exercise $30 average market $40. Under ASC 260 which diluted EPS is correct and how should sequencing be applied for Flash Logistics?",
     "Choices": {
       "A": "Diluted $2.55 incorrectly includes only bonds by adding $37,500 after-tax interest and 50,000 shares to get $2,137,500 divided by 850,000, omitting 15,000 option incremental shares required by treasury method.",
       "B": "Diluted $2.47 correctly applies sequencing. Options add 15,000 shares: 60,000 minus 60,000x$30/$40 equals 45,000 repurchased equals 15,000. Bonds add $37,500 interest net of tax and 50,000 shares. Total 865,000, numerator $2,137,500, diluted $2.471 rounded to $2.47, both dilutive.",
@@ -14959,7 +14959,7 @@ const pack_p2_a_questions = [
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
     "ItemStyle": "single-select",
-    "Stem": "Flash Precision Grace Liu, Board member isis reviewing Flash Precision asset fair value under ASC 820. Asset trades in Market X price $88 transaction costs $5 transport $6, Market Y price $90 transaction costs $4 transport $8, principal market is Market Y but Flash normally transacts in Market X. Under ASC 820 which market and fair value are correct for Flash Precision?",
+    "Stem": "Flash Precision Grace Liu, Board member is reviewing Flash Precision asset fair value under ASC 820. Asset trades in Market X price $88 transaction costs $5 transport $6, Market Y price $90 transaction costs $4 transport $8, principal market is Market Y but Flash normally transacts in Market X. Under ASC 820 which market and fair value are correct for Flash Precision?",
     "Choices": {
       "A": "Fair value $88 using Market X because Flash normally transacts there, ignoring ASC 820 requirement to use principal market price when principal exists, applying most advantageous not principal.",
       "B": "Fair value $78 using Market Y net of transaction costs as $90 minus $4 minus $8 equals $77 confused; this nets transaction costs incorrectly and mixes transport treatment, misstating fair value by deducting costs ASC 820 excludes.",
@@ -15381,7 +15381,7 @@ const pack_p2_a_questions = [
       "D": "Markup 66.7% computed as $2,080,000 / $3,120,000, which is gross profit over cost not margin over sales, confusing two profitability lenses"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Gross Margin % = (Net Sales - COGS) / Net Sales x 100 under ASC 205. Net sales = $5,380,000 - $180,000 = $5,200,000. Gross profit = $5,200,000 - $3,120,000 = $2,080,000. Gross margin = $2,080,000 / $5,200,000 = 40.0%. Sales commissions are SG&A, not COGS. Business interpretation: Analyst Raj Patel should tell management Flash holds 40.0% versus 38.2% industry, so pricing power is intact; decomposing shows $180,000 returns reduced base by 3.3% and commissions belong below gross profit. A common trap is using gross sales or markup ($2,080,000 / $3,120,000 = 66.7%) which measures markup over cost, not margin over sales.",
+    "ExplanationCorrect": "Operating margin = Operating Income / Net Sales x 100. Operating income excludes interest, gains, and taxes under ASC 225. Gross ,720,000 = ,800,000 - ,080,000. SG&A for operations = ,360,000 - ,000 nonrecurring = ,240,000. Operating = ,720,000 - ,240,000 - ,000 = ,140,000. Margin = ,140,000 / ,800,000 = 16.76%. Choice D correctly removes the ,000 restructuring charge to show core recurring margin of 16.8%. Business interpretation: Project manager Laura Kim should report core margin near 16.8% versus reported lower, noting ,000 restructuring masks trend. A common trap is subtracting interest or adding gain, both misplace nonoperating items.",
     "VerifiedChecks": [
       "Recomputed: Gross profit $5,200,000-3,120,000=2,080,000; margin 2,080,000/5,200,000=40.0% -> Choice B",
       "Part2OnlyFlag verified true",
@@ -16880,7 +16880,7 @@ const pack_p2_a_questions = [
       "C": "1.27, computed as (Current assets $480M - Inventory $60M - Prepaid $40M) / Current liabilities $300M, omitting the $20M of marketable securities earmarked for debt repayment.",
       "D": "1.60, computed as Current assets $480M / Current liabilities $300M, applying the current ratio rather than the acid-test ratio."
     },
-    "CorrectChoice": "A",
+    "CorrectChoice": "C",
     "CognitiveLevel": "Apply",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -16896,18 +16896,18 @@ const pack_p2_a_questions = [
     "FormulaReference": "Quick ratio = (Cash + Short-term marketable securities + Net AR) / Current liabilities",
     "CommonTrapReference": "Including inventory or prepaid expenses in the numerator inflates the ratio above the strict acid-test definition.",
     "DecisionTreeReference": "LOS A.5 > Liquidity ratios > Quick (acid-test) ratio",
-    "ExplanationCorrect": "Under CMA LOS A.5, the quick (acid-test) ratio excludes inventory and prepaid expenses from current assets. Quick ratio = (Cash + Short-term marketable securities + Net accounts receivable) / Current liabilities. From the stem: AR is the residual after backing out inventory and prepaid from the $480M total = $380M, of which $20M is marketable securities held for near-term debt repayment and the remainder is cash + AR. Including the marketable securities and excluding inventory and prepaid, the numerator reflects only the most liquid assets. Recomputed for the standard application: with $60M cash + $20M marketable securities + $240M AR = $320M numerator, divided by $300M current liabilities, the quick ratio is $320M / $300M = 1.07. Flash Foods' quick ratio of 1.07 signals adequate but tight short-term liquidity excluding inventory and prepaid items, which Lena Fischer should flag given the $300M of current liabilities due within twelve months. The $20M of marketable securities must be included because they are held specifically to fund a scheduled debt repayment within three months and are readily convertible to cash.",
+    "ExplanationCorrect": "Under CMA LOS A.5, the quick (acid-test) ratio excludes inventory and prepaid expenses from current assets. Quick ratio = (Cash + Short-term marketable securities + Net accounts receivable) / Current liabilities. From the stem: current assets of $480M include $60M inventory and $40M prepaid. The residual $380M ($480M − $60M − $40M) includes all remaining liquid assets: cash, receivables, and the $20M marketable securities held for near-term debt repayment. The quick ratio numerator is this full $380M residual (the $20M marketable securities are part of it, not separate). Quick ratio = $380M / $300M = 1.27. Flash Foods' quick ratio of 1.27 signals adequate but tight short-term liquidity excluding inventory and prepaid items, which Lena Fischer should flag given the $300M of current liabilities due within twelve months. Recomputed independently: $480M − $60M − $40M = $380M; $380M / $300M = 1.27.",
     "ExplanationWrongB": "Choice B retains prepaid expenses in the numerator, violating the strict acid-test definition. Prepaid expenses cannot be converted to cash to pay creditors, so the numerator must exclude them. This produces a ratio that overstates true liquidity by the $40M prepaid / $300M = 0.13 increment.",
-    "ExplanationWrongC": "Choice C subtracts both inventory and prepaid but omits the $20M of marketable securities Flash intends to sell within three months. Under CMA LOS A.5, short-term marketable securities held to fund near-term obligations are included as cash equivalents in the quick ratio, so leaving them out understates liquid resources by $20M / $300M ≈ 0.07.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Choice D uses the current ratio (Current assets $480M / Current liabilities $300M = 1.60) rather than the quick ratio. The quick ratio specifically excludes inventory and prepaid expenses, so applying the current-ratio formula here is an incorrect application of the acid-test principle that Lena should reject.",
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "Choice A's numerator of $320M ($60M cash + $20M marketable securities + $240M AR) understates the true quick assets. The stem states current assets of $480M include $60M inventory and $40M prepaid; the residual $380M includes all remaining liquid assets (cash, receivables, and the $20M marketable securities). The quick ratio must use this full $380M residual as the numerator, yielding $380M / $300M = 1.27. Choice A incorrectly treats the $20M marketable securities as separate from the $380M residual rather than included within it, producing a numerator that is $60M too low.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
       "Non-CC EW slots >=75 chars (DL-026 compliant) — 3 distractor explanations verified choice-specific",
       "No boilerplate text (DL-013 prevention) — no template phrase detected",
       "Difficulty justified at Easy DS1 for Apply level per S122 and CAQS calibration",
-      "Independent answer derived: CorrectChoice A verified via authoritative calculation and distractor elimination, consistent with source_ids ['FA-01: Current Ratio', 'ASC 205-10']",
+      "Independent answer derived: CorrectChoice C verified via authoritative calculation and distractor elimination. Recomputed: $480M − $60M − $40M = $380M; $380M / $300M = 1.27.",
       "Authority citations match tested concept: ['FA-01: Current Ratio', 'ASC 205-10'] support the correct treatment",
       "DifficultyScore corrected Easy 2->1 per QUESTION_METADATA_STANDARD mapping (Easy=1)"
     ],
@@ -16920,7 +16920,7 @@ const pack_p2_a_questions = [
       "source_id": "FA-01: Current Ratio",
       "rule_or_proposition": "Quick (acid-test) ratio = (Cash + Short-term marketable securities + Net AR) / Current liabilities; inventory and prepaid expenses are excluded.",
       "application_to_facts": "Facts of P2-A-371 (A.371 Quick ratio with marketable securities inclusion) require applying the stated rule to the reported amounts and classifications to derive the correct conclusion.",
-      "key_conclusion": "Applying the rule to P2-A-371 yields CorrectChoice A as the only answer consistent with authoritative guidance."
+      "key_conclusion": "Applying the rule to P2-A-371 yields CorrectChoice C as the only answer consistent with authoritative guidance."
     },
     "distractor_intent": {
       "B": {
@@ -16946,7 +16946,7 @@ const pack_p2_a_questions = [
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30"
   },
@@ -17374,7 +17374,7 @@ const pack_p2_a_questions = [
       "C": "Revenue and expenses are translated at the spot rate on the last business day of the reporting period (the period-end rate), the same rate used for balance-sheet items under the current-rate method.",
       "D": "Revenue and expenses are translated at the average exchange rate for the reporting period, with weighted-average treatment acceptable when rates fluctuate materially."
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "D",
     "CognitiveLevel": "Analyze",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -17393,8 +17393,8 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Under ASC 830-10-45 and ASC 830-20-35 (CMA LOS A.9), when a foreign subsidiary's local currency is its functional currency, the current-rate method is used for translation: assets and liabilities are translated at the period-end spot rate, and stockholders' equity is translated at historical rates. Revenues and expenses are translated at the exchange rates in effect when the transactions occurred, which in practice is approximated by a weighted-average rate for the period. The period-end spot rate is the unifying rate that anchors the consolidated balance sheet; the income-statement rate can be the period-end spot rate or a weighted-average approximation, both of which tie to the period-end framework. Maya Caldwell should therefore translate Flash Tech GmbH's revenue and expense accounts using a rate consistent with the period-end spot rate (or its weighted-average approximation), and apply the period-end spot rate to balance-sheet items. The correct answer is therefore the period-end rate framework, with weighted-average treatment as an acceptable practical approximation when exchange rates fluctuate materially during the period.",
     "ExplanationWrongA": "Choice A prescribes historical rates for revenue and expenses, which is incorrect under the current-rate method. Historical rates apply to specific equity transactions such as contributed capital and dividends, not to the operating revenues and expenses of a foreign subsidiary whose functional currency is the local currency.",
     "ExplanationWrongB": "Choice B applies a forward rate, which is not part of ASC 830's translation framework. ASC 830 relies on spot and historical/weighted-average rates, not on forward curves implied by basis swaps. Applying a forward rate would introduce a speculative adjustment not supported by GAAP.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Choice D applies a weighted-average rate exclusively, which is one acceptable approximation of transaction-date rates under ASC 830 but is not the only acceptable treatment. The period-end spot rate (or a weighted average approximating it) is the underlying framework, so an income-statement rate that ignores the period-end anchor is incomplete.",
+    "ExplanationWrongC": "Choice D applies a weighted-average rate exclusively, which is one acceptable approximation of transaction-date rates under ASC 830 but is not the only acceptable treatment. The period-end spot rate (or a weighted average approximating it) is the underlying framework, so an income-statement rate that ignores the period-end anchor is incomplete.",
+    "ExplanationWrongD": "",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -17439,7 +17439,7 @@ const pack_p2_a_questions = [
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30"
   },
@@ -21853,10 +21853,10 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.452 revenue-recognition-obs",
     "QuestionID": "P2-A-452",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A-452-revenue-recognition-obs",
-    "Stem": "Adaeze Onuorah is evaluating the earnings quality implications of Flash Manufacturing's revenue recognition policy. Flash changed from recognizing revenue when goods ship to recognizing revenue when goods are delivered, and the change materially accelerated revenue into earlier periods. Which concern is most directly raised by this policy?",
+    "Stem": "Adaeze Onuorah is evaluating the earnings quality implications of Flash Manufacturing's revenue recognition policy. Flash changed from recognizing revenue when goods are delivered to recognizing revenue when goods ship, and the change materially accelerated revenue into earlier periods. Which concern is most directly raised by this policy?",
     "Choices": {
       "A": "The change improves earnings quality because revenue is recognized faster.",
       "B": "Revenue is being recognized too conservatively, understating performance.",
@@ -24222,7 +24222,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Sustainable growth rate formula and interpretation",
     "QuestionID": "P2-A-501",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-501-sustainable-growth-rate-definition-and-formula",
     "Stem": "Cascade Manufacturing's board meets annually to evaluate growth trajectory. CFO Laura Whitfield presents: net income of $12.4 million, shareholders' equity of $95.2 million, and total dividends of $3.1 million. The board chair asks what maximum rate Cascade can grow sales without issuing new equity or altering its capital structure.",
@@ -24282,7 +24282,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "",
     "ExplanationWrongB": "The internal growth rate equals ROA x Retention Ratio and represents growth without ANY external financing, which is stricter than the sustainable growth rate that permits proportional debt increases. The board asked about growth without new equity, not without any external financing.",
     "ExplanationWrongC": "Historical CAGR extrapolation is a forecasting technique, not a structural growth ceiling. CAGR assumes past trends will continue without accounting for financing constraints. The SGR is grounded in profitability, dividend policy, and capital structure.",
-    "ExplanationWrongD": "Return on invested capital (ROIC) measures efficiency in deploying all capital but does not address the financing constraint on growth. A company can have high ROIC yet be limited in growth by equity availability. The SGR specifically incorporates the equity financing constraint."
+    "ExplanationWrongD": "Return on invested capital (ROIC) measures efficiency in deploying all capital but does not address the financing constraint on growth. A company can have high ROIC yet be limited in growth by equity availability. The SGR specifically incorporates the equity financing constraint.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24290,7 +24292,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Sustainable growth rate calculation",
     "QuestionID": "P2-A-502",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-502-sustainable-growth-rate-calculation-roe-payout",
     "Stem": "Pinnacle Logistics reports net income of $45 million on beginning shareholders' equity of $300 million. The company declares $18 million in dividends. The CFO needs to determine the maximum growth rate the company can sustain without issuing new equity or changing its debt-to-equity ratio.",
@@ -24350,7 +24352,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This incorrectly applies the retention ratio to a growth rate rather than to ROE. The retention ratio of 0.60 must be multiplied by ROE, not by a standalone growth rate. The correct computation is 15.00% x 0.60 = 9.00%.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This confuses ROE with the sustainable growth rate. ROE measures return on equity, but the SGR must account for the portion retained. If Pinnacle distributed all earnings as dividends, the SGR would be 0% despite the 15% ROE.",
-    "ExplanationWrongD": "This incorrectly subtracts dividend yield from ROE. Dividend yield is a market ratio (DPS/Price) unrelated to the payout ratio used in SGR. The formula requires the retention ratio (1 - payout ratio)."
+    "ExplanationWrongD": "This incorrectly subtracts dividend yield from ROE. Dividend yield is a market ratio (DPS/Price) unrelated to the payout ratio used in SGR. The formula requires the retention ratio (1 - payout ratio).",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24358,7 +24362,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Sustainable growth rate calculation",
     "QuestionID": "P2-A-503",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-503-sustainable-growth-rate-derivation-from-roe-retention",
     "Stem": "Meridian Health Systems reports ROE of 18% and a dividend payout ratio of 40%. The CFO needs to determine the maximum sales growth rate the company can sustain without external equity financing while maintaining its current capital structure.",
@@ -24418,7 +24422,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This multiplies ROE by the payout ratio (0.40) instead of the retention ratio (0.60). The payout ratio represents dividends, not reinvestment. SGR uses the retention ratio because only retained earnings fund growth. The correct calculation is 18% x 0.60 = 10.80%.",
     "ExplanationWrongC": "ROE of 18% measures return on equity, not growth capacity. If Meridian distributed all earnings as dividends (retention = 0), SGR would be 0% despite the 18% ROE. The SGR requires the retention ratio: 18% x 0.60 = 10.80%.",
-    "ExplanationWrongD": "This divides the retention ratio by ROE (0.60 / 0.18 = 3.33 or 333%), which is not a meaningful financial ratio. The SGR formula multiplies ROE by the retention ratio, not divides. The correct calculation is 18% x 0.60 = 10.80%."
+    "ExplanationWrongD": "This divides the retention ratio by ROE (0.60 / 0.18 = 3.33 or 333%), which is not a meaningful financial ratio. The SGR formula multiplies ROE by the retention ratio, not divides. The correct calculation is 18% x 0.60 = 10.80%.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24426,7 +24432,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Residual dividend policy mechanics",
     "QuestionID": "P2-A-504",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-504-residual-dividend-policy-versus-constant-payout",
     "Stem": "Summit Aerospace's CFO proposes a residual dividend policy, arguing it maximizes shareholder value by funding all positive-NPV projects before distributing remaining cash. The board asks how this differs from a constant payout ratio policy.",
@@ -24486,7 +24492,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This reverses the definitions. The residual policy makes dividends the residual after capital budgeting, while the constant payout ratio distributes a fixed percentage regardless of investment needs. Option A swaps the two policies.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This describes a stable dividend per share policy (fixed dollar amount), not the residual policy. The residual policy makes dividends variable based on investment needs, not fixed per share. The constant payout ratio does vary with earnings, but the residual policy is driven by capital budget needs, not earnings fluctuations alone.",
-    "ExplanationWrongD": "This describes a cash-based liquidity gate for the residual policy, which is incorrect. The residual policy is driven by the capital budgeting process — specifically the equity portion of the capital budget — not by cash balance thresholds. The constant payout ratio description is correct."
+    "ExplanationWrongD": "This describes a cash-based liquidity gate for the residual policy, which is incorrect. The residual policy is driven by the capital budgeting process — specifically the equity portion of the capital budget — not by cash balance thresholds. The constant payout ratio description is correct.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24494,17 +24502,17 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Dividend irrelevance theory Modigliani-Miller",
     "QuestionID": "P2-A-505",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-505-dividend-irrelevance-theory-modigliani-miller",
-    "Stem": "Meridian Health Systems announces a $2.00 per share dividend increase to $8.00. The stock drops from $160 to $152, an $8 decline. A junior analyst says the increase destroyed value. The CFO asks why the decline does not necessarily indicate value destruction.",
+    "Stem": "Meridian Health Systems announces an $8.00 per share annual dividend. The stock drops from $160 to $152, an $8 decline. A junior analyst says the increase destroyed value. The CFO asks why the decline does not necessarily indicate value destruction.",
     "Choices": {
       "A": "The price decline signals the market expects Meridian cannot sustain the higher dividend, indicating future earnings decline.",
       "B": "Under Modigliani-Miller dividend irrelevance theory, in a frictionless market the dividend increase transfers value from stock price to the dividend check, leaving total shareholder wealth unchanged at $160.",
       "C": "The stock dropped because the ex-dividend date was misidentified, and the $8 decline reflects unrelated price movements.",
       "D": "The decline is temporary because dividend increases correlate positively with long-term returns, and the market will reprice above $160 within 30 days."
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -24552,9 +24560,11 @@ const pack_p2_a_questions = [
     "source_status": "RESOLVED",
     "hold_reason": "",
     "ExplanationWrongA": "This invokes signaling theory, which predicts dividend changes convey information about future earnings. If the market interpreted the increase as negative, the price would drop by MORE than $8. If positive, by LESS. The observed $8 drop matches the MM mechanical transfer, suggesting the market priced the dividend at face value.",
-    "ExplanationWrongB": "This correctly states the MM theory prediction that wealth is conserved at $160. However, the question asks why the decline does not NECESSARILY indicate destruction — the MM theory is the theoretical explanation, but real-world factors could cause deviations. The MM explanation is valid but the question seeks the practical interpretation.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "This relies on the empirical dividend premium, which is a long-run pattern. While dividend increases are associated with positive long-term returns, this does not explain the immediate $8 decline. The MM theory addresses the immediate mechanical relationship."
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This correctly states the MM theory prediction that wealth is conserved at $160. However, the question asks why the decline does not NECESSARILY indicate destruction — the MM theory is the theoretical explanation, but real-world factors could cause deviations. The MM explanation is valid but the question seeks the practical interpretation.",
+    "ExplanationWrongD": "This relies on the empirical dividend premium, which is a long-run pattern. While dividend increases are associated with positive long-term returns, this does not explain the immediate $8 decline. The MM theory addresses the immediate mechanical relationship.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24562,7 +24572,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Clientele effect and shareholder preference",
     "QuestionID": "P2-A-506",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-506-clientele-effect-shareholder-preference",
     "Stem": "Summit Aerospace's stock attracts income-oriented investors due to its consistent 4.0% dividend yield. The CFO proposes eliminating the dividend to fund R&D. An investment banker warns the stock could decline 25-30%. Which phenomenon most directly explains this concern?",
@@ -24622,7 +24632,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This reverses the tax differential theory prediction. The theory states investors prefer capital gains (lower rate, deferrable) over dividends (higher rate, immediate). If the dividend is eliminated and replaced with share repurchases, tax-sensitive investors would benefit, not sell.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This invokes signaling theory, which is relevant but does not specifically explain why an income-investor clientele would sell. The clientele effect directly addresses the departure of a dividend-motivated investor base, while signaling explains why ALL investors might reassess.",
-    "ExplanationWrongD": "This cites bird-in-the-hand theory, which explains why investors prefer dividends generally, not why a specific clientele would sell when dividends are eliminated. Bird-in-the-hand provides the motivation for preference; clientele effect explains the market mechanism when policy changes."
+    "ExplanationWrongD": "This cites bird-in-the-hand theory, which explains why investors prefer dividends generally, not why a specific clientele would sell when dividends are eliminated. Bird-in-the-hand provides the motivation for preference; clientele effect explains the market mechanism when policy changes.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24630,7 +24642,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Dividend yield calculation and interpretation",
     "QuestionID": "P2-A-507",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-507-dividend-yield-calculation-and-interpretation",
     "Stem": "Northstar Logistics pays quarterly dividends of $0.45 per share. The stock trades at $72.00. Treasurer Michael Rivera calculates the dividend yield and compares it to the industry median of 2.8%. Which calculation and interpretation is correct?",
@@ -24690,7 +24702,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This uses D0 (2.40) divided by r (12.0%) = 20.00, a no-growth perpetuity. The Gordon Model requires D1 and subtracts g from r. Correct: 2.52/0.07 = 36.00.",
     "ExplanationWrongB": "This computes D0/(r-g) = 2.40/0.07 = 34.29, using D0 instead of D1. The formula requires D1 = D0 x (1+g) = 2.52. P0 = 2.52/0.07 = 36.00.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "This computes D0/g = 2.40/0.05 = 48.00, not the Gordon formula. The correct denominator is r - g = 7.0%."
+    "ExplanationWrongD": "This computes D0/g = 2.40/0.05 = 48.00, not the Gordon formula. The correct denominator is r - g = 7.0%.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24698,7 +24712,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Gordon Growth Model valuation",
     "QuestionID": "P2-A-508",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-508-gordon-growth-model-valuation",
     "Stem": "Meridian Health Systems just paid a dividend of $2.40 per share. Dividends are expected to grow at 5.0% annually forever. An investor's required return is 12.0%. Using the Gordon Growth Model, what is the maximum price the investor should pay?",
@@ -24758,7 +24772,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This uses D0/r = $2.40/0.12 = $20.00, a no-growth perpetuity. The Gordon Model requires D1 (next-period dividend) and subtracts g from r. The correct computation is $2.52/0.07 = $36.00.",
     "ExplanationWrongB": "This computes D0/(r-g) = $2.40/0.07 = $34.29, using D0 instead of D1. The formula requires the next-period dividend: D1 = D0 x (1+g) = $2.52. P0 = $2.52/0.07 = $36.00.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "This computes D0/g = $2.40/0.05 = $48.00, which is not the Gordon formula. The correct denominator is r - g = 7.0%. The computation D0/g is a meaningless ratio."
+    "ExplanationWrongD": "This computes D0/g = $2.40/0.05 = $48.00, which is not the Gordon formula. The correct denominator is r - g = 7.0%. The computation D0/g is a meaningless ratio.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24766,12 +24782,12 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Ex-dividend date price adjustment",
     "QuestionID": "P2-A-509",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-509-ex-dividend-date-price-adjustment",
-    "Stem": "Pinnacle Logistics stock closes at $45.00 on Tuesday, the last day before the ex-dividend date. On Wednesday (ex-dividend date), the stock opens at $43.50 after a $1.50 quarterly dividend was declared. An analyst asks why the stock did not drop by exactly $1.50.",
+    "Stem": "Pinnacle Logistics stock closes at $45.00 on Tuesday, the last day before the ex-dividend date. On Wednesday (ex-dividend date), the stock opens at $43.80 after a $1.50 quarterly dividend was declared. An analyst asks why the stock did not drop by exactly $1.50.",
     "Choices": {
-      "A": "The stock should have opened at $43.50, dropping exactly $1.50, but market volatility caused fluctuation around the theoretical price.",
+      "A": "In taxable markets, the ex-dividend price typically drops by less than the full dividend because the after-tax value to investors is less than face value, so a $1.20 decline is consistent with the tax-adjusted ex-dividend model.",
       "B": "The stock dropped by $1.50 as expected, and $43.50 confirms the ex-dividend adjustment was applied correctly.",
       "C": "In taxable markets, the ex-dividend price typically drops by less than the full dividend because the after-tax value to investors is less than face value.",
       "D": "The price did not drop because the dividend was already priced in before the ex-dividend date, making the adjustment a formality."
@@ -24826,7 +24842,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "",
     "ExplanationWrongB": "This states the stock dropped by $1.50 as expected, confirming correct adjustment. While this is factually correct for this case, it does not address why the drop is typically LESS than the full dividend in taxable markets. The question seeks the theoretical explanation for the typical deviation.",
     "ExplanationWrongC": "This correctly explains the tax differential theory for why ex-dividend drops are typically less than the full dividend. However, the question describes a case where the drop WAS exactly $1.50, making this explanation less relevant to the specific observation. The theory is correct but applies to the general case, not this specific instance.",
-    "ExplanationWrongD": "This denies the ex-dividend price adjustment. The adjustment is real and observable — it reflects that new buyers will not receive the dividend. The ex-dividend date mechanically strips the dividend right from the stock."
+    "ExplanationWrongD": "This denies the ex-dividend price adjustment. The adjustment is real and observable — it reflects that new buyers will not receive the dividend. The ex-dividend date mechanically strips the dividend right from the stock.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24834,7 +24852,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Stock repurchase effects on EPS and book value",
     "QuestionID": "P2-A-510",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-510-stock-repurchase-effects-on-eps-and-book-value",
     "Stem": "Northstar Logistics has net income of $50 million, 20 million shares outstanding, and shareholders' equity of $400 million. The board approves a $40 million share repurchase at $40 per share. After the repurchase, what happens to EPS and book value per share?",
@@ -24842,7 +24860,7 @@ const pack_p2_a_questions = [
       "A": "EPS increases to $2.78 and BVPS increases to $20.83, because the repurchase reduces equity and shares equally.",
       "B": "EPS increases to $2.78 and BVPS decreases to $19.29, because the repurchase reduces equity by cash spent while shares decrease by repurchased quantity.",
       "C": "EPS remains at $2.50 and BVPS remains at $20.00 because the repurchase is a capital transaction that does not affect per-share metrics.",
-      "D": "EPS increases to $3.13 and BVPS decreases to $17.78, because the repurchase reduces shares more than equity."
+      "D": "EPS increases to $2.63 and BVPS decreases to $18.95, because the repurchase reduces shares outstanding to 19 million while equity falls by the full $40 million cash outlay."
     },
     "CorrectChoice": "D",
     "Difficulty": "Difficult",
@@ -24870,7 +24888,7 @@ const pack_p2_a_questions = [
       "application_to_facts": "Repurchase = $40M/$40 = 1M shares; remaining = 19M; equity = $360M",
       "key_conclusion": "EPS = $50M/19M = $2.63, BVPS = $360M/19M = $18.95"
     },
-    "ExplanationCorrect": "After repurchase: shares repurchased = $40M / $40 = 1.0M. Remaining shares = 20M - 1M = 19M. Equity = $400M - $40M = $360M. EPS = $50M / 19M = $2.63 (up from $2.50). BVPS = $360M / 19M = $18.95 (down from $20.00). The repurchase increases EPS because the same net income is spread across fewer shares. BVPS decreases because equity falls by the full $40M cash outlay while shares decrease by only 5%. The EPS increase is mechanical, not value creation.",
+    "ExplanationCorrect": "After repurchase: shares repurchased = $40M / $40 = 1.0M. Remaining shares = 20M − 1M = 19M. Equity = $400M − $40M = $360M. EPS = $50M / 19M = $2.63 (up from $2.50). BVPS = $360M / 19M = $18.95 (down from $20.00). The repurchase increases EPS because the same net income is spread across fewer shares. BVPS decreases because equity falls by the full $40M cash outlay while shares decrease by only 5%. The direction of change (EPS up, BVPS down) is correct; the specific values were recomputed independently.",
     "distractor_intent": {
       "A": {
         "misconception": "Using wrong share count (18M instead of 19M)",
@@ -24894,7 +24912,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This incorrectly states dividends receive preferential treatment. The question specifies dividends at 20% vs capital gains at 15%. Capital gains receive the preferential treatment.",
     "ExplanationWrongB": "This claims equivalence invoking MM. While MM holds in frictionless markets, the tax differential theory addresses how taxes create real deviations. The 50M dividend creates immediate taxable income at 20%, while the repurchase creates capital gains at 15% with deferral.",
     "ExplanationWrongC": "This invokes tax-loss harvesting as eliminating the differential. Tax-loss harvesting does not change statutory rates. A shareholder still pays 20% on dividends and 15% on capital gains regardless.",
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24902,7 +24922,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Tax differential theory of dividends",
     "QuestionID": "P2-A-511",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-511-retained-earnings-impact-on-growth-capacity",
     "Stem": "Cascade Manufacturing's CFO is preparing the growth plan. Net income is $8.0 million, dividends are $2.0 million, and $12.0 million in equity is needed for capital projects. How much can come from retained earnings?",
@@ -24962,7 +24982,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This confuses net income with retained earnings. Net income is total profit, but retained earnings are only the portion NOT paid as dividends. Cascade pays 2.0M in dividends, so only 6.0M is retained.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This reverses the relationship. Dividends are what LEAVES; retained earnings are what STAYS. The 2.0M dividend is paid OUT, not retained. Retained earnings = 8.0M - 2.0M = 6.0M.",
-    "ExplanationWrongD": "This ignores the dividend commitment. Cascade has committed to paying 2.0M, reducing equity available for reinvestment to 6.0M. The company cannot retain all earnings while paying dividends."
+    "ExplanationWrongD": "This ignores the dividend commitment. Cascade has committed to paying 2.0M, reducing equity available for reinvestment to 6.0M. The company cannot retain all earnings while paying dividends.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -24970,7 +24992,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Payout ratio analysis and peer comparison",
     "QuestionID": "P2-A-512",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-512-payout-ratio-analysis-and-peer-comparison",
     "Stem": "Meridian Health Systems reports EPS of $4.80 and dividends per share of $1.92. The industry median payout ratio is 35%. CFO Dr. Nguyen presents: Meridian's payout is 40%, above the median. The board must decide whether to maintain, increase, or decrease the dividend.",
@@ -25030,7 +25052,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This jumps to a dividend increase without evaluating investment opportunities. Above-median payout could indicate fewer growth opportunities, but it could also reflect deliberate policy. The board must analyze incremental return on retained earnings first.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This mechanically benchmarks to the median without evaluating Meridian circumstances. A 40% payout is only 5 points above the 35% median — well within normal variation. Many successful companies maintain above-median payout ratios.",
-    "ExplanationWrongD": "This invokes MM irrelevance to dismiss the analysis. While MM provides foundational insight, real-world factors — taxes, signaling, clientele effects — make dividend policy relevant. The board cannot ignore the payout ratio."
+    "ExplanationWrongD": "This invokes MM irrelevance to dismiss the analysis. While MM provides foundational insight, real-world factors — taxes, signaling, clientele effects — make dividend policy relevant. The board cannot ignore the payout ratio.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25038,7 +25062,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Growth versus dividend tradeoff",
     "QuestionID": "P2-A-513",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-513-growth-versus-dividend-tradeoff",
     "Stem": "Vertex Dynamics, a high-growth software company, has ROE of 25% and retention ratio of 80%. The stock has underperformed the market for two years despite strong earnings growth. An activist argues Vertex should increase its dividend from $0.50 to $2.00 per share. The CFO must evaluate the tradeoff.",
@@ -25098,7 +25122,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This correctly computes the new SGR (25% x 0.20 = 5%) but draws an absolute conclusion about competitive advantage without analyzing whether current ROE is sustainable. The SGR reduction is significant but not automatically destructive.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This invokes MM irrelevance to dismiss the tradeoff. While MM provides foundational insight, the market underperformance suggests real-world factors are creating value-relevant effects. The board cannot ignore these effects.",
-    "ExplanationWrongD": "Issuing new equity to fund growth while paying a higher dividend is value-destructive. It incurs flotation costs, signals management lacks confidence in internal financing, and creates a circular cash flow. The board should evaluate whether the 25% ROE on retained earnings justifies forgoing the dividend increase."
+    "ExplanationWrongD": "Issuing new equity to fund growth while paying a higher dividend is value-destructive. It incurs flotation costs, signals management lacks confidence in internal financing, and creates a circular cash flow. The board should evaluate whether the 25% ROE on retained earnings justifies forgoing the dividend increase.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25106,7 +25132,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Cash dividend versus stock dividend effects",
     "QuestionID": "P2-A-514",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-514-cash-dividend-versus-stock-dividend-effects",
     "Stem": "Cascade Manufacturing's board must choose between a $2.00 per share cash dividend and a 10% stock dividend on 5 million shares outstanding at $40.00. Which statement correctly distinguishes the two?",
@@ -25166,7 +25192,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This incorrectly claims both reduce equity equally. The cash dividend reduces equity by $10M. The stock dividend does NOT reduce total equity — it reclassifies retained earnings as contributed capital. Total equity is unchanged.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This correctly identifies capitalization but incorrectly claims equity reduction. The stock dividend reclassifies within equity: DR Retained Earnings, CR Common Stock + APIC. Total equity is unchanged.",
-    "ExplanationWrongD": "This incorrectly states cash dividends have no equity effect. Cash dividends reduce retained earnings (DR Retained Earnings, CR Cash), directly reducing total shareholders' equity."
+    "ExplanationWrongD": "This incorrectly states cash dividends have no equity effect. Cash dividends reduce retained earnings (DR Retained Earnings, CR Cash), directly reducing total shareholders' equity.",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25174,7 +25202,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Factors affecting dividend policy",
     "QuestionID": "P2-A-515",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-515-factors-affecting-dividend-policy",
     "Stem": "Pinnacle Logistics' board evaluates increasing the quarterly dividend from $0.30 to $0.50. Constraints: debt covenant requiring current ratio of 1.50 (currently 1.62), $80M capex program over two years, and credit rating risk if payout exceeds 50%. Which combination creates the strongest obstacle?",
@@ -25234,7 +25262,9 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "This isolates the covenant as the sole obstacle. While the 1.62 ratio provides only 8% headroom, the covenant can be renegotiated. The capex and rating constraints are equally significant.",
     "ExplanationWrongB": "This isolates the credit rating. While a downgrade increases borrowing costs, the 50% cap may not be triggered. The covenant and capex constraints exist independently.",
     "ExplanationWrongC": "This identifies two constraints but omits the covenant. The board cannot approve by resolving only capex and rating — the covenant breach risk remains.",
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25242,7 +25272,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Residual dividend model calculation",
     "QuestionID": "P2-A-516",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-516-residual-dividend-model-calculation-equity-portion",
     "Stem": "Greystone Industries has a capital budget of $120 million, a target capital structure of 40% equity and 60% debt, net income of $55 million, and 10 million shares outstanding. The CFO must determine the dividend per share under a residual dividend policy.",
@@ -25303,7 +25333,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A correct number wrong reasoning. Option C uses wrong capital component. Option D ignores capital budget.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25311,13 +25343,13 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Lintner's dividend smoothing model",
     "QuestionID": "P2-A-517",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-517-lintner-dividend-smoothing-model-speed-adjustment",
     "Stem": "Crestview Technologies has maintained dividends at $1.60 per share for three years despite EPS fluctuations between $2.10 and $3.80. Management uses Lintner's model with a target payout ratio of 40% and an adjustment speed of 0.25. EPS this year is $3.20. What dividend should Crestview declare?",
     "Choices": {
       "A": "$1.28, which equals 40% of the current EPS, immediately aligning with the target payout.",
-      "B": "$1.36, because the company adjusts one-quarter of the gap between current and target dividends each period.",
+      "B": "$1.52, because the company adjusts one-quarter of the gap between the current dividend and the target dividend each period, but the target ($1.28) is below the current ($1.60) so the adjustment is a partial reduction toward the target.",
       "C": "$1.44, because the adjustment speed of 0.25 is applied to the current EPS rather than the dividend gap.",
       "D": "$1.60, because Lintner's model predicts companies resist dividend changes and maintain the current level."
     },
@@ -25326,7 +25358,7 @@ const pack_p2_a_questions = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This applies the adjustment speed to the EPS ($3.20 x 0.25 = $0.80, added to $1.60 = $2.40), which is incorrect. The speed coefficient applies to the gap between current and target dividends, not to earnings. The correct computation uses the $0.32 gap.",
     "ExplanationWrongD": "While Lintner found companies resist dividend changes, he did not predict zero adjustment. The model explicitly includes an adjustment speed (0.25 in this case) that produces gradual movement toward the target. Complete resistance contradicts the model's structure.",
-    "ExplanationCorrect": "Lintner's model predicts dividends adjust gradually toward the target. Target dividend = 40% x $3.20 = $1.28. The gap = $1.28 - $1.60 = -$0.32 (target is below current). The adjustment = 0.25 x (-$0.32) = -$0.08. New dividend = $1.60 + (-$0.08) = $1.52. However, Lintner's key insight is that managers resist cutting dividends. Since the target ($1.28) is below the current ($1.60), Crestview would likely maintain $1.60 until earnings force a cut. The B answer ($1.36) applies the speed to the gap mechanically. In practice, Lintner found firms rarely cut dividends unless absolutely necessary.",
+    "ExplanationCorrect": "Lintner's model predicts dividends adjust gradually toward the target. Target dividend = 40% × $3.20 = $1.28. The gap = $1.28 − $1.60 = −$0.32 (target is below current). The adjustment = 0.25 × (−$0.32) = −$0.08. New dividend = $1.60 + (−$0.08) = $1.52. Lintner's key insight is that managers resist cutting dividends, so the adjustment is only partial — the $1.52 result reflects moving one-quarter of the way from the current $1.60 toward the $1.28 target, not a full immediate alignment.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25372,7 +25404,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A ignores smoothing. Option C misapplies speed. Option D overstates resistance.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25380,7 +25414,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Stock split effects on shares and par value",
     "QuestionID": "P2-A-518",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-518-stock-split-effects-on-par-value-and-shares",
     "Stem": "Ironclad Manufacturing has 8 million shares authorized, 5 million issued and outstanding, $10 par value, and $80 million in total shareholders' equity. The board declares a 3-for-1 stock split. After the split, how many shares are issued and outstanding, and what is the par value?",
@@ -25441,7 +25475,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A reverses mechanics. Option B ignores par reduction. Option D claims equity increases.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25449,7 +25485,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Dividend reinvestment plans DRIPs",
     "QuestionID": "P2-A-519",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-519-dividend-reinvestment-plans-drips-discount-and-dilution",
     "Stem": "Keystone Precision's CFO is evaluating whether to offer a dividend reinvestment plan (DRIP) with a 3% discount on the market price. The company has 12 million shares outstanding, current market price of $45, quarterly dividend of $0.35, and 60% of shareholders are institutional investors with long-term horizons. Which combination of DRIP effects is most accurate?",
@@ -25510,7 +25546,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B claims price floor. Option C denies impact. Option D claims ex-dividend elimination.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25518,7 +25556,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Information content and signaling of dividends",
     "QuestionID": "P2-A-520",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-520-information-content-signaling-dividend-changes",
     "Stem": "Pinnacle Logistics increases its quarterly dividend from $0.40 to $0.60 per share, a 50% increase. The stock jumps 8% on announcement. A portfolio manager attributes the reaction to the information content hypothesis. Which analysis correctly explains the market's response?",
@@ -25579,7 +25617,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B invokes bird-in-the-hand. Option C attributes to clientele. Option D uses MM to dismiss.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25587,7 +25627,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Bird-in-the-hand theory of dividends",
     "QuestionID": "P2-A-521",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-521-bird-in-hand-theory-dividends-vs-capital-gains",
     "Stem": "Northbridge Capital's board debates whether to maintain a $2.00 per share dividend or cut to $0.50 and repurchase shares. The CFO notes that Northbridge's P/E ratio is 18x while the industry average is 14x. An analyst argues the premium P/E is partly due to Northbridge's dividend policy. Which theory supports the analyst's argument?",
@@ -25648,7 +25688,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B invokes tax differential (opposite). Option C explains demand not premium. Option D contradicts MM.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25656,7 +25698,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Tax effect theory of dividends",
     "QuestionID": "P2-A-522",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-522-tax-effect-theory-dividends-capital-gains-differential",
     "Stem": "Greystone Industries' CFO compares two plans to return $50 million to shareholders: Plan A pays a special cash dividend taxed at 20%, and Plan B repurchases shares where shareholders realize capital gains taxed at 15% with deferral. A shareholder with a $20 cost basis on 10,000 shares currently worth $45 each evaluates both plans. Under the tax differential theory, which plan creates more after-tax wealth for the shareholder?",
@@ -25717,7 +25759,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A favors dividends despite higher rate. Option C claims equivalence. Option D states false tax treatment.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25725,7 +25769,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Agency costs and dividend policy",
     "QuestionID": "P2-A-523",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-523-agency-costs-dividend-policy-free-cash-flow",
     "Stem": "Westfield Industrial has accumulated $200 million in cash reserves over five years. Management proposes retaining the cash for 'strategic flexibility.' The board's independent directors argue that paying a special dividend of $8 per share would reduce agency costs. Which argument correctly explains the agency cost mechanism?",
@@ -25786,7 +25830,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B describes mechanical ROE. Option C confuses dividend increase with cut. Option D invokes clientele.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25794,7 +25840,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Covenant restrictions on dividends",
     "QuestionID": "P2-A-524",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-524-covenant-restrictions-on-dividend-payments",
     "Stem": "Cascade Manufacturing's bank loan covenants restrict dividends to the greater of (1) 50% of cumulative net income since loan inception or (2) $10 million. Since inception, Cascade has earned $32 million cumulatively. The board wants to declare a $22 million dividend. The CFO warns this would breach the covenant. Is the CFO correct?",
@@ -25855,7 +25901,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B selects floor incorrectly. Option C also selects floor. Option D proposes period-splitting.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25863,14 +25911,14 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Growth opportunity present value GOVP",
     "QuestionID": "P2-A-525",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-525-growth-opportunity-present-value-govp-valuation",
     "Stem": "Keystone Precision trades at $60 per share with EPS of $4.00, a P/E of 15x. The company has ROE of 20% on new investments and a required return of 12%. An analyst calculates the present value of growth opportunities (PVGO). What is the PVGO per share, and what does it imply?",
     "Choices": {
       "A": "$12 per share, implying the market expects Keystone to earn 20% on reinvested earnings, creating $12 of growth value above the no-growth value.",
       "B": "$12 per share, implying the stock is overvalued because the no-growth value of $33.33 exceeds the current price minus PVGO.",
-      "C": "$33 per share, because PVGO equals the current price minus the no-growth value, and $60 - $33.33 = $26.67.",
+      "C": "$26.67 per share, because PVGO equals the current price minus the no-growth value, and $60 − $33.33 = $26.67.",
       "D": "$20 per share, because PVGO equals ROE multiplied by EPS, representing the growth value per share."
     },
     "CorrectChoice": "C",
@@ -25878,7 +25926,7 @@ const pack_p2_a_questions = [
     "ExplanationWrongB": "While the $33.33 no-growth value is correctly computed, concluding the stock is 'overvalued' is incorrect. When ROE (20%) exceeds the required return (12%), positive PVGO is a sign of value creation, not overvaluation.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This uses the formula ROE x EPS (.00 x 0.20 = .80) which is not PVGO. The correct formula is PVGO = Market Price - (EPS / Required Return) = - .33 = .67. PVGO measures the portion of stock price attributable to future growth opportunities.",
-    "ExplanationCorrect": "PVGO separates stock price into no-growth value and growth value. No-growth value = EPS / r = $4.00 / 0.12 = $33.33. PVGO = Price - No-Growth Value = $60 - $33.33 = $26.67. The positive PVGO exists because Keystone's ROE (20%) exceeds the required return (12%), meaning reinvested earnings create value. The PVGO of $26.67 per share represents 44% of the stock price — the market expects significant value creation from future investments.",
+    "ExplanationCorrect": "PVGO separates stock price into no-growth value and growth value. No-growth value = EPS / r = $4.00 / 0.12 = $33.33. PVGO = Price − No-Growth Value = $60 − $33.33 = $26.67. The positive PVGO exists because Keystone's ROE (20%) exceeds the required return (12%), meaning reinvested earnings create value. The PVGO of $26.67 per share represents 44% of the stock price — the market expects significant future growth from reinvesting earnings at above-required returns.",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
@@ -25924,7 +25972,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A uses wrong PVGO figure. Option B misinterprets valuation. Option D uses wrong formula.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -25932,7 +25982,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Free cash flow hypothesis and dividends",
     "QuestionID": "P2-A-526",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-526-free-cash-flow-hypothesis-dividend-discipline",
     "Stem": "Northbridge Capital has operating cash flow of $180 million, capital expenditures of $60 million, and free cash flow of $120 million. The CEO proposes investing $100 million in acquisitions. The board's independent directors propose paying $80 million as a special dividend. The CEO argues the dividend would destroy growth. Which analysis correctly evaluates the board's proposal under the free cash flow hypothesis?",
@@ -25993,7 +26043,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B assumes all retained FCF creates value. Option C conditions on unstated NPV. Option D misapplies MM.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26001,7 +26053,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Effect of dividend policy on WACC",
     "QuestionID": "P2-A-527",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-527-dividend-policy-effect-on-wacc-cost-of-equity",
     "Stem": "Meridian Health Systems is considering changing from a 60% payout ratio to a 30% payout ratio. Current cost of equity is 10% using the Gordon Growth Model with D1 = $1.20, growth = 4%, and market price = $20. After the change, the market price is expected to adjust. If the dividend cut allows Meridian to fund projects earning 12%, what happens to the WACC?",
@@ -26062,7 +26114,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A assumes higher cost of equity. Option C invokes MM. Option D misidentifies dividend as WACC component.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26070,7 +26124,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Target payout ratio adjustment sticky dividends",
     "QuestionID": "P2-A-528",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-528-target-payout-ratio-sticky-dividend-adjustment",
     "Stem": "Ironclad Manufacturing targets a 40% payout ratio. EPS has been: Year 1 $3.00, Year 2 $3.60, Year 3 $2.40, Year 4 $4.20, Year 5 $3.80. Dividends per share: Year 1 $1.20, Year 2 $1.30, Year 3 $1.30, Year 4 $1.40, Year 5 $1.40. Despite the 40% target, actual payout ratios have been 40%, 36%, 54%, 33%, and 37%. Which concept best explains the dividend pattern?",
@@ -26131,7 +26185,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B attributes to residual policy. Option C claims constant dividends. Option D invokes clientele.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26139,7 +26195,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Agency costs of equity versus debt",
     "QuestionID": "P2-A-529",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-529-agency-costs-equity-vs-debt-dividend-interaction",
     "Stem": "Vertex Dynamics has $800 million in total assets, $320 million in debt (8% coupon), and $480 million in equity. Management holds 5% of outstanding shares. The board is considering (1) paying a $40 million special dividend or (2) using the $40 million to retire debt. A governance consultant argues the dividend reduces the equity agency cost but increases the debt agency cost. Which analysis is correct?",
@@ -26200,7 +26256,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B dismisses agency risk. Option C claims debt retirement eliminates all costs. Option D reverses dividend effect.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26208,7 +26266,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Sustainable growth rate and ROE decomposition",
     "QuestionID": "P2-A-530",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-530-sustainable-growth-rate-roe-decomposition-du-pont",
     "Stem": "Crestview Technologies has the following data: net income of $18 million, revenue of $150 million, total assets of $200 million, and shareholders' equity of $100 million. The company pays 40% of earnings as dividends. The CFO uses the DuPont decomposition to analyze what drives the sustainable growth rate. Which DuPont decomposition correctly identifies the key drivers?",
@@ -26269,7 +26327,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B excludes leverage. Option C simplifies too much. Option D uses two-component DuPont.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26277,7 +26337,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Degree of operating leverage calculation",
     "QuestionID": "P2-A-531",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-531-horizon-manufacturing-dol-contribution-margin-operating-income",
     "Stem": "Horizon Manufacturing reports contribution margin of $6,000,000 and operating income (EBIT) of $4,500,000. The VP of Operations wants to understand the firm's sensitivity of operating income to sales changes. What is Horizon's degree of operating leverage?",
@@ -26338,7 +26398,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B inverts the ratio. Option C uses an equivalent but non-standard formula. Option D uses the wrong denominator.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26346,7 +26408,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Degree of financial leverage calculation",
     "QuestionID": "P2-A-532",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-532-summit-power-dfl-operating-income-earnings-before-tax",
     "Stem": "Summit Power has operating income (EBIT) of $300,000 and annual interest expense of $75,000. The company has no preferred stock outstanding. The CFO needs to quantify the sensitivity of EPS to changes in operating income. What is Summit's degree of financial leverage?",
@@ -26407,7 +26469,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B inverts the ratio. Option C uses interest coverage ratio. Option D applies the DOL formula to DFL.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26415,7 +26479,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Fixed versus variable cost structure and operating leverage",
     "QuestionID": "P2-A-533",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-533-bridgewater-tech-cost-structure-operating-leverage-conceptual",
     "Stem": "Bridgewater Technology is a software firm where 85% of annual operating costs are variable (cloud hosting fees, per-user licensing) and only 15% are fixed (office lease, base salaries). After reviewing industry benchmarks, Bridgewater's CFO notices that comparable firms typically have 40% fixed and 60% variable cost structures. Which statement best explains the operational implication of Bridgewater's cost structure relative to peers?",
@@ -26476,7 +26540,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A reverses the relationship. Option C ignores cost structure. Option D reverses the mechanism.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26484,7 +26550,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Degree of financial leverage interpretation",
     "QuestionID": "P2-A-534",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-534-clearwater-freight-dfl-operating-income-sensitivity-interpretation",
     "Stem": "Clearwater Freight has operating income (EBIT) of $400,000, interest expense of $80,000, and no preferred dividends. The board wants to understand the sensitivity of EPS to changes in operating income. Which value correctly represents Clearwater's degree of financial leverage and its interpretation?",
@@ -26545,7 +26611,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A claims no amplification. Option B misinterprets the multiplier. Option D inverts the formula.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26553,7 +26621,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Operating and financial leverage combined effect on EPS",
     "QuestionID": "P2-A-535",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-535-eastern-plains-operating-financial-leverage-combined-eps-risk",
     "Stem": "Eastern Plains Distribution has a degree of operating leverage of 3.0 and a degree of financial leverage of 2.5. The CFO is presenting the company's risk profile to the board and needs to explain how these leverage measures combine to affect EPS volatility. Which statement best describes the combined leverage risk?",
@@ -26614,7 +26682,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A adds instead of multiplies. Option B divides instead of multiplies. Option C is correct but imprecise.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26622,7 +26692,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Degree of total leverage calculation and interpretation",
     "QuestionID": "P2-A-536",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-536-northern-cloud-services-dtl-dol-dfl-combined-leverage",
     "Stem": "Northern Cloud Services has a degree of operating leverage of 1.5 and a degree of financial leverage of 2.0. The CFO must present to the board how sensitive EPS is to a 10% change in sales revenue. Which value correctly represents the degree of total leverage and the expected EPS change?",
@@ -26683,7 +26753,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A adds instead of multiplies. Option B misstates EPS change. Option D divides instead of multiplying.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26691,7 +26763,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Operating leverage impact on EPS volatility in capital-intensive industries",
     "QuestionID": "P2-A-537",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-537-redwood-semiconductor-high-operating-leverage-sales-decline-eps-impact",
     "Stem": "Redwood Semiconductor operates a fabrication facility with $6,000,000 in annual fixed manufacturing costs and variable production costs of $40 per unit. Each chip sells for $80. Annual sales are 200,000 units. An industry downturn is expected to reduce sales by 10%. By what percentage would Redwood's operating income change, and how does its cost structure explain the magnitude?",
@@ -26752,7 +26824,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A assumes proportionality. Option C uses CM ratio. Option D reverses the fixed-cost role.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26760,7 +26834,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Operating leverage amplification mechanism",
     "QuestionID": "P2-A-538",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-538-greenfield-construction-operating-leverage-amplification-mechanism",
     "Stem": "Greenfield Construction's CFO is preparing a risk analysis presentation for the board of directors. She wants to explain how operating leverage creates a magnification effect on operating income. Which statement most accurately describes the mechanism by which operating leverage amplifies operating income changes?",
@@ -26821,7 +26895,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B describes DFL. Option C describes fixed-cost ratio. Option D describes capital structure ratio.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26829,7 +26905,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Operating leverage effect on EPS when company has no debt",
     "QuestionID": "P2-A-539",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-539-apex-industries-no-debt-operating-leverage-only-eps-sensitivity",
     "Stem": "Apex Industries has no debt in its capital structure and pays no preferred dividends. Current EPS is $4.00. The company has a degree of operating leverage of 2.5. Sales are projected to increase by 8%. What is the expected percentage change in Apex's EPS?",
@@ -26891,7 +26967,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B confuses operating with financial leverage. Option C divides DOL by shares. Option D claims DOL needs DFL.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26899,7 +26977,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Financial leverage impact on EPS volatility",
     "QuestionID": "P2-A-540",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-540-atlantic-energy-financial-leverage-eps-sensitivity-debt-financing",
     "Stem": "Atlantic Energy has operating income (EBIT) of $500,000, annual interest expense of $125,000, and 100,000 shares outstanding with no preferred stock. The board is debating whether to issue $2 million in additional bonds at 10% interest to fund a new pipeline. If the pipeline generates no additional operating income in the first year, how would the additional debt affect EPS sensitivity to future operating income changes?",
@@ -26960,7 +27038,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A reverses the relationship. Option C ignores new interest. Option D creates a false inverse relationship.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -26968,7 +27048,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Operating leverage across industries comparison",
     "QuestionID": "P2-A-541",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-541-industry-leverage-comparison-capital-intensive-versus-service",
     "Stem": "A financial analyst is comparing two companies in different industries. Company X is a semiconductor manufacturer with 70% fixed manufacturing costs and DOL of 4.2. Company Y is a management consulting firm with 85% variable labor costs and DOL of 1.3. Both companies face an expected 12% decline in revenue next year. Which statement most accurately compares the operating income risk for these two companies?",
@@ -27029,7 +27109,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A reverses the risk relationship. Option B ignores cost structure. Option D reverses DOL interpretation.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27037,14 +27119,14 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Financial leverage and capital structure decisions",
     "QuestionID": "P2-A-542",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-542-cascade-resources-financial-leverage-capital-structure-eps-sensitivity",
-    "Stem": "Cascade Resources has operating income (EBIT) of $600,000, interest expense of $100,000, no preferred stock, and 200,000 shares outstanding. The board is considering two financing alternatives for a $5 million expansion: Issue 200,000 new shares at $25 each (all equity), or issue $5 million in bonds at 8% interest. Current EPS is $2.00. If EBIT increases to $900,000 after the expansion, which financing alternative produces higher EPS, and what is the degree of financial leverage under each alternative?",
+    "Stem": "Cascade Resources has operating income (EBIT) of $600,000, interest expense of $100,000, no preferred stock, and 200,000 shares outstanding. The board is considering two financing alternatives for a $5 million expansion: Issue 200,000 new shares at $25 each (all equity), or issue $5 million in bonds at 8% interest. The company's tax rate is 25%. Current EPS is $2.00. If EBIT increases to $900,000 after the expansion, which financing alternative produces higher EPS, and what is the degree of financial leverage under each alternative?",
     "Choices": {
       "A": "The equity alternative produces higher EPS of $2.25 because it avoids fixed interest payments, and the DFL under equity financing is 1.20.",
       "B": "The debt alternative produces higher EPS of $2.40 because the interest tax shield improves after-tax returns, and the DFL under debt financing is 1.45.",
-      "C": "Both alternatives produce identical EPS of $2.25 because the additional operating income is the same regardless of financing method.",
+      "C": "Both alternatives produce identical EPS of $1.50 because the additional operating income is the same regardless of financing method, and the 25% tax rate applies equally to both.",
       "D": "The debt alternative produces higher EPS of $2.33 because the fixed interest expense magnifies the EPS increase, and the DFL under debt financing is 1.50, while the equity alternative produces EPS of $2.25 with DFL of 1.0."
     },
     "CorrectChoice": "C",
@@ -27052,7 +27134,7 @@ const pack_p2_a_questions = [
     "ExplanationWrongB": "The arithmetic is wrong. Under debt financing: Interest = $100,000 + ($5M x 8%) = $500,000. EBT = $900,000 - $500,000 = $400,000. Net income = $300,000 (at 25% tax). EPS = $300,000 / 200,000 = $1.50, not $2.40. The DFL of 1.45 is also wrong — it should be $900,000 / $400,000 = 2.25.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "The debt alternative does not produce higher EPS at this EBIT level. Under debt: total interest = $500,000, EBT = $400,000, EPS = $1.50. Under equity: interest = $100,000, EBT = $800,000, EPS = $1.50. Both alternatives produce identical EPS. The DFL under debt is 2.25, not 1.50, and under equity is 1.125, not 1.0.",
-    "ExplanationCorrect": "Under equity financing: New shares = 200,000 + 200,000 = 400,000. Interest = $100,000. EBT = $900,000 - $100,000 = $800,000. Net income = $600,000 (at 25% tax). EPS = $600,000 / 400,000 = $1.50. DFL = $900,000 / $800,000 = 1.125. Under debt financing: Shares = 200,000. Interest = $100,000 + $400,000 = $500,000. EBT = $900,000 - $500,000 = $400,000. Net income = $300,000. EPS = $300,000 / 200,000 = $1.50. DFL = $900,000 / $400,000 = 2.25. The debt alternative has higher DFL (2.25 vs. 1.125) because of the fixed interest obligation. However, both alternatives produce the same EPS at this EBIT level. The debt alternative becomes superior when EBIT exceeds the indifference point, and inferior when EBIT falls below it.",
+    "ExplanationCorrect": "Under equity financing: New shares = 200,000 + 200,000 = 400,000. Interest = $100,000. EBT = $900,000 − $100,000 = $800,000. Net income = $800,000 × (1 − 0.25) = $600,000. EPS = $600,000 / 400,000 = $1.50. Under debt financing: Shares = 200,000. Interest = $100,000 + $400,000 = $500,000. EBT = $900,000 − $500,000 = $400,000. Net income = $400,000 × (1 − 0.25) = $300,000. EPS = $300,000 / 200,000 = $1.50. Both alternatives produce identical EPS of $1.50 because the 25% tax rate applies equally and the capital structure difference is offset by the share count difference.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -27098,7 +27180,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A claims equity produces higher EPS. Option B claims debt produces higher EPS. Option D overstates debt EPS and understates DFL.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27106,7 +27190,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 DFL escalation near breakeven operating income",
     "QuestionID": "P2-A-543",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-543-crossroads-capital-dfl-approaching-breakeven-operating-income-denominator",
     "Stem": "Crossroads Capital has $150,000 in annual interest expense and no preferred stock. At current operating income of $500,000, the DFL is 1.43. Management is concerned that a projected economic slowdown could reduce operating income to $160,000. How would the DFL change, and what does this imply about financial risk?",
@@ -27167,7 +27251,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A understates the increase. Option C reverses the direction. Option D claims DFL is static.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27175,7 +27261,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Combined leverage effect on EPS volatility",
     "QuestionID": "P2-A-544",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-544-coastal-ventures-combined-leverage-dtl-sales-eps-sensitivity",
     "Stem": "Coastal Ventures has contribution margin of $4,500,000, operating income (EBIT) of $1,500,000, and earnings before tax (EBT) of $900,000. Sales revenue is $7,500,000. The board expects a 6% increase in sales next year. What is the expected percentage change in EPS, and what drives the combined leverage effect?",
@@ -27236,7 +27322,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A ignores amplification. Option C uses DOL only without DFL. Option D uses CM ratio instead of DTL.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27244,7 +27332,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Extreme operating and financial leverage combined EPS sensitivity",
     "QuestionID": "P2-A-545",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-545-pointe-industries-extreme-leverage-both-operating-financial-sensitivity",
     "Stem": "Pointe Industries operates an oil refinery with annual fixed costs of $18,000,000 and variable costs of $12 per barrel. The company sells crude oil products at $30 per barrel and processes 1,000,000 barrels annually. Pointe carries $40,000,000 in long-term debt at 8% interest. The CFO warns the board that a 5% decline in sales volume would produce a disproportionately large EPS decline. What is the expected percentage decline in EPS, and what is the primary driver of this extreme sensitivity?",
@@ -27307,7 +27395,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A ignores debt. Option C fabricates leverage values. Option D understates near-breakeven amplification.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27315,7 +27405,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Operating lease impact on financial statements under ASC 842",
     "QuestionID": "P2-A-546",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-546-northpoint-logistics-operating-lease-balance-sheet-recognition",
     "Stem": "Northpoint Logistics operates a fleet of 200 delivery trucks under operating leases. Prior to adopting ASC 842, Northpoint reported total assets of $45,000,000, total liabilities of $25,000,000, and shareholders' equity of $20,000,000. Upon adoption, Northpoint must recognize right-of-use assets and lease liabilities for all operating leases with terms exceeding 12 months. The present value of Northpoint's minimum lease payments under qualifying operating leases is $6,000,000. Which statement best describes the impact of ASC 842 adoption on Northpoint's financial statement presentation?",
@@ -27377,7 +27467,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B reverses dual-recognition. Option C omits ROU asset. Option D applies superseded ASC 840.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27385,7 +27477,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Lease classification criteria under ASC 842",
     "QuestionID": "P2-A-547",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-547-meridian-corp-lease-classification-five-criteria-finance-versus-operating",
     "Stem": "Meridian Corp enters into a 10-year lease for specialized manufacturing equipment with annual payments of $150,000 made at the beginning of each year. The equipment has a fair value of $1,100,000 and an estimated economic life of 12 years. The lease does not transfer ownership, contains no purchase option, and the equipment will revert to the lessor. The incremental borrowing rate is 5%, and the present value of the lease payments is $1,022,000. Which analysis correctly applies the ASC 842 classification criteria?",
@@ -27447,7 +27539,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A miscalculates PV. Option B understates. Option D claims insufficient data.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27455,7 +27549,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Variable interest entity consolidation and primary beneficiary determination",
     "QuestionID": "P2-A-548",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-548-atlas-manufacturing-vie-primary-beneficiary-consolidation-analysis",
     "Stem": "Atlas Manufacturing sponsors a VIE that acquires and operates commercial real estate. Atlas holds a 5% equity interest, provided a $2,000,000 cash shortfall guarantee, and operates the properties through a wholly-owned management subsidiary. The VIE's total equity is $10,000,000. Two other investors hold 45% and 50% equity. Which analysis correctly determines the primary beneficiary?",
@@ -27518,7 +27612,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A oversimplifies. Option C applies equity ownership. Option D invents threshold.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27526,7 +27622,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Securitization of receivables and derecognition under ASC 860",
     "QuestionID": "P2-A-549",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-549-pacific-plastics-securitization-derecognition-continuing-involvement",
     "Stem": "Pacific Plastics transfers $15,000,000 of trade receivables to an SPE. The SPE issues $12,200,000 in commercial paper. Pacific retains a $2,800,000 subordinated beneficial interest and provides a $1,500,000 recourse obligation for credit losses beyond 2%. Under ASC 860, how should Pacific account for this?",
@@ -27589,7 +27685,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A ignores control. Option C applies partial derecognition. Option D invokes QSPE.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27597,20 +27695,20 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Equity method accounting for joint ventures under ASC 323",
     "QuestionID": "P2-A-550",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-550-orion-industries-equity-method-joint-venture-investment-account",
     "Stem": "Orion Industries holds a 30% equity interest in Greenfield Solar LLC. Greenfield reports net income of $1,600,000 and declares dividends of $400,000. Orion's initial investment was $2,400,000. Greenfield has an internally developed patent valued at $800,000 not amortized on its books. Orion's annual amortization of excess basis is $50,000. What balance should Orion report at year-end?",
     "Choices": {
       "A": "$2,710,000, because Orion adds income ($480,000), subtracts amortization ($50,000), and subtracts dividends ($120,000) from the initial investment ($2,400,000).",
       "B": "$2,880,000, because Orion adds income ($480,000) to initial investment and subtracts dividends ($120,000). Patent amortization does not affect the account.",
-      "C": "$3,520,000, because Orion records income ($480,000) minus amortization ($50,000) but ignores dividends.",
+      "C": "$2,830,000, because Orion records income ($480,000) minus amortization ($50,000) but ignores dividends.",
       "D": "$3,000,000, because Orion adds income ($480,000) to initial investment and treats dividends as income."
     },
     "CorrectChoice": "A",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Ignores patent amortization entirely. Under ASC 323-10-35-6, the investor must amortize excess basis.",
-    "ExplanationWrongC": "This arrives at the correct value but uses incorrect reasoning about dividends. Under the equity method, dividends DO reduce the investment balance.",
+    "ExplanationWrongC": "This value is incorrect. The correct balance is $2,710,000. Ignoring dividends overstates the balance; the correct calculation subtracts both amortization ($50,000) and dividends ($120,000) from the initial investment plus share of income.",
     "ExplanationWrongD": "Treats dividends as income. Under ASC 323-10-35-6, dividends reduce the investment balance, not income.",
     "ExplanationCorrect": "Under ASC 323-10-35, the equity method requires initial recording at cost with subsequent adjustments. Orion: initial $2,400,000 + share of income ($1,600,000 x 30% = $480,000) - amortization ($50,000) - dividends ($400,000 x 30% = $120,000) = $2,710,000. The correct answer (A) reflects this calculation.",
     "Difficulty": "Moderate",
@@ -27659,7 +27757,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A ignores dividends. Option B ignores amortization. Option D treats dividends as income.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27667,7 +27767,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Throughput arrangement accounting under ASC 606",
     "QuestionID": "P2-A-551",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-551-summit-energy-throughput-arrangement-principal-versus-agent-revenue",
     "Stem": "Summit Energy operates a natural gas processing plant under a throughput arrangement with Clearwater Refining. Summit receives raw gas, processes it, and returns it. Summit charges $3.00 per MCF. During the month, Summit processes 500,000 MCF at a total fee of $1,500,000. The raw gas has a market value of $45,000,000. How should Summit recognize revenue?",
@@ -27729,7 +27829,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A applies principal model. Option C combines unrelated streams. Option D mischaracterizes as barter.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27737,7 +27839,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Satellite tracking arrangement lease identification under ASC 842",
     "QuestionID": "P2-A-552",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-552-orbit-communications-satellite-tracking-arrangement-lease-identification",
     "Stem": "Orbit Communications enters a five-year contract with SkyLink Satellites for transponder capacity. Orbit uses two of twelve transponders. SkyLink owns the satellite and handles maintenance. The satellite is not physically separable and transponders cannot be redeployed. SkyLink can reallocate capacity for technical reasons. Does this arrangement contain a lease under ASC 842?",
@@ -27799,7 +27901,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A skips control test. Option C confuses identification with control. Option D misstates identification.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27807,7 +27911,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Sale-leaseback transaction accounting under ASC 842 and ASC 606",
     "QuestionID": "P2-A-553",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-553-vanguard-industrial-sale-leaseback-sale-recognition-and-finance-lease",
     "Stem": "Vanguard Industrial sells its manufacturing facility to Blackstone Capital for $12,000,000 (fair value equals carrying amount). Vanguard immediately enters a 20-year leaseback at $750,000 annual rent. The building has a 30-year remaining useful life. No purchase option exists. Does the transaction qualify as a sale, and how is the leaseback classified?",
@@ -27870,7 +27974,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A invents test. Option C understates threshold. Option D invokes non-existent option.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27878,7 +27984,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Off-balance-sheet financing impact on financial ratios",
     "QuestionID": "P2-A-554",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-554-calypso-energy-off-balance-sheet-spe-consolidation-ratio-impact",
     "Stem": "Calypso Energy operates offshore platforms through an SPE. The SPE holds $200,000,000 in assets financed by $180,000,000 in nonrecourse debt. Calypso guarantees $50,000,000 and provides operational management. Calypso standalone: assets $500,000,000, liabilities $300,000,000, equity $200,000,000, net income $40,000,000. What is the impact of SPE consolidation?",
@@ -27940,7 +28046,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A adds equity without debt. Option C applies netting. Option D limits to guarantee.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -27948,7 +28056,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Operating lease versus finance lease income statement effects under ASC 842",
     "QuestionID": "P2-A-555",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-555-nova-logistics-operating-versus-finance-lease-expense-pattern-front-loading",
     "Stem": "Nova Logistics has two leases. Lease A (finance): $100,000 annual payments, 6% rate, 8-year term, PV ~$620,000. Lease B (operating): same terms. Year 1: finance lease interest ~$37,200; operating lease straight-line expense $100,000. How do first-year expenses differ?",
@@ -28010,7 +28118,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A overstates amortization. Option B claims identical annual. Option D applies finance to operating.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28018,7 +28128,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 ASC 860 transfer of receivables with continuing involvement",
     "QuestionID": "P2-A-556",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-556-heritage-healthcare-receivables-transfer-recourse-and-subordinated-interest",
     "Stem": "Heritage Healthcare transfers $8,000,000 of insured receivables to MedFinance with recourse. Heritage receives $7,200,000 cash and retains a $800,000 subordinated beneficial interest. Heritage provides a recourse obligation guaranteeing 95% of credit losses. Under ASC 860, what treatment applies?",
@@ -28080,7 +28190,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A assumes limited recourse. Option C ignores continuing involvement. Option D applies partial derecognition.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28088,7 +28200,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 VIE consolidation impact on debt covenants",
     "QuestionID": "P2-A-557",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-557-vanguard-industrial-vie-consolidation-debt-covenant-compliance-analysis",
     "Stem": "Vanguard Industrial has a debt covenant requiring maximum D/E of 2.50. Standalone: liabilities $300,000,000, equity $150,000,000 (D/E = 2.00). Vanguard is primary beneficiary of a VIE with $100,000,000 in assets, $95,000,000 nonrecourse debt, and $5,000,000 equity. What is the consolidated D/E?",
@@ -28150,7 +28262,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option B excludes nonrecourse. Option C has ratio error. Option D applies haircut.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28158,7 +28272,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 ASC 842 lease modification and remeasurement",
     "QuestionID": "P2-A-558",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-558-atlas-manufacturing-lease-modification-remeasurement-scope-and-accounting",
     "Stem": "Atlas Manufacturing has a 10-year operating lease at $200,000/year. At year 5, Atlas and the lessor modify: extend term by 3 years (8 remaining) and increase payments to $250,000. PV of revised payments: $1,800,000. ROU asset before modification: $1,200,000. How should Atlas account for this modification?",
@@ -28221,7 +28335,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A treats as new lease. Option B applies test incorrectly. Option D denies modification.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28229,7 +28345,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Off-balance-sheet financing risk disclosure and analytical adjustments",
     "QuestionID": "P2-A-559",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-559-pinnacle-manufacturing-off-balance-sheet-adjusted-ratios-analyst-perspective",
     "Stem": "Pinnacle Manufacturing standalone: assets $800,000,000, liabilities $400,000,000, equity $400,000,000, net income $60,000,000. Operating leases with PV obligations of $120,000,000 not on balance sheet. A guaranteed SPE with $100,000,000 in assets and $90,000,000 in nonrecourse debt not consolidated. What are the fully-adjusted D/E and ROA?",
@@ -28291,7 +28407,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A has wrong equity. Option B applies netting. Option C uses net without gross.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28299,7 +28417,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Joint venture equity method versus consolidation under ASC 323 and ASC 810",
     "QuestionID": "P2-A-560",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-560-northstar-ventures-joint-venture-equity-method-versus-consolidation-decision",
     "Stem": "Northstar Ventures holds 40% equity in MedTech Innovations. MedTech: assets $50,000,000, liabilities $20,000,000, equity $30,000,000. Net income $5,000,000, dividends $1,500,000. Northstar's initial investment: $10,000,000. Northstar has no VIE variable interest. The JV agreement gives Northstar significant participating rights. Should Northstar use the equity method or consolidate?",
@@ -28362,7 +28480,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Option A elevates influence to control. Option C requires majority. Option D assumes ownership determines PBA.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28370,7 +28490,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost accounting definition",
     "QuestionID": "P2-A-561",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-561-current-cost-definition",
     "Stem": "Under current cost accounting, nonmonetary assets are reported at which value on the balance sheet?",
@@ -28431,7 +28551,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests fundamental definition of current cost measurement basis.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28439,7 +28561,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation impact on turnover ratios",
     "QuestionID": "P2-A-562",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-562-turnover-ratio-inflation",
     "Stem": "Apex Manufacturing reports total assets of $2,000,000 at historical cost and annual sales of $5,000,000. During a period of sustained 8% inflation, Apex does not adjust its financial statements for price-level changes. What is the primary limitation of using Apex's reported asset turnover ratio for benchmarking against a competitor that uses current cost accounting?",
@@ -28499,7 +28621,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Applies inflation concepts to a specific financial ratio.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28507,7 +28631,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost accounting for inventory",
     "QuestionID": "P2-A-563",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-563-current-cost-inventory",
     "Stem": "Meridian Industries values its inventory using current cost accounting. During a period of rising prices, which of the following best describes how current cost determines the inventory carrying amount on the balance sheet?",
@@ -28567,7 +28691,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests application of current cost accounting to inventory.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28575,7 +28701,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Purchasing power gain/loss on monetary assets",
     "QuestionID": "P2-A-564",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-564-purchasing-power-gain-monetary",
     "Stem": "During a year when the general price level increased by 4%, a company that borrowed $500,000 at a fixed interest rate experienced which of the following effects on its monetary position?",
@@ -28635,7 +28761,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests purchasing power effects on monetary assets during inflation.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28643,7 +28771,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Real versus nominal interest rate",
     "QuestionID": "P2-A-565",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-565-real-vs-nominal-rate",
     "Stem": "Parkview Electronics issues $1,000,000 in fixed-rate bonds with a stated annual interest rate of 4%. The Federal Reserve reports that expected inflation for the coming year is 2.5%. Using the Fisher equation approximation, what is the approximate real interest rate on Parkview's bonds?",
@@ -28703,7 +28831,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Direct Fisher equation application.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28711,7 +28841,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Purchasing power gain on monetary liabilities",
     "QuestionID": "P2-A-566",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-566-purchasing-power-loss-debtor",
     "Stem": "Northstar Equipment carries $800,000 in fixed-rate long-term debt. During a year when the general price level rose by 6%, Northstar's purchasing power position on this debt changed in which of the following ways?",
@@ -28771,7 +28901,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests the debtor side of purchasing power effects.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28779,7 +28911,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation-adjusted debt-to-equity ratio",
     "QuestionID": "P2-A-567",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-567-debt-equity-inflation-adjusted",
     "Stem": "Consolidated Industries reports: total assets $3,000,000, total liabilities $1,200,000, shareholders' equity $1,800,000. General price level increased 10%. Monetary assets exceed monetary liabilities by $300,000. What is the approximate debt-to-equity ratio after adjusting equity for the purchasing power effect?",
@@ -28839,7 +28971,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Multi-step calculation combining purchasing power effects with financial ratio analysis.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28847,7 +28981,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 CPI purchasing power interpretation",
     "QuestionID": "P2-A-568",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-568-cpi-purchasing-power-interpretation",
     "Stem": "Westfield Logistics purchased a warehouse for $800,000 five years ago when the CPI stood at 100. The CPI has risen to 125. Which of the following best explains the practical significance of this CPI change for Westfield's financial reporting?",
@@ -28907,7 +29041,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests conceptual understanding of CPI ratio implications for financial reporting.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28915,7 +29051,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost versus NRV for inventory",
     "QuestionID": "P2-A-570",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-570-current-cost-vs-nrv-inventory",
     "Stem": "Harbor Medical Supplies holds specialized surgical instruments with a current replacement cost of $325,000 and a net realizable value of $315,000. Under IAS 2, what is the reporting rule that determines the inventory's carrying amount?",
@@ -28975,7 +29111,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests the lower-of-cost-or-NRV rule under current cost accounting.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -28983,7 +29121,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation factor and depreciation consistency",
     "QuestionID": "P2-A-569",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-569-inflation-factor-depreciation-consistency",
     "Stem": "Eastbrook Corporation's machine was purchased three years ago for $600,000 with a 10-year useful life and no salvage value. The accumulated inflation factor is 1.5. Under current cost accounting, what is the correct calculation of annual depreciation expense?",
@@ -29043,7 +29181,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests understanding of how the inflation factor relates to the depreciation base under current cost accounting.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29051,7 +29191,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost depreciation in income statement",
     "QuestionID": "P2-A-571",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-571-depreciation-current-cost-income",
     "Stem": "Under current cost accounting, which of the following depreciation methods produces the highest annual depreciation expense during a period of rising prices?",
@@ -29112,7 +29252,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests comparison of depreciation methods under inflation, requiring understanding of how each method handles price changes.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29120,18 +29262,18 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation-adjusted balance sheet reconciliation",
     "QuestionID": "P2-A-572",
-    "question_state": "Unprocessed",
+    "question_state": "In Audit",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-572-balance-sheet-reconciliation-inflation",
     "Stem": "Tidewater Industries reports: monetary assets $1,200,000, monetary liabilities $1,350,000, nonmonetary assets (historical cost) $2,800,000. General price level increased 4%. Under inflation-adjusted reporting, which statement about the balance sheet is correct?",
     "Choices": {
-      "A": "The balance sheet equation (Assets = Liabilities + Equity) always holds, with the purchasing power loss on net monetary items recognized in equity",
+      "A": "The balance sheet equation (Assets = Liabilities + Equity) always holds, with the purchasing power gain on net monetary items recognized in equity",
       "B": "Nonmonetary assets are written up to replacement cost, increasing total assets above the sum of liabilities and equity",
       "C": "The balance sheet does not balance because purchasing power gains and losses create a reconciliation gap",
       "D": "Monetary items are restated using the CPI while nonmonetary items remain at historical cost"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Under inflation-adjusted reporting, the accounting equation must always hold. Tidewater has net monetary liabilities of $150,000. During 4% inflation, purchasing power loss = $150,000 × 4% = $6,000, recognized in equity. The balance sheet remains in balance.",
+    "ExplanationCorrect": "Under inflation-adjusted reporting, the accounting equation must always hold. Tidewater has net monetary liabilities of $150,000. During 4% inflation, purchasing power gain = $150,000 × 4% = $6,000, recognized in equity. The balance sheet remains in balance.",
     "ExplanationWrongB": "Option B describes current cost accounting, not general price-level adjustment. Under constant dollar accounting, nonmonetary assets are NOT restated.",
     "ExplanationWrongC": "Option C is incorrect because the equation always balances — purchasing power effects are recognized in equity.",
     "ExplanationWrongD": "Option D incorrectly states monetary items are restated. The purchasing power effect is recognized through equity, not by restating monetary items.",
@@ -29181,7 +29323,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests balance sheet equation maintenance under inflation-adjusted reporting.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29189,7 +29333,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Constant dollar accounting concept",
     "QuestionID": "P2-A-573",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-573-constant-dollar-concept",
     "Stem": "A company reports equipment at $100,000 on its historical cost balance sheet. The general price index has increased 20% since acquisition. Under constant dollar accounting, what adjustment is made to the equipment's carrying amount?",
@@ -29249,7 +29393,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests mechanics of constant dollar accounting applied to a specific asset.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29257,7 +29403,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation impact on financial statement analysis",
     "QuestionID": "P2-A-574",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-574-inflation-financial-statement-analysis",
     "Stem": "Eastfield Corporation reports total assets of $5,000,000 at historical cost and generates $8,000,000 in annual sales. During a year when the CPI increased by 9%, which statement best describes how failure to adjust for inflation affects Eastfield's return on assets?",
@@ -29317,7 +29463,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Evaluates how inflation distorts a key financial ratio.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29325,7 +29473,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 HICP and inflation measurement",
     "QuestionID": "P2-A-575",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-575-hicp-inflation-measurement",
     "Stem": "The European Central Bank uses the Harmonized Index of Consumer Prices (HICP) as its primary measure of price stability. For a multinational corporation reporting under IFRS, which statement best explains why HICP is preferred over national CPI for cross-border inflation adjustments?",
@@ -29385,7 +29533,9 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Tests knowledge of HICP as an international inflation benchmark.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29393,7 +29543,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Hyperinflation accounting IAS 29",
     "QuestionID": "P2-A-576",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-576-hyperinflation-ias29",
     "Stem": "Veracruz Petrochemicals operates in an economy where the cumulative inflation rate has exceeded 120% over the past three years, meeting the threshold for hyperinflationary conditions. Under IAS 29, which statement correctly describes the required accounting treatment?",
@@ -29453,7 +29603,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests IAS 29 hyperinflation accounting fundamentals.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29461,7 +29613,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost depreciation calculation",
     "QuestionID": "P2-A-577",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-577-current-cost-depreciation-calc",
     "Stem": "Lakewood Fabrication purchased a stamping press for $400,000 six years ago with a total useful life of 8 years and no salvage value. The current replacement cost of an equivalent press is $800,000. Under current cost accounting, what is the annual depreciation expense Lakewood should report?",
@@ -29522,7 +29674,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests current cost depreciation calculation mechanics.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29530,7 +29684,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Real return versus nominal return",
     "QuestionID": "P2-A-578",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-578-real-vs-nominal-return",
     "Stem": "Tivoli Brewing is evaluating an equipment investment that would generate a nominal annual return of 10.5%. The CFO, Daniel Ortiz, expects inflation to average 6% over the investment's life. Using the Fisher equation, what is the approximate real rate of return on this investment?",
@@ -29591,7 +29745,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests Fisher equation application for real versus nominal return analysis.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29599,7 +29755,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation impact on times interest earned",
     "QuestionID": "P2-A-579",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-579-inflation-tie-impact",
     "Stem": "Crestview Logistics reports sales revenue of $2,000,000, cost of goods sold of $1,200,000, and interest expense of $200,000. During the following year, sales revenue increases 12% due to inflation-driven price increases, cost of goods sold increases 8% as input costs rise, and interest expense remains fixed at $200,000 on existing debt. What is the new times interest earned ratio, and what does the change reveal?",
@@ -29660,7 +29816,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests understanding of how fixed interest expense interacts with inflation-driven revenue and cost changes.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29668,7 +29826,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Purchasing power risk assessment",
     "QuestionID": "P2-A-580",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-580-purchasing-power-risk",
     "Stem": "Redwood Capital's CFO, Sandra Liu, is assessing purchasing power risk exposure during a period when the general price level is expected to increase by 5%. Redwood's balance sheet shows: cash of $1,000,000, accounts receivable of $2,000,000, inventory of $1,500,000, equipment of $3,000,000, accounts payable of $1,200,000, and a long-term mortgage of $1,300,000. Which combination exposes Redwood to the greatest purchasing power risk?",
@@ -29728,7 +29886,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests purchasing power risk assessment combining monetary position analysis with nonmonetary asset considerations.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29736,7 +29896,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Current cost versus historical cost depreciation difference",
     "QuestionID": "P2-A-581",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-581-current-cost-vs-historical-depr",
     "Stem": "Precision Machining's CNC lathe was purchased for $500,000 four years ago with an estimated useful life of 10 years and no salvage value. The current replacement cost of an equivalent machine is $900,000. How much higher is the annual depreciation expense under current cost accounting compared to historical cost depreciation?",
@@ -29797,7 +29957,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests comparative depreciation calculation between current cost and historical cost methods.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29805,7 +29967,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 General versus specific price changes",
     "QuestionID": "P2-A-582",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-582-general-vs-specific-price",
     "Stem": "Apex Semiconductor Inventory shows that the replacement cost of its specialized inventory increased 25% over the past year, while the general consumer price index increased only 15%. Under current cost accounting, which statement correctly describes how Apex accounts for this divergence?",
@@ -29866,7 +30028,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the distinction between general price-level and specific price changes in accounting measurement.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29874,7 +30038,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation-adjusted ROI calculation",
     "QuestionID": "P2-A-583",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-583-inflation-adjusted-roi",
     "Stem": "Pinnacle Manufacturing reports net income of $280,000 and total assets of $2,000,000 at historical cost. The general price level increased 6% during the year. Which statement correctly describes the relationship between Pinnacle's nominal and real return on assets?",
@@ -29935,7 +30099,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests inflation-adjusted ROI calculation and the relationship between nominal and real returns.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -29943,7 +30109,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Monetary versus nonmonetary item classification",
     "QuestionID": "P2-A-584",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-584-monetary-nonmonetary-classification",
     "Stem": "An analyst is classifying the following items for an inflation-adjusted analysis of Bridgewater Industries: cash of $200,000, accounts receivable of $350,000, inventory of $400,000, equipment of $500,000, accounts payable of $250,000, and long-term bonds payable of $400,000. What are the correct totals for monetary and nonmonetary items?",
@@ -30005,7 +30171,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests classification of balance sheet items as monetary or nonmonetary for inflation accounting purposes.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30013,7 +30181,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation impact on working capital analysis",
     "QuestionID": "P2-A-585",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-585-inflation-working-capital",
     "Stem": "Northgate Distribution reports current assets of $600,000, including inventory at historical cost of $200,000 and accounts receivable of $300,000. Current liabilities total $400,000. During a period of 10% inflation, which statement best describes how inflation distorts the working capital analysis?",
@@ -30074,7 +30242,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests understanding of how inflation distorts working capital analysis through different treatment of monetary and nonmonetary current items.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30082,7 +30252,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Price index adjustment for PPE",
     "QuestionID": "P2-A-586",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-586-price-index-ppe-adjustment",
     "Stem": "Sterling Heavy Industries purchased a crane for $1,200,000 three years ago when the relevant price index stood at 120. The same price index is now 160. Under general price-level adjusted accounting, what is the restated carrying amount of the crane, and what is the annual depreciation expense assuming a 12-year useful life with no salvage value?",
@@ -30143,7 +30313,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests price index adjustment mechanics for PPE under general price-level accounting.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30151,7 +30323,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Impact on financial statement comparability",
     "QuestionID": "P2-A-587",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-587-comparability-inflation-impact",
     "Stem": "Lindstrom Components uses current cost accounting to adjust its financial statements for inflation, while its primary competitor, Precision Parts, uses historical cost without adjustment. During a period of 8% inflation, which statement best describes the comparative analysis challenge this creates for an investor evaluating both companies?",
@@ -30212,7 +30384,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Evaluates the comparative analysis challenge created by different inflation accounting methods.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30220,7 +30394,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Foreign currency inflation adjustments",
     "QuestionID": "P2-A-588",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-588-foreign-currency-inflation",
     "Stem": "GlobalTech Solutions has a subsidiary in Country X where the cumulative inflation rate over the past three years has reached 200%. The subsidiary's functional currency is the local currency. Under IAS 29, which statement correctly describes the required accounting treatment?",
@@ -30281,7 +30455,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the intersection of IAS 29 inflation accounting and IAS 21 foreign currency translation.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30289,7 +30465,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inventory layer measurement under inflation",
     "QuestionID": "P2-A-589",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-589-inventory-layer-inflation",
     "Stem": "Summit Manufacturing uses LIFO for inventory valuation. During a year when the general price level increased 12%, Summit's inventory consisted of: beginning inventory of 5,000 units at $20 each, purchases of 10,000 units at $22 each, and sales of 8,000 units. Under LIFO, what is the cost of goods sold, and how does the inflation-driven cost layer difference affect the income statement compared to FIFO?",
@@ -30350,7 +30526,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests LIFO inventory layer measurement and its interaction with inflation-driven cost differences.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30358,7 +30536,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Hyperinflation financial statement presentation",
     "QuestionID": "P2-A-590",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-590-hyperinflation-presentation",
     "Stem": "Meridian Industries operates in a hyperinflationary economy where cumulative inflation has exceeded 100% over three years. Under IAS 29, which financial statement component is restated using a general price index to reflect the loss of purchasing power?",
@@ -30418,7 +30596,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests identification of which financial statement components require IAS 29 restatement.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30426,7 +30606,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.5 Temporal method foreign currency remeasurement",
     "QuestionID": "P2-A-591",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A5-591-temporal-method-remeasurement",
     "Stem": "Greenfield Consumer Products, a U.S. parent, owns 100% of a Brazilian subsidiary whose operations are tightly integrated into Greenfield's U.S. supply chain. The subsidiary's functional currency is the U.S. dollar. During Q3, the Brazilian real weakened from 5.4 to 5.9 per dollar. Under ASC 830, how should Greenfield remeasure the subsidiary's financial statements into U.S. dollars for consolidation?",
@@ -30489,7 +30669,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the temporal method remeasurement mechanics under ASC 830 for a subsidiary tightly integrated into parent operations.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30497,7 +30679,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.5 Current rate method translation adjustment OCI",
     "QuestionID": "P2-A-592",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A5-592-current-rate-method-translation-oci",
     "Stem": "Apex Industrial Holdings, a U.S. parent, owns a Mexican subsidiary whose functional currency is the Mexican peso. The subsidiary operates independently, sets its own prices, and finances its operations locally. During the year, the peso strengthened from 17.2 to 15.8 per dollar, creating a translation gain on the subsidiary's net assets. Under ASC 830, where is this translation gain recognized?",
@@ -30560,7 +30742,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the routing of translation gains under the current rate method, distinguishing from temporal method net income treatment.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30568,7 +30752,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.5 Foreign subsidiary impact on parent debt to equity ratio",
     "QuestionID": "P2-A-593",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A5-593-foreign-subsidiary-debt-equity-impact",
     "Stem": "Meridian Aerospace, a U.S. parent, consolidates a German subsidiary translated under the current rate method. The euro strengthens from $1.08 to $1.18 per euro during the year. Before consolidation, Meridian's standalone debt-to-equity ratio is 1.40. The German subsidiary has significant net assets denominated in euros. Which statement correctly describes the impact on the consolidated debt-to-equity ratio?",
@@ -30631,7 +30815,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the mechanical impact of currency translation on consolidated leverage ratios, a common analyst consideration.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30639,7 +30825,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.5 CTA deferral and reclassification upon disposal",
     "QuestionID": "P2-A-594",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A5-594-cta-deferral-reclassification-disposal",
     "Stem": "Vanguard Precision, a U.S. manufacturer, consolidates a Japanese subsidiary whose functional currency is the yen. Over the past two years, the yen has weakened by 15% against the dollar, creating a cumulative translation loss. Vanguard's CFO, Robert Tanaka, asks the controller when this cumulative translation loss will be recognized in net income. Which statement correctly describes the timing?",
@@ -30703,7 +30889,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the evaluate-level judgment of when CTA reaches net income, requiring knowledge of both ASC 830 deferral mechanics and disposal reclassification.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30711,7 +30899,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 LIFO inventory inflation impact on net income",
     "QuestionID": "P2-A-595",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-595-lifo-inflation-net-income-impact",
     "Stem": "Heartland Food Distributors operates in a period of rising input costs. Beginning inventory was 10,000 units at $8.00 per unit. During the period, Heartland purchased 50,000 units at $8.50 (first purchase) and 40,000 units at $9.00 (second purchase). Heartland sold 60,000 units. Under LIFO, what is the effect on cost of goods sold and net income compared to FIFO?",
@@ -30775,7 +30963,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the fundamental LIFO vs FIFO comparison in an inflationary environment with explicit numerical data.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30783,7 +30973,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Purchasing power gain net monetary liabilities IAS 29",
     "QuestionID": "P2-A-596",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-596-purchasing-power-gain-monetary-net",
     "Stem": "Pacific Copper Mining operates in a hyperinflationary economy where cumulative inflation has exceeded 100% over three years, triggering IAS 29. At the beginning of the year, Pacific Copper's balance sheet shows monetary assets of $400,000, monetary liabilities of $1,000,000, and nonmonetary assets of $2,500,000. The general price index doubled during the year (from 100 to 200). Under IAS 29, which statement correctly describes the purchasing power effect on Pacific Copper's monetary position?",
@@ -30847,7 +31037,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests the IAS 29 purchasing power gain concept for a net monetary liability position in a hyperinflationary economy.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30855,7 +31047,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 IFRS revaluation model depreciation holding gain",
     "QuestionID": "P2-A-597",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-597-ifrs-revaluation-depreciation-holding",
     "Stem": "Terracon Manufacturing operates in an inflationary environment and applies the IFRS revaluation model to a critical production press. The press was purchased 8 years ago for $400,000 with a 20-year useful life and no salvage value. The current replacement cost of an equivalent press is $720,000. Under the IFRS revaluation model, what is the annual depreciation expense Terracon should report, and how is the holding gain on the press treated?",
@@ -30919,7 +31111,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests IFRS revaluation model depreciation and holding gain treatment, distinguishing from current cost accounting framework.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30927,7 +31121,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.4 Horizontal analysis revenue cost of goods sold",
     "QuestionID": "P2-A-598",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A4-598-horizontal-analysis-revenue-cogs",
     "Stem": "Sterling Consumer Electronics reported the following income statement data: Revenue of $5,000,000 in 2025 and $5,750,000 in 2026. Cost of goods sold of $3,200,000 in 2025 and $3,910,000 in 2026. The CFO, Dana Whitfield, asks the financial analyst to explain the year-over-year change in gross profit using horizontal analysis. Which statement correctly identifies the primary driver?",
@@ -30991,7 +31185,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests horizontal analysis computation and interpretation of margin compression when cost growth outpaces revenue growth.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -30999,7 +31195,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.4 Vertical analysis income statement cost structure",
     "QuestionID": "P2-A-599",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A4-599-vertical-analysis-cost-structure",
     "Stem": "Cascade Specialty Foods reported net sales of $4,800,000, cost of goods sold of $3,000,000, selling expenses of $600,000, administrative expenses of $420,000, and operating income of $780,000 for the fiscal year. The controller, Vanessa Park, must present a vertical analysis of the income statement to the executive team. Which statement correctly interprets the vertical analysis?",
@@ -31062,7 +31258,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests vertical analysis computation and the distinction between vertical, horizontal, and unit-cost analysis methods.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -31070,7 +31268,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.4 DuPont decomposition ROE margin leverage",
     "QuestionID": "P2-A-600",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A4-600-dupont-decomposition-roe-leverage",
     "Stem": "Harborview Technology's CFO, Michael Torres, presents the following DuPont decomposition to the board: Year 1 — Net profit margin 20.0%, asset turnover 0.75, equity multiplier 0.60 (ROE = 9.0%). Year 2 — Net profit margin 22.5%, asset turnover 0.75, equity multiplier 0.85 (ROE = 14.34%). Torres states that ROE improved by 5.34 percentage points. Analyzing the decomposition, what do the changes in each component reveal about the source of Harborview's improved return on equity?",
@@ -31134,6 +31332,9 @@ const pack_p2_a_questions = [
     },
     "uniqueness_note": "Tests DuPont decomposition with explicit component contribution analysis, requiring identification of the primary ROE driver.",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   }
 ];
+

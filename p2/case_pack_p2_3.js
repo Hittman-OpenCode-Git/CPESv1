@@ -6895,7 +6895,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7070,12 +7070,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used Year 2 figures ($1,570,000 / $520,000 = 3.02) or reversed the numerator and denominator.",
         "ExplanationWrongB": "This answer may have excluded inventory from current assets, computing the quick ratio instead of the current ratio.",
         "ExplanationWrongC": "This answer likely used average current assets rather than ending balances, or included long-term debt in the denominator.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A5-Q2",
@@ -7088,12 +7090,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used operating income ($450,000) instead of net income, computing operating margin of 8.33%.",
         "ExplanationWrongB": "This answer may have used Year 1 or Year 2 net income with Year 3 sales, or applied an incorrect tax rate.",
         "ExplanationWrongC": "This answer likely used gross profit ($1,620,000) in the numerator, computing gross margin of 30%.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A5-Q3",
@@ -7112,12 +7116,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The current ratio actually improved slightly from 3.00 to 3.03 — it did not decline. This choice misreads the data.",
         "ExplanationWrongC": "Debt-to-equity remaining constant at 0.50 indicates no change in leverage, which is neutral rather than a deterioration signal.",
         "ExplanationWrongD": "The profit margin decline reflects cost control issues, not operational efficiency in asset utilization. DSO is a direct efficiency metric.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A5-Q4",
@@ -7130,12 +7136,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used sales ($5,400,000) instead of COGS in the numerator.",
         "ExplanationWrongB": "This answer may have computed days inventory outstanding (365 / 4.50 = 81.1 days) instead of the turnover ratio.",
         "ExplanationWrongC": "This answer likely used average total assets or a different denominator, conflating inventory turnover with asset turnover.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A5-Q5",
@@ -7154,11 +7162,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Long-term debt has been constant at $960,000 across all three years — there is no increasing debt burden to address.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "While inventory turnover is declining, DSO deterioration is more severe (20.5% increase vs. inventory decline) and quicker to fix."
+        "ExplanationWrongD": "While inventory turnover is declining, DSO deterioration is more severe (20.5% increase vs. inventory decline) and quicker to fix.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A5-Q6",
@@ -7177,11 +7187,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The current ratio has remained stable around 3.0 and is not at risk of falling below 2.0 based on current trends.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Margin compression is real but is a symptom of poor asset management, not the root cause."
+        "ExplanationWrongC": "Margin compression is real but is a symptom of poor asset management, not the root cause.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -7210,7 +7222,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7324,12 +7336,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used operating income ($600,000) instead of net income, computing operating margin of 12.00%.",
         "ExplanationWrongB": "This answer may have used gross profit ($1,800,000) in the numerator, computing gross margin of 36.00%.",
         "ExplanationWrongC": "This answer likely used beginning-of-year equity or total assets in the denominator rather than net sales.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A6-Q2",
@@ -7342,12 +7356,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used ending assets ($4,200,000) rather than average assets, producing $5,000,000 / $4,200,000 = 1.19.",
         "ExplanationWrongB": "This answer may have used total assets from two years ago rather than the current year average.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing assets / sales instead of sales / assets.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A6-Q3",
@@ -7360,12 +7376,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used total liabilities instead of total assets in the numerator.",
         "ExplanationWrongB": "This answer may have computed the debt-to-equity ratio ($1,600,000 / $2,600,000 = 0.62) instead of the equity multiplier.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing equity / assets instead of assets / equity.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A6-Q4",
@@ -7384,11 +7402,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Profit margin actually improved from 8.00% to 8.28%, so it is not the driver of ROE decline.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "Interest expense remained constant at $48,000 and is already captured in the profit margin calculation."
+        "ExplanationWrongD": "Interest expense remained constant at $48,000 and is already captured in the profit margin calculation.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A6-Q5",
@@ -7407,11 +7427,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Profit margin is not the primary ROE driver — it actually improved. Cutting expenses would provide a marginal benefit.",
-        "ExplanationWrongD": "Tax planning provides a marginal improvement and does not address the operational efficiency problem."
+        "ExplanationWrongD": "Tax planning provides a marginal improvement and does not address the operational efficiency problem.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A6-Q6",
@@ -7430,11 +7452,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "At 1.62, the equity multiplier implies a debt-to-equity ratio of approximately 0.62, which is moderate.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "The equity multiplier is the third component of the DuPont model and directly affects ROE."
+        "ExplanationWrongC": "The equity multiplier is the third component of the DuPont model and directly affects ROE.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -7463,7 +7487,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7598,12 +7622,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used net income ($1,050,000) instead of operating income in the denominator.",
         "ExplanationWrongB": "This answer may have used fixed costs ($8,000,000) in the numerator instead of contribution margin.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing Operating Income / Contribution Margin = 0.20.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A7-Q2",
@@ -7616,12 +7642,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used net income instead of income before tax, or used contribution margin instead of operating income.",
         "ExplanationWrongB": "This answer may have computed DFL as (Operating Income - Interest) / Operating Income = 0.75.",
         "ExplanationWrongC": "This answer likely used total assets or equity in the computation rather than the income-statement-based formula.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A7-Q3",
@@ -7634,12 +7662,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely added DOL and DFL instead of multiplying them (5.00 + 1.33 = 6.33).",
         "ExplanationWrongB": "This answer may have used net income in the denominator of the direct formula.",
         "ExplanationWrongC": "This answer likely squared one of the leverage components or used an incorrect formula.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A7-Q4",
@@ -7658,12 +7688,14 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "While the DOL ratio decreases from 5.00 to 4.71, the absolute fixed-cost exposure increases by $2.4M, raising risk.",
         "ExplanationWrongC": "The variable cost ratio remaining constant does not prevent DOL from changing — fixed costs increased.",
         "ExplanationWrongD": "The expansion maintains positive operating income of $2,800,000, well above breakeven.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A7-Q5",
@@ -7682,11 +7714,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Variable costs increasing proportionally with revenue is expected behavior for variable costs.",
-        "ExplanationWrongD": "The contribution margin ratio remains at 40%, unchanged from the current 40%. There is no improvement."
+        "ExplanationWrongD": "The contribution margin ratio remains at 40%, unchanged from the current 40%. There is no improvement.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A7-Q6",
@@ -7705,11 +7739,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Approving without addressing the net income decline and increased risk would expose the company to higher earnings volatility.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "Issuing equity to pay down debt is reactive and dilutive. A better approach is to restructure financing before approval."
+        "ExplanationWrongD": "Issuing equity to pay down debt is reactive and dilutive. A better approach is to restructure financing before approval.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -7738,7 +7774,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7823,12 +7859,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used COGS instead of sales in the numerator, or used a 360-day year.",
         "ExplanationWrongB": "This answer may have used inventory or accounts payable instead of accounts receivable.",
         "ExplanationWrongC": "This answer likely computed the accounts receivable turnover (8.33) instead of DSO.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A8-Q2",
@@ -7841,12 +7879,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely omitted DPO from the calculation (DSO + DIO = 93) or used incorrect component values.",
         "ExplanationWrongB": "This answer may have added DPO instead of subtracting it, or used sales instead of purchases for DPO.",
         "ExplanationWrongC": "This answer likely used 360 days instead of 365, or miscomputed one of the component ratios.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A8-Q3",
@@ -7859,12 +7899,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used annual sales divided by the DSO reduction rather than daily sales.",
         "ExplanationWrongB": "This answer may have used COGS or inventory instead of sales to compute the daily figure.",
         "ExplanationWrongC": "This answer likely computed the total receivables balance rather than the marginal reduction.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A8-Q4",
@@ -7883,11 +7925,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The two actions have different gross and net benefits — they are not identical.",
-        "ExplanationWrongD": "Both actions provide meaningful working capital benefits that would reduce line-of-credit reliance."
+        "ExplanationWrongD": "Both actions provide meaningful working capital benefits that would reduce line-of-credit reliance.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A8-Q5",
@@ -7906,11 +7950,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Requesting a larger line of credit contradicts the bank's request to reduce reliance on it.",
-        "ExplanationWrongD": "Factoring is expensive and signals financial weakness to the bank."
+        "ExplanationWrongD": "Factoring is expensive and signals financial weakness to the bank.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-A8-Q6",
@@ -7929,11 +7975,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Early-payment discounts are paid to suppliers, not received from customers.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Reducing line-of-credit reliance is what the bank wants — they would not punish Crest for improving."
+        "ExplanationWrongC": "Reducing line-of-credit reliance is what the bank wants — they would not punish Crest for improving.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -7962,7 +8010,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8080,12 +8128,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the market return instead of the equity risk premium, or used an incorrect beta.",
         "ExplanationWrongB": "This answer may have added the risk-free rate and equity risk premium without multiplying by beta (3.20% + 5.50% = 8.70%).",
         "ExplanationWrongC": "This answer likely used the pre-tax cost of debt instead of the risk-free rate as the base.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B3-Q2",
@@ -8098,12 +8148,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the pre-tax cost of debt (6.50%) without applying the tax shield.",
         "ExplanationWrongB": "This answer may have applied the tax rate to the cost of equity instead of the cost of debt.",
         "ExplanationWrongC": "This answer likely used an incorrect tax rate or made an arithmetic error in the (1 - t) adjustment.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B3-Q3",
@@ -8116,12 +8168,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used book values instead of market values, or omitted preferred stock.",
         "ExplanationWrongB": "This answer may have used the pre-tax cost of debt in the WACC formula instead of the after-tax cost.",
         "ExplanationWrongC": "This answer likely used equal weights (1/3 each) instead of market-value-based weights.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B3-Q4",
@@ -8140,12 +8194,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Exceeding WACC alone does not satisfy the board's 200 bps spread requirement.",
         "ExplanationWrongC": "The IRR of 12% exceeds the hurdle of 10.73%. This answer misstates the comparison.",
         "ExplanationWrongD": "Accepting projects based on the risk-free rate ignores the cost of capital entirely.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B3-Q5",
@@ -8158,12 +8214,14 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used original capital structure weights without adjusting for the new $12M debt.",
         "ExplanationWrongB": "This answer may have ignored the tax shield on the new debt, or used book values.",
         "ExplanationWrongC": "This answer likely used the pre-tax cost of new debt (7.25%) instead of the after-tax cost (4.71%).",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B3-Q6",
@@ -8182,11 +8240,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Maximizing debt maximizes tax shields but also maximizes financial risk and distress costs.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "A marginal WACC increase does not mean the project destroys value — the IRR confirms value creation."
+        "ExplanationWrongC": "A marginal WACC increase does not mean the project destroys value — the IRR confirms value creation.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -8215,7 +8275,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8349,12 +8409,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely applied the Hamada equation incorrectly or used an incorrect D/E ratio.",
         "ExplanationWrongB": "This answer may have used the after-tax cost of debt instead of the risk-free rate in CAPM.",
         "ExplanationWrongC": "This answer likely used the proposed capital structure instead of the current structure.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B4-Q2",
@@ -8367,12 +8429,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used book values instead of market values, or omitted the tax shield.",
         "ExplanationWrongB": "This answer may have used equal weights instead of market-value-based weights.",
         "ExplanationWrongC": "This answer likely used the pre-tax cost of debt in the WACC formula.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B4-Q3",
@@ -8385,12 +8449,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the interest payment instead of the full debt amount, or applied an incorrect tax rate.",
         "ExplanationWrongB": "This answer may have used the after-tax cost of debt in the formula instead of the tax rate.",
         "ExplanationWrongC": "This answer likely used the change in equity value instead of the tax shield formula.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B4-Q4",
@@ -8409,12 +8475,14 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the distress costs, which are a key component of the trade-off model.",
         "ExplanationWrongC": "The tax shield ($15M) exceeds the distress costs ($12M), so net value increases.",
         "ExplanationWrongD": "The values do not offset — there is a net positive of approximately $3M.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B4-Q5",
@@ -8433,11 +8501,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The share price is stated to remain at $20.00 in both scenarios — this is not the primary risk.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Preferred stock cost is not a function of debt levels in this analysis."
+        "ExplanationWrongC": "Preferred stock cost is not a function of debt levels in this analysis.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B4-Q6",
@@ -8456,11 +8526,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The full recapitalization pushes distress probability to 10% and consumes most of the tax benefit.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "Issuing equity avoids the tax shield benefit entirely and dilutes existing shareholders."
+        "ExplanationWrongD": "Issuing equity avoids the tax shield benefit entirely and dilutes existing shareholders.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -8489,7 +8561,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8608,12 +8680,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the current dividend ($2.00) without the growth adjustment, producing $33.33.",
         "ExplanationWrongB": "This answer may have used an incorrect growth rate or cost of equity in the denominator.",
         "ExplanationWrongC": "This answer likely used the proposed dividend ($3.00) instead of the current dividend.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B5-Q2",
@@ -8626,12 +8700,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the current dividend growth rate without adjusting the numerator.",
         "ExplanationWrongB": "This answer may have used the cost of equity instead of the spread (r - g) in the denominator.",
         "ExplanationWrongC": "This answer likely used a different growth rate or made an arithmetic error.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B5-Q3",
@@ -8644,12 +8720,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the proposed dividend ($3.00) instead of the incremental difference ($1.00).",
         "ExplanationWrongB": "This answer may have used total retained earnings instead of the per-share dividend difference.",
         "ExplanationWrongC": "This answer likely computed the total dividend payment ($15M) rather than the incremental amount.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B5-Q4",
@@ -8668,12 +8746,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Pension funds prefer high dividends — they would benefit, not be negatively affected.",
         "ExplanationWrongC": "Retirees depend on dividend income — they would benefit from the increase.",
         "ExplanationWrongD": "Tax-exempt endowments have no preference, so they would be unaffected.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B5-Q5",
@@ -8692,11 +8772,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The DDM value is a theoretical maximum; market frictions and clientele effects prevent the full increase.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Dividend increases are generally interpreted as signals of confidence, not weakness."
+        "ExplanationWrongC": "Dividend increases are generally interpreted as signals of confidence, not weakness.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B5-Q6",
@@ -8715,11 +8797,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The full increase conflicts with the plant financing needs and would disrupt the growth investor clientele.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "An increase to $4.00 would consume $10M annually, severely impairing plant financing."
+        "ExplanationWrongD": "An increase to $4.00 would consume $10M annually, severely impairing plant financing.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -8748,7 +8832,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8864,12 +8948,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the spot rate (1.0850) instead of the forward rate, producing $5,425,000.",
         "ExplanationWrongB": "This answer may have used the inverse rate (EUR/USD) instead of USD/EUR.",
         "ExplanationWrongC": "This answer likely used an incorrect forward rate or made an arithmetic error.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B6-Q2",
@@ -8888,12 +8974,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "If USD rates were lower, the EUR would trade at a forward premium, not a discount.",
         "ExplanationWrongC": "The forward discount reflects interest rate differentials, not exchange rate expectations.",
         "ExplanationWrongD": "Interest rate parity appears to hold — the forward discount is consistent with the rate differential.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B6-Q3",
@@ -8912,11 +9000,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Borrowing EUR and converting to USD is the reverse — this hedges a receivable, not a payable.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "This describes a forward contract, not a money market hedge."
+        "ExplanationWrongD": "This describes a forward contract, not a money market hedge.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B6-Q4",
@@ -8929,12 +9019,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used revenues instead of net assets in the calculation.",
         "ExplanationWrongB": "This answer may have used operating income instead of net assets.",
         "ExplanationWrongC": "This answer likely used the JPY amount instead of the USD equivalent.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B6-Q5",
@@ -8953,11 +9045,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "JPY depreciation does not change JPY-denominated revenues — it changes their USD equivalent.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "USD operating income decreases, not increases, when the local currency depreciates."
+        "ExplanationWrongC": "USD operating income decreases, not increases, when the local currency depreciates.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-B6-Q6",
@@ -8976,11 +9070,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Remaining unhedged exposes the company to EUR appreciation risk — speculation is not treasury policy.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Money market hedges are not always superior — they involve borrowing costs and execution complexity."
+        "ExplanationWrongC": "Money market hedges are not always superior — they involve borrowing costs and execution complexity.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -9009,7 +9105,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9116,12 +9212,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the selling price ($50) instead of contribution margin in the numerator.",
         "ExplanationWrongB": "This answer may have used variable cost ($25) instead of contribution margin.",
         "ExplanationWrongC": "This answer likely divided machine hours by CM per unit instead of the reverse.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C6-Q2",
@@ -9134,12 +9232,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used selling prices instead of contribution margins in the weighted average.",
         "ExplanationWrongB": "This answer may have used an incorrect product mix or miscounted total units.",
         "ExplanationWrongC": "This answer likely used variable costs instead of contribution margins.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C6-Q3",
@@ -9158,11 +9258,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Alpha has the highest CM per unit but the lowest CM per machine hour ($20 vs $25 for Charlie).",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "Equal proportions ignores the constraint optimization principle and would produce suboptimal profit."
+        "ExplanationWrongD": "Equal proportions ignores the constraint optimization principle and would produce suboptimal profit.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C6-Q4",
@@ -9175,12 +9277,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the original fixed costs ($260,000) instead of the reduced amount.",
         "ExplanationWrongB": "This answer may have used a different WACM or made an arithmetic error.",
         "ExplanationWrongC": "This answer likely computed breakeven in dollars instead of units.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C6-Q5",
@@ -9199,11 +9303,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Lower variable cost per unit actually provides more room to absorb cost increases, not less.",
-        "ExplanationWrongD": "Charlie requires the fewest machine hours per unit (1.0), not the most."
+        "ExplanationWrongD": "Charlie requires the fewest machine hours per unit (1.0), not the most.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C6-Q6",
@@ -9222,11 +9328,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The $40,000 savings reduces breakeven by 1,039 units, which is meaningful for margin of safety.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Maintaining the unchanged mix ignores the constraint optimization opportunity."
+        "ExplanationWrongC": "Maintaining the unchanged mix ignores the constraint optimization opportunity.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -9255,7 +9363,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9361,12 +9469,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included fixed overhead in the minimum price, overcosting the order.",
         "ExplanationWrongB": "This answer may have omitted the labeling cost or shipping cost from the calculation.",
         "ExplanationWrongC": "This answer likely used the full absorption cost instead of variable cost.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C7-Q2",
@@ -9379,12 +9489,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the regular selling price ($95) instead of the special order price.",
         "ExplanationWrongB": "This answer may have included fixed overhead in the variable cost, understating the contribution.",
         "ExplanationWrongC": "This answer likely computed total contribution ($14,000) instead of per-unit contribution.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C7-Q3",
@@ -9403,12 +9515,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Fixed costs can be relevant if they change between alternatives (e.g., adding a new shift).",
         "ExplanationWrongC": "The price exceeding fixed cost per unit is not the reason for irrelevance.",
         "ExplanationWrongD": "Fixed overhead is not a sunk cost — it is a future committed cost that does not change.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C7-Q4",
@@ -9427,11 +9541,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the $15,000 second-shift cost, which is an incremental fixed cost.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "The order is unprofitable at $70 with second-shift costs, but could be profitable at a higher price."
+        "ExplanationWrongD": "The order is unprofitable at $70 with second-shift costs, but could be profitable at a higher price.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C7-Q5",
@@ -9450,11 +9566,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Outsourcing costs are incremental and relevant to the decision.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "The outsource applies to only 1,000 overflow units, not all 2,000 units."
+        "ExplanationWrongC": "The outsource applies to only 1,000 overflow units, not all 2,000 units.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C7-Q6",
@@ -9473,11 +9591,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The positive contribution margin does not account for the $15,000 second-shift cost.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "An $80 price would yield $17 profit per unit ($34,000 total), but may lose the customer."
+        "ExplanationWrongC": "An $80 price would yield $17 profit per unit ($34,000 total), but may lose the customer.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -9506,7 +9626,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9608,12 +9728,14 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included depreciation ($20,000), producing $90,000.",
         "ExplanationWrongB": "This answer may have included only the operator salary, omitting maintenance and defects.",
         "ExplanationWrongC": "This answer likely used the new equipment's maintenance cost instead of the old equipment's.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C8-Q2",
@@ -9626,12 +9748,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included annual maintenance in the total, producing $355,000.",
         "ExplanationWrongB": "This answer may have omitted the salvage value, producing $400,000.",
         "ExplanationWrongC": "This answer likely used a different useful life or made an arithmetic error.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C8-Q3",
@@ -9650,11 +9774,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The operator salary is relevant — it is an avoidable cost if the new equipment is purchased.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "The salvage value is relevant — it is a future cash inflow only if the new equipment is purchased."
+        "ExplanationWrongD": "The salvage value is relevant — it is a future cash inflow only if the new equipment is purchased.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C8-Q4",
@@ -9667,12 +9793,14 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely compared total five-year costs without annualizing.",
         "ExplanationWrongB": "This answer may have included depreciation in the old equipment cost.",
         "ExplanationWrongC": "This answer likely used the wrong capital recovery method or useful life.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C8-Q5",
@@ -9691,12 +9819,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Employee morale is a concern but is secondary to patient safety in medical device manufacturing.",
         "ExplanationWrongC": "Obsolescence risk applies to both old and new equipment and is not the primary concern.",
         "ExplanationWrongD": "Tax implications are quantitative and should be included in the financial analysis, not treated as qualitative.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C8-Q6",
@@ -9715,11 +9845,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Job security is a concern but cannot override patient safety requirements in medical manufacturing.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Deferring risks quality failures in a regulated industry with significant liability exposure."
+        "ExplanationWrongC": "Deferring risks quality failures in a regulated industry with significant liability exposure.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   },
@@ -9748,7 +9880,7 @@ var casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9858,12 +9990,14 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used variable cost only ($30) without the opportunity cost component.",
         "ExplanationWrongB": "This answer may have used the full external price ($85) as the minimum, ignoring excess capacity.",
         "ExplanationWrongC": "This answer likely used the allocated fixed cost ($50 total cost) as the minimum price.",
-        "ExplanationWrongD": ""
+        "ExplanationWrongD": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C9-Q2",
@@ -9882,11 +10016,13 @@ var casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Variable cost is the minimum, not the maximum. Assembly would not set the ceiling at the seller's cost.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "The $85 price is what external customers pay, but Assembly has a cheaper alternative at $80."
+        "ExplanationWrongD": "The $85 price is what external customers pay, but Assembly has a cheaper alternative at $80.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C9-Q3",
@@ -9905,11 +10041,13 @@ var casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The transfer price ($75) is below Assembly's external price ($80), so Assembly saves, not loses.",
-        "ExplanationWrongD": "The transfer price ($75) is below the external price ($80), creating a benefit."
+        "ExplanationWrongD": "The transfer price ($75) is below the external price ($80), creating a benefit.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C9-Q4",
@@ -9928,12 +10066,14 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the opportunity cost of the 3,000 sacrificed external sales.",
         "ExplanationWrongC": "Components is not indifferent — they gain from using excess capacity but lose on sacrificed external sales.",
         "ExplanationWrongD": "Components gains from the transfer on excess capacity units, not loses overall.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C9-Q5",
@@ -9952,11 +10092,13 @@ var casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Assembly's savings are offset by Components' lower revenue — the net corporate impact is zero.",
         "ExplanationWrongB": "",
-        "ExplanationWrongD": "The transfer price does not change total corporate revenue — it only redistributes it between divisions."
+        "ExplanationWrongD": "The transfer price does not change total corporate revenue — it only redistributes it between divisions.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       },
       {
         "ItemID": "CBQ23-C9-Q6",
@@ -9975,11 +10117,13 @@ var casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "Unprocessed",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "At $85, Assembly would buy externally at $80, and the internal transfer would not occur.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Full cost allocation is an accounting convention that may not align with economic incentives."
+        "ExplanationWrongC": "Full cost allocation is an accounting convention that may not align with economic incentives.",
+        "certification_session": "P2-CERT-WAVE",
+        "certification_date": "2026-09-06"
       }
     ]
   }

@@ -1,0 +1,40 @@
+[11:17:19] Loading backup...
+[11:17:19] Backup loaded: 2637741 chars
+[11:17:19] Fixing P2-A-004...
+[11:17:19]   P2-A-004: Choice C, EC, VerifiedChecks updated
+[11:17:19] Fixing P2-A-295...
+[11:17:20]   P2-A-295: Choice D, EC updated
+[11:17:20] Fixing P2-A-307...
+[11:17:20]   P2-A-307: EC updated
+[11:17:20] Fixing P2-A-350...
+[11:17:20]   P2-A-350: Choice D, EC, VerifiedChecks updated
+[11:17:20] Fixing P2-A-071...
+[11:17:20]   P2-A-071: EWB filled
+[11:17:20] Fixing P2-A-082...
+[11:17:20]   P2-A-082: EWB filled (re-authored)
+[11:17:20] Fixing P2-A-091...
+[11:17:20]   P2-A-091: EWB relabeled (Option D -> Option B)
+[11:17:20] Applying boundary-safe 'isis' -> 'is'...
+[11:17:20]   'isis' -> 'is': 13 occurrences replaced (whole-word only)
+[11:17:20] Verifying P2-A-072 EWB clear...
+[11:17:20]   P2-A-072: EWB already empty (preserved)
+[11:17:20] Verifying P2-A-083 EWB clear...
+[11:17:20]   P2-A-083: EWB already empty (preserved)
+[11:17:20]   P2-A-003: clean (no 'cris')
+[11:17:20]   P2-A-184: clean (no 'cris')
+[11:17:20]   P2-A-243: clean (no 'cris')
+[11:17:20] Writing restored file...
+[11:17:20] Written: C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\p2\pack_p2_a.js (2637999 chars)
+[11:17:20] === QUICK VERIFICATION ===
+[11:17:21]   PASS: P2-A-004.ExplanationCorrect contains '7-day'
+[11:17:21]   PASS: P2-A-295.ExplanationCorrect contains '2.74 times'
+[11:17:21]   PASS: P2-A-350.ExplanationCorrect contains '16.76%'
+[11:17:21]   PASS: P2-A-071.ExplanationWrongB contains 'inflation'
+[11:17:21]   PASS: P2-A-082.ExplanationWrongB contains 'self-standing metric'
+[11:17:21]   PASS: P2-A-091.ExplanationWrongB contains 'Option B treats'
+[11:17:21]   PASS: P2-A-072.ExplanationWrongB is empty
+[11:17:21]   PASS: P2-A-083.ExplanationWrongB is empty
+[11:17:21]   PASS: No 'cris' corruption found
+[11:17:21]   PASS: No mojibake (â€") found
+[11:17:21] === VERIFICATION COMPLETE: 0 issues ===
+[11:17:21] SUCCESS: All fixes applied, no corruption detected

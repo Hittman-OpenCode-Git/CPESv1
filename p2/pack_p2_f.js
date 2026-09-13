@@ -7587,7 +7587,7 @@ var pack_p2_f_questions = [
     "certification_date": "2026-08-28",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "F-171-ima-ethics-competence",
-    "Stem": "Flash Industries' controller is reviewing the IMA Statement of Ethical Professional Practice with a new management accountant. Which of the following is one of the four overarching principles in the IMA Statement?",
+    "Stem": "Flash Industries' controller is reviewing the IMA Statement of Ethical Professional Practice with a new management accountant. Which of the following is one of the four standards in the IMA Statement?",
     "Choices": {
       "A": "Maximization of shareholder wealth as the primary professional duty",
       "B": "Competence, confidentiality, integrity, and credibility — the four overarching principles that guide members and candidates of the IMA",
@@ -8654,7 +8654,7 @@ var pack_p2_f_questions = [
     "certification_date": "2026-08-28",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "F-195-earnings-pressure-integrity-decomposition",
-    "Topic": "F.195 integrity-analyzing-earnings-management-pressure",
+"Topic": "F.195 integrity-analyzing-earnings-management-pressure",
     "LOSTag": "F.3",
     "BlueprintDomain": "Professional Ethics",
     "FormulaReference": "",
@@ -8663,8 +8663,8 @@ var pack_p2_f_questions = [
       "SEC Regulation G - Non-GAAP Presentation Integrity"
     ],
     "CommonTrapReference": "Decomposing pressure into compliance tactics rather than recognizing integrity breach",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "CalculationItem": false,
     "ItemStyle": "single-select",

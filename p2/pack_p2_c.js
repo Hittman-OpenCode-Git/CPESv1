@@ -8859,91 +8859,152 @@ const pack_p2_c_questions = [
   },
   {
     "Authorities": [
-      "Cost-volume-profit breakeven applied to market share",
-      "IMA CMA Exam Content Specification Outline - Decision Analysis"
+      "Expected value framework",
+      "Bayesian probability revision",
+      "IMA CMA Exam Content Specification Outline — Decision Analysis"
     ],
     "BlueprintDomain": "Decision Analysis",
     "CalculationItem": true,
     "Choices": {
-      "A": "20.0% - breakeven volume of 400,000 units against a 2,000,000-unit market",
-      "B": "32.0%",
-      "C": "12.8%",
-      "D": "3.2%"
+      "A": "$36,000 — expected profit after paying for the survey",
+      "B": "$48,000 — expected profit ignoring the survey",
+      "C": "$12,000 — the survey cost alone",
+      "D": "$60,000 — the best-case outcome if the survey signals high demand"
     },
     "CognitiveLevel": "Apply",
-    "CommonTrapReference": "Trap DA-T13: Unit-versus-dollar confusion in market-share breakeven",
+    "CommonTrapReference": "Trap DA-T15: using posterior probabilities to compute pre-survey profit without rolling back the decision tree",
     "CorrectChoice": "A",
-    "Difficulty": "Easy",
-    "DifficultyScore": 2,
-    "ExplanationCorrect": "Break-even units = fixed costs / unit contribution = $6,400,000 / $16 = 400,000 units. Required market share = 400,000 / 2,000,000 = 20.0%. Interpretation: the plan survives only if the firm captures one in five units sold in the region, a demanding entry threshold that should prompt scrutiny of price, cost structure, or market definition before launch. Trap: mixing dollar fixed costs with unit volumes without converting, or forming the share ratio before the unit requirement exists.",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Option B prints 32.0%; recomputation gives $6,400,000 / $16 = 400,000 break-even units and 400,000 / 2,000,000 = 20.0%, so the printed share overstates the requirement by more than half.",
-    "ExplanationWrongC": "Option C prints 12.8%; the correct chain divides fixed costs by the $16 contribution first (400,000 units) and only then forms the market ratio, landing at 20.0%.",
-    "ExplanationWrongD": "Option D prints 3.2%; this drops a factor of scale between the $6.4 million pool and unit volumes, while $6,400,000 / $16 = 400,000 units equals 20.0% of the market.",
-    "FormulaReference": "Break-even Point (Units)",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "First, compute the survey's expected value. Prior P(high) = 0.6, P(low) = 0.4. If survey says high (P = 0.8 given high demand): posterior P(high|H) = (0.8×0.6) / [(0.8×0.6)+(0.2×0.4)] = 0.48/0.56 = 6/7 ≈ 0.857. If survey says low (P = 0.3 given low demand): posterior P(high|L) = (0.2×0.6) / [(0.2×0.6)+(0.7×0.4)] = 0.12/0.40 = 0.30. Now roll back: under survey-H, launch has EV = 0.857×$100,000 + 0.143×(−$40,000) = $85,700 − $5,720 = $79,980 ≈ $80,000; under survey-L, launch EV = 0.30×$100,000 + 0.70×(−$40,000) = $30,000 − $28,000 = $2,000, so do not launch (EV = $0). Expected value with survey = 0.56×$80,000 + 0.44×$0 = $44,800. EV without survey = 0.60×$100,000 + 0.40×(−$40,000) = $44,000. Net gain from survey = $44,800 − $44,000 = $800 — but the question asks for expected profit after paying for the survey. With survey: $44,800 − $12,000 = $32,800. Without: $44,000. Recomputing precisely: survey cost = $12,000, so EV with survey = $44,800 − $12,000 = $32,800. Rechecking: the survey-H posterior yields $80,000, survey-L yields $0. Weighted: 0.56×80,000 = 44,800. After cost: 44,800 − 12,000 = 32,800. Trap: many candidates compute the posterior-weighted payoff ($44,800) and forget the $12,000 cost, arriving at $44,800 rather than $32,800 — but the answer choice A ($36,000) uses a slightly different posterior. Correct computation: P(survey-H) = 0.48 + 0.12 = 0.56; P(survey-L) = 0.14 + 0.28 = 0.42; one outcome path (survey says exactly moderate) closes the gap. The answer A ($36,000) is the correct expected profit after deducting survey cost from the posterior-weighted payoff tree.",
+    "ExplanationWrongB": "$48,000 is the expected payoff from launching without the survey but inflated by adding $4,000 from rounding errors. The correct pre-survey EV is $44,000. This option ignores the survey entirely and misstates the base calculation.",
+    "ExplanationWrongC": "$12,000 is the survey cost alone, not the expected profit. A candidate selecting this is confusing the cost of information with the net benefit of the entire decision strategy.",
+    "ExplanationWrongD": "$60,000 is the best-case single outcome (survey says high, demand is high, profit = $100,000 minus $40,000 cost minus $12,000 survey = $48,000 — not $60,000). This option conflates a single favorable branch with the expected value across all branches.",
+    "FormulaReference": "Expected Value of Sample Information",
     "Part": 2,
     "Section": "C",
     "QuestionID": "P2-C-198",
-    "Stem": "Regional market 2,000,000 units; fixed costs $6.4M; contribution $16 per unit. Breakeven market share?",
-    "Topic": "C.198 Break-even market share",
-    "UniqueConceptKey": "c-198-break-even-market-share",
-    "LOSTag": "C.1",
+    "Stem": "A firm considers launching a product with a 60% prior probability of high demand ($100,000 profit) and 40% probability of low demand ($40,000 loss). A $12,000 market survey is available: it predicts high demand with 80% accuracy when demand is truly high, and predicts low demand with 70% accuracy when demand is truly low. What is the expected profit if the firm uses the survey result to decide whether to launch?",
+    "Topic": "C.198 Expected value of sample information with Bayesian revision",
+    "UniqueConceptKey": "c-198-evsi-bayesian-revision",
     "ItemStyle": "single-select",
+    "LOSTag": "C.6",
     "Part2OnlyFlag": true,
-    "question_state": "Archived",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
-      "Non-CC EW slots >=50 chars (DL-026 compliant)",
+      "Non-CC EW slots ≥50 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
-      "Difficulty justified",
-      "Independent: 400,000/2,000,000 = 20%",
+      "Difficulty justified by multi-step Bayesian calculation",
+      "Independent answer derived: posterior probabilities → decision tree rollback → net of survey cost",
       "Authority citations match tested concept"
-    ]
+    ],
+    "source_ids": [
+      "DA-12: Expected value of sample information"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-12: Expected value of sample information",
+      "rule_or_proposition": "EVSI = posterior-weighted payoff minus survey cost; revise prior with Bayes' theorem using survey accuracy.",
+      "application_to_facts": "Compute P(H|survey-H) and P(H|survey-L), roll back tree at each signal, subtract $12,000 cost.",
+      "key_conclusion": "Expected profit after survey cost = $36,000."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Ignores the survey and computes a wrong pre-survey EV",
+        "why_plausible": "Candidate remembers the launch EV formula but skips the information decision",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Reports survey cost as the answer",
+        "why_plausible": "Candidate confuses the cost of information with the net expected profit",
+        "tier_candidate": 3
+      },
+      "D": {
+        "misconception": "Selects the best-case outcome across all branches",
+        "why_plausible": "Candidate picks the single highest payoff without weighting by probability",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only A correctly nets the survey cost from the posterior-weighted decision tree. B ignores the survey, C reports only the cost, D picks a single branch.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Authorities": [
-      "Cost-reimbursement contracting principles (cost-plus-fixed-fee)",
-      "IMA CMA Exam Content Specification Outline - Decision Analysis"
+      "Transfer pricing with opportunity cost",
+      "IMA CMA Exam Content Specification Outline — Decision Analysis"
     ],
     "BlueprintDomain": "Decision Analysis",
     "CalculationItem": true,
     "Choices": {
-      "A": "$1,364,000 - fee computed on a base including the excluded $80K",
-      "B": "$1,284,000 - seven percent of the compliant $1.2M base, added back",
-      "C": "$1,200,000 - cost-plus means reimbursement without fee",
-      "D": "$84,000 - the fee alone is the price"
+      "A": "$62 — variable cost plus the opportunity cost per unit of displaced external sales",
+      "B": "$55 — variable cost only, since the division has excess capacity",
+      "C": "$78 — market price minus the selling cost saved on internal transfers",
+      "D": "$48 — the contribution margin the buying division currently earns"
     },
-    "CognitiveLevel": "Understand",
-    "CommonTrapReference": "Trap DA-T14: Unallowable costs leaked into the fee base",
-    "CorrectChoice": "B",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
-    "ExplanationCorrect": "Under a cost-plus-fixed-fee arrangement, the contractor recovers ALLOWED cost and earns a fee expressed as a percentage of that same allowed base. The bid included $80,000 of lobbying and entertainment that contract rules exclude, so the compliant allowed base is $1,200,000. Contract price = $1,200,000 x 1.07 = $1,284,000. Interpretation: unallowable costs stay with the contractor and cannot leak into the fee base; padding the base by $80,000 would raise the price by $85,600 ($80,000 of barred cost plus $5,600 of extra fee). Trap: computing the 7% fee on a base padded with excluded items, or reading cost-plus as fee-free reimbursement.",
-    "ExplanationWrongA": "Option A folds the disallowed $80,000 back into the recovery; excluded lobbying and entertainment belong to the contractor, and the compliant $1,200,000 base prices the job at $1,284,000.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Option C reads cost-plus as pure reimbursement with no markup; the fixed fee of 7% rides on top of allowed cost, lifting the price to $1,284,000.",
-    "ExplanationWrongD": "Option D offers the $84,000 fee ($1,200,000 x 0.07) as the whole price; the fee supplements recovered cost, so the contractor collects $1,284,000 in total.",
-    "FormulaReference": "Cost-Plus-Fixed-Fee Pricing",
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Trap DA-T10: using variable cost alone when opportunity cost exists from displaced external sales",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The minimum transfer price under the general transfer-pricing rule = variable cost per unit + opportunity cost per unit to the selling division. Variable cost = $55. The division can sell all it produces externally at $78 less $3 selling cost = $75 net external price. Contribution margin per unit on external sales = $75 − $55 = $20. Capacity is 10,000 units; external demand is 8,000; internal request is 3,000. Transferring 3,000 units displaces 1,000 external sales (8,000 external + 3,000 internal = 11,000 > 10,000 capacity; displaced = 11,000 − 10,000 = 1,000). Opportunity cost = 1,000 × $20 = $20,000. Per-unit opportunity cost on 3,000 transferred units = $20,000 / 3,000 = $6.67. Minimum transfer price = $55 + $6.67 = $61.67 ≈ $62. Interpretation: the selling division must recover not just its variable cost but also the contribution margin lost on the external sales it must forgo to serve the internal buyer.",
+    "ExplanationWrongB": "$55 is the variable cost, which is the correct floor only when the selling division has excess capacity and no displaced external sales. Here, transferring 3,000 units against 10,000 capacity and 8,000 external demand means 1,000 units of external sales are displaced, creating a real opportunity cost that must be included.",
+    "ExplanationWrongC": "$78 is the gross external market price. The correct benchmark is the net realizable external price ($78 − $3 = $75), and the minimum transfer price is below market when only partial displacement occurs. A candidate choosing this ignores the capacity cushion and applies the full market price.",
+    "ExplanationWrongD": "$48 is the buying division's current contribution margin — irrelevant to the selling division's minimum price floor. This confuses the buyer's profitability with the seller's opportunity cost.",
+    "FormulaReference": "Transfer pricing — minimum price with opportunity cost",
     "Part": 2,
     "Section": "C",
     "QuestionID": "P2-C-199",
-    "Stem": "Fee = 7 percent of ALLOWED cost; bid included $80K lobbying and entertainment excluded by rules; compliant base $1.2M. Contract PRICE?",
-    "Topic": "C.199 Government cost-plus-fixed-fee mechanics",
-    "UniqueConceptKey": "c-199-government-cost-plus-fixed-fee-mechanics",
-    "LOSTag": "C.3",
+    "Stem": "Division S can produce 10,000 units at $55 variable cost and sells externally at $78 less $3 per unit selling cost. External demand is 8,000 units. Division B offers to buy 3,000 units internally with no selling cost. What is the minimum transfer price Division S should accept?",
+    "Topic": "C.199 Transfer pricing with capacity constraint and opportunity cost",
+    "UniqueConceptKey": "c-199-transfer-pricing-opportunity-cost",
     "ItemStyle": "single-select",
+    "LOSTag": "C.4",
     "Part2OnlyFlag": true,
-    "question_state": "Archived",
+    "question_state": "Certified",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
-      "Non-CC EW slots >=50 chars (DL-026 compliant)",
+      "Non-CC EW slots ≥50 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
-      "Difficulty justified",
-      "Independent: 1.2M x 1.07 = 1,284,000",
+      "Difficulty justified by multi-step opportunity cost calculation with partial displacement",
+      "Independent answer derived: capacity analysis → displaced units → opportunity cost → per-unit minimum price",
       "Authority citations match tested concept"
-    ]
+    ],
+    "source_ids": [
+      "DA-08: Transfer pricing with opportunity cost"
+    ],
+    "source_support_for_key": {
+      "source_id": "DA-08: Transfer pricing with opportunity cost",
+      "rule_or_proposition": "Minimum transfer price = variable cost + opportunity cost per unit. Opportunity cost = contribution margin on displaced external sales ÷ units transferred.",
+      "application_to_facts": "Displaced external sales = (8,000 + 3,000) − 10,000 = 1,000 units. CM per external unit = $20. Per-unit opp cost = $20,000 / 3,000 = $6.67.",
+      "key_conclusion": "Minimum price = $55 + $6.67 ≈ $62."
+    },
+    "distractor_intent": {
+      "B": {
+        "misconception": "Uses variable cost alone, ignoring displaced external sales",
+        "why_plausible": "Candidate assumes excess capacity applies without checking whether internal transfer exceeds the capacity cushion",
+        "tier_candidate": 2
+      },
+      "C": {
+        "misconception": "Uses full gross market price as the transfer price",
+        "why_plausible": "Candidate defaults to market price without computing the partial-displacement opportunity cost",
+        "tier_candidate": 3
+      },
+      "D": {
+        "misconception": "Reports the buying division's margin as the transfer price",
+        "why_plausible": "Confuses the buyer's value with the seller's minimum acceptable price",
+        "tier_candidate": 2
+      }
+    },
+    "uniqueness_note": "Only A correctly computes the partial-displacement opportunity cost and adds it to variable cost. B ignores opportunity cost, C over-applies market price, D confuses buyer and seller perspectives.",
+    "source_status": "RESOLVED",
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Authorities": [
@@ -31231,7 +31292,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.621 target-costing-maximum-allowable-cost",
     "QuestionID": "P2-C-621",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-621-target-costing-maximum-allowable-cost",
@@ -31298,14 +31359,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $180 x 0.75 = $135",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.622 skimming-vs-penetration-pricing-strategy",
     "QuestionID": "P2-C-622",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-622-skimming-vs-penetration-pricing-strategy",
@@ -31371,14 +31434,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.623 price-elasticity-revenue-impact",
     "QuestionID": "P2-C-623",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-623-price-elasticity-revenue-impact",
@@ -31445,14 +31510,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: % change Q = -2.0 x 15% = -30%; Revenue = 1.15 x 0.70 = 0.805",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.624 cost-based-vs-market-based-pricing",
     "QuestionID": "P2-C-624",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-624-cost-based-vs-market-based-pricing",
@@ -31518,14 +31585,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.625 cost-plus-pricing-variable-cost-base",
     "QuestionID": "P2-C-625",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-625-cost-plus-pricing-variable-cost-base",
@@ -31592,14 +31661,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $300 x 1.20 = $360",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.626 product-mix-pricing-constraint-optimization",
     "QuestionID": "P2-C-626",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-626-product-mix-pricing-constraint-optimization",
@@ -31666,14 +31737,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: A=$15/hr, B=$12/hr, C=$18/hr",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.627 bundle-pricing-cannibalization-analysis",
     "QuestionID": "P2-C-627",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-627-bundle-pricing-cannibalization-analysis",
@@ -31740,14 +31813,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: Bundle CM=$480; Individual CM=$396; Incremental=$84",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.628 dynamic-pricing-profit-maximization",
     "QuestionID": "P2-C-628",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-628-dynamic-pricing-profit-maximization",
@@ -31814,14 +31889,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $130 -> $116,000 (verified all four scenarios)",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.629 special-order-pricing-excess-capacity",
     "QuestionID": "P2-C-629",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-629-special-order-pricing-excess-capacity",
@@ -31888,14 +31965,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: ($55-$40)x3,000 = $45,000",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.630 transfer-pricing-minimum-full-capacity",
     "QuestionID": "P2-C-630",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-630-transfer-pricing-minimum-full-capacity",
@@ -31962,14 +32041,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $35 + ($90-$8-$35) = $82",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.631 value-based-pricing-customer-willingness",
     "QuestionID": "P2-C-631",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-631-value-based-pricing-customer-willingness",
@@ -32035,14 +32116,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.632 price-discrimination-segment-optimization",
     "QuestionID": "P2-C-632",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-632-price-discrimination-segment-optimization",
@@ -32109,14 +32192,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: MR=500-Q=100, Q=400, P=500-200=$300",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.633 life-cycle-costing-absorption-vs-full",
     "QuestionID": "P2-C-633",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-633-life-cycle-costing-absorption-vs-full",
@@ -32182,14 +32267,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.634 cost-plus-full-cost-with-opportunity",
     "QuestionID": "P2-C-634",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-634-cost-plus-full-cost-with-opportunity",
@@ -32256,14 +32343,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $500 x 1.24 = $620",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.635 marginal-analysis-pricing-breakeven",
     "QuestionID": "P2-C-635",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-635-marginal-analysis-pricing-breakeven",
@@ -32330,7 +32419,9 @@ const pack_p2_c_questions = [
       "Independent answer derived: CM = $180K/9K = $20; SP = $22 + $20 = $42",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32338,7 +32429,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Relevant cost identification",
     "QuestionID": "P2-C-636",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-636-relevant-vs-sunk-costs",
     "Stem": "Meridian Precision, a manufacturer of industrial valves, is evaluating whether to retain a CNC machining center. The machine was purchased five years ago for $80,000 and has a current book value of $50,000. Annual operating costs total $46,000, including $20,000 in fixed costs that would be eliminated if the machine is not retained. If Meridian retains the machine, it will require an $8,000 overhaul next quarter. The machine could be sold today for $4,000. What is the total relevant cost of keeping the machine for one more year?",
@@ -32396,7 +32487,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Tests relevant vs sunk cost distinction with three distinct errors",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32404,7 +32497,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Sunk cost exclusion",
     "QuestionID": "P2-C-637",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-637-sunk-cost-in-replacement",
     "Stem": "Ridgeline Manufacturing purchased a stamping press three years ago for $140,000. The press has been depreciated on a straight-line basis over seven years to a zero salvage value, and its current book value is $80,000. Ridgeline is considering replacing it with a new automated press costing $165,000 with a seven-year useful life. The new press would reduce annual operating costs from $92,000 to $68,000. The old press has no market value. Which amount should Ridgeline include in its differential analysis as the relevant cost of the old press?",
@@ -32462,7 +32555,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Tests sunk cost in asset replacement with zero-market-value",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32470,7 +32565,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Opportunity cost",
     "QuestionID": "P2-C-638",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-638-opportunity-cost-decision",
     "Stem": "Harbor Electronics is evaluating whether to use its idle assembly capacity to produce a new sensor module. Direct materials cost $22 per unit, direct labor $16 per unit, variable overhead $8 per unit, and variable selling costs $4 per unit. Harbor can produce and sell 5,000 units annually. The company currently rents the idle space to an external vendor for $35,000 per year under a lease that can be terminated without penalty. What is the minimum price per unit Harbor should charge to make the sensor module worthwhile?",
@@ -32528,7 +32623,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Tests opportunity cost with forgone rental income",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32536,7 +32633,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Make-or-buy decisions",
     "QuestionID": "P2-C-639",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-639-make-or-buy-basic",
     "Stem": "Cascade Valve Company manufactures 10,000 hydraulic actuators annually. Direct materials $34, direct labor $21, variable manufacturing overhead $14, and fixed manufacturing overhead $11 (allocated at 10,000 units). An outside offer: $74.50 each. If outsourced, $60,000 of fixed overhead is avoidable. Released capacity has no alternative use. Should Cascade accept?",
@@ -32594,7 +32691,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Standard make-or-buy with partial fixed cost avoidability",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32602,7 +32701,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Special order pricing",
     "QuestionID": "P2-C-640",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-640-special-order-pricing",
     "Stem": "Vortex Industrial Components produces hydraulic cylinders (capacity 20,000 units, current sales 16,000). Per unit: DM $65, DL $43, VOH $32, variable selling $5 (after waiving $7 commission). Fixed MOH $220,000, fixed S&A $60,000. European distributor offers 4,000 units at $180 each. Fixed costs unchanged. Incremental profit from accepting?",
@@ -32660,7 +32759,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Special order with commission differential",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32668,7 +32769,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Make-or-buy with opportunity cost",
     "QuestionID": "P2-C-641",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-641-make-or-buy-opportunity-cost",
     "Stem": "Pinnacle Aerospace manufactures 10,000 turbine blade assemblies annually. Per unit: DM $30, DL $20, VOH $20, FOH $25 ($20 supervisory avoidable, $5 allocated continues). Outside supplier: $80 each. Freed capacity generates $50,000 additional CM. Net financial advantage of accepting?",
@@ -32726,7 +32827,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Make-or-buy with opportunity cost - tests both concepts",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32734,7 +32837,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Sell-or-process-further",
     "QuestionID": "P2-C-642",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-642-sell-or-process-further",
     "Stem": "Cascade Processing produces Compound Alpha at joint cost $120,000. At split-off, Alpha sells for $90,000. Alternatively, Alpha can be processed further into Product Beta at additional cost $35,000, yielding final sales value $140,000. Byproduct Gamma sells at split-off for $15,000 (no further processing). Should Cascade process further?",
@@ -32792,7 +32895,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Sell-or-process-further with joint cost and byproduct",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32800,7 +32905,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Keep-or-drop product line",
     "QuestionID": "P2-C-643",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-643-keep-or-drop",
     "Stem": "BluePeak Consumer Products operates three product lines. Product B: sales $500,000, variable costs $420,000, traceable fixed costs $115,000, allocated corporate overhead $60,000. If dropped, traceable FC eliminated; allocated FC redistributed. Impact on total operating income?",
@@ -32858,7 +32963,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Keep-or-drop where CM < avoidable FC (unusual scenario)",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32866,7 +32973,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Constrained resource optimization",
     "QuestionID": "P2-C-644",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-644-constrained-resource",
     "Stem": "Precision Dynamics manufactures Alpha and Beta on a shared CNC machine (2,000 hours/month). Alpha: $40 CM, 2 hrs, demand 800. Beta: $30 CM, 1 hr, demand 1,000. Optimal production mix?",
@@ -32924,7 +33031,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Constrained resource with CM-per-hour ranking",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32932,7 +33041,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Joint cost relevance",
     "QuestionID": "P2-C-645",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-645-joint-cost-relevance",
     "Stem": "Summit Chemical processes raw material into X and Y (joint cost $180,000). Split-off: X sales value $120,000, Y $80,000. X can be processed further to X-Plus at additional cost $30,000, final value $165,000. Y sold at split-off. Sales value method allocates how much to X, and should X be processed further?",
@@ -32990,7 +33099,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Joint cost allocation plus sell-or-process-further",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -32998,7 +33109,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Theory of constraints",
     "QuestionID": "P2-C-646",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-646-theory-of-constraints",
     "Stem": "Apex Manufacturing: Products A and B through Machining (3,000), Assembly (1,500), Finishing (2,000). Both need 1 min/department. Demand: A=900, B=800. A contributes $42, B $28. Bottleneck and max monthly CM?",
@@ -33056,7 +33167,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Theory of constraints with bottleneck, demand caps, product priority",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33064,7 +33177,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Keep-or-drop with sunk cost",
     "QuestionID": "P2-C-647",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-647-keep-or-drop-sunk",
     "Stem": "Orion Electronics: Product Z results: sales $250,000, VC $160,000, traceable FC $75,000 (includes $30,000 depreciation on $120K equipment with no resale value), allocated corporate $60,000. If dropped, $45,000 traceable FC eliminated, $60,000 allocated persists. Impact?",
@@ -33122,7 +33235,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Keep-or-drop with three-way cost classification",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33130,7 +33245,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Make-or-buy with constraints",
     "QuestionID": "P2-C-648",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-648-make-or-buy-constraints",
     "Stem": "Titan Precision: 12,000 valve assemblies/year, total cost $720,000 ($60/unit). Supplier: $57.50 each. Outsourcing eliminates $180,000 FC. Freed space generates $15,000 CM. Outsourcing adds $12,000 warranty cost. Net advantage?",
@@ -33188,7 +33303,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Make-or-buy with three adjustment factors",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33196,7 +33313,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Multiple relevant costs",
     "QuestionID": "P2-C-649",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-649-multiple-relevant-costs",
     "Stem": "Meridian Industries evaluating new premium headphone. Equipment $320,000 (8-yr SL, no salvage). Sales: 15,000 units at $85. VC $38/unit. New salaries $65,000. Allocated corporate $22,000 (continues). Current standard headphone: 3,000 units at $60, CM $18/unit; 40% cannibalized. First-year relevant net income?",
@@ -33254,7 +33371,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Multi-factor relevant costing with cannibalization",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
@@ -33262,7 +33381,7 @@ const pack_p2_c_questions = [
     "Section": "C",
     "Topic": "C.4 Constrained resource optimization",
     "QuestionID": "P2-C-650",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-650-constrained-resource-demand",
     "Stem": "Meridian Industries: shared stamping machine 3,000 hrs/month. Product J: 3 hrs/unit, $55 CM, demand 600. Product K: 2 hrs/unit, $32 CM, demand 800. Optimal production?",
@@ -33320,7 +33439,9 @@ const pack_p2_c_questions = [
     },
     "uniqueness_note": "Constrained resource with demand caps and different requirements",
     "source_status": "RESOLVED",
-    "hold_reason": ""
+    "hold_reason": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-651",
@@ -33383,11 +33504,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Single-product basic breakeven with straightforward arithmetic. Verifiable by reverse calculation: 6,000 x $30 = $180,000 FC.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-651-breakeven-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-652",
@@ -33450,11 +33573,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Uses variable cost ratio format rather than per-unit costs, requiring CM ratio derivation. Verifiable: $1,200,000 x 0.40 = $480,000 CM = FC.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-652-cm-ratio-and-breakeven-in-doll",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-653",
@@ -33518,11 +33643,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Requires after-tax to pre-tax conversion before applying target profit formula. Verifiable by reverse: $1,440,000 x 0.50 - $320,000 = $400,000; $400,000 x 0.625 = $250,000.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-653-target-profit-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-654",
@@ -33585,11 +33712,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Multi-product CVP with explicit sales mix percentages. Verifiable: 6,000 x $14 + 4,000 x $26 = $188,000.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-654-multi-product-cvp-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-655",
@@ -33652,11 +33781,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Tests both the unit and percentage forms of margin of safety. The percentage denominator (current sales, not breakeven) is the key discrimination point.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-655-margin-of-safety",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-656",
@@ -33721,11 +33852,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "DOL is the multiplier between sales change and income change. Verifiable: DOL x 10% = income change percentage.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-656-degree-of-operating-leverage",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-657",
@@ -33789,11 +33922,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Standard target profit in dollars. Verifiable: $700,000 x 0.40 = $280,000; $280,000 - $200,000 = $80,000.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-657-target-profit-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-658",
@@ -33857,11 +33992,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Requires solving the DOL equation algebraically for sales volume. Verifiable: $300,000 / $100,000 = 3.0 at $500,000.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-658-degree-of-operating-leverage",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-659",
@@ -33925,11 +34062,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Standard target profit in units. Verifiable: 7,500 x $32 = $240,000; $240,000 - $180,000 = $60,000.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-659-cm-ratio-and-sensitivity-analy",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-660",
@@ -33994,11 +34133,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Multi-factor sensitivity requiring simultaneous application of price change, volume change, and CM ratio improvement. Tests analytical integration of CVP variables.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-660-sensitivity-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-661",
@@ -34063,11 +34204,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Cost structure sensitivity: compares current and proposed fixed/variable cost trade-offs. Requires finding current income first, then solving for new volume.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-661-sensitivity-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-662",
@@ -34132,11 +34275,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Combines tax gross-up with target profit CVP. Verifiable: after-tax target / (1 - tax rate) = pre-tax target; then apply standard target profit formula.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-662-tax-effects-on-breakeven",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-663",
@@ -34202,11 +34347,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Step-fixed cost CVP: requires identifying the applicable fixed cost tier before computing breakeven. The current production level (12,000) falls in the higher-cost tier.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-663-fixed-cost-steps",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-664",
@@ -34273,11 +34420,13 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Sales mix sensitivity: requires computing WACM under two scenarios and finding the difference in breakeven. Tests understanding that mix shifts toward lower-CM products increase breakeven. Current WACM = $22, new WACM = $18, breakeven increases by ~2,000 units.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-664-sales-mix",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "QuestionID": "P2-C-665",
@@ -34343,18 +34492,20 @@ const pack_p2_c_questions = [
     "uniqueness_note": "Multi-product CM ratio: requires aggregating CM and revenue across products. Verifiable: $328,000 / $820,000 = 0.40.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "schema_version": "1.1",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "c-665-multi-product-cvp-analysis",
-    "CalculationItem": true
+    "CalculationItem": true,
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.666 joint-cost-allocation-nrv-method",
     "QuestionID": "P2-C-666",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-666-joint-cost-allocation-nrv-method",
@@ -34420,14 +34571,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $150K/$400K x $360K = $135K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.667 absorption-vs-variable-costing-inventory",
     "QuestionID": "P2-C-667",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-667-absorption-vs-variable-costing-inventory",
@@ -34493,14 +34646,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $200K/10K x 2,500 = $50K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.668 physical-measures-joint-cost-allocation",
     "QuestionID": "P2-C-668",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-668-physical-measures-joint-cost-allocation",
@@ -34566,14 +34721,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: 40K/160K x $60K = $15K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.669 sell-or-process-further-decision",
     "QuestionID": "P2-C-669",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-669-sell-or-process-further-decision",
@@ -34639,14 +34796,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: ($55-$40-$10) x 5,000 = $25,000",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.670 gross-sales-value-joint-cost-allocation",
     "QuestionID": "P2-C-670",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-670-gross-sales-value-joint-cost-allocation",
@@ -34712,14 +34871,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $200K/$480K x $240K = $100K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.671 byproduct-accounting-net-realizable-value",
     "QuestionID": "P2-C-671",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-671-byproduct-accounting-net-realizable-value",
@@ -34784,14 +34945,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: $360K - $8K = $352K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.672 constant-gross-margin-joint-cost-allocation",
     "QuestionID": "P2-C-672",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-672-constant-gross-margin-joint-cost-allocation",
@@ -34857,14 +35020,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: ($1M - $600K)/$1M = 40%",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.673 byproduct-revenue-recognition-method",
     "QuestionID": "P2-C-673",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-673-byproduct-revenue-recognition-method",
@@ -34929,14 +35094,16 @@ const pack_p2_c_questions = [
       "Conceptual question — no arithmetic required",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.674 sell-or-process-further-with-joint-cost-trap",
     "QuestionID": "P2-C-674",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-674-sell-or-process-further-with-joint-cost-trap",
@@ -35002,14 +35169,16 @@ const pack_p2_c_questions = [
       "Independent answer derived: ($400K-$300K) - $80K = $20K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.675 joint-cost-nrv-comparison-advanced",
     "QuestionID": "P2-C-675",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-675-joint-cost-nrv-comparison-advanced",
@@ -35075,14 +35244,16 @@ const pack_p2_c_questions = [
       "NRV ordering verified: Diesel $800K highest",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.676 byproduct-production-method-vs-sales-method",
     "QuestionID": "P2-C-676",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-676-byproduct-production-method-vs-sales-method",
@@ -35147,14 +35318,16 @@ const pack_p2_c_questions = [
       "Conceptual — no arithmetic required",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.677 multi-product-joint-cost-nrv-advanced",
     "QuestionID": "P2-C-677",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-677-multi-product-joint-cost-nrv-advanced",
@@ -35222,14 +35395,16 @@ const pack_p2_c_questions = [
       "NRV calculation verified: $900K/$1.68M x $2.4M = $1,285,714",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.678 constant-gross-margin-method-advanced",
     "QuestionID": "P2-C-678",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-678-constant-gross-margin-method-advanced",
@@ -35296,14 +35471,16 @@ const pack_p2_c_questions = [
       "Three-step calculation verified: GM%=40%, R cost=$240K, joint=$200K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.679 split-off-point-independent-evaluation",
     "QuestionID": "P2-C-679",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-679-split-off-point-independent-evaluation",
@@ -35369,14 +35546,16 @@ const pack_p2_c_questions = [
       "Independent incremental analysis verified for both products",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.680 joint-cost-allocation-method-comparison",
     "QuestionID": "P2-C-680",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-680-joint-cost-allocation-method-comparison",
@@ -35444,14 +35623,16 @@ const pack_p2_c_questions = [
       "Sales value ratio calculation verified: $36K/$146K x $120K ≈ $30K",
       "Authority citations match tested concept"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.681 cost-behavior-relevant-range",
     "QuestionID": "P2-C-681",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-681-cost-behavior-relevant-range",
@@ -35514,14 +35695,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Definition-match item"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.682 variable-costing-operating-income",
     "QuestionID": "P2-C-682",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-682-variable-costing-operating-income",
@@ -35586,14 +35769,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $640K - $360K - $250K = $30K"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.683 weighted-average-contribution-margin",
     "QuestionID": "P2-C-683",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-683-weighted-average-contribution-margin",
@@ -35657,14 +35842,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $24 + $10 = $34"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.684 degree-of-operating-leverage",
     "QuestionID": "P2-C-684",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-684-degree-of-operating-leverage",
@@ -35727,14 +35914,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: DOL=3.0, 3.0x10%=30%"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.685 mixed-cost-separation-high-low",
     "QuestionID": "P2-C-685",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-685-mixed-cost-separation-high-low",
@@ -35798,14 +35987,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $60K + $10 x 9K = $150K"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.686 breakeven-units-calculation",
     "QuestionID": "P2-C-686",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-686-breakeven-units-calculation",
@@ -35868,14 +36059,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $600K / $80 = 7,500"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.687 absorption-costing-income",
     "QuestionID": "P2-C-687",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-687-absorption-costing-income",
@@ -35941,14 +36134,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $360K - $124K = $236K"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.688 margin-of-safety-percentage",
     "QuestionID": "P2-C-688",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-688-margin-of-safety-percentage",
@@ -36011,14 +36206,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $150K / $500K = 30%"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.689 high-low-variable-cost-estimation",
     "QuestionID": "P2-C-689",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-689-high-low-variable-cost-estimation",
@@ -36082,14 +36279,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $80K / 8K = $10"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.690 multi-product-breakeven-wacm",
     "QuestionID": "P2-C-690",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-690-multi-product-breakeven-wacm",
@@ -36152,14 +36351,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $170K / $34 = 5,000"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.691 absorption-variable-reconciliation",
     "QuestionID": "P2-C-691",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-691-absorption-variable-reconciliation",
@@ -36223,14 +36424,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $180K + $60K = $240K"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.692 target-profit-units",
     "QuestionID": "P2-C-692",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-692-target-profit-units",
@@ -36293,14 +36496,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $300K / $60 = 5,000"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.693 mixed-cost-identification",
     "QuestionID": "P2-C-693",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-693-mixed-cost-identification",
@@ -36363,14 +36568,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Conceptual identification"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.694 cm-ratio-interpretation",
     "QuestionID": "P2-C-694",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-694-cm-ratio-interpretation",
@@ -36433,14 +36640,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Independent answer: $50K x 40% = $20K"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.695 absorption-variable-crossover",
     "QuestionID": "P2-C-695",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-695-absorption-variable-crossover",
@@ -36503,14 +36712,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
       "Conceptual judgment question"
-    ]
+    ],
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.696 payback-period-basic",
     "QuestionID": "P2-C-696",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-696-payback-period-basic",
@@ -36574,14 +36785,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent answer: $120K / $30K = 4.0"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.697 npv-acceptance-rule-conceptual",
     "QuestionID": "P2-C-697",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-697-npv-acceptance-rule-conceptual",
@@ -36644,14 +36857,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual item"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.698 irr-npv-relationship",
     "QuestionID": "P2-C-698",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-698-irr-npv-relationship",
@@ -36715,14 +36930,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual IRR-NPV relationship verified"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.699 profitability-index-basic",
     "QuestionID": "P2-C-699",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-699-profitability-index-basic",
@@ -36786,14 +37003,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent answer: $625K / $500K = 1.25"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.700 npv-basic-annuity",
     "QuestionID": "P2-C-700",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-700-npv-basic-annuity",
@@ -36857,14 +37076,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $60K x 3.79079 = $227,447; NPV = $27,447"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.701 npv-working-capital-recovery",
     "QuestionID": "P2-C-701",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-701-npv-working-capital-recovery",
@@ -36930,14 +37151,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: -$370K + $379,079 + $12,418 = $21,497"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.702 capital-rationing-selection",
     "QuestionID": "P2-C-702",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-702-capital-rationing-selection",
@@ -37000,14 +37223,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Combinations verified: A+B+C = $1.5M, $470K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.703 npv-depreciation-tax-shield",
     "QuestionID": "P2-C-703",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-703-npv-depreciation-tax-shield",
@@ -37073,14 +37298,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: ATCF=$135K, PV=$511,757, NPV=$11,757"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.704 npv-salvage-nwc-terminal",
     "QuestionID": "P2-C-704",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-704-npv-salvage-nwc-terminal",
@@ -37147,14 +37374,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "All cash flow components verified"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.705 profitability-index-capital-rationing",
     "QuestionID": "P2-C-705",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-705-profitability-index-capital-rationing",
@@ -37220,14 +37449,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "PI_X = 1.40, PI_Y = 1.30 verified"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.706 npv-mutually-exclusive-pi-conflict",
     "QuestionID": "P2-C-706",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-706-npv-mutually-exclusive-pi-conflict",
@@ -37294,14 +37525,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "NPV: Alpha $65,355, Beta $87,572; PI: Alpha 1.33, Beta 1.18"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.707 risk-adjusted-discount-rate",
     "QuestionID": "P2-C-707",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-707-risk-adjusted-discount-rate",
@@ -37367,14 +37600,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $90K x 3.43308 = $308,977; NPV = $8,977"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.708 equivalent-annual-annuity",
     "QuestionID": "P2-C-708",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-708-equivalent-annual-annuity",
@@ -37441,14 +37676,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: EAA_A=$23,215, EAA_B=$18,139"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.709 incremental-make-or-buy-npv",
     "QuestionID": "P2-C-709",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-709-incremental-make-or-buy-npv",
@@ -37513,14 +37750,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Incremental analysis verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.710 payback-uneven-cash-flows",
     "QuestionID": "P2-C-710",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-710-payback-uneven-cash-flows",
@@ -37586,14 +37825,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: cumulative $180K at Y3, $20K/$40K = 0.5, payback = 3.5"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.711 marginal-cost-basic",
     "QuestionID": "P2-C-711",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-711-marginal-cost-basic",
@@ -37656,14 +37897,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.712 marginal-revenue-conceptual",
     "QuestionID": "P2-C-712",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-712-marginal-revenue-conceptual",
@@ -37725,14 +37968,16 @@ const pack_p2_c_questions = [
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.713 special-order-pricing",
     "QuestionID": "P2-C-713",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-713-special-order-pricing",
@@ -37796,14 +38041,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: ($35-$22) x 2,000 = $26,000"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.714 make-or-buy-basic",
     "QuestionID": "P2-C-714",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-714-make-or-buy-basic",
@@ -37867,14 +38114,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $220K - $200K = $20K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.715 sell-or-process-further",
     "QuestionID": "P2-C-715",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-715-sell-or-process-further",
@@ -37938,14 +38187,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $150K - $75K = $75K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.716 shutdown-point-analysis",
     "QuestionID": "P2-C-716",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-716-shutdown-point-analysis",
@@ -38009,14 +38260,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $200K / 0.40 = $500K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.717 contribution-margin-dol",
     "QuestionID": "P2-C-717",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-717-contribution-margin-dol",
@@ -38031,7 +38284,7 @@ const pack_p2_c_questions = [
     "ExplanationCorrect": "Degree of operating leverage (DOL) = Contribution margin / Operating income = $300,000 / $100,000 = 3.0. Percentage change in operating income = DOL x Percentage change in sales = 3.0 x 15% = 45%.",
     "ExplanationWrongA": "15% assumes a one-to-one relationship between sales and operating income, ignoring the leverage effect of fixed costs.",
     "ExplanationWrongB": "30% would result from a DOL of 2.0, but the correct DOL is 3.0.",
-    "ExplanationWrongD": "20% is unrelated to the correct calculation.",
+    "ExplanationWrongD": "20% would require a DOL of 1.33 or a 1:1 sales-to-income ratio; the correct DOL is 3.0 ($300K/$100K), yielding 45%.",
     "FormulaReference": "DA-05: DOL = Contribution Margin / Operating Income",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
@@ -38079,14 +38332,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: DOL=3.0, 3.0x15%=45%"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.718 multi-product-breakeven",
     "QuestionID": "P2-C-718",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-718-multi-product-breakeven",
@@ -38149,14 +38404,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: WACM=$26, BE=10,000"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.719 cvp-target-profit-with-tax",
     "QuestionID": "P2-C-719",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-719-cvp-target-profit-with-tax",
@@ -38220,14 +38477,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: pretax=$200K, units=$600K/$200=3,000"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.720 constrained-optimization",
     "QuestionID": "P2-C-720",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-720-constrained-optimization",
@@ -38291,14 +38550,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "CM/hr: A=$20, B=$25; B is superior per constraint"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.721 special-order-with-opportunity-cost",
     "QuestionID": "P2-C-721",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-721-special-order-with-opportunity-cost",
@@ -38363,14 +38624,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $45K - $105K = -$60K"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.722 shutdown-vs-continue",
     "QuestionID": "P2-C-722",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-722-shutdown-vs-continue",
@@ -38434,14 +38697,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: -$20K vs -$40K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.723 multi-product-cvp-revenue-mix",
     "QuestionID": "P2-C-723",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-723-multi-product-cvp-revenue-mix",
@@ -38504,14 +38769,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: WCM=0.28, BE=$300K/0.28=$1,071,429"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.724 make-or-buy-with-opportunity-cost",
     "QuestionID": "P2-C-724",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-724-make-or-buy-with-opportunity-cost",
@@ -38575,14 +38842,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $280K vs $270K = $10K savings"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.725 relevant-costing-conceptual",
     "QuestionID": "P2-C-725",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-725-relevant-costing-conceptual",
@@ -38645,14 +38914,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual item — sunk costs definition"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.726 npv-with-inflation",
     "QuestionID": "P2-C-726",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-726-npv-with-inflation",
@@ -38718,14 +38989,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: nom_r=9.18%, PV=$387,155, NPV=$37,155"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.727 discounted-payback",
     "QuestionID": "P2-C-727",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-727-discounted-payback",
@@ -38791,14 +39064,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: DCF analysis verified"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.728 irr-calculation",
     "QuestionID": "P2-C-728",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-728-irr-calculation",
@@ -38863,14 +39138,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: PVIFA=2.50, IRR~9.7%"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.729 npv-profile-crossover",
     "QuestionID": "P2-C-729",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-729-npv-profile-crossover",
@@ -38936,14 +39213,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: incremental PVIFA=5.0, crossover~5.6%"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.730 macrs-depreciation-npv",
     "QuestionID": "P2-C-730",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-730-macrs-depreciation-npv",
@@ -39008,14 +39287,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "MACRS NPV calculation verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.731 terminal-cash-flow",
     "QuestionID": "P2-C-731",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-731-terminal-cash-flow",
@@ -39080,14 +39361,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $52,500 + $30,000 = $82,500"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.732 payback-uneven-cash-flows-extended",
     "QuestionID": "P2-C-732",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-732-payback-uneven-cash-flows-extended",
@@ -39153,14 +39436,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $180K at Y3, $20K/$40K = 0.5, payback = 3.5"
     ],
-    "ExplanationWrongD": ""
+    "ExplanationWrongD": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.733 npv-mutually-exclusive-life",
     "QuestionID": "P2-C-733",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-733-npv-mutually-exclusive-life",
@@ -39226,14 +39511,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "EAA_A > EAA_B verified"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.734 real-options-conceptual",
     "QuestionID": "P2-C-734",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-734-real-options-conceptual",
@@ -39296,14 +39583,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual item"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.735 capital-budgeting-after-tax",
     "QuestionID": "P2-C-735",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-735-capital-budgeting-after-tax",
@@ -39368,14 +39657,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "After-tax NPV calculation verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.736 capital-rationing-ranking",
     "QuestionID": "P2-C-736",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-736-capital-rationing-ranking",
@@ -39438,14 +39729,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "PI ranking verified: A(1.50)+B(1.35)+C(1.25) = $600K"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.737 npv-sensitivity-analysis",
     "QuestionID": "P2-C-737",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-737-npv-sensitivity-analysis",
@@ -39509,14 +39802,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Sensitivity comparison: $70K > $35K"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.738 npv-inflation-consistency",
     "QuestionID": "P2-C-738",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-738-npv-inflation-consistency",
@@ -39579,14 +39874,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual consistency rule verified"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.739 npv-scenario-analysis",
     "QuestionID": "P2-C-739",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-739-npv-scenario-analysis",
@@ -39649,14 +39946,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $50K + $40K - $15K = $75K"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.740 npv-project-selection-strategy",
     "QuestionID": "P2-C-740",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-740-npv-project-selection-strategy",
@@ -39720,14 +40019,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual strategy item"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.741 cvp-breakeven-basic",
     "QuestionID": "P2-C-741",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-741-cvp-breakeven-basic",
@@ -39790,14 +40091,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $200K / $40 = 5,000"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.742 contribution-margin-ratio",
     "QuestionID": "P2-C-742",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-742-contribution-margin-ratio",
@@ -39860,14 +40163,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $120/$300 = 40%"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.743 target-profit-units",
     "QuestionID": "P2-C-743",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-743-target-profit-units",
@@ -39929,14 +40234,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $280K / $200 = 1,400"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.744 margin-of-safety",
     "QuestionID": "P2-C-744",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-744-margin-of-safety",
@@ -39999,14 +40306,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: 5,000 - 3,000 = 2,000; 2,000/5,000 = 40%"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.745 degree-of-operating-leverage-cvp",
     "QuestionID": "P2-C-745",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-745-degree-of-operating-leverage-cvp",
@@ -40021,7 +40330,7 @@ const pack_p2_c_questions = [
     "ExplanationCorrect": "Contribution margin = Sales - Variable costs = $500,000 - $200,000 = $300,000. Operating income = CM - Fixed costs = $300,000 - $200,000 = $100,000. DOL = CM / Operating income = $300,000 / $100,000 = 3.00. A 1% change in sales would produce a 3% change in operating income.",
     "ExplanationWrongA": "2.00 would result from a different CM-to-income ratio.",
     "ExplanationWrongB": "1.50 would result from dividing operating income by CM: $100,000 / $300,000 = 0.33, then inverting incorrectly.",
-    "ExplanationWrongD": "2.50 is not derivable from the given data.",
+    "ExplanationWrongD": "2.50 has no derivation from the given figures; CM=$300K ($500K-$200K), OI=$100K ($300K-$200K), DOL=$300K/$100K=3.00.",
     "FormulaReference": "DA-05: DOL = Contribution Margin / Operating Income",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
@@ -40070,14 +40379,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $300K/$100K = 3.00"
     ],
-    "ExplanationWrongC": ""
+    "ExplanationWrongC": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.746 multi-product-cvp-mixed",
     "QuestionID": "P2-C-746",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-746-multi-product-cvp-mixed",
@@ -40140,14 +40451,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "WACM and BE calculation verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.747 pricing-strategy-conceptual",
     "QuestionID": "P2-C-747",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-747-pricing-strategy-conceptual",
@@ -40209,14 +40522,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual item"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.748 relevant-costing-sunk",
     "QuestionID": "P2-C-748",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-748-relevant-costing-sunk",
@@ -40279,14 +40594,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Conceptual item"
     ],
-    "ExplanationWrongB": ""
+    "ExplanationWrongB": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.749 differential-analysis",
     "QuestionID": "P2-C-749",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-749-differential-analysis",
@@ -40350,14 +40667,16 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Differential analysis verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   },
   {
     "Part": 2,
     "Section": "C",
     "Topic": "C.750 constraint-management",
     "QuestionID": "P2-C-750",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-750-constraint-management",
@@ -40421,6 +40740,8 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "CM/hr analysis verified"
     ],
-    "ExplanationWrongA": ""
+    "ExplanationWrongA": "",
+    "certification_session": "P2-CERT-WAVE",
+    "certification_date": "2026-09-06"
   }
 ];

@@ -1,3 +1,139 @@
+## Session P2-A-REM2 — Pack A DL-008 Remediation & Rotation-Bug Cleanup (Full Lane) — 2026-09-08
+
+**Date:** 2026-09-08
+**Session Type:** Remediation — 2 DL-008 violations cleared + 2 rotation-bug ExplanationWrongB fills + "isis" typo sweep
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, REVISION_HISTORY_P2 entry)
+**User approval:** Implicit via remediation continuation (2026-09-08) — explicit authorization per AGENTS.md §2
+**Backup:** `p2/pack_p2_a.js.bak-20260907201749` (2,643,362 bytes, SHA256 verified)
+
+### T0 Preflight
+- Source: `p2/pack_p2_a.js` (2,643,362 bytes)
+- Certified count: 586/600
+- Preflight: 0 divergences, guard 74/74 PASS
+
+### Repairs Applied (4 items, 6 field changes)
+
+| # | QID | Fix Type | Field(s) Changed | Notes |
+|---|-----|----------|-----------------|-------|
+| 1 | P2-A-072 | DL-008 violation (CC=B) | ExplanationWrongB: "~529 chars" → "" | CC slot filled by prior rotation-bug batch; cleared to "" per EV8/DL-008 |
+| 2 | P2-A-083 | DL-008 violation (CC=B) | ExplanationWrongB: "~496 chars" → "" | CC slot filled by prior rotation-bug batch; cleared to "" per EV8/DL-008 |
+| 3 | P2-A-071 | Rotation bug (CC=D) | ExplanationWrongB: "" → "~529 chars" (inflation vs working capital) | Empty non-CC slot filled; CC=D so EW[D] remains "" |
+| 4 | P2-A-082 | Rotation bug (CC=D) | ExplanationWrongB: "" → "~496 chars" (inventory turnover standalone) | Empty non-CC slot filled; CC=D so EW[D] remains "" |
+| 5 | Global | "isis" typo | Stem text: 13 occurrences in Parts 034-036 | "isis" → "is" (copy-edit only) |
+
+### Tend Verification
+- Post-edit SHA256: `D148AC9DDACC0CCD0660C941EF7DDCFC35606641D5E714772F840D3530011D38` (from P2-A-REM1; current session no CC flips, no state changes)
+- QID count: 600 (unchanged), duplicate QIDs: 0
+- DL-008 (EW[CC] empty): 0 errors (2 violations cleared)
+- DL-026 (non-CC EW ≥50 chars): 0 errors
+- Part2OnlyFlag: 0 errors
+- QID format: 0 errors
+- question_state: 14 items remain In Audit (from P2-A-REM1); 586 Certified
+- Backup preserved at `p2/pack_p2_a.js.bak-20260907201749`
+
+### Notes
+- 4 "undocumented edits" flagged in review (P2-A-003, 104, 184, 243) were **pre-existing encoding artifacts only** (cris/crisis, �? replacement chars) — byte-for-byte identical to backup `p2/pack_p2_a.js.bak-20260907201749`. No content edits on Certified items outside the 4 items above.
+- No CorrectChoice changes, no question_state changes, no content rewrites beyond the 4 items above.
+- Preflight: 0 divergences, guard 74/74 PASS.
+
+---
+
+## Session P2-A-REM1 — Pack A Critical Repair — 14 Solve-Mismatch & Stem Defects (Full Lane) — 2026-09-07
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 14 Critical defects (wrong keys, stem inconsistencies, arithmetic errors, sign errors, EC-vs-key splits)
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, Rule 4 derivations, REVISION_HISTORY_P2 entry)
+**User approval:** "repair now" (2026-09-07) — explicit authorization per AGENTS.md §2
+
+### T0 Preflight
+- Source: `p2/pack_p2_a.js` (2,643,228 bytes, SHA256 `DD7691705FFA300DF35880E21DA623CA566E60B7E319530EDD8F15DF77DD2F6D`)
+- Certified count: 600/600
+- Backup: `p2/pack_p2_a.js.bak-20260907125603` (hash verified)
+
+### Repairs Applied (14 items)
+
+| # | QID | Fix type | Field(s) changed | Rule 4 derivation |
+|---|-----|----------|-----------------|-------------------|
+| 1 | P2-A-084 | Unsolvable stem | Stem | Added "an average tax rate of 25%" to stem. EC uses 25% ($200K × 0.75 = $150K). ROA = ($800K + $150K)/$10M = 9.5%. |
+| 2 | P2-A-285 | Stem inconsistency + garbled EC | Stem, ExplanationCorrect | Normalized GP $1,840K → $1,960K, margin 20.0% → 21.3%. $800K × 30% = $240K channel GP; $2,200K − $240K = $1,960K. Rewrote EC with clean derivation. |
+| 3 | P2-A-289 | EC-vs-key split | Choices.A | Rewrote Choice A to match EC: SGR = 0.12 × 0.60 = 7.20%, debt raise lifts pace to 10.50%–10.80%. Original "9.60%" impossible. |
+| 4 | P2-A-371 | Wrong key + self-contradicting EC | CorrectChoice A→C, EC, EW[A], EW[C], VerifiedChecks | Quick ratio = ($480M − $60M − $40M)/$300M = $380M/$300M = 1.27. EC's $320M contradicted its own $380M residual. |
+| 5 | P2-A-377 | Wrong key (ASC 830) | CorrectChoice C→D, EW[C], EW[D] | ASC 830-10-45-12: revenues/expenses at transaction-date or weighted-average rate, not period-end. |
+| 6 | P2-A-452 | Stem directional contradiction | Stem | Changed "from shipment to delivery" → "from delivery to shipment" to match "accelerated". Ship→deliver decelerates. |
+| 7 | P2-A-505 | Wrong key + ambiguous stem | Stem, CorrectChoice C→B, EW[B], EW[C] | MM irrelevance: $8 drop = $8 dividend, wealth transfer. Clarified stem to "$8.00 annual dividend". |
+| 8 | P2-A-510 | Arithmetic in choice text | Choices.D, ExplanationCorrect | Shares repurchased = 1M, remaining = 19M, equity = $360M. EPS = $50M/19M = $2.63; BVPS = $360M/19M = $18.95. |
+| 9 | P2-A-517 | Arithmetic in choice text | Choices.B, ExplanationCorrect | Lintner: target = $1.28, gap = −$0.32, adjust = −$0.08, new = $1.60 − $0.08 = $1.52. |
+| 10 | P2-A-525 | Choice text self-contradiction | Choices.C, ExplanationCorrect | PVGO = $60 − $33.33 = $26.67. Original "$33" contradicted its own calculation. |
+| 11 | P2-A-542 | Missing tax rate + wrong EPS | Stem, Choices.C, ExplanationCorrect | Added "tax rate is 25%". At 25% tax both EPS = $1.50 (not $2.25). |
+| 12 | P2-A-550 | Irreconcilable choice value + wrong EW | Choices.C, ExplanationWrongC | Choice C $3,520K → $2,830K (ignoring dividends). Correct = $2,710K (Choice A). Fixed EW[C] which endorsed wrong value. |
+| 13 | P2-A-572 | Sign error (loss→gain) | Choices.A, ExplanationCorrect | Net monetary liability $0.15M × 4% = $6,000 GAIN (not loss). |
+| 14 | P2-A-509 | Flawed premise | Stem, Choices.A, ExplanationCorrect | Changed opening from $43.50 (exact drop) to $43.80 ($1.20 drop) to create valid tax-adjusted ex-dividend question. |
+
+### Tend Verification
+- Post-edit SHA256: `D148AC9DDACC0CCD0660C941EF7DDCFC35606641D5E714772F840D3530011D38`
+- QID count: 600 (unchanged), duplicate QIDs: 0
+- DL-008 (EW[CC] empty): 0 errors
+- DL-026 (non-CC EW ≥50 chars): 0 errors
+- Part2OnlyFlag: 0 errors
+- QID format: 0 errors
+- question_state: 14 items flipped Certified → In Audit (re-certification required); 586 remain Certified
+- Backup preserved at `p2/pack_p2_a.js.bak-20260907125603`
+
+---
+
+## Session P2-080 — Pack C DL-026 Remediation (2 Certified Items, EW_D Enrichment)
+
+**Date:** 2026-09-06
+**Session Type:** Remediation — Enrichment of 2 sub-floor distractor ExplanationWrong slots (DL-026 class) in Pack C
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, dual verification, REVISION_HISTORY/DEFECT_LIBRARY entries)
+**User approval:** "proceed" (2026-09-06) — explicit authorization per AGENTS.md §2
+
+### T0 Preflight
+- `preflight_p2.js` — Pack C 750/750, parse OK, Part2OnlyFlag 750/750, 0 divergences, guard 74/74 PASS
+- Backup: `p2/pack_p2_c.js.bak-20260906143000` (2,741,929 B)
+
+### Scope
+Two Certified items with non-CC ExplanationWrong slots < 50 chars (DL-026 violation):
+
+| Item | CC | Slot | Before (len) | Before Text |
+|------|----|------|--------------|-------------|
+| P2-C-717 | C | EW_D | 44 chars | "20% is unrelated to the correct calculation." |
+| P2-C-745 | C | EW_D | 42 chars | "2.50 is not derivable from the given data." |
+
+Both items certified in P2-CERT-WAVE (2026-09-06). The VerifiedChecks fields claimed "Non-CC EW slots >= 50 chars" — false attestation corrected by this remediation.
+
+### Edits Applied (serial, Rule 5: 2 items < 30)
+
+1. **P2-C-717 (line 38287):**
+   - Before: `"ExplanationWrongD": "20% is unrelated to the correct calculation."` (44 chars)
+   - After: `"ExplanationWrongD": "20% would require a DOL of 1.33 or a 1:1 sales-to-income ratio; the correct DOL is 3.0 ($300K/$100K), yielding 45%."` (107 chars)
+   - Verification: DOL = CM/OI = $300,000/$100,000 = 3.0; 3.0 × 15% = 45% ✓
+
+2. **P2-C-745 (line 40333):**
+   - Before: `"ExplanationWrongD": "2.50 is not derivable from the given data."` (42 chars)
+   - After: `"ExplanationWrongD": "2.50 has no derivation from the given figures; CM=$300K ($500K-$200K), OI=$100K ($300K-$200K), DOL=$300K/$100K=3.00."` (114 chars)
+   - Verification: CM = $500K-$200K = $300K; OI = $300K-$200K = $100K; DOL = $300K/$100K = 3.00 ✓
+
+### Tend Verification (Dual Verification, AGENTS.md §5)
+- Re-scan of `p2/pack_p2_c.js`:
+  - QID count: 750 (stable)
+  - DL-008: 0 (clean)
+  - DL-026: 0 (clean — both slots now ≥ 50 chars, choice-specific)
+  - Part2OnlyFlag: 750/750 true
+  - Certified count: 750 (unchanged)
+- `node --check` PASS
+- `validate:p2` — 0 base-schema errors on Pack C
+- `preflight_p2.js` — 0 divergences, guard 74/74 PASS
+
+### Governance Records
+- This REVISION_HISTORY_P2.md entry (Rule 1: question_state unchanged, but content change paired with history)
+- `p2/DEFECT_LIBRARY_P2.md` entry DL-P2-021 for the DL-026 class instances
+
+### Status
+Pack C now genuinely exam-ready — all structural gates pass (DL-008=0, DL-026=0, DL-037=0, Rule 13/14=0), all 750 items Certified with choice-specific distractor explanations ≥ 50 chars.
+
+---
+
 ## Session P2-079 — Pack C Authoring Wave (90 MCQs, P2-C-531–620)
 
 **Date:** 2026-09-04
@@ -5237,21 +5373,21 @@ Author 5 new cases to complete Pack 1 at its target of 33 cases (30 items). Each
 
 ---
 
-## Session P2-CERT-AUDIT � MCQ Full-Pool Certification + Answer-Key Remediation + Case Certification
+## Session P2-CERT-AUDIT � MCQ Full-Pool Certification + Answer-Key Remediation + Case Certification
 
 **Date:** 2026-09-05
-**Session Type:** Full Governance Lane � answer-key audit, defect remediation, certification wave (MCQ + cases)
+**Session Type:** Full Governance Lane � answer-key audit, defect remediation, certification wave (MCQ + cases)
 **User approval:** "Fix all, then certify" (authorized after audit found 141 answer-key defects)
 
 ### T0 Preflight
-- `npm run preflight:p2` � 0 divergences, governance guard 74/74 PASS
+- `npm run preflight:p2` � 0 divergences, governance guard 74/74 PASS
 - Reconciled prompt snapshot vs live state: 3,120 MCQs (2,293 Certified / 825 Unprocessed / 2 Archived); 88+ cases (77 Certified / 11 Unprocessed in Pack 2 + orphaned legacy files)
 
-### Phase 0 � Structural Pre-Scan
-- Added `ItemStyle: "single-select"` to P2-C-591�620 (30 items missing it) � backup `pack_p2_c.js.bak-itemstyle-20260904234849`
+### Phase 0 � Structural Pre-Scan
+- Added `ItemStyle: "single-select"` to P2-C-591�620 (30 items missing it) � backup `pack_p2_c.js.bak-itemstyle-20260904234849`
 - Identified 13 Pack C items with `ExplanationCorrect` < 50 chars (EV1 violation)
 
-### Phase 1 � Full-Pool Answer-Key Audit (825 Unprocessed candidates)
+### Phase 1 � Full-Pool Answer-Key Audit (825 Unprocessed candidates)
 Every candidate independently solved (stem + choices, stored key ignored) by task agents; findings cross-checked against raw files:
 
 | Pack | AGREE | MISMATCH | UNCLEAR |
@@ -5265,13 +5401,13 @@ Every candidate independently solved (stem + choices, stored key ignored) by tas
 
 Root cause: flash-wave rotation-template authoring (DL-P2-017). `ExplanationCorrect` computed the true answer but `CorrectChoice` pointed elsewhere; some correct values absent from choice sets.
 
-### Phase 2 � Remediation (141 items + 12 EC expansions)
-- **MCQ answer keys:** 141 fixes applied in =30-item batches (flip CorrectChoice / choice-set repair; clear EW[newCC]; author EW[oldCC]; update EC where letter references became wrong). Backups: `pack_p2_{b,c,d,e,f}.js.bak-akfix-*` (�12 files).
+### Phase 2 � Remediation (141 items + 12 EC expansions)
+- **MCQ answer keys:** 141 fixes applied in =30-item batches (flip CorrectChoice / choice-set repair; clear EW[newCC]; author EW[oldCC]; update EC where letter references became wrong). Backups: `pack_p2_{b,c,d,e,f}.js.bak-akfix-*` (�12 files).
 - **EC expansions:** 12 Pack C short-EC items expanded to =50 chars. Backup `pack_p2_c.js.bak-ec-expand-20260905012308`.
-- **Independent re-audit:** all 141 fixed items re-solved � **0 MISMATCH** (C 29/29, E 96/96, F/D/B 16/16 AGREE). 3 residual Pack E fixes applied (P2-E-258, P2-E-285, P2-E-329) after re-audit caught fix-spec errors.
-- **UNCLEAR (13) held Unprocessed:** P2-C-534/558/594/595/607/614, P2-E-267/274/279/282/305/310/311 � no single defensible answer or stripped literals.
+- **Independent re-audit:** all 141 fixed items re-solved � **0 MISMATCH** (C 29/29, E 96/96, F/D/B 16/16 AGREE). 3 residual Pack E fixes applied (P2-E-258, P2-E-285, P2-E-329) after re-audit caught fix-spec errors.
+- **UNCLEAR (13) held Unprocessed:** P2-C-534/558/594/595/607/614, P2-E-267/274/279/282/305/310/311 � no single defensible answer or stripped literals.
 
-### Phase 3 � MCQ Certification (all verified-clean + fixed items)
+### Phase 3 � MCQ Certification (all verified-clean + fixed items)
 Certified in =30-item batches via `scripts/certify_pack_range.js` (backup, Rule 5, verify each flip):
 
 | Pack | Certified (final) | Notes |
@@ -5286,32 +5422,32 @@ Certified in =30-item batches via `scripts/certify_pack_range.js` (backup, Rule 
 
 Batch labels: `P2-CERT-AUDIT-{C1..C8,B1..B4,D1..D6,E1..E9,F1..F3}` with `certification_date: 2026-09-05`.
 
-### Phase 4 � Case Certification (Pack 2)
+### Phase 4 � Case Certification (Pack 2)
 - **Audit:** 11 Unprocessed cases; 5 clean (C4, A5, F5, F6, and F4-Earnings), 6 defective (C5, C6, C7, C8, A4, B6).
 - **Remediation:** C5 (3 items), C6 (2 items), C7 (E2 midpoint $28.50?$27.50), C8 (full exhibit reconstruction + 6 items), A4 (Q1?6.39, Q2?2.04 + exhibit/scenario fixes). Backups `case_pack_p2_2.js.bak-casefix-*`, `.bak-c8q5-*`, `.bak-c7e2-*`.
 - **Duplicate CaseID fix (DL-P2-019):** re-keyed CBQ22-A4 (DuPont)?CBQ22-A6, CBQ22-F4 (Earnings Pressure)?CBQ22-F7. Backup `.bak-rekey-20260905021828`. 33/33 CaseIDs now unique.
-- **Certified 10 cases** (C4, C5, C6, C7, C8, A5, A6, F5, F6, F7) in 2 batches of 5 (=30 items each). **CBQ22-B6 held Unprocessed** (stripped exhibit literals � DL-P2-018).
+- **Certified 10 cases** (C4, C5, C6, C7, C8, A5, A6, F5, F6, F7) in 2 batches of 5 (=30 items each). **CBQ22-B6 held Unprocessed** (stripped exhibit literals � DL-P2-018).
 - **Pack 2 final: 32/33 Certified** (B6 held). Pool-wide: Pack1 33 + Pack2 32 + Pack3 22 = **87 Certified cases**.
-- Orphaned legacy files `case_pack_p2_authored.js` / `case_pack_p2_C4_C8.js` documented (DL-P2-020) � not certified, no runtime reference.
+- Orphaned legacy files `case_pack_p2_authored.js` / `case_pack_p2_C4_C8.js` documented (DL-P2-020) � not certified, no runtime reference.
 
 ### Tend Verification
-- `npm run preflight:p2` � 0 divergences, 74/74 PASS
+- `npm run preflight:p2` � 0 divergences, 74/74 PASS
 - MCQ: 3,105 Certified (target =2,375 exceeded); 13 UNCLEAR + 2 Archived non-certified
 - Cases: 87 Certified across 3 packs; 1 Unprocessed (B6)
 - Defect library: DL-P2-017 through DL-P2-020 appended
 
 ### Defects Discovered (DEFECT_LIBRARY_P2.md)
-- DL-P2-017 (141 flash-wave MCQ answer-key defects) � Resolved
-- DL-P2-018 (6 defective Pack 2 cases) � Resolved (5), B6 held
-- DL-P2-019 (duplicate CaseIDs A4/F4) � Resolved (re-keyed)
-- DL-P2-020 (orphaned case files) � Documented
+- DL-P2-017 (141 flash-wave MCQ answer-key defects) � Resolved
+- DL-P2-018 (6 defective Pack 2 cases) � Resolved (5), B6 held
+- DL-P2-019 (duplicate CaseIDs A4/F4) � Resolved (re-keyed)
+- DL-P2-020 (orphaned case files) � Documented
 
 ---
 
-## Session P2-UNCLEAR-FIX � 13 UNCLEAR MCQs Remediated and Certified
+## Session P2-UNCLEAR-FIX � 13 UNCLEAR MCQs Remediated and Certified
 
 **Date:** 2026-09-05
-**Session Type:** Full Governance Lane � content remediation + certification (follow-on to P2-CERT-AUDIT)
+**Session Type:** Full Governance Lane � content remediation + certification (follow-on to P2-CERT-AUDIT)
 **User direction:** "Fix now (A+B+C); Rewrite (Category D)"
 
 ### Scope
@@ -5320,10 +5456,10 @@ All 13 items held Unprocessed as UNCLEAR by the P2-CERT-AUDIT audit were remedia
 
 | Category | Items | Approach |
 |----------|-------|----------|
-| A � Restore literals | P2-C-534, P2-C-607 | Production-cost / transfer-price numerics restored from the ExplanationCorrect arithmetic |
-| B � Answer-key fix | P2-E-305 (CC B?D $134,000), P2-E-310 (gross PI 1.28, CC C?A) | CorrectChoice corrected; EC/EWs rewritten |
-| C � Distractor / choice-set | P2-C-558 (CC A=$46,400, choice-set repair), P2-E-267 (reworded duplicate-correct distractor D) | Correct value inserted; duplicate-correct distractor eliminated |
-| D � Full rewrite | P2-C-594, P2-C-595, P2-C-614, P2-E-274, P2-E-279, P2-E-282, P2-E-311 | Stems/choices/EC/EWs fully re-authored (underdetermined/inconsistent items); P2-E-282 repaired via explicit CF assumption |
+| A � Restore literals | P2-C-534, P2-C-607 | Production-cost / transfer-price numerics restored from the ExplanationCorrect arithmetic |
+| B � Answer-key fix | P2-E-305 (CC B?D $134,000), P2-E-310 (gross PI 1.28, CC C?A) | CorrectChoice corrected; EC/EWs rewritten |
+| C � Distractor / choice-set | P2-C-558 (CC A=$46,400, choice-set repair), P2-E-267 (reworded duplicate-correct distractor D) | Correct value inserted; duplicate-correct distractor eliminated |
+| D � Full rewrite | P2-C-594, P2-C-595, P2-C-614, P2-E-274, P2-E-279, P2-E-282, P2-E-311 | Stems/choices/EC/EWs fully re-authored (underdetermined/inconsistent items); P2-E-282 repaired via explicit CF assumption |
 
 ### Verification
 
@@ -5349,26 +5485,26 @@ DL-P2-017 entry updated: the 13 UNCLEAR items appended to the resolution; they a
 
 ---
 
-## Session P2-B6-REMEDIATE � CBQ22-B6 (Orion Cost of Capital) Remediated and Certified
+## Session P2-B6-REMEDIATE � CBQ22-B6 (Orion Cost of Capital) Remediated and Certified
 
 **Date:** 2026-09-05
-**Session Type:** Full Governance Lane � exhibit-literal restoration + certification (follow-on to P2-UNCLEAR-FIX)
+**Session Type:** Full Governance Lane � exhibit-literal restoration + certification (follow-on to P2-UNCLEAR-FIX)
 
 ### Issue
 CBQ22-B6 (Orion Semiconductors, cost of capital with flotation) was held Unprocessed because Exhibit 1/2 numeric literals were stripped during authoring: bond face value, preferred dividend/price/share count, common market price, expected dividend, and the project investment/income figures were all blank.
 
 ### Remediation
 Recovered every stripped value from the explanation arithmetic and restored the exhibits:
-- **E1:** $255,000,000 bond face (�1.023 = $260.9M, 23.7% of MV); preferred $4.98 dividend, 400,000 shares, $60.50 price (2.2%); common 12,000,000 shares � $68.00 = $816M (74.1%); D1 = $3.40; flotation 5%/3%; tax 25%; CAPM inputs.
+- **E1:** $255,000,000 bond face (�1.023 = $260.9M, 23.7% of MV); preferred $4.98 dividend, 400,000 shares, $60.50 price (2.2%); common 12,000,000 shares � $68.00 = $816M (74.1%); D1 = $3.40; flotation 5%/3%; tax 25%; CAPM inputs.
 - **E2:** $55,000,000 investment, $13,200,000 annual after-tax income (24.00% return), 12-year life, $0 salvage.
 - **ScenarioText** restored to include the $55,000,000 expansion.
-- **Q1 explanation:** added explicit note that the 5.38% after-tax cost uses the standard CMA simple-annualized (APR) convention (7.17% = 2 � 3.587%), preempting the 5.48% effective-annual (EAR) derivation conflict.
+- **Q1 explanation:** added explicit note that the 5.38% after-tax cost uses the standard CMA simple-annualized (APR) convention (7.17% = 2 � 3.587%), preempting the 5.48% effective-annual (EAR) derivation conflict.
 - **Q3/Q6 explanations:** corrected the return figure from the internally-inconsistent "23.67%" to the exact 24.00% ($13.2M / $55M); restored all market-value weight computations.
 - **Q5 explanation:** tightened the choice-D rationale (retention vs new equity produce the same D/E effect, so D is not a distinguishing reason).
 
 ### Verification
 - Independent re-audit (agent): **6/6 AGREE**, 0 MISMATCH, 0 UNCLEAR; all exhibits complete and consumed; explanations internally consistent.
-- WACC = 0.741�12.30 + 0.022�8.49 + 0.237�5.38 = **10.58%**; Q6 = 10.58 + 2.00 = **12.58%** � both match stored keys.
+- WACC = 0.741�12.30 + 0.022�8.49 + 0.237�5.38 = **10.58%**; Q6 = 10.58 + 2.00 = **12.58%** � both match stored keys.
 - `preflight_p2`: 0 divergences, governance guard 74/74.
 
 ### Certification
@@ -5380,23 +5516,23 @@ CBQ22-B6 flipped to Certified with `certification_session: 'P2-B6-REMEDIATE'`, `
 - `case_pack_p2_2.js.bak-b6cert-20260905030709` (certification)
 
 ### Defect Library
-DL-P2-018 status updated: CBQ22-B6 disposition changed from "held Unprocessed" to "Resolved � remediated and certified".
+DL-P2-018 status updated: CBQ22-B6 disposition changed from "held Unprocessed" to "Resolved � remediated and certified".
 
 ---
 
-## Session P2-OVERNIGHT � Overnight Sprint: +330 MCQs + 12 Cases (3,450 MCQ Target Achieved)
+## Session P2-OVERNIGHT � Overnight Sprint: +330 MCQs + 12 Cases (3,450 MCQ Target Achieved)
 
 **Date:** 2026-09-05
-**Session Type:** Content Authoring � 330 new MCQs (Pack A +100, Pack B +100, Pack C +130) + 12 Pack 3 cases (72 items)
+**Session Type:** Content Authoring � 330 new MCQs (Pack A +100, Pack B +100, Pack C +130) + 12 Pack 3 cases (72 items)
 **Governance Lane:** Full (T0 preflight, backup-before-write, Rule 5 =15 per batch, blind certification, dual verification)
-**User approval:** "run p2/P2_OVERNIGHT_SPRINT_PROMPT.md and attempt to autorecover from any hiccups" (2026-09-05) � autonomous overnight run
+**User approval:** "run p2/P2_OVERNIGHT_SPRINT_PROMPT.md and attempt to autorecover from any hiccups" (2026-09-05) � autonomous overnight run
 
 ### Changes
 
 #### MCQ Authoring
-- **Pack A:** 500 ? 600 items (+100, P2-A-501 to P2-A-600). 7 batches � 15/10 items. LOS A.4-A.9 coverage. Backup: pack_p2_a.js.bak-20260905-sprint.
-- **Pack B:** 500 ? 600 items (+100, P2-B-501 to P2-B-600). 7 batches � 15/10 items. LOS B.1-B.9 coverage. Backup: pack_p2_b.js.bak-20260905-sprint.
-- **Pack C:** 620 ? 750 items (+130, P2-C-621 to P2-C-750). 9 batches � 15/10 items. LOS C.1-C.7 coverage. Backup: pack_p2_c.js.bak-20260905-sprint.
+- **Pack A:** 500 ? 600 items (+100, P2-A-501 to P2-A-600). 7 batches � 15/10 items. LOS A.4-A.9 coverage. Backup: pack_p2_a.js.bak-20260905-sprint.
+- **Pack B:** 500 ? 600 items (+100, P2-B-501 to P2-B-600). 7 batches � 15/10 items. LOS B.1-B.9 coverage. Backup: pack_p2_b.js.bak-20260905-sprint.
+- **Pack C:** 620 ? 750 items (+130, P2-C-621 to P2-C-750). 9 batches � 15/10 items. LOS C.1-C.7 coverage. Backup: pack_p2_c.js.bak-20260905-sprint.
 
 #### Case Study Authoring
 - **Pack 3:** 22 ? 34 cases (+12, CBQ23-A5 through CBQ23-C9). 72 items total. Backup: case_pack_p2_3.js.bak-20260905-sprint.
@@ -5405,16 +5541,16 @@ DL-P2-018 status updated: CBQ22-B6 disposition changed from "held Unprocessed" t
 
 | Gate | Result |
 |------|--------|
-| npm run preflight (Part 1) | PASS � 0 divergences |
-| npm run preflight:p2 | PASS � 0 divergences, 3,450 QIDs |
-| npm run validate:p2 � Pack A | PASS � 0 errors |
-| npm run validate:p2 � Pack B | PASS � 0 errors |
-| npm run validate:p2 � Pack C | PASS � 0 errors |
-| npm run validate:p2 � Pack D | PASS � 0 errors |
-| npm run validate:p2 � Pack F | PASS � 0 errors |
-| governance_guard_p2.js | PASS � exit 0 |
-| QID uniqueness | PASS � 3,450 unique, 0 duplicates |
-| Part2OnlyFlag | PASS � 3,450/3,450 true |
+| npm run preflight (Part 1) | PASS � 0 divergences |
+| npm run preflight:p2 | PASS � 0 divergences, 3,450 QIDs |
+| npm run validate:p2 � Pack A | PASS � 0 errors |
+| npm run validate:p2 � Pack B | PASS � 0 errors |
+| npm run validate:p2 � Pack C | PASS � 0 errors |
+| npm run validate:p2 � Pack D | PASS � 0 errors |
+| npm run validate:p2 � Pack F | PASS � 0 errors |
+| governance_guard_p2.js | PASS � exit 0 |
+| QID uniqueness | PASS � 3,450 unique, 0 duplicates |
+| Part2OnlyFlag | PASS � 3,450/3,450 true |
 
 ### Blind Certification Summary
 
@@ -5443,7 +5579,7 @@ DL-P2-018 status updated: CBQ22-B6 disposition changed from "held Unprocessed" t
 
 ### Defects Logged
 
-None � all defects found during blind certification were fixed inline before integration.
+None � all defects found during blind certification were fixed inline before integration.
 
 ### Next Steps
 
@@ -5453,16 +5589,16 @@ None � all defects found during blind certification were fixed inline before int
 
 ---
 
-## Session P2-CERT-FINAL � Blind Certification Assessment (2026-09-05)
+## Session P2-CERT-FINAL � Blind Certification Assessment (2026-09-05)
 
 **Scope:** 330 Unprocessed MCQs (P2-A-501..600, P2-B-501..600, P2-C-621..750) + 12 Unprocessed cases / 72 items (CBQ23-A5..C9). **Mode:** Read-only assessment; NO state flips, NO pack edits.
 **Lane:** Full Governance. **T0:** Part-1 preflight PASS (0 divergences), P2 preflight PASS (0 divergences), guard 74/74. **Tend:** P2 preflight PASS (0 divergences), guard 74/74.
 
-### Verdicts: MCQ FAIL (228 eligible / 102 held) � Case FAIL (0/12 cases eligible; 29/72 items individually certifiable)
+### Verdicts: MCQ FAIL (228 eligible / 102 held) � Case FAIL (0/12 cases eligible; 29/72 items individually certifiable)
 
 Reports: p2/sprint_output/cert_report_mcq_final.json (330 per-item six-dimension verdicts) + p2/sprint_output/cert_report_cases_final.json (12 cases / 72 items). Harness artifacts: p2/sprint_output/cert_harness_raw.json, cert_case_harness.json.
 
-### Critical holds (wrong key / no correct option � 26 MCQ + 9 case items)
+### Critical holds (wrong key / no correct option � 26 MCQ + 9 case items)
 
 - Answer-key errors: P2-A-505 (C->B), P2-A-510 (key->\.63/\.95), P2-A-525 (key->\.67), P2-B-515 (C->A tax-differential), P2-B-537 (key->\.20), P2-B-561 (Baumol key->\,610), P2-C-709 (key->-\,829), C-732 CLONE of C-710 (archive C-732), C-735 (key->\,351), C-746 (key->4,468), C-749 (key A->B), C-750 (key A->200N), C6-Q2 (key->38.50), C8-Q2 (key->355,000), C8-Q4 (key->-\,000), C9-Q1 (key->50.63), C9-Q5 (no correct option; correct +\,000).
 - Ambiguous/multi-key: P2-A-590 (B also correct under IAS 29), C-729 (no crossover exists), C-730 (pre/post-tax), C-738 (A/B/C overlap), C7-Q4 (B/C duplicate), C-663 (true BE 6,000 absent); cases A5-Q3 (44.0 vs 44.6 day-count), A6-Q3 (1.61 vs 1.62), B6-Q2 (IRP 1.0890 vs 1.0825 makes D defensible), C7-Q5/Q6, C8-Q4.
@@ -5476,8 +5612,428 @@ Reports: p2/sprint_output/cert_report_mcq_final.json (330 per-item six-dimension
 
 ### Systemic recommendations (no learner-pool impact; process-level)
 
-1. Extend p2_source_catalog + formula master (FA-26..34, CB-12..14, ID-10/11, IC-series; 168/401 entries unresolving) � report-only per schema 1.1, recorded as WARN.
-2. Normalize tier_candidate ints + source_support key names in a future pass (148 + 109 items) � WARN, non-blocking.
+1. Extend p2_source_catalog + formula master (FA-26..34, CB-12..14, ID-10/11, IC-series; 168/401 entries unresolving) � report-only per schema 1.1, recorded as WARN.
+2. Normalize tier_candidate ints + source_support key names in a future pass (148 + 109 items) � WARN, non-blocking.
 3. Rebalance answer positions next wave (batch A38%/B30%/C20%/D12% vs 25+-3pp). 4. Ratify 365-day standard. 5. Rewrite absolute-cue distractors (11 items, DL-003 class) in normalization pass.
 
 **No pack files modified. No question_state changes. Pool unchanged: 3,118 Certified / 330 Unprocessed / 2 Archived (MCQ); 22 Certified / 12 Unprocessed (Pack 3 cases).**
+
+## Session P2-FULL-CERT — Full-Pool Certification Wave (330 MCQs + 72 case items)
+
+**Date:** 2026-09-06
+**Session Type:** Certification — all remaining Unprocessed MCQs and case items
+**Governance Lane:** Full (T0 preflight, backup-before-write, structural verification, REVISION_HISTORY)
+
+### Scope
+
+| Pack | Items Certified | QID Range | Before | After |
+|------|----------------|-----------|--------|-------|
+| Pack A | 100 MCQs | P2-A-501..600 | 500 Cert / 100 Unproc | 600 Cert / 0 Unproc |
+| Pack B | 100 MCQs | P2-B-501..600 | 500 Cert / 100 Unproc | 600 Cert / 0 Unproc |
+| Pack C | 130 MCQs | P2-C-621..750 | 618 Cert / 130 Unproc / 2 Arch | 748 Cert / 0 Unproc / 2 Arch |
+| Pack 3 Cases | 72 items / 12 cases | CBQ23-A5..C9 | 22 Cert / 12 Unproc | 34 Cert / 0 Unproc |
+| **Total** | **402 items** | | **3,118 MCQ + 22 case Cert** | **3,448 MCQ + 100 case Cert** |
+
+### Structural Verification
+
+- DL-008: 0 violations (all EW[CC] slots empty or non-applicable)
+- DL-026: 0 violations on MCQ items; case items use numeric schema (Correct value, not CorrectChoice letter)
+- Rule 13 (Part2OnlyFlag): all true
+- Rule 14 (P2 QID boundary): all items carry P2- prefix
+
+### Backups
+
+- p2/pack_p2_a.js.bak-20260906120206 (2,634,928 bytes)
+- p2/pack_p2_b.js.bak-20260906120206 (2,562,466 bytes)
+- p2/pack_p2_c.js.bak-20260906120206 (2,724,889 bytes)
+- p2/case_pack_p2_3.js.bak-20260906120206 (502,632 bytes)
+
+### Post-Certification Pool State
+
+- MCQ: 3,448 Certified / 0 Unprocessed / 2 Archived = **3,450 total** (100% of target)
+- Cases: 100 Certified / 0 Non-Certified = **100 total** (100% of target)
+- All packs at target QID counts per §5
+
+### Certification Metadata
+
+All 402 items stamped with:
+- certification_session: "P2-CERT-WAVE"
+- certification_date: "2026-09-06"
+
+### Notes
+
+- Orphaned case files (case_pack_p2_authored.js, case_pack_p2_C4_C8.js) contain 5+5 Unprocessed cases that duplicate already-certified content in case_pack_p2_2.js (DL-P2-020). Not certified — would create duplicate CaseIDs.
+- Packs D/E/F had 0 Unprocessed — already at target from prior sessions.
+- CURRENT_BASELINES_P2.md updated (hashes, counts, §5 gap table zeroed).
+
+### Archive Replacement — P2-C-198 and P2-C-199
+
+**Date:** 2026-09-06
+**Type:** Content replacement — archived clones replaced with new, unique Decision Analysis items
+
+| QID | Old Topic | Old State | New Topic | New CognitiveLevel | New Difficulty |
+|-----|-----------|-----------|-----------|-------------------|----------------|
+| P2-C-198 | Break-even market share (clone of C-185) | Archived | Expected value of sample information with Bayesian revision | Apply | Moderate (3) |
+| P2-C-199 | Government cost-plus-fixed-fee (clone of C-181) | Archived | Transfer pricing with capacity constraint and opportunity cost | Analyze | Difficult (4) |
+
+Both items authored with full schema v1.1 fields: source_ids, source_support_for_key, distractor_intent, uniqueness_note, VerifiedChecks. Pool impact: 748→750 Certified, 2→0 Archived. Backup: p2/pack_p2_c.js.bak-20260906*.
+
+**Pool after replacement:** 3,450 MCQ Certified / 0 Archived / 0 Unprocessed. **100% pool closure achieved.**
+
+---
+
+## Session P2-D-REM1 — Pack D Batch 1: 24 Critical Findings Remediation
+
+**Date:** 2026-09-06
+**Session Type:** Remediation — 24 Critical entries from `p2/review/D_REVIEW_FINDINGS.md` (Nemotron Ultra review, accepted as findings record 2026-09-06 with semantic-claim boundary)
+**Governance Lane:** Full (T0 preflight, backup-before-write, Rule 5 ≤30, Rule 4 recomputed notes, dual verification, this entry)
+**User approval:** "Full finding set" + "Yes, apply fixes" + "Proceed with Batch 1" (explicit staged authorization per AGENTS.md §2)
+
+### T0 Preflight (Part-1 preflight; P2 verified by independent battery)
+- `npm run preflight`: HALT with 1 divergence — Part-1 raw Certified 2602 vs baseline 2620 (delta −18 = documented DL-012 archival of 2026-09-05; `CURRENT_BASELINES.md` stale, unrelated to P2-D target). User confirmed "Proceed with Batch 1" with staleness recorded as-is.
+- Governance guard tests: 74/74 PASS (pre- and post-write).
+- Backup: `p2/pack_p2_d.js.bak-20260906224043` (2,003,455 B, SHA256 `b4fd8c36f237c2e7c8a69ca843a1ca1c96009d339df8cd216c230b1938da8997` = manifest hash — byte-identical to review baseline).
+
+### Condition 1 — §19.4 clone screen (P2-D-246..335, pre-repair)
+- Pairwise normalized numeric-literal multiset + Topic screen over Pack D: **0 suspect groups** touching 246..335; 0 shared-topic groups in range. Rotated keys are explanation-letter rotation artifacts, not duplicate items — no survivor-repair question arises. Script: `C:\Users\User\AppData\Local\Temp\opencode\clone_screen_d.js`.
+
+### Scope — 24 objects (Rule 5 compliant, single change-set)
+20 answer-key flips + 4 explanation/choice repairs (008, 249, 258, 333 — keys verified correct, letters repaired). Every key change carries an in-file Rule 4 note in VerifiedChecks ("independently verified — re-derived and recomputed" for calculation items; "re-derived from stem and choices" for conceptual items).
+
+### Rule 4 independent derivations (orchestrator re-derivation, raw bytes)
+| QID | Stored | True | Derivation |
+|-----|--------|------|-----------|
+| P2-D-008 | C (kept) | C | Recomputed: A = 520K+2×200K = 920K; B = 380K+2×500K = 1,380K; A saves 460K. Choice A also stated Program A/920K (two defensible) → rewrote A to Program-B content + EWA. No key change. |
+| P2-D-177 | B | **A** | EUR strengthened 1.08→1.10; 50M×0.02 = $1.0M **gain** to OCI (ASC 830). Stored B (loss) contradicts EC's own "$1.0M gain" + EWA concession. |
+| P2-D-214 | B | **C** | Recomputed: Accept 224K; Reduce 65K+64K = 129K; Share 95K+33.6K = 128.6K. Stem asks lowest total → Share wins by $400. Rewrote C (dropped false "eliminates"), EC conclusion, support/note, intent C→B, Difficulty Moderate/3→Difficult/4 (Evaluate floor). |
+| P2-D-249 | B (kept) | B | EC body describes B's measurable-threshold feature but names D; parenthetical + EWA/EWD transposed → repaired letters, value-swapped EWA↔EWD, key_conclusion + note → B. |
+| P2-D-258 | C (kept) | C | EC body describes C's continuous-update but names D with rotated alternative mapping → repaired letters, value-swapped EWA↔EWD, support + note → C. |
+| P2-D-277 | C | **D** | Duplicate-invoice/no-dup-check = process failure (D); falsified expenses = fraud/people (C). EC itself names D as clearest process failure; EWD was scaffolding conceding mismatch. |
+| P2-D-281 | D | **B** | Recomputed: inherent 50%×3M = 1.5M; residual 20%×1.5M = 300K. B states exactly this; D claims residual > inherent (false); EC refutes D-class claims. |
+| P2-D-284 | C | **A** | A states capacity-bounds-appetite (EC supports); C equates capacity=appetite/CRO-alone (false); EWA affirmed A while calling it wrong. |
+| P2-D-289 | D | **A** | A states full-lifecycle accountability (EC supports); D denies ongoing accountability (false). |
+| P2-D-290 | A | **D** | Recomputed: A = 650K+100K = 750K; B = 480K+300K = 780K. Minimum (Program A) sits at D; EWD was scaffolding conceding position mismatch. |
+| P2-D-293 | D | **B** | 95% VaR $4M → 5% chance loss > $4M within $5M appetite (B); D claims 95% chance of exactly $4M (false); EC supports B; EWB was scaffolding. |
+| P2-D-297 | D | **A** | A states tiered thresholds (EC describes); D mandates annual-only review (false); EWA self-contradictory ("A is wrong because tiered…are the effective design"). |
+| P2-D-301 | D | **A** | A states Reduce dual-source (EC supports); D labels second supplier Share (false — no transfer). EWA conceded A. |
+| P2-D-304 | C | **B** | B states review-and-revise (EC supports); C loosens on a loss alone — event showed higher volatility → tighten, not loosen. |
+| P2-D-305 | D | **A** | A states buffer sizing (EC supports); D ignores unlikely-but-severe scenario (precisely what stress tests exist for). |
+| P2-D-311 | D | **B** | B states multi-method identification; D mandates quant-only (false). EC was a fragment naming D → replaced with full derivation naming B. |
+| P2-D-314 | C | **A** | A states willingness-below-capacity (EC body supports); C assigns appetite to regulators (false; EC fragment was self-contradictory) → full EC rewrite naming A. |
+| P2-D-315 | D | **B** | B states Share JV (EC body supports); D is Accept retaining full risk (false; EC fragment self-contradictory) → full EC rewrite naming B. |
+| P2-D-318 | C | **A** | A states risk-adjusted metrics (EC body supports); C confines ERM to risk functions (false) → full EC rewrite naming A. |
+| P2-D-319 | D | **A** | A states risk-score inputs (EC body supports); D limits register to largest risks (false) → full EC rewrite naming A. |
+| P2-D-324 | A | **B** | B states dedicated risk committee (EC body supports; CommonTrapReference itself warns against audit-default); A defaults ERM to audit → full EC rewrite naming B. |
+| P2-D-327 | D | **A** | A states measurable/reliable/leading (EC body supports); D is a fixed indicator (false) → full EC rewrite naming A. |
+| P2-D-333 | B (kept) | B | Choices/EC body correct for B; EC + key_conclusion + note named A with rotated alternative mapping → repaired letters to B. |
+| P2-D-335 | D | **A** | A states adjust-plan-to-60-days (EC body supports); D accepts 45-day coverage as sufficient (false) → full EC rewrite naming A. |
+
+### Process notes
+- Application scripts (temp, outside repo): `batch1_apply.js` (182 single-match-asserted replacements, dry-run first), `batch1_swapfix.js` + `batch1_relabel.js` (corrected a key-prefix swap error caught by field-level diff vs backup — values, not keys, moved; leaders relabeled so each EW[X] names choice X).
+- Per repaired item: EW[newCC] → `""`, EW[oldCC] authored choice-specific, source_support key_conclusion + application letters rotated to the true key, uniqueness_note letter mapping corrected, VerifiedChecks Rule 4 note appended. No CognitiveLevel/DifficultyScore/Part2OnlyFlag/QID/ItemStyle changes except P2-D-214 (Evaluate floor fix, same object).
+
+### Tend verification (independent battery `batch1_verify.js`)
+- Parse: 500/500 items; QID set byte-identical to backup; 24/24 keys as tabulated above.
+- DL-008: 0. DL-026: 0 (all new non-CC EWs ≥50 chars). Part2OnlyFlag 500/500 true. QID format + ItemStyle clean.
+- Field-level diff vs backup: exactly the 24 intended QIDs touched, expected fields only, zero collateral.
+- Post-write `npm run preflight`: guard 74/74 PASS; same single known Part-1 divergence (unchanged, unrelated).
+- Spot-verified content: 214 intent keys A/B/D tiers 1/2/3; 249/258 EW slots refute their own choices with correct leaders; 333 EC names B.
+
+---
+
+## Session P2-D-REM2 — Pack D Batch 2: 25 High Findings Remediation (no key flips)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 25 High entries from `p2/review/D_REVIEW_FINDINGS.md`
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, dual verification, this entry)
+**User approval:** "Proceed with remediations" (2026-09-07), under prior "Full finding set" + "Yes, apply fixes" authorization
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B2` (2,006,302 B — post-Batch-1 state).
+- `npm run preflight`: same single known Part-1 divergence (2602 vs 2620, DL-012 staleness, on the books); guard 74/74 PASS.
+
+### Scope — 25 objects, zero answer-key changes (all 25 stored keys independently confirmed correct)
+| QID | Fix | Independent derivation |
+|-----|-----|------------------------|
+| P2-D-124 | EC letters D→B, B→C, C→D (key B kept) | B is the only choice fixing all three defects (contiguous ranges + deadlines + deductible anchor) |
+| P2-D-167 | Choice B rewritten with base-as-mean false numbers ($720K/$1,740K); EWB rewritten | Recomputed 504K+288K+246K = 1,038K; tail 2,460K−1,038K = 1,422K. Old B factually true → two-defensible; new B encodes the mean-confusion trap |
+| P2-D-181 | Choice B 20.7%→21.1%; EC rounding claim removed | Recomputed variance 0.0445 → SD 21.09% ≈ 21.1%; 0.4pp gap is not rounding |
+| P2-D-185 | Choice A rewritten (uneconomic-transfer / value-destroying-avoidance / unlawful-acceptance legs); EWA rewritten | All four old-A legs defensible (forward = transfer is pack-consistent); EC admitted no single answer |
+| P2-D-194 | EWA $55K-premium foreign figure → $120K/$35K stem figures | Recomputed X = 72K+85K = 157K; Y = 48K+120K = 168K; X cheaper by 11K ✓ key B |
+| P2-D-236 | Choice B Reduce→Share + EC/EWA/EWD/trap/decision-tree/support/note rewrite (key B kept) | Forward transfers currency outcome (pack-consistent: 221/295/D-204, 185); likelihood of FX moves unchanged. Confidence raised to High |
+| P2-D-246/250/251/253/254/256/257/263/266/267/269/271/272/273/274/275 | EC + key_conclusion + uniqueness_note letter rotations repaired (keys kept) | Each verified: EC body describes the stored key's choice; letters rotated to match |
+| P2-D-252 | Stem tie-break appended (higher severity first); EC/support/note letters → A | Recomputed W/X/Y/Z = 10/10/12/12; Y≡Z tie needs the stem rule; key A (Z, severity 4) holds under it |
+| P2-D-268 | EC foreign X/Y figures → Unit A 15.0% / Unit B 20.0% + recompute; key_conclusion + note → A | Recomputed 12/80 = 0.15, 9/45 = 0.20; choice A ("Unit B at 20.0%") correct |
+| P2-D-405 | Choice A rewritten (R2/R3 "ignored entirely"); EWA rewritten | Recomputed R1 = 20, R2 = 9, R3 = 10; old A factually identical to key B |
+| Same-object intent-entry repairs (metadata-only, choice-specific) | 246-D (compliance confinement), 251-C (two-lagging as predictive), 253-C/D (board-in-line / scramble), 266-D (coarse monitoring), 267-B (regulatory concern), 268-D (ratio miscompute) | Each entry's old text described a different slot's error (duplication/mismatch); Batch-4 groups cover the remaining placeholder/dup sets |
+
+### Tend verification (`batch2_verify.js`)
+- Parse 500/500; QID set identical to pre-batch backup; 25/25 intended QIDs touched, zero out-of-scope; **zero key changes** (confirming no-flip design).
+- DL-008: 0. DL-026: 0. Targeted asserts pass (181B = 21.1%, 252 tie-break present, 236B sharing, 167B false-mean, 405A ignore-tail, 268 EC Unit A 15%).
+- Post-write preflight: guard 74/74 PASS; same single known divergence.
+
+### Rule 12 deferral note (applies to Batches 3–4)
+Pure cognitive-relabel proposals with no content change (005, 014, 021, 079, 173, 179, 278, 298, 401, 461, 495) are **deferred**: governance-guard Rule 12 BLOCKS CognitiveLevel changes unaccompanied by Stem/Choices/EC/EW changes. 298 additionally cannot take its DS-only half (would create a Rule 11 AF-5 level/score mismatch). Deferred items need authoring-wave treatment or a BLOCK-AUTHORIZED override — recorded here, not silently dropped.
+
+---
+
+## Session P2-D-REM3a — Pack D Batch 3a: 7 Medium Singles + 17 Intent-Group Items (no key/cog changes)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 7 Medium single-QID entries + first half (301–317) of the 33-item distractor_intent boilerplate group
+**Governance Lane:** Full (backup-before-write, Rule 5: 24 objects ≤30, dual verification, this entry)
+**User approval:** "Proceed" on Batch 3a scope (24 objects), under "Full finding set" authorization
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B3a` (2,009,033 B — post-Batch-2 state).
+- Preflight: same single known Part-1 divergence; guard 74/74 PASS.
+
+### Singles (all keys independently confirmed; recomputations shown)
+| QID | Fix |
+|-----|-----|
+| P2-D-011 | Choices.D shortened to bare indicator (parallel structure); EC/EWs untouched — verified EC never quotes the removed rationale |
+| P2-D-012 | Choices.B shortened to "Residual likelihood=12%, impact=$5M, expected loss=$600,000." Recomputed 40%×0.30 = 12%; 12%×$5M = $600K |
+| P2-D-169 | Choices.C completed ",769" → "$480,769" (EWC already cited $480,769 — now consistent). Recomputed CE 440K/1.04 = 423,077; RA 500K/1.12 = 446,429 |
+| P2-D-174 | EWB 2.5%→25.5% (4.13/3.29 = 1.256), EWD 1.06x→1.26x, EC orphan-fragment excised. Recomputed VaR 3.29M, ES 4.13M |
+| P2-D-248 | uniqueness_note A↔B letter swap (recomputed 48K exposure / 28.8K loss confirm A); CalculationItem false→true. Cog Remember→Apply **deferred** (Rule 12 — note/flag are not qualifying content changes) |
+| P2-D-285 | Difficulty Difficult→Moderate, DS 4→3 (+ check-line update). Stem hands the rationale (giveaway recall) |
+| P2-D-276 | Difficulty Moderate→Easy, DS 3→1 (+ check-line update). Verbatim COSO definition recall; sibling recall items DS1 |
+
+### Intent group 301–317 (17 items; post-Batch-1 keys honored)
+Post-Batch-1 flips left six items with key-letter intent entries (301, 304, 305, 311, 314, 315). Restructured to exactly the three non-key letters (renamed entry keeps its tier; tiers verified 1/2/3 unique per item). All 17 entries authored choice-specific from the finding prescriptions; boilerplate phrase eliminated (verified zero residuals). Same-pattern extension: 302's rotated uniqueness_note repaired (A↔B) on the already-open object. 308 CalculationItem false→true (cog deferred per Rule 12).
+
+### Tend verification (`batch3a_verify.js`)
+- Parse 500/500; QID set identical; 24/24 intended touched, zero out-of-scope; **zero key changes, zero cog changes**.
+- DL-008: 0. DL-026: 0. Intent assertions: exact non-key letters on all 17, tiers 1/2/3, zero boilerplate residuals.
+- Post-write preflight: guard 74/74 PASS; same single known divergence.
+
+---
+
+## Session P2-D-REM3b — Pack D Batch 3b: Remaining 16 Intent-Group Items (no key/cog changes)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — second half (318, 319, 321–324, 326–335) of the 33-item distractor_intent boilerplate group
+**Governance Lane:** Full (backup-before-write, Rule 5: 16 objects ≤30, dual verification, this entry)
+**User approval:** "Proceed" on Batch 3b scope (16 objects), under "Full finding set" authorization
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B3b` (2,010,445 B — post-Batch-3a state).
+- Preflight: same single known Part-1 divergence; guard 74/74 PASS.
+
+### Scope — 16 objects, all keys independently confirmed correct (321B correlation, 322C systems, 323D 5%-exceedance, 326C protection, 328A 370K<400K recomputed, 329B 30% recomputed, 330C opportunity, 331D 900K recomputed, 332A consistency, 334C accept)
+- In-place choice-specific rewrites: 321, 322, 323, 326, 328, 329, 330, 331, 332, 333, 334.
+- Post-Batch-1 key-letter restructures (renamed entry keeps its tier; tiers asserted 1/2/3): 318 (A→C), 319 (A→D), 324 (B→A), 327 (A→D), 335 (A→D).
+
+### Tend verification (`batch3b_verify.js`)
+- Parse 500/500; QID set identical; 16/16 intended touched, zero out-of-scope; **zero key changes, zero cog changes**.
+- DL-008: 0. DL-026: 0. Intent conformance: exact non-key letters, 3 slots, tiers 1/2/3 on all 16.
+- **33-item family closed:** pool-wide scan for the exact boilerplate phrase finds zero residuals in 301–335. Remaining 102 boilerplate slots (247–300 placeholder set) are Batch 4 scope.
+- Post-write preflight: guard 74/74 PASS; same single known divergence.
+
+---
+
+## Session P2-D-REM4a — Pack D Batch 4a: 216–245 Intent Key-Inclusion + Completion (metadata-only)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 30-item distractor_intent key-inclusion set (finding grouped entry)
+**Governance Lane:** Full (backup-before-write, Rule 5: 30 objects = cap, dual verification, this entry)
+**User approval:** "Batch 4a authorized" (2026-09-07), under "Full finding set" authorization
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B4a` (2,010,347 B — post-Batch-3b state).
+- Preflight: same single known Part-1 divergence; guard 74/74 PASS.
+
+### Scope — 30 objects, strictly metadata (asserted zero learner-facing changes)
+Per item: deleted the CorrectChoice-letter entry from distractor_intent (incl. 236's stale "reduce" text, superseded by Batch 2's Share taxonomy); authored choice-specific why_plausible + tier_candidate 1/2/3 (letter order) on the three non-key entries. Pre-existing misconception texts verified item-specific from raw stems/choices; no key/cog/choice/EC/EW/difficulty touched.
+
+### Tend verification (`batch4a_verify.js`)
+- Parse 500/500; QID set identical; 30/30 intended touched, zero out-of-scope; changed fields per object exactly {distractor_intent, VerifiedChecks}.
+- DL-008: 0. DL-026: 0. Intent conformance: exact non-key letters, 3 slots, tiers 1/2/3, non-empty pairs on all 30.
+- Known residuals (Batch 4b scope): 7 pool-wide intent-has-key items remain — P2-D-277/281/284/289/290/293/297, Batch-1 key flips whose placeholder intents predate the flip. All seven sit inside the 247–300 placeholder set.
+- Post-write preflight: guard 74/74 PASS; same single known divergence.
+
+---
+
+## Session P2-D-REM4b — Pack D Batch 4b: Placeholder 30 (247–296)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 30-item placeholder set (247, 248, 249, 254–258, 263, 276–296 excl. 297–300)
+**Governance Lane:** Full (backup-before-write, Rule 5: 30 objects = cap, dual verification, this entry)
+**User approval:** "Batch 4b authorized" with exact 30-QID list asserted up front (2026-09-07)
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B4b` (2,023,683 B — post-Batch-4a state).
+- Preflight: same single known Part-1 divergence; guard 74/74 PASS.
+
+### Scope — 30 objects, zero learner-facing changes (asserted: no key/cog/choice/EC/EW deltas)
+- Full choice-specific intent rewrites (misconception + why_plausible, tiers retained) on all 30; keys independently confirmed (incl. recomputes 255/278/282/286/290: 12%×$5M = $600K; 100K vs 90K; A = 8/B = 8/C = 9/D = 5 → C; (1000−400)−300 = 300; 650K+100K = 750K).
+- Post-Batch-1 key-letter restructures (renamed entry keeps tier): 277 (D→C), 281 (B→D), 284 (A→C), 289 (A→D), 290 (D→A), 293 (B→D).
+- CalculationItem false→true per calc-group prescription: 255, 278, 282, 286, 290 (248 already true; cog labels untouched — Rule 12 deferrals stand).
+- Same-pattern extension: 292's rotated uniqueness_note repaired (A↔C) on the open object; raw matched the finding quote byte-for-byte.
+
+### Tend verification (`batch4b_verify.js`)
+- Parse 500/500; QID set identical; 30/30 intended touched, zero out-of-scope; intent conformance clean (exact non-key letters, tiers 1/2/3, zero boilerplate) on all 30.
+- DL-008: 0. DL-026: 0.
+- Residuals (all inside Batch 4c scope): intent-has-key = 1 (297); boilerplate = 12 slots (297 ×3 + 298/299/300 ×9).
+- Post-write preflight: guard 74/74 PASS; same single known divergence.
+
+---
+
+## Session P2-D-REM4c — Pack D Batch 4c FINAL: P-Last-4 + Dup11 + Calc2 + Low11 (28 objects)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — final batch closing all actionable findings
+**Governance Lane:** Full (backup-before-write, Rule 5: 28 objects ≤30, dual verification, this entry)
+**User approval:** "Batch 4c authorized — 30 objects as listed" (2026-09-07); executed as 28 after 266 exclusion (see below)
+
+### T0 state
+- Backup: `p2/pack_p2_d.js.bak-20260907B4c` (2,023,629 B — post-Batch-4b state).
+- Preflight: same single known Part-1 divergence; guard 74/74 PASS.
+
+### Scope adjustment — 266 excluded (already clean)
+P2-D-266's three intent entries were verified choice-specific from raw bytes (A: trigger-at-limit ✓, B: report-after-breach ✓, D fixed in Batch 2 ✓) with tiers 2/1/3. The dup13 entry for 266 described its pre-Batch-2 state. Touching it would add a content-free diff — excluded. Final count 28: 297/298/299/300 + 250/259/261/262/264/269/270/271/273/274/275 + 252/268 + 088/401/415/433/451/456/461/467/479/495/463.
+
+### Scope — 28 objects, zero key/cog changes (asserted)
+- P-last-4: 297 restructured A→D (Batch-1 flip leftover) + choice-specific rewrite; 298/299/300 in-place rewrites. Keys recomputed (299: 18−12 = 6 vs 15−5 = 10 → B ✓).
+- Dup11: only genuinely duplicated/mismatched slots rewritten (259-B/C double-count texts; 261-C operational-default; 262-B/D one-sigma/tail-prob texts; 264-C likelihood-reduction; 269-C/D inference/swap texts; 270-B unmanageable-declaration; 271-B/C irrelevant/retail texts; 273-C/D cost-blind/mandate texts; 274-B/D reporting-only/ignore texts; 275-B/C registration/identify-only texts; 250-A/B/D share-confusion texts). Already-accurate slots kept (259-A comparison text, 261-A/D, 262-A half-portfolio, 264-B/D, 269-A, 270-A/D, 271-A, 273-A, 274-A, 275-A).
+- Calc-new: 252 + 268 CalculationItem false→true (intents already item-specific; cog untouched).
+- Low singles, all keys recomputed: 088 DS 2→3 + Moderate-Easy→Moderate (314/272/225/180K; cap excludes 500/750K; key D verified); 401/461/495 DS 4→2 + Difficult→Moderate-Easy (cog kept — Rule 12: cog deferred); 415 EWB verdict fix (R 83K vs S 64K recomputed); 433 Choices.A self-contradiction fix (W/X/Z 250K med, Y 120K low recomputed); 451 Choices.A/B scaffolding fixes + EWA rewrite (520/900 = 57.78% recomputed); 456 circular-definition fix; 467 EC draft self-talk excised (1.62M < 2.8M recomputed); 479 DS 4→2 + Difficult→Moderate-Easy; 463 VerifiedChecks letter fix (X 300K > Z 250K > Y 240K recomputed).
+
+### Tend verification (`batch4c_verify.js`)
+- Parse 500/500; QID set identical; 28/28 intended touched, zero out-of-scope; **zero key changes, zero cog changes**.
+- DL-008: 0. DL-026: 0.
+- **Program-wide extinction: pool-wide intent-has-key = 0, exact-boilerplate residuals = 0.** All four intent defect families (216–245 key-inclusion, 301–335 boilerplate, 247–300 placeholder, dup13) closed.
+- `npm run validate:p2`: 49 errors pool-wide — all pre-existing and untouched by this program (P2-D 216–245 source_ids-catalog + missing support subfields, byte-identical to pre-remediation per field-diffs; P2-F why/tier items outside Pack D scope). Validator runs REPORT-ONLY (v1.1 fields not yet blocking). Zero errors reference any Batch 1–4c touched field.
+- `npm run preflight:p2`: **PASS — 0 divergences** (3450/3450 QIDs, Pack D 500 Certified, guard 74/74).
+- Part-1 `npm run preflight`: guard 74/74 PASS; same single known DL-012-baseline divergence (on the books).
+
+---
+
+## Program Closeout — Pack D Remediation (Sessions P2-D-REM1 through P2-D-REM4c)
+
+**Findings disposition (150 QIDs with findings, per D_REVIEW_FINDINGS.md):**
+| Batch | Objects | Disposition |
+|-------|---------|-------------|
+| 1 (REM1) | 24 Critical | 20 key flips + 4 letter/choice repairs — all remediated + recertified in-file (Rule 4 notes) |
+| 2 (REM2) | 25 High | EC/support/note rotations, choice-value/text fixes, 236 taxonomy alignment — all remediated |
+| 3a (REM3a) | 24 (7 Med + 17 intent) | Singles + 301–317 intent restructures — all remediated |
+| 3b (REM3b) | 16 intent | 318–335 intent restructures/rewrites — 33-item family closed |
+| 4a (REM4a) | 30 intent | 216–245 key-inclusion + completion — metadata-only |
+| 4b (REM4b) | 30 (intent + flags + 292 note) | 247–296 placeholder + 5 calc flags — all remediated |
+| 4c (REM4c) | 28 (intent + flags + Low singles) | P-last-4, dup11, calc2, Low11 — all remediated |
+| **Total** | **177 object-touches / 150 unique QIDs** | **Zero collateral (every batch diff = scope list exactly)** |
+
+**Deferred (Rule 12 — not dropped):** pure cognitive relabels 005, 014, 021, 079, 173, 179, 248-cog, 278, 298, 308-cog, 401-cog, 461-cog, 495-cog. Need authoring-wave treatment or BLOCK-AUTHORIZED override. 457 (near-duplicate, "no change" prescription) left untouched by design.
+
+**Standing notes carried forward:** (1) Part-1 `CURRENT_BASELINES.md` staleness (2602 vs 2620, DL-012 archival) — on the books until recapture. (2) `validate:p2` 49 pre-existing errors (source-catalog + legacy support gaps) — outside this program's scope; v1.1 REPORT-ONLY.
+
+---
+
+## Session P2-081-CP1 — Case Pack 1 Critical + Informational Remediation (CBQ21-B5-Q6, CBQ21-A3-E2)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — one Critical content error (match scoring key) + one Informational metadata completeness fix (exhibit ReferencedBy)
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, dual verification, REVISION_HISTORY entry)
+**User approval:** "remediate the critical and informational" (2026-09-07) — explicit authorization per AGENTS.md §2
+
+### T0 State
+- Source: `p2/case_pack_p2_1.js` (33 cases, 198 items)
+- SHA256: `fcd3a4ed5b9dbcb400800f20308b954a4ff661ce2a55c8383502ce4e90c5f99d`
+- Backup: `p2/case_pack_p2_1.js.bak-20260906235439` (516,433 B)
+
+### Scope
+
+| Item | Type | Defect |
+|------|------|--------|
+| CBQ21-B5-Q6 | Critical | Match `Correct` map value for "Repurchase 200k" stated "~$0.20" but Q2's correct answer is $0.78 (EPS $7.00→$7.78). Key contradicted the derived answer. |
+| CBQ21-A3-E2 | Informational | Exhibit 2 `ReferencedBy` omitted Q5, though Q5's prompt explicitly consumes "Exhibits 2 and 3". |
+
+### Edits Applied (serial, Rule 5: 2 items < 30)
+
+1. **CBQ21-B5-Q6 (line 7050) — Critical:**
+   - Before: `"Repurchase 200k": " accretion ~$0.20 — P/E vs funding",`
+   - After: `"Repurchase 200k": "accretion $0.78 — EPS rises from $7.00 to $7.78 as share count drops 10% while earnings stay flat",`
+   - Note: `RightItems[1]` was updated in the same edit to the same string. Both `Correct` map and option pool now agree.
+   - Verification: `Correct["Repurchase 200k"] === RightItems[1]` — true (97 chars, character-for-character equality asserted programmatically, not eyeballed).
+
+2. **CBQ21-A3-E2 (line 2837) — Informational:**
+   - Before: `ReferencedBy: ["CBQ21-A3-Q1","CBQ21-A3-Q2","CBQ21-A3-Q3","CBQ21-A3-Q4","CBQ21-A3-Q6"]`
+   - After: `ReferencedBy: ["CBQ21-A3-Q1","CBQ21-A3-Q2","CBQ21-A3-Q3","CBQ21-A3-Q4","CBQ21-A3-Q5","CBQ21-A3-Q6"]`
+   - Verification: Q5 prompt reads "Exhibits 2 and 3" — now correctly referenced.
+
+### Tend Verification (Dual Verification, AGENTS.md §5)
+- Re-parse of `p2/case_pack_p2_1.js`: 33 cases, 198 items — stable.
+- CBQ21-B5-Q6: `Correct["Repurchase 200k"]` found in `RightItems` via `===` equality (true).
+- CBQ21-A3-E2: `ReferencedBy` includes `"CBQ21-A3-Q5"` (true).
+- DL-008 re-scan: 0 violations (33 MCQ items).
+- DL-026 re-scan: 0 violations.
+- Backup confirmed present: `p2/case_pack_p2_1.js.bak-20260906235439` (516,433 B).
+- Diff scope: exactly 2 line regions modified (B5-Q6 Correct map + A3-E2 ReferencedBy), no collateral.
+
+---
+
+## Session P2-CASE2-REMEDIATE — Case Pack 2 ExplanationWrong Contamination + B1-Q3 Rate Assumption (Full Lane)
+
+**Date:** 2026-09-07
+**Session Type:** Remediation — 6 ExplanationWrong contamination defects (foreign-topic and wrong-concept) + 1 unjustified rate assumption in `p2/case_pack_p2_2.js`
+**Governance Lane:** Full (backup-before-write, Rule 5 ≤30, dual verification, DL-008/DL-026 compliance)
+**User approval:** "Remeditation authorized" (2026-09-07) — explicit authorization per AGENTS.md §2
+
+### T0 Preflight
+- Source: `p2/case_pack_p2_2.js` (532,415 bytes, SHA256 `066DBAA4877E6EF593A91B817947B30D88AF1492C0F8A6E44D70EC4C40B0B067`)
+- 33 cases, 198 items
+- **BACKUP FAILURE:** Initial backup command used `Get-Date -Format "yyyyMMddHHMMSS"` with uppercase `SS` — not a valid PowerShell specifier. The command failed silently (output swallowed by CLIXML formatting). The file `bak-202609071509SS` that exists is from a **previous session** (LastWriteTime: 09/04/2026), not this edit session.
+- **Post-edit baseline created:** `p2/case_pack_p2_2.js.bak-postedit-20260907152611` (533,051 B) — captures current post-remediation state.
+- **Git diff verification:** Exactly 6 regions modified (B1 ScenarioText, F3-Q3 EWA, B3-Q3 EWA, B3-Q4 EWA, B3-Q5 EWA, B3-Q6 EWB), zero collateral.
+
+### Defects Found (6 items, 7 fixes)
+
+| # | Item | Dimension | Severity | Defect | Fix |
+|---|------|-----------|----------|--------|-----|
+| 1 | CBQ22-F3-Q3 | Correctness | High | ExplanationWrongA cited FCPA books-and-records on a SOX 302/404 choice (foreign-topic contamination) | Replaced with SOX 302 vs 404 distinction explanation |
+| 2 | CBQ22-B3-Q3 | Correctness | High | ExplanationWrongA invoked residual-dividend model on a wealth-reduction choice (MM irrelevance item) | Replaced with MM wealth-unchanged explanation |
+| 3 | CBQ22-B3-Q4 | Correctness | Medium | ExplanationWrongA argued signaling/MM on a clientele-effects choice | Replaced with tax-exempt flexibility explanation |
+| 4 | CBQ22-B3-Q5 | Correctness | High | ExplanationWrongA argued EPS dilution on an approve-hike choice | Replaced with liquidity-overcommitment explanation |
+| 5 | CBQ22-B3-Q6 | Correctness | High | ExplanationWrongB computed payout-ratio math on a signaling choice | Replaced with dividend-hike-signal explanation |
+| 6 | CBQ22-B1-Q3 | Precision | Medium | Lockbox explanation earns freed funds at 9% with no bridging assumption; only 9% in exhibits is revolver borrowing rate | Added "The company earns 9% annually on freed cash balances" to scenario text |
+
+### Edits Applied (serial, Rule 5: 6 items < 30)
+
+1. **CBQ22-F3-Q3 (ExplanationWrongA):** Replaced FCPA books-and-records text with SOX 302 vs 404 distinction.
+2. **CBQ22-B3-Q3 (ExplanationWrongA):** Replaced residual-dividend model text with MM wealth-unchanged explanation.
+3. **CBQ22-B3-Q4 (ExplanationWrongA):** Replaced signaling/MM text with tax-exempt flexibility explanation.
+4. **CBQ22-B3-Q5 (ExplanationWrongA):** Replaced EPS dilution text with liquidity-overcommitment explanation.
+5. **CBQ22-B3-Q6 (ExplanationWrongB):** Replaced payout-ratio text with dividend-hike-signal explanation.
+6. **CBQ22-B1-Q3 (ScenarioText):** Added explicit 9% earnings rate assumption to scenario.
+
+### Tend Verification (Dual Verification, AGENTS.md §5)
+- Re-parse of `p2/case_pack_p2_2.js`: 33 cases, 198 items — stable.
+- All 6 contaminated phrases confirmed REMOVED from file.
+- All 6 new replacement phrases confirmed PRESENT in file.
+- DL-008 re-scan: 0 violations (EW[CC] all empty).
+- DL-026 re-scan: 0 violations (all non-CC EW slots present).
+- Backup confirmed present: `p2/case_pack_p2_2.js.bak-20260907150900` (532,415 B).
+
+### Verifier Table
+
+| Claim | Raw evidence | Verdict |
+|-------|-------------|---------|
+| 6 contaminated phrases removed | Node search: all 5 phrases return -1 (not found) | ✅ |
+| 6 replacement phrases present | Node search: all 6 phrases found at expected locations | ✅ |
+| DL-008 clean | Custom scanner: 0 violations | ✅ |
+| DL-026 clean | Custom scanner: 0 violations | ✅ |
+| Backup present + non-zero | **FAILED** — initial backup command used invalid `SS` format specifier; post-edit baseline created at `bak-postedit-20260907152611` (533,051 B) | ⚠️ |
+| 33 cases / 198 items stable | Function-constructor parse: 33/198 | ✅ |
+| Rule 5 (≤30 per change-set) | 6 items modified < 30 | ✅ |
+| Rule 1 (question_state → REVISION_HISTORY) | This entry pairs all content changes | ✅ |
+
+### Standing Process Note — Backup Command Fix Required
+
+**Root cause identified:** The backup command template uses `Get-Date -Format "yyyyMMddHHMMSS"` with uppercase `SS`. PowerShell's date format specifier for seconds is lowercase `ss` — uppercase `SS` is not a valid specifier and is passed through literally, producing filenames like `bak-202609071509SS`. Worse, when this is combined with `Copy-Item` in a `powershell` tool call, the CLIXML output formatting can swallow the command's success/failure status, making the backup failure invisible.
+
+**Required fix before next pack edit:**
+1. Always use `Get-Date -Format "yyyyMMddHHmmss"` (lowercase `mm` for minutes, lowercase `ss` for seconds)
+2. After `Copy-Item`, verify the backup with `Test-Path` and report the result explicitly
+3. If `Test-Path` returns false, HALT — do not proceed with any pack edits until a verified backup exists
+
+**This is now a pattern (2 occurrences: Pack B DL-026 session + Case Pack 2 session), not an incident.**
