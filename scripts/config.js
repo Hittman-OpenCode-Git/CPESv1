@@ -101,6 +101,29 @@ module.exports = {
     ],
 
     //==========================================================================
+    // Part 2 Question Packs (psychometric stack only)
+    // Consumed exclusively by scripts/validators/psychometric/*.
+    // Do NOT merge into questionPacks — P1 validators (Metadata/Blueprint/
+    // Difficulty/Reference/Explanation) assume the P1 schema.
+    //==========================================================================
+
+    part2QuestionPacks: [
+
+        "p2/pack_p2_a.js",
+
+        "p2/pack_p2_b.js",
+
+        "p2/pack_p2_c.js",
+
+        "p2/pack_p2_d.js",
+
+        "p2/pack_p2_e.js",
+
+        "p2/pack_p2_f.js"
+
+    ],
+
+    //==========================================================================
     // Case Study Banks
     //==========================================================================
 

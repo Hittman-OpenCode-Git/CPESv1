@@ -23,7 +23,7 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
-# Domain A — Financial Statement Analysis (21 Formulas)
+# Domain A — Financial Statement Analysis (24 Formulas)
 
 ---
 
@@ -414,6 +414,61 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
+## FA-22: Statement of Cash Flows Presentation
+
+**Domain:** A — Financial Statement Analysis
+**Section:** Cash Flow Analysis
+**Notation:** `CFO_{direct} = CFO_{indirect}`
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| CFO | Cash from Operations | Net cash provided by operating activities | USD |
+
+**Tolerance:** $1 | **Rounding:** Nearest whole dollar
+**Common Errors:** Treating direct/indirect as different totals; omitting non-cash adjustments under indirect
+**Authority:** ASC 230-10-45 (both methods permitted; indirect predominant in practice)
+**Exam Trap:** Method choice changes presentation only. A "different CFO under direct" distractor is always wrong.
+
+---
+
+## FA-23: Free Cash Flow
+
+**Domain:** A — Financial Statement Analysis
+**Section:** Cash Flow Analysis
+**Notation:** `FCF = Operating\ Cash\ Flow - Capital\ Expenditures`
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| OCF | Operating Cash Flow | Cash from operations (ASC 230) | USD |
+| CapEx | Capital Expenditures | Cash invested in productive capacity, net of disposals | USD |
+
+**Tolerance:** $0.1M | **Rounding:** One decimal place (millions)
+**Common Errors:** Using gross CapEx without netting disposals; treating FCF as distributable before debt service
+**Authority:** Ross–Westerfield–Jordan, *Corporate Finance*; CFA Level I FRA
+**Exam Trap:** FCF is cash after funding productive capacity — available for buybacks, dividends, or debt reduction per firm policy, not automatically distributable.
+
+---
+
+## FA-25: Debt-to-Assets Ratio
+
+**Domain:** A — Financial Statement Analysis
+**Section:** Leverage Ratios
+**Notation:** `D/A = \frac{Total\ Liabilities}{Total\ Assets}`
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| TL | Total Liabilities | All interest-bearing and operating liabilities | USD |
+| TA | Total Assets | Balance-sheet total | USD |
+
+**Tolerance:** 0.01 (ratio) | **Rounding:** Two decimal places
+**Common Errors:** Confusing with D/E (FA-07); mismatched numerator (equity instead of liabilities)
+**Authority:** Ross–Westerfield–Jordan, *Corporate Finance*
+**Exam Trap:** D/A and D/E carry the same numerator but answer different questions (asset coverage vs equity cushion). A lender covenant quoting one cannot be tested with the other. Companion to FA-07.
+
+<!-- FA-24 intentionally unassigned (no cited formula; numbering gaps preserved per DL-011 precedent) -->
+
+---
+
 # Domain B — Corporate Finance (9 Formulas)
 
 ---
@@ -593,7 +648,7 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
-# Domain C — Decision Analysis (11 Formulas)
+# Domain C — Decision Analysis (13 Formulas)
 
 ---
 
@@ -796,6 +851,44 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
+## DA-13: Make-or-Buy (Outsourcing) Decision
+
+**Domain:** C — Decision Analysis
+**Section:** Marginal Analysis
+**Notation:** `Choose\ min(In\text{-}house_{avoidable},\ Outsource_{full}) + qualitatives`
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| Avoidable | Avoidable In-House Cost | Variable + escapable fixed; sunk and allocated common excluded | USD |
+| Outsource | Full Outsource Cost | Price + transition + monitoring + control loss | USD |
+
+**Tolerance:** $1 | **Rounding:** Nearest whole dollar
+**Common Errors:** Including sunk/allocated common costs in-house; ignoring transition costs and control loss; deciding on unit price alone
+**Authority:** Garrison–Noreen–Brewer, *Managerial Accounting*; Hilton–Platt (distinct from DA-08 sell-or-process)
+**Exam Trap:** Rent or depreciation on owned facilities with no alternative use is irrelevant. The trap choice almost always adds back a sunk figure — exclude it.
+
+---
+
+## DA-14: CVP After-Tax Target Profit
+
+**Domain:** C — Decision Analysis
+**Section:** Cost-Volume-Profit Analysis
+**Notation:** `Q = \frac{Fixed\ Costs + Target/(1-t)}{CM\ per\ unit}`
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| FC | Fixed Costs | Total fixed costs for the period | USD |
+| Target | After-Tax Profit Target | Desired profit after income tax | USD |
+| t | Tax Rate | Marginal income tax rate | decimal |
+| CM/u | Contribution Margin per Unit | Price − variable cost per unit | USD/unit |
+
+**Tolerance:** 1 unit | **Rounding:** Round up (whole units)
+**Common Errors:** Forgetting the gross-up (dividing target by (1−t) is required, not optional); applying tax to fixed costs
+**Authority:** Garrison–Noreen–Brewer, *Managerial Accounting* (extends DA-01..03 pre-tax family)
+**Exam Trap:** The gross-up applies to the TARGET only. Fixed costs are already pre-tax. Grossing up the sum instead of just the target overstates required volume.
+
+---
+
 # Domain D — Risk Management (3 Formulas)
 
 ---
@@ -854,7 +947,7 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
-# Domain E — Investment Decisions (8 Formulas)
+# Domain E — Investment Decisions (9 Formulas)
 
 ---
 
@@ -1009,6 +1102,24 @@ If a question calculation conflicts with this document, the question must be rev
 
 ---
 
+## ID-09: Internal Rate of Return
+
+**Domain:** E — Investment Decisions
+**Section:** Capital Budgeting
+**Notation:** `NPV = \sum_{t=1}^{n} \frac{CF_t}{(1+IRR)^t} = 0`; accept iff `IRR > hurdle`; conflicts → NPV governs
+
+| Variable | Name | Description | Units |
+|----------|------|-------------|-------|
+| IRR | Internal Rate of Return | Discount rate setting NPV to zero | percentage |
+| Hurdle | Required Rate | Cost of capital / required return | percentage |
+
+**Tolerance:** 0.1% | **Rounding:** One decimal place
+**Common Errors:** Ranking mutually exclusive projects by IRR (scale/timing conflicts); multiple IRRs with non-conventional flows; ignoring the reinvestment-rate assumption
+**Authority:** Ross–Westerfield–Jordan, *Corporate Finance*; Brealey–Myers–Allen
+**Exam Trap:** IRR assumes reinvestment at the IRR itself. For mutually exclusive projects of different scale or timing, NPV (ID-01) governs — a higher IRR with lower NPV destroys the ranking every time.
+
+---
+
 # Domain F — Professional Ethics (0 Formulas)
 
 **Domain F** tests the IMA Statement of Ethical Professional Practice (4 standards: Competence, Confidentiality, Integrity, Credibility), the IMA ethical decision-making model, SOX 2002, FCPA, corporate governance, and sustainability reporting. All items are conceptual—no quantitative formulas are tested.
@@ -1019,13 +1130,13 @@ If a question calculation conflicts with this document, the question must be rev
 
 | Domain | Name | Formula Count |
 |--------|------|:------------:|
-| A | Financial Statement Analysis | 21 |
+| A | Financial Statement Analysis | 24 |
 | B | Corporate Finance | 9 |
-| C | Decision Analysis | 11 |
+| C | Decision Analysis | 13 |
 | D | Risk Management | 3 |
-| E | Investment Decisions | 8 |
+| E | Investment Decisions | 9 |
 | F | Professional Ethics | 0 |
-| **Total** | | **52** |
+| **Total** | | **58** |
 
 ---
 
@@ -1047,10 +1158,10 @@ Every calculation question must pass:
 | Source | Domain A | Domain B | Domain C | Domain D | Domain E | Domain F | Total |
 |--------|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-----:|
 | P2002_BLUEPRINT_EXTRACTION.json | 21 | 9 | 11 | 3 | 8 | 0 | **52** |
-| FORMULA_MASTER_P2.md (this file) | 21 | 9 | 11 | 3 | 8 | 0 | **52** |
+| FORMULA_MASTER_P2.md (this file) | 24 | 9 | 13 | 3 | 9 | 0 | **58** |
 | P2005_FORMULA_MASTER.json | 21 | 9 | 11 | 3 | 8 | 0 | **52** |
 
-**Verification status:** ALL MATCH — 52 formulas across all three sources. ✓
+**Verification status:** DIVERGED 2026-09-13 — this file gained FA-22/23/25, DA-13/14, ID-09 (52→58) per Step-0b traceability audit. P2005_FORMULA_MASTER.json + P2002_BLUEPRINT_EXTRACTION.json sync is logged follow-up work (not silently matched).
 
 ---
 
@@ -1059,3 +1170,4 @@ Every calculation question must pass:
 | Version | Date | Author | Summary |
 |---------|------|--------|---------|
 | 1.0 | 2026-07-29 | P2-005 Formula Master Subagent | Initial version. 52 formulas across 6 domains extracted from P2002_BLUEPRINT_EXTRACTION.json and P2002_CERTIFICATION_STANDARD.md §D.4/§E.1. Cross-referenced against blueprint targets. |
+| 1.1 | 2026-09-13 | Board Step-0b traceability audit | +6 entries (FA-22 cash-flow presentation, FA-23 FCF, FA-25 D/A, DA-13 make-or-buy, DA-14 CVP after-tax, ID-09 IRR), each traced to agreeing item content + Tier-1 source. FA-24 intentionally unassigned. P2005/P2002 sync deferred (logged above). |

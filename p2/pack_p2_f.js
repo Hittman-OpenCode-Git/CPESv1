@@ -10520,7 +10520,7 @@ var pack_p2_f_questions = [
       "C": "Reverse the disputed accounting entries herself without further authorization, because the Helpline's blessing overrides management's instructions on journal entries.",
       "D": "Silently ignore the issue because engaging the Helpline automatically transfers professional responsibility away from her to the IMA."
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Analyze",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -10576,10 +10576,10 @@ var pack_p2_f_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30",
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "ExplanationWrongA": "The Helpline does not authorize immediate public disclosure of confidential employer information; Confidentiality still governs unless disclosure is required by law or professional standards.",
-    "ExplanationWrongB": "Correct identification of continued duty, disassociation, and resignation as last resort, but the answer key requires the member to remain prepared to formally disassociate from the questionable treatment while continuing legitimate duties rather than authorizing her own adjusting entries.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Reversing entries unilaterally exceeds the member authority and usurps management books; the IMA framework requires escalation, formal disassociation, and resignation only as a last resort - not self-help journals.",
     "ExplanationWrongD": "Engaging the Helpline does not transfer Lena's professional responsibility to the IMA; she remains accountable for her own conduct under the Statement's principles."
   },
   {
@@ -11047,7 +11047,7 @@ var pack_p2_f_questions = [
       "C": "Sign the letter because SOX 404 applies only to the external auditor's attestation, not to management's assertions about internal controls.",
       "D": "Sign the letter with a handwritten note that Lena personally disagrees, because the note preserves her professional position without disrupting the audit."
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Understand",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -11103,10 +11103,10 @@ var pack_p2_f_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30",
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "ExplanationWrongA": "Remediation intent is not a substitute for current effectiveness in management's Section 404 assertion, and signing a known-inaccurate representation letter breaches Integrity and the SOX certification regime.",
-    "ExplanationWrongB": "Choice B treats SOX 404 management assertion as a one-time annual event, but the assertion must be supported by continuous control monitoring and quarterly sub-certifications; the controller's responsibility is ongoing evidence collection, not just an annual signature.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "SOX 404 requires management own assessment and assertion on ICR effectiveness as of the assessment date; the external auditor attestation is separate and never relieves management. A known unremediated material weakness must be disclosed, not signed away.",
     "ExplanationWrongD": "A handwritten dissent on a representation letter that otherwise asserts effectiveness does not cure the misleading assertion; Lena must refuse to sign and disclose the weakness rather than append a caveat."
   },
   {

@@ -1,7 +1,5 @@
-const path = require("path");
-const fs = require("fs");
 const Validator = require("../Validator");
-const config = require("../../config");
+const { loadAllQuestions } = require("./extractor");
 
 class MathematicalValidator extends Validator {
     constructor() {
@@ -18,8 +16,6 @@ class MathematicalValidator extends Validator {
         this.exactPattern = /variance\s+is\s+exactly\s+/i;
 
         this.confidence = 99;
-        this.questionPacks = config.questionPacks;
-        this.root = config.paths.root;
     }
 
     validate() {
@@ -28,51 +24,40 @@ class MathematicalValidator extends Validator {
         let questionsScanned = 0;
         let findings = 0;
 
-        this.questionPacks.forEach(file => {
-            const fullPath = path.join(this.root, file);
-            if (!fs.existsSync(fullPath)) {
-                this.addWarning(`File not found: ${file}`);
-                return;
-            }
+        const questions = loadAllQuestions();
+        questionsScanned += questions.length;
 
-            const content = fs.readFileSync(fullPath, "utf8");
-            const questions = this.extractQuestions(content, file);
-            if (!questions) return;
+        questions.forEach((q, idx) => {
+            if (!q.Choices) return;
+            const qid = q.QuestionID || `${q._sourceFile || "unknown"}:${idx}`;
 
-            questionsScanned += questions.length;
+            Object.entries(q.Choices).forEach(([letter, text]) => {
+                if (this.isDl001Pattern(text)) {
+                    const msg = `${qid} Choice ${letter}: "${text}" — variance equals standard cost (DL-001)`;
+                    this.addError(msg);
+                    findings++;
+                }
 
-            questions.forEach((q, idx) => {
-                if (!q.Choices) return;
-                const qid = q.QuestionID || `${file}:${idx}`;
-
-                Object.entries(q.Choices).forEach(([letter, text]) => {
-                    if (this.isDl001Pattern(text)) {
-                        const msg = `${qid} Choice ${letter}: "${text}" — variance equals standard cost (DL-001)`;
-                        this.addError(msg);
-                        findings++;
-                    }
-
-                    if (this.exactPattern.test(text)) {
-                        const msg = `${qid} Choice ${letter}: "${text}" — variance is exactly [number] (imprecision)`;
-                        this.addWarning(msg);
-                        findings++;
-                    }
-                });
-
-                if (q.ExplanationCorrect) {
-                    if (this.isDl001Pattern(q.ExplanationCorrect)) {
-                        const msg = `${qid} ExplanationCorrect: "${q.ExplanationCorrect}" — variance equals standard cost (DL-001)`;
-                        this.addError(msg);
-                        findings++;
-                    }
-
-                    if (this.exactPattern.test(q.ExplanationCorrect)) {
-                        const msg = `${qid} ExplanationCorrect: "${q.ExplanationCorrect}" — variance is exactly [number] (imprecision)`;
-                        this.addWarning(msg);
-                        findings++;
-                    }
+                if (this.exactPattern.test(text)) {
+                    const msg = `${qid} Choice ${letter}: "${text}" — variance is exactly [number] (imprecision)`;
+                    this.addWarning(msg);
+                    findings++;
                 }
             });
+
+            if (q.ExplanationCorrect) {
+                if (this.isDl001Pattern(q.ExplanationCorrect)) {
+                    const msg = `${qid} ExplanationCorrect: "${q.ExplanationCorrect}" — variance equals standard cost (DL-001)`;
+                    this.addError(msg);
+                    findings++;
+                }
+
+                if (this.exactPattern.test(q.ExplanationCorrect)) {
+                    const msg = `${qid} ExplanationCorrect: "${q.ExplanationCorrect}" — variance is exactly [number] (imprecision)`;
+                    this.addWarning(msg);
+                    findings++;
+                }
+            }
         });
 
         this.addStatistic("questionsScanned", questionsScanned);
@@ -159,40 +144,6 @@ class MathematicalValidator extends Validator {
         });
 
         return results;
-    }
-
-    extractQuestions(content, filename) {
-        const banks = [];
-        const bankRegex = /(?:MCQ|CASE)_BANK_[A-Z]\s*=\s*\[/g;
-        let match;
-
-        while ((match = bankRegex.exec(content)) !== null) {
-            const start = match.index;
-            const varName = match[0];
-
-            let depth = 1;
-            let pos = match.index + match[0].length;
-            while (pos < content.length && depth > 0) {
-                if (content[pos] === '[') depth++;
-                else if (content[pos] === ']') depth--;
-                pos++;
-            }
-
-            if (depth === 0) {
-                try {
-                    const arrayStr = content.slice(start + varName.length, pos - 1);
-                    const arrStart = arrayStr.indexOf('{');
-                    if (arrStart === -1) continue;
-                    const trimmed = '[' + arrayStr.slice(arrStart).trim() + ']';
-                    const parsed = JSON.parse(trimmed);
-                    banks.push(...parsed);
-                } catch (e) {
-                    this.addWarning(`Could not parse bank ${varName} in ${filename}: ${e.message}`);
-                }
-            }
-        }
-
-        return banks.length > 0 ? banks : null;
     }
 }
 

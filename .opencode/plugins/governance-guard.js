@@ -2,10 +2,11 @@
  * Governance Guard Plugin — CMA Part 1 & Part 2 Exam Simulator
  *
  * Enforces governance rules at tool-execution level.
- * Rules 1-19 are all BLOCK level (S221 upgrade; R15-R19 added 2026-09-10).
+ * Rules 1-21 are all BLOCK level (S221 upgrade; R15-R19 added 2026-09-10;
+ * R20-R21 added 2026-09-13, coverage-hardening change-set).
  *
  * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021,
- *             DL-047, DL-046, DL-048, DL-045),
+ *             DL-047, DL-046, DL-048, DL-045, DL-049, DL-050),
  *             P2_SCHEMA_STANDARD.md (Rule 13, Rule 14)
  *
  * RULE 1  (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
@@ -27,7 +28,12 @@
  * RULE 17 (BLOCK) — Heuristic-screen admissibility note required on mass choice rewrites (DL-045 doctrine)
  * RULE 18 (BLOCK) — Choice-text hygiene floor (DL-046 family: whitespace/fragment)
  * RULE 19 (BLOCK) — Duplicate CaseID within a change-set (DL-048 intra-batch gate)
+ * RULE 20 (BLOCK) — Legacy silent-drop extractor regression block (board R21 / DL-049 mechanism)
+ * RULE 21 (BLOCK) — Semantic quarantine manifest enforcement on →Certified writes (board R25 / DL-047)
  */
+
+import fs from "node:fs";
+import path from "node:path";
 
 const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
 const RECOMPUTED_RE = /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i;
@@ -61,6 +67,18 @@ const REGENERATION_SCRIPT_RE = /(build_master_registry|regenerate|rebuild|regen)
 
 // RULE 8: Output paths that require session registry entries
 const SESSION_PACKAGES_RE = /scripts[\\\/]output[\\\/]session_packages[\\\/]/i;
+
+// RULE 20 (board R21): validator/screen script paths + legacy bank-regex shape.
+// Matches only regex-literal shapes (backslash-bracket), never prose mentions
+// ("MCQ_BANK_C" in a comment does not fire). Exempt when pack_parser present.
+const VALIDATOR_SCREEN_PATH_RE = /scripts[\\\/](validators|lib)[\\\/]|scripts[\\\/](phase0_census|semantic_key_audit_p2|semantic_screens|s121_portfolio_dashboard|baseline_coherence|[^\\\/]*extractor[^\\\/]*\.js|[^\\\/]*scan_[^\\\/]*\.js)/i;
+const LEGACY_BANK_RE = /BANK_\\[A-Z\\]|\(\?:MCQ\|CASE\)_BANK/;
+
+// RULE 21 (board R25): semantic quarantine manifest (DL-047 enforcement).
+// Fail-open on missing/unparseable manifest is an explicit documented behavior:
+// a guard that breaks the pipeline on a transient missing file is worse than
+// failing open (board determination 2026-09-13).
+const QUARANTINE_MANIFEST_RELPATH = "scripts/output/semantic_quarantine.json";
 
 export const GovernanceGuard = async ({ client }) => {
 
@@ -336,6 +354,51 @@ export const GovernanceGuard = async ({ client }) => {
       }
     }
     return violations;
+  }
+
+  /** RULE 20 — Legacy silent-drop extractor regression block (board R21 / DL-049).
+   *  Returns array of { snippet } when a validator/screen script write
+   *  reintroduces bank-name-regex extraction without the canonical parser
+   *  substrate (the Pack C comment-blindness / P2 bank-name mechanism). */
+  function findLegacyExtractorViolations(filePath, text) {
+    const p = String(filePath || "").replace(/\\/g, "/");
+    if (!VALIDATOR_SCREEN_PATH_RE.test(filePath || "") && !VALIDATOR_SCREEN_PATH_RE.test(p)) return [];
+    if (/pack_parser/.test(text || "")) return [];
+    const src = text || "";
+    const hits = [];
+    const re = new RegExp(LEGACY_BANK_RE.source, "g");
+    let m;
+    while ((m = re.exec(src)) !== null) {
+      hits.push({ snippet: src.substring(Math.max(0, m.index - 40), m.index + 60).replace(/\s+/g, " ") });
+      if (hits.length >= 5) break;
+    }
+    return hits;
+  }
+
+  /** RULE 21 — Semantic quarantine manifest enforcement (board R25 / DL-047).
+   *  Returns array of { qid } for objects flipped to Certified while listed
+   *  in the manifest active set. Pure function of (text, manifest) so the
+   *  test suite exercises it without filesystem access. */
+  function findQuarantinedCertViolations(text, manifest) {
+    const active = new Set(((manifest && manifest.active) || []).map(e => e && e.qid).filter(Boolean));
+    if (active.size === 0) return [];
+    const objects = extractObjectsFromText(text);
+    const out = [];
+    for (const obj of objects) {
+      if (obj.question_state !== "Certified") continue;
+      const qid = obj.QuestionID || "";
+      if (qid && active.has(qid)) out.push({ qid });
+    }
+    return out;
+  }
+
+  function loadQuarantineManifest() {
+    try {
+      const raw = fs.readFileSync(path.join(process.cwd(), QUARANTINE_MANIFEST_RELPATH), "utf8");
+      const m = JSON.parse(raw);
+      if (m && Array.isArray(m.active)) return m;
+    } catch (e) { /* fail-open: documented behavior, see constant note */ }
+    return { active: [] };
   }
 
   /** RULE 19 — Duplicate CaseID within a change-set (DL-048 intra-batch gate).
@@ -651,6 +714,36 @@ export const GovernanceGuard = async ({ client }) => {
           "before authoring. Cross-file duplicates are additionally caught by\n" +
           "scripts/validators/CaseIdentityValidator.js at pipeline time."
         );
+      }
+
+      // ── RULE 20: BLOCK legacy silent-drop extractor patterns ──
+      const legacyExt = findLegacyExtractorViolations(filePath, newContent);
+      if (legacyExt.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
+        throw new Error(
+          `GOVERNANCE RULE 20 — BLOCKED (legacy silent-drop extractor)\n` +
+          `Validator/screen write reintroduces bank-name-regex extraction without pack_parser:\n` +
+          legacyExt.map(v => `  ...${v.snippet}...`).join("\n") + "\n\n" +
+          "Per board R21 / DL-049: bank-declaration regexes silently blind whole packs " +
+          "(Pack C comment-blindness, P2 bank names, archived-vs-live case banks). " +
+          "Route all extraction through scripts/lib/pack_parser.js with a raw-count " +
+          "coverage assertion (board R20), or mark BLOCK-AUTHORIZED with justification."
+        );
+      }
+
+      // ── RULE 21: BLOCK →Certified writes for quarantined QIDs ──
+      if (SOURCE_FILE_RE.test(basename(filePath)) && /"question_state"\s*:\s*"Certified"/.test(newContent || "")) {
+        const qcert = findQuarantinedCertViolations(checkText, loadQuarantineManifest());
+        if (qcert.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
+          throw new Error(
+            `GOVERNANCE RULE 21 — BLOCKED (semantic quarantine)\n` +
+            `${qcert.length} quarantined item(s) cannot re-enter Certified:\n` +
+            qcert.map(v => `  ${v.qid}`).join("\n") + "\n\n" +
+            "Per board R25 / DL-047: items confirmed defective by semantic audit stay out " +
+            "of the delivery pool until adjudicated remediation + restore with " +
+            "Rule-16 stamps. Remove the QID from scripts/output/semantic_quarantine.json " +
+            "active list only after the fix verifies, or proceed BLOCK-AUTHORIZED."
+          );
+        }
       }
 
       // ── RULE 16: BLOCK →Certified writes without provenance stamps ──

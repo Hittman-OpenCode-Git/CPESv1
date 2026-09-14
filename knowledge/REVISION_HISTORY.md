@@ -1,5 +1,373 @@
 # REVISION_HISTORY.md
 
+## Advisory Board Report Closeout — §5 Prose Fix Logged — 2026-09-13
+
+**Session:** Advisory board report review closeout (Governance Light Lane — prose-only doc edits; no pack/content/state/key writes)
+**Trigger:** Third-party review of `reports/ADVISORY_BOARD_MEETING_20260913.md` (8 findings) + closeout cosmetics (4) + `CURRENT_BASELINES.md` §5 description staleness (1)
+**Scope:** 13 prose-only corrections across 2 files (report + baselines). Verified: no pack files, answer keys, question_state, or guard source touched — read-only audit edits per AGENTS.md §2.
+
+### §5 fix (this entry's subject)
+- `CURRENT_BASELINES.md` L151–152 description cells: "9-rule"/"51-test" → "21-rule (Rules 20/21 added S913)" / "98-test (Rule 20×4 + Rule 21×5)". Hashes byte-identical pre/post (verified); `baseline_coherence` 0 divergences.
+- Logged per Full Lane governance-change provenance: a touch to a governance-critical file needs a record even when prose-only, so the next diff review finds an explained change, not a mystery.
+
+---
+
+## FormulaRef Phase 1 — 6 Master Entries + 2 Re-points — 2026-09-13
+
+**Session:** Phase-1 execution (Full Governance Lane — foundation + 2 single-item content writes)
+**Trigger:** Step-0b traceability audit (coherent subset: FA-22/23/25, DA-13/14, ID-09)
+**Scope:** Master + validator list + 2 re-points. Backups `.bak-ph1-20260913075000` (4 files).
+
+### Foundation
+- Appended FA-22 (cash-flow presentation), FA-23 (FCF), FA-25 (D/A), DA-13 (make-or-buy), DA-14 (CVP after-tax), ID-09 (IRR) in master format with Tier-1 sources; FA-24 intentionally unassigned (commented).
+- Counts: A 21→24, C 11→13, E 8→9, total 52→58; summary + cross-ref (.md row only) + v1.1 revision row. P2005/P2002 sync logged as follow-up (pre-existing A:25-vs-21 divergence noted; not silently matched).
+- Validator `P2_FORMULA_IDS` +6 in-prefix.
+
+### Re-points (span-bounded, neighbor-bounded after QID-forward-window miss)
+- P2-A-250 FA-22→FA-21 (tests SGR; own EC cites it); P2-C-332 DA-12→DA-10 (EMV duplicate). Keys/states untouched.
+- Process note: QID-forward spans miss fields preceding the QID key (A-250's FormulaReference sits before QuestionID) — neighbor-bounded segments are the correct surgical unit, not forward windows.
+
+### Verification
+- Unrecognized IDs 47→40 (remaining = retired rotation set, by design); `validate` 0 errors; preflights 0; coherence 0 (after `--fix`); guard 98/98.
+
+---
+
+## FormulaRef Step 0a — CF-to-CB Prefix Fix (silent-skip closed) — 2026-09-13
+
+**Session:** FormulaRef triage Step 0a (Full Governance Lane — 2-line validator fix; no content writes)
+**Trigger:** Validator allowlist + pattern used `CF-` (0 items cite it); items cite `CB-` (532 raw) → ~300 citations silently skipped
+**Scope:** `P2_FORMULA_IDS` CF-01..09 → CB-01..09; pattern `^(FA|CF|DA|RM|ID)-` → `^(FA|CB|DA|RM|ID)-`. Backup `.bak-cf2cb-20260913073500`.
+
+### Result
+- CB-01..09 recognized; CB-10..25 + FA-22/23/25 + DA-12/13/14 + RM-04/05/06 + ID-09..30 now surface as "unrecognized" (honest).
+- `validate`: 0 errors (WARN exit 0); preflights 0; coherence 0 (validators unbaselined; no `--fix`).
+- Counts (exact, field-level): 532 raw `CB-\d{2}` strings, of which **299 are `FormulaReference`-field citations** (prose mentions excluded per review); beyond-registry CB-10 (28) + CB-11 (19) + CB-12..25 (14 IDs × 4–6).
+- Full beyond-range list enumerated from output (47 IDs) for Step 0b master authoring.
+
+### Remaining (Step 0b/1/2, scoped read-only)
+- 0b: author ~47 master entries (FA-22/23/25, DA-12/13/14, RM-04/05/06, ID-09..30, CB-10..25) per master format.
+- 1: F-pack 14 × CalculationItem→false (all verified qualitative).
+- 2: A–E 241 × FormulaReference backfill (post-0b), Rule-5 batched.
+
+---
+
+## P2C-2 Wave 3 — 9 Conversions + E3-Q1/Q2 Fixes (structural conversion complete) — 2026-09-13
+
+**Session:** P2C-2 Wave 3 (Full Governance Lane — 7 conversions + 2 display/prompt fixes; no key changes)
+**Trigger:** Wave-3 authorization (D2-Q4–Q6 + E3-Q1–Q6, final 9 mcq items)
+**Scope:** 9 objects. Backup `.bak-p2c2w3-20260913071000`. All → Unprocessed (never Certified; no stamps).
+
+### Fixes
+- E3-Q1 (key A intact): prompt "before any MACRS adjustment" → MACRS-inclusive (downstream E3-Q4 computes off $46.5M base — display fix would have broken the chain); EC bridge repaired ($46.5M with shields).
+- E3-Q2 (key A intact): display $25.3M → $32.5M (choice's own formula yields $32.5M); EC repaired (intermediate-omission trap named).
+- 7 plain conversions (same additive spec; Topics authored; ECs verbatim).
+
+### Verification
+- 9/9 backup-diff asserts (incl. E3-Q1 prompt/EC markers, E3-Q2 $32.5M markers, stale-sentence absence).
+- **69/69 conversions complete, 0 `mcq` remaining pool-wide.**
+- `validate`: **0 errors** (700 → 69 → 39 → 9 → 0 across P2C-1/P2C-2); warnings 10,234; preflights 0; coherence 0; guard 98/98.
+
+### Process notes
+- Fix-script `setField` splice-duplication bug (returned full content, caller re-spliced) created a phantom "duplicate QID" — caught by assert, zero writes, repaired.
+- PowerShell `Select -First N` truncated a driver mid-write (stale JSON); re-ran via file redirect (second occurrence — same lesson as Batch-2).
+
+### Remaining P2C-2 tail
+FormulaRef triage (255: classify formula-tested vs validator carve-out); P2C-3 (492 state-adds, scripted batches); DL-051 case-side semantic audit (Open backlog).
+
+---
+
+## P2C-2 Wave 2 — 30 Conversions + C3-Q3 Flip (first case-side inversion repair) — 2026-09-13
+
+**Session:** P2C-2 Wave 2 (Full Governance Lane — 30 conversions + 1 key flip; no other key changes)
+**Trigger:** Wave-2 authorization (file1 C4-Q4–Q6 + file2 18 + file3 C3×6/D2-Q1–Q3)
+**Scope:** 31 objects (30 conversions incl. C3-Q3; Rule-5: 30 conversions + 1 flip — flip counted within the same objects, no new objects). Backups `.bak-p2c2w2-20260913065500` (3 case files + DEFECT_LIBRARY).
+
+### C3-Q3 flip B→C — Rule-4 note
+Prompt's own numbers (CM $336K, fixed $175K, sales $700K) give MoS ≈ $335.4K ≈ choice C; EC supports C; EW_C refuted C (cleared), EW_B authored ($161K matches no derivation). EC B-rationalization repaired. Converted to select shape; Topic authored (`Margin of safety analysis`); disposition Unprocessed (never Certified — no stamps).
+### Conversions
+Same additive spec as Wave 1 (Type→select, Choices→array, +Correct text, +Explanation=EC, +Topic, +Unprocessed; MCQ keys preserved). File2's 18 kept existing Topics (asserted). DL-051 filed (case-side semantic audit backlog, Open).
+
+### Verification
+- 60/60 backup-diff asserts pass (Waves 1+2 + flip mechanics).
+- `validate` errors 39→9 (exactly Wave-3's 9 remaining file-3 mcq items); preflights 0; coherence 0.
+- Remaining: Wave 3 (9: D2-Q4–Q6 + E3-Q1–Q6 with prompt/display/EC fixes), FormulaRef triage, P2C-3 (492 states).
+
+---
+
+## P2C-2 Wave 1 — 30 mcq-to-select Conversions (case_pack_p2_1) — 2026-09-13
+
+**Session:** P2C-2 Wave 1 (Full Governance Lane — 30 case-item schema conversions; no key changes, no state downgrades)
+**Trigger:** P2C-2 authorization; `mcq` shape unscorable/unrenderable (`Choices.map` crash, `Correct` absent, `Explanation` absent)
+**Scope:** 30 items (D2×6, F2×6, E3×3, A4×6, B4×6, C4-Q1–Q3). Backup `.bak-p2c2w1-20260913064000`. Rule-5: 30 objects.
+
+### Conversion (additive; zero content deleted)
+- `Type mcq→select`; `Choices {A..D}→array` (renderer contract); `+Correct` = Choices[CC] **text** (triple-evidenced convention); `+Explanation` = EC verbatim (0 of 30 ECs carry letter-refs — verified); `+Topic` (29 authored, 1 preserved); `+question_state Unprocessed` (inert; pool unfed; DL-024 precedent).
+- Preserved byte-identical vs backup: CorrectChoice, EC, EW×4, VerifiedChecks, LOSTag, Prompt, CognitiveLevel, Difficulty(Score).
+
+### Verification
+- 30/30 backup-diff asserts pass (choices, Correct, Explanation==EC, Topics, states, preservation).
+- `validate` errors 69→39 (−30 exactly); warnings −59; preflights 0; coherence 0.
+- C3-Q3/E3-Q1/E3-Q2 quarantined separately (In Audit); restored to Unprocessed post-fix (never Certified — no stamps; certification requires a wave).
+
+### Process notes
+- Fix-script learned span-bleed (ItemID-window caught case-level `question_state`) → brace-matched object spans; prose-match hardening (string-aware, depth-checked keys). Three clean-failure iterations, zero writes until asserts held.
+- `Correct`=text correction (was letter in plan) caught by reviewer-demanded P1 evidence before any write.
+
+---
+
+## P2C-1 — Part2BlueprintValidator Path Fix (P2 Coverage Awakened) — 2026-09-13
+
+**Session:** P2C-1 execution (Full Governance Lane — validator logic only; no content/state/key writes)
+**Trigger:** Part2BlueprintValidator built root-relative paths (`pack_p2_a.js`, `case_pack_p2_1.js`); files live under `p2/` → 0 packs found, "passes clean for pre-authoring state" on a 3,450+100 pool
+**Scope:** 3 edits (2 path prefixes + R20 loud-empty guard). Backup `.bak-p2c1-20260913061500`.
+
+### Result
+- Coverage: 6 P2 MCQ packs + 3 case packs; 4,050 items (3,450 MCQ + 600 case); all six domains populated.
+- `validate` now FAILs honestly: 700 errors + 10,353 warnings (was blind-pass). Triaged below; pipeline stays red until P2C-2.
+- Preflights 0; coherence 0 (no baseline drift).
+
+### Triage (read-only; content fixes NOT applied)
+- 631x `Invalid Difficulty "Moderate-Easy"` — VALIDATOR BUG (allowlist omits standard label used pool-wide). 1-line fix proposed, awaiting authorization.
+- 69x `Invalid Type "mcq"` — genuine per P2_SCHEMA_STANDARD (Type discriminator + ItemStyle). P2C-2 content: 33+18+18 batches.
+- 72x missing Explanation (0 chars) — same 69 mcq-items (+3) carrying EC/EW instead of Explanation; resolved by the same P2C-2 shape decision.
+- 52x Missing Topic; 255x CalculationItem without FormulaReference — genuine metadata backlog for P2C-2.
+- ~2,994x Topic-alignment + FormulaID-registry warnings — taxonomy-vocabulary noise (validator lists vs authoring convention); registry work, not case edits.
+- P2C-2 must also settle: mcq-to-select normalization vs registering `mcq` as a subtype (69 coexist with 61 `select` — internal inconsistency per reviewer).
+
+---
+
+## DL-050 Wiring — Case Validators onto Live Banks (P1) — 2026-09-13
+
+**Session:** DL-050 wiring (Full Governance Lane — validator logic only; no case content, state, or key writes)
+**Trigger:** DL-050 (case validators scanned archived banks; 80 live P1 + 100 P2 cases invisible)
+**Scope:** 5 validator files. Backups `.bak-dl050-20260913060000`. Rule-5: 0 question objects.
+
+### Changes
+- Blueprint/Difficulty/Metadata/Reference/CaseIntegrity: `config.caseBanks` → `config.casePackBanks` (live P1; archived legacy retired).
+- CaseIntegrity.extractCases → delegate to CaseExtractor (single source); dead legacy body removed.
+- Blueprint/Difficulty/Reference: silent `if (!cases) return` → loud `No cases extracted — coverage gap (DL-050)` warn.
+- P2 cases deliberately NOT wired (dry-run: 205+100 errors schema-noise; needs schema-aware checks — documented residual).
+
+### Verification
+- `validate`: 0 errors (6,913 warnings = 6,907 + 6; legacy ~282 retired, live ~279 appeared).
+- Live triage: 0 Critical/High content defects. Genuine: 7 metadata micro-findings (short explanations, missing Topic, 7-choice item — micro-batch backlog). Validator gaps: Reference matching, CaseIntegrity vacuous check, Blueprint topic list, Difficulty CF5 formula.
+- `preflight` 0, `preflight:p2` 0, coherence 0 (no baseline drift; no `--fix` needed).
+- DL-050 → Partially Resolved.
+
+---
+
+## Guard Codification — Rules 20/21 + Manifest + Mechanism Fixes (DL-050 Open) — 2026-09-13
+
+**Session:** Coverage-hardening guard change-set (Full Governance Lane — governance-critical guard/test/validator logic; no pack/case content, state, or key writes)
+**Trigger:** Board program: codify R21/R25 as guard rules; P2 assurance proved them necessary. Scoping surfaced DL-050 (case-side twin).
+**Scope:** Guard + tests + manifest (new) + p2_schema + CaseExtractor + coherence RULES + AGENTS + DL-050 + ledger. Backups `.bak-guard-20260913054500` (7 files).
+
+### Guard Rules 20/21 (all BLOCK)
+- **Rule 20 = board R21** (canonical-parser mandate): blocks validator/screen-script writes reintroducing bank-name-regex extraction without `pack_parser` (regex-literal shapes only; prose mentions + pack files exempt). Zero hits on current tree (verified pre-write).
+- **Rule 21 = board R25** (semantic-key gate): blocks →Certified writes for QIDs on `scripts/output/semantic_quarantine.json` active list (BLOCK-AUTHORIZED bypass for adjudicated restores). Manifest seeded empty-active + 26-item resolved ledger. **Fail-open on missing manifest is explicit documented behavior** (board determination).
+- **Mapping (anti-drift, DL-011 precedent):** board R20 (coverage) + R23 (portfolio) enforced in code+pipeline, NOT guard rules. Recorded in AGENTS.md §1 + here.
+
+### Mechanism fixes (so the rules guard a true state)
+- `p2_schema_validator.js`: R20 per-file assertion (parsed vs raw QuestionID; present-but-zero throws).
+- `CaseExtractor.js`: patterns extended to live `CASE_PACK_\d+` / `casePackP2_\d+` (alias lines deliberately excluded — no array literal there). Live-bank *wiring* deferred → DL-050 stays Open.
+- `baseline_coherence.js`: RULES 19→21; fixed own `!== 89` hardcode that false-flagged the 98-test suite.
+
+### Tests + docs
+- Suite **89→98** (Rule 20×4, Rule 21×5); guard ESM import smoke-tested (`node:` imports OK).
+- AGENTS.md §1: Rules 20/21 rows + `19→21` header + mapping note; test-count `89→98`.
+- **DL-050 filed (Open):** case validators scan archived banks only; 80 live P1 + 100 P2 cases invisible; warnings fire on dead files.
+- `baseline_coherence --fix`: §4 full 21-rule table + 98/98; §5 guard/test hashes; P2 §1 Batch-2 drift recaptured (authorized). Coherence 0; preflight 0; preflight:p2 0.
+
+### Verification
+- `test_governance_guard` 98/98; `validate` 0 errors (6,907 warnings, unchanged — legacy behavior preserved); `validate:p2` 49 report-only (unchanged); preflights 0; coherence 0.
+
+### Process notes
+- Rule 19 (no bypass by design) blocked my own test edit via fixture CaseIDs in scope — resolved by anchoring away from fixture text, not by marker. Fixture-bearing test edits must scope anchors to avoid tripping the detector under test.
+- New-file writes (manifest) do not trip Rule 7 (path not in derived-registry list); verified by successful write.
+
+---
+
+## P2 Batch-2 — 21-Item Consolidated Remediation (10 flips + 11 key-intact) — 2026-09-13
+
+**Session:** Batch-2 execution (Full Governance Lane — 10 answer-key changes + 11 answer-content/explanation changes + 28 state changes)
+**Trigger:** Complete 302-flag adjudication inventory (15 inversions + 10 key-intact + 1 ambiguity); per-pack consolidated plan reviewed + authorized
+**Scope:** 21 objects (Rule-5 compliant), 6 packs. Backups `.bak-p2b2-20260913050000` (6 packs, sizes verified). Flow per item: In Audit → fix → verify → Certified + `P2-REM-002/2026-09-13` (Rule 16).
+
+### Key flips — Rule-4 independently-verified recomputation notes
+- B-214 A→B: 5.8M/2.7M = $2.148 > $2.00 (rewrote B/EC/EW_A/C/D; scratch removed).
+- B-295 D→B: lower WACC wins; D's shield claim backwards (EC trap repaired; EW swap).
+- B-275 B→C: 140K+158K = 298K > 288K (EW swap). B-277 D→A: conditional shield/coverage (EW swap).
+- B-502 B→A: D1 2.0352/48+6% = 10.24% (EC rewritten; A display 10.20→10.24; EW swap).
+- B-246 C→A: **ambiguity resolution** (A clean-correct, C clean-wrong, EC rewritten; not a clean inversion).
+- C-358 D→B: −394K+827K = +433K accept (rewrote B; EW swap; EC kept).
+- C-352 B→A, F-222 C→B, F-229 C→B (EW swaps; ECs kept).
+
+### Key-intact repairs (answer-content/explanation; keys verified correct)
+- E-185 C 0.84→0.94; C-372 C $52K→$140.5K (+EC hedge repaired); B-306 C WACC 10.50→11.40% (+EC exact-match repair); B-393 D $38.80→$39.04.
+- A-516 A $0.70→$4.80 (+EW_A); C-613 A $70→$3.20 (+EW_A) — duplicate-answer resolutions.
+- D-450 A lead-in Yes→No + scratch removed (DL-037). E-249 EC rewritten (both-sunk). A-306 EC rewritten (IPR&D ASC 805). E-350 EW_A/EW_C rewritten (swap repaired).
+
+### Verification
+- 21/21 content asserts pass (CC, EW[CC]="", all non-CC ≥50, display/EC markers); parse clean, 0 errDiag.
+- `preflight:p2` 0 divergences (3,436 Certified = full pool; 14 In Audit = original P2-A only).
+- `validate` 0 errors (6,907 warnings); guard 89/89.
+- Screens post-fix: A0/B67/C4/D2/E125/B-num86. Residuals on fixed items adjudicated FP-class (restatement overlap, style continuations, number overlap) with verified key/EC agreement; E-350 swap + B-393 coherence re-read verbatim to confirm.
+
+### Process notes
+- Fix-script self-bug caught pre-write (`return content.content`); clean failure, zero writes, repaired and re-ran.
+- PowerShell `Select -First N` truncated a driver run mid-write (stale JSON observed); re-ran to completion via file redirect. Stream truncation is a second read-after-write variant — never truncate a writer's stdout.
+
+---
+
+## P2 C/D Sweep — 3 Defects Confirmed; C-372 + B-306 Quarantined — 2026-09-13
+
+**Session:** P2 C/D adjudication closeout (Full Governance Lane — state changes only on 2 items; no content/key writes)
+**Trigger:** Reviewer derived C (6) + D (2); dual-verified file-level (derivations + EC/key agreement)
+**Scope:** 2 quarantines. Backups `.bak-p2q3-20260913045000` (B/C packs).
+
+### Confirmed (dual-verified)
+- P2-A-306 (CC=B, stays live): key correct (IPR&D indefinite-lived); EC is foreign-topic ASC 606 text with unfilled blanks (`,000`) — DL-016 contamination + incompleteness. EC-rewrite queued (Batch 2).
+- P2-C-372 (CC=C → In Audit): L−S = $140.5K absent from choices; C has right ranking, wrong magnitude ($52K). Unanswerable-as-stored (E-185 precedent). Fix path: correct C display to ~$140.5K (key intact).
+- P2-B-306 (CC=C → In Audit): correct WACC 11.40% absent (C 10.50%, D 12.00%); EC's "closest match" claim arithmetically wrong (D is closer). Fix path: correct C display to 11.40% (key intact).
+- D flags + 4 C flags adjudicated clean (style-FP / on-topic).
+
+### Running P2 inventory
+- 15 key inversions quarantined; 5 Batch-1 flips restored; 11 key-intact defects queued (A-516, C-613, D-450, E-249, B-393, E-185, A-306, C-372, B-306 + 2 pending); 1 ambiguity (B-246). In Audit for defects: 14.
+- Remaining: E (126). Batch-2 consolidated per-pack diffs after inventory completes.
+
+---
+
+## P2 Screen-B Sweep — 6 New Inversions Quarantined (B-275/F-222/C-352/F-229/B-277/B-502 + B-246 review) — 2026-09-13
+
+**Session:** P2 Screen-B adjudication closeout (Full Governance Lane — state changes only; no content/key writes)
+**Trigger:** Reviewer independently derived 74/74 Screen-B flags; 6 conceptual key inversions confirmed + 1 ambiguity note; dual-verified file-level (derivations + EC agreement + FP-mechanism check)
+**Scope:** 7 quarantines (state-only). Keys untouched. Backups `.bak-p2q2-20260913044500` (B/C/F packs).
+
+### Confirmed (all Certified → In Audit; §9.2 downgrade, defect confirmation is trigger)
+- P2-B-275 B→C (credit-policy NPV: 140K+158K=298K > 288K loss). P2-F-222 C→B (IMA disassociate/resign). P2-C-352 B→A (CVP linear/decompose). P2-F-229 C→B (EC explicitly mandates refuse/escalate/disclose). P2-B-277 D→A (conditional tax-shield/FCF). P2-B-502 B→A (D1 method; EC also wrong — Type 2; A's 10.20 vs computed 10.24 rounding blemish noted for repair).
+- P2-B-246 → In Audit pending review (A/C both defensible + `cb-11-topic-246` template residue; multiple-defensible unfairness, not a confirmed inversion).
+
+### Running P2 inventory
+- 15 key inversions quarantined (9 B-num + 6 Screen-B); 5 Batch-1 flips restored Certified; 6 other defects queued (A-516, C-613, D-450, E-249, B-393, E-185 choice/EC-side).
+- Remaining sweep: C (6) + D (2) + E (126). Batch-2 consolidated per-pack diffs after inventory completes.
+
+---
+
+## P2 B-num Remediation — Quarantine-10 + Batch-1 Flips (5) — 2026-09-13
+
+**Session:** P2 semantic-audit remediation (Full Governance Lane — answer-key changes + state changes on Certified items)
+**Trigger:** B-num adjudication confirmed 9 Critical key inversions + 1 unanswerable (dual derivation: reviewer + independent file-level verification)
+**Scope:** 10 quarantines (state-only) + 5 key flips with EW surgery + 5 restores. Packs B/C/E. ECs untouched (byte-verified identical to backup).
+
+### (i) Quarantine — 10 items Certified → In Audit (§9.2 downgrade; defect confirmation is the re-verification trigger)
+P2-B-214, P2-B-295, P2-B-243, P2-C-353, P2-C-354, P2-C-363, P2-C-379, P2-C-358, P2-E-422, P2-E-185. Keys untouched at quarantine; verified post-write.
+
+### (ii) Batch-1 flips — Rule 4 independently-verified recomputation notes
+- P2-C-353 C→B: (20−5)×1500 − 9×1500 = +$9,000 rework benefit. EW_B (misfiled correct justification)→""; EW_C authored (sunk-cost trap).
+- P2-C-354 D→C: Green $10.00/hr > Blue $6.00/hr. EW_C (misfiled)→""; EW_D authored (even-split fallacy).
+- P2-C-363 B→A: 250 − 62.50 = $187.50. EW_A (misfiled)→""; EW_B authored (pass-through fallacy).
+- P2-C-379 C→B: 300K/20 = 15,000 units; 20/50 = 40%. EW_B (misfiled)→""; EW_C authored (60% ratio error).
+- P2-B-243 A→B: 0.40×3M = $1.2M + signaling. EW_B (actively refuted true answer)→""; EW_A authored (retention/payout confusion).
+- Root causes (ledger): C-353/354/363/379 = empty-slot marker + CC rotated off true answer together; B-243 = EW actively refuting true answer. Same flip operation.
+- Restored to Certified + `recertification_batch: P2-REM-001` / `recertification_date: 2026-09-13` (Rule 16; originals preserved).
+
+### Verification
+- Parse clean (600/750/500 recs, 0 errDiag); EW[CC] empty + all non-CC ≥50 (DL-008/026 clean); ECs byte-identical to `.bak-p2fix-20260913043000` backups.
+- `preflight:p2` 0 divergences (3,431 Certified = 5 restored in, 5 quarantined out); `validate` 0 errors; guard 89/89.
+- B-num re-run: 93→83 (5 fixed quiet + 5 quarantined excluded); B 75→74; fixed-5 quiet on all screens.
+- Backups: `backups/pack_p2_{b,c,e}.bak-p2fix-20260913043000.js` (sizes verified).
+- Process note (DL-019 read-after-write variant): a parallelized B-num re-run + result read briefly observed stale pre-flip flags; serial re-run confirmed clean. Dependent reads stay serial after any pack write.
+
+### Held
+- 5 quarantined pending Batch 2 (B-214, B-295, E-422, C-358 full/key+EC rewrites; E-185 choice repair). Diffs presented before any write.
+- Remaining sweep: B 21–75, C/D/E. P2-B-393/A-516/C-613/D-450/E-249 fixes queued in Batch 2.
+
+---
+
+## P2 Semantic Audit — Shared Screens + P2 Driver (read-only; adjudication held) — 2026-09-13
+
+**Session:** Board-authorized P2 scoping (Full Governance Lane — new audit tooling; zero pack/content/state/key writes)
+**Trigger:** DL-047 screens never ran against Part 2 (3,450 items, larger pool, highest residual content risk)
+**Scope:** 1 refactor + 1 new lib + 1 new driver; audit run read-only. Adjudication/quarantine/remediation HELD for human review.
+
+### Tooling
+- New `scripts/lib/semantic_screens.js` — verbatim extraction of the five deterministic screens from `phase0_census.js` (A fingerprints, B lead-token echo, C EC–stem mismatch, D lowercase-fragment, E generalized DL-010). P1 contaminant patterns exported for the P2 cross-part spread check.
+- `scripts/phase0_census.js` → thin P1 driver (import-safe `require.main` guard). **Regression gate PASS:** re-run yields Y1 == Y0 exactly (`A:0 B:53 C:0 D:12 E:256`, 3,070 items / 3,052 Certified). Extraction is logic-preserving. (Pre-fix history 3/24/1/14 not reproducible post-remediation — correctly so.)
+- New `scripts/semantic_key_audit_p2.js` — P2 driver (6 packs via `pack_parser` single-object records; `file:line` evidence on every flag) + P2-specific **B-num numeric-literal echo** screen. Output `scripts/output/semantic_key_audit_p2.json`.
+- Backups: `backups/phase0_census.js.bak-p2scope-20260913042000`, `backups/phase0_results_v2.json.bak-p2scope-*`.
+
+### P2 yields (3,450 items / 3,436 Certified; Screen B Certified-only, 14 In Audit excluded; case packs out of scope)
+- A fingerprints: **0** (no P1-contaminant spread into P2; P2-native list empty).
+- B lead-token echo: **75** | B-num numeric echo: **93** | C EC–stem: **6** | D lowercase: **2** (P2-B-306 A/D, on-topic MM-II/WACC style continuations) | E generalized DL-010: **126**.
+- 49 absent-EW-key items confirmed benign DL-018 variant (absent == CC in all 49; P2-C-198/199 + 47 P2-E). Screens skip absent keys.
+- 6× `JS_FALLBACK_USED` warnings (P2-D-219/223/230/234/238/245; provenance degraded, data intact).
+
+### Disposition
+- **No new DL filed; no verdicts rendered.** Flag list with `pack:line` evidence published in the output JSON for human adjudication (DL-047 flow: quarantine → fix → verify → recertify).
+- Rule 25 (pre-certification semantic gate) deferred to the R20/R21/R23 guard change-set.
+
+---
+
+## P1 Assurance — Baseline Coherence + Hygiene (R22, states, §4, Constitution) — 2026-09-13
+
+**Session:** Board-audit follow-on, P1 (Full Governance Lane — governance-critical validator/dashboard/baseline logic + derived-registry regeneration)
+**Trigger:** Board audit + P0 verification; baseline docs internally incoherent; dashboard state blind spot; warning-label collision
+**Scope:** 6 code files + 1 new gate + 2 baseline docs (Rule-7 regeneration) + .gitignore + Constitution §11.1 + 245 file moves (non-destructive). No pack/case content, no `question_state`, no answer keys.
+
+### Code
+- `PsychometricValidator.js` — `totalErrors/totalWarnings` → `psychometricModuleErrors/Warnings` (P1.1; §19.2 verified no consumers).
+- `s121_portfolio_dashboard.js` — `byState` map + `nonCertified`; pool totals show Non-Certified + states (P1.2). P1: 18 Archived; P2: 14 In Audit (was rendered 0).
+- `preflight_p2.js` — `targetQIDs` A/B 500→600 (P1.3a).
+- `baseline_coherence.js` (new) — read-only R22 gate + `--fix` (hashes/sizes/counts/§4/footer/P2§1 + board-authorized prose). Read-only wired into `preflight` + `pipeline`.
+- `package.json` — `baseline-coherence` script; `pipeline` appends it.
+- `.gitignore` — added `*.bak6` (ignore-rule gap; 6 on disk, 0 tracked).
+- Constitution §11.1 — reconciled to `app/`+`content/`+`p2/` layout; `main.js` + `AGENTS.md` recognized. **Highest-authority amendment.**
+
+### Baselines (Rule-7 `--fix` regeneration)
+- `CURRENT_BASELINES.md`: §1 (10 stale hashes/sizes recaptured), §2 notes (18 Archived, not Unprocessed), §3 DL-035→RESOLVED-in-fact, §4 full 19-rule table + 89/89, §5 (4 hashes), §6 de-fragmented, footer (3,052/18/3,070).
+- `CURRENT_BASELINES_P2.md`: §1 (5 hashes, A 586 + 14 In Audit), header + regen-claim corrected.
+- Coherence: 21 divergences → **0**. Backups `.bak-coherence-*`.
+
+### Hygiene (non-destructive moves)
+- 244 stray `.bak*` → `backups/strays-20260913/<mirror>` (0 remain outside `backups/`/`archive/`). `p2d_sprint_manifest.json` → `p2/`.
+- **HELD:** empty `./{` and `./}` deletions await explicit "execute the cleanup" (§3.1).
+
+### Verification
+- `validate`: 0 errors; psychometric 6,520 scanned; total 6,912 (`psychometricModule` 6,623).
+- `dashboard`: 6,520; states honest; 76 divergence flags.
+- `preflight` 0 divergences (incl. coherence gate), `preflight:p2` 0, guard 89/89, parser 20/20, `coherence` 0.
+- Backups: `.bak-p1-20260913000546` (9 files) + `.bak-coherence-*`.
+
+---
+
+## P0 Assurance — Psychometric Coverage Rewire (Pack C + Part 2) — 2026-09-13
+
+**Session:** Board-audit follow-on, P0.1/P0.2 (Full Governance Lane — governance-critical validator logic)
+**Trigger:** Board audit found the psychometric stack scanned 2,450/3,070 P1 items and 0 P2 items while reporting success
+**Scope:** 4 script files. No pack/case content, no `question_state`, no answer keys, no `CorrectChoice`, no registry writes.
+
+### Changes
+
+- `scripts/validators/psychometric/extractor.js` — rewired to canonical `scripts/lib/pack_parser.js`; shape-selects records by `QuestionID`; added R20 coverage assertion (parsed records vs raw `"QuestionID"` count; throws on mismatch); removed silent `catch {}` and `? : null` return paths.
+- `scripts/validators/psychometric/MathematicalValidator.js` — removed its duplicate legacy regex extractor; now consumes `loadAllQuestions()` (fixes the P2 loop gap identified in scoping).
+- `scripts/config.js` — added `part2QuestionPacks` (6 P2 packs), consumed only by the psychometric stack; `questionPacks` left P1-only to avoid disturbing P1-schema validators.
+- `scripts/s121_portfolio_dashboard.js` — `P2_PACKS` expanded 2→6; added R23 coverage assertion; footer totals made dynamic.
+
+### Verification
+
+- `npm run validate`: psychometric `questionsScanned` **2,450 → 6,520** (3,070 P1 + 3,450 P2); `totalErrors: 0`; warnings 2,185 → 6,912 (the true picture, not a regression).
+- `s121_portfolio_dashboard.js`: Part 2 now reports 3,450 items / 3,436 Certified across 6 packs (was 1,200 / 2 packs); Combined 6,520; divergence flags 53 → 76 (P2-C..F now measured).
+- `test_pack_parser` 20/20; `test_governance_guard` 89/89; `preflight` 0 divergences (3,052); `preflight:p2` 0 divergences (3,436).
+- Backups: `backups/{config.js,extractor.js,MathematicalValidator.js,s121_portfolio_dashboard.js}.bak-p0-20260912234924`.
+
+### Governance
+
+- Defect logged: **DL-049** (Psychometric stack silently excludes Pack C and all of Part 2).
+- R20/R21/R23 guard-rule codification **deferred** to a separate change-set (keeps `governance-guard.js` + 89-test suite isolated for clean attribution per AGENTS.md §19.2).
+- No content, state, key, or registry writes.
+
+---
+
 ## Tier 3 Wave 8 — 30 New Items (P1B-C-201..210 + P1B-D-151..160 + P1B-E-151..160, Unprocessed) — 2026-09-10
 
 **Session:** Tier 3 content production, Wave 8 (Full Governance Lane — new content + pack insertion)

@@ -57,8 +57,10 @@ class PsychometricValidator extends Validator {
         });
 
         this.addStatistic("modules", this.modules.length);
-        this.addStatistic("totalErrors", totalErrors);
-        this.addStatistic("totalWarnings", totalWarnings);
+        // Disambiguated names (P1.1): the all-validator totals are reported by
+        // ValidatorRunner.summary(); these are the psychometric-module sub-totals.
+        this.addStatistic("psychometricModuleErrors", totalErrors);
+        this.addStatistic("psychometricModuleWarnings", totalWarnings);
         this.finish();
         return this.report();
     }

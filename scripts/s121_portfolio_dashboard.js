@@ -63,8 +63,12 @@ const P1_PACKS = [
 ];
 
 const P2_PACKS = [
-  { name: "Pack P2-A", file: "p2/pack_p2_a.js", variable: "pack_p2_a_questions" },
-  { name: "Pack P2-B", file: "p2/pack_p2_b.js", variable: "pack_p2_b_questions" },
+  { name: "Pack P2-A", file: "p2/pack_p2_a.js" },
+  { name: "Pack P2-B", file: "p2/pack_p2_b.js" },
+  { name: "Pack P2-C", file: "p2/pack_p2_c.js" },
+  { name: "Pack P2-D", file: "p2/pack_p2_d.js" },
+  { name: "Pack P2-E", file: "p2/pack_p2_e.js" },
+  { name: "Pack P2-F", file: "p2/pack_p2_f.js" },
 ];
 
 // ── String-aware JSON object extraction ───────────────────────────
@@ -115,6 +119,16 @@ function scanPack(packDef, partLabel) {
   const raw = fs.readFileSync(filePath, "utf8");
   const objects = extractObjects(raw);
 
+  // R23 — coverage assertion. The scanner must see every question object; a
+  // silent under-extraction would publish a false distribution.
+  const rawQidCount = (raw.match(/"QuestionID"\s*:/g) || []).length;
+  if (objects.length !== rawQidCount) {
+    throw new Error(
+      `COVERAGE_ASSERTION_FAILED [${packDef.file}]: dashboard extracted ` +
+      `${objects.length} objects but raw "QuestionID" count is ${rawQidCount} (R23).`
+    );
+  }
+
   const result = {
     name: packDef.name,
     part: partLabel,
@@ -126,6 +140,9 @@ function scanPack(packDef, partLabel) {
     correctChoice: { A: 0, B: 0, C: 0, D: 0 },
     certified: 0,
     unprocessed: 0,
+    // P1.2 — full state enumeration (Archived / In Audit must not render as 0).
+    byState: {},
+    nonCertified: 0,
     bySection: {},
     diffs: [],
     warnings: [],
@@ -167,11 +184,14 @@ function scanPack(packDef, partLabel) {
       sec.correctChoice[cc]++;
     }
 
-    // State
-    const qs = obj.question_state;
-    if (qs === "Certified") result.certified++;
-    else if (qs === "Unprocessed") result.unprocessed++;
+    // State — enumerate every governance state; non-Certified is derived.
+    const stateKey = obj.question_state || "(missing)";
+    result.byState[stateKey] = (result.byState[stateKey] || 0) + 1;
+    if (stateKey === "Certified") result.certified++;
+    else if (stateKey === "Unprocessed") result.unprocessed++;
   }
+
+  result.nonCertified = result.itemsScanned - result.certified;
 
   // ── Calculate gaps ──────────────────────────────────────────
   const n = result.itemsScanned;
@@ -268,6 +288,8 @@ function aggregate(results, label) {
     correctChoice: { A: 0, B: 0, C: 0, D: 0 },
     certified: 0,
     unprocessed: 0,
+    nonCertified: 0,
+    byState: {},
   };
 
   for (const r of results) {
@@ -275,6 +297,10 @@ function aggregate(results, label) {
     agg.totalItems += r.totalItems;
     agg.certified += r.certified;
     agg.unprocessed += r.unprocessed;
+    agg.nonCertified += r.nonCertified || 0;
+    for (const [s, n] of Object.entries(r.byState || {})) {
+      agg.byState[s] = (agg.byState[s] || 0) + n;
+    }
 
     for (const [k, v] of Object.entries(r.difficulty)) {
       agg.difficulty[k] = (agg.difficulty[k] || 0) + v;
@@ -314,11 +340,16 @@ function renderMarkdown(results, p1Agg, p2Agg) {
   // ── Pool totals ─────────────────────────────────────────────
   lines.push("## 0. Pool Totals");
   lines.push("");
-  lines.push("| Pool | Packs | Total Items | Certified | Unprocessed |");
-  lines.push("|------|-------|------------|-----------|-------------|");
-  lines.push(`| **Part 1** | 5 | ${p1Agg.totalItems} | ${p1Agg.certified} (${pct(p1Agg.certified, p1Agg.totalItems)}) | ${p1Agg.unprocessed} (${pct(p1Agg.unprocessed, p1Agg.totalItems)}) |`);
-  lines.push(`| **Part 2** | 2 | ${p2Agg.totalItems} | ${p2Agg.certified} (${pct(p2Agg.certified, p2Agg.totalItems)}) | ${p2Agg.unprocessed} (${pct(p2Agg.unprocessed, p2Agg.totalItems)}) |`);
-  lines.push(`| **Combined** | 7 | ${p1Agg.totalItems + p2Agg.totalItems} | ${p1Agg.certified + p2Agg.certified} | ${p1Agg.unprocessed + p2Agg.unprocessed} |`);
+  lines.push("| Pool | Packs | Total Items | Certified | Non-Certified | States |");
+  lines.push("|------|-------|------------|-----------|---------------|--------|");
+  const fmtStates = (agg) =>
+    Object.entries(agg.byState || {}).sort().map(([s, n]) => `${s}: ${n}`).join(", ") || "—";
+  lines.push(`| **Part 1** | ${P1_PACKS.length} | ${p1Agg.totalItems} | ${p1Agg.certified} (${pct(p1Agg.certified, p1Agg.totalItems)}) | ${p1Agg.nonCertified} (${pct(p1Agg.nonCertified, p1Agg.totalItems)}) | ${fmtStates(p1Agg)} |`);
+  lines.push(`| **Part 2** | ${P2_PACKS.length} | ${p2Agg.totalItems} | ${p2Agg.certified} (${pct(p2Agg.certified, p2Agg.totalItems)}) | ${p2Agg.nonCertified} (${pct(p2Agg.nonCertified, p2Agg.totalItems)}) | ${fmtStates(p2Agg)} |`);
+  const combCert = p1Agg.certified + p2Agg.certified;
+  const combNon = p1Agg.nonCertified + p2Agg.nonCertified;
+  const combN = p1Agg.totalItems + p2Agg.totalItems;
+  lines.push(`| **Combined** | ${P1_PACKS.length + P2_PACKS.length} | ${combN} | ${combCert} (${pct(combCert, combN)}) | ${combNon} (${pct(combNon, combN)}) | P1 {${fmtStates(p1Agg)}}; P2 {${fmtStates(p2Agg)}} |`);
   lines.push("");
 
   // ── Per-pack summaries ──────────────────────────────────────
@@ -514,8 +545,8 @@ function main() {
   const p2Agg = aggregate(p2Results, "Part 2");
 
   console.log(`\n=== Pool Totals ===`);
-  console.log(`  Part 1: ${p1Agg.totalItems} items, ${p1Agg.certified} Certified`);
-  console.log(`  Part 2: ${p2Agg.totalItems} items, ${p2Agg.certified} Certified`);
+  console.log(`  Part 1: ${p1Agg.totalItems} items, ${p1Agg.certified} Certified, ${p1Agg.nonCertified} non-Certified (${JSON.stringify(p1Agg.byState)})`);
+  console.log(`  Part 2: ${p2Agg.totalItems} items, ${p2Agg.certified} Certified, ${p2Agg.nonCertified} non-Certified (${JSON.stringify(p2Agg.byState)})`);
   console.log(`  Combined: ${p1Agg.totalItems + p2Agg.totalItems} items`);
 
   // Write outputs

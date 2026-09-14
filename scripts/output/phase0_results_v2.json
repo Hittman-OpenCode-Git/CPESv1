@@ -1,0 +1,3296 @@
+{
+  "timestamp": "2026-09-13T04:20:37.015Z",
+  "parseStats": {
+    "A": {
+      "file": "pack_a_corrected.js",
+      "records": 560,
+      "diagnostics": 0,
+      "canonicalRecords": 560
+    },
+    "B": {
+      "file": "pack_b_corrected.js",
+      "records": 620,
+      "diagnostics": 0,
+      "canonicalRecords": 620
+    },
+    "C": {
+      "file": "pack_c_corrected.js",
+      "records": 620,
+      "diagnostics": 0,
+      "canonicalRecords": 620
+    },
+    "D": {
+      "file": "pack_d_corrected.js",
+      "records": 590,
+      "diagnostics": 0,
+      "canonicalRecords": 590
+    },
+    "E": {
+      "file": "pack_e_corrected.js",
+      "records": 680,
+      "diagnostics": 0,
+      "canonicalRecords": 680
+    }
+  },
+  "totalCount": 3070,
+  "certifiedCount": 3052,
+  "screenYields": {
+    "A": 0,
+    "B": 53,
+    "C": 0,
+    "D": 12,
+    "E": 256
+  },
+  "screens": {
+    "A": {
+      "name": "exact-phrase fingerprints",
+      "flags": []
+    },
+    "B": {
+      "name": "EC lead-token echo",
+      "flags": [
+        {
+          "qid": "P1-A-011",
+          "pack": "A",
+          "storedCC": "A",
+          "bestLetter": "B",
+          "bestRecall": 85.7,
+          "ccRecall": -100,
+          "margin": 185.7,
+          "bestLeadWordCount": 7,
+          "ecPreview": "Under ASC 360-10-35-21, a long-lived asset must be tested for recoverability whenever events or changes in circumstances"
+        },
+        {
+          "qid": "P1-A-034",
+          "pack": "A",
+          "storedCC": "A",
+          "bestLetter": "B",
+          "bestRecall": 66.7,
+          "ccRecall": 0,
+          "margin": 66.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Under ASC 450-20-25-2, a loss contingency is accrued when: (1) it is probable a liability has been incurred, and (2) the"
+        },
+        {
+          "qid": "P1-B-030",
+          "pack": "A",
+          "storedCC": "A",
+          "bestLetter": "B",
+          "bestRecall": 80,
+          "ccRecall": 40,
+          "margin": 40,
+          "bestLeadWordCount": 5,
+          "ecPreview": "AdvantEdge LLC (Choice A) maximizes total cost of ownership when purchase cost, quality cost, and delivery reliability a"
+        },
+        {
+          "qid": "P1-B-070",
+          "pack": "A",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 66.7,
+          "ccRecall": -100,
+          "margin": 166.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Apex should implement ZBB for FY2028. The financial analysis strongly supports the decision: a $200,480 one-time investm"
+        },
+        {
+          "qid": "P1-C-024",
+          "pack": "A",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": 10,
+          "margin": 40,
+          "bestLeadWordCount": 4,
+          "ecPreview": "A balanced scorecard should translate strategy into linked financial and nonfinancial measures."
+        },
+        {
+          "qid": "P1-D-004",
+          "pack": "A",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 77.8,
+          "ccRecall": -100,
+          "margin": 177.8,
+          "bestLeadWordCount": 9,
+          "ecPreview": "Under GAAP, the materiality assessment is not based on a single ratio (2.3% of COGS) but on whether the overapplied amou"
+        },
+        {
+          "qid": "P1-E-065",
+          "pack": "A",
+          "storedCC": "B",
+          "bestLetter": "A",
+          "bestRecall": 66.7,
+          "ccRecall": -100,
+          "margin": 166.7,
+          "bestLeadWordCount": 12,
+          "ecPreview": "Under COSO Principle 13 (Obtains, Generates, and Uses Relevant, Quality Information), control information must be releva"
+        },
+        {
+          "qid": "P1-A-081",
+          "pack": "A",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 4,
+          "ecPreview": "ASC 350's simplified test (ASU 2017-04 eliminated Step 2): impairment = carrying amount minus fair value = $1,500,000 − "
+        },
+        {
+          "qid": "P1-A-091",
+          "pack": "A",
+          "storedCC": "C",
+          "bestLetter": "A",
+          "bestRecall": 75,
+          "ccRecall": -100,
+          "margin": 175,
+          "bestLeadWordCount": 4,
+          "ecPreview": "ASC 740's more-likely-than-not test (>50% probability) applies dollar by dollar: $80,000 backed by signed contracts clea"
+        },
+        {
+          "qid": "P1-A-093",
+          "pack": "A",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 80,
+          "ccRecall": -100,
+          "margin": 180,
+          "bestLeadWordCount": 5,
+          "ecPreview": "ASC 820 ranks by the lowest-level significant input: (1) Apple — quoted price for the identical asset in an active marke"
+        },
+        {
+          "qid": "P1-C-115",
+          "pack": "A",
+          "storedCC": "A",
+          "bestLetter": "B",
+          "bestRecall": 100,
+          "ccRecall": 50,
+          "margin": 50,
+          "bestLeadWordCount": 5,
+          "ecPreview": "Negotiation range: floor = S's variable cost $30 (excess capacity → no opportunity cost; below $30 S loses cash per unit"
+        },
+        {
+          "qid": "P1B-A-135",
+          "pack": "B",
+          "storedCC": "C",
+          "bestLetter": "A",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 4,
+          "ecPreview": "When AFS debt securities are sold, the cumulative unrealized gain in OCI ($50,000) is reclassified (recycled) to net inc"
+        },
+        {
+          "qid": "P1B-B-102",
+          "pack": "B",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 100,
+          "ccRecall": 50,
+          "margin": 50,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Operating budgets include sales, production, direct materials, direct labor, overhead, and S&A budgets. Capital, cash, a"
+        },
+        {
+          "qid": "P1B-C-179",
+          "pack": "B",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 100,
+          "ccRecall": 30,
+          "margin": 70,
+          "bestLeadWordCount": 3,
+          "ecPreview": "When using a plantwide rate based on DLH (which favors high-volume products), Product H (80% of DLH) receives 80% of ove"
+        },
+        {
+          "qid": "P1B-D-109",
+          "pack": "B",
+          "storedCC": "A",
+          "bestLetter": "C",
+          "bestRecall": 100,
+          "ccRecall": -100,
+          "margin": 200,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Joint costs are the costs incurred before the split-off point that benefit all joint products simultaneously. These cost"
+        },
+        {
+          "qid": "P1B-F-100",
+          "pack": "B",
+          "storedCC": "C",
+          "bestLetter": "B",
+          "bestRecall": 60,
+          "ccRecall": -100,
+          "margin": 160,
+          "bestLeadWordCount": 5,
+          "ecPreview": "CCPA grants California consumers the right to know what personal information is collected, the right to delete personal "
+        },
+        {
+          "qid": "P1B-B-212",
+          "pack": "B",
+          "storedCC": "D",
+          "bestLetter": "A",
+          "bestRecall": 66.7,
+          "ccRecall": -100,
+          "margin": 166.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Current: ABB $240,000 + $125,000 + $120,000 = $485,000 vs traditional $500,000 — the $15,000 gap is idle/non-value activ"
+        },
+        {
+          "qid": "P1B-B-216",
+          "pack": "B",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 100,
+          "ccRecall": -100,
+          "margin": 200,
+          "bestLeadWordCount": 5,
+          "ecPreview": "Lost contribution = 2,000 × $20 = $40,000 — real, immediate, unrecoverable (stockout sales rarely fully recover). Excess"
+        },
+        {
+          "qid": "P1B-B-228",
+          "pack": "B",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 100,
+          "ccRecall": 57.1,
+          "margin": 42.9,
+          "bestLeadWordCount": 5,
+          "ecPreview": "The $60,000 coordination failure (per the costing analysis: $40,000 lost CM on 2,000-unit stockouts plus $20,000 excess-"
+        },
+        {
+          "qid": "P1B-C-210",
+          "pack": "B",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 50,
+          "ccRecall": 0,
+          "margin": 50,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Price the bundle against the measured failure stream: $400,000/year decision error + 15% forecast bias drag + recurring "
+        },
+        {
+          "qid": "P1B-D-155",
+          "pack": "B",
+          "storedCC": "C",
+          "bestLetter": "B",
+          "bestRecall": 62.5,
+          "ccRecall": 0,
+          "margin": 62.5,
+          "bestLeadWordCount": 8,
+          "ecPreview": "Products bear 8,000 × $50 = $400,000 (resources consumed at the budgeted rate). The $100,000 balance (2,000 idle hours ×"
+        },
+        {
+          "qid": "P1B-A-154",
+          "pack": "B",
+          "storedCC": "C",
+          "bestLetter": "A",
+          "bestRecall": 66.7,
+          "ccRecall": 0,
+          "margin": 66.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Beneficial conversion feature = $1,200,000 conversion value − $1,000,000 proceeds = $200,000 intrinsic value at issuance"
+        },
+        {
+          "qid": "P1B-A-164",
+          "pack": "B",
+          "storedCC": "C",
+          "bestLetter": "B",
+          "bestRecall": 75,
+          "ccRecall": -100,
+          "margin": 175,
+          "bestLeadWordCount": 4,
+          "ecPreview": "Equity method mirrors both layers: $30,000 pickup (30% × $100,000) to investor earnings; $12,000 OCI pickup (30% × $40,0"
+        },
+        {
+          "qid": "P1B-C-218",
+          "pack": "B",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 66.7,
+          "ccRecall": 0,
+          "margin": 66.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Gross scrap variance = (1,600 − 1,000) × $6.00 = 600 × $6.00 = $3,600 U (excess volume — operations). Recovery variance "
+        },
+        {
+          "qid": "P1B-C-226",
+          "pack": "B",
+          "storedCC": "D",
+          "bestLetter": "A",
+          "bestRecall": 100,
+          "ccRecall": 50,
+          "margin": 50,
+          "bestLeadWordCount": 7,
+          "ecPreview": "Unadjusted: $5,000,000/100,000 = $50.00 vs $5,280,000/110,000 = $48.00 → $2.00 (4.0%) gain. Quality-adjusted (adding war"
+        },
+        {
+          "qid": "P1B-C-240",
+          "pack": "B",
+          "storedCC": "B",
+          "bestLetter": "A",
+          "bestRecall": 71.4,
+          "ccRecall": 0,
+          "margin": 71.4,
+          "bestLeadWordCount": 7,
+          "ecPreview": "Two-lens mechanics: kaizen lens — $47.50 vs $47.06 moving target = $0.44 U (this quarter's improvement pace lagged the 2"
+        },
+        {
+          "qid": "P1-AC-106",
+          "pack": "C",
+          "storedCC": "B",
+          "bestLetter": "A",
+          "bestRecall": 77.8,
+          "ccRecall": -100,
+          "margin": 177.8,
+          "bestLeadWordCount": 9,
+          "ecPreview": "Firm non-cancelable commitments: recognize the net loss when market falls below contract price before receipt — ($20 − $"
+        },
+        {
+          "qid": "P1-AC-111",
+          "pack": "C",
+          "storedCC": "C",
+          "bestLetter": "D",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Revised expected-to-vest = 10,000 − 15% × 10,000 = 8,500 options × $8 = $68,000 total; Year-1 cost = $68,000/4 = $17,000"
+        },
+        {
+          "qid": "P1-AC-114",
+          "pack": "C",
+          "storedCC": "C",
+          "bestLetter": "D",
+          "bestRecall": 60,
+          "ccRecall": -100,
+          "margin": 160,
+          "bestLeadWordCount": 5,
+          "ecPreview": "OCI = current unrealized $40,000 MINUS reclassification adjustment $25,000 (removing previously-recognized OCI now reali"
+        },
+        {
+          "qid": "P1-BC-103",
+          "pack": "C",
+          "storedCC": "A",
+          "bestLetter": "D",
+          "bestRecall": 62.5,
+          "ccRecall": 0,
+          "margin": 62.5,
+          "bestLeadWordCount": 8,
+          "ecPreview": "DOL = $800,000/$300,000 = 2.6667 ≈ 2.67. ±10% sales → ±26.67% NOI: upside $300,000 × 1.2667 = $380,000; downside $300,00"
+        },
+        {
+          "qid": "P1-BC-107",
+          "pack": "C",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": 0,
+          "margin": 50,
+          "bestLeadWordCount": 8,
+          "ecPreview": "PV of savings = $28,000 × PVIFA(7%,10) = $28,000 × 7.02358 = $196,660.24 ≈ $196,661. PV of salvage = $5,000 × PVIF(7%,10"
+        },
+        {
+          "qid": "P1-BC-109",
+          "pack": "C",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Controllability filter: efficiency $12,000 U (crew scheduling — controlled) stays accountable; maintenance $30,000 (disp"
+        },
+        {
+          "qid": "P1-FD-002",
+          "pack": "D",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 60,
+          "ccRecall": 0,
+          "margin": 60,
+          "bestLeadWordCount": 5,
+          "ecPreview": "APIs allow separate systems to exchange data automatically, which supports timely payment and accounting information wit"
+        },
+        {
+          "qid": "P1-CD-124",
+          "pack": "D",
+          "storedCC": "C",
+          "bestLetter": "A",
+          "bestRecall": 55.6,
+          "ccRecall": 0,
+          "margin": 55.6,
+          "bestLeadWordCount": 9,
+          "ecPreview": "$60,000 / $1,000,000 total = 6% — material by any reasonable threshold, so the GAAP matching principle requires inventor"
+        },
+        {
+          "qid": "P1-AD-085",
+          "pack": "D",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Extinguishment gain/loss = carrying amount − reacquisition price = $520,000 − $480,000 = $40,000 gain. The unamortized p"
+        },
+        {
+          "qid": "P1-AD-089",
+          "pack": "D",
+          "storedCC": "B",
+          "bestLetter": "D",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Extinguishment gain/loss = carrying amount − reacquisition price = $520,000 − $480,000 = $40,000 gain. The unamortized p"
+        },
+        {
+          "qid": "P1-AD-091",
+          "pack": "D",
+          "storedCC": "C",
+          "bestLetter": "A",
+          "bestRecall": 75,
+          "ccRecall": -100,
+          "margin": 175,
+          "bestLeadWordCount": 4,
+          "ecPreview": "ASC 740's more-likely-than-not test (>50% probability) applies dollar by dollar: $80,000 backed by signed contracts clea"
+        },
+        {
+          "qid": "P1-AD-093",
+          "pack": "D",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 80,
+          "ccRecall": -100,
+          "margin": 180,
+          "bestLeadWordCount": 5,
+          "ecPreview": "ASC 820 ranks by the lowest-level significant input: (1) Apple — quoted price for the identical asset in an active marke"
+        },
+        {
+          "qid": "P1-DD-092",
+          "pack": "D",
+          "storedCC": "D",
+          "bestLetter": "B",
+          "bestRecall": 66.7,
+          "ccRecall": -100,
+          "margin": 166.7,
+          "bestLeadWordCount": 6,
+          "ecPreview": "MOS = actual − breakeven = $1,000,000 − $800,000 = $200,000 (20% of sales: $200,000/$1,000,000 — not option C's $200,000"
+        },
+        {
+          "qid": "P1-DD-097",
+          "pack": "D",
+          "storedCC": "A",
+          "bestLetter": "C",
+          "bestRecall": 57.1,
+          "ccRecall": 0,
+          "margin": 57.1,
+          "bestLeadWordCount": 7,
+          "ecPreview": "The decision prices information: $210,000/year of margin distortion (underpriced complex bids, overpriced simple bids lo"
+        },
+        {
+          "qid": "P1-DD-100",
+          "pack": "D",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Machine annual cost = $180,000/8 + $5,000 = $22,500 + $5,000 = $27,500 vs $70,000 overtime → savings $42,500/year. Payba"
+        },
+        {
+          "qid": "P1-DD-102",
+          "pack": "D",
+          "storedCC": "D",
+          "bestLetter": "C",
+          "bestRecall": 60,
+          "ccRecall": 0,
+          "margin": 60,
+          "bestLeadWordCount": 5,
+          "ecPreview": "Noise exposure: ±15% on $2,000,000 = ±$300,000 of standard error — variances, evaluations, and pricing built on historic"
+        },
+        {
+          "qid": "P1E-A-005",
+          "pack": "E",
+          "storedCC": "A",
+          "bestLetter": "C",
+          "bestRecall": 100,
+          "ccRecall": 55.6,
+          "margin": 44.4,
+          "bestLeadWordCount": 5,
+          "ecPreview": "Under ASC 330-10-35, inventory is measured at the lower of cost or net realizable value (LCNRV). Finished goods are eval"
+        },
+        {
+          "qid": "P1E-A-007",
+          "pack": "E",
+          "storedCC": "C",
+          "bestLetter": "B",
+          "bestRecall": 50,
+          "ccRecall": 0,
+          "margin": 50,
+          "bestLeadWordCount": 4,
+          "ecPreview": "Under ASC 470-10-45-11, a long-term obligation that becomes callable due to a covenant violation may still be classified"
+        },
+        {
+          "qid": "P1E-A-058",
+          "pack": "E",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 63.6,
+          "ccRecall": 0,
+          "margin": 63.6,
+          "bestLeadWordCount": 11,
+          "ecPreview": "The three components of Pacific Foods' restructuring plan are governed by different accounting standards with distinct r"
+        },
+        {
+          "qid": "P1E-B-039",
+          "pack": "E",
+          "storedCC": "A",
+          "bestLetter": "C",
+          "bestRecall": 100,
+          "ccRecall": 50,
+          "margin": 50,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Dual-rate pricing charges one price to buyer and credits another to seller."
+        },
+        {
+          "qid": "P1E-C-064",
+          "pack": "E",
+          "storedCC": "A",
+          "bestLetter": "D",
+          "bestRecall": 66.7,
+          "ccRecall": 25,
+          "margin": 41.7,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Nonfinancial measures often drive future financial outcomes."
+        },
+        {
+          "qid": "P1E-D-057",
+          "pack": "E",
+          "storedCC": "D",
+          "bestLetter": "A",
+          "bestRecall": 66.7,
+          "ccRecall": 25,
+          "margin": 41.7,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Direct method ignores services provided between service departments."
+        },
+        {
+          "qid": "P1E-C-092",
+          "pack": "E",
+          "storedCC": "D",
+          "bestLetter": "A",
+          "bestRecall": 66.7,
+          "ccRecall": -100,
+          "margin": 166.7,
+          "bestLeadWordCount": 3,
+          "ecPreview": "Concept: Under ASC 280, an operating segment is reportable if it meets any of three quantitative 10% thresholds. The ass"
+        },
+        {
+          "qid": "P1E-E-S05",
+          "pack": "E",
+          "storedCC": "A",
+          "bestLetter": "D",
+          "bestRecall": 75,
+          "ccRecall": -100,
+          "margin": 175,
+          "bestLeadWordCount": 12,
+          "ecPreview": "The correct answer is A. Under PCAOB Auditing Standard 2201 (An Audit of Internal Control Over Financial Reporting That "
+        },
+        {
+          "qid": "P1E-E-105",
+          "pack": "E",
+          "storedCC": "C",
+          "bestLetter": "D",
+          "bestRecall": 81.8,
+          "ccRecall": 0,
+          "margin": 81.8,
+          "bestLeadWordCount": 11,
+          "ecPreview": "Age and amount interact: large breaks that age past 60 days signal either broken follow-up (control failure) or delibera"
+        },
+        {
+          "qid": "P1E-E-113",
+          "pack": "E",
+          "storedCC": "B",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": 0,
+          "margin": 50,
+          "bestLeadWordCount": 8,
+          "ecPreview": "The $50,000 threshold demonstrably misses the known fraud band ($18,000/$22,000 passed untested twice) — threshold valid"
+        },
+        {
+          "qid": "P1E-E-127",
+          "pack": "E",
+          "storedCC": "A",
+          "bestLetter": "C",
+          "bestRecall": 50,
+          "ccRecall": -100,
+          "margin": 150,
+          "bestLeadWordCount": 6,
+          "ecPreview": "Joint benefit math: labor $70,000 × 80% = $56,000/year plus error reduction $90,000 × 90% = $81,000/year = $137,000/year"
+        }
+      ]
+    },
+    "C": {
+      "name": "EC-stem mismatch",
+      "flags": []
+    },
+    "D": {
+      "name": "EW lowercase-fragment",
+      "flags": [
+        {
+          "qid": "P1-BC-056",
+          "pack": "C",
+          "slot": "B",
+          "isCorrectChoice": false,
+          "textPreview": "this adds March collections ($54,000) and February collections ($150,000 x 40% = $60,000) but omits the January portion "
+        },
+        {
+          "qid": "P1-BC-056",
+          "pack": "C",
+          "slot": "C",
+          "isCorrectChoice": false,
+          "textPreview": "this equals total March sales, ignoring the collection pattern. Cash collections reflect the timing of receipts, not the"
+        },
+        {
+          "qid": "P1-FC-026",
+          "pack": "C",
+          "slot": "D",
+          "isCorrectChoice": false,
+          "textPreview": "checksums verify data integrity by detecting unauthorized changes. The terminated employee scenario involves unauthorize"
+        },
+        {
+          "qid": "P1-AD-054",
+          "pack": "D",
+          "slot": "A",
+          "isCorrectChoice": false,
+          "textPreview": "this results from dividing net income by shares without subtracting preferred dividends ($500,000 / 200,000 = $2.50). Ba"
+        },
+        {
+          "qid": "P1-AD-054",
+          "pack": "D",
+          "slot": "D",
+          "isCorrectChoice": false,
+          "textPreview": "this results from subtracting the full preferred dividend amount from both income and shares, or an arithmetic error. Th"
+        },
+        {
+          "qid": "P1-AD-055",
+          "pack": "D",
+          "slot": "A",
+          "isCorrectChoice": false,
+          "textPreview": "this is basic EPS only ($600,000 - $60,000) / 250,000 = $2.16, so $2.40 is not a valid intermediate either. $2.40 may co"
+        },
+        {
+          "qid": "P1-AD-055",
+          "pack": "D",
+          "slot": "B",
+          "isCorrectChoice": false,
+          "textPreview": "this is basic EPS ($600,000 - $60,000) / 250,000 = $2.16. Diluted EPS must add back preferred dividends to net income an"
+        },
+        {
+          "qid": "P1-DD-024",
+          "pack": "D",
+          "slot": "B",
+          "isCorrectChoice": false,
+          "textPreview": "this may result from using an incorrect rate ($84,000 / 280 = $300 per hour; $30,000 does not match a straightforward ca"
+        },
+        {
+          "qid": "P1-DD-024",
+          "pack": "D",
+          "slot": "C",
+          "isCorrectChoice": false,
+          "textPreview": "this is the total cost pool, not the amount assigned to an individual product. ABC assigns costs proportionally based on"
+        },
+        {
+          "qid": "P1E-D-005",
+          "pack": "E",
+          "slot": "D",
+          "isCorrectChoice": false,
+          "textPreview": "work to date describes weighted average, which combines beginning and current costs."
+        },
+        {
+          "qid": "P1E-D-026",
+          "pack": "E",
+          "slot": "D",
+          "isCorrectChoice": false,
+          "textPreview": "costs incurred include sunk and irrelevant costs; only relevant costs matter for decisions."
+        },
+        {
+          "qid": "P1E-D-073",
+          "pack": "E",
+          "slot": "B",
+          "isCorrectChoice": false,
+          "textPreview": "manufacturing costs is a broader category; prime costs specifically include only direct materials and direct labor."
+        }
+      ]
+    },
+    "E": {
+      "name": "generalized DL-010",
+      "flags": [
+        {
+          "qid": "P1-A-015",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 80,
+          "ewPreview": "Consolidation requires control (majority voting interest), not just 20%-plus ownership. Frontier's 30% ownership with significant influence triggers equity meth"
+        },
+        {
+          "qid": "P1-A-020",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Integrated reporting is broader than sustainability reporting. It connects strategy, governance, performance, and prospects across six capitals (financial, manu"
+        },
+        {
+          "qid": "P1-C-001",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Eliminating the need for actual cost tracking is not realistic. Even with a standard-costing system, actual costs must still be recorded, and variances between "
+        },
+        {
+          "qid": "P1-C-016",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Paying $7.60 instead of the $7.00 standard is unfavorable."
+        },
+        {
+          "qid": "P1-C-018",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the direction is wrong. Paying above the standard rate is unfavorable."
+        },
+        {
+          "qid": "P1-C-019",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is correct, but the direction is wrong. Fewer actual hours than standard hours is favorable."
+        },
+        {
+          "qid": "P1-C-020",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Actual cost exceeded the flexible budget, so the variance is unfavorable."
+        },
+        {
+          "qid": "P1-C-023",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Higher flexible-budget contribution than static budget is favorable."
+        },
+        {
+          "qid": "P1-C-029",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the sign is wrong. Using 190 pounds more than allowed is unfavorable."
+        },
+        {
+          "qid": "P1-C-030",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount matches the rate difference, but the direction is wrong. A higher actual rate than standard creates an unfavorable variance."
+        },
+        {
+          "qid": "P1-C-031",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the direction is wrong. Actual hours were below standard hours, which is favorable."
+        },
+        {
+          "qid": "P1-C-032",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the direction is wrong. Spending more than the flexible budget is unfavorable."
+        },
+        {
+          "qid": "P1-C-035",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Flexible-budget contribution is higher than static-budget contribution, so the variance is favorable."
+        },
+        {
+          "qid": "P1-C-040",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Paying more than standard creates an unfavorable variance."
+        },
+        {
+          "qid": "P1-C-042",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but paying more than the standard rate is unfavorable."
+        },
+        {
+          "qid": "P1-C-043",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Using fewer hours than standard is favorable."
+        },
+        {
+          "qid": "P1-C-044",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Actual overhead exceeded the flexible budget, so the variance is unfavorable."
+        },
+        {
+          "qid": "P1-C-047",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Flexible-budget contribution is higher than static-budget contribution, so the variance is favorable."
+        },
+        {
+          "qid": "P1-C-052",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Paying more than the standard price is unfavorable."
+        },
+        {
+          "qid": "P1-C-053",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the direction is wrong. Actual material use exceeded the standard allowance, which is unfavorable."
+        },
+        {
+          "qid": "P1-C-054",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is correct, but the sign is not. A $23 actual rate versus a $22 standard rate is unfavorable."
+        },
+        {
+          "qid": "P1-C-055",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the sign is wrong. Using fewer hours than standard is favorable."
+        },
+        {
+          "qid": "P1-C-056",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is right, but the direction is wrong. Spending above the flexible budget is unfavorable."
+        },
+        {
+          "qid": "P1-C-064",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. The actual purchase price was above standard, so the variance is unfavorable."
+        },
+        {
+          "qid": "P1-C-065",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the sign is wrong. Using more material than allowed is unfavorable."
+        },
+        {
+          "qid": "P1-C-066",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. A higher actual wage rate than standard is unfavorable."
+        },
+        {
+          "qid": "P1-C-067",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Actual hours were below standard hours, so the variance is favorable."
+        },
+        {
+          "qid": "P1-C-068",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the direction is wrong. Actual cost exceeded the flexible budget, so the variance is unfavorable."
+        },
+        {
+          "qid": "P1-C-071",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Flexible-budget contribution is above the static budget, which is favorable."
+        },
+        {
+          "qid": "P1-C-077",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Using more material than the standard allows is unfavorable."
+        },
+        {
+          "qid": "P1-C-078",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the direction is wrong. Paying $23 when the standard is $22 creates an unfavorable variance."
+        },
+        {
+          "qid": "P1-C-079",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is right, but the direction is wrong. Using fewer hours than allowed creates a favorable efficiency variance."
+        },
+        {
+          "qid": "P1-C-080",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Spending above the flexible budget is unfavorable."
+        },
+        {
+          "qid": "P1-C-083",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Flexible-budget contribution exceeds static-budget contribution, so the volume variance is favorable."
+        },
+        {
+          "qid": "P1-C-088",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Paying more than the standard price creates an unfavorable variance."
+        },
+        {
+          "qid": "P1-C-089",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the sign is wrong. Using more material than allowed is unfavorable."
+        },
+        {
+          "qid": "P1-C-090",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is correct, but the direction is wrong. A higher actual wage rate than standard is unfavorable."
+        },
+        {
+          "qid": "P1-C-091",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Using fewer labor hours than standard is favorable."
+        },
+        {
+          "qid": "P1-C-092",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is right, but the sign is wrong. Actual cost exceeded the flexible budget, making the variance unfavorable."
+        },
+        {
+          "qid": "P1-C-095",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the sign is wrong. Flexible-budget contribution is higher than static-budget contribution, so the variance is favorable."
+        },
+        {
+          "qid": "P1-C-097",
+          "pack": "A",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "A zero transfer price would understate divisional performance and ignore both variable cost and opportunity cost."
+        },
+        {
+          "qid": "P1-C-100",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The dollar amount is right, but the sign is wrong. Paying above the standard price is unfavorable."
+        },
+        {
+          "qid": "P1-D-028",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "$500,000 is Midgard's total facility-level cost pool, not Product X's allocated share. Allocation requires applying the rate ($25 per machine hour) to Product X"
+        },
+        {
+          "qid": "P1-D-032",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the status is wrong. Actual overhead exceeded applied overhead, so overhead is underapplied."
+        },
+        {
+          "qid": "P1-D-052",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but the status is wrong. Actual overhead above applied overhead is underapplied."
+        },
+        {
+          "qid": "P1-D-062",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is correct, but the status is wrong. Actual overhead exceeded applied overhead, so it is underapplied."
+        },
+        {
+          "qid": "P1-D-068",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "$80,000 is the total ABC overhead for Product H, not the change. Product H's overhead decreases by $160,000 when switching from traditional to ABC."
+        },
+        {
+          "qid": "P1-F-011",
+          "pack": "A",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 60,
+          "ewPreview": "A foreign key links to another table, but the vendor master table still needs its own unique primary key."
+        },
+        {
+          "qid": "P1-F-016",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 11.1,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Adding more data does not correct the misleading effect of a truncated or inconsistent axis."
+        },
+        {
+          "qid": "P1-F-035",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 10,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 55,
+          "ewPreview": "Identifying only Path-2 as a gap understates the scope. While Path-2 is a genuine encryption gap, Paths 4 and 5 also lack adequate protection. Path-4's unencryp"
+        },
+        {
+          "qid": "P1-F-044",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 62.5,
+          "ewPreview": "Automation does not remove version-control risk; automated analytics can still run the wrong model, assumptions, or data set."
+        },
+        {
+          "qid": "P1-A-090",
+          "pack": "A",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 55.6,
+          "ewPreview": "Option C computes $230,000 correctly but requires no disclosure. The $40,000 phantom profit is material and non-recurring — earnings quality requires segregatin"
+        },
+        {
+          "qid": "P1-A-102",
+          "pack": "A",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 60,
+          "ewPreview": "Option A capitalizes all $550,000 as 'major overhaul,' booking $400,000 of non-benefit (restoration + routine) as an asset. Invoice labels do not create future "
+        },
+        {
+          "qid": "P1B-A-080",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Deferring revenue until the end of the contract term is not appropriate. ASC 606 requires recognition when the performance obligation is satisfied, which occurs"
+        },
+        {
+          "qid": "P1B-A-088",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Only $300 of the $1,200 has been earned by March 31 (3 months of 12). The remaining $900 is unearned and must remain classified as a liability until the service"
+        },
+        {
+          "qid": "P1B-A-090",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Once an asset is classified as held-for-sale, it is no longer reported as PP&E or depreciated. It is presented as a separate current asset on the balance sheet."
+        },
+        {
+          "qid": "P1B-A-113",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": -100,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "A deferred tax liability would arise from a future taxable amount (e.g., accelerated depreciation for tax). Here, warranty expense creates a future deductible a"
+        },
+        {
+          "qid": "P1B-A-121",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "This amount is not a standard amount. Accrual would only be required if the loss were probable (typically >70-75% probability). At 40%, the correct treatment is"
+        },
+        {
+          "qid": "P1B-A-132",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Prospective application is used for changes in estimate. A change in reporting entity is a specific type of accounting change that explicitly requires retrospec"
+        },
+        {
+          "qid": "P1B-A-132",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 75,
+          "ewPreview": "Disclosure alone is insufficient. The financial statements themselves must be restated retrospectively to reflect the new reporting entity for all periods prese"
+        },
+        {
+          "qid": "P1B-A-138",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 20,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Accrual of a gain contingency before realization violates the conservatism principle. GAAP prohibits recognition of gain contingencies until the gain is realize"
+        },
+        {
+          "qid": "P1B-A-142",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Expensing R&D as incurred is a GAAP-specific rule. Under IFRS, development costs may be capitalized if certain criteria are met (technical feasibility, intent t"
+        },
+        {
+          "qid": "P1B-A-142",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Capitalizing R&D costs as intangible assets is permitted under IFRS for development costs but not under GAAP. Under GAAP, all R&D costs are expensed as incurred"
+        },
+        {
+          "qid": "P1B-A-142",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Deferring R&D costs to future periods when benefits are realized is not permitted under GAAP. The matching principle does not override the requirement to expens"
+        },
+        {
+          "qid": "P1B-A-144",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Consolidation of the target with the acquirer happens regardless of pushdown accounting. Pushdown accounting is about whether the separate financial statements "
+        },
+        {
+          "qid": "P1B-A-144",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 55.6,
+          "ewPreview": "Goodwill is recognized in pushdown accounting (the excess of consideration over fair value of net assets), but that is only one component of pushdown accounting"
+        },
+        {
+          "qid": "P1B-A-148",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 75,
+          "ewPreview": "Accrued revenue is not reported as a liability. It represents revenue earned but not yet billed, making it an asset because the company has a right to receive p"
+        },
+        {
+          "qid": "P1B-B-126",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "A cost center manager is responsible only for costs. ROI requires accountability for both profits and the capital base, which extends beyond cost control."
+        },
+        {
+          "qid": "P1B-B-127",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Zero-based budgeting requires justifying all expenses from zero each period. Budget slack is about padding targets, not about the base from which budgets start."
+        },
+        {
+          "qid": "P1B-B-129",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 75,
+          "ewPreview": "Participative budgeting involves lower-level managers. Top-down budgeting flows from senior management down to operational levels."
+        },
+        {
+          "qid": "P1B-B-130",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "ABB is not about adjusting prior budgets for inflation. It is a forward-looking approach that starts with expected activity demand and budgets resources accordi"
+        },
+        {
+          "qid": "P1B-B-131",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Incremental budgeting starts with the prior period and adjusts upward. ZBB requires justification of every expense from a zero base, not from prior levels."
+        },
+        {
+          "qid": "P1B-B-132",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Activity-based budgeting focuses on activity drivers. Kaizen budgeting specifically emphasizes continuous cost reduction throughout the budget period."
+        },
+        {
+          "qid": "P1B-B-134",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "The CFO is a member of the budget committee but does not single-handedly resolve all budget disputes. The budget committee as a group reviews submissions and re"
+        },
+        {
+          "qid": "P1B-B-136",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 60,
+          "ewPreview": "The production budget plans for the quantity of goods to be produced. Capital expenditure planning is about long-term asset acquisitions, not production volumes"
+        },
+        {
+          "qid": "P1B-B-136",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 60,
+          "ewPreview": "The operating expense budget covers day-to-day expenses. Capital expenditures are planned separately because they involve long-term investments with multi-perio"
+        },
+        {
+          "qid": "P1B-B-137",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Operating budgets (sales, production, etc.) must be completed first to provide the revenue and expense information needed for the budgeted income statement."
+        },
+        {
+          "qid": "P1B-B-139",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Sensitivity analysis tests the impact of varying one input at a time. Probability-based budgeting assigns probabilities to different outcomes to compute expecte"
+        },
+        {
+          "qid": "P1B-B-139",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Monte Carlo simulation is one technique used for probability-based budgeting, but the concept of probability-based budgeting encompasses assigning probabilities"
+        },
+        {
+          "qid": "P1B-B-147",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "A favorable variance for revenues means actual exceeded budget, not the reverse. When actual revenue exceeds budget, the variance is favorable because it increa"
+        },
+        {
+          "qid": "P1B-B-161",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Activity-based budgeting focuses on activities and cost drivers. Incremental budgeting adjusts the prior budget for expected changes."
+        },
+        {
+          "qid": "P1B-B-162",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "The strategic plan sets long-term direction. A budget manual provides the specific operational guidelines for budget preparation throughout the organization."
+        },
+        {
+          "qid": "P1B-B-162",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "The budgeted financial statements are the output of the budget process. The budget manual provides instructions for how to prepare those statements."
+        },
+        {
+          "qid": "P1B-B-167",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Ethical considerations are important behavioral factors. Budgeting involves human behavior, and factors like employee morale and motivation significantly affect"
+        },
+        {
+          "qid": "P1B-B-186",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "$0 would result only if actual hours equaled standard hours allowed. Here, 1,600 actual exceeds 1,500 standard, so there is an unfavorable efficiency variance."
+        },
+        {
+          "qid": "P1B-B-200",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "The CFO oversees the budget process and may recommend the budget to the board, but final approval requires board-level authorization as part of corporate govern"
+        },
+        {
+          "qid": "P1B-C-106",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The variance is favorable because actual hours (11,800) were less than standard hours (12,000). Using fewer hours than standard for the output achieved indicate"
+        },
+        {
+          "qid": "P1B-C-152",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 75,
+          "ewPreview": "Setting the transfer price at variable cost ($70) transfers the entire contribution margin ($35 per unit, $280,000 total) to the Appliance Division. While this "
+        },
+        {
+          "qid": "P1B-C-192",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 60,
+          "ewPreview": "Normal costing and standard costing are distinct systems with different approaches to cost measurement, though they can be used together."
+        },
+        {
+          "qid": "P1B-D-101",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 75,
+          "ewPreview": "ABC uses multiple cost drivers beyond DLH, such as machine hours, number of setups, and inspection hours, to reflect how products consume activities."
+        },
+        {
+          "qid": "P1B-E-099",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "HR handles general employee complaints, but SOX specifically requires audit committee oversight for accounting concerns."
+        },
+        {
+          "qid": "P1B-F-093",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Authenticity concerns whether data is genuine. The primary impact is loss of access."
+        },
+        {
+          "qid": "P1B-F-096",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Maintaining separate databases is a limitation of legacy systems, not a feature of ERP."
+        },
+        {
+          "qid": "P1B-F-112",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Time series analysis examines data points collected over time to identify trends. The described goal of understanding the relationship between advertising spend"
+        },
+        {
+          "qid": "P1B-F-113",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 17.6,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "RPA cannot perform the unstructured text classification required by Process 2 — bots follow rules, and there is no deterministic rule for 'this email expresses "
+        },
+        {
+          "qid": "P1B-B-211",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option D demands 10% annually without basis — 5% demonstrably reaches $99.28 in year 2. Doubling required pace on unfounded urgency burns improvement goodwill."
+        },
+        {
+          "qid": "P1B-C-207",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option B discards benchmarking entirely over a scale objection the decomposition already solves. The $0.80 efficiency portion is a genuine, copyable opportunity"
+        },
+        {
+          "qid": "P1B-C-207",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option C excuses the full $2.70 gap because part of it is scale-driven. The $0.80 operational portion is controllable and attributable — scale cover for efficie"
+        },
+        {
+          "qid": "P1B-D-152",
+          "pack": "B",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 53.3,
+          "ewPreview": "Option A's with-intercept model invents $670 of fixed commission pay at zero sales — contradicting the no-retainer plan. Fit improvement from theory-violating p"
+        },
+        {
+          "qid": "P1B-D-153",
+          "pack": "B",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option C expenses all $13,000, understating the custom job by $8,000 of expected rework. Normal rework on custom specs is product cost — expensing it understate"
+        },
+        {
+          "qid": "P1B-A-155",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Option D's $37,365 prices only the guarantee while dropping $421,236 of rents — liabilities include all probable payment legs, never guarantees alone."
+        },
+        {
+          "qid": "P1B-C-211",
+          "pack": "B",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option D reads 100 excess lbs as $620 favorable — consuming beyond standard output is unfavorable by definition; direction follows actual-minus-standard."
+        },
+        {
+          "qid": "P1B-C-212",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option B's $2,020 lump charges operations for a $600 market spike — price effects belong to purchasing-vs-index evaluation, never the shop floor."
+        },
+        {
+          "qid": "P1B-C-231",
+          "pack": "B",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 60,
+          "ewPreview": "Option B charges purchasing $15,000 of floor usage and requested substitution — buying owns supplier selection, never production's recipe requests or waste."
+        },
+        {
+          "qid": "P1-AC-010",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Trading classification under ASC 320 applies to debt securities purchased with intent to sell in the near term for short-term profit. When management has both t"
+        },
+        {
+          "qid": "P1-AC-012",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "Full consolidation is required when the investor controls the investee, typically at ownership exceeding 50% per ASC 810. At 30% ownership, Larkspur has signifi"
+        },
+        {
+          "qid": "P1-BC-008",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-009",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-010",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-012",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-013",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-013",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-014",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Incorrect under Forecasting techniques. it quantifies the relationship between sales and identified independent variables to project future results. This is a c"
+        },
+        {
+          "qid": "P1-BC-059",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 90.9,
+          "ewPreview": "The high-low method separates mixed costs into fixed and variable components using the highest and lowest activity levels. It does not model how average labor t"
+        },
+        {
+          "qid": "P1-BC-083",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "A moving average smooths data by computing the mean of consecutive periods, which inherently dampens peaks and troughs rather than predicting them. Seasonal for"
+        },
+        {
+          "qid": "P1-CC-010",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Zero-based budgeting requires all expenses to be justified from a zero base each period rather than using prior-year spending as a starting point. It is a budge"
+        },
+        {
+          "qid": "P1-CC-012",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 60,
+          "ewPreview": "Sales divided by average total assets is the asset turnover ratio — one component of DuPont but not the full decomposition which is margin × turnover."
+        },
+        {
+          "qid": "P1-CC-012",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 60,
+          "ewPreview": "The original DuPont formula does not include a tax factor explicitly. It multiplies margin (income after taxes/sales) by turnover (sales/assets). The tax effect"
+        },
+        {
+          "qid": "P1-CC-013",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "The contribution margin ratio is (sales - variable costs)/sales, a cost-volume-profit concept for break-even analysis, not the same as the DuPont profit margin "
+        },
+        {
+          "qid": "P1-CC-034",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Economic value added (EVA) requires data on net operating profit after tax and invested capital. EVA is used for investment centers, not cost centers."
+        },
+        {
+          "qid": "P1-CC-050",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Standard costing sets predetermined cost benchmarks for internal measurement. It establishes targets for what costs should be under efficient conditions. Benchm"
+        },
+        {
+          "qid": "P1-CC-050",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Internal benchmarking would compare performance between different departments or units within the same organization, not study external competitors in the same "
+        },
+        {
+          "qid": "P1-CC-050",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Generic benchmarking compares processes across unrelated industries (e.g., a hospital studying a hotel's check-in process). The question specifically describes "
+        },
+        {
+          "qid": "P1-CC-051",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Internal benchmarking compares performance across different departments or units within the same organization. The question describes comparing processes or fun"
+        },
+        {
+          "qid": "P1-CC-051",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Strategic benchmarking focuses on high-level competitive strategies of successful organizations, not the operational comparison of similar processes or function"
+        },
+        {
+          "qid": "P1-CC-052",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Internal benchmarking evaluates performance across departments within the same organization. The question specifically describes a cross-industry comparison, wh"
+        },
+        {
+          "qid": "P1-CC-052",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Strategic benchmarking focuses on high-level competitive strategies of successful organizations in the same or different industries, not operational process com"
+        },
+        {
+          "qid": "P1-CC-055",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The amount is right, but a price below budget creates an unfavorable variance."
+        },
+        {
+          "qid": "P1-DC-026",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The relevant range is the band of activity within which cost behavior assumptions hold: total fixed costs remain constant, and variable cost per unit remains un"
+        },
+        {
+          "qid": "P1-DC-026",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "This option reflects a misunderstanding of relevant range cost behavior. The choice \"The contribution margin ratio\" is inconsistent with the correct treatment u"
+        },
+        {
+          "qid": "P1-DC-027",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "The relevant range is the band of activity within which cost behavior assumptions hold: total fixed costs remain constant, and variable cost per unit remains un"
+        },
+        {
+          "qid": "P1-DC-028",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "The relevant range is the band of activity within which cost behavior assumptions hold: total fixed costs remain constant, and variable cost per unit remains un"
+        },
+        {
+          "qid": "P1-DC-029",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The relevant range is the band of activity within which cost behavior assumptions hold: total fixed costs remain constant, and variable cost per unit remains un"
+        },
+        {
+          "qid": "P1-DC-029",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "This option reflects a misunderstanding of relevant range cost behavior. The choice \"The contribution margin ratio\" is inconsistent with the correct treatment u"
+        },
+        {
+          "qid": "P1-DC-029",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The break-even point is the sales volume where total revenue equals total costs. The relevant range refers to the activity band within which fixed and variable "
+        },
+        {
+          "qid": "P1-DC-036",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "The Theory of Constraints identifies the bottleneck that limits system throughput. The five focusing steps are: identify the constraint, exploit the constraint,"
+        },
+        {
+          "qid": "P1-DC-036",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Standard costing sets predetermined costs for performance evaluation. The Theory of Constraints identifies the bottleneck constraining throughput and focuses im"
+        },
+        {
+          "qid": "P1-DC-037",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "The Theory of Constraints identifies the bottleneck that limits system throughput. The five focusing steps are: identify the constraint, exploit the constraint,"
+        },
+        {
+          "qid": "P1-DC-038",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "The Theory of Constraints identifies the bottleneck that limits system throughput. The five focusing steps are: identify the constraint, exploit the constraint,"
+        },
+        {
+          "qid": "P1-DC-039",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "The Theory of Constraints identifies the bottleneck that limits system throughput. The five focusing steps are: identify the constraint, exploit the constraint,"
+        },
+        {
+          "qid": "P1-DC-046",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 60,
+          "ewPreview": "Byproduct NRV is recognized in the period produced, not deferred. Treating it as a deferred asset would delay recognition and misstate both inventory (understat"
+        },
+        {
+          "qid": "P1-DC-049",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Under the production method, byproduct net realizable value is treated as a reduction of the joint cost allocated to main products, not an increase. Adding bypr"
+        },
+        {
+          "qid": "P1-DC-061",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inve"
+        },
+        {
+          "qid": "P1-DC-062",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inve"
+        },
+        {
+          "qid": "P1-DC-063",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inve"
+        },
+        {
+          "qid": "P1-DC-064",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inve"
+        },
+        {
+          "qid": "P1-DC-065",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inve"
+        },
+        {
+          "qid": "P1-EC-008",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 80,
+          "ewPreview": "The Theory of Constraints identifies the single constraint limiting throughput in a production or service process and focuses improvement efforts there. Applyin"
+        },
+        {
+          "qid": "P1-EC-008",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "The Balanced Scorecard translates strategy into measures across four perspectives: financial, customer, internal business process, and learning & growth. A cand"
+        },
+        {
+          "qid": "P1-EC-041",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 20,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "A candidate selecting Option B may analyze the scenario as an SoD failure, reasoning that the controller should not have been able to process the entry alone. H"
+        },
+        {
+          "qid": "P1-EC-049",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "No single control, including a whistleblower hotline, can guarantee fraud prevention. The hotline encourages detection and reporting—it creates a channel for em"
+        },
+        {
+          "qid": "P1-FC-010",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 20,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Choice D is incorrect because predictive analytics uses historical data and statistical models to forecast future outcomes and estimate probabilities. The Kestr"
+        },
+        {
+          "qid": "P1-FC-031",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Choice A is incorrect because big data is defined by multiple characteristics working together, not volume alone. The stem describes massive amounts (volume), c"
+        },
+        {
+          "qid": "P1-FC-053",
+          "pack": "C",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 60,
+          "ewPreview": "Choice D is incorrect because data visualization presents existing information graphically through charts and dashboards for human interpretation — it does not "
+        },
+        {
+          "qid": "P1-FC-063",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 75,
+          "ewPreview": "Choice B is incorrect because ERP systems do not automatically guarantee compliance with all external regulations. Regulatory compliance depends on how the syst"
+        },
+        {
+          "qid": "P1-FC-068",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Choice C is incorrect because a data warehouse requires data to be structured and organized according to a predefined schema before storage, typically using ETL"
+        },
+        {
+          "qid": "P1-FC-073",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 80,
+          "ewPreview": "Choice C is incorrect because zero-based budgeting is a financial planning methodology requiring managers to justify all expenses from scratch each period. It i"
+        },
+        {
+          "qid": "P1-CC-105",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 14.3,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "Option A rejects on the $7,000 U alone, ignoring the $25,000 avoided penalty the rush purchased. Variance-unfavorable does not mean decision-unfavorable — the $"
+        },
+        {
+          "qid": "P1-AC-105",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 14.3,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 80,
+          "ewPreview": "Option A's $60,000 carries ending retail as cost — a 100% cost ratio that no computation supports. Retail dollars are not cost dollars."
+        },
+        {
+          "qid": "P1-AC-125",
+          "pack": "C",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 14.3,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 60,
+          "ewPreview": "Option B's no-entry ignores $500,000 of cash received and a $360,000 NCI balance created — equity transactions record in equity (APIC/NCI), they just bypass ear"
+        },
+        {
+          "qid": "P1-BC-105",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option A's $1,200,000/$1,100,000 ignores $180,000 of beginning AR (collectible cash) and $90,000 of beginning AP (payable cash) — beginning balances are first-y"
+        },
+        {
+          "qid": "P1-DC-105",
+          "pack": "C",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 80,
+          "ewPreview": "Option A's 10,000 EU counts BWIP's first material (added last period) as current work — staged additions split by period; prior-period additions never recur in "
+        },
+        {
+          "qid": "P1-DC-113",
+          "pack": "C",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option C's $65,000 inflation gets the direction backwards — discarding $34,000 of inter-service flow under-allocates P1 by $14,915, never inflates."
+        },
+        {
+          "qid": "P1-AD-010",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 20,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Deferral implies the interest cost will never be recognized, which violates the matching principle. Under ASC 835-20, construction-period interest is capitalize"
+        },
+        {
+          "qid": "P1-AD-031",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 55.6,
+          "ewPreview": "Under ASC 855, subsequent events that provide additional evidence about conditions that existed at the balance sheet date (Type I/recognized events) REQUIRE adj"
+        },
+        {
+          "qid": "P1-AD-033",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 55.6,
+          "ewPreview": "Under ASC 855, subsequent events that provide additional evidence about conditions that existed at the balance sheet date (Type I/recognized events) REQUIRE adj"
+        },
+        {
+          "qid": "P1-AD-034",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 55.6,
+          "ewPreview": "Under ASC 855, subsequent events that provide additional evidence about conditions that existed at the balance sheet date (Type I/recognized events) REQUIRE adj"
+        },
+        {
+          "qid": "P1-AD-038",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Debt issuance costs are a cost of borrowing — a liability transaction — not an equity transaction. Under ASU 2015-03, these costs reduce the bond's carrying amo"
+        },
+        {
+          "qid": "P1-AD-048",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 80,
+          "ewPreview": "Under ASC 330, physical possession does not determine inventory ownership for consigned goods. The consignor retains legal title and the risks of ownership unti"
+        },
+        {
+          "qid": "P1-AD-057",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Retrospective restatement applies to changes in accounting PRINCIPLE, not changes in estimate. A change in estimated useful life due to new wear-pattern informa"
+        },
+        {
+          "qid": "P1-AD-058",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Retrospective restatement applies to changes in accounting PRINCIPLE, not changes in estimate. A change in estimated useful life due to new wear-pattern informa"
+        },
+        {
+          "qid": "P1-AD-059",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Retrospective restatement applies to changes in accounting PRINCIPLE, not changes in estimate. A change in estimated useful life due to new wear-pattern informa"
+        },
+        {
+          "qid": "P1-AD-060",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Retrospective restatement applies to changes in accounting PRINCIPLE, not changes in estimate. A change in estimated useful life due to new wear-pattern informa"
+        },
+        {
+          "qid": "P1-AD-061",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "ASC 230 requires disclosure of all significant noncash investing and financing transactions. Omitting this transaction would violate the full-disclosure princip"
+        },
+        {
+          "qid": "P1-AD-062",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "ASC 230 requires disclosure of all significant noncash investing and financing transactions. Omitting this transaction would violate the full-disclosure princip"
+        },
+        {
+          "qid": "P1-AD-063",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "ASC 230 requires disclosure of all significant noncash investing and financing transactions. Omitting this transaction would violate the full-disclosure princip"
+        },
+        {
+          "qid": "P1-AD-064",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "ASC 230 requires disclosure of all significant noncash investing and financing transactions. Omitting this transaction would violate the full-disclosure princip"
+        },
+        {
+          "qid": "P1-BD-071",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 63.6,
+          "ewPreview": "Selecting Model A based solely on lower cost ignores the magnitude of the accuracy differential. A 6.6 percentage point MAPE improvement, at $85,000 per point, "
+        },
+        {
+          "qid": "P1-BD-074",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Residual income is a performance evaluation metric that measures divisional profit above a required return on invested capital — it is unrelated to forecast acc"
+        },
+        {
+          "qid": "P1-CD-006",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Reflects only the joint interaction of the hours deviation and rate deviation: (2,100 - 2,000) x ($19 - $18) = $100. The rate variance isolates the wage effect "
+        },
+        {
+          "qid": "P1-CD-019",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Reverses the sign of the $16,000 unfavorable mix variance. The shift away from higher-margin Premium ($18 CM) toward lower-margin Standard ($10 CM) reduces tota"
+        },
+        {
+          "qid": "P1-CD-021",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "A candidate selecting this option likely reversed the sign of the sales mix variance. The computation is (−1,000 Premium units × $40) + (1,000 additional Standa"
+        },
+        {
+          "qid": "P1-CD-030",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "A dual-rate system is designed to ensure the selling division recovers at least its variable costs plus a fixed fee, not to generate losses. If the selling divi"
+        },
+        {
+          "qid": "P1-CD-043",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Not all three customers are unprofitable. Alpha generated $164,475 and Gamma generated $110,730 in customer-level profit. Only Beta is unprofitable ($26,300 los"
+        },
+        {
+          "qid": "P1-CD-047",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "This ranking places Apex first, but Apex has the lowest customer profitability ratio (26.8%) despite having the highest revenue. A common error is ranking by ab"
+        },
+        {
+          "qid": "P1-CD-047",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "This ranking places Nova first, but Nova's profitability ratio (31.4%) is second-highest. Nova has a healthy ratio but Crest ($82,350 profit / $215,000 revenue "
+        },
+        {
+          "qid": "P1-CD-064",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "This choice incorrectly includes all five variances for investigation. The DM quantity variance ($2,800F) fails the dollar threshold (>$4,000 required; $2,800 i"
+        },
+        {
+          "qid": "P1-CD-067",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "This choice incorrectly includes the FOH budget variance ($5,800U, 4.7%) and DL efficiency ($4,500U, 5.2%). The FOH budget variance passes the dollar threshold "
+        },
+        {
+          "qid": "P1-CD-067",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "This choice fails to apply either threshold. All six variances would be investigated at a cost far exceeding the expected benefit of resolving the three smalles"
+        },
+        {
+          "qid": "P1-CD-071",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "A TQM organization would show high prevention costs relative to failure costs, typically with prevention and appraisal costs at 40-50% of total quality costs an"
+        },
+        {
+          "qid": "P1-CD-071",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "A Six Sigma organization would show heavy investment in measurement and analysis (appraisal-type activities), statistically controlled processes, and very low f"
+        },
+        {
+          "qid": "P1-CD-074",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "An early-stage quality control operation would show high appraisal costs (inspection) relative to prevention and high failure costs. This profile shows the oppo"
+        },
+        {
+          "qid": "P1-CD-074",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Lean manufacturing is defined by waste elimination, flow improvement, and pull systems, not by a specific COQ profile. However, this COQ profile is more precise"
+        },
+        {
+          "qid": "P1-CD-079",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Bonus determination is a consequence of performance measurement, not its primary purpose. Segment margin provides an evaluation of segment profitability before "
+        },
+        {
+          "qid": "P1-DD-003",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "This amount represents the full $12,400 added to COGS. Closing the entire underapplied balance to COGS is appropriate only when the amount is immaterial. The qu"
+        },
+        {
+          "qid": "P1-DD-012",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 57.1,
+          "ewPreview": "Overapplied overhead is a temporary cost-allocation discrepancy, not a liability. It represents the excess of applied overhead over actual overhead and must be "
+        },
+        {
+          "qid": "P1-DD-012",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Prorating overapplied overhead only to raw materials is incorrect—raw materials have not yet been allocated any applied overhead. The disposition must go throug"
+        },
+        {
+          "qid": "P1-DD-013",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Overapplied overhead is a manufacturing cost variance, not revenue. Treating it as revenue would artificially inflate both revenue and net income. Overapplied o"
+        },
+        {
+          "qid": "P1-DD-027",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The numeric difference is 5,500, but the question asks for units, not dollars."
+        },
+        {
+          "qid": "P1-DD-036",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "$74.80 results from applying a simple 12% reduction (4 quarters x 3% = 12%) to the current cost: $85.00 x (1 - 0.12) = $74.80. This incorrectly applies additive"
+        },
+        {
+          "qid": "P1-DD-036",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "$82.45 represents one quarter of reduction applied to the current cost: $85.00 x 0.97 = $82.45. This captures only the first quarter's kaizen target and ignores"
+        },
+        {
+          "qid": "P1-DD-039",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "$73.67 applies a uniform 3.5% reduction rate across all three components (the average of 5%, 3%, and 2% = 3.33%), compounding quarterly: $85.00 x (0.965)^4. How"
+        },
+        {
+          "qid": "P1-DD-039",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "$72.10 results from compounding each component over 5 quarters instead of 4: $42 x (0.95)^5 + $28 x (0.97)^5 + $15 x (0.98)^5. The kaizen target covers four qua"
+        },
+        {
+          "qid": "P1-DD-039",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "$75.66 applies only a single quarter's reduction to each component: $42 x 0.95 + $28 x 0.97 + $15 x 0.98 = $39.90 + $27.16 + $14.70 = $81.76. Actually, this com"
+        },
+        {
+          "qid": "P1-DD-059",
+          "pack": "D",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Option A correctly calculates the $20,000 magnitude but misclassifies the direction. When standard hours allowed (11,000) are less than denominator hours (12,00"
+        },
+        {
+          "qid": "P1-DD-070",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Option C equals the actual variable overhead incurred ($18,500). The spending variance is the difference between actual and budgeted VOH, not the actual VOH amo"
+        },
+        {
+          "qid": "P1-DD-075",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 14.3,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Abnormal spoilage does not represent a future economic benefit that should be deferred and amortized. Deferring such a cost would delay recognition of a loss th"
+        },
+        {
+          "qid": "P1-AD-083",
+          "pack": "D",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 71.4,
+          "ewPreview": "Option B treats the guarantee as disclosure-only, ignoring the management contract (power) and loss absorption (economics) alongside it. The bundle, not any sin"
+        },
+        {
+          "qid": "P1-AD-088",
+          "pack": "D",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 20,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option D denies any layer despite $13,043 of base-dollar growth ($113,043 > $100,000). Real inventory growth exists — inflation indexing reveals it rather than "
+        },
+        {
+          "qid": "P1-DD-086",
+          "pack": "D",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 60,
+          "ewPreview": "Option C buys on the $560,000 headline versus $600,000 gross make, skipping the avoidability filter ($150,000 out) and the $60,000 lease opportunity (in). Headl"
+        },
+        {
+          "qid": "P1E-A-021",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Voting rights are a characteristic of common stock, not a feature of cumulative preferred."
+        },
+        {
+          "qid": "P1E-A-048",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Waiting until completion would delay recognition of a known loss, violating conservatism."
+        },
+        {
+          "qid": "P1E-A-052",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Retrospective application is used for changes in accounting principle, not changes in estimate; depreciation method changes are applied prospectively."
+        },
+        {
+          "qid": "P1E-A-066",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Only the consignor records the inventory on its balance sheet; the consignee does not record inventory it does not own."
+        },
+        {
+          "qid": "P1E-A-066",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The inventory must be reported on the consignor's balance sheet since the consignor retains legal title and risk of loss."
+        },
+        {
+          "qid": "P1E-A-070",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Under IFRS, inventory write-downs are reversed when net realizable value recovers, unlike U.S. GAAP which prohibits reversal."
+        },
+        {
+          "qid": "P1E-A-074",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "There are three levels of inputs in the fair value hierarchy, not two."
+        },
+        {
+          "qid": "P1E-A-074",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "The fair value hierarchy established by ASC 820 has exactly three levels: Level 1, Level 2, and Level 3."
+        },
+        {
+          "qid": "P1E-A-078",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "The completed contract method is permitted under U.S. GAAP for certain contracts, so it is used in some circumstances."
+        },
+        {
+          "qid": "P1E-B-063",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Incremental budgeting is precisely the approach that created the controller's concerns — ten years of 3% annual increases with no increase in activity is the te"
+        },
+        {
+          "qid": "P1E-C-005",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "HR sets wage rates and hires staff, but daily labor utilization is managed by the production manager who oversees the manufacturing process."
+        },
+        {
+          "qid": "P1E-C-017",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Not both: the ROI approach would reject it. Only residual income accepts any project earning above the required rate, regardless of current ROI."
+        },
+        {
+          "qid": "P1E-C-018",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 60,
+          "ewPreview": "These three categories omit the customer and learning/growth perspectives integral to the balanced scorecard framework."
+        },
+        {
+          "qid": "P1E-C-019",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "This is the internal business process perspective question. The financial perspective asks how shareholders and investors view company performance."
+        },
+        {
+          "qid": "P1E-C-019",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "This is the customer perspective question. The financial perspective addresses how the company looks to shareholders and capital providers."
+        },
+        {
+          "qid": "P1E-C-020",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "ROI is a financial perspective measure. Customer perspective focuses on customer-facing outcomes like satisfaction, loyalty, and market share."
+        },
+        {
+          "qid": "P1E-C-025",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "No 15% threshold exists under ASC 280. The quantitative threshold is 10% of combined revenue, operating profit, or total assets."
+        },
+        {
+          "qid": "P1E-C-039",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Total CM difference combines price, volume, and market effects. Market share variance isolates the effect of changes in market penetration."
+        },
+        {
+          "qid": "P1E-C-045",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": -100,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "EVA is a financial performance metric, not a nonfinancial measure. Nonfinancial measures include operational metrics like delivery performance."
+        },
+        {
+          "qid": "P1E-C-045",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": -100,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "ROI is a financial ratio. Nonfinancial BSC measures capture operational drivers like quality, cycle time, and customer satisfaction."
+        },
+        {
+          "qid": "P1E-D-018",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Value-added activities are essential to production; they contribute to product value."
+        },
+        {
+          "qid": "P1E-D-020",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "R&D costs are only the beginning; life-cycle costing extends through disposal."
+        },
+        {
+          "qid": "P1E-B-072",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 75,
+          "ewPreview": "Standard cost cards must be established first; variance calculation occurs after actual results are compared to standards."
+        },
+        {
+          "qid": "P1E-B-079",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "$15,000 is not present in the cost function Total Cost = $5,000 + $10/unit."
+        },
+        {
+          "qid": "P1E-B-083",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "While transfer prices can affect tax outcomes, the primary benefit of market-based pricing is goal congruence in decision-making."
+        },
+        {
+          "qid": "P1E-B-085",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "RI evaluates investment profitability relative to a required return, not overall cost reduction across the organization."
+        },
+        {
+          "qid": "P1E-B-087",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 100,
+          "ewPreview": "Rolling forecasts are updated each period by adding a new period, not just once per year."
+        },
+        {
+          "qid": "P1E-B-095",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Selling and administrative expenses are treated as period costs under both absorption and variable costing."
+        },
+        {
+          "qid": "P1E-C-062",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "20% incorrectly adds ROI and required rate. Value creation is measured by the spread (difference), not the sum of the two rates."
+        },
+        {
+          "qid": "P1E-C-063",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Both EVA and residual income use the same cost of capital. The distinction is EVA's economic adjustments to accounting data."
+        },
+        {
+          "qid": "P1E-C-064",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Nonfinancial measures like customer satisfaction are often harder to quantify than financial data. Their value lies in predictive power."
+        },
+        {
+          "qid": "P1E-E-044",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The CFO oversees financial operations but does not approve the internal audit charter; audit committee approval maintains independence."
+        },
+        {
+          "qid": "P1E-E-044",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "The CEO manages day-to-day operations; charter approval requires independent governance by the audit committee."
+        },
+        {
+          "qid": "P1E-E-045",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "Reporting solely to the CFO would compromise internal audit independence from management."
+        },
+        {
+          "qid": "P1E-E-057",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": -100,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "The CFO plays a key role but internal control involves the entire organization, not just the CFO."
+        },
+        {
+          "qid": "P1E-E-059",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 100,
+          "ewPreview": "Internal control has inherent limitations including human error, collusion, and management override of controls."
+        },
+        {
+          "qid": "P1E-E-065",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 75,
+          "ewPreview": "IT system responsibility is an operational matter; principle 5 addresses holding individuals accountable for internal control."
+        },
+        {
+          "qid": "P1E-F-043",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Process documentation is a different audit procedure; parallel simulation runs client data through auditor-controlled software."
+        },
+        {
+          "qid": "P1E-F-068",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "B",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 100,
+          "ewPreview": "Blockchain provides an immutable distributed ledger that enhances transaction transparency and audit trails."
+        },
+        {
+          "qid": "P1E-C-065",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Budget-to-actual comparison is variance analysis, not BSC alignment. BSC cascades strategic goals to individual performance objectives."
+        },
+        {
+          "qid": "P1E-C-065",
+          "pack": "E",
+          "slot": "D",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 50,
+          "ewPreview": "Asset-liability matching is balance-sheet management. BSC aligns individual performance with strategy, not balance-sheet items."
+        },
+        {
+          "qid": "P1E-C-092",
+          "pack": "E",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": -100,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 66.7,
+          "ewPreview": "Option C states the segment does not meet the test. The asset test is met when segment assets are 10% or more of total combined assets, including exactly 10%."
+        },
+        {
+          "qid": "P1E-C-093",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "A",
+          "ownRecall": 0,
+          "bestOtherLetter": "A",
+          "bestOtherRecall": 100,
+          "ewPreview": "Option B prioritizes comprehensiveness and detail. Performance reports should first be timely and understandable; excessive detail can obscure key insights."
+        },
+        {
+          "qid": "P1-E-R31",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "C",
+          "ownRecall": 14.3,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 54.5,
+          "ewPreview": "The DRP and BCP are not interchangeable. While they overlap in the IT domain, the BCP addresses the continuity of all critical business functions — including ma"
+        },
+        {
+          "qid": "P1E-B-102",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "B",
+          "ownRecall": 20,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option A's 30,500 plans zero defects, guaranteeing a ~1,525-unit shortfall against the 5% scrap rate. Defect rates are budget inputs, not variance surprises."
+        },
+        {
+          "qid": "P1E-B-115",
+          "pack": "E",
+          "slot": "A",
+          "correctChoice": "C",
+          "ownRecall": 0,
+          "bestOtherLetter": "C",
+          "bestOtherRecall": 50,
+          "ewPreview": "Option A's $560,000 adds every inflow while ignoring every outflow — $310,000 OCF minus $150,000 capex minus $60,000 dividends plus $120,000 financing nets +$22"
+        }
+      ]
+    }
+  }
+}

@@ -1327,6 +1327,101 @@ test("Rule 19 PASS — distinct CaseIDs", () => {
   assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
 });
 
+// BLOCK-AUTHORIZED: guard-test expansion (Rules 20/21) — fixture objects below
+// carry full EW slots, Part, and Part2OnlyFlag so Rules 10/13/14 pass; Rule 16
+// provenance is covered by this marker.
+
+console.log("\nRULE 20 — Legacy silent-drop extractor regression block (board R21 / DL-049)\n");
+
+// Replicated from governance-guard.js (file convention: logic duplicated, not imported).
+const VALIDATOR_SCREEN_PATH_RE = /scripts[\\\/](validators|lib)[\\\/]|scripts[\\\/](phase0_census|semantic_key_audit_p2|semantic_screens|s121_portfolio_dashboard|baseline_coherence|[^\\\/]*extractor[^\\\/]*\.js|[^\\\/]*scan_[^\\\/]*\.js)/i;
+const LEGACY_BANK_RE = /BANK_\\[A-Z\\]|\(\?:MCQ\|CASE\)_BANK/;
+
+function findLegacyExtractorViolations(filePath, text) {
+  const p = String(filePath || "").replace(/\\/g, "/");
+  if (!VALIDATOR_SCREEN_PATH_RE.test(filePath || "") && !VALIDATOR_SCREEN_PATH_RE.test(p)) return [];
+  if (/pack_parser/.test(text || "")) return [];
+  const src = text || "";
+  const hits = [];
+  const re = new RegExp(LEGACY_BANK_RE.source, "g");
+  let m;
+  while ((m = re.exec(src)) !== null) {
+    hits.push({ snippet: src.substring(Math.max(0, m.index - 40), m.index + 60).replace(/\s+/g, " ") });
+    if (hits.length >= 5) break;
+  }
+  return hits;
+}
+
+test("Rule 20 BLOCK — validator write with legacy bank regex, no pack_parser", () => {
+  const text = `function extract(content) {\n  const m = content.match(/(?:MCQ|CASE)_BANK_[A-Z]\\s*=\\s*\\[/);\n  if (!m) return null;\n}`;
+  const v = findLegacyExtractorViolations("scripts/validators/psychometric/extractor.js", text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+});
+
+test("Rule 20 PASS — same pattern WITH pack_parser substrate", () => {
+  const text = `const { parsePack } = require("../lib/pack_parser");\n// legacy /(?:MCQ|CASE)_BANK_[A-Z]/ handled by DECL_RE`;
+  const v = findLegacyExtractorViolations("scripts/validators/psychometric/extractor.js", text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 20 PASS — pack file with bank declaration (out of path scope)", () => {
+  const text = `const MCQ_BANK_C = [ // BLOCK-AUTHORIZED\n { "QuestionID": "P1-C-001" } ];`;
+  const v = findLegacyExtractorViolations("content/packs/pack_c_corrected.js", text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 20 PASS — prose mention without regex shape", () => {
+  const text = `// Pack C declaration (const MCQ_BANK_C = // comment) blinded the old extractor`;
+  const v = findLegacyExtractorViolations("scripts/validators/psychometric/extractor.js", text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+console.log("\nRULE 21 — Semantic quarantine manifest enforcement (board R25 / DL-047)\n");
+
+function findQuarantinedCertViolations(text, manifest) {
+  const active = new Set(((manifest && manifest.active) || []).map(e => e && e.qid).filter(Boolean));
+  if (active.size === 0) return [];
+  const objects = extractObjectsFromText(text);
+  const out = [];
+  for (const obj of objects) {
+    if (obj.question_state !== "Certified") continue;
+    const qid = obj.QuestionID || "";
+    if (qid && active.has(qid)) out.push({ qid });
+  }
+  return out;
+}
+
+const Q_MANIFEST = { active: [{ qid: "P2-C-353", reason: "test" }] };
+const Q_OBJ = (qid, state) => `{ "QuestionID": "${qid}", "CorrectChoice": "B", "question_state": "${state}", "Part": 2, "Part2OnlyFlag": true, "ExplanationWrongA": "Refutes A with choice-specific reasoning.", "ExplanationWrongC": "Refutes C with choice-specific reasoning.", "ExplanationWrongD": "Refutes D with choice-specific reasoning." }`;
+
+test("Rule 21 BLOCK — Certified write for quarantined QID", () => {
+  const v = findQuarantinedCertViolations(Q_OBJ("P2-C-353", "Certified"), Q_MANIFEST);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].qid === "P2-C-353", `Expected P2-C-353, got ${v[0].qid}`);
+});
+
+test("Rule 21 PASS — Certified write for non-listed QID", () => {
+  const v = findQuarantinedCertViolations(Q_OBJ("P2-C-354", "Certified"), Q_MANIFEST);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 21 PASS — non-Certified write for listed QID", () => {
+  const v = findQuarantinedCertViolations(Q_OBJ("P2-C-353", "In Audit"), Q_MANIFEST);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 21 PASS — empty manifest constrains nothing", () => {
+  const v = findQuarantinedCertViolations(Q_OBJ("P2-C-353", "Certified"), { active: [] });
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 21 BYPASS — BLOCK-AUTHORIZED marker allows adjudicated restore", () => {
+  const scope = Q_OBJ("P2-C-353", "Certified") + "\nBLOCK-AUTHORIZED: adjudicated restore";
+  const v = findQuarantinedCertViolations(scope, Q_MANIFEST);
+  const blocked = v.length > 0 && !BLOCK_AUTH_RE.test(scope);
+  assert(blocked === false, `Expected bypass to allow, got blocked=${blocked}`);
+});
+
 // ── Summary ────────────────────────────────────────────────────
 
 console.log(`\n=== RESULTS: ${pass} PASS, ${fail} FAIL ===\n`);

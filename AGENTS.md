@@ -9,7 +9,9 @@
 
 ## 1. Governance Guard Plugin — Registered, Do Not Re-Litigate
 
-The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` and listed in `opencode.json` under `"plugin"`. It enforces 19 rules, all at BLOCK level (upgraded S221; R15–R19 added 2026-09-10). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
+The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` and listed in `opencode.json` under `"plugin"`. It enforces 21 rules, all at BLOCK level (upgraded S221; R15–R19 added 2026-09-10; R20–R21 added 2026-09-13, coverage-hardening change-set). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
+
+**Board-proposal → guard-rule mapping (2026-09-13; recorded so numbering never drifts — DL-011 precedent):** board **R21** (canonical-parser mandate) = guard **RULE 20**; board **R25** (semantic-key gate) = guard **RULE 21**. Board **R20** (validator coverage assertions) and **R23** (portfolio coverage gate) are enforced in code + pipeline (`extractor.js` / `p2_schema_validator.js` / `s121_portfolio_dashboard.js` throws; `baseline_coherence.js`; `npm run pipeline`), NOT as write-guard rules — a write-guard cannot verify scan completeness.
 
 | Rule | Level | Behavior |
 |------|-------|----------|
@@ -32,8 +34,10 @@ The `governance-guard` plugin is registered at `.opencode/plugins/governance-gua
 | RULE 17 | **BLOCK** | Heuristic-screen admissibility — mass choice rewrites (≥3 objects) must cite evidence basis (stratified / context review / adjudicated / triage / candidate-list / independently derived) or carry BLOCK-AUTHORIZED (DL-045 doctrine) |
 | RULE 18 | **BLOCK** | Choice-text hygiene floor — trimmed, ≥8 chars, alphanumeric start after exempt leading `$€£¥%(-` run (dollar amounts, parenthesized negatives, enumerations; DL-046 family: whitespace/fragment) |
 | RULE 19 | **BLOCK** | Duplicate CaseID within a change-set (DL-048 intra-batch gate; cross-file enforced by CaseIdentityValidator) |
+| RULE 20 | **BLOCK** | Legacy silent-drop extractor regression block — validator/screen writes reintroducing bank-name-regex extraction without `pack_parser` (board R21 / DL-049 mechanism; regex-literal shapes only, prose mentions exempt) |
+| RULE 21 | **BLOCK** | Semantic quarantine manifest enforcement — pack writes flipping listed QIDs to `Certified` (board R25 / DL-047; manifest `scripts/output/semantic_quarantine.json`; BLOCK-AUTHORIZED bypass for adjudicated restores; fail-open on missing manifest is explicit documented behavior) |
 
-**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (89 tests, all validated; run via `npm run preflight`).
+**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (98 tests, all validated; run via `npm run preflight`).
 
 ---
 

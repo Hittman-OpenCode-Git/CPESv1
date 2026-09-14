@@ -107,6 +107,19 @@ try {
   warn("Governance guard tests — FAILED to execute: " + (e.message || "").substring(0, 60));
 }
 
+// ── 4b. Baseline Coherence (R22, read-only) ─────────────────────
+// The coherence gate itself is read-only; --fix is never invoked here.
+
+try {
+  const cp2 = require("child_process");
+  cp2.execSync("node scripts/baseline_coherence.js", {
+    cwd: ROOT, encoding: "utf8", timeout: 120000, maxBuffer: 10 * 1024 * 1024
+  });
+  ok("Baseline coherence — 0 divergences");
+} catch (e) {
+  warn("Baseline coherence — DIVERGENT (see output above)");
+}
+
 // ── 5. Report ─────────────────────────────────────────────────────
 
 console.log("\n=== PREFLIGHT — " + new Date().toISOString() + " ===");

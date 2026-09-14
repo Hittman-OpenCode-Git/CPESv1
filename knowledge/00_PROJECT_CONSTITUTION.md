@@ -287,29 +287,31 @@ No file should serve multiple unrelated purposes.
 
 11.1 Root Directory
 
-The repository root directory shall contain only files required to run the application.
+The repository root directory shall contain only files required to run the application
+plus top-level governance and tooling manifests.
 
 Permitted root-level files:
 
 index_updated.html
-app.js
+main.js
 styles.css
-pack_a_corrected.js
-pack_b_corrected.js
-pack_c_corrected.js
-pack_d_corrected.js
-pack_e_corrected.js
-scored_cases.js
-scored_cases2.js
-scored_cases3.js
-scored_cases4.js
-scored_cases5.js
 package.json
 package-lock.json
 opencode.json
 VERSION
+AGENTS.md
+.gitignore
+
+Application source lives in subfolders (`app/` for the runtime engine and May coaching
+layer, `content/` for MCQ packs and case banks, `p2/` for Part 2 content). The legacy
+flat-layout entries (`app.js`, `pack_*_corrected.js`, `scored_cases*.js` at root) were
+retired when the repository was reorganized; they are no longer permitted at root.
 
 No other files shall reside in the repository root.
+
+*Amended 2026-09-13 (P1 hygiene): permitted list reconciled to the actual
+`app/` + `content/` + `p2/` layout; `main.js` (Electron entry per package.json) and
+`AGENTS.md` recognized; stray authoring manifests excluded.*
 
 11.2 Subfolder Organization
 
@@ -317,7 +319,7 @@ All non-application files shall be organized into subfolders by function.
 
 | Subfolder | Purpose | File Types |
 |-----------|---------|------------|
-| `backups/` | Backup copies of application files | `.bak`, `.bak2`, `.bak3`, `.bak4`, `.bak5`, `.bak7` |
+| `backups/` | Backup copies of application files | `.bak`, `.bak2`, `.bak3`, `.bak4`, `.bak5`, `.bak6`, `.bak7`, `.bak-*` |
 | `scripts/` | Validation, enrichment, and utility scripts | `.js`, `.py`, `.sh` |
 | `reports/` | Audit reports, change reports, review findings | `.md`, `.txt` |
 | `knowledge/` | AI governance: constitution, standards, defect library, taxonomy | `.md` |

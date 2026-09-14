@@ -8186,14 +8186,14 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-185",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "2026-08-28",
+    "certification_date": "2026-08-28", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-185-profitability-index",
     "Stem": "Flash Materials is evaluating a project that requires an initial investment of $400,000 and generates a single after-tax cash inflow of $500,000 at the end of year 3. Treasurer Maya Caldwell uses a required return of 10%. What is the profitability index (PI)?",
     "Choices": {
       "A": "Approximately 1.16 (PV of inflow $463,000 / investment $400,000)",
       "B": "1.00 (the project breaks even in NPV terms)",
-      "C": "0.84 (the project is not worthwhile)",
+      "C": "0.94 (the project is not worthwhile)",
       "D": "1.25 (a 25% return on investment)"
     },
     "CorrectChoice": "C",
@@ -12386,7 +12386,7 @@ var pack_p2_e_questions = [
     "FormulaReference": "No formula; classification rule: sunk costs are incurred regardless of decision and are excluded from NPV.",
     "CommonTrapReference": "Treating any project-related expense as incremental; or size-based logic for sunk vs incremental.",
     "DecisionTreeReference": "Cost incurred regardless of decision? -> Sunk, exclude. Cost incurred only if project proceeds? -> Incremental, include.",
-    "ExplanationCorrect": "Sunk costs are expenditures already incurred and unrecoverable regardless of the decision; they are excluded from incremental cash-flow analysis. The $200,000 feasibility study (incurred and expensed last year) is sunk. The $50,000 market survey, however, is an incremental future cost if it is contingent on the project proceeding and recoverable upon abandonment — it should be included. Recomputed: classification depends on recoverability and decision-contingency, not size. Trap: lumping both as sunk simply because they are project-related.",
+    "ExplanationCorrect": "Sunk costs are already incurred and unrecoverable regardless of the decision, and are excluded from incremental analysis. The $200,000 study was incurred and expensed last year. The $50,000 survey is just completed - already incurred - so it too is sunk; project-specificity does not make a spent cost incremental. Classification turns on timing and recoverability, not size or topic. Business interpretation: Adaeze excludes both and evaluates only future incremental flows. Common trap: treating project-related spent costs as incremental.",
     "ExplanationWrongB": "Both costs were completed before the decision; the survey is not contingent on proceeding and is also sunk if irrecoverable.",
     "ExplanationWrongC": "Project-related does not equal incremental; sunk costs can be project-related but still excluded.",
     "ExplanationWrongD": "Size does not determine sunk vs incremental classification; recoverability and timing do.",
@@ -12428,7 +12428,7 @@ var pack_p2_e_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30",
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "ExplanationWrongA": ""
   },
   {
@@ -16973,7 +16973,7 @@ var pack_p2_e_questions = [
     "Section": "E",
     "QuestionID": "P2-E-350",
     "question_state": "Certified",
-    "certification_date": "2026-09-05",
+    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-E4",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-350-npv-irr-conflict-ranking",
@@ -16986,9 +16986,9 @@ var pack_p2_e_questions = [
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "When NPV and IRR conflict for mutually exclusive projects, NPV is the superior criterion because it measures the absolute value added to the firm. Project Alpha NPV = -$200,000 + $80,000 x PVIFA(10%,4) = $53,592. Project Beta NPV = -$200,000 + $55,000 x PVIFA(10%,6) = $39,542. Flash Mining CFO Priya Nair should accept Project Alpha because it has the higher NPV. The IRR ranking is misleading because IRR assumes reinvestment at the IRR rate rather than the cost of capital.",
-    "ExplanationWrongA": "Choice D misstates Beta's IRR. Beta's IRR of 16.4% exceeds Flash's 10% cost of capital, making it acceptable on a standalone basis. The issue is ranking, not acceptability.",
+    "ExplanationWrongA": "Ranking by IRR is wrong for mutually exclusive projects: Alpha 21.9% assumes reinvestment at 21.9%, overstating early flows. NPV governs: Alpha $53,592 > Beta $39,542.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "Choice A omits on IRR ranking, which is incorrect for mutually exclusive projects. IRR assumes reinvestment at the IRR rate (21.9% for Alpha), overstating the value of early cash flows.",
+    "ExplanationWrongC": "Beta NPV is $39,542 ($55,000x4.3553 - $200,000), below Alpha $53,592. Beta is independently acceptable (16.4% > 10%) but loses on ranking; NPV, not IRR, decides.",
     "ExplanationWrongD": "Choice D is incorrect because Beta's IRR of 16.4% also exceeds Flash's 10% cost of capital, so both projects are independently acceptable; the decision is one of ranking, not acceptability. For mutually exclusive projects NPV governs: NPV(Alpha) = -$200,000 + $80,000 x 3.1699 = $53,592, while NPV(Beta) = -$200,000 + $55,000 x 4.3553 = $39,542. CFO Priya Nair should accept Project Alpha because it has the higher NPV, not reject both projects.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
@@ -20176,7 +20176,7 @@ var pack_p2_e_questions = [
     "Section": "E",
     "QuestionID": "P2-E-422",
     "question_state": "Certified",
-    "certification_date": "2026-09-05",
+    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-E6",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-422-real-option-abandonment-value",
@@ -20187,11 +20187,11 @@ var pack_p2_e_questions = [
       "C": "Gain of $150,000 by abandoning now",
       "D": "Loss of $1,050,000 from abandoning"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "The decision to abandon compares the abandonment value against the present value of continuing. The remaining cash flows are $400,000 x 4 = $1,600,000 undiscounted. The equipment salvage value is $550,000. If Elena continues, she receives $1,600,000 over four years. If she abandons, she receives $550,000 now plus frees up the resources. The net gain from abandoning equals the abandonment value minus the opportunity cost of foregone cash flows: $550,000 - $400,000 = $150,000, assuming one year of forgone cash flows is the relevant comparison. CFO Elena Voronova should consider both the quantitative gain and qualitative factors such as strategic positioning and employee impacts.",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Abandon-versus-continue compares full streams: continuing yields $400,000 x 4 = $1,600,000 over four years; abandoning yields $550,000 now. Net effect of abandoning = $550,000 - $1,600,000 = -$1,050,000 - a $1,050,000 loss versus continuing. The $1.5M original investment is sunk and irrelevant. Business interpretation: Elena should continue absent overriding strategic factors. Common trap: comparing abandonment value to a single year ($550K - $400K) ignores three years of foregone cash flow.",
     "ExplanationWrongA": "Choice A uses the abandonment value as a loss. The $550,000 salvage is an inflow from abandoning, not an outflow. The question asks for the net gain or loss of the abandonment decision.",
     "ExplanationWrongB": "Choice B confuses the magnitude and direction of the comparison. The correct analysis compares the $550,000 abandonment proceeds against the relevant foregone cash flows.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongC": "A $150,000 gain compares the $550,000 abandonment value against one year of cash flow only. Three further years ($1,200,000) are foregone, turning the apparent gain into a $1,050,000 loss. Single-year comparison is the trap.",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
@@ -20214,7 +20214,7 @@ var pack_p2_e_questions = [
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "ExplanationWrongD": "Choice D confuses the salvage value from the remaining cash flows ($1,600,000 - $550,000 = $1,050,000), which calculates the opportunity cost of abandoning rather than the net gain."
+    "ExplanationWrongD": ""
   },
   {
     "Part": 2,

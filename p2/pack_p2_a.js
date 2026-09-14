@@ -10889,7 +10889,7 @@ const pack_p2_a_questions = [
     "ExplanationWrongB": "Choice B swaps in the dividend yield definition; the misconception is mixing market-relative income measures (dividends divided by price) with the earnings-relative payout ratio (dividends divided by EPS). The trend says nothing about price or yield — it measures how much of each earned dollar Flash returns versus retains.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Choice D invents an automatic suspension rule at the 50% threshold; the misconception is treating a rule of thumb as a binding covenant. Credit agreements set negotiated thresholds specific to each borrower, and many mature firms sustain payouts above 50% — the genuine concern in Flash's trend is the shrinking retention ratio, not a universal trigger point.",
-    "FormulaReference": "FA-22",
+    "FormulaReference": "FA-21",
     "ItemStyle": "single-select",
     "LOSTag": "A.9",
     "Part": 2,
@@ -13402,7 +13402,7 @@ const pack_p2_a_questions = [
     "QuestionID": "P2-A-306",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "2026-08-28",
+    "certification_date": "2026-08-28", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A-306-acquired-iprd-accounting",
     "Stem": "Flash Diagnostics acquired a smaller diagnostics company and, as part of the purchase price allocation, identified an in-process research and development (IPR&D) project with a fair value of $12,000,000. The project is not yet technologically feasible and has no alternative future use. CFO Adaeze Onuorah is determining the post-acquisition accounting. How should the IPR&D be accounted for in Flash's consolidated financial statements immediately after the acquisition?",
@@ -13413,7 +13413,7 @@ const pack_p2_a_questions = [
       "D": "The accounting for acquired IPR&D is identical under U.S. GAAP and IFRS, with no recognition or measurement differences"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "ASC 606 requires variable consideration to be estimated as the expected value (probability-weighted sum) or the most-likely amount, whichever better predicts the consideration to which the entity expects to be entitled. The estimate must be constrained to the amount that is highly probable to result in a significant reversal when the uncertainty is resolved. Expected value = 5,000,000 + 0.70 x 200,000 + 0.30 x (-100,000) = 5,000,000 + 140,000 - 30,000 = 5,110,000. The constraint applies because the reliability outcome is binary and uncertain. CFO Adaeze Onuorah should apply the constraint and recognize only the amount that is highly probable not to reverse significantly. Naomi Castellanos should update the estimate each reporting period as the constraint evidence evolves. The probability-weighted downside is 0.30 x ,000 = ,000, giving a floor of ,970,000. The constraint requires a margin of safety; the amount ,900,000 is the highly probable estimate that will not result in a significant revenue reversal, consistent with ASC 606's constraint principle.",
+    "ExplanationCorrect": "Under ASC 805, acquired IPR&D is recognized at its $12,000,000 fair value as an indefinite-lived intangible asset, separate from goodwill - not expensed and not amortized before feasibility. It is tested for impairment at least annually during development; completion triggers amortization over useful life, abandonment triggers write-off. IFRS 3 likewise requires capitalization. Business interpretation: Flash reports a $12M indefinite-lived asset. Common trap: expensing acquired IPR&D (pre-2007 U.S. GAAP) or amortizing before feasibility (developed-technology treatment).",
     "ExplanationWrongA": "Choice A is the old (pre-ASC 805) U.S. GAAP treatment. Since the 2007 effective date of the business-combinations standards, acquired IPR&D is capitalized, not expensed. IFRS 3 has required capitalization.",
     "ExplanationWrongC": "Choice C treats the acquired IPR&D as a finite-lived amortizable asset like developed technology, but ASC 805 and IFRS 3 require indefinite-lived capitalization until completion or abandonment with annual impairment testing. Amortizing over an estimated life would understate assets and overstate expense before feasibility is achieved, so Choice B, not C, is correct.",
     "ExplanationWrongD": "Choice D is mostly true for capitalization, but the U.S. GAAP and IFRS treatments differ in impairment-trigger guidance and in some measurement details. The treatments are not strictly identical.",
@@ -25277,13 +25277,13 @@ const pack_p2_a_questions = [
     "UniqueConceptKey": "a-516-residual-dividend-model-calculation-equity-portion",
     "Stem": "Greystone Industries has a capital budget of $120 million, a target capital structure of 40% equity and 60% debt, net income of $55 million, and 10 million shares outstanding. The CFO must determine the dividend per share under a residual dividend policy.",
     "Choices": {
-      "A": "$0.70 per share, because the equity needed is $48 million and the residual after dividends is $7 million.",
+      "A": "$4.80 per share, because the $48 million equity requirement divided by 10 million shares sets the dividend.",
       "B": "$0.70 per share, because dividends equal net income minus the equity portion of the capital budget.",
       "C": "$1.20 per share, because dividends equal net income minus total debt financing.",
       "D": "$5.50 per share, because the residual dividend model distributes all earnings after capital expenditures."
     },
     "CorrectChoice": "B",
-    "ExplanationWrongA": "While the $0.70 figure is correct, this option's reasoning is misleading. It implies dividends are calculated first and then the residual is determined, but the residual dividend model calculates dividends AS the residual. The correct reasoning: dividends are the result of subtracting equity needs from net income.",
+    "ExplanationWrongA": "Dividing the $48M equity need by 10M shares ($4.80) confuses the funding requirement with the distribution. Dividends are the residual AFTER funding equity needs: $55M - $48M = $7M, or $0.70/share - not the equity need per share.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This subtracts debt financing ($72M) from net income ($55M), yielding a negative figure, then arrives at $1.20 through incorrect logic. The residual dividend model subtracts only the EQUITY portion of the capital budget, not the debt portion. Debt is raised externally; equity is funded from retained earnings.",
     "ExplanationWrongD": "This ignores the capital budget constraint entirely. The residual dividend model does not distribute all earnings; it distributes only the earnings remaining after funding the equity portion of the capital budget. With $48M in equity needs, only $7M is available for dividends.",
@@ -25335,7 +25335,7 @@ const pack_p2_a_questions = [
     "source_status": "RESOLVED",
     "hold_reason": "",
     "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_date": "2026-09-06", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "Part": 2,

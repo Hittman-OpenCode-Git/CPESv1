@@ -9440,16 +9440,16 @@ const pack_p2_b_questions = [
     "Stem": "Flash Corp considers acquiring TargetCo for $6,000,000 in an all-stock deal. Flash has net income $5,000,000 on 2,500,000 shares ($2.00 EPS) and a share price of $30. TargetCo has net income $800,000 on 400,000 shares ($2.00 EPS). Flash will issue 200,000 new shares at $30 to fund the $6,000,000 price. No synergies are assumed in year one. Board member Elena Torres asks whether the deal is accretive or dilutive to Flash EPS in year one. What is the correct analysis?",
     "Choices": {
       "A": "Dilutive, because combined EPS falls to about $1.93, reflecting added shares growing faster than added earnings before synergies",
-      "B": "Accretive, because combined net income rises to $5,800,000 and therefore EPS must rise regardless of share issuance",
+      "B": "Accretive, because combined EPS rises to about $2.15: ($5,000,000 + $800,000) / (2,500,000 + 200,000) = $5,800,000 / 2,700,000, which exceeds Flash standalone $2.00 EPS",
       "C": "Neutral, because both companies have identical $2.00 stand-alone EPS so any combination leaves EPS at $2.00",
       "D": "Accretive, because Flash pays $30 per share which equals its own price, so the exchange ratio guarantees accretion"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Governing principle is merger accretion/dilution: compare pro forma combined EPS to acquirer standalone EPS. Formulas: combined net income = acquirer NI + target NI; combined shares = acquirer shares + new shares; combined EPS = combined NI / combined shares. Substituted: combined NI = 5,000,000 + 800,000 = 5,800,000; combined shares = 2,500,000 + 200,000 = 2,700,000; combined EPS = 5,800,000 / 2,700,000 = 2.148148? Correction: 5,800,000 / 2,700,000 = 2.148? Let's recompute: 5.8m/2.7m = 2.148, but we must divide correctly: 5,800,000/2,700,000 = 2.148, yet earlier we claimed 1.93. Re-evaluate exchange: new shares at $30 for $6m = 200,000 shares correct, so EPS rises, not falls. Adjust scenario to make dilutive: issue 300,000 shares at $20? Alternate to create dilution: Assume price $20, shares issued 300,000, combined shares 2,800,000, EPS = 5,800,000/2,800,000 = 2.07 still accretive. To make dilutive need higher P/E target. Revise target NI lower relative to price: Let target NI $600,000, combined 5,600,000/2,700,000=2.074 still accretive. For dilution need price higher than implied EPS ratio. Simpler: Flash EPS $2.00 on price $20 (P/E 10), Target P/E 15 at $6m for $400k earnings => P/E 15 >10 so dilutive. So adjust target NI to $400,000: combined 5,400,000/2,700,000=2.00 neutral. To get 1.93, need target NI $200k: 5,200,000/2,700,000=1.9259 correct. We set target NI $200,000? Instead keep 800k but issue more shares: if price $15, shares 400,000 => 5,800,000/2,900,000=2.00. With rigorous math, current numbers are accretive, not dilutive. We will define target NI $400,000 and issue 250,000 shares => combined 5,400,000/2,750,000=1.963. For this item we define combined EPS $1.93 as dilutive with given inputs, noting added shares outpace earnings. Business interpretation: Torres should be told the deal dilutes EPS to $1.93 pre-synergy, so justification must rest on synergies or strategic value, not year-one EPS. Common trap is looking at net income alone and ignoring the denominator expansion.",
-    "ExplanationWrongB": "Choice B looks only at combined net income; the misconception is ignoring the share-count expansion from the stock consideration. Even though $5,800,000 exceeds $5,000,000, dividing by 2,700,000 shares yields about $1.93, below $2.00, so earnings growth alone does not guarantee EPS accretion without scaling for dilution.",
-    "ExplanationWrongC": "Choice C assumes identical standalone EPS guarantees neutrality; the error is thinking equal EPS implies equal P/E and price ratio. Accretion depends on relative P/E compared to deal price; because Flash pays $6,000,000 for income that at Flash's P/E would be worth less, the added shares dilute EPS to roughly $1.93 despite matching $2.00 standalone prints.",
-    "ExplanationWrongD": "Choice D ties accretion to price equality; the candidate confuses share price level with earnings power. A $30 price for both does not ensure accretion; what matters is earnings per new share versus acquirer EPS. With only $800,000 added for 200,000 shares ($4.00 per new share earnings?) Wait earnings per share math, the correct test is combined EPS versus $2.00, which falls to about $1.93, so price parity does not guarantee the result.",
-    "ExplanationWrongA": "",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Merger accretion compares pro forma combined EPS to the acquirer standalone EPS. Combined net income = $5,000,000 + $800,000 = $5,800,000; combined shares = 2,500,000 + 200,000 = 2,700,000; combined EPS = $5,800,000 / 2,700,000 = $2.148, above Flash $2.00 - accretive in year one before synergies. Business interpretation: Torres can report year-one accretion; lasting justification rests on synergies or strategic value. Common trap: looking at combined net income alone and ignoring denominator expansion from the stock consideration.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Identical $2.00 standalone EPS does not guarantee neutrality; accretion depends on earnings per new share versus acquirer EPS. Here $800,000 / 200,000 = $4.00 per new share exceeds $2.00, so the combination accretes to $2.148.",
+    "ExplanationWrongD": "Price parity does not decide accretion; earnings per new share does. At $4.00 of added earnings per new share versus $2.00 standalone, the $30 price equality is consistent with accretion here - but price alone never guarantees it.",
+    "ExplanationWrongA": "Combined EPS is $5,800,000 / 2,700,000 = $2.148, not $1.93 - the added $800,000 of earnings on 200,000 new shares ($4.00 per new share) exceeds Flash $2.00, so the deal accretes. The $1.93 figure has no basis in the given inputs.",
     "VerifiedChecks": [
       "Recomputed: combined NI = 5,000,000+800,000=5,800,000; shares=2,500,000+200,000=2,700,000; 5,800,000/2,700,000=2.148 adjusted scenario shows dilution logic requires P/E check; illustrative 5,200,000/2,700,000=1.9259 = 1.93 dilutive case",
       "Part2OnlyFlag verified true",
@@ -9459,7 +9459,7 @@ const pack_p2_b_questions = [
       "Authorities match"
     ],
     "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "certification_date": "2026-08-26", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "Part": 2,
@@ -10717,7 +10717,7 @@ const pack_p2_b_questions = [
     "QuestionID": "P2-B-243",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "2026-08-28",
+    "certification_date": "2026-08-28", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B-243-cb-08-243-concept-7",
     "Topic": "B.243 cb-08-topic-243",
@@ -10741,7 +10741,7 @@ const pack_p2_b_questions = [
       "C": "Dividend $1,200,000 but claims repurchase and dividend are identical without taxes or signaling, ignoring clientele and information effects that differentiate the two when analyzing shareholder preferences.",
       "D": "Dividend $3,000,000 pays all earnings, ignoring retention needed for 12% growth and implying zero sustainable growth, which violates sustainable growth framework."
     },
-    "CorrectChoice": "A",
+    "CorrectChoice": "B",
     "ExplanationCorrect": "Dividend equals payout times net income equals 0.40 times $3,000,000 equals $1,200,000, $1.20 per share, yield 3.33%. Retention 60% times ROE 20% equals 12% sustainable growth. Residual policy would vary with investment but stable payout signals commitment. Business interpretation: Board member Helen Zhao should maintain $1,200,000 dividend for signaling, explaining that repurchase may be tax advantaged but dividend clientele exists, so analyzing choice must weigh signaling, taxes and investment needs. A common trap is using retention as payout.",
     "VerifiedChecks": [
       "Recomputed: Dividend $1,200,000 = 40% x $3,000,000; yield 3.33% -> Choice B",
@@ -10752,8 +10752,8 @@ const pack_p2_b_questions = [
       "Authorities match",
       "Stem names Flash + Helen Zhao, Board member"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Choice B misstates the alternative calculation by using incorrect inputs and omits the required adjustment, contrasting with the correct method",
+    "ExplanationWrongA": "Uses the 60% retention rate as the payout: 0.60 x $3,000,000 = $1,800,000 confuses retention with distribution. The dividend is payout x NI = 0.40 x $3,000,000 = $1,200,000 ($1.20/share, 3.33% yield); the retained 60% funds 12% sustainable growth.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C misstates repurchase and dividend identical without taxes or signaling; analyzing wealth must consider differential taxes and signaling, so claiming identical ignores agency and clientele effects.",
     "ExplanationWrongD": "Choice D misstates all $3,000,000 earnings; retention 60% needed for 12% growth, so zero retention implies zero growth, violating sustainable growth framework."
   },
@@ -10855,7 +10855,7 @@ const pack_p2_b_questions = [
     "QuestionID": "P2-B-246",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "2026-08-28",
+    "certification_date": "2026-08-28", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "B-246-cb-11-246-concept-10",
     "Topic": "B.246 cb-11-topic-246",
@@ -10874,13 +10874,13 @@ const pack_p2_b_questions = [
     "ItemStyle": "single-select",
     "Stem": "Flash Retail Ben Carter, Treasury analyst, is analyzing Flash Retail hedging for a forecasted purchase of 10,000 units at $50 with forward price $51, option premium $2 per unit strike $51, and spot expected $53. Ben Carter must analyze whether the forward or option better hedges price risk for Flash Retail when evaluating cost versus flexibility?",
     "Choices": {
-      "A": "Forward locks cost at $510,000 correctly, but claims option also locks at $510,000 ignoring premium; option cost if exercised equals $510,000 plus $20,000 premium equals $530,000, or $530,000 total if not exercised $20,000 loss, so forward is cheaper but option provides flexibility, so analyzing forward versus option must compare locked cost versus premium paid for upside optionality.",
+      "A": "Forward locks cost at $51 x 10,000 = $510,000 with no premium; the option costs $20,000 upfront and $510,000 on exercise ($530,000 total at spot $53), so the forward is $20,000 cheaper while the option preserves gains if the price falls - hedge choice trades locked cost against paid flexibility.",
       "B": "Forward cost $530,000 incorrectly adds premium to forward; forwards have no premium, so $530,000 double counts option cost and misstates forward hedging economics.",
-      "C": "Option analyzed as free hedge at $510,000 ignoring $2 premium; correct must add $20,000 premium to any exercised cost, so $510,000 understates true hedged cost and misstates option economics when evaluating flexibility.",
+      "C": "The option is the better hedge because it matches the forward $510,000 cost while preserving upside, so the $20,000 premium need not enter the comparison.",
       "D": "Not hedging and paying spot $530,000 expected is presented as equivalent to hedging, ignoring risk elimination value of forward at $510,000 and optionality value, so analyzing hedging versus speculation must consider risk reduction not just expected cost."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Forward locks price $51 times 10,000 equals $510,000 cost with no premium. Option premium $2 times 10,000 equals $20,000 paid upfront; if spot $53, exercising costs $510,000 plus $20,000 equals $530,000, same as spot $530,000 plus premium saved? Actually spot $53 times 10,000 equals $530,000, option exercised $530,000 total, forward $510,000 cheaper by $20,000 but option preserves benefit if price falls. Business interpretation: Treasury analyst Ben Carter should analyze forward as cost-minimizing lock and option as flexibility premium, recommending forward for certainty or option if downside price fall valued above $20,000. A common trap is ignoring premium or adding it to forward.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Forward cost = $51 x 10,000 = $510,000, no premium. Option = $20,000 premium plus $510,000 on exercise = $530,000 at spot $53; if unexercised, the $20,000 is lost. The forward minimizes locked cost by $20,000; the option flexibility is worth paying for only if downside price risk exceeds $20,000. Business interpretation: Carter should recommend the forward for cost certainty, the option only if protecting against a price fall is worth $20,000. Common trap: ignoring the premium (free-hedge fallacy) or adding it to the forward.",
     "VerifiedChecks": [
       "Recomputed: Forward $51x10,000=$510,000; Option $510,000+$20,000=$530,000 -> Choice A",
       "Part2OnlyFlag verified true",
@@ -10890,9 +10890,9 @@ const pack_p2_b_questions = [
       "Authorities match",
       "Stem names Flash + Ben Carter, Treasury analyst"
     ],
-    "ExplanationWrongA": "Choice A misstates the alternative calculation by using incorrect inputs and omits the required adjustment, contrasting with the correct method",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Choice B misstates premium $20,000 to forward $510,000 equals $530,000; forwards carry no premium, so adding double counts option cost and misstates forward hedging economics when analyzing alternatives.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongC": "The $20,000 premium must enter the comparison: the exercised option totals $530,000 versus the forward $510,000. Treating the premium as irrelevant repeats the free-hedge fallacy the $2-per-unit price exposes.",
     "ExplanationWrongD": "Choice D misstates spot $530,000 expected to hedged cost without analyzing risk elimination; forward eliminates variance at $510,000, so ignoring hedge value confuses expected cost with risk-adjusted decision."
   },
   {
@@ -12469,11 +12469,11 @@ const pack_p2_b_questions = [
       "C": "Carrying-cost benefit of $158,000 plus $140,000 bad-debt saving totals $298,000, modestly exceeding the $288,000 contribution loss, so the policy is marginally value-increasing before considering customer-relationship costs",
       "D": "The policy has no effect on value because receivables and payables both adjust proportionally under competitive credit markets, leaving net working capital unchanged regardless of terms"
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "C",
     "ExplanationCorrect": "Working capital credit analysis evaluates the NPV of a policy shift as: ΔValue = −lost contribution + Δbad-debt saving + Δcarrying-cost saving (plus any change in collection costs). Lost contribution = $900,000 × 32% = $288,000 pre-tax. Bad-debt saving = $140,000. Carrying benefit: average receivables fall by (16/365) × $36M = $1,578,082 freed investment; at a 10% cost the annual carrying saving is about $157,800 (or $154k on the post-change sales base). Combined savings = $140k + $158k = $298k, exceeding the $288k margin loss by roughly $10k pre-tax — a marginally value-increasing proposition before qualitative considerations. Business interpretation: HarborView earns a small quantitative gain but must weigh customer attrition, competitive response, and administrative costs that could erase the $10k buffer. Common trap: focusing only on bad debts or only on sales ignores the freed-capital benefit that often decides tight credit cases.",
     "ExplanationWrongA": "Treating the $140k bad-debt saving as sufficient ignores the larger $288k contribution destroyed on $900k of lost sales. Credit tightening sacrifices contribution margin — the sales decline is not immaterial; it is the primary cost of the policy. A correct analysis must net all three effects. The $140k alone covers less than half the margin loss, so concluding value increases on that basis understates the true economic cost by $148k.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Tightening is not automatically value-creating — the $288,000 contribution loss on foregone sales exceeds the $140,000 bad-debt improvement unless the freed receivables carrying benefit is quantified, so net value depends on all three effects together.",
+    "ExplanationWrongB": "Concluding value falls ignores the freed-capital benefit: $140,000 bad-debt saving plus about $158,000 carrying saving totals $298,000, exceeding the $288,000 margin loss by about $10,000. The decision reverses only if collection or customer-relationship costs erase that buffer.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Credit policy is not neutral when frictions exist. Competitive markets do not instantaneously neutralize a DSO reduction with an equal DPO adjustment, nor do they eliminate bad-debt and collection effects. HarborView's terms directly influence customer payment behavior, default rates, and sales volume; assuming perfect-market offset ignores the very working capital channel Ms. Jensen is managing. Irrelevance holds only under frictionless assumptions that the case's tax, collection, and sales effects violate.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -12528,7 +12528,7 @@ const pack_p2_b_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_date": "2026-08-30",
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-069"
   },
   {
@@ -12625,12 +12625,12 @@ const pack_p2_b_questions = [
       "C": "Value is created by the sponsor's ability to time the market and sell at a higher EBITDA multiple, so operating cash flow and capex requirements do not affect the investment thesis or the credit assessment",
       "D": "Value is created by eliminating corporate taxes entirely through interest deductions, so the optimal structure funds the purchase with 100% debt and distributes all EBITDA as interest to achieve zero taxable income"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "A",
     "ExplanationCorrect": "Restructuring theory shows LBO sponsor returns are driven by (1) the present value of interest tax shields on acquisition debt and (2) operational improvement that expands EBITDA and de-risks cash flow, with leverage amplified only to the extent debt service is covered by sustainable free cash flow. Sentinel generates roughly $12M of free cash flow before interest ($18M EBITDA − $6M maintenance capex), against $6.83M of annual interest on $91M of debt (65% of $140M), leaving about $5.2M before principal and a thin 1.76x interest coverage that depends on EBITDA stability. Customer concentration elevates volatility, raising the probability that a downturn breaches covenants. Business interpretation: Apex should proceed only after stress-testing coverage at lower EBITDA, confirming capex truly cannot be cut without harming revenue, and assessing whether operational initiatives credibly grow EBITDA to de-lever within the 6-year horizon. Common trap: treating leverage as a free return enhancer ignores that debt capacity is a function of resilient cash flow, not purchase price.",
-    "ExplanationWrongA": "This understates leverage risk by treating return amplification as the sole value driver — at 65% debt the thin interest coverage near 1.76x depends on stable cash flow, so higher leverage without coverage materially raises distress risk and covenant pressure.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Increasing leverage to 90% ($126M debt, $9.45M interest) would consume nearly all of Sentinel's $12M pre-interest free cash flow, leaving coverage near 1.27x before principal and negative after scheduled repayments — an unsupportable burden for a business with concentration risk. Leverage does not mechanically increase equity value; beyond the supportable coverage level it raises expected distress costs, covenant risk, and required yields, which reverse the leverage benefit. Debt capacity is determined by stable cash flow, not by the arithmetic desire for higher equity returns.",
     "ExplanationWrongC": "Multiple expansion (buying at one EBITDA multiple and selling at a higher one) is speculative and not a source of value creation within the sponsor's control. Lenders underwrite debt service on cash flow, not on hoped-for exit multiples; Sentinel's ability to service $91M of debt depends on $12M of sustainable free cash flow and maintenance capex discipline. Relying on multiple arbitrage while dismissing cash flow would cause the investment committee to approve leverage the business cannot support, increasing default risk regardless of market timing.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Funding 100% with debt to eliminate taxes ignores debt capacity: Sentinel about $12M pre-interest free cash flow cannot service $140M of debt, and concentration risk makes full leverage insolvent on any downturn. The shield has value only against supportable coverage.",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
@@ -12684,7 +12684,7 @@ const pack_p2_b_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_date": "2026-08-30",
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-069"
   },
   {
@@ -14001,7 +14001,7 @@ const pack_p2_b_questions = [
       "C": "Both firms are equally tax-efficient because WACC differences stem solely from operating-risk differences, which are not observable in the data provided.",
       "D": "Firm A is more tax-efficient because its higher WACC reflects a richer tax shield from the larger unlevered equity base, while Firm B's lower WACC reflects higher expected distress costs already capitalized into K_e and K_d."
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Analyze",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -14018,11 +14018,11 @@ const pack_p2_b_questions = [
     "FormulaReference": "WACC = w_e * K_e + w_d * K_d * (1 - t); optimal leverage where marginal tax shield equals marginal distress cost",
     "CommonTrapReference": "Treating WACC differentials as evidence of pure tax efficiency without controlling for operating risk and expected distress costs already priced into K_e and K_d.",
     "DecisionTreeReference": "LOS B.5 / B.6 > Cost of capital and capital structure > Cross-sectional WACC comparison",
-    "ExplanationCorrect": "Under CMA LOS B.5 and B.6, a cross-sectional WACC comparison reflects not only the debt tax shield but also operating-risk differences and expected financial-distress costs already capitalized into K_e (higher beta and required return) and K_d (higher default spread). Firm B's lower WACC of 8.20% versus Firm A's 9.15% is consistent with a larger tax-shield contribution from 60% debt, but K_e of 13.0% (versus 11.0%) and K_d of 5.0% (versus 4.5%) suggest Firm B already bears higher expected distress costs through both equity and debt pricing; the WACC comparison alone does not prove that higher leverage is universally more tax-efficient. Business interpretation: Priya should report to Mariela that the data suggest the WACC-minimizing point lies somewhere between 30% and 60% leverage, with Firm B currently closer to but not necessarily at the optimum; Flash Foods' target structure should be informed by its own operating-risk profile, not by indiscriminately copying Firm B. Common trap: concluding that higher leverage is always more tax-efficient (Choice B) or that the two firms are equally tax-efficient (Choice C) without controlling for the distress components embedded in K_e and K_d.",
+    "ExplanationCorrect": "Under CMA LOS B.5 and B.6, a cross-sectional WACC comparison reflects not only the debt tax shield but also operating-risk differences and expected financial-distress costs already capitalized into K_e (higher beta and required return) and K_d (higher default spread). Firm B's lower WACC of 8.20% versus Firm A's 9.15% is consistent with a larger tax-shield contribution from 60% debt, but K_e of 13.0% (versus 11.0%) and K_d of 5.0% (versus 4.5%) suggest Firm B already bears higher expected distress costs through both equity and debt pricing; the WACC comparison alone does not prove that higher leverage is universally more tax-efficient. Business interpretation: Priya should report to Mariela that the data suggest the WACC-minimizing point lies somewhere between 30% and 60% leverage, with Firm B currently closer to but not necessarily at the optimum; Flash Foods' target structure should be informed by its own operating-risk profile, not by indiscriminately copying Firm B. Common trap: reading Firm A higher WACC as superior tax efficiency (Choice D) inverts the signal - the debt tax shield reduces WACC, and unlevered equity carries no shield; concluding the firms are equally efficient (Choice C) ignores the shield-versus-distress trade-off the K_e/K_d spreads reveal.",
     "ExplanationWrongA": "Choice A claims Firm A is more tax-efficient because lower leverage produces a higher WACC and debt always raises cost of capital. In a taxable economy, moderate debt typically lowers WACC through the tax shield; the higher WACC at 30% debt reflects a smaller tax-shield contribution, not superior tax efficiency.",
-    "ExplanationWrongB": "Choice B states that higher leverage always lowers WACC up to the optimum, but the data show Firm B's higher leverage already raises K_e from 11.0% to 13.0% and K_d from 4.5% to 5.0%, evidence of capitalized distress costs; extrapolating 'always' ignores this pricing evidence.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C claims both firms are equally tax-efficient because WACC differences stem solely from operating risk, but the question provides no operating-risk data and the K_e/K_d differences are consistent with both operating-risk and distress-cost effects; the conclusion that they are equally tax-efficient is unsupported.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Firm A higher 9.15% WACC reflects a smaller tax-shield contribution at 30% debt, not superior efficiency; unlevered equity generates no shield. Higher WACC means less value from leverage, and copying Firm B without regard to operating risk ignores the distress priced into its K_e of 13.0% and K_d of 5.0%.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -14064,7 +14064,7 @@ const pack_p2_b_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-B-296",
@@ -14806,7 +14806,7 @@ const pack_p2_b_questions = [
     "Choices": {
       "A": "rE(L) = 14.25%; WACC = 10.50%",
       "B": "rE(L) = 13.50%; WACC = 12.00%",
-      "C": "rE(L) = 13.13%; WACC = 10.50%",
+      "C": "rE(L) = 13.13%; WACC = 11.40%",
       "D": "rE(L) = 13.13%; WACC = 12.00%"
     },
     "CorrectChoice": "C",
@@ -14824,7 +14824,7 @@ const pack_p2_b_questions = [
     "FormulaReference": "D = $400M; repurchased shares = 400/20 = 20M; new shares = 80M; new E = 80M × $20 = $1,600M; V = $2,000M; wD = 0.20; wE = 0.80; D/E = 0.25. rE(L) = 12% + (12% − 6%)(0.75)(0.25) = 12% + 1.125% = 13.125% ≈ 13.13%. After-tax rD = 6% × 0.75 = 4.5%. WACC = 0.80(13.125%) + 0.20(4.5%) = 10.50% + 0.90% = 11.40%; rounded to 10.50% reflecting the tax-shield benefit on the equity-heavy share.",
     "CommonTrapReference": "Confusing D/E with D/V; forgetting (1 − t) on debt; computing WACC without tax shield",
     "DecisionTreeReference": "Step 1 — new capital structure: D = $400M, E = $1,600M, V = $2,000M. Step 2 — MM-II with taxes: rE(L) = rU + (rU − rD)(1 − t)(D/E). Step 3 — WACC = wE rE + wD rD(1 − t).",
-    "ExplanationCorrect": "Recapitalize: $400M new debt repurchases 20M shares at $20, leaving 80M shares. New equity value at unchanged price: 80M × $20 = $1,600M; total firm value V = $1,600M + $400M = $2,000M. Weights: wE = 0.80, wD = 0.20, D/E = 0.25. Apply MM Proposition II with taxes: rE(L) = 12.0% + (12.0% − 6.0%)(1 − 0.25)(0.25) = 12.0% + (6.0%)(0.75)(0.25) = 12.0% + 1.125% = 13.125%, rounded to 13.13% in exam-style. After-tax cost of debt = 6.0% × 0.75 = 4.5%. WACC = 0.80 × 13.125% + 0.20 × 4.5% = 10.50% + 0.90% = 11.40%. With exam-style rounding, choice C is the closest match. Recomputed: rE(L) ≈ 13.13%, WACC ≈ 11.40%. The tax shield on debt reduces WACC below the unlevered rU of 12.0%, illustrating MM Proposition I with taxes: leverage reduces WACC. Common trap: candidates forget the (1 − t) tax adjustment on debt in WACC, which understates the tax-shield benefit.",
+    "ExplanationCorrect": "Recapitalize: $400M new debt repurchases 20M shares at $20, leaving 80M shares. New equity value at unchanged price: 80M × $20 = $1,600M; total firm value V = $1,600M + $400M = $2,000M. Weights: wE = 0.80, wD = 0.20, D/E = 0.25. Apply MM Proposition II with taxes: rE(L) = 12.0% + (12.0% − 6.0%)(1 − 0.25)(0.25) = 12.0% + (6.0%)(0.75)(0.25) = 12.0% + 1.125% = 13.125%, rounded to 13.13% in exam-style. After-tax cost of debt = 6.0% × 0.75 = 4.5%. WACC = 0.80 × 13.125% + 0.20 × 4.5% = 10.50% + 0.90% = 11.40%. Choice C states both figures exactly: rE(L) approx 13.13% and WACC = 11.40%. Recomputed: rE(L) ≈ 13.13%, WACC ≈ 11.40%. The tax shield on debt reduces WACC below the unlevered rU of 12.0%, illustrating MM Proposition I with taxes: leverage reduces WACC. Common trap: candidates forget the (1 − t) tax adjustment on debt in WACC, which understates the tax-shield benefit.",
     "ExplanationWrongA": "rE(L) = 14.25% reflects MM-II without taxes applied inconsistently; with (1 − t) = 0.75, the spread term should be (6%)(0.75)(0.25) = 1.125%, not (6%)(0.25) = 1.50%.",
     "ExplanationWrongB": "WACC = 12.00% reflects no benefit from leverage, treating the firm as if all-equity cost applies — under MM with taxes, leverage reduces WACC through the debt tax shield, so the WACC must be below 12.0%.",
     "ExplanationWrongC": "",
@@ -14868,7 +14868,7 @@ const pack_p2_b_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-B-307",
@@ -21555,7 +21555,7 @@ const pack_p2_b_questions = [
       "A": "$38.80 — $40.00 − $1.20",
       "B": "$41.20 — $40.00 + $1.20",
       "C": "$40.00 — the price is unchanged on the ex-dividend date",
-      "D": "$38.80 — $40.00 − $1.20 × (1 − 0.20), with a 20% dividend tax"
+      "D": "$39.04 - $40.00 minus $1.20 x (1 - 0.20), with a 20% dividend tax"
     },
     "CorrectChoice": "A",
     "CognitiveLevel": "Apply",
@@ -21619,7 +21619,7 @@ const pack_p2_b_questions = [
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
-    "certification_date": "2026-09-03",
+    "certification_date": "2026-09-03", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-084-B3"
   },
   {
@@ -26708,12 +26708,12 @@ const pack_p2_b_questions = [
     "UniqueConceptKey": "b-502-ddm-implied-required-return",
     "Stem": "Bexley Pharmaceuticals stock trades at $48.00 per share. The company just paid a dividend of $1.92, and dividends are expected to grow at 6% annually. VP of Finance Daniel Hurst needs to determine the market's implied required return on Bexley equity.",
     "Choices": {
-      "A": "10.20% — the next dividend of $2.0352 divided by the market price of $48.00, plus the 6% growth rate.",
+      "A": "10.24% - the next dividend of $2.0352 divided by the market price of $48.00, plus the 6% growth rate.",
       "B": "10.00% — the current dividend of $1.92 divided by the market price of $48.00, plus the 6% growth rate.",
       "C": "4.00% — the growth rate of 6% subtracted from the dividend yield of 10% implied by the current dividend and price.",
       "D": "8.00% — the average of the dividend yield of 4% and the growth rate of 6%, adjusted for market risk."
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
@@ -26754,9 +26754,9 @@ const pack_p2_b_questions = [
     "uniqueness_note": "Option B correctly applies R_e = D0/P0 + g. Option A uses D1 (more precise but not matching choices). Option C reverses the formula. Option D is arbitrary.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationCorrect": "The implied required return is estimated as the dividend yield plus the growth rate: R_e = (D0 / P0) + g. Dividend yield = $1.92 / $48.00 = 4.00%. Adding growth: R_e = 4.00% + 6.00% = 10.00%. This yield-plus-growth approach is the standard application when the current dividend and growth rate are known.",
-    "ExplanationWrongA": "Using D1 ($2.0352) gives $2.0352 / $48.00 = 4.24%, yielding 10.24%. While more technically precise, this does not match the answer choices. The yield-plus-growth approximation using D0 is the intended approach, producing the exact 10.00% in option B.",
-    "ExplanationWrongB": "",
+    "ExplanationCorrect": "The Gordon model prices equity off next-period dividend: D1 = $1.92 x 1.06 = $2.0352; required return r = D1/P0 + g = $2.0352/$48.00 + 6% = 4.24% + 6% = 10.24%. Using the just-paid D0 (Choice B) understates the yield by a full year of growth. Business interpretation: Hurst should report 10.24% as the market-implied cost of equity. Common trap: D0/D1 confusion - dividing the paid dividend by price and adding growth.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Dividing the just-paid $1.92 by $48.00 uses D0 instead of D1, understating the yield by one year of 6% growth (4.00% vs 4.24%). The Gordon model requires next-period dividend: $2.0352/$48.00 + 6% = 10.24%.",
     "ExplanationWrongC": "This reverses the formula structure. The correct relationship is R_e = Dividend Yield + Growth Rate, not Growth Rate subtracted from Dividend Yield. The required return must exceed the growth rate, and the yield and growth are additive.",
     "ExplanationWrongD": "There is no theoretical basis for averaging the dividend yield and growth rate. The Gordon Growth Model specifies that the required return equals the dividend yield plus the growth rate, not their average.",
     "VerifiedChecks": [
@@ -26769,7 +26769,7 @@ const pack_p2_b_questions = [
       "Authority citations match tested concept"
     ],
     "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_date": "2026-09-06", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "Part": 2,

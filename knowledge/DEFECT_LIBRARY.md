@@ -3918,6 +3918,198 @@ case files. No content changes (IDs only); question_state/Certified untouched.
 
 ---
 
+## DL-049 — Psychometric Stack Silently Excludes Pack C and All of Part 2
+
+```
+Defect ID        DL-049
+Class            Structural / Process (hybrid)
+Domain           Validator Coverage — silent extraction drop
+Severity         HIGH (Pack C 620 items + all Part 2 3,450 items = 4,070 items, 62.4% of the combined 6,520-item pool, received zero psychometric screening)
+Detected By      Build-Time AI Verification — board audit 2026-09-12/13 (validator `questionsScanned` cross-checked against raw QID counts)
+Status           Resolved — 2026-09-13 (P0.1/P0.2 rewire)
+Category         Legacy regex extractor + silent-null return; shared pack list; hardcoded dashboard pack roster
+```
+
+### Issue
+
+The psychometric validator stack (`AbsoluteLanguage`, `Ambiguity`, `DistractorSimilarity`, `ExplanationConsistency` via `extractQuestions`/`loadAllQuestions`, plus `MathematicalValidator` via its own duplicate extractor) scanned only **2,450 of 3,070** Part 1 items and **zero** Part 2 items — while reporting success.
+
+Three root causes:
+
+1. **Pack C dropped entirely (620 items).** The regex `/(?:MCQ|CASE)_BANK_[A-Z]\s*=\s*\[/` could not match Pack C's declaration `const MCQ_BANK_C = // BLOCK-AUTHORIZED ...` (comment between `=` and `[`). `extractQuestions` returned `null`; `loadAllQuestions` skipped the file. Same silent-null shape as DL-044.
+2. **Part 2 never in scope (3,450 items).** `config.questionPacks` listed only the 5 P1 packs, and P2 bank names (`pack_p2_x_questions`) never matched the `MCQ_BANK_*` regex.
+3. **Dashboard measured 1,200 of 3,450 P2 items.** `s121_portfolio_dashboard.js` hardcoded only `P2-A`/`P2-B`.
+
+### Pattern
+
+```
+validate.js reports questionsScanned: 2450  (true total 6520)
+  -> AbsoluteLanguage/Ambiguity/DistractorSimilarity/ExplanationConsistency saw A/B/D/E only
+  -> MathematicalValidator carried a second copy of the same broken regex
+  -> every "validator passes / warnings 2,185" figure was understated
+```
+
+### Detection Rule
+
+```
+For each validator source, assert itemsScanned == raw "QuestionID" count per file.
+A null/empty extraction from a non-empty file, or any count mismatch, is a coverage failure.
+```
+
+### Validator / Source
+
+Build-Time AI Verification — board audit 2026-09-12/13. Fix substrate: canonical `scripts/lib/pack_parser.js` (its `DECL_RE`, line 92, already tolerates the comment-bearing declaration).
+
+### Correction
+
+Executed 2026-09-13 (Full Governance Lane; backups `backups/*.bak-p0-20260912234924`):
+
+| File | Change |
+|------|--------|
+| `scripts/validators/psychometric/extractor.js` | Rewired to `pack_parser`; shape-selects records by `QuestionID`; added R20 coverage assertion (parsed records vs raw `"QuestionID"` count; throws on mismatch); removed silent `catch {}` / `? : null`. |
+| `scripts/validators/psychometric/MathematicalValidator.js` | Deleted duplicate legacy extractor; now consumes `loadAllQuestions()` (closes the P2 loop gap found in scoping). |
+| `scripts/config.js` | Added `part2QuestionPacks` (6 P2 packs), consumed only by the psychometric stack; `questionPacks` kept P1-only. |
+| `scripts/s121_portfolio_dashboard.js` | `P2_PACKS` expanded 2→6; added R23 coverage assertion; footer totals made dynamic. |
+
+### Regression Test
+
+- `npm run validate` → psychometric `questionsScanned: 6520` (was 2450), `totalErrors: 0`.
+- `node scripts/s121_portfolio_dashboard.js` → Part 2 = 3,450 items across 6 packs (was 1,200 across 2).
+- `node scripts/test_pack_parser.js` 20/20; `node scripts/test_governance_guard.js` 89/89; `npm run preflight` and `npm run preflight:p2` 0 divergences.
+
+### Residual (non-blocking)
+
+Legacy `config.caseBanks` (`ENHANCED_CASE_BASE`) never matched the old regex either, so dropping it from `loadAllQuestions` is a no-op, not a regression. Active `case_pack_1/2/3` items remain outside psychometric scope by design.
+
+### Cross-References
+
+- DL-044 (silent-null extraction — case banks), DL-036 (silent-empty tooling — rootDir), DL-045 (positive-evidence doctrine)
+- R20/R21/R23 (proposed coverage/parser/portfolio gates — deferred to a separate change-set)
+- REVISION_HISTORY.md 2026-09-13 entry
+
+### Resolved
+
+2026-09-13.
+
+---
+
+## DL-050 — Case Validators Silently Skip Live Banks (Case-Side DL-049 Twin)
+
+```
+Defect ID        DL-050
+Class            Structural / Process (hybrid)
+Domain           Validator Coverage — silent extraction drop (case banks)
+Severity         HIGH (80 live P1 cases / 425 items + 100 P2 cases / ~600 items unscanned; warnings fire only on archived banks)
+Detected By      Build-Time AI Verification — guard-codification scoping 2026-09-13 (validator file-list cross-check vs bank declarations)
+Status           Partially Resolved — P1-live wired 2026-09-13 (5 validators on casePackBanks; 0 errors); P2-case schema-aware coverage deferred (P1 validators FAIL on P2 schema: 205+100 errors in dry-run)
+Category         Bank-name mismatch + archived-only file lists; legacy CaseExtractor null-return
+```
+
+### Issue
+
+The case-side validators (Blueprint, Difficulty, Metadata, Reference via `CaseExtractor`; CaseIntegrity via its own extractor) iterate `config.caseBanks` — the five ARCHIVED legacy banks — and extract via patterns matching only `ENHANCED_CASE_BASE`/`SCORED_CASES` declarations. Live banks declare `CASE_PACK_1/2/3` (P1) and `casePackP2_1/2/3` (P2), which never match → null → silently skipped. "Cases Checked: 75" covers archived content only. The 80 live P1 cases and 100 P2 cases receive zero validation from these five validators (live coverage: CaseIdentityValidator only). P2 case banks appear in no config list at all.
+
+### Pattern
+
+```
+validate.js reports Cases Checked: 75  (true live total 180)
+  -> warnings fire on content/cases/legacy/* (dead files)
+  -> content/cases/case_pack_* + p2/case_pack_p2_* invisible
+```
+
+### Detection Rule
+
+```
+For each case validator, assert extracted-case count == raw CaseID count per listed file, plus assert every live bank file appears in some validator's file list.
+```
+
+### Validator / Source
+
+Build-Time AI Verification — 2026-09-13 guard-codification scoping.
+
+### Correction (partial, this change-set)
+
+`scripts/lib/CaseExtractor.js` patterns extended to live declarations (`CASE_PACK_\d+`, `casePackP2_\d+`; alias lines deliberately excluded). **Live-bank wiring executed for P1** (Blueprint/Difficulty/Metadata/Reference/CaseIntegrity now iterate `config.casePackBanks`; CaseIntegrity delegated to CaseExtractor; 3 silent returns → loud warns). Validators still consume archived `config.caseBanks` for nothing — legacy scanning retired. **P2-case wiring explicitly deferred** — do not read this entry as closed.
+
+### P1-Live Triage Verdict (2026-09-13; 80 cases / 425 items, 0 errors)
+- Genuine micro-findings: 5 short explanations (37–47 chars: CBQ2-A2 ×3, CBQ5-C1 ×2), 1 missing Topic (CBQ5-D2), 1 seven-choice item (CBQ2-E2). Backlog for micro-batch; no new DL.
+- Validator gaps (not content): Reference exhibit-matching too literal (~126; misses "Exhibit 2"-style refs — verified consumed); CaseIntegrity identical-choices vacuous on numeric items (~10); Blueprint domain-topic list under-populated (73 legitimate topics); Difficulty CF5 formula gripe uniform (68).
+- Legacy side-note: files 2/3/4 carry second `MIGRATED_CASE_BASE_*` arrays (45 cases) the old first-match extractor silently dropped — moot post-retirement, recorded for the record.
+
+### Regression Test (for the wiring change-set)
+
+- Each of Blueprint/Difficulty/Metadata/Reference/CaseIntegrity reports per-live-bank case counts summing to 80 P1 + 100 P2.
+- Zero warnings reference `content/cases/legacy/*` (or legacy scanning explicitly retained and labeled).
+- `npm run validate` case coverage: 180 banks' items, not 75.
+
+### Cross-References
+
+- DL-049 (MCQ-side twin), DL-044 (silent-null family), DL-036 (silent-empty family)
+- R21/Rule 20 (guards future extractor regressions once wired)
+- REVISION_HISTORY.md 2026-09-13 guard-codification entry
+
+### Resolved
+
+Not yet — Open.
+
+---
+
+## DL-051 — No Semantic Key-Verification Exists for Case Items (Case-Side DL-047 Gap)
+
+```
+Defect ID        DL-051
+Class            Process / Methodology
+Domain           Verification Coverage — case-bank semantic agreement
+Severity         MEDIUM (unmeasured; 1 inversion + 2 content defects found in the first 69 case items reviewed)
+Detected By      Build-Time AI Verification — P2C-2 conversion review 2026-09-13 (CBQ23-C3-Q3 key inversion B→C surfaced by a letter-ref probe, not a screen)
+Status           Open — backlog (named item; not yet scheduled)
+Category         Monitored class without an automated screen
+```
+
+### Issue
+
+The DL-047 semantic screens (fingerprints, lead-token echo, EC–stem mismatch, lowercase-fragment, generalized DL-010, B-num) run over MCQ packs only. Case items — P1 (425), P2 (600) — have never been semantically screened for key/explanation agreement. The first case-side inversion (CBQ23-C3-Q3: stored B, true C, EC supporting C) was found by accident during P2C-2 conversion review. Case validators (even post-DL-050 wiring) check structure/metadata, never semantic agreement.
+
+### Pattern
+
+```
+MCQ pool: 6 deterministic screens, quarantine manifest, guard Rules 20/21
+Case pool: 0 semantic screens, 0 manifests, 0 gates
+```
+
+### Detection Rule (proposed)
+
+Adapt screens B/B-num to the case schema (`Correct` text / `Explanation` single / `Choices` array): per Certified case item, keyword-recall of each choice text against Explanation; flag when best-recall choice ≠ stored `Correct` with margin; numeric-echo variant for calculation items. Requires Certified-only scoping + FP adjudication protocol (same DL-047 flow).
+
+### Validator / Source
+
+Build-Time AI Verification — P2C-2 scoping 2026-09-13.
+
+### Correction (proposed, NOT executed)
+
+Run the adapted screens across P1 (425) + P2 (600) case items; adjudicate per DL-047 flow (quarantine → fix → verify → restore); file findings as DL-05x. Do NOT auto-remediate from screen output (DL-045 doctrine).
+
+### Regression Test
+
+- Screens re-run clean (modulo documented FP set) after remediation.
+- Any future case-certification batch passes the adapted screens before state flips (Rule-25 analog for cases).
+
+### Delivery Blocker (board determination 2026-09-13)
+
+**DL-051 must complete before any case-delivery rewire.** `getCasePool()` currently has no P2 hook and no item-state filter, so case-side semantic defects (C3-Q3 precedent: key inversion found by accident, never screened) cannot reach learners today. The moment any loader change feeds P2 cases (or filters on item `question_state`), unscreened key-agreement defects become learner-facing. Any change-set that wires case delivery MUST either complete DL-051 first or carry BLOCK-AUTHORIZED with explicit learner-safety justification. This dependency is intentional and permanent until DL-051 resolves.
+
+### Cross-References
+
+- DL-047 (MCQ semantic screens + quarantine flow), DL-050 (case-validator blindness), DL-045 (positive-evidence doctrine)
+- CBQ23-C3-Q3 (first case-side inversion; remediated P2C-2 Wave 2)
+- REVISION_HISTORY.md P2C-2 entries
+
+### Resolved
+
+Not yet — Open.
+
+---
+
 ## Template for New Entries
 
 ```markdown

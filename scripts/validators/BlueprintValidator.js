@@ -16,7 +16,7 @@ class BlueprintValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.caseBanks;
+        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
         let totalCases = 0;
         let crossDomainCases = 0;
         let topicCounts = {};
@@ -26,7 +26,7 @@ class BlueprintValidator extends Validator {
             if (!fs.existsSync(fullPath)) return;
             const content = fs.readFileSync(fullPath, "utf8");
             const cases = this.extractCases(content, file);
-            if (!cases) return;
+            if (!cases) { this.addWarning(`No cases extracted from ${file} — coverage gap (DL-050)`); return; }
 
             cases.forEach((c, idx) => {
                 totalCases++;

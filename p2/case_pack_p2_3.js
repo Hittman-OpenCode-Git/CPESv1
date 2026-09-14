@@ -3309,14 +3309,9 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-C3-Q1",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. Option A uses the correct ranking and a defensible computation; the precise 4,640-hour figure arises when the mix is rebalanced toward higher-margin SKUs, which is the planning basis Priya is recommending.", "Topic": "Contribution margin per constrained hour", "question_state": "Unprocessed",
         "Prompt": "Based on Exhibit 1, which statement most accurately describes the contribution-margin-per-reactor-hour ranking and the units required to break even on fixed manufacturing and SG&A for the current product mix?",
-        "Choices": {
-          "A": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.",
-          "B": "Product C ranks first at $30 per unit but contributes only $15 per reactor hour, and the current mix needs approximately 9,333 hours to cover the $140,000 of fixed manufacturing and SG&A.",
-          "C": "All three products rank equally on a per-hour basis because contribution per hour equals contribution per unit divided by hours, and the current mix needs exactly 5,000 hours to cover fixed costs.",
-          "D": "Product B ranks first because it has the lowest variable cost ratio, and the current mix needs 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A at a $30 weighted-average contribution per hour."
-        },
+        "Choices": ["Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Product C ranks first at $30 per unit but contributes only $15 per reactor hour, and the current mix needs approximately 9,333 hours to cover the $140,000 of fixed manufacturing and SG&A.", "All three products rank equally on a per-hour basis because contribution per hour equals contribution per unit divided by hours, and the current mix needs exactly 5,000 hours to cover fixed costs.", "Product B ranks first because it has the lowest variable cost ratio, and the current mix needs 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A at a $30 weighted-average contribution per hour."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3329,14 +3324,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.", "Explanation": "If 12,000 hours are dedicated to Product A at $28.04 per hour, total contribution is 12,000 × $28.04 ≈ $336,480. At 2.14 hours per unit, that is 12,000 / 2.14 ≈ 5,607 units of Product A. The displaced B and C volume is the opportunity cost that must be evaluated against outsourcing economics.", "Topic": "Total contribution margin computation", "question_state": "Unprocessed",
         "Prompt": "Using Exhibit 1 and Exhibit 2, if Flash Industrial reallocates all 12,000 available bottleneck hours to the highest contribution-per-hour product, what is the maximum period contribution margin, and how many units of that product are produced?",
-        "Choices": {
-          "A": "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.",
-          "B": "Approximately $264,000 of contribution margin from 12,000 units of Product B at $22 per hour.",
-          "C": "Approximately $180,000 of contribution margin from 12,000 units of Product C at $15 per hour.",
-          "D": "Approximately $336,000 of contribution margin from exactly 6,000 units of Product A at 2.00 hours per unit."
-        },
+        "Choices": ["Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.", "Approximately $264,000 of contribution margin from 12,000 units of Product B at $22 per hour.", "Approximately $180,000 of contribution margin from 12,000 units of Product C at $15 per hour.", "Approximately $336,000 of contribution margin from exactly 6,000 units of Product A at 2.00 hours per unit."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3349,34 +3339,24 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.", "Explanation": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000/23% figure understates the cushion by excluding allocated corporate cost contrary to the stated $175,000 fixed total; the correct margin is about $335,000 (about 48%).", "Topic": "Margin of safety analysis", "question_state": "Unprocessed",
         "Prompt": "Under the recommended Product-A-led mix, with $336,000 of contribution margin and $175,000 of total fixed costs (manufacturing plus allocated corporate), what is the margin of safety in dollars and as a percentage of expected sales, assuming expected sales of approximately $700,000?",
-        "Choices": {
-          "A": "Margin of safety is approximately $25,000, or about 3.6% of expected sales, indicating very thin cushion.",
-          "B": "Margin of safety is approximately $161,000, or about 23% of expected sales, indicating a reasonable cushion.",
-          "C": "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.",
-          "D": "Margin of safety is approximately $525,000, or 75% of expected sales, indicating an unusually high cushion."
-        },
-        "CorrectChoice": "B",
+        "Choices": ["Margin of safety is approximately $25,000, or about 3.6% of expected sales, indicating very thin cushion.", "Margin of safety is approximately $161,000, or about 23% of expected sales, indicating a reasonable cushion.", "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.", "Margin of safety is approximately $525,000, or 75% of expected sales, indicating an unusually high cushion."],
+        "CorrectChoice": "C",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
-        "ExplanationCorrect": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000 / 23% framing reflects an alternative calculation where segment corporate cost is treated as period-specific rather than allocated; either way the cushion is described as reasonable rather than negligible.",
+        "ExplanationCorrect": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000/23% figure understates the cushion by excluding allocated corporate cost contrary to the stated $175,000 fixed total; the correct margin is about $335,000 (about 48%).",
         "ExplanationWrongA": "Choice A applies margin-of-safety to a single-product CVP rather than the multi-product mix; with multi-product CVP under a constrained bottleneck, the standard margin-of-safety calculation (current sales - break-even sales) must be weighted across the actual product mix, not applied to the highest-margin product in isolation.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Margin of safety equals expected sales minus breakeven sales, not total contribution margin; equating the two overstates the cushion and is a common error when students confuse cash contribution with profit cushion.",
+        "ExplanationWrongB": "A $161,000/23% margin matches no derivation from the given inputs: breakeven = $175,000/0.48 = $364,583, so margin = $700,000 - $364,583 = about $335,000. The $161,000 figure likely drops allocated corporate cost contrary to the stated $175,000 fixed total.",
+        "ExplanationWrongC": "",
         "ExplanationWrongD": "A 75% margin of safety is implausible because that would require breakeven sales of only $175,000, implying a contribution-margin ratio above 99%, which is not consistent with the product economics in Exhibit 1."
       },
       {
         "ItemID": "CBQ23-C3-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.", "Explanation": "Outsourcing changes the volume that Flash Logistics handles but does not eliminate the related-party pricing analysis. The remaining in-house volume continues to move on Flash Logistics trucks, so the $1,450-per-load rate still requires benchmarking against external carriers, and any margin Flash Logistics earns on the captive business should be tested under the comparable-profits-interval (CPI) method or a CUP method, consistent with OECD/German Section 482 principles.", "Topic": "Make-or-buy captive vs external rate", "question_state": "Unprocessed",
         "Prompt": "The CFO has asked how a shift to outsource TerraBond to a third-party supplier at $42 per unit would affect Flash Industrial's intercompany transfer-pricing exposure with Flash Logistics. Which analysis is most appropriate?",
-        "Choices": {
-          "A": "Outsourcing eliminates the captive trucking arrangement with Flash Logistics, removing any related-party pricing issue; the arm's-length test therefore becomes moot for the outsourced volume.",
-          "B": "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.",
-          "C": "Outsourcing automatically triggers a Section 482 penalty in Germany because the related-party transaction count rises, regardless of margin levels.",
-          "D": "Transfer pricing applies only to inbound purchases, not to outbound captive services, so the analysis is irrelevant."
-        },
+        "Choices": ["Outsourcing eliminates the captive trucking arrangement with Flash Logistics, removing any related-party pricing issue; the arm's-length test therefore becomes moot for the outsourced volume.", "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.", "Outsourcing automatically triggers a Section 482 penalty in Germany because the related-party transaction count rises, regardless of margin levels.", "Transfer pricing applies only to inbound purchases, not to outbound captive services, so the analysis is irrelevant."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -3389,14 +3369,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.", "Explanation": "The optimal constrained-resource mix allocates hours to the highest contribution-per-hour product first (A), then to the next best (B), and finally to the lowest (C) only when needed to retain strategic customers. Marginal TerraBond units that exceed reactor capacity should be evaluated against the $42 outsourcing quote; because in-house variable cost is $34, outsourcing at $42 saves the reactor hours for A and B while preserving customer revenue. This balances capital efficiency, customer retention, and fixed-cost recovery.", "Topic": "Constrained capacity allocation", "question_state": "Unprocessed",
         "Prompt": "Holding WACC at 9%, fixed costs at $175,000 per period, and current demand for A and B unchanged, which recommendation best balances optimal contribution against capital rationing, fixed-cost recovery, and customer relationships on TerraBond?",
-        "Choices": {
-          "A": "Allocate all 12,000 hours to Product A because it has the highest contribution per reactor hour, ignoring TerraBond customers entirely.",
-          "B": "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.",
-          "C": "Maintain the current mix because any reallocation would violate historical customer-allocation norms, even though contribution falls by roughly $20,000 per period.",
-          "D": "Shut down the TerraBond line entirely and redeploy the freed fixed cost to marketing for Product A."
-        },
+        "Choices": ["Allocate all 12,000 hours to Product A because it has the highest contribution per reactor hour, ignoring TerraBond customers entirely.", "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.", "Maintain the current mix because any reallocation would violate historical customer-allocation norms, even though contribution falls by roughly $20,000 per period.", "Shut down the TerraBond line entirely and redeploy the freed fixed cost to marketing for Product A."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Very Difficult",
@@ -3409,14 +3384,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.", "Explanation": "Outsourcing is generally appropriate only when the supplier's capacity, quality systems, and contract terms mitigate execution risk over a horizon that matches the in-house cost recovery. A defensible evaluation couples the per-hour economics with qualitative safeguards — supplier audits, dual-sourcing, and price-volume commitments — so the qualitative concentration risk is managed, not ignored.", "Topic": "Outsourcing scale and control conditions", "question_state": "Unprocessed",
         "Prompt": "The CEO is weighing whether to outsource all TerraBond production at $42 per unit and use the freed reactor hours entirely for Product A. Which evaluation best weighs that decision against the qualitative risks of single-product concentration?",
-        "Choices": {
-          "A": "Outsourcing all TerraBond is generally preferable because Product A delivers roughly $28 per reactor hour versus $15 in-house for C, so the opportunity cost of keeping C in-house is high; the qualitative risk of single-product dependence is outweighed by the quantitative gain.",
-          "B": "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.",
-          "C": "Single-product dependence is automatically disqualifying under the COSO ERM framework, so the CEO must retain in-house production of all three products.",
-          "D": "Outsourcing all TerraBond eliminates fixed-cost recovery for the reactor line because fixed costs are unavoidable and will simply be reallocated to Products A and B, leaving segment margin unchanged."
-        },
+        "Choices": ["Outsourcing all TerraBond is generally preferable because Product A delivers roughly $28 per reactor hour versus $15 in-house for C, so the opportunity cost of keeping C in-house is high; the qualitative risk of single-product dependence is outweighed by the quantitative gain.", "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.", "Single-product dependence is automatically disqualifying under the COSO ERM framework, so the CEO must retain in-house production of all three products.", "Outsourcing all TerraBond eliminates fixed-cost recovery for the reactor line because fixed costs are unavoidable and will simply be reallocated to Products A and B, leaving segment margin unchanged."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Very Difficult",
@@ -3592,14 +3562,9 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-D2-Q1",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Explanation": "Risk capacity is the objective ceiling the entity can survive without threatening solvency or capital targets; risk appetite is the discretionary amount management chooses to accept in pursuit of strategy. At launch, capacity typically exceeds appetite because management deliberately keeps exposure below the survivability ceiling. TradeBridge's $4M expected loss against $500M exposure and the 3.5% delinquency ceiling illustrates an appetite calibrated well inside capacity.", "Topic": "Risk capacity vs appetite", "question_state": "Unprocessed",
         "Prompt": "Which statement most accurately distinguishes risk capacity from risk appetite, as those concepts apply to the TradeBridge launch?",
-        "Choices": {
-          "A": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.",
-          "B": "Risk capacity and risk appetite are synonymous and used interchangeably in committee reports, so no distinction is needed for TradeBridge.",
-          "C": "Risk appetite is the upper bound set by regulators, while risk capacity is the internal stretch goal that management targets.",
-          "D": "Risk capacity refers only to operational losses, while risk appetite refers only to market losses, so for a factoring product the two concepts collapse into one."
-        },
+        "Choices": ["Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Risk capacity and risk appetite are synonymous and used interchangeably in committee reports, so no distinction is needed for TradeBridge.", "Risk appetite is the upper bound set by regulators, while risk capacity is the internal stretch goal that management targets.", "Risk capacity refers only to operational losses, while risk appetite refers only to market losses, so for a factoring product the two concepts collapse into one."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3612,14 +3577,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.", "Explanation": "The mean is 1.6% and the green-amber boundary is 2.5%, a difference of 0.9 percentage points. At a standard deviation of 0.7 percentage points, that is roughly 0.9 / 0.7 ≈ 1.3 standard deviations. Under a normal distribution, a 1.3σ upper tail corresponds to roughly a 10% one-sided false-positive rate, which is higher than ideal and explains why the band will trip frequently — a common calibration challenge for low-mean KRIs.", "Topic": "KRI threshold calibration", "question_state": "Unprocessed",
         "Prompt": "Using Exhibit 2 and assuming portfolio delinquency is approximately normally distributed, what is the implied green-amber boundary in number of standard deviations above the observed mean, and what does that imply for false-positive rates?",
-        "Choices": {
-          "A": "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.",
-          "B": "The green-amber boundary at 2.5% sits approximately 0.9 standard deviations above the mean of 1.6%, implying a tight band with limited noise.",
-          "C": "The green-amber boundary at 2.5% sits exactly 2.0 standard deviations above the mean of 1.6%, implying roughly a 2.5% one-sided false-positive rate.",
-          "D": "The green-amber boundary cannot be interpreted in standard deviations because delinquency is not normally distributed under any circumstances."
-        },
+        "Choices": ["The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.", "The green-amber boundary at 2.5% sits approximately 0.9 standard deviations above the mean of 1.6%, implying a tight band with limited noise.", "The green-amber boundary at 2.5% sits exactly 2.0 standard deviations above the mean of 1.6%, implying roughly a 2.5% one-sided false-positive rate.", "The green-amber boundary cannot be interpreted in standard deviations because delinquency is not normally distributed under any circumstances."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3632,14 +3592,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.", "Explanation": "COSO ERM Principle 10 calls for control activities that are integrated with risk responses and proportionate to the risk. A four-eyes approval above a defined exposure threshold, system-driven invoice anomaly flags, segregation of duties between onboarding and collections, and periodic quality testing collectively satisfy the principle by aligning preventive, detective, and monitoring controls with the credit and operational risks identified for TradeBridge.", "Topic": "Control activity design", "question_state": "Unprocessed",
         "Prompt": "Which control-activity design is most consistent with COSO ERM Principle 10 for the TradeBridge onboarding and collections process?",
-        "Choices": {
-          "A": "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.",
-          "B": "Allow the onboarding analyst to approve any size of obligor up to the $500M portfolio cap so long as the KRI dashboard reads green.",
-          "C": "Centralize all onboarding, collections, and exception handling in a single experienced analyst to reduce coordination costs.",
-          "D": "Move onboarding, collections, and credit approvals to a shared-services center outside Europe to reduce headcount cost."
-        },
+        "Choices": ["Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.", "Allow the onboarding analyst to approve any size of obligor up to the $500M portfolio cap so long as the KRI dashboard reads green.", "Centralize all onboarding, collections, and exception handling in a single experienced analyst to reduce coordination costs.", "Move onboarding, collections, and credit approvals to a shared-services center outside Europe to reduce headcount cost."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -3652,14 +3607,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.", "Explanation": "An effective escalation framework pairs immediate operational containment with structured committee oversight. Tier-1 detection within hours, credit-lead review within a day, risk-committee notification within two days, and a board-level trigger linked to the formal appetite statement produce a response that is timely, proportionate, and aligned with governance. The two-consecutive-month rule provides continuity without suppressing real-time visibility.", "Topic": "Exception reporting and escalation", "question_state": "Unprocessed",
         "Prompt": "TradeBridge has identified a scenario in which obligor concentration breaches 15% on a single counterparty. Which incident-response escalation framework is most appropriate?",
-        "Choices": {
-          "A": "Tier-1 analyst handles the breach, escalates only if losses exceed $1M; no committee involvement is required at the trigger level.",
-          "B": "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.",
-          "C": "Wait until quarter-end to bundle the breach into a routine risk report to the audit committee.",
-          "D": "Immediately cease all onboarding for TradeBridge until the concentration is unwound through natural runoff."
-        },
+        "Choices": ["Tier-1 analyst handles the breach, escalates only if losses exceed $1M; no committee involvement is required at the trigger level.", "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.", "Wait until quarter-end to bundle the breach into a routine risk report to the audit committee.", "Immediately cease all onboarding for TradeBridge until the concentration is unwound through natural runoff."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -3672,14 +3622,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.", "Explanation": "Risk avoidance sacrifices the strategic upside of TradeBridge and is rarely the lowest-cost response when targeted mitigation is available. A CDS overlay on the largest 20 obligors addresses the tail of the loss distribution where operational risk is concentrated; it is defensible when the $1.6M premium is less than the expected loss reduction from the hedged book. The framework should quantify that comparison, document basis risk, and review the overlay at the KRI cadence.", "Topic": "Risk mitigation selection", "question_state": "Unprocessed",
         "Prompt": "The CEO is weighing whether to avoid TradeBridge entirely (risk avoidance) versus launch the product with a $1.6M credit-default swap overlay covering the largest 20 obligors (risk mitigation). Which evaluation is most defensible?",
-        "Choices": {
-          "A": "Avoidance is generally preferable because any operational risk above zero is unacceptable under Flash Capital's framework.",
-          "B": "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.",
-          "C": "Avoidance and mitigation are interchangeable, so the choice is purely cosmetic.",
-          "D": "Mitigation through hedging is generally preferable because insurance-like instruments have no basis risk under any scenario."
-        },
+        "Choices": ["Avoidance is generally preferable because any operational risk above zero is unacceptable under Flash Capital's framework.", "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.", "Avoidance and mitigation are interchangeable, so the choice is purely cosmetic.", "Mitigation through hedging is generally preferable because insurance-like instruments have no basis risk under any scenario."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3692,14 +3637,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.", "Explanation": "A defensible evaluation combines a near-term hedge to cap further tail loss with root-cause remediation on the onboarding process that drives delinquency. Documenting basis risk and pre-committing to unwind once the KRI returns to amber for two consecutive months ties the mitigation to the appetite statement and supports clean audit-trail reporting.", "Topic": "Delinquency response actions", "question_state": "Unprocessed",
         "Prompt": "After three months of operation, portfolio delinquency is running at 3.7% — red on the KRI dashboard — while concentration is at 12% and stable. The risk committee must choose between retaining the exposure unchanged or hedging a portion of the delinquent obligors with a $0.9M CDS overlay. Which evaluation best balances the qualitative and quantitative considerations?",
-        "Choices": {
-          "A": "Retain the exposure unchanged because delinquency breaches happen regularly in a new product and the KRI is therefore unreliable; no further action is required.",
-          "B": "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.",
-          "C": "Terminate TradeBridge immediately because a single red KRI breach is an automatic shutdown signal under the framework.",
-          "D": "Hide the KRI breach from the risk committee until quarter-end to avoid an overreaction."
-        },
+        "Choices": ["Retain the exposure unchanged because delinquency breaches happen regularly in a new product and the KRI is therefore unreliable; no further action is required.", "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.", "Terminate TradeBridge immediately because a single red KRI breach is an automatic shutdown signal under the framework.", "Hide the KRI breach from the risk committee until quarter-end to avoid an overreaction."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Very Difficult",
@@ -3896,19 +3836,14 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-E3-Q1",
-        "Type": "mcq",
-        "Prompt": "Using Exhibit 1 and a WACC of 8.5%, what is the approximate NPV of the replacement alternative using the full $32 million pre-tax-equivalent operating cash flow as a proxy for after-tax operating cash flow, before any MACRS adjustment?",
-        "Choices": {
-          "A": "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.",
-          "B": "Approximately $96.5M, computed as the simple sum of $32M × 8 plus $20M minus $180M.",
-          "C": "Approximately $0M, indicating the project just clears its hurdle rate.",
-          "D": "Approximately $156M, the undiscounted sum of all inflows."
-        },
+        "Type": "select", "Correct": "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.", "Explanation": "PV of an 8-year annuity of $32M at 8.5% = $32M x 5.621 = about $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 = about $11.2M; pre-shield inflows total about $191.1M against the $180M outlay. Including the MACRS shield as presented in the exhibit, total NPV is approximately $46.5M. The correct choice captures the standard annuity-plus-salvage structure with shields.", "Topic": "Replacement NPV with tax shields", "question_state": "Unprocessed",
+        "Prompt": "Using Exhibit 1 and a WACC of 8.5%, what is the approximate NPV of the replacement alternative, reflecting operating cash flows, MACRS tax shields, and the $20M salvage against the $180M outlay?",
+        "Choices": ["Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.", "Approximately $96.5M, computed as the simple sum of $32M × 8 plus $20M minus $180M.", "Approximately $0M, indicating the project just clears its hurdle rate.", "Approximately $156M, the undiscounted sum of all inflows."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "PV of an 8-year annuity of $32M at 8.5% = $32M × 5.621 ≈ $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 ≈ $11.2M; total inflows ≈ $191.1M; minus the $180M outlay gives an NPV of roughly $11M to $12M. The exhibit rounds this to $46.5M as a working estimate after the MACRS-driven tax shield is added. Option A captures the standard annuity-plus-salvage structure.",
+        "ExplanationCorrect": "PV of an 8-year annuity of $32M at 8.5% = $32M x 5.621 = about $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 = about $11.2M; pre-shield inflows total about $191.1M against the $180M outlay. Including the MACRS shield as presented in the exhibit, total NPV is approximately $46.5M. The correct choice captures the standard annuity-plus-salvage structure with shields.",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Summing $32M × 8 plus $20M ignores the time value of money and produces $276M of nominal inflows, which is not an NPV calculation.",
         "ExplanationWrongC": "An NPV of approximately zero would imply an IRR roughly equal to WACC; the exhibit suggests a positive NPV once MACRS tax shields are included, not a marginal project.",
@@ -3916,19 +3851,14 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.", "Explanation": "After-tax operating cash flow equals (revenue - operating cost) x (1 - tax rate) + depreciation x tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M x 0.79 + $34.56M x 0.21 = $25.28M + $7.26M = about $32.5M. The correct $32.5M follows the standard depreciation-shield formulation; the $25.3M intermediate omits the $7.26M shield and is the classic trap.", "Topic": "After-tax operating cash flow", "question_state": "Unprocessed",
         "Prompt": "Using the MACRS schedule in Exhibit 2 and a 21% tax rate, what is the after-tax operating cash flow in Year 3 of the replacement project, assuming $32M of pre-tax operating cash flow before depreciation?",
-        "Choices": {
-          "A": "Approximately $25.3M, computed as $32M × (1 − 0.21) + $34.56M × 0.21.",
-          "B": "Approximately $32M, because depreciation does not affect cash flow.",
-          "C": "Approximately $39.7M, computed as $32M + $34.56M × 0.21.",
-          "D": "Approximately $7.3M, computed as $34.56M × 0.21 only."
-        },
+        "Choices": ["Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.", "Approximately $32M, because depreciation does not affect cash flow.", "Approximately $39.7M, computed as $32M + $34.56M × 0.21.", "Approximately $7.3M, computed as $34.56M × 0.21 only."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "After-tax operating cash flow equals (revenue − operating cost) × (1 − tax rate) + depreciation × tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M × 0.79 + $34.56M × 0.21 = $25.28M + $7.26M ≈ $32.5M. Option A's $25.3M uses the same logic when operating cash flow is interpreted strictly as pre-depreciation EBIT; either form is defensible, and the exam-acceptable answer is the standard depreciation-shield formulation.",
+        "ExplanationCorrect": "After-tax operating cash flow equals (revenue - operating cost) x (1 - tax rate) + depreciation x tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M x 0.79 + $34.56M x 0.21 = $25.28M + $7.26M = about $32.5M. The correct $32.5M follows the standard depreciation-shield formulation; the $25.3M intermediate omits the $7.26M shield and is the classic trap.",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Depreciation reduces taxable income and therefore produces a tax shield; ignoring it understates cash flow when an explicit tax-rate adjustment is part of the analysis.",
         "ExplanationWrongC": "Adding the tax shield to gross operating cash flow without subtracting taxes on operating income double-counts the shield and overstates cash flow.",
@@ -3936,14 +3866,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.", "Explanation": "The exhibit estimates the value of the one-year deferral option at roughly $7.2M using a Black-Scholes-style framework on the underlying $46.5M NPV. Combining option value with underlying NPV gives a strategic NPV of approximately $53.7M. Sensitivity to WACC remains positive across the 7.5%–9.5% band, so the project retains its value-accretive character even under modest discount-rate changes.", "Topic": "Real option to defer", "question_state": "Unprocessed",
         "Prompt": "Based on Exhibit 2, what does the embedded real option to defer the replacement by approximately one year add to the project's valuation, and how sensitive is that conclusion to WACC?",
-        "Choices": {
-          "A": "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.",
-          "B": "The deferral option adds $0M because real options are not applicable to capital-equipment decisions.",
-          "C": "The deferral option adds $46.5M, which is equal to the entire underlying NPV and is therefore not additive.",
-          "D": "The deferral option adds $32M, which is equal to the first-year cash flow and therefore an obvious overstatement."
-        },
+        "Choices": ["The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.", "The deferral option adds $0M because real options are not applicable to capital-equipment decisions.", "The deferral option adds $46.5M, which is equal to the entire underlying NPV and is therefore not additive.", "The deferral option adds $32M, which is equal to the first-year cash flow and therefore an obvious overstatement."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -3956,14 +3881,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.", "Explanation": "NPV declines from about $46.5M at 8.5% WACC to about $32.0M at 9.5% WACC, a reduction of roughly 31%. The takeaway is that a one-percentage-point increase in WACC materially compresses NPV, so the project remains value-accretive but the cushion narrows; the board paper should disclose this sensitivity and identify the WACC threshold at which the project would no longer clear the hurdle.", "Topic": "NPV sensitivity to WACC", "question_state": "Unprocessed",
         "Prompt": "Using Exhibit 2's sensitivity figures, what is the approximate percentage change in replacement NPV when WACC moves from 8.5% to 9.5%, and what is the qualitative takeaway for the board paper?",
-        "Choices": {
-          "A": "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.",
-          "B": "NPV is unchanged because WACC sensitivity applies only to IRR, not NPV.",
-          "C": "NPV rises when WACC rises because higher discount rates increase present value of negative cash flows.",
-          "D": "NPV falls exactly 8.5% per one-point WACC change, by definition."
-        },
+        "Choices": ["NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.", "NPV is unchanged because WACC sensitivity applies only to IRR, not NPV.", "NPV rises when WACC rises because higher discount rates increase present value of negative cash flows.", "NPV falls exactly 8.5% per one-point WACC change, by definition."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -3976,14 +3896,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.", "Explanation": "A defensible CFO recommendation reconciles a positive-NPV project with the capital envelope by structuring execution — phasing, financing, or partner capital — rather than mechanically rejecting the project. Documenting leverage-covenant impact and presenting the staged plan with sensitivity analysis gives the board a clear, decision-ready path.", "Topic": "Capital rationing and phasing", "question_state": "Unprocessed",
         "Prompt": "Given the capital-rationing envelope of $140M available after the Flash Tech data-center commitment, what is the most defensible CFO recommendation to the board?",
-        "Choices": {
-          "A": "Proceed with the full $180M replacement immediately because NPV is positive, ignoring the capital-rationing envelope.",
-          "B": "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.",
-          "C": "Cancel the replacement and extend the lease because $140M is less than $180M and the project therefore cannot proceed.",
-          "D": "Replace the fleet only if the Flash Tech data-center commitment is canceled, with no consideration of strategic priorities."
-        },
+        "Choices": ["Proceed with the full $180M replacement immediately because NPV is positive, ignoring the capital-rationing envelope.", "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.", "Cancel the replacement and extend the lease because $140M is less than $180M and the project therefore cannot proceed.", "Replace the fleet only if the Flash Tech data-center commitment is canceled, with no consideration of strategic priorities."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Very Difficult",
@@ -3996,14 +3911,9 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.", "Explanation": "NPV is the theoretically superior ranking metric for mutually exclusive projects because it assumes reinvestment at WACC and measures absolute dollar value added. When IRR conflicts with NPV, the typical drivers are scale differences, timing of cash flows, or non-standard cash-flow patterns. The defensible framing is to recommend the higher-NPV project, explain the IRR/NPV conflict in terms of reinvestment-rate and scale assumptions, and present sensitivity around the choice so the board understands the trade-off.", "Topic": "NPV-IRR ranking conflict", "question_state": "Unprocessed",
         "Prompt": "If a leveraged analysis shows NPV ranking favoring replacement while IRR ranking favors the lease extension, which framing is most defensible for the board paper?",
-        "Choices": {
-          "A": "Recommend the lease extension because IRR outranks NPV under any capital structure assumption.",
-          "B": "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.",
-          "C": "Recommend whichever metric the CEO prefers; methodology is secondary to leadership preference.",
-          "D": "Recommend neither; conflicting signals are an automatic disqualifier for the project."
-        },
+        "Choices": ["Recommend the lease extension because IRR outranks NPV under any capital structure assumption.", "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.", "Recommend whichever metric the CEO prefers; methodology is secondary to leadership preference.", "Recommend neither; conflicting signals are an automatic disqualifier for the project."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Very Difficult",

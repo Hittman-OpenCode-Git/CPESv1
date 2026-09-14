@@ -18,7 +18,7 @@ class MetadataValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.caseBanks;
+        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
         let totalCases = 0;
 
         banks.forEach(file => {

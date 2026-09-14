@@ -15005,7 +15005,7 @@ const pack_p2_c_questions = [
     "Topic": "C.332 decision-under-uncertainty-evaluation",
     "LOSTag": "C.5",
     "BlueprintDomain": "Decision Analysis",
-    "FormulaReference": "DA-12",
+    "FormulaReference": "DA-10",
     "Authorities": [
       "IMA Decision Analysis - expected value and decision under uncertainty",
       "Risk analysis and expected monetary value framework"
@@ -16403,7 +16403,7 @@ const pack_p2_c_questions = [
       "C": "CVP assumes selling price per unit declines as volume rises due to economies of scale, lowering the average price received and aligning with falling average total cost",
       "D": "CVP assumes variable cost per unit rises with volume because input prices climb with demand, requiring contribution margin to be adjusted upward at higher activity levels to preserve accuracy"
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "CognitiveLevel": "Understand",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -16419,8 +16419,8 @@ const pack_p2_c_questions = [
     "CommonTrapReference": "T: Treating semi-variable (mixed) costs as purely fixed or purely variable without separation via high-low or regression",
     "DecisionTreeReference": null,
     "ExplanationCorrect": "Under CVP assumptions, total revenue and total cost are assumed linear within the relevant range: selling price per unit is constant, variable cost per unit is constant, and fixed costs remain constant in total. A key limitation is that mixed (semi-variable) costs and step-fixed costs cannot be cleanly classified without judgment; the high-low method or least-squares regression should be used to separate them, and any misclassification distorts the contribution margin per unit and the breakeven output. In practice, Flash Foods needs to split its packaging-line maintenance cost into fixed and variable components before computing CM and breakeven units. Business interpretation: if the controller treats a semi-variable cost as purely fixed, breakeven volume is understated and margin of safety is overstated. A common trap is to assume CVP accommodates curvilinear cost behavior without adjustment, which it does not.",
-    "ExplanationWrongA": "This reverses the inventory assumption: CVP assumes production equals sales with no change in inventory, so inventory fluctuation does not improve accuracy. When inventory changes, absorption versus variable costing create profit differences unrelated to CVP. The candidate confuses cost allocation under absorption costing with the CVP linearity assumption.",
-    "ExplanationWrongB": "",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "CVP assumes production equals sales with no inventory change; spreading fixed costs over inventory is an absorption-costing effect, not a CVP assumption. Inventory fluctuation does not improve CVP accuracy.",
     "ExplanationWrongC": "CVP does not assume selling price declines with volume; it assumes price is constant within the relevant range. Declining price due to volume discounts violates the linearity assumption and requires revised analysis. The candidate confuses average total cost behavior (fixed cost spreading) with revenue behavior — these are different things.",
     "ExplanationWrongD": "CVP assumes variable cost per unit is constant, not rising with volume. While input prices could rise in reality, CVP holds unit variable cost fixed. Increasing variable cost proportionally would imply diseconomies that CVP does not model without adjustment, so this statement reverses the actual assumption.",
     "VerifiedChecks": [
@@ -16461,7 +16461,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-353",
@@ -16476,7 +16476,7 @@ const pack_p2_c_questions = [
       "C": "Scrap the batch, because reworked revenue of $30,000 is less than joint cost plus rework of $73,500, so full cost recovery fails and rework destroys value",
       "D": "Rework the batch, because reworked sales of $30,000 exceed scrap sales of $7,500 by $22,500, ignoring rework cost because technicians are already on payroll"
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Apply",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -16493,8 +16493,8 @@ const pack_p2_c_questions = [
     "DecisionTreeReference": null,
     "ExplanationCorrect": "Under relevant costing for scrap-or-rework decisions, joint manufacturing costs of $60,000 already incurred are sunk and therefore irrelevant. Only incremental cash flows that differ between alternatives matter. Incremental revenue from rework = (Reworked price - Scrap price) × units = ($20 - $5) × 1,500 = $15 × 1,500 = $22,500. Incremental rework cost = $9 × 1,500 = $13,500. Net incremental benefit of rework = $22,500 - $13,500 = $9,000. Recomputed: ($20-$5)x1500 = $22,500; $9x1500 = $13,500; $22,500-$13,500 = $9,000 net benefit to rework. Business interpretation: Flash Tech should rework because spending $13,500 of avoidable cost yields $22,500 of incremental revenue, increasing operating income by $9,000. The $60,000 already spent is unrecoverable under either alternative and is correctly excluded. A common trap is including the $60,000 sunk cost, which makes both options appear unprofitable and leads to incorrectly rejecting value-adding rework.",
     "ExplanationWrongA": "This choice incorrectly includes the $60,000 sunk joint cost in the comparison (treating $60,000 + $13,500 = $73,500 vs $30,000 reworked sales). Sunk costs do not differ between scrap and rework and must be excluded from marginal analysis. The relevant comparison is $22,500 incremental revenue versus $13,500 incremental cost, not total cost versus total revenue.",
-    "ExplanationWrongB": "This choice applies correct incremental reasoning but in this item's authoring the CC is C, so this slot highlights a candidate who correctly identifies incremental revenue and cost but reaches the reject conclusion based on a full-cost lens. Under correct relevant costing the candidate would rework.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Scrapping forgoes a $9,000 incremental benefit: rework adds ($20-$5)x1,500 = $22,500 of revenue for $9x1,500 = $13,500 of avoidable cost. The $60,000 joint cost is sunk under either alternative. Rejecting rework because full cost $73,500 exceeds $30,000 confuses sunk with incremental cost.",
     "ExplanationWrongD": "This choice correctly computes incremental revenue of $22,500 but then ignores the $13,500 rework cost by treating technician labor as already-paid fixed overhead. Relevant costing includes all incremental costs that differ between alternatives, regardless of payroll status. Incremental labor and materials are avoidable if the batch is scrapped and are therefore relevant to the decision.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -16534,7 +16534,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-354",
@@ -16549,7 +16549,7 @@ const pack_p2_c_questions = [
       "C": "Prioritize Green, because contribution of $10.00 per machine hour exceeds Blue at $6.00 per hour, yielding maximum total contribution under the hour constraint",
       "D": "Split the hours evenly between Green and Blue, because each unit contributes positively and producing both maximizes flexibility while covering fixed costs"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "C",
     "CognitiveLevel": "Apply",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
@@ -16567,8 +16567,8 @@ const pack_p2_c_questions = [
     "ExplanationCorrect": "When a single resource is the binding constraint, profit is maximized by allocating that resource to the product with the highest contribution margin per unit of the constrained resource, not by the highest unit contribution. For Flash Logistics: SKU Green CM/hr = ($48 - $28) / 2.0 = $20 / 2.0 = $10.00 per hour. SKU Blue CM/hr = ($70 - $40) / 5.0 = $30 / 5.0 = $6.00 per hour. Recomputed: Green CM/hr = $10.00, Blue CM/hr = $6.00. Because Green yields $4.00 more contribution per constrained hour than Blue, the optimal mix fills Green demand first (up to 1,200 units × 2.0 hr = 2,400 hours) and uses the remaining 600 hours for Blue (600 / 5.0 = 120 units). Business interpretation: the bottleneck operator should produce all 1,200 Greens it can sell and shift remaining capacity to Blues. A common trap is to rank by unit contribution ($30 vs $20), which would produce Blue first and consume the constraint on a lower-CM/hr product.",
     "ExplanationWrongA": "Prioritizing Blue by unit contribution ($30 > $20) is wrong because Blue consumes 5 hours per unit and Green consumes only 2. Ranking by unit contribution ignores the constraint, and total contribution per scarce hour is what determines the optimal mix. Selecting Blue first wastes bottleneck capacity on lower CM/hr work.",
     "ExplanationWrongB": "Using selling price ($70 vs $48) is wrong because price does not account for variable cost. Two products with the same price can have very different contributions. CM (price minus variable cost) per constrained hour, not revenue per unit, drives the ranking under a single binding constraint.",
-    "ExplanationWrongC": "Prioritizing Green by CM/hr ($10.00 vs $6.00) reflects correct ranking logic, but in this item D is the CC as authored. The candidate's approach is the standard ranking method and would normally be correct; the item authoring treats D as the CC to test recognition of full capacity utilization.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Splitting hours evenly ignores the constraint ranking: Green earns $10.00/hr versus Blue $6.00/hr, so every hour shifted from Green to Blue forfeits $4.00 of contribution. Filling Green demand first (1,200 units x 2.0 hr = 2,400 hrs) then 120 Blues maximizes total contribution; an even split strands contribution on the bottleneck.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -16607,7 +16607,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-355",
@@ -16837,11 +16837,11 @@ const pack_p2_c_questions = [
     "Stem": "Flash Capital, under treasurer Maya Caldwell, is evaluating a $4,800,000 capital investment for a new modular data-center platform. Projected free cash flows are: Year 1 $1,500,000, Year 2 $1,800,000, Year 3 $1,400,000, and Year 4 $1,000,000. The company's hurdle rate is 12 percent. Ms. Caldwell needs to assess whether the project meets the financial criteria and what decision follows from a multi-method capital-budgeting analysis, including NPV, IRR, and payback period, considering that the project contains a real option to expand capacity in Year 3 at an additional $1,200,000 with incremental cash flows of $700,000 in Years 4 through 6.",
     "Choices": {
       "A": "Reject because NPV is negative at 12 percent and payback exceeds the company's 3-year cutoff, with the real option unable to overcome the negative baseline NPV of approximately -$420,000",
-      "B": "Accept because NPV at 12 percent is approximately $322,000, IRR exceeds 12 percent at about 16 percent, and payback is 3.1 years with the real option providing further upside potential",
+      "B": "Accept because the baseline shortfall of about -$394,000 is overcome by the Year-3 expansion option (about $827,000), giving total NPV of about +$433,000 at 12 percent",
       "C": "Accept because the project returns $5,700,000 in undiscounted cash inflows versus $4,800,000 invested, indicating positive total return regardless of discount rate considerations",
       "D": "Reject because the IRR cannot be calculated for non-conventional cash flows with multiple sign changes, even though the NPV at 12 percent is positive, indicating an unreliable signal"
     },
-    "CorrectChoice": "D",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Analyze",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -16858,9 +16858,9 @@ const pack_p2_c_questions = [
     "DecisionTreeReference": null,
     "ExplanationCorrect": "Compute NPV at 12 percent: Year 1 PV = $1,500,000 / 1.12 = $1,339,286; Year 2 PV = $1,800,000 / 1.2544 = $1,434,949; Year 3 PV = $1,400,000 / 1.4049 = $996,512; Year 4 PV = $1,000,000 / 1.5735 = $635,518. Sum PV = $1,339,286 + $1,434,949 + $996,512 + $635,518 = $4,406,265. NPV = $4,406,265 - $4,800,000 = -$393,735. Recomputed: NPV ≈ -$394,000 (negative). IRR approximation: solving NPV=0 yields IRR between 9% and 11%, below the 12% hurdle. Payback: cumulative after Year 3 = $4,700,000; Year 4 adds $1,000,000, so payback = 3.10 years. Adding the real option value: option PV at 12% = $700,000 x [PV factor Years 4-6 at 12%] - $1,200,000 x [PV factor Year 3 at 12%]. Years 4-6 annuity factor at 12% = 2.4018; PV inflows = $1,681,260. PV of $1,200,000 at Year 3 = $854,294. Option NPV = $826,966. Total NPV with option = -$393,735 + $826,966 = $433,231 (positive). Business interpretation: the project is unattractive as a stand-alone investment but the embedded expansion option provides sufficient upside to clear the hurdle. A common trap is to ignore the real option and reject based on negative baseline NPV.",
     "ExplanationWrongA": "Stating that the baseline NPV is negative and that the real option cannot overcome it understates the option value. When the option is properly valued via decision-tree analysis with expansion cash flows and additional investment, the option NPV of approximately $827,000 exceeds the $394,000 baseline shortfall, flipping the decision to accept. The candidate failed to value the embedded expansion option.",
-    "ExplanationWrongB": "Stating NPV is positive ($322,000) and IRR is 16% without the option is arithmetically inconsistent with the cash flows given. The actual baseline NPV at 12% is approximately -$394,000 and IRR is below 12%. These favorable numbers correspond to including the real option, which the candidate omitted. The statement is internally inconsistent.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C correctly identifies the project as not meeting the hurdle but inflates the discount rate by adding the country risk premium to WACC instead of to the project-specific cash flows; the standard approach is to inflate cash flows or adjust the discount rate once, not double-count. The result $12.6M understates the true NPV and misses the value of the option.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Rejecting on incalculability is wrong twice over: these cash flows are conventional (one sign change: outflow then inflows), so IRR is computable (about 9-11%, below the 12% hurdle); and with the expansion option the total NPV of about +$433K is positive, which means accept. Baseline-only rejection ignores the embedded option that flips the decision.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008 compliant)",
@@ -16899,7 +16899,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-359",
@@ -17206,7 +17206,7 @@ const pack_p2_c_questions = [
       "C": "Target cost $62.50, computed as the required margin alone, indicating engineering must achieve near-zero cost to meet strategic margin targets",
       "D": "Target cost $312.50, computed as market price $250 plus required margin $62.50, indicating engineering should design for premium features beyond competitive price"
     },
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "CognitiveLevel": "Apply",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -17222,8 +17222,8 @@ const pack_p2_c_questions = [
     "CommonTrapReference": "T: Confusing target cost (price minus margin) with target price (cost plus margin) or treating margin as additive to cost rather than subtractive from price",
     "DecisionTreeReference": null,
     "ExplanationCorrect": "Target costing begins with the market-determined price and works backward to derive an allowable cost that delivers the required profit margin. Target Cost = Target Price - Required Profit per Unit. With market price of $250 and required operating margin of 25% on sales, required profit per unit = 25% x $250 = $62.50. Target cost = $250 - $62.50 = $187.50. Recomputed: Target cost = $187.50. Business interpretation: engineering must design the custom tool so that its total manufacturing cost fits within $187.50 per unit to deliver the 25% operating margin at the $250 market price. If current design cost exceeds target cost, value engineering or design changes are required. A common trap is to set target cost equal to market price (no margin) or to add margin to cost rather than subtract it from price.",
-    "ExplanationWrongA": "Target cost $187.50 is correct: market price $250 minus 25% margin of $62.50 yields allowable cost of $187.50. The candidate correctly applied the target-costing identity. The conclusion that engineering must design within $187.50 is the standard target-costing outcome.",
-    "ExplanationWrongB": "",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Target cost $250.00 treats the full market price as allowable cost, leaving zero margin. Target costing subtracts the required $62.50 profit from the $250 price, giving $187.50. Passing through any manufacturing cost abandons the 25% operating margin target.",
     "ExplanationWrongC": "Target cost $62.50 (the margin alone) is wrong because the margin is what is removed from price, not what remains as cost. The candidate confused the required profit with the target cost. Setting target cost equal to required margin would force engineering to design a free product, which is economically impossible.",
     "ExplanationWrongD": "Target cost $312.50 (price plus margin) is wrong because it adds the margin to the price rather than subtracting it. This would imply the product sells for less than it costs to produce, which is impossible. The candidate reversed the target-costing formula and treated cost as additive to price.",
     "VerifiedChecks": [
@@ -17264,7 +17264,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-364",
@@ -17872,7 +17872,7 @@ const pack_p2_c_questions = [
     "Choices": {
       "A": "Project S; it has a higher NPV by about $28,500.",
       "B": "Project L; it has a higher NPV by about $11,500.",
-      "C": "Project L; it has a higher NPV by about $52,000.",
+      "C": "Project L; it has a higher NPV by about $140,500.",
       "D": "Project S; it has a higher NPV by about $11,500."
     },
     "CorrectChoice": "C",
@@ -17891,7 +17891,7 @@ const pack_p2_c_questions = [
     "FormulaReference": "NPV = −Initial + Σ CFt / (1 + r)^t",
     "CommonTrapReference": "Picking the project with higher IRR or shorter payback rather than the one with higher NPV.",
     "DecisionTreeReference": "C.7 → Mutually exclusive? → Yes → Compute NPV → Choose higher NPV",
-    "ExplanationCorrect": "Compute NPVs at 10%. Project S: −400,000 + 590,000/(1.10)^3 = −400,000 + 590,000/1.331 = −400,000 + 443,275 ≈ $43,275. Project L: −400,000 + 200,000/1.10 + 250,000/1.21 + 260,000/1.331 = −400,000 + 181,818 + 206,612 + 195,342 ≈ $183,772. NPV advantage of L over S ≈ $183,772 − $43,275 ≈ $140,497, but given the answer choices the operative ranking is L > S, with L's NPV advantage over S being clearly the largest option presented. Recomputed: Project L NPV ≈ $183,800; Project S NPV ≈ $43,300; difference ≈ $140,500 (the closest option reflects Project L as the better choice by a meaningful margin).",
+    "ExplanationCorrect": "Compute NPVs at 10%. Project S: -400,000 + 590,000/(1.10)^3 = -400,000 + 590,000/1.331 = -400,000 + 443,275 = about $43,275. Project L: -400,000 + 200,000/1.10 + 250,000/1.21 + 260,000/1.331 = -400,000 + 181,818 + 206,612 + 195,342 = about $183,772. NPV advantage of L over S = about $183,772 - $43,275 = about $140,497, about $140,500. Recomputed: Project L NPV about $183,800; Project S NPV about $43,300; difference about $140,500.",
     "ExplanationWrongA": "Chooses S with a small advantage; reverses the NPV ranking. Project L front-loads earlier cash flows with greater present value than S's single later inflow at 10%.",
     "ExplanationWrongB": "Picks L but understates the gap; the absolute NPV difference between L and S is much larger than $11,500 at 10% discounting because L's first two cash flows have substantial present value.",
     "ExplanationWrongC": "",
@@ -17935,7 +17935,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-373",
@@ -18400,7 +18400,7 @@ const pack_p2_c_questions = [
       "C": "15,000 units; CM ratio = 60%.",
       "D": "20,000 units; CM ratio = 60%."
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Understand",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
@@ -18418,8 +18418,8 @@ const pack_p2_c_questions = [
     "DecisionTreeReference": "C.5 → Unit CM → (FC + Target profit) / Unit CM → Units; CM ratio = CM/Price",
     "ExplanationCorrect": "Unit CM = $50 − $30 = $20. Target units = (Fixed cost $240,000 + Target profit $60,000) / $20 = $300,000 / $20 = 15,000 units. CM ratio = $20 / $50 = 40%. Both figures are consistent with the data. The principle: required sales in units cover fixed cost plus desired profit.",
     "ExplanationWrongA": "States 10,000 units; this corresponds to covering fixed cost only ($240,000/$20), omitting the $60,000 target profit. The correct units must add target profit to fixed cost.",
-    "ExplanationWrongB": "States 15,000 units with CM ratio = 40%; near-miss distractor pairing the correct unit count with the right CM ratio to test reading precision (the actual CM ratio is 40%, but the canonical answer pairs 15,000 units with 40% — therefore B is the closest correct pairing).",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "States 15,000 units with CM ratio 60%; the unit count is right but the ratio is wrong. CM ratio = $20/$50 = 40%, not 60%. A 60% ratio would imply variable cost of $20, contradicting the $30 given.",
     "ExplanationWrongD": "States 20,000 units with CM ratio = 60%; both are wrong — units should be 15,000 and CM ratio is 40%, not 60%.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -18460,7 +18460,7 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-380",
@@ -30717,21 +30717,21 @@ const pack_p2_c_questions = [
     "Topic": "C.613 shadow-price-binding-constraint",
     "QuestionID": "P2-C-613",
     "question_state": "Certified",
-    "certification_date": "2026-09-05",
+    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-C8b",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
     "UniqueConceptKey": "C-613-shadow-price-binding-constraint",
     "Stem": "Harbor Food Processors uses linear programming to optimize its product mix. The binding constraints are raw material availability (2,500 kilograms) and labor hours (1,600 hours). At the optimal solution, the shadow price for raw material is $3.20 per kilogram. If Harbor can acquire an additional 100 kilograms of raw material at $2.50 per kilogram, what is the net benefit?",
     "Choices": {
-      "A": "$70, because the shadow price exceeds the acquisition cost",
+      "A": "$3.20, because the shadow price per kilogram is the benefit of additional material",
       "B": "$320, because the shadow price times 100 kilograms equals $320",
       "C": "$250, because 100 kilograms at $2.50 per kilogram costs $250",
       "D": "$70, because the net benefit equals (shadow price minus acquisition cost) times the additional quantity"
     },
     "CorrectChoice": "D",
     "ExplanationCorrect": "The shadow price of $3.20 per kilogram represents the marginal value of one additional kilogram of raw material at the optimal solution. If Harbor acquires 100 additional kilograms at $2.50 per kilogram, the gross value of the additional material is $3.20 x 100 = $320. The cost of acquiring the material is $2.50 x 100 = $250. The net benefit is $320 - $250 = $70. The shadow price framework confirms this: the shadow price represents the maximum amount the company should pay per unit of the constraint resource. Since the acquisition cost ($2.50) is below the shadow price ($3.20), each additional kilogram contributes $0.70 to profit. A common trap is multiplying the shadow price by quantity without subtracting the acquisition cost.",
-    "ExplanationWrongA": "Choice A states the correct net benefit but attributes it to the wrong reasoning. The $70 comes from (shadow price minus acquisition cost) times quantity.",
+    "ExplanationWrongA": "Answering $3.20 states the per-unit shadow price instead of the total net benefit. The question asks for the total on 100 kg: ($3.20 - $2.50) x 100 = $70. Unit/value confusion is the trap.",
     "ExplanationWrongB": "Choice B computes the gross value ($320) without subtracting the $250 acquisition cost.",
     "ExplanationWrongC": "Choice C states only the acquisition cost without computing the value of the additional material.",
     "ExplanationWrongD": "",

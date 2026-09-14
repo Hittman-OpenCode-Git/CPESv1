@@ -3132,14 +3132,9 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-A3-Q1",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates", "Explanation": "When the functional currency of a foreign subsidiary differs from the parent's reporting currency in a non-hyperinflationary economy, ASC 830 requires the current-rate method. Under this approach, all assets and liabilities are translated at the closing (current) exchange rate, income and expense items at average or transaction-date rates, and equity at historical rates. The resulting translation adjustment is reported in other comprehensive income (AOCI). The temporal method is reserved for subsidiaries operating in hyperinflationary economies where the books are first remeasured into the reporting currency.", "question_state": "Unprocessed",
         "Prompt": "Under ASC 830, which translation methodology is generally required for a foreign subsidiary whose functional currency differs from the parent's USD reporting currency in a non-hyperinflationary economy?",
-        "Choices": {
-          "A": "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates",
-          "B": "Temporal method remeasuring monetary items at the closing rate and non-monetary items at historical rates",
-          "C": "Monetary/non-monetary method translating monetary items at average rates",
-          "D": "Current-cost method restating all assets to fair value before translation"
-        },
+        "Choices": ["Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates", "Temporal method remeasuring monetary items at the closing rate and non-monetary items at historical rates", "Monetary/non-monetary method translating monetary items at average rates", "Current-cost method restating all assets to fair value before translation"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3158,14 +3153,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580", "Explanation": "Under ASC 830-10-45, in a hyperinflationary economy the subsidiary first remeasures its financial statements so that non-monetary items (such as inventory carried at historical cost) are restated to current purchasing power using a general price index, while monetary items retain nominal amounts adjusted for inflation. After restatement, the entire set of remeasured statements is translated to the reporting currency using the closing exchange rate (1,580 ARS/USD at September 30, 2026). The historical rate of 177 would correspond to the 2022 base year and is not the closing translation rate.", "question_state": "Unprocessed",
         "Prompt": "Given that Argentina's economy is hyperinflationary under ASC 830-10-45, which rate should be applied to restate the ARS 18,500,000 inventory balance on the subsidiary's books before translation, and at what rate is the restated inventory translated to USD?",
-        "Choices": {
-          "A": "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580",
-          "B": "Restate at the current CPI index (612.5); translate at the historical ARS/USD rate of 177",
-          "C": "Restate at the average CPI for the period; translate at the average ARS/USD rate of 1,520",
-          "D": "Restate at the closing CPI index only; translate at the closing ARS/USD rate after applying the closing rate a second time to inventory"
-        },
+        "Choices": ["Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580", "Restate at the current CPI index (612.5); translate at the historical ARS/USD rate of 177", "Restate at the average CPI for the period; translate at the average ARS/USD rate of 1,520", "Restate at the closing CPI index only; translate at the closing ARS/USD rate after applying the closing rate a second time to inventory"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3184,14 +3174,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "The translation difference is recognized immediately in net income under ASC 830-30-45-12", "Explanation": "Under ASC 830-30-45, when a foreign entity is in a hyperinflationary economy, the remeasurement gain or loss arising from translating remeasured net assets at the closing rate is generally recognized in net income rather than in OCI, because the underlying financial statements have already been remeasured to current purchasing power. ASC 830-10-45 and ASC 830-30-45-12 reflect this treatment: the post-remeasurement translation effect is taken to earnings because it results from changes in the exchange rate against a stable reporting currency after the entity's books have been restated for inflation. A cumulative translation adjustment in AOCI applies primarily to non-hyperinflationary translation of self-sustaining foreign operations.", "question_state": "Unprocessed",
         "Prompt": "If Flash Tech Argentina's remeasured net assets of ARS 40,000,000 are translated to USD using the closing rate of 1,580 ARS/USD, what is the impact of a translation gain or loss under ASC 830-30-45?",
-        "Choices": {
-          "A": "The translation difference flows through AOCI as a cumulative translation adjustment (CTA), with no effect on net income for the period",
-          "B": "The translation difference is recognized immediately in net income under ASC 830-30-45-12",
-          "C": "The translation difference is deferred on the balance sheet indefinitely until disposal of the subsidiary",
-          "D": "The translation difference is reclassified to retained earnings at each balance-sheet date"
-        },
+        "Choices": ["The translation difference flows through AOCI as a cumulative translation adjustment (CTA), with no effect on net income for the period", "The translation difference is recognized immediately in net income under ASC 830-30-45-12", "The translation difference is deferred on the balance sheet indefinitely until disposal of the subsidiary", "The translation difference is reclassified to retained earnings at each balance-sheet date"],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3210,14 +3195,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs", "Explanation": "ASC 830-10-20 determines functional currency primarily by indicators such as cash flows, financing currency, intra-company transactions, and sales market indicators. Under ASC 830, a foreign operation whose functional currency is the local currency is treated as self-sustaining and translated using the current-rate method; one whose functional currency is the parent's currency is treated as 'integral' and is remeasured using the temporal method. IAS 21 (paragraphs 9-14) determines functional currency through a similar but distinct set of indicators emphasizing the primary economic environment in which the entity operates, and uses the term 'foreign operation' rather than 'integral vs self-sustaining,' although the translation outcomes are generally converged.", "question_state": "Unprocessed",
         "Prompt": "Which of the following best describes the most material conceptual difference between ASC 830 (U.S. GAAP) and IAS 21 (IFRS) in classifying a foreign operation as 'integral' vs 'self-sustaining'?",
-        "Choices": {
-          "A": "ASC 830 and IAS 21 are identical and use the same terminology for integral and self-sustaining operations",
-          "B": "ASC 830 requires self-sustaining entities to be remeasured using the temporal method, whereas IAS 21 requires all foreign operations to use the closing-rate method",
-          "C": "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs",
-          "D": "ASC 830 and IAS 21 both prohibit translation adjustments in OCI and require all FX effects in profit or loss"
-        },
+        "Choices": ["ASC 830 and IAS 21 are identical and use the same terminology for integral and self-sustaining operations", "ASC 830 requires self-sustaining entities to be remeasured using the temporal method, whereas IAS 21 requires all foreign operations to use the closing-rate method", "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs", "ASC 830 and IAS 21 both prohibit translation adjustments in OCI and require all FX effects in profit or loss"],
         "CorrectChoice": "C",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3236,14 +3216,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience", "Explanation": "Under ASC 830-10-45, the presentation currency of a consolidated reporting entity is generally the currency in which the parent entity's books are recorded. For a U.S. SEC registrant whose parent functional currency is USD, presenting in USD provides comparability for U.S. investors, aligns the consolidated statements with the parent's functional currency, and avoids unnecessary translation at the parent level. ASC 830 does not prohibit a presentation-currency change but requires prospective application and disclosure of the change and the rationale under ASC 830-10-45-7 through 45-10. Stability of the presentation currency is desirable, but switching to a third currency solely because one subsidiary's environment is hyperinflationary is generally not supported as the strongest basis.", "question_state": "Unprocessed",
         "Prompt": "CFO Mariela Hoffmann asks whether to switch the consolidated reporting currency from USD to a stable third currency (for example, CHF) given ARS volatility. Which is the strongest evaluative basis for retaining the USD presentation currency under ASC 830?",
-        "Choices": {
-          "A": "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience",
-          "B": "ASC 830 prohibits any presentation-currency change once a parent elects a reporting currency at incorporation",
-          "C": "A presentation-currency change automatically reclassifies all prior AOCI balances to retained earnings without disclosure",
-          "D": "Switching to CHF would be required if the Argentine peso is hyperinflationary, regardless of the parent's functional currency"
-        },
+        "Choices": ["The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience", "ASC 830 prohibits any presentation-currency change once a parent elects a reporting currency at incorporation", "A presentation-currency change automatically reclassifies all prior AOCI balances to retained earnings without disclosure", "Switching to CHF would be required if the Argentine peso is hyperinflationary, regardless of the parent's functional currency"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3262,14 +3237,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life", "Explanation": "Under ASC 326 (CECL), the allowance for credit losses on a financial asset is measured as the lifetime expected credit loss, generally computed from probability of default, loss given default, and exposure at default, discounted to present value using the effective interest rate. For an FX-denominated receivable, expected recoverability depends on the obligor's ability to pay in USD; expected currency-driven shortfalls (such as ARS devaluation reducing the local-currency equivalent recoverable amount, or capital controls restricting USD outflow) are typically incorporated through reasonable-and-supportable forecasts and scenario adjustments. This integrates market risk with credit risk in the CECL estimate.", "question_state": "Unprocessed",
         "Prompt": "Flash Tech Argentina holds a USD-denominated third-party receivable of ARS 4,200,000. Under ASC 326 (CECL), which combination of inputs most directly influences the allowance for credit losses on this FX-denominated receivable?",
-        "Choices": {
-          "A": "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life",
-          "B": "Only the historical loss rate on peso-denominated receivables, with no adjustment for FX risk",
-          "C": "The current ARS/USD spot rate at quarter-end, used to translate the loss and then ignored for forward-looking expectations",
-          "D": "Solely the credit rating of the U.S. parent guarantor, ignoring the obligor's own credit profile"
-        },
+        "Choices": ["Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life", "Only the historical loss rate on peso-denominated receivables, with no adjustment for FX risk", "The current ARS/USD spot rate at quarter-end, used to translate the loss and then ignored for forward-looking expectations", "Solely the credit rating of the U.S. parent guarantor, ignoring the obligor's own credit profile"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3434,14 +3404,9 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-F3-Q1",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement", "Explanation": "SAB 99 (and its successor guidance, SAB Topic 1.M) makes clear that quantitative thresholds alone are not conclusive; registrants must consider both quantitative measures (such as the percentage of pre-tax income, revenue, or equity implicated) and qualitative factors (such as whether the item masks a change in earnings, affects compliance with covenants, or could alter investor perception). The proper sequence is to perform a quantitative screen and then overlay qualitative factors. The SEC's enforcement posture in a particular inquiry is generally not by itself determinative of materiality, although it is a relevant qualitative factor.", "question_state": "Unprocessed",
         "Prompt": "Under SAB 99 and SAB Topic 1.M, which of the following is the correct sequence for assessing whether the pending SEC inquiry is material to Flash Media's Q3 Form 10-Q?",
-        "Choices": {
-          "A": "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement",
-          "B": "Rely exclusively on a 5% pre-tax income benchmark with no qualitative overlay",
-          "C": "Default to materiality whenever the SEC contacts the registrant, regardless of dollar amount",
-          "D": "Apply materiality only after the SEC issues a Wells notice, ignoring the inquiry stage"
-        },
+        "Choices": ["Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement", "Rely exclusively on a 5% pre-tax income benchmark with no qualitative overlay", "Default to materiality whenever the SEC contacts the registrant, regardless of dollar amount", "Apply materiality only after the SEC issues a Wells notice, ignoring the inquiry stage"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3460,14 +3425,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required", "Explanation": "Under ASC 450-20-25, a loss contingency is accrued only when (i) it is probable that a loss has been incurred and (ii) the loss amount can be reasonably estimated. If the loss is reasonably possible (but not probable), or probable but not estimable, accrual is not permitted; instead, the contingency is disclosed in the footnotes, with a brief description and an estimate of the possible loss or a statement that such an estimate cannot be made. For an SEC inquiry where the staff's view is preliminary and management believes the original accounting is correct, a 'reasonably possible' characterization typically leads to footnote disclosure rather than accrual, with materiality driving the level of detail.", "question_state": "Unprocessed",
         "Prompt": "Under ASC 450-20, when is accrual of a contingent liability required for an SEC inquiry where loss is not yet probable but is reasonably possible and estimable?",
-        "Choices": {
-          "A": "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required",
-          "B": "Accrual is required for any SEC inquiry regardless of probability",
-          "C": "Accrual is required only if the loss exceeds 5% of pre-tax income",
-          "D": "Accrual is required if the inquiry is reasonably possible, even without a reliable estimate"
-        },
+        "Choices": ["Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required", "Accrual is required for any SEC inquiry regardless of probability", "Accrual is required only if the loss exceeds 5% of pre-tax income", "Accrual is required if the inquiry is reasonably possible, even without a reliable estimate"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3486,14 +3446,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable", "Explanation": "Section 302 of the Sarbanes-Oxley Act requires the principal executive and financial officers to certify that the periodic report fairly presents the financial condition and results of operations, that they are responsible for establishing and maintaining disclosure controls and procedures, and that they have evaluated the effectiveness of those controls as of the reporting date. Section 404 requires management to assess, and (for accelerated filers) the external auditor to attest to, the effectiveness of internal control over financial reporting. A material emerging matter such as a pending SEC inquiry falls within the scope of disclosure controls (because it may trigger a misstatement or omission) and may require evaluation of whether ICFR has been compromised.", "question_state": "Unprocessed",
         "Prompt": "Which statement best describes the interaction between SOX Section 302 (CEO/CFO certifications) and SOX Section 404 (management's assessment of internal control) for an emerging matter such as the SEC inquiry?",
-        "Choices": {
-          "A": "Both sections are identical and require the same procedures with no incremental duties",
-          "B": "SOX 302 requires external auditor attestation of internal controls, while SOX 404 is the management-only certification",
-          "C": "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable",
-          "D": "Neither section requires any evaluation of disclosure controls or internal control over financial reporting"
-        },
+        "Choices": ["Both sections are identical and require the same procedures with no incremental duties", "SOX 302 requires external auditor attestation of internal controls, while SOX 404 is the management-only certification", "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable", "Neither section requires any evaluation of disclosure controls or internal control over financial reporting"],
         "CorrectChoice": "C",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3512,14 +3467,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading", "Explanation": "The Credibility principle of the IMA Statement of Ethical Professional Practice requires management accountants to disclose all relevant information that could influence a user's understanding of reports, analyses, or recommendations. In the context of a pending SEC inquiry, withholding information about the inquiry from the audit committee or from investors (when disclosure is required) would cause reports to be misleading and would violate the Credibility principle. Credibility operates alongside Confidentiality (which permits disclosure when authorized or legally required, including to the audit committee) and Integrity (which supports refusing to suppress material information).", "question_state": "Unprocessed",
         "Prompt": "Under the IMA Statement of Ethical Professional Practice, which principle most directly supports Naomi's obligation to communicate the SEC inquiry to the audit committee and to ensure that any 10-Q disclosure reflects the matter fairly?",
-        "Choices": {
-          "A": "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading",
-          "B": "Confidentiality — members must keep information confidential except when disclosure is authorized or legally required",
-          "C": "Competence — members must maintain professional expertise at a level needed to ensure employers receive competent service",
-          "D": "Integrity — members must abstain from engaging in conduct that would discredit the profession"
-        },
+        "Choices": ["Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading", "Confidentiality — members must keep information confidential except when disclosure is authorized or legally required", "Competence — members must maintain professional expertise at a level needed to ensure employers receive competent service", "Integrity — members must abstain from engaging in conduct that would discredit the profession"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3538,14 +3488,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing", "Explanation": "This response reconciles the principles: it satisfies Credibility (full and fair disclosure of material information) and Integrity (transparent communication with governance) while addressing the corporate risk by (i) keeping the disclosure brief, factual, and consistent with outside counsel guidance to minimize waiver-of-privilege and prejudicing-cooperation risks; (ii) updating the 10-Q's legal-proceedings and subsequent-events sections under ASC 450-20 and Reg S-K Item 103; and (iii) documenting the assessment in writing to the audit committee. SAB 99 requires a qualitative overlay on the quantitative screen, and even a sub-1% revenue item can be qualitatively material if it implicates revenue-recognition integrity, investor confidence, or potential restatement risk.", "question_state": "Unprocessed",
         "Prompt": "Which recommendation to the audit committee best reconciles IMA Credibility and Integrity principles with the corporate risk of premature disclosure of a preliminary SEC inquiry?",
-        "Choices": {
-          "A": "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing",
-          "B": "Omit all reference to the inquiry because it is non-public and the dollar amount is below 1% of revenue, treating the matter as immaterial under SAB 99",
-          "C": "Wait until the SEC issues a Wells notice before any disclosure, citing confidentiality and litigation privilege",
-          "D": "Disclose only the existence of the inquiry on social media without updating the legal proceedings disclosure in the 10-Q"
-        },
+        "Choices": ["Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing", "Omit all reference to the inquiry because it is non-public and the dollar amount is below 1% of revenue, treating the matter as immaterial under SAB 99", "Wait until the SEC issues a Wells notice before any disclosure, citing confidentiality and litigation privilege", "Disclose only the existence of the inquiry on social media without updating the legal proceedings disclosure in the 10-Q"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3564,14 +3509,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach", "Explanation": "The Integrity principle obligates members to 'abstain from engaging in or supporting any activity that might discredit the profession' and to perform their duties with faithfulness and diligence. Withholding a material pending inquiry suppresses information that could affect investor decisions and may itself be characterized as misleading by omission, thereby discrediting both the profession and the registrant. The Integrity principle is broader than legal compliance and operates even where the SEC has not yet issued a Wells notice; it supports timely, faithful communication to governance and to investors when material.", "question_state": "Unprocessed",
         "Prompt": "CFO Hoffmann prefers to defer disclosure until the inquiry resolves. From the IMA Integrity principle perspective, what is the strongest ethical counter-argument to her position?",
-        "Choices": {
-          "A": "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach",
-          "B": "Investors typically interpret disclosures pessimistically, so any disclosure necessarily harms them",
-          "C": "Integrity requires disclosure only after a Wells notice, making deferral appropriate until the SEC escalates",
-          "D": "Integrity has no application to disclosure timing; that is solely a legal compliance question"
-        },
+        "Choices": ["Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach", "Investors typically interpret disclosures pessimistically, so any disclosure necessarily harms them", "Integrity requires disclosure only after a Wells notice, making deferral appropriate until the SEC escalates", "Integrity has no application to disclosure timing; that is solely a legal compliance question"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3752,14 +3692,9 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-B3-Q1",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings", "Explanation": "Under the residual dividend model, the company funds its investment opportunities (capex and working-capital needs) out of retained earnings first, then distributes any residual net income as dividends. Here, net income is $80M, capex is $90M, and working-capital needs are $30M, totaling $120M of investment needs. Because investment needs exceed net income, residual earnings are negative ($80M − $120M = −$40M), and the company should not pay any dividend; instead, it would use external financing or accumulated retained earnings to fund the gap. Applying a fixed 60% payout to net income or to net income plus capex does not reflect the residual model mechanics.", "question_state": "Unprocessed",
         "Prompt": "Under the residual dividend model, with $80M net income, $90M capex, $30M working-capital needs, and a 60% target payout on residual earnings, what is the projected dividend in millions of dollars?",
-        "Choices": {
-          "A": "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings",
-          "B": "Dividend = 0.60 × 80 = 48 because the target payout generally applies to net income",
-          "C": "Dividend = 0.60 × (80 − 90) = −6, implying the company pays a negative dividend",
-          "D": "Dividend = 0.60 × (80 + 90 + 30) = 120"
-        },
+        "Choices": ["Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings", "Dividend = 0.60 × 80 = 48 because the target payout generally applies to net income", "Dividend = 0.60 × (80 − 90) = −6, implying the company pays a negative dividend", "Dividend = 0.60 × (80 + 90 + 30) = 120"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3778,14 +3713,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q2",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS", "Explanation": "A quarterly DPS of $0.55 implies an annualized DPS of $0.55 × 4 = $2.20. With projected EPS of $1.60, the dividend-coverage ratio is EPS / DPS = $1.60 / $2.20 ≈ 0.73x, meaning earnings would not cover the dividend at projected EPS and the company would have to fund part of the dividend from accumulated retained earnings, cash, or external financing. A coverage ratio below 1.0 is generally a red flag for sustainable payout policy and is one reason the residual dividend model declines to declare a dividend when investment needs exceed earnings.", "question_state": "Unprocessed",
         "Prompt": "If the board approves the dividend hike to $0.55 per share quarterly, what is the implied annualized dividend per share, and what is the dividend-coverage ratio (EPS divided by DPS) assuming projected EPS of $1.60?",
-        "Choices": {
-          "A": "Annual DPS = $1.65; coverage = $1.60 / $1.65 = 0.97x",
-          "B": "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS",
-          "C": "Annual DPS = $0.55; coverage = $1.60 / $0.55 = 2.91x",
-          "D": "Annual DPS = $0.40; coverage = $1.60 / $0.40 = 4.00x"
-        },
+        "Choices": ["Annual DPS = $1.65; coverage = $1.60 / $1.65 = 0.97x", "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS", "Annual DPS = $0.55; coverage = $1.60 / $0.55 = 2.91x", "Annual DPS = $0.40; coverage = $1.60 / $0.40 = 4.00x"],
         "CorrectChoice": "B",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3804,14 +3734,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q3",
-        "Type": "mcq",
+        "Type": "select", "Correct": "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead", "Explanation": "In a perfect capital market with no taxes or transaction costs, MM dividend-irrelevance theory predicts that the form of cash distribution (dividend vs share repurchase) does not change shareholder wealth in aggregate. Shareholders who prefer cash can 'homemake' dividends by selling a proportional number of shares if the company repurchases instead, and shareholders who prefer capital appreciation can reinvest cash dividends in additional shares. The argument relies on the ability of shareholders to substitute at the margin, and it explains why repurchases and dividends are largely equivalent in well-functioning markets.", "question_state": "Unprocessed",
         "Prompt": "Modigliani-Miller dividend-irrelevance theory, with perfect capital markets and no taxes, predicts that for Flash Capital (a stable-FCF firm) the choice between $48M in dividends and an equivalent share repurchase would have what impact on shareholder wealth?",
-        "Choices": {
-          "A": "Both policies reduce shareholder wealth by an amount equal to the cash returned",
-          "B": "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead",
-          "C": "A dividend is strictly preferred to a repurchase because of the bird-in-hand argument",
-          "D": "A repurchase is strictly preferred because it concentrates ownership in remaining holders"
-        },
+        "Choices": ["Both policies reduce shareholder wealth by an amount equal to the cash returned", "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead", "A dividend is strictly preferred to a repurchase because of the bird-in-hand argument", "A repurchase is strictly preferred because it concentrates ownership in remaining holders"],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3830,14 +3755,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q4",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need", "Explanation": "Clientele-effect theory holds that different investor groups sort themselves into companies whose payout policies suit their tax situations and cash-flow preferences. Tax-exempt investors (such as pension funds and endowments) generally prefer to defer taxes on capital gains and may find a share repurchase more flexible because they can choose whether to tender shares for cash or remain invested, and because there is no taxable dividend event when they do not tender. By contrast, taxable investors in high tax brackets who prefer current income may prefer dividends. The clientele-effect framework therefore predicts heterogeneous responses to a dividend hike.", "question_state": "Unprocessed",
         "Prompt": "Which clientele-effect argument best explains why Flash Capital's institutional shareholders, many of whom are tax-exempt retirement funds, might prefer a share repurchase over a higher cash dividend?",
-        "Choices": {
-          "A": "Tax-exempt investors generally prefer dividends because dividends are more predictable",
-          "B": "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need",
-          "C": "Tax-exempt investors prefer share repurchases only when the company is in financial distress",
-          "D": "Clientele effects do not exist for institutional investors because they all behave the same way"
-        },
+        "Choices": ["Tax-exempt investors generally prefer dividends because dividends are more predictable", "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need", "Tax-exempt investors prefer share repurchases only when the company is in financial distress", "Clientele effects do not exist for institutional investors because they all behave the same way"],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3856,14 +3776,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q5",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities", "Explanation": "A balanced approach preserves flexibility: a moderate dividend hike (less than the proposed $0.55, e.g., $0.45–$0.50 quarterly) captures some signaling benefit while reducing the cash drain, and pre-funding the $120M of maturing debt with a portion of the $210M cash and marketable securities reduces refinancing risk. Deferring the larger $200M buyback avoids overcommitting cash at a moment when debt rollover is the binding constraint and free cash flow is only $55M. This sequencing is consistent with pecking-order and financial-flexibility considerations, while still rewarding shareholders.", "question_state": "Unprocessed",
         "Prompt": "Given stable free cash flow of $55M, $120M of debt maturing in 18 months, $210M in cash and marketable securities, and a proposed $200M buyback authorization, which capital-return policy best preserves financial flexibility while supporting shareholder value?",
-        "Choices": {
-          "A": "Approve the full hike to $0.55 quarterly and execute the $200M buyback simultaneously to maximize immediate signaling",
-          "B": "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities",
-          "C": "Suspend the dividend and use all cash to repurchase shares",
-          "D": "Maintain the dividend at $0.40 quarterly with no buyback and no debt pre-funding"
-        },
+        "Choices": ["Approve the full hike to $0.55 quarterly and execute the $200M buyback simultaneously to maximize immediate signaling", "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities", "Suspend the dividend and use all cash to repurchase shares", "Maintain the dividend at $0.40 quarterly with no buyback and no debt pre-funding"],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3882,14 +3797,9 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q6",
-        "Type": "mcq",
+        "Type": "select", "Correct": "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF", "Explanation": "Under the dividend-signaling literature (e.g., Bhattacharya, Miller-Rock), dividend hikes are typically interpreted as credible long-term commitments because managers are reluctant to cut dividends once raised; the implied cost of a future cut (in terms of reputation and stock price) gives the signal credibility. Repurchases are more flexible (they can be paused or sized down without the stigma of a 'dividend cut') and therefore can also be credible signals, especially when supported by stable FCF and balance-sheet capacity. In practice, both mechanisms can convey information about management's confidence in future cash flows, with relative credibility depending on the firm's financial flexibility and history of dividend stability.", "question_state": "Unprocessed",
         "Prompt": "From a signaling perspective, which statement best characterizes the announcement effect of a sustainable dividend hike versus a share repurchase for Flash Capital?",
-        "Choices": {
-          "A": "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF",
-          "B": "Dividend hikes are generally negative signals because they imply management has no positive-NPV projects",
-          "C": "Repurchases are typically negative signals because they suggest management believes its own shares are overvalued",
-          "D": "Neither dividend hikes nor repurchases convey any information under strong-form market efficiency"
-        },
+        "Choices": ["Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF", "Dividend hikes are generally negative signals because they imply management has no positive-NPV projects", "Repurchases are typically negative signals because they suggest management believes its own shares are overvalued", "Neither dividend hikes nor repurchases convey any information under strong-form market efficiency"],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",

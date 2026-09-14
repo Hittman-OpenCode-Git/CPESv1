@@ -20,8 +20,8 @@ const ROOT = path.resolve(__dirname, "..");
 const P2_DIR = path.join(ROOT, "p2");
 
 const PACKS = [
-  { file: "pack_p2_a.js", label: "P2 Pack A", section: "a", targetQIDs: 500 },
-  { file: "pack_p2_b.js", label: "P2 Pack B", section: "b", targetQIDs: 500 },
+  { file: "pack_p2_a.js", label: "P2 Pack A", section: "a", targetQIDs: 600 },
+  { file: "pack_p2_b.js", label: "P2 Pack B", section: "b", targetQIDs: 600 },
   { file: "pack_p2_c.js", label: "P2 Pack C", section: "c", targetQIDs: 750 },
   { file: "pack_p2_d.js", label: "P2 Pack D", section: "d", targetQIDs: 500 },
   { file: "pack_p2_e.js", label: "P2 Pack E", section: "e", targetQIDs: 500 },

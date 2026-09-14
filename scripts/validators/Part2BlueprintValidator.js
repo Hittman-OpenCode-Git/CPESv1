@@ -117,10 +117,13 @@ const P2_FORMULA_IDS = [
   "FA-01", "FA-02", "FA-03", "FA-04", "FA-05", "FA-06", "FA-07",
   "FA-08", "FA-09", "FA-10", "FA-11", "FA-12", "FA-13", "FA-14",
   "FA-15", "FA-16", "FA-17", "FA-18", "FA-19", "FA-20", "FA-21",
-  "CF-01", "CF-02", "CF-03", "CF-04", "CF-05", "CF-06", "CF-07", "CF-08", "CF-09",
+  "FA-22", "FA-23", "FA-25",
+  "CB-01", "CB-02", "CB-03", "CB-04", "CB-05", "CB-06", "CB-07", "CB-08", "CB-09",
   "DA-01", "DA-02", "DA-03", "DA-04", "DA-05", "DA-06", "DA-07", "DA-08", "DA-09", "DA-10", "DA-11",
+  "DA-13", "DA-14",
   "RM-01", "RM-02", "RM-03",
-  "ID-01", "ID-02", "ID-03", "ID-04", "ID-05", "ID-06", "ID-07", "ID-08"
+  "ID-01", "ID-02", "ID-03", "ID-04", "ID-05", "ID-06", "ID-07", "ID-08",
+  "ID-09"
 ];
 
 // P2 QID format
@@ -197,6 +200,12 @@ class Part2BlueprintValidator extends Validator {
     this.addStatistic("P2 Items Checked", totalItems);
     this.addStatistic("P2 Cases Checked", totalCases);
 
+    // R20 loud-empty guard (DL-049/050 family): files found but nothing
+    // extracted means the extractor is blind, not that the pool is clean.
+    if ((mcqFiles.length + caseFiles.length) > 0 && totalItems + totalCases === 0) {
+      this.addError("Files found but zero items extracted — extractor coverage failure (R20)");
+    }
+
     Object.keys(domainItemCounts).sort().forEach(d => {
       this.addStatistic(`P2 Domain: ${d}`, domainItemCounts[d]);
     });
@@ -214,7 +223,7 @@ class Part2BlueprintValidator extends Validator {
   _findP2MCQFiles(root) {
     const files = [];
     for (const section of P2_VALID_SECTIONS) {
-      const fname = `pack_p2_${section.toLowerCase()}.js`;
+      const fname = `p2/pack_p2_${section.toLowerCase()}.js`;
       const fp = path.join(root, fname);
       if (fs.existsSync(fp)) files.push(fname);
     }
@@ -224,7 +233,7 @@ class Part2BlueprintValidator extends Validator {
   _findP2CaseFiles(root) {
     const files = [];
     for (let i = 1; i <= 3; i++) {
-      const fname = `case_pack_p2_${i}.js`;
+      const fname = `p2/case_pack_p2_${i}.js`;
       const fp = path.join(root, fname);
       if (fs.existsSync(fp)) files.push(fname);
     }
@@ -338,7 +347,7 @@ class Part2BlueprintValidator extends Validator {
     // Difficulty validation
     if (!item.Difficulty) {
       this.addWarning(`${prefix}: Missing Difficulty`);
-    } else if (!["Easy", "Moderate", "Difficult", "Very Difficult"].includes(item.Difficulty)) {
+    } else if (!["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"].includes(item.Difficulty)) {
       this.addError(`${prefix}: Invalid Difficulty "${item.Difficulty}"`);
     }
 
@@ -418,7 +427,7 @@ class Part2BlueprintValidator extends Validator {
     // Formula reference check
     if (item.FormulaReference) {
       const formulaId = item.FormulaReference.split(":")[0].trim();
-      if (formulaId.match(/^(FA|CF|DA|RM|ID)-\d{2}$/) && !this.p2FormulaSet.has(formulaId)) {
+      if (formulaId.match(/^(FA|CB|DA|RM|ID)-\d{2}$/) && !this.p2FormulaSet.has(formulaId)) {
         this.addWarning(`${prefix}: FormulaReference "${formulaId}" is not a recognized Part 2 formula ID`);
       }
     }

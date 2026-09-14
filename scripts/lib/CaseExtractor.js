@@ -20,6 +20,11 @@ class CaseExtractor {
             const patterns = [
                 /const\s+ENHANCED_CASE_BASE\d*\s*=\s*(\[)/,
                 /const\s+SCORED_CASES\s*=\s*(\[)/,
+                // DL-050: live banks (previously fell through to null = silent skip).
+                // NOTE: alias lines (CASE_BANK_X = CASE_PACK_N) are deliberately
+                // NOT matched — only direct array declarations anchor extraction.
+                /(?:const|var)\s+CASE_PACK_\d+\s*=\s*(\[)/,
+                /(?:const|var)\s+casePackP2_\d+\s*=\s*(\[)/,
                 /^(\s*\[)/m
             ];
 

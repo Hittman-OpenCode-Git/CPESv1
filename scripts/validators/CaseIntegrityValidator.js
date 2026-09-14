@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const Validator = require("./Validator");
 const config = require("../config");
+const CaseExtractor = require("../lib/CaseExtractor"); // DL-050: single-source extraction
 
 class CaseIntegrityValidator extends Validator {
     constructor() {
@@ -55,7 +56,7 @@ class CaseIntegrityValidator extends Validator {
         this.emptyPromptCases = [];
 
         const root = config.paths.root;
-        const caseBanks = config.caseBanks;
+        const caseBanks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
 
         caseBanks.forEach(file => {
             const fullPath = path.join(root, file);
@@ -119,22 +120,9 @@ class CaseIntegrityValidator extends Validator {
     }
 
     extractCases(content, filename) {
-        const varMatch = content.match(/(?:const|let|var)\s+(ENHANCED_CASE_BASE\d*)\s*=\s*\[/);
-        if (!varMatch) return null;
-        const arrStart = content.indexOf('[', varMatch.index);
-        let depth = 0, pos = arrStart;
-        do {
-            if (content[pos] === '[') depth++;
-            if (content[pos] === ']') depth--;
-            pos++;
-        } while (depth > 0 && pos < content.length);
-        const jsStr = content.substring(arrStart, pos);
-        try { return JSON.parse(jsStr); } catch(e) {
-            try {
-                const fn = new Function('return (' + jsStr + ')');
-                return fn();
-            } catch(e2) { return null; }
-        }
+        // DL-050: delegate to single-source CaseExtractor (live-bank capable).
+        // Legacy ENHANCED_CASE_BASE-only matching silently dropped live banks.
+        return CaseExtractor.extractFromContent(content);
     }
 
     validateCase(c, file, caseIdx) {

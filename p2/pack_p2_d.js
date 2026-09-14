@@ -24855,14 +24855,14 @@ var pack_p2_d_questions = [
     "Section": "D",
     "QuestionID": "P2-D-450",
     "question_state": "Certified",
-    "certification_date": "2026-09-05",
+    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-D4",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "D-450-risk-appetite-leverage-covenant-translation",
     "Topic": "D.450 risk-appetite-translation-to-leverage-limit",
     "Stem": "Flash Holdings professional Marco Bellini, Treasurer, must translate the board's risk appetite into an operating limit. Flash has $40 million equity and appetite states debt-to-equity must stay below 0.70 and earnings volatility below $5 million. Current debt is $24 million. A proposed expansion adds $6 million debt and is expected to add $1.2 million to earnings volatility. Does the proposal stay within appetite?",
     "Choices": {
-      "A": "Yes, debt to equity becomes $30 million / $40 million = 0.75? No  -  $30 / $40 = 0.75 exceeds 0.70, so actually no; wait recomputed: $24m + $6m = $30m, 0.75 exceeds 0.70, and volatility $1.2m is below $5m, but leverage breaches so the proposal is outside appetite",
+      "A": "No, debt to equity becomes $30 million / $40 million = 0.75, which exceeds the 0.70 limit; volatility of $1.2 million is within the $5 million appetite, but the leverage breach alone puts the proposal outside appetite",
       "B": "Yes, debt to equity is $24m / $40m = 0.60 and stays below 0.70 regardless of new $6m, so appetite unaffected",
       "C": "No, because $1.2m volatility alone exceeds $5m limit, even though leverage may pass",
       "D": "No, because appetite is measured only by debt-to-equity averaging and $6m should be spread over 5 years"
