@@ -18154,7 +18154,7 @@ var MCQ_BANK_D = [
     "UniqueConceptKey": "E-D002-three-lines-of-defense-model",
     "LOSTag": "P1-E Internal controls",
     "primaryTheory": "E6",
-    "Difficulty": "Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Bramblewood structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
@@ -18192,10 +18192,15 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "The fraud triangle (pressure, opportunity, rationalization) identifies the conditions under which occupational fraud is likely to occur — it does not describe a governance model for structuring risk and control responsibilities across an organization. The stem describes three distinct and complementary layers of defense: operational management owning and managing risk, risk/compliance functions providing oversight and monitoring, and internal audit delivering independent assurance. This layered structure is the defining characteristic of the Three Lines Model, not the fraud triangle. A candidate selecting this option may be associating 'control' with fraud prevention and confusing the fraud triangle (a causal model for why fraud happens) with the three lines model (a governance structure for how control responsibilities are allocated).",
     "ExplanationWrongD": "The balanced scorecard is a strategic performance measurement tool that translates an organization's strategy into financial and non-financial performance metrics across multiple perspectives (financial, customer, internal processes, learning and growth). It does not prescribe how risk and control functions should be structured into distinct operational, oversight, and assurance layers. The stem describes a governance structure with three layers of defense, which is the Three Lines Model — not a performance measurement framework. A candidate selecting this option may be confused by the fact that the balanced scorecard can include risk-related metrics, but the scorecard itself is a performance management tool, not a governance model for allocating control responsibilities across organizational layers.",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
-    "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-002 (DL-012 rotation clone)"
+    "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-002 (DL-012 rotation clone)",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Difficulty label aligned to DifficultyScore per closeout verdict"
+    }
   },
   {
     "Part": 1,
@@ -22425,7 +22430,7 @@ var MCQ_BANK_D = [
     "UniqueConceptKey": "F-D010-business-intelligence-self-service-reporting",
     "LOSTag": "P1-F Technology and analytics",
     "primaryTheory": "F3",
-    "Difficulty": "Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Juniperfield enables business users to build their own reports and analyses from a governed data source without relying solely on IT. What is this capability called?",
@@ -22463,10 +22468,15 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C is incorrect. Data lineage tracing documents the origin, movement, and transformation of data as it flows through systems — it is a data governance and audit capability, not a report-building function. Data lineage answers questions such as where a particular data element came from, what transformations were applied, and who modified it. A candidate may associate data-related terminology with reporting capabilities, but data lineage tools do not provide dashboards, visualizations, or self-service analytics. Self-service BI platforms build reports and analyses on top of governed data; data lineage tracks the provenance of that data but does not itself empower business users to create reports without IT support.",
     "ExplanationWrongD": "Option D is incorrect. Blockchain is a decentralized, distributed ledger technology that provides tamper-resistant, immutable transaction records through cryptographic verification and consensus mechanisms. It has no relationship to business intelligence, reporting, or data analysis capabilities. A candidate may select this option by confusing emerging technology categories — blockchain's value proposition centers on trustless transaction recording and smart contract execution, not on enabling business users to build reports and dashboards. Self-service BI provides governed data access, visualization, and analytics capabilities that empower business users to answer questions independently without IT intervention.",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
-    "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FD-010 (DL-012 rotation clone)"
+    "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FD-010 (DL-012 rotation clone)",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Difficulty label aligned to DifficultyScore per closeout verdict"
+    }
   },
   {
     "Part": 1,
@@ -26093,7 +26103,7 @@ var MCQ_BANK_D = [
     "Stem": "Pinnacle Stamping tracks overall equipment effectiveness (OEE) on Press 7: availability 90%, performance 80%, quality 95%, for OEE of 68.4%. The operations manager blames the quality rate as the main drag. The plant controller decomposes the multiplicative metric, computes the marginal OEE lift of a 10-point improvement in each factor, and ranks the levers. What does the decomposition prove?",
     "Choices": {
       "A": "Quality is the top lever — at 95% it trails availability and needs the most work",
-      "B": "Availability is the top lever — downtime is always the binding constraint on stamping presses",
+      "B": "Availability is the top lever — downtime is typically the binding constraint on stamping presses",
       "C": "Quality is the top lever — defects compound through performance losses",
       "D": "Performance is the top lever — lifting it to 90% yields OEE of 76.95%, beating equal-point gains elsewhere (76.0% availability, 72.0% quality)"
     },
@@ -26147,7 +26157,7 @@ var MCQ_BANK_D = [
     "Stem": "Crestline ($40M revenue) benchmarks order-fulfillment cost per order against an industry leader ($2B revenue) at $3.10 versus Crestline's $4.80. The benchmarking team recommends matching the leader's $3.10 within one year. The controller objects that the comparison is unadjusted. A follow-up study decomposes the $1.70 gap: $1.10 from fixed-cost leverage and automation thresholds only attainable at scale, $0.60 from pick-pack methods Crestline can copy. What target should the controller set?",
     "Choices": {
       "A": "$3.10 — best-in-class is best-in-class regardless of scale",
-      "B": "No target — cross-company comparisons are never valid across size classes",
+      "B": "No target — cross-company comparisons are rarely valid across size classes",
       "C": "$4.20 — the attainable $0.60 efficiency portion only, excluding the $1.10 scale advantage Crestline cannot replicate",
       "D": "$5.90 — Crestline's cost adjusted upward proves it already beats the leader"
     },
@@ -26418,7 +26428,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "No change — both divisions clear 15% under either method",
       "B": "Under direct, P misses at 14.7% while Q earns at 17.3%; under step-down both earn — P's bonus depends on the allocation method",
-      "C": "Under direct both miss 15%; the method only changes margins, never outcomes",
+      "C": "Under direct both miss 15%; the method only changes margins, rarely outcomes",
       "D": "Under step-down P still misses — the method cannot move anyone across the hurdle"
     },
     "CorrectChoice": "B",
@@ -26580,7 +26590,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "Investigate DM price and VOH spending ($3,500 total, $12,100 expected net benefit); defer DL efficiency — its $2,000 expected value cannot fit the budget alongside higher-yield probes",
       "B": "Investigate all three ($6,500) — expected benefits exceed the budget overrun",
-      "C": "Investigate DL efficiency only — labor variances always deserve priority as the largest controllable cost",
+      "C": "Investigate DL efficiency only — labor variances typically deserve priority as the largest controllable cost",
       "D": "Investigate nothing — investigation costs are sunk once spent, so expected-value analysis is invalid"
     },
     "CorrectChoice": "A",
@@ -26634,7 +26644,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "Mandate market price — simplicity and objectivity outweigh autonomy concerns",
       "B": "Negotiated price within the floor-ceiling range with controller arbitration as backstop — preserves autonomy while guaranteeing congruence; dual pricing double-counts the margin and corrupts both divisions' ROI",
-      "C": "Mandate variable cost — guarantees internal trade happens, which is always goal-congruent",
+      "C": "Mandate variable cost — guarantees internal trade happens, which is typically goal-congruent",
       "D": "Dual pricing — both divisions win, so goal congruence is maximized by construction"
     },
     "CorrectChoice": "B",
@@ -26795,7 +26805,7 @@ var MCQ_BANK_D = [
     "Stem": "Two divisions use practical-capacity denominators. Division M: budgeted 50,000 hrs, actual 48,000, fixed overhead $480,000 (rate $9.60). Division N: budgeted 20,000 hrs, actual 12,000, fixed overhead $200,000 (rate $10.00). M's volume variance is $19,200 U; N's is $80,000 U. Corporate ranks N's manager lower. N's manager protests that N was built for a discontinued product line and runs at 60% utilization by corporate design. How should the performance committee evaluate the two managers?",
     "Choices": {
       "A": "Rank N lower — $80,000 U dwarfs $19,200 U regardless of context",
-      "B": "Rank both equally — volume variances never reflect managerial performance",
+      "B": "Rank both equally — volume variances rarely reflect managerial performance",
       "C": "Evaluate M on the $19,200 operational shortfall but move N's structural idle capacity to a strategic review — N's 40% gap is a corporate capacity decision, not shop-floor performance",
       "D": "Reverse the ranking — N's larger variance proves its manager faces tougher conditions and deserves credit"
     },
@@ -26905,7 +26915,7 @@ var MCQ_BANK_D = [
       "A": "ROI-based — the 10%-vs-14% shortfall is objective and the prior zeroes prove standards are demanding, not broken",
       "B": "ROI-based with a lowered 9% hurdle — keeps ROI while making the bonus attainable",
       "C": "Controllable-margin bonus — the $20,000 beat ($400,000 vs $380,000) measures what the manager influences; loaded ROI punishes $650,000 of uncontrollables and already cost the company one manager",
-      "D": "No bonus plan — divisional bonuses never survive allocation disputes, so pay salary only"
+      "D": "No bonus plan — divisional bonuses rarely survive allocation disputes, so pay salary only"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "$650,000 of the ROI calculation ($150,000 allocation + $500,000 facility) sits outside the manager's influence — 26% of the denominator and 37.5% of the numerator swing on headquarters decisions. The prior manager's twin zeroes are not evidence of demanding standards but of a measure that withholds pay for uncontrollable shortfalls; the resignation is the system working as (perversely) designed — it selected out talent rather than improving ROI a point. A controllable-margin bonus ($400,000 vs $380,000 = $20,000 beat, ~5.3%) rewards exactly what the role controls while corporate retains loaded ROI for investment oversight — two measures, two purposes. Lowering the hurdle to 9% (option B) keeps the uncontrollable noise and merely reprices it. Business interpretation: when a measure has already cost you a manager, the measure is the finding. Common trap: reading repeated bonus zeroes as proof of rigor rather than proof of misdesign.",
@@ -27172,7 +27182,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Beginning inventory 5,000 units @ $12 ($60,000); purchases 10,000 @ $10 ($100,000); sales 12,000 units. Compare FIFO versus moving-average COGS and ending inventory in this falling-price environment.",
     "Choices": {
-      "A": "Identical — method choice never matters when prices fall steadily",
+      "A": "Identical — method choice rarely matters when prices fall steadily",
       "B": "FIFO COGS $130,000, ending $30,000; average COGS $128,000, ending $32,000 — falling prices invert the usual rising-price story",
       "C": "FIFO COGS $128,000; average $130,000 — falling prices preserve the rising-price ranking",
       "D": "FIFO ending $32,000; average ending $30,000 — ending follows COGS inversely"
@@ -27335,7 +27345,7 @@ var MCQ_BANK_D = [
     "Stem": "A $1,000,000 common stock issuance incurs $60,000 underwriting fees. Separately, $40,000 of stock-option compensation vests this period, and the company repurchases $100,000 of its shares as treasury stock. How is each treated?",
     "Choices": {
       "A": "All $200,000 expensed — equity transactions flow through income like all costs",
-      "B": "All $200,000 credited to equity — shareholder transactions never touch earnings",
+      "B": "All $200,000 credited to equity — shareholder transactions rarely touch earnings",
       "C": "$60,000 to APIC (issuance cost, not expense); $40,000 compensation expense over vesting; $100,000 treasury contra-equity — three different treatments for three different economics",
       "D": "Capitalize $200,000 as an equity asset — treasury and fees are investments in own shares"
     },
@@ -27497,7 +27507,7 @@ var MCQ_BANK_D = [
     "Stem": "Harbor holds 10% of Beacon LLC's equity but guarantees Beacon's debt, directs Beacon's operations under a management contract, and absorbs losses through the guarantee. Beacon's equity is insufficient to finance its activities. Should Harbor consolidate Beacon, and on what basis?",
     "Choices": {
       "A": "No — 10% is below every consolidation threshold; equity method at most",
-      "B": "No — guarantees are disclosed, never consolidation triggers",
+      "B": "No — guarantees are disclosed, rarely consolidation triggers",
       "C": "Yes only if Harbor acquires 51% — voting control remains the sole trigger",
       "D": "Yes — Beacon is a VIE (insufficient equity) and Harbor is primary beneficiary (power via management contract plus economics via guarantee/loss absorption)"
     },
@@ -27553,7 +27563,7 @@ var MCQ_BANK_D = [
       "A": "No gain — restructurings merely re-time payments at the same economics",
       "B": "Borrower gain $60,000 ($500,000 − $440,000) — accrued interest excluded from carrying comparison",
       "C": "Borrower gain $80,000 ($500,000 − $420,000) to income; lender recognizes a corresponding $80,000 loss",
-      "D": "Borrower defers $80,000 as a liability contra — gains on own debt are never income"
+      "D": "Borrower defers $80,000 as a liability contra — gains on own debt are rarely income"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Troubled-debt restructuring (borrower): gain = carrying amount ($500,000, including accrued interest — part of the obligation) minus PV of restructured payments at the original effective rate ($420,000) = $80,000 recognized in income immediately. Excluding accrued interest (option B, $60,000) understates the obligation settled — carrying means carrying, all-in. No-gain (option A) treats restructuring as pure re-timing, ignoring the $80,000 of obligation extinguished below carrying. Deferral (option D) applies non-troubled modification accounting (effective-yield recalculation) to a troubled situation — financial difficulty plus concession triggers gain recognition, not deferral. The lender mirrors with an $80,000 loss (impairment of the receivable to restructured PV). Business interpretation: troubled restructurings crystallize economics the original terms obscured — gains and losses now, not over the new term. Common trap: stripping accrued interest from the carrying comparison.",
@@ -27604,7 +27614,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Bonds: $500,000 face, unamortized premium $20,000 (carrying $520,000). Reacquired for $480,000 cash. What gain or loss is recognized?",
     "Choices": {
-      "A": "$20,000 loss — premium paid over face is always a loss",
+      "A": "$20,000 loss — premium paid over face is typically a loss",
       "B": "$40,000 gain — carrying $520,000 less reacquisition $480,000",
       "C": "$20,000 gain — face less cash, ignoring premium",
       "D": "No gain or loss — par-value accounting nets to zero"
@@ -27715,7 +27725,7 @@ var MCQ_BANK_D = [
       "A": "No gain — restructurings merely re-time payments at the same economics",
       "B": "Borrower gain $60,000 ($500,000 − $440,000) — accrued interest excluded from carrying comparison",
       "C": "Borrower gain $80,000 ($500,000 − $420,000) to income; lender recognizes a corresponding $80,000 loss",
-      "D": "Borrower defers $80,000 as a liability contra — gains on own debt are never income"
+      "D": "Borrower defers $80,000 as a liability contra — gains on own debt are rarely income"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Troubled-debt restructuring (borrower): gain = carrying amount ($500,000, including accrued interest — part of the obligation) minus PV of restructured payments at the original effective rate ($420,000) = $80,000 recognized in income immediately. Excluding accrued interest (option B, $60,000) understates the obligation settled — carrying means carrying, all-in. No-gain (option A) treats restructuring as pure re-timing, ignoring the $80,000 of obligation extinguished below carrying. Deferral (option D) applies non-troubled modification accounting (effective-yield recalculation) to a troubled situation — financial difficulty plus concession triggers gain recognition, not deferral. The lender mirrors with an $80,000 loss (impairment of the receivable to restructured PV). Business interpretation: troubled restructurings crystallize economics the original terms obscured — gains and losses now, not over the new term. Common trap: stripping accrued interest from the carrying comparison.",
@@ -27769,7 +27779,7 @@ var MCQ_BANK_D = [
       "A": "$130,000 — current cost is the LIFO value when prices rise",
       "B": "$113,043 — base-year dollars with no layer added",
       "C": "$115,000 — $100,000 base plus a $15,000 layer ($13,043 base dollars × 1.15)",
-      "D": "$100,000 — LIFO never adds layers in inflation"
+      "D": "$100,000 — LIFO rarely adds layers in inflation"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Convert to base dollars: $130,000 / 1.15 = $113,043.48. Layer = $113,043.48 − $100,000 = $13,043.48 base dollars × 1.15 index = $15,000.00. Ending = $100,000 base + $15,000 layer = $115,000. Current-cost carrying (option A, $130,000) abandons LIFO for current cost — the $15,000 inflation effect belongs in the layer valuation, not ignored. Base-dollars-only (option B, $113,043) forgets to re-inflate the layer — ending inventory reports in current dollars, not base dollars. No-layer (option D) denies the $13,043 base-dollar increment the computation proves. Business interpretation: dollar-value LIFO separates real growth (layers) from inflation (index) — deflate to find layers, re-inflate to report them. Common trap: reporting base-year dollars as the answer.",
@@ -27820,7 +27830,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Bonds: $500,000 face, unamortized premium $20,000 (carrying $520,000). Reacquired for $480,000 cash. What gain or loss is recognized?",
     "Choices": {
-      "A": "$20,000 loss — premium paid over face is always a loss",
+      "A": "$20,000 loss — premium paid over face is typically a loss",
       "B": "$40,000 gain — carrying $520,000 less reacquisition $480,000",
       "C": "$20,000 gain — face less cash, ignoring premium",
       "D": "No gain or loss — par-value accounting nets to zero"
@@ -27928,7 +27938,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "A company carries a $200,000 deferred tax asset from NOL carryforwards. Evidence: 40% probability of sufficient future taxable income (new contracts cover $80,000 of the DTA; the remaining $120,000 depends on speculative market recovery). What valuation allowance and net DTA are required?",
     "Choices": {
-      "A": "$0 allowance — NOLs are statutory rights, always fully realizable",
+      "A": "$0 allowance — NOLs are statutory rights, typically fully realizable",
       "B": "$200,000 allowance — uncertainty taints the entire asset",
       "C": "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not",
       "D": "$80,000 allowance — the realizable portion is the allowance"
@@ -28091,7 +28101,7 @@ var MCQ_BANK_D = [
     "Stem": "Year-end 12/31; audit report date 3/15. Event 1 (Feb 2): a major customer declares bankruptcy from financial distress evident in December (the $300,000 receivable was doubtful at year-end; allowance held only $50,000). Event 2 (Feb 20): fire destroys a warehouse (fully insured, new event). What treatment does each require?",
     "Choices": {
       "A": "Adjust for both — all material subsequent events adjust",
-      "B": "Disclose both without adjusting — subsequent events never adjust issued-pending statements",
+      "B": "Disclose both without adjusting — subsequent events rarely adjust issued-pending statements",
       "C": "Adjust for the fire, disclose the bankruptcy — severity governs, not timing",
       "D": "Type I: +$250,000 provision (condition existed at year-end); Type II: disclose fire, no adjustment"
     },
@@ -28307,7 +28317,7 @@ var MCQ_BANK_D = [
     "Stem": "Equity $5,000,000; debt $4,500,000 (D/E 0.90); covenant max 1.00. Equipment need $1,000,000: buy with debt, or 5-year finance lease (PV $850,000), or 12-month renewable short-term leases. The operations VP needs 5 years of assured access. How should the controller decide?",
     "Choices": {
       "A": "Buy with $1,000,000 debt — 5-year access certainty justifies the leverage",
-      "B": "Five-year finance lease — leasing always preserves covenants versus buying",
+      "B": "Five-year finance lease — leasing typically preserves covenants versus buying",
       "C": "Five-year operating lease — operating leases stay off-balance-sheet",
       "D": "Twelve-month renewable leases with evergreen renewal history and disclosed intent — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90, with repricing risk disclosed"
     },
@@ -28361,7 +28371,7 @@ var MCQ_BANK_D = [
     "Stem": "Goodwill Step-0 review: market cap below book one quarter (−8%, first occurrence); a 5% customer churns (routine turnover band 3–7%); new regulation with estimable $50,000 annual compliance cost against $2,000,000 unit earnings; rates flat; core product growth +18% with expanded margins. Does MLTN favor testing?",
     "Choices": {
       "A": "Yes — any adverse factor triggers quantitative testing",
-      "B": "Yes — regulation plus churn together always clear MLTN",
+      "B": "Yes — regulation plus churn together typically clear MLTN",
       "C": "No — single-quarter 8% cap dip (noise band), in-band churn, and absorbable $50,000 cost do not outweigh 18% margin-expanding growth; MLTN not met, document and monitor",
       "D": "Impair immediately — the regulation alone justifies a write-down"
     },
@@ -28469,7 +28479,7 @@ var MCQ_BANK_D = [
     "Stem": "Outstanding: 8% $10,000,000 bonds, 10 years left, callable at 103 ($10,300,000). Refunding: new 5% 10-year bonds; issuance costs $150,000. Current market 5%. The treasurer also notes $50,000 of unamortized issuance costs on the old bonds that would be written off. Should the company refund now?",
     "Choices": {
       "A": "Refund — PV of $300,000 annual savings ($2,316,519) dwarfs $500,000 of total )[SECURITY_DATA] ($300,000 call + $150,000 new issuance + $50,000 old write-off); NPV +$1,816,519",
-      "B": "Do not refund — call premiums plus write-offs always destroy refunding economics",
+      "B": "Do not refund — call premiums plus write-offs typically destroy refunding economics",
       "C": "Refund only if rates fall below 3% — 5% is insufficient improvement",
       "D": "Refund on coupon comparison — $300,000 × 10 = $3,000,000 gross savings decides it"
     },
@@ -28684,9 +28694,9 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "A $10,000,000 variable-rate loan is hedged with a pay-fixed interest-rate swap (notional $10,000,000). Year change: swap +$300,000 FV; loan's benchmark-rate value change −$280,000 (i.e., $280,000 of additional interest cost). The hedge is documented and tested quarterly. How much goes to OCI versus earnings, and is the hedge highly effective?",
     "Choices": {
-      "A": "OCI $300,000; nothing to earnings — swaps always fully effective by design",
+      "A": "OCI $300,000; nothing to earnings — swaps typically fully effective by design",
       "B": "OCI $280,000; $20,000 ineffectiveness to earnings — 93% offset ratio is within highly-effective bounds; monitor the $20,000 drift source",
-      "C": "Earnings $300,000; OCI $0 — fair-value changes always hit earnings immediately",
+      "C": "Earnings $300,000; OCI $0 — fair-value changes typically hit earnings immediately",
       "D": "OCI $280,000 with the $20,000 deferred as well — round effectiveness to 100%"
     },
     "CorrectChoice": "B",
@@ -28794,7 +28804,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "Use all estimates as stated — regression output is authoritative at any volume",
       "B": "Slope $3.80 is valid (t = 9.5); intercept is insignificant (t = 1.1) so $45,000 is unreliable; the 20,000-unit forecast exceeds the 8–16k range and is unreliable",
-      "C": "Intercept $45,000 is the true fixed cost — intercepts always measure fixed cost regardless of t-statistics",
+      "C": "Intercept $45,000 is the true fixed cost — intercepts typically measure fixed cost regardless of t-statistics",
       "D": "R² 0.94 means the forecast is 94% accurate at any volume"
     },
     "CorrectChoice": "B",
@@ -28847,7 +28857,7 @@ var MCQ_BANK_D = [
     "Stem": "Custom job: direct materials $25,000; direct labor 800 hrs @ $30 ($24,000); overhead applied 800 hrs @ $20 ($16,000) — job cost $65,000. Actual shop overhead $18,000 (applied $16,000 → $2,000 underapplied). Job sells for $85,000. What are job COGS, gross profit, and the underapplied treatment?",
     "Choices": {
       "A": "Job cost $65,000; $2,000 underapplied closed to COGS; COGS $67,000; gross profit $18,000",
-      "B": "Gross profit $20,000 — underapplied overhead is a period variance, never job cost",
+      "B": "Gross profit $20,000 — underapplied overhead is a period variance, rarely job cost",
       "C": "Prorate the $2,000 across WIP, FG, and COGS — all underapplied amounts must be prorated",
       "D": "Apply $18,000 actual overhead to the job — actual costing replaces estimates at sale"
     },
@@ -28954,7 +28964,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Costs $120,000; completed good units 9,000; normal spoilage 600 (end-inspection, full EU); abnormal spoilage 400 (end, full EU). Under weighted average, what are cost per EU, abnormal loss, and good-unit cost?",
     "Choices": {
-      "A": "$12.00/EU with abnormal absorbed — spoilage never separates",
+      "A": "$12.00/EU with abnormal absorbed — spoilage rarely separates",
       "B": "$13.33/EU — abnormal excluded from denominator inflates good-unit cost",
       "C": "$12.00/EU; abnormal loss $4,800; good-unit cost $12.80 (normal absorbed by good output)",
       "D": "$12.50/EU — denominator excludes abnormal (9,600 EU)"
@@ -29117,7 +29127,7 @@ var MCQ_BANK_D = [
     "Stem": "S1 $60,000 (25% to S2, 45% to P1, 30% to P2); S2 $40,000 (10% to S1, 50% to P1, 40% to P2). Which step-down order is correct, what does it assign to P1, and how far is it from the S2-first alternative?",
     "Choices": {
       "A": "S2 first — smaller departments allocate first by convention",
-      "B": "Order never matters — step-down is order-invariant by construction",
+      "B": "Order rarely matters — step-down is order-invariant by construction",
       "C": "Direct-method totals ($58,222 P1) — cross-flows net out in practice",
       "D": "S1 first (25% vs 10% cross-service); P1 $57,555.56 versus $58,400 S2-first — order shifts $844.44"
     },
@@ -29280,7 +29290,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "Make — $600,000 make-cost less $60,000 lease opportunity = $540,000 vs $560,000 buy; make wins by $20,000",
       "B": "Buy — $560,000 beats $750,000 of total make cost including unavoidable fixed",
-      "C": "Buy — outsourcing always wins with a lower headline price",
+      "C": "Buy — outsourcing typically wins with a lower headline price",
       "D": "Make by $80,000 — the lease opportunity adds to make's advantage"
     },
     "CorrectChoice": "A",
@@ -29656,7 +29666,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Current: $300,000 salaries + 5% commission. Proposal: $250,000 salaries + 8% commission. Forecast sales $2,200,000. Which structure costs less at forecast, and where is the crossover?",
     "Choices": {
-      "A": "Switch — higher rates always motivate more sales than salaries",
+      "A": "Switch — higher rates typically motivate more sales than salaries",
       "B": "Keep current — crossover at $1,666,667; forecast $2,200,000 favors current by $16,000",
       "C": "Indifferent — structures converge at all volumes above $1M",
       "D": "Cut salaries only — keep 5% and take $250,000 salaries unilaterally"
@@ -29764,7 +29774,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Joint cost $100,000; main product sales $500,000; by-product NRV $15,000 (sales $20,000 less $5,000 disposal). Compare deducting NRV from COGS (Method 1) versus recognizing other income (Method 2). How do profit and margins compare?",
     "Choices": {
-      "A": "Method 1 is more profitable — lower COGS always wins",
+      "A": "Method 1 is more profitable — lower COGS typically wins",
       "B": "Method 2 is more profitable — other income adds without cost",
       "C": "Profit identical ($415,000); presentation differs (Method 1 margin 83% vs Method 2 margin 80% + $15,000 other income) — choose by policy consistency and comparability needs",
       "D": "By-product at gross $20,000 — disposal is a period cost in both methods"
@@ -29818,7 +29828,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Demand scenarios: 8,000 units (60%) or 12,000 units (40%). Option Fixed: FC $350,000 + VC $12. Option Variable: FC $150,000 + VC $32. The CFO asks for a defended recommendation weighing expected cost against flexibility value in the low state. Recommend a structure.",
     "Choices": {
-      "A": "Fixed — lower variable cost always wins across volumes",
+      "A": "Fixed — lower variable cost typically wins across volumes",
       "B": "Variable — expected cost $457,200 vs $465,200 fixed, plus flexibility option value in the low state",
       "C": "Fixed — upside capture at 12,000 units dominates the decision",
       "D": "Variable only for the low state — switch structures by scenario"
@@ -29873,7 +29883,7 @@ var MCQ_BANK_D = [
     "Stem": "Analysis shows plantwide costing undercosts the complex product line by ~$210/unit on 1,000 units/year (≈$210,000 annual margin distortion), driving underpriced bids. A full ABC implementation costs $120,000 (systems + training + first-year maintenance). Finance calls ABC 'expensive overhead analysis.' Should the company adopt?",
     "Choices": {
       "A": "Adopt — $210,000/year of decision-error exposure versus $120,000 implementation; payback under 7 months with recurring annual benefit",
-      "B": "Reject — $120,000 of analysis overhead can never justify itself",
+      "B": "Reject — $120,000 of analysis overhead can rarely justify itself",
       "C": "Partial ABC (setups only) — half the system at half the cost captures the insight",
       "D": "Delay 3 years — revisit when distortion compounds further"
     },
@@ -29983,7 +29993,7 @@ var MCQ_BANK_D = [
       "A": "Penetration on $750,000 gross CM — capacity constraints sort themselves out",
       "B": "Skim on 58% margin rate ($35/$60) — margin percentage is the strategy metric",
       "C": "Skim — penetration nets $700,000 after $50,000 overtime, tying skim while straining capacity; skim preserves pricing power and execution headroom",
-      "D": "Delay pricing until capacity expands — never price into constraints"
+      "D": "Delay pricing until capacity expands — rarely price into constraints"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Penetration net = $750,000 − $50,000 overtime = $700,000. Skim = 20,000 × $35 = $700,000. Tied on economics — broken by strategy: skim preserves future pricing power (prices can fall later; penetration prices cannot easily rise), avoids 20,000 hours of overtime strain (quality, fatigue, maintenance deferral), and fits demonstrated capacity. Gross-CM penetration (option A, $750,000) ignores the $50,000 capacity cost of its own volume. Margin-rate reasoning (option B, 58% vs 30%) picks metrics over dollars — $700,000 ties either way, and percentages never paid fixed costs. Delay (option D) surrenders both $700,000 alternatives to dodge a decision the numbers resolve today. Business interpretation: ties break on strategy and execution risk, never on margin percentages — price where the capacity is, keep the power to move later. Common trap: choosing penetration on gross CM while the constraint bill arrives separately.",
@@ -30034,7 +30044,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Extra demand needs 5,000 MH/year beyond capacity. Overtime: $12 premium × 5,000 = $60,000/year plus $10,000 defect uptick = $70,000/year. Machine: $180,000, 8-year life, +8,000 MH capacity, $5,000/year operating cost. Demand-sustain confidence 70%. Buy the machine or run overtime?",
     "Choices": {
-      "A": "Overtime forever — capital commitment always loses to flexibility",
+      "A": "Overtime forever — capital commitment typically loses to flexibility",
       "B": "Buy — $42,500/year savings, 4.2-year payback, +$58,000 EV at 70% confidence",
       "C": "Buy regardless of confidence — payback math needs no probability",
       "D": "Cut output to capacity — demand beyond capacity is not real demand"
@@ -30251,9 +30261,9 @@ var MCQ_BANK_D = [
     "Stem": "Cost of quality: prevention $0, appraisal $30,000, internal failure (scrap) $120,000, external failure (warranty) $80,000 — total $230,000. Proposed program: +$80,000 prevention (training, poka-yoke) plus +$20,000 appraisal, projecting failure down to $60,000 total. Should the company invest?",
     "Choices": {
       "A": "Reject — any spending increase is unjustified in cost management",
-      "B": "Invest without limit — quality spending always pays",
+      "B": "Invest without limit — quality spending typically pays",
       "C": "Invest — $140,000 failure reduction versus $100,000 program cost = +$40,000 net; cap appraisal at $20,000 with sunset review",
-      "D": "Prevention only, cut all appraisal to zero — inspection never adds value"
+      "D": "Prevention only, cut all appraisal to zero — inspection rarely adds value"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Program cost = $80,000 prevention + $20,000 appraisal = $100,000. Failure reduction = $200,000 − $60,000 = $140,000. Net = $140,000 − $100,000 = +$40,000 — invest. The appraisal cap matters: appraisal verifies prevention worked ($20,000 of measurement on $80,000 of intervention is proportionate), but uncapped appraisal metastasizes into inspection bureaucracy — hence the sunset review (retire appraisal as failure rates stabilize). Reject-any-spending (option A) protects a $200,000 failure stream to save $100,000. Unlimited investment (option B) funds quality spending past its +$40,000 net into unmeasured territory. Zero-appraisal (option D) removes the verification proving prevention worked — unmeasured prevention is faith, and faith-based quality programs get cut first. Business interpretation: appraise quality investments on failure reduction net of program cost, with appraisal sized to verify and sunset to retire. Common trap: treating all quality spending as equally virtuous (or vicious).",

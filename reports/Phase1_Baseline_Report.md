@@ -36,7 +36,7 @@
 
 | Level | Count | % of Total | Target % | Status |
 |-------|------:|-----------:|---------:|--------|
-| Remember        |    97 |   2.8% |     5% | ✓ On track |\n| Understand      |   986 |  28.2% |    15% | ⚠ Off target |\n| Apply           |  1241 |  35.5% |    40% | ✓ On track |\n| Analyze         |   717 |  20.5% |    25% | ✓ On track |\n| Evaluate        |   454 |  13.0% |    15% | ✓ On track |\n| Unassigned      |     0 |   0.0% |     0% | ⚠ Needs assignment |
+| Remember        |    97 |   2.8% |     5% | ✓ On track |\n| Understand      |   986 |  28.2% |    15% | ⚠ Off target |\n| Apply           |  1242 |  35.5% |    40% | ✓ On track |\n| Analyze         |   716 |  20.5% |    25% | ✓ On track |\n| Evaluate        |   454 |  13.0% |    15% | ✓ On track |\n| Unassigned      |     0 |   0.0% |     0% | ⚠ Needs assignment |
 
 ---
 
@@ -44,7 +44,7 @@
 
 | Difficulty | Count | % of Total |
 |-----------|------:|-----------:|
-| Moderate             |  1241 |  35.5% |\n| Difficult            |   958 |  27.4% |\n| Easy                 |   544 |  15.6% |\n| Moderate-Easy        |   535 |  15.3% |\n| Very Difficult       |   217 |   6.2% |
+| Moderate             |  1241 |  35.5% |\n| Difficult            |   962 |  27.5% |\n| Easy                 |   539 |  15.4% |\n| Moderate-Easy        |   535 |  15.3% |\n| Very Difficult       |   218 |   6.2% |
 
 ---
 

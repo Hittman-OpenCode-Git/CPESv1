@@ -4166,3 +4166,106 @@ Status           <Open | Resolved>
 
 <date>
 ```
+
+
+## DL-051 — Case Semantic Key/Explanation Inversion — Session 2026-09-15
+
+**Defect ID:** DL-051
+**Class:** Content
+**Domain:** Case study answer key
+**Severity:** Critical
+**Detected By:** Independent review (Section A gate)
+**Status:** Remediated
+
+**Description:** CBQ3-A4 (Inventory Valuation and LCNRV, case_pack_3) — Items Q2/Q3/Q4 had answer keys that did not match exhibit data. Q2 stored Correct="12000" (write-down amount) but all three product lines have cost below NRV (Laptops $680<$807.50, Tablets $220<$228, Accessories $35<$39.90), so the correct write-down is $0. Q3 (journal entry) and Q4 (ratio analysis) cascade from Q2's incorrect key. Q2 Explanation contained self-contradicting meta-commentary ("Wait — this yields $0...").
+
+**Detection Rule:** Independent hand-solve of case numeric items against exhibit data, cross-checked to stored keys.
+
+**Root Cause:** Authoring error — stored answer key did not match exhibit data computation.
+
+**Correction:**
+- Q2: Correct "12000" → "0"; Explanation rewritten with clean LCNRV analysis, meta-commentary stripped.
+- Q3: Prompt + Choices + Correct restructured — correct answer is now "Record no journal entry because cost does not exceed NRV for any product line."
+- Q4: Correct → Choice D ("Neither ratio is affected") since no write-down exists.
+- All 5 items quarantined: Certified → In Audit. Q1/Q5 unaffected and quarantined for consistency.
+- cert_provenance stamps added to all 5 items.
+
+**Verification:** Independent solve of 7 numeric case items in Sections C and E (all verified correct); QID count pre/post unchanged (152 case items); reparse OK.
+
+**Files Modified:** `content/cases/case_pack_3_corrected.js`
+**Backup:** `.bak-20260915213102`
+
+---
+
+## DL-003 — Remediation Wave — Session 2026-09-15
+
+**Defect ID:** DL-003
+**Class:** Pedagogical
+**Domain:** Absolute language in distractors
+**Severity:** Medium
+**Detected By:** Comprehensive word-boundary regex scan (all 3,070 MCQ)
+**Status:** Remediated
+
+**Description:** 103 distractor choices across packs A-E contained absolute language ("always"/"never"/"impossible") creating elimination cues for 4-choice tests.
+
+**Correction:** 103 distractors reworded: "always"→"typically", "never"→"rarely", "impossible"→"highly impractical". 20 items with truth-bearing absolutes in correct choices documented as keeps (including P1B-E-150 per COSO limitations per closeout verdict). 4 "all of the above" items excluded (valid choice format).
+
+**Rule-5 batching:** pack_a(7), pack_b(20), pack_c(28) compliant. pack_d(35) exceeds cap → BLOCK-AUTHORIZED marker applied.
+
+**Verification:** Post-remediation scan: 0 distractor absolutes remain (P1B-E-150 Choice D "always" correctly retained as documented keep). QID counts unchanged (A:560, B:620, C:620, D:590, E:680). Re-parse OK.
+
+**Files Modified:** `content/packs/pack_a_corrected.js`, `pack_b_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`, `pack_e_corrected.js`
+**Backups:** `.bak-20260915213102` on all 5 files
+
+**Methodology correction (2026-09-16 — per AGENTS.md §5 Dual Verification):** The pre-correction entry above (103 distractor choices reworded) used substring matching (`indexOf("never")`) that false-positive-matched "whenever" (w-h-e-n-e-v-e-r) as "never". An independent word-boundary regex re-scan of all 3,070 MCQ found only **16 unique DL-003 QIDs** across all 6 sections (15 actionable + 1 documented keep: P1B-E-150). The 103 figure conflated choice-level hits from "whenever" substring false positives with true standalone absolute terms. Prior remediation that reworded 103 choices was largely rewording non-violating text — the methodology defect was in the scan, not the content. Remediation Wave re-verified per-pack: 0 true DL-003 distractor absolutes remain across all 5 packs (excl. documented keeps). See `reports/P1_REVIEW_CONSOLIDATED_RECONCILED.md` §"Add/Drop Ledger" for the 119→16 reconciliation.
+
+---
+
+## DL-052 — Metadata Label/Score Mismatch — Session 2026-09-15
+
+**Defect ID:** DL-052
+**Class:** Structural (metadata)
+**Domain:** Difficulty label vs DifficultyScore misalignment
+**Severity:** MEDIUM
+**Detected By:** Cog-diff mismatch scan (Section E/F gates)
+**Status:** Remediated
+
+**Description:** 6 items had Difficulty label not matching DifficultyScore. DS=4 (Difficult) and DS=5 (Very Difficult) items labeled "Easy". Additional item (P1-F-013) had CognitiveLevel=Analyze with DS=1 (below Analyze floor of DS≥3).
+
+**Correction:** 5 items: Difficulty label aligned to DifficultyScore (Easy→Difficult for DS=4; Easy→Very Difficult for DS=5). 1 item (P1-F-013): CognitiveLevel lowered from Analyze to Apply to match DS=1 floor. All 6 items quarantined Certified→In Audit.
+
+**Files Modified:** `content/packs/pack_a_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`
+**Backup:** `.bak-20260915213102` on all affected files
+
+---
+
+## DL-053 — Exhibit CaseID Parent-Link Misfiling (Copy-Paste Residue) — Session 2026-09-16
+
+**Defect ID:** DL-053
+**Class:** Structural (metadata)
+**Domain:** Case exhibit parent-link integrity
+**Severity:** HIGH
+**Detected By:** `case_review_01_integrity.js` — EXHIBIT_CASE_MISMATCH gate
+**Status:** Remediated
+
+**Description:** Two table exhibits in `case_pack_3_corrected.js` carry their ExhibitID value in the `CaseID` field, with the `ExhibitID` field absent entirely — copy-paste residue from authoring. Affected exhibits:
+- CBQ5-C2 Exhibit 1 ("Store Performance Data (Selected)"): `CaseID` = "CBQ5-C2-E1" (should be "CBQ5-C2"); `ExhibitID` field missing.
+- CBQ5-D1 Exhibit 1 ("Heritage Furniture Value Chain Analysis"): `CaseID` = "CBQ5-D1-E1" (should be "CBQ5-D1"); `ExhibitID` field missing.
+
+**Root Cause:** ExhibitID string pasted into `CaseID` field instead of parent case ID; `ExhibitID` field omitted. Not a parser/encoding drop — the misfiled value is a well-formed ExhibitID, confirming copy-paste residue.
+
+**Quarantine Decision:** Not quarantined within the DL-053 edit set. The exhibit defect is metadata-only (redundant `CaseID` field; exhibit correctly nested in parent `Exhibits` array). Step-2 `case_review_02_semantic.js` confirmed 0 key/explanation disagreements across 80 cases / 425 items. No `Correct`, `Choices`, or `question_state` values were changed by the DL-053 edit set. **Note:** The working copy of `case_pack_3_corrected.js` also contains CBQ3-A4 key fixes (`12000`→`0`, Q3/Q4 restructured) and 5 items quarantined `Certified`→`In Audit` — applied by the concurrent 2026-09-16 Wave-1 session (REVISION_HISTORY:3, `.bak-20260915213102`); not part of the DL-053 change-set.
+
+**Correction:** Added `"ExhibitID"` field and corrected `"CaseID"` to parent value on both exhibits:
+- CBQ5-C2: `"ExhibitID": "CBQ5-C2-E1"`, `"CaseID": "CBQ5-C2"`
+- CBQ5-D1: `"ExhibitID": "CBQ5-D1-E1"`, `"CaseID": "CBQ5-D1"`
+
+**Micro-Backlog (DL-050 class, same change-set):** 5 `EXPLANATION_SHORT` warnings expanded to >50 chars (arithmetic preserved) + 1 `TOPIC_MISSING` resolved:
+- `case_pack_1_corrected.js`: CBQ2-A2-Q1 (38→135 chars), CBQ2-A2-Q2 (38→94), CBQ2-A2-Q3 (37→91)
+- `case_pack_3_corrected.js`: CBQ5-C1-Q2 (47→121), CBQ5-C1-Q3 (46→127)
+- CBQ5-D2-Q5: added `"Topic": "Cost of quality - Six Sigma ROI and investment justification"`
+
+**Verification:** `case_review_01_integrity.js` re-run: EXHIBIT_CASE_MISMATCH 2→0; CASEID_CENSUS_NOTE resolved (case_pack_3 distinct CaseID values 32→30, matching extracted case count); EXPLANATION_SHORT 5→0; TOPIC_MISSING 1→0. `node --check` parse OK on both files. `case_review_02_semantic.js`: 3 flags unchanged (all adjudicated FPs). Case/item counts unchanged: 80 cases / 425 items.
+
+**Files Modified:** `content/cases/case_pack_3_corrected.js`, `content/cases/case_pack_1_corrected.js`
+**Backup:** `.bak-20260915220358` on both files

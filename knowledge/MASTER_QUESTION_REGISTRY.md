@@ -2,15 +2,15 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-09-13 00:12:11
-  Source hash: 4dcda7b7
+  Last generated: 2026-09-16 17:08:06
+  Source hash: 1e2df73a
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-09-13 00:12:11
-**Source Hash:** `4dcda7b7`
+**Generated:** 2026-09-16 17:08:06
+**Source Hash:** `1e2df73a`
 **Total Questions:** 3495
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
@@ -1588,7 +1588,7 @@
 | P1-EC-008 | I | E.008 coso internal control framework | Easy | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-EC-009 | I | E.009 COSO Principle 15 -- SOC report evaluation | Easy | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-EC-010 | I | E.010 coso internal control framework | Moderate | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-EC-011 | I | E.011 COSO Principle 7 — risk severity — inherent  | Easy | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-EC-011 | I | E.011 COSO Principle 7 — risk severity — inherent  | Difficult | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-EC-012 | I | E.012 COSO Principle 3 — organizational structure  | Difficult | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-EC-013 | I | E.013 COSO Principle 17 — monitoring — continuous  | Difficult | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-EC-014 | I | E.014 fraud triangle elements | Easy | P1-E Internal controls | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1668,7 +1668,7 @@
 | P1-FC-013 | T | F.013 ERP controls — implementation risk and scope | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-014 | T | F.014 digital transformation — legacy system decom | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-015 | T | F.015 robotic process automation use case | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-016 | T | F.016 cloud computing service models | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-016 | T | F.016 cloud computing service models | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-017 | T | F.017 system integration — API security governance | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-018 | T | F.018 cybersecurity governance — incident response | Very Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-019 | T | F.019 digital transformation governance — technolo | Very Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1702,7 +1702,7 @@
 | P1-FC-047 | T | F.047 data quality — analyzing completeness vs. ac | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-048 | T | F.048 data quality dimensions accuracy completenes | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-049 | T | F.049 data quality — analyzing timeliness degradat | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-050 | T | F.050 data quality dimensions accuracy completenes | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-050 | T | F.050 data quality dimensions accuracy completenes | Very Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-051 | T | F.051 AI — evaluating supervised vs. unsupervised  | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-052 | T | F.052 AI — evaluating algorithmic bias risk in cre | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-053 | T | F.053 artificial intelligence machine learning | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -2199,7 +2199,7 @@
 | P1-DD-074 | C | D.074 abnormal spoilage cost treatment | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DD-075 | C | D.075 abnormal spoilage cost treatment | Moderate-Easy | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-001 | I | E.001 three lines of defense model | Easy | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-ED-002 | I | E.002 three lines of defense model | Easy | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-ED-002 | I | E.002 three lines of defense model | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-003 | I | E.003 Three Lines of Defense — evaluating fourth-l | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-004 | I | E.004 COSO Principle 5 — accountability — evaluati | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-005 | I | E.005 three lines of defense dual reporting | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -2282,7 +2282,7 @@
 | P1-FD-007 | T | F.007 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-008 | T | F.008 BI — evaluating self-service BI governance m | Very Difficult | P1-F.1 Information Systems | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-009 | T | F.009 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-010 | T | F.010 business intelligence self service reporting | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-010 | T | F.010 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-011 | T | F.011 cybersecurity — data encryption strategy eva | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-012 | T | F.012 encryption — evaluating encryption at rest v | Difficult | P1-F.3 Data Governance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-013 | T | F.013 data encryption at rest and in transit | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -3462,7 +3462,7 @@
 | CBQ5-D2-Q2 | C | Cost of quality - prevention, appraisal, internal  | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-D2-Q3 | C | Six Sigma financial justification - net savings ca | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-D2-Q4 | C | Cost of quality - prevention vs. failure cost trad | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ5-D2-Q5 | C | Six Sigma and Quality Control | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q5 | C | Cost of quality - Six Sigma ROI and investment jus | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-D3-Q1 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-D3-Q2 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 | CBQ5-D3-Q3 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
@@ -5805,7 +5805,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-086 Choice B: "No gain — exchanges never recognize gains until cash is received" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-086 Choice B: "No gain — exchanges rarely recognize gains until cash is received" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -5829,7 +5829,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-089 Choice D: "Disclose all four without accruing — litigation outcomes are never estimable enough" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-089 Choice D: "Disclose all four without accruing — litigation outcomes are rarely estimable enough" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -5841,8 +5841,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-091 Choice A: "$0 allowance — NOLs are statutory rights, always fully realizable" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-091 Choice C: "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-091 Choice A: "$0 allowance — NOLs are statutory rights, typically fully realizable" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -5866,7 +5866,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-094 Choice B: "Disclose both without adjusting — subsequent events never adjust issued-pending statements" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-094 Choice B: "Disclose both without adjusting — subsequent events rarely adjust issued-pending statements" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -5890,7 +5890,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-097 Choice B: "LIFO always — $500,000 of tax savings dominates any reporting consideration" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-097 Choice B: "LIFO typically — $500,000 of tax savings dominates any reporting consideration" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -5902,8 +5902,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-098 Choice B: "Five-year finance lease — leasing always preserves covenants versus buying" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-098 Choice D: "Twelve-month renewable leases (short-term exempt) — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-098 Choice B: "Five-year finance lease — leasing typically preserves covenants versus buying" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -5927,8 +5927,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-101 Choice B: "Do not refund — call premiums always destroy refunding economics" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1-A-101 Choice C: "Refund only if rates fall below 3% — 5% is insufficient improvement" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1-A-101 Choice B: "Do not refund — call premiums typically destroy refunding economics" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8229,7 +8229,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-208 Choice D: "Fixed spending $0 — fixed costs never vary, so the $2,000 is volume" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-B-208 Choice D: "Fixed spending $0 — fixed costs rarely vary, so the $2,000 is volume" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8265,9 +8265,9 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (3):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice A: "Never — kaizen shaves pennies, not the $10 gap" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% never compounds fast enough" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% rarely compounds fast enough" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1B-B-211 Choice A: "rarely — kaizen shaves pennies, not the $10 gap" — contains vague qualifier matching /\brarely\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-B-211 Choice D: "Only with 10% annual reduction — 5% rarely compounds fast enough" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8341,7 +8341,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-B-222 Choice C: "$2,100,000 — statistical models always dominate judgmental pipelines" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-B-222 Choice C: "$2,100,000 — statistical models typically dominate judgmental pipelines" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8402,8 +8402,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-201 Choice C: "Tie — defect differentials always offset price differentials exactly" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-201 Choice D: "Y wins at $82,609 versus X at $88,000 — X must buy 11,000 lbs at full price" — contains absolute language "must"
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-201 Choice C: "Tie — defect differentials typically offset price differentials exactly" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8415,7 +8415,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-203 Choice D: "Mix nets $0 — composition shifts always self-cancel" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-203 Choice D: "Mix nets $0 — composition shifts typically self-cancel" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8427,8 +8427,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-207 Choice B: "No target — cross-company comparisons are never valid across size classes" — contains absolute language "never"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-207 Choice D: "$11.70 — the attainable $0.80 efficiency portion only ($12.50 − $0.80); the $1.90 scale advantage is out of reach" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-207 Choice B: "No target — cross-company comparisons are rarely valid across size classes" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8452,7 +8452,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-C-209 Choice B: "Probe — large absolute dollars always justify investigation regardless of limits" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-C-209 Choice B: "Probe — large absolute dollars typically justify investigation regardless of limits" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8489,7 +8489,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-152 Choice A: "With intercept ($0.67k + 4.67%) — intercepts always improve fit and belong in budgets" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-D-152 Choice A: "With intercept ($0.67k + 4.67%) — intercepts typically improve fit and belong in budgets" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8501,8 +8501,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (3):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-153 Choice C: "Job $120,000; $13,000 period loss — rework never attaches to jobs" — contains absolute language "never"
 - [PsychometricValidator] [AmbiguityValidator] P1B-D-153 Choice A: "Job $128,000 ($120,000 + $8,000 normal); $5,000 abnormal period loss — normal rework attaches, abnormal expenses" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-D-153 Choice C: "Job $120,000; $13,000 period loss — rework rarely attaches to jobs" — contains vague qualifier matching /\brarely\b/
 - [PsychometricValidator] [AmbiguityValidator] P1B-D-153 Choice D: "Job $125,000 — abnormal attaches, normal expenses (rework symmetry)" — contains vague qualifier matching /\bnormal(?:ly)?\b/
 
 ---
@@ -8516,7 +8516,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-154 Choice B: "TI 7,000 EU ($10.00); DM 7,800 ($5.77); conv 8,600 ($6.40) — current-period work only" — contains absolute language "only/exclusively"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-D-154 Choice D: "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in always uses average method" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-D-154 Choice D: "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in typically uses average method" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8566,7 +8566,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-E-154 Choice A: "Low risk — single indicators never suffice, and $12,000 is immaterial" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-E-154 Choice A: "Low risk — single indicators rarely suffice, and $12,000 is immaterial" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8614,7 +8614,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-151 Choice D: "$100,000 immediate expense — issuance friction never benefits future periods" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-151 Choice D: "$100,000 immediate expense — issuance friction rarely benefits future periods" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8651,8 +8651,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-157 Choice A: "$300,000 gain in OCI — curtailments never touch net income until settlement" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-157 Choice D: "$80,000 loss — prior-service write-offs always dominate curtailment economics" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-157 Choice A: "$300,000 gain in OCI — curtailments rarely touch net income until settlement" — contains vague qualifier matching /\brarely\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-157 Choice D: "$80,000 loss — prior-service write-offs typically dominate curtailment economics" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8664,9 +8664,9 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (3):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice A: "No settlement — lump sums under $500,000 never trigger regardless of cost ratios" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, never deferred losses" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, rarely deferred losses" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-158 Choice A: "No settlement — lump sums under $500,000 rarely trigger regardless of cost ratios" — contains vague qualifier matching /\brarely\b/
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-158 Choice D: "Settlement gain $20,000 only — settlements recognize gains, rarely deferred losses" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8704,8 +8704,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-161 Choice C: "Defer the $20,000 of unamortized issuance costs — write-offs never survive modifications" — contains absolute language "never"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-161 Choice D: "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying plus unamortized costs) — non-substantial, non-troubled modifications adjust yield, never recognize gains" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-161 Choice C: "Defer the $20,000 of unamortized issuance costs — write-offs rarely survive modifications" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8718,7 +8718,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-162 Choice A: "No entry — transfers between categories are presentational only" — contains absolute language "only/exclusively"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-162 Choice C: "Debit investment $30,000, credit net income $30,000 — fair-value changes always hit earnings on transfer" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-162 Choice C: "Debit investment $30,000, credit net income $30,000 — fair-value changes typically hit earnings on transfer" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -8730,7 +8730,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-164 Choice B: "Nothing — OCI belongs to the investee's equity, never the investor's statements" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-164 Choice B: "Nothing — OCI belongs to the investee's equity, rarely the investor's statements" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -8779,7 +8779,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1B-A-179 Choice B: "Test Store 7 jointly with the region — individual stores never qualify as groups" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1B-A-179 Choice B: "Test Store 7 jointly with the region — individual stores rarely qualify as groups" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -9189,7 +9189,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-A-070 Choice A: "Never" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-A-070 Choice A: "rarely" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -9214,7 +9214,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-A-078 Choice A: "Never" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-A-078 Choice A: "rarely" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -10982,7 +10982,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-C-092 Choice A: "Only if profit also exceeds threshold" — contains absolute language "only/exclusively"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-C-092 Choice B: "Never" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-C-092 Choice B: "rarely" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11097,7 +11097,7 @@ Questions that triggered one or more validator errors or warnings:
 
 **Validator Warnings (2):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-101 Choice A: "Q4 $600,000 (30% of $2,000,000); revised shares sum to 96% before Q4 — indices must sum to 1.00, so Q4 takes the 34% residual ($748,000 on $2.2M), not a stale 30%" — contains absolute language "must"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-101 Choice C: "Q4 $600,000 — annual revisions never change quarterly shares" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-101 Choice C: "Q4 $600,000 — annual revisions rarely change quarterly shares" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11109,7 +11109,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-102 Choice D: "30,500 — defects are a production variance, never a budget input" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-102 Choice D: "30,500 — defects are a production variance, rarely a budget input" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11121,7 +11121,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-103 Choice D: "Order 9,500 and renegotiate — tiers are always negotiable, so analysis is moot" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-103 Choice D: "Order 9,500 and renegotiate — tiers are typically negotiable, so analysis is moot" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11133,8 +11133,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-105 Choice B: "Regression on all four — more data always beats selective data" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-105 Choice D: "Exclude the hurricane point; VC $6.00 with no fixed component — intercepts are unreliable, so report variable only" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-105 Choice B: "Regression on all four — more data typically beats selective data" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11146,8 +11146,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-106 Choice A: "Keep — discounts always accelerate cash worth more than their cost" — contains absolute language "always"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-106 Choice D: "Keep — DSO deterioration always exceeds discount savings" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-106 Choice A: "Keep — discounts typically accelerate cash worth more than their cost" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-106 Choice D: "Keep — DSO deterioration typically exceeds discount savings" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11159,7 +11159,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-107 Choice A: "The 6% loan — lower stated rate always wins" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-107 Choice A: "The 6% loan — lower stated rate typically wins" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11171,7 +11171,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-108 Choice D: "Fixed spending $0 — fixed costs never vary, so the $3,000 is volume" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-108 Choice D: "Fixed spending $0 — fixed costs rarely vary, so the $3,000 is volume" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11233,7 +11233,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-112 Choice B: "Hold $30 — one period never justifies revision" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-112 Choice B: "Hold $30 — one period rarely justifies revision" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11257,8 +11257,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-116 Choice A: "Voluntary — autonomy always beats mandated internal trade" — contains absolute language "always"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-116 Choice B: "No policy — internal demand is soft information, never plannable" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-116 Choice A: "Voluntary — autonomy typically beats mandated internal trade" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-116 Choice B: "No policy — internal demand is soft information, rarely plannable" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11270,7 +11270,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-122 Choice C: "Static annual — process costs always exceed their benefits at these scales" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-122 Choice C: "Static annual — process costs typically exceed their benefits at these scales" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11282,7 +11282,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-125 Choice A: "Ignore — quantitatively immaterial amounts never warrant action" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-125 Choice A: "Ignore — quantitatively immaterial amounts rarely warrant action" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11294,9 +11294,9 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (3):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice B: "Reject — $50,000 of bank fees always exceeds float gains at these volumes" — contains absolute language "always"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "never"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day rarely justifies lockbox fixed costs" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-126 Choice B: "Reject — $50,000 of bank fees typically exceeds float gains at these volumes" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-126 Choice C: "Adopt only with two-day acceleration — one day rarely justifies lockbox fixed costs" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11308,7 +11308,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-127 Choice A: "$12,000 — fewer false alarms always wins regardless of miss costs" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-127 Choice A: "$12,000 — fewer false alarms typically wins regardless of miss costs" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11320,7 +11320,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-128 Choice A: "Monthly — lower process cost always wins" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-128 Choice A: "Monthly — lower process cost typically wins" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11344,8 +11344,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (2):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-130 Choice B: "Judgment alone — field knowledge always dominates models" — contains absolute language "always"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-B-130 Choice C: "Statistical alone — MSE 100 beats 150, so judgment adds only noise" — contains absolute language "only/exclusively"
+- [PsychometricValidator] [AmbiguityValidator] P1E-B-130 Choice B: "Judgment alone — field knowledge typically dominates models" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11357,7 +11357,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-103 Choice B: "Detective — cheaper sticker price always wins under budget constraint" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-103 Choice B: "Detective — cheaper sticker price typically wins under budget constraint" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11369,8 +11369,8 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (4):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-105 Choice A: "Oldest first mechanically — age always outranks amount" — contains absolute language "always"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-105 Choice B: "Largest first mechanically — amount always outranks age" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-105 Choice A: "Oldest first mechanically — age typically outranks amount" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-105 Choice B: "Largest first mechanically — amount typically outranks age" — contains vague qualifier matching /\btypical(?:ly)?\b/
 - [PsychometricValidator] [AmbiguityValidator] P1E-E-105: Choices A and B have high word overlap (83%) — may fail to discriminate
 - [PsychometricValidator] [DistractorSimilarityValidator] P1E-E-105: Choices A and B (distractor-distractor) share high similarity (75%)
 
@@ -11432,7 +11432,7 @@ Questions that triggered one or more validator errors or warnings:
 **CAQS:** Not scored
 
 **Validator Warnings (1):**
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-116 Choice D: "Wait for the financial trail — preliminary evidence never justifies action" — contains absolute language "never"
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-116 Choice D: "Wait for the financial trail — preliminary evidence rarely justifies action" — contains vague qualifier matching /\brarely\b/
 
 ---
 
@@ -11470,7 +11470,7 @@ Questions that triggered one or more validator errors or warnings:
 **Validator Warnings (3):**
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "never"
 - [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice C: "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios" — contains absolute language "must"
-- [PsychometricValidator] [AbsoluteLanguageValidator] P1E-E-124 Choice D: "Double analytics to $140,000 — more technology always improves coverage proportionally" — contains absolute language "always"
+- [PsychometricValidator] [AmbiguityValidator] P1E-E-124 Choice D: "Double analytics to $140,000 — more technology typically improves coverage proportionally" — contains vague qualifier matching /\btypical(?:ly)?\b/
 
 ---
 
@@ -11502,22 +11502,22 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 5ms)
-- **Metadata Validator**: WARN (0 errors, 4 warnings, 863ms)
-- **Blueprint Validator**: WARN (0 errors, 70 warnings, 240ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 1 warnings, 2ms)
-- **Difficulty Validator**: WARN (0 errors, 39 warnings, 376ms)
-- **Reference Validator**: WARN (0 errors, 159 warnings, 217ms)
-- **Explanation Validator**: WARN (0 errors, 6 warnings, 642ms)
-- **Case Integrity Validator**: WARN (0 errors, 10 warnings, 42ms)
-- **Case Identity Validator**: PASS (0 errors, 0 warnings, 154ms)
-- **PsychometricValidator**: WARN (0 errors, 1896 warnings, 1773ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 4ms)
+- **Metadata Validator**: WARN (0 errors, 1 warnings, 180ms)
+- **Blueprint Validator**: WARN (0 errors, 73 warnings, 123ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 3376 warnings, 738ms)
+- **Difficulty Validator**: WARN (0 errors, 70 warnings, 144ms)
+- **Reference Validator**: WARN (0 errors, 128 warnings, 105ms)
+- **Explanation Validator**: WARN (0 errors, 6 warnings, 759ms)
+- **Case Integrity Validator**: WARN (0 errors, 12 warnings, 106ms)
+- **Case Identity Validator**: PASS (0 errors, 0 warnings, 37ms)
+- **PsychometricValidator**: WARN (0 errors, 6618 warnings, 6130ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-09-13 00:12:11
-  Source hash: 4dcda7b7
+  Registry regenerated on 2026-09-16 17:08:06
+  Source hash: 1e2df73a
   Questions: 3495
   To regenerate: node scripts/generate_registry.js
 -->

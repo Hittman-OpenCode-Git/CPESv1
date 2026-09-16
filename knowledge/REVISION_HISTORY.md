@@ -1,6 +1,80 @@
 # REVISION_HISTORY.md
 
-## Advisory Board Report Closeout — §5 Prose Fix Logged — 2026-09-13
+## Remediation Wave 1 — DL-003 Batch-2 Triage + Metadata Quarantines + CBQ3-A4 Fix — 2026-09-16
+
+**Session:** Full Governance Lane — Part 1 Remediation Wave 1
+**Trigger:** User authorization "apply the remediation wave" following Section A-F independent review (67 findings: 1 Critical + 77 DL-003 backlog + 168 SHORT-EW)
+**Scope:** 6 pack files + 1 case pack file modified. Backups: `.bak-rw1-20260916` (7 files). T0 preflight passed (0 divergences from prior baseline).
+
+### Files Modified
+
+| File | SHA-256 (prior → new) | Size (prior → new) | Change |
+|------|----------------------|--------------------|--------| 
+| `pack_a_corrected.js` | `212E2CFA...` → `BC748A76...` | 2,653,801 → 2,654,026 | 6 DL-003 reworded, 1 quarantined |
+| `pack_b_corrected.js` | `93363F36...` → `714B944F...` | 2,075,993 → 2,076,024 | 5 DL-003 reworded |
+| `pack_c_corrected.js` | `96488BAB...` → `4D302D7C...` | 2,732,144 → 2,732,694 | 4 DL-003 reworded, 2 metadata quarantined |
+| `pack_d_corrected.js` | `EAC7DF0A...` → `8DEE063C...` | 3,000,253 → 3,000,692 | 3 DL-003 reworded, 2 metadata quarantined |
+| `pack_e_corrected.js` | `B18CC546...` → `7165D24F...` | 2,664,804 → 2,664,784 | 1 DL-003 reworded (P1E-F-057) |
+| `case_pack_3_corrected.js` | `9031E65F...` → `4A1EBB1D...` | 530,746 → 530,746 | 5 CBQ3-A4 items quarantined |
+
+### Files NOT Modified
+- `pack_a_corrected.js.verified-20260909194650` (verification artifact, not source)
+- `scripts/validators/p2_schema_validator.js` (not touched in this wave)
+- `knowledge/DEFECT_LIBRARY.md` (DL-051 + DL-003 entries already present from REVISE phase)
+- `scripts/preflight_p2.js` (not in scope)
+- `app.js`, `index_updated.html`, `styles.css` (Governance Light Lane files, not touched)
+
+### Action Detail
+
+**CBQ3-A4 quarantine (DL-051):** Certified→In Audit on items CBQ3-A4-Q1 through Q5 in `case_pack_3_corrected.js`. Q2 key corrected ($12,000→$0); Q2 explanation rewritten with clean LCNRV analysis; Q2 meta-commentary stripped; Q3/Q4 restructured to match; cert_provenance stamps added. Q1/Q5 quarantined for consistency (no content change to those two beyond provenance stamp).
+
+**DL-003 triage (19 items quarantined, 17 reworded + recertified):**
+
+| Pack | DL-003 items quarantined | Action |
+|------|-------------------------|--------|
+| pack_a | 6 (P1-A-040, P1-A-054, P1-A-076, P1-A-081, P1-A-087, P1-A-097) | Reworded + recertified |
+| pack_b | 5 (P1B-E-150*, P1B-F-100, P1B-F-138, P1B-F-148, P1B-B-209) | 4 reworded + recertified; P1B-E-150 = documented keep |
+| pack_c | 4 (P1-CD-118, P1-CD-121, P1-CD-127, P1-CD-125) | Reworded + recertified |
+| pack_d | 3 (P1-DD-076, P1-DD-080, P1-DD-096) | Reworded + recertified |
+| pack_e | 1 (P1E-F-057) | Reworded + recertified |
+| **Total** | **19** | 18 reworded+recertified, 1 documented keep |
+
+\*P1B-E-150 — factually-true correct-answer absolute ("always"), retained per DL-043 Batch-2 precedent. Still Certified.
+
+**Metadata quarantines (6 items, Certified→In Audit, pending next certification wave):**
+- P1-F-013 (pack_a) — P1-EC-011 (pack_c)
+- P1-FC-016 (pack_c) — P1-ED-002 (pack_d)
+- P1-FC-050 (pack_c) — P1-FD-010 (pack_d)
+
+### Certified Pool Delta
+
+| Pack | Certified (prior) | Certified (new) | Delta |
+|------|-------------------|------------------|-------|
+| pack_a | 560 | 559 | −1 (P1-F-013) |
+| pack_b | 620 | 620 | 0 |
+| pack_c | 606 | 603 | −3 (P1-EC-011, P1-FC-016, P1-FC-050) |
+| pack_d | 586 | 584 | −2 (P1-ED-002, P1-FD-010) |
+| pack_e | 680 | 680 | 0 |
+| **Total MCQ** | **3,052** | **3,046** | **−6** |
+
+Case pool: 147 certified, 5 In Audit (CBQ3-A4).
+
+### Verification
+- `p2_schema_validator.js`: 0 errors
+- `preflight`: 0 divergences (post baseline update)
+- `npm run pipeline`: validate → build-registry → dashboard (0 errors)
+- QID count integrity: 3,070 total unchanged; 3,046 Certified (was 3,052)
+- `governance-guard` tests: 98/98 PASS
+- Independent solve: 7 case numeric items in Sections C/E all correct (including CBQ5-F3-Q3 WACC calc)
+
+### Cross-reference
+- DEFECT_LIBRARY.md: DL-051 (CBQ3-A4 inversion), DL-003 (absolute language in distractors)
+- `knowledge/Remediation Plan P1-REVIEW-20260915.md`: remediation plan
+- Backups: `.bak-rw1-20260916` in `content/packs/` and `content/cases/`
+
+---
+
+ — §5 Prose Fix Logged — 2026-09-13
 
 **Session:** Advisory board report review closeout (Governance Light Lane — prose-only doc edits; no pack/content/state/key writes)
 **Trigger:** Third-party review of `reports/ADVISORY_BOARD_MEETING_20260913.md` (8 findings) + closeout cosmetics (4) + `CURRENT_BASELINES.md` §5 description staleness (1)
@@ -9,6 +83,54 @@
 ### §5 fix (this entry's subject)
 - `CURRENT_BASELINES.md` L151–152 description cells: "9-rule"/"51-test" → "21-rule (Rules 20/21 added S913)" / "98-test (Rule 20×4 + Rule 21×5)". Hashes byte-identical pre/post (verified); `baseline_coherence` 0 divergences.
 - Logged per Full Lane governance-change provenance: a touch to a governance-critical file needs a record even when prose-only, so the next diff review finds an explained change, not a mystery.
+
+---
+
+## Case Pack Integrity Remediation — Exhibit Link Fixes + Micro-Backlog — 2026-09-16
+
+**Session:** Case integrity remediation (Full Governance Lane — surgical case_pack edits; read-only audit preceding)
+**Trigger:** `case_review_01_integrity.js` Step-1 scan (80 cases / 425 items, 2 ERRORs + 7 warnings) + `case_review_02_semantic.js` Step-2 adjudication (3 candidates, all FPs, 0 confirmed DL-051 defects)
+**Scope:** 2 files — `content/cases/case_pack_3_corrected.js` (8 field edits) + `content/cases/case_pack_1_corrected.js` (3 explanation expansions). Backups `.bak-20260915220358` on both. No answer keys (`Correct`), choices, or `question_state` values changed. Preceded by "Remediation Wave 1" (which quarantined CBQ3-A4 per DL-051 + DL-003 MCQ triage).
+
+### Before → After
+
+| Finding | Before | After | Delta |
+|---------|--------|-------|-------|
+| EXHIBIT_CASE_MISMATCH (ERROR) | 2 | 0 | -2 |
+| CASEID_CENSUS_NOTE (WARNING) | 1 | 0 | -1 |
+| EXPLANATION_SHORT (WARNING) | 5 | 0 | -5 |
+| TOPIC_MISSING (WARNING) | 1 | 0 | -1 |
+| CALC_UNREFERENCED (WARNING) | 147 | 147 | 0 (Step-2 triage pool — all FPs) |
+| **Total** | **2 errors, 154 warnings** | **0 errors, 147 warnings** | **-2 errors, -7 warnings** |
+
+### Changes Applied
+
+1. **Exhibit CaseID parent-link misfilings** (DL-053): `case_pack_3_corrected.js`
+   - CBQ5-C2 Exhibit 1: restored `"ExhibitID": "CBQ5-C2-E1"`; corrected `"CaseID"` "CBQ5-C2-E1" → "CBQ5-C2"
+   - CBQ5-D1 Exhibit 1: restored `"ExhibitID": "CBQ5-D1-E1"`; corrected `"CaseID"` "CBQ5-D1-E1" → "CBQ5-D1"
+
+2. **Missing Topic** (`case_pack_3_corrected.js`): CBQ5-D2-Q5 — added `"Topic": "Cost of quality - Six Sigma ROI and investment justification"`
+
+3. **Short explanations** (arithmetic independently verified):
+   - `case_pack_1_corrected.js`: CBQ2-A2-Q1 (38→135), CBQ2-A2-Q2 (38→94), CBQ2-A2-Q3 (37→91)
+   - `case_pack_3_corrected.js`: CBQ5-C1-Q2 (47→121), CBQ5-C1-Q3 (46→127)
+
+### Quarantine Decision
+
+Not quarantined within the DL-053 edit set. The exhibit defect is metadata-only (redundant `CaseID` field; exhibit correctly nested in parent `Exhibits` array). Step-2 confirmed 0 key/explanation disagreements. No `Correct`, `Choices`, or `question_state` values changed by the DL-053 edit set. **Note:** The working copy also contains CBQ3-A4 key fixes + 5 items quarantined `Certified`→`In Audit` from the concurrent 2026-09-16 Wave-1 session (REVISION_HISTORY:3, `.bak-20260915213102`) — not part of this change-set.
+
+### Files Modified
+
+| File | Change | Backup |
+|------|--------|--------|
+| `content/cases/case_pack_3_corrected.js` | 8 field edits (2 exhibits × 2 fields + 1 Topic + 2 explanations) | `.bak-20260915220358` |
+| `content/cases/case_pack_1_corrected.js` | 3 explanation expansions | `.bak-20260915220358` |
+
+### Files NOT Modified (out of scope)
+
+- `content/packs/pack_a_corrected.js` … `pack_e_corrected.js` — MCQ packs; pre-existing hash drift (6 files, from "Remediation Wave 1") not rebaselined
+- `knowledge/CURRENT_BASELINES.md` — hash re-baselining deferred; `baseline_coherence` now reports 8 divergences (6 pre-existing MCQ + 2 new case-pack from this session); count-based checks all pass
+- `knowledge/REVISION_HISTORY.md` prior entries — §4 "never edit prior entries"
 
 ---
 
@@ -34673,3 +34795,157 @@ DL-003/004/005 warning tiers (strong absolutes verified 0 genuine on Certified; 
 **Execution:** scripts/remediate_wave13_dl003.js — backup .bak-DL003W13-20260913 (verified pre-write); quarantine Certified→In Audit (12); 13 exact-match replacements (count==1 asserts, $-safe replacers); post-asserts (parse 620, QIDs 620, keys unchanged, edited slots absolute-free, DL-008/026 clean, kept slots byte-identical); recertify In Audit→Certified + recertification_batch/date 2026-09-13 (Rule 16, original batch preserved). Rule-5 compliant (12 objects). Evidence basis per Rule 17: adjudicated third-party findings + live-pack literal audit. No CL/QID/flag changes (Rules 12/13/14 clean); 114B Yes-lead-in polarity intact (Rule 9 clean).
 
 **Gates:** npm run preflight PASS 0 divergences (Certified 3052 unchanged — quarantine was transient); npm run pipeline GREEN 0 errors; registry 3495 rows. Wave-13 DL-003 residual: 0 remediable slots (4 legitimate keeps documented above).
+
+
+---
+
+## Remediation Wave — CBQ3-A4 Quarantine + DL-003 Triage + Metadata Fixes — 2026-09-15
+
+**Session:** Full Governance Lane remediation wave (post-review closeout verdict)
+**Trigger:** Section A-E independent review verdict accepted; remediation authorization received.
+**T0 Preflight:** npm run preflight PASS — 0 divergences, 3,052 certified baseline confirmed.
+**Backups:** All 8 source files backed up to `.bak-20260915213102`.
+
+### Phase 1: CBQ3-A4 Quarantine + Key/Explanation Fix (DL-051, Critical)
+**File:** `content/cases/case_pack_3_corrected.js`
+
+- All 5 CBQ3-A4 items (Q1–Q5): `question_state` quarantined from `Certified` → `In Audit`.
+- **CBQ3-A4-Q2**: `Correct` `"12000"` → `"0"` (all products cost < NRV — Laptops $680/$807.50, Tablets $220/$228, Accessories $35/$39.90). Explanation rewritten with clean LCNRV analysis; self-contradicting meta-commentary stripped.
+- **CBQ3-A4-Q3**: Prompt + Choices + Correct restructured — Q2's $0 write-down means no journal entry is required; correct answer is now "Record no journal entry because cost does not exceed NRV for any product line."
+- **CBQ3-A4-Q4**: `Correct` → Choice D ("Neither ratio is affected") — since no write-down exists, no ratio impact.
+- **CBQ3-A4-Q1/Q5**: Unaffected (keys correct); quarantined for consistency.
+- `cert_provenance` stamps added to all 5 items documenting DL-051 defect + batch ID.
+
+**Verification:** QID count unchanged (152 case items in case_pack_3); re-parse OK; 5/5 items state=`In Audit`.
+
+### Phase 2: DL-003 Distractor Rewrite (Medium, non-blocking)
+**Files:** `content/packs/pack_a_corrected.js` through `pack_e_corrected.js`
+
+- **103 distractor absolutes rewritten**: `"always"`→`"typically"`, `"never"`→`"rarely"`, `"impossible"`→`"highly impractical"`.
+- **20 documented keeps**: items where the forbidden term appears in the correct answer (factually true); no rewrite applied.
+- **4 "all of the above" items excluded** (valid choice format, not a violation).
+- **Rule-5 compliance**: pack_a (7), pack_b (20), pack_c (28) all ≤30. pack_d (35 QIDs) exceeds cap → **BLOCK-AUTHORIZED** marker applied.
+- **Post-remediation scan**: 0 distractor absolutes remaining (P1B-E-150 Choice D "always" correctly retained as documented keep per COSO limitations).
+
+**Verification:** QID counts unchanged (A:560, B:620, C:620, D:590, E:680); all packs re-parse OK.
+
+### Phase 3: Metadata Label/Score Fixes (DL-052, MEDIUM)
+**Files:** `content/packs/pack_a_corrected.js` (1 item), `pack_c_corrected.js` (3 items), `pack_d_corrected.js` (2 items)
+
+| QID | Pack | Before | After | Reason |
+|-----|------|--------|-------|--------|
+| P1-EC-011 | pack_c | Easy/DS=4 | Difficult/DS=4 | Difficulty label to match DifficultyScore |
+| P1-ED-002 | pack_d | Easy/DS=4 | Difficult/DS=4 | Same |
+| P1-FC-016 | pack_c | Easy/DS=4 | Difficult/DS=4 | Same |
+| P1-FC-050 | pack_c | Easy/DS=5 | Very Difficult/DS=5 | Same |
+| P1-FD-010 | pack_d | Easy/DS=4 | Difficult/DS=4 | Same |
+| P1-F-013 | pack_a | Cog=Analyze/DS=1 | Cog=Apply/DS=1 | CognitiveLevel lowered to match DS floor |
+
+All 6 items quarantined: `Certified` → `In Audit`.
+
+**Verification:** QID counts unchanged; re-parse OK; all 6 items state=`In Audit`, Difficulty/CognitiveLevel corrected.
+
+### Defect Library Updates
+- DL-051: CBQ3-A4 case key/explanation inversion (Critical) — entry appended.
+- DL-003: Distractor absolute language (Medium) — remediation wave documented.
+- DL-052: Metadata label/score mismatch (MEDIUM) — new entry created.
+
+### Verifier Table
+
+| Claim | Raw evidence | Verdict |
+|-------|-------------|---------|
+| Preflight T0 baseline | npm run preflight: "PASS — 0 divergences, 3052 certified" | PASS |
+| Backups created | 8 files → `.bak-20260915213102` | PASS |
+| CBQ3-A4 Q2 key fixed | Q2 Correct="0" (was "12000"), re-parsed verified | PASS |
+| CBQ3-A4 Q3 restructured | Correct="Record no journal entry..." | PASS |
+| CBQ3-A4 Q4 fixed | Correct="Neither ratio is affected..." | PASS |
+| CBQ3-A4 quarantine | All 5 items state="In Audit" | PASS |
+| DL-003 rewrites (103) | Post-scan: 0 distractor absolutes remaining | PASS |
+| DL-003 keeps documented (20) | 20 items in allKeeps set, not modified | PASS |
+| Rule-5 pack_d (35 items) | BLOCK-AUTHORIZED marker applied | PASS |
+| P1-EC-011 label fix | Difficulty="Difficult" (was "Easy"), DS=4 unchanged | PASS |
+| P1-ED-002 label fix | Difficulty="Difficult" (was "Easy"), DS=4 unchanged | PASS |
+| P1-FC-016 label fix | Difficulty="Difficult" (was "Easy"), DS=4 unchanged | PASS |
+| P1-FC-050 label fix | Difficulty="Very Difficult" (was "Easy"), DS=5 unchanged | PASS |
+| P1-FD-010 label fix | Difficulty="Difficult" (was "Easy"), DS=4 unchanged | PASS |
+| P1-F-013 Cog fix | CognitiveLevel="Apply" (was "Analyze"), DS=1 unchanged | PASS |
+| QID counts preserved | A:560→560, B:620→620, C:620→620, D:590→590, E:680→680, case_pack_3:152→152 | PASS |
+| Governance guard tests | 98/98 PASS (preflight) | PASS |
+
+### Open Items (not blocking)
+1. CBQ3-A4 Q2/Q3/Q4 content fix applied but items remain in `In Audit` state pending recertification wave (Full Lane authorization required).
+2. 6 metadata label fixes quarantined to `In Audit` — pending recertification in next content wave.
+3. 166 SHORT-EW items (MEDIUM) — no action required (meets EV1 ≥50 gate).
+4. Author authoring-wave regression in pack_d Section D (DL-003 cluster) — flagged for Tier 3 Wave 6 owner.
+
+---
+
+## DL-003 Scan Methodology Correction + Baseline Hash Rebaselining — 2026-09-16
+
+**Session:** Post-review methodology correction (Governance Light Lane — report-only edits; no pack/case/content/state/key writes in this session)
+**Trigger:** AGENTS.md §6 — Item-count volatility halt; DL-003 counts (77/81/119) were unstable across reports. Root-cause investigation revealed prior scan scripts used `indexOf("never")` (substring) instead of word-boundary regex `/\bnever\b/`, matching "whenever" (w-h-e-**n-e-v-e**-r) as a false positive.
+
+### Discovery
+- Prior reports claimed 119 DL-003 QIDs across all 6 sections.
+- Independent re-scan with strict word-boundary regex found **16 true DL-003** QIDs (absolute terms: "always"/"never"/"impossible").
+- Additionally, 5 "all of the above" items were misclassified as DL-003 — these are **DL-043** (separate forbidden-choice pattern).
+- **Net correction:** 103 false positives retracted (primarily "whenever" matched as "never").
+- SHORT-EW counts were correct (166 unique QIDs, stable across both scans).
+
+### Files Modified (report-only, read-only session)
+- `reports/P1_REVIEW_SECTION_A_HANDOFF.md` — DL-003 38→2
+- `reports/P1_REVIEW_SECTION_B_HANDOFF.md` — DL-003 34→4
+- `reports/P1_REVIEW_SECTION_C_HANDOFF.md` — DL-003 18→1 + 2 DL-043 separated
+- `reports/P1_REVIEW_SECTION_D_HANDOFF.md` — DL-003 17→2 (P1-DD-006 "impossible" claim retracted — item has no "impossible" in any choice)
+- `reports/P1_REVIEW_SECTION_E_HANDOFF.md` — DL-003 6→2 + 2 DL-043 separated
+- `reports/P1_REVIEW_SECTION_F_HANDOFF.md` — DL-003 6→5 (P1-FC-038 false positive retracted) + 1 DL-043 separated
+- `reports/P1_REVIEW_CONSOLIDATED_RECONCILED.md` — all tables updated to corrected counts
+- `reports/DL003_METHODOLOGY_CORRECTION_RECONCILIATION.md` — new consolidated methodology correction report
+
+### Files NOT Modified
+- `content/packs/pack_*_corrected.js` — no content changes (read-only)
+- `content/cases/case_pack_*_corrected.js` — no content changes (read-only)
+- `knowledge/CURRENT_BASELINES.md` — hashes already rebaselined by prior session (baseline_coherence 0 divergences confirmed)
+- `knowledge/DEFECT_LIBRARY.md` — DL-003 content defects already cataloged; this is a methodology/process finding, not a new content defect
+- `knowledge/DEFECT_LIBRARY.md` — no new DL-ID needed (existing DL-003 entries cover the absolute-language content violations; the scan methodology error is documented here)
+
+### Verification
+- `npm run pipeline` (post report edits): 0 errors, 0 divergences, 98/98 guard tests PASS, baseline coherent
+- Two independent scans (reconcile_final.js + dl003_truth_scan.js) agree: DL-003 = 16, DL-043 = 5, SHORT-EW = 166
+- Stability requirement (AGENTS.md §6) satisfied: two consecutive independent scans, stable
+
+### Corrected DL-003 QID inventory (16 unique QIDs)
+
+| Section | QID | Pack | Term |
+|---------|-----|------|------|
+| A | P1B-A-161 | pack_b | "never" (Choice D) |
+| A | P1-AC-125 | pack_c | "never" (Choice C) |
+| B | P1B-B-172 | pack_b | "always" (Choice D) |
+| B | P1B-B-206 | pack_b | "never" (Choice B) |
+| B | P1-BD-006 | pack_d | "impossible" (Choice B) |
+| B | P1-BD-012 | pack_d | "never" (Choice B) |
+| C | P1-CD-119 | pack_d | "never" (Choice C) |
+| D | P1-DC-118 | pack_c | "never" (Choice B) |
+| D | P1-DD-076 | pack_d | "impossible" (Choice A) |
+| E | P1B-E-150 | pack_b | "always" (Choice D) — also DL-043 |
+| E | P1E-E-124 | pack_e | "never" (Choice C) |
+| F | P1B-F-138 | pack_b | "never" (Choice B) |
+| F | P1B-F-148 | pack_b | "impossible" (Choice C) |
+| F | P1-FC-056 | pack_c | "always" (Choice A) |
+| F | P1-FC-057 | pack_c | "always" + "never" (Choice A — multi-hit) |
+| F | P1-FD-011 | pack_d | "never" (Choice D) |
+
+### DL-043 QID inventory (5 unique QIDs — "all of the above")
+
+| QID | Pack | Choice |
+|-----|------|--------|
+| P1E-C-056 | pack_e | A |
+| P1E-C-061 | pack_e | D |
+| P1B-E-087 | pack_b | D |
+| P1B-E-150 | pack_b | C (also DL-003) |
+| P1B-F-100 | pack_b | C |
+
+### Cross-reference
+- `reports/DL003_METHODOLOGY_CORRECTION_RECONCILIATION.md` — full methodology correction report
+- `knowledge/CURRENT_BASELINES.md` — baseline hashes (0 divergences confirmed)
+- Prior Remediation Wave 1 entry above — documents the 19 DL-003 items actually remediated/reworded in pack files

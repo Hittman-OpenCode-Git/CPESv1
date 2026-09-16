@@ -22667,11 +22667,16 @@ var MCQ_BANK_A = [
     "ExplanationWrongB": "Independent local spreadsheets create version and governance risk and do not provide an integrated reporting architecture.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "A security log is useful control evidence, but it is not designed to integrate finance data for trend analysis.",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "DifficultyScore": 1,
     "certification_date": "2026-07-24",
     "certification_batch": "Session 68 Wave 1",
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Cog=Analyze with DS=1; lowered Cog to Apply (DS floor: Analyze requires DS≥3, but DS=1 governs)"
+    }
   },
   {
     "Part": 1,
@@ -26574,7 +26579,7 @@ var MCQ_BANK_A = [
     "Stem": "Old machine: cost $100,000, accumulated depreciation $40,000 (BV $60,000), FV $75,000. New machine FV $90,000 plus $15,000 cash paid ($75,000 + $15,000 = $90,000 total consideration). The exchange alters operating cash flows (new machine: different capacity and efficiency). What gain is recognized and at what value is the new machine recorded?",
     "Choices": {
       "A": "Gain $15,000 recognized; new machine $90,000 — commercial substance triggers full gain recognition",
-      "B": "No gain — exchanges never recognize gains until cash is received",
+      "B": "No gain — exchanges rarely recognize gains until cash is received",
       "C": "Gain $30,000; new machine $90,000 — total FV minus book value",
       "D": "Gain $15,000; new machine $75,000 — cash paid is expensed as installation"
     },
@@ -26684,7 +26689,7 @@ var MCQ_BANK_A = [
       "A": "Accrue all four — conservatism requires recognizing every exposure",
       "B": "Accrue (1) $500,000; disclose (2) and (3); neither accrue nor disclose (4) — probability-plus-estimability gates recognition",
       "C": "Accrue (1) and (2) — probable means accrue with or without an estimate",
-      "D": "Disclose all four without accruing — litigation outcomes are never estimable enough"
+      "D": "Disclose all four without accruing — litigation outcomes are rarely estimable enough"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "ASC 450's two-gate recognition: accrue if and only if probable AND reasonably estimable. (1) Probable + $500,000 estimable → accrue $500,000 liability with disclosure. (2) Probable but inestimable → disclose nature and non-estimability; no accrual (nothing coherent to book). (3) Reasonably possible $300,000 → disclose (nature + estimate or range); no accrual. (4) Remote → neither (disclosure permitted but not required). Accrue-all (option A) books $1.8M of liabilities on remote and inestimable exposures — conservatism does not override the gates. Accruing (2) (option C) books an unestimable amount — fabrication, not conservatism. Disclose-all-without-accrue (option D) understates the $500,000 probable-estimable liability the gates clearly capture. Business interpretation: the matrix separates measurement (can we estimate?) from likelihood (how probable?) — both gates must open for the balance sheet. Common trap: accruing on probability alone.",
@@ -26789,7 +26794,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "A company carries a $200,000 deferred tax asset from NOL carryforwards. Evidence: 40% probability of sufficient future taxable income (new contracts cover $80,000 of the DTA; the remaining $120,000 depends on speculative market recovery). What valuation allowance and net DTA are required?",
     "Choices": {
-      "A": "$0 allowance — NOLs are statutory rights, always fully realizable",
+      "A": "$0 allowance — NOLs are statutory rights, typically fully realizable",
       "B": "$200,000 allowance — uncertainty taints the entire asset",
       "C": "$120,000 allowance; $80,000 net DTA — only the contracted $80,000 meets more-likely-than-not",
       "D": "$80,000 allowance — the realizable portion is the allowance"
@@ -26952,7 +26957,7 @@ var MCQ_BANK_A = [
     "Stem": "Year-end 12/31; audit report date 3/15. Event 1 (Feb 2): a major customer declares bankruptcy from financial distress evident in December (the $300,000 receivable was doubtful at year-end; allowance held only $50,000). Event 2 (Feb 20): fire destroys a warehouse (fully insured, new event). What treatment does each require?",
     "Choices": {
       "A": "Adjust for both — all material subsequent events adjust",
-      "B": "Disclose both without adjusting — subsequent events never adjust issued-pending statements",
+      "B": "Disclose both without adjusting — subsequent events rarely adjust issued-pending statements",
       "C": "Adjust for the fire, disclose the bankruptcy — severity governs, not timing",
       "D": "Type I: +$250,000 provision (condition existed at year-end); Type II: disclose fire, no adjustment"
     },
@@ -27114,7 +27119,7 @@ var MCQ_BANK_A = [
     "Stem": "In rising prices, FIFO reports inventory $2,000,000 higher than LIFO (current assets $10M vs $8M against $4M current liabilities: ratios 2.5 vs 2.0). LIFO would save $500,000 in tax (25% × $2M). The debt covenant requires a 2.0 current ratio minimum. Which method should the controller recommend, and why?",
     "Choices": {
       "A": "FIFO — LIFO's $500,000 tax saving lands exactly on the 2.0 covenant (technical-default risk); covenant survival dominates tax savings",
-      "B": "LIFO always — $500,000 of tax savings dominates any reporting consideration",
+      "B": "LIFO typically — $500,000 of tax savings dominates any reporting consideration",
       "C": "LIFO with a covenant waiver — assume the bank agrees before switching",
       "D": "Weighted average — splits the tax and covenant differences"
     },
@@ -27168,7 +27173,7 @@ var MCQ_BANK_A = [
     "Stem": "Equity $5,000,000; debt $4,500,000 (D/E 0.90); covenant max D/E 1.00. Equipment need $1,000,000: buy with debt, or 5-year finance lease (PV $850,000), or 12-month renewable short-term leases. How should the controller decide?",
     "Choices": {
       "A": "Buy with $1,000,000 debt — ownership residual justifies the leverage",
-      "B": "Five-year finance lease — leasing always preserves covenants versus buying",
+      "B": "Five-year finance lease — leasing typically preserves covenants versus buying",
       "C": "Five-year operating lease — operating leases stay off-balance-sheet",
       "D": "Twelve-month renewable leases (short-term exempt) — purchase debt takes D/E to 1.10 (breach) and finance leases to 1.07 (breach); only exempt leases preserve 0.90"
     },
@@ -27330,7 +27335,7 @@ var MCQ_BANK_A = [
     "Stem": "Outstanding: 8% $10,000,000 bonds, 10 years left, callable at 103 ($10,300,000). Refunding: new 5% 10-year bonds; issuance costs $150,000. Current market 5%. Should the company refund now?",
     "Choices": {
       "A": "Refund — PV of $300,000 annual savings ($2,316,519) dwarfs $450,000 call premium plus issuance; NPV +$1,866,519",
-      "B": "Do not refund — call premiums always destroy refunding economics",
+      "B": "Do not refund — call premiums typically destroy refunding economics",
       "C": "Refund only if rates fall below 3% — 5% is insufficient improvement",
       "D": "Refund on coupon comparison — $300,000 × 10 = $3,000,000 gross savings decides it"
     },

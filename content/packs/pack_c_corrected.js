@@ -1,5 +1,4 @@
-const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items)
-[
+var MCQ_BANK_C = [
   {
     "Part": 1,
     "Section": "A",
@@ -18585,7 +18584,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "E-C011-inherent-residual-risk",
     "LOSTag": "P1-E Internal controls",
     "primaryTheory": "E1",
-    "Difficulty": "Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Westbrook Health System operates a pharmacy narcotics tracking system across six hospitals. The automated reconciliation control does not flag discrepancies for quantities under 50 units per transaction. The enterprise risk assessment rated narcotics diversion risk as Low - Residual based on the assumption that the monthly physical inventory audit would identify cumulative discrepancies. An internal audit revealed that $340,000 in Schedule II narcotics — approximately 17,000 dosage units — were unaccounted for over 14 months, with individual transactions averaging 38 units each, systematically below the threshold. The pharmacy director asserts the risk assessment was correct because the detective control was supposed to catch this. Which best evaluates whether the risk assessment properly distinguished inherent from residual risk?",
@@ -18611,7 +18610,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-EC-011",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -18625,7 +18624,12 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This misidentifies the locus of error. The inherent risk rating may be correct — the failure is in residual risk evaluation. The risk assessment's error was assuming the detective control was effective when it could not detect transactions below the known system threshold. This is a residual risk assessment failure, not an inherent risk assessment failure.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Analyze",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Difficulty label aligned to DifficultyScore per closeout verdict"
+    }
   },
   {
     "Part": 1,
@@ -22694,7 +22698,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "F-C016-cloud-computing-service-models",
     "LOSTag": "P1-F Technology and analytics",
     "primaryTheory": "F5",
-    "Difficulty": "Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Prairiewood outsources its entire IT infrastructure, including servers and storage, to a cloud provider while managing its own applications. What cloud service model is this?",
@@ -22732,10 +22736,15 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongB": "Option B addresses the most numerically prevalent finding (12 of 47 integrations) but misidentifies its risk priority. Stale API keys that have not been rotated in 24 months represent a credential hygiene deficiency — the keys are still associated with active, legitimate client integrations and there is no evidence they have been compromised. The risk from stale credentials is probabilistic (increased likelihood of compromise over time), while the risk from excessive permissions is deterministic (clients currently have and are exercising access beyond their authorized scope). Implementing a 90-day rotation policy is an appropriate systemic remediation, but it should follow — not precede — the immediate rescoping of known excessive permissions. Additionally, automated key rotation without first validating that all integrations will support the rotation process could disrupt 47 client connections processing $12 billion in annual transactions. A candidate may confuse prevalence (number of findings) with severity (risk impact of findings).",
     "ExplanationWrongC": "Option C (Software as a Service (SaaS)...) does not align with the governing framework. A full distractor explanation requires authoring — see DL-035 remediation queue.",
     "ExplanationWrongD": "",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
-    "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FC-016 (DL-012 rotation clone)"
+    "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FC-016 (DL-012 rotation clone)",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Difficulty label aligned to DifficultyScore per closeout verdict"
+    }
   },
   {
     "Part": 1,
@@ -23777,7 +23786,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The high confidence (94%) indicates the rule is statistically reliable, meaning the pattern represents a legitimate and well-established business process rather than an anomaly that warrants audit attention.",
       "B": "The rule reveals a potential control circumvention pattern — invoice amounts clustering just below the $10,000 approval threshold, combined with routing to an account exempt from purchase order requirements, is consistent with deliberate splitting of payments to avoid internal controls, and the lift of 8.3 confirms this pattern occurs far more frequently than would be expected by random chance.",
       "C": "The rule is irrelevant because association rule mining is designed for retail transaction analysis and cannot be validly applied to accounts payable data, which has a fundamentally different structure from market basket transactions.",
-      "D": "The high lift value (8.3) indicates the algorithm has discovered a data-entry error pattern rather than a fraud indicator, because lift values above 5.0 in financial datasets are almost always artifacts of duplicate invoice postings."
+      "D": "The high lift value (8.3) indicates the algorithm has discovered a data-entry error pattern rather than a fraud indicator, because lift values above 5.0 in financial datasets are almost typically artifacts of duplicate invoice postings."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "The correct answer is B. Association rule mining discovers co-occurrence patterns in transaction data — items or events that appear together more frequently than random chance would predict. While the technique originated in market basket analysis (customers who buy bread also buy milk), its mathematical foundation is domain-agnostic. In the Apex audit, the algorithm identified a suspicious co-occurrence pattern: invoices from Bayou LLC in a narrow $9,800-$9,900 range, approved by Manager K, posting to a no-PO-required expense account. The 94% confidence means that 94% of invoices matching the vendor-amount-approver combination are routed to account 5400. The lift of 8.3 means this combination occurs 8.3 times more frequently than expected if the elements were independently distributed — a strong statistical signal. The proximity of invoice amounts to the $10,000 approval threshold, combined with routing to a PO-exempt account, is consistent with a known control circumvention pattern: splitting payments to stay below authorization thresholds while directing them to accounts with fewer controls. The IMA's technology and analytics domain recognizes that data mining techniques originally developed for one domain can be validly applied to audit and fraud detection when the underlying data structure supports it.",
@@ -24304,7 +24313,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "UniqueConceptKey": "F-C050-data-quality-dimensions-accuracy-completeness",
     "LOSTag": "P1-F Technology and analytics",
     "primaryTheory": "F2",
-    "Difficulty": "Easy",
+    "Difficulty": "Very Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Amberfield's data quality initiative measures whether data values are correct, complete, and consistent across systems. What data quality dimensions are being assessed?",
@@ -24341,11 +24350,16 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongA": "Option A correctly identifies that the problem has labeled data (known fraudulent transactions from confirmed investigations), making supervised classification viable. However, the analysis fails to consider that fraud patterns evolve. A supervised model trained on historical confirmed fraud cases learns to detect patterns that were fraudulent in the past — it will not detect novel fraud techniques that differ from historical patterns because those patterns do not appear in the training data. Fraud detection is one of the canonical use cases where a hybrid approach is recommended: supervised learning for known patterns plus unsupervised anomaly detection for new, previously unseen patterns. Recommending supervised classification alone ignores the specific fraud-domain requirement for detecting unknown fraud types.",
     "ExplanationWrongB": "",
     "ExplanationWrongD": "Option D (Only software licensing costs...) does not align with the governing framework. A full distractor explanation requires authoring — see DL-035 remediation queue.",
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
     "upgrade_note": "S899 Phase 1 — Evaluate/Very Difficult replacement for archived P1-FC-050 (DL-012 rotation clone)",
-    "ExplanationWrongC": "Option C (Only network bandwidth...) does not align with the governing framework. A full distractor explanation requires authoring — see DL-035 remediation queue."
+    "ExplanationWrongC": "Option C (Only network bandwidth...) does not align with the governing framework. A full distractor explanation requires authoring — see DL-035 remediation queue.",
+    "cert_provenance": {
+      "metadata_fix": "P1-20260915",
+      "date": "2026-09-15",
+      "reason": "Difficulty label aligned to DifficultyScore per closeout verdict"
+    }
   },
   {
     "Part": 1,
@@ -25655,7 +25669,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Foundry fixed overhead is $600,000. Practical capacity 75,000 hrs; budgeted production 60,000 hrs; actual 57,000 hrs; actual FOH $612,000. The controller prepares the variance report under practical denominator but shows the audit committee what budgeted denominator would have reported. What is the comparison, and which should govern evaluation?",
     "Choices": {
-      "A": "Identical $42,000 U either way — denominator choice never changes total variance",
+      "A": "Identical $42,000 U either way — denominator choice rarely changes total variance",
       "B": "Practical: budget $12,000 U + volume $144,000 U; budgeted-denominator volume only $30,000 U — practical exposes 15,000 more idle hours and should govern",
       "C": "Budgeted denominator is correct because plans, not engineering ideals, govern accountability",
       "D": "Practical denominator with actual-hours applied — zero volume variance is cleanest"
@@ -26034,7 +26048,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "First-pass yield (FPY) improvements precede COGS improvements by one quarter (correlation +0.8); Net Promoter Score moves coincidentally with revenue in the same quarter. The analytics team labels both metrics 'leading indicators' in the new dashboard. Which classification is correct, and why does it matter?",
     "Choices": {
       "A": "Both are leading — any metric on a dashboard leads decisions",
-      "B": "Both are lagging — correlation never establishes lead time",
+      "B": "Both are lagging — correlation rarely establishes lead time",
       "C": "FPY is leading (predicts next-quarter COGS with a measured one-quarter lead); NPS is lagging/coincident — only FPY buys reaction time",
       "D": "FPY causes COGS improvement — the +0.8 correlation proves the causal mechanism"
     },
@@ -26252,7 +26266,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "All 1,500 to execution — budgets are commitments, and attribution to forecasting rewards excuse-making",
       "B": "All 1,500 to forecasting — the mid-year update proves demand, not execution, moved",
       "C": "1,000 to forecast error (budget-to-forecast) and 500 to execution (forecast-to-actual) — sales owns 500 units, planning owns 1,000",
-      "D": "500 to forecast error and 1,000 to execution — the larger share always belongs to execution"
+      "D": "500 to forecast error and 1,000 to execution — the larger share typically belongs to execution"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Decompose chronologically: budget-to-forecast = 10,000 − 9,000 = 1,000 units of forecast error (demand softness confirmed mid-year — a planning and market-analysis accountability item). Forecast-to-actual = 9,000 − 8,500 = 500 units of execution gap (stockouts and fulfillment failures against known demand — owned by sales operations and production). The stockout blame-shifting resolves empirically: only 500 units (one-third) could possibly be stockouts; 1,000 units never existed as demand. Business interpretation: rolling-forecast updates exist precisely to separate these accountabilities — without the 9,000-unit marker, all 1,500 would pool as 'missed budget' and both functions would (correctly) call the attribution unfair. Common trap: assigning the full budget variance to whoever speaks last.",
@@ -26953,7 +26967,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Expand immediately — $58,000/year savings justify any $200,000 machine",
       "B": "Expand iff forward-order coverage supports ≥60% confidence — $58,000/year savings with 3.4-year payback at stated odds; otherwise overtime as a real option while coverage builds",
-      "C": "Overtime permanently — capital commitment always loses to flexibility",
+      "C": "Overtime permanently — capital commitment typically loses to flexibility",
       "D": "Cut demand to capacity — marketing should sell what operations can make"
     },
     "CorrectChoice": "B",
@@ -27008,7 +27022,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Keep flat $50 — simplicity and predictability outweigh refinement",
       "B": "Allocate by division revenue — ability to pay is the fairest base",
       "C": "Two-tier: $150/complex + $25/routine with requester triage — C pays $337,500 (its $37,500 spam premium), pricing the externality it imposes",
-      "D": "Outsource IT — internal chargebacks always distort more than markets"
+      "D": "Outsource IT — internal chargebacks typically distort more than markets"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Rate derivation: complex $150 × 2,000 = $300,000; routine $25 × 8,000 = $200,000; total $500,000 — reconciles. C's two-tier bill = 1,500×$150 + 4,500×$25 = $225,000 + $112,500 = $337,500 versus $300,000 flat — the +$37,500 is the priced externality of C's triage failures (4,500 routine tickets, many avoidable with requester-side filtering). Flat $50 (option A) subsidizes spam: each routine ticket costs $25 but is 'free' at the margin... precisely, flat pricing makes routine tickets cost C $50 while costing IT $25 — overpriced per ticket yet underpriced in total because C's complex tickets ($150 cost) ride at $50. The two-tier structure plus requester triage attacks both margins: correct marginal prices plus volume discipline. Revenue allocation (option B) severs cost causation entirely. Outsourcing (option D) leaps scope — a $500,000 rate-design problem does not imply a make-buy verdict. Business interpretation: chargebacks are congestion prices — tier by cost-to-serve and watch demand self-regulate. Common trap: defending flat rates for simplicity while volume mixes shift underneath.",
@@ -27383,10 +27397,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "A non-cancelable purchase commitment covers 10,000 units at $20 ($200,000). Year-end market price falls to $16. The goods have not been received. What loss, if any, is recognized, and how is the commitment reported?",
     "Choices": {
-      "A": "No entry until receipt — executory contracts never recognize losses early",
+      "A": "No entry until receipt — executory contracts rarely recognize losses early",
       "B": "$40,000 loss recognized immediately with a $40,000 liability (10,000 × ($20 − $16)); disclosed as a commitment",
       "C": "$200,000 liability — the full commitment accrues at signing",
-      "D": "$40,000 disclosed only — unrealized commitment losses never accrue"
+      "D": "$40,000 disclosed only — unrealized commitment losses rarely accrue"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Firm non-cancelable commitments: recognize the net loss when market falls below contract price before receipt — ($20 − $16) × 10,000 = $40,000, debit loss, credit estimated liability (accrued purchase-commitment loss). Full-commitment accrual (option C, $200,000) books the gross purchase before performance — executory contracts accrue losses, never gross amounts. No-entry (option A) ignores the onerous-commitment rule (the $40,000 is unavoidable — canceling is impossible, performing loses $40,000 versus market). Disclosure-only (option D) treats an accrued probable-estimable loss as a contingency footnote — firm commitments below market meet accrual gates. Business interpretation: onerous executory contracts accrue their unavoidable loss immediately — the signature binds, the market moved, the loss exists. Common trap: waiting for receipt to recognize committed losses.",
@@ -27653,7 +27667,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "10,000 options granted, fair value $8 each ($80,000 total), 4-year cliff vesting, 10% estimated forfeitures. Year 1: actual forfeitures run 15% (1,500 left). How much Year-1 compensation cost should be recognized, and should the estimate be revised?",
     "Choices": {
-      "A": "$20,000 (80,000/4) — estimates lock at grant and never revise",
+      "A": "$20,000 (80,000/4) — estimates lock at grant and rarely revise",
       "B": "$18,000 Year 1 on the original 10% estimate with a cumulative catch-up only if the 15% persists a second year",
       "C": "$17,000 Year 1 (8,500 × $8 / 4 years) with the forfeiture estimate revised to 15% and a $1,000 cumulative catch-up",
       "D": "$0 Year 1 — cliff vesting recognizes nothing until year 4"
@@ -27761,7 +27775,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Net income $800,000; 100,000 shares; options: 20,000 at $10 exercise, average market $25; plus 5,000 out-of-the-money options at $40 exercise (market $25). What is diluted EPS?",
     "Choices": {
-      "A": "$8.00 — options never dilute when markets rise above exercise",
+      "A": "$8.00 — options rarely dilute when markets rise above exercise",
       "B": "$6.96 — both option tranches included (25,000 gross shares added)",
       "C": "$7.14 — in-the-money tranche only (+12,000 net: $200,000 proceeds buy back 8,000; out-of-the-money tranche excluded as anti-dilutive)",
       "D": "$6.67 — all 25,000 options net of full treasury proceeds at $25"
@@ -27872,7 +27886,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Yes — held-for-sale plus MD&A strategic language satisfies both tests",
       "B": "No — 5% of revenue cannot be a strategic shift regardless of language; management labels don't meet the test, so report in continuing operations with held-for-sale balance-sheet presentation",
       "C": "Yes — any held-for-sale component is automatically discontinued",
-      "D": "No — losses can never be discontinued; only gains qualify"
+      "D": "No — losses can rarely be discontinued; only gains qualify"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Discontinued operations require BOTH (1) held-for-sale (or disposed) AND (2) a strategic shift with major effect (line-of-business or geographic exit, quantitatively major). The component passes test 1 (held-for-sale criteria met) but fails test 2: 5% of revenue is not quantitatively major, and MD&A adjectives ('strategic') do not satisfy an effects test — labels never substitute for magnitude. Report the $300,000 loss in continuing operations; present related assets/liabilities as held-for-sale on the balance sheet. Language-satisfies (option A) lets MD&A draft accounting conclusions. Automatic-discontinued (option C) collapses the dual test into one — held-for-sale alone (e.g., a single store closure) routinely stays in continuing operations. Gains-only (option D) invents a sign restriction the standard does not contain. Business interpretation: discontinued presentation is reserved for exits that change what the company IS — 5% does not, whatever the MD&A says. Common trap: letting management labels satisfy quantitative tests.",
@@ -28034,7 +28048,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "No reconsideration — VIE status locks at inception permanently",
       "B": "No reconsideration — 8% equity is below every reconsideration threshold",
       "C": "Yes — reconsider on the guarantee-plus-power change; Beacon likely becomes a VIE (support-dependent) with Harbor as primary beneficiary (power + economics), requiring consolidation",
-      "D": "Conclude no change after reconsidering — guarantees never affect VIE analysis"
+      "D": "Conclude no change after reconsidering — guarantees rarely affect VIE analysis"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "VIE reconsideration triggers include changes in governing documents, new financial support arrangements, and shifts in decision-making power — the guarantee plus sole-authority amendment hits all three. Post-change analysis: (1) Beacon likely becomes a VIE (dependence on Harbor's guarantee = insufficient equity at risk to finance activities without support); (2) Harbor is likely primary beneficiary (power via sole operating authority + economics via guarantee/loss absorption). Inception-locked status (option A) denies reconsideration rules that exist precisely for changed circumstances. Equity-threshold gating (option B: 8%) applies voting-interest thinking to a VIE question — power plus economics decide, never percentage. Guarantees-don't-matter (option D) ignores that support arrangements are primary VIE triggers. Business interpretation: reconsider VIE status on every structural change in power or support — inception conclusions expire when facts do. Common trap: treating initial non-VIE determinations as permanent.",
@@ -28139,10 +28153,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "80% acquired for $1,600,000; subsidiary FV $2,000,000 (full-goodwill view) versus subsidiary book value $1,500,000 with NCI share at $300,000 (partial-goodwill view). How do total goodwill and NCI differ between full-goodwill and partial-goodwill methods?",
     "Choices": {
-      "A": "Identical — method labels never change goodwill or NCI amounts",
+      "A": "Identical — method labels rarely change goodwill or NCI amounts",
       "B": "Full: goodwill $500,000 ($2,000,000 − $1,500,000), NCI $400,000 (20% × $2,000,000); Partial: goodwill $400,000 ($1,600,000 − 80% × $1,500,000), NCI $300,000 (20% × book) — $100,000 of NCI goodwill is the difference",
       "C": "Full goodwill $400,000; partial $500,000 — full recognition reduces goodwill by sharing it",
-      "D": "NCI always $400,000 — fair value governs regardless of method election"
+      "D": "NCI typically $400,000 — fair value governs regardless of method election"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Full-goodwill: consideration $1,600,000 + NCI FV $400,000 (20% × $2,000,000) = $2,000,000; less FV of net assets $1,500,000 = $500,000 goodwill (including $100,000 attributable to NCI). Partial-goodwill: consideration $1,600,000 − 80% × $1,500,000 ($1,200,000) = $400,000 goodwill (parent-only); NCI = 20% × $1,500,000 book = $300,000. Difference: $100,000 of NCI goodwill recognized under full, omitted under partial — NCI $400,000 vs $300,000; total goodwill $500,000 vs $400,000. Identical-outcome claims (option A) deny the $100,000 NCI-goodwill difference the election exists to create. Inverted figures (option C) swap the methods' results. NCI-always-$400,000 (option D) imposes fair value under the partial election that explicitly measures NCI at book share. Business interpretation: the NCI measurement election prices $100,000 of recognized NCI goodwill against simpler book-share mechanics — elect deliberately, disclose clearly. Common trap: treating the election as presentational.",
@@ -28518,7 +28532,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "D/E covenant max 1.00; current 0.90 ($4.5M/$5.0M). Three proposals compete: (1) $1,000,000 debt-funded buyback (takes D/E to 1.10); (2) $850,000 finance lease for needed equipment (takes D/E to 1.07); (3) 12-month renewable short-term leases preserving 0.90 with repricing risk. Earnings accretion is highest under (1). What should the board approve?",
     "Choices": {
       "A": "Buyback — highest earnings accretion dominates covenant considerations",
-      "B": "Finance lease — leasing always preserves covenants versus debt-funded alternatives",
+      "B": "Finance lease — leasing typically preserves covenants versus debt-funded alternatives",
       "C": "Short-term renewable leases — the only alternative preserving covenant headroom (0.90); accretion differences don't service covenant math",
       "D": "Buyback plus a preemptive waiver — banks routinely grant waivers for accretive transactions"
     },
@@ -28952,7 +28966,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Collections $1,200,000; disbursements $1,100,000; net +$100,000 — sales fund expenses one-for-one",
       "D": "Collections $1,182,740; disbursements $1,103,699; net +$79,041 (≈+$79,000) — exact day-rate math on both balances",
       "C": "Collections $1,020,000; disbursements $1,190,000 — beginning balances reverse the flow",
-      "B": "Net −$15,000 — growth always consumes cash regardless of working-capital math"
+      "B": "Net −$15,000 — growth typically consumes cash regardless of working-capital math"
     },
     "CorrectChoice": "D",
     "ExplanationCorrect": "Ending AR = $1,200,000 × 60/365 = $197,260.27; collections = $180,000 + $1,200,000 − $197,260.27 = $1,182,739.73 ≈ $1,182,740. Ending AP = $700,000 × 45/365 = $86,301.37; disbursements = $90,000 + $700,000 + $300,000 + $100,000 − $86,301.37 = $1,103,698.63 ≈ $1,103,699. Net = $1,182,740 − $1,103,699 = +$79,041 ≈ +$79,000. Rounded-balance shortcuts ($200,000/$85,000) drift $6,000 off exact day-rate math — budget at exact rates, round only the reported total. One-for-one sales-funds-expenses (option A) ignores $180,000 of beginning AR and $90,000 of beginning AP. Growth-consumes-cash (option B) asserts without computing — here collections exceed disbursements. Inverted signs (option C) subtracts AR and adds AP — beginning AR adds cash (collected), beginning AP subtracts it (paid). Business interpretation: direct-method budgets convert accrual plans through balance-sheet day rates — exact rates in, rounded totals out. Common trap: rounded intermediate balances.",
@@ -29003,7 +29017,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "A plant budgets 95% on-time delivery (OTD) with expedite spending capped at $30,000. Mid-year OTD runs 88% with $45,000 of expedite already spent; the shortfall traces to a single supplier's late components. Operations requests +$40,000 expedite budget; procurement requests a supplier switch (one-time $25,000 qualification + $10,000 higher annual piece cost). How should the budget be reforecast?",
     "Choices": {
-      "A": "Grant +$40,000 expedite — OTD shortfalls always justify premium freight",
+      "A": "Grant +$40,000 expedite — OTD shortfalls typically justify premium freight",
       "D": "Switch suppliers ($25,000 + $10,000/year) and hold expedite at $30,000 — root-cause fix beats symptom funding; the $40,000 expedite request treats supplier failure as permanent expediting need",
       "C": "Cut OTD target to 88% — budgets follow actuals, not aspirations",
       "B": "Do both (+$40,000 expedite and switch) — belt-and-suspenders guarantees OTD recovery"
@@ -29275,7 +29289,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "$480,000 released (DIO $140,000 + DSO $240,000 + DPO $100,000 at per-leg daily rates); unilateral DPO stretch without terms risks supply disruption that DIO/DSO gains cannot offset",
       "B": "$600,000 (20 days × $30,000 sales) — CCC days price at sales rate uniformly",
-      "C": "No cash released — working-capital timing shifts never free cash, only re-time it",
+      "C": "No cash released — working-capital timing shifts rarely free cash, only re-time it",
       "D": "$1,200,000 (20 days × $60,000 combined daily flow) — all three legs stack at full rates"
     },
     "CorrectChoice": "A",
@@ -29328,7 +29342,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Annual demand 48,000 units, order cost $100, carrying cost $4/unit-year. Supplier lead time averages 10 days (σ 2 days); daily demand averages 131.5 units (σ 20). Service target 95% (z = 1.65). What are EOQ, safety stock, and reorder point?",
     "Choices": {
       "A": "EOQ 1,549 units; safety stock 446 units; ROP 1,761 units — independent-demand math with both variabilities",
-      "B": "EOQ 1,549 units with zero safety stock — EOQ models assume certainty, so safety stock is always zero",
+      "B": "EOQ 1,549 units with zero safety stock — EOQ models assume certainty, so safety stock is typically zero",
       "C": "EOQ 48,000 units (one annual order) — minimizes ordering cost absolutely",
       "D": "ROP 1,315 units (10-day demand only) — safety stock double-counts variability already in EOQ"
     },
@@ -29382,7 +29396,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Current JIC: $200,000 average inventory ($8,000 carrying at 4%) with 99.2% fill rate. Proposed JIT: $40,000 inventory ($1,600 carrying) with 96.5% fill rate; each fill-rate point below 98% costs ~$25,000 in expediting/lost margin. Should operations switch, and what is the net?",
     "Choices": {
       "A": "Switch — $6,400 of carrying savings justify any fill-rate change",
-      "B": "Stay JIC — fill rate never trades against carrying cost",
+      "B": "Stay JIC — fill rate rarely trades against carrying cost",
       "D": "Stay — JIT net is −$61,100 [($6,400 carrying saved) − ($67,500 fill-rate cost: 2.7 pts × $25,000)]; JIC's $8,000 carrying buys 99.2% service that JIT destroys",
       "C": "Switch with a $100,000 safety buffer — halfway inventories capture halfway benefits"
     },
@@ -29813,7 +29827,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "The controller discovers a sales VP buried a $150,000 reserve via timing shifts (pulling Q2 orders into Q1), inflating the region's bonus pool by ~$22,000. Internal channels (CFO, audit committee) are unexhausted; no law is broken; amounts are quantitatively immaterial but bonus-material. What is the correct response protocol?",
     "Choices": {
-      "A": "Ignore — quantitatively immaterial amounts never warrant action",
+      "A": "Ignore — quantitatively immaterial amounts rarely warrant action",
       "C": "Confront the VP, restate the current quarter, disclose to the audit committee — timing manipulation for bonus metrics violates credibility/integrity regardless of materiality, with internal channels first",
       "B": "External whistleblowing — manipulation forfeits all internal process",
       "D": "Silently reverse next quarter — self-correcting without confrontation preserves relationships"
@@ -29868,7 +29882,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Statistical forecast MSE is 100; judgmental (sales-team) forecast MSE is 150. The planning team uses judgment alone, then statistical alone, then argues endlessly. What combination rule should govern, and how should weights evolve?",
     "Choices": {
       "A": "Inverse-MSE weights: 60% statistical (150/250) + 40% judgment (100/250), reweighted annually on tracked accuracy — combined MSE beats either alone",
-      "B": "Judgment alone — field knowledge always dominates models",
+      "B": "Judgment alone — field knowledge typically dominates models",
       "C": "Statistical alone — MSE 100 beats 150, so judgment adds only noise",
       "D": "50/50 fixed — equal respect for equal stakeholders"
     },
@@ -30030,8 +30044,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Daily collections average $2,000,000. A lockbox system costing $50,000/year would accelerate availability by one full day; investable rate is 5%. Should treasury adopt it?",
     "Choices": {
       "A": "Adopt — $100,000 annual float benefit ($2,000,000 × 5%) minus $50,000 cost = +$50,000 net",
-      "B": "Reject — $50,000 of bank fees always exceeds float gains at these volumes",
-      "C": "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs",
+      "B": "Reject — $50,000 of bank fees typically exceeds float gains at these volumes",
+      "C": "Adopt only with two-day acceleration — one day rarely justifies lockbox fixed costs",
       "D": "Reject — float management is obsolete in same-day settlement eras"
     },
     "CorrectChoice": "A",
@@ -30083,7 +30097,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Budget monitoring: σ = $6,000 monthly noise. False-alarm probe costs $5,000; missed real shifts average $100,000 (20:1 asymmetry). Compare $12,000 versus $8,000 investigation thresholds. Which should govern?",
     "Choices": {
-      "A": "$12,000 — fewer false alarms always wins regardless of miss costs",
+      "A": "$12,000 — fewer false alarms typically wins regardless of miss costs",
       "C": "$15,000 — round numbers aid compliance and recall",
       "B": "No threshold — investigate every variance since misses dominate",
       "D": "$8,000 — 20:1 miss-to-alarm cost asymmetry justifies sensitivity over specificity; $12,000 specificity prices $100,000 misses to save $5,000 probes"
@@ -30137,7 +30151,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Monthly S&OP costs $20,000/year (staff time, systems) with $500,000/year of stockout-plus-obsolescence costs under monthly coordination. Weekly S&OP costs $80,000/year and would cut coordination failures to $300,000/year. Which cadence should the company run?",
     "Choices": {
-      "A": "Monthly — lower process cost always wins",
+      "A": "Monthly — lower process cost typically wins",
       "C": "Quarterly — minimum process cost dominates any cadence analysis",
       "B": "Weekly — $380,000 total ($300,000 failures + $80,000 process) beats $520,000 monthly ($500,000 + $20,000) by $140,000",
       "D": "Ad-hoc S&OP on exceptions — meetings should follow problems, not calendars"
@@ -30246,7 +30260,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Statistical forecast MSE is 100; judgmental (sales-team) forecast MSE is 150. The planning team uses judgment alone, then statistical alone, then argues endlessly. What combination rule should govern, and how should weights evolve?",
     "Choices": {
       "D": "Inverse-MSE weights: 60% statistical (150/250) + 40% judgment (100/250), reweighted annually on tracked accuracy — combined MSE beats either alone",
-      "B": "Judgment alone — field knowledge always dominates models",
+      "B": "Judgment alone — field knowledge typically dominates models",
       "C": "Statistical alone — MSE 100 beats 150, so judgment adds only noise",
       "A": "50/50 fixed — equal respect for equal stakeholders"
     },
@@ -30301,7 +30315,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Hold 30% ($720,000) — index stability beats single-year responsiveness every time",
       "D": "Re-index toward 34% with shrinkage (e.g., 32% ≈ $768,000) — one year at 34% against five at 30% moves the posterior partway; full re-indexing overfits, holding ignores evidence",
-      "C": "Re-index fully to 34% ($816,000) — latest actuals always govern",
+      "C": "Re-index fully to 34% ($816,000) — latest actuals typically govern",
       "B": "Drop seasonal indexing — one surprise proves models useless"
     },
     "CorrectChoice": "D",

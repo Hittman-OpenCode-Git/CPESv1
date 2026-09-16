@@ -1,5 +1,4 @@
-// BLOCK-AUTHORIZED — Phase 2 certification batch S140-S144 (75 items)
-const MCQ_BANK_E = [
+var MCQ_BANK_E = [
   {
     "StudyLinks": [
       {
@@ -3422,7 +3421,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Inventory write-down reversal IFRS",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Never",
+      "A": "rarely",
       "B": "NRV recovers",
       "C": "Inventory is sold",
       "D": "Cost increases"
@@ -3775,7 +3774,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Completed contract method",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Never",
+      "A": "rarely",
       "B": "U.S. GAAP for most contracts",
       "C": "IFRS for contracts",
       "D": "U.S. GAAP for contracts not meeting over-time criteria"
@@ -25115,7 +25114,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Only if profit also exceeds threshold",
-      "B": "Never",
+      "B": "rarely",
       "C": "No",
       "D": "Yes, because Segment A's $500,000 is 10% of the $5,000,000 total, which meets the asset test"
     },
@@ -31395,7 +31394,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Q4 $600,000 (30% of $2,000,000); revised shares sum to 96% before Q4 — indices must sum to 1.00, so Q4 takes the 34% residual ($748,000 on $2.2M), not a stale 30%",
       "B": "Q4 $660,000 — 30% of the revised $2,200,000 regardless of other quarters",
-      "C": "Q4 $600,000 — annual revisions never change quarterly shares",
+      "C": "Q4 $600,000 — annual revisions rarely change quarterly shares",
       "D": "Q4 $528,000 — 24% matching Q2/Q3 symmetry"
     },
     "CorrectChoice": "A",
@@ -31450,7 +31449,7 @@ const MCQ_BANK_E = [
       "A": "30,500 — sales plus net FG build, ignoring defects",
       "B": "32,105 — good output needed (30,000 + 2,000 − 1,500 = 30,500) grossed up by the 95% yield (30,500/0.95 = 32,105.26)",
       "C": "32,000 — 30,500 plus a 5% add-on (30,500 × 1.05)",
-      "D": "30,500 — defects are a production variance, never a budget input"
+      "D": "30,500 — defects are a production variance, rarely a budget input"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Good output required = 30,000 + 2,000 − 1,500 = 30,500 units. With 5% scrapped, starts × 95% = 30,500 → starts = 30,500/0.95 = 32,105.26 → 32,105 whole units. Additive 5% (option C: 30,500 × 1.05 = 32,025) understates by 80 units because the defect rate applies to starts, not to good output — division by yield, never multiplication by defect rate. Ignoring defects (options A/D: 30,500) plans a 1,605-unit shortfall. Business interpretation: gross up by dividing by yield (1 − defect rate). Common trap: multiplying good output by (1 + defect rate).",
@@ -31504,7 +31503,7 @@ const MCQ_BANK_E = [
       "A": "Order 10,000: $45,000 + ~$150 carrying on the 500-unit excess = $45,150 — beats $47,500 by $2,350",
       "B": "Order 9,500 — exact need avoids all carrying cost",
       "C": "Order 20,000 — double-tier quantities double the savings",
-      "D": "Order 9,500 and renegotiate — tiers are always negotiable, so analysis is moot"
+      "D": "Order 9,500 and renegotiate — tiers are typically negotiable, so analysis is moot"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Need-cost = 9,500 × $5.00 = $47,500. Tier-break: 10,000 × $4.50 = $45,000 plus carrying on the 500-unit excess — average excess 250 units × $2.40/year × 0.25 year ≈ $150 (one quarter's carry on half the excess, consumed next quarter). Total ≈ $45,150 < $47,500 — break the tier, saving ~$2,350/quarter (~$9,400/year). Exact-need ordering (option B) pays $2,350/quarter for carrying-cost purity. Doubling to 20,000 (option C) strands 10,500 units: extra carrying ≈ 5,250 avg × $2.40 = $12,600/year against $4,500 more discount — net loss. Renegotiation-first (option D) skips the analysis the numbers already resolve — negotiate from the $2,350 surplus, not instead of computing it. Business interpretation: price tiers are all-units discounts — always compare tier-total-plus-carry against need-cost; the 500-unit excess here is cheap bridge stock, not waste. Common trap: treating carrying cost as prohibitive without computing it.",
@@ -31610,7 +31609,7 @@ const MCQ_BANK_E = [
     "Stem": "Maintenance (MH, cost): (8k, $98k), (12k, $122k), (10k, $110k), (6k, $200k — hurricane outage with emergency contractors). Separate fixed and variable components for the flexible budget.",
     "Choices": {
       "A": "High-low on all four — $25.50 variable with negative fixed, accepted as computed",
-      "B": "Regression on all four — more data always beats selective data",
+      "B": "Regression on all four — more data typically beats selective data",
       "C": "Exclude the hurricane point; VC $6.00, FC $50,000 — verified against the third observation ($110,000)",
       "D": "Exclude the hurricane point; VC $6.00 with no fixed component — intercepts are unreliable, so report variable only"
     },
@@ -31663,10 +31662,10 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "Terms 2/10 net 30; $1,000,000 monthly AR; 40% of customers take the discount. Borrowing rate 8%. Dropping the discount is projected to stretch DSO 15 days. Should the company keep or drop 2/10?",
     "Choices": {
-      "A": "Keep — discounts always accelerate cash worth more than their cost",
+      "A": "Keep — discounts typically accelerate cash worth more than their cost",
       "B": "Drop — 2/10 costs 36.7% APR versus 8% borrowing ($96,000/year); even with $39,452 of DSO-stretch carrying cost, dropping nets +$56,548",
       "C": "Drop — discounts are pure cost with no benefit side",
-      "D": "Keep — DSO deterioration always exceeds discount savings"
+      "D": "Keep — DSO deterioration typically exceeds discount savings"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Discount cost = $400,000 × 2% = $8,000/month = $96,000/year. Annualized rate = (0.02/0.98) × (360/20) = 0.020408 × 18 = 36.73% ≈ 36.7% — versus 8% borrowing, the discount is ruinously expensive credit. DSO-stretch cost if dropped: $12,000,000 annual × 15/365 × 8% = $12,000,000 × 0.041096 × 0.08 = $39,452. Net of dropping = $96,000 − $39,452 = +$56,548/year. Keep-always (option A) pays 36.7% APR for acceleration borrowable at 8%. Drop-as-pure-cost (option C) ignores the $39,452 DSO consequence — benefits exist, they are just outweighed. Keep-on-DSO-fear (option D) asserts without computing: $39,452 < $96,000, computed. Business interpretation: price trade credit against borrowing cost with DSO consequences loaded — 2/10 net 30 at 36.7% is among the most expensive common financings. Common trap: treating discounts as free acceleration.",
@@ -31717,7 +31716,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "A $500,000 loan at 6% stated requires a 20% compensating balance. An alternative 7% loan has no balance requirement. Which borrowing is cheaper on an effective-rate basis?",
     "Choices": {
-      "A": "The 6% loan — lower stated rate always wins",
+      "A": "The 6% loan — lower stated rate typically wins",
       "B": "Neither — compensating balances are illegal tie-ins, so the comparison is void",
       "C": "The 7% loan as stated — headline rates decide",
       "D": "The 7% loan — the 6% loan's effective rate is 7.5% ($30,000 on $400,000 usable); compensating balances tax the proceeds"
@@ -31774,7 +31773,7 @@ const MCQ_BANK_E = [
       "A": "All −$7,600 is activity — volume missed budget, end of story",
       "B": "Price +$22,000 F; activity −$29,600 U — discounting helped",
       "C": "Activity +$24,000 F; price −$22,000 U; variable-efficiency −$6,600 U; fixed-spending −$3,000 U — volume win, execution loss",
-      "D": "Fixed spending $0 — fixed costs never vary, so the $3,000 is volume"
+      "D": "Fixed spending $0 — fixed costs rarely vary, so the $3,000 is volume"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Flexible at 22,000: revenue 22,000×$30 = $660,000; VC 22,000×$18 = $396,000; FC $150,000 → NOI $114,000. Activity = $114,000 − $90,000 = +$24,000 F. Price = $638,000 − $660,000 = −$22,000 U. Variable efficiency = $396,000 − $402,600 = −$6,600 U. Fixed spending = $150,000 − $153,000 = −$3,000 U. Check: +24,000 − 22,000 − 6,600 − 3,000 = −$7,600 U — reconciles. Volume delivered $24,000 that execution surrendered $31,600 of — every controllable dimension failed while headline volume grew. A manager bonused on totals would celebrate growth that destroyed $7,600 of profit. Business interpretation: flexible bridges deny volume credit for price/efficiency failures — split before judging. Common trap: bonusing net variances.",
@@ -32150,7 +32149,7 @@ const MCQ_BANK_E = [
     "Stem": "Picking rate was set at $30/hr on 8,000 budgeted hours ($240,000). Actual: 6,000 hours at $200,000 total (actual rate $33.33). Volume fell short while wages crept. Should the $30 rate be revised, and how do rate versus volume effects split?",
     "Choices": {
       "A": "Revise to $33.33 — actuals define standards",
-      "B": "Hold $30 — one period never justifies revision",
+      "B": "Hold $30 — one period rarely justifies revision",
       "C": "Revise to $25 — split the difference to share the pain",
       "D": "Hold the $30 rate (volume drove the $40,000 total variance: (8,000−6,000)×$30 = $60,000 F volume vs (33.33−30)×6,000 = $20,000 U rate); investigate the $3.33 wage creep separately"
     },
@@ -32365,8 +32364,8 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "Internal customers demand 5,000 units @ $40 transfer ($200,000) against $45 outside price; producing division has idle capacity (VC $30). The producing manager prefers outside sales effort instead. Corporate is considering mandating internal fulfillment. What is the company-optimal policy?",
     "Choices": {
-      "A": "Voluntary — autonomy always beats mandated internal trade",
-      "B": "No policy — internal demand is soft information, never plannable",
+      "A": "Voluntary — autonomy typically beats mandated internal trade",
+      "B": "No policy — internal demand is soft information, rarely plannable",
       "C": "Prohibit internal trade — outside focus maximizes market discipline",
       "D": "Mandate internal fulfillment at $35 transfer — company saves (45−30)×5,000 = $75,000; transfer splits gains ($10 buyer savings + $5 seller margin per unit)"
     },
@@ -32529,7 +32528,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Quarterly — $210,000 benefit minus $40,000 cost = $170,000 net, beating monthly's $120,000 net ($240,000 − $120,000)",
       "B": "Monthly — highest error reduction (80%) regardless of cost",
-      "C": "Static annual — process costs always exceed their benefits at these scales",
+      "C": "Static annual — process costs typically exceed their benefits at these scales",
       "D": "Monthly — $240,000 benefit exceeds quarterly's $210,000, so monthly wins on benefits alone"
     },
     "CorrectChoice": "A",
@@ -32689,7 +32688,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "The controller discovers the VP buried a $200,000 reserve via year-end timing shifts, inflating the division's bonus pool by ~$30,000. Internal channels (CFO, audit committee) are unexhausted; no law is broken; amounts are quantitatively immaterial but bonus-material. What is the correct response protocol?",
     "Choices": {
-      "A": "Ignore — quantitatively immaterial amounts never warrant action",
+      "A": "Ignore — quantitatively immaterial amounts rarely warrant action",
       "B": "External whistleblowing — manipulation forfeits all internal process",
       "C": "Confront the VP, restate the current quarter, disclose to the audit committee — timing manipulation for bonus metrics violates IMA credibility/integrity regardless of materiality, with internal channels first",
       "D": "Silently reverse next quarter — self-correcting without confrontation preserves relationships"
@@ -32744,8 +32743,8 @@ const MCQ_BANK_E = [
     "Stem": "Daily collections average $2,000,000. A lockbox system costing $50,000/year would accelerate availability by one full day; investable rate is 5%. Should treasury adopt it?",
     "Choices": {
       "A": "Adopt — $100,000 annual float benefit ($2,000,000 × 5%) minus $50,000 cost = +$50,000 net",
-      "B": "Reject — $50,000 of bank fees always exceeds float gains at these volumes",
-      "C": "Adopt only with two-day acceleration — one day never justifies lockbox fixed costs",
+      "B": "Reject — $50,000 of bank fees typically exceeds float gains at these volumes",
+      "C": "Adopt only with two-day acceleration — one day rarely justifies lockbox fixed costs",
       "D": "Reject — float management is obsolete in same-day settlement eras"
     },
     "CorrectChoice": "A",
@@ -32797,7 +32796,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "Budget monitoring: σ = $6,000 monthly noise. False-alarm probe costs $5,000; missed real shifts average $100,000 (20:1 asymmetry). Compare $12,000 versus $8,000 investigation thresholds. Which should govern?",
     "Choices": {
-      "A": "$12,000 — fewer false alarms always wins regardless of miss costs",
+      "A": "$12,000 — fewer false alarms typically wins regardless of miss costs",
       "B": "No threshold — investigate every variance since misses dominate",
       "C": "$15,000 — round numbers aid compliance and recall",
       "D": "$8,000 — 20:1 miss-to-alarm cost asymmetry justifies sensitivity over specificity; $12,000 specificity prices $100,000 misses to save $5,000 probes"
@@ -32851,7 +32850,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "Monthly S&OP costs $20,000/year (staff time, systems) with $500,000/year of stockout-plus-obsolescence costs under monthly coordination. Weekly S&OP costs $80,000/year and would cut coordination failures to $300,000/year. Which cadence should the company run?",
     "Choices": {
-      "A": "Monthly — lower process cost always wins",
+      "A": "Monthly — lower process cost typically wins",
       "B": "Weekly — $380,000 total ($300,000 failures + $80,000 process) beats $520,000 monthly ($500,000 + $20,000) by $140,000",
       "C": "Quarterly — minimum process cost dominates any cadence analysis",
       "D": "Ad-hoc S&OP on exceptions — meetings should follow problems, not calendars"
@@ -32960,7 +32959,7 @@ const MCQ_BANK_E = [
     "Stem": "Statistical forecast MSE is 100; judgmental (sales-team) forecast MSE is 150. The planning team uses judgment alone, then statistical alone, then argues endlessly. What combination rule should govern, and how should weights evolve?",
     "Choices": {
       "A": "Inverse-MSE weights: 60% statistical (150/250) + 40% judgment (100/250), reweighted annually on tracked accuracy — combined MSE beats either alone",
-      "B": "Judgment alone — field knowledge always dominates models",
+      "B": "Judgment alone — field knowledge typically dominates models",
       "C": "Statistical alone — MSE 100 beats 150, so judgment adds only noise",
       "D": "50/50 fixed — equal respect for equal stakeholders"
     },
@@ -33122,7 +33121,7 @@ const MCQ_BANK_E = [
     "Stem": "Disbursement fraud exposure is $600,000/year. Preventive upgrade (dual authorization workflow) costs $90,000 and cuts occurrence 80%. Detective upgrade (daily match analytics) costs $40,000 and cuts loss-given-occurrence 60%. Budget allows only one this year. Which should fund first, and what remains exposed?",
     "Choices": {
       "A": "Preventive — $480,000 reduction ($600,000 × 80%) for $90,000; residual $120,000 plus unaddressed severity",
-      "B": "Detective — cheaper sticker price always wins under budget constraint",
+      "B": "Detective — cheaper sticker price typically wins under budget constraint",
       "C": "Neither — split $130,000 proportionally across both for half coverage each",
       "D": "Preventive — occurrence elimination beats severity reduction categorically"
     },
@@ -33229,8 +33228,8 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "Bank reconciliation: 12 breaks totaling $95,000 — 9 under $5,000 each ($22,000) aged under 30 days, 2 at $18,000 and $25,000 aged 60–90 days, 1 at $30,000 aged 120+ days. The controller has 20 investigation hours. How should effort allocate?",
     "Choices": {
-      "A": "Oldest first mechanically — age always outranks amount",
-      "B": "Largest first mechanically — amount always outranks age",
+      "A": "Oldest first mechanically — age typically outranks amount",
+      "B": "Largest first mechanically — amount typically outranks age",
       "C": "Investigate the $30,000/120-day and $25,000/90-day breaks first (age × amount interaction: stale large breaks indicate control failure or concealment), then the $18,000, then batch-clear the nine small current breaks",
       "D": "Clear the nine small breaks first — volume clearance maximizes items resolved per hour"
     },
@@ -33826,7 +33825,7 @@ const MCQ_BANK_E = [
       "A": "External reporting immediately — whistleblower demands plus $1.8M exposure override internal process",
       "B": "Quiet review with the manager informed — transparency with subjects preserves fairness",
       "C": "Secure evidence (preserve email, image devices), restrict the manager's authority quietly (dual-approval overlay), engage counsel-directed investigation, protect the whistleblower — controls first, investigation under privilege, retaliation guards active throughout",
-      "D": "Wait for the financial trail — preliminary evidence never justifies action"
+      "D": "Wait for the financial trail — preliminary evidence rarely justifies action"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Sequence by irreversibility: (1) preserve evidence first (email, devices — spoliation destroys everything downstream); (2) quietly restrict authority via dual-approval overlay (stops the $1.8M exposure without tipping the subject — removal or confrontation first risks destruction); (3) counsel-directed investigation (privilege protects findings and strategy); (4) whistleblower protections active from minute one (anti-retaliation monitoring, confidential channel). Immediate external reporting (option A) with preliminary evidence and unexhausted internal channels violates proportionality — external is last resort. Informing the manager (option B) tips the subject before evidence is secured. Waiting for financial trails (option D) leaves $1.8M of sole-source authority live while evidence sits unpreserved. Business interpretation: fraud response sequences by evidence-preservation urgency, then exposure containment, then privileged investigation — retaliation guards run parallel throughout. Common trap: choosing between speed and process instead of sequencing both.",
@@ -34258,7 +34257,7 @@ const MCQ_BANK_E = [
       "A": "Cut analytics — $70,000 of software for monitoring is discretionary technology spend",
       "B": "Cut manual reviews — analytics plus deep dive cover the ground",
       "C": "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts must come from coverage analysis, never budget ratios",
-      "D": "Double analytics to $140,000 — more technology always improves coverage proportionally"
+      "D": "Double analytics to $140,000 — more technology typically improves coverage proportionally"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Price coverage by leg: analytics $70,000 → 70% same-day ($1,000/point); manual $30,000 → 20% at 90-day lag ($1,500/point); deep dive $20,000 → 8% residual ($2,500/point). Analytics is the cheapest point AND the fastest (same-day vs 90-day lag) — cutting it (option A) saves $70,000 to forfeit 70 points of same-day coverage, collapsing to 28% at $50,000 (worse coverage at worse speed). Cutting manual (option B) forfeits 20 points the analytics cannot see (judgment-intensive anomalies). Doubling analytics (option D) pays $70,000 more for diminishing returns past 70% (analytics already harvests its visible population). The mix is efficient as priced: keep all three, re-examine only if leg yields shift. Business interpretation: optimize monitoring mixes by coverage-per-dollar times detection speed — cheapest-fastest legs cut last, never first. Common trap: cutting technology spend without pricing the coverage it buys.",

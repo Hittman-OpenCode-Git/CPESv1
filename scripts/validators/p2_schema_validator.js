@@ -362,9 +362,14 @@ for (const file of PACKS) {
   const content = fs.readFileSync(fp, "utf8");
   const items = extractItems(content);
 
+  // R20 coverage assertion (board R20 / DL-049 family): extraction must see
+  // every question object; a silent drop fails loudly instead of passing.
+  const rawQids = (content.match(/"QuestionID"\s*:/g) || []).length;
+  if (items.length !== rawQids) {
+    throw new Error(`COVERAGE_ASSERTION_FAILED [${file}]: parsed ${items.length} items vs raw QuestionID count ${rawQids} (R20).`);
+  }
   if (items.length === 0) {
-    console.log(`  OK    ${file} — empty pack (no items to validate)`);
-    continue;
+    throw new Error(`COVERAGE_ASSERTION_FAILED [${file}]: pack present but zero items extracted (R20).`);
   }
 
   const errors = [];

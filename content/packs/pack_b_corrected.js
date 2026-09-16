@@ -1,4 +1,4 @@
-﻿const MCQ_BANK_B = [
+var MCQ_BANK_B = [
   {
     "Part": 1,
     "Section": "A",
@@ -23386,7 +23386,7 @@
       "A": "All $1,500 F is activity — volume beat budget, end of story",
       "B": "Price +$11,000 F; activity −$9,500 U — discounting helped",
       "C": "Activity +$20,000 F; price −$11,000 U; variable-efficiency −$5,500 U; fixed-spending −$2,000 U — volume win, execution loss",
-      "D": "Fixed spending $0 — fixed costs never vary, so the $2,000 is volume"
+      "D": "Fixed spending $0 — fixed costs rarely vary, so the $2,000 is volume"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Flexible budget at 11,000: revenue 11,000×$50 = $550,000; variable 11,000×$30 = $330,000; fixed $100,000 → NOI $120,000. Activity variance = $120,000 − $100,000 = +$20,000 F. Price = $539,000 − $550,000 = −$11,000 U. Variable efficiency = $330,000 − $335,500 = −$5,500 U. Fixed spending = $100,000 − $102,000 = −$2,000 U. Check: +20,000 − 11,000 − 5,500 − 2,000 = +$1,500 F — reconciles. The $1,500 headline flatters: volume delivered $20,000 that execution surrendered $18,500 of (discounting $11,000, over-spending $7,500). A manager bonused on the $1,500 total would celebrate a quarter where every controllable dimension failed. Business interpretation: flexible bridges exist to deny volume credit for price/efficiency failures — always split before judging. Common trap: bonusing the net variance.",
@@ -23545,10 +23545,10 @@
     "ItemStyle": "single-select",
     "Stem": "A component costs $110 against a $100 target cost. Engineering proposes 5% annual kaizen reduction for 3 years. The product manager doubts the target is reachable within the product's 2-year remaining life. Is the target feasible, and when?",
     "Choices": {
-      "A": "Never — kaizen shaves pennies, not the $10 gap",
+      "A": "rarely — kaizen shaves pennies, not the $10 gap",
       "B": "Year 1 — 5% of $110 is $5.50, nearly the gap",
       "C": "Year 2 ($99.28) — compounding reaches target within product life; 3-year path hits $94.31",
-      "D": "Only with 10% annual reduction — 5% never compounds fast enough"
+      "D": "Only with 10% annual reduction — 5% rarely compounds fast enough"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Kaizen path: Year 1 $110 × 0.95 = $104.50; Year 2 $104.50 × 0.95 = $99.275 ≈ $99.28 — below the $100 target within the 2-year life. Year 3 would reach $99.28 × 0.95 = $94.31. The manager's doubt confuses linear intuition ($5.50/year × 2 = $11.00 — actually also sufficient: $110 − $11 = $99) with the compounding reality, but both arithmetic framings agree the target falls in year 2. The 10%-demand (option D) doubles the required pace without basis. Business interpretation: kaizen feasibility is a compounding question — always compound before declaring targets unreachable. Common trap: linearizing exponential improvement (or dismissing small percentages that compound).",
@@ -24141,7 +24141,7 @@
     "Choices": {
       "A": "$2,200,000 — strip the $200,000 double-count ($2.3M adjusted pipeline), then split the remaining $200,000 methods gap evenly",
       "B": "$2,400,000 — the pipeline is objective evidence and governs",
-      "C": "$2,100,000 — statistical models always dominate judgmental pipelines",
+      "C": "$2,100,000 — statistical models typically dominate judgmental pipelines",
       "D": "$2,350,000 — average the two forecasts as equal experts"
     },
     "CorrectChoice": "A",
@@ -24627,7 +24627,7 @@
     "Choices": {
       "A": "X wins at $81,633 effective ($8.163/lb usable) versus Y at $82,609 ($8.261/lb) — the $0.40 price gap reverses after quality adjustment, saving $976",
       "B": "Y wins at $76,000 (10,000 × $7.60) versus $80,000 — price decides, quality is a production variance",
-      "C": "Tie — defect differentials always offset price differentials exactly",
+      "C": "Tie — defect differentials typically offset price differentials exactly",
       "D": "Y wins at $82,609 versus X at $88,000 — X must buy 11,000 lbs at full price"
     },
     "CorrectChoice": "A",
@@ -24736,7 +24736,7 @@
       "A": "Price −$4,500 U (M −$9,500 + N +$5,000); volume −$22,500 U (M +$37,500, N −$60,000 at budget prices); within volume, mix −$18,000 U at CM with quantity $0 — total −$27,000 reconciles",
       "B": "Quantity −$27,000 U; mix and price $0 — totals moved, components did not",
       "C": "Price −$27,000 U; mix and quantity $0 — discounting explains everything",
-      "D": "Mix nets $0 — composition shifts always self-cancel"
+      "D": "Mix nets $0 — composition shifts typically self-cancel"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Price effect at actual quantities: M 9,500×($24−$25) = −$9,500; N 2,500×($42−$40) = +$5,000; net −$4,500 U. Volume effect at budget prices: M (9,500−8,000)×$25 = +$37,500; N (2,500−4,000)×$40 = −$60,000; net −$22,500 U. Total: −$4,500 − $22,500 = −$27,000 U — reconciles. Within volume: mix at budgeted CM = (9,500×$10 + 2,500×$22) − (8,000×$10 + 4,000×$22) = $150,000 − $168,000 = −$18,000 U (shift toward lower-CM M); quantity = 12,000 − 12,000 = $0. (Volume-at-price −$22,500 vs mix-at-CM −$18,000 differ by price-mix interaction — report both bases explicitly.) Quantity-only reading (option B) ignores the −$4,500 price and the −$18,000 mix inside volume. Price-only (option C) ignores −$22,500 of volume. Self-canceling mix (option D) denies composition effects that moved $18,000 of margin. Business interpretation: bridge revenue first (price + volume), then split volume into mix and quantity at CM — two bases, each labeled. Common trap: single-cause attribution of multi-cause bridges.",
@@ -24950,7 +24950,7 @@
     "Stem": "Our fulfillment cost is $12.50/order versus a leader's $9.80. Decomposition: $1.90 from scale (leader ships 5× our volume with automation thresholds we cannot reach), $0.80 from pick-pack methods we can copy. What target should the controller set?",
     "Choices": {
       "A": "$9.80 — best-in-class is best-in-class regardless of scale",
-      "B": "No target — cross-company comparisons are never valid across size classes",
+      "B": "No target — cross-company comparisons are rarely valid across size classes",
       "C": "Keep $12.50 — any gap with a scale component is entirely excused",
       "D": "$11.70 — the attainable $0.80 efficiency portion only ($12.50 − $0.80); the $1.90 scale advantage is out of reach"
     },
@@ -25058,7 +25058,7 @@
     "Stem": "A $25,000 unfavorable variance sits inside ±$30,000 control limits (σ = $15,000). The $10,000 fixed rule says probe; the 5%-of-budget rule ($40,000 on $800,000) says ignore. Historical base rate: 85% of in-control variances self-correct with zero finding. Each probe costs $4,000. What should govern?",
     "Choices": {
       "A": "Probe — $25,000 exceeds the $10,000 rule, and rules are rules",
-      "B": "Probe — large absolute dollars always justify investigation regardless of limits",
+      "B": "Probe — large absolute dollars typically justify investigation regardless of limits",
       "C": "Ignore — the 5% rule governs as the more senior threshold",
       "D": "Do not probe — in-control with 85% self-correction base rate; fixed and percentage rules that ignore distribution and base rates waste probes on noise"
     },
@@ -25219,7 +25219,7 @@
     "ItemStyle": "single-select",
     "Stem": "Sales vs commissions ($000s): (100, $5), (200, $10), (300, $14). Theory says zero sales → zero commission (no retainer). Estimate the commission rate with and without intercept, and recommend.",
     "Choices": {
-      "A": "With intercept ($0.67k + 4.67%) — intercepts always improve fit and belong in budgets",
+      "A": "With intercept ($0.67k + 4.67%) — intercepts typically improve fit and belong in budgets",
       "B": "Through-origin 4.79% (Σxy/Σx² = 6,700/140,000) — theory (zero sales → zero commission) plus a better out-of-sample basis; the intercept model invents $670 of fixed pay that doesn't exist",
       "C": "Simple average 4.89% ((5+5+4.67)/3) — averaging rates is the robust estimator",
       "D": "Highest observed 5% — conservative budgeting uses ceiling rates"
@@ -25275,7 +25275,7 @@
     "Choices": {
       "A": "Job $128,000 ($120,000 + $8,000 normal); $5,000 abnormal period loss — normal rework attaches, abnormal expenses",
       "B": "Job $133,000 — all rework attaches to custom jobs by definition",
-      "C": "Job $120,000; $13,000 period loss — rework never attaches to jobs",
+      "C": "Job $120,000; $13,000 period loss — rework rarely attaches to jobs",
       "D": "Job $125,000 — abnormal attaches, normal expenses (rework symmetry)"
     },
     "CorrectChoice": "A",
@@ -25330,7 +25330,7 @@
       "A": "TI 9,000 EU ($7.78); DM 9,800 ($4.59); conv 9,600 ($5.73) — BWIP prior work included throughout",
       "B": "TI 7,000 EU ($10.00); DM 7,800 ($5.77); conv 8,600 ($6.40) — current-period work only",
       "C": "TI 7,000 ($10.00); DM 9,800 ($4.59); conv 9,600 ($5.73) — BWIP excluded selectively by convenience",
-      "D": "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in always uses average method"
+      "D": "TI 9,000 ($7.78); DM 7,800 ($5.77); conv 8,600 ($6.40) — transferred-in typically uses average method"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "FIFO counts only current-period work per component. Transferred-in: completed 9,000 − BWIP 2,000 (already transferred last period) = 7,000 EU → $70,000/7,000 = $10.00. DM: BWIP 0% → started-and-completed (9,000 − 2,000) = 7,000 + EWIP 1,000×80% = 800 → 7,800 EU → $45,000/7,800 = $5.7692 ≈ $5.77. Conversion: finish BWIP 2,000×50% = 1,000 + 7,000 + EWIP 1,000×60% = 600 → 8,600 EU → $55,000/8,600 = $6.3953 ≈ $6.40. (Option A's 9,000/9,800/9,600 EU set includes BWIP prior work — average mechanics.) Selective exclusion (option C) applies FIFO to two components and average to DM — method consistency forbids it. Transferred-always-average (option D) invents a component exception FIFO does not contain. Business interpretation: FIFO layers each cost component independently — BWIP prior work excluded component-by-component, never selectively. Current unit cost = $10.00 + $5.77 + $6.40 = $22.17. Common trap: including BWIP prior EU under FIFO labels.",
@@ -25867,7 +25867,7 @@
     "ItemStyle": "single-select",
     "Stem": "Facts: a payables clerk missed bonuses two years running and carries medical debt (pressure); she is the sole check signer with no secondary review (opportunity); she tells coworkers the company 'owes her' for unpaid overtime (rationalization). A $12,000 round-sum personal check to herself is suspected. How should the fraud-risk assessment read this, and what responds first?",
     "Choices": {
-      "A": "Low risk — single indicators never suffice, and $12,000 is immaterial",
+      "A": "Low risk — single indicators rarely suffice, and $12,000 is immaterial",
       "B": "Medium risk — monitor the clerk quarterly with additional training",
       "C": "Elevated risk on pressure alone — debt predicts fraud sufficiently",
       "D": "High risk — all three fraud-triangle legs present with a suspected act; immediate dual control on disbursements plus mandatory vacation with coverage review, then investigate the $12,000"
@@ -26248,7 +26248,7 @@
       "A": "$100,000 deferred asset, straight-line amortization — issuance costs are prepaid services",
       "C": "$100,000 debt discount (contra-liability) amortized by effective-interest — issuance costs reduce proceeds and accrete through interest",
       "B": "$80,000 discount plus $20,000 immediate expense — underwriter fees differ economically from legal costs",
-      "D": "$100,000 immediate expense — issuance friction never benefits future periods"
+      "D": "$100,000 immediate expense — issuance friction rarely benefits future periods"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "ASU 2015-03: debt issuance costs present as a direct deduction from the carrying amount (contra-liability, economically a discount — net proceeds $1,900,000), amortized via the effective-interest method (accreting through interest expense over the term). Deferred-asset treatment (option A) revives pre-2015 presentation, and straight-line misstates constant-yield economics. Split treatment (option B) invents an economic distinction — underwriter and legal costs are both issuance friction reducing net proceeds identically. Immediate expense (option D) ignores multi-period benefit (lower coupon via incurred costs amortizes across the term). Business interpretation: issuance costs are unamortized discount by another name — present against the debt, accrete through yield. Common trap: grandfathered deferred-asset presentation.",
@@ -26569,10 +26569,10 @@
     "ItemStyle": "single-select",
     "Stem": "A plan freeze eliminates future accruals: PBO drops $300,000 (from $1,000,000 to $700,000); unrecognized prior-service cost in AOCI is $80,000. What curtailment gain is recognized, and where?",
     "Choices": {
-      "A": "$300,000 gain in OCI — curtailments never touch net income until settlement",
+      "A": "$300,000 gain in OCI — curtailments rarely touch net income until settlement",
       "C": "$220,000 gain in net income ($300,000 PBO reduction less $80,000 prior-service write-off) — curtailment gains recognize when the event occurs",
       "B": "$300,000 gain in net income — prior-service balances amortize on original schedules regardless",
-      "D": "$80,000 loss — prior-service write-offs always dominate curtailment economics"
+      "D": "$80,000 loss — prior-service write-offs typically dominate curtailment economics"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Curtailment gain = PBO reduction ($300,000) less related unrecognized prior-service cost written off ($80,000) = $220,000, recognized in net income when the freeze occurs. Full-PBO-as-gain (option B: $300,000) ignores the $80,000 prior-service balance that the curtailment extinguishes alongside the obligation. OCI-only (option A) defers a realized curtailment gain that the event triggers now. Loss verdicts (option D: $80,000) mistake the write-off leg for the whole transaction — $300,000 of obligation relief dominates $80,000 of balance-sheet cleanup. Business interpretation: curtailments net obligation relief against extinguished deferrals in current earnings — the freeze is the recognition event. Common trap: carrying prior-service balances past the curtailments that erase them.",
@@ -26623,10 +26623,10 @@
     "ItemStyle": "single-select",
     "Stem": "Lump-sum window settles $400,000 of PBO (of $2,000,000 total) with $380,000 of plan assets; unrecognized net loss in AOCI is $300,000. Service + interest cost for the year totals $250,000. Is settlement accounting triggered, and what is recognized?",
     "Choices": {
-      "A": "No settlement — lump sums under $500,000 never trigger regardless of cost ratios",
+      "A": "No settlement — lump sums under $500,000 rarely trigger regardless of cost ratios",
       "C": "Settlement triggered ($400,000 > $250,000 service+interest); recognize pro-rata loss: $300,000 × ($400,000/$2,000,000) = $60,000 plus the $20,000 settlement gain ($400,000 − $380,000)",
       "B": "Settlement triggered with full $300,000 loss recognized — thresholds trigger all-or-nothing recognition",
-      "D": "Settlement gain $20,000 only — settlements recognize gains, never deferred losses"
+      "D": "Settlement gain $20,000 only — settlements recognize gains, rarely deferred losses"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Settlement threshold: settled PBO ($400,000) exceeds annual service + interest cost ($250,000) → settlement accounting triggered. Pro-rata AOCI recognition = $300,000 × ($400,000/$2,000,000) = $300,000 × 20% = $60,000 loss. Settlement gain = PBO settled ($400,000) − assets paid ($380,000) = $20,000 gain. Net settlement effect = $60,000 loss − $20,000 gain = $40,000 net loss. Dollar-floor denial (option A: $500,000 minimum) invents a threshold the standard states as a cost comparison, never a dollar floor. All-or-nothing (option B: full $300,000) ignores pro-rating — only the settled 20% accelerates. Gains-only (option D: $20,000) recognizes the settlement gain while deferring the pro-rata loss the same event triggers. Business interpretation: settlements accelerate a pro-rata slice of deferred balances plus the settlement difference — threshold first (cost comparison), then pro-rata math. Common trap: fixed-dollar settlement thresholds.",
@@ -26787,7 +26787,7 @@
     "Choices": {
       "A": "Recognize an $80,000 modification gain immediately — carrying exceeds new PV by $80,000",
       "B": "Derecognize and book a new $920,000 bond — any term change extinguishes the old debt",
-      "C": "Defer the $20,000 of unamortized issuance costs — write-offs never survive modifications",
+      "C": "Defer the $20,000 of unamortized issuance costs — write-offs rarely survive modifications",
       "D": "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying plus unamortized costs) — non-substantial, non-troubled modifications adjust yield, never recognize gains"
     },
     "CorrectChoice": "D",
@@ -26841,7 +26841,7 @@
     "Choices": {
       "A": "No entry — transfers between categories are presentational only",
       "B": "Debit investment $30,000, credit OCI $30,000 (carry to fair value through OCI); the transfer taints remaining HTM holdings, requiring re-evaluation of HTM intent on the rest",
-      "C": "Debit investment $30,000, credit net income $30,000 — fair-value changes always hit earnings on transfer",
+      "C": "Debit investment $30,000, credit net income $30,000 — fair-value changes typically hit earnings on transfer",
       "D": "Credit OCI $30,000 with no debit — OCI accumulates without a corresponding asset adjustment"
     },
     "CorrectChoice": "B",
@@ -26948,7 +26948,7 @@
     "Stem": "A 30% investee reports $100,000 net income plus $40,000 of OCI (AFS gains). The investor's carrying value mechanics must reflect both. What flows where on the investor's statements?",
     "Choices": {
       "A": "$42,000 to net income ($30,000 pickup + $12,000 OCI share reclassified as earnings)",
-      "B": "Nothing — OCI belongs to the investee's equity, never the investor's statements",
+      "B": "Nothing — OCI belongs to the investee's equity, rarely the investor's statements",
       "C": "$30,000 pickup to earnings plus $12,000 OCI pickup to investor OCI (30% × $40,000) — equity method mirrors both income layers",
       "D": "$42,000 to investor OCI — equity pickups bypass net income entirely"
     },
@@ -27758,7 +27758,7 @@
     "Stem": "A retail chain tests long-lived assets: individual stores (each with independent cash flows), a regional distribution center serving 8 stores (no independent cash flows), and corporate headquarters (no independent cash flows). Store 7 underperforms with carrying $400,000 vs undiscounted cash flows $320,000. How should grouping and testing proceed?",
     "Choices": {
       "A": "Test everything entity-wide — aggregation maximizes offsetting across units",
-      "B": "Test Store 7 jointly with the region — individual stores never qualify as groups",
+      "B": "Test Store 7 jointly with the region — individual stores rarely qualify as groups",
       "C": "Store 7 alone (lowest independent-cash-flow level): $80,000 shortfall triggers fair-value measurement; DC with shared assets groups at the lowest level with identifiable cash flows largely independent",
       "D": "Test headquarters with Store 7 — corporate assets absorb store-level shortfalls"
     },
