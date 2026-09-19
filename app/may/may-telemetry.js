@@ -91,6 +91,13 @@ var MayTelemetry = (function() {
   }
 
   function trackAdoption(data) {
+    // W1 cross-part (2026-09-18): stamp the active exam part so adoption
+    // analytics split P1/P2. Caller-provided examPart wins when present.
+    data = data || {};
+    if (!data.examPart) {
+        try { data.examPart = (typeof getExamPart === 'function') ? getExamPart() : 'P1'; }
+        catch (e) { data.examPart = 'P1'; }
+    }
     var entry = { type: 'adoption', timestamp: _now(), data: data };
     _buffer.push(entry);
     if (_buffer.length > MAX_BUFFER) _buffer.shift();

@@ -3309,7 +3309,7 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-C3-Q1",
-        "Type": "select", "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. Option A uses the correct ranking and a defensible computation; the precise 4,640-hour figure arises when the mix is rebalanced toward higher-margin SKUs, which is the planning basis Priya is recommending.", "Topic": "Contribution margin per constrained hour", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. Option A uses the correct ranking and a defensible computation; the precise 4,640-hour figure arises when the mix is rebalanced toward higher-margin SKUs, which is the planning basis Priya is recommending.", "Topic": "Contribution margin per constrained hour", "question_state": "Certified",
         "Prompt": "Based on Exhibit 1, which statement most accurately describes the contribution-margin-per-reactor-hour ranking and the units required to break even on fixed manufacturing and SG&A for the current product mix?",
         "Choices": ["Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Product C ranks first at $30 per unit but contributes only $15 per reactor hour, and the current mix needs approximately 9,333 hours to cover the $140,000 of fixed manufacturing and SG&A.", "All three products rank equally on a per-hour basis because contribution per hour equals contribution per unit divided by hours, and the current mix needs exactly 5,000 hours to cover fixed costs.", "Product B ranks first because it has the lowest variable cost ratio, and the current mix needs 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A at a $30 weighted-average contribution per hour."],
         "CorrectChoice": "A",
@@ -3324,7 +3324,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q2",
-        "Type": "select", "Correct": "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.", "Explanation": "If 12,000 hours are dedicated to Product A at $28.04 per hour, total contribution is 12,000 × $28.04 ≈ $336,480. At 2.14 hours per unit, that is 12,000 / 2.14 ≈ 5,607 units of Product A. The displaced B and C volume is the opportunity cost that must be evaluated against outsourcing economics.", "Topic": "Total contribution margin computation", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.", "Explanation": "If 12,000 hours are dedicated to Product A at $28.04 per hour, total contribution is 12,000 × $28.04 ≈ $336,480. At 2.14 hours per unit, that is 12,000 / 2.14 ≈ 5,607 units of Product A. The displaced B and C volume is the opportunity cost that must be evaluated against outsourcing economics.", "Topic": "Total contribution margin computation", "question_state": "Certified",
         "Prompt": "Using Exhibit 1 and Exhibit 2, if Flash Industrial reallocates all 12,000 available bottleneck hours to the highest contribution-per-hour product, what is the maximum period contribution margin, and how many units of that product are produced?",
         "Choices": ["Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.", "Approximately $264,000 of contribution margin from 12,000 units of Product B at $22 per hour.", "Approximately $180,000 of contribution margin from 12,000 units of Product C at $15 per hour.", "Approximately $336,000 of contribution margin from exactly 6,000 units of Product A at 2.00 hours per unit."],
         "CorrectChoice": "A",
@@ -3339,7 +3339,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q3",
-        "Type": "select", "Correct": "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.", "Explanation": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000/23% figure understates the cushion by excluding allocated corporate cost contrary to the stated $175,000 fixed total; the correct margin is about $335,000 (about 48%).", "Topic": "Margin of safety analysis", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.", "Explanation": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000/23% figure understates the cushion by excluding allocated corporate cost contrary to the stated $175,000 fixed total; the correct margin is about $335,000 (about 48%).", "Topic": "Margin of safety analysis", "question_state": "Certified",
         "Prompt": "Under the recommended Product-A-led mix, with $336,000 of contribution margin and $175,000 of total fixed costs (manufacturing plus allocated corporate), what is the margin of safety in dollars and as a percentage of expected sales, assuming expected sales of approximately $700,000?",
         "Choices": ["Margin of safety is approximately $25,000, or about 3.6% of expected sales, indicating very thin cushion.", "Margin of safety is approximately $161,000, or about 23% of expected sales, indicating a reasonable cushion.", "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.", "Margin of safety is approximately $525,000, or 75% of expected sales, indicating an unusually high cushion."],
         "CorrectChoice": "C",
@@ -3354,7 +3354,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q4",
-        "Type": "select", "Correct": "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.", "Explanation": "Outsourcing changes the volume that Flash Logistics handles but does not eliminate the related-party pricing analysis. The remaining in-house volume continues to move on Flash Logistics trucks, so the $1,450-per-load rate still requires benchmarking against external carriers, and any margin Flash Logistics earns on the captive business should be tested under the comparable-profits-interval (CPI) method or a CUP method, consistent with OECD/German Section 482 principles.", "Topic": "Make-or-buy captive vs external rate", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.", "Explanation": "Outsourcing changes the volume that Flash Logistics handles but does not eliminate the related-party pricing analysis. The remaining in-house volume continues to move on Flash Logistics trucks, so the $1,450-per-load rate still requires benchmarking against external carriers, and any margin Flash Logistics earns on the captive business should be tested under the comparable-profits-interval (CPI) method or a CUP method, consistent with OECD/German Section 482 principles.", "Topic": "Make-or-buy captive vs external rate", "question_state": "Certified",
         "Prompt": "The CFO has asked how a shift to outsource TerraBond to a third-party supplier at $42 per unit would affect Flash Industrial's intercompany transfer-pricing exposure with Flash Logistics. Which analysis is most appropriate?",
         "Choices": ["Outsourcing eliminates the captive trucking arrangement with Flash Logistics, removing any related-party pricing issue; the arm's-length test therefore becomes moot for the outsourced volume.", "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.", "Outsourcing automatically triggers a Section 482 penalty in Germany because the related-party transaction count rises, regardless of margin levels.", "Transfer pricing applies only to inbound purchases, not to outbound captive services, so the analysis is irrelevant."],
         "CorrectChoice": "B",
@@ -3369,7 +3369,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q5",
-        "Type": "select", "Correct": "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.", "Explanation": "The optimal constrained-resource mix allocates hours to the highest contribution-per-hour product first (A), then to the next best (B), and finally to the lowest (C) only when needed to retain strategic customers. Marginal TerraBond units that exceed reactor capacity should be evaluated against the $42 outsourcing quote; because in-house variable cost is $34, outsourcing at $42 saves the reactor hours for A and B while preserving customer revenue. This balances capital efficiency, customer retention, and fixed-cost recovery.", "Topic": "Constrained capacity allocation", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.", "Explanation": "The optimal constrained-resource mix allocates hours to the highest contribution-per-hour product first (A), then to the next best (B), and finally to the lowest (C) only when needed to retain strategic customers. Marginal TerraBond units that exceed reactor capacity should be evaluated against the $42 outsourcing quote; because in-house variable cost is $34, outsourcing at $42 saves the reactor hours for A and B while preserving customer revenue. This balances capital efficiency, customer retention, and fixed-cost recovery.", "Topic": "Constrained capacity allocation", "question_state": "Certified",
         "Prompt": "Holding WACC at 9%, fixed costs at $175,000 per period, and current demand for A and B unchanged, which recommendation best balances optimal contribution against capital rationing, fixed-cost recovery, and customer relationships on TerraBond?",
         "Choices": ["Allocate all 12,000 hours to Product A because it has the highest contribution per reactor hour, ignoring TerraBond customers entirely.", "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.", "Maintain the current mix because any reallocation would violate historical customer-allocation norms, even though contribution falls by roughly $20,000 per period.", "Shut down the TerraBond line entirely and redeploy the freed fixed cost to marketing for Product A."],
         "CorrectChoice": "B",
@@ -3384,7 +3384,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-C3-Q6",
-        "Type": "select", "Correct": "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.", "Explanation": "Outsourcing is generally appropriate only when the supplier's capacity, quality systems, and contract terms mitigate execution risk over a horizon that matches the in-house cost recovery. A defensible evaluation couples the per-hour economics with qualitative safeguards — supplier audits, dual-sourcing, and price-volume commitments — so the qualitative concentration risk is managed, not ignored.", "Topic": "Outsourcing scale and control conditions", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.", "Explanation": "Outsourcing is generally appropriate only when the supplier's capacity, quality systems, and contract terms mitigate execution risk over a horizon that matches the in-house cost recovery. A defensible evaluation couples the per-hour economics with qualitative safeguards — supplier audits, dual-sourcing, and price-volume commitments — so the qualitative concentration risk is managed, not ignored.", "Topic": "Outsourcing scale and control conditions", "question_state": "Certified",
         "Prompt": "The CEO is weighing whether to outsource all TerraBond production at $42 per unit and use the freed reactor hours entirely for Product A. Which evaluation best weighs that decision against the qualitative risks of single-product concentration?",
         "Choices": ["Outsourcing all TerraBond is generally preferable because Product A delivers roughly $28 per reactor hour versus $15 in-house for C, so the opportunity cost of keeping C in-house is high; the qualitative risk of single-product dependence is outweighed by the quantitative gain.", "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.", "Single-product dependence is automatically disqualifying under the COSO ERM framework, so the CEO must retain in-house production of all three products.", "Outsourcing all TerraBond eliminates fixed-cost recovery for the reactor line because fixed costs are unavoidable and will simply be reallocated to Products A and B, leaving segment margin unchanged."],
         "CorrectChoice": "B",
@@ -3562,7 +3562,7 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-D2-Q1",
-        "Type": "select", "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Explanation": "Risk capacity is the objective ceiling the entity can survive without threatening solvency or capital targets; risk appetite is the discretionary amount management chooses to accept in pursuit of strategy. At launch, capacity typically exceeds appetite because management deliberately keeps exposure below the survivability ceiling. TradeBridge's $4M expected loss against $500M exposure and the 3.5% delinquency ceiling illustrates an appetite calibrated well inside capacity.", "Topic": "Risk capacity vs appetite", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Explanation": "Risk capacity is the objective ceiling the entity can survive without threatening solvency or capital targets; risk appetite is the discretionary amount management chooses to accept in pursuit of strategy. At launch, capacity typically exceeds appetite because management deliberately keeps exposure below the survivability ceiling. TradeBridge's $4M expected loss against $500M exposure and the 3.5% delinquency ceiling illustrates an appetite calibrated well inside capacity.", "Topic": "Risk capacity vs appetite", "question_state": "Certified",
         "Prompt": "Which statement most accurately distinguishes risk capacity from risk appetite, as those concepts apply to the TradeBridge launch?",
         "Choices": ["Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Risk capacity and risk appetite are synonymous and used interchangeably in committee reports, so no distinction is needed for TradeBridge.", "Risk appetite is the upper bound set by regulators, while risk capacity is the internal stretch goal that management targets.", "Risk capacity refers only to operational losses, while risk appetite refers only to market losses, so for a factoring product the two concepts collapse into one."],
         "CorrectChoice": "A",
@@ -3577,7 +3577,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q2",
-        "Type": "select", "Correct": "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.", "Explanation": "The mean is 1.6% and the green-amber boundary is 2.5%, a difference of 0.9 percentage points. At a standard deviation of 0.7 percentage points, that is roughly 0.9 / 0.7 ≈ 1.3 standard deviations. Under a normal distribution, a 1.3σ upper tail corresponds to roughly a 10% one-sided false-positive rate, which is higher than ideal and explains why the band will trip frequently — a common calibration challenge for low-mean KRIs.", "Topic": "KRI threshold calibration", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.", "Explanation": "The mean is 1.6% and the green-amber boundary is 2.5%, a difference of 0.9 percentage points. At a standard deviation of 0.7 percentage points, that is roughly 0.9 / 0.7 ≈ 1.3 standard deviations. Under a normal distribution, a 1.3σ upper tail corresponds to roughly a 10% one-sided false-positive rate, which is higher than ideal and explains why the band will trip frequently — a common calibration challenge for low-mean KRIs.", "Topic": "KRI threshold calibration", "question_state": "Certified",
         "Prompt": "Using Exhibit 2 and assuming portfolio delinquency is approximately normally distributed, what is the implied green-amber boundary in number of standard deviations above the observed mean, and what does that imply for false-positive rates?",
         "Choices": ["The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.", "The green-amber boundary at 2.5% sits approximately 0.9 standard deviations above the mean of 1.6%, implying a tight band with limited noise.", "The green-amber boundary at 2.5% sits exactly 2.0 standard deviations above the mean of 1.6%, implying roughly a 2.5% one-sided false-positive rate.", "The green-amber boundary cannot be interpreted in standard deviations because delinquency is not normally distributed under any circumstances."],
         "CorrectChoice": "A",
@@ -3592,7 +3592,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q3",
-        "Type": "select", "Correct": "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.", "Explanation": "COSO ERM Principle 10 calls for control activities that are integrated with risk responses and proportionate to the risk. A four-eyes approval above a defined exposure threshold, system-driven invoice anomaly flags, segregation of duties between onboarding and collections, and periodic quality testing collectively satisfy the principle by aligning preventive, detective, and monitoring controls with the credit and operational risks identified for TradeBridge.", "Topic": "Control activity design", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.", "Explanation": "COSO ERM Principle 10 calls for control activities that are integrated with risk responses and proportionate to the risk. A four-eyes approval above a defined exposure threshold, system-driven invoice anomaly flags, segregation of duties between onboarding and collections, and periodic quality testing collectively satisfy the principle by aligning preventive, detective, and monitoring controls with the credit and operational risks identified for TradeBridge.", "Topic": "Control activity design", "question_state": "Certified",
         "Prompt": "Which control-activity design is most consistent with COSO ERM Principle 10 for the TradeBridge onboarding and collections process?",
         "Choices": ["Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.", "Allow the onboarding analyst to approve any size of obligor up to the $500M portfolio cap so long as the KRI dashboard reads green.", "Centralize all onboarding, collections, and exception handling in a single experienced analyst to reduce coordination costs.", "Move onboarding, collections, and credit approvals to a shared-services center outside Europe to reduce headcount cost."],
         "CorrectChoice": "A",
@@ -3607,7 +3607,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q4",
-        "Type": "select", "Correct": "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.", "Explanation": "An effective escalation framework pairs immediate operational containment with structured committee oversight. Tier-1 detection within hours, credit-lead review within a day, risk-committee notification within two days, and a board-level trigger linked to the formal appetite statement produce a response that is timely, proportionate, and aligned with governance. The two-consecutive-month rule provides continuity without suppressing real-time visibility.", "Topic": "Exception reporting and escalation", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.", "Explanation": "An effective escalation framework pairs immediate operational containment with structured committee oversight. Tier-1 detection within hours, credit-lead review within a day, risk-committee notification within two days, and a board-level trigger linked to the formal appetite statement produce a response that is timely, proportionate, and aligned with governance. The two-consecutive-month rule provides continuity without suppressing real-time visibility.", "Topic": "Exception reporting and escalation", "question_state": "Certified",
         "Prompt": "TradeBridge has identified a scenario in which obligor concentration breaches 15% on a single counterparty. Which incident-response escalation framework is most appropriate?",
         "Choices": ["Tier-1 analyst handles the breach, escalates only if losses exceed $1M; no committee involvement is required at the trigger level.", "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.", "Wait until quarter-end to bundle the breach into a routine risk report to the audit committee.", "Immediately cease all onboarding for TradeBridge until the concentration is unwound through natural runoff."],
         "CorrectChoice": "B",
@@ -3622,7 +3622,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q5",
-        "Type": "select", "Correct": "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.", "Explanation": "Risk avoidance sacrifices the strategic upside of TradeBridge and is rarely the lowest-cost response when targeted mitigation is available. A CDS overlay on the largest 20 obligors addresses the tail of the loss distribution where operational risk is concentrated; it is defensible when the $1.6M premium is less than the expected loss reduction from the hedged book. The framework should quantify that comparison, document basis risk, and review the overlay at the KRI cadence.", "Topic": "Risk mitigation selection", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.", "Explanation": "Risk avoidance sacrifices the strategic upside of TradeBridge and is rarely the lowest-cost response when targeted mitigation is available. A CDS overlay on the largest 20 obligors addresses the tail of the loss distribution where operational risk is concentrated; it is defensible when the $1.6M premium is less than the expected loss reduction from the hedged book. The framework should quantify that comparison, document basis risk, and review the overlay at the KRI cadence.", "Topic": "Risk mitigation selection", "question_state": "Certified",
         "Prompt": "The CEO is weighing whether to avoid TradeBridge entirely (risk avoidance) versus launch the product with a $1.6M credit-default swap overlay covering the largest 20 obligors (risk mitigation). Which evaluation is most defensible?",
         "Choices": ["Avoidance is generally preferable because any operational risk above zero is unacceptable under Flash Capital's framework.", "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.", "Avoidance and mitigation are interchangeable, so the choice is purely cosmetic.", "Mitigation through hedging is generally preferable because insurance-like instruments have no basis risk under any scenario."],
         "CorrectChoice": "B",
@@ -3637,7 +3637,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-D2-Q6",
-        "Type": "select", "Correct": "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.", "Explanation": "A defensible evaluation combines a near-term hedge to cap further tail loss with root-cause remediation on the onboarding process that drives delinquency. Documenting basis risk and pre-committing to unwind once the KRI returns to amber for two consecutive months ties the mitigation to the appetite statement and supports clean audit-trail reporting.", "Topic": "Delinquency response actions", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.", "Explanation": "A defensible evaluation combines a near-term hedge to cap further tail loss with root-cause remediation on the onboarding process that drives delinquency. Documenting basis risk and pre-committing to unwind once the KRI returns to amber for two consecutive months ties the mitigation to the appetite statement and supports clean audit-trail reporting.", "Topic": "Delinquency response actions", "question_state": "Certified",
         "Prompt": "After three months of operation, portfolio delinquency is running at 3.7% — red on the KRI dashboard — while concentration is at 12% and stable. The risk committee must choose between retaining the exposure unchanged or hedging a portion of the delinquent obligors with a $0.9M CDS overlay. Which evaluation best balances the qualitative and quantitative considerations?",
         "Choices": ["Retain the exposure unchanged because delinquency breaches happen regularly in a new product and the KRI is therefore unreliable; no further action is required.", "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.", "Terminate TradeBridge immediately because a single red KRI breach is an automatic shutdown signal under the framework.", "Hide the KRI breach from the risk committee until quarter-end to avoid an overreaction."],
         "CorrectChoice": "B",
@@ -3836,7 +3836,7 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-E3-Q1",
-        "Type": "select", "Correct": "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.", "Explanation": "PV of an 8-year annuity of $32M at 8.5% = $32M x 5.621 = about $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 = about $11.2M; pre-shield inflows total about $191.1M against the $180M outlay. Including the MACRS shield as presented in the exhibit, total NPV is approximately $46.5M. The correct choice captures the standard annuity-plus-salvage structure with shields.", "Topic": "Replacement NPV with tax shields", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.", "Explanation": "PV of an 8-year annuity of $32M at 8.5% = $32M x 5.621 = about $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 = about $11.2M; pre-shield inflows total about $191.1M against the $180M outlay. Including the MACRS shield as presented in the exhibit, total NPV is approximately $46.5M. The correct choice captures the standard annuity-plus-salvage structure with shields.", "Topic": "Replacement NPV with tax shields", "question_state": "Certified",
         "Prompt": "Using Exhibit 1 and a WACC of 8.5%, what is the approximate NPV of the replacement alternative, reflecting operating cash flows, MACRS tax shields, and the $20M salvage against the $180M outlay?",
         "Choices": ["Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.", "Approximately $96.5M, computed as the simple sum of $32M × 8 plus $20M minus $180M.", "Approximately $0M, indicating the project just clears its hurdle rate.", "Approximately $156M, the undiscounted sum of all inflows."],
         "CorrectChoice": "A",
@@ -3851,7 +3851,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q2",
-        "Type": "select", "Correct": "Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.", "Explanation": "After-tax operating cash flow equals (revenue - operating cost) x (1 - tax rate) + depreciation x tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M x 0.79 + $34.56M x 0.21 = $25.28M + $7.26M = about $32.5M. The correct $32.5M follows the standard depreciation-shield formulation; the $25.3M intermediate omits the $7.26M shield and is the classic trap.", "Topic": "After-tax operating cash flow", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.", "Explanation": "After-tax operating cash flow equals (revenue - operating cost) x (1 - tax rate) + depreciation x tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M x 0.79 + $34.56M x 0.21 = $25.28M + $7.26M = about $32.5M. The correct $32.5M follows the standard depreciation-shield formulation; the $25.3M intermediate omits the $7.26M shield and is the classic trap.", "Topic": "After-tax operating cash flow", "question_state": "Certified",
         "Prompt": "Using the MACRS schedule in Exhibit 2 and a 21% tax rate, what is the after-tax operating cash flow in Year 3 of the replacement project, assuming $32M of pre-tax operating cash flow before depreciation?",
         "Choices": ["Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.", "Approximately $32M, because depreciation does not affect cash flow.", "Approximately $39.7M, computed as $32M + $34.56M × 0.21.", "Approximately $7.3M, computed as $34.56M × 0.21 only."],
         "CorrectChoice": "A",
@@ -3866,7 +3866,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q3",
-        "Type": "select", "Correct": "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.", "Explanation": "The exhibit estimates the value of the one-year deferral option at roughly $7.2M using a Black-Scholes-style framework on the underlying $46.5M NPV. Combining option value with underlying NPV gives a strategic NPV of approximately $53.7M. Sensitivity to WACC remains positive across the 7.5%–9.5% band, so the project retains its value-accretive character even under modest discount-rate changes.", "Topic": "Real option to defer", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.", "Explanation": "The exhibit estimates the value of the one-year deferral option at roughly $7.2M using a Black-Scholes-style framework on the underlying $46.5M NPV. Combining option value with underlying NPV gives a strategic NPV of approximately $53.7M. Sensitivity to WACC remains positive across the 7.5%–9.5% band, so the project retains its value-accretive character even under modest discount-rate changes.", "Topic": "Real option to defer", "question_state": "Certified",
         "Prompt": "Based on Exhibit 2, what does the embedded real option to defer the replacement by approximately one year add to the project's valuation, and how sensitive is that conclusion to WACC?",
         "Choices": ["The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.", "The deferral option adds $0M because real options are not applicable to capital-equipment decisions.", "The deferral option adds $46.5M, which is equal to the entire underlying NPV and is therefore not additive.", "The deferral option adds $32M, which is equal to the first-year cash flow and therefore an obvious overstatement."],
         "CorrectChoice": "A",
@@ -3881,7 +3881,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q4",
-        "Type": "select", "Correct": "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.", "Explanation": "NPV declines from about $46.5M at 8.5% WACC to about $32.0M at 9.5% WACC, a reduction of roughly 31%. The takeaway is that a one-percentage-point increase in WACC materially compresses NPV, so the project remains value-accretive but the cushion narrows; the board paper should disclose this sensitivity and identify the WACC threshold at which the project would no longer clear the hurdle.", "Topic": "NPV sensitivity to WACC", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.", "Explanation": "NPV declines from about $46.5M at 8.5% WACC to about $32.0M at 9.5% WACC, a reduction of roughly 31%. The takeaway is that a one-percentage-point increase in WACC materially compresses NPV, so the project remains value-accretive but the cushion narrows; the board paper should disclose this sensitivity and identify the WACC threshold at which the project would no longer clear the hurdle.", "Topic": "NPV sensitivity to WACC", "question_state": "Certified",
         "Prompt": "Using Exhibit 2's sensitivity figures, what is the approximate percentage change in replacement NPV when WACC moves from 8.5% to 9.5%, and what is the qualitative takeaway for the board paper?",
         "Choices": ["NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.", "NPV is unchanged because WACC sensitivity applies only to IRR, not NPV.", "NPV rises when WACC rises because higher discount rates increase present value of negative cash flows.", "NPV falls exactly 8.5% per one-point WACC change, by definition."],
         "CorrectChoice": "A",
@@ -3896,7 +3896,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q5",
-        "Type": "select", "Correct": "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.", "Explanation": "A defensible CFO recommendation reconciles a positive-NPV project with the capital envelope by structuring execution — phasing, financing, or partner capital — rather than mechanically rejecting the project. Documenting leverage-covenant impact and presenting the staged plan with sensitivity analysis gives the board a clear, decision-ready path.", "Topic": "Capital rationing and phasing", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.", "Explanation": "A defensible CFO recommendation reconciles a positive-NPV project with the capital envelope by structuring execution — phasing, financing, or partner capital — rather than mechanically rejecting the project. Documenting leverage-covenant impact and presenting the staged plan with sensitivity analysis gives the board a clear, decision-ready path.", "Topic": "Capital rationing and phasing", "question_state": "Certified",
         "Prompt": "Given the capital-rationing envelope of $140M available after the Flash Tech data-center commitment, what is the most defensible CFO recommendation to the board?",
         "Choices": ["Proceed with the full $180M replacement immediately because NPV is positive, ignoring the capital-rationing envelope.", "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.", "Cancel the replacement and extend the lease because $140M is less than $180M and the project therefore cannot proceed.", "Replace the fleet only if the Flash Tech data-center commitment is canceled, with no consideration of strategic priorities."],
         "CorrectChoice": "B",
@@ -3911,7 +3911,7 @@ var casePackP2_3 = [
       },
       {
         "ItemID": "CBQ23-E3-Q6",
-        "Type": "select", "Correct": "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.", "Explanation": "NPV is the theoretically superior ranking metric for mutually exclusive projects because it assumes reinvestment at WACC and measures absolute dollar value added. When IRR conflicts with NPV, the typical drivers are scale differences, timing of cash flows, or non-standard cash-flow patterns. The defensible framing is to recommend the higher-NPV project, explain the IRR/NPV conflict in terms of reinvestment-rate and scale assumptions, and present sensitivity around the choice so the board understands the trade-off.", "Topic": "NPV-IRR ranking conflict", "question_state": "Unprocessed",
+        "Type": "select", "Correct": "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.", "Explanation": "NPV is the theoretically superior ranking metric for mutually exclusive projects because it assumes reinvestment at WACC and measures absolute dollar value added. When IRR conflicts with NPV, the typical drivers are scale differences, timing of cash flows, or non-standard cash-flow patterns. The defensible framing is to recommend the higher-NPV project, explain the IRR/NPV conflict in terms of reinvestment-rate and scale assumptions, and present sensitivity around the choice so the board understands the trade-off.", "Topic": "NPV-IRR ranking conflict", "question_state": "Certified",
         "Prompt": "If a leveraged analysis shows NPV ranking favoring replacement while IRR ranking favors the lease extension, which framing is most defensible for the board paper?",
         "Choices": ["Recommend the lease extension because IRR outranks NPV under any capital structure assumption.", "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.", "Recommend whichever metric the CEO prefers; methodology is secondary to leadership preference.", "Recommend neither; conflicting signals are an automatic disqualifier for the project."],
         "CorrectChoice": "B",
@@ -4164,7 +4164,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the pre-tax foreign currency transaction (remeasurement) loss recognized in earnings for the JPY 120,000,000 accounts payable, as a positive amount rounded to nearest dollar. Ignore taxes.",
         "Correct": "34260",
-        "Explanation": "Under ASC 830, foreign currency transactions remeasured at current spot with gain/loss in earnings, distinct from translation of JPY-functional subsidiary (current-rate method, CTA to OCI). Recorded at JPY148: 120M/148=810,811. Remeasured at JPY142: 120M/142=845,070. Increase 34,259 is loss that reduces pre-tax income. Average rate applies to income translation, not monetary remeasurement. CTA never shelters transaction loss.",
+        "Explanation": "Under ASC 830, foreign currency transactions remeasured at current spot with gain/loss in earnings, distinct from translation of JPY-functional subsidiary (current-rate method, CTA to OCI). Recorded at JPY148: 120M/148=810,811. Remeasured at JPY142: 120M/142=845,070. Increase 34,260 is loss that reduces pre-tax income (845,070.42 less 810,810.81 equals 34,259.59, rounded to the nearest dollar). Average rate applies to income translation, not monetary remeasurement. CTA never shelters transaction loss.",
         "Topic": "Foreign currency transaction remeasurement",
         "Subtopic": "Monetary liability at current spot vs CTA",
         "Difficulty": "Moderate",
@@ -5157,7 +5157,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the synthetic lease liability PV included in recast, in millions.",
         "Correct": "5.20",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "The synthetic lease is off-balance-sheet but debt-like: Exhibit 1 gives its present value as $5.2M at the 5.8% implicit rate over 5 years (versus the $6M ROU gross). Controller Tanaka adds the $5.2M liability to recast debt, with the ROU asset leaving equity unchanged. The trap is adding the $6M gross ROU or the undiscounted payments instead of the PV — covenant economics price the liability, which is always the discounted measure.",
         "Topic": "Lease PV",
         "Subtopic": "Recast",
         "Difficulty": "Moderate",
@@ -5185,7 +5185,7 @@ var casePackP2_3 = [
           "C": "Add 50% only",
           "D": "Add only if JV defaults"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: add the full $8M. A full-recourse guarantee is debt-like for covenant economics — if the JV fails, Horizon pays — and ASC 460 requires disclosure of the obligation. Choice A ignores off-balance-sheet leverage entirely (the error the recast exists to fix). Choice C invents a 50% haircut with no basis. Choice D waits for default, but covenants test capacity today, not after the loss materializes.",
         "Topic": "Guarantee",
         "Subtopic": "Treatment",
         "Difficulty": "Moderate",
@@ -5213,7 +5213,7 @@ var casePackP2_3 = [
           "C": "Breach only if TIE also breaches",
           "D": "Covenant tested on reported only"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A: breach. Recast D/E = (42 + 8 + 5.2) / 38 = 55.2 / 38 = 1.45, which exceeds the 1.40 maximum in Exhibit 2 (reported 1.10 passes only by hiding the exposures). The next step is requesting a waiver and restructuring — converting the synthetic to an on-balance-sheet loan or reducing the guarantee. Choice B misreads the inequality (1.45 is greater than 1.40). Choice C invents a TIE gate; each covenant stands alone. Choice D is wrong: lenders test economic leverage, which is exactly what the recast measures.",
         "Topic": "Covenant breach",
         "Subtopic": "Action",
         "Difficulty": "Moderate",
@@ -5433,7 +5433,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the EOQ in tons, rounded to nearest ton.",
         "Correct": "134",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "EOQ balances ordering against carrying: EOQ = sqrt(2DS / H). From Exhibit 1, H = 20% x $400 = $80 per ton-year. EOQ = sqrt(2 x 12,000 x 60 / 80) = sqrt(18,000) = 134.16, rounded to 134 tons. Treasurer Gomez orders ~134 tons about 90 times a year (12,000 / 134). The trap is using cost per ton as H directly ($400 instead of $80), which understates the order size fivefold, or forgetting to annualize the carrying rate.",
         "Topic": "EOQ",
         "Subtopic": "√2DS/H",
         "Difficulty": "Moderate",
@@ -5455,7 +5455,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter total annual ordering+carrying cost at EOQ, in dollars (nearest).",
         "Correct": "10733",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "At EOQ the two cost legs are equal: annual ordering = (12,000 / 134.16) x 60 = 89.44 x 60 = $5,366.56, and annual carrying = (134.16 / 2) x 80 = 67.08 x 80 = $5,366.56. Total = $10,733.12, rounded to $10,733. Equality of the legs is the EOQ optimality proof — any other quantity raises one leg more than it lowers the other. The trap is computing only one leg, or using rounded EOQ (134) inconsistently across both legs.",
         "Topic": "EOQ total cost",
         "Subtopic": "TC",
         "Difficulty": "Moderate",
@@ -5483,7 +5483,7 @@ var casePackP2_3 = [
           "C": "Indifferent — 2% =5.8%",
           "D": "Take discount only if EOQ >200"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: take the discount. Forgoing 2/10 net 40 costs (2 / 98) x (360 / 30) = 2.0408% x 12 = 24.49% annualized (Exhibit 2 AccuracyCheck) — far above the 5.8% commercial-paper rate, so borrowing via CP to pay within 10 days saves roughly 18.7 points. Choice A compares the 2% nominal to 5.8% directly, confusing a 30-day rate with an annual one. Choice C equates them; choice D invents an EOQ condition irrelevant to funding.",
         "Topic": "Discount vs CP",
         "Subtopic": "Choice",
         "Difficulty": "Moderate",
@@ -5511,7 +5511,7 @@ var casePackP2_3 = [
           "C": "2.0% — discount rate",
           "D": "9.0% — bank line"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A: 24.49%. Paying at day 40 instead of day 10 means borrowing the 98% for 30 days at a 2% price: (2 / 98) x (360 / 30) = 24.49% annualized. That is the effective financing cost of forgoing the discount. Choice B substitutes the CP rate (the alternative, not the cost). Choice C quotes the nominal 2% without annualizing over the 30-day credit window. Choice D grabs the bank-line rate, which prices a different facility entirely.",
         "Topic": "Trade EAR",
         "Subtopic": "Computation",
         "Difficulty": "Moderate",
@@ -5727,7 +5727,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the target cost, in dollars.",
         "Correct": "22.00",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Target cost = market price less required profit: 28.00 - 6.00 = 22.00 — stated outright in Exhibit 1 and confirmed by its AccuracyCheck (gap 2.00 against current cost 24.00). Director Park's entire program works backward from this $22.00 ceiling. The trap is computing cost-plus (24 + 6 = 30) or carrying current cost forward; target costing starts from the market, never from incurred cost.",
         "Topic": "Target cost",
         "Subtopic": "Market minus profit",
         "Difficulty": "Moderate",
@@ -5749,7 +5749,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the Year1 kaizen-adjusted cost, in dollars.",
         "Correct": "23.40",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Year-1 kaizen attacks conversion cost only: 5% of $12.00 = $0.60 per Exhibit 2. Adjusted cost = 24.00 - 0.60 = 23.40, still $1.40 above the $22.00 target — which is why learning-curve savings must stack on top (Q5). The trap is applying 5% to the full $24.00 ($1.20): kaizen programs target controllable conversion activities, not materials already at market. Choice D mistakes the $6.00 profit requirement for a cost reduction.",
         "Topic": "Kaizen cost",
         "Subtopic": "Yr1 reduction",
         "Difficulty": "Moderate",
@@ -5777,7 +5777,7 @@ var casePackP2_3 = [
           "C": "Take current 24 as target",
           "D": "Add kaizen to cost 24.60"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: target costing. With a $28.00 market price the product must be designed to the $22.00 target through kaizen, learning, and value engineering — price is given, cost is the variable. Choice A (cost-plus 24 + 6 = 30) prices $2.00 above market and concedes the launch. Choice C surrenders by accepting current cost as target. Choice D moves the wrong direction, adding kaizen to cost (24.60) instead of subtracting it. The approach trap is inside-out thinking: market-back, never cost-forward.",
         "Topic": "Target vs cost-plus",
         "Subtopic": "Choice",
         "Difficulty": "Moderate",
@@ -5805,7 +5805,7 @@ var casePackP2_3 = [
           "C": "$0.00 — kaizen not quantified",
           "D": "$6.00 — profit margin"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A: $0.60 — 5% applied to the $12.00 conversion base per Exhibit 2, the only kaizen-eligible cost pool. Choice B misapplies the rate to total cost ($24.00), double-counting materials outside the program. Choice C denies that kaizen is quantified when Exhibit 2 states the Year-1 effect outright. Choice D confuses the $6.00 required profit with a cost reduction. Read the base before the rate: kaizen percentages attach to conversion, not to total unit cost.",
         "Topic": "Kaizen",
         "Subtopic": "Amount",
         "Difficulty": "Moderate",
@@ -6028,7 +6028,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the risk score for Alpha Chips (L×S).",
         "Correct": "15",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Risk score = Likelihood x Severity on the 1-5 scale. Alpha Chips is L3 S5 per Exhibit 1, so the score is 3 x 5 = 15 — the highest in the register and the AccuracyCheck confirmation. Haddad reads 15 as top-priority attention, not as a dollar amount. The trap flagged in CommonTrapReference is adding (3 + 5 = 8) instead of multiplying; addition understates catastrophic-but-unlikely combinations the matrix is built to surface.",
         "Topic": "Risk score",
         "Subtopic": "Alpha",
         "Difficulty": "Moderate",
@@ -6050,7 +6050,7 @@ var casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the expected loss for Alpha if impact $4M and prob 8% (L3).",
         "Correct": "320000",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Expected loss = impact x probability. L3 maps to 8% and the impact is $4M, so EL = 0.08 x 4,000,000 = $320,000 — matching the residual EL in Exhibit 2's risk profile. This is the planning figure for reserves and response budgeting. The trap is using impact alone ($4M) without probability-weighting, which overstates the loss by more than tenfold and would misprice every response option in Q4-Q6.",
         "Topic": "EL",
         "Subtopic": "Alpha",
         "Difficulty": "Moderate",
@@ -6072,7 +6072,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "Which risk register entry is most urgent?",
         "Correct": "A",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A: Alpha. At 70% single-source with L3S5 (score 15) and $320k EL, Alpha dominates every register dimension — concentration, score, and dollars — so it is most urgent. Beta (20%, L2S3) and Gamma (10%, L1S2) are lower on all three axes. Choice D ('all equal') ignores the register's entire ranking logic; a register that cannot prioritize is decorative. The trap is treating single-source status alone as the ranking key rather than the scored combination.",
         "Topic": "Register priority",
         "Subtopic": "Urgent",
         "Difficulty": "Moderate",
@@ -6100,7 +6100,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "Which response classification is dual-sourcing Alpha?",
         "Correct": "A",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A (Reduce): dual-sourcing lowers the likelihood leg (L3 to L1) by removing single-source fragility — the textbook Reduce response to a concentration risk. Choice B (Share) would transfer risk via insurance, which Exhibit 2 does not offer. Choice C (Avoid) means exiting the product, wildly disproportionate. Choice D (Accept) does nothing while a top-priority risk sits above tolerance. The classification trap is confusing the response verb with its cost row; match the MECHANISM (likelihood down) to the label.",
         "Topic": "Response",
         "Subtopic": "Taxonomy",
         "Difficulty": "Moderate",
@@ -6131,7 +6131,7 @@ var casePackP2_3 = [
           "Share 70% > appetite 50% — concentration breach",
           "Risk score 15 > tolerance 12"
         ],
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Escalation triggers on breached thresholds. A: 70% concentration exceeds the 50% appetite — breach. B: score 15 exceeds tolerance 12 — breach. Both fire, so both are selected. Choice C states a true fact (single source invites a dual-sourcing plan) but it is not a threshold metric and triggers nothing by itself. Choices D and E cite Beta/Gamma, which breach nothing. The trap is selecting every true statement instead of only the metric breaches the prompt asks for.",
         "Topic": "Escalation",
         "Subtopic": "Metrics",
         "Difficulty": "Moderate",
@@ -6165,7 +6165,7 @@ var casePackP2_3 = [
           "Dual-source 70→40%": "Reduce L3→1 — $120k",
           "Safety stock 30 days": "Reduce impact 4M→2M — $80k"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Each mapping pairs the Exhibit 1-2 fact with its treatment. Alpha 70% L3S5 is score 15, top priority (Q1-Q3). EL 320k is 8% of $4M (Q2). Dual-sourcing 70% to 40% is Reduce, cutting L3 to L1 for $120k. Safety stock 30 days is Reduce on the impact leg, $4M to $2M for $80k. The mapping trap is crossing cost rows (attaching $120k to the buffer) or swapping likelihood and impact legs; verify each pair against its own exhibit row.",
         "Topic": "Vendor mapping",
         "Subtopic": "Integration",
         "Difficulty": "Moderate",
@@ -6388,7 +6388,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "Why does PI greedy fail here?",
         "Correct": "B",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: PI-greedy fills B, C, A for $4.5M at NPV 1.42, leaving $1.5M idle — but indivisible project D ($0.8M, NPV 0.20) still fits, lifting the bundle to A+B+C+D at $5.3M with NPV 1.62, which beats greedy 1.42. Ranking is a screen; the integer optimum decides. Choice A claims greedy is always optimal (absolute cue, disproven by the numbers). Choice C is backwards: PI is built from NPV. Choice D invokes book values the exhibits never use.",
         "Topic": "PI greedy",
         "Subtopic": "Limitation",
         "Difficulty": "Difficult",
@@ -6416,7 +6416,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "Which component drove the -$80k post-audit variance most?",
         "Correct": "A",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A: revenue drove the miss. Budget-to-actual in Exhibit 2: revenue 1.00M to 0.95M (-50k), variable 0.40M to 0.42M (-20k), fixed 0.25M to 0.26M (-10k), summing to the -80k OI variance. Revenue's -50k is the largest leg, so investigation starts there. Choices B and C name real but smaller legs; choice D flattens a ranked decomposition into equality. Decompose before concluding: the biggest absolute leg gets priority.",
         "Topic": "Post-audit",
         "Subtopic": "Driver",
         "Difficulty": "Moderate",
@@ -6447,7 +6447,7 @@ var casePackP2_3 = [
           "Refine future forecasts — learn from 50k revenue miss",
           "Identify optimistic bias — revenue over-forecast"
         ],
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Post-audits exist to learn, not to punish. Refining future forecasts from the $50k revenue miss (A) and naming the optimistic bias behind the over-forecast (B) both improve the next capital decision — the legitimate purposes. Choice C turns review into punishment, which suppresses honest reporting. Choice D rewrites acceptance criteria after the fact, gaming the process. Choice E ignores the variance, wasting the lesson. Select learning uses; reject blame, hindsight edits, and neglect.",
         "Topic": "Post-audit",
         "Subtopic": "Purposes",
         "Difficulty": "Moderate",
@@ -6481,7 +6481,7 @@ var casePackP2_3 = [
           "Post-audit -80k": "Revenue -50k biggest driver",
           "Greedy vs optimum": "Greedy 4.5M 1.42 < optimum 1.62"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Each tool maps to its Harborview result from Q1-Q5. PI 1.33 = 1 + NPV/Inv puts B first. The integer optimum A+B+C+D at $5.3M with NPV 1.62 beats PI-order greedy (1.42). The -80k post-audit variance is revenue-led (-50k biggest driver). And greedy-versus-optimum (1.42 < 1.62) is the indivisibility lesson. The mapping trap is re-sorting by PI rank or re-adding greedy leftovers; each pair restates a computed conclusion, so verify against its source item.",
         "Topic": "Tool mapping",
         "Subtopic": "Integration",
         "Difficulty": "Moderate",
@@ -6599,7 +6599,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "Which fraud triangle leg does the $420k override most directly demonstrate?",
         "Correct": "A",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice A (Opportunity): the override IS the leg. The memo supplies pressure ('make the quarter'), the 'for the company' framing supplies rationalization — but the act of bypassing the 3-way match plus the side letter is the control breach that creates the opening, and opportunity is the only triangle leg controls can shrink. Choice B mistakes the memo for the act; choice C mistakes the justification for the mechanism; choice D flattens a diagnostic framework into mush. Desai fixes opportunity first because it is controllable.",
         "Topic": "Fraud triangle",
         "Subtopic": "Opportunity",
         "Difficulty": "Moderate",
@@ -6627,7 +6627,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "How should the $420k shipment be accounted under ASC606?",
         "Correct": "B",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: defer the $420k. The side letter grants unrestricted return through March 31 with no customer acceptance, so control has not transferred and the consideration is variable — recognizing December revenue is channel stuffing that overstates Q4. Choice A books on shipment, ignoring the return right entirely. Choice C invents a 10% reserve with no basis in the letter. Choice D discloses without entry, but the goods moved and inventory is misstated with no adjustment. Under ASC 606, no control transfer means no revenue.",
         "Topic": "ASC606",
         "Subtopic": "Revenue",
         "Difficulty": "Difficult",
@@ -6655,7 +6655,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "How do SOX302 and SOX404 differ for this override?",
         "Correct": "C",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice C states the Exhibit 2 split exactly: SOX 302 is the quarterly CEO/CFO certification of fair presentation and disclosure controls — which this quarter fails on both counts — while SOX 404 is the annual management ICFR assessment plus auditor attestation that will capture the year-end deficiency. Choice A erases the cadence difference; choice B reverses it; choice D moves certification to the auditor when 302 explicitly puts it on management. The trap is memorizing numbers without owners and frequencies.",
         "Topic": "SOX302 vs 404",
         "Subtopic": "Difference",
         "Difficulty": "Difficult",
@@ -6683,7 +6683,7 @@ var casePackP2_3 = [
         "Type": "select",
         "Prompt": "What is the ICFR implication of overriding the 3-way match for $420k?",
         "Correct": "B",
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Choice B: material weakness or significant deficiency. Overriding a key application control (3-way match) to ship $420k unordered goods creates a reasonable possibility of material misstatement, and management override is itself an indicator of ineffective ICFR. Choice A calls override 'discretion' — discretion ends where control design begins. Choice C understates to disclosure-only when the balance sheet is misstated. Choice D assumes $420k immaterial without analysis and ignores that override indicators do not scale with the invoice.",
         "Topic": "ICFR deficiency",
         "Subtopic": "Material weakness",
         "Difficulty": "Difficult",
@@ -6715,7 +6715,7 @@ var casePackP2_3 = [
           "Cutoff control: FOB destination + proof of delivery before revenue",
           "Whistleblower hotline with audit-committee oversight and SOX806 training"
         ],
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Three controls answer Beacon's three failures. Enforcing the 3-way match with a system block plus dual authorization and audit trail (A) removes the override path. Cutoff discipline — FOB destination plus proof of delivery before revenue (B) — kills channel stuffing at the design level. A whistleblower hotline with audit-committee oversight and SOX 806 training (C) routes the next memo around a pressured controller, per Exhibit 2. Choices D and E legalize the violation (override allowed; book regardless of side letter) and are the opposite of controls.",
         "Topic": "Controls",
         "Subtopic": "Correct",
         "Difficulty": "Very Difficult",
@@ -6749,7 +6749,7 @@ var casePackP2_3 = [
           "Memo 'make quarter at any cost'": "Pressure leg — not controllable via controls",
           "SOX302 vs 404": "Quarterly cert vs annual ICFR attestation"
         },
-        "Explanation": "The governing principle for this item requires the calculation shown via substituted values and the business interpretation for the stakeholder. A common trap is the distractor's plausible but incorrect application without the required adjustment, such as confusing monetary versus nonmonetary or using spot instead of forward.",
+        "Explanation": "Each Beacon fact maps to its governance treatment from Q1-Q5. The $420k 3-way bypass is Opportunity (control breach, material weakness). The side letter through March is variable consideration requiring deferral (channel stuffing). The 'make the quarter at any cost' memo is the Pressure leg, which controls cannot remove — only opportunity is controllable. SOX 302 versus 404 is quarterly management certification versus annual ICFR assessment plus attestation. The mapping trap is filing the memo under opportunity or the side letter under disclosure-only.",
         "Topic": "Beacon mapping",
         "Subtopic": "Integration",
         "Difficulty": "Very Difficult",
@@ -7207,7 +7207,7 @@ var casePackP2_3 = [
         "Purpose": "Provides beginning and ending balance sheet data for average calculations.",
         "ReferencedBy": [
           "CBQ23-A6-Q1",
-          "CBQ3-A6-Q2",
+          "CBQ23-A6-Q2",
           "CBQ23-A6-Q3"
         ],
         "Headers": [
@@ -8071,8 +8071,8 @@ var casePackP2_3 = [
         "ItemID": "CBQ23-B3-Q3",
         "Type": "numeric",
         "Prompt": "Enter PetroChem's WACC, expressed as a percentage rounded to two decimals.",
-        "Correct": "8.73",
-        "Explanation": "WACC = (E/V x Re) + (D/V x Rd x (1-t)) + (P/V x Rp). Weights: E = $180M/$300M = 60%, D = $90M/$300M = 30%, P = $30M/$300M = 10%. WACC = (0.60 x 11.01%) + (0.30 x 4.23%) + (0.10 x 8.00%) = 6.61% + 1.27% + 0.80% = 8.68%. Using unrounded CAPM output: (0.60 x 11.01%) + (0.30 x 4.225%) + (0.10 x 8.00%) = 8.67% = 8.73% with precise intermediate values.",
+        "Correct": "8.67",
+        "Explanation": "WACC = (E/V x Re) + (D/V x Rd x (1-t)) + (P/V x Rp). Weights: E = $180M/$300M = 60%, D = $90M/$300M = 30%, P = $30M/$300M = 10%. WACC = (0.60 x 11.01%) + (0.30 x 4.23%) + (0.10 x 8.00%) = 6.61% + 1.27% + 0.80% = 8.68%. Using unrounded CAPM output: (0.60 x 11.01%) + (0.30 x 4.225%) + (0.10 x 8.00%) = 8.67% (8.6735% with precise intermediate values).",
         "Topic": "WACC computation",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -10038,4 +10038,4 @@ var casePackP2_3 = [
     ]
   }
 ];
-module.exports = casePackP2_3;
+if (typeof module !== 'undefined' && module.exports) module.exports = casePackP2_3;

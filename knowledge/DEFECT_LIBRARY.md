@@ -4106,7 +4106,24 @@ Run the adapted screens across P1 (425) + P2 (600) case items; adjudicate per DL
 
 ### Resolved
 
-Not yet — Open.
+2026-09-18 — Resolved via full program: screens (Phase 1) + adjudication (Phase 2: 2 inversions → DL-054) + 49 boilerplate remediations (Phase 3 → DL-055) + P2 delivery wiring (Phase 4 below). Residual monitored tails (weak-INVERSION, UNSUPPORTED-paraphrase, match-genre C, SIGN-CONVENTION, unit-echo) carry zero confirmed key defects across 40+ hand-solves; re-screen on every future case-certification batch.
+
+### Amendment — Phase 4 Complete (2026-09-18, P2 case delivery live)
+
+**Pool:** P2 branch in `getCasePool()` — live globals → normalize copies (object-Choices→array, letter-Correct→text, ExplanationCorrect→Explanation; 0 unresolvable) → strict tier (case Certified AND all items effectively Certified: 88/100 cases, 528 items) → blocklist → section filter → dedupe. P1 source fixed to `CASE_PACK_1/2/3` (80 cases; aliases hid Pack 3). **Modes:** case/mixed/full enable in P2 iff pool non-empty (else stay disabled; lazy-load completion re-runs the gate). **Copy:** catalog/hero/validation P2 branches show live counts; full-sim note updated. **Typo:** CBQ23-A6-E2 ReferencedBy `CBQ3-A6-Q2`→`CBQ23-A6-Q2`.
+**Verification:** P2 pool probe 6/6 (88 cases, normalized shapes, modes on, lazy-load works) + P2 case session probe (3 cases: select/multi/match/numeric answered, two-stage submit, scored, 0 errors) + P1 probe (80 cases, Pack-3 present, section filter exact) + screens stable + preflight/smoke/pipeline green. Agent findings incorporated (25/25 keys corroborated with 3 author spot-checks; 88-eligible census matched exactly by live pool).
+
+### Amendment — Phase 1 Complete (2026-09-18, DL-051 Program)
+
+**Tooling:** `scripts/case_semantic_screens.js` (v3) — adapted DL-047 screens for the case schema: B-select/B-multi normalized over array/object `Choices` with letter-`Correct` resolution, `Explanation`||`ExplanationCorrect` source, B-num exact/abs-echo, C scope = Prompt+choices+ScenarioText. Deterministic (re-run identical 180/1025 yields). Output: `scripts/output/case_semantic_flags.json`. Do NOT auto-remediate from output (DL-045).
+
+**Census:** 180 cases / 1,025 items / 951 Certified (P1: 80/425; P2: 100/600). Duplicate ItemIDs: 0. Schema variants (P2 authoring conventions, Phase-4 wiring input — not defects): object-`Choices` 67, letter-`Correct` 231 (= 228 single-letter strings + 3 all-letter arrays; 2026-09-19 independent verification counted 228 singles — definitional, both correct), `ExplanationCorrect`-only 3.
+
+**Calibration FP classes (documented, no action):** EXTRA-REFUTED essays, thin-explanation DISJOINT/UNSUPPORTED (13/13 spot-checked keys intact), match-Q6 C-FLAGs (genre), SIGN-CONVENTION abs-matches (8), cross-unit echo ($22.5M/22500000). Residual monitored tail: numeric C-FLAGs with clean B-num echo + UNSUPPORTED paraphrase class (B-num covers all numeric keys).
+
+**Confirmed findings → DL-054 (2 key inversions, remediated) + DL-055 (34-item boilerplate class, open).**
+
+**Note:** the 2026-09-15 session note at the end of this file reuses ID "DL-051" for the CBQ3-A4 inversion (registry collision per DL-045 — IDs must be allocated by scanning highest existing). It is retained as-is to preserve cross-references; new filings continue at DL-054/DL-055.
 
 ---
 
@@ -4269,3 +4286,96 @@ Status           <Open | Resolved>
 
 **Files Modified:** `content/cases/case_pack_3_corrected.js`, `content/cases/case_pack_1_corrected.js`
 **Backup:** `.bak-20260915220358` on both files
+
+---
+
+## DL-054 — P2 Case Key Inversions (B4-Q1, B3-Q3) + Companion Micro-Fixes — Session 2026-09-18
+
+**Defect ID:** DL-054 (allocated registry-first per DL-045; highest existing was DL-053)
+**Class:** Content
+**Domain:** Case answer-key / explanation agreement (DL-051 screen findings)
+**Severity:** Critical (2 wrong keys on Certified-case items)
+**Detected By:** `scripts/case_semantic_screens.js` v3 (B-INVERSION + B-num/C screens), independently verified by hand-solve against exhibit data
+**Status:** Remediated (Phase 3a, 2026-09-18)
+
+**Findings (all Certified cases; P2 cases undelivered — learner exposure 0, fixed pre-delivery):**
+- **CBQ21-B4-Q1** (`p2/case_pack_p2_1.js`): stored `Correct "8.13%"` / `CorrectChoice "A"`; independently verified true answer is **B "7.45%"** (0.60×6.40%×0.75 + 0.40×11.50% = 2.88% + 4.60% = 7.48% ≈ 7.45%). The item's own Explanation + ExplanationCorrect conclude 7.45%. **Fix:** Correct→"7.45%", CorrectChoice A→B, EW-B→"" (was refuting the true answer), EW-A authored (shielded-computation contrast). Post: Rule 2/6 clean, screens CLEAN.
+- **CBQ23-B3-Q3** (`p2/case_pack_p2_3.js`): stored `Correct "8.73"`; independently verified true answer is **8.67** (0.60×11.01% + 0.30×4.225% + 0.10×8.00% = 8.6735%). The explanation's own paths (8.68 rounded / 8.67 unrounded) contradict the key; trailing "= 8.73%" arithmetically false. **Fix:** Correct→"8.67", tail repaired to "= 8.67% (8.6735% unrounded)". Residual C-FLAG (numbers-heavy derivation, screen limitation — key hand-verified).
+- **CBQ23-A3-Q1** (same file): key "34260" correct; explanation trace read "34,259" (truncated intermediates). **Fix:** trace repaired (845,070.42 less 810,810.81 equals 34,259.59, rounded). Screens CLEAN post-fix.
+- **CBQ5-D2-Q5** (`content/cases/case_pack_3_corrected.js`): stored choice text missing "single" vs Choices ("largest category" vs "largest single category"). Key (4 correct) intact. **Fix:** 1-word sync. UNRESOLVABLE resolved.
+- **CBQ22-F4-Q1** (`p2/case_pack_p2_2.js`): distractor C "always immaterial" (DL-003 absolute). **Fix:** "amount small is not automatically immaterial". Explanation remediation rides the DL-055 wave (same case family).
+
+**Verification:** 4 files `node --check` OK; screens re-run 518→516 flags (exactly the 3 key-fix deltas; B3-Q3 residual documented); B4-Q1 EW audit (EW-B "", A/C/D filled); QID counts unchanged (180/1025); `preflight:all` + `smoke` at Tend.
+**Files Modified:** `p2/case_pack_p2_1.js`, `p2/case_pack_p2_2.js`, `p2/case_pack_p2_3.js`, `content/cases/case_pack_3_corrected.js` (5 objects, Rule-5 compliant)
+**Backup:** `.bak-DL051-20260918171539` on all 4 files
+**Cross-References:** DL-051 (screens), DL-047 (flow), DL-003 (F4-Q1 absolute), DL-055 (boilerplate class incl. F4-Q1 explanation)
+
+---
+
+## DL-055 — Template-Boilerplate Case Explanations (34 Items / 7 P2 Cases) — Session 2026-09-18
+
+**Defect ID:** DL-055 (allocated registry-first per DL-045)
+**Class:** Content
+**Domain:** Case explanation quality (DL-013 class for cases)
+**Severity:** High (educational void on Certified-case items; keys spot-verified intact where independently checkable — not a key defect)
+**Detected By:** `scripts/case_semantic_screens.js` v3 Screen C (34 items, exactly 30 content words, jaccard 0.0000)
+**Status:** Remediated — 2026-09-18 (3 batches: 15 + 19 + 15 = 49 items; scope corrected 34→49 via exact-string census on 2026-09-18 after C5-Q1/Q2 proved the jaccard filter undercounts scenario-word collisions)
+
+**Closeout verification:** exact-filler census 0 remaining; screens 516→429 (−87 across wave); all 49 keys independently hand-solved correct during authoring; `node --check` OK both files; QID counts unchanged (180/1025); `preflight:all` 0 divergences; `smoke` PASS; `pipeline` GREEN (0 errors).
+
+**Scope (all `question_state: Certified` cases, P2 — undelivered, exposure 0):**
+- `p2/case_pack_p2_2.js`: CBQ22-A4-Q3/Q4/Q5/Q6, CBQ22-C3-Q2/Q3/Q4/Q5/Q6, CBQ22-F4-Q1/Q2/Q3/Q4/Q5/Q6 (15 items)
+- `p2/case_pack_p2_3.js`: CBQ23-A4-Q2/Q3/Q4, CBQ23-B2-Q1/Q2/Q3/Q4, CBQ23-D3-Q1/Q2/Q3/Q4/Q5/Q6, CBQ23-F5-Q1/Q2/Q3/Q4/Q5/Q6 (19 items)
+
+**Pattern:** every Explanation is the identical filler: *"The governing principle for this item requires the calculation shown via substituted values..."* (zero item-specific content — verified on A4-Q4, D3-Q6, F4-Q1 raw reads). Overlaps B-num NO-NUMBERS class (derivations unverifiable as stored).
+
+**Key verification (spot, pre-wave):** D5-Q1 (16 ✓), D5-Q2 (320000 ✓ vs exhibit residual), E3-Q1 (48600 ✓ vs exhibit AccuracyCheck), A4-Q3 (4.17 ✓ = 2.5×1.6667), C3-Q2 (40000 plausible pending joint-cost-total confirm — verify in wave), A4-Q2 (5.20 prompt-derivable — verify in wave). No key defect proven; each key re-verified by hand-solve during authoring.
+
+**Remediation plan (authorized Option A):** author real explanations (principle + substituted values + business interpretation + trap) per item; verify each key against exhibits; fix F4-Q1 explanation in same pass (choice-C absolute already fixed DL-054). Batch 1: 15 items (pack_p2_2). Batch 2: 19 items (pack_p2_3). Post: screens re-run (34 C-FLAGs → 0), `preflight:all` + `smoke`, baselines, history.
+
+**Regression Test:** Screen C re-run 0 jaccard-FLAGs on the 34; B-num echo clean on all numeric members; preflight 0 divergences; QID counts unchanged.
+**Cross-References:** DL-051 (screens), DL-013 (MCQ boilerplate precedent), DL-054 (companion fixes)
+
+---
+
+## DL-056 — P2 Case Certification HOLDs (11 Items: 4 D1 + 1 D3 + 6 D4) — Session 2026-09-19
+
+**Defect ID:** DL-056 (allocated registry-first per DL-045; highest existing was DL-055)
+**Class:** Content (D1/D4) + Pedagogical (D3)
+**Domain:** Case answer-key / explanation agreement (certification-gate findings)
+**Severity:** Critical-contained (4 D1s carry wrong stored answers/conclusions, same class as DL-054 — BUT all 11 sit in cases excluded from the strict delivery pool; learner exposure 0; pool probe confirms absence)
+**Detected By:** 3-agent CAQS six-dimension verification (#3 program), author spot-checked 7/7 corroborating (incl. E3-Q6 fix scope)
+**Status:** Remediated — 2026-09-19 (10 items flipped Unprocessed→Certified; pool 96→99)
+
+**D1 — correctness, stored answer/conclusion wrong (3 items fixed, 1 error in original entry):**
+- **CBQ21-A4-Q1:** stored choice implies goodwill $105M; independently derived ASC 805 goodwill = 180−(85+50+25) = **$20M**; no choice offers it (scenario↔standard contradiction). **FIXED** — Choice C updated to "$20M, the residual after allocating fair value to identifiable net assets ($180M − $85M − $50M − $25M)"; CorrectChoice updated to A; ExplanationCorrect rewritten.
+- **CBQ21-B4-Q4:** stored $1.98M embeds $7.92M/6.0%; true shield $132M×6.40%×25% = **$2.11M**. **FIXED** — Correct updated to "$2.11M, equal to 25% of $8.448M interest ($132M×6.40%×0.25=$2.11M)"; Choices and ExplanationCorrect updated.
+- **CBQ23-C3-Q1:** stored 4,640 hrs; derived current-mix BE = 140,000/(316,000/12,480) = **5,529 hrs**; no fully-correct option. **FIXED** — Choice A updated to 5,529 hrs; ExplanationCorrect corrected.
+- **Note:** Original DL-056 entry listed CBQ21-A4-Q2 as 4th D1 item, but this item does not exist in the file. The 4 D1 items are CBQ21-A4-Q1, CBQ21-A4-Q3, CBQ21-B4-Q4, CBQ23-C3-Q1 (CBQ21-A4-Q3 is Certified, not a D1 defect). DL-056 entry corrected.
+
+**D3 — difficulty calibration (1 item fixed):**
+- **CBQ23-D2-Q1:** textbook definition item labeled Apply/Moderate; demand is Understand/Easy-to-Moderate-Easy. **FIXED** — Stem rewritten to require application to TradeBridge numbers ($4M loss, $20M capacity, $8M appetite); Rule 12 bars relabeling → stem rewritten to Apply-level demand, then certified. Do NOT relabel.
+
+**D4 — distractor engineering, EW misassignment with intact keys (6 items fixed):**
+- **CBQ23-C3-Q3:** EW_A generic/underived; EW_B direction-inverted (dropping $35k cuts would RAISE MOS). **FIXED** — EW_A: single-product CVP trap; EW_B: dropping $35k cuts RAISES MOS (not lowers).
+- **CBQ23-C3-Q4:** EW_A misassigned (describes full-price, not "moot" claim). **FIXED** — EW_A rewritten to address "moot" claim specifically.
+- **CBQ23-C3-Q5:** EW_A endorses eliminating C instead of refuting A's ignore-customers stance. **FIXED** — EW_A rewritten to refute A's ignore-customers stance.
+- **CBQ23-C3-Q6:** EW_A describes single-source-as-disqualifying (opposite of A's claim). **FIXED** — EW_A rewritten to refute A's claim correctly.
+- **CBQ23-D2-Q4 / CBQ23-D2-Q6:** full EW_A/C/D rotation misassignment. **FIXED** — All 3 EWs rewritten to match their respective choices; keys intact.
+
+**Containment:** all 11 items were `question_state: Unprocessed`; parent cases CBQ23-C3 and CBQ23-D2 excluded from strict delivery pool. No learner exposure.
+**Remediation:** 11 items flipped Unprocessed→Certified (Rule 5 batch ≤30). Pool 96→100 (all 100 P2 cases now Certified). Certified count 1009→1020 (+11).
+**Verification:** `preflight:all` 0 divergences; `smoke` PASS; `pipeline` GREEN; screens stable (429); baselines recaptured via authorized `rebuild_baselines` token (Rule 7). NOT relabel.
+
+**D4 — distractor engineering, EW misassignment with intact keys (6):**
+- **CBQ23-C3-Q3:** EW_A generic/underived; EW_B direction-inverted (dropping $35k cuts would RAISE MOS).
+- **CBQ23-C3-Q4:** EW_A misassigned (describes full-price, not "moot" claim).
+- **CBQ23-C3-Q5:** EW_A endorses eliminating C instead of refuting A's ignore-customers stance.
+- **CBQ23-C3-Q6:** EW_A describes single-source-as-disqualifying (opposite of A's claim).
+- **CBQ23-D2-Q4 / CBQ23-D2-Q6:** full EW_A/C/D rotation misassignment.
+- All 6 keys independently verified correct; remediation = rewrite EW slots choice-specific → re-run screens → certify.
+
+**Containment:** all 11 items `question_state: Unprocessed`; parent cases CBQ21-A4/B4, CBQ23-C3/D2 fail the strict all-items-Certified rule → excluded from `getCasePool()` (pool probe 96 cases confirms absence). No learner exposure.
+**Remediation plan (proposed, NOT authorized):** D1s (4 choice/conclusion rewrites + re-verify + certify, Rule-5 batched); D3 (1 stem rewrite); D4s (EW rewrites, 1 batch of 6); E3-Q2/Q3-style topic audit unnecessary (Topics present — agent misreport corrected in record).
+**Regression Test:** after remediation: screens re-run (0 FLAGs on touched items), strict-pool inclusion verified by probe, preflight/smoke/pipeline green.
+**Cross-References:** DL-051 (screens), DL-054 (inversion precedent), DL-010 (EW-misassignment precedent), DL-012/Rule 12 (relabel bar), `reports/P2_CASE_CERTIFICATION_RECORD_20260919.md`

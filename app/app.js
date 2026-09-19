@@ -30,6 +30,87 @@ const SECTION_INFO = {
     "F": { name: "Technology and Analytics", target: 75, weight: 15 }
 };
 
+// Promotion (2026-09-18): Part 2 blueprint (weights from p2/P2002_BLUEPRINT_EXTRACTION.json
+// exam_weight_percent: A20/B20/C25/D10/E10/F15 = 100; official IMA Part 2 weights).
+const SECTION_INFO_P2 = {
+    "A": { name: "Financial Statement Analysis", weight: 20 },
+    "B": { name: "Corporate Finance", weight: 20 },
+    "C": { name: "Decision Analysis", weight: 25 },
+    "D": { name: "Risk Management", weight: 10 },
+    "E": { name: "Investment Decisions", weight: 10 },
+    "F": { name: "Professional Ethics", weight: 15 }
+};
+
+// Part-aware section metadata. P1 path returns SECTION_INFO rows (unchanged).
+function sectionInfo(sec) {
+    var table = getExamPart() === 'P2' ? SECTION_INFO_P2 : SECTION_INFO;
+    return table[sec] || { name: '', weight: 0 };
+}
+
+function sectionWeightTargets() {
+    if (getExamPart() === 'P2') return { A: 0.20, B: 0.20, C: 0.25, D: 0.10, E: 0.10, F: 0.15 };
+    return { A: 0.15, B: 0.20, C: 0.20, D: 0.15, E: 0.15, F: 0.15 };
+}
+
+// W1 hero counts (2026-09-18): live bank census so hero copy never stales.
+// typeof-guarded: unloaded banks (W4 lazy-load) count as 0. Case banks
+// dedupe by CaseID (A/D and B/E alias the same packs).
+function liveBankCounts() {
+    function bankLen(b) { return Array.isArray(b) ? b.length : 0; }
+    function p1bank(name, migrated) {
+        try {
+            if (typeof window !== 'undefined' && typeof window[name] !== 'undefined') return window[name];
+            var v = (function () { try { return eval(name); } catch (e) { return []; } })();
+            if (Array.isArray(v) && v.length) return v;
+        } catch (e) {}
+        try {
+            var m = (function () { try { return eval(migrated); } catch (e2) { return []; } })();
+            if (Array.isArray(m)) return m;
+        } catch (e) {}
+        return [];
+    }
+    var p1mcq = bankLen(p1bank('MCQ_BANK_A')) + bankLen(p1bank('MCQ_BANK_B')) + bankLen(p1bank('MCQ_BANK_C')) + bankLen(p1bank('MCQ_BANK_D')) + bankLen(p1bank('MCQ_BANK_E'));
+    // W1-hero fix (2026-09-18): count the live CASE_PACK banks (80 cases),
+    // not the legacy CASE_BANK section slices (stale partial coverage: 50).
+    var seenCases = {};
+    var p1cases = 0;
+    ['CASE_PACK_1', 'CASE_PACK_2', 'CASE_PACK_3'].forEach(function (nm) {
+        (p1bank(nm) || []).forEach(function (c) {
+            if (c && c.CaseID && !seenCases[c.CaseID]) { seenCases[c.CaseID] = 1; p1cases++; }
+        });
+    });
+    var p2mcq = 0;
+    try {
+        var pb = resolveP2MCQBanks();
+        Object.keys(pb).forEach(function (k) { p2mcq += bankLen(pb[k]); });
+    } catch (e) {}
+    // W1-hero fix (2026-09-18): P2 case census for the hero counts.
+    // Dedupe by CaseID; unloaded banks count as 0.
+    var p2cases = 0;
+    try {
+        var seenP2C = {};
+        ['casePackP2_1', 'casePackP2_2', 'casePackP2_3'].forEach(function (nm) {
+            var arr = p1bank(nm);
+            (arr || []).forEach(function (c) {
+                if (c && c.CaseID && !seenP2C[c.CaseID]) { seenP2C[c.CaseID] = 1; p2cases++; }
+            });
+        });
+    } catch (e) {}
+    return { p1mcq: p1mcq, p1cases: p1cases, p2mcq: p2mcq, p2cases: p2cases };
+}
+
+// Flat bank roster for collection/quiz resolvers (part-aware; typeof-safe).
+function resolveAllMCQBanks() {
+    if (getExamPart() === 'P2') return Object.values(resolveP2MCQBanks());
+    var out = [];
+    try { if (typeof MCQ_BANK_A !== 'undefined') out.push(MCQ_BANK_A); } catch (e) { }
+    try { if (typeof MCQ_BANK_B !== 'undefined') out.push(MCQ_BANK_B); } catch (e) { }
+    try { if (typeof MCQ_BANK_C !== 'undefined') out.push(MCQ_BANK_C); } catch (e) { }
+    try { if (typeof MCQ_BANK_D !== 'undefined') out.push(MCQ_BANK_D); } catch (e) { }
+    try { if (typeof MCQ_BANK_E !== 'undefined') out.push(MCQ_BANK_E); } catch (e) { }
+    return out;
+}
+
 const STUDY_LINKS = {
     "Financial statements": [{ label: "IMA CMA Learning Outcome Statements, Part 1 Section A", url: "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx" }, { label: "OpenStax: Financial Statements overview", url: "https://openstax.org/books/principles-financial-accounting/pages/2-3-prepare-an-income-statement-statement-of-owners-equity-and-balance-sheet" }],
     "Recognition and measurement": [{ label: "IMA CMA Learning Outcome Statements, Section A.2", url: "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx" }, { label: "FASB Concepts Statements and revenue guidance portal", url: "https://www.fasb.org/page/PageContent?pageId=/standards/concepts-statements.html" }],
@@ -88,6 +169,14 @@ const CMAProfileManager = {
                 var profile = JSON.parse(raw);
                 var defaults = this._default();
                 for (var k in defaults) { if (!(k in profile) && defaults.hasOwnProperty(k)) profile[k] = defaults[k]; }
+                // W1 cross-part (2026-09-18): legacy history rows predate part
+                // stamps — backfill as P1 so part filters never drop them.
+                if (Array.isArray(profile.sessionHistory)) {
+                    for (var hi = 0; hi < profile.sessionHistory.length; hi++) {
+                        var he = profile.sessionHistory[hi];
+                        if (he && typeof he === 'object' && !he.part) he.part = 'P1';
+                    }
+                }
                 return profile;
             }
         } catch (e) { /* corrupted */ }
@@ -258,9 +347,10 @@ const CMAProfileManager = {
         var srcKeys = [];
         var safeRead = function (key) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch (e) { return null; } };
 
-        // Session history
+        // Session history (W1 cross-part 2026-09-18: legacy rows predate
+        // part stamps — backfill as P1 so part filters never drop them).
         var hist = safeRead('cmaP1History2026');
-        if (hist && Array.isArray(hist) && hist.length > 0) { profile.sessionHistory = hist.slice(0, 100); srcKeys.push('cmaP1History2026'); }
+        if (hist && Array.isArray(hist) && hist.length > 0) { profile.sessionHistory = hist.slice(0, 100).map(function (h) { if (h && typeof h === 'object' && !h.part) h.part = 'P1'; return h; }); srcKeys.push('cmaP1History2026'); }
 
         // Seen questions
         var seen = safeRead('cmaP1SeenQuestions2026');
@@ -824,6 +914,12 @@ const CHOICES = ['A', 'B', 'C', 'D'];
 
 function renderMarkdownTables(text) {
     if (!text || typeof text !== 'string') return text;
+    // H2 fix: table cells/headers are interpolated into innerHTML downstream —
+    // escape them at construction so pack text can never inject markup.
+    // (Align values are internally generated and need no escaping.)
+    var esc = function(s) {
+        return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    };
     var lines = text.split('\n');
     var result = [];
     var i = 0;
@@ -852,14 +948,14 @@ function renderMarkdownTables(text) {
             });
             var html = '<table><thead><tr>';
             for (var h = 0; h < headers.length; h++) {
-                html += '<th style="text-align:' + (alignMap[h] || 'left') + '">' + headers[h] + '</th>';
+                html += '<th style="text-align:' + (alignMap[h] || 'left') + '">' + esc(headers[h]) + '</th>';
             }
             html += '</tr></thead><tbody>';
             for (var r = 0; r < rows.length; r++) {
                 html += '<tr>';
                 for (var c = 0; c < headers.length; c++) {
                     var cell = (rows[r] && rows[r][c]) ? rows[r][c] : '';
-                    html += '<td style="text-align:' + (alignMap[c] || 'left') + '">' + cell + '</td>';
+                    html += '<td style="text-align:' + (alignMap[c] || 'left') + '">' + esc(cell) + '</td>';
                 }
                 html += '</tr>';
             }
@@ -1095,9 +1191,12 @@ function assignTier(q) {
 // ── Session 96 — Defect manifest: unified ingestion, validation, dedup, diagnostics ──
 // Replaces Session 88 fragmented blocklist loading.
 // Sources (priority order):
-//   1. window._cmaDefectManifest.blocked — populated by may-core.js _fetchDefectManifest()
+//   1. window._cmaDefectManifest.blocked / .blockedQids — populated async by
+//      may-core.js _fetchDefectManifest(). Arrival after first pool build is
+//      handled by refresh() + manifest-aware pool cache keys below (C1 fix).
 //   2. window._cmaDeliveryBlocklist.blocked — legacy static blocklist (<script> loaded)
-//   3. Direct JSON fetch (governance/DEFECT_MANIFEST_DL008_DL026.json) — async fallback
+// NOTE (C1): there is no synchronous third source. _ensureLoaded() retries on
+// PARTIAL/ERROR so a first call that races the async fetch locks nothing.
 let _DefectManifest = (function() {
     var LOAD_STATE = { NOT_LOADED: 0, LOADING: 1, PARTIAL: 2, LOADED: 3, ERROR: 4 };
     var _state = LOAD_STATE.NOT_LOADED;
@@ -1178,7 +1277,10 @@ let _DefectManifest = (function() {
     }
 
     function _ensureLoaded() {
-        if (_state === LOAD_STATE.LOADED || _state === LOAD_STATE.PARTIAL) return;
+        // C1 fix: only LOADED locks. PARTIAL (first call raced the async fetch)
+        // and ERROR retry on the next call — _loadSources() resets state, so
+        // re-ingest is safe. LOADING short-circuits re-entrancy.
+        if (_state === LOAD_STATE.LOADED || _state === LOAD_STATE.LOADING) return;
         _state = LOAD_STATE.LOADING;
         try {
             var count = _loadSources();
@@ -1188,6 +1290,16 @@ let _DefectManifest = (function() {
             _state = LOAD_STATE.ERROR;
             _loadError = e.message || 'Unknown error loading defect manifest';
         }
+    }
+
+    // C1 fix: force re-ingest (e.g. right after the async fetch lands) and drop
+    // any pool built while blocking was inactive. Safe to call repeatedly.
+    function refresh() {
+        _state = LOAD_STATE.NOT_LOADED;
+        _loadError = null;
+        _ensureLoaded();
+        if (typeof _resetPoolCache === 'function') _resetPoolCache();
+        return _state;
     }
 
     // ── Public API ──
@@ -1225,7 +1337,7 @@ let _DefectManifest = (function() {
     function getLoadState() { return _state; }
     function isHealthy() { return _state === LOAD_STATE.LOADED && _blockedSet && _blockedSet.size > 0; }
 
-    return { isBlocked: isBlocked, getReason: getReason, getStats: getStats, getLoadState: getLoadState, isHealthy: isHealthy };
+    return { isBlocked: isBlocked, getReason: getReason, getStats: getStats, getLoadState: getLoadState, isHealthy: isHealthy, refresh: refresh };
 })();
 
 // Backward-compatible alias — existing callers can use _DefectManifest instead
@@ -1243,6 +1355,103 @@ function _resetPoolCache() {
     _casePoolCache = null;
     _poolPacksKey = "";
     _casePacksKey = "";
+}
+
+// ============================================================
+// Phase 0 — Single-app mode-switch plumbing (dev shell only)
+// Primary path (P1) is behavior-identical when getExamPart() === 'P1'.
+// P2 delivery is exercised exclusively via dev/part2-shell.html, which sets
+// window.__DEV_PART = 'P2' before app.js loads. Promotion to primary
+// requires a Full Governance session (index_updated.html P2 script tags +
+// Part toggle UI + May Phase 1). No pack/case/certification impact.
+// ============================================================
+function getExamPart() {
+    // Promotion: dev flag > active-session stamp > primary toggle > P1 default.
+    // In primary P1 flow (no flag, P1 session or no session, toggle P1) this
+    // returns 'P1' exactly as Phase 0 did.
+    if (typeof window !== 'undefined' && window.__DEV_PART === 'P2') return 'P2';
+    try {
+        if (typeof state !== 'undefined' && state.session && !state.session.completed && state.session.part) return state.session.part;
+    } catch (e) { /* state not yet initialized — fall through */ }
+    if (typeof document !== 'undefined') {
+        try { var el = document.querySelector('input[name="examPart"]:checked'); if (el && el.value) return el.value; } catch (e) { /* ignore */ }
+    }
+    return 'P1';
+}
+
+// P2 MCQ banks (p2/pack_p2_*.js). typeof-guarded: missing scripts → empty
+// arrays, never a ReferenceError (P2 files use const/var top-level globals).
+function resolveP2MCQBanks() {
+    return {
+        'A': typeof pack_p2_a_questions !== 'undefined' ? pack_p2_a_questions : [],
+        'B': typeof pack_p2_b_questions !== 'undefined' ? pack_p2_b_questions : [],
+        'C': typeof pack_p2_c_questions !== 'undefined' ? pack_p2_c_questions : [],
+        'D': typeof pack_p2_d_questions !== 'undefined' ? pack_p2_d_questions : [],
+        'E': typeof pack_p2_e_questions !== 'undefined' ? pack_p2_e_questions : [],
+        'F': typeof pack_p2_f_questions !== 'undefined' ? pack_p2_f_questions : []
+    };
+}
+
+// ── W4 lazy-load P2 banks (2026-09-18) ──
+// P1 cold start skips ~15MB of P2 content: the nine P2 scripts (6 MCQ + 3
+// case) are injected in order on first Part 2 activation. Dev shell keeps
+// its own static tags — isLoaded detects present globals and resolves
+// immediately without injection. All pool/catalog/hero/ops consumers are
+// typeof-guarded and treat unloaded banks as empty.
+var P2BankLoader = {
+    _promise: null,
+    _loaded: false,
+    _src: function () {
+        if (typeof window !== 'undefined' && Array.isArray(window.__P2_BANK_SRC) && window.__P2_BANK_SRC.length) return window.__P2_BANK_SRC;
+        return ['p2/pack_p2_a.js', 'p2/pack_p2_b.js', 'p2/pack_p2_c.js', 'p2/pack_p2_d.js', 'p2/pack_p2_e.js', 'p2/pack_p2_f.js', 'p2/case_pack_p2_1.js', 'p2/case_pack_p2_2.js', 'p2/case_pack_p2_3.js'];
+    },
+    isLoaded: function () {
+        if (this._loaded) return true;
+        try {
+            if (typeof pack_p2_a_questions !== 'undefined' && pack_p2_a_questions.length > 0) { this._loaded = true; return true; }
+        } catch (e) {}
+        return false;
+    },
+    ensureLoaded: function () {
+        if (this.isLoaded()) return Promise.resolve(true);
+        if (this._promise) return this._promise;
+        var self = this, chain = Promise.resolve();
+        this._src().forEach(function (src) {
+            chain = chain.then(function () { return self._inject(src); });
+        });
+        this._promise = chain.then(function () {
+            self._loaded = true; self._promise = null;
+            _resetPoolCache();
+            return true;
+        }).catch(function (err) { self._promise = null; throw err; });
+        return this._promise;
+    },
+    _inject: function (src) {
+        return new Promise(function (resolve, reject) {
+            var s = document.createElement('script');
+            s.src = src; s.async = false;
+            s.onload = function () { resolve(true); };
+            s.onerror = function () { reject(new Error('P2 bank failed to load: ' + src)); };
+            document.body.appendChild(s);
+        });
+    }
+};
+
+// Runtime Rule-14 defense-in-depth (write-time enforcement is guard Rule 14;
+// verified 2026-09-18: 0 P2- QIDs in P1 banks, 0 P1- QIDs in P2 banks).
+// Returns true if q belongs in the active part's delivery pool.
+function isQidPartEligible(q) {
+    var part = getExamPart();
+    var qid = (q && q.QuestionID) || '';
+    if (part === 'P2') {
+        if (qid.indexOf('P2-') !== 0) {
+            if (typeof console !== 'undefined') console.warn('[Phase0] Dropping non-P2 QID from P2 pool:', qid);
+            return false;
+        }
+        return true;
+    }
+    if (qid.indexOf('P2-') === 0) return false;
+    return true;
 }
 
 // ============================================================
@@ -1973,6 +2182,7 @@ const SessionPersistence = {
             h.unshift({
                 date: new Date().toISOString(),
                 mode: s.mode,
+                part: s.part || getExamPart(), // Promotion: namespace history by part
                 mcqs: s.mcqs.length,
                 correct,
                 cases: s.cases.length,
@@ -2005,6 +2215,7 @@ const SessionPersistence = {
             db.sessions.push({
                 date: entry.date,
                 mode: entry.mode,
+                part: entry.part || 'P1', // Promotion: legacy entries backfill as P1
                 mcqs: entry.mcqs,
                 correct: entry.correct,
                 accuracy: entry.accuracy,
@@ -2103,6 +2314,12 @@ function numericEqual(a, b) {
     return Math.abs(na - nb) < 1e-9;
 }
 function tolerantAnswerEqual(correct, attempt) {
+    // C2 fix: fail closed on blank. Previously an empty attempt fell through the
+    // numeric path (parseNumericValue("") → null) into fuzzy text, where
+    // tolerantTextEqual("0", "") is true (dist 1 ≤ 1 for len ≤ 5) — a blank
+    // answer on a zero-answer case item scored 1/1. Blank is never correct.
+    if (correct === null || correct === undefined || attempt === null || attempt === undefined) return false;
+    if (!String(correct).trim() || !String(attempt).trim()) return false;
     const numEq = numericEqual(correct, attempt);
     if (numEq !== null) return numEq;
     return tolerantTextEqual(correct, attempt);
@@ -2150,6 +2367,22 @@ function isExamIntegrityMode(session) {
 const ExamSessionManager = {
     start(e) {
         e.preventDefault();
+        // W4: P2 banks lazy-load on first P2 activation. If they have not
+        // arrived yet, defer the session build until they do — otherwise the
+        // pool is empty and the session degenerates to zero questions.
+        // Re-entrancy safe: isLoaded() is true on the retry pass.
+        if (getExamPart() === 'P2' && !P2BankLoader.isLoaded()) {
+            var _sbtn = $('startSessionBtn');
+            if (_sbtn) { _sbtn.disabled = true; _sbtn.textContent = 'Loading Part 2 banks...'; }
+            var _self = this;
+            P2BankLoader.ensureLoaded().then(function () {
+                if (_sbtn) { _sbtn.disabled = false; _sbtn.textContent = 'Start Session'; }
+                _self.start(e);
+            }).catch(function () {
+                if (_sbtn) { _sbtn.disabled = false; _sbtn.textContent = 'Start Session'; }
+            });
+            return;
+        }
         let mode = $('mode').value;
         let secs = this.sectionsSelected();
         // Debug: log selected sections
@@ -2189,9 +2422,11 @@ const ExamSessionManager = {
         let mcqs = selection.mcqs;
         let tierCounts = selection.tierCounts || {};
 
-        // UX-4: Collection review — override pool selection with saved collection items
+        // UX-4: Collection review — override pool selection with saved collection items.
+        // Promotion (H5 fix): cross-part items are dropped at consumption so a P1
+        // collection can never leak into a P2 session (and vice versa).
         if (state.collectionReview && state.collectionMcqs && state.collectionMcqs.length > 0) {
-            mcqs = state.collectionMcqs.slice(0, c.mcqs);
+            mcqs = state.collectionMcqs.filter(isQidPartEligible).slice(0, c.mcqs);
             tierCounts = {};
             state.collectionReview = false;
             state.collectionMcqs = null;
@@ -2218,6 +2453,7 @@ const ExamSessionManager = {
         state.session = {
             id: Date.now().toString(36),
             mode,
+            part: getExamPart(), // Phase 0: 'P1' in primary; 'P2' only via dev shell
             sections: secs,
             realConditions: !!($('realConditions') && $('realConditions').checked),
             mcqs,
@@ -2413,17 +2649,28 @@ const ExamSessionManager = {
     },
 
     selectedPacks() {
+        // P2 sections-only (2026-09-18): P2 packs map 1:1 to sections
+        // (Pack A = Section A, ...), so sections drive pack loading and
+        // pack checkboxes are ignored in P2 mode. P1 cross-section
+        // behavior unchanged: checked packs, or all five if none checked.
+        if (getExamPart() === 'P2') return ['A', 'B', 'C', 'D', 'E', 'F'];
         let packs = [...document.querySelectorAll('input[name="pack"]:checked')].map(x => x.value);
-        return packs.length ? packs : ['A', 'B', 'C', 'D', 'E'];
+        if (packs.length) return packs;
+        return ['A', 'B', 'C', 'D', 'E'];
     },
 
     getMCQPool() {
         let packs = this.selectedPacks();
-        let packsKey = packs.sort().join(",");
+        // Phase 0: part is part of the cache key (P1 behavior identical).
+        let part = getExamPart();
+        // C1 fix: manifest state is part of the cache key so a pool built before
+        // the async blocklist arrived is rebuilt (not reused) once it lands.
+        let manifestKey = _DefectManifest.getLoadState() + ':' + _DefectManifest.getStats().totalBlocked;
+        let packsKey = part + '|' + packs.sort().join(",") + '|' + manifestKey;
         if (_mcqPoolCache && _poolPacksKey === packsKey) return _mcqPoolCache;
         _poolPacksKey = packsKey;
 
-        let banks = {
+        let banks = part === 'P2' ? resolveP2MCQBanks() : {
             'A': typeof MCQ_BANK_A !== 'undefined' ? MCQ_BANK_A : [],
             'B': typeof MCQ_BANK_B !== 'undefined' ? MCQ_BANK_B : [],
             'C': typeof MCQ_BANK_C !== 'undefined' ? MCQ_BANK_C : [],
@@ -2439,6 +2686,7 @@ const ExamSessionManager = {
                 let copy = Object.assign({}, q);
                 // Skip objects that lack a renderable question body (paired-object metadata blocks)
                 if (!copy.Stem || !copy.CorrectChoice) continue;
+                if (!isQidPartEligible(copy)) continue; // Phase 0 Rule-14 runtime gate
                 assignTier(copy);
                 copy._similarityKey = this.deriveSimilarityKey(copy);
                 allItems.push(copy);
@@ -2477,30 +2725,115 @@ const ExamSessionManager = {
         return _mcqPoolCache;
     },
 
+    // ── Phase 4 (2026-09-18, DL-051): P2 case normalization ──
+    // P2 authoring conventions that P1-shape delivery code cannot consume:
+    // object-Choices (67), letter-Correct (231), ExplanationCorrect-only (3).
+    // Normalize COPIES at the pool boundary so render/score paths see only
+    // P1 shapes (array Choices, text Correct, Explanation). Verified lossless
+    // 2026-09-18: 0 unresolvable letters, keys prefix-complete (Agent audit).
+    normalizeCaseItemForDelivery(it) {
+        let out = Object.assign({}, it);
+        let norm = [];
+        if (Array.isArray(it.Choices)) {
+            norm = it.Choices.map((ch, i) => ({ key: String.fromCharCode(65 + i), text: String(ch == null ? '' : ch).trim().replace(/\s+/g, ' ') }));
+        } else if (it.Choices && typeof it.Choices === 'object') {
+            norm = Object.keys(it.Choices).sort().map(k => ({ key: k, text: String(it.Choices[k] == null ? '' : it.Choices[k]).trim().replace(/\s+/g, ' ') }));
+        }
+        if (norm.length) {
+            let textByKey = {};
+            norm.forEach(n => { textByKey[n.key] = n.text; });
+            out.Choices = norm.map(n => n.text);
+            let resolveKey = (v) => {
+                let t = String(v == null ? '' : v).trim().replace(/\s+/g, ' ');
+                if (textByKey[t] !== undefined) return t;
+                let hit = norm.find(n => n.text === t);
+                return hit ? hit.key : null;
+            };
+            if (typeof it.Correct === 'string') {
+                let k = resolveKey(it.Correct);
+                if (k !== null) out.Correct = textByKey[k];
+            } else if (Array.isArray(it.Correct)) {
+                out.Correct = it.Correct.map(v => { let k = resolveKey(v); return k !== null ? textByKey[k] : v; });
+            }
+        }
+        if (!out.Explanation && it.ExplanationCorrect) out.Explanation = it.ExplanationCorrect;
+        return out;
+    },
     getCasePool() {
         let packs = this.selectedPacks();
-        let packsKey = packs.sort().join(",") + "_case";
+        // Phase 0: part in key (P2 case wiring deferred — P2-case globals use a
+        // different schema; see DL-050/DL-051. P2 mode currently yields P1-shape
+        // banks only, i.e. an empty case pool: MCQ-only P2 sessions in dev).
+        // Promotion: P2 delivery is MCQ-only by board determination (DL-051
+        // delivery blocker) — return an empty pool so P1 cases can never leak
+        // into P2 sessions.
+        // C1 fix: same manifest-aware key as getMCQPool (see above).
+        let manifestKey = _DefectManifest.getLoadState() + ':' + _DefectManifest.getStats().totalBlocked;
+        let packsKey = getExamPart() + '|' + packs.sort().join(",") + "_case|" + manifestKey;
         if (_casePoolCache && _casePacksKey === packsKey) return _casePoolCache;
         _casePacksKey = packsKey;
+        // Phase 4 (2026-09-18, DL-051): P2 case delivery. Banks read from live
+        // globals, items normalized to P1 shapes, strict tier rule (case
+        // Certified AND every item effectively Certified — 88/100 cases
+        // qualify 2026-09-18), blocklist + section filter like P1. P1 cases
+        // can never leak in: pool built exclusively from casePackP2_*.
+        if (getExamPart() === 'P2') {
+            let p2banks = [
+                (typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : []),
+                (typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : []),
+                (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : [])
+            ];
+            let p2secs = [];
+            try { p2secs = this.sectionsSelected ? this.sectionsSelected() : []; } catch (e) {}
+            let p2pool = [];
+            for (let cb of p2banks) {
+                for (let c of (cb || [])) {
+                    let copy = Object.assign({}, c);
+                    copy.Items = (c.Items || []).map(it => this.normalizeCaseItemForDelivery(it));
+                    let st = (copy.question_state || '').trim();
+                    let itemsOk = copy.Items.length > 0 && copy.Items.every(it => ((it.question_state || copy.question_state || '').trim() === 'Certified'));
+                    if (st === 'Certified' && itemsOk) copy._tier = 1;
+                    else copy._tier = -1;
+                    copy._isEnhanced = true;
+                    if (p2secs && p2secs.length && Array.isArray(copy.SectionTags) && copy.SectionTags.length) {
+                        if (!copy.SectionTags.some(s => p2secs.includes(s))) continue;
+                    }
+                    p2pool.push(copy);
+                }
+            }
+            let p2active = p2pool.filter(c => {
+                if (c._tier < 1) return false;
+                if (_DefectManifest.isBlocked(c.CaseID)) return false;
+                if (Array.isArray(c.Items)) {
+                    for (let it of c.Items) {
+                        let iid = it.ItemID || it.QuestionID;
+                        if (iid && _DefectManifest.isBlocked(iid)) return false;
+                    }
+                }
+                return true;
+            });
+            let seenP2 = new Set();
+            _casePoolCache = p2active.filter(c => {
+                if (seenP2.has(c.CaseID)) return false;
+                seenP2.add(c.CaseID);
+                return true;
+            });
+            return _casePoolCache;
+        }
 
+        // Phase 4 (2026-09-18): live CASE_PACK banks (80 cases). The legacy
+        // CASE_BANK section aliases covered only 50 and hid the third pack.
         let banks = {
-            'A': (typeof CASE_BANK_A !== 'undefined' ? CASE_BANK_A : (typeof MIGRATED_CASE_BASE_A !== 'undefined' ? MIGRATED_CASE_BASE_A : [])),
-            'B': (typeof CASE_BANK_B !== 'undefined' ? CASE_BANK_B : (typeof MIGRATED_CASE_BASE_B !== 'undefined' ? MIGRATED_CASE_BASE_B : [])),
-            'C': (typeof CASE_BANK_C !== 'undefined' ? CASE_BANK_C : (typeof MIGRATED_CASE_BASE_C !== 'undefined' ? MIGRATED_CASE_BASE_C : [])),
-            'D': (typeof CASE_BANK_D !== 'undefined' ? CASE_BANK_D : (typeof MIGRATED_CASE_BASE_D !== 'undefined' ? MIGRATED_CASE_BASE_D : [])),
-            'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
+            'LIVE': [].concat(typeof CASE_PACK_1 !== 'undefined' ? CASE_PACK_1 : []).concat(typeof CASE_PACK_2 !== 'undefined' ? CASE_PACK_2 : []).concat(typeof CASE_PACK_3 !== 'undefined' ? CASE_PACK_3 : [])
         };
-        let enhanced_banks = {
-            'A': [].concat(typeof ENHANCED_CASE_BANK_A !== 'undefined' ? ENHANCED_CASE_BANK_A : []).concat(typeof ENHANCED_CASE_BANK2_A !== 'undefined' ? ENHANCED_CASE_BANK2_A : []).concat(typeof ENHANCED_CASE_BANK3_A !== 'undefined' ? ENHANCED_CASE_BANK3_A : []).concat(typeof ENHANCED_CASE_BANK4_A !== 'undefined' ? ENHANCED_CASE_BANK4_A : []).concat(typeof ENHANCED_CASE_BANK5_A !== 'undefined' ? ENHANCED_CASE_BANK5_A : []),
-            'B': [].concat(typeof ENHANCED_CASE_BANK_B !== 'undefined' ? ENHANCED_CASE_BANK_B : []).concat(typeof ENHANCED_CASE_BANK2_B !== 'undefined' ? ENHANCED_CASE_BANK2_B : []).concat(typeof ENHANCED_CASE_BANK3_B !== 'undefined' ? ENHANCED_CASE_BANK3_B : []).concat(typeof ENHANCED_CASE_BANK4_B !== 'undefined' ? ENHANCED_CASE_BANK4_B : []).concat(typeof ENHANCED_CASE_BANK5_B !== 'undefined' ? ENHANCED_CASE_BANK5_B : []),
-            'C': [].concat(typeof ENHANCED_CASE_BANK_C !== 'undefined' ? ENHANCED_CASE_BANK_C : []).concat(typeof ENHANCED_CASE_BANK2_C !== 'undefined' ? ENHANCED_CASE_BANK2_C : []).concat(typeof ENHANCED_CASE_BANK3_C !== 'undefined' ? ENHANCED_CASE_BANK3_C : []).concat(typeof ENHANCED_CASE_BANK4_C !== 'undefined' ? ENHANCED_CASE_BANK4_C : []).concat(typeof ENHANCED_CASE_BANK5_C !== 'undefined' ? ENHANCED_CASE_BANK5_C : []),
-            'D': [].concat(typeof ENHANCED_CASE_BANK_D !== 'undefined' ? ENHANCED_CASE_BANK_D : []).concat(typeof ENHANCED_CASE_BANK2_D !== 'undefined' ? ENHANCED_CASE_BANK2_D : []).concat(typeof ENHANCED_CASE_BANK3_D !== 'undefined' ? ENHANCED_CASE_BANK3_D : []).concat(typeof ENHANCED_CASE_BANK4_D !== 'undefined' ? ENHANCED_CASE_BANK4_D : []).concat(typeof ENHANCED_CASE_BANK5_D !== 'undefined' ? ENHANCED_CASE_BANK5_D : []),
-            'E': [].concat(typeof ENHANCED_CASE_BANK_E !== 'undefined' ? ENHANCED_CASE_BANK_E : []).concat(typeof ENHANCED_CASE_BANK2_E !== 'undefined' ? ENHANCED_CASE_BANK2_E : []).concat(typeof ENHANCED_CASE_BANK3_E !== 'undefined' ? ENHANCED_CASE_BANK3_E : []).concat(typeof ENHANCED_CASE_BANK4_E !== 'undefined' ? ENHANCED_CASE_BANK4_E : []).concat(typeof ENHANCED_CASE_BANK5_E !== 'undefined' ? ENHANCED_CASE_BANK5_E : []),
-            'F': [].concat(typeof ENHANCED_CASE_BANK_F !== 'undefined' ? ENHANCED_CASE_BANK_F : []).concat(typeof ENHANCED_CASE_BANK2_F !== 'undefined' ? ENHANCED_CASE_BANK2_F : []).concat(typeof ENHANCED_CASE_BANK3_F !== 'undefined' ? ENHANCED_CASE_BANK3_F : []).concat(typeof ENHANCED_CASE_BANK4_F !== 'undefined' ? ENHANCED_CASE_BANK4_F : []).concat(typeof ENHANCED_CASE_BANK5_F !== 'undefined' ? ENHANCED_CASE_BANK5_F : [])
-        };
+        let enhanced_banks = { 'LIVE': [] };
 
         let result = [];
-        for (let p of packs) {
+        // Phase 4: cases are not letter-partitioned — single live source,
+        // filtered by the section checkboxes below.
+        let sectionFilterP1 = [];
+        try { sectionFilterP1 = this.sectionsSelected ? this.sectionsSelected() : []; } catch (e) {}
+        for (let p of ['LIVE']) {
             // Enhanced cases first (higher quality signal), then standard cases.
             // Tier assignment per case: Certified > enhanced > standard
             let scored = (enhanced_banks[p] || []).map(c => {
@@ -2525,6 +2858,7 @@ const ExamSessionManager = {
             // Session 96 — Blocklist-gate cases: exclude any case whose CaseID
             // or any item QID is delivery-blocked (future-proofing for case-level defects)
             let active = [].concat(scored, standard).filter(c => {
+                if (sectionFilterP1.length && Array.isArray(c.SectionTags) && c.SectionTags.length && !c.SectionTags.some(s => sectionFilterP1.includes(s))) return false;
                 if (c._tier < 1) return false;
                 if (_DefectManifest.isBlocked(c.CaseID)) { c._tier = -1; c._blockedReason = 'DELIVERY_BLOCKLIST'; return false; }
                 if (Array.isArray(c.Items)) {
@@ -2640,7 +2974,7 @@ const ExamSessionManager = {
         let all = sections.length === 6 && $('weighted') && $('weighted').checked;
         if (!all) return shuffle(pool).slice(0, Math.min(count, pool.length));
         let result = [];
-        let targets = { A: 0.15, B: 0.20, C: 0.20, D: 0.15, E: 0.15, F: 0.15 };
+        let targets = sectionWeightTargets();
         for (let sec of sections) {
             let secPool = this.uniqueByConcept(pool.filter(q => q.Section === sec));
             let take = Math.min(secPool.length, Math.floor(count * targets[sec]));
@@ -2739,7 +3073,7 @@ const ExamSessionManager = {
         // S130 — Auto-save missed questions to recovery-candidates collection
         this._saveMissedToCollection(state.session);
         this.renderSummary('priority');
-        if (typeof May !== 'undefined') May.handoffCompletedSession(state.session);
+        if (typeof May !== 'undefined') May.handoffCompletedSession(state.session); // Promotion Phase 1: May serves both parts
         if (typeof MayTelemetry !== 'undefined') {
             var _attribC = window._mayAttributionCard;
             MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, attributionCardId: (_attribC && _attribC.cardId) || null, attributionCardType: (_attribC && _attribC.recommendationType) || null, timestamp: new Date().toISOString() });
@@ -2864,7 +3198,7 @@ const ExamSessionManager = {
             if (s) { s.mcqs = s.mcqs || []; s.cases = s.cases || []; }
             if (!s) {
                 $('sessionView').innerHTML = `<div class="empty-state-visual"><div><h2>Ready for 2026-aligned original CMA Part 1 practice</h2><p>Select content to configure your timer, then start a session. Review missed and marked questions after submission with targeted study links.</p></div><div class="empty-state-cards"><div class="empty-state-card" onclick="quickStart('mcq');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#128218;</div><h3>MCQ Practice</h3><p>500-item question bank per pack</p></div><div class="empty-state-card" onclick="quickStart('case');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#128203;</div><h3>Case Studies</h3><p>Real exam-style scenarios</p></div><div class="empty-state-card" onclick="quickStart('full');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#127891;</div><h3>Full Exam</h3><p>100 MCQs + 2 cases, 4 hours</p></div></div></div>`;
-                // Re-inject May companion card on landing page
+                // Re-inject May companion card on landing page (Promotion Phase 1: both parts)
                 if (typeof May !== 'undefined') {
                     sessionStorage.removeItem('mayCompanionDismissed');
                     setTimeout(() => { May._injectMayCompanionCard(); }, 50);
@@ -2987,7 +3321,7 @@ const ExamSessionManager = {
                     let isCorrect = scoreMCQ(q, b.dataset.choice) === 1;
                     AnalyticsCollector.recordAnswer(q.QuestionID, isCorrect, s.confidence[q.QuestionID], s.guessed[q.QuestionID]);
                     AnalyticsCollector.startQuestion(q.QuestionID);
-                    if (typeof May !== 'undefined') {
+                    if (typeof May !== 'undefined') { // Promotion Phase 1: May serves both parts
                         May.recordLiveAttempt(q, b.dataset.choice, isCorrect, May.context._liveHintCount || 0, false, 0, s.confidence[q.QuestionID]);
                         May.showPostAnswerFeedback(q, isCorrect);
                     }
@@ -3796,7 +4130,7 @@ const ExamSessionManager = {
             s.cases.forEach(c => { c.Items.forEach((it, i) => { let sec = c.SectionTags[0]; let ok = this.correctCase(it, s.caseAnswers[this.caseKey(c, i)]); bySec[sec] = bySec[sec] || { n: 0, c: 0, time: 0 }; bySec[sec].n++; if (ok) bySec[sec].c++; }); });
 
             let tiles = Object.entries(bySec).sort((a, b) => (a[1].c / a[1].n) - (b[1].c / b[1].n)).map(([sec, v]) =>
-                `<div class="scoretile"><b>Section ${sec}</b><br>${v.c}/${v.n} correct (${Math.round(v.c / v.n * 100)}%)<br><span class="small">${SECTION_INFO[sec] ? SECTION_INFO[sec].name : ''}</span></div>`
+                `<div class="scoretile"><b>Section ${sec}</b><br>${v.c}/${v.n} correct (${Math.round(v.c / v.n * 100)}%)<br><span class="small">${sectionInfo(sec).name}</span></div>`
             ).join('');
 
             // Topic breakdown with MCQ/CBQ split
@@ -3907,7 +4241,7 @@ const ExamSessionManager = {
         $('historyView').innerHTML = h.length ?
             '<h2>History <button onclick="SessionPersistence.clearHistory(); ExamSessionManager.renderHistory();" class="btn btn-outline" style="float:right;padding:4px 8px;font-size:0.8rem;">Clear History</button></h2>' +
             h.map(x => `<div class="history-card"><b>${new Date(x.date).toLocaleString()}</b>` +
-                `<p class="small">Mode ${x.mode} | ${fmt(x.duration)} | Sections ${(x.sections||[]).join(', ')} | MCQs ${x.correct}/${x.mcqs} | Cases ${x.cases || 0}${x.scaledScore ? ' | Scaled: ' + x.scaledScore : ''}${x.grade ? ' | ' + x.grade : ''}${x.passed ? ' | ✓ PASS' : (x.passed === false ? ' | Below threshold' : '')}${x.mcqGate === false ? ' | MCQ gate failed' : ''}${x.difficultyPreset && x.difficultyPreset !== 'standard' ? ' | ' + x.difficultyPreset + ' form' : ''}</p></div>`
+                `<p class="small">Part ${x.part || 'P1'} | Mode ${x.mode} | ${fmt(x.duration)} | Sections ${(x.sections||[]).join(', ')} | MCQs ${x.correct}/${x.mcqs} | Cases ${x.cases || 0}${x.scaledScore ? ' | Scaled: ' + x.scaledScore : ''}${x.grade ? ' | ' + x.grade : ''}${x.passed ? ' | ✓ PASS' : (x.passed === false ? ' | Below threshold' : '')}${x.mcqGate === false ? ' | MCQ gate failed' : ''}${x.difficultyPreset && x.difficultyPreset !== 'standard' ? ' | ' + x.difficultyPreset + ' form' : ''}</p></div>`
             ).join('') :
             '<div class="empty-state"><h2>No saved attempts yet</h2></div>';
     }
@@ -4893,6 +5227,40 @@ function generateStudyPlan(readiness, history, latestScore, mcqPct, cbqPct) {
     let focusTopics = weakTopics.map(t => t.name);
     let reinforceTopics = strongTopics.map(t => t.name);
 
+    // W1 cross-part bridge (2026-09-18): P1 section mastery >= 80% (n >= 10)
+    // recommends aligned P2 sections. Reads dashboard SESSIONS (which carry
+    // bySection + part), not history (topic snapshots lack sections) — so the
+    // signal works on pre-W1 records too.
+    let bridgeRecs = [];
+    try {
+        var _db = null;
+        try { _db = SessionPersistence.getDashboard(); } catch (e) {}
+        var _p1sec = {};
+        ((_db && _db.sessions) || []).forEach(function (s) {
+            if ((s.part || 'P1') !== 'P1' || !s.bySection) return;
+            Object.entries(s.bySection).forEach(function (kv) {
+                var sec = kv[0], v = kv[1] || {};
+                if (!/^[A-F]$/.test(sec)) return;
+                if (!_p1sec[sec]) _p1sec[sec] = { n: 0, c: 0 };
+                _p1sec[sec].n += v.total || 0;
+                _p1sec[sec].c += v.correct || 0;
+            });
+        });
+        var _align = { A: ['A'], B: ['B', 'C'], C: ['C'], D: ['C', 'E'], E: ['D'], F: ['F'] };
+        Object.keys(_align).forEach(function (sec) {
+            var dd = _p1sec[sec];
+            if (dd && dd.n >= 10 && (dd.c / dd.n) >= 0.80) {
+                bridgeRecs.push({
+                    from: sec,
+                    fromName: ((typeof SECTION_INFO !== 'undefined' && SECTION_INFO[sec]) || {}).name || sec,
+                    pct: Math.round(dd.c / dd.n * 100),
+                    to: _align[sec].slice()
+                });
+            }
+        });
+        bridgeRecs = bridgeRecs.slice(0, 3);
+    } catch (e) { bridgeRecs = []; }
+
     // Difficulty strategy
     let difficultyStrategy;
     if (band === 'BELOW_TARGET') {
@@ -4940,6 +5308,7 @@ function generateStudyPlan(readiness, history, latestScore, mcqPct, cbqPct) {
         band,
         focusTopics,
         reinforceTopics,
+        bridgeRecs,
         weakTopics,
         strongTopics,
         difficultyStrategy,
@@ -4975,6 +5344,13 @@ generateStudyPlan.renderStudyPlanCard = function (plan) {
         ? '<div style="margin-top:8px;"><strong>Reinforce:</strong> ' + plan.reinforceTopics.map(t => `<span style="background:#f0fdf4;border:1px solid #86efac;border-radius:4px;padding:2px 6px;margin:2px;display:inline-block;font-size:0.8rem;">${t}</span>`).join(' ') + '</div>'
         : '';
 
+    let bridgeHtml = (plan.bridgeRecs && plan.bridgeRecs.length > 0)
+        ? '<div style="margin-top:8px;"><strong>Part 2 bridge:</strong> ' + plan.bridgeRecs.map(r => {
+            let tos = r.to.map(s => 'P2-' + s + ' ' + (((typeof SECTION_INFO_P2 !== 'undefined' && SECTION_INFO_P2[s]) || {}).name || s)).join(' + ');
+            return `<span style="background:#f0f9ff;border:1px solid #7dd3fc;border-radius:4px;padding:2px 6px;margin:2px;display:inline-block;font-size:0.8rem;">P1-${r.from} ${r.pct}% → ${tos}</span>`;
+        }).join(' ') + '</div>'
+        : '';
+
     let sessionHtml = plan.sessionTypes.map(s => {
         let icon = s.priority === 'high' ? '!' : s.priority === 'medium' ? '>' : 'i';
         return `<div style="margin:6px 0;padding:6px 10px;background:${s.priority === 'high' ? '#fef2f2' : s.priority === 'medium' ? '#fff7ed' : '#f0f9ff'};border-radius:4px;font-size:0.85rem;">
@@ -4988,6 +5364,7 @@ generateStudyPlan.renderStudyPlanCard = function (plan) {
       <p class="small" style="margin-bottom:4px;"><strong>Timeframe:</strong> ${plan.timeframe}</p>
       ${focusHtml}
       ${reinforceHtml}
+      ${bridgeHtml}
       <div style="margin-top:12px;"><strong>Session Plan:</strong></div>
       ${sessionHtml}
       <div style="margin-top:10px;padding:8px;background:#eff6ff;border-radius:4px;font-size:0.85rem;">
@@ -5009,10 +5386,23 @@ generateStudyPlan.renderResultSnippet = function (plan) {
 // PerformanceDashboard
 // ============================================================
 const PerformanceDashboard = {
+    // W1 cross-part filter (2026-09-18): P1 / P2 / ALL selector. Defaults to
+    // the active part (pre-W1 behavior). Persists for the page lifetime.
+    _partFilter: null,
+    setPartFilter(v) {
+        if (['P1', 'P2', 'ALL'].indexOf(v) === -1) return;
+        PerformanceDashboard._partFilter = v;
+        PerformanceDashboard.render();
+    },
     render() {
         let db = SessionPersistence.getDashboard();
         let sessions = db.sessions || [];
         let history = SessionPersistence.getHistory();
+        // Promotion: legacy rows backfill P1. W1: filter P1 / P2 / ALL.
+        let partFilter = PerformanceDashboard._partFilter || getExamPart();
+        if (['P1', 'P2', 'ALL'].indexOf(partFilter) === -1) partFilter = getExamPart();
+        sessions = sessions.filter(s => partFilter === 'ALL' || (s.part || 'P1') === partFilter);
+        history = history.filter(h => partFilter === 'ALL' || (h.part || 'P1') === partFilter);
 
         let overallCorrect = 0, overallTotal = 0, overallCbqC = 0, overallCbqT = 0;
         let bySection = {};
@@ -5026,13 +5416,16 @@ const PerformanceDashboard = {
             overallTotal += s.mcqs || 0;
             overallCbqC += s.cbqCorrect || 0;
             overallCbqT += s.cbqTotal || 0;
-            trend.push({ date: s.date, accuracy: s.accuracy, scaledScore: s.scaledScore, mode: s.mode, mcqGate: s.mcqGate, difficultyPreset: s.difficultyPreset, passed: s.passed });
+            trend.push({ date: s.date, accuracy: s.accuracy, scaledScore: s.scaledScore, mode: s.mode, mcqGate: s.mcqGate, difficultyPreset: s.difficultyPreset, passed: s.passed, part: s.part || 'P1' });
             if (s.mcqGate !== undefined) { gateTotal++; if (s.mcqGate) gatePassed++; }
             if (s.bySection) {
                 Object.entries(s.bySection).forEach(([sec, v]) => {
-                    if (!bySection[sec]) bySection[sec] = { n: 0, c: 0 };
-                    bySection[sec].n += v.total || 0;
-                    bySection[sec].c += v.correct || 0;
+                    // W1: in ALL mode, P1-A and P2-A are different domains —
+                    // namespace section keys by part to avoid merging them.
+                    let key = partFilter === 'ALL' ? ((s.part || 'P1') + '-' + sec) : sec;
+                    if (!bySection[key]) bySection[key] = { n: 0, c: 0 };
+                    bySection[key].n += v.total || 0;
+                    bySection[key].c += v.correct || 0;
                 });
             }
             let dp = s.difficultyPreset || 'standard';
@@ -5062,9 +5455,17 @@ const PerformanceDashboard = {
         let weakestTopics = topicEntries.slice(0, 3);
         let strongestTopics = [...topicEntries].reverse().slice(0, 3);
 
-        let sectionHtml = Object.entries(bySection).sort((a, b) => (a[1].c / a[1].n) - (b[1].c / b[1].n)).map(([sec, v]) =>
-            `<div class="dashboard-section"><b>Section ${sec}: ${SECTION_INFO[sec] ? SECTION_INFO[sec].name : ''}</b><br>${v.c}/${v.n} (${Math.round(v.c / v.n * 100)}%)<div class="topic-bar"><div class="topic-fill" style="width:${Math.round(v.c / v.n * 100)}%"></div></div></div>`
-        ).join('') || '<p>No section data yet. Complete a session to see section performance.</p>';
+        // W1: section names resolve from the row's own part table (ALL mode
+        // mixes parts), never from the active-part sectionInfo(). In ALL mode
+        // keys are part-namespaced upstream (P1-A vs P2-A are different domains).
+        let sectionHtml = Object.entries(bySection).sort((a, b) => (a[1].c / a[1].n) - (b[1].c / b[1].n)).map(([sec, v]) => {
+            let dispPart = partFilter, dispSec = sec;
+            if (partFilter === 'ALL' && sec.length > 2 && sec.charAt(2) === '-') { dispPart = sec.slice(0, 2); dispSec = sec.slice(3); }
+            let table = dispPart === 'P2' ? SECTION_INFO_P2 : SECTION_INFO;
+            let secName = (table[dispSec] && table[dispSec].name) || '';
+            let label = partFilter === 'ALL' ? ('Part ' + dispPart.slice(1) + ' · Section ' + dispSec) : ('Section ' + dispSec);
+            return `<div class="dashboard-section"><b>${label}: ${secName}</b><br>${v.c}/${v.n} (${Math.round(v.c / v.n * 100)}%)<div class="topic-bar"><div class="topic-fill" style="width:${Math.round(v.c / v.n * 100)}%"></div></div></div>`;
+        }).join('') || '<p>No section data yet. Complete a session to see section performance.</p>';
 
         let weakTopicHtml = weakestTopics.length > 0
             ? weakestTopics.map(([t, v]) => `<div class="dashboard-section"><b>${t}</b><br>${v.c}/${v.n} (${Math.round(v.c / v.n * 100)}%)<div class="topic-bar"><div class="topic-fill" style="background:#ef4444;width:${Math.round(v.c / v.n * 100)}%"></div></div></div>`).join('')
@@ -5075,7 +5476,7 @@ const PerformanceDashboard = {
             : '<p class="small">Complete more sessions for reliable topic analysis.</p>';
 
         let trendHtml = trend.length > 0 ? trend.slice(-10).map(t =>
-            `<div class="trend-item"><span>${new Date(t.date).toLocaleDateString()}</span><span>Acc: ${Math.round((t.accuracy || 0) * 100)}%</span><span>Score: ${t.scaledScore || 'N/A'}</span><span class="small">${t.passed ? '✓ PASS' : ''} ${t.mcqGate === false ? 'GATE FAIL' : ''}</span></div>`
+            `<div class="trend-item"><span>${new Date(t.date).toLocaleDateString()}</span>${partFilter === 'ALL' ? `<span class="small">P${(t.part || 'P1') === 'P2' ? '2' : '1'}</span>` : ''}<span>Acc: ${Math.round((t.accuracy || 0) * 100)}%</span><span>Score: ${t.scaledScore || 'N/A'}</span><span class="small">${t.passed ? '✓ PASS' : ''} ${t.mcqGate === false ? 'GATE FAIL' : ''}</span></div>`
         ).join('') : '<p>Complete a session to see trends.</p>';
 
         let difficultyCompareHtml = PerformanceAnalytics.renderDifficultyComparison(trendAnalysis);
@@ -5111,6 +5512,11 @@ const PerformanceDashboard = {
 
         $('dashboardView').innerHTML = `<div class="dashboard">
           <h2>Performance Dashboard</h2>
+          <label class="small">Show: <select id="dashPartFilter" onchange="PerformanceDashboard.setPartFilter(this.value)">
+            <option value="P1"${partFilter === 'P1' ? ' selected' : ''}>Part 1</option>
+            <option value="P2"${partFilter === 'P2' ? ' selected' : ''}>Part 2</option>
+            <option value="ALL"${partFilter === 'ALL' ? ' selected' : ''}>Both parts</option>
+          </select></label>
           <div class="dashboard-grid">
             <div class="dashboard-card"><h3>Overall MCQ Accuracy</h3><div class="dashboard-stat">${overallMcqPct}%</div><p>${overallCorrect}/${overallTotal} across ${sessions.length} session(s)</p></div>
             ${overallCbqPct !== null ? `<div class="dashboard-card"><h3>Overall CBQ Accuracy</h3><div class="dashboard-stat">${overallCbqPct}%</div><p>${overallCbqC}/${overallCbqT} tasks correct</p></div>` : ''}
@@ -5576,7 +5982,7 @@ const ReviewCoach = {
         }
         if (repeatedMissSections.length > 0 && repeatedMissSections[0].count >= 3) {
             let sec = repeatedMissSections[0];
-            patterns.push(`<strong>Section ${sec.section} weakness:</strong> ${sec.count} repeated misses in Section ${sec.section} (${SECTION_INFO[sec.section] ? SECTION_INFO[sec.section].name : ''}). This section represents ${SECTION_INFO[sec.section] ? SECTION_INFO[sec.section].weight : '?'}% of the exam — prioritize accordingly.`);
+            patterns.push(`<strong>Section ${sec.section} weakness:</strong> ${sec.count} repeated misses in Section ${sec.section} (${sectionInfo(sec.section).name}). This section represents ${sectionInfo(sec.section).weight}% of the exam — prioritize accordingly.`);
         }
         if (patterns.length > 0) {
             patternHtml = `<div class="coach-card"><h4>Likely Learning Patterns</h4>${patterns.map(p => `<p>${p}</p>`).join('')}</div>`;
@@ -5858,12 +6264,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (t.dataset.view === 'operationsView') renderOperationsView();
         if (t.dataset.view === 'helpView') renderHelpCenter();
         if (t.dataset.view === 'coachView') {
-            // S130 — Compact May: show collapsed initially
+            // S130 — Compact May: show collapsed initially (Promotion Phase 1: both parts)
             if (typeof May !== 'undefined') May._renderCompactCoach();
             else ReviewCoach.renderFullCoach();
         }
         if (t.dataset.view === 'sessionView' || t.dataset.view === 'studyView') {
-            // Re-show May companion card when returning to landing/study view (no active session)
+            // Re-show May companion card when returning to landing/study view (no active session; Promotion Phase 1: both parts)
             if (typeof May !== 'undefined' && (!state.session || state.session.completed)) {
                 sessionStorage.removeItem('mayCompanionDismissed');
                 May._injectMayCompanionCard();
@@ -5925,7 +6331,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let isCorrect = scoreMCQ(q, k) === 1;
                 AnalyticsCollector.recordAnswer(q.QuestionID, isCorrect, s.confidence[q.QuestionID], s.guessed[q.QuestionID]);
                 AnalyticsCollector.startQuestion(q.QuestionID);
-                if (typeof May !== 'undefined') {
+                if (typeof May !== 'undefined') { // Promotion Phase 1: May serves both parts
                     May.recordLiveAttempt(q, k, isCorrect, May.context._liveHintCount || 0, false, 0, s.confidence[q.QuestionID]);
                     May.showPostAnswerFeedback(q, isCorrect);
                 }
@@ -5959,7 +6365,12 @@ function syncContentCards() {
     let mode = $('mode').value;
     document.querySelectorAll('.content-card').forEach(card => {
         let radio = card.querySelector('input[type="radio"]');
-        if (radio && radio.value === mode) card.classList.add('selected');
+        // W1-hero fix (2026-09-18): only content-type cards sync here. Part
+        // cards (name=examPart) are managed by setExamPart — without this
+        // guard the Part 1 card lost its selected state on every load/mode
+        // change, making the default ambiguous.
+        if (!radio || radio.name !== 'contentType') return;
+        if (radio.value === mode) card.classList.add('selected');
         else card.classList.remove('selected');
     });
 }
@@ -5974,6 +6385,109 @@ function quickStart(mode) {
 
 function setMode(mode) {
     quickStart(mode);
+}
+
+// ── Promotion (2026-09-18): single-app Part toggle ──
+function setExamPart(part) {
+    var p1 = document.querySelector('input[name="examPart"][value="P1"]');
+    var p2 = document.querySelector('input[name="examPart"][value="P2"]');
+    if (p1) p1.checked = (part !== 'P2');
+    if (p2) p2.checked = (part === 'P2');
+    var c1 = $('cardPart1'), c2 = $('cardPart2');
+    if (c1) c1.classList.toggle('selected', part !== 'P2');
+    if (c2) c2.classList.toggle('selected', part === 'P2');
+    updatePartUI();
+    _resetPoolCache();
+    try { renderValidation(); } catch (e) { /* ignore */ }
+    // W4: first P2 activation lazy-loads the nine P2 banks (P1 cold start
+    // skips them). Fire-and-forget; ExamSessionManager.start gates P2
+    // sessions on completion so no session builds from an empty pool.
+    if (part === 'P2' && !P2BankLoader.isLoaded()) {
+        var _vs = $('validationStatus');
+        if (_vs) _vs.innerHTML = '<b>Loading Part 2 banks...</b> <span class="small">Nine content files, one-time per visit.</span>';
+        P2BankLoader.ensureLoaded().then(function () {
+            _resetPoolCache();
+            try { renderValidation(); } catch (e) {}
+            try { updatePartUI(); } catch (e) {}
+        }).catch(function (err) {
+            var _vs2 = $('validationStatus');
+            if (_vs2) _vs2.innerHTML = '<b>Part 2 banks failed to load.</b> <span class="small">' + String((err && err.message) || err) + '</span>';
+        });
+    }
+}
+
+function updatePartUI() {
+    var p2 = getExamPart() === 'P2';
+    // Hero copy follows the active part (W1-hero fix 2026-09-18): the static
+    // Part 1 hero made the P1 default ambiguous once the toggle shipped.
+    // Counts are live censuses so copy never stales. Cosmetic only — never
+    // break part switching.
+    try {
+        var _lc = liveBankCounts();
+        var _he = $('heroEyebrow'), _ht = $('heroTitle'), _hl = $('heroLede');
+        if (_he) _he.textContent = p2 ? 'Original CMA Part 2 2026-Aligned Exam-Style Practice' : 'Original CMA Part 1 2026-Aligned Exam-Style Practice';
+        if (_ht) _ht.textContent = p2 ? 'CMA Part 2 2026 Practice Simulator' : 'CMA Part 1 2026 Practice Simulator';
+        if (_hl) {
+            if (p2) {
+                // Phase 4: delivery live, so no qualifier; unloaded banks show
+                // a loading line instead of zero counts.
+                _hl.innerHTML = (_lc.p2mcq > 0)
+                    ? _lc.p2mcq.toLocaleString() + ' Part 2 MCQs across six question packs (A &bull; B &bull; C &bull; D &bull; E &bull; F) plus ' + _lc.p2cases + ' integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.'
+                    : 'Part 2 banks are loading... your counts unlock as soon as all nine files arrive.';
+            } else {
+                _hl.innerHTML = _lc.p1mcq.toLocaleString() + ' Part 1 MCQs across five question packs (A &bull; B &bull; C &bull; D &bull; E) plus ' + _lc.p1cases + ' integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.';
+            }
+        }
+    } catch (e) { /* ignore */ }
+    // Pack labels + Pack F visibility (P2 has six packs)
+    var packNames = p2
+        ? { A: 'P2-A', B: 'P2-B', C: 'P2-C', D: 'P2-D', E: 'P2-E', F: 'P2-F' }
+        : { A: 'Pack A (A\u2013F)', B: 'Pack B (A\u2013F)', C: 'Pack C (A\u2013F)', D: 'Pack D (A\u2013F)', E: 'Pack E (A\u2013F)' };
+    Object.keys(packNames).forEach(function (k) {
+        var el = $('packLabel' + k);
+        if (el) el.textContent = packNames[k];
+    });
+    var fRow = $('packFRow');
+    if (fRow) fRow.style.display = p2 ? '' : 'none';
+    // P2 sections-only (2026-09-18): P2 packs map 1:1 to sections, so the
+    // pack checkbox row is hidden in P2 mode — sections drive pack loading
+    // via selectedPacks(). P1 behavior unchanged (pack row visible).
+    var packField = $('packField');
+    if (packField) packField.style.display = p2 ? 'none' : '';
+    // Section labels
+    var secNames = p2
+        ? { A: 'A \u2014 Financial Statement Analysis', B: 'B \u2014 Corporate Finance', C: 'C \u2014 Decision Analysis', D: 'D \u2014 Risk Management', E: 'E \u2014 Investment Decisions', F: 'F \u2014 Professional Ethics' }
+        : { A: 'A \u2014 External Reporting', B: 'B \u2014 Planning', C: 'C \u2014 Performance', D: 'D \u2014 Cost', E: 'E \u2014 Internal Controls', F: 'F \u2014 Technology' };
+    Object.keys(secNames).forEach(function (k) {
+        var el = $('secName' + k);
+        if (el) el.textContent = secNames[k];
+    });
+    // Phase 4 (2026-09-18, DL-051): P2 case delivery is live (88 strict-
+    // eligible cases). Case-bearing modes enable in P2 iff the P2 case pool
+    // is non-empty; unloaded banks yield an empty pool so cards stay disabled
+    // until lazy-load completes (then this re-runs and enables them).
+    var modes = { case: 'cardCase', mixed: 'cardMixed', full: 'cardFull' };
+    var p2CasesLive = false;
+    if (p2) {
+        try {
+            if (typeof ExamSessionManager !== 'undefined' && ExamSessionManager.getCasePool) {
+                p2CasesLive = ExamSessionManager.getCasePool().length > 0;
+            }
+        } catch (e) { p2CasesLive = false; }
+    }
+    var disableModes = p2 && !p2CasesLive;
+    Object.keys(modes).forEach(function (m) {
+        var card = $(modes[m]);
+        var radio = card ? card.querySelector('input[name="contentType"]') : null;
+        if (radio) radio.disabled = disableModes;
+        if (card) card.style.opacity = disableModes ? '.45' : '';
+    });
+    var cur = document.querySelector('input[name="contentType"]:checked');
+    if (disableModes && cur && ['case', 'mixed', 'full'].indexOf(cur.value) !== -1) setMode('mcq');
+    var w = $('weightedField');
+    if (w) w.style.display = '';
+    var note = $('fullOverrideNote');
+    if (note && p2) note.innerHTML = '<p><strong>Full Part 2 Simulation:</strong> 100 MCQs with a 4-hour countdown timer. Case studies included from the live P2 case pool (DL-051 Phase 4).</p>';
 }
 
 function updateSliderNote() {
@@ -6021,7 +6535,9 @@ function renderDefectDiagnostics() {
 }
 
 function renderValidation() {
-    let banks = {
+    // Promotion: roster follows the active part.
+    let part = getExamPart();
+    let banks = part === 'P2' ? resolveP2MCQBanks() : {
         'A': typeof MCQ_BANK_A !== 'undefined' ? MCQ_BANK_A : [],
         'B': typeof MCQ_BANK_B !== 'undefined' ? MCQ_BANK_B : [],
         'C': typeof MCQ_BANK_C !== 'undefined' ? MCQ_BANK_C : [],
@@ -6040,54 +6556,80 @@ function renderValidation() {
         if (bank.length) detailHtml += ` | ${Object.entries(counts).map(([s, c]) => s + ': ' + c).join(' | ')}`;
         detailHtml += '<br>';
     }
-    let caseBanks = {
-        'A': (typeof CASE_BANK_A !== 'undefined' ? CASE_BANK_A : (typeof MIGRATED_CASE_BASE_A !== 'undefined' ? MIGRATED_CASE_BASE_A : [])),
-        'B': (typeof CASE_BANK_B !== 'undefined' ? CASE_BANK_B : (typeof MIGRATED_CASE_BASE_B !== 'undefined' ? MIGRATED_CASE_BASE_B : [])),
-        'C': (typeof CASE_BANK_C !== 'undefined' ? CASE_BANK_C : (typeof MIGRATED_CASE_BASE_C !== 'undefined' ? MIGRATED_CASE_BASE_C : [])),
-        'D': (typeof CASE_BANK_D !== 'undefined' ? CASE_BANK_D : (typeof MIGRATED_CASE_BASE_D !== 'undefined' ? MIGRATED_CASE_BASE_D : [])),
-        'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
+    // W1-catalog fix (2026-09-18): live banks per active part. P1 reads
+    // CASE_PACK_1/2/3 (80 cases — the legacy CASE_BANK aliases hid the third
+    // pack). P2 reads casePackP2_1/2/3 (delivery/validation pending DL-051).
+    let caseBanks = part === 'P2' ? {
+        '1': (typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : []),
+        '2': (typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : []),
+        '3': (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : [])
+    } : {
+        '1': (typeof CASE_PACK_1 !== 'undefined' ? CASE_PACK_1 : []),
+        '2': (typeof CASE_PACK_2 !== 'undefined' ? CASE_PACK_2 : []),
+        '3': (typeof CASE_PACK_3 !== 'undefined' ? CASE_PACK_3 : [])
     };
-    let seenPacks = {}; for (let [label, cb] of Object.entries(caseBanks)) { if (cb && cb.length) { let key = cb.length + '|' + (cb[0].CaseID || ''); if (!seenPacks[key]) { seenPacks[key] = { labels: [label], count: cb.length, sections: cb.reduce((acc, c) => { c.SectionTags.forEach(s => acc[s] = (acc[s] || 0) + 1); return acc; }, {}) }; } else { seenPacks[key].labels.push(label); } } }
+    let seenPacks = {}; for (let [label, cb] of Object.entries(caseBanks)) { if (cb && cb.length) { let key = cb.length + '|' + (cb[0].CaseID || ''); if (!seenPacks[key]) { seenPacks[key] = { labels: [label], count: cb.length, sections: cb.reduce((acc, c) => { (c.SectionTags || []).forEach(s => acc[s] = (acc[s] || 0) + 1); return acc; }, {}) }; } else { seenPacks[key].labels.push(label); } } }
     let totalCases = Object.values(seenPacks).reduce((s, p) => s + p.count, 0);
     for (let k of Object.keys(seenPacks)) { let p = seenPacks[k]; detailHtml += `Case Pack ${p.labels.join('/')}: ${p.count} cases | ${Object.entries(p.sections).map(([s, n]) => s + ': ' + n).join(', ')}<br>`; }
+    if (part === 'P2') { var _p2ld = true; try { _p2ld = P2BankLoader.isLoaded(); } catch (e) {} detailHtml += _p2ld ? '<span class="small">P2 cases live in delivery (DL-051 Phase 4).</span><br>' : '<b>Part 2 banks loading...</b> <span class="small">Counts appear when all nine files arrive.</span><br>'; }
     detailHtml += `<b>${allOk ? 'All packs validated' : 'Some packs have issues'}</b>`;
-    let summaryHtml = `<b>${totalMCQs.toLocaleString()} MCQs across 5 packs + ${totalCases} case sets</b> &mdash; ${allOk ? 'All validated' : 'Issues detected'}`;
+    let summaryHtml = `<b>${totalMCQs.toLocaleString()} MCQs across ${Object.keys(banks).length} packs + ${totalCases} case sets</b> &mdash; ${allOk ? 'All validated' : 'Issues detected'}`;
     let html = `${summaryHtml} <span class="catalog-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'\u25B2 Collapse':'\u25BC Details'">\u25BC Details</span><div class="catalog-detail">${detailHtml}</div>`;
     $('validationStatus').innerHTML = html;
 }
 
 function renderCatalog() {
-    let banks = {
+    // Promotion: roster + labels follow the active part. P2 case catalog is
+    // deferred with DL-050/DL-051 (no semantic screens exist for case items).
+    let part = getExamPart();
+    let info = part === 'P2' ? SECTION_INFO_P2 : SECTION_INFO;
+    let banks = part === 'P2' ? resolveP2MCQBanks() : {
         'A': typeof MCQ_BANK_A !== 'undefined' ? MCQ_BANK_A : [],
         'B': typeof MCQ_BANK_B !== 'undefined' ? MCQ_BANK_B : [],
         'C': typeof MCQ_BANK_C !== 'undefined' ? MCQ_BANK_C : [],
         'D': typeof MCQ_BANK_D !== 'undefined' ? MCQ_BANK_D : [],
         'E': typeof MCQ_BANK_E !== 'undefined' ? MCQ_BANK_E : []
     };
+    // W1-catalog fix (2026-09-18): live CASE_PACK banks (80 cases) — the
+    // legacy CASE_BANK aliases hid the third pack (50-case subset).
     let caseBanks = {
-        'A': (typeof CASE_BANK_A !== 'undefined' ? CASE_BANK_A : (typeof MIGRATED_CASE_BASE_A !== 'undefined' ? MIGRATED_CASE_BASE_A : [])),
-        'B': (typeof CASE_BANK_B !== 'undefined' ? CASE_BANK_B : (typeof MIGRATED_CASE_BASE_B !== 'undefined' ? MIGRATED_CASE_BASE_B : [])),
-        'C': (typeof CASE_BANK_C !== 'undefined' ? CASE_BANK_C : (typeof MIGRATED_CASE_BASE_C !== 'undefined' ? MIGRATED_CASE_BASE_C : [])),
-        'D': (typeof CASE_BANK_D !== 'undefined' ? CASE_BANK_D : (typeof MIGRATED_CASE_BASE_D !== 'undefined' ? MIGRATED_CASE_BASE_D : [])),
-        'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
+        '1': (typeof CASE_PACK_1 !== 'undefined' ? CASE_PACK_1 : []),
+        '2': (typeof CASE_PACK_2 !== 'undefined' ? CASE_PACK_2 : []),
+        '3': (typeof CASE_PACK_3 !== 'undefined' ? CASE_PACK_3 : [])
     };
-    let packLabels = { 'A': 'Pack A', 'B': 'Pack B', 'C': 'Pack C', 'D': 'Pack D', 'E': 'Pack E' };
-    let cards = Object.entries(SECTION_INFO).map(([sec, info]) => {
+    let packLabels = part === 'P2'
+        ? { 'A': 'P2-A', 'B': 'P2-B', 'C': 'P2-C', 'D': 'P2-D', 'E': 'P2-E', 'F': 'P2-F' }
+        : { 'A': 'Pack A', 'B': 'Pack B', 'C': 'Pack C', 'D': 'Pack D', 'E': 'Pack E' };
+    let cards = Object.entries(info).map(([sec, secInfo]) => {
         let parts = Object.entries(banks).map(([pk, bank]) => { let qs = bank.filter(q => q.Section === sec); return `${packLabels[pk]}: ${qs.length}`; }).join(' | ');
         let allTopics = [...new Set(Object.values(banks).flatMap(bank => bank.filter(q => q.Section === sec).map(q => q.Topic)))].join(', ');
-        return `<div class="catalog-card"><b>Section ${sec}: ${info.name}</b><p class="small">${parts} | Official weight ${info.weight}%</p><p>${allTopics}</p></div>`;
+        return `<div class="catalog-card"><b>Section ${sec}: ${secInfo.name}</b><p class="small">${parts} | Official weight ${secInfo.weight}%</p><p>${allTopics}</p></div>`;
     }).join('');
     let totalMCQs = Object.values(banks).reduce((s, b) => s + b.length, 0);
+    let partTitle = part === 'P2' ? 'CMA Part 2' : 'CMA Part 1';
+    // W1-catalog fix (2026-09-18): P2 case counts from live globals.
+    let p2CaseCounts = [0, 0, 0];
+    if (part === 'P2') {
+        try {
+            let _cb = [typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : [], typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : [], typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : []];
+            for (let _bi = 0; _bi < 3; _bi++) p2CaseCounts[_bi] = _cb[_bi].length;
+        } catch (e) {}
+    }
+    let p2CaseTotal = p2CaseCounts[0] + p2CaseCounts[1] + p2CaseCounts[2];
     $('catalogView').innerHTML = `
     <h2>Catalog and Source Disclosure</h2>
-    <p class="small">All items are original CMA Part 1 exam-style practice mapped to the current Learning Outcome Statements used for 2026 testing.</p>
-    <h3>Five Question Packs (${totalMCQs} total MCQs)</h3>
+    <p class="small">All items are original ${partTitle} exam-style practice mapped to the current Learning Outcome Statements used for 2026 testing.</p>
+    <h3>${part === 'P2' ? 'Six' : 'Five'} Question Packs (${totalMCQs} total MCQs)</h3>
     <div class="grid">${cards}</div>
     <h2>Case-Based Practice</h2>
-    <p class="small">Cases are short business scenarios with integrated item sets and response types.</p>
+    ${part === 'P2'
+        ? (p2CaseTotal > 0
+            ? '<p class="small">' + p2CaseTotal + ' Part 2 case studies across 3 packs (' + p2CaseCounts.join(' + ') + ') — available for case, mixed, and full sessions (DL-051 Phase 4).</p>'
+            : '<p class="small">Part 2 banks are loading... case counts appear when all nine files arrive.</p>')
+        : `<p class="small">Cases are short business scenarios with integrated item sets and response types.</p>
     <div class="grid">${Object.entries(caseBanks).flatMap(([pk, cb]) =>
         cb.map(c => `<div class="catalog-card"><b>Pack ${pk} — ${c.CaseID}: ${c.Title}</b><p class="small">Sections ${c.SectionTags.join(', ')} | ${c.Items.length} items | ${c.EstimatedMinutes} minutes</p></div>`)
-    ).join('')}</div>
+    ).join('')}</div>`}
     <h2>Study Resource Links</h2>
     <div class="grid">${Object.entries(STUDY_LINKS).map(([k, links]) =>
         `<div class="catalog-card"><b>${k}</b><p>${links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('<br>')}</p></div>`
@@ -6171,8 +6713,10 @@ function renderBookmarkCollections() {
             var cid = this.dataset.cid;
             var qids = CMAProfileManager.getCollectionQuestionIds(cid);
             if (qids.length === 0) { alert('No questions in this collection.'); return; }
-            // Find matching questions across all banks
-            var allBanks = [MCQ_BANK_A, MCQ_BANK_B, MCQ_BANK_C, MCQ_BANK_D, MCQ_BANK_E];
+            // Find matching questions across all banks (Promotion: part-aware roster)
+            var allBanks = [];
+            var _pb = resolveAllMCQBanks();
+            for (var _bi = 0; _bi < _pb.length; _bi++) { allBanks.push(_pb[_bi]); }
             var found = [];
             for (var bi = 0; bi < allBanks.length; bi++) {
                 var bank = allBanks[bi];
@@ -6211,6 +6755,17 @@ function renderOperationsView() {
         { name: 'Pack D', bank: (typeof MCQ_BANK_D !== 'undefined' ? MCQ_BANK_D : []), color: '#7c3aed' },
         { name: 'Pack E', bank: (typeof MCQ_BANK_E !== 'undefined' ? MCQ_BANK_E : []), color: '#db2777' }
     ];
+    // W1-ops fix (2026-09-18): admin console covers both parts. P2 banks
+    // appended when loaded (packStats consumes identical fields: Difficulty,
+    // CognitiveLevel, CorrectChoice, Section, question_state — all verified
+    // present on P2 items). Read-only stats; no delivery impact.
+    try {
+        var _p2r = (typeof resolveP2MCQBanks === 'function') ? resolveP2MCQBanks() : {};
+        var _p2c = { A: '#0ea5e9', B: '#84cc16', C: '#f59e0b', D: '#8b5cf6', E: '#ec4899', F: '#14b8af' };
+        ['A', 'B', 'C', 'D', 'E', 'F'].forEach(function (_k) {
+            if (_p2r[_k] && _p2r[_k].length) packs.push({ name: 'P2-' + _k, bank: _p2r[_k], color: _p2c[_k] });
+        });
+    } catch (e) { /* P2 banks gated — P1-only console */ }
 
     // Collect learner data
     var history = [];
@@ -7143,7 +7698,7 @@ function renderStudyView() {
             var profile = window._cmaProfile || CMAProfileManager.load();
             var recovery = profile.bookmarkCollections && profile.bookmarkCollections['recovery-candidates'];
             if (recovery && recovery.items && recovery.items.length > 0) {
-                recoveryEl.innerHTML = '<p>' + recovery.items.length + ' questions saved for review. <a href="#" onclick="var cid=\'recovery-candidates\'; var qids=CMAProfileManager.getCollectionQuestionIds(cid); if(qids.length===0){alert(\'No questions.\');return} var allBanks=[MCQ_BANK_A,MCQ_BANK_B,MCQ_BANK_C,MCQ_BANK_D,MCQ_BANK_E]; var found=[]; for(var bi=0;bi<allBanks.length;bi++){var bank=allBanks[bi]; if(!bank)continue; for(var qi=0;qi<bank.length;qi++){if(qids.indexOf(bank[qi].QuestionID)!==-1)found.push(bank[qi])}} if(found.length===0){alert(\'No matching questions.\');return} state.collectionMcqs=found; state.collectionReview=true; document.getElementById(\'mode\').value=\'mcq\'; document.getElementById(\'sessionForm\').requestSubmit()" style="text-decoration:underline;">Review Recovery Candidates &rarr;</a></p>';
+                recoveryEl.innerHTML = '<p>' + recovery.items.length + ' questions saved for review. <a href="#" onclick="var cid=\'recovery-candidates\'; var qids=CMAProfileManager.getCollectionQuestionIds(cid); if(qids.length===0){alert(\'No questions.\');return} var allBanks=resolveAllMCQBanks(); var found=[]; for(var bi=0;bi<allBanks.length;bi++){var bank=allBanks[bi]; if(!bank)continue; for(var qi=0;qi<bank.length;qi++){if(qids.indexOf(bank[qi].QuestionID)!==-1)found.push(bank[qi])}} if(found.length===0){alert(\'No matching questions.\');return} state.collectionMcqs=found; state.collectionReview=true; document.getElementById(\'mode\').value=\'mcq\'; document.getElementById(\'sessionForm\').requestSubmit()" style="text-decoration:underline;">Review Recovery Candidates &rarr;</a></p>';
             } else {
                 recoveryEl.innerHTML = '<p class="small">Questions you missed across sessions appear here for focused retry.</p>';
             }
@@ -7311,12 +7866,9 @@ const MayQuizController = {
     currentQuiz: null,
 
     _getAllBanks() {
-        var banks = [];
-        try { if (typeof MCQ_BANK_A !== 'undefined') banks.push(MCQ_BANK_A); } catch (e) { }
-        try { if (typeof MCQ_BANK_B !== 'undefined') banks.push(MCQ_BANK_B); } catch (e) { }
-        try { if (typeof MCQ_BANK_C !== 'undefined') banks.push(MCQ_BANK_C); } catch (e) { }
-        try { if (typeof MCQ_BANK_D !== 'undefined') banks.push(MCQ_BANK_D); } catch (e) { }
-        try { if (typeof MCQ_BANK_E !== 'undefined') banks.push(MCQ_BANK_E); } catch (e) { }
+        // Promotion: part-aware roster (P2 collections resolve against P2 banks).
+        // Returns a FLAT question list, matching the original contract.
+        var banks = resolveAllMCQBanks();
         var all = [];
         for (var i = 0; i < banks.length; i++) {
             for (var j = 0; j < banks[i].length; j++) all.push(banks[i][j]);
@@ -8023,7 +8575,7 @@ const MayQuizController = {
 
 // ── Override May compact coach to include quiz entries ──
 (function () {
-    var _origRenderCompactCoach = May && May._renderCompactCoach;
+    var _origRenderCompactCoach = (typeof May !== 'undefined' && May) ? May._renderCompactCoach : null;
     if (typeof May !== 'undefined') {
         May._renderCompactCoach = function () {
             var el = document.getElementById('coachView');
@@ -8123,6 +8675,7 @@ function renderHelpButton() {
 function initS124Onboarding() {
     renderHelpButton();
     AdminGate.init();
+    try { updatePartUI(); } catch (e) { /* ignore — toggle absent in dev shell */ }
     // Delay tour check to let views render
     setTimeout(function () {
         GuidedTour.checkFirstRun();

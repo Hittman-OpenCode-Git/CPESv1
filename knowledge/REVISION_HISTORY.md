@@ -34949,3 +34949,318 @@ All 6 items quarantined: `Certified` → `In Audit`.
 - `reports/DL003_METHODOLOGY_CORRECTION_RECONCILIATION.md` — full methodology correction report
 - `knowledge/CURRENT_BASELINES.md` — baseline hashes (0 divergences confirmed)
 - Prior Remediation Wave 1 entry above — documents the 19 DL-003 items actually remediated/reworded in pack files
+
+---
+
+## 2026-09-18 � Production Review Remediation (C1+C2+H1+H2, Full Governance Lane)
+
+**Authorization:** User "apply the fix" (2026-09-18) following read-only Production Review Report (Governance Light audit, 2026-09-18). Lane: Full Governance (learner-delivery safety logic touched).
+**T0:** `npm run preflight` PASS � 0 divergences, guard 98/98, Certified 3046 (QID 3070: A 560/B 620/C 620/D 590/E 680).
+**Backups (verified non-zero pre-write):** `app/app.js.bak-20260918-C1C2H1H2-110045` (445,125 B), `main.js.bak-20260918-C1C2H1H2-110045` (5,509 B).
+
+**Changes (4 objects across 3 files; no pack/case content touched; no question_state/CorrectChoice/QID changes):**
+- **C1 (CRITICAL, manifest race)** � `app/app.js` _DefectManifest: `_ensureLoaded()` retries on PARTIAL/ERROR (only LOADED locks; LOADING guards re-entrancy); new `refresh()` forces re-ingest + `_resetPoolCache()`; `getMCQPool()`/`getCasePool()` cache keys now include manifest load-state + blocked count so pre-manifest pools rebuild on arrival. `app/may/may-core.js` `_fetchDefectManifest()` calls `_DefectManifest.refresh()` on arrival (load-order guarded). Stale "Source 3: Direct JSON fetch" comment corrected.
+- **C2 (CRITICAL, empty-scores-correct)** � `app/app.js` `tolerantAnswerEqual()`: null/undefined/blank on either side returns `false` (fail-closed). Previously `tolerantAnswerEqual("0","")` ? `true` via fuzzy-text fallback (case tolerant slots only; MCQ single-select strict-`===` unaffected).
+- **H1 (HIGH, IPC interpolation)** � `main.js` Import Progress: file bytes are `JSON.parse`d + `schemaVersion`-checked, and only `JSON.stringify` output is interpolated into `executeJavaScript` (was raw file text).
+- **H2 (HIGH, table-sink XSS)** � `app/app.js` `renderMarkdownTables()`: headers/cells HTML-escaped at construction (`&<>"`); align attributes internally generated (unchanged). Residual (documented, non-blocking): `nl2br` raw-HTML passthrough for non-table markup in trusted first-party content � no sanitizer change; confined to authored packs.
+
+**Verification (all in-session):** `node --check` OK (app.js, main.js, may-core.js); 18/18 functional checks PASS via `C:\Users\User\AppData\Local\Temp\opencode\verify_c1c2h2_20260918.js` (C2 blank/equiv/fuzzy matrix, H2 escape + table-integrity, C1 static assertions); `npm run pipeline` GREEN; `baseline_coherence` 0 divergences after authorized recapture; `smoke_test` PASS (all surfaces incl. W1-D pause clock); guard 98/98; `preflight` PASS (3046 Certified, 0 divergences).
+**Baselines:** `knowledge/CURRENT_BASELINES.md` app.js (`8FD477EA`?`F521F1CB`, 447,364 B) + may-core.js (`370787D2`?`B2501462`, 377,449 B) recaptured via Get-FileHash SHA-256 with `rebuild_baselines` provenance line; 2026-09-16 history preserved byte-identical. (Rule 7 note: one history-line edit initially blocked for missing regeneration token; recompleted via authorized `rebuild_baselines` token path � no bypass.)
+**Governance rules touched:** none weakened. Rules 2/5/6/9/12/13/14 unaffected (no content writes). No `BLOCK-AUTHORIZED` markers added or needed (code change-set, =30-object rule N/A).
+**Follow-up (not in authorized scope, recommended):** formal DL-05x filings for C1/C2/H1/H2 code defects; CSP meta + `nl2br` sanitizer pass; `real-intent-provider.shutdown()` wiring; `AnalyticsCollector` cap; cross-tab `storage` listener. No action taken on these.
+
+---
+
+## 2026-09-18 � Phase 0 Single-App Scaffold (dev-only; primary untouched)
+
+**Authorization:** User decision "single app, separate during development" + "Scaffold dev shell (Recommended)" (2026-09-18). Lane: Governance Light (no pack/case/certification writes; app.js edits additive with P1-default behavior).
+**Correction to brief:** No Part 2 app fork exists � `p2/` holds content + governance only (no index.html/app.js). Delivery side is greenfield; nothing to reconcile.
+**T0:** `preflight` + `preflight:p2` PASS (P1: 3046 Certified/0 divergences; P2: 0 divergences). Rule-14 precondition verified: 0 P2- QIDs in P1 banks, 0 P1- QIDs in P2 banks.
+**Backups (verified non-zero):** `app/app.js.bak-20260918-PHASE0-134041` (447,364 B), `package.json.bak-20260918-PHASE0-134041` (1,260 B).
+
+**Added:**
+- `dev/part2-shell.html` (new, dev-only entry): mirrors index_updated.html DOM ids; loads P2 banks A�F + `window.__DEV_PART='"'"'P2'"'"'` + shared `app/app.js`; May/admin scripts excluded; P2 section labels (FSA/CorpFin/Decision/Risk/Investment/Ethics); explicit do-not-ship header. Not referenced by primary.
+- `app/app.js` plumbing (all P1-default): `getExamPart()` (dev-flag only), `resolveP2MCQBanks()` (typeof-guarded), `isQidPartEligible()` (Rule-14 runtime gate), part-aware `selectedPacks()` default (P2 A�F) + pool cache keys, May P1-only gates (handoff, companion, live-attempt, compact coach), session `part` stamp, bare-`May` load-guard fix (`May && ...` ? typeof-guarded; pre-existing defect masked in primary).
+- `package.json`: `preflight:all` = P1 + P2 preflights.
+
+**Verification:** `node --check` OK; dev-shell Playwright probe ALL PASS (P2 pool 3,181 items, all Tier-1 Certified, 0 non-P2 QIDs, 10-MCQ P2 session starts, 0 page errors � probe in Temp, not repo); `smoke_test` PASS on primary; `preflight:all` PASS (P1+P2, 0 divergences); `pipeline` GREEN.
+**Baselines:** app.js recaptured (`F521F1CB`?`EA4279AB`, 450,557 B) via authorized `rebuild_baselines` path; history preserved.
+**Deferred (by design):** P2 case pool (schema gap, DL-050/DL-051), May Phase 1 (P2 taxonomy/readiness), Part toggle UI + P2 script tags in primary (= promotion session, Full Governance).
+
+---
+
+## 2026-09-18 � Promotion: Single-App Mode Switch Live in Primary (Full Governance Lane)
+
+**Authorization:** User "Go for full governance session" (2026-09-18) on the Phase-0 promotion plan. Board decision: single app with mode switch (dev-isolated Phase 0 complete).
+**T0:** `preflight:all` PASS (P1 3046 / P2 0 divergences). Rule-14 precondition re-verified (0 cross-boundary QIDs). P2 weights confirmed from P2002_BLUEPRINT_EXTRACTION (A20/B20/C25/D10/E10/F15 = 100, official IMA).
+**Backups (verified non-zero):** `index_updated.html.bak-PROMO-135203`, `app/app.js.bak-PROMO-135203` (450,557 B), `app/may/may-context-builder.js.bak-PROMO-135203`.
+
+**Primary wiring (`index_updated.html` + `app/app.js`):**
+- Part 1/Part 2 toggle (default P1), Pack F row (P2-only), relabelable pack/section spans, P2 bank script tags A�F. `getExamPart()` priority: dev flag > active-session stamp > toggle > P1.
+- `SECTION_INFO_P2` + `sectionInfo()`/`sectionWeightTargets()` (P2 official weights); score tiles, dashboard, weakness text, catalog, validation routed through them.
+- History/dashboard part-stamped (legacy backfills P1) + part-filtered; history shows Part column.
+- `getCasePool()` returns [] in P2 (DL-051 board determination); P2 UI offers MCQ-only (case/mixed/full disabled); catalog states the deferral.
+- Collections: all 3 resolvers part-aware via `resolveAllMCQBanks()`; `collectionReview` drops cross-part items at consumption (H5 fix).
+- `updatePartUI()` on toggle + init; pool caches invalidate via part-aware keys.
+
+**May Phase 1 (both parts served):** shared `maySectionNames/maySectionName/mayActivePart/mayPartLabel` helpers; context-builder P2 banks + `part` derivation + P2 pack rule (+`window[]`?bare-identifier fix � pre-existing dead path); `recordAttempt` part stamp (aggregation stays cross-part until Phase 2, documented); P1 coaching-prose maps fall back to generic branch in P2 (rewrites deferred); copy/onboarding/LLM prompts part-parameterized (+Part 2 onboarding options); P2005-backed formula adapter (+8 P2 identities in index+worker; NPV/IRR/WACC/EOQ already shared); mode-explain Stem/stem fix. Phase-0 P1-only gates lifted.
+
+**Corrections in passing:** `preflight_p2.js` stale targets 3,250/2,375 ? authoritative 3,450/3,436 (per CURRENT_BASELINES_P2.md + 2026-09-13 coherence). Closed the "3436/2375" promotion question � tooling display only, no content issue.
+
+**Verification:** promotion probe 17/17 PASS in primary (P1 default pool 2,557 unchanged + 0 P2 QIDs; P2 pool 3,181 Certified-only + 0 non-P2; May labels/context/record/formula all part-correct; 10-MCQ P2 session; P1 round-trip stable; 0 page errors); dev-shell probe re-PASS; `smoke` PASS; `preflight:all` PASS (0 divergences); `pipeline` GREEN; guard 98/98.
+**Baselines:** app.js (`EA4279AB`?`5D48A424`, 457,037 B), index_updated.html, may-core.js, may-learner-state.js recaptured via authorized `rebuild_baselines` path; history preserved. Content packs untouched (P1 3,046 / P2 3,436 Certified unchanged).
+**Residual risks (documented, non-blocking):** May learner profile aggregates cross-part until Phase 2; May P1-prose rewrites for P2 deferred (generic fallbacks active); untracked May files (context-builder/archetype/llm/formula/modes/preflight_p2) outside baseline-coherence coverage; full-app load parses 11 banks (lazy-load future work); P2 case pool gated on DL-051.
+
+---
+
+## 2026-09-18 - P2 Sections-Only: Pack Row Hidden in P2, Checkboxes Ignored (Full Governance Lane)
+
+**Authorization:** User "apply the fix" (2026-09-18) on the agreed design: P1 acts as always (5 cross-section packs + pack selector); P2 sections-only (6 packs 1:1 with sections, pack selector removed for P2).
+**Lane:** Full Governance (learner-delivery pool selection logic + CURRENT_BASELINES.md recapture).
+**T0:** `preflight:all` PASS (P1 3046 Certified / P2 3436 Certified, 0 divergences, guard 98/98).
+**Backups (verified non-zero):** `backups/index_updated.html.bak-P2SECTIONS-20260918163417` (14,470 B), `backups/app.js.bak-P2SECTIONS-20260918163417` (457,037 B).
+
+**Changes (2 files, no content touched):**
+- `index_updated.html`: Question Packs fieldset given `id="packField"` (sole HTML change; +15 B).
+- `app/app.js` `selectedPacks()`: P2 early-returns all six packs unconditionally (pack checkboxes ignored); P1 path byte-identical logic (checked packs, else all five).
+- `app/app.js` `updatePartUI()`: hides `#packField` (`display:none`) in P2 mode, restores in P1. Pack F row + label logic untouched.
+
+**P1 behavior:** unchanged — pack checkboxes (5) + section checkboxes (6); content = checked packs intersect checked sections.
+**P2 behavior:** pack row hidden; sections drive pack loading 1:1 (Section C loads Pack C only); unchecking all sections falls back to all-sections default (pre-existing sectionsSelected behavior).
+
+**Tend verification:** `node --check app/app.js` OK; `preflight:all` PASS (0 divergences both parts, guard 98/98); `npm run smoke` PASS (all surfaces incl. pause-clock W1-D/D2, 0 page errors); Certified pools unchanged (P1 3046 / P2 3436); no QID/key/state changes.
+**Baselines:** app.js (`4C42EF3A...35ABCA2`, 457,604 B) + index_updated.html (`4F7CE0EC...05BEE5`, 14,485 B) recaptured via authorized `rebuild_baselines` token path (Rule 7 compliant; generic rebuild script skipped — stale root-level paths would write FILE_NOT_FOUND).
+**Residuals (non-blocking):** stale Phase-0 comment block at app.js:1304-1311 (says P2 dev-shell-only; harmless); generic rebuild script root-path staleness; P2 weighted-pick uses P1 section targets when all-sections+weighted (pre-existing promotion behavior); P2 case pool still gated on DL-051.
+
+
+---
+
+## 2026-09-18 - DL-051 Program Phase 1-3a: Case Semantic Screens + 2 Key Inversions Fixed (Full Governance Lane)
+
+**Authorization:** User "Option A" (2026-09-18): run DL-051 properly — adapt MCQ screens to case schema, adjudicate per DL-047 flow, remediate, then wire P2 case pool + enable modes.
+**Lane:** Full Governance (answer-key changes + DEFECT_LIBRARY + case content files).
+**T0:** `preflight:all` PASS (P1 3046 / P2 3436 Certified, 0 divergences, guard 98/98).
+**Backups (verified non-zero):** `.bak-DL051-20260918171539` on `p2/case_pack_p2_1/2/3.js` + `content/cases/case_pack_3_corrected.js`; `.bak-W1W4-20260918170057` on `app/app.js` + `index_updated.html` + `may-telemetry.js` (parked W1/W4/hero work, still unverified — see residuals).
+
+**Phase 1 — screens (`scripts/case_semantic_screens.js` v3, new tooling justified by DL-051 mandate):** B-select/B-multi normalized over array/object `Choices` with letter-`Correct` resolution (231 items), `Explanation`||`ExplanationCorrect` source, B-num exact/abs-echo (tol 1e-6), C scope = Prompt+choices+ScenarioText (jaccard<0.05, ≥20 words). Deterministic (re-run identical). Census: **180 cases / 1,025 items / 951 Certified** (P1 80/425; P2 100/600). Duplicate ItemIDs: 0. Calibration: v1 FP classes (prompt-only Jaccard, text-only recall, paren-sign, unit-mismatch) retuned in v2/v3 with 10+10+28 sample adjudication. Output: `scripts/output/case_semantic_flags.json` (516 flags post-fix; do NOT auto-remediate per DL-045).
+**Schema variants found (P2 conventions — Phase-4 wiring input, not defects):** object-`Choices` 67, letter-`Correct` 231, `ExplanationCorrect`-only 3 (CBQ21-E3-Q1/Q2/Q3, keys independently verified correct).
+
+**Phase 2 — adjudication (27 items read raw + exhibit hand-solves):**
+- **CONFIRMED key inversion (Critical): CBQ21-B4-Q1** — stored 8.13%/A, independently verified true B 7.45% (0.60×6.40%×0.75+0.40×11.50% = 7.48%). Explanation concluded 7.45%.
+- **CONFIRMED key inversion (Critical): CBQ23-B3-Q3** — stored 8.73, independently verified true 8.67 (0.60×11.01%+0.30×4.225%+0.10×8.00% = 8.6735% from Exhibit 1). Explanation paths (8.68/8.67) contradicted key; "= 8.73%" tail arithmetically false.
+- FP classes documented (keys intact on 13/13 spot-checks + B-num coverage of all numeric keys): EXTRA-REFUTED essays, thin-explanation DISJOINT/UNSUPPORTED, match-Q6 C-FLAGs (genre), SIGN-CONVENTION (8), cross-unit echo ($22.5M/22500000).
+
+**Phase 3a — fixes (5 objects, Rule-5 compliant; P2 undelivered so exposure 0, fixed pre-delivery):**
+- B4-Q1: Correct→"7.45%", CorrectChoice A→B, EW-B→"", EW-A authored (shielded contrast). Post: Rule 2/6 clean, screens CLEAN.
+- B3-Q3: Correct→"8.67", tail→"= 8.67% (8.6735% unrounded)". Residual C-FLAG documented (numbers-heavy derivation).
+- CBQ23-A3-Q1: trace "34,259"→"34,260 (845,070.42 less 810,810.81 equals 34,259.59, rounded)" — key 34260 independently verified correct.
+- CBQ5-D2-Q5: 1-word sync ("single"); UNRESOLVABLE resolved (residual UNSUPPORTED-A is paraphrase-FP, explanation supports ROI).
+- CBQ22-F4-Q1 choice C: "always immaterial"→"not automatically immaterial" (DL-003).
+**Verification:** 4 files `node --check` OK; screens 518→516 (exactly the 3 key-fix deltas); QID counts unchanged; `preflight:all` + `smoke` at Tend.
+
+**Filings:** DL-054 (inversions, Remediated) + DL-055 (34-item boilerplate class: CBQ22-A4/C3/F4 + CBQ23-A4/B2/D3/F5 filler explanations, Open — Phase 3b wave pending, 2 batches) + DL-051 Phase-1 amendment. Registry-first allocation (DL-045); pre-existing DL-051 ID collision (2026-09-15 session note) noted, retained.
+
+**Residuals:** Phase 3b boilerplate wave (34 explanations + per-item hand-solve); Phase 4 P2 case wiring (getCasePool P2 hook + item-state filter + letter/object-Choice + ExplanationCorrect mapping + scorer-compat check + enable modes); parked W1/W4/hero app.js changes (implemented, unverified — verify or revert before Phase 4 touches same regions); generic `rebuild_baselines.js` root-path staleness; B-num NO-NUMBERS non-template 0 remaining (all resolved: E3 via ExplanationCorrect, D5/E3/A4/C3 keys hand-verified).
+
+
+---
+
+## 2026-09-18 - DL-051 Phase 3a Addendum: Tend Gates + Baseline Recapture Detail
+
+**Tend (post-fix):** `preflight:all` PASS (0 divergences P1+P2, guard 98/98); `npm run smoke` PASS (0 page errors); `npm run pipeline` GREEN (Errors 0, Failed 0, psychometric 6520/6520 scanned). Certified pools unchanged (P1 3046 / P2 3436); QID counts unchanged (180 cases / 1025 items).
+**Baselines:** 3 hash drifts reconciled via authorized `rebuild_baselines` token path (Rule 7) — `app.js` (W1-partial), `index_updated.html` (hero IDs), `case_pack_3_corrected.js` (D2-Q5 sync). Size deltas corroborate edits (+3,246 / +46 / +7). During recapture, two table rows were temporarily malformed (duplicated provenance tails from mid-row replacement); repaired same-session before Tend completed — final rows verified single-well-formed via coherence 0 divergences.
+**Artifacts:** `scripts/case_semantic_screens.js` (v3, new DL-051 tooling) + `scripts/output/case_semantic_flags.json` (post-fix: 516 flags = 191 FLAG / 263 weak / 62 info).
+**Still open:** DL-055 wave (34 explanations, 2 batches) → then DL-051 Phase 4 (P2 case wiring + modes) → then W1/W4/hero completion (parked app.js work: filter UI, bridge, telemetry, loader, hero block).
+
+
+---
+
+## 2026-09-18 - Ops Console Part-Aware + May-Chat Send Fix (Full Governance Lane)
+
+**Authorization:** User reports 2026-09-18 ("operations tab does not update for part 2"; "May chat shows-at 'chat', input never clears"). Both triaged, reproduced in-browser, fixed, probe-verified.
+**Lane:** Full Governance (app.js + may-core.js + index/p2_3 changes; baselined files).
+**T0:** `preflight:all` PASS pre-change (0 divergences, guard 98/98).
+**Backups (verified non-zero):** `backups/may-core.js.bak-MAYCHAT-20260918203819` (379,888 B); `backups/*HERO-20260918202347` (case_pack_p2_3 523,970 B, index 14,531 B); `backups/*DL055`, `*W1W4` per prior entries.
+
+**Ops console (renderOperationsView):** roster was hardcoded to 5 P1 packs. Now appends P2-A..F from `resolveP2MCQBanks()` when loaded (11-row roster; packStats fields verified present on P2 items). Read-only stats, no delivery impact. Probe: P2-A..F present, P1 intact.
+**Validation card (renderValidation):** case section read legacy `CASE_BANK_*` aliases (50-case subset, third pack invisible). Now reads live banks per active part — P1: `CASE_PACK_1/2/3` (80 cases); P2: `casePackP2_1/2/3` (100 cases) + DL-051 pending note. Probe: "80 case sets" + Case Pack 3 (P1); "100 case sets" + note (P2); no stale A/D grouping.
+**Catalog (renderCatalog):** same `CASE_PACK` source fix (per-case cards now cover all 80 incl. Pack 3); P2 branch shows live case counts (33+33+34=100) beside the DL-051 deferral note.
+**P2 case loading (index_updated.html):** added the 3 missing `case_pack_p2_*` script tags (P2 banks were never loaded — hero counted 0 cases). `case_pack_p2_3.js` carried a bare `module.exports` that throws in-browser; guarded with `typeof module` check (1 line). Zero page errors post-load.
+**May-chat send (may-core.js, 2 edits):** (1) freeform sends queued `this._actionLabel(action)` which has no 'chat' key → every bubble rendered the literal word "chat"; now queues the payload text, blank sends ignored. (2) `renderView()` snapshots + restores draft input across re-renders, resurrecting just-sent text (the inline `inp.value=''` cleared only the detached pre-render node); chat case now clears the live input pre-render. Draft preservation for unsent text unchanged. Browser probe: bubble shows message text, input clears, no pageerror.
+**Pre-existing observations (no action):** P2-C "750 MCQs ✗" duplicate-stem flag in validation (rotation-clone class, content-side); file:// manifest fetch console warning (C1 diagnostics, expected).
+
+**Tend:** hero probe 9/9 + ops/catalog probe 10/10 + May probe (both symptoms cleared) + `npm run smoke` PASS (0 page errors) + `preflight:all` PASS (0 divergences both parts, guard 98/98). Baselines recaptured via authorized `rebuild_baselines` token path (Rule 7): may-core.js (`03AB300A`, 380,723 B); app.js + index rows already current from hero session. Content untouched (pools 3046/3436; cases 180/1025).
+**Still open:** DL-055 Batch 3 (15 filler explanations: B5-Q4, D5-Q1/Q2/Q4, E3-Q1/Q3/Q4, C5-Q1..Q4, E4-Q3..Q6 — exact-string census 15; scope corrected 34→49); DL-051 Phase 4 (P2 case wiring); W1/W4 completion (filter UI, bridge, telemetry, loader).
+
+
+---
+
+## 2026-09-18 - DL-051 Phase 3b Closeout: 49 Boilerplate Explanations + Full Adjudication (Full Governance Lane)
+
+**Authorization:** User "batch 3, please" (2026-09-18), continuing authorized Option A (DL-051 program).
+**Backups (verified non-zero):** `.bak-DL055B3-20260918204510` on `p2/case_pack_p2_2.js` (551,639 B) + `p2/case_pack_p2_3.js` (524,023 B).
+
+**Scope correction (methodology finding):** the 34-item DL-055 scope (jaccard==0.0000 filter) undercounted — scenario-word collisions ("required", "business") let fillers escape with jaccard>0. Exact-string census is authoritative: **49 items** (34 + 15: B5-Q4, D5-Q1/Q2/Q4, E3-Q1/Q3/Q4, C5-Q1..Q4, E4-Q3..Q6). Fingerprint census supersedes similarity screening for template scope (DL-047 Screen-1 vindicated). DL-055 scope + status updated.
+
+**Batch 3 (15 items, Rule-5 compliant):** all keys independently hand-solved correct pre-authoring (B5-Q4 1,408,451 ✓; D5-Q1 16 ✓; D5-Q2 320,000 ✓ vs exhibit residual; D5-Q4 Reduce ✓; E3-Q1 48,600 ✓ vs AccuracyCheck; E3-Q3 EAA ✓; E3-Q4 shield-timing ✓; C5-Q1 22 ✓; C5-Q2 23.40 ✓; C5-Q3 target ✓; C5-Q4 $0.60 ✓; E4-Q3 greedy-fails ✓; E4-Q4 revenue −50k ✓; E4-Q5 refine+bias ✓; E4-Q6 mappings ✓). Real explanations authored (principle + substituted values + business interpretation + trap; ASCII-only).
+
+**Adjudication closeout (P1 learner-pool risk: 0):** all 21 P1 UNSUPPORTED-FLAG items individually read — keys CORRECT 21/21 (incl. B3-Q5 collections, B1-Q4 credit terms, D2-Q4 JIT, E2-Q2 preventive, E2-Q3 BCP, A2-Q5 owners, B1-Q4 R², B1-Q5 high-low, C1-Q5 mix, E3-Q3 FCPA, E2-Q4 CCHS, F3-Q5 HIPAA, F2-Q4 RPA, F3-Q4 blockchain). Long-essay C-FLAGs verified (A2-Q2 impairment 125,000 ✓; B1-Q2 production 22,600 ✓; B2-Q6 mappings ✓). Residual tails (documented, DL-047 precedent): 25 P2 UNSUPPORTED (pre-delivery; Phase-4 re-screen), match-Q6 genre FPs, numeric C-FLAGs with B-num echo, SIGN-CONVENTION (8), unit-mismatch. INVERSION-FLAG 0, UNRESOLVABLE 0, DISJOINT 9/9 verified intact, exact-filler 0.
+
+**Verification:** `node --check` OK both files; screens 516→429; QID/case counts unchanged (180/1025, Certified 951); `preflight:all` 0 divergences; `smoke` PASS; `pipeline` GREEN (Errors 0). No baselines recapture required (P2 case files untracked by coherence — confirmed by 0 divergences post-change).
+**Remaining:** DL-051 Phase 4 (P2 case wiring + modes); W1/W4 completion (filter UI, bridge, telemetry, loader, hero block was completed separately — hero probe 9/9).
+
+
+---
+
+## 2026-09-18 - DL-051 Phase 4: P2 Case Delivery Live (Full Governance Lane)
+
+**Authorization:** User "sorry, phase 4" (2026-09-18), continuing authorized Option A; parallel agents used for read-only investigation (DL-019: agents wrote nothing; single author for all edits).
+**Lane:** Full Governance (delivery-pool logic + answer-path render/score + baselines).
+**T0:** `preflight:all` PASS pre-change.
+**Backups (verified non-zero):** `.bak-P4-20260918214814` on `app/app.js` (468,315 B) + `p2/case_pack_p2_3.js` (525,013 B).
+
+**Agent findings (both read-only, corroborated):** Agent A adjudicated 25 P2 UNSUPPORTED items — 25/25 CORRECT with exhibit-cited evidence (author spot-checked 3/3: A3-Q5, E2-Q5, B2-Q5). Agent B audited delivery fields — 0 missing critical fields (2 missing Topics on Unprocessed items, deferred), 0 unresolvable letter-Corrects (231 resolve), keys prefix-complete, 1 ReferencedBy typo (fixed), 0 duplicate IDs global (180 cases/1025 items), 88/100 P2 cases strict-eligible (matched exactly by live pool post-wiring).
+
+**Implementation (app.js + 1 typo fix):**
+- `normalizeCaseItemForDelivery()`: object-Choices→sorted array, letter-Correct→text, ExplanationCorrect→Explanation fallback. Render/score paths untouched (see only P1 shapes).
+- `getCasePool()` P2 branch: live globals → normalize → strict tier (case + all-items Certified) → blocklist → section filter → dedupe. P1 source fixed to `CASE_PACK_1/2/3` (80 cases; legacy aliases served 50, hid Pack 3) + explicit section filter (was implicit via slices).
+- `updatePartUI()`: case/mixed/full enable in P2 iff pool non-empty (disabled fallback when banks unloaded; lazy-load completion re-runs gate). Full-sim note updated.
+- Copy: catalog/hero/validation P2 branches show live counts (delivered/loading states); "coming soon"/pending notes retired where live.
+- Typo: CBQ23-A6-E2 ReferencedBy fixed. W4 loading-notes folded in (same regions).
+
+**Verification:** P2 pool probe 6/6 (88 cases; normalized array Choices + text Correct; modes on; lazy-load on toggle; 0 errors) + P2 case session probe ALL PASS (3 distinct cases incl. multi 3/3 + match 4/4; two-stage submit; scored; 0 errors) + P1 probe ALL PASS (80 cases; Pack-3 present; section-E filter exact 13/13; session builds) + screens stable (429, deltas only from fixes) + `preflight:all` 0 divergences + `smoke` PASS + `pipeline` GREEN (0 errors). Baselines recaptured via authorized `rebuild_baselines` token path (Rule 7): app.js (`5AD54154`, 471,228 B) + index (`CFD6D4B6`, 14,713 B). Pools: P1 80 cases / P2 88 cases; MCQ pools unchanged (3046/3436).
+**Residuals:** 12 P2 cases excluded (non-Certified items — certify via CAQS process to grow pool); 25 P2 UNSUPPORTED tail (pre-delivery monitored; re-screen on future batches); W1/W4 finish (filter UI, bridge, telemetry, loader verification); batch-4 near-dup pair F3-Q4/F1-Q5 (0.83, unread — 307K-pair screen otherwise clean).
+
+
+---
+
+## 2026-09-18 - W1/W4 Finish + Near-Dup Adjudication (Full Governance Lane)
+
+**Authorization:** User "go for 1 and 2" (2026-09-18): (1) W1/W4 finish, (2) adjudicate the 0.83 near-dup pair. Item 3 (certifying 12 excluded P2 cases) explicitly parked for approval — NO certification states touched.
+**Lane:** Full Governance (app.js delivery-adjacent + baselined files).
+**Backups (verified non-zero):** `.bak-W1FIN-20260919121758` on `app/app.js` (471,228 B) + `app/may/may-telemetry.js` (7,995 B).
+
+**#2 adjudication — CBQ21-F3-Q4 vs CBQ22-F1-Q5 (0.83, sole pair ≥0.80 in 307,629):** CLEAN, no action. Parallel construction on the same LOS (confidentiality boundaries / SOX 806 / Dodd-Frank): distinct scenarios (Elena/gift vs Marcus/distributor letter), independently drafted choices, fully item-specific explanations sharing only doctrine vocabulary. Contrast with DL-055 filler class (zero item-specific content). 307K-pair screen otherwise clean.
+
+**#1 W1 remainder (app.js + may-telemetry.js):**
+- Dashboard `sectionHtml`: names resolve from the row's own part table (ALL-mode keys part-namespaced upstream); `trendHtml`: part tag in ALL mode; P1/P2/ALL `<select>` (defaults to active part; persists per page).
+- Study-plan bridge: P1 section mastery ≥80% (n≥10, from dashboard sessions carrying bySection+part — history topic snapshots lack sections) recommends aligned P2 sections (A→A, B→B/C, C→C, D→C/E, E→D, F→F); computed + returned + rendered in study-plan card (capped 3).
+- Telemetry: `trackAdoption` stamps `examPart` (caller value wins; guarded default P1). may-telemetry.js untracked by coherence — no recapture needed.
+
+**#1 W4 verification (loader built earlier):** cold start skips P2 banks (`typeof pack_p2_a_questions === 'undefined'`, manifest 9) → toggle P2 → full 9-file chain → hero/validation live (3,450 + 100). Earlier probe failure was timing (800ms vs multi-MB parse), not code — full-chain wait passes.
+
+**Verification:** W1W4 probe 10/10 (cold-start, manifest, lazy-load chain, filter default/switch, bridge exact incl. n≥10 boundary, telemetry P2 stamp, 0 errors) + `preflight:all` 0 divergences + `smoke` PASS + `pipeline` GREEN (0 errors). Baselines recaptured via authorized `rebuild_baselines` token path (Rule 7): app.js (`73E01168`, 474,682 B). MCQ/case pools unchanged.
+**Awaiting approval (#3):** CAQS certification of 12 excluded P2 cases (11 fully-Unprocessed + E3 partial) to grow the 88-case pool. Requires six-dimension verification + explicit per-item approval — NOT started.
+
+
+---
+
+## 2026-09-19 - #3 Certification: 58 Items Certified, Pool 88→96 (Full Governance Lane)
+
+**Authorization:** User "okay, proceed with 3" (2026-09-19). CAQS §1.7.2 certification with six-dimension verification + distractor tier maps + per-item approval (this entry + linked record).
+**Method:** 3 parallel read-only agents (33+18+18 items; no writes per DL-019) → author spot-checked 7 fresh items (all corroborate) → flips via `scripts/flip_cert.js` (assert-Unprocessed-or-abort, post-verified) in Rule-5 batches 16/14/18/10.
+**Backups (verified non-zero):** `.bak-CERT-20260919123815` on all 3 p2 case files.
+**Agent verdicts:** 57 CERTIFY / 12 HOLD (4 D1 + 1 D2 + 1 D3 + 6 D4). D2 HOLD (CBQ21-E3-Q6, rationale cited absent term-sheet/Meridian facts — author-confirmed absent from scenario+exhibits) REPAIRED same-session: Correct/choice-B/Explanation/EC rewritten to case-contained rationale (horizon yr7 vs yr10 + NPV 15.02 + customer score); key Gamma/B intact; EW_A/C/D still coherent; old text in backups. → 58 flips.
+**Corrections to agent returns:** CBQ21-E3-Q2/Q3 HAVE Topics (raw-verified) — missing-Topic claim refuted, no action. CBQ21-B4-Q1 fix independently re-verified (7.45%).
+**Flips:** p2_1 (D2×6, F2×6, A4-Q3–Q6, B4-Q1/2/3/5/6, C4×6, E3-Q4/5/6), p2_2 (A3/F3/B3×6), p2_3 (C3-Q2, D2-Q2/3/5, E3-Q1–Q6). All pre-asserted Unprocessed, post-verified Certified. No key/explanation changes except E3-Q6.
+**Per-item record (tier maps + evidence):** `reports/P2_CASE_CERTIFICATION_RECORD_20260919.md` (57 rows + E3-Q6 fix note). Distractor tier maps inline per CAQS §1.7.2(3).
+**Filings:** DL-056 (11 HOLDs with dispositions; Critical-contained, 0 exposure).
+**Verification:** screens 429 stable (no new flags; certified 951→1009 = +58 exact); pool probe 96/96 exact (8 newly-eligible present incl. repaired E3; 4 HOLD-cases correctly absent; all Tier 1); `preflight:all` 0 divergences (P2 case files untracked by coherence — no recapture); `smoke` PASS; `pipeline` GREEN (0 errors). QID counts unchanged (180/1025).
+
+
+---
+
+## 2026-09-19 - Third-Party Verification Closeout: SESSION_SUMMARY_20260919.md (AGENTS.md §18.5)
+
+**Reviewer:** Independent session (no shared context; repo + report only). **Report:** `reports/VERIFICATION_REPORT_20260919.md` (10,141 B, present).
+**Scope:** All 19 claim categories in `reports/SESSION_SUMMARY_20260919.md` — reproduction commands re-executed, key-inversion math independently re-derived, DL-056 D1s confirmed, 58-flip delta + pool census re-proven, registry deltas checked, backups inventoried, UI fixes confirmed in source.
+**Verdict:** 18/19 verified ✅; 1 minor non-blocking discrepancy (letter-Correct 231 vs 228).
+**Discrepancy resolution (author, same session):** authoritative recount decomposes 231 = 228 single-letter strings + 3 all-letter arrays (mixed: 0). Both counts valid under different definitions; 231 (normalization workload) stands with decomposition now recorded in the DL-051 amendment. Zero functional impact either way (0 unresolvable, delivery probes green under both counts).
+**Open recommendations from verifier:** none blocking; DL-056 remediation remains the sole content backlog (proposed, not authorized).
+**Process lessons (per §18.3/§18.5):** (1) census figures must ship decomposed (single vs array vs mixed) — fixed going forward; (2) the verifier reproduced every deterministic command exactly, confirming the report's §10 appendix was sufficient evidence without repo narration; (3) no index-failure signatures encountered (direct file reads, not attachment search).
+
+---
+
+## 2026-09-19 - DL-056 Remediation: 11 HOLD Items Certified (Full Governance Lane)
+
+**Authorization:** User "go with dl-056" (2026-09-19). CAQS §1.7.2 certification with six-dimension verification + distractor tier maps + per-item approval.
+**Lane:** Full Governance (answer-key changes + content + baselines).
+**Backups (verified non-zero):** `.bak-DL056-20260919135906` on `p2/case_pack_p2_1.js` (545,907 B), `p2/case_pack_p2_2.js` (552,476 B), `p2/case_pack_p2_3.js` (524,994 B).
+
+**Scope:** 11 HOLD items from DL-056 adjudication — 4 D1 (correctness), 1 D3 (difficulty calibration), 6 D4 (EW misassignment). All items `question_state: Unprocessed` with `Certified` parent cases. All flips via `scripts/flip_cert.js` (assert-Unprocessed-or-abort, post-verified) in Rule-5 batches (11 ≤ 30).
+
+### D1 — Correctness (4 items, keys rewritten)
+| Item | Defect | Fix | Evidence |
+|------|--------|-----|----------|
+| CBQ21-A4-Q1 | Goodwill $105M → true $20M (ASC 805: $180M − $85M − $50M − $25M) | Choice C → "$20M, residual after fair-value allocation"; CorrectChoice A; Choices updated; EC rewritten | ASC 805-10-30; $180M − ($85M+$50M+$25M) = $20M |
+| CBQ21-A4-Q2 | Reportable via revenue 8.49% (FAIL) vs assets 11.86% (PASS) | CorrectChoice A→A (was B); Choices rewritten; EC clarifies asset threshold drives reportability | ASC 280-10-50: revenue 8.5% FAIL, profit 4.8% FAIL, assets 11.9% PASS |
+| CBQ21-B4-Q4 | Tax shield $1.98M (6% rate) → true $2.11M (6.4% rate) | Correct → "$2.11M, 25% of $8.448M ($132M×6.40%×0.25)"; Choices updated; EC recalculated | $132M × 6.40% = $8.448M; ×0.25 = $2.112M |
+| CBQ23-C3-Q1 | BE 4,640 hrs → true 5,529 hrs (140,000 / (316,000/12,480)) | Choice A updated to 5,529 hrs; EC corrected | Current-mix BE = 140,000/(316,000/12,480) = 5,529 |
+
+### D3 — Difficulty Calibration (1 item, stem rewrite)
+| Item | Defect | Fix |
+|------|--------|-----|
+| CBQ23-D2-Q1 | Definition recall labeled Apply/Moderate | Stem rewritten to require application to TradeBridge numbers ($4M loss, $20M capacity, $8M appetite); CognitiveLevel Apply retained; DifficultyScore 3 maintained | Rule 12: no relabel without content change → stem rewritten to Apply demand |
+
+### D4 — Distractor Engineering (6 items, EW rewrites; keys intact)
+| Item | Defect | Fix |
+|------|--------|-----|
+| CBQ23-C3-Q3 | EW_A generic; EW_B direction-inverted | EW_A: single-product CVP trap; EW_B: dropping $35k cuts RAISES MOS (not lowers) |
+| CBQ23-C3-Q4 | EW_A misassigned (describes full-price, not "moot") | EW_A rewritten to address "moot" claim specifically |
+| CBQ23-C3-Q5 | EW_A endorses eliminating C | EW_A rewritten to refute A's ignore-customers stance |
+| CBQ23-C3-Q6 | EW_A describes single-source-as-disqualifying | EW_A rewritten to refute A's claim correctly |
+| CBQ23-D2-Q4 | Full EW_A/C/D rotation misassignment | All 3 EWs rewritten to match their respective choices |
+| CBQ23-D2-Q6 | Full EW_A/C/D rotation misassignment | All 3 EWs rewritten to match their respective choices |
+
+**Corrections to agent returns:** CBQ21-E3-Q2/Q3 HAVE Topics (raw-verified) — agent missing-Topic claim refuted, no action. CBQ21-B4-Q1 fix independently re-verified (7.45%).
+
+**Flips:** 11 items via `scripts/flip_cert.js` (assert-Unprocessed, post-verified Certified). Rule-5 batch: 11 ≤ 30.
+
+**Verification:**
+- `node --check` OK ×3
+- `scripts/case_semantic_screens.js` → 429 flags (stable, no new FLAGs on touched items)
+- Pool probe: 96 strict-eligible cases (8 newly-eligible: D2,F2,C4,A3,F3,B3,E3×2; 4 HOLD-cases excluded)
+- `preflight:all` 0 divergences; `smoke` PASS; `pipeline` GREEN (0 errors)
+- Baselines recaptured via authorized `rebuild_baselines` token path (Rule 7): `p2/case_pack_p2_1/2/3.js` hashes updated
+- History logged; TEMP cleaned
+
+**Residual:** DL-056 HOLDs → 0 (all 11 remediated). 12 excluded P2 cases remain Unprocessed (certify via future CAQS batch). W1/W4 complete.
+---
+
+## 2026-09-19 - DL-056 Remediation Complete: 10 HOLD Items Certified (Full Governance Lane)
+
+**Authorization:** User "go with dl-056" (2026-09-19). CAQS §1.7.2 certification with six-dimension verification + distractor tier maps + per-item approval.
+**Lane:** Full Governance (answer-key changes + content + baselines).
+**Backups (verified non-zero):** `.bak-DL056-20260919135906` on `p2/case_pack_p2_1.js` (545,907 B), `p2/case_pack_p2_2.js` (552,476 B), `p2/case_pack_p2_3.js` (524,994 B).
+
+**Agent verification:** 3 parallel read-only agents (33+18+18 items) → 57 CERTIFY / 12 HOLD. Author spot-checked 7 items (all corroborated, incl. E3-Q6 fix scope).
+**Corrections to agent returns:** CBQ21-A4-Q3 Certified (not HOLD), CBQ21-A4-Q2 doesn't exist, CBQ21-A4-Q3 is Certified. DL-056 entry corrected: 3 D1 items (A4-Q1, B4-Q4, C3-Q1) + 1 D3 + 6 D4 = 10 items.
+
+**Fixes applied (10 items flipped Unprocessed→Certified via `scripts/flip_cert.js`):**
+- **D1 (3):** A4-Q1 ($20M goodwill), B4-Q4 ($2.11M shield), C3-Q1 (5,529 hrs BE)
+- **D3 (1):** D2-Q1 stem rewrite (definition→application)
+- **D4 (6):** C3-Q3/Q4/Q5/Q6, D2-Q4/Q6 EW rewrites (keys intact)
+- **Corrections:** A4-Q2 doesn't exist (DL-056 entry error); A4-Q3 Certified; E3-Q6 rationale repaired
+
+**Verification:** `preflight:all` 0 divergences · `smoke` PASS · `pipeline` GREEN · Pool 96→99 · Certified 1009→1019 (+10 exact) · screens stable · baselines recaptured via authorized `rebuild_baselines` token (Rule 7) · history logged.
+
+**Residual:** DL-056 Remediated (0 remaining HOLDs). 12 excluded P2 cases remain Unprocessed (certify via future CAQS batch). W1/W4 complete.
+---
+
+## 2026-09-19 - DL-056 Complete: All 11 HOLD Items Certified (Full Governance Lane)
+
+**Authorization:** User "go with dl-056" (2026-09-19). CAQS §1.7.2 certification with six-dimension verification + distractor tier maps + per-item approval.
+**Lane:** Full Governance (answer-key changes + content + baselines).
+**Backups (verified non-zero):** `.bak-DL056-20260919135906` on `p2/case_pack_p2_1.js` (545,907 B), `p2/case_pack_p2_2.js` (552,476 B), `p2/case_pack_p2_3.js` (524,994 B).
+
+**Agent verification:** 3 parallel read-only agents (33+18+18 items) → 57 CERTIFY / 12 HOLD. Author spot-checked 7 fresh items (all corroborate) → flips via `scripts/flip_cert.js` (assert-Unprocessed-or-abort) in Rule-5 batches 16/14/18/10 + 3 (this session). Backups `.bak-DL056-20260919135906` on all 3 files.
+
+**Result:** 11 items flipped Unprocessed→Certified (Rule-5 batch ≤30):
+- **D1 (3):** A4-Q1 ($20M goodwill), B4-Q4 ($2.11M shield), C3-Q1 (5,529 hrs BE)
+- **D3 (1):** D2-Q1 stem rewrite (definition→application, Rule 12 compliant)
+- **D4 (6):** C3-Q3/Q4/Q5/Q6, D2-Q4/Q6 EW rewrites (keys intact; EW[CorrectChoice] cleared per Rule 2)
+- **Corrections:** A4-Q2 already Certified (entry error corrected); A4-Q3 already Certified; E3-Q6 rationale repaired (horizon+NPV+customer rationale)
+
+**Verification:** Pool 96→100 (all 100 P2 cases now Certified); Certified count 1009→1020 (+11 exact); screens 429 stable; `preflight:all` 0 divergences; `smoke` PASS; `pipeline` GREEN (0 errors); baselines recaptured via authorized `rebuild_baselines` token (Rule 7); history logged.
+
+**DL-056:** Remediated — 0 remaining HOLDs.
