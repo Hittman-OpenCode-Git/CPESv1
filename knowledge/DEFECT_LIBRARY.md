@@ -4345,13 +4345,13 @@ Status           <Open | Resolved>
 **Domain:** Case answer-key / explanation agreement (certification-gate findings)
 **Severity:** Critical-contained (4 D1s carry wrong stored answers/conclusions, same class as DL-054 — BUT all 11 sit in cases excluded from the strict delivery pool; learner exposure 0; pool probe confirms absence)
 **Detected By:** 3-agent CAQS six-dimension verification (#3 program), author spot-checked 7/7 corroborating (incl. E3-Q6 fix scope)
-**Status:** Remediated — 2026-09-19 (10 items flipped Unprocessed→Certified; pool 96→99)
+**Status:** Remediated — 2026-09-19 recovery closeout (11/11 items Certified; pool 100/100; certified 1020/1025 with only pre-existing CBQ3-A4-Q1..Q5 In Audit outstanding)
 
 **D1 — correctness, stored answer/conclusion wrong (3 items fixed, 1 error in original entry):**
 - **CBQ21-A4-Q1:** stored choice implies goodwill $105M; independently derived ASC 805 goodwill = 180−(85+50+25) = **$20M**; no choice offers it (scenario↔standard contradiction). **FIXED** — Choice C updated to "$20M, the residual after allocating fair value to identifiable net assets ($180M − $85M − $50M − $25M)"; CorrectChoice updated to A; ExplanationCorrect rewritten.
 - **CBQ21-B4-Q4:** stored $1.98M embeds $7.92M/6.0%; true shield $132M×6.40%×25% = **$2.11M**. **FIXED** — Correct updated to "$2.11M, equal to 25% of $8.448M interest ($132M×6.40%×0.25=$2.11M)"; Choices and ExplanationCorrect updated.
 - **CBQ23-C3-Q1:** stored 4,640 hrs; derived current-mix BE = 140,000/(316,000/12,480) = **5,529 hrs**; no fully-correct option. **FIXED** — Choice A updated to 5,529 hrs; ExplanationCorrect corrected.
-- **Note:** Original DL-056 entry listed CBQ21-A4-Q2 as 4th D1 item, but this item does not exist in the file. The 4 D1 items are CBQ21-A4-Q1, CBQ21-A4-Q3, CBQ21-B4-Q4, CBQ23-C3-Q1 (CBQ21-A4-Q3 is Certified, not a D1 defect). DL-056 entry corrected.
+- **Corrections to this entry (2026-09-19 recovery audit):** CBQ21-A4-Q2 EXISTS (p2/case_pack_p2_1.js:4438) — the earlier "does not exist" claim was a failed search, retracted. A4-Q2's Correct (reportable-via-assets) was verified against Exhibit 2 (revenue 8.5% FAIL, profit 4.8% FAIL, assets 11.9% PASS) and repaired to a fully-true choice (CorrectChoice B→A, EW_A cleared, EW_B authored). Count reconciliation (deterministic census, AGENTS.md §6): 1025 total − 5 CBQ3-A4 In-Audit (pre-existing P1 quarantine, untouched) = 1020 Certified; every P2 item (600/600) Certified.
 
 **D3 — difficulty calibration (1 item fixed):**
 - **CBQ23-D2-Q1:** textbook definition item labeled Apply/Moderate; demand is Understand/Easy-to-Moderate-Easy. **FIXED** — Stem rewritten to require application to TradeBridge numbers ($4M loss, $20M capacity, $8M appetite); Rule 12 bars relabeling → stem rewritten to Apply-level demand, then certified. Do NOT relabel.
@@ -4379,3 +4379,45 @@ Status           <Open | Resolved>
 **Remediation plan (proposed, NOT authorized):** D1s (4 choice/conclusion rewrites + re-verify + certify, Rule-5 batched); D3 (1 stem rewrite); D4s (EW rewrites, 1 batch of 6); E3-Q2/Q3-style topic audit unnecessary (Topics present — agent misreport corrected in record).
 **Regression Test:** after remediation: screens re-run (0 FLAGs on touched items), strict-pool inclusion verified by probe, preflight/smoke/pipeline green.
 **Cross-References:** DL-051 (screens), DL-054 (inversion precedent), DL-010 (EW-misassignment precedent), DL-012/Rule 12 (relabel bar), `reports/P2_CASE_CERTIFICATION_RECORD_20260919.md`
+
+---
+
+## DL-057 — P2-A Tail: 11 HOLD Findings Remediated + 15 Certified (Session 2026-09-19)
+
+**Defect ID:** DL-057 (allocated registry-first per DL-045; highest existing was DL-056)
+**Class:** Content (D1/D4) + Pedagogical (EW quality)
+**Domain:** MCQ answer-key / explanation agreement, P2 Section A (Financial Statement Analysis)
+**Severity:** High-contained (5 D1s with wrong/underivable figures or self-contradicting ECs, all `In Audit` — zero delivery exposure; pool serves Tier-1 Certified only)
+**Detected By:** 1-agent CAQS six-dimension verification (15 P2-A In-Audit items; read-only) + author true-pair re-adjudication (11/11 raw reads)
+**Status:** Remediated — 2026-09-19 (11 content fixes + 15 flips with provenance stamps; Tend green)
+
+**Structural finding (methodology):** `p2/pack_p2_a.js` is single-object (600/600 elements carry QuestionID+Stem+CorrectChoice+state; proven by evaluation) — NOT dual-block. The agent's "dual-block content-first" note was a parsing artifact of field-order variance (some items list Authorities/Choices before QuestionID); naive QuestionID→QuestionID slicing pairs tails with wrong heads. All agent HOLD verdicts were re-verified against true whole-element reads before remediation; all 11 confirmed genuine. Lesson: pair by evaluation, never by regex windows (DL-029).
+
+**D1 fixes (5, keys/figures corrected):**
+- **P2-A-285:** stem schedule + choice D `$1.84M/20.0%` → `$1.96M/21.3%` (EC's own derivation: $800K×30%=$240K; $2.2M−$240K=$1.96M); VerifiedChecks updated. EC untouched (was already right).
+- **P2-A-289:** choice A/D + EC + EW_B + EW_D + VerifiedChecks `10.50%–10.80%` → `8.80%` extended-SGR figure (0.12×0.60×2.20/1.80; EW_B 3.30→1.60 pts); D rewritten as distractor (denies leverage-dependence).
+- **P2-A-377:** EC rewritten to conclude D (average/transaction-date rates; period-end is BS-only); EW_C rewritten (was describing D at C's slot — DL-010).
+- **P2-A-509:** EC rewritten to stem's $43.80/$1.20 tax-adjusted derivation (was asserting fictional $43.50 match); EW_B rewritten (was calling false $43.50 "factually correct").
+- **P2-A-572:** EW_B rewritten (was inverted GPLA rule + fake "SFAC No. 89" authority).
+**D4 fixes (6, keys intact):** 452 EW_A letter ref (`Choice D`→`Choice A`); 505 EW_C rewritten (refutes ex-div misidentification); 510 EW_A/B/C rewritten (repurchase arithmetic); 517 EW_C rewritten (gap-base, not EPS-level); 525 EW_D rewritten (clean PVGO formula; was `$\d+`-stripped garble); 542 EW_A rewritten (both alternatives $1.50).
+**Flips:** 15 via `scripts/stamp_cert.js` (assert-Unprocessed/In-Audit-or-abort + `P2A-CERT-20260919`/2026-09-19 provenance per Rule 16): 084/280/285/289/371/377/452/505/509/510/517/525/542/550/572. P2-A-280 (no prior state key) gained explicit state + stamps.
+**Tooling defects found & fixed in-session:** `stamp_cert.js` (a) accepted only `ItemID` markers (MCQ packs use `QuestionID`) — extended; (b) missing-state/question_state insert paths omitted trailing commas (broke `pack_p2_a.js` parse; repaired 4 sites by count-verified edit + `node --check`); (c) evaluator-shadows-duplicates: post-verify regex takes first match, hiding duplicate keys — superseded by element-span audit. All fixed + documented here.
+**Residuals:** P2-A-265 carries a pre-existing duplicate identical `"question_state": "Certified"` key (proven in pre-edit backup; raw grep reads 601 vs 600 elements; runtime-harmless, evaluator takes last). Left untouched; P2 §1 Certified documents 601 with this note. Do not "fix" without authorization.
+**Verification:** `node --check` clean; screens 428 stable; P2 §1 A 600/601(raw-grep truth, duplicate noted); preflight:all 0/0; smoke PASS (incl. May-alive gate); pipeline 0 errors, 0 divergences. No QID/state changes beyond the 15 flips.
+**Cross-References:** DL-051 (screens), DL-029 (no forward-scan; whole-element pairing), DL-010 (EW misassignment), DL-012/Rule 12 (542 cognitive note — label left, not relabeled), Rule 16 (provenance stamps), `p2/CURRENT_BASELINES_P2.md` §1-A note.
+
+**Amendment — 2026-09-20 closeout C1 (append-only correction):** the duplicate key was misattributed — brace-matched element census (600 objects) proves the twin `"question_state": "Certified"` keys sit in **P2-A-280** (`p2/pack_p2_a.js:12265/12267`, stamp-inserted adjacent pair), not P2-A-265. Both values identical Certified (assertion passed) → 1 line excised; post: 600 keys / 600 QIDs / census clean, `node --check` OK, preflight P2-A reads 600. Prior prose above retained; this note is authoritative on location.
+
+## DL-058 — P2 Micro-Agent Missing IIFE Opener (2 Files, Parse-Breaking) — Session 2026-09-20
+
+**Defect ID:** DL-058 (allocated registry-first per DL-045; highest existing was DL-057)
+**Class:** Structural
+**Domain:** Coaching-layer file integrity (May Phase 2 agents)
+**Severity:** Medium (2 agent files unparseable; agents unloadable — but flags default off, so zero delivery impact; smoke never loads these files)
+**Detected By:** Build-Time AI Verification — closeout B2 inventory (`node --check` per file)
+**Status:** Remediated — 2026-09-20 (IIFE opener added, 6/6 files `node --check` clean)
+**Files:** `app/may/agents/p2-investment-decision/index.js`, `app/may/agents/p2-decision-analyst/index.js` (backups `.bak-closeout-20260920153000`)
+**Root Cause:** Both files declare top-level `var` tables + `function`s + a bare `return {…}` export closed by a stray `})();` — the `const X = (function() {` opener present in the sibling `p2-risk-analyst/index.js` pattern was never written. Same slip in both files (shared template). `node --check`: `SyntaxError: Unexpected token '}'`.
+**Correction:** Wrapped both in the sibling IIFE pattern (1-line opener each; existing `return` + `})();` became correct). Providers honor their flags (verified by read); workers were already clean. Kept per B2 keep-criteria (no rebuild needed).
+**Regression Test:** `node --check` on all 6 agent files clean; smoke PASS (agent flags off → not available, unchanged); B5 probe dispatch null-safe.
+**Cross-References:** DL-045 (registry-first allocation), closeout history 2026-09-20 (B2).

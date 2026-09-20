@@ -93,7 +93,9 @@ const MayCoachingModeExplain = (function() {
     try {
       if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_FORMULA_RETRIEVER')) {
         if (typeof FormulaRetrieverRetrieve === 'function') {
-          var stem = (question && question.Stem) ? String(question.Stem) : '';
+          // Promotion: context objects carry lowercase `stem`; raw bank items
+          // carry `Stem`. Accept both (previously only `Stem` was read).
+          var stem = (question && (question.stem || question.Stem)) ? String(question.stem || question.Stem) : '';
           var res = FormulaRetrieverRetrieve({ questionContext: ec, stem: stem, explanationCorrect: ec });
           if (res && res.asc) agentHit = res;
         }
@@ -108,7 +110,9 @@ const MayCoachingModeExplain = (function() {
     if (cosoMatch) return 'COSO Framework';
     var gaapMatch = ec.match(/GAAP/);
     if (gaapMatch) return 'U.S. GAAP';
-    return 'CMA Part 1 accounting principles';
+    var partFallback = 'Part 1';
+    try { if (typeof May !== 'undefined' && May.partLabel) partFallback = May.partLabel(); } catch (e) { /* ignore */ }
+    return 'CMA ' + partFallback + ' accounting principles';
   }
 
   function _recommendApproach(question, learner) {

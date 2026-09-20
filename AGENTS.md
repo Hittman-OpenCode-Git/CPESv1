@@ -205,6 +205,7 @@ Determine the lane at session start. If the session touches ANY Full Governance 
 | Backup-before-write | **Mandatory** per §3 for all pack/case file edits |
 | Raw evidence verification | **Mandatory** per §5 (Dual Verification) for all self-reported claims |
 | `npm run pipeline` | **Required at Tend** after content/regeneration work |
+| Semantic screens re-run (`case_semantic_screens.js` + MCQ screens) | **Required at Tend** on every certification batch — no state flip without a clean re-run; no auto-remediation per DL-045 |
 | `knowledge/REVISION_HISTORY.md` entry | **Required** for content, certification, or governance changes per §4 |
 | `knowledge/DEFECT_LIBRARY.md` entry | **Required** for any newly discovered defect |
 | Destructive script authorization | **Required** per §3.1 — staged authorization, no exceptions |

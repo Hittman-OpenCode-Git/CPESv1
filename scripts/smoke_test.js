@@ -126,6 +126,22 @@ async function main() {
     fail("May tab [data-view='coachView'] not found");
   }
 
+  // ── May Core Alive (2026-09-19, 3b) ──────────────────────────
+  // Regression guard: a destroyed may-core.js (non-object payload) must fail
+  // loudly here instead of passing silently. Asserts the core API surface,
+  // not just tab activation.
+  const mayAlive = await page.evaluate(() => {
+    try {
+      return typeof May !== "undefined" &&
+        typeof May.renderView === "function" &&
+        typeof May.handleAction === "function" &&
+        typeof May._speak === "function";
+    } catch (e) { return false; }
+  });
+  mayAlive
+    ? pass("May core API alive (renderView/handleAction/_speak)")
+    : fail("May core API dead — may-core.js payload not intact");
+
   // ── Script Integrity ─────────────────────────────────────────
 
   const scriptsLoaded = await page.evaluate(() => {

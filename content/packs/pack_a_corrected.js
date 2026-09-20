@@ -22655,6 +22655,7 @@ var MCQ_BANK_A = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "QuestionID": "P1-F-013",
+    "certification_session": "P1-CERT-20260920",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -22667,9 +22668,9 @@ var MCQ_BANK_A = [
     "ExplanationWrongB": "Independent local spreadsheets create version and governance risk and do not provide an integrated reporting architecture.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "A security log is useful control evidence, but it is not designed to integrate finance data for trend analysis.",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "DifficultyScore": 1,
-    "certification_date": "2026-07-24",
+    "certification_date": "2026-09-20",
     "certification_batch": "Session 68 Wave 1",
     "CognitiveLevel": "Apply",
     "cert_provenance": {

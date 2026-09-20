@@ -21,11 +21,25 @@ const MayContextBuilder = (function() {
    */
   function _findQuestion(qid) {
     if (!qid) return null;
-    
-    // Search MCQ packs
-    const packs = ['packA', 'packB', 'packC', 'packD', 'packE'];
-    for (const packName of packs) {
-      const pack = window[packName];
+
+    // Search MCQ packs. NOTE: top-level const/let bank globals are NOT
+    // window properties — resolve bare identifiers under typeof guards.
+    // Real globals are MCQ_BANK_A–E (P1) and pack_p2_a–f_questions (P2).
+    const packs = [];
+    try {
+      if (typeof MCQ_BANK_A !== 'undefined') packs.push(MCQ_BANK_A);
+      if (typeof MCQ_BANK_B !== 'undefined') packs.push(MCQ_BANK_B);
+      if (typeof MCQ_BANK_C !== 'undefined') packs.push(MCQ_BANK_C);
+      if (typeof MCQ_BANK_D !== 'undefined') packs.push(MCQ_BANK_D);
+      if (typeof MCQ_BANK_E !== 'undefined') packs.push(MCQ_BANK_E);
+      if (typeof pack_p2_a_questions !== 'undefined') packs.push(pack_p2_a_questions);
+      if (typeof pack_p2_b_questions !== 'undefined') packs.push(pack_p2_b_questions);
+      if (typeof pack_p2_c_questions !== 'undefined') packs.push(pack_p2_c_questions);
+      if (typeof pack_p2_d_questions !== 'undefined') packs.push(pack_p2_d_questions);
+      if (typeof pack_p2_e_questions !== 'undefined') packs.push(pack_p2_e_questions);
+      if (typeof pack_p2_f_questions !== 'undefined') packs.push(pack_p2_f_questions);
+    } catch (e) { /* ignore */ }
+    for (const pack of packs) {
       if (!pack) continue;
       const found = pack.find(q => q.QuestionID === qid);
       if (found) return found;
@@ -49,9 +63,20 @@ const MayContextBuilder = (function() {
   }
 
   /**
-   * Infer domain name from section letter.
+   * Infer domain name from section letter (Promotion Phase 1: part-aware).
    */
-  function _sectionName(section) {
+  function _sectionName(section, part) {
+    if (part === 2 || part === 'P2' || part === '2') {
+      const p2 = {
+        'A': 'Financial Statement Analysis',
+        'B': 'Corporate Finance',
+        'C': 'Decision Analysis',
+        'D': 'Risk Management',
+        'E': 'Investment Decisions',
+        'F': 'Professional Ethics'
+      };
+      return p2[section] || 'Unknown';
+    }
     const map = {
       'A': 'External Financial Reporting Decisions',
       'B': 'Planning, Budgeting, and Forecasting',
@@ -159,13 +184,17 @@ const MayContextBuilder = (function() {
     const isCase = result._isCaseItem;
     const qData = isCase ? result._question : result;
     const caseData = isCase ? result._case : null;
+    // Promotion Phase 1: derive part from the item (P2 items carry Part: 2 /
+    // Part2OnlyFlag and P2- QIDs) instead of hardcoding part 1.
+    const part = (qData.Part === 2 || qData.Part2OnlyFlag === true || (qid && qid.indexOf('P2-') === 0)) ? 2 : 1;
+    const section = qData.Section || (typeof qData.Part !== 'undefined' ? String.fromCharCode(64 + qData.Part) : null);
 
     return {
       questionId: qid,
       pack: _inferPack(qid),
-      part: 1,
-      section: qData.Section || (typeof qData.Part !== 'undefined' ? String.fromCharCode(64 + qData.Part) : null),
-      sectionName: _sectionName(qData.Section || (qData.Part ? String.fromCharCode(64 + qData.Part) : null)),
+      part: part,
+      section: section,
+      sectionName: _sectionName(section, part),
       topic: qData.Topic || '',
       subtopic: qData.Subtopic || null,
       cognitiveLevel: qData.CognitiveLevel || 'Apply',
@@ -179,13 +208,15 @@ const MayContextBuilder = (function() {
         D: qData.ChoiceD || ''
       },
       correctChoice: qData.CorrectChoice || qData.Correct || '',
-      explanationCorrect: qData.ExplanationCorrect || qData.Explanation || '',
+explanationCorrect: qData.ExplanationCorrect || qData.Explanation || '',
       explanationWrong: {
         A: qData.ExplanationWrongA || '',
         B: qData.ExplanationWrongB || '',
         C: qData.ExplanationWrongC || '',
         D: qData.ExplanationWrongD || ''
       },
+      formulaReference: qData.FormulaReference || null,
+      commonTrapReference: qData.CommonTrapReference || null,
       questionState: qData.question_state || 'Unprocessed',
       isDefective: false,
       defectTags: [],
@@ -323,6 +354,11 @@ const MayContextBuilder = (function() {
 
   function _inferPack(qid) {
     if (!qid) return 'unknown';
+    // Promotion Phase 1: P2 QIDs carry their pack letter (P2-X-NNN → pack X).
+    if (qid.startsWith('P2-')) {
+      const section = qid.match(/P2-([A-F])-/);
+      if (section) return section[1];
+    }
     if (qid.startsWith('P1B-')) return 'B';
     if (qid.startsWith('P1-')) {
       const section = qid.match(/P1-([A-F])-/);

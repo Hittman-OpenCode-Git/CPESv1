@@ -29,6 +29,8 @@ const MayFeatureFlags = (function() {
     ENABLE_ADAPTIVE_ORCHESTRATION: false,
     ENABLE_COACHING_MEMORY: false,
     ENABLE_PRODUCTION_MAY_INTEGRATION: true,
+    // Phase 2 — May Phase 2 master switch (gates P2-specific coaching paths)
+    ENABLE_MAY_PHASE_2: false,
     // Phase 2b — micro-agents (hidden beta, default off)
     ENABLE_MISCONCEPTION_AGENT: false,
     ENABLE_FORMULA_RETRIEVER: false,
@@ -36,7 +38,11 @@ const MayFeatureFlags = (function() {
     // Phase 2b+ — additional micro-agents (hidden beta, default off)
     ENABLE_WHISPERER: false,
     ENABLE_GUARD_AGENT: false,
-    ENABLE_PLANNER_AGENT: false
+    ENABLE_PLANNER_AGENT: false,
+    // Phase 2c — P2 domain-specific micro-agents (hidden beta, default off)
+    ENABLE_P2_RISK_ANALYST: false,
+    ENABLE_P2_INVESTMENT_AGENT: false,
+    ENABLE_P2_DECISION_ANALYST: false
   };
 
   var _changeLog = [];
@@ -127,6 +133,12 @@ const MayFeatureFlags = (function() {
         if (process.env.MAY_ENABLE_WHISPERER === '1') _flags.ENABLE_WHISPERER = true;
         if (process.env.MAY_ENABLE_GUARD_AGENT === '1') _flags.ENABLE_GUARD_AGENT = true;
         if (process.env.MAY_ENABLE_PLANNER_AGENT === '1') _flags.ENABLE_PLANNER_AGENT = true;
+        // Phase 2c — May Phase 2 master switch
+        if (process.env.MAY_ENABLE_PHASE_2 === '1') _flags.ENABLE_MAY_PHASE_2 = true;
+        // Phase 2c — P2 domain-specific micro-agents
+        if (process.env.MAY_ENABLE_P2_RISK_ANALYST === '1') _flags.ENABLE_P2_RISK_ANALYST = true;
+        if (process.env.MAY_ENABLE_P2_INVESTMENT_AGENT === '1') _flags.ENABLE_P2_INVESTMENT_AGENT = true;
+        if (process.env.MAY_ENABLE_P2_DECISION_ANALYST === '1') _flags.ENABLE_P2_DECISION_ANALYST = true;
       }
       if (typeof process !== 'undefined' && process.env && process.env.CMA_MAY_PILOT === '1') {
         _flags.ENABLE_CONTEXT_BUILDER = true;

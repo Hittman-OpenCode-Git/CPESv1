@@ -44,8 +44,8 @@ var MayArchetypeCoach = (function() {
         'ready':      { label: 'Exam Ready',          emoji: '\u2605', color: '#27ae60' }
     };
 
-    // ── Domain / Section Labels ──
-    var SECTION_LABELS = {
+    // ── Domain / Section Labels (Promotion Phase 1: part-aware shared table) ──
+    var SECTION_LABELS = (typeof maySectionNames === 'function') ? maySectionNames((typeof mayActivePart === 'function') ? mayActivePart() : 'P1') : {
         A: 'External Financial Reporting',
         B: 'Planning, Budgeting & Forecasting',
         C: 'Performance Management',
@@ -55,7 +55,11 @@ var MayArchetypeCoach = (function() {
     };
 
     // ── Action factory ──
+    // Phase 2: every action carries the exam part active at creation
+    // (P2-aware actions — downstream consumers filter by part; additive).
     function _act(type, priority, label, guidance, rationale, actionable, handler) {
+        var part = 'P1';
+        try { if (typeof mayActivePart === 'function') part = mayActivePart(); } catch (e) { /* default P1 */ }
         return {
             type: type,
             priority: priority || PRI.MEDIUM,
@@ -63,7 +67,8 @@ var MayArchetypeCoach = (function() {
             guidance: guidance || '',
             archetypeRationale: rationale || '',
             actionable: !!actionable,
-            handler: handler || null
+            handler: handler || null,
+            part: part
         };
     }
 

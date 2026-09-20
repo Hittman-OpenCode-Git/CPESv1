@@ -7,6 +7,60 @@ const May = {
     // Section name lookup — single source, used by all coaching functions
     SECTION_NAMES: { A: 'External Financial Reporting', B: 'Planning, Budgeting & Forecasting',
         C: 'Performance Management', D: 'Cost Management', E: 'Internal Controls', F: 'Technology & Analytics' },
+    // Promotion Phase 1: Part 2 domain names (p2/P2002_BLUEPRINT_EXTRACTION.json).
+    SECTION_NAMES_P2: { A: 'Financial Statement Analysis', B: 'Corporate Finance',
+        C: 'Decision Analysis', D: 'Risk Management', E: 'Investment Decisions', F: 'Professional Ethics' },
+    // Active-part helpers. getExamPart lives in app.js (typeof-guarded: May also
+    // loads in contexts where app.js is absent, e.g. provider benchmarks).
+    _activePart: function () {
+        try { if (typeof getExamPart === 'function') return getExamPart(); } catch (e) { /* ignore */ }
+        return 'P1';
+    },
+    partLabel: function () { try { if (typeof mayPartLabel === 'function') return mayPartLabel(); } catch (e) { /* ignore */ } return this._activePart() === 'P2' ? 'Part 2' : 'Part 1'; },
+    sectionName: function (sec) {
+        // Prefer the shared table (may-learner-state.js) when available.
+        try { if (typeof maySectionName === 'function') return maySectionName(sec, this._activePart()); } catch (e) { /* fall through */ }
+        var table = this._activePart() === 'P2' ? this.SECTION_NAMES_P2 : this.SECTION_NAMES;
+        return table[sec] || 'this section';
+    },
+    // True for P2 delivery items (QID prefix) or when the P2 part is active.
+    // P1-specific coaching prose maps consult this and fall back to their
+    // generic branch for P2 (rewrites deferred to Phase 2).
+    _isP2Context: function (q) {
+        if (q && q.QuestionID && q.QuestionID.indexOf('P2-') === 0) return true;
+        return this._activePart() === 'P2';
+    },
+    // Phase 2 gate: true only when the P2 coaching switch is on AND the
+    // item/part is P2. All P2 prose branches consult this; when the flag is
+    // off every method keeps its exact Phase 1 behavior (generic fallback).
+    _isP2Coaching: function (q) {
+        try {
+            if (typeof MayFeatureFlags === 'undefined' || !MayFeatureFlags.isEnabled('ENABLE_MAY_PHASE_2')) return false;
+        } catch (e) { return false; }
+        return this._isP2Context(q);
+    },
+    // P2 domain-agent dispatch (Phase 2, sections C/D/E only).
+    // Routes to the section's micro-agent provider when the master switch,
+    // the agent flag, and provider availability all agree; returns null
+    // silently otherwise (caller falls back to generic coaching).
+    P2DomainAgent: function (section, input) {
+        try {
+            if (!this._isP2Coaching(input && input.question ? input.question : null) && this._activePart() !== 'P2') return null;
+            if (typeof MayFeatureFlags !== 'undefined' && !MayFeatureFlags.isEnabled('ENABLE_MAY_PHASE_2')) return null;
+            var map = {
+                'C': { need: 'ENABLE_P2_DECISION_ANALYST', cls: 'P2DecisionAnalystClassify' },
+                'D': { need: 'ENABLE_P2_RISK_ANALYST', cls: 'P2RiskAnalystClassify' },
+                'E': { need: 'ENABLE_P2_INVESTMENT_AGENT', cls: 'P2InvestmentDecisionClassify' }
+            };
+            var route = map[section];
+            if (!route) return null;
+            var need = route.need;
+            if (typeof MayFeatureFlags !== 'undefined' && !MayFeatureFlags.isEnabled(need)) return null;
+            var fn = (typeof window !== 'undefined') ? window[route.cls] : null;
+            if (typeof fn !== 'function') return null;
+            return fn(input);
+        } catch (e) { return null; }
+    },
     // Pattern name lookup — single source, used by all coaching functions
     PATTERN_NAMES: {
         'misclassification': 'classification errors',
@@ -129,6 +183,15 @@ const May = {
                     window._cmaDefectManifest.blockedQids.forEach(entry => {
                         self.context._defectManifest[entry.qid] = entry;
                     });
+                    // C1 fix: tell the app layer the async manifest has landed so
+                    // _DefectManifest re-ingests immediately and any pool built
+                    // while blocking was inactive is invalidated. Guarded for
+                    // load-order safety (app.js loads after may-core.js).
+                    try {
+                        if (typeof _DefectManifest !== 'undefined' && _DefectManifest.refresh) {
+                            _DefectManifest.refresh();
+                        }
+                    } catch (e) { /* blocking activates on next isBlocked() retry */ }
                 })
                 .catch(() => { /* manifest unavailable — safe fallback */ });
         } catch (e) { /* fetch not available — safe fallback */ }
@@ -145,7 +208,7 @@ const May = {
 
         let lines = [];
         lines.push(`Hi ${profile.name}, I'm **Chloe May** — but you can call me **May**.\n`);
-        lines.push(`I'm your study companion for CMA Part 1. I track your progress by topic, explain questions using the bank's own content, give you graduated hints, flag your weak areas, and build targeted recovery sets.`);
+        lines.push(`I'm your study companion for CMA ${May.partLabel()}. I track your progress by topic, explain questions using the bank's own content, give you graduated hints, flag your weak areas, and build targeted recovery sets.`);
 
         if (sessionCount > 0) {
             lines.push(`\nI've tracked **${sessionCount}** session(s) and **${totalAttempts}** question attempts for you so far.`);
@@ -170,14 +233,35 @@ const May = {
             lines.push(`\nLooks like you haven't completed a practice session yet. Start with a **10-question MCQ** to give me some data to work with — I'll get better the more you practice.`);
         }
 
+        // Phase 2: P2 onboarding branch — case comfort + weekly-hours.
+        if (May._activePart() === 'P2') {
+            try {
+                let plan = MayLearnerState.getExamPlan && MayLearnerState.getExamPlan();
+                if (!plan || !plan.weeklyHours) {
+                    lines.push(`\nFor Part 2, tell me your **weekly study hours** and I'll pace the plan around them (MCQ drills plus case practice).`);
+                }
+                lines.push(`\nPart 2 adds **integrated cases** alongside MCQs. When you're ready, try a case session — multi-exhibit items reward the same incremental-analysis habits as the MCQ drills.`);
+            } catch (e) { /* onboarding is advisory only */ }
+        }
+
         lines.push(`\nWhat would you like to do?`);
 
         this._speak(lines.join('\n'));
     },
 
+    // Phase 2: P2 exam briefing. Cites only the dev-shell simulation shape
+    // (100 MCQs + 2 cases, about 4 hours) — no format specifics asserted.
+    getP2ExamBriefing() {
+        this._speak(`**Part 2 simulation briefing:** the dev-shell runs **100 MCQs + 2 cases** in about **4 hours**.\n\n` +
+            `- Bank the MCQ marks first: flag calculation-heavy items and move on rather than stalling.\n` +
+            `- For each case, read the exhibits before the items and note which exhibit each item needs.\n` +
+            `- Keep the incremental lens: only what differs between alternatives matters.\n` +
+            `- Reserve the final stretch for flagged items — a calm re-read beats a rushed first guess.`);
+    },
+
     // ── Ask for the learner's name ────────────────────────
     askForName() {
-        this._speak("Hi! I'm **Chloe May** — but you can call me **May**. I'll be your study companion for CMA Part 1.\n\nWhat's your name? I'll use it to track your progress across sessions.");
+        this._speak("Hi! I'm **Chloe May** — but you can call me **May**. I'll be your study companion for CMA " + May.partLabel() + ".\n\nWhat's your name? I'll use it to track your progress across sessions.");
     },
 
     // ── Set name from chat input ──────────────────────────
@@ -885,7 +969,7 @@ const May = {
 
         if (!isReturning) {
             // Full briefing for first-timers
-            lines.push(`**CMA Part 1 Exam — Fall 2026 Format:**`);
+            lines.push(`**CMA ${May.partLabel()} Exam — Fall 2026 Format:**`);
             lines.push(`- **Section 1:** 100 multiple-choice questions (3 hours)`);
             lines.push(`- **Section 2:** 2 essay scenarios, each with 5-7 sub-questions (1 hour)`);
             lines.push(`- MCQs are 75% of your score; essays are 25%`);
@@ -990,7 +1074,7 @@ const May = {
     // ── Greeting based on context ────────────────────────
     _greetingForQuestion(q) {
         let topic = MayLearnerState._normalizeTopic(q.Topic || 'this topic');
-        let section = May.SECTION_NAMES[q.Section] || 'this section';
+        let section = May.sectionName(q.Section);
         let isCase = this.context.currentCaseItemType === 'case';
         let casePrefix = isCase && this.context.currentCaseTitle ? `This is a case item from **${this.context.currentCaseTitle}**. ` : '';
 
@@ -1024,7 +1108,15 @@ const May = {
             }
         }
 
-        this._addMessage('learner', this._actionLabel(action));
+        // Chat sends display the learner's own text (2026-09-19 May-chat fix,
+        // re-applied post-restore: _actionLabel has no 'chat' key, so every
+        // freeform send rendered the literal word "chat"). Blank sends ignored.
+        if (action === 'chat') {
+            if (!payload || !payload.trim()) { return; }
+            this._addMessage('learner', payload);
+        } else {
+            this._addMessage('learner', this._actionLabel(action));
+        }
 
         // ── MAY-001: Context Builder + Coaching Router integration ──
         // Gated behind feature flags (default: false — zero behavior change)
@@ -1092,6 +1184,13 @@ const May = {
                 this._showStrategyEffectiveness();
                 break;
             case 'chat':
+                // Clear the visible input BEFORE renderView snapshots it
+                // (2026-09-19 May-chat fix, re-applied post-restore: renderView
+                // preserves drafts across re-renders, which resurrected
+                // just-sent text because the inline onclick clears only the
+                // detached pre-render node).
+                var _chatInp = document.getElementById('mayChatInput');
+                if (_chatInp) _chatInp.value = '';
                 if (payload && payload.trim()) {
                     this._handleFreeform(payload.trim());
                 }
@@ -1177,7 +1276,7 @@ const May = {
         let isUnanswered = !learnerAnswer;
         let topicData = null;
 
-        let sectionName = May.SECTION_NAMES[section] || '';
+        let sectionName = May.sectionName(section);
 
         // ── Try to get topic performance data from learner state ──
         try {
@@ -1508,7 +1607,7 @@ const May = {
 
         // ── 4. Topic strength → Maintain, extend ──
         if (tp && tp.totalAttempts >= 3 && tp.accuracy >= 85 && !suggestions.some(s => s.evidence && s.evidence.threshold === 'persistent_weakness')) {
-            let sectionName = May.SECTION_NAMES[section] || '';
+            let sectionName = May.sectionName(section);
 
             // Find the weakest adjacent topic to suggest
             let weakestTopic = null;
@@ -1605,7 +1704,7 @@ const May = {
         let stem = q.Stem || '';
         let isCalculation = !!(q.CalculationItem || (stem || '').match(/\$/));
 
-        let sectionName = May.SECTION_NAMES[section] || '';
+        let sectionName = May.sectionName(section);
 
         let result = {
             shortAnswer: '',
@@ -1711,6 +1810,19 @@ const May = {
         }
 
         // Generic traps by question type when no wrong-explanations exist
+        // Phase 2: P2-domain traps (gated — flag off = generic below).
+        // Calculation traps above are domain-agnostic and stay for P2.
+        if (!isCalculation && May._isP2Coaching(q)) {
+            let p2Traps = {
+                'A': '**Common trap:** Computing the ratio correctly but interpreting it backwards — a higher receivable turnover means faster collection, not slower. Always state what the direction means.',
+                'B': '**Common trap:** Using the pre-tax cost of debt in WACC. Interest is tax-deductible, so the after-tax rate belongs in the blend.',
+                'C': '**Common trap:** Including sunk or allocated fixed costs in the comparison. Only incremental cash flows decide.',
+                'D': '**Common trap:** Choosing a hedge that offsets the wrong exposure or mismatches in timing. Match instrument, amount, and period.',
+                'E': '**Common trap:** Ranking by IRR or payback instead of NPV. A higher IRR on a smaller project can still mean less value created.',
+                'F': '**Common trap:** Treating an ethics dilemma as a business trade-off. The standards do not bend for profitability — apply them first.'
+            };
+            if (p2Traps[q.Section]) return p2Traps[q.Section];
+        }
         if (isCalculation) {
             let calcTraps = [
                 '**Common trap:** Using the wrong formula or plugging numbers into the wrong position — always identify the formula first, then extract each value from the stem before computing.',
@@ -1937,7 +2049,7 @@ const May = {
         let isCalculation = !!(q.CalculationItem || (stem || '').match(/\$/));
         let contextRef = context || {};
 
-        let sectionName = May.SECTION_NAMES[section] || '';
+        let sectionName = May.sectionName(section);
 
         let wrongLetters = letters.filter(l => l !== cc);
         let selectedChoice = contextRef.selectedChoice || null;
@@ -2057,8 +2169,19 @@ const May = {
             }
         }
 
-        // Generic section-aligned misconceptions
-        let sectionMap = {
+        // Generic section-aligned misconceptions (Phase 1: P2 uses the generic
+        // fallback below; P1-tailored prose rewrites deferred to Phase 2)
+        // Phase 2: P2-domain misconception map (gated — flag off = generic).
+        let p2MisconceptionMap = {
+            'A': 'This choice misreads the financial statements — confusing what a ratio actually measures or comparing figures that are not on the same basis.',
+            'B': 'This choice mixes up financing logic — treating the cost of one capital source as if it were the blended cost, or ignoring how leverage changes risk.',
+            'C': 'This choice uses the wrong decision lens — comparing totals instead of incremental differences, or treating sunk costs as relevant.',
+            'D': 'This choice misjudges the risk — confusing the type of exposure or mismatching the hedge to what is actually at stake.',
+            'E': 'This choice misranks the investment — trusting a method that ignores the time value of money or comparing projects with inconsistent assumptions.',
+            'F': 'This choice rationalizes away the ethics standard — treating a credibility or conflict problem as a business decision rather than applying the IMA standard.'
+        };
+        if (May._isP2Coaching(q) && p2MisconceptionMap[q.Section]) return p2MisconceptionMap[q.Section];
+        let sectionMap = May._isP2Context(q) ? {} : {
             'A': 'This choice reflects a reporting classification error — mixing up where and how the item appears in the financial statements.',
             'B': 'This choice confuses the sequence or dependency in the budget process — treating a downstream component as if it came first.',
             'C': 'This choice applies the wrong variance formula or uses the wrong benchmark — a common calculation-pattern error.',
@@ -2076,7 +2199,18 @@ const May = {
             return 'Write the formula first and label every input before computing. Check that each number you used came from the stem and is not from a similar but different scenario.';
         }
 
-        let tipMap = {
+        // Phase 1: P2 uses the generic tip below (P1 tipMap deferred to Phase 2).
+        // Phase 2: P2-domain tips (gated — flag off = generic).
+        let p2TipMap = {
+            'A': 'When a ratio question appears, ask: *What goes on top, what goes on the bottom, and are both from the same period?* Write the formula before touching the numbers.',
+            'B': 'Separate the financing pieces first: cost of debt (after tax), cost of equity, then the blend. The exam loves distractors that use a pre-tax rate where an after-tax one belongs.',
+            'C': 'Circle only the costs and revenues that change between alternatives. Cross out sunk costs and allocated fixed overhead before you compute anything.',
+            'D': 'Name the exposure first (currency, rate, commodity, credit), then check the hedge matches it in amount and timing. A hedge against the wrong exposure is no hedge.',
+            'E': 'Rank with discounted methods (NPV first), then sanity-check with IRR and payback. Never let a non-discounted method overrule NPV.',
+            'F': 'Run the IMA decision tree: identify the ethical issue, weigh competence, confidentiality, integrity, and credibility, then escalate through the proper channels.'
+        };
+        if (May._isP2Coaching(q) && p2TipMap[section]) return p2TipMap[section];
+        let tipMap = May._activePart() === 'P2' ? {} : {
             'A': 'When you see classification questions, ask: *What is the transaction? Where does it belong under the standard?* Eliminate options that classify it in the wrong category.',
             'B': 'Map the question to its position in the master budget flow. If the stem mentions multiple departments or cost elements, trace which feeds which.',
             'C': 'Identify the variance type from the stem keywords (price, quantity, rate, efficiency). Then recall the specific formula — don\'t guess from memory.',
@@ -2340,6 +2474,24 @@ const May = {
 
     _conceptHint(q, topic) {
         let section = q.Section;
+        // Phase 2: P2-domain concept map (gated — flag off = P1 map/generic).
+        let p2ConceptMap = {
+            'A': 'Statement analysis is about relationships between numbers. Focus on what each ratio isolates — profitability, liquidity, leverage, or efficiency.',
+            'B': 'Corporate finance weighs return against risk and cost. Focus on how each financing choice changes the blended cost of capital.',
+            'C': 'Decision analysis compares alternatives. Focus on identifying which revenues and costs actually change between the options.',
+            'D': 'Risk management starts with naming the exposure. Focus on matching each risk type to the instrument designed to offset it.',
+            'E': 'Investment decisions discount the future to the present. Focus on the timing of cash flows and the required return.',
+            'F': 'Professional ethics applies the IMA standards. Focus on competence, confidentiality, integrity, and credibility in that order.'
+        };
+        if (May._isP2Coaching(q) && p2ConceptMap[section]) {
+            let p2hint = p2ConceptMap[section];
+            let p2exp = q.ExplanationCorrect || '';
+            let p2first = p2exp.split('.')[0] || '';
+            if (p2first.length > 30 && !p2first.toLowerCase().includes('under')) {
+                p2hint += `\n\nTo get you oriented: ${p2first}.`;
+            }
+            return p2hint;
+        }
         let conceptMap = {
             'A': 'This section covers external financial reporting under U.S. GAAP. Think about recognition, measurement, and classification rules.',
             'B': 'Budgeting and forecasting questions often hinge on the order of budget preparation or the components that go into each budget.',
@@ -2414,7 +2566,7 @@ const May = {
         let isCalculation = !!(q.CalculationItem || (stem || '').match(/\$/));
         let contextRef = context || {};
 
-        let sectionName = May.SECTION_NAMES[section] || '';
+        let sectionName = May.sectionName(section);
 
         // 1. What this means — plain-language version of the concept
         let whatItMeans = this._plainLanguageTranslation(explanation, topic, isCalculation);
@@ -2569,7 +2721,24 @@ const May = {
 
     // Explain why this concept matters in real terms.
     _inferWhyItMatters(topic, section, isCalculation) {
-        let sectionMap = {
+        // Phase 1: P2 falls through to the generic `base` below.
+        // Phase 2: P2-domain significance map (gated — flag off = generic).
+        let p2SectionMap = {
+            'A': 'Statement analysis is how investors and lenders decide whether a company is healthy. Misreading the numbers means misjudging performance, liquidity, and risk.',
+            'B': 'Every company must raise money and put it to work. Mispricing capital leads to bad financing and value-destroying projects.',
+            'C': 'Managers decide daily with incomplete information. Sound incremental analysis is the difference between profitable choices and expensive ones.',
+            'D': 'Risk does not disappear when ignored — it compounds. Understanding exposure and hedging protects earnings and cash flow from shocks the company cannot control.',
+            'E': 'Capital decisions lock up money for years. A disciplined investment framework keeps the company from funding projects that destroy shareholder value.',
+            'F': 'Trust is the currency of the profession. One ethical lapse can end a career and damage the organization; the standards exist to protect both.'
+        };
+        if (May._isP2Coaching(null) && p2SectionMap[section]) {
+            let p2base = p2SectionMap[section];
+            if (isCalculation) {
+                return 'Numbers drive decisions. This calculation is not just an academic exercise — it is the kind of analysis managers use every day to decide pricing, production levels, investment choices, and cost control measures. ' + p2base;
+            }
+            return p2base;
+        }
+        let sectionMap = May._activePart() === 'P2' ? {} : {
             'A': 'Financial reporting rules determine how companies present their numbers to the outside world — investors, lenders, regulators. Getting these rules right means users of financial statements can actually trust what they are reading.',
             'B': 'Budgeting and forecasting are how companies plan their future. If you get the budget process wrong, every downstream decision — hiring, purchasing, pricing — is built on bad numbers.',
             'C': 'Performance measurement tells management whether the company is actually executing its plan. Good metrics drive good decisions; bad metrics reward the wrong behavior.',
@@ -2596,7 +2765,18 @@ const May = {
             return calcTips[Math.floor(Math.random() * calcTips.length)];
         }
 
-        let recognitionMap = {
+        // Phase 1: P2 uses the generic tip below (calculation tips above are domain-agnostic and stay).
+        // Phase 2: P2-domain recognition map (gated — flag off = generic).
+        let p2RecognitionMap = {
+            'A': 'Look for ratio names, percentage changes, or "compared to" language. Identify which statements the inputs come from, then recall the exact formula — the exam tests whether you know what each ratio leaves out.',
+            'B': 'Financing questions name the sources: debt, preferred, common equity. The trigger words are "cost of," "WACC," "leverage," or "optimal structure." Compute each piece after tax where required.',
+            'C': 'Decision questions list alternatives with competing numbers. The trigger is "should the company accept, make, buy, drop, or price at" — always compare only what differs.',
+            'D': 'Risk questions describe an exposure plus a market move: currency shifts, rate changes, commodity swings. Match the exposure to the instrument before evaluating the hedge.',
+            'E': 'Investment questions give cash flows over years plus a discount rate. The triggers are "NPV," "IRR," "payback," or "rank." Discount first, decide second.',
+            'F': 'Ethics questions present pressure: a boss asking to bend a rule, a conflict of interest, confidential information. The answer always runs through the IMA Statement of Ethical Professional Practice.'
+        };
+        if (May._isP2Coaching(null) && p2RecognitionMap[section]) return p2RecognitionMap[section];
+        let recognitionMap = May._activePart() === 'P2' ? {} : {
             'A': 'Look for keywords like "report," "classify," "recognize," or "present" in the stem. These signal that the question is asking *where and how* something appears in the financial statements — not just what it is.',
             'B': 'Budgeting questions often have a sequence or dependency. Look for words like "beginning," "next," "after," or "before" — they tell you the order of operations in the master budget process.',
             'C': 'Performance questions often use comparison language: "vs.," "compared to," "favorable," or "unfavorable." When you see those words, you are looking at a variance or benchmark question.',
@@ -2629,6 +2809,16 @@ const May = {
             return calcRules[Math.floor(Math.random() * calcRules.length)];
         }
 
+        // Phase 2: P2-domain quick rules (gated — flag off = P1 map/generic).
+        let p2RuleMap = {
+            'A': '**Quick rule:** Ratios answer *what per what*. If you cannot say what the numerator and denominator each mean, you do not understand the ratio yet.',
+            'B': '**Quick rule:** Debt is cheap because interest is tax-deductible; equity is expensive because risk demands return. WACC blends them by market weight.',
+            'C': '**Quick rule:** Only the future differs. Sunk costs are gone, allocated fixed costs stay — decide on the incremental delta alone.',
+            'D': '**Quick rule:** Hedge the exposure you have, in the amount you have it, for the period you have it. Anything else is speculation.',
+            'E': '**Quick rule:** NPV > 0 means accept; when ranking, highest NPV wins. IRR and payback inform but never overrule NPV.',
+            'F': '**Quick rule:** When pressured, disclose and escalate — first to your supervisor, then up the chain, then to the audit committee. Never stay silent.'
+        };
+        if (May._isP2Coaching(q) && p2RuleMap[section]) return p2RuleMap[section];
         let ruleMap = {
             'A': '**Quick rule:** Classification questions answer *where* and *how*, not just *what*. Always ask: "Where does this belong in the financial statements, and under which standard?"',
             'B': '**Quick rule:** The master budget flows like a river — from top (sales) to bottom (cash). Each component feeds the next. Trace the flow, do not memorize isolated pieces.',
@@ -4232,7 +4422,7 @@ const May = {
             return;
         }
         if (lower.includes('who are you') || lower.includes('what are you')) {
-            this._speak("I'm May — your study companion for CMA Part 1. I track your performance across sessions, explain concepts, give hints, and help you figure out what to work on next. I'm not a chatbot — I read from your actual question bank and session history.");
+            this._speak("I'm May — your study companion for CMA " + May.partLabel() + ". I track your performance across sessions, explain concepts, give hints, and help you figure out what to work on next. I'm not a chatbot — I read from your actual question bank and session history.");
             return;
         }
 
@@ -4536,7 +4726,7 @@ const May = {
                     <div class="may-onboarding-card">
                         <div class="may-onboarding-avatar">M</div>
                         <h2>Hi, I'm May</h2>
-                        <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
+                        <p class="may-onboarding-subtitle">Your CMA ${May.partLabel()} study companion</p>
                         <p>I can explain questions from your practice sessions, give you graduated hints, and help you figure out what to work on next.</p>
                         <div class="may-capability-prompts">
                             <span>Try asking:</span>
@@ -4559,7 +4749,7 @@ const May = {
                     <div class="may-onboarding-card">
                         <div class="may-onboarding-avatar">M</div>
                         <h2>Welcome back, ${profile.name}</h2>
-                        <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
+                        <p class="may-onboarding-subtitle">Your CMA ${May.partLabel()} study companion</p>
                         ${sc > 0 ? `<p>I've tracked <strong>${sc} session${sc !== 1 ? 's' : ''}</strong> and <strong>${totalAttempts} attempts</strong> for you.</p>` : `<p>${welcomeMsg}</p>`}
                         <div class="may-capability-prompts">
                             <span>What would you like to do?</span>
@@ -4585,7 +4775,7 @@ const May = {
                 <div class="may-onboarding-card">
                     <div class="may-onboarding-avatar">M</div>
                     <h2>Hi, I'm May</h2>
-                    <p class="may-onboarding-subtitle">Your CMA Part 1 practice coach</p>
+                    <p class="may-onboarding-subtitle">Your CMA ${May.partLabel()} practice coach</p>
                     <p>I can help track your progress, explain missed questions, and build a focused review plan. <strong>To personalize your review, let's get you set up.</strong></p>
                     <p>Have you practiced with me before?</p>
                     <div class="may-onboarding-cta">
@@ -4629,12 +4819,14 @@ const May = {
             onboardButtons = `<div class="may-empty-chat may-greeting-chat">
                 <p class="may-greeting-actions">
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('part','Part 1')">Part 1 — Financial Planning, Performance, and Analytics</button>
+                    <button class="may-action-btn" onclick="May._handleOnboardingResponse('part','Part 2')">Part 2 — Strategic Financial Management</button>
                 </p>
             </div>`;
         } else if (onboardStep === 'ASK_PLAN_PART') {
             onboardButtons = `<div class="may-empty-chat may-greeting-chat">
                 <p class="may-greeting-actions">
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Part 1')">Part 1</button>
+                    <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Part 2')">Part 2</button>
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Not sure yet')">Not sure yet</button>
                 </p>
             </div>`;
@@ -5163,7 +5355,7 @@ const May = {
     },
 
     // UX-2 — Domain Readiness Dashboard
-    // Renders a priority-ordered dashboard of the 6 CMA Part 1 blueprint domains
+    // Renders a priority-ordered dashboard of the 6 CMA blueprint domains (part-aware via May.sectionName)
     // with numeric readiness scores, progress bars, trend arrows, and weakest/strongest flags.
     _renderDomainReadinessDashboard() {
         let ds = MayLearnerState.getDomainReadinessScores();
@@ -6172,7 +6364,7 @@ const May = {
             greetingHtml = `<div class="may-setup-greeting" id="maySetupGreeting">
                 <div class="may-setup-avatar">M</div>
                 <div class="may-setup-text">
-                    <strong>Hi! I'm May — your study companion for CMA Part 1.</strong>
+                    <strong>Hi! I'm May — your study companion for CMA ${May.partLabel()}.</strong>
                     I'll track your progress, explain questions, and build review sets.
                     <span class="may-setup-cta" onclick="May.openMayFromLauncher()">Set up May to get started</span>
                 </div>
@@ -6743,7 +6935,7 @@ const May = {
             btnAction = 'May.openMayFromLauncher()';
         } else {
             // New student
-            heading = 'Hi, I\'m May — your CMA Part 1 study companion';
+            heading = 'Hi, I\'m May — your CMA ' + May.partLabel() + ' study companion';
             text = 'I\'ll help you track progress, understand missed questions, and turn each practice session into a focused review plan.';
             btnLabel = 'Meet May';
             btnAction = 'May.openMayFromLauncher()';
@@ -6753,7 +6945,7 @@ const May = {
             <div class="may-companion-avatar">M</div>
             <div class="may-companion-body">
                 <div class="may-companion-heading">${heading}</div>
-                ${!hasProfile ? '<div class="may-companion-subtitle">Your CMA Part 1 study companion</div>' : ''}
+                ${!hasProfile ? '<div class="may-companion-subtitle">Your CMA ' + May.partLabel() + ' study companion</div>' : ''}
                 <p class="may-companion-text">${text}</p>
                 <div class="may-companion-actions">
                     <button class="may-companion-btn may-companion-btn-may" onclick="${btnAction}">${btnLabel}</button>

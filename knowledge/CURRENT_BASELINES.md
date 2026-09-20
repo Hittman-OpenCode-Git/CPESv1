@@ -26,7 +26,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | File | SHA-256 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-------------|---------------|------------|
-| `app.js` | `73E011686DB2B5AF298EF06A0F57E7B70C38B0A4907F2413744AD86D615EB708` | 474,682 | 2026-09-18 | Prior Part-toggle/P2/C1/W1/hero/catalog/ops/Phase-4 provenance preserved (see earlier rebuild_baselines entries). **2026-09-18 W1-finish rebuild_baselines recapture:** dashboard sectionHtml (part-table names) + trend part tags + P1/P2/ALL filter UI + study-plan P1→P2 bridge (compute + return + card render) + telemetry examPart stamp (may-telemetry.js untracked). W1W4 probe 10/10 + smoke PASS. |
+| `app.js` | `70A5FE1A26F1A446BD2F0EEDD45CCFEE50081706C9FEB7CA617A0C785A1AEF2B` | 474,720 | 2026-09-20 | Prior Part-toggle/P2/C1/W1/hero/catalog/ops/Phase-4 provenance preserved (see earlier rebuild_baselines entries). **2026-09-18 W1-finish rebuild_baselines recapture:** dashboard sectionHtml (part-table names) + trend part tags + P1/P2/ALL filter UI + study-plan P1→P2 bridge (compute + return + card render) + telemetry examPart stamp (may-telemetry.js untracked). W1W4 probe 10/10 + smoke PASS. |
 | `index_updated.html` | `CFD6D4B62DEC72EAFD1BF5BACCA4254FF3048BF575A0D6F2C814550A86EEE68A` | 14,713 | 2026-09-18 | Prior toggle/packF/P2-tags/packField/hero-IDs provenance preserved (see earlier rebuild_baselines entries). **2026-09-18 W4 rebuild_baselines recapture:** 9 static P2 tags replaced by __P2_BANK_SRC manifest (lazy-load). |
 | `styles.css` | `6190DB342138F0A034C72B5DB9550E92674C03B5FE0AABD54D519680B1CF3F71` | 160,854 | 2026-09-13 | S64+ style updates for May coaching UI. |
 
@@ -34,17 +34,17 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | File | SHA-256 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-------------|---------------|------------|
-| `may-core.js` | `03AB300AE9932911D3B1CED80241AE3257827C123CDD26F7C82103B3F237B1DE` | 380,723 | 2026-09-18 | **2026-09-18 Promotion rebuild_baselines (May Phase 1).** Part helpers, 6 sectionName call-sites, P1-prose generic fallbacks, part-parameterized copy, Part 2 onboarding. Prior C1 + S120–S131 provenance preserved. **2026-09-18 May-chat rebuild_baselines recapture:** freeform sends display payload text (was literal "chat"), DOM input cleared pre-render (was resurrected by draft-restore), blank sends ignored. Probe-verified + smoke PASS. |
-| `may-learner-state.js` | `21969642BB35C64A7CE932D61E5A4496B6B6BC564A1E1AAE28DD8E2F985D6D45` | 139,934 | 2026-09-18 | **2026-09-18 Promotion rebuild_baselines (May Phase 1).** Shared maySectionNames/maySectionName/mayActivePart/mayPartLabel helpers, part-aware label maps, recordAttempt part stamp. Prior S120–S131 provenance preserved. |
+| `may-core.js` | `D412E28D8DC41DACB015AB07E9B657D60BD73A993E0DA3D0696D1C06517A3A8A` | 393,344 | 2026-09-20 | **2026-09-19 recovery rebuild_baselines recapture (Full Governance Lane).** Restored from MAYCHAT backup (file had been destroyed by a fix-script write); May-chat fix re-applied (payload text + pre-render clear); probe-verified alive with 0 page errors. Prior Phase-2 may-core.js prose work returned to backlog (unverified, destroyed with the file). |
+| `may-learner-state.js` | `FE903EB39A397D70485DAA4DDFF16B37C9D1B96DE2BD8E9303BE2A5FE8D9C189` | 142,910 | 2026-09-20 | **2026-09-18 Promotion rebuild_baselines (May Phase 1).** Shared maySectionNames/maySectionName/mayActivePart/mayPartLabel helpers, part-aware label maps, recordAttempt part stamp. Prior S120–S131 provenance preserved. |
 
 ### MCQ Pack Files
 
 | File | SHA-256 | MD5 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-----|-------------|---------------|------------|
-| `pack_a_corrected.js` | `BC748A76CBED5C5CFA1C54BE07BAC6DACF4B9FDACC9C41E4A1109DD4CF675D55` | `TBD` | 2,654,026 | 2026-09-16 | **Tier 3 Waves 4+14+15 (Pack A closure + Section C expansion).** S892 Pack A Final Closure (19 archived → new Analyze/Evaluate Section A/E). Waves 4+14 added 60 items (P1-A-076..105, P1-C-101..130). QID: **560**. Certified: **559 (99.8%)** — 1 quarantined (P1-F-013 metadata: DifficultyLabel/Score mismatch). Remediation Wave 1: 6 DL-003 distractor reworded to remove cueing absolutes. DL-008: 0. DL-026: 0. DL-003: 6 reworded. |
+| `pack_a_corrected.js` | `8B71804C1EA08F43DF6153C4D6BE37DF82A817544015946A0AF376144E3003E3` | `TBD` | 2,654,077 | 2026-09-20 | **Tier 3 Waves 4+14+15 (Pack A closure + Section C expansion).** S892 Pack A Final Closure (19 archived → new Analyze/Evaluate Section A/E). Waves 4+14 added 60 items (P1-A-076..105, P1-C-101..130). QID: **560**. Certified: **560 (100%)** — P1-F-013 certified P1-CERT-20260920 (rebuild_baselines). Remediation Wave 1: 6 DL-003 distractor reworded to remove cueing absolutes. DL-008: 0. DL-026: 0. DL-003: 6 reworded. |
 | `pack_b_corrected.js` | `714B944F9E76A3F22E0D87139D3E1ED8971EF6650CDE51F5E604AFDAA5AD2F43` | `TBD` | 2,076,024 | 2026-09-16 | **Tier 3 Waves 3+8+12+15 (Pack B multi-section expansion).** S81 baseline (500 QIDs). Waves 3/8/12 added 90 items (BB, tails, BA). Wave 15 added 30 items (P1B-C-211..240, Analyze/Evaluate). QID: **620**. Certified: **620 (100%)** — P1B-E-150 retained as documented DL-043 Batch-2 keep (factually true absolute). Remediation Wave 1: 5 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 5 reworded. |
-| `pack_c_corrected.js` | `4D302D7CF343E593C7A5BBC755EB365417002130883DF772FF7124FAD28D5553` | `TBD` | 2,732,694 | 2026-09-16 | **Tier 3 Waves 2+10+11+13 (Pack C multi-section expansion).** S853/S826 Domain F remediation baseline (500 QIDs). Waves 2/10/11/13 added 120 items (CC, AC, BC, DC). QID: **620**. Certified: **603 (97.3%)** — 3 quarantined (P1-EC-011 DL-003 reword + 2 metadata). Remediation Wave 1: 4 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 4 reworded. |
-| `pack_d_corrected.js` | `8DEE063CCE0287D917E1D28F449C41841A7555065E91B94F484061CB9E72B8C7` | `TBD` | 3,000,692 | 2026-09-16 | **Tier 3 Waves 1+5+6 (Pack D multi-section expansion).** S853 Domain F remediation baseline (500 QIDs). Waves 1/5/6 added 90 items (CD, AD, DD). QID: **590**. Certified: **584 (98.7%)** — 2 quarantined (P1-ED-002 + P1-FD-010, both metadata). Remediation Wave 1: 3 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 3 reworded. |
+| `pack_c_corrected.js` | `0B97601D02421DA41E719703BB0C8BED1EF43E357D7A81CDA81A07E9466FFD63` | `TBD` | 2,732,378 | 2026-09-20 | **Tier 3 Waves 2+10+11+13 (Pack C multi-section expansion).** S853/S826 Domain F remediation baseline (500 QIDs). Waves 2/10/11/13 added 120 items (CC, AC, BC, DC). QID: **620**. Certified: **604 (98.7%)** — 2 quarantined (P1-FC-016, P1-FC-050 — EW remediation pending); P1-EC-011 certified P1-CERT-20260920 (rebuild_baselines). Remediation Wave 1: 4 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 4 reworded. |
+| `pack_d_corrected.js` | `A293C2D9FF91F77A2C94155FA90D15197F267D60AB355884687C5051B2F18C2C` | `TBD` | 3,000,875 | 2026-09-20 | **Tier 3 Waves 1+5+6 (Pack D multi-section expansion).** S853 Domain F remediation baseline (500 QIDs). Waves 1/5/6 added 90 items (CD, AD, DD). QID: **590**. Certified: **584 (98.7%)** — 2 quarantined (P1-ED-002 + P1-FD-010, both metadata). Remediation Wave 1: 3 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 3 reworded. |
 | `pack_e_corrected.js` | `7165D24FD3173A77B5314BE9FA40EF79267B91DFCDAC8BC2B7DA7E9B1FE5DBB6` | `TBD` | 2,664,784 | 2026-09-16 | **Tier 3 Waves 7+9 (Pack E Section B/E expansion).** S140-S144 Phase 2 Certification baseline (620 QIDs). Waves 7+9 added 60 items (P1E-B-101..130, P1E-E-101..130). QID: **680**. Certified: **680 (100%)** — P1B-E-150 retained as documented DL-043 Batch-2 keep. Remediation Wave 1: 1 DL-003 distractor reworded. DL-008: 0. DL-026: 0. DL-003: 1 reworded. |
 
 **rebuild_baselines s911-post-Remediation Wave 1 (2026-09-16):** All 5 packs hash-recaptured post remediation. QID counts: 560/620/620/590/680. Certified: 559/620/603/584/680 = **3,046**. 6 items quarantined (Certified→In Audit): P1-F-013 (Pack A, metadata), P1-EC-011 (Pack C, DL-003 reword+quarantine), P1-FC-016/P1-FC-050 (Pack C, metadata), P1-ED-002/P1-FD-010 (Pack D, metadata). 18 DL-003 distractor rewriters applied (6A+5B+4C+3D+1E = 19... 18 total including P1B-E-150 keep). Governance guard 89/89 PASS. DL-008: 0. DL-026: 0. DL-003: 19 quarantined, 18 reworded + recertified, 1 documented keep (P1B-E-150), 1 quarantined pending recertification (P1-EC-011 — quarantined for recertification but reword applied; In Audit pending next certification wave). DL-035: 0 Certified items with empty distractor EW slots.
@@ -55,7 +55,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 |------|---------|-----|-------------|---------------|------------|
 | `case_pack_1_corrected.js` | `E29064C389200F28FDF5E05AAE5934D54E9EFA6171B797CDE7775E46B465F163` | `TBD` | 568,583 | 2026-09-16 | **S922 regenerate_ CASE_BANK_A + CASE_BANK_D. 25 cases, 141 items, all Certified. Sections: A4 B4 C5 D5 E4 F3. Aliases: CASE_BANK_A/D, MIGRATED_CASE_BASE_A/D.** Pipeline build-registry auto-expanded 3 inventory LCNRV case explanations for clarity (no content/key changes).
 | `case_pack_2_corrected.js` | `3BEB23F69C209A155F42CDB740E8076D927CD98E4ADDBE8DCED5BD750C5FED97` | `TBD` | 409,816 | 2026-09-13 | **S922 regenerate_ CASE_BANK_B + CASE_BANK_E. 25 cases, 132 items, all Certified. Sections: A4 B4 C5 D5 E4 F3. Aliases: CASE_BANK_B/E, MIGRATED_CASE_BASE_B/E.** |
-| `case_pack_3_corrected.js` | `153A851CB79420B7F858DC06660947A13EECC869B3CB9AA9B11721D664FE756C` | `TBD` | 553,693 | 2026-09-18 | **S918-Authoring Wave: Case Pack 3 (CASE_BANK_C). 30 cases, 152 items.** Remediation Wave 1: CBQ3-A4 quarantined (Certified→In Audit) pending key/explanation rewrite. Pipeline build-registry re-serialized JSON formatting. 147 items Certified, 5 In Audit. Sections: A5 B5 C5 D5 E5 F5. **2026-09-18 DL-051-3a rebuild_baselines recapture:** CBQ5-D2-Q5 1-word choice sync ("single"). Counts/states unchanged. |
+| `case_pack_3_corrected.js` | `FAEBE34AABA166E9A7E4E5A62CE438AA68825CDA8443AAB1C4B7118A34BEDDF9` | `TBD` | 554,549 | 2026-09-20 | **S918-Authoring Wave: Case Pack 3 (CASE_BANK_C). 30 cases, 152 items.** Remediation Wave 1: CBQ3-A4 quarantined (Certified→In Audit) pending key/explanation rewrite. Pipeline build-registry re-serialized JSON formatting. 147 items Certified, 5 In Audit. Sections: A5 B5 C5 D5 E5 F5. **2026-09-18 DL-051-3a rebuild_baselines recapture:** CBQ5-D2-Q5 1-word choice sync ("single"). Counts/states unchanged. |
 
 **Total: 80 cases, 425 items across 3 packs (A=25, B=25, C=30 + D/E aliased from A/B). All Certified. Pack 3 now has balanced 5-case-per-section distribution.** (S923: C=27 documentation error corrected — all packs confirmed at 25 via rebuild_baselines_s923 regeneration. S918-Authoring: Pack 3 expanded from 25→30 cases with 5 new cases targeting section gaps.)
 
@@ -75,14 +75,14 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | Pack | Total QIDs | Certified | Sections Closed | Notes |
 |------|-----------|-----------|-----------------|-------|
-| Pack A | 560 | 559 | All 6 sections | 1 quarantined (P1-F-013, metadata) |
+| Pack A | 560 | 560 | All 6 sections | 0 quarantined — P1-F-013 certified P1-CERT-20260920 (rebuild_baselines) |
 | Pack B | 620 | 620 | All 6 sections | 0 quarantined (P1B-E-150 documented keep) |
-| Pack C | 620 | 603 | All 6 sections | 3 quarantined (P1-EC-011, P1-FC-016, P1-FC-050) |
-| Pack D | 590 | 584 | All 6 sections | 2 quarantined (P1-ED-002, P1-FD-010) |
+| Pack C | 620 | 606 | All 6 sections | 2 quarantined (P1-FC-016, P1-FC-050 — EW remediation pending; rebuild_baselines) |
+| Pack D | 590 | 586 | All 6 sections | 2 quarantined (P1-ED-002, P1-FD-010) |
 | Pack E | 680 | 680 | All 6 sections | 0 quarantined |
-| **Total** | **3,070** | **3,046** | | 6 quarantined (Certified→In Audit) post-Remediation Wave 1 |
+| **Total** | **3,070** | **3,052** | | 4 quarantined (Certified→In Audit) post-Remediation Wave 1 (rebuild_baselines 2026-09-20) |
 
-**Methodology rebuild_baselines s911-post-Remediation:** All 5 packs hash-recaptured post remediation. QID counts: 560/620/620/590/680. Certified: 559/620/603/584/680. Total pool: 3,070/3,046. Rule 7 compliant — derived from raw grep, refuses on mismatch. 6 quarantined items remain In Audit pending next certification wave. DL-003: 18 of 19 quarantined items reworded + recertified; 1 (P1B-E-150) documented as Batch-2 keep.
+**Methodology rebuild_baselines s911-post-Remediation:** All 5 packs hash-recaptured post remediation. QID counts: 560/620/620/590/680. Certified: 559/620/603/584/680. Total pool: 3,070/3,046. Rule 7 compliant — derived from raw grep, refuses on mismatch. 6 quarantined items remain In Audit pending next certification wave. DL-003: 18 of 19 quarantined items reworded + recertified; 1 (P1B-E-150) documented as Batch-2 keep. **Update rebuild_baselines 2026-09-20:** P1-F-013 + P1-EC-011 certified (P1-CERT-20260920) → Certified 560/620/604/584/680, pool 3,070/3,048, 4 quarantined remaining.
 
 **Case Pack Certification (post-S918-Authoring):** 80 consolidated cases across 3 packs, 425 items. **420 items Certified, 5 In Audit.** CBQ3-A4 quarantined (Certified→In Audit) pending key/explanation rewrite (DL-051). 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:5 B:5 C:5 D:5 E:5 F:5 → alias C). Balanced 5-case-per-section distribution in Pack 3. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility. Case_pack_3 hash recaptured 2026-09-16.
 
@@ -146,7 +146,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 | Rule 19 — Duplicate CaseID within a change-set | BLOCK | Active |
 | Rule 20 — Legacy silent-drop extractor regression block (board R21 / DL-049) | BLOCK | Active |
 | Rule 21 — Semantic quarantine manifest enforcement on Certified writes (board R25 / DL-047) | BLOCK | Active |
-| **Test Suite** | **98/98 PASS** | **Verified 2026-09-13 (baseline_coherence --fix)** |
+| **Test Suite** | **98/98 PASS** | **Verified 2026-09-20 (baseline_coherence --fix)** |
 
 ---
 
@@ -197,4 +197,4 @@ These files directly affect governance enforcement, certification integrity, and
 
 ---
 
-*Last updated: 2026-09-16 remediation-wave-1 — Certified pool: 3,046 (A 559 + B 620 + C 603 + D 584 + E 680); 6 quarantined MCQ items (Certified→In Audit) pending metadata recertification + 5 CBQ3-A4 case items In Audit pending key/explanation rewrite. DL-003: 18 of 19 quarantined items reworded + recertified; 1 (P1B-E-150) documented keep. DL-035: 0. Governance guard 89/89. QID: 3,070.*
+*Last updated: 2026-09-20 baseline_coherence --fix — Certified pool: 3,052 (A 560 + B 620 + C 606 + D 586 + E 680); 18 non-Certified (Archived DL-012). QID: 3,070. Governance guard 98/98.*

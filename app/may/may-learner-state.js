@@ -2,6 +2,43 @@
 // May Learner State — Cross-session tracking and progress layer
 // For May, the AI reviewer/tutor (alpha)
 // ============================================================
+
+// Promotion Phase 1: shared part-aware section labels — single source for
+// all May label maps (learner-state, may-core, archetype-coach). P1 default
+// preserves existing behavior. getExamPart lives in app.js (typeof-guarded:
+// May also loads in contexts where app.js is absent).
+function mayActivePart() {
+    try { if (typeof getExamPart === 'function') return getExamPart(); } catch (e) { /* ignore */ }
+    return 'P1';
+}
+function maySectionNames(part) {
+    if (part === 2 || part === 'P2' || part === '2') {
+        return {
+            A: 'Financial Statement Analysis',
+            B: 'Corporate Finance',
+            C: 'Decision Analysis',
+            D: 'Risk Management',
+            E: 'Investment Decisions',
+            F: 'Professional Ethics'
+        };
+    }
+    return {
+        A: 'External Financial Reporting',
+        B: 'Planning, Budgeting & Forecasting',
+        C: 'Performance Management',
+        D: 'Cost Management',
+        E: 'Internal Controls',
+        F: 'Technology & Analytics'
+    };
+}
+function maySectionName(sec, part) {
+    var table = maySectionNames(part === undefined ? mayActivePart() : part);
+    return table[sec] || sec;
+}
+function mayPartLabel() {
+    return mayActivePart() === 'P2' ? 'Part 2' : 'Part 1';
+}
+
 const MayLearnerState = {
     STORAGE_KEY: 'cmaMayLearnerState',
 
@@ -61,6 +98,65 @@ const MayLearnerState = {
         return data.examPlan;
     },
 
+    // ── Phase 2: part-aware aggregation ────────────────────
+    // Attempts already carry `part` (1/2, stamped in recordAttempt).
+    // These helpers filter by part; existing cross-part rollups untouched.
+    _allAttempts(data) {
+        let out = [];
+        (data.sessions || []).forEach(s => { (s.attempts || []).forEach(a => out.push(a)); });
+        return out;
+    },
+    partsSeen() {
+        let parts = new Set();
+        this._allAttempts(this.load()).forEach(a => parts.add(a.part === 2 ? 2 : 1));
+        return Array.from(parts).sort();
+    },
+    getPartAwareReadiness(part) {
+        let p = (part === 2 || part === 'P2' || part === '2') ? 2 : 1;
+        let attempts = this._allAttempts(this.load()).filter(a => (a.part === 2 ? 2 : 1) === p);
+        let perSection = {};
+        ['A', 'B', 'C', 'D', 'E', 'F'].forEach(s => { perSection[s] = { attempts: 0, correct: 0, accuracy: null }; });
+        let correct = 0;
+        attempts.forEach(a => {
+            if (a.correct) correct++;
+            let cell = perSection[a.section] || (perSection[a.section] = { attempts: 0, correct: 0, accuracy: null });
+            cell.attempts++;
+            if (a.correct) cell.correct++;
+        });
+        Object.values(perSection).forEach(c => { c.accuracy = c.attempts > 0 ? Math.round(100 * c.correct / c.attempts) : null; });
+        return {
+            part: p,
+            attempts: attempts.length,
+            accuracy: attempts.length > 0 ? Math.round(100 * correct / attempts.length) : null,
+            perSection: perSection
+        };
+    },
+    getCrossPartReadiness() {
+        let p1 = this.getPartAwareReadiness(1);
+        let p2 = this.getPartAwareReadiness(2);
+        let weakerPart = null;
+        if (p1.accuracy !== null && p2.accuracy !== null) weakerPart = p1.accuracy <= p2.accuracy ? 1 : 2;
+        else if (p1.accuracy !== null) weakerPart = 1;
+        else if (p2.accuracy !== null) weakerPart = 2;
+        return { P1: p1, P2: p2, weakerPart: weakerPart };
+    },
+    // Cross-part study-plan bridge: weakest part first, weakest sections
+    // within each part next. Pure recommendation strings — no state change.
+    getCrossPartStudyPlan() {
+        let cross = this.getCrossPartReadiness();
+        let plan = [];
+        [cross.P1, cross.P2].forEach(r => {
+            let secs = Object.entries(r.perSection)
+                .filter(([, c]) => c.attempts > 0)
+                .sort((a, b) => (a[1].accuracy || 0) - (b[1].accuracy || 0));
+            secs.forEach(([s, c]) => {
+                plan.push('Part ' + r.part + ' Section ' + s + ': ' + c.accuracy + '% over ' + c.attempts + ' attempts — prioritize in the next session.');
+            });
+            if (r.attempts === 0) plan.push('Part ' + r.part + ': no attempts yet — start with a short mixed MCQ set to establish a baseline.');
+        });
+        return { weakerPart: cross.weakerPart, actions: plan };
+    },
+
     // ── Load / Save ─────────────────────────────────────
     load() {
         try {
@@ -109,10 +205,14 @@ const MayLearnerState = {
         let itemType = question.ItemType || question.Type || 'MCQ';
         let cognitiveLevel = question.CognitiveLevel || 'Unknown';
         let questionState = question.question_state || 'Unknown';
+        // Promotion Phase 1: stamp part from the item (QID prefix is authoritative;
+        // falls back to the Part field). Enables per-part filtering in Phase 2;
+        // aggregation stays cross-part until then (documented residual).
+        let part = (qid.indexOf('P2-') === 0 || question.Part === 2 || question.Part2OnlyFlag === true) ? 2 : 1;
 
         let attempt = {
             questionId: qid, section, topic, subtopic, difficulty, difficultyScore,
-            itemType, cognitiveLevel, questionState,
+            itemType, cognitiveLevel, questionState, part,
             correct: isCorrect, hintsUsed: hintsUsed || 0,
             explanationRequested: !!explanationRequested,
             elapsedMs: elapsedMs || 0, selectedChoice: answer || null,
@@ -878,21 +978,15 @@ const MayLearnerState = {
 
     // Session 103 — Section-level readiness aggregation
     // Rolls topic-level readiness into cautious section summaries.
-    // Sections are A–F per CMA Part 1 blueprint; topic→section mapping
-    // is inferred from the sectionsSeen field on each topic aggregate.
+    // Sections are A–F per CMA blueprint (part-aware labels via maySectionNames);
+    // topic→section mapping is inferred from the sectionsSeen field on each topic aggregate.
     getSectionReadinessSummary() {
         let readiness = this.getReadinessSummary();
         if (!readiness || !readiness.hasEnoughData) return null;
 
         let topicProgress = this.getTopicProgress();
-        let sectionNames = {
-            A: 'External Financial Reporting',
-            B: 'Planning, Budgeting & Forecasting',
-            C: 'Performance Management',
-            D: 'Cost Management',
-            E: 'Internal Controls',
-            F: 'Technology & Analytics'
-        };
+        // Promotion Phase 1: part-aware labels (P1 default unchanged).
+        let sectionNames = maySectionNames(mayActivePart());
 
         // Build a map of section → [{topic, ...readiness}]
         let sectionTopics = { A: [], B: [], C: [], D: [], E: [], F: [] };
@@ -1030,14 +1124,7 @@ const MayLearnerState = {
         let trendMap = {};
         trends.forEach(t => { trendMap[t.topic] = t; });
 
-        let domainNames = {
-            A: 'External Financial Reporting',
-            B: 'Planning, Budgeting & Forecasting',
-            C: 'Performance Management',
-            D: 'Cost Management',
-            E: 'Internal Controls',
-            F: 'Technology & Analytics'
-        };
+        let domainNames = maySectionNames(mayActivePart());
 
         // Aggregate topics into domains
         let domains = { A: [], B: [], C: [], D: [], E: [], F: [] };
@@ -1148,14 +1235,7 @@ const MayLearnerState = {
             'Not enough data': '#9ca3af'
         };
 
-        let sectionNames = {
-            A: 'External Financial Reporting',
-            B: 'Planning, Budgeting & Forecasting',
-            C: 'Performance Management',
-            D: 'Cost Management',
-            E: 'Internal Controls',
-            F: 'Technology & Analytics'
-        };
+        let sectionNames = maySectionNames(mayActivePart());
 
         // Map scores to readiness bands
         function scoreBand(score) {
@@ -1196,7 +1276,7 @@ const MayLearnerState = {
 
         return `<div class="dashboard-card" style="grid-column:1/-1;">
           <h3>Domain Readiness</h3>
-          <p class="small" style="margin-bottom:12px;">Readiness scores by CMA Part 1 blueprint domain — based on your practice attempts. Domains are ordered weakest first (recovery priority).</p>
+          <p class="small" style="margin-bottom:12px;">Readiness scores by CMA blueprint domain — based on your practice attempts. Domains are ordered weakest first (recovery priority).</p>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;">
             ${domainCards}
           </div>

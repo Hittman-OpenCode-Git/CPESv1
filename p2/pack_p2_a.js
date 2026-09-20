@@ -3578,6 +3578,8 @@ const pack_p2_a_questions = [
     "Part": 2,
     "Part2OnlyFlag": true,
     "QuestionID": "P2-A-084",
+    "certification_date": "2026-09-19",
+    "certification_session": "P2A-CERT-20260919",
     "Section": "A",
     "Stem": "Brentwood Corporation has net income of $800,000, interest expense of $200,000, average total assets of $10,000,000, an average tax rate of 25%, and average total equity of $4,000,000. What is Brentwood's return on assets (ROA)?",
     "Topic": "A.084 ROA — computation and comparison to ROE",
@@ -3589,7 +3591,7 @@ const pack_p2_a_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Independent calculation: ($800K + $200K × 0.75) / $10M = 9.5% — B is correct"
     ],
-    "question_state": "In Audit"
+    "question_state": "Certified"
   },
   {
     "Authorities": [
@@ -12276,8 +12278,8 @@ const pack_p2_a_questions = [
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Authorities": [
@@ -12467,7 +12469,7 @@ const pack_p2_a_questions = [
       "A": "Endorse the reported 15% sales growth and 22% gross margin as operating improvement, citing the receivables build as evidence of successful extended-terms selling",
       "B": "Capitalize the $800,000 of extended-terms sales as a receivable-financing asset, add it to equity, and recast ROE upward on the enlarged denominator",
       "C": "Treat the entire $2,000,000 receivables increase as permanent working-capital investment financed by the new term loan, and recommend raising the dividend to absorb the cash build",
-      "D": "Strip the $800,000 of channel-stuffed sales and the related $560,000 cost of sales from the period, normalize revenue to $9,200,000 and gross profit to $1,840,000 for a 20% margin, and flag the receivables spike as a collection-risk driver before endorsing any distribution"
+      "D": "Strip the $800,000 of channel-stuffed sales and the related $560,000 cost of sales from the period, normalize revenue to $9,200,000 and gross profit to $1,960,000 for a 21.3% margin, and flag the receivables spike as a collection-risk driver before endorsing any distribution"
     },
     "CognitiveLevel": "Evaluate",
     "CommonTrapReference": "Endorsing headline growth without adjusting for channel stuffing",
@@ -12486,20 +12488,20 @@ const pack_p2_a_questions = [
     "Part2OnlyFlag": true,
     "QuestionID": "P2-A-285",
     "Section": "A",
-    "Stem": "Treasurer Elise Fontaine reviews Flash's fourth quarter ahead of a board distribution vote. Reported sales are $10,000,000 with gross profit of $2,200,000 (22.0%). The packet notes $800,000 of shipments were pulled into the last week on 120-day terms to two distributors with no prior volume and recent payment delinquencies, at a 30% product margin. Receivables rose $2,000,000 in the quarter, far outpacing sales, and the normalized finance schedule restates revenue at $9,200,000 with gross profit at $1,840,000 (20.0%) after removing the channel-loaded tail. Which recommendation should Elise make to the board?",
+    "Stem": "Treasurer Elise Fontaine reviews Flash's fourth quarter ahead of a board distribution vote. Reported sales are $10,000,000 with gross profit of $2,200,000 (22.0%). The packet notes $800,000 of shipments were pulled into the last week on 120-day terms to two distributors with no prior volume and recent payment delinquencies, at a 30% product margin. Receivables rose $2,000,000 in the quarter, far outpacing sales, and the normalized finance schedule restates revenue at $9,200,000 with gross profit at $1,960,000 (21.3%) after removing the channel-loaded tail. Which recommendation should Elise make to the board?",
     "Topic": "A.285 channel-stuffing-earnings-quality",
     "UniqueConceptKey": "A-285-revenue-normalization-judgment",
     "VerifiedChecks": [
-      "Recomputed: headline 2200000/10000000=22.0%; normalized 1840000/9200000=20.0%; adjustment strips 800k revenue tail",
+      "Recomputed: headline 2200000/10000000=22.0%; normalized 1960000/9200000=21.3%; adjustment strips 800k revenue tail",
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Authorities": [
@@ -12642,21 +12644,21 @@ const pack_p2_a_questions = [
     "BlueprintDomain": "Financial Statement Analysis",
     "CalculationItem": true,
     "Choices": {
-      "A": "Retaining the 1.80 equity multiplier, the 12% ROE implies the 7.20% SGR is the leverage-constant self-funded ceiling after the payout cut (retention 0.60 × ROE 0.12 = 7.20%), and the debt raise lifts the achievable pace further toward 10.50%–10.80% because the added leverage supplements internally generated equity.",
+      "A": "Retaining the 1.80 equity multiplier, the 12% ROE implies the 7.20% SGR is the leverage-constant self-funded ceiling after the payout cut (retention 0.60 × ROE 0.12 = 7.20%), and the debt raise lifts the achievable pace further toward 8.80% because the added leverage supplements internally generated equity at constant operating margin.",
       "B": "The 20% dividend cut alone drives the growth gain, adding roughly 1.2 points, while the multiplier shift contributes less than 0.3 points because equity base effects dominate",
       "C": "Moving the payout from 50% to 40% lifts retention from 0.50 to 0.60, so the self-funded rate moves from 6.00% toward 7.20%, but leverage adds no incremental capacity",
-      "D": "Adjusting for the planned capital structure, the pro-forma sustainable pace rises to about 10.50%–10.80% on the expanded retention and higher leverage, while operating margin itself has not changed"
+      "D": "Adjusting for the planned capital structure, the pro-forma sustainable pace rises to about 8.80%, all of it internally generated with no added financial risk from the higher leverage, while operating margin itself has not changed"
     },
     "CognitiveLevel": "Analyze",
     "CommonTrapReference": "Ignoring leverage shift when projecting sustainable growth",
     "CorrectChoice": "A",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
-    "ExplanationCorrect": "Sustainable growth analysis separates what internally generated equity can fund when policy levers move. Flash reports ROE 12% with a 50% payout, so retention 0.50 and SGR 0.12 x 0.50 = 6.00%. The plan cuts payout to 40% (retention 0.60) and lifts debt financing; the classic textbook SGR = ROE x retention assumes constant leverage, so at constant structure the ceiling moves only to 0.12 x 0.60 = 7.20%. Incorporating the disclosed capital-structure shift under the extended formulation lifts the pro-forma pace further toward 10.50%–10.80% on the higher equity multiplier, but no operating margin improvement has been evidenced. Business interpretation: treasurer Hana Suzuki should present 7.20% as the leverage-constant self-funded pace and flag the extra leverage-driven increment as financing-enabled growth that raises coverage risk. The common trap is quoting the financing-enabled 10.80% as though it were internally generated without borrowing.",
+    "ExplanationCorrect": "Sustainable growth analysis separates what internally generated equity can fund when policy levers move. Flash reports ROE 12% with a 50% payout, so retention 0.50 and SGR 0.12 x 0.50 = 6.00%. The plan cuts payout to 40% (retention 0.60) and lifts debt financing; the classic textbook SGR = ROE x retention assumes constant leverage, so at constant structure the ceiling moves only to 0.12 x 0.60 = 7.20%. Incorporating the disclosed capital-structure shift under the extended formulation lifts the pro-forma pace further toward 8.80% on the higher equity multiplier (0.12 x 0.60 x 2.20/1.80), with no operating margin improvement evidenced. Business interpretation: treasurer Hana Suzuki should present 7.20% as the leverage-constant self-funded pace and flag the extra leverage-driven increment as financing-enabled growth that raises coverage risk. The common trap is quoting the financing-enabled 8.80% as though it were internally generated without borrowing.",
     "ExplanationWrongA": "",
-    "ExplanationWrongB": "Choice B reverses the driver weights; moving retention 0.50 to 0.60 adds 1.20 points (12% x 0.10), while under the extended SGR the multiplier expansion supplies roughly 3.30 points of the move toward 10.50%, far larger than the 0.3 points claimed.",
+    "ExplanationWrongB": "Choice B reverses the driver weights; moving retention 0.50 to 0.60 adds 1.20 points (12% x 0.10), while under the extended SGR the multiplier expansion supplies roughly 1.60 points of the move toward 8.80% (8.80-7.20), larger than the 0.3 points claimed.",
     "ExplanationWrongC": "Choice C acknowledges the retention lift correctly but denies any leverage effect; the extended Higgins formulation explicitly allows a target leverage change to augment the self-funded pace, which the disclosed shift toward debt supplies and should be disclosed separately.",
-    "ExplanationWrongD": "Choice D reports the correct financing-enabled outcome but leaves operating margin unchanged by assertion; in fact margin is flat at 12% ROE on the larger equity base, so compliance requires noting that growth beyond 7.20% is leverage-dependent rather than operating-driven.",
+    "ExplanationWrongD": "Choice D claims the entire 8.80% pace is internally generated with no added risk; in fact growth beyond 7.20% is leverage-dependent (the multiplier supplies ~1.60 points), so the financing-enabled increment must be disclosed as borrowing-driven, not operating-driven.",
     "FormulaReference": "FA-21",
     "ItemStyle": "single-select",
     "LOSTag": "A.9",
@@ -12668,16 +12670,16 @@ const pack_p2_a_questions = [
     "Topic": "A.289 sgr-leverage-adjusted",
     "UniqueConceptKey": "A-289-retention-and-leverage-split",
     "VerifiedChecks": [
-      "Recomputed: 0.12 x 0.50=6.00%; 0.12 x 0.60=7.20%; pro-forma financing-enabled range 10.50%-10.80% per extended formulation",
+      "Recomputed: 0.12 x 0.50=6.00%; 0.12 x 0.60=7.20%; pro-forma financing-enabled 8.80% per extended formulation (0.12x0.60x2.20/1.80)",
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match"
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Authorities": [
@@ -15357,6 +15359,8 @@ const pack_p2_a_questions = [
     "question_state": "Certified",
     "certification_session": "P2-067",
     "certification_date": "2026-08-28",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A-349-gross-margin-net-sales-minus-cogs-decomposition",
     "Topic": "A.349 gross-margin-percentage-net-sales-analysis",
@@ -15381,9 +15385,10 @@ const pack_p2_a_questions = [
       "D": "Markup 66.7% computed as $2,080,000 / $3,120,000, which is gross profit over cost not margin over sales, confusing two profitability lenses"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Operating margin = Operating Income / Net Sales x 100. Operating income excludes interest, gains, and taxes under ASC 225. Gross ,720,000 = ,800,000 - ,080,000. SG&A for operations = ,360,000 - ,000 nonrecurring = ,240,000. Operating = ,720,000 - ,240,000 - ,000 = ,140,000. Margin = ,140,000 / ,800,000 = 16.76%. Choice D correctly removes the ,000 restructuring charge to show core recurring margin of 16.8%. Business interpretation: Project manager Laura Kim should report core margin near 16.8% versus reported lower, noting ,000 restructuring masks trend. A common trap is subtracting interest or adding gain, both misplace nonoperating items.",
+    "ExplanationCorrect": "Gross margin percentage = (Net Sales − Cost of Goods Sold) ÷ Net Sales × 100. Under ASC 606, net sales = gross sales $5,380,000 less sales returns $180,000 = $5,200,000. Under ASC 330, COGS = $3,120,000 (includes $140,000 fixed manufacturing overhead as a product cost; excludes $210,000 sales commissions, which are period costs under SG&A). Gross profit = $5,200,000 − $3,120,000 = $2,080,000. Gross margin = $2,080,000 ÷ $5,200,000 = 40.0%, which exceeds the 38.2% industry median by 1.8 percentage points, indicating pricing discipline is maintained after returns adjustment. Common traps: Choice A uses gross sales ($5,380,000) as the denominator, violating ASC 606; Choice C misclassifies sales commissions as COGS, violating ASC 330; Choice D confuses markup (gross profit ÷ COGS = 66.7%) with margin (gross profit ÷ Net Sales = 40.0%). Business interpretation: Analyst Raj Patel should report 40.0% gross margin and note that the 1.8-point premium over the industry median reflects effective returns management and proper product-cost classification.",
     "VerifiedChecks": [
       "Recomputed: Gross profit $5,200,000-3,120,000=2,080,000; margin 2,080,000/5,200,000=40.0% -> Choice B",
+      "Rule 4: EC independently verified against gross-margin derivation; prior EC (operating-margin/restructuring/Laura Kim) was misfiled content from P2-A-350 family and replaced. CC=B retained (key unchanged).",
       "Part2OnlyFlag verified true",
       "EW[B] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
@@ -16869,6 +16874,8 @@ const pack_p2_a_questions = [
   },
   {
     "QuestionID": "P2-A-371",
+    "certification_date": "2026-09-19",
+    "certification_session": "P2A-CERT-20260919",
     "Section": "A",
     "BlueprintDomain": "Financial Statement Analysis",
     "Part": 2,
@@ -16946,7 +16953,7 @@ const pack_p2_a_questions = [
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30"
   },
@@ -17363,6 +17370,8 @@ const pack_p2_a_questions = [
   },
   {
     "QuestionID": "P2-A-377",
+    "certification_date": "2026-09-19",
+    "certification_session": "P2A-CERT-20260919",
     "Section": "A",
     "BlueprintDomain": "Financial Statement Analysis",
     "Part": 2,
@@ -17390,10 +17399,10 @@ const pack_p2_a_questions = [
     "FormulaReference": "Under current-rate method: assets and liabilities at period-end spot rate; revenues and expenses at exchange rates in effect when the transactions occurred (often approximated by a weighted average); the period-end spot rate is the unifying balance sheet rate",
     "CommonTrapReference": "Confusing the period-end rate (balance sheet) with the weighted-average rate (income statement) when the local currency is the functional currency.",
     "DecisionTreeReference": "LOS A.9 > Foreign operations > Translation method > Income statement rate selection",
-    "ExplanationCorrect": "Under ASC 830-10-45 and ASC 830-20-35 (CMA LOS A.9), when a foreign subsidiary's local currency is its functional currency, the current-rate method is used for translation: assets and liabilities are translated at the period-end spot rate, and stockholders' equity is translated at historical rates. Revenues and expenses are translated at the exchange rates in effect when the transactions occurred, which in practice is approximated by a weighted-average rate for the period. The period-end spot rate is the unifying rate that anchors the consolidated balance sheet; the income-statement rate can be the period-end spot rate or a weighted-average approximation, both of which tie to the period-end framework. Maya Caldwell should therefore translate Flash Tech GmbH's revenue and expense accounts using a rate consistent with the period-end spot rate (or its weighted-average approximation), and apply the period-end spot rate to balance-sheet items. The correct answer is therefore the period-end rate framework, with weighted-average treatment as an acceptable practical approximation when exchange rates fluctuate materially during the period.",
+    "ExplanationCorrect": "Under ASC 830-10-45 and ASC 830-20-35 (CMA LOS A.9), when a foreign subsidiary's local currency is its functional currency, the current-rate method is used for translation: assets and liabilities are translated at the period-end spot rate, and stockholders' equity is translated at historical rates. Revenues and expenses are translated at the exchange rates in effect when the transactions occurred, which in practice is approximated by a weighted-average rate for the period. Revenues and expenses are translated at the exchange rates in effect when the transactions occurred — in practice, a weighted-average rate for the period. The period-end spot rate applies to balance-sheet assets and liabilities, not to the income statement. Maya Caldwell should therefore translate revenue and expense accounts at the average rate (choice D); choice C's period-end spot rate belongs on the balance sheet. The correct answer is the average-rate treatment.",
     "ExplanationWrongA": "Choice A prescribes historical rates for revenue and expenses, which is incorrect under the current-rate method. Historical rates apply to specific equity transactions such as contributed capital and dividends, not to the operating revenues and expenses of a foreign subsidiary whose functional currency is the local currency.",
     "ExplanationWrongB": "Choice B applies a forward rate, which is not part of ASC 830's translation framework. ASC 830 relies on spot and historical/weighted-average rates, not on forward curves implied by basis swaps. Applying a forward rate would introduce a speculative adjustment not supported by GAAP.",
-    "ExplanationWrongC": "Choice D applies a weighted-average rate exclusively, which is one acceptable approximation of transaction-date rates under ASC 830 but is not the only acceptable treatment. The period-end spot rate (or a weighted average approximating it) is the underlying framework, so an income-statement rate that ignores the period-end anchor is incomplete.",
+    "ExplanationWrongC": "Choice C applies the period-end spot rate to revenue and expenses, but under ASC 830 the period-end rate translates balance-sheet items only; income-statement items use transaction-date (average) rates. C confuses the balance-sheet anchor with the income-statement rule.",
     "ExplanationWrongD": "",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -17439,7 +17448,7 @@ const pack_p2_a_questions = [
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30"
   },
@@ -21853,7 +21862,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.452 revenue-recognition-obs",
     "QuestionID": "P2-A-452",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A-452-revenue-recognition-obs",
     "Stem": "Adaeze Onuorah is evaluating the earnings quality implications of Flash Manufacturing's revenue recognition policy. Flash changed from recognizing revenue when goods are delivered to recognizing revenue when goods ship, and the change materially accelerated revenue into earlier periods. Which concern is most directly raised by this policy?",
@@ -21865,7 +21874,7 @@ const pack_p2_a_questions = [
     },
     "CorrectChoice": "D",
     "ExplanationCorrect": "Under ASC 606, revenue is recognized when (or as) a performance obligation is satisfied by transferring a promised good or service to the customer. Recognizing revenue at shipment rather than delivery — when title and control have not yet transferred and the customer has not received the goods — accelerates revenue into periods before the performance obligation is fully satisfied. This is a channel-stuffing and premature-recognition concern: it inflates current-period revenue at the expense of future periods, which is a classic earnings-quality red flag. Adaeze should examine whether the policy change reflects a genuine business change or an attempt to manage reported revenue, and verify that control transfers to the customer at shipment under the contract terms.",
-    "ExplanationWrongA": "Choice D (improves quality by recognizing faster) conflates speed with quality. Faster recognition is not better recognition; quality depends on whether revenue is recognized when the performance obligation is genuinely satisfied. Premature recognition inflates current earnings and can create a future revenue shortfall, degrading rather than improving quality.",
+    "ExplanationWrongA": "Choice A (improves quality by recognizing faster) conflates speed with quality. Faster recognition is not better recognition; quality depends on whether revenue is recognized when the performance obligation is genuinely satisfied. Premature recognition inflates current earnings and can create a future revenue shortfall, degrading rather than improving quality.",
     "ExplanationWrongB": "Choice B (too conservative) misreads the direction. Recognizing revenue at shipment rather than delivery ACCELERATES recognition into earlier periods, which is aggressive, not conservative. Conservative recognition would delay revenue until delivery and customer acceptance, deferring rather than accelerating income.",
     "ExplanationWrongC": "Choice C (no implication) is untenable. The timing of revenue recognition directly affects when and how much revenue is reported; a material change in recognition timing has significant earnings-quality implications. The magnitude of the acceleration makes the policy change a first-order analytical concern.",
     "ExplanationWrongD": "",
@@ -21893,9 +21902,9 @@ const pack_p2_a_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
-    "certification_date": "2026-09-01",
+    "certification_date": "2026-09-19",
     "certification_batch": "",
-    "certification_session": "P2-080"
+    "certification_session": "P2A-CERT-20260919"
   },
   {
     "Part": 2,
@@ -24502,7 +24511,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Dividend irrelevance theory Modigliani-Miller",
     "QuestionID": "P2-A-505",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-505-dividend-irrelevance-theory-modigliani-miller",
     "Stem": "Meridian Health Systems announces an $8.00 per share annual dividend. The stock drops from $160 to $152, an $8 decline. A junior analyst says the increase destroyed value. The CFO asks why the decline does not necessarily indicate value destruction.",
@@ -24561,10 +24570,10 @@ const pack_p2_a_questions = [
     "hold_reason": "",
     "ExplanationWrongA": "This invokes signaling theory, which predicts dividend changes convey information about future earnings. If the market interpreted the increase as negative, the price would drop by MORE than $8. If positive, by LESS. The observed $8 drop matches the MM mechanical transfer, suggesting the market priced the dividend at face value.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "This correctly states the MM theory prediction that wealth is conserved at $160. However, the question asks why the decline does not NECESSARILY indicate destruction — the MM theory is the theoretical explanation, but real-world factors could cause deviations. The MM explanation is valid but the question seeks the practical interpretation.",
+    "ExplanationWrongC": "This correctly states the MM theory prediction that wealth is conserved at $160. Choice C claims the ex-dividend date was misidentified and the $8 decline reflects unrelated price movements — but the stem places the $8 decline exactly at the dividend event, and MM predicts exactly an $8 mechanical transfer. C invents misidentification to avoid the theory; the decline is explained, not anomalous.",
     "ExplanationWrongD": "This relies on the empirical dividend premium, which is a long-run pattern. While dividend increases are associated with positive long-term returns, this does not explain the immediate $8 decline. The MM theory addresses the immediate mechanical relationship.",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -24782,7 +24791,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Ex-dividend date price adjustment",
     "QuestionID": "P2-A-509",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-509-ex-dividend-date-price-adjustment",
     "Stem": "Pinnacle Logistics stock closes at $45.00 on Tuesday, the last day before the ex-dividend date. On Wednesday (ex-dividend date), the stock opens at $43.80 after a $1.50 quarterly dividend was declared. An analyst asks why the stock did not drop by exactly $1.50.",
@@ -24818,7 +24827,7 @@ const pack_p2_a_questions = [
       "application_to_facts": "Stock drops exactly $1.50 on $1.50 dividend — matches perfectly in this case",
       "key_conclusion": "The question asks why it might not always be exact, but this case shows it was"
     },
-    "ExplanationCorrect": "The ex-dividend date is when the stock begins trading without the right to receive the declared dividend. The stock should theoretically drop by the dividend amount. Here, $45.00 - $1.50 = $43.50, which matches exactly. In taxable markets, the typical drop is LESS than the full dividend because buyers must be compensated for the tax liability on the dividend they will not receive. The fact that Pinnacle's stock dropped by exactly $1.50 suggests tax-exempt investors (pension funds, IRAs) are marginal buyers, or the market is efficiently pricing the dividend at face value.",
+    "ExplanationCorrect": "The ex-dividend date is when the stock begins trading without the right to receive the declared dividend. The stock should theoretically drop by the dividend amount. Here, the stock opened at $43.80 — a $1.20 decline on the $1.50 dividend, consistent with after-tax valuation by taxable marginal investors (had tax-exempts dominated, the drop would approach the full $1.50). In taxable markets, the typical drop is LESS than the full dividend because buyers must be compensated for the tax liability on the dividend they will not receive. The fact that Pinnacle's stock dropped by exactly $1.50 suggests tax-exempt investors (pension funds, IRAs) are marginal buyers, or the market is efficiently pricing the dividend at face value.",
     "distractor_intent": {
       "B": {
         "misconception": "Stating the adjustment was correct without addressing theory",
@@ -24840,11 +24849,11 @@ const pack_p2_a_questions = [
     "source_status": "RESOLVED",
     "hold_reason": "",
     "ExplanationWrongA": "",
-    "ExplanationWrongB": "This states the stock dropped by $1.50 as expected, confirming correct adjustment. While this is factually correct for this case, it does not address why the drop is typically LESS than the full dividend in taxable markets. The question seeks the theoretical explanation for the typical deviation.",
+    "ExplanationWrongB": "This states the stock dropped by $1.50 as expected — but the stem states it opened at $43.80, a $1.20 decline. B contradicts the given facts; the $0.30 shortfall is the very tax effect the question tests.",
     "ExplanationWrongC": "This correctly explains the tax differential theory for why ex-dividend drops are typically less than the full dividend. However, the question describes a case where the drop WAS exactly $1.50, making this explanation less relevant to the specific observation. The theory is correct but applies to the general case, not this specific instance.",
     "ExplanationWrongD": "This denies the ex-dividend price adjustment. The adjustment is real and observable — it reflects that new buyers will not receive the dividend. The ex-dividend date mechanically strips the dividend right from the stock.",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -24852,7 +24861,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Stock repurchase effects on EPS and book value",
     "QuestionID": "P2-A-510",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-510-stock-repurchase-effects-on-eps-and-book-value",
     "Stem": "Northstar Logistics has net income of $50 million, 20 million shares outstanding, and shareholders' equity of $400 million. The board approves a $40 million share repurchase at $40 per share. After the repurchase, what happens to EPS and book value per share?",
@@ -24909,12 +24918,12 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Options A and B use wrong share count. Option C denies per-share effects. Only D correctly identifies the direction of both EPS and BVPS changes.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "ExplanationWrongA": "This incorrectly states dividends receive preferential treatment. The question specifies dividends at 20% vs capital gains at 15%. Capital gains receive the preferential treatment.",
-    "ExplanationWrongB": "This claims equivalence invoking MM. While MM holds in frictionless markets, the tax differential theory addresses how taxes create real deviations. The 50M dividend creates immediate taxable income at 20%, while the repurchase creates capital gains at 15% with deferral.",
-    "ExplanationWrongC": "This invokes tax-loss harvesting as eliminating the differential. Tax-loss harvesting does not change statutory rates. A shareholder still pays 20% on dividends and 15% on capital gains regardless.",
+    "ExplanationWrongA": "Choice A asserts EPS of $2.78 with BVPS of $20.83 — but $2.78 implies 50/18, i.e., 2M shares repurchased for $40M at $20/share, contradicting the $40/share price (1M shares). The repurchase leaves 19M shares and $360M equity.",
+    "ExplanationWrongB": "Choice B asserts EPS of $2.78 with BVPS of $19.29 — same share-count error as A ($20/share implied vs $40 paid); $19.29 matches neither the $20.00 pre-deal nor the true $18.95 post-deal book value.",
+    "ExplanationWrongC": "Choice C claims per-share metrics do not change — but 1M fewer shares over $40M less equity moves EPS to $2.63 and BVPS to $18.95. A repurchase mechanically alters both denominators and numerators.",
     "ExplanationWrongD": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -25343,7 +25352,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Lintner's dividend smoothing model",
     "QuestionID": "P2-A-517",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-517-lintner-dividend-smoothing-model-speed-adjustment",
     "Stem": "Crestview Technologies has maintained dividends at $1.60 per share for three years despite EPS fluctuations between $2.10 and $3.80. Management uses Lintner's model with a target payout ratio of 40% and an adjustment speed of 0.25. EPS this year is $3.20. What dividend should Crestview declare?",
@@ -25356,7 +25365,7 @@ const pack_p2_a_questions = [
     "CorrectChoice": "B",
     "ExplanationWrongA": "Option A selects $1.28, which is simply 40% of the current EPS. This ignores Lintner's adjustment speed entirely. The model does not jump immediately to the target; it adjusts gradually by applying the speed coefficient to the gap between target and current dividends.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "This applies the adjustment speed to the EPS ($3.20 x 0.25 = $0.80, added to $1.60 = $2.40), which is incorrect. The speed coefficient applies to the gap between current and target dividends, not to earnings. The correct computation uses the $0.32 gap.",
+    "ExplanationWrongC": "Choice C's $1.44 misapplies the speed coefficient — to the earnings level or an inverted gap — instead of the dividend gap ($1.28 target minus $1.60 current = -$0.32; 0.25 x -$0.32 = -$0.08; $1.60 - $0.08 = $1.52). Lintner speeds operate on dividends, never on earnings.",
     "ExplanationWrongD": "While Lintner found companies resist dividend changes, he did not predict zero adjustment. The model explicitly includes an adjustment speed (0.25 in this case) that produces gradual movement toward the target. Complete resistance contradicts the model's structure.",
     "ExplanationCorrect": "Lintner's model predicts dividends adjust gradually toward the target. Target dividend = 40% × $3.20 = $1.28. The gap = $1.28 − $1.60 = −$0.32 (target is below current). The adjustment = 0.25 × (−$0.32) = −$0.08. New dividend = $1.60 + (−$0.08) = $1.52. Lintner's key insight is that managers resist cutting dividends, so the adjustment is only partial — the $1.52 result reflects moving one-quarter of the way from the current $1.60 toward the $1.28 target, not a full immediate alignment.",
     "Difficulty": "Moderate",
@@ -25405,8 +25414,8 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Option A ignores smoothing. Option C misapplies speed. Option D overstates resistance.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -25911,7 +25920,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.9 Growth opportunity present value GOVP",
     "QuestionID": "P2-A-525",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-525-growth-opportunity-present-value-govp-valuation",
     "Stem": "Keystone Precision trades at $60 per share with EPS of $4.00, a P/E of 15x. The company has ROE of 20% on new investments and a required return of 12%. An analyst calculates the present value of growth opportunities (PVGO). What is the PVGO per share, and what does it imply?",
@@ -25925,7 +25934,7 @@ const pack_p2_a_questions = [
     "ExplanationWrongA": "Option A states the PVGO is $12 per share, but this figure does not correspond to the standard PVGO formula. The correct calculation is PVGO = Price - (EPS / r) = $60 - ($4.00 / 0.12) = $60 - $33.33 = $26.67. The $12 figure appears to be an arithmetic error or a misapplication of a different valuation approach.",
     "ExplanationWrongB": "While the $33.33 no-growth value is correctly computed, concluding the stock is 'overvalued' is incorrect. When ROE (20%) exceeds the required return (12%), positive PVGO is a sign of value creation, not overvaluation.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "This uses the formula ROE x EPS (.00 x 0.20 = .80) which is not PVGO. The correct formula is PVGO = Market Price - (EPS / Required Return) = - .33 = .67. PVGO measures the portion of stock price attributable to future growth opportunities.",
+    "ExplanationWrongD": "Choice D computes ROE x EPS ($4.00 x 20% = $0.80) and calls it PVGO. PVGO = Price - EPS/r = $60 - $33.33 = $26.67 — the portion of price attributable to growth. ROE x EPS measures earnings generation, not growth value.",
     "ExplanationCorrect": "PVGO separates stock price into no-growth value and growth value. No-growth value = EPS / r = $4.00 / 0.12 = $33.33. PVGO = Price − No-Growth Value = $60 − $33.33 = $26.67. The positive PVGO exists because Keystone's ROE (20%) exceeds the required return (12%), meaning reinvested earnings create value. The PVGO of $26.67 per share represents 44% of the stock price — the market expects significant future growth from reinvesting earnings at above-required returns.",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -25973,8 +25982,8 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Option A uses wrong PVGO figure. Option B misinterprets valuation. Option D uses wrong formula.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -27119,7 +27128,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.8 Financial leverage and capital structure decisions",
     "QuestionID": "P2-A-542",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-542-cascade-resources-financial-leverage-capital-structure-eps-sensitivity",
     "Stem": "Cascade Resources has operating income (EBIT) of $600,000, interest expense of $100,000, no preferred stock, and 200,000 shares outstanding. The board is considering two financing alternatives for a $5 million expansion: Issue 200,000 new shares at $25 each (all equity), or issue $5 million in bonds at 8% interest. The company's tax rate is 25%. Current EPS is $2.00. If EBIT increases to $900,000 after the expansion, which financing alternative produces higher EPS, and what is the degree of financial leverage under each alternative?",
@@ -27130,7 +27139,7 @@ const pack_p2_a_questions = [
       "D": "The debt alternative produces higher EPS of $2.33 because the fixed interest expense magnifies the EPS increase, and the DFL under debt financing is 1.50, while the equity alternative produces EPS of $2.25 with DFL of 1.0."
     },
     "CorrectChoice": "C",
-    "ExplanationWrongA": "While the equity alternative does produce EPS of $2.25, the claim that it produces HIGHER EPS than the debt alternative is incorrect. The debt alternative produces EPS of $2.33, which is higher. Additionally, DFL under equity financing is 1.0 (no debt), not 1.20.",
+    "ExplanationWrongA": "Choice A asserts equity EPS of $2.25 beats debt's $2.33 — both figures are wrong: at EBIT $900,000 both alternatives yield $1.50. A also misstates DFL under equity as 1.20; with no debt, DFL is 1.0.",
     "ExplanationWrongB": "The arithmetic is wrong. Under debt financing: Interest = $100,000 + ($5M x 8%) = $500,000. EBT = $900,000 - $500,000 = $400,000. Net income = $300,000 (at 25% tax). EPS = $300,000 / 200,000 = $1.50, not $2.40. The DFL of 1.45 is also wrong — it should be $900,000 / $400,000 = 2.25.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "The debt alternative does not produce higher EPS at this EBIT level. Under debt: total interest = $500,000, EBT = $400,000, EPS = $1.50. Under equity: interest = $100,000, EBT = $800,000, EPS = $1.50. Both alternatives produce identical EPS. The DFL under debt is 2.25, not 1.50, and under equity is 1.125, not 1.0.",
@@ -27181,8 +27190,8 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Option A claims equity produces higher EPS. Option B claims debt produces higher EPS. Option D overstates debt EPS and understates DFL.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -27695,7 +27704,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.7 Equity method accounting for joint ventures under ASC 323",
     "QuestionID": "P2-A-550",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "a-550-orion-industries-equity-method-joint-venture-investment-account",
     "Stem": "Orion Industries holds a 30% equity interest in Greenfield Solar LLC. Greenfield reports net income of $1,600,000 and declares dividends of $400,000. Orion's initial investment was $2,400,000. Greenfield has an internally developed patent valued at $800,000 not amortized on its books. Orion's annual amortization of excess basis is $50,000. What balance should Orion report at year-end?",
@@ -27758,8 +27767,8 @@ const pack_p2_a_questions = [
     "uniqueness_note": "Option A ignores dividends. Option B ignores amortization. Option D treats dividends as income.",
     "source_status": "RESOLVED",
     "hold_reason": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
@@ -29262,7 +29271,7 @@ const pack_p2_a_questions = [
     "Section": "A",
     "Topic": "A.6 Inflation-adjusted balance sheet reconciliation",
     "QuestionID": "P2-A-572",
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A6-572-balance-sheet-reconciliation-inflation",
     "Stem": "Tidewater Industries reports: monetary assets $1,200,000, monetary liabilities $1,350,000, nonmonetary assets (historical cost) $2,800,000. General price level increased 4%. Under inflation-adjusted reporting, which statement about the balance sheet is correct?",
@@ -29274,7 +29283,7 @@ const pack_p2_a_questions = [
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Under inflation-adjusted reporting, the accounting equation must always hold. Tidewater has net monetary liabilities of $150,000. During 4% inflation, purchasing power gain = $150,000 × 4% = $6,000, recognized in equity. The balance sheet remains in balance.",
-    "ExplanationWrongB": "Option B describes current cost accounting, not general price-level adjustment. Under constant dollar accounting, nonmonetary assets are NOT restated.",
+    "ExplanationWrongB": "Option B describes current cost accounting, not general price-level adjustment: under GPLA, NONMONETARY assets ARE restated (monetary items are not, producing the purchasing-power gain or loss). There is no authoritative SFAC No. 89 for constant-dollar reporting.",
     "ExplanationWrongC": "Option C is incorrect because the equation always balances — purchasing power effects are recognized in equity.",
     "ExplanationWrongD": "Option D incorrectly states monetary items are restated. The purchasing power effect is recognized through equity, not by restating monetary items.",
     "Difficulty": "Difficult",
@@ -29324,8 +29333,8 @@ const pack_p2_a_questions = [
     "source_status": "RESOLVED",
     "hold_reason": "",
     "ExplanationWrongA": "",
-    "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_session": "P2A-CERT-20260919",
+    "certification_date": "2026-09-19"
   },
   {
     "Part": 2,
