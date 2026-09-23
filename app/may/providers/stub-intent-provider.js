@@ -137,7 +137,7 @@
   ];
 
   // ─── Topic Extraction ───────────────────────────────────────────
-  // Common CMA Part 1 topics. Maps free-text keywords → canonical topic.
+  // Common CMA topics (part-aware labels via maySectionNames where available). Maps free-text keywords → canonical topic.
   // Phase 0 stub — limited dictionary. Real model needs broader coverage.
 
   var TOPIC_DICTIONARY = [

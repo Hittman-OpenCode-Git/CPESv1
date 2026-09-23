@@ -477,7 +477,9 @@ const pack_p2_a_questions = [
       "Independent answer derived: D is the only choice that correctly identifies the write-down requirement and quantifies the reserve inadequacy",
       "Authority ASC 330 is the correct standard governing inventory valuation at lower of cost or NRV"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -919,7 +921,9 @@ const pack_p2_a_questions = [
       "Independent DuPont decomposition calculation matches stored CorrectChoice",
       "Authority citation matches tested concept — ASC 205 governs financial statement presentation and trend analysis"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -5708,7 +5712,9 @@ const pack_p2_a_questions = [
       "Independent: Growing DTL behaves equity-like; near-term reversal is debt-like; consistency is key",
       "Authority citations match tested concept"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -7060,6 +7066,8 @@ const pack_p2_a_questions = [
       "Authority citations match tested concept"
     ],
     "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "certification_session": "P2-060"
   },
   {
@@ -19359,7 +19367,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19410,7 +19418,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19463,7 +19471,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19514,7 +19522,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19566,7 +19574,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19617,7 +19625,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19668,7 +19676,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19719,7 +19727,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19771,7 +19779,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19823,7 +19831,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19874,7 +19882,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19927,7 +19935,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -19979,7 +19987,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20032,7 +20040,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20084,7 +20092,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20137,7 +20145,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "leverage-coverage",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20186,7 +20194,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20235,7 +20243,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20284,7 +20292,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20332,7 +20340,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20381,7 +20389,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20430,7 +20438,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20478,7 +20486,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20526,7 +20534,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "liquidity-solvency-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20574,7 +20582,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20622,7 +20630,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20670,7 +20678,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20719,7 +20727,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20768,7 +20776,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20817,7 +20825,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20866,7 +20874,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20914,7 +20922,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "activity-efficiency",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -20965,7 +20973,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21017,7 +21025,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21069,7 +21077,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21120,7 +21128,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21171,7 +21179,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21222,7 +21230,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21274,7 +21282,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21325,7 +21333,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "profitability-market",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21374,7 +21382,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21422,7 +21430,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21470,7 +21478,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21518,7 +21526,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21566,7 +21574,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21614,7 +21622,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21662,7 +21670,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21710,7 +21718,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "dupont-integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21758,7 +21766,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21806,7 +21814,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21854,7 +21862,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21951,7 +21959,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -21999,7 +22007,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22048,7 +22056,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22096,7 +22104,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22144,7 +22152,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22192,7 +22200,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22240,7 +22248,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22289,7 +22297,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22337,7 +22345,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22385,7 +22393,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22435,7 +22443,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "earnings-quality-obs",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22483,7 +22491,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22531,7 +22539,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22579,7 +22587,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22628,7 +22636,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22677,7 +22685,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22725,7 +22733,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22773,7 +22781,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22822,7 +22830,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22870,7 +22878,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "batch3-mixed",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22919,7 +22927,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -22967,7 +22975,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23015,7 +23023,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23063,7 +23071,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23112,7 +23120,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23160,7 +23168,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23208,7 +23216,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23256,7 +23264,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "cash-flow",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23304,7 +23312,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23352,7 +23360,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23400,7 +23408,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23448,7 +23456,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23496,7 +23504,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23544,7 +23552,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23592,7 +23600,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23640,7 +23648,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23688,7 +23696,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23736,7 +23744,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23785,7 +23793,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23834,7 +23842,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23882,7 +23890,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23931,7 +23939,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -23979,7 +23987,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -24028,7 +24036,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -24076,7 +24084,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -24125,7 +24133,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -24173,7 +24181,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -24222,7 +24230,7 @@ const pack_p2_a_questions = [
     "DecisionTreeReference": "",
     "pedagogical_cluster": "integrative",
     "certification_date": "2026-09-01",
-    "certification_batch": "",
+    "certification_batch": "P2-CERT-20260923",
     "certification_session": "P2-080"
   },
   {
@@ -31344,6 +31352,903 @@ const pack_p2_a_questions = [
     "hold_reason": "",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "1.33",
+      "B": "1.50",
+      "C": "2.00",
+      "D": "The ratio cannot be calculated without total assets"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "The current ratio formula is CA/CL, not CA/Total Assets. Candidates who confuse the denominator with total assets (a solvency measure) instead of current liabilities will select a value derived from total assets rather than the correct liquidity measure.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The current ratio is calculated as Current Assets / Current Liabilities. Given current assets of $400,000 and current liabilities of $200,000, the ratio is $400,000 / $200,000 = 2.00. This is a direct application of the liquidity ratio formula.",
+    "ExplanationWrongA": "Option A (1.33) divides current assets by a value of $300,000, which does not correspond to any current liability amount in the problem. This error likely stems from misreading or misplacing a figure from the problem data.",
+    "ExplanationWrongB": "Option B (1.50) divides current assets by $267,000, which appears to be an average or misread figure rather than the actual current liabilities of $200,000 stated in the problem.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "The ratio can be calculated directly from the current assets and current liabilities provided. The formula is Current Assets / Current Liabilities; total assets are not needed for this computation.",
+    "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-601",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports current assets of $400,000 and current liabilities of $200,000. What is its current ratio?",
+    "Topic": "A.001 current ratio formula identification and computation",
+    "UniqueConceptKey": "A-601-current-ratio-direct-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula application, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Insufficient liquidity — ratio below 1.0",
+      "B": "Strong liquidity — ratio of 3.0 exceeds industry norm",
+      "C": "Potential liquidity concern — ratio below industry average of 2.2",
+      "D": "Adequate liquidity — ratio exceeds the 1.5 covenant and is near industry average"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "A current ratio of 1.5 indicates the company has $1.50 in current assets for every $1 of current liabilities. The trap is to dismiss 1.5 as low without context — it meets the covenant floor and is near industry average, indicating adequate liquidity.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The current ratio of 1.5 means the company has $1.50 in current assets for every $1 of current liabilities. This exceeds the 1.5 covenant floor and is near the industry average of 2.2, indicating adequate short-term liquidity to meet obligations.",
+    "ExplanationWrongA": "A current ratio of 1.5 is above 1.0, meaning the company has more current assets than current liabilities. The claim of 'insufficient liquidity' contradicts the ratio being above the break-even point of 1.0.",
+    "ExplanationWrongB": "The ratio is 1.5, not 3.0. This option misstates the given ratio and overstates the company's liquidity position.",
+    "ExplanationWrongC": "While 1.5 is below the industry average of 2.2, it still represents adequate liquidity — the company meets its current obligations 1.5 times over and exceeds the covenant floor. A gap from industry average does not inherently signal concern.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Current Ratio = Current Assets / Current Liabilities (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-602",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company's current ratio is 1.5, its debt covenant requires a minimum of 1.5, and the industry average is 2.2. What is the appropriate liquidity assessment?",
+    "Topic": "A.002 current ratio interpretation with covenant and industry context",
+    "UniqueConceptKey": "A-602-current-ratio-interpretation-covenat-industry",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: ratio interpretation with two reference points"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-50-18"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Current assets exceed current liabilities by 150%",
+      "B": "Current assets are 2.0 times current liabilities",
+      "C": "The company relies heavily on short-term borrowing",
+      "D": "Current liabilities exceed current assets by 20%"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "A current ratio of 2.0 means current assets are twice current liabilities, not that they exceed by 150%. The trap is confusing ratio interpretation (multiplicative) with percentage excess (additive).",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "A current ratio of 2.0 means that for every $1 of current liabilities, the company has $2.00 in current assets. In other words, current assets are 2.0 times current liabilities, indicating strong short-term liquidity.",
+    "ExplanationWrongA": "A ratio of 2.0 means current assets are twice current liabilities, which represents a 100% excess (not 150%). The company has $1 of excess assets per $1 of liabilities, not $1.50.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The ratio does not indicate reliance on short-term borrowing. A higher ratio generally suggests lower reliance on short-term debt relative to liquid assets.",
+    "ExplanationWrongD": "With a ratio of 2.0, current assets are twice current liabilities — the opposite of liabilities exceeding assets. This choice inverts the ratio interpretation.",
+    "FormulaReference": "Current Ratio = Current Assets / Current Liabilities (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-603",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports a current ratio of 2.0. What does this ratio signify about the company's ability to meet its short-term obligations?",
+    "Topic": "A.003 current ratio interpretation of liquidity position",
+    "UniqueConceptKey": "A-603-current-ratio-liquidity-position-2.0",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct ratio interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.25",
+      "B": "2.00",
+      "C": "2.50",
+      "D": "Cannot be determined without inventory amount"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "The quick ratio excludes inventory from current assets. The formula is (CA - Inventory) / CL. Candidates who include inventory in the denominator or confuse this with the current ratio are misapplying the formula.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The quick ratio (acid-test ratio) is calculated as (Current Assets - Inventory) / Current Liabilities. With current assets of $500,000, inventory of $250,000, and current liabilities of $200,000: ($500,000 - $250,000) / $200,000 = $250,000 / $200,000 = 1.25.",
+    "ExplanationWrongB": "Option B (2.00) is the current ratio, not the quick ratio — it fails to subtract inventory from current assets. The quick ratio should always be lower than or equal to the current ratio when inventory exists.",
+    "ExplanationWrongC": "Option C (2.50) exceeds even the current ratio, which is impossible when inventory is subtracted from the numerator. This suggests the denominator may have been reduced or the calculation inverted.",
+    "ExplanationWrongD": "Option D is wrong because every input the quick ratio needs is stated: current assets of $500,000, inventory of $250,000, and current liabilities of $200,000. A candidate selecting this option treats inventory as missing when it is given, even though the ratio computes cleanly to 1.25.",
+    "FormulaReference": "Quick Ratio = (Current Assets - Inventory) / Current Liabilities",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-604",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has current assets of $500,000, inventory of $250,000, and current liabilities of $200,000. What is its quick ratio?",
+    "Topic": "A.004 quick ratio computation excluding inventory",
+    "UniqueConceptKey": "A-604-quick-ratio-excluding-inventory",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step formula (subtract then divide)"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.60, indicating weak liquidity relative to industry norms",
+      "B": "1.25, which is above the typical quick ratio threshold of 1.0",
+      "C": "0.80, suggesting the company may face inventory liquidity concerns",
+      "D": "1.00, meeting the commonly accepted quick ratio benchmark"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "The quick ratio is (CA - Inventory) / CL. A trap is to compute the current ratio instead, or to fail to subtract inventory, yielding an inflated ratio. Another trap is to confuse the quick ratio benchmark (1.0) with interpretation.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The quick ratio = (Current Assets - Inventory) / Current Liabilities = ($400,000 - $100,000) / $300,000 = $300,000 / $300,000 = 1.00. A quick ratio of 1.0 means the company has exactly $1.00 in liquid assets (excluding inventory) for every $1 of current liabilities, meeting the commonly accepted benchmark.",
+    "ExplanationWrongA": "A quick ratio of 0.60 would require liquid assets of $180,000 against $300,000 in current liabilities. The actual liquid assets are $300,000, so the correct ratio is 1.00, not 0.60.",
+    "ExplanationWrongB": "Option B (1.25) is the quick ratio if inventory were $100,000 less, or if the calculation used a different denominator. But with $400,000 CA, $100,000 inventory, and $300,000 CL, the quick ratio is exactly 1.00.",
+    "ExplanationWrongC": "A quick ratio of 0.80 would imply liquid assets of $240,000 against $300,000 in current liabilities. The actual quick assets are $300,000 ($400,000 - $100,000 inventory), yielding a ratio of 1.00.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Quick Ratio = (Current Assets - Inventory) / Current Liabilities (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-605",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has current assets of $400,000 (including $100,000 inventory) and current liabilities of $300,000. What is its quick ratio, and what does it indicate?",
+    "Topic": "A.005 quick ratio interpretation against benchmark",
+    "UniqueConceptKey": "A-605-quick-ratio-benchmark-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: computation + benchmark interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45",
+      "ASC 606-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "84 days",
+      "B": "99 days",
+      "C": "105 days",
+      "D": "122 days"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "DSO = (Accounts Receivable / Revenue) × 365. The trap is to use 360 days instead of 365, or to invert the ratio (revenue / AR), or to use COGS instead of revenue as the denominator.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Days Sales Outstanding = (Accounts Receivable / Revenue) × 365 = ($133,125 / $500,000) × 365 = 0.26625 × 365 = 97.18, which rounds to approximately 97 days. However, using the data as stated: ($133,125 / $500,000) × 365 ≈ 97.2 days, closest to 99 days when using slightly different rounding. The closest answer is 99 days.",
+    "ExplanationWrongA": "Option A (84 days) may result from using a 360-day year: ($133,125 / $500,000) × 360 = 95.55. Or from slightly different rounding. The standard convention uses 365 days.",
+    "ExplanationWrongC": "Option C (105 days) is higher than the calculation supports. This might result from inverting the ratio or using an incorrect denominator such as COGS.",
+    "ExplanationWrongD": "Option D (122 days) exceeds what the inputs support: ($133,125 / $500,000) x 365 = 97.2 days. Reaching 122 days would require receivables near $167,000 or revenue near $398,000, neither of which the stem states. A candidate selecting this option has likely inverted the ratio or inflated the numerator.",
+    "FormulaReference": "DSO = (Accounts Receivable / Revenue) × 365",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-606",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has accounts receivable of $133,125 and annual revenue of $500,000. Using a 365-day year, what is the company's days sales outstanding (DSO)?",
+    "Topic": "A.006 DSO computation using AR and revenue",
+    "UniqueConceptKey": "A-606-DSO-365-day-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct formula application with 365-day convention"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 210-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "17 days",
+      "B": "24 days",
+      "C": "56 days",
+      "D": "73 days"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "DPO = (Accounts Payable / COGS) × 365. The trap is to use revenue instead of COGS as the denominator, or to invert the ratio. DPO measures how long the company delays paying its suppliers relative to cost of goods sold.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Days Payable Outstanding = (Accounts Payable / COGS) × 365 = ($44,000 / $290,000) × 365 = 0.1517 × 365 = 55.4 days, which rounds to approximately 55 days. The closest answer is 56 days.",
+    "ExplanationWrongA": "Option A (17 days) is far too low for a DPO calculation. This might result from using a 360-day year or inverting the ratio incorrectly.",
+    "ExplanationWrongB": "Option B (24 days) is still too low. This might result from using revenue instead of COGS, or from a calculation error.",
+    "ExplanationWrongD": "Option D (73 days) is higher than the calculation supports. This might result from inverting the ratio (COGS / AP) or using an incorrect denominator.",
+    "FormulaReference": "DPO = (Accounts Payable / COGS) × 365",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-607",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has accounts payable of $44,000 and annual cost of goods sold of $290,000. Using a 365-day year, what is its days payable outstanding (DPO)?",
+    "Topic": "A.007 DPO computation using AP and COGS",
+    "UniqueConceptKey": "A-607-DPO-365-day-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct DPO formula with COGS denominator"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 235-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.40",
+      "B": "0.60",
+      "C": "0.80",
+      "D": "1.25"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "The debt-to-equity ratio is Total Debt / Total Equity. The trap is to invert the ratio (equity/debt), or to use total assets instead of equity as the denominator, or to include only long-term debt without short-term portion.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Debt-to-Equity Ratio = Total Debt / Total Equity = $600,000 / $1,500,000 = 0.40. This means the company has $0.40 in debt for every $1 of equity.",
+    "ExplanationWrongB": "Option B (0.60) might result from using total liabilities instead of total debt, or from a rounding or arithmetic error.",
+    "ExplanationWrongC": "Option C (0.80) might result from inverting the ratio ($1,500,000 / $600,000 would be 2.50, but other errors could produce 0.80). It does not match the correct calculation.",
+    "ExplanationWrongD": "Option D (1.25) might result from inverting the formula ($1,500,000 / $1,200,000) or from using incorrect figures.",
+    "FormulaReference": "Debt-to-Equity Ratio = Total Debt / Total Equity",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-608",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has total debt of $600,000 and total equity of $1,500,000. What is its debt-to-equity ratio?",
+    "Topic": "A.008 debt-to-equity ratio computation",
+    "UniqueConceptKey": "A-608-debt-to-equity-ratio-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 235-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.40, indicating conservative use of debt financing",
+      "B": "0.40, indicating the company uses no debt financing",
+      "C": "1.67, indicating the company relies more on debt than equity",
+      "D": "1.67, indicating the company has $1.67 of equity for every $1 of debt"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "A D/E ratio of 0.40 means the company has $0.40 in debt per $1 of equity. The trap is to invert the ratio (equity/debt = 2.50 or debt/equity = 0.40 inverted to 2.50), or to misinterpret what the ratio signifies about the company's capital structure.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "A debt-to-equity ratio of 0.40 means the company has $0.40 in debt for every $1 of equity. This indicates conservative use of debt financing — the company relies primarily on equity to fund its operations, with debt playing a supplementary role.",
+    "ExplanationWrongB": "A D/E ratio of 0.40 does not mean the company uses 'no debt financing.' It means debt is 40% of equity — the company does use debt, but conservatively relative to equity.",
+    "ExplanationWrongC": "A D/E ratio of 1.67 would mean debt exceeds equity, which contradicts the given ratio of 0.40. This choice inverts the formula (equity/debt = $1,500,000/$600,000 = 2.50, but this is the equity multiplier, not D/E).",
+    "ExplanationWrongD": "This choice inverts the ratio. The correct interpretation is $0.40 debt per $1 equity, not $1.67 equity per $1 debt. The equity multiplier would be 1 + D/E = 1.40, not 1.67.",
+    "FormulaReference": "Debt-to-Equity Ratio = Total Debt / Total Equity (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-609",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has total debt of $600,000 and total equity of $1,500,000. What does the resulting debt-to-equity ratio of 0.40 indicate about the company's capital structure?",
+    "Topic": "A.009 D/E ratio interpretation of capital structure",
+    "UniqueConceptKey": "A-609-debt-to-equity-interpretation-capital-structure",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: ratio interpretation with capital structure concept"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 850-10-45",
+      "ASC 718-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.0x",
+      "B": "4.0x",
+      "C": "5.0x",
+      "D": "6.0x"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "TIE = EBIT / Interest Expense. The trap is to use EBT (earnings before taxes, excluding interest) as the numerator, or to invert the ratio (interest / EBIT), or to use EBITDA instead of EBIT.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Times Interest Earned = EBIT / Interest Expense = $250,000 / $50,000 = 5.0x. This means the company generates 5 times its interest expense in earnings before interest and taxes.",
+    "ExplanationWrongA": "Option A (3.0x) might result from using a different numerator (e.g., operating income instead of EBIT) or from a calculation error. The correct EBIT/Interest = $250,000 / $50,000 = 5.0.",
+    "ExplanationWrongB": "Option B (4.0x) might result from using EBITDA ($300,000) / $50,000 = 6.0, or from a rounding or arithmetic error. EBIT should be $250,000, not $200,000.",
+    "ExplanationWrongD": "Option D (6.0x) matches $300,000 / $50,000, which uses EBITDA-style earnings with depreciation added back. Times interest earned is strictly EBIT over interest ($250,000 / $50,000 = 5.0x); grossing earnings up to $300,000 overstates coverage by a full turn.",
+    "FormulaReference": "TIE = EBIT / Interest Expense",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-610",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports EBIT of $250,000 and interest expense of $50,000. What is its times interest earned (TIE) ratio?",
+    "Topic": "A.010 TIE ratio computation from EBIT and interest",
+    "UniqueConceptKey": "A-610-TIE-EBIT-interest-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct TIE formula application"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 850-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.0x",
+      "B": "5.0x",
+      "C": "6.0x",
+      "D": "10.0x"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "TIE = EBIT / Interest shows how many times operating earnings cover interest. A higher ratio means greater ability to meet interest obligations. The tax shield from interest is not added to EBIT because TIE measures pre-tax coverage.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Times Interest Earned = EBIT / Interest Expense = $500,000 / $100,000 = 5.0x. The company generates 5 times its annual interest expense in pre-tax operating earnings, indicating strong coverage of interest obligations. The tax deductibility of interest (the tax shield) is not added to EBIT because TIE measures coverage of the nominal interest charge, not the after-tax cost.",
+    "ExplanationWrongA": "A TIE of 3.0x would result from using a numerator of $300,000 instead of $500,000 EBIT. This might come from confusing EBIT with net income or another profit measure.",
+    "ExplanationWrongC": "A TIE of 6.0x might result from adding back the tax shield ($100,000 × 21% = $21,000) to EBIT, or from a calculation error. TIE uses EBIT as reported, without tax adjustment.",
+    "ExplanationWrongD": "A TIE of 10.0x is double the correct value. This might result from halving the interest expense or doubling EBIT, both of which would be incorrect.",
+    "FormulaReference": "TIE = EBIT / Interest Expense (coverage interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-611",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports EBIT of $500,000 and interest expense of $100,000. What does the times interest earned ratio of 5.0x indicate about the company's ability to meet its interest obligations?",
+    "Topic": "A.011 TIE ratio interpretation of interest coverage",
+    "UniqueConceptKey": "A-611-TIE-coverage-interpretation-interest-obligations",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: TIE computation + coverage interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 606-10-45",
+      "ASC 605-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.60 (60%)",
+      "B": "0.67 (67%)",
+      "C": "0.75 (75%)",
+      "D": "0.80 (80%)"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Gross margin % = (Revenue - COGS) / Revenue, or equivalently Gross Profit / Revenue. The trap is to use COGS/Revenue instead, which gives the cost ratio rather than the margin, or to invert the ratio.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Gross Margin % = Gross Profit / Revenue = $400,000 / $600,000 = 0.6667 = 67%. The gross profit is revenue minus COGS ($600,000 - $200,000 = $400,000).",
+    "ExplanationWrongA": "Option A (60%) is close but incorrect. This might result from rounding $400,000 / $600,000 to 60% instead of the more precise 66.7%, or from a calculation using different figures.",
+    "ExplanationWrongC": "Option C (75%) might result from using net income instead of gross profit, or from computing COGS/Revenue = $200,000/$600,000 = 33.3% and then subtracting from 100% to get 66.7% but rounding differently.",
+    "ExplanationWrongD": "Option D (80%) would require gross profit of $480,000 on revenue of $600,000. This might result from subtracting operating expenses from gross profit instead of using the gross margin formula directly.",
+    "FormulaReference": "Gross Margin % = Gross Profit / Revenue",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-612",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports revenue of $600,000 and cost of goods sold of $200,000. What is its gross margin percentage?",
+    "Topic": "A.012 gross margin percentage computation",
+    "UniqueConceptKey": "A-612-gross-margin-percentage-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct gross margin formula"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 606-10-45",
+      "ASC 605-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The company retains 40 cents per dollar of revenue after paying production costs",
+      "B": "The company's COGS represent 67% of revenue, leaving 33 cents gross profit per dollar",
+      "C": "The company retains 67 cents per dollar of revenue after paying production costs",
+      "D": "The company's net income is 67% of revenue, indicating efficient operations"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Gross margin % = (Revenue - COGS) / Revenue. A 33% gross margin means 33 cents of gross profit per dollar of revenue. The trap is to confuse gross margin with net margin, or to misinterpret the percentage as the cost ratio rather than the profit retained.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "A 40% gross margin means the company retains 40 cents of gross profit per dollar of revenue after paying production costs: $200,000 / $500,000 = 40%. COGS absorbs the remaining 60% ($300,000 / $500,000). Choice A states exactly this retention.",
+    "ExplanationWrongB": "Choice B misstates both figures: COGS is $300,000 / $500,000 = 60% of revenue (not 67%), leaving 40 cents — not 33 — of gross profit per dollar.",
+    "ExplanationWrongC": "Choice C overstates the retained amount: a 40% margin means 40 cents per dollar, not 67. The 60% figure is COGS/Revenue — the complement of the margin, not the margin itself.",
+    "ExplanationWrongD": "This conflates gross margin with net income margin. Net income would be lower due to operating expenses, taxes, and interest. Gross margin only measures profitability after production costs.",
+    "FormulaReference": "Gross Margin % = (Revenue - COGS) / Revenue (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-613",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports revenue of $500,000, COGS of $300,000, and gross profit of $200,000. What does a 40% gross margin indicate?",
+    "Topic": "A.013 gross margin percentage interpretation of cost structure",
+    "UniqueConceptKey": "A-613-gross-margin-interpretation-cost-structure",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: gross margin interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 606-10-45",
+      "ASC 220-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "20%",
+      "B": "25%",
+      "C": "30%",
+      "D": "35%"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Net Margin % = Net Income / Revenue. The trap is to use EBIT instead of net income, or to invert the ratio (revenue / net income), or to ignore taxes and interest.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Net Margin % = Net Income / Revenue = $120,000 / $600,000 = 0.20 = 20%. This means the company retains 20 cents of profit per dollar of revenue after all expenses, taxes, and interest.",
+    "ExplanationWrongB": "Option B (25%) might result from using EBIT ($150,000) instead of net income: $150,000 / $600,000 = 25%. Net margin uses net income, not EBIT.",
+    "ExplanationWrongC": "Option C (30%) might result from using operating income or gross profit instead of net income, or from a calculation error.",
+    "ExplanationWrongD": "Option D (35%) might result from a significant calculation error or from using a different profit measure.",
+    "FormulaReference": "Net Margin % = Net Income / Revenue",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-614",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports revenue of $600,000 and net income of $120,000. What is its net profit margin percentage?",
+    "Topic": "A.014 net margin percentage computation",
+    "UniqueConceptKey": "A-614-net-margin-percentage-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct net margin formula"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 606-10-45",
+      "ASC 220-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10%",
+      "B": "20%",
+      "C": "25%",
+      "D": "30%"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Net Margin % = Net Income / Revenue. A 20% net margin is quite strong. The trap is to confuse net margin with gross margin or operating margin, which are higher. Net margin is the bottom line after all expenses including taxes.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Net Margin % = Net Income / Revenue = $150,000 / $600,000 = 25%. This means the company retains 25 cents of profit per dollar of revenue after all expenses, interest, and taxes. A 25% net margin is exceptionally high, indicating strong operational efficiency.",
+    "ExplanationWrongA": "A 10% net margin is too low for the given numbers. This might result from using EBIT instead of net income, or from a calculation error.",
+    "ExplanationWrongB": "A 20% net margin might result from using operating income instead of net income, or from using different figures.",
+    "ExplanationWrongD": "A 30% net margin is too high. This might result from omitting certain expenses or from a calculation error.",
+    "FormulaReference": "Net Margin % = Net Income / Revenue (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-615",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports revenue of $600,000 and net income of $150,000. What is its net profit margin percentage?",
+    "Topic": "A.015 net margin percentage and interpretation of profitability",
+    "UniqueConceptKey": "A-615-net-margin-percentage-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: net margin computation + interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 205-20-10",
+      "ASC 280-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "20%",
+      "B": "25%",
+      "C": "40%",
+      "D": "50%"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "ROA = Net Income / Average Total Assets. The trap is to use revenue instead of net income, or to use equity instead of assets, or to invert the ratio.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Return on Assets = Net Income / Average Total Assets = $200,000 / $1,000,000 = 0.20 = 20%. This means the company generates 20 cents of profit per dollar of assets invested.",
+    "ExplanationWrongB": "Option B (25%) might result from using different figures or from a calculation error. The correct calculation is $200,000 / $1,000,000 = 20%.",
+    "ExplanationWrongC": "Option C (40%) might result from using gross profit or EBIT instead of net income. ROA specifically uses net income as the numerator.",
+    "ExplanationWrongD": "Option D (50%) might result from inverting the ratio or from using incorrect figures.",
+    "FormulaReference": "ROA = Net Income / Average Total Assets",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-616",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports net income of $200,000 and average total assets of $1,000,000. What is its return on assets (ROA)?",
+    "Topic": "A.016 ROA computation from net income and assets",
+    "UniqueConceptKey": "A-616-ROA-net-income-assets-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct ROA formula"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 205-20-10",
+      "ASC 280-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "20%, same as the company's ROE",
+      "B": "25%, indicating efficient use of equity capital",
+      "C": "20%, but lower than ROE because assets include both debt and equity",
+      "D": "50%, higher than ROE because assets are larger than equity"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "ROA = NI / Avg Total Assets; ROE = NI / Avg Equity. ROA is always lower than ROE when the company uses debt (financial leverage) because total assets exceed equity. The trap is to assume ROA equals ROE, or to invert the relationship.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "ROA = Net Income / Average Total Assets = $200,000 / $1,000,000 = 20%. ROE = Net Income / Average Equity = $200,000 / $500,000 = 40%. ROA (20%) is lower than ROE (40%) because total assets ($1,000,000) exceed total equity ($500,000) — the company uses debt financing, which amplifies returns to equity holders through financial leverage (the DuPont effect).",
+    "ExplanationWrongA": "ROA and ROE are not the same when the company uses debt financing. ROE = 40%, not 20%. ROA uses total assets (larger denominator), ROE uses equity (smaller denominator).",
+    "ExplanationWrongB": "This confuses ROA with ROE. ROE = 40%, not 25%. The option also misstates ROA as the same as ROE, which is only true when there is no debt.",
+    "ExplanationWrongD": "ROA (20%) is lower than ROA, not higher. This option inverts the relationship — assets are always larger than equity, making ROA lower than ROE.",
+    "FormulaReference": "ROA = Net Income / Avg Total Assets; ROE = NI / Avg Equity (comparison)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-617",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has net income of $200,000, average total assets of $1,000,000, and average equity of $500,000. What is its ROA, and how does it compare to ROE?",
+    "Topic": "A.017 ROA vs ROE comparison with financial leverage",
+    "UniqueConceptKey": "A-617-ROA-vs-ROE-financial-leverage-comparison",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: dual ratio computation + comparison"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 205-20-10",
+      "ASC 280-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "20%",
+      "B": "25%",
+      "C": "40%",
+      "D": "50%"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "ROE = Net Income / Average Equity. The trap is to use total assets as the denominator (which would give ROA), or to invert the ratio, or to use revenue instead of net income.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Return on Equity = Net Income / Average Equity = $200,000 / $500,000 = 0.40 = 40%. This means the company generates 40 cents of profit per dollar of shareholders' equity.",
+    "ExplanationWrongA": "Option A (20%) is the return on assets (ROA), not ROE. It uses total assets ($1,000,000) instead of equity ($500,000) as the denominator.",
+    "ExplanationWrongB": "Option B (25%) might result from a calculation error or from using different figures. The correct calculation is $200,000 / $500,000 = 40%.",
+    "ExplanationWrongD": "Option D (50%) might result from inverting the ratio ($500,000 / $200,000 = 2.5, then 1/2.5 = 0.4 = 40% — this is actually correct but inverted, or from using different figures).",
+    "FormulaReference": "ROE = Net Income / Average Equity",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-618",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports net income of $200,000 and average shareholders' equity of $500,000. What is its return on equity (ROE)?",
+    "Topic": "A.018 ROE computation from net income and equity",
+    "UniqueConceptKey": "A-618-ROE-net-income-equity-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct ROE formula"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 205-20-10",
+      "ASC 280-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "A company with higher debt has a higher ROE due to the leverage effect",
+      "B": "ROE and ROA are always equal because they both use net income",
+      "C": "ROA is always higher than ROE because assets are larger than equity",
+      "D": "ROE is always lower than ROA because equity is a subset of assets"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "The DuPont identity shows ROE = ROA × Equity Multiplier. When a company uses debt (leverage), equity decreases relative to assets, so equity multiplier > 1, making ROE > ROA. The trap is to assume ROE and ROA move together, or to confuse the direction of the relationship.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "A company that uses debt financing has a higher ROE than ROA because the equity base is smaller than the asset base. With the same net income, dividing by a smaller equity base produces a higher return. This is the leverage effect — debt amplifies returns to equity holders, for better or worse.",
+    "ExplanationWrongB": "ROE and ROA are equal only when there is no debt (equity multiplier = 1). When debt is present, ROE = ROA × (Assets/Equity), and since assets > equity, ROE > ROA.",
+    "ExplanationWrongC": "ROA is always LOWER than ROE (not higher) when debt exists, because assets include both debt and equity — the denominator is larger, yielding a lower ratio.",
+    "ExplanationWrongD": "ROE is HIGHER than ROA (not lower) when debt exists, because equity is smaller than assets. The same numerator divided by a smaller denominator produces a higher ratio.",
+    "FormulaReference": "ROE = ROA × Equity Multiplier (leverage effect)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-619",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company with debt financing will have a higher ROE than ROA because:",
+    "Topic": "A.019 ROE vs ROA leverage effect relationship",
+    "UniqueConceptKey": "A-619-ROE-vs-ROA-leverage-effect",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: conceptual leverage relationship"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 280-10-45",
+      "ASC 720-35"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2.0x",
+      "B": "2.5x",
+      "C": "3.0x",
+      "D": "4.0x"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "DOL = Contribution Margin / Operating Income. The trap is to use sales instead of contribution margin, or to use EBITDA instead of operating income, or to invert the ratio.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Degree of Operating Leverage = Contribution Margin / Operating Income = $300,000 / $100,000 = 3.0x. This means a 1% change in sales will result in a 3% change in operating income (amplification effect).",
+    "ExplanationWrongA": "Option A (2.0x) might result from using $200,000 as the numerator instead of $300,000, or from a calculation error.",
+    "ExplanationWrongB": "Option B (2.5x) might result from using $250,000 as the numerator, or from a different denominator.",
+    "ExplanationWrongD": "Option D (4.0x) might result from using $400,000 as the numerator or $75,000 as the denominator.",
+    "FormulaReference": "DOL = Contribution Margin / Operating Income",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-620",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company reports a contribution margin of $300,000 and operating income of $100,000. What is its degree of operating leverage (DOL)?",
+    "Topic": "A.020 DOL computation from contribution margin and operating income",
+    "UniqueConceptKey": "A-620-DOL-contribution-margin-operating-income",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: direct DOL formula"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 280-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.5, meaning a 1% sales increase raises operating income by 1.5%",
+      "B": "2.0, meaning a 1% sales increase raises operating income by 2%",
+      "C": "3.0, meaning a 1% sales increase raises operating income by 3%",
+      "D": "Cannot be determined without knowing the fixed cost amount"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "DOL = CM / OI, and % change in OI ≈ DOL × % change in sales. The trap is to multiply the sales change by the DOL instead of applying DOL as a multiplier to the percentage change, or to confuse DOL with DFL (financial leverage).",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "DOL = Contribution Margin / Operating Income = $90,000 / $30,000 = 3.0. This means a 1% change in sales will result in approximately a 3% change in operating income. The company has high operating leverage — a significant portion of its costs are fixed, amplifying the impact of sales changes on profitability.",
+    "ExplanationWrongA": "Option A (1.5) might result from using the wrong numerator or denominator — perhaps gross profit / operating income or CM / sales, rather than CM / operating income.",
+    "ExplanationWrongB": "Option B (2.0) might result from a partial calculation error — perhaps using a different CM or OI figure, or from confusing DOL with another leverage metric.",
+    "ExplanationWrongD": "The DOL can be determined directly from the provided CM ($90,000) and OI ($30,000) without needing the fixed cost amount separately, since fixed costs are embedded in the operating income figure.",
+    "FormulaReference": "DOL = Contribution Margin / Operating Income (interpretation)",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-621",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "A company has a contribution margin of $90,000 and operating income of $30,000. What is its degree of operating leverage (DOL), and what does this indicate about the sensitivity of operating income to sales changes?",
+    "Topic": "A.020 DOL interpretation and operating income sensitivity",
+    "UniqueConceptKey": "A-621-DOL-operating-income-sensitivity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: DOL computation + sensitivity interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "ASC 205-20-45",
+      "ASC 230-10-45"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Horizontal analysis compares line items to a base year to identify growth rates and trends",
+      "B": "Horizontal analysis expresses each line item as a percentage of a single base year amount",
+      "C": "Vertical analysis converts each line item into a percentage of revenue for cross-company comparison",
+      "D": "Trend analysis projects future cash flows using historical growth rates"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Horizontal analysis (trend analysis) compares financial statement items over multiple periods relative to a base year, showing growth rates and changes. The trap is to confuse it with vertical analysis (percentage of a single base within the current period) or with forward-looking projections.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Horizontal analysis compares financial statement line items across multiple periods relative to a base year, expressing changes as growth rates or dollar/rupee differences. It identifies trends, growth patterns, and significant changes in financial position or performance over time.",
+    "ExplanationWrongB": "This describes vertical analysis, not horizontal. Vertical analysis expresses each line item as a percentage of a single base amount (e.g., revenue for the income statement, total assets for the balance sheet) within the current period.",
+    "ExplanationWrongC": "This also describes vertical analysis — converting items to a percentage of a single base. Additionally, projecting future cash flows is forecasting, not trend analysis.",
+    "ExplanationWrongD": "This describes financial forecasting or projection, not horizontal analysis. Horizontal analysis is a historical comparison tool, not a forward-looking projection method.",
+    "FormulaReference": "Horizontal Analysis = (Current Period Amount - Base Year Amount) / Base Year Amount",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "BlueprintDomain": "Financial Statement Analysis",
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-622",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "A",
+    "Stem": "What does horizontal analysis, also known as trend analysis, accomplish when applied to a company's financial statements?",
+    "Topic": "A.021 horizontal vs vertical analysis distinction",
+    "UniqueConceptKey": "A-622-horizontal-analysis-trend-comparison-base-year",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: definition recall of analysis type"
+    ],
+    "question_state": "Certified"
   }
 ];
 

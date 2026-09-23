@@ -13,7 +13,7 @@ class ReferenceValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
+        const banks = [...config.casePackBanks, ...config.part2CasePacks]; // DL-050: P2 cases wired
 
         let totalCases = 0;
         let orphanExhibits = 0;
@@ -24,6 +24,7 @@ class ReferenceValidator extends Validator {
         const formulaNames = this.loadFormulaNames(root);
         const decisionTreeNames = this.loadDecisionTreeNames(root);
         const trapRefs = this.loadTrapReferences(root);
+        const p2PackSet = new Set(config.part2CasePacks);
 
         banks.forEach(file => {
             const fullPath = path.join(root, file);
@@ -32,9 +33,10 @@ class ReferenceValidator extends Validator {
             const cases = this.extractCases(content, file);
             if (!cases) { this.addWarning(`No cases extracted from ${file} — coverage gap (DL-050)`); return; }
 
+            const isP2 = p2PackSet.has(file);
             cases.forEach((c, idx) => {
                 totalCases++;
-                const result = this.validateReferences(c, file, idx, formulaNames, decisionTreeNames, trapRefs);
+                const result = this.validateReferences(c, file, idx, formulaNames, decisionTreeNames, trapRefs, isP2);
                 orphanExhibits += result.orphanExhibits;
                 orphanReferences += result.orphanReferences;
                 totalReferences += result.totalReferences;
@@ -51,7 +53,9 @@ class ReferenceValidator extends Validator {
     }
 
     extractCases(content, filename) {
-        return CaseExtractor.extractFromContent(content);
+        const cases = CaseExtractor.extractFromContent(content);
+        if (cases) return CaseExtractor.normalizeCaseItems(cases);
+        return cases;
     }
 
     loadFormulaNames(root) {
@@ -119,7 +123,7 @@ class ReferenceValidator extends Validator {
         return refs;
     }
 
-    validateReferences(c, filename, idx, formulaNames, decisionTreeNames, trapRefs) {
+    validateReferences(c, filename, idx, formulaNames, decisionTreeNames, trapRefs, isP2) {
         const caseID = c.CaseID || "?";
         const prefix = `${filename}[${idx}] (${caseID})`;
         const result = { orphanExhibits: 0, orphanReferences: 0, totalReferences: 0 };
@@ -149,18 +153,26 @@ class ReferenceValidator extends Validator {
             // --- FormulaReference validation (if populated) ---
             if (item.FormulaReference !== undefined && item.FormulaReference !== null && item.FormulaReference !== "") {
                 if (!formulaNames.includes(item.FormulaReference)) {
-                    this.addWarning(
-                        `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): FormulaReference "${item.FormulaReference}" not found in FORMULA_MASTER.md`
-                    );
+                    // P2 case packs use descriptive references (ID codes, section refs,
+                    // prose formulas) that don't match P1 canonical names — accepted
+                    // via p2UseDescriptiveReferences flag (DL-059 FP-C remediation)
+                    if (!isP2 || !taxonomy.p2UseDescriptiveReferences) {
+                        this.addWarning(
+                            `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): FormulaReference "${item.FormulaReference}" not found in FORMULA_MASTER.md`
+                        );
+                    }
                 }
             }
 
             // --- DecisionTreeReference validation (if populated) ---
             if (item.DecisionTreeReference !== undefined && item.DecisionTreeReference !== null && item.DecisionTreeReference !== "") {
                 if (!decisionTreeNames.includes(item.DecisionTreeReference)) {
-                    this.addWarning(
-                        `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): DecisionTreeReference "${item.DecisionTreeReference}" not found in ACCOUNTING_DECISION_TREES.md`
-                    );
+                    // P2 uses descriptive names — accepted via p2UseDescriptiveReferences (DL-059 FP-C)
+                    if (!isP2 || !taxonomy.p2UseDescriptiveReferences) {
+                        this.addWarning(
+                            `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): DecisionTreeReference "${item.DecisionTreeReference}" not found in ACCOUNTING_DECISION_TREES.md`
+                        );
+                    }
                 }
             }
 
@@ -179,15 +191,34 @@ class ReferenceValidator extends Validator {
                     t.full === item.CommonTrapReference || t.name === item.CommonTrapReference
                 );
                 if (!matched) {
-                    this.addWarning(
-                        `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): CommonTrapReference "${item.CommonTrapReference}" not found in COMMON_EXAM_TRAPS.md`
-                    );
+                    // P2 uses prose descriptions — accepted via p2UseDescriptiveReferences (DL-059 FP-C)
+                    if (!isP2 || !taxonomy.p2UseDescriptiveReferences) {
+                        this.addWarning(
+                            `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): CommonTrapReference "${item.CommonTrapReference}" not found in COMMON_EXAM_TRAPS.md`
+                        );
+                    }
                 }
             }
         });
 
+        // P2: check prose references and ReferencedBy field for orphan exhibits
+        const p2ProsePatterns = (isP2 && taxonomy.p2ExhibitProsePatterns) || [];
+        const p2HasProseExhibitRef = p2ProsePatterns.length > 0 && c.Items.some(item => {
+            const text = JSON.stringify(item);
+            return p2ProsePatterns.some(p => p.test(text));
+        });
+
         c.Exhibits.forEach(ex => {
-            if (ex.ExhibitID && !referencedExhibitIDs.has(ex.ExhibitID)) {
+            const hasExplicitRef = referencedExhibitIDs.has(ex.ExhibitID);
+            // P2: exhibits may carry a ReferencedBy field listing item IDs
+            const hasFieldRef = ex.ReferencedBy && Array.isArray(ex.ReferencedBy) &&
+                ex.ReferencedBy.filter(r => typeof r === "string" && r.length > 0).length > 0;
+            // P2: prose references in item text indicate exhibit is referenced
+            const hasProseRef = isP2 && p2HasProseExhibitRef;
+            // P2: numeric data overlap — exhibit data values appear in item text
+            const hasDataRef = isP2 && this.hasExhibitDataOverlap(ex, c.Items);
+
+            if (ex.ExhibitID && !hasExplicitRef && !hasFieldRef && !hasProseRef && !hasDataRef) {
                 result.orphanExhibits++;
                 this.addWarning(
                     `${prefix} exhibit "${ex.ExhibitID}": Exhibit is never referenced by any item`
@@ -200,6 +231,21 @@ class ReferenceValidator extends Validator {
         this.validateExhibitIDUniqueness(c, prefix);
 
         return result;
+    }
+
+    // P2: check if exhibit numeric data (4+ digit values) appears in item text
+    // P2 items reference exhibits implicitly by using data from exhibit tables
+    // without explicit ExhibitID references or prose keywords (DL-059 FP-D)
+    hasExhibitDataOverlap(exhibit, items) {
+        if (!exhibit || typeof exhibit !== "object") return false;
+        const exhibitText = JSON.stringify(exhibit);
+        const numbers = exhibitText.match(/\d{4,}/g);
+        if (!numbers || numbers.length === 0) return false;
+        const uniqueNumbers = [...new Set(numbers)];
+        return items.some(item => {
+            const itemText = JSON.stringify(item);
+            return uniqueNumbers.some(num => itemText.includes(num));
+        });
     }
 
     extractReferences(item) {

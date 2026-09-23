@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator — Difficulty Calibration Standard v1.1
+﻿# CMA Exam Simulator — Difficulty Calibration Standard v1.1
 
 **Version:** 1.1
 **Status:** Active
@@ -10,7 +10,7 @@
 
 ## §1 — Purpose
 
-This standard defines the evidence-based difficulty calibration framework for every item in the CMA Part 1 Exam Simulator. It replaces ad-hoc template-based difficulty assignment with a cognitive-demand-driven rubric. All future content creation, audit, and recalibration sessions shall reference this standard.
+This standard defines the evidence-based difficulty calibration framework for every item in the CMA Exam Simulator. It replaces ad-hoc template-based difficulty assignment with a cognitive-demand-driven rubric. All future content creation, audit, and recalibration sessions shall reference this standard.
 
 **v1.1 adds:** Boundary decision trees (§9), expanded forbidden trigger catalog with DL-012 clone pattern (§8), reviewer protocols for all four CL boundary zones, disagreement resolution process (§11), reviewer quick-reference decision trees (§12), confidence gate protocol (§13), drift detection process (§14), and cross-pack consistency rule (§15). Codifies findings from S713–S720 systematic testing across 2,500 items. Example library removed pending re-verification (S721 Agent D Validation Board: 74% QID mismatch rate across 16 of 23 exemplars).
 

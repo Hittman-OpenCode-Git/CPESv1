@@ -1,4 +1,4 @@
-# Repository Rules
+﻿# Repository Rules
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document codifies the rules that govern the physical organization, change management, and hygiene of the CMA Part 1 Exam Simulator repository. It is the operational companion to `docs/ROOT_FOLDER_POLICY.md` (what goes where) and `AGENTS.md` (how sessions operate).
+This document codifies the rules that govern the physical organization, change management, and hygiene of the CMA Exam Simulator repository. It is the operational companion to `docs/ROOT_FOLDER_POLICY.md` (what goes where) and `AGENTS.md` (how sessions operate).
 
 ---
 

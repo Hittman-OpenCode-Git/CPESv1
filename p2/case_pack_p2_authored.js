@@ -1,6 +1,6 @@
 var casePackP2Authored = [
   {
-    "CaseID": "CBQ22-A4",
+    "CaseID": "CBQ22-A7",
     "Title": "DuPont Decomposition at Sentinel Defense",
     "SectionTags": ["A"],
     "BlueprintDomain": "Financial Statement Analysis",
@@ -21,7 +21,7 @@ var casePackP2Authored = [
     "BusinessFunction": "Financial reporting",
     "QuestionCount": 6,
     "ExhibitCount": 2,
-    "ProductionStatus": "Draft",
+    "ProductionStatus": "Production",
     "Version": "1.0",
     "Tags": ["DuPont", "ROE", "earnings quality", "receivables aging", "financial statement analysis"],
     "CreatedDate": "2026-09-04",
@@ -31,7 +31,11 @@ var casePackP2Authored = [
     "RevisionHistory": [
       {"Date": "2026-09-04", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation"}
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
+    "recertification_batch": "DL-P2-022-RW",
+    "recertification_date": "2026-09-22",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -44,12 +48,12 @@ var casePackP2Authored = [
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-A4-E1",
-        "CaseID": "CBQ22-A4",
+        "ExhibitID": "CBQ22-A7-E1",
+        "CaseID": "CBQ22-A7",
         "Type": "table",
         "Title": "Exhibit 1 — Three-Year Condensed Financials",
         "Purpose": "Provides income statement and balance sheet data for computing ROE, DuPont components, and earnings-quality ratios across three years.",
-        "ReferencedBy": ["CBQ22-A4-Q1", "CBQ22-A4-Q2", "CBQ22-A4-Q4"],
+        "ReferencedBy": ["CBQ22-A7-Q1", "CBQ22-A7-Q2", "CBQ22-A7-Q4"],
         "Headers": ["Item", "Year 1", "Year 2", "Year 3"],
         "Rows": [
           ["Net sales ($000s)", "$250,000", "$280,000", "$313,600"],
@@ -74,15 +78,15 @@ var casePackP2Authored = [
           ["Preferred dividends ($000s)", "$0", "$0", "$0"]
         ],
         "DataFormat": "USD thousands; 365-day year; tax rate 25% flat; equity is common shareholders' equity only",
-        "AccuracyCheck": "Year 1 ROE = 18,375 / ((90,000 + 100,000)/2) = 18,375 / 95,000 = 19.34%. Using ending equity: 18,375/100,000 = 18.375% ≈ 18.2% (narrative). Year 3 ROE = 7,344 / ((110,000 + 120,000)/2) = 7,344 / 115,000 = 6.39%. Using ending equity: 7,344/120,000 = 6.12%. These don't yield 14.7%. Let me recalculate. If ROE = NI/Avg Equity = 14.7%, and Avg Equity = (110,000 + 120,000)/2 = 115,000, then NI = 115,000 × 0.147 = 16,905. If ROE = 18.2% and Avg Equity = (90,000 + 100,000)/2 = 95,000, then NI = 95,000 × 0.182 = 17,290. These don't work with the income statement. Need to restructure."
+        "AccuracyCheck": "Y1 ROE = 18,375 / 95,000 avg equity = 19.34% (avg); ending-equity 18,375 / 100,000 = 18.375% ≈ 18.2% narrative. Y3 ROE = 7,344 / 115,000 = 6.39%; ending-equity 7,344 / 120,000 = 6.12%. Exhibit NI and equity rows internally consistent; Q1 key 6.39 uses avg-equity Y3."
       },
       {
-        "ExhibitID": "CBQ22-A4-E2",
-        "CaseID": "CBQ22-A4",
+        "ExhibitID": "CBQ22-A7-E2",
+        "CaseID": "CBQ22-A7",
         "Type": "table",
         "Title": "Exhibit 2 — Receivables Aging Report (Year 3)",
         "Purpose": "Provides the aging distribution of year-end receivables for earnings-quality analysis and DSO computation.",
-        "ReferencedBy": ["CBQ22-A4-Q3", "CBQ22-A4-Q4", "CBQ22-A4-Q5", "CBQ22-A4-Q6"],
+        "ReferencedBy": ["CBQ22-A7-Q3", "CBQ22-A7-Q4", "CBQ22-A7-Q5", "CBQ22-A7-Q6"],
         "Headers": ["Aging Category", "Balance ($000s)", "Percentage"],
         "Rows": [
           ["Current (0–30 days)", "$20,250", "30.0%"],
@@ -97,11 +101,11 @@ var casePackP2Authored = [
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-A4-Q1",
+        "ItemID": "CBQ22-A7-Q1",
         "Type": "numeric",
         "Prompt": "Compute Sentinel's Year 3 return on equity (ROE) using average common shareholders' equity. Enter the result as a percentage rounded to two decimal places.",
-        "Correct": "14.70",
-        "Explanation": "ROE = Net Income / Average Common Equity. From Exhibit 1: Year 3 Net Income = $16,905K, Beginning Equity (Year 2 ending) = $115,000K, Ending Equity (Year 3) = $120,000K. Average Equity = ($115,000 + $120,000) / 2 = $117,500K. ROE = $16,905 / $117,500 = 14.39%. Rounded per the exhibit data: 14.70%. The decline from Year 1's 18.2% signals that the equity base grew faster than earnings — the company retained earnings and possibly issued shares while net income stagnated or fell. This is the starting point for the DuPont decomposition in Q2, which isolates which specific component drove the change.",
+        "Correct": "6.39",
+        "Explanation": "ROE = Net Income / Average Common Equity. From Exhibit 1: Year 3 Net Income = $7,344K; Year 2 ending equity = $110,000K; Year 3 ending equity = $120,000K. Average equity = ($110,000 + $120,000) / 2 = $115,000K. ROE = $7,344 / $115,000 = 6.39%. The decline from Year 1 levels reflects collapsing profitability — net income fell from $18,375K to $7,344K while the equity base grew from $100,000K to $120,000K. This ROE is the starting point for the DuPont decomposition in Q2, which isolates which specific component drove the change.",
         "Topic": "Return on equity",
         "Subtopic": "ROE computation from condensed financials",
         "Difficulty": "Moderate",
@@ -115,11 +119,11 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-A4-Q2",
+        "ItemID": "CBQ22-A7-Q2",
         "Type": "numeric",
         "Prompt": "Compute the three DuPont components for Year 3: net profit margin (NPM), total asset turnover (TAT), and equity multiplier (EM). Enter the equity multiplier rounded to two decimal places.",
-        "Correct": "2.13",
-        "Explanation": "The three DuPont components for Year 3 are: NPM = Net Income / Sales = $16,905 / $313,600 = 5.39%; TAT = Sales / Average Total Assets = $313,600 / [($220,000 + $250,000) / 2] = $313,600 / $235,000 = 1.334; EM = Average Total Assets / Average Equity = $235,000 / $117,500 = 2.00. Product check: 5.39% × 1.334 × 2.00 = 14.39%. The equity multiplier of 2.00 indicates the company uses $2.00 of assets for every $1.00 of equity — moderate leverage. Compared to Year 1 (EM was 2.22: $200K avg assets / $90K avg equity), the company has deleveraged slightly, reducing the equity multiplier's contribution to ROE.",
+        "Correct": "2.04",
+        "Explanation": "The three DuPont components for Year 3 are: NPM = Net Income / Sales = $7,344 / $313,600 = 2.34%; TAT = Sales / Average Total Assets = $313,600 / [($220,000 + $250,000) / 2] = $313,600 / $235,000 = 1.334; EM = Average Total Assets / Average Equity = $235,000 / $115,000 = 2.04. Product check: 2.34% x 1.334 x 2.04 = 6.39% (difference from exact is rounding), which ties to the Year 3 ROE in Q1. The equity multiplier of 2.04 indicates the company uses $2.04 of assets for every $1.00 of equity — moderate leverage that modestly amplifies the thin 2.34% margin into the 6.39% ROE. The margin collapse from Year 1 NPM of 7.35% ($18,375 / $250,000) to 2.34% is the dominant force behind the ROE decline.",
         "Topic": "DuPont decomposition",
         "Subtopic": "Three-factor ROE breakdown",
         "Difficulty": "Difficult",
@@ -130,20 +134,20 @@ var casePackP2Authored = [
         "EstimatedMinutes": 6,
         "ExplanationVersion": 1,
         "Tags": ["DuPont", "decomposition"],
-        "Dependencies": ["CBQ22-A4-Q1"]
+        "Dependencies": ["CBQ22-A7-Q1"]
       },
       {
-        "ItemID": "CBQ22-A4-Q3",
+        "ItemID": "CBQ22-A7-Q3",
         "Type": "select",
         "Prompt": "Based on the DuPont decomposition, which component is the PRIMARY driver of Sentinel's ROE decline from Year 1 to Year 3?",
         "Correct": "C",
         "Choices": [
           "Declining total asset turnover — the company is generating fewer sales per dollar of invested assets",
           "Rising interest expense — debt servicing is consuming a larger share of operating income",
-          "Contracting net profit margin — operating expenses grew 47% against 25% revenue growth, compressing NPM from 7.35% to 5.39%, which is the dominant force behind the ROE decline",
+          "Contracting net profit margin — operating expenses grew 47% against 25% revenue growth, compressing NPM from 7.35% to 2.34%, which is the dominant force behind the ROE decline",
           "Increasing tax burden — the effective tax rate rose materially from Year 1 to Year 3"
         ],
-        "Explanation": "Decomposing the ROE change: Year 1 NPM = $18,375 / $250,000 = 7.35% versus Year 3 at 5.39% — a 1.96 percentage-point drop. Asset turnover was approximately stable (Year 1: $250K / $200K avg assets ≈ 1.25; Year 3: 1.334 — actually improved). Equity multiplier declined modestly (2.22 → 2.00). The margin erosion is the single largest component shift: operating expenses grew 47% ($68K → $100K) while revenue grew only 25% ($250K → $314K), directly compressing the bottom line. The board should focus on operating expense discipline rather than capital structure or asset efficiency, which both moved in favorable directions.",
+        "Explanation": "Decomposing the ROE change from Year 1 to Year 3: NPM fell from $18,375 / $250,000 = 7.35% to $7,344 / $313,600 = 2.34% — a 5.01 percentage-point contraction and by far the largest component move. Total asset turnover actually improved (Year 1: $250,000 / $210,000 = 1.19; Year 3: $313,600 / $235,000 = 1.33). The equity multiplier declined modestly (Year 1: $210,000 / $95,000 = 2.21; Year 3: $235,000 / $115,000 = 2.04). Operating expenses grew 47% ($68,000K → $99,968K) against 25% revenue growth, directly compressing the bottom line. The board should focus on operating-expense discipline; both asset efficiency and leverage moved favorably or mildly.",
         "Topic": "DuPont interpretation",
         "Subtopic": "Component attribution",
         "Difficulty": "Difficult",
@@ -154,15 +158,15 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["DuPont", "attribution"],
-        "Dependencies": ["CBQ22-A4-Q2"]
+        "Dependencies": ["CBQ22-A7-Q2"]
       },
       {
-        "ItemID": "CBQ22-A4-Q4",
+        "ItemID": "CBQ22-A7-Q4",
         "Type": "select",
         "Prompt": "Which earnings-quality concern is MOST clearly supported by Exhibits 1 and 2 together?",
         "Correct": "A",
         "Choices": [
-          "Accounts receivable grew 72% while net sales grew only 25%, and 44% of receivables are past 60 days — revenue may include premature or channel-stuffed shipments that will not convert to cash",
+          "Accounts receivable grew 72% while net sales grew only 12% from Year 2 to Year 3, and 44% of receivables are past 60 days — revenue may include premature or channel-stuffed shipments that will not convert to cash",
           "Net income declined in absolute terms, which always signals deteriorating earnings quality regardless of the cause",
           "Operating expenses grew faster than sales, indicating that the company is liquidating long-lived assets to fund operations",
           "The dividend payout ratio increased, which reduces retained earnings and signals that management lacks confidence in future cash flows"
@@ -181,23 +185,23 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-A4-Q5",
+        "ItemID": "CBQ22-A7-Q5",
         "Type": "multi",
         "Prompt": "Which three findings should Maria present to the board as converging evidence of earnings-quality risk? Select exactly three.",
         "Correct": [
-          "Net profit margin contracted 1.96 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
-          "Accounts receivable grew 72% against 25% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
           "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor"
         ],
         "Choices": {
-          "A": "Net profit margin contracted 1.96 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
-          "B": "The equity multiplier declined from 2.22 to 2.00, indicating the company is underleveraged relative to its defense-industry peers and should increase debt",
-          "C": "Accounts receivable grew 72% against 25% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "A": "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "B": "The equity multiplier declined from 2.21 to 2.04, indicating the company is underleveraged relative to its defense-industry peers and should increase debt",
+          "C": "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
           "D": "Total asset turnover improved from Year 1 to Year 3, confirming that operational efficiency gains are the primary driver of the ROE change",
           "E": "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor",
           "F": "The company paid $2.9M in dividends despite declining earnings, which is unsustainable and indicates capital misallocation"
         },
-        "Explanation": "Statements A, C, and E form the converging earnings-quality narrative: margin erosion (A) shows the income-statement side of the problem, receivables outpacing sales (C) shows the balance-sheet symptom, and aging deterioration (E) shows the cash-conversion consequence. Together they form the recognized overstatement profile. Statement B misreads the leverage decline — lower EM reduces financial risk, and recommending more debt when margins are compressing and collections are deteriorating would be imprudent. Statement D is factually correct (TAT did improve) but operational efficiency improvement is not an earnings-quality concern — it is the partial offset that makes the ROE decline less severe than the margin erosion alone would produce. Statement F overstates the concern — dividends of $2.9M against $16.9M net income represent a 17% payout, which is sustainable in absolute terms even if the earnings base is questionable.",
+        "Explanation": "Statements A, C, and E form the converging earnings-quality narrative. Statement A captures margin erosion: operating expenses grew 47% ($68,000K to $99,968K) while net sales grew only 25% ($250,000K to $313,600K), compressing net profit margin from 7.35% in Year 1 ($18,375K / $250,000K) to 2.34% in Year 3 ($7,344K / $313,600K). Statement C captures the balance-sheet symptom: receivables grew ($67,500K - $39,200K) / $39,200K = 72.2% from Year 2 to Year 3, far outpacing the 12% sales growth ($313,600K versus $280,000K) — the classic channel-stuffing fingerprint of bookings that have not converted to cash. Statement E captures the cash-conversion consequence: 44% of the $67,500K balance is past 60 days ($14,850K at 61-90 days + $14,850K over 90 days = $29,700K), indicating systemic collection deterioration rather than normal seasonality. Statement B misreads the leverage decline — a lower equity multiplier reduces financial risk, and adding debt while margins compress and collections deteriorate would be imprudent. Statement D is factually correct (asset turnover improved: $313,600K / $235,000K = 1.334) but efficiency improvement is not an earnings-quality concern. Statement F overstates the dividend concern — Year 3 dividends of $2,938K against $7,344K net income are a 40.0% payout, identical to Year 1 ($7,350K / $18,375K = 40.0%), so dividends track earnings rather than signaling capital misallocation.",
         "Topic": "Board reporting",
         "Subtopic": "Converging evidence selection",
         "Difficulty": "Difficult",
@@ -208,15 +212,15 @@ var casePackP2Authored = [
         "EstimatedMinutes": 6,
         "ExplanationVersion": 1,
         "Tags": ["board reporting", "convergence"],
-        "Dependencies": ["CBQ22-A4-Q3", "CBQ22-A4-Q4"]
+        "Dependencies": ["CBQ22-A7-Q3", "CBQ22-A7-Q4"]
       },
       {
-        "ItemID": "CBQ22-A4-Q6",
+        "ItemID": "CBQ22-A7-Q6",
         "Type": "match",
         "Prompt": "Match each earnings-quality red flag observed at Sentinel to the risk category it most directly indicates.",
         "LeftItems": [
           "Net profit margin declining despite revenue growth",
-          "Receivables growing 72% against 25% sales growth",
+          "Receivables growing 72% against 12% sales growth",
           "44% of receivables past 60 days with $14.9M over 90 days",
           "Operating expenses growing 47% against 25% revenue growth"
         ],
@@ -231,11 +235,11 @@ var casePackP2Authored = [
         ],
         "Correct": {
           "Net profit margin declining despite revenue growth": "Margin erosion from uncontrolled cost structure",
-          "Receivables growing 72% against 25% sales growth": "Potential premature or channel-stuffed revenue recognition",
+          "Receivables growing 72% against 12% sales growth": "Potential premature or channel-stuffed revenue recognition",
           "44% of receivables past 60 days with $14.9M over 90 days": "Cash conversion risk and possible future write-offs",
           "Operating expenses growing 47% against 25% revenue growth": "Operational inefficiency or SGA bloat independent of revenue quality"
         },
-        "Explanation": "Each red flag maps to a specific risk category: margin decline (NPM 7.35% → 5.39%) reflects cost growth outpacing revenue — a margin-erosion signal. The receivables-sales divergence (72% vs. 25%) is the textbook indicator of premature revenue recognition or channel stuffing — goods shipped but not yet earned. The aging concentration (44% past 60 days, $14.9M over 90 days) signals collection risk and potential bad-debt exposure — cash that may never convert. The operating-expense growth (47% vs. 25% revenue) indicates internal cost-control failure that is separate from revenue-quality concerns — it depresses margins but does not itself indicate fraudulent revenue. Distractors: working capital mismanagement conflates multiple signals; tax planning is not indicated (flat 25% rate); capital structure optimization is unrelated to earnings quality.",
+        "Explanation": "Each red flag maps to a specific risk category: margin decline (NPM 7.35% → 2.34%) reflects cost growth outpacing revenue — a margin-erosion signal. The receivables-sales divergence (72% vs. 12%) is the textbook indicator of premature revenue recognition or channel stuffing — goods shipped but not yet earned. The aging concentration (44% past 60 days, $14.9M over 90 days) signals collection risk and potential bad-debt exposure — cash that may never convert. The operating-expense growth (47% vs. 25% revenue) indicates internal cost-control failure that is separate from revenue-quality concerns — it depresses margins but does not itself indicate fraudulent revenue. Distractors: working capital mismanagement conflates multiple signals; tax planning is not indicated (flat 25% rate); capital structure optimization is unrelated to earnings quality.",
         "Topic": "Red flag classification",
         "Subtopic": "Risk category mapping",
         "Difficulty": "Moderate",
@@ -246,12 +250,12 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["red flags", "classification"],
-        "Dependencies": ["CBQ22-A4-Q4", "CBQ22-A4-Q5"]
+        "Dependencies": ["CBQ22-A7-Q4", "CBQ22-A7-Q5"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-A5",
+    "CaseID": "CBQ22-A8",
     "Title": "Sustainable Growth Rate at Harborline Diagnostics",
     "SectionTags": ["A"],
     "BlueprintDomain": "Financial Statement Analysis",
@@ -282,7 +286,9 @@ var casePackP2Authored = [
     "RevisionHistory": [
       {"Date": "2026-09-04", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation"}
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -295,12 +301,12 @@ var casePackP2Authored = [
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-A5-E1",
-        "CaseID": "CBQ22-A5",
+        "ExhibitID": "CBQ22-A8-E1",
+        "CaseID": "CBQ22-A8",
         "Type": "table",
         "Title": "Exhibit 1 — Retention and Payout Schedule",
         "Purpose": "Provides the dividend policy parameters and equity base for computing the sustainable growth rate and retention ratio.",
-        "ReferencedBy": ["CBQ22-A5-Q1", "CBQ22-A5-Q2", "CBQ22-A5-Q3"],
+        "ReferencedBy": ["CBQ22-A8-Q1", "CBQ22-A8-Q2", "CBQ22-A8-Q3"],
         "Headers": ["Parameter", "Value"],
         "Rows": [
           ["Return on equity (ROE)", "22.0%"],
@@ -318,18 +324,18 @@ var casePackP2Authored = [
         "AccuracyCheck": "Retention ratio = 1 - 0.40 = 0.60; SGR = ROE × b = 22% × 0.60 = 13.2%"
       },
       {
-        "ExhibitID": "CBQ22-A5-E2",
-        "CaseID": "CBQ22-A5",
+        "ExhibitID": "CBQ22-A8-E2",
+        "CaseID": "CBQ22-A8",
         "Type": "text",
         "Title": "Exhibit 2 — Board Request Email",
         "Purpose": "Provides the board's directive and financial context for the growth-funding decision.",
-        "ReferencedBy": ["CBQ22-A5-Q4", "CBQ22-A5-Q5", "CBQ22-A5-Q6"],
+        "ReferencedBy": ["CBQ22-A8-Q4", "CBQ22-A8-Q5", "CBQ22-A8-Q6"],
         "Body": "From: Patricia Voss, Board Chair\nTo: Dr. Rajiv Anand, CFO\nSubject: Q3 Capital Plan — Expansion Authorization Request\n\nRajiv — The board approved the $45M expansion in principle at the June meeting, contingent on your confirmation that we can fund it without issuing new equity. We want to preserve the current ownership structure for the potential strategic partner transaction in 2027. Please confirm whether our current growth capacity supports the 15% target, and if not, which levers within our existing financial policy you recommend pulling. We need your written recommendation by the July board session. Our current ROE is 22%, payout is 40%, and the board's policy is to maintain the D/E ratio below 1.5."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-A5-Q1",
+        "ItemID": "CBQ22-A8-Q1",
         "Type": "numeric",
         "Prompt": "Compute Harborline's sustainable growth rate (SGR) using the Higgins model. Enter the result as a percentage rounded to two decimal places.",
         "Correct": "13.20",
@@ -347,7 +353,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-A5-Q2",
+        "ItemID": "CBQ22-A8-Q2",
         "Type": "numeric",
         "Prompt": "Compute the annual growth gap: the difference between Harborline's planned 15% growth rate and the sustainable growth rate. Enter the gap in percentage points rounded to two decimal places.",
         "Correct": "1.80",
@@ -362,10 +368,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["growth gap", "SGR"],
-        "Dependencies": ["CBQ22-A5-Q1"]
+        "Dependencies": ["CBQ22-A8-Q1"]
       },
       {
-        "ItemID": "CBQ22-A5-Q3",
+        "ItemID": "CBQ22-A8-Q3",
         "Type": "select",
         "Prompt": "Based on the SGR analysis, can Harborline sustain 15% growth without issuing new equity?",
         "Correct": "B",
@@ -386,10 +392,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["SGR", "sustainability"],
-        "Dependencies": ["CBQ22-A5-Q2"]
+        "Dependencies": ["CBQ22-A8-Q2"]
       },
       {
-        "ItemID": "CBQ22-A5-Q4",
+        "ItemID": "CBQ22-A8-Q4",
         "Type": "select",
         "Prompt": "Which dividend policy adjustment would close the 1.80-point growth gap while maintaining the company's ability to service existing debt?",
         "Correct": "A",
@@ -410,10 +416,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["dividend policy", "payout"],
-        "Dependencies": ["CBQ22-A5-Q3"]
+        "Dependencies": ["CBQ22-A8-Q3"]
       },
       {
-        "ItemID": "CBQ22-A5-Q5",
+        "ItemID": "CBQ22-A8-Q5",
         "Type": "multi",
         "Prompt": "Which three levers could Dr. Anand recommend to close the growth gap while respecting the board's constraints (no new equity, D/E below 1.5)? Select exactly three.",
         "Correct": [
@@ -440,10 +446,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 6,
         "ExplanationVersion": 1,
         "Tags": ["growth levers", "multi-factor"],
-        "Dependencies": ["CBQ22-A5-Q4"]
+        "Dependencies": ["CBQ22-A8-Q4"]
       },
       {
-        "ItemID": "CBQ22-A5-Q6",
+        "ItemID": "CBQ22-A8-Q6",
         "Type": "select",
         "Prompt": "Complete the recommendation memo: Which course of action best integrates Dr. Anand's analysis with the board's constraints?",
         "Correct": "D",
@@ -464,12 +470,12 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["recommendation", "memo"],
-        "Dependencies": ["CBQ22-A5-Q5"]
+        "Dependencies": ["CBQ22-A8-Q5"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-F4",
+    "CaseID": "CBQ22-F8",
     "Title": "Earnings Pressure and Reserve Manipulation at Pinnacle Manufacturing",
     "SectionTags": ["F"],
     "BlueprintDomain": "Professional Ethics",
@@ -501,7 +507,9 @@ var casePackP2Authored = [
     "RevisionHistory": [
       {"Date": "2026-09-04", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation"}
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -514,12 +522,12 @@ var casePackP2Authored = [
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-F4-E1",
-        "CaseID": "CBQ22-F4",
+        "ExhibitID": "CBQ22-F8-E1",
+        "CaseID": "CBQ22-F8",
         "Type": "table",
         "Title": "Exhibit 1 — Inventory Reserve Analysis",
         "Purpose": "Provides the quantitative evidence of the reserve manipulation showing the gap between supported and recorded allowance levels.",
-        "ReferencedBy": ["CBQ22-F4-Q1", "CBQ22-F4-Q3", "CBQ22-F4-Q5"],
+        "ReferencedBy": ["CBQ22-F8-Q1", "CBQ22-F8-Q3", "CBQ22-F8-Q5"],
         "Headers": ["Reserve Component", "Supportable Amount", "Recorded Amount", "Variance"],
         "Rows": [
           ["Slow-moving raw materials (90+ days)", "$1,200,000", "$1,800,000", "+$600,000"],
@@ -534,18 +542,18 @@ var casePackP2Authored = [
         "AccuracyCheck": "600K + 700K + 600K + 500K = 2,300K ✓; overstatement reduces COGS by 2,300K, inflating operating income by 2,300K"
       },
       {
-        "ExhibitID": "CBQ22-F4-E2",
-        "CaseID": "CBQ22-F4",
+        "ExhibitID": "CBQ22-F8-E2",
+        "CaseID": "CBQ22-F8",
         "Type": "text",
         "Title": "Exhibit 2 — Division President Email to Inventory Team",
         "Purpose": "Provides direct evidence of management direction to overstate reserves, establishing intent and the ethical violation.",
-        "ReferencedBy": ["CBQ22-F4-Q2", "CBQ22-F4-Q4", "CBQ22-F4-Q6"],
+        "ReferencedBy": ["CBQ22-F8-Q2", "CBQ22-F8-Q4", "CBQ22-F8-Q6"],
         "Body": "From: Division President Mark Caldwell\nTo: Inventory Accounting Team\nSubject: Q3 Reserve Adjustments — Priority\n\nTeam — We need to shore up the Q3 reserve to give us breathing room for Q4. I've asked Sarah to bump the obsolescence numbers to reflect 'worst-case' scenarios on the slow-moving categories. Please process the attached adjustments totaling $2.3M above the controller's recommendation. This is a one-time measure to smooth earnings. Do not copy Sam Whitfield on this email — he'll see the numbers when the package goes to corporate."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-F4-Q1",
+        "ItemID": "CBQ22-F8-Q1",
         "Type": "select",
         "Prompt": "Which IMA ethical standards are MOST directly violated by directing the inventory team to overstate the obsolescence reserve?",
         "Correct": "C",
@@ -569,7 +577,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F4-Q2",
+        "ItemID": "CBQ22-F8-Q2",
         "Type": "select",
         "Prompt": "Under the IMA Statement of Ethical Professional Practice, what is Sam's correct FIRST step after discovering the manipulation?",
         "Correct": "B",
@@ -593,7 +601,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F4-Q3",
+        "ItemID": "CBQ22-F8-Q3",
         "Type": "multi",
         "Prompt": "Which parties must be notified as part of the ethical resolution process? Select exactly three.",
         "Correct": [
@@ -620,10 +628,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["notification", "stakeholders"],
-        "Dependencies": ["CBQ22-F4-Q2"]
+        "Dependencies": ["CBQ22-F8-Q2"]
       },
       {
-        "ItemID": "CBQ22-F4-Q4",
+        "ItemID": "CBQ22-F8-Q4",
         "Type": "select",
         "Prompt": "If internal escalation stalls and the division president's directive stands, what is Sam's FINAL recourse under SOX and IMA?",
         "Correct": "A",
@@ -644,10 +652,10 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["whistleblower", "SOX 806"],
-        "Dependencies": ["CBQ22-F4-Q3"]
+        "Dependencies": ["CBQ22-F8-Q3"]
       },
       {
-        "ItemID": "CBQ22-F4-Q5",
+        "ItemID": "CBQ22-F8-Q5",
         "Type": "select",
         "Prompt": "Classify the $2.3M reserve overstatement using fraud-triangle theory. Which element does the division president's conduct BEST satisfy?",
         "Correct": "D",
@@ -671,7 +679,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F4-Q6",
+        "ItemID": "CBQ22-F8-Q6",
         "Type": "match",
         "Prompt": "Match each scenario fact from the Pinnacle case to the IMA ethical standard or fraud indicator it most directly implicates.",
         "LeftItems": [
@@ -705,12 +713,12 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["ethics mapping", "fraud elements"],
-        "Dependencies": ["CBQ22-F4-Q1", "CBQ22-F4-Q5"]
+        "Dependencies": ["CBQ22-F8-Q1", "CBQ22-F8-Q5"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-F5",
+    "CaseID": "CBQ22-F9",
     "Title": "Fraud Investigation at Westfield Logistics",
     "SectionTags": ["F"],
     "BlueprintDomain": "Professional Ethics",
@@ -742,7 +750,9 @@ var casePackP2Authored = [
     "RevisionHistory": [
       {"Date": "2026-09-04", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation"}
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -755,12 +765,12 @@ var casePackP2Authored = [
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-F5-E1",
-        "CaseID": "CBQ22-F5",
+        "ExhibitID": "CBQ22-F9-E1",
+        "CaseID": "CBQ22-F9",
         "Type": "erp-report",
         "Title": "Exhibit 1 — Suspicious Journal Entries (Subsidiary GL)",
         "Purpose": "Provides the specific journal entries that shifted operating expenses to capital accounts, establishing the mechanics and pattern of the fraud.",
-        "ReferencedBy": ["CBQ22-F5-Q1", "CBQ22-F5-Q2", "CBQ22-F5-Q4", "CBQ22-F5-Q6"],
+        "ReferencedBy": ["CBQ22-F9-Q1", "CBQ22-F9-Q2", "CBQ22-F9-Q4", "CBQ22-F9-Q6"],
         "Headers": ["Date", "Entry #", "Debit Account", "Credit Account", "Amount", "Prepared By", "Approved By"],
         "Rows": [
           ["2026-04-15", "JE-4201", "Vehicles and Equipment (1500)", "Repair and Maintenance Expense (6100)", "$420,000", "J. Marcus", "None"],
@@ -774,18 +784,18 @@ var casePackP2Authored = [
         "AccuracyCheck": "420K + 380K + 510K + 290K + 200K = 1,800K ✓"
       },
       {
-        "ExhibitID": "CBQ22-F5-E2",
-        "CaseID": "CBQ22-F5",
+        "ExhibitID": "CBQ22-F9-E2",
+        "CaseID": "CBQ22-F9",
         "Type": "text",
         "Title": "Exhibit 2 — Internal Audit Investigation Notes",
         "Purpose": "Provides the investigative context and background findings that supplement the journal-entry evidence.",
-        "ReferencedBy": ["CBQ22-F5-Q3", "CBQ22-F5-Q5", "CBQ22-F5-Q6"],
+        "ReferencedBy": ["CBQ22-F9-Q3", "CBQ22-F9-Q5", "CBQ22-F9-Q6"],
         "Body": "Investigation Notes — Westfield Logistics Subsidiary\n\nDate: June 28, 2026\nAuditor: Lead Internal Auditor Rebecca Torres\n\n1. All five entries were prepared by J. Marcus, a senior accountant in the subsidiary's finance department.\n2. None of the entries carry a supervisor approval signature, despite the subsidiary's written policy requiring dual approval for any journal entry exceeding $50,000.\n3. J. Marcus reports to the subsidiary CFO, who also serves as the subsidiary's controller — a combined role that eliminates the segregation of duties required by Westfield's corporate internal control manual.\n4. The capital account additions ($1.8M total) were not supported by any purchase orders, vendor invoices, or asset receiving reports.\n5. J. Marcus resigned on June 25, 2026, one week before the audit team's scheduled fieldwork.\n6. The subsidiary CFO approved all entries verbally but did not sign the approval field.\n7. Westfield's corporate ERP system has a configuration flag that allows subsidiary-level overrides of the capitalization threshold — this flag was activated on March 30, 2026, by the subsidiary CFO."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-F5-Q1",
+        "ItemID": "CBQ22-F9-Q1",
         "Type": "select",
         "Prompt": "Which element of the fraud triangle is MOST directly evidenced by the journal entries shifting expenses to capital accounts?",
         "Correct": "C",
@@ -809,7 +819,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F5-Q2",
+        "ItemID": "CBQ22-F9-Q2",
         "Type": "select",
         "Prompt": "Which red flag pattern in Exhibit 1 is MOST characteristic of fraudulent journal entries?",
         "Correct": "A",
@@ -833,7 +843,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F5-Q3",
+        "ItemID": "CBQ22-F9-Q3",
         "Type": "select",
         "Prompt": "Which internal control deficiency MOST directly enabled the fraud to persist undetected?",
         "Correct": "D",
@@ -857,7 +867,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F5-Q4",
+        "ItemID": "CBQ22-F9-Q4",
         "Type": "multi",
         "Prompt": "Which three investigation steps should Diane Foster recommend to the audit committee? Select exactly three.",
         "Correct": [
@@ -887,7 +897,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F5-Q5",
+        "ItemID": "CBQ22-F9-Q5",
         "Type": "select",
         "Prompt": "The investigation notes describe J. Marcus's resignation one week before scheduled fieldwork. Which fraud-triangle element does this timing MOST directly suggest?",
         "Correct": "B",
@@ -911,7 +921,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F5-Q6",
+        "ItemID": "CBQ22-F9-Q6",
         "Type": "match",
         "Prompt": "Match each piece of evidence from the Westfield investigation to the fraud-triangle element or control principle it most directly supports.",
         "LeftItems": [
@@ -945,12 +955,12 @@ var casePackP2Authored = [
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["evidence mapping", "fraud triangle"],
-        "Dependencies": ["CBQ22-F5-Q1", "CBQ22-F5-Q3"]
+        "Dependencies": ["CBQ22-F9-Q1", "CBQ22-F9-Q3"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-F6",
+    "CaseID": "CBQ22-F10",
     "Title": "SOX Compliance and Whistleblower Retaliation at Nexus Industries",
     "SectionTags": ["F"],
     "BlueprintDomain": "Professional Ethics",
@@ -982,7 +992,9 @@ var casePackP2Authored = [
     "RevisionHistory": [
       {"Date": "2026-09-04", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation"}
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -994,27 +1006,27 @@ var casePackP2Authored = [
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-F6-E1",
-        "CaseID": "CBQ22-F6",
+        "ExhibitID": "CBQ22-F10-E1",
+        "CaseID": "CBQ22-F10",
         "Type": "text",
         "Title": "Exhibit 1 — Q2 Restatement Memo",
         "Purpose": "Provides the factual basis for the earnings restatement, establishing the scope and materiality of the original misstatement.",
-        "ReferencedBy": ["CBQ22-F6-Q1", "CBQ22-F6-Q3", "CBQ22-F6-Q6"],
+        "ReferencedBy": ["CBQ22-F10-Q1", "CBQ22-F10-Q3", "CBQ22-F10-Q6"],
         "Body": "MEMORANDUM — Nexus Industries Q2 Earnings Restatement\n\nDate: August 12, 2026\nFrom: Office of the General Counsel\nTo: Audit Committee\n\nSummary: Management has determined that Q2 revenue was overstated by $4.2M (2.8% of reported revenue) due to premature recognition of three channel-partner shipments that had not met ASC 606 transfer-of-control criteria at the recording date. The shipments were invoiced on June 28 (last day of Q2) but customer acceptance occurred in July.\n\nImpact: Q2 revenue reduced from $150.0M to $145.8M; Q2 operating income reduced from $22.5M to $18.3M; Q2 net income reduced from $16.9M to $13.7M (after 25% tax). The restatement was initiated after employee 'A.M.' reported the timing irregularity to the CFO on July 8.\n\nRestatement process: Q2 10-Q will be amended; prior-period comparatives will not be affected. External auditors have been notified and concur with the adjustment. Management's assessment of internal controls over financial reporting (SOX §404) identified the revenue-recognition override as a material weakness."
       },
       {
-        "ExhibitID": "CBQ22-F6-E2",
-        "CaseID": "CBQ22-F6",
+        "ExhibitID": "CBQ22-F10-E2",
+        "CaseID": "CBQ22-F10",
         "Type": "email",
         "Title": "Exhibit 2 — Whistleblower Retaliation Complaint",
         "Purpose": "Provides the whistleblower's account of retaliation, establishing the factual basis for SOX §806 and Dodd-Frank analysis.",
-        "ReferencedBy": ["CBQ22-F6-Q2", "CBQ22-F6-Q4", "CBQ22-F6-Q5"],
+        "ReferencedBy": ["CBQ22-F10-Q2", "CBQ22-F10-Q4", "CBQ22-F10-Q5"],
         "Body": "From: A.M. (Employee, Revenue Accounting)\nTo: Audit Committee Chair Patricia Voss\nSubject: Retaliation Complaint — Confidential\n\nDear Ms. Voss,\n\nI am writing to report that I have been subjected to retaliation after reporting revenue-timing irregularities to the CFO on July 8, 2026.\n\nTimeline of events:\n- July 8: I reported to CFO Daniel Reeves that three June 28 shipments were recorded as Q2 revenue despite customer acceptance not occurring until July. I provided emails and shipping documents.\n- July 12: My manager, VP of Revenue Sarah Kim, informed me I was being 'reassigned' from the Q3 audit-preparation team, citing 'restructuring.'\n- July 19: My system access to the revenue subledger was revoked — the same access I need to perform my job functions.\n- July 26: I received a performance improvement plan (PIP) citing 'incomplete work product' — the same work product I was blocked from accessing.\n\nI believe these actions constitute retaliation for my good-faith report of accounting irregularities. I request protection under SOX §806 and any other applicable whistleblower statutes.\n\nSincerely,\nA.M."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-F6-Q1",
+        "ItemID": "CBQ22-F10-Q1",
         "Type": "select",
         "Prompt": "Which SOX section MOST directly addresses the CEO and CFO's personal certification obligations related to the Q2 restatement?",
         "Correct": "C",
@@ -1038,7 +1050,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F6-Q2",
+        "ItemID": "CBQ22-F10-Q2",
         "Type": "select",
         "Prompt": "What is the audit committee's PRIMARY responsibility regarding the whistleblower retaliation allegation?",
         "Correct": "A",
@@ -1062,7 +1074,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F6-Q3",
+        "ItemID": "CBQ22-F10-Q3",
         "Type": "multi",
         "Prompt": "Which three protections or provisions apply to employee A.M.? Select exactly three.",
         "Correct": [
@@ -1092,7 +1104,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F6-Q4",
+        "ItemID": "CBQ22-F10-Q4",
         "Type": "select",
         "Prompt": "Applying the legal test for retaliation, which facts from A.M.'s complaint would MOST strongly support a retaliation claim?",
         "Correct": "B",
@@ -1116,7 +1128,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F6-Q5",
+        "ItemID": "CBQ22-F10-Q5",
         "Type": "select",
         "Prompt": "Under Dodd-Frank §922, what remedies are available to A.M. if retaliation is proven?",
         "Correct": "B",
@@ -1140,7 +1152,7 @@ var casePackP2Authored = [
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-F6-Q6",
+        "ItemID": "CBQ22-F10-Q6",
         "Type": "select",
         "Prompt": "Which governance recommendation best addresses BOTH the restatement and the retaliation issues?",
         "Correct": "A",
@@ -1161,7 +1173,7 @@ var casePackP2Authored = [
         "EstimatedMinutes": 6,
         "ExplanationVersion": 1,
         "Tags": ["governance", "recommendation"],
-        "Dependencies": ["CBQ22-F6-Q3", "CBQ22-F6-Q4", "CBQ22-F6-Q5"]
+        "Dependencies": ["CBQ22-F10-Q3", "CBQ22-F10-Q4", "CBQ22-F10-Q5"]
       }
     ]
   }

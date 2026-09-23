@@ -1,6 +1,6 @@
-/**
+﻿/**
  * ============================================================================
- * CMA Part 1 Exam Simulator
+ * CMA Exam Simulator
  * Validation Framework Configuration
  * ============================================================================
  *
@@ -24,7 +24,7 @@ module.exports = {
 
     project: {
 
-        name: "CMA Part 1 Exam Simulator",
+        name: "CMA Exam Simulator",
 
         version: "2.0",
 
@@ -138,6 +138,25 @@ module.exports = {
         "content/cases/legacy/scored_cases4.js",
 
         "content/cases/legacy/scored_cases5.js"
+
+    ],
+
+    //==========================================================================
+    // Part 2 Case Study Banks
+    // Added for DL-051 / DL-050 coverage — Part 2 cases were not in validation pipeline.
+    //==========================================================================
+
+    part2CasePacks: [
+
+        "p2/case_pack_p2_1.js",
+
+        "p2/case_pack_p2_2.js",
+
+        "p2/case_pack_p2_3.js",
+
+        "p2/case_pack_p2_authored.js",
+
+        "p2/case_pack_p2_C4_C8.js"
 
     ],
 

@@ -56,7 +56,7 @@ class CaseIntegrityValidator extends Validator {
         this.emptyPromptCases = [];
 
         const root = config.paths.root;
-        const caseBanks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
+        const caseBanks = [...config.casePackBanks, ...config.part2CasePacks]; // DL-050: P2 cases wired
 
         caseBanks.forEach(file => {
             const fullPath = path.join(root, file);
@@ -122,7 +122,9 @@ class CaseIntegrityValidator extends Validator {
     extractCases(content, filename) {
         // DL-050: delegate to single-source CaseExtractor (live-bank capable).
         // Legacy ENHANCED_CASE_BASE-only matching silently dropped live banks.
-        return CaseExtractor.extractFromContent(content);
+        const cases = CaseExtractor.extractFromContent(content);
+        if (cases) return CaseExtractor.normalizeCaseItems(cases);
+        return cases;
     }
 
     validateCase(c, file, caseIdx) {
@@ -167,6 +169,7 @@ class CaseIntegrityValidator extends Validator {
         // --- Check each item ---
         let allChoicesIdentical = true;
         let firstChoices = null;
+        let choicesItemCount = 0;
         let placeholderChoiceFlag = false;
         let allExplanationsSame = true;
         let firstExplanation = null;
@@ -182,6 +185,7 @@ class CaseIntegrityValidator extends Validator {
                 } else {
                     if (!firstChoices) firstChoices = JSON.stringify(it.Choices);
                     else if (JSON.stringify(it.Choices) !== firstChoices) allChoicesIdentical = false;
+                    choicesItemCount++;
 
                     for (let ch of it.Choices) {
                         for (let pat of this.placeholderPatterns) {
@@ -229,7 +233,7 @@ class CaseIntegrityValidator extends Validator {
             }
         }
 
-        if (allChoicesIdentical && c.Items.length > 1 && firstChoices) {
+        if (allChoicesIdentical && choicesItemCount > 1) {
             let hasPlaceholder = c.Items.some(it => it.Choices && it.Choices.some(ch =>
                 this.placeholderPatterns.some(p => p.test(ch))
             ));

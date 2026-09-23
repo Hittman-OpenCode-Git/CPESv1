@@ -1,7 +1,7 @@
-{
+﻿{
   "metadata": {
     "document": "SESSION201_WORKFLOW_ARCHITECTURE.json",
-    "description": "Board 1: Workflow Architecture — actual and documented certification workflow for the CMA Part 1 Exam Simulator",
+    "description": "Board 1: Workflow Architecture — actual and documented certification workflow for the CMA Exam Simulator",
     "session": "S201",
     "agent": "Agent B",
     "type": "Read-Only Current-State Analysis",

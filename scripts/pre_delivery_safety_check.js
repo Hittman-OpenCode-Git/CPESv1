@@ -1,5 +1,5 @@
-/**
- * pre_delivery_safety_check.js — CMA Part 1 Exam Simulator Pre-Delivery Safety Check
+﻿/**
+ * pre_delivery_safety_check.js — CMA Exam Simulator Pre-Delivery Safety Check
  *
  * Purpose: Scans all 5 pack files for Certified items and verifies critical
  * learner-safety checks before delivery to the practice pool.

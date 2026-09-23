@@ -1,6 +1,6 @@
-# Algorithms — Scoring and Analytics
+﻿# Algorithms — Scoring and Analytics
 
-**Purpose:** Single source of truth for all scoring, analytics, and difficulty-preset behavior in the CMA Part 1 Exam Simulator. Every algorithm described here is implemented in `app.js`. Line numbers reference the Session 20 baseline (`6E972362...`).
+**Purpose:** Single source of truth for all scoring, analytics, and difficulty-preset behavior in the CMA Exam Simulator. Every algorithm described here is implemented in `app.js`. Line numbers reference the Session 20 baseline (`6E972362...`).
 
 **Version:** 1.0
 **Status:** Active

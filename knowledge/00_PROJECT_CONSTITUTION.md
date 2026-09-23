@@ -1,4 +1,4 @@
-00_PROJECT_CONSTITUTION.md
+﻿00_PROJECT_CONSTITUTION.md
 
 Version: 2.0
 Status: Active
@@ -26,7 +26,7 @@ Content authoring framework
 Quality assurance framework
 2. Vision
 
-Develop the highest-quality open, AI-assisted CMA Part 1 examination simulator available.
+Develop the highest-quality open, AI-assisted CMA examination simulator available.
 
 The project shall emphasize:
 

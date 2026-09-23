@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION321_IDENTITY_SCHEMA_V2",
   "session": "S321",
   "board": "A — Identity Model v2 Implementation",
@@ -7,7 +7,7 @@
   "mode": "READ-ONLY — design specification only",
   "status": "SPECIFICATION",
 
-  "purpose": "Define the canonical item identity model that replaces QID-only identity. Every item in the CMA Part 1 Exam Simulator shall be uniquely identifiable by a compound key that is stable across template rotations, pack relocations, and content revisions.",
+  "purpose": "Define the canonical item identity model that replaces QID-only identity. Every item in the CMA Exam Simulator shall be uniquely identifiable by a compound key that is stable across template rotations, pack relocations, and content revisions.",
 
   "motivation": {
     "v1_failure": "QID-based identity model is broken. One QID = template group identifier, not unique item. Template rotation creates 5 variants with different CorrectChoice values. Pack B stores CC BEFORE QID (unique to one pack). DL-029 forward-scan from QID grabs neighbor's CC (~75% false positives). S320 remediation targeted wrong variants because QID-first-match doesn't guarantee the canonical seed.",

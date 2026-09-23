@@ -1,8 +1,8 @@
-/**
+﻿/**
  * Investigation Registry v1.0 — SESSION 252, Board D
  *
  * Manages formal investigations triggered by challenges, defect discoveries,
- * governance events, or systematic issues across the CMA Part 1 Exam Simulator.
+ * governance events, or systematic issues across the CMA Exam Simulator.
  *
  * Lifecycle: OPEN → INVESTIGATING → ACTION_REQUIRED → RESOLVED → CLOSED
  *

@@ -1,8 +1,8 @@
-# Longcat 2.0 Review Prompt — CMA Part 1 Tier 3 Waves 13–15 (Third-Party Content Review)
+﻿# Longcat 2.0 Review Prompt — CMA Part 1 Tier 3 Waves 13–15 (Third-Party Content Review)
 
 ## Context
 
-You are reviewing **90 newly authored Tier 3 items** for the CMA Part 1 Exam Simulator question bank — the entire "last wave of polishing" (Waves 13, 14, 15). All 90 items are `question_state: "Certified"` in the live packs and passed internal six-dimension verification, but your independent review is the external gate before learners see them. The items were split into **11 verbatim parts** (≤40KB each, ~10K tokens) so your retrieval index can fully ingest each part without prefix truncation.
+You are reviewing **90 newly authored Tier 3 items** for the CMA Exam Simulator question bank — the entire "last wave of polishing" (Waves 13, 14, 15). All 90 items are `question_state: "Certified"` in the live packs and passed internal six-dimension verification, but your independent review is the external gate before learners see them. The items were split into **11 verbatim parts** (≤40KB each, ~10K tokens) so your retrieval index can fully ingest each part without prefix truncation.
 
 ### The three groups
 

@@ -1,4 +1,4 @@
-# SESSION 201 — EXECUTIVE FINDINGS
+﻿# SESSION 201 — EXECUTIVE FINDINGS
 
 **Generated:** 2026-07-27
 **Agent:** Agent K — Executive Synthesis
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary
 
-The CMA Part 1 Exam Simulator certification pipeline is operating at roughly 40% of its potential efficiency. For every genuinely needed review pass, 2.5 passes are performed. Items arrive at certification boards with 3-5 concurrent defects 89.5% of the time. Eighty percent of items are re-audited every wave without having changed. The same ExplanationWrong fields are examined 4-7 times per session by different agents who reach identical conclusions 95%+ of the time -- a pattern that peaked in the S809 chain, where 60 agent-spawns across 4 sessions examined 38 items without a single content write.
+The CMA Exam Simulator certification pipeline is operating at roughly 40% of its potential efficiency. For every genuinely needed review pass, 2.5 passes are performed. Items arrive at certification boards with 3-5 concurrent defects 89.5% of the time. Eighty percent of items are re-audited every wave without having changed. The same ExplanationWrong fields are examined 4-7 times per session by different agents who reach identical conclusions 95%+ of the time -- a pattern that peaked in the S809 chain, where 60 agent-spawns across 4 sessions examined 38 items without a single content write.
 
 These inefficiencies are not accidental. They trace to eight root causes, five of which are structural gaps in the certification architecture rather than per-session process errors. The most severe: no automated pre-certification structural scan existed when thousands of items were certified, allowing 539 DL-008 violations (including 175 in the learner delivery pool) to go undetected for weeks. The QID-based identity model treats template-rotation variants as indistinguishable, causing remediation scripts to target wrong items and scan tools to produce systematic false positives. The documented CAQS 7-gate sequential pipeline was never operated as designed -- the actual system is a parallel 10+ agent board structure that grew organically across 14 certification sessions.
 

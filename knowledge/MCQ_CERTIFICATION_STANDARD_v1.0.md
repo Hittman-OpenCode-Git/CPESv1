@@ -1,4 +1,4 @@
-# CMA Part 1 — MCQ Certification Standard v1.0
+﻿# CMA Part 1 — MCQ Certification Standard v1.0
 
 **Spec — Operational Standard for 800-Series Certification**
 **Status:** Active
@@ -13,7 +13,7 @@
 
 ### 1.1 Purpose
 
-This document is the **operational certification standard** for every standalone multiple-choice question (MCQ) in the CMA Part 1 Exam Simulator. It defines measurable thresholds, a weighted scoring model, certification gates, and governance compliance requirements. The 800-series certification agents execute against this standard — it translates the high-level quality framework of CAQS v1.0 and the readiness assessment model of CERTIFICATION_READINESS_STANDARD.md into actionable, repeatable per-item evaluation criteria.
+This document is the **operational certification standard** for every standalone multiple-choice question (MCQ) in the CMA Exam Simulator. It defines measurable thresholds, a weighted scoring model, certification gates, and governance compliance requirements. The 800-series certification agents execute against this standard — it translates the high-level quality framework of CAQS v1.0 and the readiness assessment model of CERTIFICATION_READINESS_STANDARD.md into actionable, repeatable per-item evaluation criteria.
 
 ### 1.2 Scope
 

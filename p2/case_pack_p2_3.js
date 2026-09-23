@@ -426,7 +426,7 @@ var casePackP2_3 = [
         "ItemID": "CBQ23-E1-Q2",
         "Type": "numeric",
         "Prompt": "Enter the project NPV in dollars (answers within ±$1,000 accepted).",
-        "Correct": "49170",
+        "Correct": "49176",
         "Explanation": "PV of operating flows = $137,500 × PVIFA(10%,5) = $137,500 × 3.7908 = $521,235. Terminal salvage arrives at year 5 with book value zero, so the full $60,000 is taxable: after-tax salvage = $60,000 × 0.75 = $45,000; PV = $45,000 × 0.6209 = $27,941. NPV = −$500,000 + $521,235 + $27,941 ≈ +$49,176 → ACCEPT (positive NPV adds shareholder value at the 10% hurdle). Forgetting the salvage term, or taxing it a second time, swings the answer by roughly $28K.",
         "Topic": "Net present value",
         "Subtopic": "Terminal salvage treatment",
@@ -603,6 +603,8 @@ var casePackP2_3 = [
       }
     ],
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch2",
+    "recertification_date": "2026-09-20",
     "certification_session": "P2-059",
     "Part": 2,
     "Part2OnlyFlag": true,
@@ -738,7 +740,7 @@ var casePackP2_3 = [
         "Explanation": "The floor must cover variable cost PLUS the opportunity cost spread across every unit ordered: ($48 × 1,200 + $32,000) ÷ 1,200 = ($57,600 + $32,000) ÷ 1,200 = $89,600 ÷ 1,200 = $74.67. At anything below $74.67 Hartwell is literally paying to displace its best customers. Note this exceeds even the midpoint between $48 and $80 — full-capacity orders are expensive to serve.",
         "Topic": "Minimum acceptable price",
         "Subtopic": "Opportunity-cost pricing",
-        "Difficulty": "Very Difficult",
+        "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
@@ -767,7 +769,7 @@ var casePackP2_3 = [
         "Explanation": "The split structure prices each unit at its TRUE opportunity cost: idle units genuinely cost only $48 to serve, so any price above that adds pure contribution, while displaced units consume $80-worth of machine time and cannot be discounted without destroying value. Categorical rejection (C) forfeits the free $200-unit contribution out of pride; matching rumors (D) deepens losses by $15 per unit versus the offer already on the table; blanket acceptance (A) institutionalizes the −$11,600 monthly leak.",
         "Topic": "Counterproposal design",
         "Subtopic": "Tiered capacity pricing",
-        "Difficulty": "Difficult",
+        "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
@@ -3309,14 +3311,14 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-C3-Q1",
-        "Type": "select", "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. Option A uses the correct ranking and a defensible computation; the precise 4,640-hour figure arises when the mix is rebalanced toward higher-margin SKUs, which is the planning basis Priya is recommending.", "Topic": "Contribution margin per constrained hour", "question_state": "Certified",
+        "Type": "select", "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 5,529 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. The prior 4,640-hour figure assumed a rebalanced mix; at the actual current mix, 5,529 hours is correct.", "Topic": "Contribution margin per constrained hour", "question_state": "Certified",
         "Prompt": "Based on Exhibit 1, which statement most accurately describes the contribution-margin-per-reactor-hour ranking and the units required to break even on fixed manufacturing and SG&A for the current product mix?",
-        "Choices": ["Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Product C ranks first at $30 per unit but contributes only $15 per reactor hour, and the current mix needs approximately 9,333 hours to cover the $140,000 of fixed manufacturing and SG&A.", "All three products rank equally on a per-hour basis because contribution per hour equals contribution per unit divided by hours, and the current mix needs exactly 5,000 hours to cover fixed costs.", "Product B ranks first because it has the lowest variable cost ratio, and the current mix needs 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A at a $30 weighted-average contribution per hour."],
+        "Choices": ["Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 5,529 hours to cover the $140,000 of fixed manufacturing and SG&A.", "Product C ranks first at $30 per unit but contributes only $15 per reactor hour, and the current mix needs approximately 9,333 hours to cover the $140,000 of fixed manufacturing and SG&A.", "All three products rank equally on a per-hour basis because contribution per hour equals contribution per unit divided by hours, and the current mix needs exactly 5,000 hours to cover fixed costs.", "Product B ranks first because it has the lowest variable cost ratio, and the current mix needs 4,640 hours to cover the $140,000 of fixed manufacturing and SG&A at a $30 weighted-average contribution per hour."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. Option A uses the correct ranking and a defensible computation; the precise 4,640-hour figure arises when the mix is rebalanced toward higher-margin SKUs, which is the planning basis Priya is recommending.",
+        "ExplanationCorrect": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. The prior 4,640-hour figure assumed a rebalanced mix; at the actual current mix, 5,529 hours is correct.",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Product C contributes $30 per unit but only $15 per reactor hour — per-unit margin and per-constrained-resource margin are different measures when hours per unit differ, so Product C does not rank first under the binding constraint.",
         "ExplanationWrongC": "Per-hour contribution is not the same as per-unit contribution, so the three products do not rank equally on a per-hour basis; Product A at roughly $28/hour clearly outranks Product C at $15/hour.",
@@ -3562,8 +3564,8 @@ var casePackP2_3 = [
     "Items": [
       {
         "ItemID": "CBQ23-D2-Q1",
-        "Type": "select", "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Explanation": "Risk capacity is the objective ceiling the entity can survive without threatening solvency or capital targets; risk appetite is the discretionary amount management chooses to accept in pursuit of strategy. At launch, capacity typically exceeds appetite because management deliberately keeps exposure below the survivability ceiling. TradeBridge's $4M expected loss against $500M exposure and the 3.5% delinquency ceiling illustrates an appetite calibrated well inside capacity.", "Topic": "Risk capacity vs appetite", "question_state": "Certified",
-        "Prompt": "Which statement most accurately distinguishes risk capacity from risk appetite, as those concepts apply to the TradeBridge launch?",
+        "Type": "select", "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Explanation": "Risk capacity is the objective ceiling ($20M) the entity can survive without threatening solvency; risk appetite is the discretionary amount ($8M) management chooses to accept in pursuit of the TradeBridge business plan. At launch, capacity ($20M) exceeds appetite ($8M) because management deliberately keeps exposure below the survivability ceiling. The month-3 delinquency ($4M expected loss) sits within appetite ($8M) but is approaching it, requiring monitoring — not an immediate breach of capacity ($20M). Choices B, C, and D misstate the definitions: capacity and appetite are not synonymous (B); appetite is set internally by the board, not by regulators (C); both concepts span operational, credit, and market risk rather than splitting by loss type (D).", "Topic": "Risk capacity vs appetite", "question_state": "Certified",
+        "Prompt": "TradeBridge's launch plan projects a $4M expected loss against $500M exposure with a 3.5% delinquency ceiling. The board has set a risk capacity of $20M and a risk appetite of $8M. During month 3, portfolio delinquency hits 3.7% with $4M expected loss. Which statement correctly applies the distinction between risk capacity and risk appetite to this situation?",
         "Choices": ["Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.", "Risk capacity and risk appetite are synonymous and used interchangeably in committee reports, so no distinction is needed for TradeBridge.", "Risk appetite is the upper bound set by regulators, while risk capacity is the internal stretch goal that management targets.", "Risk capacity refers only to operational losses, while risk appetite refers only to market losses, so for a factoring product the two concepts collapse into one."],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
@@ -6792,6 +6794,7 @@ var casePackP2_3 = [
       "Interpret ratio trends across multiple periods to identify deterioration",
       "Evaluate management performance using ratio-based benchmarks"
     ],
+    "LearningObjectives": ["Compute liquidity, activity, and profitability ratios from comparative financial statements","Interpret ratio trends across multiple periods to identify deterioration","Evaluate management performance using ratio-based benchmarks"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -6806,6 +6809,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7119,6 +7124,7 @@ var casePackP2_3 = [
       "Identify the primary driver of ROE deterioration",
       "Evaluate management improvement strategies through DuPont analysis"
     ],
+    "LearningObjectives": ["Decompose ROE using the three-component DuPont model","Identify the primary driver of ROE deterioration","Evaluate management improvement strategies through DuPont analysis"],
     "PrimaryCompetency": "Analysis",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -7133,6 +7139,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7384,6 +7392,7 @@ var casePackP2_3 = [
       "Compute the degree of financial leverage and combined leverage",
       "Evaluate the risk implications of leverage for capital structure decisions"
     ],
+    "LearningObjectives": ["Compute the degree of operating leverage and its impact on earnings volatility","Compute the degree of financial leverage and combined leverage","Evaluate the risk implications of leverage for capital structure decisions"],
     "PrimaryCompetency": "Analysis",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -7398,6 +7407,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7671,6 +7682,7 @@ var casePackP2_3 = [
       "Evaluate the impact of working capital policy changes on cash flow",
       "Recommend working capital strategies to improve liquidity"
     ],
+    "LearningObjectives": ["Compute the cash conversion cycle and its components","Evaluate the impact of working capital policy changes on cash flow","Recommend working capital strategies to improve liquidity"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -7685,6 +7697,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7907,6 +7921,7 @@ var casePackP2_3 = [
       "Calculate the weighted average cost of capital with multiple funding sources",
       "Evaluate whether a project meets the WACC hurdle rate"
     ],
+    "LearningObjectives": ["Compute the cost of equity using the Capital Asset Pricing Model","Calculate the weighted average cost of capital with multiple funding sources","Evaluate whether a project meets the WACC hurdle rate"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -7921,6 +7936,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8172,6 +8189,7 @@ var casePackP2_3 = [
       "Analyze the trade-off between tax benefits and distress costs",
       "Recommend an optimal capital structure based on firm-specific factors"
     ],
+    "LearningObjectives": ["Apply Modigliani-Miller propositions to evaluate capital structure","Analyze the trade-off between tax benefits and distress costs","Recommend an optimal capital structure based on firm-specific factors"],
     "PrimaryCompetency": "Judgment",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -8186,6 +8204,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8458,6 +8478,7 @@ var casePackP2_3 = [
       "Evaluate the impact of dividend policy on share price using dividend discount models",
       "Assess client preference effects on dividend policy decisions"
     ],
+    "LearningObjectives": ["Analyze the trade-off between dividend payments and retained earnings for growth","Evaluate the impact of dividend policy on share price using dividend discount models","Assess client preference effects on dividend policy decisions"],
     "PrimaryCompetency": "Judgment",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -8472,6 +8493,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -8729,6 +8752,7 @@ var casePackP2_3 = [
       "Analyze the impact of exchange rate changes on international operations",
       "Assess currency risk management strategies for multinational firms"
     ],
+    "LearningObjectives": ["Compute forward exchange rates and evaluate hedging alternatives","Analyze the impact of exchange rate changes on international operations","Assess currency risk management strategies for multinational firms"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -8743,6 +8767,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9002,6 +9028,7 @@ var casePackP2_3 = [
       "Determine optimal product mix under machine-hour constraints",
       "Evaluate the impact of fixed-cost changes on breakeven and target profit"
     ],
+    "LearningObjectives": ["Compute contribution margin per unit of constrained resource for product mix decisions","Determine optimal product mix under machine-hour constraints","Evaluate the impact of fixed-cost changes on breakeven and target profit"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -9016,6 +9043,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9260,6 +9289,7 @@ var casePackP2_3 = [
       "Analyze capacity constraints and their impact on special order profitability",
       "Evaluate qualitative factors in pricing decisions"
     ],
+    "LearningObjectives": ["Determine the minimum acceptable price for a special order using relevant costing","Analyze capacity constraints and their impact on special order profitability","Evaluate qualitative factors in pricing decisions"],
     "PrimaryCompetency": "Calculation",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -9274,6 +9304,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9523,6 +9555,7 @@ var casePackP2_3 = [
       "Compare alternatives using total relevant cost analysis",
       "Evaluate qualitative factors in make-versus-buy and equipment decisions"
     ],
+    "LearningObjectives": ["Identify relevant costs in an equipment replacement decision","Compare alternatives using total relevant cost analysis","Evaluate qualitative factors in make-versus-buy and equipment decisions"],
     "PrimaryCompetency": "Judgment",
     "EstimatedMinutes": 30,
     "Difficulty": "Moderate",
@@ -9537,6 +9570,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9777,6 +9812,7 @@ var casePackP2_3 = [
       "Evaluate the impact of transfer pricing on divisional performance measurement",
       "Assess goal congruence implications of different transfer pricing policies"
     ],
+    "LearningObjectives": ["Determine the minimum and maximum transfer prices using the general transfer pricing rule","Evaluate the impact of transfer pricing on divisional performance measurement","Assess goal congruence implications of different transfer pricing policies"],
     "PrimaryCompetency": "Judgment",
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
@@ -9791,6 +9827,8 @@ var casePackP2_3 = [
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [

@@ -1,4 +1,4 @@
-# Question Registry Index — CMA Part 1 Exam Simulator
+﻿# Question Registry Index — CMA Exam Simulator
 
 **Generated:** 2026-07-27 (S314 Agent AA — Registry Partitioning & Duplicate Prevention Board)
 **Source:** knowledge/MASTER_QUESTION_REGISTRY.md

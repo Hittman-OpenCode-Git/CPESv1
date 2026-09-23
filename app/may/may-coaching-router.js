@@ -31,7 +31,8 @@ const MayCoachingRouter = (function() {
     SOCRATIC:      'SOCRATIC',
     MOTIVATE:      'MOTIVATE',
     STUDY_PLAN:    'STUDY_PLAN',
-    EXAM_REVIEW:   'EXAM_REVIEW'
+    EXAM_REVIEW:   'EXAM_REVIEW',
+    SELF_SCORE:    'SELF_SCORE'
   };
 
   /**
@@ -123,6 +124,15 @@ const MayCoachingRouter = (function() {
     featureFlag: null,
     fallbackBehavior: 'Use existing May._summarizeSession handler'
   };
+  MODE_CONTRACTS[MODE.SELF_SCORE] = {
+    name: MODE.SELF_SCORE,
+    purpose: 'Guided self-scoring against P2 CSO LOS rubric — learner records criterion-level judgments (HS-1, HS-4, HS-6, HS-9)',
+    triggerActions: [],
+    requiredContext: ['question.LOS', 'question.CSOLOS', 'question.Topic'],
+    outputGuidanceType: '{ losTag, criteria[], progress, ev3Compliant }',
+    featureFlag: 'ENABLE_SELF_SCORE_MODE',
+    fallbackBehavior: 'No self-score panel rendered'
+  };
 
   /**
    * Get the formal contract for a coaching mode.
@@ -162,6 +172,10 @@ const MayCoachingRouter = (function() {
    * @returns {Object|null} CoachingResponse or null (use fallback)
    */
   function dispatchToHandler(mayContext, routing) {
+    // May 2.5 Track 1 note (may_2_5_track1, W6/DL-060 B): a null return
+    // here is the ROUTINE flag-off path (caller uses its fallback handler),
+    // not an active degradation — so it must NOT raise the pill. Only a
+    // genuine dispatch exception below reports via the truth path.
     if (!routing || !routing.mode) return null;
 
     // CAL-06 (MAY-019): Track mode from router dispatch path
@@ -179,7 +193,20 @@ const MayCoachingRouter = (function() {
         var result = MayCoachingModeBase.dispatch(enriched, routing);
         if (result) return result;
       }
-    } catch (e) { /* silent — never interrupt existing workflows */ }
+    } catch (e) {
+      // May 2.5 Track 1 (may_2_5_track1, W6/DL-060): genuine dispatch
+      // exception — an active router fallbackBehavior source.
+      try {
+        if (typeof window !== 'undefined' && typeof window.MayReportDegradation === 'function') {
+          window.MayReportDegradation('router-fallback', 'dispatch exception; caller uses fallback handler');
+        } else if (typeof MayDegradation !== 'undefined' && MayDegradation.report) {
+          MayDegradation.report('router-fallback', 'dispatch exception; caller uses fallback handler');
+        }
+      } catch (e2) { /* degradation hook non-blocking */ }
+      // DL-060: clear the transient router-fallback degradation after reporting
+      // (exception is momentary; caller's fallback handler resolves the condition)
+      try { if (typeof MayDegradation !== 'undefined' && MayDegradation.clear) MayDegradation.clear('router-fallback'); } catch (e3) {}
+    }
 
     return null;
   }

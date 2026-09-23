@@ -38,13 +38,13 @@ The `getWelcomeMessage()` function produces a **15+ line markdown wall of text**
 
 **What she sees:** `"Hi [name], I'm Chloe May — but you can call me May. I'm your study companion for CMA Part 1. I track your progress by topic, explain questions using the bank's own content, give you graduated hints, flag your weak areas, and build targeted recovery sets..."` followed by bullet points and a pre-production warning.
 
-**What she should see:** 3-4 lines max. "Hi [name], I'm May — your CMA Part 1 study companion. I'll explain missed questions and track what you're strong or weak on. Start a practice session and I'll be here when you're done."
+**What she should see:** 3-4 lines max. "Hi [name], I'm May — your CMA study companion. I'll explain missed questions and track what you're strong or weak on. Start a practice session and I'll be here when you're done."
 
 **Severity:** Medium (she'll likely dismiss May and never come back)
 
 ### 2. "Welcome back — have we met before?" is confusing for a genuinely new user (may-core.js:225)
 
-On first visit, `_enterGreetingFlow()` speaks: `"Welcome back — have we met before?"` This is technically a greeting state machine that handles returning vs. new students — but a first-time user doesn't know that. She just sees "Welcome back" when she's never been here. The companion card says "Hi, I'm May — your CMA Part 1 study companion" (warm and direct) but the chat says "Welcome back" (confusing).
+On first visit, `_enterGreetingFlow()` speaks: `"Welcome back — have we met before?"` This is technically a greeting state machine that handles returning vs. new students — but a first-time user doesn't know that. She just sees "Welcome back" when she's never been here. The companion card says "Hi, I'm May — your CMA study companion" (warm and direct) but the chat says "Welcome back" (confusing).
 
 **Root cause:** The greeting flow is designed for a multi-student scenario (student roll selection) but triggered for everyone, including brand-new users with zero localStorage data. The `trySetName()` path (line 179-209) is cleaner for new users.
 
@@ -76,7 +76,7 @@ The `<div class="diag-panel" id="defectDiagnostics">` shows "Loading diagnostics
 
 ### 6. The May companion card "Set up May" CTA could be clearer (may-core.js:6433-6438)
 
-For new users, the companion card shows: "Hi, I'm May — your CMA Part 1 study companion" with text "I'll help you track progress..." and a **"Set up May"** button. Clicking it opens the May chat view where the greeting flow starts. The label "Set up May" sounds like configuration/installation — it's really "Get started" or "Meet May."
+For new users, the companion card shows: "Hi, I'm May — your CMA study companion" with text "I'll help you track progress..." and a **"Set up May"** button. Clicking it opens the May chat view where the greeting flow starts. The label "Set up May" sounds like configuration/installation — it's really "Get started" or "Meet May."
 
 **Severity:** Low (she'll figure it out, but the button could be warmer)
 

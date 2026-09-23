@@ -1,8 +1,8 @@
-# CMA Part 1 Formula Master
+﻿# CMA Part 1 Formula Master
 
 **Version:** 1.0
 **Status:** Active
-**Purpose:** Single source of truth for all formulas used within the CMA Part 1 Exam Simulator.
+**Purpose:** Single source of truth for all formulas used within the CMA Exam Simulator.
 
 ---
 

@@ -1,8 +1,8 @@
-{
+﻿{
   "document": "SESSION202_CHANGE_MATRIX",
   "version": "1.0",
   "session": "S202",
-  "title": "Complete v1→v2 Transformation Map — CMA Part 1 Exam Simulator Certification Framework",
+  "title": "Complete v1→v2 Transformation Map — CMA Exam Simulator Certification Framework",
   "generated": "2026-07-27",
   "source_documents": [
     "reports/SESSION202_FRAMEWORK_V2_ARCHITECTURE.json",

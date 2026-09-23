@@ -394,6 +394,54 @@ async function main() {
     ? pass("HintCalibratorProvider hidden-beta (flag off → not available)")
     : fail("HintCalibratorProvider INVARIANT BROKEN: available with flag off");
 
+// DL-060 — May degraded-state indicator truthfulness (flags-off → reduced label)
+  // Verify the core DL-060 contract: indicatorVisible === degradedActive (truthfulness).
+  // Also verify flags-off sessions report degradation sources.
+  const dl060 = await page.evaluate(async () => {
+    try {
+      // Wait for MayFeatureFlags to initialize and report flags-off degradation
+      await new Promise((resolve) => {
+        const check = () => {
+          if (typeof MayFeatureFlags !== 'undefined' && typeof MayFeatureFlags.getAll === 'function') {
+            resolve();
+          } else {
+            setTimeout(check, 50);
+          }
+        };
+        check();
+      });
+      // Allow microtask queue to flush for MayDegradation report
+      await new Promise(r => setTimeout(r, 2000));
+      
+      if (typeof MayDegradation !== 'undefined') {
+        const active = typeof MayDegradation.isActive === 'function' ? MayDegradation.isActive() : false;
+        const log = MayDegradation.getLog ? MayDegradation.getLog() : [];
+        const lastReport = log.filter(e => e.op === 'report').pop();
+        const indicatorVisible = lastReport ? lastReport.indicatorVisible === true : false;
+        const _activeSources = log.filter(e => e.op === 'report').map(e => e.source);
+        const truthful = active === indicatorVisible;
+        return {
+          degradedActive: active,
+          indicatorVisible: indicatorVisible,
+          logLength: log.length,
+          logSources: _activeSources,
+          truthful: truthful,
+          hasFlagsOffSource: _activeSources.some(s => s.startsWith('flags-off'))
+        };
+      }
+      return { error: 'MayDegradation not loaded' };
+    } catch (e) {
+      return { error: e.message };
+    }
+  });
+  if (dl060.error) {
+    fail("DL-060: " + dl060.error);
+  } else if (dl060.truthful === true && dl060.hasFlagsOffSource === true) {
+    pass("DL-060: indicator truthful (active=" + dl060.degradedActive + " === indicatorVisible=" + dl060.indicatorVisible + "), flags-off source present, sources=" + dl060.logSources.join(','));
+  } else {
+    fail("DL-060 FAIL: truthful=" + dl060.truthful + " (active=" + dl060.degradedActive + " vs indicatorVisible=" + dl060.indicatorVisible + "), flags-off source=" + dl060.hasFlagsOffSource + ", sources=" + (dl060.logSources || []).join(','));
+  }
+
   // Phase 2b+ — additional micro-agents loaded + hidden
   scriptsLoaded._hasWhisperer
     ? pass("WhispererProvider loaded (Phase 2b+)")

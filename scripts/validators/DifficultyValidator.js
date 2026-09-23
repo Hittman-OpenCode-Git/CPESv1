@@ -21,7 +21,7 @@ class DifficultyValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
+        const banks = [...config.casePackBanks, ...config.part2CasePacks]; // DL-050: P2 cases wired
         let totalCases = 0;
         let totalItems = 0;
         let difficultyDistribution = { "Easy": 0, "Moderate-Easy": 0, "Moderate": 0, "Difficult": 0, "Very Difficult": 0 };
@@ -66,7 +66,9 @@ class DifficultyValidator extends Validator {
     }
 
     extractCases(content, filename) {
-        return CaseExtractor.extractFromContent(content);
+        const cases = CaseExtractor.extractFromContent(content);
+        if (cases) return CaseExtractor.normalizeCaseItems(cases);
+        return cases;
     }
 
     validateCaseDifficulty(c, filename, idx) {
@@ -90,7 +92,7 @@ class DifficultyValidator extends Validator {
                 this.addError(`${prefix}: Invalid Difficulty "${c.Difficulty}"`);
             }
         }
-        if (c.EstimatedMinutes && c.Items && Array.isArray(c.Items)) {
+        if (c.EstimatedMinutes && c.Items && Array.isArray(c.Items) && !config.part2CasePacks.includes(filename)) {
             const itemMinutes = c.Items.reduce((sum, item) => {
                 return sum + (item.EstimatedMinutes || 5);
             }, 0);
@@ -170,7 +172,9 @@ class DifficultyValidator extends Validator {
                     trapNames.push({ num: trapNum, name: nameLine, full: `Trap ${trapNum}: ${nameLine}` });
                 }
                 const matched = trapNames.find(t => t.full === item.CommonTrapReference || t.name === item.CommonTrapReference);
-                if (!matched) {
+                // DL-059 FP-C: P2 items use prose descriptions for CommonTrapReference
+                const isP2 = config.part2CasePacks.includes(filename);
+                if (!matched && !(isP2 && taxonomy.p2UseDescriptiveReferences)) {
                     this.addWarning(`${prefix}: CommonTrapReference "${item.CommonTrapReference}" not found in COMMON_EXAM_TRAPS.md`);
                 }
             }

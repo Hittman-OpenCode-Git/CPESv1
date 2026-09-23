@@ -570,13 +570,22 @@ function main() {
   fs.writeFileSync(mdPath, md, "utf8");
   console.log(`  MD:   ${mdPath}`);
 
-  // Exit code: non-zero if any divergence found
+  // Exit code (P3 2026-09-22, board-forced consensus): distribution DIVs are
+  // portfolio drift — WARN class, exit 0. Only scan failures (r.error =
+  // coverage blindness: the dashboard cannot see a pack, DL-049 family)
+  // BLOCK. Content correctness is enforced upstream by validate + semantic
+  // gates, never by distribution shape (an S121-shaped pool can still carry
+  // wrong keys; a drifted pool is not thereby incorrect).
   const totalDivs = allResults.reduce((s, r) => s + (r.diffs ? r.diffs.length : 0), 0);
-  console.log(`\n  Total divergence flags: ${totalDivs}`);
+  const scanErrors = allResults.filter(r => r.error).length;
+  console.log(`\n  Total divergence flags: ${totalDivs} (WARN class — portfolio drift, not content)`);
   if (totalDivs > 0) {
-    console.log("  (Divergences exceed ±3pp tolerance from S121 targets)");
+    console.log("  (Divergences exceed ±3pp tolerance from S121 targets — authoring signal, non-blocking)");
   }
-  process.exit(totalDivs > 0 ? 1 : 0);
+  if (scanErrors > 0) {
+    console.log(`  BLOCK: ${scanErrors} pack(s) failed to scan (coverage blindness)`);
+  }
+  process.exit(scanErrors > 0 ? 1 : 0);
 }
 
 main();

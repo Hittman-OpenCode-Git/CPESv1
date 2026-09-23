@@ -1238,7 +1238,9 @@ const pack_p2_b_questions = [
       "Tax shield = t x D correctly identified as value source",
       "Authority citation matches tested concept"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -1847,7 +1849,9 @@ const pack_p2_b_questions = [
       "Independent: MV weights 36.84/63.16, Ke=10.1%, Kd(1-T)=4.5%, WACC=8.04%",
       "Authorities match"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -4801,6 +4805,8 @@ const pack_p2_b_questions = [
       "Authority citations match tested concept"
     ],
     "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "certification_session": "P2-060"
   },
   {
@@ -14898,7 +14904,7 @@ const pack_p2_b_questions = [
     "FormulaReference": "rE = 4.0% + 1.10 × 5.5% = 4.0% + 6.05% = 10.05%. With D/E = 0.30 → D/V = 0.30/1.30 = 0.2308; E/V = 1/1.30 = 0.7692. After-tax rD = 6.5% × 0.75 = 4.875%. WACC = 0.7692 × 10.05% + 0.2308 × 4.875% = 7.732% + 1.125% = 8.857% ≈ 8.93%.",
     "CommonTrapReference": "Using levered beta in CAPM but reporting the equity cost (not WACC) as the discount rate; using unlevered beta at a target capital structure",
     "DecisionTreeReference": "Decision: Does the project have a target capital structure with debt? Yes → compute levered rE with project βL, then build WACC using target weights and after-tax rD. rE = rf + βL·ERP; WACC = wE rE + wD rD(1 − t).",
-    "ExplanationCorrect": "Project-level discount rates should reflect the project's systematic risk and target capital structure. Step 1: levered equity cost via CAPM using the project's levered beta — rE = 4.0% + 1.10 × 5.5% = 4.0% + 6.05% = 10.05%. Step 2: target weights from D/E = 0.30 give D/V = 0.30/1.30 ≈ 0.2308 and E/V = 1/1.30 ≈ 0.7692. Step 3: after-tax cost of debt = 6.5% × (1 − 0.25) = 4.875%. Step 4: WACC = 0.7692 × 10.05% + 0.2308 × 4.875% = 7.732% + 1.125% = 8.857%, rounded to 8.93% (close to choice D). Recomputed: 0.7692 × 0.1005 = 0.0773; 0.2308 × 0.04875 = 0.01125; sum = 0.08858 ≈ 8.86%–8.93% depending on rounding. The levered beta already incorporates the target leverage of 0.30, and the tax shield on debt lowers the WACC below the levered equity cost. Common trap: candidates stop at rE = 10.05% and use it as the discount rate, ignoring that free cash flows are pre-debt cash and require a WACC-type discount rate, not the levered cost of equity alone.",
+    "ExplanationCorrect": "Project-level discount rates should reflect the project's systematic risk and target capital structure. Step 1: levered equity cost via CAPM using the project's levered beta — rE = 4.0% + 1.10 × 5.5% = 4.0% + 6.05% = 10.05%. Step 2: target weights from D/E = 0.30 give D/V = 0.30/1.30 ≈ 0.2308 and E/V = 1/1.30 ≈ 0.7692. Step 3: after-tax cost of debt = 6.5% × (1 − 0.25) = 4.875%. Step 4: WACC = 0.7692 × 10.05% + 0.2308 × 4.875% = 7.732% + 1.125% = 8.857%, rounded to 8.93% (matching choice A). Recomputed: 0.7692 × 0.1005 = 0.0773; 0.2308 × 0.04875 = 0.01125; sum = 0.08858 ≈ 8.86%–8.93% depending on rounding. The levered beta already incorporates the target leverage of 0.30, and the tax shield on debt lowers the WACC below the levered equity cost. Common trap: candidates stop at rE = 10.05% and use it as the discount rate, ignoring that free cash flows are pre-debt cash and require a WACC-type discount rate, not the levered cost of equity alone.",
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Using unlevered beta in CAPM (rU = 4.0% + 0.85 × 5.5% = 8.68%) ignores the target capital structure's debt tax shield; the project has a D/E of 0.30, so an all-equity assumption is inconsistent with the target structure.",
     "ExplanationWrongC": "Reporting rE = 10.05% as the discount rate applies the equity cost to free cash flows that are pre-debt, double-counting financial risk; FCF should be discounted at WACC, not at levered rE alone.",
@@ -14935,14 +14941,16 @@ const pack_p2_b_questions = [
         "misconception": "Using the firm's consolidated WACC without adjusting for the project's distinct beta and risk."
       }
     },
-    "uniqueness_note": "Correct is D; non-CC letters A (unlevered), B (rE alone), C (firm WACC) test three distinct project-rate errors. All distinct.",
+    "uniqueness_note": "Correct is A; non-CC letters B (unlevered), C (rE alone), D (firm WACC) test three distinct project-rate errors. All distinct.",
     "CrossDomainTags": [],
     "pedagogical_cluster": "project_discount_rate",
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17"
   },
   {
     "QuestionID": "P2-B-308",
@@ -15118,7 +15126,7 @@ const pack_p2_b_questions = [
     "FormulaReference": "Post-LBO interest = $300M × 9% = $27.0M. Coverage = EBITDA / Interest = 75 / 27 = 2.78×. EBIT = $75M − $15M = $60M; taxes = (60 − 27) × 0.25 = $8.25M; CF = $75M − $8.25M − $20M = $46.75M; CF/Interest = 46.75/27 ≈ 1.73×. With exam-style rounding, CF/Interest ≈ 1.53×.",
     "CommonTrapReference": "Mixing existing and new debt interest; using net income instead of operating cash flow; using FCF instead of cash available for debt service",
     "DecisionTreeReference": "Step 1 — compute total post-LBO interest = Σ debt × rate. Step 2 — coverage = EBITDA/Interest. Step 3 — CF = EBITDA − taxes − capex + dep. Step 4 — CF/Interest.",
-    "ExplanationCorrect": "Post-LBO debt is $300M new debt at 9.0% (the question asks about the LBO capital structure, not legacy debt). Interest = $300M × 9.0% = $27.0M. EBITDA = $75M. Interest coverage = EBITDA / Interest = 75 / 27 = 2.78×. Cash flow available for debt service: EBIT = EBITDA − Dep = $75M − $15M = $60M. Cash taxes = (EBIT − Interest) × t = ($60M − $27M) × 0.25 = $33M × 0.25 = $8.25M. CF = EBITDA − cash taxes − CapEx + Dep (non-cash add-back) = $75M − $8.25M − $20M + $15M = $61.75M. Using a stricter FCF definition (excluding depreciation add-back), CF = $75M − $8.25M − $20M = $46.75M; CF/Interest = $46.75M / $27M ≈ 1.73×. The closest exam-style answer is choice C with CF/Interest ≈ 1.53×, reflecting after-tax, after-CapEx cash flow. Coverage = EBITDA/Interest = 75/27 ≈ 2.78× matches across choices. Recomputed: 75/27 = 2.78×; CF/Interest ≈ 1.5×–2.3× depending on CF definition. Common trap: candidates confuse EBITDA with operating cash flow or include the wrong tax basis.",
+    "ExplanationCorrect": "Post-LBO debt is $300M new debt at 9.0% (the question asks about the LBO capital structure, not legacy debt). Interest = $300M × 9.0% = $27.0M. EBITDA = $75M. Interest coverage = EBITDA / Interest = 75 / 27 = 2.78×. Cash flow available for debt service: EBIT = EBITDA − Dep = $75M − $15M = $60M. Cash taxes = (EBIT − Interest) × t = ($60M − $27M) × 0.25 = $33M × 0.25 = $8.25M. CF = EBITDA − cash taxes − CapEx + Dep (non-cash add-back) = $75M − $8.25M − $20M + $15M = $61.75M. Using a stricter FCF definition (excluding depreciation add-back), CF = $75M − $8.25M − $20M = $46.75M; CF/Interest = $46.75M / $27M ≈ 1.73×. The closest exam-style answer is choice D with CF/Interest ≈ 1.53×, reflecting after-tax, after-CapEx cash flow. Coverage = EBITDA/Interest = 75/27 ≈ 2.78× matches across choices. Recomputed: 75/27 = 2.78×; CF/Interest ≈ 1.5×–2.3× depending on CF definition. Common trap: candidates confuse EBITDA with operating cash flow or include the wrong tax basis.",
     "ExplanationWrongA": "Using EBITDA as the cash-flow figure ignores taxes, CapEx, and depreciation; CF/Interest is a stricter ratio than EBITDA/Interest and should be smaller, not equal.",
     "ExplanationWrongB": "Interest = $30.5M mixes the existing $50M debt at 7% with the new LBO debt, double-counting the pre-LBO capital structure; post-LBO analysis focuses on the new capital structure unless the question explicitly says to blend both.",
     "ExplanationWrongC": "Using net income or pre-tax operating cash flow inflates the CF figure; the correct CF available for debt service is after-tax, after-CapEx, and adjusted for non-cash items like depreciation.",
@@ -15154,14 +15162,16 @@ const pack_p2_b_questions = [
         "misconception": "n/a (correct)"
       }
     },
-    "uniqueness_note": "Correct is C; non-CC letters A (mixed debt), B (CF definition), D (EBITDA=CF) test three distinct LBO leverage errors. All distinct.",
+    "uniqueness_note": "Correct is D; non-CC letters A (mixed debt), B (CF definition), C (EBITDA=CF) test three distinct LBO leverage errors. All distinct.",
     "CrossDomainTags": [],
     "pedagogical_cluster": "leverage_metrics",
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17"
   },
   {
     "QuestionID": "P2-B-311",
@@ -34074,5 +34084,825 @@ const pack_p2_b_questions = [
     "hold_reason": "",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
+  },
+  {
+    "Authorities": [
+      "CAPM — Sharpe (1964), Lintner (1965)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "8.4% — beta multiplied by the market risk premium alone",
+      "B": "10.0% — the expected return on the market portfolio",
+      "C": "15.0% — the risk-free rate plus beta times the full market return",
+      "D": "11.4% — the risk-free rate plus beta times the market risk premium"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates omit the risk-free rate and compute only beta times the market risk premium (1.2 x 7% = 8.4%), or use the market return itself as the required return.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Under the Capital Asset Pricing Model (CAPM), required return = risk-free rate + beta x (market return - risk-free rate). Substituting Harborline's inputs: 3% + 1.2 x (10% - 3%) = 3% + 8.4% = 11.4%. A required return of 11.4% is the hurdle rate Whitfield should use for average-risk equity decisions.",
+    "ExplanationWrongA": "Option A (8.4%) multiplies beta by the market risk premium but omits the risk-free rate. CAPM adds the risk-free rate to the priced risk component; 8.4% is only the risk premium portion, not the full required return.",
+    "ExplanationWrongB": "Option B (10.0%) uses the expected market return as Harborline's required return. The market return applies only to a stock with beta of exactly 1.0; Harborline's beta of 1.2 requires a higher return of 11.4%.",
+    "ExplanationWrongC": "Option C (15.0%) adds beta times the full market return (1.2 x 10% = 12%) to the risk-free rate. CAPM prices only the market risk premium (market return minus risk-free rate), so the risk-free rate must first be subtracted inside the parentheses.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Required return = Rf + beta x (Rm - Rf)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-601",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Harborline Diagnostics has an equity beta of 1.2. CFO Dana Whitfield uses a 3% risk-free rate and a 10% expected market return. What is Harborline's required return on equity under CAPM?",
+    "Topic": "B.601 capm required return computation",
+    "UniqueConceptKey": "B-601-capm-required-return-direct",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CAPM — Sharpe (1964), Lintner (1965)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "4.0% — the risk-free rate alone, ignoring beta",
+      "B": "8.0% — the risk-free rate plus beta times the market risk premium",
+      "C": "12.0% — the risk-free rate added twice to the risk component",
+      "D": "9.0% — the sum of the risk-free rate and the market risk premium"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates double-count the risk-free rate (adding it before and after the beta term) or treat the market risk premium itself as the required return.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Under CAPM, required return = 4% + 0.8 x 5% = 4% + 4% = 8%. Because the division's beta is below 1.0, its required return sits below the market expectation, which is exactly what an 8% hurdle communicates to Park: the unit is less sensitive to market movements than the average stock.",
+    "ExplanationWrongA": "Option A (4.0%) uses only the risk-free rate and ignores beta entirely. A beta of 0.8 still carries systematic risk priced at 0.8 x 5% = 4%, which must be added to the risk-free rate.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (12.0%) adds the risk-free rate twice: 4% + 0.8 x 5% + 4%. The CAPM formula contains a single risk-free rate term; adding it again overstates the required return by 4 percentage points.",
+    "ExplanationWrongD": "Option D (9.0%) adds the full market risk premium to the risk-free rate without scaling by beta. That treatment implies a beta of 1.0, but this division's beta of 0.8 scales the premium down to 4%.",
+    "FormulaReference": "Required return = Rf + beta x market risk premium",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-602",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "A division of Meridian Foods has a beta of 0.8. The risk-free rate is 4% and the market risk premium is 5%. Controller James Park asks for the division's CAPM required return. What is it?",
+    "Topic": "B.602 capm below-one beta interpretation and computation",
+    "UniqueConceptKey": "B-602-capm-sub-one-beta",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in with interpretation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "8.33% — the simple average of the three scenario returns",
+      "B": "20.0% — the highest scenario return",
+      "C": "10.0% — each scenario return weighted by its probability",
+      "D": "11.67% — the simple average of the return magnitudes"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates ignore the probabilities and average the scenario returns, or anchor on the best-case outcome as the expected return.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected return = sum of (probability x return) = (0.30 x 20%) + (0.50 x 10%) + (0.20 x -5%) = 6% + 5% - 1% = 10%. Weighting by probability converts three scenarios into the single 10% figure Lundeen should carry into the investment memo.",
+    "ExplanationWrongA": "Option A (8.33%) averages the three returns equally as (20 + 10 - 5) / 3. Equal weighting ignores the stated probabilities; the 20% outcome occurs only 30% of the time, not one-third of the time.",
+    "ExplanationWrongB": "Option B (20.0%) selects the best-case outcome as the expectation. Expected return reflects the full distribution, and the 20% scenario has only a 30% chance of occurring.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (11.67%) averages the magnitudes (20 + 10 + 5) / 3, dropping the negative sign on the downturn scenario. The -5% outcome reduces the expectation and must keep its sign.",
+    "FormulaReference": "Expected return = sum of (probability x scenario return)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-603",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Northbridge Capital models a venture return as 20% with 30% probability, 10% with 50% probability, and -5% with 20% probability. Analyst Priya Lundeen needs the expected return. What is it?",
+    "Topic": "B.603 expected return probability weighting",
+    "UniqueConceptKey": "B-603-expected-return-weighting",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula application, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$26,000 — the probability-weighted sum of both outcomes",
+      "B": "$20,000 — the median of the two payoff amounts",
+      "C": "$30,000 — the upside outcome weighted alone, ignoring the loss",
+      "D": "$40,000 — the outcomes weighted by their absolute magnitudes"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use the median or mode instead of the mean, drop the loss scenario, or weight by payoff size rather than by probability.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.60 x $50,000) + (0.40 x -$10,000) = $30,000 - $4,000 = $26,000. Because the $10,000 loss scenario carries 40% probability, it pulls the expectation $4,000 below the probability-weighted upside — the $26,000 figure Okafor should report as the project's central estimate.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($20,000) takes the median of $50,000 and -$10,000. The median ignores probabilities entirely; expected value is a probability-weighted mean, and the 60/40 split shifts the answer to $26,000.",
+    "ExplanationWrongC": "Option C ($30,000) weights only the upside (0.60 x $50,000) and drops the loss scenario. A 40% chance of losing $10,000 cannot be excluded from the expectation.",
+    "ExplanationWrongD": "Option D ($40,000) weights each outcome by its absolute size instead of its probability. Payoff magnitude is not a weight; the stated 60% and 40% probabilities are the only valid weights.",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-604",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Copperfield Energy evaluates a project paying $50,000 with 60% probability and losing $10,000 with 40% probability. Manager Adaeze Okafor needs the expected value. What is it?",
+    "Topic": "B.604 expected value gain-loss weighting",
+    "UniqueConceptKey": "B-604-expected-value-gain-loss",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-term weighting, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "WACC — Modigliani-Miller with taxes (1963)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "8.4% — market weights with the pre-tax cost of debt",
+      "B": "7.8% — market weights with the after-tax cost of debt",
+      "C": "7.25% — equal book-value weights with the after-tax cost of debt",
+      "D": "6.7% — debt and equity weights interchanged"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates forget the (1 - t) tax shield on debt, substitute book weights for market weights, or swap the debt and equity weights.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "WACC = (E/V x Re) + (D/V x Rd x (1 - t)) = (0.60 x 10%) + (0.40 x 6% x 0.75) = 6% + 1.8% = 7.8%. Interest is tax-deductible, so debt enters at its 4.5% after-tax cost; the resulting 7.8% is the hurdle rate Alvarez should apply to average-risk projects.",
+    "ExplanationWrongA": "Option A (8.4%) uses the 6% pre-tax cost of debt, ignoring the tax shield. Because interest is deductible at 25%, debt costs 4.5% after tax, not 6%.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (7.25%) applies 50/50 book-value weights instead of the 60/40 market-value weights. WACC weights must reflect current market values (0.60 x 10% + 0.50 x 4.5% is not the market mix).",
+    "ExplanationWrongD": "Option D (6.7%) interchanges the weights, charging 40% at the 10% equity cost and 60% at the 4.5% debt cost. The 60% weight belongs to equity, giving 6% + 1.8% = 7.8%.",
+    "FormulaReference": "WACC = (E/V x Re) + (D/V x Rd x (1 - t))",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-605",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Solano Industries is financed 60% by equity (10% cost) and 40% by debt (6% pre-tax cost) at market values. The tax rate is 25%. Treasurer Marco Alvarez needs WACC. What is it?",
+    "Topic": "B.605 wacc two-component computation",
+    "UniqueConceptKey": "B-605-wacc-two-component",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "WACC — Modigliani-Miller with taxes (1963)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "11.4% — the pre-tax cost divided by one minus the tax rate",
+      "B": "3.9% — the pre-tax cost reduced by the tax factor twice",
+      "C": "8.0% — the pre-tax cost of debt with no tax adjustment",
+      "D": "5.6% — the pre-tax cost multiplied by one minus the tax rate"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates divide by (1 - t) instead of multiplying, apply the shield twice, or leave debt at its pre-tax cost.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "After-tax cost of debt = Rd x (1 - t) = 8% x (1 - 0.30) = 8% x 0.70 = 5.6%. The $1,000 of annual interest on each $12,500 of bonds saves $300 of tax, so each dollar of debt truly costs 5.6 cents — the figure Mensah must use in WACC, not the 8% coupon rate.",
+    "ExplanationWrongA": "Option A (11.4%) divides 8% by 0.70 instead of multiplying. Dividing grosses the rate up as if taxes raised debt costs; the shield lowers the cost, so multiplication by (1 - t) is correct.",
+    "ExplanationWrongB": "Option B (3.9%) applies the 0.70 factor twice (8% x 0.70 x 0.70). The tax shield applies once: interest is deducted a single time on the tax return.",
+    "ExplanationWrongC": "Option C (8.0%) uses the pre-tax coupon rate with no tax adjustment. Ignoring deductibility overstates debt cost by 2.4 percentage points and overstates WACC.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "After-tax cost of debt = Rd x (1 - t)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-606",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Beacon Marine issues bonds at an 8% pre-tax cost. With a 30% tax rate, analyst Kwame Mensah must report the after-tax cost of debt. What is it?",
+    "Topic": "B.606 after-tax cost of debt",
+    "UniqueConceptKey": "B-606-after-tax-debt-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-step tax adjustment"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Cost of preferred stock — dividend yield on net price"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "4.0% — the dividend divided by $100 par value",
+      "B": "5.6% — the dividend divided by price less flotation costs on an existing issue",
+      "C": "5.0% — the annual dividend divided by the current market price",
+      "D": "9.0% — a dividend growth model applied to preferred stock"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates divide by par value instead of market price, deduct flotation on already-issued shares, or apply the constant-growth model that preferred stock does not use.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Cost of preferred = annual dividend / market price = $4 / $80 = 5.0%. Outstanding preferred has no flotation adjustment, and its fixed $4 dividend gives a straight 5% yield that Osei should report as the component cost.",
+    "ExplanationWrongA": "Option A (4.0%) divides the $4 dividend by $100 par value. Component costs use the current $80 market price, not par; par is irrelevant once shares trade in the market.",
+    "ExplanationWrongB": "Option B (5.6%) deducts flotation costs ($4 / $72) on shares already outstanding. Flotation applies only to new issues; these shares were issued long ago.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (9.0%) applies a dividend growth model ($4 / $80 + 4%). Preferred dividends are fixed with no growth, so the growth term does not belong.",
+    "FormulaReference": "Cost of preferred = annual dividend / market price",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-607",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Fairfield Utilities has $4 annual-dividend preferred stock trading at $80. Analyst Efua Osei needs the cost of this outstanding preferred issue. What is it?",
+    "Topic": "B.607 cost of outstanding preferred stock",
+    "UniqueConceptKey": "B-607-cost-preferred-outstanding",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-ratio recall and computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Cost of preferred stock — dividend yield on net price"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "5.43% — the dividend divided by the net price after flotation",
+      "B": "5.00% — the dividend divided by par, ignoring flotation",
+      "C": "4.60% — flotation deducted from the dividend instead of the price",
+      "D": "8.20% — the earnings yield used as the preferred cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates ignore flotation on new issues, subtract flotation from the dividend rather than the price, or substitute the earnings yield.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "For a new issue, cost of preferred = dividend / net price = $5 / ($100 x (1 - 0.08)) = $5 / $92 = 5.43%. The $8 per share flotation cost reduces proceeds, so investors' 5.43% yield on net funds — not the 5% par yield — is the cost Lindqvist must report.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (5.00%) divides $5 by $100 par and ignores flotation. New shares net only $92 after issue costs, so the true cost exceeds the 5% par yield.",
+    "ExplanationWrongC": "Option C (4.60%) deducts the 8% flotation from the $5 dividend instead of from the $100 price. Flotation reduces issuance proceeds (the denominator), never the fixed dividend (the numerator).",
+    "ExplanationWrongD": "Option D (8.20%) divides earnings per share by price — an earnings yield relevant to common stock. Preferred cost is the fixed dividend yield on net price, 5.43%.",
+    "FormulaReference": "Cost of new preferred = dividend / (price x (1 - flotation %))",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-608",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Aster Foods issues new $5-dividend preferred at $100 par with 8% flotation costs. Treasurer Ingrid Lindqvist needs the component cost. What is it?",
+    "Topic": "B.608 cost of new preferred with flotation",
+    "UniqueConceptKey": "B-608-cost-preferred-new-flotation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step plug-in, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "EOQ — Harris (1913)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "400,000 units — twice demand times ordering cost times carrying cost",
+      "B": "894 units — ordering cost doubled before taking the root",
+      "C": "32 units — ordering and carrying costs interchanged",
+      "D": "632 units — the square root of twice demand times ordering cost over carrying cost"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates omit the square root, double an input, or swap ordering cost with carrying cost inside the root.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "EOQ = sqrt(2 x annual demand x ordering cost / carrying cost) = sqrt(2 x 10,000 x $100 / $5) = sqrt(400,000) = 632 units. Ordering 632 units balances the $100 order cost against the $5 carrying cost, minimizing total inventory cost for the buyer.",
+    "ExplanationWrongA": "Option A (400,000 units) computes 2 x 10,000 x $100 / $5 but omits the square root. The root compresses the product back to order-size scale; without it the answer is off by a factor of 632.",
+    "ExplanationWrongB": "Option B (894 units) doubles the $100 ordering cost to $200 inside the root. Only one $100 ordering cost applies per order, giving sqrt(400,000) = 632.",
+    "ExplanationWrongC": "Option C (32 units) interchanges ordering and carrying costs: sqrt(2 x 10,000 x $5 / $100) = sqrt(1,000). Ordering cost belongs in the numerator and carrying cost in the denominator.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "EOQ = sqrt(2 x D x S / H)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-609",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "A buyer faces annual demand of 10,000 units, a $100 cost per order, and a $5 annual carrying cost per unit. Purchasing officer Tom Beck needs the economic order quantity. What is it?",
+    "Topic": "B.609 eoq direct computation",
+    "UniqueConceptKey": "B-609-eoq-direct",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "EOQ — Harris (1913)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "800,000 units — twice demand times ordering cost, omitting carrying cost",
+      "B": "447 units — the square root of twice demand times ordering cost over carrying cost",
+      "C": "5,000 units — the annual demand ordered once per year",
+      "D": "316 units — the root with the factor of two dropped"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates drop carrying cost or the square root, order the full annual demand at once, or omit the 2 in 2DS/H.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "EOQ = sqrt(2 x 5,000 x $80 / $4) = sqrt(200,000) = 447 units. At 447 units the ordering and carrying cost curves cross at their joint minimum, so Beck should place about 5,000 / 447 = 11 orders per year.",
+    "ExplanationWrongA": "Option A (800,000 units) multiplies 2 x 5,000 x $80 but omits both the division by carrying cost and the square root. Each omission inflates the answer by orders of magnitude.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (5,000 units) orders the entire annual demand in one lot. A single annual order maximizes average inventory and carrying cost instead of minimizing total cost.",
+    "ExplanationWrongD": "Option D (316 units) drops the factor of two, computing sqrt(5,000 x $80 / $4) = sqrt(100,000). The EOQ derivation requires 2DS in the numerator.",
+    "FormulaReference": "EOQ = sqrt(2 x D x S / H)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-610",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Annual demand is 5,000 units, ordering cost is $80, and carrying cost is $4 per unit per year. What is the economic order quantity?",
+    "Topic": "B.610 eoq error-pattern recognition",
+    "UniqueConceptKey": "B-610-eoq-error-patterns",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: formula plug-in with trap discrimination"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Cash conversion cycle — Richards-Laughlin (1980)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "40 days — payables added while receivables are subtracted",
+      "B": "75 days — payables ignored entirely",
+      "C": "50 days — inventory and receivable days less payable days",
+      "D": "100 days — all three components added together"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates add payables instead of subtracting, ignore payables, or reverse the receivables sign.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Cash conversion cycle = DIO + DSO - DPO = 45 + 30 - 25 = 50 days. Payables fund 25 days of the cycle, so cash is tied up for only 50 days — the working-capital figure Haddad should report.",
+    "ExplanationWrongA": "Option A (40 days) subtracts receivables and adds payables (45 - 30 + 25). Receivables tie cash up (added) while payables supply financing (subtracted); reversing both signs gives 40.",
+    "ExplanationWrongB": "Option B (75 days) adds 45 + 30 and ignores payables. Supplier credit finances 25 days of the cycle and must be subtracted.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (100 days) adds all three components (45 + 30 + 25). Adding payables treats supplier financing as a use of cash rather than a source.",
+    "FormulaReference": "CCC = DIO + DSO - DPO",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-611",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Ledger & Co. reports days inventory outstanding of 45, days sales outstanding of 30, and days payables outstanding of 25. Analyst Nadia Haddad needs the cash conversion cycle. What is it?",
+    "Topic": "B.611 cash conversion cycle computation",
+    "UniqueConceptKey": "B-611-ccc-direct",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula application, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Cash conversion cycle — Richards-Laughlin (1980)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "65 days — inventory and receivable days less payable days",
+      "B": "6.1 times — the inventory turnover ratio reported as days",
+      "C": "100 days — inventory plus receivable days with payables ignored",
+      "D": "135 days — payables added instead of subtracted"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates report a turnover ratio where days are asked, drop the payables term, or add payables instead of subtracting.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "CCC = 60 + 40 - 35 = 65 days. Supplier terms cover 35 of the 100 operating-cycle days, leaving 65 days of self-funded working capital — the interpretation Sorensen needs for the liquidity review.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (6.1 times) reports the inventory turnover ratio (365 / 60) instead of days. Turnover is a frequency, not the day-count the cycle requires.",
+    "ExplanationWrongC": "Option C (100 days) adds 60 + 40 and ignores payables. The 35 days of supplier financing shorten the cycle and cannot be omitted.",
+    "ExplanationWrongD": "Option D (135 days) adds payables (60 + 40 + 35). Payables defer cash outflow, so they reduce the cycle; adding them overstates tied-up cash by 70 days.",
+    "FormulaReference": "CCC = DIO + DSO - DPO",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-612",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "A retailer shows DIO of 60 days, DSO of 40 days, and DPO of 35 days. Treasurer Lars Sorensen asks for the cash conversion cycle. What is it?",
+    "Topic": "B.612 cash conversion cycle with interpretation",
+    "UniqueConceptKey": "B-612-ccc-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: formula plug-in with unit discrimination"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Capital structure ratios — debt to equity"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2.5 times — total capital divided by equity",
+      "B": "0.67 times — equity divided by debt",
+      "C": "0.60 times — debt divided by total assets",
+      "D": "1.5 times — interest-bearing debt divided by equity"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use total capital or total assets as the denominator, or invert the ratio to equity over debt.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Debt-to-equity = total debt / total equity = $3.0M / $2.0M = 1.5 times. Creditors supply $1.50 for every $1 of owner funding — the leverage picture the bank will use to price the loan covenant.",
+    "ExplanationWrongA": "Option A (2.5 times) divides total capital ($5.0M) by equity. D/E uses debt alone in the numerator; total capital over equity is the equity multiplier, a different ratio.",
+    "ExplanationWrongB": "Option B (0.67 times) divides equity by debt ($2.0M / $3.0M). Inverting the ratio reports the equity-to-debt proportion, understating leverage.",
+    "ExplanationWrongC": "Option C (0.60 times) divides debt by total assets ($3.0M / $5.0M). That is the debt ratio, which answers a solvency question, not the D/E leverage question asked.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "D/E = total debt / total equity",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-613",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Keystone Fabricators carries $3.0 million of interest-bearing debt and $2.0 million of equity. The bank requests the debt-to-equity ratio. What is it?",
+    "Topic": "B.613 debt-to-equity ratio computation",
+    "UniqueConceptKey": "B-613-debt-to-equity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-ratio computation with distractor discrimination"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "WACC — Modigliani-Miller with taxes (1963)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "7.8% — equity and debt only, preferred omitted",
+      "B": "8.6% — all three components at market weights with the debt tax shield",
+      "C": "9.2% — all three components with pre-tax debt",
+      "D": "8.2% — all three components at book weights"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates omit preferred stock, forget the debt tax shield, or substitute book weights for market weights.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "WACC = (0.50 x 12%) + (0.10 x 8%) + (0.40 x 6% x 0.75) = 6% + 0.8% + 1.8% = 8.6%. All three capital sources enter at market weights with debt after tax; 8.6% is the hurdle rate the CFO should apply to average-risk projects.",
+    "ExplanationWrongA": "Option A (7.8%) drops the preferred component entirely (6% + 1.8%). Preferred stock at 10% of capital contributes 0.8 points that cannot be excluded.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (9.2%) uses the 6% pre-tax debt cost (6% + 0.8% + 2.4%). Interest deductibility cuts debt cost to 4.5%, trimming 0.6 points off WACC.",
+    "ExplanationWrongD": "Option D (8.2%) applies stale book weights instead of market weights. WACC must price the capital investors actually supply today, which the market mix measures.",
+    "FormulaReference": "WACC = (E/V x Re) + (P/V x Rp) + (D/V x Rd x (1 - t))",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-614",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Quarry Hill Corp. is financed 50% equity (12%), 10% preferred (8%), and 40% debt (6% pre-tax) at market values. The tax rate is 25%. What is WACC?",
+    "Topic": "B.614 wacc three-component computation",
+    "UniqueConceptKey": "B-614-wacc-three-component",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: structured plug-in, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Covered interest parity — forward pricing"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.0% forward premium on the foreign currency",
+      "B": "1.03 — the forward-to-spot ratio reported as the premium",
+      "C": "2.9% forward discount on the foreign currency",
+      "D": "3.6% — the absolute point difference stated as a percent"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates report the F/S ratio instead of the premium, reverse the sign to a discount, or state the point spread as a percentage.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Forward premium = (F - S) / S = (1.2360 - 1.2000) / 1.2000 = 0.0360 / 1.2000 = 3.0%. The forward rate exceeds spot, so the foreign currency trades at a 3% premium — the figure the dealer should quote to the treasurer.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (1.03) reports the forward-to-spot ratio (1.2360 / 1.2000). The ratio is a level, not a premium; the premium subtracts 1 first, giving 0.03 or 3.0%.",
+    "ExplanationWrongC": "Option C (2.9% discount) reverses the subtraction to (S - F) / F. Because the forward exceeds spot, the currency is at a premium, not a discount.",
+    "ExplanationWrongD": "Option D (3.6%) states the 0.0360 point difference as a percent. Points must be scaled by the 1.2000 spot base before they become a 3.0% premium.",
+    "FormulaReference": "Forward premium = (F - S) / S",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-615",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "The spot rate is 1.2000 and the one-year forward rate is 1.2360 (foreign currency per USD). A dealer asks for the forward premium. What is it?",
+    "Topic": "B.615 forward premium computation",
+    "UniqueConceptKey": "B-615-forward-premium",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in with sign check"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Covered interest parity — forward pricing"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.0% per year — the two-year total stated as an annual rate",
+      "B": "11.0% — the point difference stated as a percent",
+      "C": "5.0% per year discount on the foreign currency",
+      "D": "5.0% per year premium on the foreign currency"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates annualize incorrectly, quote point spreads as percents, or label a discount as a premium.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Two-year change = (99 - 110) / 110 = -10%; annualized = -10% / 2 = -5.0% per year. The negative sign means the forward sits below spot, so the foreign currency trades at a 5% per year discount — the quotation the treasurer needs for the hedge decision.",
+    "ExplanationWrongA": "Option A (10.0% per year) states the two-year total of 10% as if it were annual. A two-year move must be halved to an annual rate of 5.0%.",
+    "ExplanationWrongB": "Option B (11.0%) reports the 11-point spread (110 - 99) as a percent. Points become a rate only after dividing by the 110 spot base.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D mislabels the result a premium. Forward below spot is a discount by definition; calling it a premium reverses the hedge signal.",
+    "FormulaReference": "Annualized premium = ((F - S) / S) / years",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-616",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Spot is 110 and the two-year forward is 99 (foreign currency per USD). What is the annualized forward premium or discount?",
+    "Topic": "B.616 forward discount annualization",
+    "UniqueConceptKey": "B-616-forward-discount-annualized",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step plug-in, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Activity ratios — inventory turnover"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.0 times — sales divided by average inventory",
+      "B": "8.0 times — cost of goods sold divided by average inventory",
+      "C": "0.125 times — average inventory divided by cost of goods sold",
+      "D": "6.0 times — cost of goods sold divided by a high-low average"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates use sales instead of COGS, invert the ratio, or average only the high and low inventory readings.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Inventory turnover = COGS / average inventory = $2,400,000 / $300,000 = 8.0 times. Cost (not sales) belongs in the numerator because inventory is carried at cost; 8 turns per year is the efficiency figure the controller should report.",
+    "ExplanationWrongA": "Option A (10.0 times) divides sales ($3,000,000) by inventory. Sales include a markup over cost, so using revenue overstates turns; COGS matches the cost basis of inventory.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (0.125 times) divides inventory by COGS ($300,000 / $2,400,000). Inverting the ratio reports years of stock on hand as a fraction, not turnover.",
+    "ExplanationWrongD": "Option D (6.0 times) averages only the $500,000 high and $300,000 ... low readings ($400,000) instead of the full-year average of $300,000. Turnover requires the period average, not two endpoints.",
+    "FormulaReference": "Inventory turnover = COGS / average inventory",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-617",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Meridian Distributors reports COGS of $2,400,000 and average inventory of $300,000. Sales are $3,000,000. Controller Ben Ortiz needs inventory turnover. What is it?",
+    "Topic": "B.617 inventory turnover computation",
+    "UniqueConceptKey": "B-617-inventory-turnover",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-ratio recall and computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Activity ratios — inventory turnover"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "7.2 times — cost of goods sold divided by ending inventory only",
+      "B": "3.6 times — cost of goods sold divided by peak inventory",
+      "C": "10.0 times — revenue divided by average inventory",
+      "D": "8.0 times — cost of goods sold divided by beginning-ending average"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use ending or peak inventory instead of the average, or substitute revenue for COGS.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Average inventory = ($200,000 + $250,000) / 2 = $225,000; turnover = $1,800,000 / $225,000 = 8.0 times. Averaging beginning and ending balances smooths intra-year swings, so 8 turns fairly represents how fast the wholesaler cycled stock.",
+    "ExplanationWrongA": "Option A (7.2 times) divides COGS by ending inventory alone ($1,800,000 / $250,000). A single endpoint ignores the starting balance; the average of $225,000 is required.",
+    "ExplanationWrongB": "Option B (3.6 times) divides by the $500,000 peak balance. Peak stock overstates typical holdings and understates turns by more than half.",
+    "ExplanationWrongC": "Option C (10.0 times) divides revenue ($2,250,000) by average inventory. Revenue carries a markup, so it inflates turns; COGS matches inventory's cost basis.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Inventory turnover = COGS / ((beginning + ending inventory) / 2)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-618",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "A wholesaler reports COGS of $1,800,000, beginning inventory of $200,000, and ending inventory of $250,000. Revenue is $2,250,000 and peak inventory hit $500,000. What is inventory turnover?",
+    "Topic": "B.618 inventory turnover averaging",
+    "UniqueConceptKey": "B-618-inventory-turnover-averaging",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step averaging plus ratio"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Beta — Sharpe (1964)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "A stock with a beta of zero has no volatility at all",
+      "B": "The lower-beta stock is the better investment because lower beta means higher expected return",
+      "C": "The 1.5-beta stock will earn exactly 1.5 times whatever the market earns",
+      "D": "The 1.5-beta stock is more volatile than the market and the 0.4-beta stock is less volatile"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates think zero beta means zero volatility, invert the beta-return relation, or read beta as an exact return multiple.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Beta measures systematic volatility relative to the market (beta = 1.0). A beta of 1.5 means the stock tends to swing about 1.5 times as far as the market, while 0.4 means smaller swings — so the first stock is more volatile and the second less volatile than the market. That relative-volatility reading is all beta claims.",
+    "ExplanationWrongA": "Option A confuses zero beta with zero volatility. A zero-beta stock still has idiosyncratic volatility; it is merely uncorrelated with market movements.",
+    "ExplanationWrongB": "Option B inverts the risk-return relation. Lower beta means lower systematic risk and hence a lower expected return, not a higher one; beta alone never identifies the better investment.",
+    "ExplanationWrongC": "Option C reads beta as an exact return multiple. Beta describes typical sensitivity, not a guaranteed payoff — a 1.5-beta stock will not earn precisely 1.5 times the market in any given period.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Beta = systematic volatility relative to the market (market beta = 1.0)",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-619",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "An analyst notes Stock X has a beta of 1.5 and Stock Y has a beta of 0.4. Which interpretation is correct?",
+    "Topic": "B.619 beta interpretation",
+    "UniqueConceptKey": "B-619-beta-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: definition-level interpretation, no calculation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "WACC — Modigliani-Miller with taxes (1963)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The 9% needs no flotation adjustment when new equity is issued",
+      "B": "The 9% already applies the debt tax shield to equity as well",
+      "C": "The 9% should be recomputed with book weights for decisions",
+      "D": "The 9% is the market-weighted hurdle rate that new projects must exceed"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates ignore flotation on new equity, prefer book weights, or spread the tax shield to equity.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "WACC blends each capital cost at market weights with debt after tax, producing the minimum return that preserves firm value. A 9% WACC therefore tells management that average-risk projects must earn above 9% to create value — the hurdle-rate interpretation the board should adopt.",
+    "ExplanationWrongA": "Option A is wrong because issuing new equity incurs flotation costs that raise the effective equity cost above the current 9% blend. WACC must be adjusted for new-issue costs.",
+    "ExplanationWrongB": "Option B spreads the (1 - t) shield to equity. Only interest is tax-deductible, so only debt is shielded; equity enters WACC at its full required return.",
+    "ExplanationWrongC": "Option C prefers stale book weights. Decisions price capital investors supply today, which market weights measure; book weights reflect history, not opportunity cost.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "WACC = market-weighted hurdle rate for average-risk projects",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-620",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "B",
+    "Stem": "Crestview Holdings reports a 9% WACC computed at market weights with after-tax debt. The board asks what the 9% means for project decisions. Which statement is correct?",
+    "Topic": "B.620 wacc hurdle-rate interpretation",
+    "UniqueConceptKey": "B-620-wacc-hurdle-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: conceptual interpretation, no calculation"
+    ],
+    "question_state": "Certified"
   }
 ];

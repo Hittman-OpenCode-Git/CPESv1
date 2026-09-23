@@ -28,6 +28,14 @@ const PACKS = [
   { file: "pack_p2_f.js", label: "P2 Pack F", section: "f", targetQIDs: 500 },
 ];
 
+const CASE_PACKS = [
+  { file: "case_pack_p2_1.js", label: "P2 Case Pack 1" },
+  { file: "case_pack_p2_2.js", label: "P2 Case Pack 2" },
+  { file: "case_pack_p2_3.js", label: "P2 Case Pack 3" },
+  { file: "case_pack_p2_authored.js", label: "P2 Case Pack Authored" },
+  { file: "case_pack_p2_C4_C8.js", label: "P2 Case Pack C4_C8" },
+];
+
 let divergences = 0;
 const results = [];
 
@@ -107,7 +115,7 @@ for (const pack of PACKS) {
   }
 }
 
-  info("Total P2 QIDs: " + totalQIDs + " (target: 3,250)");
+  info("Total P2 QIDs: " + totalQIDs + " (target: 3,450)");
 
 // ── 2. Certified Counts ──────────────────────────────────────────
 
@@ -125,7 +133,7 @@ for (const pack of PACKS) {
 }
 
 if (totalCertified > 0) {
-  info("Total P2 Certified: " + totalCertified + " (target: ≥2,375)");
+  info("Total P2 Certified: " + totalCertified + " (target: ≥3,436)");
 } else {
   info("Total P2 Certified: 0 (no items certified yet)");
 }
@@ -153,6 +161,74 @@ if (dupCount === 0) {
   warn("QID uniqueness — " + dupCount + " duplicate(s)");
 }
 
+// ── 3.5. P2 Case Pack Checks (§6) ─────────────────────────────────
+
+let totalCaseIDs = 0;
+let totalCaseCertified = 0;
+const allCaseIDs = new Set();
+let caseDupCount = 0;
+
+for (const cpack of CASE_PACKS) {
+  const fp = path.join(P2_DIR, cpack.file);
+  if (!fs.existsSync(fp)) {
+    info(cpack.label + " — file not found");
+    continue;
+  }
+
+  const content = fs.readFileSync(fp, "utf8");
+
+  // Parse check + CaseID extraction via CaseExtractor
+  let cases = null;
+  try {
+    const CaseExtractor = require("./lib/CaseExtractor");
+    cases = CaseExtractor.extractFromContent(content);
+  } catch (e) {
+    warn(cpack.label + " — CaseExtractor FAILED: " + e.message.substring(0, 100));
+  }
+
+  if (!cases || cases.length === 0) {
+    warn(cpack.label + " — no cases extracted (bare array or parse failure)");
+  } else {
+    ok(cpack.label + " — parse OK (" + cases.length + " cases)");
+    let caseCertified = 0;
+    for (const c of cases) {
+      totalCaseIDs++;
+      const cid = c.CaseID;
+      if (cid) {
+        if (allCaseIDs.has(cid)) {
+          caseDupCount++;
+          if (caseDupCount <= 5) warn("DUPLICATE CaseID: " + cid + " (in " + cpack.file + ")");
+        }
+        allCaseIDs.add(cid);
+      }
+      if ((c.question_state || "").trim() === "Certified") {
+        caseCertified++;
+        totalCaseCertified++;
+      }
+    }
+    ok(cpack.label + " — CaseID count " + cases.length + " | Certified " + caseCertified);
+  }
+
+  // Global var presence check (flag bare arrays)
+  const varMatch = content.match(/^(var|const)\s+(\w+)\s*=/m);
+  if (!varMatch) {
+    warn(cpack.label + " — NO GLOBAL VAR (bare array)");
+  } else {
+    ok(cpack.label + " — global var: " + varMatch[2]);
+  }
+}
+
+if (caseDupCount === 0) {
+  ok("CaseID uniqueness — " + allCaseIDs.size + " unique, 0 duplicates");
+} else {
+  warn("CaseID uniqueness — " + caseDupCount + " duplicate(s)");
+}
+
+info("Total P2 CaseIDs: " + totalCaseIDs);
+if (totalCaseCertified > 0) {
+  info("Total P2 Case Certified: " + totalCaseCertified);
+}
+
 // ── 4. Governance Guard Test Suite ───────────────────────────────
 
 try {
@@ -173,8 +249,8 @@ try {
 
 console.log("\n=== P2 PREFLIGHT — " + new Date().toISOString() + " ===");
 console.log(results.join("\n"));
-  console.log("\n  TOTAL P2 QIDs: " + totalQIDs + " / 3,250");
-  console.log("  TOTAL P2 CERTIFIED: " + totalCertified + " / 2,375");
+  console.log("\n  TOTAL P2 QIDs: " + totalQIDs + " / 3,450");
+  console.log("  TOTAL P2 CERTIFIED: " + totalCertified + " / 3,436");
 console.log("  PACKS ACTIVE: " + PACKS.filter(p => fs.existsSync(path.join(P2_DIR, p.file))).length + " / 6");
 console.log("  DIVERGENCES: " + divergences);
 

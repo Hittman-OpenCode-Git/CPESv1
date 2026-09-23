@@ -1,4 +1,4 @@
-/**
+﻿/**
  * generate_registry.js
  * Pipeline runner: reads pack source files, runs validators, captures
  * findings per question, and emits knowledge/MASTER_QUESTION_REGISTRY.md
@@ -160,7 +160,7 @@ function generateRegistry(questions, findings) {
     lines.push('  Source hash: ' + sourceHash);
     lines.push('-->');
     lines.push('');
-    lines.push('# Master Question Registry — CMA Part 1 Exam Simulator');
+    lines.push('# Master Question Registry — CMA Exam Simulator');
     lines.push('');
     lines.push('**Status:** Generated Artifact');
     lines.push('**Generated:** ' + timestamp);

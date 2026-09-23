@@ -1,4 +1,4 @@
-# S111P — Retention Hypotheses
+﻿# S111P — Retention Hypotheses
 
 **Session:** 111P
 **Governance Lane:** Light (Read-Only)
@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-Formulate testable hypotheses about knowledge retention and decay in the CMA Part 1 Exam Simulator. These hypotheses bridge the gap between what the simulator measures (per-session accuracy) and what it needs to understand (how long learning lasts, when to re-practice, what spacing produces durable knowledge).
+Formulate testable hypotheses about knowledge retention and decay in the CMA Exam Simulator. These hypotheses bridge the gap between what the simulator measures (per-session accuracy) and what it needs to understand (how long learning lasts, when to re-practice, what spacing produces durable knowledge).
 
 ---
 

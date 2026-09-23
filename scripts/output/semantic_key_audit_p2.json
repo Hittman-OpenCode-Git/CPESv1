@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T17:30:23.914Z",
+  "timestamp": "2026-09-22T03:29:07.454Z",
   "scope": {
     "packs": [
       "p2/pack_p2_a.js",
@@ -9,25 +9,10 @@
       "p2/pack_p2_e.js",
       "p2/pack_p2_f.js"
     ],
-    "totalItems": 3450,
-    "certifiedItems": 3436,
+    "totalItems": 3530,
+    "certifiedItems": 3450,
     "screenBCertifiedOnly": true,
-    "inAuditExcludedFromB": [
-      "P2-A-084",
-      "P2-A-285",
-      "P2-A-289",
-      "P2-A-371",
-      "P2-A-377",
-      "P2-A-452",
-      "P2-A-505",
-      "P2-A-509",
-      "P2-A-510",
-      "P2-A-517",
-      "P2-A-525",
-      "P2-A-542",
-      "P2-A-550",
-      "P2-A-572"
-    ],
+    "inAuditExcludedFromB": [],
     "casePacksOutOfScope": "P2 case items (CBQ2x-*) carry Type/Prompt/Correct/Explanation with no choice slots; no key/explanation-agreement screen applies. Documented residual.",
     "patternsUsed": {
       "A": "P1_CONTAMINANT_PATTERNS (cross-part spread A0); P2-native list empty"
@@ -37,21 +22,21 @@
   "stats": {
     "P2-A": {
       "file": "p2/pack_p2_a.js",
-      "records": 600,
+      "records": 622,
       "diagnostics": 0,
-      "questions": 600
+      "questions": 622
     },
     "P2-B": {
       "file": "p2/pack_p2_b.js",
-      "records": 600,
+      "records": 620,
       "diagnostics": 0,
-      "questions": 600
+      "questions": 620
     },
     "P2-C": {
       "file": "p2/pack_p2_c.js",
-      "records": 750,
+      "records": 788,
       "diagnostics": 0,
-      "questions": 750
+      "questions": 788
     },
     "P2-D": {
       "file": "p2/pack_p2_d.js",
@@ -62,7 +47,7 @@
     "P2-E": {
       "file": "p2/pack_p2_e.js",
       "records": 500,
-      "diagnostics": 0,
+      "diagnostics": 1,
       "questions": 500
     },
     "P2-F": {
@@ -74,10 +59,10 @@
   },
   "screenYields": {
     "A": 0,
-    "B": 67,
+    "B": 68,
     "C": 4,
     "D": 2,
-    "E": 125,
+    "E": 126,
     "B-num": 86
   },
   "screens": {
@@ -112,7 +97,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "DuPont: ROE = Margin x Turnover x Equity Multiplier. Meridian EM = 18% / (6% x 1.5) = 2.0. Northgate EM = 18% / (3% x 2.",
           "file": "p2/pack_p2_a.js",
-          "line": 4306
+          "line": 4308
         },
         {
           "qid": "P2-A-128",
@@ -125,7 +110,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "Dividend yield = annual dividend ÷ current market price. Northstar's dividend was unchanged at $1.50; the price fell fro",
           "file": "p2/pack_p2_a.js",
-          "line": 5447
+          "line": 5449
         },
         {
           "qid": "P2-A-190",
@@ -138,7 +123,20 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Compound annual growth rate = (Ending ÷ Beginning)^(1/n) − 1 = ($146.41M ÷ $100M)^(1/4) − 1 = 1.4641^0.25 − 1 = 10.0%. C",
           "file": "p2/pack_p2_a.js",
-          "line": 8161
+          "line": 8163
+        },
+        {
+          "qid": "P2-A-285",
+          "pack": "P2-A",
+          "storedCC": "D",
+          "bestLetter": "A",
+          "bestRecall": 62.5,
+          "ccRecall": 0,
+          "margin": 62.5,
+          "bestLeadWordCount": 8,
+          "ecPreview": "Earnings quality requires stripping nonrecurring or collectibility-tainted sales before judging operating performance. F",
+          "file": "p2/pack_p2_a.js",
+          "line": 12462
         },
         {
           "qid": "P2-A-316",
@@ -151,7 +149,7 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Debt with a covenant breach at the balance-sheet date is callable by the lender unless a waiver extending beyond one yea",
           "file": "p2/pack_p2_a.js",
-          "line": 13847
+          "line": 13849
         },
         {
           "qid": "P2-A-345",
@@ -164,7 +162,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "DSO = (Average Receivables / Net Credit Sales) x 365 measures collection efficiency under ASC 310. Average receivables =",
           "file": "p2/pack_p2_a.js",
-          "line": 15169
+          "line": 15171
         },
         {
           "qid": "P2-A-366",
@@ -177,7 +175,7 @@
           "bestLeadWordCount": 7,
           "ecPreview": "DOL = Contribution Margin / Operating Income under FA-19. Contribution Margin = Sales − Variable Costs = $6.20M − $3.72M",
           "file": "p2/pack_p2_a.js",
-          "line": 16472
+          "line": 16477
         },
         {
           "qid": "P2-A-376",
@@ -190,7 +188,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "Under SEC Regulation G and ASC 220-20 (CMA LOS A.8), a non-GAAP measure must be reconciled to the most directly comparab",
           "file": "p2/pack_p2_a.js",
-          "line": 17281
+          "line": 17288
         },
         {
           "qid": "P2-B-005",
@@ -385,7 +383,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Flotation costs reduce the net proceeds the firm receives per share, so the cost of new equity is the required return di",
           "file": "p2/pack_p2_b.js",
-          "line": 18280
+          "line": 18284
         },
         {
           "qid": "P2-B-353",
@@ -398,7 +396,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Rank the projects by IRR: Project A (9.3%, $2.5M), Project B (8.8%, $2.0M), Project C (8.2%, $1.5M). The MCC is 8.5% for",
           "file": "p2/pack_p2_b.js",
-          "line": 18435
+          "line": 18439
         },
         {
           "qid": "P2-B-380",
@@ -411,7 +409,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "The dividend growth model (Gordon growth) gives the cost of equity as re = D1/P0 + g, where D1 is the next dividend, P0 ",
           "file": "p2/pack_p2_b.js",
-          "line": 20536
+          "line": 20540
         },
         {
           "qid": "P2-B-393",
@@ -424,7 +422,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "On the ex-dividend date, buyers no longer receive the declared dividend, so the stock price adjusts downward by the divi",
           "file": "p2/pack_p2_b.js",
-          "line": 21547
+          "line": 21551
         },
         {
           "qid": "P2-B-408",
@@ -437,7 +435,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "Contribution = Q x (P - V) = 500,000 x (40.00 - 25.00) = 500,000 x 15.00 = 7,500,000. EBIT = Contribution - Fixed = 7,50",
           "file": "p2/pack_p2_b.js",
-          "line": 22476
+          "line": 22480
         },
         {
           "qid": "P2-B-425",
@@ -450,7 +448,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "Economic Value Added measures residual wealth after capital charge: EVA = NOPAT - (Invested Capital x WACC). Capital cha",
           "file": "p2/pack_p2_b.js",
-          "line": 23220
+          "line": 23224
         },
         {
           "qid": "P2-B-444",
@@ -463,7 +461,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "U.S. bankruptcy framework distinguishes Chapter 11 reorganization from Chapter 7 liquidation. Chapter 11 permits the deb",
           "file": "p2/pack_p2_b.js",
-          "line": 24074
+          "line": 24078
         },
         {
           "qid": "P2-B-445",
@@ -476,7 +474,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "Corporate restructuring taxonomy distinguishes cash versus share mechanisms. Divestiture is a sale for cash to an outsid",
           "file": "p2/pack_p2_b.js",
-          "line": 24119
+          "line": 24123
         },
         {
           "qid": "P2-B-475",
@@ -489,7 +487,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "Netting matches opposite intra-firm flows: Flash USA owes 800,000 euros = $960,000 at 1.20, exactly the $960,000 Germany",
           "file": "p2/pack_p2_b.js",
-          "line": 25463
+          "line": 25467
         },
         {
           "qid": "P2-B-483",
@@ -502,7 +500,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "Contribution = Q x (P - V) = 400,000 x (30.00 - 18.00) = 400,000 x 12.00 = 4,800,000. EBIT = Contribution - Fixed = 4,80",
           "file": "p2/pack_p2_b.js",
-          "line": 25821
+          "line": 25825
         },
         {
           "qid": "P2-B-492",
@@ -515,7 +513,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "WACC includes each capital component at its after-tax cost weighted by target. After-tax debt = 6.00% x (1-0.25)=4.50%. ",
           "file": "p2/pack_p2_b.js",
-          "line": 26225
+          "line": 26229
         },
         {
           "qid": "P2-B-496",
@@ -528,7 +526,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Merger EPS = (Acquirer net + Target net) / (Acquirer shares + Target shares x exchange ratio). Combined earnings = 6,000",
           "file": "p2/pack_p2_b.js",
-          "line": 26403
+          "line": 26407
         },
         {
           "qid": "P2-B-552",
@@ -541,7 +539,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "WACC = (E/V × R_e) + (P/V × R_p) + (D/V × R_d × (1 − t)). Total value V = $60M + $10M + $30M = $100M. Weights: E/V = 60%",
           "file": "p2/pack_p2_b.js",
-          "line": 30517
+          "line": 30521
         },
         {
           "qid": "P2-C-009",
@@ -710,7 +708,7 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Decision theory endorsed by the IMA SMA framework layers two judgments: EV without = max(0.35 × $500,000 + 0.65 × (−$80,",
           "file": "p2/pack_p2_c.js",
-          "line": 21070
+          "line": 21072
         },
         {
           "qid": "P2-C-440",
@@ -723,7 +721,7 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Strategic sourcing judgment under the IMA SMA on relevant costing weighs the full relevant set: the $180,000 unit-price ",
           "file": "p2/pack_p2_c.js",
-          "line": 21254
+          "line": 21256
         },
         {
           "qid": "P2-C-695",
@@ -736,7 +734,7 @@
           "bestLeadWordCount": 3,
           "ecPreview": "Absorption and variable costing produce the same income only when production equals sales. No inventory change means no ",
           "file": "p2/pack_p2_c.js",
-          "line": 36647
+          "line": 36649
         },
         {
           "qid": "P2-D-193",
@@ -905,7 +903,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "The $250,000 feasibility study cost is a sunk cost: it was incurred in the past and cannot be recovered regardless of wh",
           "file": "p2/pack_p2_e.js",
-          "line": 8360
+          "line": 8362
         },
         {
           "qid": "P2-E-299",
@@ -918,7 +916,7 @@
           "bestLeadWordCount": 6,
           "ecPreview": "When projects have different cash flow timing patterns but similar total undiscounted cash flows, IRR and NPV can rank t",
           "file": "p2/pack_p2_e.js",
-          "line": 14664
+          "line": 14666
         },
         {
           "qid": "P2-E-403",
@@ -931,7 +929,7 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Safe: Rate=4%+0.8x5%=8%. NPV=$100Kx3.9927-$350K=$49,270 (positive). Risky: Rate=4%+1.6x5%=12%. NPV=$120Kx3.6048-$400K=$3",
           "file": "p2/pack_p2_e.js",
-          "line": 19324
+          "line": 19326
         },
         {
           "qid": "P2-F-039",
@@ -1042,7 +1040,7 @@
           "bestOtherRecall": 75,
           "ewPreview": "The peer's PEG is 18 ÷ 9 = 2.0, not 1.5. Both stocks carry PEG ratios of 2.0. The premise that the peer is cheaper on a growth-adjusted basis rests on a divisio",
           "file": "p2/pack_p2_a.js",
-          "line": 5140
+          "line": 5142
         },
         {
           "qid": "P2-A-124",
@@ -1054,7 +1052,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "$30.5M removes the gain but leaves the restructuring charge in. Because restructuring is a transitory cost, core earnings add it back after tax (+$4.5M), giving",
           "file": "p2/pack_p2_a.js",
-          "line": 5271
+          "line": 5273
         },
         {
           "qid": "P2-A-154",
@@ -1066,7 +1064,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "15% counts only the $6 price appreciation and omits Meridian's $2.00 dividend. Total shareholder return includes both sources of value — ($46 − $40 + $2) ÷ $40 ",
           "file": "p2/pack_p2_a.js",
-          "line": 6583
+          "line": 6585
         },
         {
           "qid": "P2-A-173",
@@ -1078,7 +1076,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "$32M treats depreciation as free cash flow. Depreciation is a non-cash allocation of historical cost, not a cash source; Flash generated $128M of operating cash",
           "file": "p2/pack_p2_a.js",
-          "line": 7413
+          "line": 7415
         },
         {
           "qid": "P2-A-295",
@@ -1090,7 +1088,7 @@
           "bestOtherRecall": 57.1,
           "ewPreview": "Choice B mixes two numerators in one answer; while EBITDA coverage of 6.80 times may inform supplemental analysis, hedging the test between measures evades the ",
           "file": "p2/pack_p2_a.js",
-          "line": 12905
+          "line": 12907
         },
         {
           "qid": "P2-A-324",
@@ -1102,19 +1100,7 @@
           "bestOtherRecall": 62.5,
           "ewPreview": "Choice B misstates the impairment by impairing the full reporting-unit shortfall of $2,700,000. The misconception is applying the unit-level excess directly to ",
           "file": "p2/pack_p2_a.js",
-          "line": 14205
-        },
-        {
-          "qid": "P2-A-377",
-          "pack": "P2-A",
-          "slot": "C",
-          "correctChoice": "D",
-          "ownRecall": 20,
-          "bestOtherLetter": "D",
-          "bestOtherRecall": 50,
-          "ewPreview": "Choice D applies a weighted-average rate exclusively, which is one acceptable approximation of transaction-date rates under ASC 830 but is not the only acceptab",
-          "file": "p2/pack_p2_a.js",
-          "line": 17364
+          "line": 14207
         },
         {
           "qid": "P2-A-512",
@@ -1126,7 +1112,7 @@
           "bestOtherRecall": 53.8,
           "ewPreview": "This mechanically benchmarks to the median without evaluating Meridian circumstances. A 40% payout is only 5 points above the 35% median — well within normal va",
           "file": "p2/pack_p2_a.js",
-          "line": 24989
+          "line": 24998
         },
         {
           "qid": "P2-A-562",
@@ -1138,7 +1124,31 @@
           "bestOtherRecall": 50,
           "ewPreview": "Option D misidentifies the mechanism — historical cost does NOT adjust, so the asset base is understated relative to inflated sales.",
           "file": "p2/pack_p2_a.js",
-          "line": 28558
+          "line": 28567
+        },
+        {
+          "qid": "P2-A-605",
+          "pack": "P2-A",
+          "slot": "A",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "A quick ratio of 0.60 would require liquid assets of $180,000 against $300,000 in current liabilities. The actual liquid assets are $300,000, so the correct rat",
+          "file": "p2/pack_p2_a.js",
+          "line": 31503
+        },
+        {
+          "qid": "P2-A-605",
+          "pack": "P2-A",
+          "slot": "C",
+          "correctChoice": "D",
+          "ownRecall": 16.7,
+          "bestOtherLetter": "B",
+          "bestOtherRecall": 50,
+          "ewPreview": "A quick ratio of 0.80 would imply liquid assets of $240,000 against $300,000 in current liabilities. The actual quick assets are $300,000 ($400,000 - $100,000 i",
+          "file": "p2/pack_p2_a.js",
+          "line": 31503
         },
         {
           "qid": "P2-B-001",
@@ -1234,7 +1244,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "The two forms are not tax-equivalent: the dividend triggers an immediate 20% tax, while the repurchase triggers at most a 15% capital gains tax at sale, and onl",
           "file": "p2/pack_p2_b.js",
-          "line": 17112
+          "line": 17116
         },
         {
           "qid": "P2-B-348",
@@ -1246,7 +1256,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "The simple average (20% + 10% − 6%) / 3 = 8.0% ignores the unequal probabilities. The normal state has 50% probability, twice the weight of the boom and recessi",
           "file": "p2/pack_p2_b.js",
-          "line": 18046
+          "line": 18050
         },
         {
           "qid": "P2-B-351",
@@ -1258,7 +1268,7 @@
           "bestOtherRecall": 80,
           "ewPreview": "Multiplying by (1 − 0.06) gives 11.28%, which reduces the cost — the wrong direction. Flotation costs make new equity MORE expensive, not less. The firm receive",
           "file": "p2/pack_p2_b.js",
-          "line": 18280
+          "line": 18284
         },
         {
           "qid": "P2-B-357",
@@ -1270,7 +1280,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Multiplying by (1 + 0.20) gives 9.60%, which adds the balance requirement rather than dividing by the usable fraction. The correct adjustment divides the stated",
           "file": "p2/pack_p2_b.js",
-          "line": 18748
+          "line": 18752
         },
         {
           "qid": "P2-B-358",
@@ -1282,7 +1292,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Using 2/100 instead of 2/98 as the cost basis gives (2/100) × (360/20) = 36.00%, slightly low. The cost is measured on the funds retained after the discount is ",
           "file": "p2/pack_p2_b.js",
-          "line": 18826
+          "line": 18830
         },
         {
           "qid": "P2-B-365",
@@ -1294,7 +1304,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "EPS does not fall when the share count drops and earnings are held constant. The $2.25 figure would require earnings to fall by more than the share count — unde",
           "file": "p2/pack_p2_b.js",
-          "line": 19370
+          "line": 19374
         },
         {
           "qid": "P2-B-378",
@@ -1306,7 +1316,7 @@
           "bestOtherRecall": 75,
           "ewPreview": "The choice matters: market and book weights produce materially different WACCs when book and market values diverge, as they do here (equity 60% book vs 72% mark",
           "file": "p2/pack_p2_b.js",
-          "line": 20381
+          "line": 20385
         },
         {
           "qid": "P2-B-387",
@@ -1318,7 +1328,7 @@
           "bestOtherRecall": 60,
           "ewPreview": "Borrowing $720,000 leaves only $720,000 x 0.80 = $576,000 usable after the 20% compensating balance, short of the $600,000 needed. The loan must be grossed up b",
           "file": "p2/pack_p2_b.js",
-          "line": 21081
+          "line": 21085
         },
         {
           "qid": "P2-B-393",
@@ -1330,7 +1340,7 @@
           "bestOtherRecall": 75,
           "ewPreview": "The price does not rise on the ex-dividend date. New buyers on the ex-date are NOT entitled to the dividend, so the price falls by the dividend amount rather th",
           "file": "p2/pack_p2_b.js",
-          "line": 21547
+          "line": 21551
         },
         {
           "qid": "P2-B-416",
@@ -1342,7 +1352,7 @@
           "bestOtherRecall": 80,
           "ewPreview": "Choice B treats the entire $50,000,000 consideration as goodwill; the error ignores that $42,000,000 of tangible and identifiable intangible assets were acquire",
           "file": "p2/pack_p2_b.js",
-          "line": 22827
+          "line": 22831
         },
         {
           "qid": "P2-B-429",
@@ -1354,7 +1364,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice D uses pre-tax earnings $1,000,000 / 600,000 = $1.67 or $600,000/600,000 = $1.00 with wrong base. The error omits the (1 - T) adjustment entirely, treati",
           "file": "p2/pack_p2_b.js",
-          "line": 23399
+          "line": 23403
         },
         {
           "qid": "P2-B-463",
@@ -1366,7 +1376,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice D overstates at $7.00 by dividing by 1,000,000 (ignoring new shares); it omits dilution entirely. Combined entity has 1,400,000 shares, so EPS is $5.00, ",
           "file": "p2/pack_p2_b.js",
-          "line": 24926
+          "line": 24930
         },
         {
           "qid": "P2-B-468",
@@ -1378,7 +1388,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice B misstates the total as 12.10% by applying 1.10 to the sum 11.00%; it treats Rf and CRP as beta-scaled. Only the 6.00% market premium is scaled by 1.10,",
           "file": "p2/pack_p2_b.js",
-          "line": 25151
+          "line": 25155
         },
         {
           "qid": "P2-B-511",
@@ -1390,7 +1400,7 @@
           "bestOtherRecall": 57.9,
           "ewPreview": "This incorrectly assumes dividends always reduce value. Under the bird-in-the-hand theory, dividends increase value by reducing perceived risk. Whether retentio",
           "file": "p2/pack_p2_b.js",
-          "line": 27371
+          "line": 27375
         },
         {
           "qid": "P2-B-537",
@@ -1402,7 +1412,7 @@
           "bestOtherRecall": 80,
           "ewPreview": "$3.20 is incorrect. The merger does change EPS. A merger is accretive when the acquirer's P/E exceeds the target's P/E.",
           "file": "p2/pack_p2_b.js",
-          "line": 29313
+          "line": 29317
         },
         {
           "qid": "P2-B-585",
@@ -1414,7 +1424,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice A incorrectly defers the entire gain. Under ASC 842-40-25, only the portion related to the right-of-use asset retained is deferred. Full deferral oversta",
           "file": "p2/pack_p2_b.js",
-          "line": 32938
+          "line": 32942
         },
         {
           "qid": "P2-B-585",
@@ -1426,7 +1436,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice B incorrectly recognizes the entire gain immediately. Under ASC 842, the gain is deferred to the extent of the right-of-use asset retained by the seller-",
           "file": "p2/pack_p2_b.js",
-          "line": 32938
+          "line": 32942
         },
         {
           "qid": "P2-C-032",
@@ -1654,7 +1664,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice B omits the profit target from the numerator, which computes ordinary breakeven units and therefore understates the volume needed to earn any profit abov",
           "file": "p2/pack_p2_c.js",
-          "line": 20012
+          "line": 20014
         },
         {
           "qid": "P2-C-436",
@@ -1666,7 +1676,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice A launches on the $123,000 baseline while leaving $4,000 of net information value on the table, since $52,000 of insight costs only $48,000.",
           "file": "p2/pack_p2_c.js",
-          "line": 21070
+          "line": 21072
         },
         {
           "qid": "P2-C-440",
@@ -1678,7 +1688,7 @@
           "bestOtherRecall": 55.6,
           "ewPreview": "Choice A decides on the $180,000 price gap alone, ignoring the $240,000 of switching, quality, and control exposure that reverses the arithmetic.",
           "file": "p2/pack_p2_c.js",
-          "line": 21254
+          "line": 21256
         },
         {
           "qid": "P2-C-484",
@@ -1690,7 +1700,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Continuing to make at $52.00 confuses the supplier price with the make cost. The avoidable make cost is $49.50, so the correct conclusion is the $2.50-per-unit ",
           "file": "p2/pack_p2_c.js",
-          "line": 23278
+          "line": 23280
         },
         {
           "qid": "P2-C-487",
@@ -1702,7 +1712,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Buying at $41.00 misstates the supplier price; the quote is $42.50. The $41.00 figure is the relevant make cost, which favors making, not buying.",
           "file": "p2/pack_p2_c.js",
-          "line": 23416
+          "line": 23418
         },
         {
           "qid": "P2-C-487",
@@ -1714,7 +1724,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Indifference at $42.50 equates the supplier price with itself. Indifference requires make cost to equal $42.50, but relevant make cost is $41.00.",
           "file": "p2/pack_p2_c.js",
-          "line": 23416
+          "line": 23418
         },
         {
           "qid": "P2-C-498",
@@ -1726,7 +1736,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Waiting at $61,000 is correctly valued but is not the maximum. The $84,000 launch EV dominates waiting by $23,000.",
           "file": "p2/pack_p2_c.js",
-          "line": 23922
+          "line": 23924
         },
         {
           "qid": "P2-C-498",
@@ -1738,7 +1748,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Licensing at $55,000 is correctly valued but trails launching. The decision rule selects the maximum EV, which is the $84,000 launch branch.",
           "file": "p2/pack_p2_c.js",
-          "line": 23922
+          "line": 23924
         },
         {
           "qid": "P2-C-524",
@@ -1750,7 +1760,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice C reports a $200,000 cushion built on breakeven sales of $1,000,000, which omits $100,000 of warehousing fixed costs from breakeven. With all fixed costs",
           "file": "p2/pack_p2_c.js",
-          "line": 25118
+          "line": 25120
         },
         {
           "qid": "P2-C-524",
@@ -1762,7 +1772,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice D reports $400,000 from a $1,300,000 forecast figure instead of the $1,200,000 actual sales. Margin of safety measures the cushion above breakeven in rea",
           "file": "p2/pack_p2_c.js",
-          "line": 25118
+          "line": 25120
         },
         {
           "qid": "P2-C-547",
@@ -1774,7 +1784,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "The minimax regret criterion does not use probabilities. It focuses on the worst-case regret for each alternative regardless of the probability of each demand s",
           "file": "p2/pack_p2_c.js",
-          "line": 26384
+          "line": 26386
         },
         {
           "qid": "P2-C-559",
@@ -1786,7 +1796,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "A ($4.5K savings) uses only the per-unit price difference ($22-$18) x 10K = $40K, ignoring hidden outsourcing costs.",
           "file": "p2/pack_p2_c.js",
-          "line": 27092
+          "line": 27094
         },
         {
           "qid": "P2-C-584",
@@ -1798,7 +1808,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Accepting based on $60,000 annual fixed cost savings ignores that internal variable cost ($140,000/year) is significantly below the supplier's escalating prices",
           "file": "p2/pack_p2_c.js",
-          "line": 28682
+          "line": 28684
         },
         {
           "qid": "P2-C-584",
@@ -1810,7 +1820,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Rejecting based on Year 3 alone is incomplete. The correct analysis compares total 3-year costs: internal $600,000 vs. external $660,000. Year 3 profitability i",
           "file": "p2/pack_p2_c.js",
-          "line": 28682
+          "line": 28684
         },
         {
           "qid": "P2-C-596",
@@ -1822,7 +1832,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice D focuses on the worst-case payoff rather than the equal-weighted average. While Launch C does have the best worst case, that is the maximin criterion, n",
           "file": "p2/pack_p2_c.js",
-          "line": 29490
+          "line": 29492
         },
         {
           "qid": "P2-C-641",
@@ -1834,7 +1844,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Ignores the $50,000 opportunity benefit from freed capacity, yielding only the $100,000 direct advantage.",
           "file": "p2/pack_p2_c.js",
-          "line": 32766
+          "line": 32768
         },
         {
           "qid": "P2-C-643",
@@ -1846,7 +1856,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "This would be correct if CM exceeded avoidable FC. Here CM ($80,000) is less than avoidable FC ($115,000), so dropping actually increases income rather than dec",
           "file": "p2/pack_p2_c.js",
-          "line": 32902
+          "line": 32904
         },
         {
           "qid": "P2-C-645",
@@ -1858,7 +1868,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Correct allocation ($108,000) but wrong process-further decision. The $45,000 incremental revenue exceeds the $30,000 incremental cost by $15,000.",
           "file": "p2/pack_p2_c.js",
-          "line": 33038
+          "line": 33040
         },
         {
           "qid": "P2-C-646",
@@ -1870,7 +1880,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Full demand CM ($60,200 = 900x$42 + 800x$28) ignores the Assembly bottleneck capacity of 1,500 units.",
           "file": "p2/pack_p2_c.js",
-          "line": 33106
+          "line": 33108
         },
         {
           "qid": "P2-C-706",
@@ -1882,7 +1892,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "NPV and PI conflict is expected when projects differ in scale. NPV is always the correct criterion for mutually exclusive selections because it measures total s",
           "file": "p2/pack_p2_c.js",
-          "line": 37456
+          "line": 37458
         },
         {
           "qid": "P2-C-706",
@@ -1894,7 +1904,7 @@
           "bestOtherRecall": 75,
           "ewPreview": "Projects are mutually exclusive: only one can be selected. The higher-NPV project (Beta) should be chosen.",
           "file": "p2/pack_p2_c.js",
-          "line": 37456
+          "line": 37458
         },
         {
           "qid": "P2-C-721",
@@ -1906,7 +1916,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "The net impact is -$60,000, but the correct framing is that accepting the order creates a $60,000 disadvantage. The wording in this choice is less precise than ",
           "file": "p2/pack_p2_c.js",
-          "line": 38557
+          "line": 38559
         },
         {
           "qid": "P2-C-748",
@@ -1918,7 +1928,7 @@
           "bestOtherRecall": 60,
           "ewPreview": "Past R&D costs are sunk and cannot be changed by any future decision. They are irrelevant.",
           "file": "p2/pack_p2_c.js",
-          "line": 40529
+          "line": 40531
         },
         {
           "qid": "P2-D-018",
@@ -2182,7 +2192,7 @@
           "bestOtherRecall": 63.6,
           "ewPreview": "Choice C inverts the reinvestment assumption: it is IRR that assumes reinvestment at the IRR, not NPV. NPV assumes reinvestment at WACC. The statement that 'NPV",
           "file": "p2/pack_p2_e.js",
-          "line": 11060
+          "line": 11062
         },
         {
           "qid": "P2-E-261",
@@ -2194,7 +2204,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice C misstates the key concept; Choice C relies on IRR as the selection criterion for mutually exclusive projects; IRR can conflict with NPV when project sc",
           "file": "p2/pack_p2_e.js",
-          "line": 13078
+          "line": 13080
         },
         {
           "qid": "P2-E-298",
@@ -2206,7 +2216,7 @@
           "bestOtherRecall": 57.1,
           "ewPreview": "Choice A selects by highest PI, which is the wrong criterion for mutually exclusive projects. PI measures efficiency (NPV per dollar), but the goal is to maximi",
           "file": "p2/pack_p2_e.js",
-          "line": 14619
+          "line": 14621
         },
         {
           "qid": "P2-E-302",
@@ -2218,7 +2228,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Choice C describes the crossover point itself, where both projects have equal NPV. At this exact rate, the firm is indifferent. The ranking changes for rates st",
           "file": "p2/pack_p2_e.js",
-          "line": 14799
+          "line": 14801
         },
         {
           "qid": "P2-E-326",
@@ -2230,7 +2240,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice D applies claims equivalence when the EAA calculations show different annualized values. The correct comparison reveals which machine generates higher an",
           "file": "p2/pack_p2_e.js",
-          "line": 15872
+          "line": 15874
         },
         {
           "qid": "P2-E-332",
@@ -2242,7 +2252,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice D applies claims equivalence when the EAA calculations show different annualized values. The correct comparison reveals which project generates higher an",
           "file": "p2/pack_p2_e.js",
-          "line": 16148
+          "line": 16150
         },
         {
           "qid": "P2-E-355",
@@ -2254,7 +2264,7 @@
           "bestOtherRecall": 62.5,
           "ewPreview": "Choice C omits the two scenarios based on IRR reduction magnitude, ignoring that the revenue decline crosses below the cost of capital threshold.",
           "file": "p2/pack_p2_e.js",
-          "line": 17196
+          "line": 17198
         },
         {
           "qid": "P2-E-392",
@@ -2266,7 +2276,7 @@
           "bestOtherRecall": 100,
           "ewPreview": "Choice D inverts the calculation by subtracting the benefit from the cost rather than the cost from the benefit, or applies the contribution margin percentage t",
           "file": "p2/pack_p2_e.js",
-          "line": 18840
+          "line": 18842
         },
         {
           "qid": "P2-E-433",
@@ -2278,7 +2288,7 @@
           "bestOtherRecall": 80,
           "ewPreview": "Choice A confuses the ROI goal incongruence problem, not residual income behavior. Under residual income, any project with positive RI is accepted regardless of",
           "file": "p2/pack_p2_e.js",
-          "line": 20668
+          "line": 20670
         },
         {
           "qid": "P2-E-452",
@@ -2290,7 +2300,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice A confuses the standard deviation with the mean; the mean is $1.4 billion, while the standard deviation measures dispersion around that mean. The standar",
           "file": "p2/pack_p2_e.js",
-          "line": 21488
+          "line": 21490
         },
         {
           "qid": "P2-E-453",
@@ -2302,7 +2312,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice C ($16.8 million) understates the program's expected value. For Flash Pharmaceuticals, Stage 2's expected value is 0.40 x $200M - $18M = $62M, and Stage ",
           "file": "p2/pack_p2_e.js",
-          "line": 21530
+          "line": 21532
         },
         {
           "qid": "P2-E-462",
@@ -2314,7 +2324,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice A reports the 40% minimum payout requirement, which is a floor, not a ceiling; the maximum dividend is constrained by the retained earnings restriction. ",
           "file": "p2/pack_p2_e.js",
-          "line": 21917
+          "line": 21919
         },
         {
           "qid": "P2-E-474",
@@ -2326,7 +2336,7 @@
           "bestOtherRecall": 66.7,
           "ewPreview": "Choice D provides no calculation and makes an unsupported rejection recommendation. Residual income in year 1 is positive ($7,000), indicating the project cover",
           "file": "p2/pack_p2_e.js",
-          "line": 22451
+          "line": 22453
         },
         {
           "qid": "P2-E-477",
@@ -2338,7 +2348,7 @@
           "bestOtherRecall": 57.1,
           "ewPreview": "Choice B states the project has no IRR, which is incorrect. The project has two IRRs. The problem is not the absence of IRR but the presence of multiple IRRs wh",
           "file": "p2/pack_p2_e.js",
-          "line": 22586
+          "line": 22588
         },
         {
           "qid": "P2-E-477",
@@ -2350,7 +2360,7 @@
           "bestOtherRecall": 57.1,
           "ewPreview": "Choice C assumes a single IRR of 25% without verification. Two sign changes in the cash flow stream produce two IRR solutions per Descartes rule of signs, makin",
           "file": "p2/pack_p2_e.js",
-          "line": 22586
+          "line": 22588
         },
         {
           "qid": "P2-E-479",
@@ -2362,7 +2372,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice B selects Pi and Sigma for $156,000 NPV, which is $48,000 less than the $204,000 achievable with Pi and Rho. The budget allows both Pi and Rho, so this c",
           "file": "p2/pack_p2_e.js",
-          "line": 22676
+          "line": 22678
         },
         {
           "qid": "P2-E-499",
@@ -2374,7 +2384,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Choice A applies the NPV rule instead of the profitability index rule; while Beta has the highest NPV at $138,000, its PI of 1.46 is the lowest among the three ",
           "file": "p2/pack_p2_e.js",
-          "line": 23576
+          "line": 23578
         },
         {
           "qid": "P2-F-011",
@@ -2559,7 +2569,7 @@
           "margin": 33.3,
           "ecPreview": "DuPont decomposition isolates each driver of ROE change. Year 1 ROE = 6.0% × 1.25 × 2.00 = 15.0%. Year 2 ROE = 5.4% × 1.",
           "file": "p2/pack_p2_a.js",
-          "line": 3884
+          "line": 3886
         },
         {
           "qid": "P2-A-096",
@@ -2571,7 +2581,7 @@
           "margin": 66.7,
           "ecPreview": "The correct answer is C. The sustainable growth rate under current policy is 16% × 0.75 = 12%, meaning Wellington is alr",
           "file": "p2/pack_p2_a.js",
-          "line": 4050
+          "line": 4052
         },
         {
           "qid": "P2-A-111",
@@ -2583,7 +2593,7 @@
           "margin": 66.7,
           "ecPreview": "Under ASC 810, the VIE consolidation model requires consolidation by the primary beneficiary regardless of equity owners",
           "file": "p2/pack_p2_a.js",
-          "line": 4701
+          "line": 4703
         },
         {
           "qid": "P2-A-121",
@@ -2595,7 +2605,7 @@
           "margin": 100,
           "ecPreview": "The PEG ratio divides P/E by expected growth to express the price paid per unit of growth: Meridian 28 ÷ 14 = 2.0; peer ",
           "file": "p2/pack_p2_a.js",
-          "line": 5140
+          "line": 5142
         },
         {
           "qid": "P2-A-162",
@@ -2607,7 +2617,7 @@
           "margin": 50,
           "ecPreview": "Under ASC 330-10, inventory is measured at cost, and holding efficiency is evaluated through turnover: COGS / Average In",
           "file": "p2/pack_p2_a.js",
-          "line": 6931
+          "line": 6933
         },
         {
           "qid": "P2-A-197",
@@ -2619,7 +2629,7 @@
           "margin": 50,
           "ecPreview": "The Higgins model states SGR = ROE x retention ratio, assuming constant margins, turnover, and capital structure with no",
           "file": "p2/pack_p2_a.js",
-          "line": 8473
+          "line": 8475
         },
         {
           "qid": "P2-A-206",
@@ -2631,7 +2641,7 @@
           "margin": 100,
           "ecPreview": "ASC 860 permits sale (derecognition) treatment only when the transferor surrenders control of the transferred assets, an",
           "file": "p2/pack_p2_a.js",
-          "line": 8878
+          "line": 8880
         },
         {
           "qid": "P2-A-209",
@@ -2643,7 +2653,7 @@
           "margin": 100,
           "ecPreview": "Earnings-quality doctrine asks how faithfully reported income represents sustainable, cash-generating performance before",
           "file": "p2/pack_p2_a.js",
-          "line": 9014
+          "line": 9016
         },
         {
           "qid": "P2-A-222",
@@ -2655,7 +2665,7 @@
           "margin": 50,
           "ecPreview": "The correct answer is B. Debt-to-assets divides total liabilities by total assets: $96.0M / $160.0M = 0.60. Debt-to-equi",
           "file": "p2/pack_p2_a.js",
-          "line": 9605
+          "line": 9607
         },
         {
           "qid": "P2-A-296",
@@ -2667,7 +2677,7 @@
           "margin": 100,
           "ecPreview": "ASC 606 (and IFRS 15) uses a five-step model in which revenue is recognized when (or as) the entity satisfies a performa",
           "file": "p2/pack_p2_a.js",
-          "line": 12950
+          "line": 12952
         },
         {
           "qid": "P2-A-309",
@@ -2679,7 +2689,7 @@
           "margin": 33.3,
           "ecPreview": "DuPont decomposition: ROE = net profit margin x asset turnover x equity multiplier. Prior year: 0.05 x 1.4 x 1.71 = 0.11",
           "file": "p2/pack_p2_a.js",
-          "line": 13534
+          "line": 13536
         },
         {
           "qid": "P2-A-339",
@@ -2691,7 +2701,7 @@
           "margin": 100,
           "ecPreview": "Standalone NPVs zero, synergy PV P $1,800,000x3.7908 equals $6,823,440, Q $900,000x3.7908 equals $3,411,720. On raw NPV ",
           "file": "p2/pack_p2_a.js",
-          "line": 14893
+          "line": 14895
         },
         {
           "qid": "P2-A-345",
@@ -2703,7 +2713,7 @@
           "margin": 100,
           "ecPreview": "DSO = (Average Receivables / Net Credit Sales) x 365 measures collection efficiency under ASC 310. Average receivables =",
           "file": "p2/pack_p2_a.js",
-          "line": 15169
+          "line": 15171
         },
         {
           "qid": "P2-A-357",
@@ -2715,7 +2725,7 @@
           "margin": 100,
           "ecPreview": "DuPont Identity ROE = NPM × TAT × EM under FA-14. Horizon: 6.0% × 1.50 × 2.00 = 18.0%; Greenfield: 7.0% × 1.25 × 1.60 = ",
           "file": "p2/pack_p2_a.js",
-          "line": 15755
+          "line": 15760
         },
         {
           "qid": "P2-A-391",
@@ -2727,7 +2737,7 @@
           "margin": 75,
           "ecPreview": "Under ASC 842-10-25-2, a lease is classified as a finance lease when the lease term is for the major part of the remaini",
           "file": "p2/pack_p2_a.js",
-          "line": 18501
+          "line": 18510
         },
         {
           "qid": "P2-A-402",
@@ -2739,7 +2749,7 @@
           "margin": 100,
           "ecPreview": "Under ASC 210-10-45-1, inventory is a current asset because it is expected to be realized through sale within the normal",
           "file": "p2/pack_p2_a.js",
-          "line": 19356
+          "line": 19365
         },
         {
           "qid": "P2-A-440",
@@ -2751,7 +2761,7 @@
           "margin": 100,
           "ecPreview": "The sustainable growth rate, per FA-20 as defined in the IMA CMA Part 2 Content Specification Outline, = ROE × retention",
           "file": "p2/pack_p2_a.js",
-          "line": 21271
+          "line": 21280
         },
         {
           "qid": "P2-A-516",
@@ -2763,7 +2773,7 @@
           "margin": 66.7,
           "ecPreview": "Under the residual dividend model, dividends equal net income minus the equity portion of the capital budget. The equity",
           "file": "p2/pack_p2_a.js",
-          "line": 25269
+          "line": 25278
         },
         {
           "qid": "P2-A-519",
@@ -2775,7 +2785,7 @@
           "margin": 100,
           "ecPreview": "A DRIP reinvests dividends into additional shares, reducing the company's cash outflow by the dividend amount. However, ",
           "file": "p2/pack_p2_a.js",
-          "line": 25482
+          "line": 25491
         },
         {
           "qid": "P2-A-547",
@@ -2787,7 +2797,7 @@
           "margin": 60,
           "ecPreview": "Under ASC 842-10-25-2, a lessee classifies a lease as a finance lease when any of five criteria is met. The two quantita",
           "file": "p2/pack_p2_a.js",
-          "line": 27474
+          "line": 27483
         },
         {
           "qid": "P2-A-549",
@@ -2799,7 +2809,7 @@
           "margin": 66.7,
           "ecPreview": "Under ASC 860-10-40-5, a transfer is a sale only if the transferor has surrendered control. Pacific retains: (1) a $2,80",
           "file": "p2/pack_p2_a.js",
-          "line": 27619
+          "line": 27628
         },
         {
           "qid": "P2-A-553",
@@ -2811,7 +2821,7 @@
           "margin": 66.7,
           "ecPreview": "Under ASC 842-10-40-5, a sale-leaseback qualifies as a sale when the transfer meets ASC 606 criteria. The building trans",
           "file": "p2/pack_p2_a.js",
-          "line": 27908
+          "line": 27917
         },
         {
           "qid": "P2-B-007",
@@ -2883,7 +2893,7 @@
           "margin": 100,
           "ecPreview": "The governing principle is money market yield conventions: an add-on instrument such as a CD is sold at face value with ",
           "file": "p2/pack_p2_b.js",
-          "line": 15705
+          "line": 15709
         },
         {
           "qid": "P2-B-360",
@@ -2895,7 +2905,7 @@
           "margin": 100,
           "ecPreview": "The trade-off theory balances the tax shield benefit of debt against the expected costs of financial distress. Net gain ",
           "file": "p2/pack_p2_b.js",
-          "line": 18981
+          "line": 18985
         },
         {
           "qid": "P2-B-369",
@@ -2907,7 +2917,7 @@
           "margin": 100,
           "ecPreview": "Under ASC 842, a lease is classified as a finance lease if ANY of the five criteria is met: (1) transfer of ownership, (",
           "file": "p2/pack_p2_b.js",
-          "line": 19682
+          "line": 19686
         },
         {
           "qid": "P2-B-449",
@@ -2919,7 +2929,7 @@
           "margin": 100,
           "ecPreview": "Efficient market hypothesis classifies information impounded in price: weak form asserts price already reflects past pri",
           "file": "p2/pack_p2_b.js",
-          "line": 24299
+          "line": 24303
         },
         {
           "qid": "P2-B-466",
@@ -2931,7 +2941,7 @@
           "margin": 100,
           "ecPreview": "Translation at spot: 500,000 x 1.08 = 540,000. Quote is USD per euro, so multiply euros by dollars per euro. Business in",
           "file": "p2/pack_p2_b.js",
-          "line": 25061
+          "line": 25065
         },
         {
           "qid": "P2-B-526",
@@ -2943,7 +2953,7 @@
           "margin": 75,
           "ecPreview": "Recording: CHF 6,200,000 × 1.4200 = CAD 8,804,000. Settlement: × 1.3850 = CAD 8,587,000. Gain = CAD 217,000. CAD strengt",
           "file": "p2/pack_p2_b.js",
-          "line": 28482
+          "line": 28486
         },
         {
           "qid": "P2-C-015",
@@ -3159,7 +3169,7 @@
           "margin": 100,
           "ecPreview": "Under idle capacity, the seller has no opportunity cost (no external sale is foregone). The minimum acceptable transfer ",
           "file": "p2/pack_p2_c.js",
-          "line": 18015
+          "line": 18017
         },
         {
           "qid": "P2-C-438",
@@ -3171,7 +3181,7 @@
           "margin": 66.7,
           "ecPreview": "Relevant costing under the IMA SMA on relevant costing charges freed capacity with its next-best use: relevant make cost",
           "file": "p2/pack_p2_c.js",
-          "line": 21162
+          "line": 21164
         },
         {
           "qid": "P2-C-466",
@@ -3183,7 +3193,7 @@
           "margin": 100,
           "ecPreview": "Special-order analysis under the IMA SMA on relevant costing compares incremental revenue with incremental cost: revenue",
           "file": "p2/pack_p2_c.js",
-          "line": 22450
+          "line": 22452
         },
         {
           "qid": "P2-C-512",
@@ -3195,7 +3205,7 @@
           "margin": 100,
           "ecPreview": "Under the sell-or-process-further rule applied through the IMA SMA on relevant costing, Meridian should process further ",
           "file": "p2/pack_p2_c.js",
-          "line": 24566
+          "line": 24568
         },
         {
           "qid": "P2-C-520",
@@ -3207,7 +3217,7 @@
           "margin": 100,
           "ecPreview": "Under the sell-or-process-further rule applied through the IMA SMA on relevant costing, Meridian processes further only ",
           "file": "p2/pack_p2_c.js",
-          "line": 24934
+          "line": 24936
         },
         {
           "qid": "P2-C-613",
@@ -3219,7 +3229,7 @@
           "margin": 100,
           "ecPreview": "The shadow price of $3.20 per kilogram represents the marginal value of one additional kilogram of raw material at the o",
           "file": "p2/pack_p2_c.js",
-          "line": 30714
+          "line": 30716
         },
         {
           "qid": "P2-C-618",
@@ -3231,7 +3241,7 @@
           "margin": 100,
           "ecPreview": "Relevant costing compares the certain scrap value today against the expected value of holding. Scrap now: $24,000 (certa",
           "file": "p2/pack_p2_c.js",
-          "line": 31074
+          "line": 31076
         },
         {
           "qid": "P2-D-007",
@@ -3483,7 +3493,7 @@
           "margin": 100,
           "ecPreview": "The sensitivities are: revenue (10% change -> $80M NPV change = $8M per 1% revenue change), cost (10% change -> $50M = $",
           "file": "p2/pack_p2_e.js",
-          "line": 8627
+          "line": 8629
         },
         {
           "qid": "P2-E-249",
@@ -3495,7 +3505,7 @@
           "margin": 100,
           "ecPreview": "Sunk costs are already incurred and unrecoverable regardless of the decision, and are excluded from incremental analysis",
           "file": "p2/pack_p2_e.js",
-          "line": 12361
+          "line": 12363
         },
         {
           "qid": "P2-E-422",
@@ -3507,7 +3517,7 @@
           "margin": 100,
           "ecPreview": "Abandon-versus-continue compares full streams: continuing yields $400,000 x 4 = $1,600,000 over four years; abandoning y",
           "file": "p2/pack_p2_e.js",
-          "line": 20174
+          "line": 20176
         },
         {
           "qid": "P2-E-433",
@@ -3519,7 +3529,7 @@
           "margin": 100,
           "ecPreview": "Residual income for the new project equals its operating income minus the capital charge: $160,000 - ($1,000,000 x 14%) ",
           "file": "p2/pack_p2_e.js",
-          "line": 20668
+          "line": 20670
         },
         {
           "qid": "P2-E-462",
@@ -3531,7 +3541,7 @@
           "margin": 50,
           "ecPreview": "The indenture caps dividends so that retained earnings do not fall below the $3.0 million floor. Flash Manufacturing's c",
           "file": "p2/pack_p2_e.js",
-          "line": 21917
+          "line": 21919
         },
         {
           "qid": "P2-E-497",
@@ -3543,7 +3553,7 @@
           "margin": 100,
           "ecPreview": "The incremental after-tax operating cash flow is calculated as: (Revenue increase - Cost increase) x (1 - Tax rate) + De",
           "file": "p2/pack_p2_e.js",
-          "line": 23486
+          "line": 23488
         },
         {
           "qid": "P2-F-430",
@@ -3574,6 +3584,168 @@
   },
   "absentEW": [
     {
+      "qid": "P2-A-604",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31465
+    },
+    {
+      "qid": "P2-A-606",
+      "pack": "P2-A",
+      "slot": "B",
+      "cc": "B",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31542
+    },
+    {
+      "qid": "P2-A-607",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31581
+    },
+    {
+      "qid": "P2-A-608",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31619
+    },
+    {
+      "qid": "P2-A-609",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31657
+    },
+    {
+      "qid": "P2-A-610",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31695
+    },
+    {
+      "qid": "P2-A-611",
+      "pack": "P2-A",
+      "slot": "B",
+      "cc": "B",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31734
+    },
+    {
+      "qid": "P2-A-612",
+      "pack": "P2-A",
+      "slot": "B",
+      "cc": "B",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31772
+    },
+    {
+      "qid": "P2-A-613",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31811
+    },
+    {
+      "qid": "P2-A-614",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31850
+    },
+    {
+      "qid": "P2-A-615",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31889
+    },
+    {
+      "qid": "P2-A-616",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31928
+    },
+    {
+      "qid": "P2-A-617",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 31967
+    },
+    {
+      "qid": "P2-A-618",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 32006
+    },
+    {
+      "qid": "P2-A-619",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 32045
+    },
+    {
+      "qid": "P2-A-620",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 32084
+    },
+    {
+      "qid": "P2-A-621",
+      "pack": "P2-A",
+      "slot": "C",
+      "cc": "C",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 32123
+    },
+    {
+      "qid": "P2-A-622",
+      "pack": "P2-A",
+      "slot": "A",
+      "cc": "A",
+      "state": "Unprocessed",
+      "file": "p2/pack_p2_a.js",
+      "line": 32161
+    },
+    {
       "qid": "P2-C-198",
       "pack": "P2-C",
       "slot": "A",
@@ -3598,7 +3770,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14168
+      "line": 14170
     },
     {
       "qid": "P2-E-289",
@@ -3607,7 +3779,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14213
+      "line": 14215
     },
     {
       "qid": "P2-E-291",
@@ -3616,7 +3788,7 @@
       "cc": "D",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14304
+      "line": 14306
     },
     {
       "qid": "P2-E-292",
@@ -3625,7 +3797,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14349
+      "line": 14351
     },
     {
       "qid": "P2-E-293",
@@ -3634,7 +3806,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14394
+      "line": 14396
     },
     {
       "qid": "P2-E-294",
@@ -3643,7 +3815,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14439
+      "line": 14441
     },
     {
       "qid": "P2-E-295",
@@ -3652,7 +3824,7 @@
       "cc": "D",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14484
+      "line": 14486
     },
     {
       "qid": "P2-E-296",
@@ -3661,7 +3833,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14529
+      "line": 14531
     },
     {
       "qid": "P2-E-297",
@@ -3670,7 +3842,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14574
+      "line": 14576
     },
     {
       "qid": "P2-E-298",
@@ -3679,7 +3851,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14619
+      "line": 14621
     },
     {
       "qid": "P2-E-299",
@@ -3688,7 +3860,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14664
+      "line": 14666
     },
     {
       "qid": "P2-E-300",
@@ -3697,7 +3869,7 @@
       "cc": "D",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14709
+      "line": 14711
     },
     {
       "qid": "P2-E-301",
@@ -3706,7 +3878,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14754
+      "line": 14756
     },
     {
       "qid": "P2-E-302",
@@ -3715,7 +3887,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14799
+      "line": 14801
     },
     {
       "qid": "P2-E-303",
@@ -3724,7 +3896,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14844
+      "line": 14846
     },
     {
       "qid": "P2-E-304",
@@ -3733,7 +3905,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14889
+      "line": 14891
     },
     {
       "qid": "P2-E-306",
@@ -3742,7 +3914,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 14972
+      "line": 14974
     },
     {
       "qid": "P2-E-308",
@@ -3751,7 +3923,7 @@
       "cc": "D",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15063
+      "line": 15065
     },
     {
       "qid": "P2-E-309",
@@ -3760,7 +3932,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15108
+      "line": 15110
     },
     {
       "qid": "P2-E-311",
@@ -3769,7 +3941,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15191
+      "line": 15193
     },
     {
       "qid": "P2-E-312",
@@ -3778,7 +3950,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15231
+      "line": 15233
     },
     {
       "qid": "P2-E-314",
@@ -3787,7 +3959,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15322
+      "line": 15324
     },
     {
       "qid": "P2-E-315",
@@ -3796,7 +3968,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 15367
+      "line": 15369
     },
     {
       "qid": "P2-E-436",
@@ -3805,7 +3977,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 20802
+      "line": 20804
     },
     {
       "qid": "P2-E-437",
@@ -3814,7 +3986,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 20845
+      "line": 20847
     },
     {
       "qid": "P2-E-439",
@@ -3823,7 +3995,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 20931
+      "line": 20933
     },
     {
       "qid": "P2-E-440",
@@ -3832,7 +4004,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 20974
+      "line": 20976
     },
     {
       "qid": "P2-E-441",
@@ -3841,7 +4013,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21017
+      "line": 21019
     },
     {
       "qid": "P2-E-442",
@@ -3850,7 +4022,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21059
+      "line": 21061
     },
     {
       "qid": "P2-E-443",
@@ -3859,7 +4031,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21101
+      "line": 21103
     },
     {
       "qid": "P2-E-444",
@@ -3868,7 +4040,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21144
+      "line": 21146
     },
     {
       "qid": "P2-E-445",
@@ -3877,7 +4049,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21187
+      "line": 21189
     },
     {
       "qid": "P2-E-446",
@@ -3886,7 +4058,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21230
+      "line": 21232
     },
     {
       "qid": "P2-E-447",
@@ -3895,7 +4067,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21273
+      "line": 21275
     },
     {
       "qid": "P2-E-448",
@@ -3904,7 +4076,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21316
+      "line": 21318
     },
     {
       "qid": "P2-E-449",
@@ -3913,7 +4085,7 @@
       "cc": "D",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21359
+      "line": 21361
     },
     {
       "qid": "P2-E-451",
@@ -3922,7 +4094,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21445
+      "line": 21447
     },
     {
       "qid": "P2-E-452",
@@ -3931,7 +4103,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21488
+      "line": 21490
     },
     {
       "qid": "P2-E-454",
@@ -3940,7 +4112,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21574
+      "line": 21576
     },
     {
       "qid": "P2-E-455",
@@ -3949,7 +4121,7 @@
       "cc": "A",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21617
+      "line": 21619
     },
     {
       "qid": "P2-E-456",
@@ -3958,7 +4130,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21660
+      "line": 21662
     },
     {
       "qid": "P2-E-457",
@@ -3967,7 +4139,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21703
+      "line": 21705
     },
     {
       "qid": "P2-E-458",
@@ -3976,7 +4148,7 @@
       "cc": "B",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21746
+      "line": 21748
     },
     {
       "qid": "P2-E-460",
@@ -3985,7 +4157,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21833
+      "line": 21835
     },
     {
       "qid": "P2-E-461",
@@ -3994,7 +4166,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21875
+      "line": 21877
     },
     {
       "qid": "P2-E-463",
@@ -4003,7 +4175,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 21961
+      "line": 21963
     },
     {
       "qid": "P2-E-464",
@@ -4012,7 +4184,7 @@
       "cc": "C",
       "state": "Certified",
       "file": "p2/pack_p2_e.js",
-      "line": 22004
+      "line": 22006
     }
   ]
 }

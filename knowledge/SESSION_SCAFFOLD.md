@@ -1,4 +1,4 @@
-# Nested Prompt Scaffold for the CMA Part 1 Simulator Repo
+﻿# Nested Prompt Scaffold for the CMA Simulator Repo
 
 This scaffold is designed for OpenCode sessions in this repository. It uses controlled prompt chaining rather than recursive autonomy, so work can move faster without letting any agent expand its own authority.
 

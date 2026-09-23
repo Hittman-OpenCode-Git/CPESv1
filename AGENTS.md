@@ -1,4 +1,4 @@
-# AGENTS.md — CMA Part 1 Exam Simulator Standing Instructions
+# AGENTS.md — CMA Exam Simulator Standing Instructions
 
 **Version:** 2.1 (Session P2-032 — Third-Party Content Review Handoffs)
 **Status:** Active
@@ -168,7 +168,7 @@ Before any live simulation test:
 | CURRENT_BASELINES.md | `knowledge/CURRENT_BASELINES.md` | **Authoritative** certified pool + file hashes |
 | preflight.js | `scripts/preflight.js` | T0 integrity check (QID counts, parse, certified counts, cross-check baselines) |
 | smoke_test.js | `scripts/smoke_test.js` | Playwright smoke test (UI surfaces, MCQ banks, May layer) |
-| pipeline (package.json) | `npm run pipeline` | validate → build-registry → dashboard (Tend for content waves) |
+| pipeline (package.json) | `npm run pipeline` | validate → case-screens → build-registry → dashboard → baseline-coherence (Tend for content waves) |
 | DL-012 proposal | `reports/remediation/DL012_REMEDIATION_PROPOSAL.md` | Corrected remediation plan (not executed) |
 | DL-008 sweep closeout | `reports/defect_sweeps/DL-008_SWEEP_CLOSEOUT.md` | 539-occurrence closeout |
 | DL-008 re-contamination | `reports/defect_sweeps/DL008_RECONTAMINATION_SCAN.md` | 14-item Wave 1 defect (FIXED) |
@@ -211,6 +211,29 @@ Determine the lane at session start. If the session touches ANY Full Governance 
 | Destructive script authorization | **Required** per §3.1 — staged authorization, no exceptions |
 | Runtime governance checkpoints (Tmid) | **Required** per §13 for sessions >30 min or >3 agents |
 | Drift-detection response | **Required** per §13.1 for any CRITICAL or HIGH signal |
+
+### 9.2.1 Semantic Screen Re-Run — Gate Lock-In (Tend)
+
+**Scope:** On every certification batch (Full Governance Lane, Tend), the full semantic-screen suite must be re-run and produce a **clean** result — defined as: zero new flags beyond the documented false-positive set, and zero confirmed key/explanation inversions. No `question_state` flip to `Certified` is authorized without a clean re-run.
+
+**Screens covered:**
+
+| Screen family | MCQ packs | Case packs | Script |
+|---------------|-----------|------------|--------|
+| B-select / B-multi (key↔explanation fingerprint) | A–E + B-num | P1 (80) + P2 (100) | `scripts/phase0_census.js` + `scripts/semantic_key_audit_p2.js` (MCQ) + `scripts/case_semantic_screens.js` v3 (case) |
+| B-num (numeric echo / key-echo) | all MCQ | all case | same |
+| Lead-token echo | all MCQ | all case | same |
+| EC–stem mismatch | all MCQ | all case | same |
+| Lowercase-fragment (DL-047 fingerprint) | all MCQ | all case | same |
+| Generalized DL-010 | all MCQ | all case | same |
+
+**Stability criterion (±2-noise):** A screen result is considered stable when the flag set is identical across two independent re-runs (deterministic screens yield byte-identical output). Any delta > 2 flags triggers a halt-reproduce cycle before certification proceeds. See DL-051 Amendment Phase 1 (2026-09-18) for the determinism verification methodology.
+
+**DL-047 adjudication flow for new flags:** quarantine → independent hand-solve against exhibit/choices → DL-05x filing if genuine (registry-first allocation) → per-batch authorization for remediation → verify → restore-to-Certified stamp. No auto-remediation from screen output (DL-045 doctrine — screen output is evidence, not an author).
+
+**DL-045 no-auto-remediate doctrine:** Screens emit evidence only. Any remediation triggered by a screen hit must cite an independent evidence basis (stratified review, context review, adjudicated, or independently derived) per Rule 17. Mass rewrites (≥3 objects) from screen output alone are BLOCK-AUTHORIZED only.
+
+**Pipeline-wiring executed (2026-09-20):** `scripts/case_semantic_screens.js` v3 is now wired into the `npm run pipeline` target (now `validate → case-screens → build-registry → dashboard → baseline-coherence`), making the screen gate a mandatory Tend checkpoint. **Runtime-cost trade-off:** case_semantic_screens.js v3 scans 180 cases / 1,025 items (~2s per run on the canonical parser, deterministic). Adding it to pipeline increases Tend wall-time by ~2-3s. The gate is now enforced via automated pipeline gate + DEFECT_LIBRARY.md provenance.
 
 ### 9.3 Governance Light Lane Requirements
 
@@ -292,6 +315,7 @@ Every Full Governance Lane session must produce at minimum a `knowledge/REVISION
 - Content changes (answer, explanation, distractor) must be logged with before/after counts.
 - Certification batches must list QuestionIDs, verification results, and counts.
 - Cross-session findings (e.g., "Pack B Sections A/D are certification-ready") must be logged as tracked notes in DEFECT_LIBRARY.md — not left as chat output alone.
+- **Semantic screens re-run** (§9.2.1): MCQ + case screens must produce a clean result (zero new flags, zero confirmed inversions) after every certification batch. No `question_state` flip is final without a clean re-run. Pipeline-wiring proposal recorded at §9.2.1.
 
 **No "staged for next session" deferrals are permitted.** Precedent: DL-019 (concurrent-write data loss) and DL-020 (validator undercount) were discovered but sat in session reports only — the defect library had no entry until later sessions wrote them.
 
@@ -335,16 +359,17 @@ Governance exists to serve content integrity and learner safety. Every governanc
 
 ## 15. Workflow Helpers
 
-Four npm scripts are available for session workflow:
+Five npm scripts are available for session workflow:
 
 | Command | What It Does | When To Use |
 |---------|-------------|-------------|
 | `npm run preflight` | QID counts, parse check, certified counts, cross-check against CURRENT_BASELINES.md, governance guard test suite | **Full Lane: T0 mandatory.** Light Lane: recommended. |
 | `npm run smoke` | Playwright UI smoke test — verifies app loads, MCQ banks present, May coaching layer active | **Light Lane: Tend mandatory** after app/UI changes. Full Lane: optional. |
-| `npm run pipeline` | validate → build-registry → dashboard (full content validation + registry rebuild + dashboard) | **Full Lane: Tend required** after content/regeneration work. |
+| `npm run pipeline` | validate → case-screens → build-registry → dashboard → baseline-coherence (full content validation + case semantic screens + registry rebuild + dashboard + baseline check) | **Full Lane: Tend required** after content/regeneration work. |
 | `npm run probe-model` | Dynamic agent/model token-budget probe (`scripts/model_limit_probe.js`) — measures real per-item emission demand from the P2 packs, projects v1.1 evidence-package size, probes the provider endpoint for each model's live max context, and reports whether declared `opencode.json` limits are adequate. Report-only by default; `--apply` writes recommended limits (auto-backup). Exit 1 = undersized. | **Before any authoring wave that depends on local models**, and before any P2_SCHEMA_STANDARD gate flip (e.g., v1.1 `--enforce`). Do not trust static limits when demand grows. |
+| `npm run probe:parity` | Delivery/pipeline contract probe (`scripts/pool_parity_probe.js`) — asserts Tier-1 Certified-only MCQ pools, P2 strict-tier case pool from casePackP2_* globals, blocklist enforcement data, and per-validator scanned-vs-raw coverage (DL-044/049/050 family). Strict-FAIL on any mismatch/missing bank. Versioned summary: `scripts/output/coverage_summary.v1.json`. | **Both lanes:** run at Tend alongside preflight/smoke after any delivery, loader, config, or validator change; re-run after validator-wiring follow-ups clear the 3 known coverage FAILs. |
 
-All four scripts exit 0 on pass, non-zero on failure. Preflight/smoke/pipeline are READ-ONLY and safe to run at any time. `probe-model` is read-only unless `--apply` is passed explicitly.
+All five scripts exit 0 on pass, non-zero on failure. Preflight/smoke/pipeline/probe:parity are READ-ONLY and safe to run at any time. `probe-model` is read-only unless `--apply` is passed explicitly.
 
 ---
 

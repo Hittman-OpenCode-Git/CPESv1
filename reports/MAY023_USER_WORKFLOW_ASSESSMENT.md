@@ -1,4 +1,4 @@
-# MAY-023 — User Workflow Assessment (Implementer Phase)
+﻿# MAY-023 — User Workflow Assessment (Implementer Phase)
 
 **Session:** MAY-023 — Controlled Production Rollout Validation
 **Date:** 2026-07-31
@@ -19,7 +19,7 @@
 | Companion card — new learner | "Meet May" onboarding message | No (determined by MayLearnerState.hasProfile) |
 | Companion card — returning learner | "Welcome back" with session count | No (determined by MayLearnerState.load()) |
 | Launcher tooltip (flag OFF) | "May is here if you need help reviewing later." | No (default from may-core.js:6518) |
-| Launcher tooltip (flag ON, 0 sessions) | "Meet May — your CMA Part 1 study companion." | **Yes (I2)** |
+| Launcher tooltip (flag ON, 0 sessions) | "Meet May — your CMA study companion." | **Yes (I2)** |
 | Launcher tooltip (flag ON, 1-2 sessions) | "Analyze your missed questions or review your study plan with May." | **Yes (I2)** |
 | Launcher tooltip (flag ON, 3+ sessions) | "Review weak areas, analyze missed questions, or continue your study plan with May." | **Yes (I2)** |
 
@@ -148,7 +148,7 @@ All May production integration styles support dark theme:
 ### 4.1 No Learner Data (First Session)
 
 - `sessionCount = 0` → `hasData = false` → panel returns `''` ✓
-- Launcher tooltip: "Meet May — your CMA Part 1 study companion." ✓
+- Launcher tooltip: "Meet May — your CMA study companion." ✓
 - Companion card: "Hi, I'm May" onboarding variant ✓
 
 ### 4.2 Session with Zero Correct Answers

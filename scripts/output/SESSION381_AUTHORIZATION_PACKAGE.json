@@ -1,4 +1,4 @@
-{
+﻿{
   "session": "S381",
   "type": "EXPANSION_AUTHORIZATION_PACKAGE",
   "status": "PENDING_REVIEW",
@@ -16,7 +16,7 @@
     "Residual-defect-board methodology validated: Function constructor object-boundary scan, DL-029 immune, 0 false positives",
     "Cognitive gap Phase 1: 120 items authored vs 50 threshold — substantially exceeded"
   ],
-  "qualified_expansion_scope": "Conditional expansion authorization for the CMA Part 1 Exam Simulator content expansion program. Scope includes: (1) Close 70-item residual DL-008/DL-026 defect gap (~4 waves). (2) Execute ~306-item Evaluate gap closure program (~19 weeks at 2 waves/week). (3) Relabel 26 misclassified cognitive-level items. (4) Repair 1 structurally corrupted item (P1-FD-046). (5) Achieve 3-week sustained throughput proof (S382 gate) for CONDITIONAL→YES conversion per S374 Condition D.",
+  "qualified_expansion_scope": "Conditional expansion authorization for the CMA Exam Simulator content expansion program. Scope includes: (1) Close 70-item residual DL-008/DL-026 defect gap (~4 waves). (2) Execute ~306-item Evaluate gap closure program (~19 weeks at 2 waves/week). (3) Relabel 26 misclassified cognitive-level items. (4) Repair 1 structurally corrupted item (P1-FD-046). (5) Achieve 3-week sustained throughput proof (S382 gate) for CONDITIONAL→YES conversion per S374 Condition D.",
   "remaining_blockers": [
     "CURRENT_BASELINES.md stale — §3 claims 0 DL-008/DL-026 but 70 Certified items found. Must be updated first S381 action.",
     "5 Certified DL-008 items in learner pool — HIGH severity, clear EW[CC] immediately (1 batch)",

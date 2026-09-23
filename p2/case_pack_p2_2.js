@@ -7467,7 +7467,7 @@ var casePackP2_2 = [
     {
       "ItemID": "CBQ22-C6-Q2",
       "Type": "numeric",
-      "Prompt": "Enter the expected value of perfect information (EVPI), in millions of dollars.",
+      "Prompt": "Enter the expected value of perfect information (EVPI), in dollars.",
       "Correct": "2750000",
       "Explanation": "EVPI = EV with perfect information − EV without perfect information. With perfect information Cascade knows the market state before choosing: large → enter at $28M, medium → enter at $8M, small → wait at $1M. EVwPI = 0.30 × $28M + 0.45 × $8M + 0.25 × $1M = $8.4M + $3.6M + $0.25M = $12.25M. EVwoPI is the best expected value without information — immediate entry at $9.5M, since the wait option is $8.35M and the pilot is $9.41M, both below $9.5M. EVPI = $12.25M − $9.5M = $2.75M. A common trap is to confuse EVPI with EVwPI ($12.25M), or to anchor on the single best payoff ($28M) instead of the probability-weighted best outcomes.",
       "Topic": "Expected value of perfect information",

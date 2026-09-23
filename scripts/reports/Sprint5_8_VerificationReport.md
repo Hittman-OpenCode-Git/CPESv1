@@ -1,11 +1,11 @@
-# Sprint 5.8 — End-to-End Validation & Release Candidate (RC1)
+﻿# Sprint 5.8 — End-to-End Validation & Release Candidate (RC1)
 
 **Date:** 2026-07-21
 **Status:** Complete — RC1 Ready
 
 ## Objective
 
-Validate the complete CMA Part 1 Practice Simulator from a candidate's perspective, eliminate runtime defects, and prepare the first release candidate. No new features added.
+Validate the complete CMA Practice Simulator from a candidate's perspective, eliminate runtime defects, and prepare the first release candidate. No new features added.
 
 ## Summary
 
@@ -126,4 +126,4 @@ All 761 warnings are pre-existing content-level issues (topic mismatches, estima
 
 Sprint 5.8 is complete. The application passes all 78 verification tests across exam modes, navigation, persistence, calculator, accessibility, performance, and browser compatibility. Two critical runtime defects were found and fixed during code review. The repository validation confirms 0 structural errors.
 
-The CMA Part 1 Practice Simulator v5.7 RC1 is ready for release.
+The CMA Practice Simulator v5.7 RC1 is ready for release.

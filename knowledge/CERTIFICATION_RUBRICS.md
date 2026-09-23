@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator — Certification Rubrics
+﻿# CMA Exam Simulator — Certification Rubrics
 
 **Version:** 1.0
 **Status:** Active
@@ -12,7 +12,7 @@
 
 ## Purpose
 
-This document defines the two certification rubrics used to gate every MCQ and case-study item in the CMA Part 1 Exam Simulator. Each rubric operates independently per item and produces one of three certification decisions. The rubrics supersede ad-hoc review approaches used in prior audit sessions and serve as the standard evaluation protocol for all certification workstreams going forward.
+This document defines the two certification rubrics used to gate every MCQ and case-study item in the CMA Exam Simulator. Each rubric operates independently per item and produces one of three certification decisions. The rubrics supersede ad-hoc review approaches used in prior audit sessions and serve as the standard evaluation protocol for all certification workstreams going forward.
 
 These rubrics implement the CAQS v1.0 six-dimension build-time verification standard (§1.6) and the Gold Standard Checklist (§14) as operational scoring instruments. They also incorporate defect-exclusion gates mapped to the DEFECT_LIBRARY.md catalog, ensuring that known defect classes discovered across 33+ prior sessions are systematically excluded from the learner delivery pool.
 

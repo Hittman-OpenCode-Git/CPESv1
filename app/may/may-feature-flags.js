@@ -30,7 +30,7 @@ const MayFeatureFlags = (function() {
     ENABLE_COACHING_MEMORY: false,
     ENABLE_PRODUCTION_MAY_INTEGRATION: true,
     // Phase 2 — May Phase 2 master switch (gates P2-specific coaching paths)
-    ENABLE_MAY_PHASE_2: false,
+    ENABLE_MAY_PHASE_2: true,
     // Phase 2b — micro-agents (hidden beta, default off)
     ENABLE_MISCONCEPTION_AGENT: false,
     ENABLE_FORMULA_RETRIEVER: false,
@@ -40,9 +40,11 @@ const MayFeatureFlags = (function() {
     ENABLE_GUARD_AGENT: false,
     ENABLE_PLANNER_AGENT: false,
     // Phase 2c — P2 domain-specific micro-agents (hidden beta, default off)
-    ENABLE_P2_RISK_ANALYST: false,
-    ENABLE_P2_INVESTMENT_AGENT: false,
-    ENABLE_P2_DECISION_ANALYST: false
+    ENABLE_P2_RISK_ANALYST: true,
+    ENABLE_P2_INVESTMENT_AGENT: true,
+     ENABLE_P2_DECISION_ANALYST: true,
+     // May 3.0 Track B (token may_3_0_guided_self_score) — Part 2 self-score rubric
+     ENABLE_SELF_SCORE_MODE: false
   };
 
   var _changeLog = [];
@@ -139,6 +141,8 @@ const MayFeatureFlags = (function() {
         if (process.env.MAY_ENABLE_P2_RISK_ANALYST === '1') _flags.ENABLE_P2_RISK_ANALYST = true;
         if (process.env.MAY_ENABLE_P2_INVESTMENT_AGENT === '1') _flags.ENABLE_P2_INVESTMENT_AGENT = true;
         if (process.env.MAY_ENABLE_P2_DECISION_ANALYST === '1') _flags.ENABLE_P2_DECISION_ANALYST = true;
+        // Phase 3.0 — self-score mode
+        if (process.env.MAY_ENABLE_SELF_SCORE_MODE === '1') _flags.ENABLE_SELF_SCORE_MODE = true;
       }
       if (typeof process !== 'undefined' && process.env && process.env.CMA_MAY_PILOT === '1') {
         _flags.ENABLE_CONTEXT_BUILDER = true;
@@ -148,6 +152,14 @@ const MayFeatureFlags = (function() {
   }
 
   applyEnvOverrides();
+
+  // DL-060: report flags-off as degradation sources on init (truth contract)
+  try {
+    if (typeof MayDegradation !== 'undefined' && MayDegradation.report) {
+      if (!_flags.ENABLE_ADAPTIVE_COACHING) MayDegradation.report('flags-off', 'ENABLE_ADAPTIVE_COACHING');
+      if (!_flags.ENABLE_READINESS_SCORING) MayDegradation.report('flags-off', 'ENABLE_READINESS_SCORING');
+    }
+  } catch (e) {}
 
   return {
     isEnabled: isEnabled,

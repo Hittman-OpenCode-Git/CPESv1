@@ -1,8 +1,8 @@
-# Explanation Style Guide
+﻿# Explanation Style Guide
 
 **Version:** 1.0  
 **Status:** Approved  
-**Applies to:** All MCQ and case item explanations in the CMA Part 1 repository  
+**Applies to:** All MCQ and case item explanations in the CMA repository  
 
 ---
 
@@ -169,4 +169,4 @@ The Explanation Validator enforces:
 
 ---
 
-*This guide is the authoritative standard for all explanation content in the CMA Part 1 repository.*
+*This guide is the authoritative standard for all explanation content in the CMA repository.*

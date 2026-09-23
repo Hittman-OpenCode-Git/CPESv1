@@ -1,4 +1,4 @@
-// CMA Part 1 Exam Simulator — Case Pack 1 (25 Cases)
+﻿// CMA Exam Simulator — Case Pack 1 (25 Cases)
 // Generated: SESSION 916-917 Case Study Reconsolidation
 // Source: Consolidated from scored_cases.js through scored_cases5.js
 // Architecture: 3-pack × 25-case structure for 2026 blueprint alignment

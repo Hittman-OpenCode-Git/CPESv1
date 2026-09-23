@@ -1,4 +1,4 @@
-# Session 750 — Executive Governance Review
+﻿# Session 750 — Executive Governance Review
 
 **Date:** 2026-07-27
 **Series:** 750-Series — Governance Automation & Compliance Operations
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Session 750 delivers the governance automation layer for the CMA Part 1 Exam Simulator. Ten Boards (A–J) produced 11 deliverables: 4 production scripts and 7 specification/model documents. Together they transform governance from periodic manual review into continuous automated validation while preserving governance integrity, auditability, change control, and certification safety.
+Session 750 delivers the governance automation layer for the CMA Exam Simulator. Ten Boards (A–J) produced 11 deliverables: 4 production scripts and 7 specification/model documents. Together they transform governance from periodic manual review into continuous automated validation while preserving governance integrity, auditability, change control, and certification safety.
 
 **Zero content changes. Zero certification actions. Zero governance-policy changes.** All work was read-only with respect to the production question pool.
 

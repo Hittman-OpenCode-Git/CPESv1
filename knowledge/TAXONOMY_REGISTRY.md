@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator — Taxonomy Registry
+﻿# CMA Exam Simulator — Taxonomy Registry
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 # Purpose
 
-This document is the single source of truth for every permitted enumeration value in the CMA Part 1 Exam Simulator repository.
+This document is the single source of truth for every permitted enumeration value in the CMA Exam Simulator repository.
 
 All validators, reports, scripts, and future adaptive-learning features shall reference this registry rather than maintaining duplicate hardcoded lists.
 

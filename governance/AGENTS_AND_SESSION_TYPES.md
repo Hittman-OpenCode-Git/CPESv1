@@ -1,4 +1,4 @@
-# Agents and Session Types
+﻿# Agents and Session Types
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document defines the types of AI-assisted sessions supported in the CMA Part 1 Exam Simulator repository, the agents (personas and subagents) that participate, and the rules that govern each session type. It ensures that every session is properly classified, scoped, and auditable.
+This document defines the types of AI-assisted sessions supported in the CMA Exam Simulator repository, the agents (personas and subagents) that participate, and the rules that govern each session type. It ensures that every session is properly classified, scoped, and auditable.
 
 ---
 

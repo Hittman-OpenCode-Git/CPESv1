@@ -1,4 +1,4 @@
-# CMA Part 1 Case Study Gold Standard
+﻿# CMA Part 1 Case Study Gold Standard
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 # Purpose
 
-This document defines the mandatory quality standard for every case study in the CMA Part 1 Exam Simulator.
+This document defines the mandatory quality standard for every case study in the CMA Exam Simulator.
 
 Pack 1 serves as the reference implementation. Every future case study shall meet or exceed the Pack 1 standard.
 

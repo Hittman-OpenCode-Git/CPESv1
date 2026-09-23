@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CMA Test Sim</title><link rel="stylesheet" href="styles.css"></head><body><header class="hero"><div class="hero-inner"><div><p class="eyebrow" id="heroEyebrow">Original CMA Part 1 2026-Aligned Exam-Style Practice</p><h1 id="heroTitle">CMA Part 1 2026 Practice Simulator</h1><p class="lede" id="heroLede">3,070 Part 1 MCQs across five question packs (A &bull; B &bull; C &bull; D &bull; E) plus 80 integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.</p><p class="disclaimer">Original study content only. Not real CMA exam questions, not official IMA sample items, not a Prometric clone, and not endorsed by IMA.</p></div><div class="hero-card" id="validationStatus">Loading catalog...</div></div><div style="position:absolute;top:12px;right:16px;"><button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme">&#9680;</button><span id="saveStatus" class="save-status"></span></div><button class="may-float-btn" id="mayFloatBtn" title="Open May AI Coach"><span class="may-float-label">May</span><span class="may-float-sub">AI Coach</span><span class="may-float-dot"></span></button></header><main class="layout">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CMA Test Sim</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="app/may/may-avatar.css"></head><body><header class="hero"><div class="hero-inner"><div><p class="eyebrow" id="heroEyebrow">Original CMA Part 1 2026-Aligned Exam-Style Practice</p><h1 id="heroTitle">CMA Part 1 2026 Practice Simulator</h1><p class="lede" id="heroLede">3,070 Part 1 MCQs across five question packs (A &bull; B &bull; C &bull; D &bull; E) plus 80 integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.</p><p class="disclaimer">Original study content only. Not real CMA exam questions, not official IMA sample items, not a Prometric clone, and not endorsed by IMA.</p></div><div class="hero-card" id="validationStatus">Loading catalog...</div></div><div style="position:absolute;top:12px;right:16px;"><button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme">&#9680;</button><span id="saveStatus" class="save-status"></span></div><button class="may-float-btn" id="mayFloatBtn" title="Open May AI Coach"><span class="may-float-label">May</span><span class="may-float-sub">AI Coach</span><span class="may-float-dot"></span></button></header><main class="layout">
   <section class="panel setup-panel">
     <h2>Start Session</h2>
     <div class="may-quickstart" id="mayQuickstart">
@@ -138,8 +138,8 @@
      start skips ~15MB of P2 content (6 MCQ + 3 case files). P2BankLoader
      (app/app.js) injects these in order on first Part 2 activation. Dev shell
      (dev/part2-shell.html) keeps its own static tags and is unaffected.
-     Delivery stays MCQ-only until DL-051 Phase 4. -->
-<script>window.__P2_BANK_SRC = ["p2/pack_p2_a.js","p2/pack_p2_b.js","p2/pack_p2_c.js","p2/pack_p2_d.js","p2/pack_p2_e.js","p2/pack_p2_f.js","p2/case_pack_p2_1.js","p2/case_pack_p2_2.js","p2/case_pack_p2_3.js"];</script>
+     P2 case delivery is live (DL-051 Phase 4, 2026-09-18). -->
+<script>window.__P2_BANK_SRC = ["p2/pack_p2_a.js","p2/pack_p2_b.js","p2/pack_p2_c.js","p2/pack_p2_d.js","p2/pack_p2_e.js","p2/pack_p2_f.js","p2/case_pack_p2_1.js","p2/case_pack_p2_2.js","p2/case_pack_p2_3.js","p2/case_pack_p2_authored.js","p2/case_pack_p2_C4_C8.js"];</script>
 <!-- CONTENT: Case Packs -->
 <script src="content/cases/case_pack_1_corrected.js"></script>
 <script src="content/cases/case_pack_2_corrected.js"></script>
@@ -148,21 +148,15 @@
 <!--  MAY: AI Coaching Layer                   -->
 <!-- ═══════════════════════════════════════════ -->
 <!-- MAY: Core Layer -->
+<script src="app/may/may-core.js"></script>
 <script src="app/may/may-learner-state.js"></script>
 <script src="app/may/may-feature-flags.js"></script>
 <script src="app/may/may-telemetry.js"></script>
+<script src="app/may/may-telemetry-synthetic-seed.js"></script>
+<script src="app/may/may-micro-lesson.js"></script>
 <script src="app/may/may-context-builder.js"></script>
 <script src="app/may/may-coaching-router.js"></script>
-<!-- MAY: Coaching Modes -->
-<script src="app/may/modes/mode-base.js"></script>
-<script src="app/may/modes/mode-explain.js"></script>
-<script src="app/may/modes/mode-quiz.js"></script>
-<script src="app/may/modes/mode-socratic.js"></script>
-<script src="app/may/modes/mode-motivate.js"></script>
-<script src="app/may/modes/mode-study-plan.js"></script>
-<script src="app/may/modes/mode-exam-review.js"></script>
-<!-- MAY: Engine + Dashboard Layer -->
-<script src="app/may/may-core.js"></script>
+<script src="app/may/may-avatar.js"></script>
 <script src="app/may/may-llm-types.js"></script>
 <script src="app/may/providers/stub-intent-provider.js"></script>
 <script src="app/may/providers/real-intent-provider.js"></script>

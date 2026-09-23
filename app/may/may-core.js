@@ -23,6 +23,75 @@ const May = {
         var table = this._activePart() === 'P2' ? this.SECTION_NAMES_P2 : this.SECTION_NAMES;
         return table[sec] || 'this section';
     },
+    // ── W6 (token may_v2_1_may_avatar) — May ledger mascot SVG ─────
+    // Inlined into the companion card on landing-page injection. The
+    // CSS at app/may/may-avatar.css is scoped under `.may-companion-avatar`
+    // so the existing `.may-avatar` text avatar at styles.css:2789 and
+    // may-core.js:4639/4875 is unaffected.
+    _mayAvatarSvg:
+        '<svg xmlns="http://www.w3.org/2000/svg" aria-label="May, your exam guide, idle" class="may-avatar may-idle" id="may-avatar-root" role="img" viewBox="0 0 200 240">' +
+        '<g id="may-body">' +
+            '<g fill="none" id="may-spiral" stroke="#8a7150" stroke-linecap="round" stroke-width="3">' +
+                '<path d="M55 30 L55 18"/>' +
+                '<path d="M75 30 L75 16"/>' +
+                '<path d="M95 30 L95 15"/>' +
+                '<path d="M115 30 L115 15"/>' +
+                '<path d="M135 30 L135 16"/>' +
+                '<path d="M155 30 L155 18"/>' +
+            '</g>' +
+            '<rect fill="#f4ead1" height="170" rx="14" stroke="#c9a35c" stroke-width="4" width="120" x="40" y="30"/>' +
+            '<rect fill="#fffdf6" height="154" rx="10" stroke="#e7d6a6" stroke-width="2" width="104" x="48" y="38"/>' +
+            '<g id="may-ledger-lines" stroke="#e3d3a0" stroke-width="2">' +
+                '<line x1="56" x2="144" y1="150" y2="150"/>' +
+                '<line x1="56" x2="144" y1="162" y2="162"/>' +
+                '<line x1="56" x2="144" y1="174" y2="174"/>' +
+                '<line x1="56" x2="144" y1="186" y2="186"/>' +
+            '</g>' +
+            '<line stroke="#e3d3a0" stroke-width="2" x1="100" x2="100" y1="146" y2="190"/>' +
+        '</g>' +
+        '<g id="may-face">' +
+            '<path d="M62 78 Q72 70 82 78" fill="none" id="brow-left" stroke="#5b4630" stroke-linecap="round" stroke-width="4"/>' +
+            '<path d="M118 78 Q128 70 138 78" fill="none" id="brow-right" stroke="#5b4630" stroke-linecap="round" stroke-width="4"/>' +
+            '<g id="eye-left" transform="translate(72,96)">' +
+                '<g id="eye-left-lid">' +
+                    '<circle class="eye-white" fill="#ffffff" r="14" stroke="#5b4630" stroke-width="3"/>' +
+                    '<g class="pupil-group" id="pupil-left">' +
+                        '<circle class="pupil" fill="#3a2a17" r="6.5"/>' +
+                        '<circle class="pupil-glint" cx="-2.2" cy="-2.2" fill="#ffffff" r="2"/>' +
+                    '</g>' +
+                '</g>' +
+            '</g>' +
+            '<g id="eye-right" transform="translate(128,96)">' +
+                '<g id="eye-right-lid">' +
+                    '<circle class="eye-white" fill="#ffffff" r="14" stroke="#5b4630" stroke-width="3"/>' +
+                    '<g class="pupil-group" id="pupil-right">' +
+                        '<circle class="pupil" fill="#3a2a17" r="6.5"/>' +
+                        '<circle class="pupil-glint" cx="-2.2" cy="-2.2" fill="#ffffff" r="2"/>' +
+                    '</g>' +
+                '</g>' +
+            '</g>' +
+            '<circle class="cheek" cx="66" cy="118" fill="#f7b8a1" opacity="0.5" r="7"/>' +
+            '<circle class="cheek" cx="134" cy="118" fill="#f7b8a1" opacity="0.5" r="7"/>' +
+            '<g id="mouth-group" transform="translate(100,132)">' +
+                '<path d="M-16 0 Q0 10 16 0 Q0 4 -16 0 Z" fill="#8a4a3a" id="mouth" stroke="#5b4630" stroke-width="2"/>' +
+            '</g>' +
+        '</g>' +
+        '<g id="may-arm" transform="translate(160,150)">' +
+            '<g id="may-arm-rotate">' +
+                '<rect fill="#f4ead1" height="12" rx="6" stroke="#c9a35c" stroke-width="3" width="46" x="0" y="-6"/>' +
+                '<g id="pencil" transform="translate(46,0)">' +
+                    '<rect fill="#ffd166" height="10" stroke="#5b4630" stroke-width="1.5" width="26" x="0" y="-5"/>' +
+                    '<polygon fill="#8a5a3a" points="26,-5 36,0 26,5" stroke="#5b4630" stroke-width="1.5"/>' +
+                    '<polygon fill="#3a2a17" points="34,-1.5 36,0 34,1.5"/>' +
+                '</g>' +
+            '</g>' +
+        '</g>' +
+        '<g aria-hidden="true" class="dl060-badge" id="dl060-badge" transform="translate(168,34)">' +
+            '<circle fill="#fff4d6" r="13" stroke="#c9832c" stroke-width="3"/>' +
+            '<text fill="#8a4a10" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="0" y="4">!</text>' +
+            '<title>Degraded mode active (DL-060)</title>' +
+        '</g>' +
+        '</svg>',
     // True for P2 delivery items (QID prefix) or when the P2 part is active.
     // P1-specific coaching prose maps consult this and fall back to their
     // generic branch for P2 (rewrites deferred to Phase 2).
@@ -1107,6 +1176,19 @@ const May = {
                 return;
             }
         }
+        // May 2.5 Track 1 (may_2_5_track1, HS-4): single-source suppression
+        // for submit-guard window / between-case-items / integrity review /
+        // active timer — all via MayExamGuard (isExamIntegrityMode inside).
+        try {
+            if (typeof MayExamGuard !== 'undefined' && MayExamGuard.isSuppressed()) {
+                let blocked2 = ['explain', 'wrong-choices', 'hint', 'simplify', 'mymistake', 'similar', 'next', 'recovery', 'chat'];
+                if (blocked2.includes(action)) {
+                    this._speak("May is paused while the exam is in progress — hints, explanations, and chat resume after you submit or leave the exam screen.");
+                    this.renderView();
+                    return;
+                }
+            }
+        } catch (e) { /* guard non-blocking */ }
 
         // Chat sends display the learner's own text (2026-09-19 May-chat fix,
         // re-applied post-restore: _actionLabel has no 'chat' key, so every
@@ -1989,8 +2071,20 @@ const May = {
     },
 
     // S76 — Generate a Socratic follow-up question after explanations
+    // May 2.5 Track 1 (may_2_5_track1, HS-4): never fire while
+    // MayExamGuard is suppressed (active timer / between case items /
+    // submit-guard / integrity review). Orchestrator isSocraticAllowed
+    // remains the practice/exam opt-in gate; this is the runtime gate.
     _socraticFollowUp(q) {
         if (!q) return null;
+        try {
+            if (typeof MayExamGuard !== 'undefined' && MayExamGuard.isSuppressed()) return null;
+            if (typeof MayCoachingOrchestrator !== 'undefined' && MayCoachingOrchestrator.isSocraticAllowed) {
+                var allowed = false;
+                try { allowed = MayCoachingOrchestrator.isSocraticAllowed({}); } catch (e) { allowed = true; }
+                if (!allowed) return null;
+            }
+        } catch (e) { /* guard non-blocking */ }
         let topic = MayLearnerState._normalizeTopic(q.Topic || '');
         let section = q.Section || '';
 
@@ -2372,6 +2466,26 @@ const May = {
     _provideHint() {
         let q = this.context.currentQuestion;
         if (!q) { this._speak("I don't have a question to hint on. Start a review first."); return; }
+        // May 2.5 Track 1 (may_2_5_track1, HS-4): hints never fire while
+        // MayExamGuard is suppressed (active timer / between case items /
+        // submit-guard / integrity review).
+        try {
+            if (typeof MayExamGuard !== 'undefined' && MayExamGuard.isSuppressed()) {
+                this._speak("Hints are paused while the exam is in progress — they resume after you submit or leave the exam screen.");
+                return;
+            }
+        } catch (e) { /* guard non-blocking */ }
+        // May 2.5 Track 1 (may_2_5_track1, HS-2/attempt-gated): graduated
+        // hints beyond the metacognitive nudge require a recorded attempt
+        // on this QID — otherwise the learner has not yet engaged the item.
+        try {
+            let qidAg = q.QuestionID || q.ItemID;
+            let attempted = !!(qidAg && this.context._prevAnswers && this.context._prevAnswers[qidAg] !== undefined);
+            if (!attempted && this.context.hintLevel > 0) {
+                this._speak("Attempt the question first, then ask for the next hint — hints build on your try.");
+                return;
+            }
+        } catch (e) { /* gate non-blocking */ }
 
         let level = this.context.hintLevel;
         let cc = q.CorrectChoice;
@@ -4949,6 +5063,12 @@ const May = {
             }
             this._updateScrollButton(chat);
         }, 50);
+
+        // W6 (token may_v2_1_may_avatar) — renderView boundary hook.
+        // Fires the avatar's renderView boundary (opens 650ms animation
+        // window) and updates exam-timer-active state from the same
+        // source-of-truth used by W1-B (isExamIntegrityMode).
+        this._renderAvatarBoundaryHook();
     },
 
     _updateScrollButton(chat) {
@@ -6942,7 +7062,7 @@ const May = {
         }
 
         let cardHtml = `<div class="may-companion-card" id="mayCompanionCard">
-            <div class="may-companion-avatar">M</div>
+            <div class="may-companion-avatar">${this._mayAvatarSvg}</div>
             <div class="may-companion-body">
                 <div class="may-companion-heading">${heading}</div>
                 ${!hasProfile ? '<div class="may-companion-subtitle">Your CMA ' + May.partLabel() + ' study companion</div>' : ''}
@@ -6962,11 +7082,79 @@ const May = {
         } else {
             workPanel.prepend(wrapper.firstElementChild);
         }
+
+        // W6 (token may_v2_1_may_avatar) — Instantiate MayAvatar now that
+        // the SVG is in the DOM, and register the DL-060 degraded-state
+        // hook so MayAvatar.setState('reduced') fires whenever the
+        // orchestrator reports degradedComponents.length > 0.
+        try {
+            if (typeof MayAvatar === 'function') {
+                let svgRoot = document.getElementById('may-avatar-root');
+                if (svgRoot && !window._mayAvatar) {
+                    window._mayAvatar = new MayAvatar(svgRoot);
+                    this._mayAvatar = window._mayAvatar;
+                }
+            }
+        } catch (e) { /* avatar init non-blocking */ }
+
+        try {
+            let self = this;
+            window.MayOnPipelineResult = function (result) {
+                try {
+                    // May 2.5 Track 1 (may_2_5_track1, W6/DL-060): route ALL
+                    // pipeline outcomes through MayDegradation so the pill,
+                    // avatar, T6 indicatorVisible bit, and chaos log stay in
+                    // agreement (visible IFF degraded[] non-empty).
+                    if (typeof MayDegradation !== 'undefined' && MayDegradation.report && MayDegradation.clear) {
+                        if (result && result.degraded && result.degraded.length > 0) {
+                            MayDegradation.report('orchestrator', result.degraded.join('; ').slice(0, 200));
+                        } else {
+                            MayDegradation.clear('orchestrator');
+                            let avatar = window._mayAvatar;
+                            if (avatar && avatar.state === 'reduced') {
+                                try { avatar.setState('idle'); } catch (e2) {}
+                            }
+                        }
+                        return;
+                    }
+                    let avatar = window._mayAvatar;
+                    if (!avatar || !result) return;
+                    if (result.degraded && result.degraded.length > 0) {
+                        avatar.setState('reduced');
+                    } else if (avatar.state === 'reduced') {
+                        avatar.setState('idle');
+                    }
+                } catch (e) { /* hook non-blocking */ }
+            };
+        } catch (e) { /* hook registration non-blocking */ }
     },
 
     _hideMayCompanionCard() {
         let card = document.getElementById('mayCompanionCard');
         if (card) card.remove();
+    },
+
+    // ── W6 (token may_v2_1_may_avatar) — renderView boundary hook ──────
+    // Called at the end of every renderView(). Notifies MayAvatar that a
+    // view boundary just happened (opens the 650ms animation window) and
+    // syncs exam-timer-active state from the unified source-of-truth
+    // (isExamIntegrityMode, per W1-B). When exam-integrity mode is on,
+    // onRenderViewBoundary is a no-op (avatar suppresses animation).
+    _renderAvatarBoundaryHook() {
+        try {
+            let avatar = window._mayAvatar;
+            if (!avatar) return;
+            let hasActive = (typeof state !== 'undefined' && state.session && !state.session.completed);
+            let examIntegrity = hasActive && (typeof isExamIntegrityMode === 'function'
+                ? isExamIntegrityMode(state.session)
+                : state.session && state.session.mode === 'full');
+            if (examIntegrity) {
+                avatar.onExamTimerStart();
+            } else {
+                avatar.onExamTimerStop();
+            }
+            avatar.onRenderViewBoundary();
+        } catch (e) { /* avatar boundary hook non-blocking */ }
     },
 
     dismissMayCompanionCard() {
@@ -7061,3 +7249,236 @@ document.addEventListener('DOMContentLoaded', () => {
     May.init();
     setTimeout(() => May.renderSetupGreeting(), 100);
 });
+
+/**
+ * MayExamGuard — May 2.5 Track 1 (token may_2_5_track1, HS-4).
+ * Single suppression source for ALL May proactive surfaces (Socratic,
+ * confusion heuristic, hints). Consumes — never duplicates — the app
+ * single source of truth `isExamIntegrityMode(session)` (DL-042, W1-A/B).
+ *
+ * Suppressed when ANY hold:
+ *   (a) active exam timer (session started, not completed, time remains),
+ *   (b) between case items (case-task index mid-case),
+ *   (c) submit-guard window open (#submitConfirmModal/#submitConfirmBar or
+ *       ExamSessionManager._confirmActive, AGENTS.md 19.3),
+ *   (d) integrity review (completed && !submitted, AGENTS.md 19.3),
+ *   (e) exam-integrity mode on (isExamIntegrityMode true, AGENTS.md 19.1).
+ * Pause is NOT a suppressor here — pause freezes the timer (19.1), so the
+ * Socratic pause carve-out stays in MayCoachingOrchestrator.
+ */
+var MayExamGuard = (function () {
+    'use strict';
+
+    function _session() {
+        try {
+            if (typeof state !== 'undefined' && state.session) return state.session;
+        } catch (e) {}
+        return null;
+    }
+
+    function _submitGuardOpen() {
+        try {
+            if (typeof document !== 'undefined') {
+                if (document.getElementById('submitConfirmModal')) return true;
+                if (document.getElementById('submitConfirmBar')) return true;
+            }
+        } catch (e) {}
+        try {
+            if (typeof ExamSessionManager !== 'undefined' && ExamSessionManager._confirmActive) return true;
+        } catch (e) {}
+        return false;
+    }
+
+    function reason(context) {
+        context = context || {};
+        if (context.activeExamTimer === true) return 'activeExamTimer';
+        if (context.betweenCaseItems === true) return 'betweenCaseItems';
+        if (context.examIntegrityReview === true) return 'examIntegrityReview';
+        if (context.submitGuard === true) return 'submitGuard';
+        var s = _session();
+        if (!s) return null;
+        try {
+            if (typeof isExamIntegrityMode === 'function' && isExamIntegrityMode(s)) {
+                if (!s.completed) return 'examIntegrityMode';
+            }
+        } catch (e) {}
+        if (_submitGuardOpen()) return 'submitGuard';
+        if (s.completed && !s.submitted) return 'integrityReview';
+        try {
+            if (s.start && !s.completed && s.duration) {
+                var elapsed = Math.floor((Date.now() - s.start) / 1000);
+                if (elapsed < s.duration) {
+                    if (typeof isExamIntegrityMode === 'function' && isExamIntegrityMode(s)) return 'activeTimer';
+                }
+            }
+        } catch (e) {}
+        try {
+            if (s.cases && s.cases.length > 0 && s.caseTaskIndex != null && s.caseTaskIndex > 0) return 'betweenCaseItems';
+        } catch (e) {}
+        return null;
+    }
+
+    function isSuppressed(context) {
+        return reason(context) !== null;
+    }
+
+    return { reason: reason, isSuppressed: isSuppressed };
+})();
+
+if (typeof window !== 'undefined') window.MayExamGuard = MayExamGuard;
+
+/**
+ * MayDegradation — May 2.5 Track 1 (token may_2_5_track1, W6, DL-060 A/B/C).
+ * Learner-visible "coaching is reduced" non-blocking dismissible pill.
+ * Truth contract: pill visible IFF a degradation source is active
+ * (orchestrator degraded[] / router fallbackBehavior / registry _fallback).
+ * Every report emits T6 with the indicatorVisible bit; every clear is
+ * logged. Chaos inject/clear append to window.__mayDegradationLog with
+ * running counts (DL-045 positive evidence for Tend probes).
+ * HS-5: pill prose states coaching is reduced, never that content is wrong.
+ */
+var MayDegradation = (function () {
+    'use strict';
+
+    var PILL_ID = 'may-degraded-pill';
+    var DISMISS_KEY = 'mayDegradedDismissed';
+    var _active = [];
+    var _log = [];
+
+    function _now() {
+        try { return new Date().toISOString(); } catch (e) { return null; }
+    }
+
+    function _t6(stage, reasonText, visible) {
+        try {
+            if (typeof MayTelemetry !== 'undefined' && MayTelemetry.trackDegradation) {
+                MayTelemetry.trackDegradation({ stage: stage, reason: reasonText, recoverable: true, indicatorVisible: visible === true });
+            }
+        } catch (e) {}
+    }
+
+    function _avatar(state) {
+        try {
+            var avatar = (typeof window !== 'undefined') ? window._mayAvatar : null;
+            if (avatar && avatar.setState) avatar.setState(state);
+        } catch (e) {}
+    }
+
+    function _pill() {
+        try {
+            if (typeof document === 'undefined') return null;
+            return document.getElementById(PILL_ID);
+        } catch (e) { return null; }
+    }
+
+    function _dismissed() {
+        try {
+            if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem(DISMISS_KEY) === '1') return true;
+        } catch (e) {}
+        return false;
+    }
+
+    function _showPill(source) {
+        var el = _pill();
+        if (!el) {
+            try {
+                if (typeof document === 'undefined') return false;
+                // HS-4: never render over exam-integrity surfaces
+                var body = document.body;
+                if (body && body.classList && body.classList.contains('exam-integrity-mode')) return false;
+                var host = document.getElementById('mayPanel') || document.getElementById('coachView') || body;
+                if (!host) return false;
+                el = document.createElement('div');
+                el.id = PILL_ID;
+                el.setAttribute('role', 'status');
+                el.setAttribute('aria-live', 'polite');
+                el.setAttribute('aria-atomic', 'true');
+                var msg = document.createElement('span');
+                msg.textContent = 'Coaching is reduced right now — answers and scores are unaffected.';
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.textContent = 'Dismiss';
+                btn.setAttribute('aria-label', 'Dismiss reduced-coaching notice');
+                btn.setAttribute('aria-controls', PILL_ID);
+                btn.onclick = function () { dismiss(); };
+                // Focus order: message then dismiss button
+                msg.setAttribute('tabindex', '-1');
+                btn.setAttribute('tabindex', '0');
+                el.appendChild(msg);
+                el.appendChild(btn);
+                if (host === body) body.appendChild(el);
+                else host.insertBefore(el, host.firstChild);
+            } catch (e) { return false; }
+        }
+        try {
+            if (_dismissed()) { el.style.display = 'none'; return false; }
+            el.style.display = '';
+            el.setAttribute('data-source', source || 'unknown');
+            // Initial focus for screen readers
+            var msgEl = el.querySelector('span');
+            if (msgEl) msgEl.focus();
+        } catch (e) {}
+        return true;
+    }
+
+    function _hidePill() {
+        try {
+            var el = _pill();
+            if (el) el.style.display = 'none';
+        } catch (e) {}
+    }
+
+    function report(source, reasonText) {
+        source = source || 'unknown';
+        var at = _now();
+        var dup = false;
+        for (var i = 0; i < _active.length; i++) {
+            if (_active[i].source === source) { dup = true; break; }
+        }
+        if (!dup) _active.push({ source: source, reason: String(reasonText || '').slice(0, 200), at: at });
+        var visible = _showPill(source);
+        _avatar('reduced');
+        _t6(source, String(reasonText || '').slice(0, 200), visible);
+        _log.push({ op: 'report', source: source, at: at, activeCount: _active.length, indicatorVisible: visible });
+        try { if (typeof window !== 'undefined') window.__mayDegradationLog = _log.slice(); } catch (e) {}
+        return { activeCount: _active.length, indicatorVisible: visible };
+    }
+
+    function dismiss() {
+        try {
+            if (typeof sessionStorage !== 'undefined') sessionStorage.setItem(DISMISS_KEY, '1');
+        } catch (e) {}
+        _hidePill();
+        _t6('pill-dismiss', 'learner dismissed reduced-coaching pill', false);
+        _log.push({ op: 'dismiss', source: 'pill', at: _now(), activeCount: _active.length, indicatorVisible: false });
+        try { if (typeof window !== 'undefined') window.__mayDegradationLog = _log.slice(); } catch (e) {}
+    }
+
+    function clear(source) {
+        if (source) {
+            _active = _active.filter(function (a) { return a.source !== source; });
+        } else {
+            _active = [];
+        }
+        if (_active.length === 0) {
+            _hidePill();
+            _avatar('idle');
+        }
+        _log.push({ op: 'clear', source: source || 'all', at: _now(), activeCount: _active.length, indicatorVisible: false });
+        try { if (typeof window !== 'undefined') window.__mayDegradationLog = _log.slice(); } catch (e) {}
+        return { activeCount: _active.length };
+    }
+
+    function isActive() {
+        return _active.length > 0 && !_dismissed();
+    }
+
+    function getLog() { return _log.slice(); }
+
+    return { report: report, dismiss: dismiss, clear: clear, isActive: isActive, getLog: getLog, PILL_ID: PILL_ID };
+})();
+
+if (typeof window !== 'undefined') {
+    window.MayDegradation = MayDegradation;
+    window.MayReportDegradation = function (s, r) { return MayDegradation.report(s, r); };
+}

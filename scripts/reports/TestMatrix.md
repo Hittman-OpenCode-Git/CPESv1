@@ -1,4 +1,4 @@
-# Test Matrix — CMA Part 1 Practice Simulator RC1
+﻿# Test Matrix — CMA Practice Simulator RC1
 
 **Date:** 2026-07-21
 **Application Version:** v5.7 (RC1)

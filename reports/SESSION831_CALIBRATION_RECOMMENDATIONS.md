@@ -1,4 +1,4 @@
-# S831 — Difficulty Calibration Audit: Calibration Recommendations
+﻿# S831 — Difficulty Calibration Audit: Calibration Recommendations
 
 **Session:** S831  
 **Generated:** 2026-07-27  
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-The CMA Part 1 Exam Simulator's difficulty distribution is **severely left-skewed**:
+The CMA Exam Simulator's difficulty distribution is **severely left-skewed**:
 
 | Difficulty Band | Current | CAQS Target | Delta | Status |
 |----------------|---------|-------------|-------|--------|

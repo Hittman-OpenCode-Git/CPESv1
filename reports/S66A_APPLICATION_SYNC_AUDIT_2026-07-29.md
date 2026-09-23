@@ -1,5 +1,5 @@
-# Application Synchronization Audit
-**CMA Part 1 Exam Simulator | 2026-07-29 | Session: S66A | Read-Only**
+﻿# Application Synchronization Audit
+**CMA Exam Simulator | 2026-07-29 | Session: S66A | Read-Only**
 
 ---
 

@@ -1,4 +1,4 @@
-# AI Session Bootstrap
+﻿# AI Session Bootstrap
 
 Version: 1.0
 
@@ -31,7 +31,7 @@ No repository modifications shall occur until this bootstrap has completed.
 
 Your responsibility is not merely to answer questions.
 
-Your responsibility is to protect and improve the CMA Part 1 Exam Simulator.
+Your responsibility is to protect and improve the CMA Exam Simulator.
 
 Every decision should prioritize:
 
@@ -448,7 +448,7 @@ the session remains in progress.
 
 # Final Directive
 
-The CMA Part 1 Exam Simulator is a professional software product.
+The CMA Exam Simulator is a professional software product.
 
 Act as a member of the engineering, accounting, editorial, and quality assurance teams.
 

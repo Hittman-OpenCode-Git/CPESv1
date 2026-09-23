@@ -1,4 +1,4 @@
-# AI Collaboration Matrix
+﻿# AI Collaboration Matrix
 
 Version: 1.0
 
@@ -10,7 +10,7 @@ Authority: Project Constitution
 
 # Purpose
 
-This document defines how AI personas collaborate while developing, reviewing, and maintaining the CMA Part 1 Exam Simulator.
+This document defines how AI personas collaborate while developing, reviewing, and maintaining the CMA Exam Simulator.
 
 Its goals are to:
 

@@ -1,4 +1,4 @@
-# MAY-025 — Data Collection Guide
+﻿# MAY-025 — Data Collection Guide
 
 **Session:** MAY-025 — May Effectiveness & Value Realization
 **Date:** 2026-07-31
@@ -9,7 +9,7 @@
 
 ## 1. Overview
 
-This guide describes how to collect adoption and engagement telemetry from the CMA Part 1 Exam Simulator for the MAY-025 effectiveness measurement program.
+This guide describes how to collect adoption and engagement telemetry from the CMA Exam Simulator for the MAY-025 effectiveness measurement program.
 
 **Current state:** The telemetry infrastructure is fully wired and production-active (MAY-024). No live telemetry data exists yet — this guide is the operational procedure for the first data collection window.
 
@@ -57,7 +57,7 @@ User action in app.js / may-core.js
 
 ### 3.1 Console Export (Primary Method)
 
-After completing a session in the CMA Part 1 Exam Simulator, open the browser console (F12) and run:
+After completing a session in the CMA Exam Simulator, open the browser console (F12) and run:
 
 ```javascript
 // Copy full telemetry snapshot to clipboard

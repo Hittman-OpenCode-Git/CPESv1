@@ -1,11 +1,11 @@
-# S110P — Commercial Feature Matrix
+﻿# S110P — Commercial Feature Matrix
 
 **Session:** 110P
 **Date:** 2026-07-31
 
 ---
 
-## 1. Feature Comparison: CMA Part 1 2026 Simulator vs. Premium Prep Platforms
+## 1. Feature Comparison: CMA 2026 Simulator vs. Premium Prep Platforms
 
 | Feature | CMA Sim (Current) | Gleim | Becker | Hock | Surgent |
 |---------|-------------------|-------|--------|------|---------|
@@ -42,7 +42,7 @@
 
 ---
 
-## 2. Features Unique to CMA Part 1 Simulator (Competitive Advantages)
+## 2. Features Unique to CMA Simulator (Competitive Advantages)
 
 | Feature | Description | Competitive Value |
 |---------|-------------|-------------------|

@@ -1,4 +1,4 @@
-# S111P — Learner Journey Intelligence & Study Behavior Modeling: Closeout
+﻿# S111P — Learner Journey Intelligence & Study Behavior Modeling: Closeout
 
 **Session:** 111P
 **Date:** 2026-07-31
@@ -9,7 +9,7 @@
 
 ## 1. Session Summary
 
-Session 111P analyzed all learner-facing subsystems in the CMA Part 1 Exam Simulator and produced a six-document learner journey intelligence framework. Zero files were modified — this was an entirely read-only planning and analytics session.
+Session 111P analyzed all learner-facing subsystems in the CMA Exam Simulator and produced a six-document learner journey intelligence framework. Zero files were modified — this was an entirely read-only planning and analytics session.
 
 ---
 

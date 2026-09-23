@@ -3485,7 +3485,9 @@ const pack_p2_c_questions = [
       "B": 3
     },
     "certification_session": "P2-044",
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -6130,6 +6132,8 @@ const pack_p2_c_questions = [
       "Authority citations match tested concept"
     ],
     "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "certification_session": "P2-060"
   },
   {
@@ -7054,6 +7058,8 @@ const pack_p2_c_questions = [
     "ItemStyle": "single-select",
     "Part2OnlyFlag": true,
     "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "certification_session": "P2-059",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -8846,6 +8852,8 @@ const pack_p2_c_questions = [
     "ItemStyle": "single-select",
     "Part2OnlyFlag": true,
     "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "certification_session": "P2-059",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -17060,7 +17068,7 @@ const pack_p2_c_questions = [
       "C": "The balanced scorecard requires identical metrics across all four perspectives to ensure consistent reporting and avoid strategic ambiguity in operational units",
       "D": "The balanced scorecard focuses exclusively on shareholder return metrics because the company is publicly traded and must prioritize market-based performance measures"
     },
-    "CorrectChoice": "C",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Analyze",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -17077,8 +17085,8 @@ const pack_p2_c_questions = [
     "DecisionTreeReference": null,
     "ExplanationCorrect": "The balanced scorecard, developed by Kaplan and Norton, retains financial metrics as the ultimate outcome measure while adding three non-financial perspectives that lead and explain future financial performance: customer (satisfaction, retention, market share), internal business process (quality, cycle time, innovation), and learning and growth (employee capabilities, information systems, culture). For Flash Tech, a premium differentiation strategy aligns with metrics like customer satisfaction and time-to-market (internal process) supported by R&D investment and skills development (learning and growth). Business interpretation: the scorecard translates strategy into a coherent set of operational metrics that drive behavior at every level, with cause-and-effect links from learning to process to customer to financial. A common trap is to view the scorecard as replacing financial measures; in reality, financial metrics remain the bottom line and are explained by the leading indicators in the other perspectives.",
     "ExplanationWrongA": "The balanced scorecard does not replace financial metrics; it complements them. Financial metrics remain the ultimate measure of value creation and are linked to the leading non-financial indicators via cause-and-effect chains. Treating the scorecard as purely non-financial would lose the link to shareholder value.",
-    "ExplanationWrongB": "The four perspectives each contain different metrics tailored to the perspective's role. Identical metrics across perspectives would create redundancy and miss the unique strategic value each lens provides. For example, customer metrics (satisfaction) differ from internal process metrics (cycle time) by design.",
-    "ExplanationWrongC": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C claims the scorecard requires identical metrics across all four perspectives. This misrepresents the framework: each perspective contains distinct metrics tailored to its strategic role — customer metrics (satisfaction, retention) differ from internal process metrics (cycle time, defect rates) and learning-and-growth metrics (skills, systems, culture). Imposing identical metrics would create redundancy and obscure the cause-and-effect linkages that translate strategy into operational drivers. The scorecard's value lies precisely in this differentiation across perspectives.",
     "ExplanationWrongD": "Exclusively shareholder-return metrics describe a single financial perspective, not the balanced scorecard framework. The scorecard's value lies precisely in broadening measurement beyond financial metrics to capture drivers of future financial performance.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
@@ -17118,7 +17126,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17"
   },
   {
     "QuestionID": "P2-C-362",
@@ -40610,23 +40620,24 @@ const pack_p2_c_questions = [
     "Stem": "Meridian Packaging is considering replacing an old machine with a new one. Old machine: original cost $100,000, book value $40,000, remaining life 5 years, annual operating cost $80,000. New machine: cost $200,000, life 5 years, annual operating cost $50,000. No salvage value for either. What is the net financial impact of replacing the old machine?",
     "Choices": {
       "A": "Replace: saves $50,000 over 5 years",
-      "B": "Keep: saves $30,000 over 5 years",
+      "B": "Keep: saves $50,000 over 5 years",
       "C": "Replace: saves $100,000 over 5 years",
       "D": "Indifferent: both options cost the same"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Differential analysis focuses only on costs that differ between alternatives. Old machine: $80,000 x 5 = $400,000 operating costs. New machine: $200,000 cost + ($50,000 x 5) = $200,000 + $250,000 = $450,000. Wait, that makes keeping cheaper. Let me reframe: Keep: $80,000 x 5 = $400,000. Replace: $200,000 + ($50,000 x 5) = $450,000. Replace costs $50,000 more. But the book value of $40,000 is sunk and irrelevant. Keep: $400,000. Replace: $450,000. Keep is $50,000 cheaper. The answer should be B. Let me restructure: Keep total = $400,000. Replace total = $200,000 + $250,000 = $450,000. Keep saves $50,000. Answer B.",
-    "ExplanationWrongB": "$30,000 results from an arithmetic error in the differential analysis.",
-    "ExplanationWrongC": "$100,000 results from including the book value as a relevant cost.",
-    "ExplanationWrongD": "The options have different total costs, so they are not equivalent.",
-    "FormulaReference": "Differential analysis: compare costs that differ between alternatives",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Differential analysis compares only costs that differ between alternatives. The book value of the old machine ($40,000) is a sunk cost and irrelevant. Keep alternative: 5 years × $80,000 = $400,000 operating cost. Replace alternative: $200,000 new machine cost + (5 years × $50,000) = $450,000 total cost. Keeping the old machine saves $50,000 ($450,000 − $400,000) over the 5-year period. The correct conclusion is to keep the old machine, saving $50,000.",
+    "ExplanationWrongA": "Choice A states that replacing saves $50,000, but the differential analysis shows the opposite: replacing costs $50,000 more than keeping. This error likely stems from misapplying the differential by subtracting in the wrong direction or ignoring the new machine's capital cost.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "$100,000 results from incorrectly including the old machine's book value ($40,000) as a relevant cost and possibly other arithmetic errors. Book value is a sunk cost — it does not differ between the keep and replace alternatives and must be excluded from the differential analysis.",
+    "ExplanationWrongD": "The options have different total costs: keeping costs $400,000 and replacing costs $450,000. The $50,000 difference is material, so indifference is incorrect.",
+    "FormulaReference": "Differential analysis: compare costs that differ between alternatives; sunk costs (book value) are excluded",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "CalculationItem": true,
-    "CommonTrapReference": "Including book value (sunk cost) in replacement analysis",
+    "CommonTrapReference": "Including book value (sunk cost) in replacement analysis; reversing the differential direction",
     "Authorities": [
       "IMA SMA on relevant costing",
       "Equipment replacement analysis"
@@ -40641,35 +40652,37 @@ const pack_p2_c_questions = [
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Wrong direction",
-        "why_plausible": "Could result from incorrect differential calculation",
+        "misconception": "Wrong direction — states replacing saves when keeping saves",
+        "why_plausible": "Reverses the differential; $50,000 figure matches the correct magnitude but wrong sign",
         "tier_candidate": "B"
       },
       "C": {
-        "misconception": "Including book value",
-        "why_plausible": "Book value is sunk and irrelevant",
+        "misconception": "Including book value as relevant cost",
+        "why_plausible": "Book value appears on the balance sheet and looks like a cost to recover",
         "tier_candidate": "B"
       },
       "D": {
-        "misconception": "Indifference",
-        "why_plausible": "Costs differ by $50,000",
+        "misconception": "Indifference — assumes costs are equal",
+        "why_plausible": "May arise from miscalculating both alternatives as identical",
         "tier_candidate": "C"
       }
     },
-    "uniqueness_note": "The differential analysis uniquely shows keeping is $50,000 cheaper.",
+    "uniqueness_note": "The differential analysis uniquely shows keeping is $50,000 cheaper; Choice B is corrected to reflect the accurate $50,000 savings figure.",
     "source_status": "RESOLVED",
     "hold_reason": "",
     "schema_version": "1.1",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
-      "EW[CC] empty (A)",
+      "EW[CC] empty (B)",
       "Non-CC EW slots >= 50 chars",
       "Difficulty justified",
-      "Differential analysis verified"
+      "Differential analysis verified: Keep $400K vs Replace $450K = $50K savings"
     ],
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "$30,000 results from an arithmetic error in the differential analysis.",
     "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06"
+    "certification_date": "2026-09-06",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17"
   },
   {
     "Part": 2,
@@ -40743,5 +40756,1563 @@ const pack_p2_c_questions = [
     "ExplanationWrongA": "",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — breakeven"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2,400 units — fixed cost divided by selling price",
+      "B": "30 units — the unit contribution margin alone",
+      "C": "3,000 units — fixed cost divided by variable cost",
+      "D": "4,000 units — fixed cost divided by unit contribution margin"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates divide by price or by variable cost instead of contribution margin, or report the margin itself as the answer.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Breakeven units = fixed costs / unit contribution margin = $120,000 / ($50 - $20) = $120,000 / $30 = 4,000 units. At 4,000 units the $30 per-unit contribution exactly covers fixed costs, so Nalbandian should quote 4,000 units as the no-profit no-loss point.",
+    "ExplanationWrongA": "Option A (2,400 units) divides $120,000 by the $50 selling price. Price alone ignores the $20 variable cost; only the $30 contribution per unit pays down fixed costs.",
+    "ExplanationWrongB": "Option B (30 units) reports the $30 contribution margin as the answer. The margin is the divisor in the breakeven formula, not the result.",
+    "ExplanationWrongC": "Option C (3,000 units) divides $120,000 by the $20 variable cost. Variable cost is subtracted from price to build the margin; it never serves as the divisor.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Breakeven units = fixed costs / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-751",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Cedar Park Manufacturing sells a widget for $50 with $20 variable cost per unit. Fixed costs are $120,000. Product manager Ani Nalbandian needs breakeven units. How many?",
+    "Topic": "C.751 breakeven units computation",
+    "UniqueConceptKey": "C-751-breakeven-units-direct",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula plug-in, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — breakeven"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "5,000 units — fixed cost divided by unit contribution margin",
+      "B": "2,000 units — fixed cost divided by selling price",
+      "C": "6,250 units — fixed plus a profit target divided by contribution margin",
+      "D": "40 units — the unit contribution margin alone"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates divide by price, smuggle a profit target into a breakeven ask, or answer with the margin figure.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Breakeven units = $200,000 / ($100 - $60) = $200,000 / $40 = 5,000 units. Breakeven means zero profit, so no target enters the numerator; 5,000 units is the volume Doucette must brief as the threshold.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (2,000 units) divides $200,000 by the $100 price. The $60 variable cost per unit must first be deducted; each unit contributes $40, not $100, toward fixed costs.",
+    "ExplanationWrongC": "Option C (6,250 units) adds a $50,000 profit target to the numerator. A target belongs in target-profit analysis, not in breakeven, which by definition sets profit to zero.",
+    "ExplanationWrongD": "Option D (40 units) answers with the $40 contribution margin. The margin is an input to the formula, not the breakeven quantity.",
+    "FormulaReference": "Breakeven units = fixed costs / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-752",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A product sells for $100 with $60 variable cost. Fixed costs are $200,000. Analyst Remy Doucette needs the breakeven volume with no profit target. How many units?",
+    "Topic": "C.752 breakeven zero-profit threshold",
+    "UniqueConceptKey": "C-752-breakeven-threshold",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: formula plug-in with trap discrimination"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — breakeven"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2,000 units — fixed cost divided by selling price",
+      "B": "5,000 units — fixed cost divided by unit contribution margin",
+      "C": "3,333 units — fixed cost divided by variable cost per unit",
+      "D": "40% — the contribution margin ratio reported as units"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates divide by price or variable cost, or report the margin ratio where a unit count is asked.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Unit contribution = $45 - $27 = $18; breakeven = $90,000 / $18 = 5,000 units. Each unit's $18 contribution accumulates toward the $90,000 fixed base, so the 5,000th unit is where profit begins.",
+    "ExplanationWrongA": "Option A (2,000 units) divides $90,000 by the $45 price. The $27 variable cost must be deducted first; price overstates each unit's contribution by $27.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (3,333 units) divides $90,000 by the $27 variable cost. Variable cost is the subtrahend inside the margin, never the divisor of fixed costs.",
+    "ExplanationWrongD": "Option D (40%) computes the margin ratio ($18 / $45) but answers a ratio to a units question. The ratio is useful input, not the breakeven quantity.",
+    "FormulaReference": "Breakeven units = fixed costs / (price - variable cost)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-753",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $90,000 for a line priced at $45 with $27 variable cost. How many units break even?",
+    "Topic": "C.753 breakeven from price and variable cost",
+    "UniqueConceptKey": "C-753-breakeven-price-vc",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step margin then breakeven"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — breakeven"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2,500 units — fixed cost divided by selling price",
+      "B": "4,286 units — fixed cost divided by variable cost per unit",
+      "C": "60 units — the selling price alone",
+      "D": "6,000 units — fixed cost divided by unit contribution margin"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates divide by price or variable cost, or answer with a stated input such as price.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Unit contribution = $60 - $35 = $25; breakeven = $150,000 / $25 = 6,000 units. The $25 margin per unit is the only correct divisor of the $150,000 fixed base.",
+    "ExplanationWrongA": "Option A (2,500 units) divides $150,000 by the $60 price, ignoring the $35 variable cost each unit incurs.",
+    "ExplanationWrongB": "Option B (4,286 units) divides $150,000 by the $35 variable cost, which is a cost per unit rather than a contribution per unit.",
+    "ExplanationWrongC": "Option C (60 units) answers with the $60 selling price. Price is a formula input, not the breakeven quantity.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Breakeven units = fixed costs / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-754",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A service contract contributes $60 per engagement against $35 variable cost. Fixed costs are $150,000. What is the breakeven number of engagements?",
+    "Topic": "C.754 breakeven service engagements",
+    "UniqueConceptKey": "C-754-breakeven-service",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-step margin then breakeven"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — breakeven"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "16 units — the unit contribution margin alone",
+      "B": "1,600 units — fixed cost divided by selling price",
+      "C": "5,000 units — fixed cost divided by unit contribution margin",
+      "D": "32% — the contribution margin ratio reported as units"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates answer with the margin, divide by price, or report the margin ratio as units.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Breakeven = $80,000 / $16 = 5,000 units. The $16 margin per unit is the divisor; dividing the fixed base by it yields the 5,000-unit threshold.",
+    "ExplanationWrongA": "Option A (16 units) mistakes the $16 divisor for the quotient. The margin scales fixed costs down to units; it is not itself the answer.",
+    "ExplanationWrongB": "Option B (1,600 units) divides $80,000 by the $50 price. Price overstates unit contribution because the cost behind the $16 margin is ignored.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (32%) reports $16 / $50 as the answer. The 32% ratio suits sales-dollar analysis, not a units question.",
+    "FormulaReference": "Breakeven units = fixed costs / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-755",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $80,000, price is $50, and unit contribution margin is $16. What are breakeven units?",
+    "Topic": "C.755 breakeven given margin directly",
+    "UniqueConceptKey": "C-755-breakeven-given-margin",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula application, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — target profit"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "40% — the contribution margin ratio reported as units",
+      "B": "1,500 units — target profit divided by contribution margin, fixed costs ignored",
+      "C": "4,000 units — fixed cost plus target profit divided by contribution margin",
+      "D": "3,550 units — fixed cost plus an after-tax target with no gross-up"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates omit fixed costs, answer with the margin ratio, or use an after-tax target without grossing up.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Target units = ($100,000 + $60,000) / $40 = $160,000 / $40 = 4,000 units. The profit target joins fixed costs in the numerator because both must be covered by unit contributions.",
+    "ExplanationWrongA": "Option A (40%) reports the margin ratio ($40 / $100 price) as units. The ratio answers a sales-dollar question, not this units question.",
+    "ExplanationWrongB": "Option B (1,500 units) divides only the $60,000 target by $40, dropping fixed costs. Fixed costs do not vanish when a profit is targeted.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (3,550 units) uses an after-tax target figure without grossing it up to pre-tax. The $60,000 target here is already stated pre-tax, so no tax adjustment applies.",
+    "FormulaReference": "Target units = (fixed costs + target profit) / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-756",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $100,000, unit contribution is $40 (price $100), and the pre-tax profit target is $60,000. How many units hit the target?",
+    "Topic": "C.756 target profit units",
+    "UniqueConceptKey": "C-756-target-profit-units",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: structured plug-in, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — target profit"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "4,000 units — fixed cost alone divided by contribution margin",
+      "B": "2,000 units — fixed plus target divided by selling price",
+      "C": "15 units — the unit contribution margin alone",
+      "D": "6,000 units — fixed cost plus target profit divided by contribution margin"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates omit the target, divide by price, or answer with the margin input.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Target units = ($60,000 + $30,000) / $15 = $90,000 / $15 = 6,000 units. Both the fixed base and the profit goal must be funded by $15 contributions.",
+    "ExplanationWrongA": "Option A (4,000 units) divides only fixed costs by $15, producing breakeven instead of the target-profit volume. The $30,000 goal adds 2,000 units.",
+    "ExplanationWrongB": "Option B (2,000 units) divides $90,000 by the $45 price. Price is not contribution; each unit funds only $15 of the $90,000 need.",
+    "ExplanationWrongC": "Option C (15 units) answers with the $15 margin. The margin is the divisor, not the volume.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Target units = (fixed costs + target profit) / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-757",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $60,000, price is $45, unit contribution is $15, and the profit target is $30,000. How many units achieve the target?",
+    "Topic": "C.757 target profit with stated margin",
+    "UniqueConceptKey": "C-757-target-profit-stated-margin",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-formula application, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — target profit"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "7,000 units — fixed cost plus target profit divided by contribution margin",
+      "B": "5,000 units — fixed cost alone divided by contribution margin",
+      "C": "2,000 units — target profit alone divided by contribution margin",
+      "D": "40% — the contribution margin ratio reported as units"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates drop either the fixed base or the target from the numerator, or report the margin ratio.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Target units = ($120,000 + $48,000) / $24 = $168,000 / $24 = 7,000 units. Omitting either $120,000 of fixed costs or $48,000 of target profit understates the volume the sales plan must deliver.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B (5,000 units) covers fixed costs only ($120,000 / $24). That is breakeven; the $48,000 target needs 2,000 more units.",
+    "ExplanationWrongC": "Option C (2,000 units) covers only the target ($48,000 / $24). Fixed costs of $120,000 remain unfunded in this answer.",
+    "ExplanationWrongD": "Option D (40%) reports $24 / $60 price as units. The ratio belongs in sales-dollar analysis, not here.",
+    "FormulaReference": "Target units = (fixed costs + target profit) / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-758",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $120,000, unit contribution is $24 (price $60), and the profit target is $48,000. How many units reach the target?",
+    "Topic": "C.758 target profit full numerator",
+    "UniqueConceptKey": "C-758-target-profit-full-numerator",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: structured plug-in with omission traps"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "CVP analysis — target profit"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2,000 units — target profit alone divided by contribution margin",
+      "B": "6,000 units — fixed cost plus target profit divided by contribution margin",
+      "C": "2,400 units — fixed plus target divided by selling price",
+      "D": "50 units — the unit contribution margin alone"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates fund only the target, divide by price, or answer with the margin.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Target units = ($200,000 + $100,000) / $50 = $300,000 / $50 = 6,000 units. The full $300,000 need divided by $50 per unit sets the sales quota.",
+    "ExplanationWrongA": "Option A (2,000 units) funds only the $100,000 target. The $200,000 fixed base is mandatory spending that contributions must also cover.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (2,400 units) divides $300,000 by the $125 price. Units contribute $50 each after variable cost, not $125.",
+    "ExplanationWrongD": "Option D (50 units) answers with the $50 margin. The margin divides the need; it is not the need.",
+    "FormulaReference": "Target units = (fixed costs + target profit) / unit contribution margin",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-759",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Fixed costs are $200,000, price is $125, unit contribution is $50, and the profit target is $100,000. How many units meet the target?",
+    "Topic": "C.759 target profit high-fixed setting",
+    "UniqueConceptKey": "C-759-target-profit-high-fixed",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: structured plug-in, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Reject — shows a $1,000 loss after allocated fixed costs",
+      "B": "Accept — earns $22,000 of revenue while spending nothing extra",
+      "C": "Reject — the $25 average cost exceeds the $22 price",
+      "D": "Accept — earns $4,000 of incremental profit over variable cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates subtract allocated fixed costs, treat revenue as profit, or compare average cost to price.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "With spare capacity, only variable cost is relevant: incremental profit = ($22 - $18) x 1,000 = $4,000, so the order should be accepted. Allocated fixed costs continue regardless and must not enter the decision.",
+    "ExplanationWrongA": "Option A subtracts $5,000 of allocated fixed costs to show a $1,000 loss. Allocated fixed costs are unavoidable and therefore irrelevant to the order decision.",
+    "ExplanationWrongB": "Option B reports the $22,000 revenue as profit, spending nothing. The $18,000 of variable cost is incremental and must be deducted, leaving $4,000.",
+    "ExplanationWrongC": "Option C compares the $25 fully-absorbed average cost to the $22 price. Average cost embeds irrelevant fixed cost; the relevant $18 variable cost sits below price.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Special-order profit = (offer price - variable cost) x quantity (spare capacity)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-760",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A buyer offers 1,000 units at $22 each. Variable cost is $18 per unit, spare capacity exists, and allocated fixed cost is $5 per unit. Should the order be accepted?",
+    "Topic": "C.760 special order spare capacity",
+    "UniqueConceptKey": "C-760-special-order-spare",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: incremental logic with fixed-cost trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$1,000 profit — revenue less variable plus allocated fixed costs",
+      "B": "$4,000 profit — revenue less variable costs only",
+      "C": "$15,000 profit — the offer revenue with no costs deducted",
+      "D": "Reject the order — average cost exceeds the offer price"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates include allocated fixed costs, deduct nothing, or judge by average cost.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Incremental profit = 500 x ($30 - $22) = 500 x $8 = $4,000. Only the $22 variable cost is incremental under spare capacity; fixed allocations are sunk to this decision.",
+    "ExplanationWrongA": "Option A ($1,000) deducts $6 per unit of allocated fixed cost along with variable cost. Fixed allocations persist with or without the order and are irrelevant.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($15,000) books the 500 x $30 revenue with zero cost. The $11,000 of variable cost is incremental and must be charged to the order.",
+    "ExplanationWrongD": "Rejecting on average cost ($22 variable + $10 fixed = $32 > $30) repeats the full-absorption error: the $10 fixed layer is irrelevant, and the $8 unit margin is positive.",
+    "FormulaReference": "Special-order profit = (offer price - variable cost) x quantity",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-761",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A 500-unit offer at $30 each arrives with spare capacity. Variable cost is $22 per unit and allocated fixed cost is $10 per unit. What is the incremental profit?",
+    "Topic": "C.761 special order incremental profit",
+    "UniqueConceptKey": "C-761-special-order-profit",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single incremental computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$2,000 — incremental profit after subtracting allocated fixed costs",
+      "B": "$15,000 — incremental profit ignoring the displaced regular sales",
+      "C": "$5,000 — price less variable cost and lost regular margin, times quantity",
+      "D": "$7,000 — price less variable plus average fixed cost, times quantity"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates deduct allocated fixed costs, ignore the opportunity cost of displaced sales, or use average cost.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "At full capacity the relevant cost is $25 variable plus the $10 regular margin displaced: ($40 - $25 - $10) x 1,000 = $5,000. The order still pays because $5 per unit survives both the outlay and the opportunity cost.",
+    "ExplanationWrongA": "Option A ($2,000) subtracts $3,000 of allocated fixed costs from the $5,000 incremental gain. Fixed allocations are unavoidable and irrelevant.",
+    "ExplanationWrongB": "Option B ($15,000) uses ($40 - $25) x 1,000 and ignores displacement. Filling the order sacrifices $10,000 of regular margin that must be charged to it.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D ($7,000) builds cost as $25 variable plus $8 average fixed. Average fixed cost is an allocation, not an incremental outlay; the correct add-on is the $10 opportunity cost.",
+    "FormulaReference": "Constrained special order = (price - VC - opportunity cost) x quantity",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-762",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A 1,000-unit offer at $40 arrives at full capacity. Variable cost is $25 and each unit displaces regular sales contributing $10. Allocated fixed cost is $3 per unit. What is the incremental profit?",
+    "Topic": "C.762 special order constrained capacity",
+    "UniqueConceptKey": "C-762-special-order-constrained",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-part relevant cost, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Buy — the $19 sunk-inclusive cost exceeds the $17 purchase price",
+      "B": "Buy — the $20 total cost exceeds the $17 purchase price",
+      "C": "Make — the $12 variable cost beats the $17 purchase price by $5",
+      "D": "Make — the $15 relevant cost beats the $17 purchase price by $2"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates add sunk costs to the make alternative, use fully-absorbed cost, or drop the opportunity cost.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Relevant make cost = $12 variable + $3 opportunity = $15, which beats the $17 purchase price by $2 per unit. Sunk costs stay out; the freed capacity's $3 value stays in.",
+    "ExplanationWrongA": "Option A adds a $4 sunk cost to reach $19 and then buys. Sunk costs are gone regardless of the decision and must be excluded.",
+    "ExplanationWrongB": "Option B uses the $20 fully-absorbed cost ($12 + $8 fixed). Fixed manufacturing overhead continues either way and is irrelevant.",
+    "ExplanationWrongC": "Option C drops the $3 opportunity cost and claims a $5 saving. Ignoring the freed capacity's value overstates making by $3 per unit.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Relevant make cost = variable cost + opportunity cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-763",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A part can be made for $12 variable cost plus $8 allocated fixed cost, or bought for $17. Making frees capacity worth $3 per unit; $4 of the fixed cost is sunk. Should the firm make or buy?",
+    "Topic": "C.763 make-or-buy relevant cost",
+    "UniqueConceptKey": "C-763-make-or-buy-relevant",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: relevant-cost assembly, direct comparison"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Buy — the $25 relevant cost exceeds the $23 purchase price by $2",
+      "B": "Make — the $26 average cost exceeds the purchase price",
+      "C": "Buy — the $20 variable cost beats the price by $3",
+      "D": "Make — the $20 variable cost beats the $23 price"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates decide by average cost, ignore opportunity cost, or treat unavoidable fixed cost as avoidable.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Relevant make cost = $20 variable + $5 opportunity = $25, which exceeds the $23 purchase price by $2, so buying saves $2 per unit. The unavoidable fixed cost continues under either choice and is excluded.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B decides by the $26 average cost ($20 + $6 fixed). Average cost embeds unavoidable fixed cost; the relevant comparison is $25 versus $23.",
+    "ExplanationWrongC": "Option C drops the $5 opportunity cost and claims a $3 saving from buying. The alternative use of capacity is a real cost of making.",
+    "ExplanationWrongD": "Option D makes because $20 is below $23, ignoring the $5 opportunity cost. Adding it flips the decision to buy.",
+    "FormulaReference": "Relevant make cost = variable cost + opportunity cost; compare to purchase price",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-764",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Making costs $20 variable plus $6 unavoidable fixed per unit; buying costs $23. Freed capacity is worth $5 per unit. Which is cheaper and by how much?",
+    "Topic": "C.764 make-or-buy with opportunity cost",
+    "UniqueConceptKey": "C-764-make-or-buy-opportunity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: relevant-cost comparison with traps"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — IMA SMA on relevant costs"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Buy — sunk-inclusive $36 beats nothing; saving claimed is $8",
+      "B": "Buy — the $30 relevant cost exceeds the $28 price by $2",
+      "C": "Buy — the $39 total cost exceeds the $28 price by $11",
+      "D": "Make — unavoidable fixed cost is saved by making"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates add sunk costs, use fully-absorbed cost, or believe making saves unavoidable fixed cost.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "With no alternative use, relevant make cost is just the $30 variable cost, which exceeds the $28 purchase price by $2 — buying saves $2 per unit. The $6 sunk and $9 unavoidable fixed layers are irrelevant.",
+    "ExplanationWrongA": "Option A adds the $6 sunk cost to reach $36 and claims an $8 saving. Sunk costs cannot be recovered by either choice.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C uses the $39 fully-absorbed cost and claims an $11 saving. Unavoidable fixed cost persists under buying, so the saving is only $2.",
+    "ExplanationWrongD": "Option D claims making saves the unavoidable fixed cost. Unavoidable means it continues whether the firm makes or buys.",
+    "FormulaReference": "Relevant make cost = variable cost (no alternative use); compare to price",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-765",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A component's variable cost is $30 with $9 unavoidable fixed and $6 sunk per unit. The purchase price is $28 and freed capacity has no alternative use. Make or buy?",
+    "Topic": "C.765 make-or-buy no alternative use",
+    "UniqueConceptKey": "C-765-make-or-buy-no-alt-use",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: sunk-cost filtering, direct comparison"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — sell or process further"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sell as-is — joint cost plus separable cost exceeds incremental revenue",
+      "B": "Sell as-is — separable costs exceed incremental revenue",
+      "C": "Process only if revenue covers the $70,000 combined total",
+      "D": "Process further — $35,000 incremental revenue exceeds $20,000 separable cost"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates add sunk joint costs to the decision, misstate the separable comparison, or require revenue to cover combined totals.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Only separable cost vs. incremental revenue matters: $35,000 - $20,000 = $15,000 gain from processing. The $50,000 joint cost is sunk at split-off and must be ignored.",
+    "ExplanationWrongA": "Option A adds the $50,000 joint cost to separable cost to reject processing. Joint costs are sunk before split-off and are never relevant after it.",
+    "ExplanationWrongB": "Option B claims the $20,000 separable cost exceeds the $35,000 revenue. The comparison runs the other way: revenue exceeds separable cost by $15,000.",
+    "ExplanationWrongC": "Option C demands revenue cover the $70,000 combined total. Processing need only beat its own $20,000 separable cost, which $35,000 does.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Process further if incremental revenue exceeds separable cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-766",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "At split-off, $50,000 of joint costs are sunk. Processing further costs $20,000 separable and adds $35,000 revenue. Process or sell as-is?",
+    "Topic": "C.766 sell-or-process joint sunk",
+    "UniqueConceptKey": "C-766-sell-or-process-sunk",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single incremental comparison"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — sell or process further"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sell as-is — $40,000 incremental revenue falls short of $45,000 separable cost",
+      "B": "Process — the $40,000 revenue alone justifies processing",
+      "C": "Process — $40,000 exceeds the allocated $30,000 joint cost",
+      "D": "Process — total product cost sits below combined value"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates ignore separable cost, judge by joint cost, or compare totals instead of incrementals.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Processing loses $5,000 ($40,000 - $45,000), so the firm should sell as-is. Separable cost is the only cost of the further-processing decision.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B processes on the $40,000 revenue alone, ignoring the $45,000 separable cost. Revenue without its incremental cost proves nothing.",
+    "ExplanationWrongC": "Option C compares revenue to the $30,000 allocated joint cost. Joint allocations are sunk and arbitrary; the $45,000 separable cost is the relevant figure.",
+    "ExplanationWrongD": "Option D compares totals ($85,000 vs. $90,000) instead of incrementals. Total-cost comparisons smuggle sunk joint cost into a forward-looking decision.",
+    "FormulaReference": "Sell as-is if separable cost exceeds incremental revenue",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-767",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Joint costs of $30,000 are allocated to a product. Further processing costs $45,000 separable and adds $40,000 revenue. Process or sell as-is?",
+    "Topic": "C.767 sell-or-process loss case",
+    "UniqueConceptKey": "C-767-sell-or-process-loss",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: incremental comparison with joint-cost trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Relevant costing — sell or process further"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sell as-is — revenue must first cover sunk joint costs",
+      "B": "Sell as-is — average cost per unit exceeds incremental revenue",
+      "C": "Process further — $18,000 incremental revenue exceeds $12,000 separable cost",
+      "D": "Process further — $18,000 of profit with no further cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates require revenue to cover sunk costs, use average cost, or book revenue as profit.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Processing gains $18,000 - $12,000 = $6,000, so process further. Sunk joint cost and average-cost allocations have no standing in this comparison.",
+    "ExplanationWrongA": "Option A holds revenue to covering the $25,000 sunk joint cost first. Sunk costs are unrecoverable and cannot gate a forward decision.",
+    "ExplanationWrongB": "Option B compares an average cost carrying sunk joint cost to the $18,000 revenue. Averages blend irrelevant sunk layers into the separable decision.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D books the full $18,000 as profit, ignoring the $12,000 separable cost. Profit is revenue less its incremental cost: $6,000.",
+    "FormulaReference": "Process gain = incremental revenue - separable cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-768",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Sunk joint costs are $25,000. Further processing costs $12,000 separable and adds $18,000 revenue. What is the correct decision and gain?",
+    "Topic": "C.768 sell-or-process gain computation",
+    "UniqueConceptKey": "C-768-sell-or-process-gain",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: incremental gain computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Transfer pricing — Hirshleifer (1956)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$60 — full cost including allocated fixed cost",
+      "B": "$40 — variable cost only, ignoring lost outside margin",
+      "C": "$70 — the outside market price",
+      "D": "$55 — variable cost plus the lost outside contribution"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use full cost, drop the opportunity cost at full capacity, or default to market price.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "At full capacity the minimum transfer price = $40 variable + $15 lost outside contribution = $55. Any price below $55 destroys $15 of outside margin the firm would otherwise keep.",
+    "ExplanationWrongA": "Option A ($60) adds $20 of allocated fixed cost to variable cost. Fixed allocations continue regardless of the transfer and are irrelevant.",
+    "ExplanationWrongB": "Option B ($40) charges variable cost only, ignoring capacity. At full capacity each internal unit sacrifices $15 of outside margin that must be priced in.",
+    "ExplanationWrongC": "Option C ($70) defaults to the outside market price. Market price is a ceiling for negotiation, not the $55 floor the selling division needs.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Minimum transfer price = variable cost + opportunity cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-769",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A division at full capacity has $40 variable cost and $20 allocated fixed cost per unit, and each internal transfer displaces outside sales contributing $15. Outside market price is $70. What is the minimum transfer price?",
+    "Topic": "C.769 transfer price full capacity",
+    "UniqueConceptKey": "C-769-transfer-full-capacity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-part floor assembly"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Transfer pricing — Hirshleifer (1956)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$40 — full manufacturing cost per unit",
+      "B": "$25 — the variable cost with spare capacity",
+      "C": "$15 — an opportunity cost that does not exist here",
+      "D": "$35 — variable cost plus sunk development cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use full cost, invent opportunity cost under spare capacity, or add sunk costs.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "With spare capacity there is no displaced sale, so the floor is just the $25 variable cost. Any price above $25 improves the firm, and no margin is sacrificed.",
+    "ExplanationWrongA": "Option A ($40) uses full manufacturing cost ($25 + $15 fixed). Fixed cost is not incremental to the transfer.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($15) charges an opportunity cost where none exists. Spare capacity means no outside sale is displaced, so opportunity cost is zero.",
+    "ExplanationWrongD": "Option D ($35) adds $10 of sunk development cost to variable cost. Sunk costs are gone and never enter transfer pricing.",
+    "FormulaReference": "Minimum transfer price = variable cost (spare capacity, no opportunity cost)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-770",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A division with spare capacity makes a component at $25 variable and $15 allocated fixed cost per unit. Development costs are sunk. What is the minimum transfer price?",
+    "Topic": "C.770 transfer price spare capacity",
+    "UniqueConceptKey": "C-770-transfer-spare-capacity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: capacity-conditional floor logic"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Transfer pricing — Hirshleifer (1956)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$50 — variable cost only, ignoring the displaced margin",
+      "B": "$85 — the outside market price",
+      "C": "$70 — variable cost plus the lost outside contribution",
+      "D": "$62 — variable cost plus sunk facility cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates drop opportunity cost, anchor on market price, or load sunk facility cost into the floor.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Full capacity means each transfer sacrifices $20 of outside margin: floor = $50 + $20 = $70. Pricing below $70 bleeds contribution the firm already earns.",
+    "ExplanationWrongA": "Option A ($50) omits the $20 displaced margin. Variable cost alone is the floor only when spare capacity exists; here capacity is full.",
+    "ExplanationWrongB": "Option B ($85) adopts the market price as the floor. The market quote caps what the buyer will pay but exceeds the seller's $70 walk-away.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D ($62) adds $12 of sunk facility cost to variable cost. Sunk facility spending is unaffected by transfer volume.",
+    "FormulaReference": "Minimum transfer price = variable cost + opportunity cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-771",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A full-capacity division has $50 variable cost per unit; each internal transfer displaces outside sales contributing $20. Sunk facility cost is $12 per unit and market price is $85. What is the minimum transfer price?",
+    "Topic": "C.771 transfer price displaced margin",
+    "UniqueConceptKey": "C-771-transfer-displaced-margin",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-part floor with sunk-cost trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Transfer pricing — Hirshleifer (1956)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$85 — full cost including allocated fixed cost",
+      "B": "$0 — free transfer since capacity is spare",
+      "C": "$95 — the outside market price",
+      "D": "$60 — the variable cost with spare capacity"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates cost-plus with fixed allocations, price at zero under spare capacity, or default to market.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Spare capacity and no displaced sale make the floor the $60 variable cost. The transfer must cover its incremental outlay; fixed allocations and market quotes do not set the minimum.",
+    "ExplanationWrongA": "Option A ($85) applies cost-plus on full cost ($60 + $25). The $25 fixed layer is not incremental to the transfer decision.",
+    "ExplanationWrongB": "Option B ($0) treats spare capacity as free. Spare capacity removes opportunity cost, not the $60 of variable inputs each unit consumes.",
+    "ExplanationWrongC": "Option C ($95) takes the market price as the floor. The buyer can source outside at $95, but the seller needs only $60 — the surplus is negotiable.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Minimum transfer price = variable cost (spare capacity)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-772",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A division with spare capacity produces at $60 variable and $25 allocated fixed cost per unit. Market price is $95. What is the minimum transfer price?",
+    "Topic": "C.772 transfer floor vs market ceiling",
+    "UniqueConceptKey": "C-772-transfer-floor-ceiling",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: floor logic with zero-price trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Pricing — cost-plus markup"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$100 — cost plus the 25% markup",
+      "B": "$80 — the unmarked manufacturing cost",
+      "C": "$95 — a competitor's price",
+      "D": "$75 — the variable cost with the markup"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates omit the markup, match competitors, or mark up variable cost instead of full cost.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Cost-plus price = $80 x (1 + 0.25) = $80 x 1.25 = $100. The 25% markup on full manufacturing cost recovers cost plus the required return per unit.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($80) sells at unmarked cost. Without the 25% markup the firm recovers cost but earns no return.",
+    "ExplanationWrongC": "Option C ($95) matches a competitor's price. Competitor pricing abandons the cost-plus policy the firm set to guarantee its margin.",
+    "ExplanationWrongD": "Option D ($75) marks up the $60 variable cost instead of the $80 full cost. The policy applies the markup to full manufacturing cost.",
+    "FormulaReference": "Cost-plus price = cost x (1 + markup %)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-773",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Full manufacturing cost is $80 per unit (variable cost $60) and the firm uses a 25% markup. A competitor charges $95. What is the cost-plus price?",
+    "Topic": "C.773 cost-plus markup pricing",
+    "UniqueConceptKey": "C-773-cost-plus-markup",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single markup computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Pricing — cost-plus markup"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$300 — the prevailing market price",
+      "B": "$200 — the unmarked cost",
+      "C": "$280 — cost plus the 40% markup",
+      "D": "$210 — the variable cost with the markup"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates price to market, omit the markup, or apply it to variable cost.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price = $200 x 1.40 = $280. The 40% markup on full cost funds the return the division plan requires; market and variable-cost figures answer different questions.",
+    "ExplanationWrongA": "Option A ($300) adopts the market price. Market pricing may be strategic, but the ask here is the mechanical cost-plus figure of $280.",
+    "ExplanationWrongB": "Option B ($200) omits the 40% markup entirely, pricing at cost with zero return.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D ($210) marks up the $150 variable cost. Cost-plus policy marks up full cost, so $60 of fixed cost per unit would go unrecovered.",
+    "FormulaReference": "Cost-plus price = cost x (1 + markup %)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-774",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Full cost is $200 per unit (variable $150), the markup is 40%, and the market price is $300. What is the cost-plus price?",
+    "Topic": "C.774 cost-plus with market distractor",
+    "UniqueConceptKey": "C-774-cost-plus-market",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: markup computation with base trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Pricing — cost-plus markup"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$200 — the going market price",
+      "B": "$135 — the variable cost with the markup",
+      "C": "$120 — the unmarked cost",
+      "D": "$180 — cost plus the 50% markup"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates price to market, mark up variable cost, or forget the markup.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price = $120 x 1.50 = $180. Marking up the full $120 cost delivers the 50% return the pricing policy targets.",
+    "ExplanationWrongA": "Option A ($200) follows the market price instead of the cost-plus formula. The $200 market quote is irrelevant to the mechanical $180 computation.",
+    "ExplanationWrongB": "Option B ($135) marks up only the $90 variable cost. Fixed cost per unit would then be unrecovered by $30 x 1.50 = $45 per unit of margin.",
+    "ExplanationWrongC": "Option C ($120) prices at cost with no markup, earning zero return on the $120 invested per unit.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Cost-plus price = cost x (1 + markup %)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-775",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Full cost is $120 per unit (variable $90), the markup is 50%, and the market price is $200. What is the cost-plus price?",
+    "Topic": "C.775 cost-plus full-cost base",
+    "UniqueConceptKey": "C-775-cost-plus-base",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: markup computation, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Pricing — cost-plus markup"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$210 — the going market price",
+      "B": "$195 — cost plus the 30% markup",
+      "C": "$150 — the unmarked cost",
+      "D": "$143 — the variable cost with the markup"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates price to market, forget the markup, or mark up variable cost instead of full cost.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price = $150 x 1.30 = $195. The 30% markup on full cost is the policy output; market and variable-cost answers solve different problems.",
+    "ExplanationWrongA": "Option A ($210) follows the market instead of the cost-plus formula. The ask is the mechanical $195 computation, not a market-positioning judgment.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($150) prices at cost with no return. The 30% markup exists precisely to lift price above cost.",
+    "ExplanationWrongD": "Option D ($143) marks up the $110 variable cost. Full-cost policy marks up $150, or $40 of fixed cost per unit goes unrecovered.",
+    "FormulaReference": "Cost-plus price = cost x (1 + markup %)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-776",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Full cost is $150 per unit (variable $110), the markup is 30%, and the market price is $210. What is the cost-plus price?",
+    "Topic": "C.776 cost-plus markup with market present",
+    "UniqueConceptKey": "C-776-cost-plus-market-present",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: markup computation, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Pricing — cost-plus markup"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$320 — the competitor's price",
+      "B": "$216 — the variable cost with the markup",
+      "C": "$300 — cost plus the 20% markup",
+      "D": "$250 — the unmarked cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates match competitors, mark up variable cost, or omit the markup.",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price = $250 x 1.20 = $300. The firm's policy prices from its own $250 full cost; the competitor's $320 is market intelligence, not the formula output.",
+    "ExplanationWrongA": "Option A ($320) copies the competitor. Matching rivals is a pricing strategy, but the question asks for the cost-plus computation of $300.",
+    "ExplanationWrongB": "Option B ($216) marks up the $180 variable cost. The $70 of fixed cost per unit would then earn no return.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D ($250) omits the 20% markup, pricing at cost with zero margin.",
+    "FormulaReference": "Cost-plus price = cost x (1 + markup %)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-777",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Full cost is $250 per unit (variable $180), the markup is 20%, and a competitor charges $320. What is the cost-plus price?",
+    "Topic": "C.777 cost-plus vs competitor price",
+    "UniqueConceptKey": "C-777-cost-plus-competitor",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: markup computation with strategy trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$8,000 — the equal-weighted average of the two outcomes",
+      "B": "$20,000 — the best-case outcome",
+      "C": "$16,000 — the outcomes weighted by their magnitudes",
+      "D": "$12,800 — each outcome weighted by its probability"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates average outcomes equally, anchor on the maximum, or weight by payoff size instead of probability.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.70 x $20,000) + (0.30 x -$4,000) = $14,000 - $1,200 = $12,800. The 70/30 probabilities — not equal shares — are the only valid weights.",
+    "ExplanationWrongA": "Option A ($8,000) averages ($20,000 - $4,000) / 2 with equal weights. The upside is more than twice as likely as the loss, so equal weighting understates the answer by $4,800.",
+    "ExplanationWrongB": "Option B ($20,000) takes the best case as the expectation. A 30% chance of loss must pull the expectation below the upside.",
+    "ExplanationWrongC": "Option C ($16,000) weights by absolute magnitudes (20/24 and 4/24). Magnitude is not probability; the stated 70% and 30% govern.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-778",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A contract pays $20,000 with 70% probability and loses $4,000 with 30% probability. What is its expected value?",
+    "Topic": "C.778 expected value asymmetric probabilities",
+    "UniqueConceptKey": "C-778-ev-asymmetric",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single expected-value computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$22,000 — the probability-weighted sum of both outcomes",
+      "B": "$20,000 — the median of the two payoff amounts",
+      "C": "$18,000 — the upside alone, ignoring the second outcome",
+      "D": "$30,000 — the maximum payoff"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use the median, drop an outcome, or report the maximum.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.60 x $30,000) + (0.40 x $10,000) = $18,000 + $4,000 = $22,000. Both branches count, scaled by 60% and 40%.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($20,000) takes the median of $30,000 and $10,000. Medians ignore probabilities; the 60/40 split makes the mean $22,000.",
+    "ExplanationWrongC": "Option C ($18,000) counts only the upside branch. The $10,000 outcome occurs 40% of the time and adds $4,000.",
+    "ExplanationWrongD": "Option D ($30,000) reports the maximum. The maximum occurs only 60% of the time and cannot stand for the whole distribution.",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-779",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A venture pays $30,000 with 60% probability and $10,000 with 40% probability. What is its expected value?",
+    "Topic": "C.779 expected value two gains",
+    "UniqueConceptKey": "C-779-ev-two-gains",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-term weighting, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$20,000 — the simple average of the three amounts",
+      "B": "$29,000 — each amount weighted by its probability",
+      "C": "$31,000 — the gains counted while the loss is dropped",
+      "D": "$50,000 — the largest single amount"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates average the amounts, drop the loss branch, or anchor on the largest payoff.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.50 x $50,000) + (0.30 x $20,000) + (0.20 x -$10,000) = $25,000 + $6,000 - $2,000 = $29,000. The loss branch deducts $2,000 that droppers miss.",
+    "ExplanationWrongA": "Option A ($20,000) averages ($50,000 + $20,000 - $10,000) / 3. Equal shares misweight a distribution split 50/30/20.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($31,000) sums only the two gains (25,000 + 6,000). The 20% loss branch is real and subtracts $2,000.",
+    "ExplanationWrongD": "Option D ($50,000) anchors on the largest payoff, which occurs only half the time.",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-780",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Returns are $50,000 at 50%, $20,000 at 30%, and -$10,000 at 20%. What is the expected value?",
+    "Topic": "C.780 expected value three branches",
+    "UniqueConceptKey": "C-780-ev-three-branches",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: three-term weighting, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Value of information — expected value with perfect information"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "-$15,000 — expected value without information minus with information",
+      "B": "$185,000 — the two expected values added together",
+      "C": "$100,000 — the expected value with perfect information alone",
+      "D": "$15,000 — expected value with information minus without information"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates reverse the subtraction, add the two values, or report the with-information value as the price of information.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "EVPI = EV with perfect information minus EV without = $100,000 - $85,000 = $15,000. Information is worth the improvement it buys, capped at $15,000 for this decision.",
+    "ExplanationWrongA": "Option A (-$15,000) reverses the subtraction. Information cannot have negative value here; with-information value exceeds without by $15,000.",
+    "ExplanationWrongB": "Option B ($185,000) adds the two expected values. The price of information is their difference, not their sum.",
+    "ExplanationWrongC": "Option C ($100,000) reports the with-information value alone. Without-information value of $85,000 is already achievable free, so only the $15,000 gain is purchasable.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "EVPI = EV with perfect information - EV without information",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-781",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Expected value with perfect information is $100,000 and without it is $85,000. What is the most the firm should pay for perfect information?",
+    "Topic": "C.781 evpi definition computation",
+    "UniqueConceptKey": "C-781-evpi-direct",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-difference recall and computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Value of information — expected value with perfect information"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "-$8,000 — the without-information value minus the with-information value",
+      "B": "$8,000 — the with-information value minus the without-information value",
+      "C": "$60,000 — the with-information value alone",
+      "D": "$112,000 — the two values added together"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates reverse the order, price information at the with-information total, or add instead of subtracting.",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "EVPI = $60,000 - $52,000 = $8,000. Paying more than $8,000 for the report would cost more than the improvement it delivers.",
+    "ExplanationWrongA": "Option A (-$8,000) subtracts in the wrong order. Value added equals with-minus-without, a positive $8,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C ($60,000) prices the report at the full with-information value. The $52,000 baseline is free, so only the $8,000 uplift is attributable to information.",
+    "ExplanationWrongD": "Option D ($112,000) adds the two values. Addition double-counts the baseline; the answer is the $8,000 difference.",
+    "FormulaReference": "EVPI = EV with perfect information - EV without information",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-782",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A market report would raise expected value from $52,000 to $60,000. What is the maximum price for the report?",
+    "Topic": "C.782 evpi report pricing",
+    "UniqueConceptKey": "C-782-evpi-report",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: difference computation with order trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Value of information — expected value with perfect information"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "-$30,000 — reversed subtraction of the two values",
+      "B": "$15,000 — half the difference between the two values",
+      "C": "$200,000 — the with-information value alone",
+      "D": "$30,000 — the gain that perfect information adds"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates reverse the subtraction, halve the gain, or report the with-information total.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "EVPI = $200,000 - $170,000 = $30,000. The $30,000 gain is the ceiling any rational buyer pays for certainty in this decision.",
+    "ExplanationWrongA": "Option A (-$30,000) reverses the subtraction order. Gains from information are with-minus-without, positive $30,000.",
+    "ExplanationWrongB": "Option B ($15,000) halves the $30,000 gain without basis. No sharing or discounting rule applies to the EVPI definition.",
+    "ExplanationWrongC": "Option C ($200,000) charges the full with-information value. The $170,000 status quo is free, leaving $30,000 as information's share.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "EVPI = EV with perfect information - EV without information",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-783",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Perfect information lifts expected value from $170,000 to $200,000. What is the value of that information?",
+    "Topic": "C.783 evpi gain framing",
+    "UniqueConceptKey": "C-783-evpi-gain",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: difference computation, straightforward"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Shut-down rule — price vs. minimum average variable cost"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Shut down — the $45 price sits below the $50 average total cost",
+      "B": "Shut down — the $40 variable cost exceeds the $45 price",
+      "C": "Shut down — price must cover total cost even in the short run",
+      "D": "Continue — the $45 price exceeds the $40 minimum average variable cost"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Candidates compare price to average total cost, misread the variable-cost comparison, or demand full-cost coverage short-run.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The short-run rule is price versus minimum average variable cost: $45 > $40, so each unit contributes $5 toward fixed costs and the line should continue. Fixed-cost coverage is a long-run question, not a shut-down trigger.",
+    "ExplanationWrongA": "Option A compares $45 to the $50 average total cost. Total cost governs long-run exit; short-run operation needs only to beat variable cost.",
+    "ExplanationWrongB": "Option B misreads $40 as exceeding $45. The $40 variable cost sits $5 below price, so contribution is positive.",
+    "ExplanationWrongC": "Option C demands short-run full-cost coverage. Sunk fixed costs do not gate short-run operation under the shut-down rule.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Continue if price >= minimum average variable cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-784",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A product sells for $45 with minimum average variable cost of $40 and average total cost of $50. Should production continue in the short run?",
+    "Topic": "C.784 shut-down rule continue case",
+    "UniqueConceptKey": "C-784-shutdown-continue",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: single-threshold recall and comparison"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Shut-down rule — price vs. minimum average variable cost"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Shut down — the $30 price falls short of the $35 minimum average variable cost",
+      "B": "Continue — the $30 of revenue alone justifies operating",
+      "C": "Continue — the $30 price covers the $8 average fixed cost",
+      "D": "Continue — the $30 price exceeds the $28 average cost"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates operate on revenue alone, compare price to fixed or average cost, or ignore variable cost.",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price of $30 sits $5 below the $35 minimum average variable cost, so each unit deepens the loss beyond fixed costs — shut down. Revenue alone never justifies operating when variable cost is uncovered.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B continues on $30 of revenue while ignoring the $35 variable cost. Revenue without its variable cost proves nothing; the $5 unit loss argues for shutdown.",
+    "ExplanationWrongC": "Option C compares price to the $8 average fixed cost. Fixed-cost coverage is irrelevant short-run; the $35 variable benchmark is the binding test.",
+    "ExplanationWrongD": "Option D compares price to a $28 average figure that blends in sunk fixed cost. The correct benchmark is the $35 variable minimum, which price fails.",
+    "FormulaReference": "Shut down if price < minimum average variable cost",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-785",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Price is $30, minimum average variable cost is $35, and average fixed cost is $8. Should the line operate in the short run?",
+    "Topic": "C.785 shut-down rule stop case",
+    "UniqueConceptKey": "C-785-shutdown-stop",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: threshold comparison with cost-type traps"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Shut-down rule — price vs. minimum average variable cost"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Shut down — $55 fails to cover the $70 sunk-inclusive total",
+      "B": "Shut down — the unit contribution margin is negative",
+      "C": "Continue — the $55 price covers the $20 sunk cost",
+      "D": "Continue — the $55 price exceeds the $50 minimum variable cost and sunk costs are ignored"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates add sunk costs to the benchmark, misstate the contribution sign, or operate to cover sunk cost.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Price of $55 beats the $50 variable minimum by $5 per unit, so continue; the $20 sunk cost is gone either way. Adding sunk cost to the benchmark is the classic shut-down error.",
+    "ExplanationWrongA": "Option A builds a $70 benchmark ($50 + $20 sunk) that price fails. Sunk costs never enter forward-looking thresholds.",
+    "ExplanationWrongB": "Option B claims a negative margin. In fact $55 - $50 = +$5 per unit, a positive contribution that favors operating.",
+    "ExplanationWrongC": "Option C continues for the wrong reason — covering the $20 sunk cost. Sunk recovery is not a decision criterion; the $5 positive margin is.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Continue if price >= minimum AVC; ignore sunk costs",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-786",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Price is $55, minimum average variable cost is $50, and sunk cost is $20 per unit. Operate or shut down in the short run?",
+    "Topic": "C.786 shut-down with sunk cost",
+    "UniqueConceptKey": "C-786-shutdown-sunk",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: threshold comparison with sunk-cost trap"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$70,000 — the simple average of the two payoffs",
+      "B": "$100,000 — the maximum payoff",
+      "C": "$40,000 — the minimum payoff",
+      "D": "$64,000 — each payoff weighted by its probability"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates average payoffs, anchor on the maximum, or retreat to the minimum.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.40 x $100,000) + (0.60 x $40,000) = $40,000 + $24,000 = $64,000. Probability weights replace equal shares and extremes alike.",
+    "ExplanationWrongA": "Option A ($70,000) averages ($100,000 + $40,000) / 2. The 40/60 split favors the lower payoff, pulling the mean $6,000 below the simple average.",
+    "ExplanationWrongB": "Option B ($100,000) takes the maximum, which materializes only 40% of the time.",
+    "ExplanationWrongC": "Option C ($40,000) retreats to the minimum. Conservatism is not expectation; the 40% upside adds $40,000 to the mean.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-787",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "A license pays $100,000 with 40% probability and $40,000 with 60% probability. What is its expected value?",
+    "Topic": "C.787 expected value licensing deal",
+    "UniqueConceptKey": "C-787-ev-license",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: two-term weighting, direct computation"
+    ],
+    "question_state": "Certified"
+  },
+  {
+    "Authorities": [
+      "Expected value — probability-weighted outcomes"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$50,000 — the median of the three payoffs",
+      "B": "$80,000 — the maximum payoff",
+      "C": "$55,000 — the two higher payoffs only, ignoring the lowest",
+      "D": "$59,000 — each payoff weighted by its probability"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Candidates use the median, anchor on the maximum, or drop the lowest branch.",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Expected value = (0.50 x $80,000) + (0.30 x $50,000) + (0.20 x $20,000) = $40,000 + $15,000 + $4,000 = $59,000. Every branch counts at its stated probability, including the 20% tail.",
+    "ExplanationWrongA": "Option A ($50,000) takes the median of the three payoffs. Medians discard probabilities; the heavy 50% weight on $80,000 lifts the mean to $59,000.",
+    "ExplanationWrongB": "Option B ($80,000) anchors on the maximum, which occurs only half the time.",
+    "ExplanationWrongC": "Option C ($55,000) sums only the top two branches ($40,000 + $15,000). The $20,000 tail adds $4,000 that cannot be dropped.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "Expected value = sum of (probability x outcome)",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-788",
+    "certification_date": "2026-09-22",
+    "certification_session": "WSC-CERT-20260922",
+    "Section": "C",
+    "Stem": "Payoffs are $80,000 at 50%, $50,000 at 30%, and $20,000 at 20%. What is the expected value?",
+    "Topic": "C.788 expected value three payoffs",
+    "UniqueConceptKey": "C-788-ev-three-payoffs",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008 compliant)",
+      "DifficultyScore=1 justified: three-term weighting, straightforward"
+    ],
+    "question_state": "Certified"
   }
 ];

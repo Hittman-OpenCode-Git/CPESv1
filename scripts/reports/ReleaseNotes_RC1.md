@@ -1,13 +1,13 @@
-# Release Notes — RC1
+﻿# Release Notes — RC1
 
-**Product:** CMA Part 1 2026 Practice Simulator
+**Product:** CMA 2026 Practice Simulator
 **Version:** v5.7 RC1 (Release Candidate 1)
 **Release Date:** 2026-07-21
 **Status:** Release Candidate
 
 ## Overview
 
-The CMA Part 1 Practice Simulator transforms a repository of 2,500 original MCQs and 75 integrated case studies into a fully functional exam simulation application. This release candidate represents the first complete, verified build of the application layer.
+The CMA Practice Simulator transforms a repository of 2,500 original MCQs and 75 integrated case studies into a fully functional exam simulation application. This release candidate represents the first complete, verified build of the application layer.
 
 ## What's New (Since v5.6)
 

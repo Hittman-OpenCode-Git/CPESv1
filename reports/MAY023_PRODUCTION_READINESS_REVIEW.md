@@ -1,4 +1,4 @@
-# MAY-023 — Production Readiness Review (Verifier Phase)
+﻿# MAY-023 — Production Readiness Review (Verifier Phase)
 
 **Session:** MAY-023 — Controlled Production Rollout Validation
 **Date:** 2026-07-31
@@ -37,7 +37,7 @@
 
 | Check | Result |
 |-------|--------|
-| Page title | "CMA Part 1 2026 Practice Simulator" ✓ |
+| Page title | "CMA 2026 Practice Simulator" ✓ |
 | Start Session panel | Present ✓ |
 | Mode cards | mcq, case, mixed, full (active: mcq) ✓ |
 | Nav tabs | 5 ✓ |

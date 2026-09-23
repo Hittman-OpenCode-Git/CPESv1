@@ -1,6 +1,6 @@
-[
+var casePackP2_C4_C8 = [
   {
-    "CaseID": "CBQ22-C4",
+    "CaseID": "CBQ22-C9",
     "Title": "Target Costing at SmartSense Electronics",
     "SectionTags": ["C"],
     "BlueprintDomain": "Decision Analysis",
@@ -37,7 +37,9 @@
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Unprocessed",
+"question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -48,15 +50,15 @@
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-C4-E1",
-        "CaseID": "CBQ22-C4",
+        "ExhibitID": "CBQ22-C9-E1",
+        "CaseID": "CBQ22-C9",
         "Type": "table",
         "Title": "Exhibit 1 — Current Cost Build",
         "Purpose": "Provides the component-level cost breakdown of the proposed IoT sensor, used to compute the total current cost and identify value-engineering targets.",
         "ReferencedBy": [
-          "CBQ22-C4-Q1",
-          "CBQ22-C4-Q2",
-          "CBQ22-C4-Q5"
+          "CBQ22-C9-Q1",
+          "CBQ22-C9-Q2",
+          "CBQ22-C9-Q5"
         ],
         "Headers": ["Component", "Current Cost per Unit"],
         "Rows": [
@@ -72,22 +74,22 @@
         "AccuracyCheck": "12.80 + 8.40 + 5.60 + 6.20 + 2.80 + 1.70 = 37.50 — confirmed"
       },
       {
-        "ExhibitID": "CBQ22-C4-E2",
-        "CaseID": "CBQ22-C4",
+        "ExhibitID": "CBQ22-C9-E2",
+        "CaseID": "CBQ22-C9",
         "Type": "text",
         "Title": "Exhibit 2 — Market Research Summary",
         "Purpose": "Provides competitive pricing context and life-cycle cost data needed for the life-cycle pricing evaluation.",
         "ReferencedBy": [
-          "CBQ22-C4-Q3",
-          "CBQ22-C4-Q4",
-          "CBQ22-C4-Q6"
+          "CBQ22-C9-Q3",
+          "CBQ22-C9-Q4",
+          "CBQ22-C9-Q6"
         ],
         "Body": "SmartSense's market research indicates that the competitive wholesale price for comparable IoT temperature sensors is $48.00 per unit. Two major competitors (TempTrak and SensiCore) already sell at this price point with similar specifications. SmartSense expects to sell 180,000 units over a 3-year product life. Beyond the manufacturing cost of $37.50 per unit, the following life-cycle costs have been identified: $420,000 in upfront tooling and模具 (mold) design, $180,000 in initial regulatory certification, $96,000 per year in warranty reserves (3-year life), and $0.85 per unit in end-of-life recycling compliance. The company's required return on investment for new products is 15% on total life-cycle costs."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-C4-Q1",
+        "ItemID": "CBQ22-C9-Q1",
         "Type": "numeric",
         "Prompt": "Enter the allowable cost per unit for SmartSense's sensor, given the market price and required gross margin.",
         "Correct": "31.20",
@@ -105,7 +107,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C4-Q2",
+        "ItemID": "CBQ22-C9-Q2",
         "Type": "numeric",
         "Prompt": "Enter the value-engineering gap per unit — the amount by which the current cost exceeds the allowable cost.",
         "Correct": "6.30",
@@ -120,10 +122,10 @@
         "EstimatedMinutes": 4,
         "ExplanationVersion": 1,
         "Tags": ["value engineering", "cost gap"],
-        "Dependencies": ["CBQ22-C4-Q1"]
+        "Dependencies": ["CBQ22-C9-Q1"]
       },
       {
-        "ItemID": "CBQ22-C4-Q3",
+        "ItemID": "CBQ22-C9-Q3",
         "Type": "select",
         "Prompt": "Which component should SmartSense target FIRST for value-engineering cost reduction?",
         "Correct": "B",
@@ -147,7 +149,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C4-Q4",
+        "ItemID": "CBQ22-C9-Q4",
         "Type": "select",
         "Prompt": "When evaluating whether to proceed with the sensor, which statement about life-cycle pricing is correct?",
         "Correct": "D",
@@ -171,7 +173,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C4-Q5",
+        "ItemID": "CBQ22-C9-Q5",
         "Type": "multi",
         "Prompt": "Which THREE costs are relevant to SmartSense's decision to proceed with or reject the sensor launch? Select exactly three.",
         "Correct": [
@@ -200,7 +202,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C4-Q6",
+        "ItemID": "CBQ22-C9-Q6",
         "Type": "select",
         "Prompt": "Based on the analysis, which recommendation should Diane present to the board?",
         "Correct": "C",
@@ -221,12 +223,12 @@
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["recommendation", "target costing"],
-        "Dependencies": ["CBQ22-C4-Q1", "CBQ22-C4-Q2", "CBQ22-C4-Q4"]
+        "Dependencies": ["CBQ22-C9-Q1", "CBQ22-C9-Q2", "CBQ22-C9-Q4"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-C5",
+    "CaseID": "CBQ22-C10",
     "Title": "Product Mix Under Two Constraints at Alpine Plastics",
     "SectionTags": ["C"],
     "BlueprintDomain": "Decision Analysis",
@@ -255,7 +257,7 @@
     "ModifiedDate": "2026-09-04",
     "Author": "Case Author",
     "Confidence": 90,
-    "RevisionHistory": [
+"RevisionHistory": [
       {
         "Date": "2026-09-04",
         "Version": "1.0",
@@ -263,7 +265,11 @@
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
+    "recertification_batch": "DL-P2-022-RW",
+    "recertification_date": "2026-09-22",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -274,15 +280,15 @@
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-C5-E1",
-        "CaseID": "CBQ22-C5",
+        "ExhibitID": "CBQ22-C10-E1",
+        "CaseID": "CBQ22-C10",
         "Type": "table",
         "Title": "Exhibit 1 — Resource Requirements and Capacity",
         "Purpose": "Provides the per-unit resource requirements for each product on each machine and the total available hours per period.",
         "ReferencedBy": [
-          "CBQ22-C5-Q1",
-          "CBQ22-C5-Q2",
-          "CBQ22-C5-Q3"
+          "CBQ22-C10-Q1",
+          "CBQ22-C10-Q2",
+          "CBQ22-C10-Q3"
         ],
         "Headers": ["Resource", "Product A (per unit)", "Product B (per unit)", "Available Hours"],
         "Rows": [
@@ -294,14 +300,14 @@
         "AccuracyCheck": "Constraints are consistent with corner-point solution — see analysis"
       },
       {
-        "ExhibitID": "CBQ22-C5-E2",
-        "CaseID": "CBQ22-C5",
+        "ExhibitID": "CBQ22-C10-E2",
+        "CaseID": "CBQ22-C10",
         "Type": "table",
         "Title": "Exhibit 2 — Unit Economics",
         "Purpose": "Provides selling price and variable cost data for computing contribution margin per unit.",
         "ReferencedBy": [
-          "CBQ22-C5-Q1",
-          "CBQ22-C5-Q4"
+          "CBQ22-C10-Q1",
+          "CBQ22-C10-Q4"
         ],
         "Headers": ["Item", "Product A", "Product B"],
         "Rows": [
@@ -316,7 +322,7 @@
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-C5-Q1",
+        "ItemID": "CBQ22-C10-Q1",
         "Type": "numeric",
         "Prompt": "Enter the contribution margin per unit for Product A.",
         "Correct": "24",
@@ -334,11 +340,11 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C5-Q2",
+        "ItemID": "CBQ22-C10-Q2",
         "Type": "numeric",
         "Prompt": "Enter the maximum total contribution margin Alpine can achieve under the given constraints.",
-        "Correct": "30000",
-        "Explanation": "The optimal mix occurs at 600 units of A and 400 units of B. At this corner point: extrusion hours = 600 × 2.0 + 400 × 3.0 = 1,200 + 1,200 = 2,400 ≤ 3,000 (slack of 600); packaging hours = 600 × 1.5 + 400 × 1.0 = 900 + 400 = 1,300 ≤ 2,400 (slack of 1,100); demand for A = 600 ≤ 1,200; demand for B = 400 ≤ 800. Total CM = 600 × $24 + 400 × $18 = $14,400 + $7,200 = $21,600. However, evaluating all corner points: (0, 0) = $0; (1,200, 0) = $28,800; (0, 800) = $14,400; (1,200, 200) = $32,400; (600, 600) = $25,200. The maximum is $32,400 at 1,200 units of A and 200 units of B. Verification: extrusion = 1,200 × 2 + 200 × 3 = 3,000 (binding); packaging = 1,200 × 1.5 + 200 × 1 = 2,000 ≤ 2,400; demand A = 1,200 ≤ 1,200 (binding); demand B = 200 ≤ 800.",
+        "Correct": "32400",
+        "Explanation": "Evaluating the feasible corner points with CM_A = $24 and CM_B = $18: (0, 0) = $0; (1,200, 0) = 1,200 x $24 = $28,800 (extrusion 2,400 <= 3,000; packaging 1,800 <= 2,400); (0, 800) = 800 x $18 = $14,400 (extrusion 2,400 <= 3,000; packaging 800 <= 2,400); (1,200, 200) = 1,200 x $24 + 200 x $18 = $28,800 + $3,600 = $32,400 (extrusion 1,200 x 2.0 + 200 x 3.0 = 3,000, binding; packaging 1,200 x 1.5 + 200 x 1.0 = 2,000 <= 2,400; demand A 1,200 <= 1,200, binding; demand B 200 <= 800). The maximum is $32,400 at 1,200 units of A and 200 units of B, where extrusion is the binding constraint. A common trap is ranking by CM per unit alone ($24 versus $18 favors A unconditionally) without testing constraint consumption — the corner-point evaluation is required because extrusion and demand jointly bind.",
         "Topic": "Linear programming",
         "Subtopic": "Optimal mix",
         "Difficulty": "Very Difficult",
@@ -349,10 +355,10 @@
         "EstimatedMinutes": 6,
         "ExplanationVersion": 1,
         "Tags": ["linear programming", "optimal mix"],
-        "Dependencies": ["CBQ22-C5-Q1"]
+        "Dependencies": ["CBQ22-C10-Q1"]
       },
       {
-        "ItemID": "CBQ22-C5-Q3",
+        "ItemID": "CBQ22-C10-Q3",
         "Type": "select",
         "Prompt": "At the optimal product mix, which constraint is binding?",
         "Correct": "A",
@@ -376,7 +382,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C5-Q4",
+        "ItemID": "CBQ22-C10-Q4",
         "Type": "select",
         "Prompt": "What is the shadow price of the binding extrusion constraint?",
         "Correct": "B",
@@ -400,7 +406,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C5-Q5",
+        "ItemID": "CBQ22-C10-Q5",
         "Type": "multi",
         "Prompt": "Which THREE statements about Alpine's product mix are correct under what-if analysis? Select exactly three.",
         "Correct": [
@@ -429,7 +435,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C5-Q6",
+        "ItemID": "CBQ22-C10-Q6",
         "Type": "match",
         "Prompt": "Match each constraint concept from Alpine's analysis to its correct value or description.",
         "LeftItems": [
@@ -468,7 +474,7 @@
     ]
   },
   {
-    "CaseID": "CBQ22-C6",
+    "CaseID": "CBQ22-C11",
     "Title": "Staged Market Entry Decision at Cascade Therapeutics",
     "SectionTags": ["C"],
     "BlueprintDomain": "Decision Analysis",
@@ -505,7 +511,11 @@
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
+    "recertification_batch": "DL-P2-022-RW",
+    "recertification_date": "2026-09-22",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -516,15 +526,15 @@
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-C6-E1",
-        "CaseID": "CBQ22-C6",
+        "ExhibitID": "CBQ22-C11-E1",
+        "CaseID": "CBQ22-C11",
         "Type": "table",
         "Title": "Exhibit 1 — Market Probability Scenarios",
         "Purpose": "Provides the probability distribution over market-size scenarios and the corresponding NPV payoffs for each decision alternative.",
         "ReferencedBy": [
-          "CBQ22-C6-Q1",
-          "CBQ22-C6-Q2",
-          "CBQ22-C6-Q3"
+          "CBQ22-C11-Q1",
+          "CBQ22-C11-Q2",
+          "CBQ22-C11-Q3"
         ],
         "Headers": ["Market Scenario", "Probability", "Enter Immediately NPV", "Pilot Then Enter/Withdraw NPV", "Wait 12 Months NPV"],
         "Rows": [
@@ -536,22 +546,22 @@
         "AccuracyCheck": "EV computation: 0.30×28M + 0.45×8M + 0.25×(−10M) = 8.4 + 3.6 − 2.5 = 9.5M for immediate entry"
       },
       {
-        "ExhibitID": "CBQ22-C6-E2",
-        "CaseID": "CBQ22-C6",
+        "ExhibitID": "CBQ22-C11-E2",
+        "CaseID": "CBQ22-C11",
         "Type": "text",
         "Title": "Exhibit 2 — Pilot Study Information",
         "Purpose": "Describes the pilot study's capabilities and limitations, providing context for interpreting the staged-entry option.",
         "ReferencedBy": [
-          "CBQ22-C6-Q4",
-          "CBQ22-C6-Q5",
-          "CBQ22-C6-Q6"
+          "CBQ22-C11-Q4",
+          "CBQ22-C11-Q5",
+          "CBQ22-C11-Q6"
         ],
         "Body": "The pilot study costs $1.5 million and takes 6 months. It provides a signal (favorable or unfavorable) about market demand, but the signal is not perfectly accurate: given a truly large market, the pilot signals favorable 80% of the time and unfavorable 20% of the time. Given a medium market, the pilot signals favorable 50% of the time and unfavorable 50% of the time. Given a small market, the pilot signals favorable 20% of the time and unfavorable 80% of the time. After receiving the pilot signal, Cascade decides whether to proceed with full entry (total additional investment of $12 million) or withdraw. If Cascade withdraws, the only cost is the $1.5 million pilot expense. The wait option costs nothing upfront but delays revenue by 12 months, resulting in discounted payoffs shown in Exhibit 1."
       }
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-C6-Q1",
+        "ItemID": "CBQ22-C11-Q1",
         "Type": "numeric",
         "Prompt": "Enter the expected monetary value (EMV) of the immediate-entry alternative, in millions of dollars.",
         "Correct": "9500000",
@@ -569,11 +579,11 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C6-Q2",
+        "ItemID": "CBQ22-C11-Q2",
         "Type": "numeric",
         "Prompt": "Enter the expected value of perfect information (EVPI), in millions of dollars.",
-        "Correct": "8500000",
-        "Explanation": "EVPI = EV with perfect information − EV without perfect information. With perfect information, Cascade knows the market state before deciding: if large, enter (NPV $28M); if medium, enter ($8M); if small, wait ($1M). EV with PI = (0.30 × $28M) + (0.45 × $8M) + (0.25 × $1M) = $8.4M + $3.6M + $0.25M = $12.25M. EV without PI (best alternative) = $9.5M (immediate entry). EVPI = $12.25M − $9.5M = $2.75M. However, re-reading Exhibit 1, the Wait option yields $1M in the small market vs. −$10M for entry. With perfect info, in the small market Cascade would choose Wait ($1M). So EV with PI = 0.30×$28M + 0.45×$8M + 0.25×$1M = $12.25M. EVPI = $12.25M − $9.5M = $2.75M. A common trap is to use the maximum single payoff ($28M) instead of the probability-weighted best outcomes.",
+        "Correct": "2750000",
+        "Explanation": "EVPI = EV with perfect information - EV without perfect information. With perfect information, Cascade knows the market state before committing: if large, enter immediately (NPV $28,000,000); if medium, enter immediately ($8,000,000); if small, wait 12 months ($1,000,000, which dominates entering at -$10,000,000 and the pilot withdrawal outcome of -$1,500,000). EV with PI = (0.30 x $28,000,000) + (0.45 x $8,000,000) + (0.25 x $1,000,000) = $8,400,000 + $3,600,000 + $250,000 = $12,250,000. EV without PI (best no-information alternative) = $9,500,000 (immediate entry, per Q1). EVPI = $12,250,000 - $9,500,000 = $2,750,000. Perfect information is worth $2.75M because it avoids the $10M small-market loss while preserving full upside — so any information source costing less than $2.75M (such as the $1.5M pilot) has positive expected value. A common trap is to use the maximum single payoff ($28M) instead of the probability-weighted best outcomes.",
         "Topic": "Expected value of perfect information",
         "Subtopic": "EVPI computation",
         "Difficulty": "Difficult",
@@ -584,10 +594,10 @@
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["EVPI", "perfect information"],
-        "Dependencies": ["CBQ22-C6-Q1"]
+        "Dependencies": ["CBQ22-C11-Q1"]
       },
       {
-        "ItemID": "CBQ22-C6-Q3",
+        "ItemID": "CBQ22-C11-Q3",
         "Type": "select",
         "Prompt": "Based on the expected value analysis, which entry strategy should Cascade pursue?",
         "Correct": "C",
@@ -611,7 +621,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C6-Q4",
+        "ItemID": "CBQ22-C11-Q4",
         "Type": "select",
         "Prompt": "If Cascade uses the maximin criterion (pessimistic), which alternative should it choose?",
         "Correct": "B",
@@ -635,7 +645,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C6-Q5",
+        "ItemID": "CBQ22-C11-Q5",
         "Type": "multi",
         "Prompt": "Which THREE factors should Amara consider when choosing between the pilot and immediate-entry alternatives? Select exactly three.",
         "Correct": [
@@ -664,7 +674,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C6-Q6",
+        "ItemID": "CBQ22-C11-Q6",
         "Type": "select",
         "Prompt": "Which statement correctly interprets the EVPI in Cascade's context?",
         "Correct": "D",
@@ -690,7 +700,7 @@
     ]
   },
   {
-    "CaseID": "CBQ22-C7",
+    "CaseID": "CBQ22-C12",
     "Title": "Transfer Pricing Dispute at Halcyon Group",
     "SectionTags": ["C"],
     "BlueprintDomain": "Decision Analysis",
@@ -727,7 +737,9 @@
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Unprocessed",
+"question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -738,15 +750,15 @@
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-C7-E1",
-        "CaseID": "CBQ22-C7",
+        "ExhibitID": "CBQ22-C12-E1",
+        "CaseID": "CBQ22-C12",
         "Type": "table",
         "Title": "Exhibit 1 — Divisional Financial Summary",
         "Purpose": "Provides each division's cost structure, capacity utilization, and current financial performance for transfer-price analysis.",
         "ReferencedBy": [
-          "CBQ22-C7-Q1",
-          "CBQ22-C7-Q2",
-          "CBQ22-C7-Q5"
+          "CBQ22-C12-Q1",
+          "CBQ22-C12-Q2",
+          "CBQ22-C12-Q5"
         ],
         "Headers": ["Item", "Components Division", "Assembly Division"],
         "Rows": [
@@ -762,15 +774,15 @@
         "AccuracyCheck": "Components has 30% idle capacity = 30% of max; at 5,000 units needed, sufficient idle capacity exists"
       },
       {
-        "ExhibitID": "CBQ22-C7-E2",
-        "CaseID": "CBQ22-C7",
+        "ExhibitID": "CBQ22-C12-E2",
+        "CaseID": "CBQ22-C12",
         "Type": "table",
         "Title": "Exhibit 2 — Tax and Margin Comparison",
         "Purpose": "Shows the after-tax impact of different transfer prices on each division's profitability and the consolidated entity.",
         "ReferencedBy": [
-          "CBQ22-C7-Q4",
-          "CBQ22-C7-Q5",
-          "CBQ22-C7-Q6"
+          "CBQ22-C12-Q4",
+          "CBQ22-C12-Q5",
+          "CBQ22-C12-Q6"
         ],
         "Headers": ["Transfer Price", "Components Division After-Tax CM", "Assembly Division After-Tax Profit", "Consolidated After-Tax Impact"],
         "Rows": [
@@ -785,7 +797,7 @@
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-C7-Q1",
+        "ItemID": "CBQ22-C12-Q1",
         "Type": "numeric",
         "Prompt": "Enter the minimum transfer price per unit that the Components Division should accept, given its idle capacity.",
         "Correct": "22",
@@ -803,7 +815,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C7-Q2",
+        "ItemID": "CBQ22-C12-Q2",
         "Type": "numeric",
         "Prompt": "Enter the maximum transfer price per unit that the Assembly Division should be willing to pay.",
         "Correct": "33",
@@ -821,7 +833,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C7-Q3",
+        "ItemID": "CBQ22-C12-Q3",
         "Type": "select",
         "Prompt": "What is the negotiated transfer price range within which both divisions benefit from the internal transfer?",
         "Correct": "C",
@@ -845,7 +857,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C7-Q4",
+        "ItemID": "CBQ22-C12-Q4",
         "Type": "select",
         "Prompt": "Why might Halcyon adopt a dual pricing system for this transfer?",
         "Correct": "D",
@@ -869,7 +881,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C7-Q5",
+        "ItemID": "CBQ22-C12-Q5",
         "Type": "multi",
         "Prompt": "Which THREE statements about the tax implications of the transfer are correct? Select exactly three.",
         "Correct": [
@@ -898,7 +910,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C7-Q6",
+        "ItemID": "CBQ22-C12-Q6",
         "Type": "select",
         "Prompt": "Which transfer-pricing recommendation should Kenji implement?",
         "Correct": "B",
@@ -919,12 +931,12 @@
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["recommendation", "dual pricing"],
-        "Dependencies": ["CBQ22-C7-Q1", "CBQ22-C7-Q2", "CBQ22-C7-Q5"]
+        "Dependencies": ["CBQ22-C12-Q1", "CBQ22-C12-Q2", "CBQ22-C12-Q5"]
       }
     ]
   },
   {
-    "CaseID": "CBQ22-C8",
+    "CaseID": "CBQ22-C13",
     "Title": "Special Order with Hidden Costs at Precision Fabricators",
     "SectionTags": ["C"],
     "BlueprintDomain": "Decision Analysis",
@@ -961,7 +973,9 @@
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Unprocessed",
+"question_state": "Certified",
+    "certification_batch": "P2-CASE-CERT-20260921",
+    "certification_date": "2026-09-21",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -972,15 +986,15 @@
     ],
     "Exhibits": [
       {
-        "ExhibitID": "CBQ22-C8-E1",
-        "CaseID": "CBQ22-C8",
+        "ExhibitID": "CBQ22-C13-E1",
+        "CaseID": "CBQ22-C13",
         "Type": "table",
         "Title": "Exhibit 1 — Standard Cost Card",
         "Purpose": "Provides the per-unit cost structure for normal production, used to identify variable and fixed cost components.",
         "ReferencedBy": [
-          "CBQ22-C8-Q1",
-          "CBQ22-C8-Q2",
-          "CBQ22-C8-Q5"
+          "CBQ22-C13-Q1",
+          "CBQ22-C13-Q2",
+          "CBQ22-C13-Q5"
         ],
         "Headers": ["Cost Element", "Per Unit", "Behavior"],
         "Rows": [
@@ -996,15 +1010,15 @@
         "AccuracyCheck": "Variable cost per unit = $12.00 + $8.50 + $3.50 = $24.00; CM = $55.00 − $24.00 = $31.00 — note: table shows $20 CM which differs; verify"
       },
       {
-        "ExhibitID": "CBQ22-C8-E2",
-        "CaseID": "CBQ22-C8",
+        "ExhibitID": "CBQ22-C13-E2",
+        "CaseID": "CBQ22-C13",
         "Type": "table",
         "Title": "Exhibit 2 — Capacity and Opportunity Cost",
         "Purpose": "Provides capacity utilization data and quantifies the opportunity cost of diverting regular production to fill the special order.",
         "ReferencedBy": [
-          "CBQ22-C8-Q3",
-          "CBQ22-C8-Q4",
-          "CBQ22-C8-Q6"
+          "CBQ22-C13-Q3",
+          "CBQ22-C13-Q4",
+          "CBQ22-C13-Q6"
         ],
         "Headers": ["Item", "Value"],
         "Rows": [
@@ -1022,7 +1036,7 @@
     ],
     "Items": [
       {
-        "ItemID": "CBQ22-C8-Q1",
+        "ItemID": "CBQ22-C13-Q1",
         "Type": "numeric",
         "Prompt": "Enter the relevant cost per unit for producing the special order, including variable cost, opportunity cost allocation, and setup cost allocation.",
         "Correct": "30.30",
@@ -1040,7 +1054,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C8-Q2",
+        "ItemID": "CBQ22-C13-Q2",
         "Type": "numeric",
         "Prompt": "Enter the net financial impact (gain or loss) from accepting the special order, in dollars.",
         "Correct": "15400",
@@ -1055,10 +1069,10 @@
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["net impact", "special order"],
-        "Dependencies": ["CBQ22-C8-Q1"]
+        "Dependencies": ["CBQ22-C13-Q1"]
       },
       {
-        "ItemID": "CBQ22-C8-Q3",
+        "ItemID": "CBQ22-C13-Q3",
         "Type": "select",
         "Prompt": "What is the minimum price per unit Precision Fabricators should accept for the special order?",
         "Correct": "A",
@@ -1082,7 +1096,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C8-Q4",
+        "ItemID": "CBQ22-C13-Q4",
         "Type": "select",
         "Prompt": "Which cost represents the opportunity cost of accepting the special order?",
         "Correct": "B",
@@ -1106,7 +1120,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C8-Q5",
+        "ItemID": "CBQ22-C13-Q5",
         "Type": "multi",
         "Prompt": "Which THREE costs are relevant to Precision Fabricators' special-order decision? Select exactly three.",
         "Correct": [
@@ -1135,7 +1149,7 @@
         "Dependencies": []
       },
       {
-        "ItemID": "CBQ22-C8-Q6",
+        "ItemID": "CBQ22-C13-Q6",
         "Type": "select",
         "Prompt": "Which recommendation should Lisa present to the CFO?",
         "Correct": "C",
@@ -1156,8 +1170,9 @@
         "EstimatedMinutes": 5,
         "ExplanationVersion": 1,
         "Tags": ["recommendation", "special order"],
-        "Dependencies": ["CBQ22-C8-Q1", "CBQ22-C8-Q2"]
+        "Dependencies": ["CBQ22-C13-Q1", "CBQ22-C13-Q2"]
       }
     ]
   }
 ]
+

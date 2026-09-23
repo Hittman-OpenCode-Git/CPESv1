@@ -40,7 +40,12 @@ class ExplanationValidator extends Validator {
         this.totalWrongCount = 0;
 
         const root = config.paths.root;
-        const packs = config.questionPacks;
+        // P2-F3 (2026-09-22): P2 MCQ packs ride alongside P1 WITHOUT merging
+        // (config comment: P1 validators must keep P1-only lists). P2 items
+        // share the ExplanationCorrect + ExplanationWrongA-D schema, so
+        // validateQuestion applies unchanged.
+        const p2packs = config.part2QuestionPacks || [];
+        const packs = config.questionPacks.concat(p2packs);
 
         packs.forEach(file => {
             const fullPath = path.join(root, file);
@@ -60,8 +65,10 @@ class ExplanationValidator extends Validator {
             });
         });
 
-        // Check case banks
-        const caseBanks = config.caseBanks;
+        // Check case banks: legacy (retained) + P1 live + P2 live (P2-F3).
+        // Live banks declare CASE_PACK_\d+ / casePackP2_* globals (see
+        // CaseExtractor patterns); legacy declares ENHANCED_CASE_BASE*.
+        const caseBanks = config.caseBanks.concat(config.casePackBanks || []).concat(config.part2CasePacks || []);
         caseBanks.forEach(file => {
             const fullPath = path.join(root, file);
             if (!fs.existsSync(fullPath)) return;
@@ -72,8 +79,11 @@ class ExplanationValidator extends Validator {
                 if (c.Items && Array.isArray(c.Items)) {
                     c.Items.forEach((item, itemIdx) => {
                         this.totalCaseItemsChecked++;
-                        if (item.Explanation) {
-                            const val = String(item.Explanation);
+                        // P2-F3: P2 items may carry ExplanationCorrect instead
+                        // of Explanation (normalizeCaseItems convention).
+                        const explSrc = item.Explanation !== undefined && item.Explanation !== null ? item.Explanation : item.ExplanationCorrect;
+                        if (explSrc) { // truthy preserves legacy skip-empty semantics
+                            const val = String(explSrc);
                             this.checkPlaceholders(val, `${file}[${caseIdx}] item[${itemIdx}] (${c.CaseID || "?"})`, "Explanation");
                             if (val.length < 50) {
                                 this.shortExplanations++;
@@ -133,11 +143,13 @@ class ExplanationValidator extends Validator {
      * per-object failures instead of poisoning the whole file.
      */
     extractQuestions(content, filename) {
-        return this.extractViaParser(content, filename, /^MCQ_BANK_/);
+        // P2-F3: P2 banks declare pack_p2_[a-f]_questions globals.
+        return this.extractViaParser(content, filename, /^(MCQ_BANK_|pack_p2_[a-f]_questions$)/);
     }
 
     extractCases(content, filename) {
-        return this.extractViaParser(content, filename, /^ENHANCED_CASE_BASE\d*$/);
+        // P2-F3: live banks declare CASE_PACK_\d+ / casePackP2_* globals.
+        return this.extractViaParser(content, filename, /^(ENHANCED_CASE_BASE\d*$|CASE_PACK_\d+$|casePackP2_\d+$|casePackP2Authored$|casePackP2_C4_C8$)/);
     }
 
     extractViaParser(content, filename, bankPattern) {

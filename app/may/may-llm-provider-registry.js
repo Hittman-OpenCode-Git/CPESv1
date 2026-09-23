@@ -212,7 +212,7 @@ const MayLLMProviderRegistry = (function() {
         var startTime = _now();
         var body = {
           messages: [
-            { role: 'system', content: 'You are a CMA Part 1 tutor. Be concise and accurate.' },
+            { role: 'system', content: 'You are a CMA ' + mayPartLabel() + ' tutor. Be concise and accurate.' },
             { role: 'user', content: (request && request.prompt) || '' }
           ],
           max_tokens: 500,
@@ -353,7 +353,7 @@ const MayLLMProviderRegistry = (function() {
         var body = {
           model: _env('OPENAI_MODEL') || 'gpt-4',
           messages: [
-            { role: 'system', content: 'You are a CMA Part 1 tutor. Be concise and accurate.' },
+            { role: 'system', content: 'You are a CMA ' + mayPartLabel() + ' tutor. Be concise and accurate.' },
             { role: 'user', content: (request && request.prompt) || '' }
           ],
           max_tokens: 500,
@@ -661,8 +661,17 @@ const MayLLMProviderRegistry = (function() {
     var stub = _providers['stub-intent'];
 
     function _fallback(reason, realConfidence) {
+      // May 2.5 Track 1 (may_2_5_track1, W6/DL-060): route the _fallback
+      // source through the learner-visible truth path (pill + T6 bit).
+      try {
+        if (typeof window !== 'undefined' && typeof window.MayReportDegradation === 'function') {
+          window.MayReportDegradation('llm-fallback', String(reason || 'fallback'));
+        } else if (typeof MayDegradation !== 'undefined' && MayDegradation.report) {
+          MayDegradation.report('llm-fallback', String(reason || 'fallback'));
+        }
+      } catch (e) { /* degradation hook non-blocking */ }
       if (stub && stub.send) {
-        return stub.send(request).then(function (stubResp) {
+        const p = stub.send(request).then(function (stubResp) {
           try {
             if (typeof MayTelemetry !== 'undefined') {
               MayTelemetry.trackFallback({
@@ -678,9 +687,12 @@ const MayLLMProviderRegistry = (function() {
           if (stubResp && stubResp.metadata) stubResp.metadata.source = 'fallback';
           return stubResp;
         });
+        return p.finally(function () {
+          try { if (typeof MayDegradation !== 'undefined' && MayDegradation.clear) MayDegradation.clear('llm-fallback'); } catch (e) {}
+        });
       }
       // No stub available — return a synthetic fallback response so callers never see undefined
-      return Promise.resolve({
+      const p = Promise.resolve({
         success: false,
         content: null,
         confidence: 0,
@@ -694,6 +706,9 @@ const MayLLMProviderRegistry = (function() {
           mode: null,
           source: 'fallback'
         }
+      });
+      return p.finally(function () {
+        try { if (typeof MayDegradation !== 'undefined' && MayDegradation.clear) MayDegradation.clear('llm-fallback'); } catch (e) {}
       });
     }
 

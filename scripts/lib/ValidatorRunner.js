@@ -101,6 +101,9 @@ class ValidatorRunner {
         fs.writeFileSync(jsonPath, JSON.stringify(this.results, null, 2), "utf8");
         logger.success(`JSON report: ${jsonPath}`);
 
+        // --- Coverage Fingerprint (S11/S12) ---
+        this.emitCoverageFingerprint(outputDir);
+
         // --- Markdown Summary ---
         const mdPath = path.join(outputDir, config.reports.markdown);
         const md = this.buildMarkdownSummary();
@@ -235,6 +238,23 @@ class ValidatorRunner {
 
         lines.push("</body></html>");
         return lines.join("\n");
+    }
+
+    // --- Coverage Fingerprint (S11/S12) ---
+    emitCoverageFingerprint(outputDir) {
+        const fingerprint = {
+            timestamp: new Date().toISOString(),
+            validators: this.results.map(r => ({
+                validator: r.validator,
+                status: r.status,
+                statistics: r.statistics,
+                scanned: r.statistics?.questionsScanned || r.statistics?.itemsScanned || r.statistics?.casesScanned || null,
+                rawExpected: null
+            }))
+        };
+        const fpPath = path.join(outputDir, "coverage_fingerprint.json");
+        fs.writeFileSync(fpPath, JSON.stringify(fingerprint, null, 2), "utf8");
+        logger.success(`Coverage fingerprint: ${fpPath}`);
     }
 
     summary() {

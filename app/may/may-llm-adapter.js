@@ -102,7 +102,7 @@ const MayLLMAdapter = (function() {
       } catch (e) {}
     }
     // Fallback prompt
-    return 'You are a CMA Part 1 tutor. Help with coaching mode: ' + mode + '.';
+    return 'You are a CMA ' + mayPartLabel() + ' tutor. Help with coaching mode: ' + mode + '.';
   }
 
   /**

@@ -1,6 +1,6 @@
-<#
+﻿<#
 .SYNOPSIS
-  Final CMA Part 1 Simulator cleanup + wind-down documentation script.
+  Final CMA Simulator cleanup + wind-down documentation script.
 
 .DESCRIPTION
   - Dry-run by default.
@@ -268,7 +268,7 @@ $cleanupManifestPath = Join-Path $dirs.cleanupReports "FINAL_PROJECT_CLEANUP_MAN
 $cleanupReportPath = Join-Path $dirs.sessionStatus "FINAL_PROJECT_CLEANUP_AND_GOVERNANCE_HANDOFF_$stampFile.md"
 
 $projectStatus = @"
-# CMA Part 1 Simulator — Project Pause Status
+# CMA Simulator — Project Pause Status
 
 Generated: $timestamp
 

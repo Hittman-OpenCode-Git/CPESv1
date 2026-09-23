@@ -1952,7 +1952,9 @@ var pack_p2_f_questions = [
       "Integrity = honesty, fair dealing, no discrediting conduct",
       "Authorities match"
     ],
-    "question_state": "Certified"
+    "question_state": "Certified",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
   },
   {
     "Authorities": [
@@ -3646,6 +3648,7 @@ var pack_p2_f_questions = [
     ],
     "question_state": "Certified",
     "certification_session": "P2-065",
+    "certification_batch": "P2-CERT-20260923",
     "certification_date": "2026-08-26"
   },
   {
@@ -10890,14 +10893,14 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "Part": 2,
     "Part2OnlyFlag": true,
-    "Stem": "The CFO Mariela Hoffmann proposes recording a contingent liability for a pending FCPA investigation as 'general legal reserves' rather than disclosing the nature of the contingency, even though outside counsel believes the matter is material and disclosure is required. Two of the four IMA principles appear to support Mariela's preferred treatment, while two others point to disclosure. Which evaluation best reconciles the principles and identifies the appropriate course of action?",
+"Stem": "The CFO Mariela Hoffmann proposes recording a contingent liability for a pending FCPA investigation as 'general legal reserves' rather than disclosing the nature of the contingency, even though outside counsel believes the matter is material and disclosure is required. Two of the four IMA principles appear to support Mariela's preferred treatment, while two others point to disclosure. Which evaluation best reconciles the principles and identifies the appropriate course of action?",
     "Choices": {
       "A": "Adopt Mariela's treatment because Confidentiality and Competence together authorize technical reserve estimates without mandatory disclosure of the underlying matter.",
       "B": "Adopt disclosure of the nature of the contingency because Integrity and Credibility require that the financial statements and accompanying disclosures not contain misrepresentations or omit material information, and they override any narrow reading of Confidentiality that would suppress material facts.",
       "C": "Adopt Mariela's treatment because Credibility permits management to determine which contingencies are material based on quantitative thresholds alone.",
       "D": "Adopt disclosure only if outside counsel signs a representation letter, because the auditor otherwise has primary responsibility for disclosure adequacy."
     },
-    "CorrectChoice": "A",
+    "CorrectChoice": "B",
     "CognitiveLevel": "Evaluate",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
@@ -10913,7 +10916,7 @@ var pack_p2_f_questions = [
     "FormulaReference": null,
     "CommonTrapReference": "Treating Confidentiality as suppressing material disclosure, treating Credibility as allowing management to set materiality thresholds, or outsourcing disclosure responsibility to outside counsel.",
     "DecisionTreeReference": "Identify four-principle tension -> weigh Integrity + Credibility against Confidentiality + Competence -> Integrity and Credibility govern disclosure of material facts -> adopt disclosure.",
-    "ExplanationCorrect": "The IMA Statement contains four principles, and the controller must evaluate them holistically rather than picking the two that favor the preferred outcome. Confidentiality supports keeping certain details limited to those who need to know, and Competence supports applying professional judgment to the reserve estimate, but neither authorizes suppressing the existence and nature of a material FCPA contingency. Integrity forbids knowingly misrepresenting facts or omitting information that would render the disclosures misleading, and Credibility requires disclosing all relevant information that a user would reasonably expect to receive. Integrity and Credibility therefore govern the disclosure decision, and Mariela's preferred treatment must be set aside.",
+    "ExplanationCorrect": "Under the IMA Statement of Ethical Professional Practice, the controller must weigh all four principles — Integrity, Credibility, Confidentiality, and Competence — rather than selecting only those that support a preferred outcome. Choice B correctly identifies that Integrity forbids knowingly omitting material information that would render disclosures misleading, and Credibility requires disclosing all relevant information that a reasonable user would expect. Confidentiality permits withholding details only when not required by law or professional standards; it does not authorize suppressing the existence and nature of a material FCPA contingency where outside counsel has confirmed disclosure is required. Competence governs the quality of the reserve estimate, not the disclosure decision. Because the FCPA investigation is material and disclosure is required, Integrity and Credibility govern, mandating disclosure. Mariela's proposed treatment must be set aside.",
     "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC]='' (DL-008 compliant)",
@@ -10932,12 +10935,12 @@ var pack_p2_f_questions = [
       "source_id": "F.2",
       "rule_or_proposition": "IMA Integrity and Credibility require that disclosures not misrepresent or omit material information; Confidentiality yields when disclosure is required by law or professional standards."
     },
-    "distractor_intent": {
+"distractor_intent": {
       "A": {
         "misconception": "Selects the two principles that support the preferred outcome and ignores that Integrity and Credibility govern the disclosure decision."
       },
       "B": {
-        "misconception": "Correct - weighs all four principles and identifies Integrity and Credibility as governing disclosure of material facts."
+        "misconception": "Correct answer — weighs all four principles and identifies Integrity and Credibility as governing disclosure of material facts."
       },
       "C": {
         "misconception": "Misuses Credibility to allow management to redefine materiality using quantitative thresholds alone."
@@ -10946,16 +10949,18 @@ var pack_p2_f_questions = [
         "misconception": "Attempts to shift disclosure responsibility to outside counsel rather than the issuer and certifying officers."
       }
     },
-    "uniqueness_note": "P2-F-227 anchors F.2 Evaluate-level reasoning on four-principle tension. P2-F-216 covers misclassification; P2-F-221 covers FCPA invoice; P2-F-224 covers control override; no overlap.",
+"uniqueness_note": "P2-F-227 anchors F.2 Evaluate-level reasoning on four-principle tension. P2-F-216 covers misclassification; P2-F-221 covers FCPA invoice; P2-F-224 covers control override; no overlap.",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-    "question_state": "Certified",
+"question_state": "Certified",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Confidentiality permits withholding only when not required by law or professional standards, and Competence governs the quality of the estimate rather than the disclosure of the underlying contingency; together they do not override the disclosure obligation for a material matter.",
+    "recertification_batch": "DL-047-F227-REMEDIATION",
+    "recertification_date": "2026-09-23",
+    "ExplanationWrongA": "Choice A selects only the two principles — Confidentiality and Competence — that appear to support non-disclosure, while ignoring that Integrity and Credibility impose affirmative disclosure obligations when a matter is material. Confidentiality does not override legal or professional standards requiring disclosure; it permits withholding only when disclosure is not required. Competence governs the technical quality of the reserve estimate, not whether the underlying matter must be disclosed. By treating Confidentiality as a blanket shield, Choice A misstates the principle hierarchy and would permit the issuer to hide a material FCPA contingency behind a 'general legal reserves' label.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Credibility reinforces the duty to disclose relevant information and does not permit management to redefine materiality; quantitative thresholds are a starting point, but qualitative materiality considerations such as an FCPA investigation must also be considered.",
     "ExplanationWrongD": "Outside counsel's representation letter does not shift disclosure responsibility away from management and the certifying officers under SOX 302; the issuer remains responsible for the adequacy of its disclosures."
   },

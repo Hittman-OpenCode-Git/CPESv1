@@ -1,8 +1,8 @@
-# Longcat 2.0 Review Prompt — CMA Part 1 Pack A (Third-Party Content Review)
+﻿# Longcat 2.0 Review Prompt — CMA Part 1 Pack A (Third-Party Content Review)
 
 ## Context
 
-You are reviewing **Pack A** of the CMA Part 1 Exam Simulator question bank. This pack contains **500 multiple-choice questions** spanning all six CMA Part 1 domains (A–F). The questions have been split into **63 verbatim parts** (≤40KB each, ~10K tokens) so your retrieval index can fully ingest each part without prefix truncation.
+You are reviewing **Pack A** of the CMA Exam Simulator question bank. This pack contains **500 multiple-choice questions** spanning all six CMA Part 1 domains (A–F). The questions have been split into **63 verbatim parts** (≤40KB each, ~10K tokens) so your retrieval index can fully ingest each part without prefix truncation.
 
 ## Source File
 

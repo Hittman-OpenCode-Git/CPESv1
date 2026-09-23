@@ -1,11 +1,11 @@
-{
+﻿{
   "contractId": "ADMIN-DATA-CONTRACT-v1.0",
   "title": "May Administration Portal — Data Contract",
   "version": "1.0.0",
   "status": "DESIGN",
   "authority": "SESSION252 Board H",
   "generatedTimestamp": "2026-07-27T23:00:00.000Z",
-  "appliesTo": "May Administration Portal (CMA Part 1 Exam Simulator Admin Interface)",
+  "appliesTo": "May Administration Portal (CMA Exam Simulator Admin Interface)",
 
   "preamble": {
     "purpose": "Define the complete data contract for all admin-facing views in the May Administration Portal. This contract specifies what data each role can see, how it is fetched, what operations are permitted, and how views relate to each other. It is a design document — no implementation code.",

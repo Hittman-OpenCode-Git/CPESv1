@@ -66,7 +66,7 @@
       "defect_class": "DL-013",
       "name": "Template Boilerplate in Unprocessed Sections",
       "severity": "Medium",
-      "scope": "851 fields across Packs A (238), C (357), D (256)",
+      "scope": "0 fields pool-wide — CLOSED CLEAN verified 2026-09-05 (raw-file screen: 0 template hits in pack_a_corrected.js); all prior counts superseded",
       "affected_qids": "Multiple — primarily Pack C Section F (75 items), Pack D Section F (74 items), and residual Pack A/C/D sections",
       "learner_pool_exposure": false,
       "remediation_effort": "Medium",

@@ -1,10 +1,10 @@
-# CMA Content & Assessment Quality Standard (CAQS v1.0)
+﻿# CMA Content & Assessment Quality Standard (CAQS v1.0)
 
 **Version:** 1.0
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
 **Dependencies:** QUESTION_METADATA_STANDARD.md, EXPLANATION_STYLE_GUIDE.md, TAXONOMY_REGISTRY.md
-**Applies to:** All MCQ banks, case studies, exhibits, and assessment content in the CMA Part 1 Exam Simulator
+**Applies to:** All MCQ banks, case studies, exhibits, and assessment content in the CMA Exam Simulator
 
 ---
 
@@ -12,7 +12,7 @@
 
 ### 1.1 Purpose
 
-This document establishes the single quality standard against which every piece of content in the CMA Part 1 Exam Simulator shall be judged. It defines what "exam-ready" means and provides measurable criteria for all content validation, review, and acceptance decisions.
+This document establishes the single quality standard against which every piece of content in the CMA Exam Simulator shall be judged. It defines what "exam-ready" means and provides measurable criteria for all content validation, review, and acceptance decisions.
 
 ### 1.2 Scope
 
@@ -898,7 +898,7 @@ Any content that does not meet the Gold Standard Checklist but is approved for p
 
 | Version | Date | Author | Summary |
 |---------|------|--------|---------|
-| 1.0 | 2026-07-21 | AI — Quality Standard Agent | Initial version. Establishes CAQS as governing quality standard for CMA Part 1 Exam Simulator |
+| 1.0 | 2026-07-21 | AI — Quality Standard Agent | Initial version. Establishes CAQS as governing quality standard for CMA Exam Simulator |
 
 ### B. Document Dependencies
 

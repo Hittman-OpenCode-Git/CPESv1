@@ -1,22 +1,26 @@
 {
   "name": "cma-part-1-exam-simulator",
   "version": "1.1.1",
-  "description": "CMA Part 1 Exam Simulator & Question Repository",
+  "description": "CMA Exam Simulator & Question Repository",
   "private": true,
   "main": "main.js",
   "scripts": {
     "validate": "node scripts/validate.js",
     "registry": "node scripts/build_master_registry.js",
     "audit": "node scripts/section_a_validation_batch.js",
-    "dashboard": "node scripts/build_dashboard.js",
+    "dashboard": "node scripts/s121_portfolio_dashboard.js",
     "build-registry": "node scripts/build_master_registry.js && node scripts/generate_registry.js",
     "generate-registry": "node scripts/generate_registry.js",
     "baseline-coherence": "node scripts/baseline_coherence.js",
-    "pipeline": "npm run validate && npm run build-registry && npm run dashboard && npm run baseline-coherence",
+    "case-screens": "node scripts/case_semantic_screens.js",
+    "pipeline": "npm run validate && npm run validate:p2 && npm run case-screens && node scripts/semantic_key_verifier.js && npm run build-registry && npm run dashboard && npm run baseline-coherence",
+    "pipeline:audit": "npm run validate && npm run case-screens && node scripts/semantic_key_verifier.js --audit && npm run build-registry && npm run dashboard && npm run baseline-coherence",
     "preflight": "node scripts/preflight.js",
     "preflight:p2": "node scripts/preflight_p2.js",
+    "preflight:all": "npm run preflight && npm run preflight:p2",
     "validate:p2": "node scripts/validators/p2_schema_validator.js",
     "probe-model": "node scripts/model_limit_probe.js",
+    "probe:parity": "node scripts/pool_parity_probe.js",
     "smoke": "node scripts/smoke_test.js",
     "test:parser": "node scripts/test_pack_parser.js",
     "electron": "electron .",
@@ -24,7 +28,7 @@
   },
   "devDependencies": {
     "@huggingface/transformers": "^4.2.0",
-    "electron": "^33.4.11",
+    "electron": "^44.4.3",
     "playwright": "^1.61.1"
   }
 }

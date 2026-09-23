@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://cma-simulator.internal/schemas/investigation-workbench/v1",
   "document": {
     "title": "Question Investigation Workbench — Workflow Model",
@@ -8,7 +8,7 @@
     "status": "Active",
     "created": "2026-07-27",
     "author": "Board I — Investigation Workbench Prototype",
-    "purpose": "Define the complete investigation workflow experienced by a human investigator resolving question-quality issues in the CMA Part 1 Exam Simulator.",
+    "purpose": "Define the complete investigation workflow experienced by a human investigator resolving question-quality issues in the CMA Exam Simulator.",
     "dependencies": {
       "Board_A": "Question Investigation API — full dossier generation",
       "Board_C": "Challenge Triage Engine — incoming challenge categorization",

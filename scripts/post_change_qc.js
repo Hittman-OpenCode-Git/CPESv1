@@ -1,5 +1,5 @@
-/**
- * post_change_qc.js — Post-Change Quality Control for CMA Part 1 Exam Simulator
+﻿/**
+ * post_change_qc.js — Post-Change Quality Control for CMA Exam Simulator
  *
  * Runs governance guard tests, parse-checks all pack files, verifies QID counts
  * and certified counts, and writes a structured QC report to stdout and to

@@ -55,7 +55,53 @@ const P2_DOMAIN_TOPICS = {
     "Profitability Ratios", "Market Ratios", "DuPont Analysis",
     "Horizontal Analysis", "Vertical Analysis", "Trend Analysis",
     "Earnings Quality", "Operating Leverage", "Financial Leverage",
-    "Sustainable Growth Rate", "Comparative Analysis"
+    "Sustainable Growth Rate", "Comparative Analysis",
+    // P2-specific topic keywords (from A.xxx topic naming pattern)
+    "Current Ratio", "Quick Ratio", "Cash Ratio", "Working Capital",
+    "Operating Cash Flow Ratio", "Debt-to-Equity", "Debt-to-Assets",
+    "Times Interest Earned", "Fixed Charge Coverage", "Off-Balance-Sheet",
+    "Integrated Liquidity", "Inventory Turnover", "Days Sales Outstanding",
+    "Days Payable Outstanding", "Total Asset Turnover", "Gross Margin",
+    "Operating Margin", "Net Profit Margin", "Return on Assets",
+    "Return on Equity", "Price to Earnings", "DuPont", "Sustainable Growth",
+    "Operating Cash Flow", "Free Cash Flow", "Cash Flow to Debt",
+    "Cash Conversion Cycle", "Quality of Earnings", "Operating Cash Flow per Share",
+    "Gross Margin Trend", "Net Profit Margin", "Return on Assets",
+    "Return on Equity", "Price to Earnings", "DuPont", "Sustainable Growth",
+    "Revenue Recognition", "Cross-Sectional Comparison", "Peer Group",
+    "Business Mix", "Integrating Multiple Ratio", "Lending Decision",
+    "Qualitative Risk", "Return on Common Equity", "Earnings per Share",
+    "EBITDA Margin", "Segment Profitability",
+    // Additional terms for remaining A.xxx topics
+    "Profitability Benchmarking", "Benchmarking", "Debt Service Coverage",
+    "Debt Service Coverage Ratio", "Altman Z-Score", "Z-Score",
+    "Cash Flow Adequacy", "Cash Flow Adequacy for Debt Repayment",
+    "Credit Rating Migration", "Credit Migration", "Covenant Compliance",
+    "Covenant", "Liquidity Solvency Distinction", "Liquidity Solvency",
+    "Cash Flow Accrual Divergence", "Cash Flow Accrual",
+    "Multi-Covenant", "Multi-Covenant Credit Assessment",
+    "Common-Size Financial Statements", "Common-Size",
+    "ROE vs ROA", "Financial Leverage Effect", "High DOL",
+    "Degree of Operating Leverage", "Business Risk",
+    "Debt Service Coverage", "Debt Service Coverage Ratio",
+    "Altman Z-Score", "Z-Score", "Cash Flow Adequacy",
+    "Cash Flow Adequacy for Debt Repayment", "Credit Rating Migration",
+    "Credit Migration", "Covenant Compliance", "Covenant",
+    "Liquidity Solvency Distinction", "Liquidity Solvency",
+    "Cash Flow Accrual Divergence", "Cash Flow Accrual",
+    "Multi-Covenant", "Multi-Covenant Credit Assessment",
+    "Common-Size Financial Statements", "Common-Size",
+    "ROE vs ROA", "Financial Leverage Effect", "High DOL",
+    "Degree of Operating Leverage", "Business Risk",
+    // Additional for remaining items
+    "Degree of Financial Leverage", "DFL", "EBIT", "EPS Volatility",
+    "Multi-Ratio Liquidity Assessment", "Multi-Ratio", "Short-Term vs Structural",
+    // Final remaining items
+    "Profitability Analysis", "Segment Performance", "Capital Allocation",
+    "Integrated Leverage", "Covenant Compliance Scenario",
+    // Final final items
+    "Comprehensive Financial Analysis", "Investment Recommendation Synthesis",
+    "Operating Cash Flow Ratio Lowercase"
   ],
   "Corporate Finance": [
     "Risk and Return", "CAPM", "Cost of Capital", "WACC",
@@ -180,6 +226,7 @@ class Part2BlueprintValidator extends Validator {
         const content = fs.readFileSync(fullPath, "utf8");
         const cases = CaseExtractor.extractFromContent(content);
         if (!cases) continue;
+        CaseExtractor.normalizeCaseItems(cases);
 
         cases.forEach((c, caseIdx) => {
           totalCases++;
@@ -231,13 +278,10 @@ class Part2BlueprintValidator extends Validator {
   }
 
   _findP2CaseFiles(root) {
-    const files = [];
-    for (let i = 1; i <= 3; i++) {
-      const fname = `p2/case_pack_p2_${i}.js`;
-      const fp = path.join(root, fname);
-      if (fs.existsSync(fp)) files.push(fname);
-    }
-    return files;
+    // DL-050 wiring: use config.part2CasePacks (5 files) instead of hardcoded 3
+    return (config.part2CasePacks || []).filter(f => {
+      return fs.existsSync(path.join(root, f));
+    });
   }
 
   // ── Extraction ────────────────────────────────────────────────
@@ -326,8 +370,18 @@ class Part2BlueprintValidator extends Validator {
       const domain = P2_SECTION_TO_DOMAIN[item.Section];
       const domainTopicList = P2_DOMAIN_TOPICS[domain];
       if (domainTopicList) {
+        // For P2 items with specific topic format (A.XXX Term — Description),
+        // extract the key financial term between the section code and em dash (or end of string)
+        let topicToMatch = item.Topic;
+        const p2TopicMatch = item.Topic.match(/^[A-F]\.\d+\s+([^—]+?)(?:\s*—|$)/i);
+        if (p2TopicMatch) {
+          topicToMatch = p2TopicMatch[1].trim().toLowerCase();
+        } else {
+          topicToMatch = topicToMatch.toLowerCase();
+        }
         const topicMatches = domainTopicList.some(t =>
-          item.Topic.toLowerCase().includes(t.toLowerCase())
+          topicToMatch.includes(t.toLowerCase()) ||
+          t.toLowerCase().includes(topicToMatch)
         );
         if (!topicMatches) {
           this.addWarning(

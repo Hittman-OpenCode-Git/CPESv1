@@ -2,15 +2,15 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-09-16 17:08:06
-  Source hash: 1e2df73a
+  Last generated: 2026-09-22 17:11:05
+  Source hash: 6f61b051
 -->
 
-# Master Question Registry — CMA Part 1 Exam Simulator
+# Master Question Registry — CMA Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-09-16 17:08:06
-**Source Hash:** `1e2df73a`
+**Generated:** 2026-09-22 17:11:05
+**Source Hash:** `6f61b051`
 **Total Questions:** 3495
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
@@ -1668,7 +1668,7 @@
 | P1-FC-013 | T | F.013 ERP controls — implementation risk and scope | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-014 | T | F.014 digital transformation — legacy system decom | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-015 | T | F.015 robotic process automation use case | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-016 | T | F.016 cloud computing service models | Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-016 | T | F.016 cloud computing service models | Moderate-Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-017 | T | F.017 system integration — API security governance | Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-018 | T | F.018 cybersecurity governance — incident response | Very Difficult | P1-F.4 Cybersecurity | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-019 | T | F.019 digital transformation governance — technolo | Very Difficult | P1-F.1 Information Systems | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -1702,7 +1702,7 @@
 | P1-FC-047 | T | F.047 data quality — analyzing completeness vs. ac | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-048 | T | F.048 data quality dimensions accuracy completenes | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-049 | T | F.049 data quality — analyzing timeliness degradat | Difficult | F.2.a. Data governance and data quality management | pack_c_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FC-050 | T | F.050 data quality dimensions accuracy completenes | Very Difficult | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FC-050 | T | F.050 data quality dimensions accuracy completenes | Easy | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-051 | T | F.051 AI — evaluating supervised vs. unsupervised  | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-052 | T | F.052 AI — evaluating algorithmic bias risk in cre | Very Difficult | F.4.a. Artificial intelligence and machine learning in management accounting | pack_c_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FC-053 | T | F.053 artificial intelligence machine learning | Moderate | P1-F Technology and analytics | pack_c_corrected.js | 0 | 0 | — | Not Scored |
@@ -2199,7 +2199,7 @@
 | P1-DD-074 | C | D.074 abnormal spoilage cost treatment | Difficult | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-DD-075 | C | D.075 abnormal spoilage cost treatment | Moderate-Easy | P1-D Cost management | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-001 | I | E.001 three lines of defense model | Easy | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-ED-002 | I | E.002 three lines of defense model | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-ED-002 | I | E.002 three lines of defense model | Moderate-Easy | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-003 | I | E.003 Three Lines of Defense — evaluating fourth-l | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-004 | I | E.004 COSO Principle 5 — accountability — evaluati | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-ED-005 | I | E.005 three lines of defense dual reporting | Difficult | P1-E Internal controls | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -2282,7 +2282,7 @@
 | P1-FD-007 | T | F.007 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-008 | T | F.008 BI — evaluating self-service BI governance m | Very Difficult | P1-F.1 Information Systems | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-009 | T | F.009 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
-| P1-FD-010 | T | F.010 business intelligence self service reporting | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
+| P1-FD-010 | T | F.010 business intelligence self service reporting | Easy | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-011 | T | F.011 cybersecurity — data encryption strategy eva | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-012 | T | F.012 encryption — evaluating encryption at rest v | Difficult | P1-F.3 Data Governance | pack_d_corrected.js | 0 | 0 | — | Not Scored |
 | P1-FD-013 | T | F.013 data encryption at rest and in transit | Difficult | P1-F Technology and analytics | pack_d_corrected.js | 0 | 0 | — | Not Scored |
@@ -11502,22 +11502,22 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 4ms)
-- **Metadata Validator**: WARN (0 errors, 1 warnings, 180ms)
-- **Blueprint Validator**: WARN (0 errors, 73 warnings, 123ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 3376 warnings, 738ms)
-- **Difficulty Validator**: WARN (0 errors, 70 warnings, 144ms)
-- **Reference Validator**: WARN (0 errors, 128 warnings, 105ms)
-- **Explanation Validator**: WARN (0 errors, 6 warnings, 759ms)
-- **Case Integrity Validator**: WARN (0 errors, 12 warnings, 106ms)
-- **Case Identity Validator**: PASS (0 errors, 0 warnings, 37ms)
-- **PsychometricValidator**: WARN (0 errors, 6618 warnings, 6130ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 1ms)
+- **Metadata Validator**: WARN (0 errors, 1 warnings, 571ms)
+- **Blueprint Validator**: WARN (0 errors, 188 warnings, 542ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 3263 warnings, 674ms)
+- **Difficulty Validator**: WARN (0 errors, 72 warnings, 1093ms)
+- **Reference Validator**: WARN (0 errors, 77 warnings, 331ms)
+- **Explanation Validator**: WARN (0 errors, 13 warnings, 1041ms)
+- **Case Integrity Validator**: WARN (0 errors, 1 warnings, 233ms)
+- **Case Identity Validator**: PASS (0 errors, 0 warnings, 54ms)
+- **PsychometricValidator**: WARN (0 errors, 6730 warnings, 6644ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-09-16 17:08:06
-  Source hash: 1e2df73a
+  Registry regenerated on 2026-09-22 17:11:05
+  Source hash: 6f61b051
   Questions: 3495
   To regenerate: node scripts/generate_registry.js
 -->

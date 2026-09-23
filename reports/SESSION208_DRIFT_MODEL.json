@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION208_DRIFT_MODEL",
   "session": "S208",
   "series": "200-Series Architecture Stewardship",
@@ -19,7 +19,7 @@
     "reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json — conditions C1-C5"
   ],
 
-  "purpose": "This model defines the 6 categories of architecture drift, their detection signals, automated checks, severity, and response protocols. It is the first formal drift model for the CMA Part 1 Exam Simulator. Its purpose is to detect when Framework v2 principles are being eroded — not to prevent all defects, but to prevent architecture-level regression.",
+  "purpose": "This model defines the 6 categories of architecture drift, their detection signals, automated checks, severity, and response protocols. It is the first formal drift model for the CMA Exam Simulator. Its purpose is to detect when Framework v2 principles are being eroded — not to prevent all defects, but to prevent architecture-level regression.",
 
   "drift_categories": [
     {

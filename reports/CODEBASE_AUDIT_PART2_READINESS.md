@@ -1,4 +1,4 @@
-# Codebase Audit — CMA Part 1 Simulator & Part 2 Readiness
+﻿# Codebase Audit — CMA Simulator & Part 2 Readiness
 
 **Date:** 2026-08-03
 **Lane:** Governance Light (read-only; no pack/case/app writes)
@@ -90,7 +90,7 @@ Three of these are load-bearing:
 
 Clean today (portable as-is): `scoreMCQ` math, `practiceScores` 75/25→0–500→360, timer/warning machinery, navigator/flags/strike-through, review mode, `SessionPersistence` mechanics, `assignTier`/defect-blocklist, `deriveSimilarityKey`, calculator, governance guard, `ExplanationValidator`.
 
-Hard-bound to Part 1: script-tag content manifest; 7 bank-enumeration sites; `SECTION_INFO` A–F; the `sections.length === 6` weighting gate; `cmaP1*` storage keys; `Part1OnlyFlag`; ~40 user-facing "Part 1" strings; May's `SYSTEM_PROMPT` ("You are the CMA Part 1 AI Review Coach"); `preflight.js`'s hardcoded pack table.
+Hard-bound to Part 1: script-tag content manifest; 7 bank-enumeration sites; `SECTION_INFO` A–F; the `sections.length === 6` weighting gate; `cmaP1*` storage keys; `Part1OnlyFlag`; ~40 user-facing "Part 1" strings; May's `SYSTEM_PROMPT` ("You are the CMA AI Review Coach"); `preflight.js`'s hardcoded pack table.
 
 **None of this is architecturally hard — it is uniformly shallow coupling.** There is no inheritance to untangle, no Part-1 assumption baked into the scoring math. The whole problem is that the *identity of the exam part* is a constant scattered across ~60 sites instead of a value in one registry.
 

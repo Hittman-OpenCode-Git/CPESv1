@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION211_TECHNICAL_DEBT_REVIEW",
   "session": "S211",
   "series": "200-Series Architecture Stewardship",
@@ -176,7 +176,7 @@
       "s208_priority": 9,
       "current_priority": 11,
       "severity": "LOW — deployment milestone",
-      "scope": "Entire CMA Part 1 Exam Simulator",
+      "scope": "Entire CMA Exam Simulator",
       "current_state": "UNCHANGED since S208.",
       "classification": "ACCEPT",
       "rationale": "Deployment milestone, not content or architecture debt. All certification, validation, and testing has been at build/development level. Runtime performance at production scale remains untested.",

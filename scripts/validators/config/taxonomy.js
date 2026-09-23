@@ -1,5 +1,5 @@
-/**
- * CMA Part 1 Exam Simulator
+﻿/**
+ * CMA Exam Simulator
  * Shared Taxonomy Configuration — Single Source of Truth for Enumeration Values
  *
  * All validators shall import this configuration rather than maintaining
@@ -84,7 +84,14 @@ module.exports = {
         "Performance Management": "C",
         "Cost Management": "D",
         "Internal Controls": "E",
-        "Technology and Analytics": "F"
+        "Technology and Analytics": "F",
+        // P2 domain aliases (SectionTag-derived; DL-050 P2 case-schema wiring)
+        "Financial Statement Analysis": "A",
+        "Corporate Finance": "B",
+        "Decision Analysis": "C",
+        "Risk Management": "D",
+        "Investment Decisions": "E",
+        "Professional Ethics": "F"
     },
 
     validSectionTags: ["A", "B", "C", "D", "E", "F"],
@@ -128,6 +135,47 @@ module.exports = {
             "Information Systems", "ERP Systems", "Data Governance", "Data Quality",
             "Cybersecurity", "Data Analytics", "Business Intelligence",
             "Artificial Intelligence", "Automation", "Emerging Technologies"
+        ],
+        // P2 Domain Topics (aligned to P1 sections via domainToSection aliases)
+        "Financial Statement Analysis": [
+            "Ratio Analysis", "Common-Size Statements", "Trend Analysis",
+            "Cash Flow Analysis", "Earnings Quality", "Segment Reporting",
+            "Revenue Recognition Analysis", "Asset Quality", "Liquidity Metrics",
+            "Solvency Metrics", "Profitability Metrics", "Efficiency Metrics"
+        ],
+        "Corporate Finance": [
+            "Capital Budgeting", "Cost of Capital", "Capital Structure",
+            "Working Capital Management", "Dividend Policy", "Mergers & Acquisitions",
+            "Valuation Methods", "Risk-Adjusted Returns", "Real Options",
+            "Financial Distress", "Restructuring", "Corporate Governance"
+        ],
+        "Decision Analysis": [
+            "Cost-Volume-Profit Analysis", "Relevant Costing", "Make-or-Buy",
+            "Sell-or-Process-Further", "Special Orders", "Pricing Decisions",
+            "Transfer Pricing", "Constrained Resource Allocation",
+            "Uncertainty Analysis", "Sensitivity Analysis", "Scenario Analysis",
+            "Decision Trees", "Expected Value", "Value of Information"
+        ],
+        "Risk Management": [
+            "Enterprise Risk Management", "Risk Identification", "Risk Assessment",
+            "Risk Response", "COSO ERM", "Internal Control Design",
+            "Control Activities", "Monitoring", "Fraud Risk", "Cyber Risk",
+            "Business Continuity", "Crisis Management", "Risk Appetite",
+            "Risk Reporting", "Key Risk Indicators"
+        ],
+        "Investment Decisions": [
+            "Net Present Value", "Internal Rate of Return", "Payback Period",
+            "Discounted Payback", "Profitability Index", "Modified IRR",
+            "Capital Rationing", "Mutually Exclusive Projects", "Replacement Decisions",
+            "Risk-Adjusted Discount Rate", "Certainty Equivalent", "Simulation",
+            "Real Options", "Post-Audit", "Performance Measurement"
+        ],
+        "Professional Ethics": [
+            "IMA Statement of Ethical Professional Practice",
+            "Competence", "Confidentiality", "Integrity", "Credibility",
+            "Conflict of Interest", "Ethical Decision Making",
+            "Whistleblowing", "Corporate Social Responsibility",
+            "Sustainability Reporting", "Governance Ethics", "Code of Conduct"
         ]
     },
 
@@ -198,6 +246,38 @@ module.exports = {
         "Capital Budgeting", "Expected Value", "Regression",
         "Internal Controls (COSO)", "COSO ERM", "Fraud",
         "Financial Statement Ratios", "Technology & Analytics"
+    ],
+
+    //==========================================================================
+    // P2 Case Pack Reference Convention — DL-059 FP-C remediation (2026-09-21)
+    // P2 items use different reference naming conventions than P1 canonical
+    // names from FORMULA_MASTER.md / ACCOUNTING_DECISION_TREES.md /
+    // 05_COMMON_EXAM_TRAPS.md:
+    //   - FormulaReference: ID codes (CB-XX, DA-XX, etc.), section refs
+    //     (ASC, SOX, COSO, IMA), prose formulas (with =), descriptive phrases
+    //   - CommonTrapReference: prose sentence descriptions
+    //   - DecisionTreeReference: descriptive hyphenated names
+    // For P2 case packs, accept any non-empty reference value instead of
+    // requiring exact matches against P1 canonical names.
+    //==========================================================================
+    p2UseDescriptiveReferences: true,
+
+    // P2 Exhibit Prose Patterns — DL-059 FP-D remediation (2026-09-21)
+    // P2 items reference exhibits via prose text (e.g., "see the table below",
+    // "as shown in the chart") rather than by ExhibitID format strings.
+    // These patterns detect prose-based exhibit references for P2 case packs.
+    p2ExhibitProsePatterns: [
+        /\bexhibit\b/i,
+        /\bshown below\b/i,
+        /\bas shown\b/i,
+        /\btable\b/i,
+        /\bchart\b/i,
+        /\bfigure\b/i,
+        /\babove\b/i,
+        /\bbelow\b/i,
+        /\bindicated\b/i,
+        /\billustrated\b/i,
+        /\bdepicted\b/i
     ],
 
     //==========================================================================

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * build_master_registry.js
  * Scans all MCQ packs and case study files to produce:
  *   1. MasterQuestionRegistry.csv
@@ -521,7 +521,7 @@ function main() {
   const report = `# Phase 1 Baseline Report
 
 **Date:** 2026-07-21
-**Repository:** CMA Part 1 Exam Simulator
+**Repository:** CMA Exam Simulator
 **Source:** MasterQuestionRegistry.csv
 
 ---

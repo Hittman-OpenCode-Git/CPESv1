@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,450/3,450 Certified** (2026-09-20 coherence refresh)
+**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,530/3,530 Certified** (2026-09-23 coherence refresh)
 **Preflight script:** `scripts/preflight_p2.js` (read-only T0/Tend gate; cross-checks counts here)
 
 **2026-09-04 — Portfolio Target Amendment (user-authorized):** New pool targets ratified — **3,450 MCQs (A=600, B=600, C=750, D=500, E=500, F=500)** and **100 cases (Pack 1=33, Pack 2=33, Pack 3=34)**. Supersedes prior 2,500-MCQ / 75-case allocation. Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500. Per-pack Section QID ranges re-allocated in this session; current authoritative QID-range table at §5.
@@ -13,12 +13,12 @@
 
 | Pack | File | Target QIDs | Current QIDs | Certified | Unprocessed | Archived | Hash (SHA256, post-Tend) |
 |------|------|-------------|-------------|-----------|-------------|----------|--------------------------|
-| A | p2/pack_p2_a.js | **600** | 600 | 600 | 0 | 0 | `f854dea2de1c3f34a021d02892f3d389f3c764c80fcfcac3afe5cdeea2e7c9fc` |
-| B | p2/pack_p2_b.js | **600** | 600 | 600 | 0 | 0 | `C4AA8F730440FF3C6553905F589BFC74C178DF30A54B36EF8D7F9085C117BC4D` |
-| C | p2/pack_p2_c.js | **750** | 750 | 750 | 0 | 0 | `E257D7688248BB8C9287CC23E6CD521AE3A25B612C80F05B3E60897C9B6511BA` |
+| A | p2/pack_p2_a.js | **600** | 622 | 622 | 0 | 0 | `690d59d98751487c08e91f237a759f71d833420e4bf0d88d60542c99ec1bd164` |
+| B | p2/pack_p2_b.js | **600** | 620 | 620 | 0 | 0 | `53770c8baf97adfe9662b35a118d220af1ed780e766824666afcafbb1cd796b5` |
+| C | p2/pack_p2_c.js | **750** | 788 | 788 | 0 | 0 | `c5e67bf231baf2798d46161948e884767e4132bee4d0632010ec8b8c4dc8ae33` |
 | D | p2/pack_p2_d.js | **500** | 500 | 500 | 0 | 0 | `12a7c2ced8fa21ad804ed672537235ec87414f56da4218ac5e980889a2bd6e8c` |
-| E | p2/pack_p2_e.js | **500** | 500 | 500 | 0 | 0 | `DC998443762A7FB70FF2EE146E0D8361A54453889EB4A5E04E58E45755D0F87E` |
-| F | p2/pack_p2_f.js | **500** | 500 | 500 | 0 | 0 | `d5d45813853b56160652fe39cc3e8b77e2136f6bc887a19b9862bbcf0d2cbbd1` |
+| E | p2/pack_p2_e.js | **500** | 500 | 500 | 0 | 0 | `9c2498deb66158f75108e144821550cb6e0d23a600eb53c50c595f052072620d` |
+| F | p2/pack_p2_f.js | **500** | 500 | 500 | 0 | 0 | `6ef60772a74993c95de9afb6658b5df06e4e2daa820841c347c32f858801d0d1` |
 | **Total** | | **3,450** | **3,450** | **3,450** | **0** | **0** | |
 
 *2026-09-05 — P2-CERT-AUDIT certification wave: +812 MCQs certified (B +100, C +234, D +165, E +238, F +75). All 141 answer-key defects (DL-P2-017) repaired before flip; 13 UNCLEAR items held Unprocessed (P2-C-534/558/594/595/607/614, P2-E-267/274/279/282/305/310/311). Certified total 3,105.*

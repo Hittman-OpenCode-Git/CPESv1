@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION208_ARCHITECTURAL_PRINCIPLES",
   "session": "S208",
   "series": "200-Series Architecture Stewardship",
@@ -9,7 +9,7 @@
   "mode": "READ-ONLY — no content modifications",
   "authority": "PROJECT_CONSTITUTION.md; CAQS_v1.0.md; Framework v2 Architecture (S200-S207)",
   "governance_note": "These principles are FROZEN as of S208. Any modification requires a formal Architecture Amendment Session with Governance Board authorization.",
-  "immutability_clause": "These principles constitute the architectural constitution of the CMA Part 1 Exam Simulator. They may not be weakened, bypassed, or deprecated without an equivalent or stronger replacement. Violation of any principle is grounds for automatic certification block.",
+  "immutability_clause": "These principles constitute the architectural constitution of the CMA Exam Simulator. They may not be weakened, bypassed, or deprecated without an equivalent or stronger replacement. Violation of any principle is grounds for automatic certification block.",
 
   "sources_consumed": [
     "knowledge/CAQS_v1.0.md — 7-gate pipeline, 10-dimension rubric, certification standards §1.7, Gold Standard Checklist §14",

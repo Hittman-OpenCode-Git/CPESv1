@@ -1,4 +1,4 @@
-# Framework v2 Non-Negotiable Architectural Principles
+﻿# Framework v2 Non-Negotiable Architectural Principles
 
 **Session:** S208 (Architecture Stewardship)
 **Board:** A — Principle Certification
@@ -9,7 +9,7 @@
 
 ## What This Document Is
 
-This document enumerates the architectural principles that **may not be violated** in the CMA Part 1 Exam Simulator. These principles were extracted from Framework v2's design (S200-S207), validated against operational evidence (2,298 certified items, 32/32 governance guard tests), and are now frozen as the architectural constitution of the project.
+This document enumerates the architectural principles that **may not be violated** in the CMA Exam Simulator. These principles were extracted from Framework v2's design (S200-S207), validated against operational evidence (2,298 certified items, 32/32 governance guard tests), and are now frozen as the architectural constitution of the project.
 
 **Any violation of these principles is grounds for automatic certification block.**
 

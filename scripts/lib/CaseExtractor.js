@@ -25,6 +25,9 @@ class CaseExtractor {
                 // NOT matched — only direct array declarations anchor extraction.
                 /(?:const|var)\s+CASE_PACK_\d+\s*=\s*(\[)/,
                 /(?:const|var)\s+casePackP2_\d+\s*=\s*(\[)/,
+                /(?:const|var)\s+casePackP2Authored\s*=\s*(\[)/,
+                /(?:const|var)\s+casePackP2_C4_C8\s*=\s*(\[)/,
+                /(?:const|var)\s+casePackP2C4C8\s*=\s*(\[)/,
                 /^(\s*\[)/m
             ];
 
@@ -87,6 +90,28 @@ class CaseExtractor {
         } catch (e) {
             return null;
         }
+    }
+
+    /**
+     * Normalizes P2 case items to P1-validator-compatible form.
+     * Handles DL-051 schema variants (P2 authoring conventions, not defects):
+     * - object-Choices → array (77 items have non-array object Choices)
+     * - ExplanationCorrect → Explanation (3 items use ExplanationCorrect only)
+     */
+    static normalizeCaseItems(cases) {
+        if (!Array.isArray(cases)) return cases;
+        cases.forEach(c => {
+            if (!c || !Array.isArray(c.Items)) return;
+            c.Items.forEach(item => {
+                if (item.Choices && typeof item.Choices === "object" && !Array.isArray(item.Choices)) {
+                    item.Choices = Object.values(item.Choices);
+                }
+                if ((!item.Explanation || String(item.Explanation).trim() === "") && item.ExplanationCorrect) {
+                    item.Explanation = item.ExplanationCorrect;
+                }
+            });
+        });
+        return cases;
     }
 
     /**

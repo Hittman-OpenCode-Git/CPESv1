@@ -1,4 +1,4 @@
-# Case Study Standards — CMA 2026
+﻿# Case Study Standards — CMA 2026
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document defines the standards that all case studies in the CMA Part 1 Exam Simulator must meet. It ensures that every integrated case scenario mirrors the structure, difficulty, and realism expected in the CMA 2026 examination.
+This document defines the standards that all case studies in the CMA Exam Simulator must meet. It ensures that every integrated case scenario mirrors the structure, difficulty, and realism expected in the CMA 2026 examination.
 
 Per Session 55, all 75 cases (5 packs × 15 cases) are currently `ProductionStatus: "Unprocessed"` — zero are Certified for the learner pool. This document serves as the target standard for case-study certification.
 

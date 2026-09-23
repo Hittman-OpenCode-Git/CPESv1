@@ -1,4 +1,4 @@
-# SESSION066 — Candidate Release Certification Decision
+﻿# SESSION066 — Candidate Release Certification Decision
 
 **Session:** S66
 **Type:** Release-Board Decision
@@ -9,7 +9,7 @@
 
 ## Decision
 
-The CMA Part 1 Exam Simulator is **READY WITH WARNINGS** for candidate use. A candidate can take a full 100-MCQ + 2-case exam tonight. The learner pool is safe, the application is synchronized, and no blocking defects remain. Two non-blocking caveats are documented below.
+The CMA Exam Simulator is **READY WITH WARNINGS** for candidate use. A candidate can take a full 100-MCQ + 2-case exam tonight. The learner pool is safe, the application is synchronized, and no blocking defects remain. Two non-blocking caveats are documented below.
 
 ---
 

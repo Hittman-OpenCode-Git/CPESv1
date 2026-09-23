@@ -1,7 +1,7 @@
 # Phase 1 Baseline Report
 
 **Date:** 2026-07-21
-**Repository:** CMA Part 1 Exam Simulator
+**Repository:** CMA Exam Simulator
 **Source:** MasterQuestionRegistry.csv
 
 ---
@@ -44,7 +44,7 @@
 
 | Difficulty | Count | % of Total |
 |-----------|------:|-----------:|
-| Moderate             |  1241 |  35.5% |\n| Difficult            |   962 |  27.5% |\n| Easy                 |   539 |  15.4% |\n| Moderate-Easy        |   535 |  15.3% |\n| Very Difficult       |   218 |   6.2% |
+| Moderate             |  1241 |  35.5% |\n| Difficult            |   959 |  27.4% |\n| Easy                 |   541 |  15.5% |\n| Moderate-Easy        |   537 |  15.4% |\n| Very Difficult       |   217 |   6.2% |
 
 ---
 

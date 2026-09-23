@@ -16,7 +16,7 @@ class BlueprintValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
+        const banks = [...config.casePackBanks, ...config.part2CasePacks]; // DL-050: P2 cases wired
         let totalCases = 0;
         let crossDomainCases = 0;
         let topicCounts = {};
@@ -54,7 +54,9 @@ class BlueprintValidator extends Validator {
     }
 
     extractCases(content, filename) {
-        return CaseExtractor.extractFromContent(content);
+        const cases = CaseExtractor.extractFromContent(content);
+        if (cases) return CaseExtractor.normalizeCaseItems(cases);
+        return cases;
     }
 
     validateBlueprint(c, filename, idx) {
@@ -65,17 +67,21 @@ class BlueprintValidator extends Validator {
 
         if (c.BlueprintDomain) {
             if (c.SectionTags.length === 1) {
-                const expectedDomain = this.sectionToDomain[c.SectionTags[0]];
-                if (expectedDomain && c.BlueprintDomain !== expectedDomain) {
+                const tag = c.SectionTags[0];
+                const expectedDomain = this.sectionToDomain[tag];
+                const reverseSection = this.domainToSection[c.BlueprintDomain];
+                if (expectedDomain && c.BlueprintDomain !== expectedDomain && reverseSection !== tag) {
                     this.addWarning(
-                        `${prefix}: SectionTag "${c.SectionTags[0]}" expected BlueprintDomain "${expectedDomain}", got "${c.BlueprintDomain}"`
+                        `${prefix}: SectionTag "${tag}" expected BlueprintDomain "${expectedDomain}", got "${c.BlueprintDomain}"`
                     );
                 }
             } else {
                 const expectedDomains = c.SectionTags
                     .map(s => this.sectionToDomain[s])
                     .filter(Boolean);
-                if (expectedDomains.length > 0 && !expectedDomains.includes(c.BlueprintDomain)) {
+                const reverseSection = this.domainToSection[c.BlueprintDomain];
+                if (expectedDomains.length > 0 && !expectedDomains.includes(c.BlueprintDomain) &&
+                    !(reverseSection && c.SectionTags.includes(reverseSection))) {
                     this.addWarning(
                         `${prefix}: SectionTags ${JSON.stringify(c.SectionTags)} map to domains [${expectedDomains.join(", ")}], but BlueprintDomain is "${c.BlueprintDomain}"`
                     );

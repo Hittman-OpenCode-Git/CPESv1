@@ -102,7 +102,8 @@ const MayCoachingModeBase = (function() {
       { name: 'SOCRATIC', global: 'MayCoachingModeSocratic' },
       { name: 'MOTIVATE', global: 'MayCoachingModeMotivate' },
       { name: 'STUDY_PLAN', global: 'MayCoachingModeStudyPlan' },
-      { name: 'EXAM_REVIEW', global: 'MayCoachingModeExamReview' }
+      { name: 'EXAM_REVIEW', global: 'MayCoachingModeExamReview' },
+      { name: 'SELF_SCORE', global: 'MayCoachingModeSelfScore' }
     ];
 
     var count = 0;

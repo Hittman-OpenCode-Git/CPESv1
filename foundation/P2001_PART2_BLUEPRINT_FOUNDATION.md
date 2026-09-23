@@ -1,9 +1,9 @@
-# CMA Part 2 Exam Simulator — Foundational Architecture Plan
+﻿# CMA Part 2 Exam Simulator — Foundational Architecture Plan
 
 **Status:** Draft — READ-ONLY Research & Architecture
 **Date:** 2026-07-29
 **Session:** P2-001
-**Based on:** CMA Part 1 Exam Simulator v2.1 architecture (2,545 MCQs, 77 cases, 9-rule governance guard)
+**Based on:** CMA Exam Simulator v2.1 architecture (2,545 MCQs, 77 cases, 9-rule governance guard)
 **Authoritative Source:** IMA CMA Part 2 Content Specification Outline (September 2024 CSO)
 
 ---

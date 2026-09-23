@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION204_INVESTIGATION_WORKBENCH_SPEC",
   "session": "S204",
   "board": "G — Navigation & Investigation Workbench",
@@ -6,7 +6,7 @@
   "series": "200-Series Process Engineering & Certification Architecture",
   "date": "2026-07-27",
   "type": "Design Specification (NOT implementation)",
-  "purpose": "Defines the Investigation Workbench — a search-and-navigate interface for the CMA Part 1 Exam Simulator's content operations team. Enables deep-linking into questions, sessions, defects, recommendations, and certification history. Designed as a companion tool for content governance, defect remediation, learner support, and certification workflow.",
+  "purpose": "Defines the Investigation Workbench — a search-and-navigate interface for the CMA Exam Simulator's content operations team. Enables deep-linking into questions, sessions, defects, recommendations, and certification history. Designed as a companion tool for content governance, defect remediation, learner support, and certification workflow.",
   "authority": "S203 Navigation Model, AGENTS.md §2 (Read-Only by Default)",
   "dependencies": [
     "SESSION203_NAVIGATION_MODEL.json (entity relationship graph)",

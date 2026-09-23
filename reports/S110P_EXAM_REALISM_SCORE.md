@@ -1,4 +1,4 @@
-# S110P — CMA Exam Realism Score
+﻿# S110P — CMA Exam Realism Score
 
 **Session:** 110P
 **Date:** 2026-07-31
@@ -247,4 +247,4 @@ To reach 90/100 exam realism, the following would need to be implemented:
 
 ## Verdict
 
-The CMA Part 1 2026 Practice Simulator scores **72/100** on exam realism — a solid **B-**. The core exam architecture is strong (scoring, timer, case interface, session management all score A/B) but the interaction layer has two critical gaps (letter keys, strikethrough) and the accessibility layer needs significant work (scoring F). These are all fixable without touching content.
+The CMA 2026 Practice Simulator scores **72/100** on exam realism — a solid **B-**. The core exam architecture is strong (scoring, timer, case interface, session management all score A/B) but the interaction layer has two critical gaps (letter keys, strikethrough) and the accessibility layer needs significant work (scoring F). These are all fixable without touching content.

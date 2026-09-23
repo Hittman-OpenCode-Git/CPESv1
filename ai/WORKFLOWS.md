@@ -1,4 +1,4 @@
-# AI Workflow Definitions
+﻿# AI Workflow Definitions
 
 Version: 1.0
 
@@ -12,7 +12,7 @@ Authority:
 
 # Purpose
 
-This document defines the standard workflows used by AI personas while developing, reviewing, testing, and maintaining the CMA Part 1 Exam Simulator.
+This document defines the standard workflows used by AI personas while developing, reviewing, testing, and maintaining the CMA Exam Simulator.
 
 These workflows ensure:
 

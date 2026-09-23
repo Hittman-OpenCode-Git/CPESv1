@@ -25,15 +25,23 @@ class CaseIdentityValidator extends Validator {
         // overlap is informational, not a defect. Only within-live duplicates are errors.
         this.liveFiles = config.casePackBanks || [];
         this.archivedFiles = config.caseBanks || [];
-        this.caseFiles = this.liveFiles.concat(this.archivedFiles);
+        this.part2Files = config.part2CasePacks || [];
+        this.caseFiles = this.liveFiles.concat(this.archivedFiles).concat(this.part2Files);
         this.liveSet = new Set(this.liveFiles);
+        this.part2Set = new Set(this.part2Files);
         this.scoreMap = { 1: "Easy", 2: "Moderate-Easy", 3: "Moderate", 4: "Difficult", 5: "Very Difficult" };
     }
 
     extractCases(content) {
-        const varMatch = content.match(/(?:const|let|var)\s+(ENHANCED_CASE_BASE\d*|CASE_PACK_\d+)\s*=/);
-        if (!varMatch) return null;
-        const arrStart = content.indexOf("[", varMatch.index);
+        const varMatch = content.match(/(?:const|let|var)\s+(ENHANCED_CASE_BASE\d*|CASE_PACK_\d+|casePackP2_\d+|casePackP2Authored|casePackP2_C4_C8)\s*=/);
+        let arrStart = -1;
+        if (varMatch) {
+            arrStart = content.indexOf("[", varMatch.index);
+        } else {
+            // Fallback: bare array at start of file (e.g., case_pack_p2_C4_C8.js)
+            const bareMatch = content.match(/^\s*\[/m);
+            if (bareMatch) arrStart = bareMatch.index;
+        }
         if (arrStart === -1) return null;
         let depth = 0, pos = arrStart;
         do {
@@ -100,13 +108,15 @@ class CaseIdentityValidator extends Validator {
             }
         }
 
-        // DL-048 gate: duplicates WITHIN the live bank are errors.
+        // DL-048 gate: duplicates WITHIN the live banks are errors.
+        // Live = Part 1 consolidated packs (casePackBanks) + Part 2 case packs (part2CasePacks).
         // Legacy(archived)↔live overlap is expected post-S916 consolidation → informational.
         let dupCount = 0, archivedOverlap = 0;
+        const allLiveFiles = new Set([...this.liveFiles, ...this.part2Files]);
         for (const [caseID, files] of seen.entries()) {
             const uniqFiles = [...new Set(files)];
             if (uniqFiles.length > 1) {
-                const liveHits = uniqFiles.filter(f => this.liveSet.has(f));
+                const liveHits = uniqFiles.filter(f => allLiveFiles.has(f));
                 if (liveHits.length > 1) {
                     dupCount++;
                     this.addError(`DL-048 duplicate CaseID ${caseID} in ${liveHits.length} LIVE files: ${liveHits.join(", ")}`);
@@ -119,7 +129,7 @@ class CaseIdentityValidator extends Validator {
         this.addStatistic("Total Cases Checked", totalCases);
         this.addStatistic("Unique CaseIDs", seen.size);
         this.addStatistic("Total Items Checked", totalItems);
-        this.addStatistic("Duplicate CaseIDs (live bank)", dupCount);
+        this.addStatistic("Duplicate CaseIDs (live banks incl. P2)", dupCount);
         this.addStatistic("Archived↔Live Overlaps (expected, S916)", archivedOverlap);
         this.addStatistic("Score/Label Mismatches", mismatchCount);
 

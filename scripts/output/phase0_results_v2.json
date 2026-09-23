@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T04:20:37.015Z",
+  "timestamp": "2026-09-20T15:45:45.200Z",
   "parseStats": {
     "A": {
       "file": "pack_a_corrected.js",
@@ -39,7 +39,7 @@
     "B": 53,
     "C": 0,
     "D": 12,
-    "E": 256
+    "E": 257
   },
   "screens": {
     "A": {
@@ -340,9 +340,9 @@
           "pack": "C",
           "storedCC": "B",
           "bestLetter": "A",
-          "bestRecall": 77.8,
+          "bestRecall": 66.7,
           "ccRecall": -100,
-          "margin": 177.8,
+          "margin": 166.7,
           "bestLeadWordCount": 9,
           "ecPreview": "Firm non-cancelable commitments: recognize the net loss when market falls below contract price before receipt — ($20 − $"
         },
@@ -3239,6 +3239,16 @@
           "bestOtherLetter": "A",
           "bestOtherRecall": 50,
           "ewPreview": "Asset-liability matching is balance-sheet management. BSC aligns individual performance with strategy, not balance-sheet items."
+        },
+        {
+          "qid": "P1E-C-092",
+          "pack": "E",
+          "slot": "B",
+          "correctChoice": "D",
+          "ownRecall": 0,
+          "bestOtherLetter": "D",
+          "bestOtherRecall": 83.3,
+          "ewPreview": "Option B asserts the segment never meets the test. Segment A's assets equal exactly 10% of total combined assets, which satisfies the asset threshold."
         },
         {
           "qid": "P1E-C-092",

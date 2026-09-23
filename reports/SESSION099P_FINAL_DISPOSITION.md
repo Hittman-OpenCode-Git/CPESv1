@@ -1,4 +1,4 @@
-# Session 99P — Final Disposition
+﻿# Session 99P — Final Disposition
 
 **Date:** 2026-07-31
 **Session Type:** Read-Only Analysis
@@ -29,7 +29,7 @@ This single read-only session (99P) consolidates all findings from S93P (Misclas
 
 ### 3.1 The Problem
 
-The CMA Part 1 Exam Simulator has **528 items labeled as higher-order (Analyze + Evaluate)** — 20.7% of the total question pool. But **only 219 of those items (8.6%) genuinely test at those cognitive levels.** The remaining 309 items are misclassified — most are Apply (formula substitution, rule application, procedure execution), with a significant minority being Understand or Remember (definition-matching).
+The CMA Exam Simulator has **528 items labeled as higher-order (Analyze + Evaluate)** — 20.7% of the total question pool. But **only 219 of those items (8.6%) genuinely test at those cognitive levels.** The remaining 309 items are misclassified — most are Apply (formula substitution, rule application, procedure execution), with a significant minority being Understand or Remember (definition-matching).
 
 The root cause is template-based authoring with position-based label assignment rather than cognitive assessment. Multiple modernization waves upgraded stems and certification status but did not independently verify cognitive labels.
 

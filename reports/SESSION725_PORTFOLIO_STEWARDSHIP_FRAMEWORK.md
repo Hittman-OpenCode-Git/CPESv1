@@ -1,4 +1,4 @@
-# Portfolio Stewardship Framework v1.0
+﻿# Portfolio Stewardship Framework v1.0
 
 **Version:** 1.0
 **Session:** 725 (Governance Hardening & Post-700 Ownership Transition)
@@ -13,7 +13,7 @@
 
 ## Executive Purpose
 
-This framework establishes the permanent ownership structure for the CMA Part 1 Exam Simulator portfolio. It defines who owns what at steady-state, eliminating the 6 ownership gaps identified by S724. Every governance responsibility has a named owner, a secondary owner, an escalation path, and a cadence. No responsibility is orphaned.
+This framework establishes the permanent ownership structure for the CMA Exam Simulator portfolio. It defines who owns what at steady-state, eliminating the 6 ownership gaps identified by S724. Every governance responsibility has a named owner, a secondary owner, an escalation path, and a cadence. No responsibility is orphaned.
 
 The framework is designed to persist across series boundaries (100→300→500→600→700→800) and across maintainer transitions. It is reviewed at every series boundary and at every quarterly stewardship review.
 

@@ -1,4 +1,4 @@
-# Governance and Risk Register — Consolidated
+﻿# Governance and Risk Register — Consolidated
 
 **Purpose:** Single consolidated governance register covering current Certified denominators, pack-level structural status, TIER table, and open risks with priorities.
 
@@ -58,7 +58,7 @@ Count must be cross-checked against unique QID count. Discrepancies indicate dup
 
 | Pack | Structurally Complete | DL-008 (Certified) | DL-008 (Non-Cert) | DL-013 Remaining | DL-026 Remaining | Parseable |
 |------|----------------------|-------------------|-------------------|-----------------|-----------------|-----------|
-| **A** | Partial | ~2 (B-001, B-025) | 173 | 238 fields / 94 QIDs | ~3 spot-check finds | Yes |
+| **A** | Partial | ~2 (B-001, B-025) | 173 | **0 fields / 0 QIDs** (CLOSED CLEAN 2026-09-05) | ~3 spot-check finds | Yes |
 | **B** | Yes (S18) | **0** | 0 | 0 | 0 | Yes (after DL-017 fix) |
 | **C** | Partial | 174 (A+B sections) | 51 | 357 fields / 159 QIDs | ~3 spot-check finds | Yes |
 | **D** | Yes (S28) | 1 (BD-001) | 37 | 256 fields / 113 QIDs | **0** (all cleared) | Yes (500/500 parseable) |
@@ -446,7 +446,7 @@ Scoring remains the S16 CMA-style baseline. Analytics remain S16/S17. Readiness 
 
 ### 8.1 Purpose
 
-This section establishes the minimum reconciliation cadence for the CMA Part 1 Exam Simulator. The Session 31 G1–G5 runbook (`reports/SESSION31_RECONCILIATION_EXECUTION.md`) is the canonical reconciliation procedure. This schedule defines WHEN to run it.
+This section establishes the minimum reconciliation cadence for the CMA Exam Simulator. The Session 31 G1–G5 runbook (`reports/SESSION31_RECONCILIATION_EXECUTION.md`) is the canonical reconciliation procedure. This schedule defines WHEN to run it.
 
 ### 8.2 Triggered Reconciliation
 

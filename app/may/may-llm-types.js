@@ -102,7 +102,7 @@ const MayLLMTypes = (function() {
     var topic = q.topic || '';
     var correct = q.correctChoice || '';
     return [
-      'You are a CMA Part 1 tutor. Explain the following question concept.',
+      'You are a CMA ' + mayPartLabel() + ' tutor. Explain the following question concept.',
       'Topic: ' + (topic || 'Accounting'),
       'Question: ' + (stem || 'N/A'),
       'Correct answer: ' + (correct || 'N/A'),
@@ -118,8 +118,8 @@ const MayLLMTypes = (function() {
     var weakClusters = (l.weaknessClusters && l.weaknessClusters.persistentWeak) || [];
     var weakTopic = weakClusters.length > 0 ? weakClusters[0].topic : '';
     return [
-      'You are a CMA Part 1 tutor. Generate quiz guidance for a learner.',
-      'The learner needs practice in: ' + (weakTopic || 'general CMA Part 1 topics'),
+      'You are a CMA ' + mayPartLabel() + ' tutor. Generate quiz guidance for a learner.',
+      'The learner needs practice in: ' + (weakTopic || ('general CMA ' + mayPartLabel() + ' topics')),
       'Overall accuracy: ' + ((l.overallAccuracy || 0) + '%'),
       '',
       'Suggest a focused quiz domain and the number of practice questions.',
@@ -131,7 +131,7 @@ const MayLLMTypes = (function() {
   PROMPT_TEMPLATES['SOCRATIC'] = function(context) {
     var q = (context && context.question) || {};
     return [
-      'You are a CMA Part 1 tutor using the Socratic method.',
+      'You are a CMA ' + mayPartLabel() + ' tutor using the Socratic method.',
       'Topic: ' + (q.topic || 'Accounting'),
       'Question: ' + (q.stem || ''),
       '',
@@ -147,7 +147,7 @@ const MayLLMTypes = (function() {
     var readiness = (l.readinessBands && Object.keys(l.readinessBands).length > 0)
       ? l.readinessBands : {};
     return [
-      'You are a CMA Part 1 study coach. Generate a personalized study plan.',
+      'You are a CMA ' + mayPartLabel() + ' study coach. Generate a personalized study plan.',
       'Learner profile:',
       '  Overall accuracy: ' + ((l.overallAccuracy || 0) + '%'),
       '  Topics covered: ' + (Object.keys(l.topicPerformance || {}).length || 0),

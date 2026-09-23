@@ -1,10 +1,10 @@
-{
+﻿{
   "specId": "SESSION252_INVESTIGATION_REGISTRY_SPEC",
   "board": "D",
   "session": "S252",
   "version": "1.0.0",
   "generatedTimestamp": "2026-07-27T20:30:00.000Z",
-  "purpose": "Unified investigation lifecycle management system — orchestrates formal inquiries triggered by challenges, defect discoveries, governance events, or systematic issues across the CMA Part 1 Exam Simulator repository.",
+  "purpose": "Unified investigation lifecycle management system — orchestrates formal inquiries triggered by challenges, defect discoveries, governance events, or systematic issues across the CMA Exam Simulator repository.",
   "scriptPath": "scripts/investigation_registry.js",
   "storagePath": "scripts/output/investigation_registry.json",
 

@@ -1,4 +1,4 @@
-# SESSION 202 — Reporting Design Guide
+﻿# SESSION 202 — Reporting Design Guide
 
 **Version:** 1.0
 **Status:** Active
@@ -11,7 +11,7 @@
 
 ## 1. Purpose
 
-This guide defines how to write, enforce, and maintain the 4-report model for the CMA Part 1 Exam Simulator. It is the operational companion to `SESSION202_REPORTING_MINIMALIST_MODEL.json`.
+This guide defines how to write, enforce, and maintain the 4-report model for the CMA Exam Simulator. It is the operational companion to `SESSION202_REPORTING_MINIMALIST_MODEL.json`.
 
 Every session S830+ produces exactly 4 reports. No more without explicit authorization.
 

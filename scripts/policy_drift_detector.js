@@ -1,7 +1,7 @@
-/**
+﻿/**
  * Policy Drift Detector v1.0 — SESSION 750, Board B
  *
- * Detects governance policy drift across the CMA Part 1 Exam Simulator:
+ * Detects governance policy drift across the CMA Exam Simulator:
  * - Missing metadata fields
  * - Missing authority citations (ASC, COSO, IFRS, etc.)
  * - Missing distractor explanations

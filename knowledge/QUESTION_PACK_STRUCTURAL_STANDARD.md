@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator — Question Pack Structural Standard
+﻿# CMA Exam Simulator — Question Pack Structural Standard
 
 **Version:** 1.0
 **Status:** Active

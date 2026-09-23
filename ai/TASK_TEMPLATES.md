@@ -1,4 +1,4 @@
-# AI Task Templates
+﻿# AI Task Templates
 
 Version: 1.0
 
@@ -14,7 +14,7 @@ Authority:
 
 # Purpose
 
-Task Templates define standardized AI operations used throughout the CMA Part 1 Exam Simulator.
+Task Templates define standardized AI operations used throughout the CMA Exam Simulator.
 
 Unlike prompts, templates define:
 

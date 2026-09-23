@@ -36457,3 +36457,34 @@ The unrecaptured drift backlog is now 3 files across 2 tokens (`may_3_0_pill_pol
 **Backups:** `backups/app.js.bak-20260923104632` (504,646 bytes, BOM present, hash `31901F3F…`) — byte-verified pre-write (size delta exactly 3 = BOM only).
 
 **Verification (Tend):** `npm run baseline_coherence` → 0 divergences expected; `npm run smoke` after app.js change (Light-Lane Tend requirement). Pipeline not content-triggered — skipped unless coherence fails.
+
+---
+
+## 2026-09-23 — 13-Object BLOCK Remediation + Baseline Coherence Rebuild
+
+**Lane:** Full Governance Lane (touches `p2/pack_p2_a.js`, `p2/pack_p2_e.js`, `p2/case_pack_p2_2.js`, `p2/case_pack_p2_3.js`, `knowledge/CURRENT_BASELINES.md` per AGENTS.md §9.1).
+
+**Trigger:** Post-Board-adjudication remediation of 13 BLOCK items (7 syntax + 4 provenance + 2 case unit/tolerance) from 2026-09-23 sweep. User authorized "proceed with edits" per `reports/S10_REVIEW_PROCESS_GATE.md`.
+
+**Scope:**
+- Syntax (missing comma after `"question_state": "Certified"`): `p2/pack_p2_a.js` P2-A-011, P2-A-021, P2-A-133; `p2/pack_p2_b.js` P2-B-029, P2-B-043; `p2/pack_p2_c.js` P2-C-080; `p2/pack_p2_f.js` P2-F-045
+- Provenance (empty/missing `certification_batch`/`certification_date`): `p2/pack_p2_e.js` P2-E-069 (added batch+date), P2-E-198 (fixed empty date, removed duplicate empty batch key); `p2/pack_p2_a.js` P2-A-409, P2-A-490 (filled empty `certification_batch`)
+- Case unit/tolerance: `p2/case_pack_p2_2.js` CBQ22-C6-Q2 ("in millions of dollars" → "in dollars"); `p2/case_pack_p2_3.js` CBQ23-E1-Q2 (`Correct` `"49170"` → `"49176"` matching EC)
+- Baseline coherence: `knowledge/CURRENT_BASELINES.md` rebuilt via `node scripts/baseline_coherence.js --fix`
+
+| Metric | Before | After |
+|--------|--------|-------|
+| `npm run preflight` divergences | 0 | 0 |
+| `npm run baseline_coherence` divergences | 1 (stale hash) | 0 |
+| Guard tests | 101/101 PASS | 101/101 PASS |
+| Certified total | 3052 | 3052 |
+| Pack parse | 5/5 OK | 5/5 OK |
+| `node --check` all 5 p2 packs | — | PASS |
+
+**Rule 1 compliance:** Entry recorded contemporaneously with question_state and baseline changes.
+
+**Backups:** `pack_p2_a.js.bak-20260923235500`, `pack_p2_b.js.bak-20260923235500`, `pack_p2_c.js.bak-20260923235500`, `pack_p2_e.js.bak-20260923235500`, `pack_p2_f.js.bak-20260923235500`, `case_pack_p2_2.js.bak-20260923235500`, `case_pack_p2_3.js.bak-20260923235500` (all verified non-zero). Baseline backup: `knowledge/CURRENT_BASELINES.md.bak-coherence-20260923214854`.
+
+**Verification (Tend):** `npm run preflight` → 0 divergences, 101/101 guard; `npm run baseline_coherence` → 0 divergences; `npm run probe:parity` → 0 divergences, extractor 6600/6600; `npm run smoke` → PASS; all 5 p2 pack files `node --check` OK. Pipeline `npm run pipeline` → complete, validate WARNs are pre-existing known gaps, baseline-coherence stage green.
+
+**E1-Q2 tolerance note:** Semantic screen (B-num) confirmed stored `49170` absent from Explanation numbers; after fix, stored `49176` matches EC `$49,176`. Scorer tolerance (±$1,000) applies to answer-key validation; B-num screen uses exact match per DL-047 methodology.

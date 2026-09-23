@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator – Exam Blueprint
+﻿# CMA Exam Simulator – Exam Blueprint
 
 **Version:** 1.0
 **Status:** Active
@@ -8,7 +8,7 @@
 
 # Purpose
 
-This document defines the content organization for the CMA Part 1 Exam Simulator.
+This document defines the content organization for the CMA Exam Simulator.
 
 Its purpose is to:
 

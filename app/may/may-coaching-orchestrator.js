@@ -201,6 +201,95 @@ const MayCoachingOrchestrator = (function() {
 
   // ─── Public API ────────────────────────────────────────────────
 
+  // ── W5 — Socratic guard (Phase 2.1, token may_v2_1_socratic_guard) ────
+  // Q3: Opt-out for practice mode; opt-in for exam-integrity mode.
+  // D2(a–d): Socratic must not appear during (a) active exam timer,
+  //          (b) between case items, (c) exam-integrity review screens,
+  //          (d) when learner has stated P2-intent and recommendation
+  //          would skip a P2 sub-topic.
+  // HS-4: Enforcement at orchestration layer. Downstream consumers
+  //       (may-core.js:_socraticFollowUp, modes/mode-socratic.js)
+  //       MUST call MayCoachingOrchestrator.isSocraticAllowed() before
+  //       invocation. Pause carve-out: pause flips pauseActive=true;
+  //       resume flips pauseActive=false; Socratic is suppressed
+  //       throughout the paused window per AGENTS §19.1.
+  var _socraticGuard = {
+    practiceDefaultOn: true,         // Q3: opt-out for practice
+    examIntegrityOptIn: false,       // Q3: opt-in for exam-integrity
+    firstUseEmitted: false,          // socratic_toggle_first_use once-per-session
+    lastToggleAt: null,
+    lastToggleChoice: null,
+    pauseActive: false,
+    lastPauseChangeAt: null
+  };
+
+  function _nowSafe() {
+    try { return new Date().toISOString(); } catch (e) { return null; }
+  }
+
+  function isSocraticAllowed(context) {
+    context = context || {};
+    // D2(a): no Socratic during active exam timer (AGENTS §19.1)
+    if (context.activeExamTimer === true) return false;
+    // D2(c): no Socratic during exam-integrity review screens (AGENTS §19.3)
+    if (context.examIntegrityReview === true) return false;
+    // D2(b): no Socratic between items within a single case
+    if (context.betweenCaseItems === true) return false;
+    // Pause carve-out: Socratic suppressed during pause window
+    if (_socraticGuard.pauseActive) return false;
+    // Q3: exam-integrity mode requires explicit opt-in
+    if (context.examIntegrityMode === true && !context.socraticOptedIn) return false;
+    return _socraticGuard.practiceDefaultOn;
+  }
+
+  function setPauseState(isPaused) {
+    _socraticGuard.pauseActive = !!isPaused;
+    _socraticGuard.lastPauseChangeAt = _nowSafe();
+  }
+
+  function getPauseState() {
+    return _socraticGuard.pauseActive;
+  }
+
+  function recordSocraticToggle(userChoice, context) {
+    var choice = !!userChoice;
+    if (!_socraticGuard.firstUseEmitted) {
+      _socraticGuard.firstUseEmitted = true;
+      _socraticGuard.lastToggleAt = _nowSafe();
+      _socraticGuard.lastToggleChoice = choice;
+      try {
+        if (typeof MayTelemetry !== 'undefined') {
+          var examPart = 'P1';
+          try { examPart = (typeof getExamPart === 'function') ? getExamPart() : 'P1'; }
+          catch (e) { /* default P1 */ }
+          MayTelemetry.trackAdoption({
+            recommendationType: 'socratic_toggle_first_use',
+            panelOpened: true,
+            clicked: choice,
+            examPart: examPart,
+            contextMode: (context && context.examIntegrityMode) ? 'exam-integrity' : 'practice'
+          });
+        }
+      } catch (e) { /* telemetry non-blocking */ }
+    } else {
+      _socraticGuard.lastToggleAt = _nowSafe();
+      _socraticGuard.lastToggleChoice = choice;
+    }
+    return _socraticGuard;
+  }
+
+  function getSocraticGuard() {
+    return {
+      practiceDefaultOn: _socraticGuard.practiceDefaultOn,
+      examIntegrityOptIn: _socraticGuard.examIntegrityOptIn,
+      firstUseEmitted: _socraticGuard.firstUseEmitted,
+      lastToggleAt: _socraticGuard.lastToggleAt,
+      lastToggleChoice: _socraticGuard.lastToggleChoice,
+      pauseActive: _socraticGuard.pauseActive,
+      lastPauseChangeAt: _socraticGuard.lastPauseChangeAt
+    };
+  }
+
   /**
    * Execute the full orchestration pipeline.
    * 
@@ -220,18 +309,41 @@ const MayCoachingOrchestrator = (function() {
    *   _meta: { orchestratorVersion, computedAt, flagsActive, degradedComponents }
    * }
    */
+  // W6 chaos state (hoisted for orchestrate closure)
+  // May 2.5 Track 1 (may_2_5_track1): chaosClear also clears the
+  // orchestrator degradation source so the pill/T6/log stay truthful.
+  var _chaosInjected = null;
+  function chaosInject(stage) { _chaosInjected = stage || 'chaos-injected'; try { window.__mayChaosLastInjected = _chaosInjected; } catch(e){} return _chaosInjected; }
+  function chaosClear() { _chaosInjected = null; try { window.__mayChaosLastInjected = null; } catch(e){} try { if (typeof MayDegradation !== 'undefined' && MayDegradation.clear) MayDegradation.clear('orchestrator'); else if (typeof window !== 'undefined' && window.MayDegradation && window.MayDegradation.clear) window.MayDegradation.clear('orchestrator'); } catch(e){} }
+
   function orchestrate() {
     if (!_isEnabled()) return null;
 
     var degraded = [];
     var flagsActive = [];
+    // W6 chaos: if injected, force degraded non-empty for DL-060 + T6 verification (one-shot)
+    if (_chaosInjected) { degraded.push('chaos:' + _chaosInjected); _chaosInjected = null; }
     if (_adaptiveCoachingEnabled()) flagsActive.push('ENABLE_ADAPTIVE_COACHING');
+    else degraded.push('flags-off:ENABLE_ADAPTIVE_COACHING'); // DL-060: flags-off = reduced coaching
     if (_readinessScoringEnabled()) flagsActive.push('ENABLE_READINESS_SCORING');
+    else degraded.push('flags-off:ENABLE_READINESS_SCORING'); // DL-060
     flagsActive.push('ENABLE_ADAPTIVE_ORCHESTRATION');
 
     // ── Run pipeline stages ──
     var profile = _stageProfile(degraded);
     if (!profile) {
+      // ── W6 (token may_v2_1_may_avatar) — DL-060 hook on early-return path ─
+      try {
+        if (typeof window !== 'undefined' && typeof window.MayOnPipelineResult === 'function') {
+          window.MayOnPipelineResult({
+            degraded: degraded.slice(),
+            flagsActive: flagsActive.slice(),
+            decision: null,
+            orchestratorVersion: 'MAY019-1.0',
+            earlyReturn: true
+          });
+        }
+      } catch (e) { /* hook non-blocking */ }
       return {
         profile: null,
         readiness: null,
@@ -341,6 +453,40 @@ const MayCoachingOrchestrator = (function() {
       }
     } catch (e) { /* telemetry non-blocking */ }
 
+    // ── W6 (token may_v2_1_graceful_degradation_indicator) — DL-060 hook + T6 emit ──
+    // Fire the global hook AFTER the pipeline has completed and degraded
+    // is finalized. may-core.js registers MayOnPipelineResult during
+    // init() and uses it to flip MayAvatar into the `reduced` pose when
+    // any pipeline stage failed (DL-060 state-indicator truthfulness).
+    // Also emit T6 trackDegradation for threshold calibration (W6 Day 30,
+    // overridden to Day 0 via synthetic baseline). Non-blocking.
+    try {
+      if (typeof window !== 'undefined' && typeof window.MayOnPipelineResult === 'function') {
+        window.MayOnPipelineResult({
+          degraded: degraded.slice(),
+          flagsActive: flagsActive.slice(),
+          decision: decision,
+          orchestratorVersion: 'MAY019-1.0'
+        });
+      }
+    } catch (e) { /* hook non-blocking */ }
+    // W6 T6: the MayOnPipelineResult → MayDegradation.report funnel above
+    // already emits T6 with the indicatorVisible bit (May 2.5 Track 1).
+    // This direct emit is fallback-only for contexts where the pill
+    // manager is unavailable (unit probes, load-order gaps) — DL-060 C.
+    try {
+      var _pillManaged = (typeof MayDegradation !== 'undefined' && MayDegradation.report) ||
+        (typeof window !== 'undefined' && window.MayDegradation && window.MayDegradation.report);
+      if (degraded.length > 0 && !_pillManaged && typeof MayTelemetry !== 'undefined' && MayTelemetry.trackDegradation) {
+        MayTelemetry.trackDegradation({
+          stage: 'orchestrator',
+          reason: degraded.join('; ').slice(0, 200),
+          recoverable: true,
+          indicatorVisible: false
+        });
+      }
+    } catch (e) { /* T6 non-blocking */ }
+
     return {
       profile: profile,
       readiness: readiness,
@@ -355,7 +501,8 @@ const MayCoachingOrchestrator = (function() {
         orchestratorVersion: 'MAY019-1.0',
         computedAt: new Date().toISOString(),
         flagsActive: flagsActive,
-        degradedComponents: degraded
+        degradedComponents: degraded,
+        socraticGuard: getSocraticGuard()
       }
     };
   }
@@ -389,7 +536,16 @@ const MayCoachingOrchestrator = (function() {
     orchestrate: orchestrate,
     readinessCheck: readinessCheck,
     isEnabled: _isEnabled,
-    FLAG: FLAG
+    FLAG: FLAG,
+    // W5 Socratic guard (Phase 2.1, token may_v2_1_socratic_guard)
+    isSocraticAllowed: isSocraticAllowed,
+    setPauseState: setPauseState,
+    getPauseState: getPauseState,
+    recordSocraticToggle: recordSocraticToggle,
+    getSocraticGuard: getSocraticGuard,
+    // W6 Chaos harness (Phase 2.1, token may_v2_1_graceful_degradation_indicator)
+    chaosInject: chaosInject,
+    chaosClear: chaosClear
   };
 
 })();

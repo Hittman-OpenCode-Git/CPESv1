@@ -928,6 +928,74 @@ For each question Q:
 - REVISION_HISTORY_P2.md: Session P2-080 entry (backup `p2/pack_p2_c.js.bak-20260906143000`, 2,741,929 B)
 - Governance guard Rule 6 (DL-026 BLOCK) — active and verified
 
+## DL-P2-022 — Certified P2 Case Key/Explanation Inversions + Phantom-Number Explanations (CBQ22-A7, CBQ22-C10-Q2, CBQ22-C11-Q2)
+
+```
+Defect ID        DL-P2-022
+Class            Content
+Domain           Case answer-key / explanation agreement (DL-054 class)
+Severity         Critical (wrong stored keys on Certified, pool-reachable items)
+Detected By      Build-Time AI Verification — 8-bank case-screen coverage wiring (P2 validator follow-ups, 2026-09-22); 4 non-weak flags hand-solved against exhibit data
+Status           Resolved — remediated 2026-09-22 (rewrite-items option; see Remediation note below)
+```
+
+### Remediation (executed 2026-09-22 — rewrite-items option, Remediation Execution Prompt DL-P2-022)
+
+**Status → Resolved.** Disposition: rewrite items (exhibit retained as source of truth; A7-Q1/Q2 author decision resolved in favor of the prompt's recommended option). 5 items rewritten, 3 cases restored Certified → see `knowledge/REVISION_HISTORY_P2.md` 2026-09-22 DL-P2-022 Remediation entry for the full ledger (before/after keys, backups, gate numbers).
+
+| Item | Correct before → after | Method |
+|------|------------------------|--------|
+| CBQ22-A7-Q1 | "14.70" → "6.39" | Re-derived from Exhibit 1 (7,344/115,000); phantom $16,905K removed |
+| CBQ22-A7-Q2 | "2.13" → "2.04" | Re-derived (EM 235,000/115,000); NPM corrected to true 2.34% |
+| CBQ22-A7-Q5 | key unchanged | Explanation-only rewrite (true 40.0% payout; phantom $16.9M/17% removed) |
+| CBQ22-C10-Q2 | "30000" → "32400" | Corner-point evaluation rewritten; self-contradictory 600/400 opening removed |
+| CBQ22-C11-Q2 | "8500000" → "2750000" | EVwPI−EVwoPI derivation rewritten; meta-commentary removed |
+
+Cases CBQ22-A7/C10/C11: `In Audit` → `Certified` with `recertification_batch: "DL-P2-022-RW"` / `recertification_date: "2026-09-22"` (Rule 16; original certification stamps preserved; quarantine stamps removed). Backups: `backups/case_pack_p2_authored.js.bak-REWRITE-20260922130339` (94,375 B), `backups/case_pack_p2_C4_C8.js.bak-REWRITE-20260922130339` (78,840 B). Tend: `node --check` 0/0; `preflight:p2` 0 divergences, Case Certified 110, guard 101/101; `pipeline` exit 1 solely on 5 pre-existing `baseline_coherence` hash drifts (app.js, styles.css, may-core.js, may-learner-state.js, ExplanationValidator.js — all pre-date session; Rule 7 stand-down, owned residual).
+
+**Known residuals — CLOSED 2026-09-22 (residual wave under same DL, 5 fields, no key changes):** A7-Q3 choice C + explanation remediated (5.39% → 2.34%; "1.96 percentage-point drop" → "5.01 percentage-point contraction"; TAT/EM aligned to sibling A6-Q3 reference: 1.19 → 1.33, 2.21 → 2.04); A7-Q6 explanation remediated (NPM arrow 5.39% → 2.34%); A7-Q5 Correct[0] + Choices.A remediated (missed in prior note — same 1.96pp → 5.01pp phantom in the identical Correct/Choices.A string; key triple [A,C,E] intact; Explanation already correct, untouched); A7-Q4 Choice A FIXED per YES authorization ("net sales grew only 25%" → "net sales grew only 12% from Year 2 to Year 3"; Correct=A unchanged; aligns with own Explanation + sibling A6-Q4). Backup: `backups/case_pack_p2_authored.js.bak-RESIDUAL-20260922135123` (94,872 B, verified pre-write). Post: `node --check` exit 0; `preflight:p2` 0 divergences, Case Certified 110, guard 101/101, 0 duplicates; grep `5\.39|1\.96` = 0 hits in authored.js, `2\.34|5\.01` present. No state flips (Rule 16 — no item-level question_state fields exist; parent DL-P2-022-RW stamps preserved). Full ledger: `knowledge/REVISION_HISTORY_P2.md` 2026-09-22 residual entry.
+
+**EXECUTED 2026-09-22 (Companion Wave, same DL).** 8 choice-text/metadata edits in `p2/case_pack_p2_authored.js` only (CBQ22-A7): Q5 Correct[1]/Choices.C "25% sales growth" → "12% sales growth"; Q5 Choices.B "2.22→2.00" → "2.21→2.04"; Q6 LeftItems[1]/Correct key "25% sales growth" → "12% sales growth" (byte-matched); Q6 Explanation "(72% vs. 25%)" → "(72% vs. 12%)" — **47% vs. 25% clauses untouched**; Exhibit 1 AccuracyCheck meta-commentary replaced with clean Y1/Y3 ROE verification text; Case ProductionStatus "Draft" → "Production". Backup: `backups/case_pack_p2_authored.js.bak-COMPANION-20260922154120` (94,919 B). Post: `node --check` exit 0; `preflight:p2` 0 divergences, Case Certified 110, guard 101/101, 0 duplicates; Q5 Correct[0/1/2] === Choices.A/C/E byte-identical ✓; Q6 LeftItems[1] === Correct key byte-identical ✓. **All three out-of-scope companions from L956 closed.**
+
+**Case/item IDs:** CBQ22-A7-Q1, CBQ22-A7-Q2 (p2/case_pack_p2_authored.js); CBQ22-C10-Q2, CBQ22-C11-Q2 (p2/case_pack_p2_C4_C8.js). All parent cases + items `question_state: Certified` (A7/C10/C11 certified P2-CASE-CERT-20260921) → strict-pool reachable, learner exposure nonzero.
+
+### Confirmed findings (independent hand-solve vs exhibit rows)
+
+| # | Item | Stored key | True answer | Evidence |
+|---|------|-----------|-------------|----------|
+| 1 | A7-Q1 | 14.70 | 14.39% per its own explanation ($16,905/$117,500); NEITHER figure is exhibit-derivable (exhibit NI $7,344K, beg. equity $110,000K → true ROE ≈ 6.4%) | Key contradicts own explanation ("Rounded per the exhibit data: 14.70%" is false rounding of 14.39); explanation numbers ($16,905 NI, $115,000K beg. equity) appear nowhere in Exhibit 1 |
+| 2 | A7-Q2 | 2.13 | 2.00 per its own explanation ($235,000/$117,500) | Direct key/explanation contradiction; 2.13 matches no clean derivation (nearest: ending-assets/avg-equity mixing) |
+| 3 | C10-Q2 | 30000 | $32,400 (corner-point optimum at 1,200 A + 200 B: 1,200×$24+200×$18; extrusion binding at 3,000h, demand A binding) | Key contradicts own explanation (which concludes $32,400); explanation opening (600/400 = $21,600 "optimal") contradicts its own conclusion |
+| 4 | C11-Q2 | 8500000 | $2.75M (EVwPI $12.25M − EVwoPI $9.5M; per-exhibit: 0.30×28+0.45×8+0.25×1 vs immediate-entry 9.5) | Key contradicts own explanation (derives $2.75M twice) AND sibling Q3 choice C ("EVPI of $2.75 million") |
+
+### Companion defects (same root, keys intact — remediate in same wave)
+
+- CBQ22-A7 Exhibit 1 `AccuracyCheck` carries draft meta-commentary verbatim ("These don't yield 14.7%... These don't work with the income statement. Need to restructure.") — DL-P2-001 family; author knew the exhibit didn't support the narrative and shipped it.
+- CBQ22-A7-Q5 explanation uses phantom $16.9M NI / 17% payout (exhibit: $7,344K NI, $2,938K dividends = 40% payout). Key triple (A,C,E) qualitatively exhibit-supported — screen flag adjudicated CONFIRMED-FP on the key.
+- CBQ22-A7 cases carry `ProductionStatus: Draft` alongside `question_state: Certified` (metadata inconsistency, non-blocking).
+
+### Root cause
+
+Authored-pack cases (authored/C4_C8) were certified 2026-09-21 without case-side semantic screening — these banks were outside all screen/BANK coverage until the P2 validator-wiring wave (this session) extended it. Explanation arithmetic was never reconciled to exhibit rows (finding 1/2 phantom numbers) or to stored keys (findings 1–4).
+
+### Detection rule
+
+Per Certified case numeric item: hand-solve Correct against exhibit rows; flag any mismatch; cross-check explanation's own derivation and sibling items. (B-num + B screens now cover all 8 banks post-wiring.)
+
+### Remediation path (proposed, NOT executed)
+
+Quarantine (Certified→In Audit on CBQ22-A7/C10/C11 — case + items) → re-derive each key from exhibits → rewrite phantom explanations + strip meta-commentary → verify → restore with recertification stamps (Rule 16). Disposition of A7-Q1/Q2 (rebuild exhibit vs rewrite items) needs author decision — exhibit and explanations disagree at the root. Rule-5 batched; per-batch authorization required.
+
+### Regression test
+
+Post-remediation: case screens re-run 0 FLAGs on touched items; B-num echo clean; QID counts unchanged; preflight:p2 0 divergences.
+
+### Cross-references
+
+- DL-P2-001 (meta-commentary + contradictory key precedent) · DL-054 (MCQ inversion precedent) · DL-051 (case screens) · DL-045 (no-auto-remediate doctrine)
+- Screens artifact: `scripts/output/case_semantic_flags.json` (8-bank run, 190/1085)
+- Triage evidence: REVISION_HISTORY_P2.md P2-wiring entry (this session)
+
 ---
 
 ## Template for New Entries

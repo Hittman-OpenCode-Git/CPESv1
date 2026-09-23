@@ -1,4 +1,4 @@
-# Session 80 — Stage 2: Audit
+﻿# Session 80 — Stage 2: Audit
 
 **Session:** 80 (Scaffold Adoption Test)
 **Governance Lane:** Light
@@ -47,7 +47,7 @@ Functional but inconsistent. No capability chips. The welcome message mixes stat
 <div class="may-onboarding-card">
   <div class="may-onboarding-avatar">M</div>
   <h2>Welcome back, ${profile.name}</h2>
-  <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
+  <p class="may-onboarding-subtitle">Your CMA study companion</p>
   <p>${welcomeMsg}</p>
 </div>
 ```
@@ -57,7 +57,7 @@ Functional but inconsistent. No capability chips. The welcome message mixes stat
 <div class="may-onboarding-card">
   <div class="may-onboarding-avatar">M</div>
   <h2>Welcome back, ${profile.name}</h2>
-  <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
+  <p class="may-onboarding-subtitle">Your CMA study companion</p>
   ${sc > 0 ? `<p>I've tracked <strong>${sc} session${sc !== 1 ? 's' : ''}</strong> and <strong>${totalAttempts} attempts</strong> for you.</p>` : ''}
   <div class="may-capability-prompts">
     <span>What would you like to do?</span>

@@ -1,8 +1,8 @@
-# Independent Review Prompt — Timer Pause-Clock Fix (Third-Party Review)
+﻿# Independent Review Prompt — Timer Pause-Clock Fix (Third-Party Review)
 
 ## Context
 
-You are reviewing a **timer integrity fix** for the CMA Part 1 Exam Simulator (`app/app.js`). This is a focused, learner-facing correctness review — not a content review. No question banks, answer keys, or certification states were touched.
+You are reviewing a **timer integrity fix** for the CMA Exam Simulator (`app/app.js`). This is a focused, learner-facing correctness review — not a content review. No question banks, answer keys, or certification states were touched.
 
 **Bug report (verbatim):** A learner paused a practice exam, returned later, and found a large amount of time had been lost — the session could not be completed. This is a recurrence: an earlier pause bug was remediated on 2026-08-31 (in-memory resume now folds the pause gap out of the elapsed clock), but the failure happened again.
 

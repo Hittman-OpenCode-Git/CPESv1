@@ -397,8 +397,18 @@ export const GovernanceGuard = async ({ client }) => {
       const raw = fs.readFileSync(path.join(process.cwd(), QUARANTINE_MANIFEST_RELPATH), "utf8");
       const m = JSON.parse(raw);
       if (m && Array.isArray(m.active)) return m;
-    } catch (e) { /* fail-open: documented behavior, see constant note */ }
-    return { active: [] };
+      throw new Error("Quarantine manifest exists but 'active' array is missing or not an array");
+    } catch (e) {
+      // Fail-closed: missing or malformed manifest blocks →Certified writes per R21
+      // (board determination 2026-09-22: fail-open was a safety hole)
+      throw new Error(
+        "GOVERNANCE RULE 21 — BLOCKED (missing quarantine manifest)\n" +
+        "scripts/output/semantic_quarantine.json is missing, unreadable, or malformed.\n" +
+        "Per board R25 / DL-047: quarantined items must not re-enter Certified without a valid manifest.\n" +
+        "Create the manifest (scripts/output/semantic_quarantine.json with {active:[]}) or restore from backup.\n" +
+        "Original error: " + e.message
+      );
+    }
   }
 
   /** RULE 19 — Duplicate CaseID within a change-set (DL-048 intra-batch gate).
@@ -591,7 +601,7 @@ export const GovernanceGuard = async ({ client }) => {
       // but does NOT also change Stem, Choices, ExplanationCorrect, or any
       // ExplanationWrong field, BLOCK the edit. Cognitive gaps must be filled by
       // authoring new content at the target level, not by relabeling existing items.
-      if (tool === "edit" && SOURCE_FILE_RE.test(basename(filePath))) {
+      if ((tool === "edit" || tool === "write") && SOURCE_FILE_RE.test(basename(filePath))) {
         const oldCL = (oldContent.match(/"CognitiveLevel"\s*:\s*"([^"]+)"/) || [])[1];
         const newCL = (newContent.match(/"CognitiveLevel"\s*:\s*"([^"]+)"/) || [])[1];
         if (oldCL && newCL && oldCL !== newCL) {
@@ -747,7 +757,38 @@ export const GovernanceGuard = async ({ client }) => {
       }
 
       // ── RULE 16: BLOCK →Certified writes without provenance stamps ──
-      const unstamped = findUnstampedCertViolations(checkText);
+      // Backfill-on-touch: also scan the existing file on disk for legacy unstamped
+      // Certified items. If the change-set modifies any of those QuestionIDs, require
+      // stamps in the newContent for those items.
+      let unstamped = findUnstampedCertViolations(checkText);
+      if (SOURCE_FILE_RE.test(basename(filePath))) {
+        try {
+          const oldFileContent = fs.readFileSync(filePath, "utf8");
+          const legacyUnstamped = findUnstampedCertViolations(oldFileContent);
+          if (legacyUnstamped.length > 0) {
+            const legacyQIDs = new Set(legacyUnstamped.map(v => v.qid));
+            // Check if newContent modifies any of these legacy unstamped items
+            const newObjects = extractObjectsFromText(checkText);
+            for (const obj of newObjects) {
+              if (obj.QuestionID && legacyQIDs.has(obj.QuestionID)) {
+                // This legacy unstamped item is being touched — require stamps
+                if (!obj.certification_batch && !obj.recertification_batch) {
+                  unstamped.push({ qid: obj.QuestionID, reason: 'Certified without batch stamp (backfill-on-touch)' });
+                }
+                if (!obj.certification_date && !obj.recertification_date) {
+                  unstamped.push({ qid: obj.QuestionID, reason: 'Certified without date stamp (backfill-on-touch)' });
+                }
+              }
+            }
+          }
+        } catch (e) {
+          // File read failed (new file, etc.) — skip legacy check
+        }
+      }
+      // Deduplicate by qid+reason
+      unstamped = Array.from(
+        new Map(unstamped.map(v => [`${v.qid}|${v.reason}`, v])).values()
+      );
       if (unstamped.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
         const lines = unstamped
           .map(v => `  ${v.qid}: ${v.reason}`)

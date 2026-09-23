@@ -1,4 +1,4 @@
-# S110P — Exam Fidelity & Candidate Experience Plan
+﻿# S110P — Exam Fidelity & Candidate Experience Plan
 
 **Session:** 110P
 **Date:** 2026-07-31
@@ -9,7 +9,7 @@
 
 ## 1. Session Objective
 
-Compare the current CMA Part 1 2026 Practice Simulator experience against actual CMA examination behavior at Prometric test centers and premium commercial CMA prep platforms (Gleim, Becker, Hock, Surgent), identifying improvements that increase realism and reduce candidate friction — without changing question content, answer keys, certification state, or May coaching logic.
+Compare the current CMA 2026 Practice Simulator experience against actual CMA examination behavior at Prometric test centers and premium commercial CMA prep platforms (Gleim, Becker, Hock, Surgent), identifying improvements that increase realism and reduce candidate friction — without changing question content, answer keys, certification state, or May coaching logic.
 
 ## 2. Scope & Boundaries
 

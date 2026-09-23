@@ -1,4 +1,4 @@
-// SESSION 916-917: Case Pack 3×25 Consolidation Script
+﻿// SESSION 916-917: Case Pack 3×25 Consolidation Script
 // Extracts ENHANCED_CASE_BASE arrays, redistributes into 3 packs of 25,
 // generates new case_pack_N_corrected.js files with CASE_BANK_X + MIGRATED_CASE_BASE_X aliases.
 
@@ -135,7 +135,7 @@ for (let i = 0; i < 3; i++) {
   const cases = packs[i];
   
   // Build the JS file
-  let output = `// CMA Part 1 Exam Simulator — Case Pack ${i + 1} (25 Cases)\n`;
+  let output = `// CMA Exam Simulator — Case Pack ${i + 1} (25 Cases)\n`;
   output += `// Generated: SESSION 916-917 Case Study Reconsolidation\n`;
   output += `// Source: Consolidated from scored_cases.js through scored_cases5.js\n`;
   output += `// Architecture: 3-pack × 25-case structure for 2026 blueprint alignment\n\n`;

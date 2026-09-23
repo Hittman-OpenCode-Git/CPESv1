@@ -1,4 +1,4 @@
-# Difficulty Vocabulary and Distribution
+﻿# Difficulty Vocabulary and Distribution
 
 **Version:** 1.0
 **Status:** Active
@@ -9,13 +9,13 @@
 
 ## 1. Purpose
 
-This document defines the canonical difficulty vocabulary for the CMA Part 1 Exam Simulator, maps existing labels to the canonical scale, and specifies target distributions. It codifies the Session 55 finding that current packs overuse "Moderate" and underuse other tiers.
+This document defines the canonical difficulty vocabulary for the CMA Exam Simulator, maps existing labels to the canonical scale, and specifies target distributions. It codifies the Session 55 finding that current packs overuse "Moderate" and underuse other tiers.
 
 ---
 
 ## 2. Canonical Difficulty Bands
 
-All content in the CMA Part 1 Exam Simulator must converge on the 5-tier difficulty scale defined in `knowledge/TAXONOMY_REGISTRY.md` §6:
+All content in the CMA Exam Simulator must converge on the 5-tier difficulty scale defined in `knowledge/TAXONOMY_REGISTRY.md` §6:
 
 | Label | Numeric Score | Description | Typical Candidate Profile |
 |-------|--------------|-------------|---------------------------|

@@ -42,6 +42,90 @@ function mayPartLabel() {
 const MayLearnerState = {
     STORAGE_KEY: 'cmaMayLearnerState',
 
+    // ── W3: Confusion heuristic env overrides (Phase 2.1, token may_v2_1_confusion_heuristic) ──
+    // MAY_CONFUSION_WINDOW default 6, MAY_CONFUSION_THRESHOLD default 3 per design doc §4.2
+    // Env overrides: window.MAY_CONFUSION_WINDOW / window.MAY_CONFUSION_THRESHOLD or MayFeatureFlags
+    getConfusionWindow() {
+        try {
+            if (typeof window !== 'undefined' && window.MAY_CONFUSION_WINDOW != null) {
+                var w = Number(window.MAY_CONFUSION_WINDOW);
+                if (!isNaN(w) && w > 0) return w;
+            }
+            if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.get) {
+                var v = MayFeatureFlags.get('MAY_CONFUSION_WINDOW');
+                var vn = Number(v);
+                if (!isNaN(vn) && vn > 0) return vn;
+            }
+        } catch (e) {}
+        return 6;
+    },
+    getConfusionThreshold() {
+        try {
+            if (typeof window !== 'undefined' && window.MAY_CONFUSION_THRESHOLD != null) {
+                var w2 = Number(window.MAY_CONFUSION_THRESHOLD);
+                if (!isNaN(w2) && w2 > 0) return w2;
+            }
+            if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.get) {
+                var v2 = MayFeatureFlags.get('MAY_CONFUSION_THRESHOLD');
+                var vn2 = Number(v2);
+                if (!isNaN(vn2) && vn2 > 0) return vn2;
+            }
+        } catch (e) {}
+        return 3;
+    },
+    // HS-4 gate: no confusion heuristic during active exam timer / between case items / review
+    // May 2.5 Track 1 (may_2_5_track1): single-source first — MayExamGuard
+    // (isExamIntegrityMode inside) governs; the legacy inline checks below
+    // remain as defense-in-depth only.
+    _isConfusionAllowed(context) {
+        context = context || {};
+        try {
+            if (typeof MayExamGuard !== 'undefined' && MayExamGuard.isSuppressed(context)) return false;
+        } catch (e) {}
+        // If caller passes empty object, fallback to global exam state (fix HS-4 dead gate)
+        try {
+            // Check explicit context first
+            if (context.activeExamTimer === true) return false;
+            if (context.betweenCaseItems === true) return false;
+            if (context.examIntegrityReview === true) return false;
+            // Fallback to global state when context is empty or missing those keys
+            if (context.activeExamTimer === undefined && typeof state !== 'undefined' && state.session) {
+                var s = state.session;
+                var hasActive = !!s.start && !s.completed;
+                // Active timer = session has start and not completed and not paused, and is exam integrity mode
+                if (hasActive) {
+                    try { if (typeof isExamIntegrityMode === 'function' && isExamIntegrityMode(s)) return false; } catch(e){}
+                    // Generic active timer check: if session is not completed, suppress confusion during exam
+                    if (s.duration && s.start) {
+                        var elapsed = Math.floor((Date.now() - s.start)/1000);
+                        if (elapsed < s.duration) {
+                            // If betweenCaseItems (caseIndex set and qIndex indicates case)
+                            if (s.cases && s.cases.length > 0 && s.qIndex >= (s.mcqs||[]).length) {
+                                // Might be between case items — check via orchestrator guard
+                            }
+                            // For now, active session implies exam context — check via MayCoachingOrchestrator
+                            if (typeof MayCoachingOrchestrator !== 'undefined' && MayCoachingOrchestrator.isSocraticAllowed) {
+                                var allowed = MayCoachingOrchestrator.isSocraticAllowed({activeExamTimer:true});
+                                if (!allowed) return false;
+                            }
+                        }
+                    }
+                }
+                if (s.completed && !s.submitted) return false; // exam-integrity review
+                if (s.cases && s.cases.length > 0 && s.caseIndex != null && s.qIndex >= (s.mcqs||[]).length) {
+                    // Between case items heuristic — if case has multiple items, suppress between
+                    // Use orchestrator guard as proxy
+                    try { if (typeof MayCoachingOrchestrator !== 'undefined' && !MayCoachingOrchestrator.isSocraticAllowed({betweenCaseItems:true})) return false; } catch(e){}
+                }
+            }
+            if (typeof MayCoachingOrchestrator !== 'undefined' && MayCoachingOrchestrator.getSocraticGuard) {
+                var guard = MayCoachingOrchestrator.getSocraticGuard();
+                if (guard && guard.pauseActive) return false;
+            }
+        } catch (e) {}
+        return true;
+    },
+
     // ── Schema defaults ─────────────────────────────────
     _default() {
         return {
@@ -57,7 +141,11 @@ const MayLearnerState = {
             recommendationOutcomes: [],
             sessionSummaries: [],
             lastUpdated: null,
-            examPlan: null  // S117 — see setExamPlan/getExamPlan
+            examPlan: null,  // S117 — see setExamPlan/getExamPlan
+            // May 3.0 Track B (token may_3_0_guided_self_score):
+            // selfScore stored per-LOS only (HS-9). Keyed by P2 CSO LOS tag
+            // (e.g., "A.1"). NEVER linked to learnerId (HS-6).
+            selfScore: {}
         };
     },
 
@@ -96,6 +184,28 @@ const MayLearnerState = {
         data.examPlan = plan || null;
         this.save(data);
         return data.examPlan;
+    },
+
+    // ── W7 — Part-intent capture (T4 of Phase 2.1, 2026-09-20) ──
+    // One-shot per session; aggregated only (HS-6, HS-9).
+    // Caller provides examPart; we never store per-learner linkage.
+    recordPartIntent(examPart) {
+        let data = this.load();
+        if (data.partIntentCaptured) return data.examPart;
+        data.partIntentCaptured = true;
+        data.examPart = (examPart === 2 || examPart === 'P2' || examPart === '2') ? 'P2' : 'P1';
+        this.save(data);
+        try {
+            if (typeof MayTelemetry !== 'undefined') {
+                MayTelemetry.trackPartIntent({ examPart: data.examPart });
+            }
+        } catch (e) { /* telemetry non-blocking */ }
+        return data.examPart;
+    },
+
+    getPartIntent() {
+        let data = this.load();
+        return data.examPart || null;
     },
 
     // ── Phase 2: part-aware aggregation ────────────────────
@@ -140,21 +250,59 @@ const MayLearnerState = {
         else if (p2.accuracy !== null) weakerPart = 2;
         return { P1: p1, P2: p2, weakerPart: weakerPart };
     },
-    // Cross-part study-plan bridge: weakest part first, weakest sections
-    // within each part next. Pure recommendation strings — no state change.
+    // W2: Cross-part study-plan bridge — Top-3 60/40 weakest/strongest + D2(d) guard
+    // D4 60% weakest / 40% strongest (prevents push to strength). Pure recommendation strings — no state change.
+    // D2(d): when learner has stated P2-intent and recommendation would skip P2 sub-topic, suppress P1-only rec.
     getCrossPartStudyPlan() {
         let cross = this.getCrossPartReadiness();
         let plan = [];
-        [cross.P1, cross.P2].forEach(r => {
-            let secs = Object.entries(r.perSection)
-                .filter(([, c]) => c.attempts > 0)
-                .sort((a, b) => (a[1].accuracy || 0) - (b[1].accuracy || 0));
-            secs.forEach(([s, c]) => {
-                plan.push('Part ' + r.part + ' Section ' + s + ': ' + c.accuracy + '% over ' + c.attempts + ' attempts — prioritize in the next session.');
+        let allSecs = [];
+        [cross.P1, cross.P2].forEach(function(r){
+            Object.entries(r.perSection).forEach(function(entry){
+                var sec = entry[0], c = entry[1];
+                if (c.attempts > 0) allSecs.push({ part: r.part, section: sec, accuracy: c.accuracy, attempts: c.attempts });
             });
-            if (r.attempts === 0) plan.push('Part ' + r.part + ': no attempts yet — start with a short mixed MCQ set to establish a baseline.');
         });
-        return { weakerPart: cross.weakerPart, actions: plan };
+        // Sort weakest-first
+        allSecs.sort(function(a,b){ return (a.accuracy||0) - (b.accuracy||0); });
+        // D2(d) guard: if P2-intent stated, filter to keep at least one P2 rec
+        var partIntent = null;
+        try { partIntent = this.getPartIntent(); } catch(e){}
+        var hasP2Data = allSecs.some(function(s){ return s.part === 2; });
+        // Build Top-3 with 60/40 split: 2 weakest + 1 strongest (HS-3 diversity, D4)
+        var top3 = [];
+        if (allSecs.length === 0) {
+            [cross.P1, cross.P2].forEach(function(r){
+                if (r.attempts === 0) plan.push('Part ' + r.part + ': no attempts yet — start with a short mixed MCQ set to establish a baseline.');
+            });
+            return { weakerPart: cross.weakerPart, actions: plan, evidence: { split: '60/40', weakestCount: 0, strongestCount: 0, total: 0 } };
+        } else if (allSecs.length <= 3) {
+            allSecs.forEach(function(s){ plan.push('Part ' + s.part + ' Section ' + s.section + ': ' + s.accuracy + '% over ' + s.attempts + ' attempts — prioritize in the next session.'); });
+            // Emit T1 for each rec (cohort-aggregated, HS-9)
+            try { if (typeof MayTelemetry !== 'undefined') { plan.forEach(function(_,i){ MayTelemetry.trackRecommendationAcceptance({ itemId: allSecs[i].part + '-' + allSecs[i].section, cohort: 'cross-part', accepted: false, examPart: 'P' + allSecs[i].part }); }); } } catch(e){}
+            return { weakerPart: cross.weakerPart, actions: plan, evidence: { split: '60/40', weakestCount: allSecs.length, strongestCount: 0, total: plan.length } };
+        } else {
+            var weakest = allSecs.slice(0, 2); // 2 weakest
+            var strongest = allSecs.slice(-1); // 1 strongest
+            // D2(d): ensure P2 not skipped when intent is P2 — preserve 60/40 diversity (fix: keep one strongest)
+            if (partIntent === 'P2' && hasP2Data && !weakest.concat(strongest).some(function(s){ return s.part === 2; })) {
+                var p2Candidates = allSecs.filter(function(s){ return s.part === 2; }).sort(function(a,b){ return (a.accuracy||0)-(b.accuracy||0); });
+                if (p2Candidates.length > 0) {
+                    // Pick strongest P2 (highest accuracy) to preserve 60/40, not weakest
+                    var p2Strongest = p2Candidates[p2Candidates.length - 1];
+                    // If strongest already weakest, pick next distinct
+                    if (weakest.some(function(w){ return w.part===p2Strongest.part && w.section===p2Strongest.section; })) {
+                        if (p2Candidates.length > 1) p2Strongest = p2Candidates[p2Candidates.length - 2];
+                    }
+                    strongest = [p2Strongest];
+                }
+            }
+            weakest.forEach(function(s){ plan.push('Part ' + s.part + ' Section ' + s.section + ': ' + s.accuracy + '% over ' + s.attempts + ' attempts — prioritize in the next session.'); });
+            strongest.forEach(function(s){ plan.push('Part ' + s.part + ' Section ' + s.section + ': ' + s.accuracy + '% over ' + s.attempts + ' attempts — strength maintenance.'); });
+            // Emit T1 acceptance tracking for dashboard (HS-9 cohort)
+            try { if (typeof MayTelemetry !== 'undefined') { plan.forEach(function(_,i){ var src = i < 2 ? weakest[i] : strongest[0]; MayTelemetry.trackRecommendationAcceptance({ itemId: src.part + '-' + src.section, cohort: 'cross-part', accepted: false, examPart: 'P' + src.part }); }); } } catch(e){}
+            return { weakerPart: cross.weakerPart, actions: plan, evidence: { split: '60/40', weakestCount: weakest.length, strongestCount: strongest.length, total: plan.length } };
+        }
     },
 
     // ── Load / Save ─────────────────────────────────────
@@ -214,6 +362,12 @@ const MayLearnerState = {
             questionId: qid, section, topic, subtopic, difficulty, difficultyScore,
             itemType, cognitiveLevel, questionState, part,
             correct: isCorrect, hintsUsed: hintsUsed || 0,
+            // May 2.5 Track 1 (may_2_5_track1): hint-assisted corrects are
+            // excluded from mastery — masteryCorrect counts only unaided
+            // corrects. Bands keep legacy accuracy (no relabeling per
+            // Rule 12); mastery signals are exposed separately.
+            hintAssisted: !!isCorrect && (hintsUsed || 0) > 0,
+            masteryCorrect: !!isCorrect && !((hintsUsed || 0) > 0),
             explanationRequested: !!explanationRequested,
             elapsedMs: elapsedMs || 0, selectedChoice: answer || null,
             confidence: confidence || null, timestamp: new Date().toISOString()
@@ -281,10 +435,14 @@ const MayLearnerState = {
     // ── Topic aggregate update ───────────────────────────
     _updateTopicAggregate(container, key, correct, hints, difficulty, diffScore, section) {
         if (!container[key]) {
-            container[key] = { totalAttempts: 0, correctCount: 0, hintCount: 0, recentAttempts: [], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString(), sectionsSeen: [], difficultyDistribution: {}, difficultyWeights: { total: 0, sum: 0 } };
+            container[key] = { totalAttempts: 0, correctCount: 0, hintCount: 0, masteryCorrectCount: 0, recentAttempts: [], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString(), sectionsSeen: [], difficultyDistribution: {}, difficultyWeights: { total: 0, sum: 0 } };
         }
         let agg = container[key];
         agg.totalAttempts++; if (correct) agg.correctCount++; agg.hintCount += hints;
+        // May 2.5 Track 1 (may_2_5_track1): mastery excludes hint-assisted
+        // corrects. Backfill-safe: legacy aggs without the field start at 0.
+        if (typeof agg.masteryCorrectCount !== 'number') agg.masteryCorrectCount = 0;
+        if (correct && !(hints > 0)) agg.masteryCorrectCount++;
         agg.lastSeen = new Date().toISOString();
         if (!agg.sectionsSeen.includes(section)) agg.sectionsSeen.push(section);
         agg.difficultyDistribution[difficulty] = (agg.difficultyDistribution[difficulty] || 0) + 1;
@@ -336,8 +494,29 @@ const MayLearnerState = {
         } catch (e) { /* agent failure → keep keyword result */ }
 
         if (patternKey) {
+            // W3: HS-4 gate + window/threshold (MAY_CONFUSION_WINDOW=6, THRESHOLD=3)
+            var windowSize = this.getConfusionWindow();
+            var threshold = this.getConfusionThreshold();
+            var windowTriggered = false;
+            var recentWrongs = 0;
+            var hs4Allowed = this._isConfusionAllowed({});
+            if (!hs4Allowed) {
+                // HS-4: suppress during active exam timer / between case items / review — still record pattern, but don't trigger threshold
+                windowTriggered = false;
+            } else {
+                try {
+                    var allAttempts = this._allAttempts(data);
+                    // allAttempts already includes current wrong (pushed before _trackMisconception), so slice includes it — no +1
+                    var recent = allAttempts.slice(-windowSize);
+                    recentWrongs = recent.filter(function(a){ return !a.correct && a.topic === topic; }).length;
+                } catch (e) { recentWrongs = 0; windowTriggered = false; } // fallback: don't trigger on corruption
+                if (hs4Allowed) {
+                    windowTriggered = recentWrongs >= threshold;
+                }
+            }
+
             let existing = data.misconceptionPatterns.find(p => p.pattern === patternKey);
-            const entryBase = { pattern: patternKey, count: 1, questionIds: [qid], _topics: [topic], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString() };
+            const entryBase = { pattern: patternKey, count: 1, questionIds: [qid], _topics: [topic], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString(), window: windowSize, threshold: threshold, windowTriggered: windowTriggered };
             if (agentDlTag) entryBase.dlTag = agentDlTag;
             if (existing) {
                 existing.count++;
@@ -345,8 +524,22 @@ const MayLearnerState = {
                 if (!existing._topics.includes(topic)) existing._topics.push(topic);
                 if (agentDlTag && !existing.dlTag) existing.dlTag = agentDlTag;
                 existing.lastSeen = new Date().toISOString();
+                existing.windowTriggered = windowTriggered;
             } else {
                 data.misconceptionPatterns.push(entryBase);
+            }
+            // W3 T3: emit tag accuracy when window threshold reached (for CB calibration)
+            if (windowTriggered) {
+                try {
+                    if (typeof MayTelemetry !== 'undefined' && MayTelemetry.trackTagAccuracy) {
+                        MayTelemetry.trackTagAccuracy({
+                            tagId: patternKey,
+                            interventionId: qid,
+                            outcomeCorrect: false,
+                            nextQuestionSameTopic: false
+                        });
+                    }
+                } catch (e) {}
             }
         }
     },
@@ -363,10 +556,14 @@ const MayLearnerState = {
         Object.entries(data.topicPerformance).forEach(([topic, agg]) => {
             let accuracy = agg.totalAttempts > 0 ? Math.round(agg.correctCount / agg.totalAttempts * 100) : null;
             let hintRate = agg.totalAttempts > 0 ? Math.round(agg.hintCount / agg.totalAttempts * 100) : 0;
+            // May 2.5 Track 1 (may_2_5_track1): mastery accuracy excludes
+            // hint-assisted corrects (backfill-safe: missing field → null).
+            let masteryCount = (typeof agg.masteryCorrectCount === 'number') ? agg.masteryCorrectCount : null;
+            let masteryAccuracy = (masteryCount !== null && agg.totalAttempts > 0) ? Math.round(masteryCount / agg.totalAttempts * 100) : null;
             let avgDifficulty = agg.difficultyWeights.total > 0 ? (agg.difficultyWeights.sum / agg.difficultyWeights.total).toFixed(1) : null;
             let recent = agg.recentAttempts.slice(-5);
             let recentPct = recent.length > 0 ? Math.round(recent.filter(a => a.correct).length / recent.length * 100) : null;
-            result[topic] = { totalAttempts: agg.totalAttempts, correctCount: agg.correctCount, accuracy, hintRate, avgDifficulty: avgDifficulty ? parseFloat(avgDifficulty) : null, recentPct, recentTotal: recent.length, firstSeen: agg.firstSeen, lastSeen: agg.lastSeen, sectionsSeen: agg.sectionsSeen, difficultyDistribution: agg.difficultyDistribution };
+            result[topic] = { totalAttempts: agg.totalAttempts, correctCount: agg.correctCount, accuracy, hintRate, masteryCorrectCount: masteryCount, masteryAccuracy, avgDifficulty: avgDifficulty ? parseFloat(avgDifficulty) : null, recentPct, recentTotal: recent.length, firstSeen: agg.firstSeen, lastSeen: agg.lastSeen, sectionsSeen: agg.sectionsSeen, difficultyDistribution: agg.difficultyDistribution };
         });
         return result;
     },
@@ -2674,5 +2871,99 @@ const MayLearnerState = {
                 improvingTopics
             }
         };
+    },
+
+    // ─────────────────────────────────────────────────────────
+    // May 3.0 Track B — Guided Self-Score (token may_3_0_guided_self_score)
+    // Self-score is learner-recorded input, NOT May-authored item content (HS-1).
+    // Stored per-LOS only (HS-9). NEVER linked to learnerId (HS-6).
+    // ─────────────────────────────────────────────────────────
+
+    recordSelfScore(question, selfScoreEntries) {
+        let data = this.load();
+        if (!data.selfScore) data.selfScore = {};
+
+        let losTag = this._normalizeLosTag(question);
+        if (!data.selfScore[losTag]) {
+            data.selfScore[losTag] = { entries: [], total: 0, met: 0 };
+        }
+
+        // selfScoreEntries: array of { criterionId, criterionMet (boolean) }
+        // HS-1: entries reference only P2 CSO LO statements — no new
+        // stems/numbers/choices are authored here.
+        if (Array.isArray(selfScoreEntries)) {
+            for (let i = 0; i < selfScoreEntries.length; i++) {
+                let entry = selfScoreEntries[i];
+                let record = {
+                    criterionId: entry.criterionId || 'unknown',
+                    criterionMet: !!entry.criterionMet,
+                    ev3Compliant: !!entry.ev3Compliant,
+                    ts: new Date().toISOString()
+                };
+                data.selfScore[losTag].entries.push(record);
+                data.selfScore[losTag].total++;
+                if (entry.criterionMet) data.selfScore[losTag].met++;
+            }
+        }
+
+        // Cap entries per-LOS to avoid unbounded growth (D3 retention)
+        if (data.selfScore[losTag].entries.length > 100) {
+            data.selfScore[losTag].entries = data.selfScore[losTag].entries.slice(-100);
+        }
+
+        this.save(data);
+
+        // V-B1/V-B3 telemetry: emits criterion counts only, never a score.
+        // Threads ev3CitedCount — the count of entries that carry an
+        // actual ev3Compliant citation (CAQS §4.3 EV3, line 345).
+        // criteriaTotal is intentionally omitted (DL-045 positive evidence;
+        // met/total percentage reconstruction is LOS-level aggregate only,
+        // contained by HS-9 — disclosed, not suppressed).
+        try {
+            if (typeof MayTelemetry !== 'undefined' && MayTelemetry.trackSelfScoreSession) {
+                MayTelemetry.trackSelfScoreSession({
+                    losTag: losTag,
+                    ev3CitedCount: selfScoreEntries ? selfScoreEntries.filter(function(e){ return !!e.ev3Compliant; }).length : 0,
+                    criteriaMetCount: selfScoreEntries ? selfScoreEntries.filter(function(e){ return !!e.criterionMet; }).length : 0,
+                    mode: 'SELF_SCORE'
+                });
+            }
+        } catch (e) {}
+
+        return losTag;
+    },
+
+    getSelfScoreProgress() {
+        let data = this.load();
+        let result = {};
+        if (!data.selfScore) return result;
+
+        // HS-9: returns LOS-level aggregates only — NO learnerId linkage.
+        Object.entries(data.selfScore).forEach(function([losTag, agg]) {
+            let total = agg.total || 0;
+            let met = agg.met || 0;
+            result[losTag] = {
+                total: total,
+                met: met,
+                pct: total > 0 ? Math.round(met / total * 100) : 0
+                // Deliberately: NO learnerId, sessionId, or PII (HS-6/HS-9)
+            };
+        });
+        return result;
+    },
+
+    _normalizeLosTag(question) {
+        if (!question) return 'Unclassified';
+        let los = question.LOS || question.LearningObjective || question.CSOLOS || '';
+        if (los && typeof los === 'string') {
+            let m = los.match(/^([A-F])\.(\d+)/i);
+            if (m) return m[1].toUpperCase() + '.' + m[2];
+        }
+        let topic = question.Topic || question.Section || '';
+        if (topic && typeof topic === 'string') {
+            let tm = topic.match(/^([A-F])\.(\d+)/i);
+            if (tm) return tm[1].toUpperCase() + '.' + tm[2];
+        }
+        return 'Unclassified';
     }
 };

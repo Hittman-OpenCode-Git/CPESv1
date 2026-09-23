@@ -1,4 +1,4 @@
-# AI Review Session Guidelines
+﻿# AI Review Session Guidelines
 
 **Version:** 1.0
 **Status:** Active
@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document defines the rules that govern AI-assisted review sessions in the CMA Part 1 Exam Simulator repository. It ensures that every session is auditable, reversible, and clearly scoped — with analysis always preceding implementation.
+This document defines the rules that govern AI-assisted review sessions in the CMA Exam Simulator repository. It ensures that every session is auditable, reversible, and clearly scoped — with analysis always preceding implementation.
 
 ---
 

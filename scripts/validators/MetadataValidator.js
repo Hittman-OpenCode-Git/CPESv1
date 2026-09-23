@@ -18,7 +18,7 @@ class MetadataValidator extends Validator {
     validate() {
         this.start();
         const root = config.paths.root;
-        const banks = config.casePackBanks; // DL-050: live banks (archived legacy retired from scope)
+        const banks = [...config.casePackBanks, ...config.part2CasePacks]; // DL-050: P2 cases wired
         let totalCases = 0;
 
         banks.forEach(file => {
@@ -45,7 +45,9 @@ class MetadataValidator extends Validator {
     }
 
     extractCases(content, filename) {
-        return CaseExtractor.extractFromContent(content);
+        const cases = CaseExtractor.extractFromContent(content);
+        if (cases) return CaseExtractor.normalizeCaseItems(cases);
+        return cases;
     }
 
     validateCase(c, filename, idx) {
@@ -248,7 +250,11 @@ class MetadataValidator extends Validator {
             }
         }
         if (exhibit.Type === "table") {
-            if (!exhibit.Headers || !Array.isArray(exhibit.Headers)) {
+            // P2-aware: P2 case packs use "Columns" instead of "Headers" (schema variant)
+            const isP2Case = config.part2CasePacks.includes(filename);
+            const hasHeaders = exhibit.Headers && Array.isArray(exhibit.Headers);
+            const hasColumns = isP2Case && exhibit.Columns && Array.isArray(exhibit.Columns);
+            if (!hasHeaders && !hasColumns) {
                 this.addWarning(`${prefix}: Table exhibit missing Headers`);
             }
             if (!exhibit.Rows || !Array.isArray(exhibit.Rows)) {

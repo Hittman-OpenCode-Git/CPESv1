@@ -1,4 +1,4 @@
-# S124 — Admin Console Competitive Analysis & Operations Redesign
+﻿# S124 — Admin Console Competitive Analysis & Operations Redesign
 
 **Session:** S124
 **Governance Lane:** Light
@@ -239,7 +239,7 @@ Ranked by value-to-effort ratio (existing data sources × UI surface needed):
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ CMA Part 1 Exam Simulator — Program Operations Console       │
+│ CMA Exam Simulator — Program Operations Console       │
 ├─────────┬─────────┬─────────────┬───────────────────────────┤
 │ LEARNERS│   MAY   │  GOVERNANCE │        CONTENT            │
 ├─────────┴─────────┴─────────────┴───────────────────────────┤

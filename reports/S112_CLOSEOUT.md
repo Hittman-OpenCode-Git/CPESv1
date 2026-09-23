@@ -1,4 +1,4 @@
-# S112 — Closeout Report
+﻿# S112 — Closeout Report
 
 **Session:** 112  
 **Lane:** Full Governance  
@@ -9,7 +9,7 @@
 
 ## Summary
 
-Session 112 implemented a durable learner-profile persistence, migration, and backup architecture for the CMA Part 1 Exam Simulator. The system eliminates dependence on browser-only localStorage by introducing a unified profile that can be exported, backed up, and restored — making learner history portable across devices and resistant to browser cleanup events.
+Session 112 implemented a durable learner-profile persistence, migration, and backup architecture for the CMA Exam Simulator. The system eliminates dependence on browser-only localStorage by introducing a unified profile that can be exported, backed up, and restored — making learner history portable across devices and resistant to browser cleanup events.
 
 ## Files Modified
 

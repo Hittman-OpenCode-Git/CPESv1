@@ -1,4 +1,4 @@
-# S123 — Repository BEFORE Report
+﻿# S123 — Repository BEFORE Report
 
 **Session:** S123 (Repository Archival & Information Architecture Audit)
 **Date:** 2026-07-31
@@ -9,7 +9,7 @@
 
 ## 1. Executive Summary
 
-The CMA Part 1 Exam Simulator repository has accumulated significant historical debris across 100+ sessions of development, recovery, quality assurance, and governance hardening. This report captures the repository's state before archival — the baseline against which the post-archival AFTER report will measure improvement.
+The CMA Exam Simulator repository has accumulated significant historical debris across 100+ sessions of development, recovery, quality assurance, and governance hardening. This report captures the repository's state before archival — the baseline against which the post-archival AFTER report will measure improvement.
 
 **Current state:** 5,033 files consuming 1,051.12 MB across 18 subdirectories. The `backups/` directory alone accounts for 81.7% of repository size (858.45 MB). Historical session reports, defect sweeps, remediation plans, and script outputs have accumulated in active working directories alongside live governance and operational code.
 

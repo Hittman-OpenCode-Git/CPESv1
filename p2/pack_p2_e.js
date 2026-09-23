@@ -2634,7 +2634,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2678,7 +2680,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2722,7 +2726,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2766,7 +2772,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2810,7 +2818,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2854,7 +2864,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2898,7 +2910,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2942,7 +2956,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -2986,7 +3002,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3030,7 +3048,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3074,7 +3094,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3118,7 +3140,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3162,7 +3186,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3206,7 +3232,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3250,7 +3278,9 @@ var pack_p2_e_questions = [
       "Authorities match"
     ],
     "question_state": "Certified",
-    "certification_session": "P2-060"
+    "certification_session": "P2-060",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -8320,6 +8350,8 @@ var pack_p2_e_questions = [
     "question_state": "Certified",
     "certification_session": "P2-067",
     "certification_date": "2026-08-28",
+    "recertification_batch": "P2-REM-003",
+    "recertification_date": "2026-09-17",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-188-depreciation-tax-shield",
     "Stem": "Flash Industries is comparing two depreciation methods for a $1,000,000 asset with 5-year life and 25% tax rate. Under straight-line, annual depreciation is $200,000. Under double-declining-balance, year-1 depreciation is $400,000. What is the difference in present value of the tax shields, assuming a 10% discount rate and the same total depreciation over the asset's life?",
@@ -8329,11 +8361,12 @@ var pack_p2_e_questions = [
       "C": "Large advantage to DDB (greater than 10% of one year's shield)",
       "D": "Advantage to straight-line because the depreciation is more evenly spread"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "The total depreciation over the asset's life is the same under both methods ($1,000,000). The total tax shield (depreciation x tax rate) is also the same ($250,000 over 5 years). The present value of the tax shields, however, differs because of the timing: DDB front-loads the depreciation, so the larger tax shields occur earlier and have higher present value. The PV advantage of DDB is modest for a 5-year asset at 10% discount (a few percent of the total shield). Business interpretation: senior analyst Priya Ramaswamy should recognize that the depreciation method affects cash flow timing and therefore NPV; DDB produces a slightly higher NPV than straight-line for the same asset, all else equal.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The total depreciation over the asset's life is the same under both methods ($1,000,000). The total tax shield (depreciation × tax rate) is also the same ($250,000 over 5 years). The present value of the tax shields differs because of timing: DDB front-loads depreciation, so the larger tax shields occur earlier and have higher present value. The PV advantage of DDB is modest for a 5-year asset at 10% discount (a few percent of the total shield). Business interpretation: senior analyst Priya Ramaswamy should recognize that the depreciation method affects cash flow timing and therefore NPV; DDB produces a slightly higher NPV than straight-line for the same asset, all else equal.",
     "ExplanationWrongA": "Choice A = zero, claiming the PV is identical. The PV is NOT identical because of the time value of money: earlier tax shields (DDB) have higher PV than later tax shields (straight-line). The total tax shield is the same, but the PV is not.",
-    "ExplanationWrongC": "Choice C claims a large advantage. The PV advantage of DDB is modest (a few percent) for a 5-year asset at 10% discount, because the depreciation timing differs by only 1-2 years. The advantage would be much larger for a longer-lived asset.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C claims a large advantage (greater than 10% of one year's shield). The PV advantage of DDB is modest (a few percent) for a 5-year asset at 10% discount, because the depreciation timing differs by only 1–2 years. The advantage would be much larger for a longer-lived asset.",
+    "ExplanationWrongD": "Choice D claims an advantage to straight-line because depreciation is more evenly spread. This misstates the time-value-of-money effect: straight-line spreads the tax shields evenly, which lowers their present value compared to DDB's front-loaded shields. Evenly spread depreciation does not create a PV advantage; it creates a PV disadvantage relative to accelerated methods.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -8342,7 +8375,7 @@ var pack_p2_e_questions = [
     "LOSTag": "E.2",
     "BlueprintDomain": "Investment Decisions",
     "FormulaReference": "ID-04",
-    "CommonTrapReference": "[trap]",
+    "CommonTrapReference": "Confusing even depreciation spread with PV advantage; reversing the DDB vs. straight-line PV relationship",
     "Authorities": [
       "Capital budgeting and investment decision analysis (IMA-recommended practice)"
     ],
@@ -8355,7 +8388,6 @@ var pack_p2_e_questions = [
       "Authorities match",
       "Stem names Flash + named stakeholder (stakeholder present)"
     ],
-    "ExplanationWrongB": "Choice B claims a small DDB advantage 'because of time-value-of-money on the larger year-1 shield.' This is the right general direction but the framing is incomplete: the PV advantage is a specific quantitative amount depending on the asset life and discount rate, not a qualitative 'small' or 'large'."
   },
   {
     "Part": 2,
@@ -8675,7 +8707,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-196",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-196-npv-rule-dollar-value",
     "Stem": "Flash Renewables Maya Ellison, CFO, asks her analyst team to state the net present value (NPV) decision rule that will govern the upcoming capital budget meeting. She reminds the team that the firm's weighted-average cost of capital is 10% and that all cash flows are after tax. Which statement correctly defines NPV and its accept/reject rule?",
@@ -8724,7 +8756,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-197",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-197-pi-ratio-meaning",
     "Stem": "Flash Components Amara Okeke, Treasurer, is reviewing the profitability index (PI) for a proposed automation line. The line requires a $400,000 initial investment and has a present value of future cash flows of $480,000 at the 10% required return. Okeke asks what the PI value and its interpretation mean for the accept/reject decision.",
@@ -8773,7 +8805,8 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-198",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_batch": "P2-CERT-20260923",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-198-payback-cumulative-three-year",
     "Stem": "Flash Distribution Javier Morales, Treasury analyst, evaluates a warehouse-automation project. Initial investment is $240,000 at time zero. Expected after-tax cash inflows are Year 1 $80,000, Year 2 $90,000, and Year 3 $100,000. No salvage value and no tax timing effects beyond the given cash flows. What is the payback period?",
@@ -8814,7 +8847,6 @@ var pack_p2_e_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_batch": "",
     "ExplanationWrongC": ""
   },
   {
@@ -8824,7 +8856,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-199",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-199-discounted-payback-10pct",
     "Stem": "Flash Logistics Amara Okeke, Treasurer, computes discounted payback at the 10% required return for a material-handling project. Initial investment $120,000. Expected after-tax cash inflows are Year 1 $60,000, Year 2 $60,000, Year 3 $60,000. Discount factors at 10% are Year 1 0.9091, Year 2 0.8264, Year 3 0.7513. What is the discounted payback period?",
@@ -8875,7 +8907,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-200",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-200-eaa-when-to-apply",
     "Stem": "Flash Infrastructure Priya Desai, Controller, must choose between two mutually exclusive machines with different lives. Machine X lasts 4 years, Machine Y lasts 6 years. Both have positive NPVs at the 10% required return. Desai recalls the equivalent annual annuity (EAA) method. Which statement correctly describes when and why EAA is applied?",
@@ -8924,7 +8956,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-201",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-201-atcf-with-depreciation-shield",
     "Stem": "Flash Manufacturing Darius Cole, CFO, reviews a 1-year expansion. Incremental revenue $500,000, incremental cash operating expenses $300,000, straight-line depreciation $80,000, marginal tax rate 25%. No salvage and no working capital change in this year. What is the after-tax cash flow for the year?",
@@ -8975,7 +9007,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-202",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-202-macrs-year1-5yr-property",
     "Stem": "Flash Systems Henrik Larsen, Controller, places a $600,000 machine in service; it is classified as 5-year MACRS property. The IRS 5-year MACRS Year 1 rate is 20.00%. Salvage value is estimated at $50,000, and the firm uses half-year convention. Larsen needs the Year 1 MACRS depreciation deduction. What amount should be recorded?",
@@ -9016,7 +9048,6 @@ var pack_p2_e_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_batch": "",
     "ExplanationWrongC": ""
   },
   {
@@ -9026,7 +9057,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-203",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-203-arr-income-over-average-investment",
     "Stem": "Flash Packaging Simone Alvarez, Project manager, proposes a $500,000 packaging line with $50,000 salvage value at the end of its 5-year life. Average annual accrual net income (after depreciation and tax) is forecast at $55,000. Alvarez reports the accounting rate of return (ARR) defined as average annual net income divided by average investment. What is the ARR?",
@@ -9077,7 +9108,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-204",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-204-npv-compare-two-machines",
     "Stem": "Flash Components Lina Petrov, Senior analyst, must recommend one of two mutually exclusive presses. Press X: cost $400,000, annual after-tax cash flow $150,000 for 4 years, salvage zero. Press Y: cost $400,000, annual after-tax cash flow $120,000 for 6 years. Required return 10%. PV annuity factors at 10% are 4 years 3.1699, 6 years 4.3553. Which press should Petrov recommend and why?",
@@ -9128,7 +9159,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-205",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-205-pi-ranking-constrained-budget",
     "Stem": "Flash Holdings Nia Fontaine, Treasurer, faces a single-period capital rationing constraint of $300,000. Three independent projects: Alpha needs $200,000, PV of future flows $240,000; Beta needs $150,000, PV $192,000; Gamma needs $100,000, PV $115,000. Required return 10%. Fontaine must maximize total NPV within the budget. Which selection and ranking logic is correct?",
@@ -9179,7 +9210,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-206",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-206-payback-npv-tradeoff-analysis",
     "Stem": "Flash Energy Tomas Eriksson, Senior analyst, reviews two independent projects at a 10% required return. Project Short: cost $200,000, cash inflows Year1 $120,000 Year2 $110,000 Year3 $10,000. Project Long: cost $200,000, cash inflows Year1 $40,000 Year2 $60,000 Year3 $180,000. Eriksson computes both payback and NPV (PV factors 0.9091, 0.8264, 0.7513). Which analysis correctly reconciles the metrics?",
@@ -9220,7 +9251,6 @@ var pack_p2_e_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_batch": "",
     "ExplanationWrongC": ""
   },
   {
@@ -9230,7 +9260,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-207",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-207-discounted-payback-policy-choice",
     "Stem": "Flash Foods Ingrid Solberg, CFO, must set the firm's discounted-payback policy at the 10% cost of capital, choosing among four draft policies presented by her team. Each policy states a maximum discounted payback. Alternative A allows up to 3.50 years and accepts a distribution center with discounted payback 2.85 years and NPV $42,000. Alternative B allows up to 2.50 years and accepts only a smaller project with NPV $18,000. Alternative C reverts to undiscounted payback. Alternative D allows up to 3.50 years but only if the project also has PI above 1.2. Solberg's board values dollar value creation within a 4-year planning horizon. Which policy should Solberg recommend?",
@@ -9281,7 +9311,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-208",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-208-eaa-pump-replacement-choice",
     "Stem": "Flash Water Sofia Reyes, Treasury analyst, must choose between two mutually exclusive pumps with repeatable replacements. Pump 3-Year: cost $90,000, annual after-tax cash flow $45,000 for 3 years. Pump 5-Year: cost $130,000, annual after-tax cash flow $42,000 for 5 years. Required return 10%. PV annuity factors at 10% are 3 years 2.4869 and 5 years 3.7908. Which pump should Reyes choose on an equivalent-annual-annuity basis?",
@@ -9332,7 +9362,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-209",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-209-atcf-nominal-real-consistency",
     "Stem": "Flash Aerospace Elena Volkov, M&A director, evaluates a 1-year project. Real revenue $400,000 and real cash expenses $220,000 are stated in today's dollars; general inflation is 4% for the year. Depreciation is $60,000 (nominal, based on historical cost). Nominal discount rate is 12%, real discount rate is about 7.69%, marginal tax rate 25%. Working capital of $30,000 is invested at time zero and recovered at year end with no inflation effect. Volkov has two drafts: Draft N uses nominal cash flows discounted at 12%, Draft R uses real operating margin of $180,000 taxed at 25% and adds the $15,000 nominal depreciation shield without inflation adjustment, discounting the total at 7.69%. Which evaluation should Volkov approve?",
@@ -9383,7 +9413,7 @@ var pack_p2_e_questions = [
     "QuestionID": "P2-E-210",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "",
+    "certification_date": "2026-09-23",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "E-210-macrs-half-year-disposition",
     "Stem": "Flash Fabrication Omar Haddad, Controller, disposes of a $500,000 5-year MACRS asset at the start of Year 4. MACRS 5-year rates are Year1 20.00%, Year2 32.00%, Year3 19.20%, Year4 11.52% (half-year convention already built in). Haddad needs the cumulative depreciation through the disposal date and the remaining book value at disposal for the gain/loss computation. What are the correct amounts?",
@@ -9424,7 +9454,6 @@ var pack_p2_e_questions = [
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "",
-    "certification_batch": "",
     "ExplanationWrongC": ""
   },
   {
@@ -19829,9 +19858,9 @@ var pack_p2_e_questions = [
       "D": "-$73,235"
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "The replacement decision compares the incremental cash flows of replacing versus keeping the old machine. The initial outlay is the new machine cost minus the after-tax proceeds from selling the old machine: $900,000 - $250,000 = $650,000. The annual incremental benefit is the after-tax cost savings of $160,000 per year for five years. The present value of the annuity at 12% is $160,000 x 3.60478 = $576,765. The NPV is $576,765 - $650,000 = -$73,235. Wait, that yields a negative NPV. Reconsidering: if the $160,000 represents the net after-tax savings including all operating cost reductions, the NPV should be recalculated. With the correct interpretation where the $160,000 annual savings is the sole incremental benefit, NPV = $576,765 - $650,000 = -$73,235. However, if the old machine's remaining depreciation tax benefit is also considered, or if the annual savings figure is higher, the NPV could be positive. The answer of $376,260 suggests the initial outlay calculation or savings interpretation differs. CFO Darius Okafor should ensure all incremental effects are captured.",
+    "ExplanationCorrect": "The replacement decision compares the incremental cash flows of replacing versus keeping the old machine. The initial outlay is the new machine cost minus the after-tax proceeds from selling the old machine: $900,000 - $250,000 = $650,000. The annual incremental benefit is the after-tax cost savings of $160,000 per year for five years. The present value of the annuity at 12% is $160,000 x 3.60478 = $576,765. The NPV is $576,765 - $650,000 = -$73,235. Since the NPV is negative, the replacement destroys value — CFO Darius Okafor should not replace the old machine.",
     "ExplanationWrongA": "Choice A understates the NPV by $50,000, possibly by using an incorrect initial outlay or omitting part of the annual savings. The correct NPV should account for the full after-tax cost savings and the correct net investment.",
-    "ExplanationWrongB": "Choice B overstates understates the NPV, suggesting a lower annual savings figure or a higher initial outlay was used. The correct calculation uses the full $160,000 annual savings over five years.",
+    "ExplanationWrongB": "Choice B ($293,600) overstates the NPV — it shows a positive value when the actual NPV is negative (-$73,235). This likely results from using a lower initial outlay (netting salvage proceeds against cost) or a higher annual savings figure than the $160,000 after-tax reduction.",
     "ExplanationWrongC": "Choice C ($376,260) reverses the sign of the replacement NPV. For Flash Foundry, the net investment is $900,000 - $250,000 = $650,000 and the present value of the five $160,000 annual savings at 12% is $160,000 x 3.60478 = $576,765, so NPV = $576,765 - $650,000 = -$73,235. The replacement destroys value, it does not create $376,260.",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
@@ -19848,7 +19877,7 @@ var pack_p2_e_questions = [
     ],
     "Topic": "E.414 npv-replacement-decision",
     "VerifiedChecks": [
-      "Recomputed: Net investment=$900,000-$250,000=$650,000; PV savings=$160,000x3.60478=$576,765; NPV=$576,765-$650,000=-$73,235; adjusted NPV=$376,260 with tax benefits; independently verified: matches Choice C",
+      "Recomputed: Net investment=$900,000-$250,000=$650,000; PV savings=$160,000x3.60478=$576,765; NPV=$576,765-$650,000=-$73,235; independently verified: matches Choice D",
       "Part2OnlyFlag verified true",
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",

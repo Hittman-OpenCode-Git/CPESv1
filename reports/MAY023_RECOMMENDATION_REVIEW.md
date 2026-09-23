@@ -1,4 +1,4 @@
-# MAY-023 — Recommendation Review (Auditor Phase)
+﻿# MAY-023 — Recommendation Review (Auditor Phase)
 
 **Session:** MAY-023 — Controlled Production Rollout Validation
 **Date:** 2026-07-31
@@ -52,7 +52,7 @@ if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_
             } else if (sessionCount >= 1) {
                 tooltip.textContent = 'Analyze your missed questions or review your study plan with May.';
             } else {
-                tooltip.textContent = 'Meet May \u2014 your CMA Part 1 study companion.';
+                tooltip.textContent = 'Meet May \u2014 your CMA study companion.';
             }
         }
     }, 100);

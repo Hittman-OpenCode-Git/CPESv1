@@ -1,4 +1,4 @@
-# Item Bank Gold Schema
+﻿# Item Bank Gold Schema
 
 **Version:** 1.0
 **Status:** Active
@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-This document defines the canonical "gold" schema for every MCQ and case-study item in the CMA Part 1 Exam Simulator. It is the target schema toward which all existing content must converge during certification and remediation passes. It derives from `knowledge/QUESTION_METADATA_STANDARD.md` and `knowledge/TAXONOMY_REGISTRY.md`.
+This document defines the canonical "gold" schema for every MCQ and case-study item in the CMA Exam Simulator. It is the target schema toward which all existing content must converge during certification and remediation passes. It derives from `knowledge/QUESTION_METADATA_STANDARD.md` and `knowledge/TAXONOMY_REGISTRY.md`.
 
 All validators, certification agents, and remediation scripts must reference this document as the single authoritative schema definition.
 

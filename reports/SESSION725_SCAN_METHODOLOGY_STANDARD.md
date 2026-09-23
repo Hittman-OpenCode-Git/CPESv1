@@ -1,4 +1,4 @@
-# Scan Methodology Standard v1.0
+﻿# Scan Methodology Standard v1.0
 
 **Version:** 1.0
 **Status:** Active
@@ -537,4 +537,4 @@ Until the governance guard is upgraded, any BLOCK event triggered by Rule 2 must
 
 ---
 
-*This standard is binding on all governance, certification, and audit operations in the CMA Part 1 Exam Simulator repository. Non-compliant scan tools produce results that are inadmissible for governance purposes.*
+*This standard is binding on all governance, certification, and audit operations in the CMA Exam Simulator repository. Non-compliant scan tools produce results that are inadmissible for governance purposes.*

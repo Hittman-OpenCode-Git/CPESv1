@@ -1,4 +1,4 @@
-// ============================================================
+﻿// ============================================================
 // CMA Learning Platform — Electron Desktop Shell (S124)
 // ============================================================
 
@@ -62,8 +62,13 @@ function buildMenu() {
                             properties: ['openFile']
                         });
                         if (!result.canceled && result.filePaths.length > 0) {
-                            const data = fs.readFileSync(result.filePaths[0], 'utf-8');
-                            mainWindow.webContents.executeJavaScript(`(function(){try{var d=${data};if(typeof CMAProfileManager!=="undefined"){CMAProfileManager.executeImport(d);alert("Profile imported. Reloading to apply.");location.reload()}}catch(e){alert("Import failed: "+e.message)}})()`);
+                            // H1 fix: never interpolate raw file bytes into evaluated JS.
+                            // Parse + schema-check first, then re-serialize — the evaluated
+                            // source is JSON.stringify output, not attacker-controlled text.
+                            const raw = fs.readFileSync(result.filePaths[0], 'utf-8');
+                            const payload = JSON.parse(raw);
+                            if (!payload || typeof payload.schemaVersion !== 'number') throw new Error('Unrecognized backup format');
+                            mainWindow.webContents.executeJavaScript(`(function(){try{var d=${JSON.stringify(payload)};if(typeof CMAProfileManager!=="undefined"){CMAProfileManager.executeImport(d);alert("Profile imported. Reloading to apply.");location.reload()}}catch(e){alert("Import failed: "+e.message)}})()`);
                         }
                     }
                 },
@@ -101,7 +106,7 @@ function buildMenu() {
                             type: 'info',
                             title: 'About CMA Learning Platform',
                             message: APP_NAME,
-                            detail: `Version ${APP_VERSION}\n\nCMA Part 1 Exam Simulator\n\n2,545 Part 1 MCQs across 5 question packs\n75 integrated case studies\nMay AI Coaching Layer\n\nOriginal study content. Not real CMA exam questions.\nNot endorsed by IMA.`,
+                            detail: `Version ${APP_VERSION}\n\nCMA Exam Simulator\n\n2,545 Part 1 MCQs across 5 question packs\n75 integrated case studies\nMay AI Coaching Layer\n\nOriginal study content. Not real CMA exam questions.\nNot endorsed by IMA.`,
                             buttons: ['OK']
                         });
                     }

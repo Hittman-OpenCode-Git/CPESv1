@@ -3871,6 +3871,8 @@ var casePackP2_1 = [
     "Confidence": 88,
     "RevisionHistory": [{"Date":"2026-08-30","Version":"1.0","Author":"Case Author","Summary":"Initial creation under P2-070"}],
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch2",
+    "recertification_date": "2026-09-20",
     "certification_session": "P2-071",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -4006,7 +4008,7 @@ var casePackP2_1 = [
         "Choices": ["When cash is collected from the customer.", "When the performance obligation is satisfied — for freight services, generally over time as the shipment moves from origin to destination, or at a point in time upon delivery.", "When the customer is invoiced, regardless of whether service has been performed.", "When the customer accepts the goods at destination and signs the bill of lading."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Apply",
-        "Difficulty": "Easy",
+        "Difficulty": "Moderate-Easy",
         "DifficultyScore": 2,
         "ExplanationCorrect": "ASC 606-10-25-1 requires an entity to recognize revenue when (or as) it satisfies a performance obligation by transferring control of a promised good or service. For freight services, control typically transfers over time as the shipment moves (ASC 606-10-25-27 over-time criteria) or at a point in time upon delivery. Cash collection and invoicing are not the recognition triggers — performance is.",
         "ExplanationWrongA": "Cash collection is wrong — ASC 606-10-25-1 triggers recognition on performance, not on cash; cash collection is a separate cash-flow event and is not a substitute for performance-based recognition. CFO Onuorah's deferral rationale conflates the two.",
@@ -4103,6 +4105,8 @@ var casePackP2_1 = [
     "Confidence": 90,
     "RevisionHistory": [{"Date":"2026-08-30","Version":"1.0","Author":"Case Author","Summary":"Initial creation under P2-070"}],
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch1",
+    "recertification_date": "2026-09-20",
     "certification_session": "P2-071",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -4228,6 +4232,7 @@ var casePackP2_1 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
+        "Topic": "NPV calculation",
         "VerifiedChecks": [
           "Recomputed: 1.09^10 = 2.3674; PV annuity 9%/10y = 6.4178; 9 × 6.4178 = 57.76; 6/2.3674 = 2.534; -48 + 57.76 + 2.534 = 12.30"
         ]
@@ -4246,6 +4251,7 @@ var casePackP2_1 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
+        "Topic": "NPV calculation",
         "VerifiedChecks": [
           "Recomputed: 1.09^7 = 1.8280; PV annuity 9%/7y = 5.0330; 11 × 5.0330 = 55.36; 14/1.8280 = 7.659; -48 + 55.36 + 7.659 = 15.02"
         ]
@@ -4307,7 +4313,7 @@ var casePackP2_1 = [
     "EstimatedMinutes": 30,
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
-    "ScenarioText": "Flash Foods, a packaged-grocery subsidiary of Flash Holdings, completed the acquisition of a regional bakery chain on 1 January of the current fiscal year. CFO Mariela Hoffmann must integrate the target into the consolidated financial statements. The purchase consideration was $180 million in cash. Under ASC 805, the acquisition method requires the acquirer to allocate the purchase price to the fair value of identifiable assets acquired and liabilities assumed, with the residual recognized as goodwill. The purchase price allocation resulted in a $50 million fair-value uplift to property, plant, and equipment (PPE), a $25 million allocation to identifiable intangible assets (primarily customer relationships and a brand name), and $105 million of residual goodwill. Mariela is now three years past the acquisition date and is preparing for the annual goodwill impairment test under ASC 350-20-35. Bakery-segment EBITDA has declined 18% versus the acquisition-date projection because of commodity-cost volatility. Mariela must decide whether the qualitative assessment supports the conclusion that it is \"not more likely than not\" that the reporting unit's fair value is less than its carrying amount, or whether a full quantitative goodwill impairment test is required. In parallel, controller Adaeze Onuorah is preparing the first post-acquisition ASC 280 segment disclosure and needs to confirm whether the bakery chain now constitutes a separately reportable operating segment given the 10% revenue, profit, and asset thresholds. Mariela has asked Adaeze to evaluate intercompany flour-supply transactions between Flash Foods and the bakery unit that must be eliminated in consolidation.",
+    "ScenarioText": "Flash Foods, a packaged-grocery subsidiary of Flash Holdings, completed the acquisition of a regional bakery chain on 1 January of the current fiscal year. CFO Mariela Hoffmann must integrate the target into the consolidated financial statements. The purchase consideration was $180 million in cash. Under ASC 805, the acquisition method requires the acquirer to allocate the purchase price to the fair value of identifiable assets acquired and liabilities assumed, with the residual recognized as goodwill. The purchase price allocation resulted in a $50 million fair-value uplift to property, plant, and equipment (PPE), a $25 million allocation to identifiable intangible assets (primarily customer relationships and a brand name), and $20 million of residual goodwill. Mariela is now three years past the acquisition date and is preparing for the annual goodwill impairment test under ASC 350-20-35. Bakery-segment EBITDA has declined 18% versus the acquisition-date projection because of commodity-cost volatility. Mariela must decide whether the qualitative assessment supports the conclusion that it is \"not more likely than not\" that the reporting unit's fair value is less than its carrying amount, or whether a full quantitative goodwill impairment test is required. In parallel, controller Adaeze Onuorah is preparing the first post-acquisition ASC 280 segment disclosure and needs to confirm whether the bakery chain now constitutes a separately reportable operating segment given the 10% revenue, profit, and asset thresholds. Mariela has asked Adaeze to evaluate intercompany flour-supply transactions between Flash Foods and the bakery unit that must be eliminated in consolidation.",
     "Industry": "Packaged Foods and Bakery Manufacturing",
     "CompanyType": "Subsidiary",
     "CompanyName": "Flash Foods",
@@ -4356,7 +4362,7 @@ var casePackP2_1 = [
           ],
           [
             "Residual goodwill",
-            "105.0"
+            "20.0"
           ],
           [
             "Net book value of assets acquired",
@@ -4421,14 +4427,14 @@ var casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A4-Q1",
-        "Type": "select", "Correct": "$105 million, equal to the residual after allocating to identifiable assets", "Explanation": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual; but the directive confirms the acquirer measured the bakery net assets at $75M fair value (uplifts over book) and recognized goodwill of $105M. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.", "Topic": "Goodwill measurement in acquisition", "question_state": "Certified",
+        "Type": "select", "Correct": "$20 million, the residual after allocating fair value to identifiable net assets ($180M less $85M less $50M less $25M)", "Explanation": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.", "Topic": "Goodwill measurement in acquisition", "question_state": "Certified",
         "Prompt": "Under ASC 805, Flash Foods paid $180M cash for the regional bakery chain. The acquired net assets had a book value of $85M, with fair-value uplifts of $50M to PPE and $25M to identifiable intangibles. Mariela Hoffmann must record goodwill on the acquisition date. What amount of goodwill should Flash Foods recognize?",
-        "Choices": ["$25 million, equal to the identifiable intangible uplift only", "$75 million, equal to the fair-value uplifts in aggregate", "$105 million, equal to the residual after allocating to identifiable assets", "$180 million, equal to the total purchase consideration transferred"],
+        "Choices": ["$25 million, equal to the identifiable intangible uplift only", "$75 million, equal to the fair-value uplifts in aggregate", "$20 million, the residual after allocating fair value to identifiable net assets ($180M less $85M less $50M less $25M)", "$180 million, equal to the total purchase consideration transferred"],
         "CorrectChoice": "C",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual; but the directive confirms the acquirer measured the bakery net assets at $75M fair value (uplifts over book) and recognized goodwill of $105M. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.",
+        "ExplanationCorrect": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.",
         "ExplanationWrongA": "Choosing $25M would record only the intangible allocation as goodwill, ignoring PPE fair-value uplift and the consideration-paid framework under ASC 805.",
         "ExplanationWrongB": "Choosing $75M would sum the fair-value uplifts themselves, but that total is part of allocated fair value, not the unallocated residual that becomes goodwill.",
         "ExplanationWrongD": "Choosing $180M treats the full consideration as goodwill and skips the ASC 805 requirement to first measure identifiable assets and liabilities at fair value.",
@@ -4436,18 +4442,18 @@ var casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A4-Q2",
-        "Type": "select", "Correct": "The bakery segment exceeds at least the 10% revenue and 10% asset thresholds, so it is reportable.", "Explanation": "ASC 280-10-50 requires a segment to be reported separately if any of three 10% tests is met: revenue ≥10% of combined revenue, absolute profit/loss ≥10% of combined profit/loss, or identifiable assets ≥10% of combined assets. Applied to Exhibit 2, bakery revenue of $180M is 8.5% (just below 10%), bakery operating profit of $11M is 4.8%, and bakery identifiable assets of $220M is 11.9%, which exceeds the asset threshold. Therefore the bakery segment is reportable. Interpretation: the bakery's asset base, inflated by the $50M PPE fair-value uplift and $25M intangibles, drives separability rather than current-period profit. A common trap is to test only revenue, missing the asset threshold that ASC 280 applies in parallel.", "Topic": "Business combination assessment", "question_state": "Certified",
+        "Type": "select", "Correct": "The bakery segment fails the revenue and profit thresholds but exceeds the 10% asset threshold (11.9%), so it is reportable.", "Explanation": "ASC 280-10-50 requires a segment to be reported separately if any of three 10% tests is met: revenue ≥10% of combined revenue, absolute profit/loss ≥10% of combined profit/loss, or identifiable assets ≥10% of combined assets. Applied to Exhibit 2, bakery revenue of $180M is 8.5% (just below 10%), bakery operating profit of $11M is 4.8%, and bakery identifiable assets of $220M is 11.9%, which exceeds the asset threshold. Therefore the bakery segment is reportable. Interpretation: the bakery's asset base, inflated by the $50M PPE fair-value uplift and $25M intangibles, drives separability rather than current-period profit. A common trap is to test only revenue, missing the asset threshold that ASC 280 applies in parallel.", "Topic": "Business combination assessment", "question_state": "Certified",
         "Prompt": "Using Exhibit 2, Adaeze Onuorah must determine whether the acquired bakery chain constitutes a separately reportable operating segment under ASC 280. The quantitative thresholds are 10% of combined revenue, 10% of combined operating profit (absolute), and 10% of combined identifiable assets. What is the correct conclusion?",
-        "Choices": ["The bakery segment fails all three thresholds and may be aggregated within the Grocery segment.", "The bakery segment exceeds at least the 10% revenue and 10% asset thresholds, so it is reportable.", "Because all three segments above the threshold are reportable, the bakery fails the 75% revenue coverage test and must be reported.", "Acquired businesses are exempt from the 10% test for three years following the acquisition, so the bakery is not reportable."],
-        "CorrectChoice": "B",
+        "Choices": ["The bakery segment fails the revenue and profit thresholds but exceeds the 10% asset threshold (11.9%), so it is reportable.", "The bakery segment exceeds at least the 10% revenue and 10% asset thresholds, so it is reportable.", "Because all three segments above the threshold are reportable, the bakery fails the 75% revenue coverage test and must be reported.", "Acquired businesses are exempt from the 10% test for three years following the acquisition, so the bakery is not reportable."],
+        "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "ExplanationCorrect": "ASC 280-10-50 requires a segment to be reported separately if any of three 10% tests is met: revenue ≥10% of combined revenue, absolute profit/loss ≥10% of combined profit/loss, or identifiable assets ≥10% of combined assets. Applied to Exhibit 2, bakery revenue of $180M is 8.5% (just below 10%), bakery operating profit of $11M is 4.8%, and bakery identifiable assets of $220M is 11.9%, which exceeds the asset threshold. Therefore the bakery segment is reportable. Interpretation: the bakery's asset base, inflated by the $50M PPE fair-value uplift and $25M intangibles, drives separability rather than current-period profit. A common trap is to test only revenue, missing the asset threshold that ASC 280 applies in parallel.",
-        "ExplanationWrongA": "Concluding all three thresholds fail ignores the identifiable-assets test under ASC 280; bakery assets of $220M represent 11.9% of the $1,855M combined total.",
+        "ExplanationWrongA": "",
         "ExplanationWrongC": "Invoking the 75% revenue-coverage test is an ASC 280 practical limit, not a fail-the-test mechanism, and is misapplied here because the bakery only needs to meet one 10% test.",
         "ExplanationWrongD": "ASC 280 provides no three-year exemption for acquired businesses; the 10% tests apply in every reporting period following the acquisition.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "Choice B reaches the right conclusion for the wrong reason: bakery revenue of $180M is 8.5% of combined revenue, below the 10% threshold — only the asset test (11.9%) is met. Selecting B endorses a false computation even where the verdict coincides."
       },
       {
         "ItemID": "CBQ21-A4-Q3",
@@ -4538,6 +4544,8 @@ var casePackP2_1 = [
     "Confidence": 87,
     "RevisionHistory": [{"Date":"2026-08-30","Version":"1.0","Author":"Case Author","Summary":"Initial creation under P2-075"}],
     "question_state": "Certified",
+    "recertification_batch": "DL-059-Batch2",
+    "recertification_date": "2026-09-20",
     "certification_session": "P2-076",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -4682,14 +4690,14 @@ var casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B4-Q4",
-        "Type": "select", "Correct": "$1.98 million, equal to 25% of $7.92M of interest on the new debt tranche.", "Explanation": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M ≈ $2.11M, closest to $1.98M (using 6.00% to reflect rounding conventions) or $2.11M. Among the choices, B is closest. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.", "Topic": "Interest tax shield quantification", "question_state": "Certified",
+        "Type": "select", "Correct": "$2.11 million, equal to 25% of $8.448M interest on the new debt tranche ($132M x 6.40% x 0.25 = $2.11M)", "Explanation": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M = $2.112M, rounded to $2.11M. Among the choices, B is exact. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.", "Topic": "Interest tax shield quantification", "question_state": "Certified",
         "Prompt": "After the downgrade to A-, Flash Industrial's pre-tax cost of debt rises from 5.20% to 6.40%. Given a 25% marginal tax rate and $132M of new debt (60% of $220M), what is the approximate annual tax shield on the new debt tranche?",
-        "Choices": ["$0.99 million, equal to 25% of the post-deal interest expense of $8.45M.", "$1.98 million, equal to 25% of $7.92M of interest on the new debt tranche.", "$3.30 million, equal to 25% of the $13.2M notional principal.", "$5.50 million, equal to 25% of the $22M acquisition cost over five years."],
+        "Choices": ["$0.99 million, equal to 25% of the post-deal interest expense of $8.45M.", "$2.11 million, equal to 25% of $8.448M interest on the new debt tranche ($132M x 6.40% x 0.25 = $2.11M)", "$3.30 million, equal to 25% of the $13.2M notional principal.", "$5.50 million, equal to 25% of the $22M acquisition cost over five years."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
-        "ExplanationCorrect": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M ≈ $2.11M, closest to $1.98M (using 6.00% to reflect rounding conventions) or $2.11M. Among the choices, B is closest. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.",
+        "ExplanationCorrect": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M = $2.112M, rounded to $2.11M. Among the choices, B is exact. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.",
         "ExplanationWrongA": "Selecting $0.99M applies the tax rate to total post-deal interest on a much larger base ($8.45M × 25% = $2.11M); the calculation must isolate the new debt tranche's interest.",
         "ExplanationWrongC": "Applying the 25% rate to $13.2M (a discounted principal) treats the tax shield as a function of principal rather than of deductible interest expense.",
         "ExplanationWrongD": "Using 25% of $22M spread over five years incorrectly amortizes the acquisition cost rather than the debt-service interest deduction.",
@@ -4702,7 +4710,7 @@ var casePackP2_1 = [
         "Choices": ["The asset sale is universally preferable because it preserves the BBB+ rating and avoids dilution.", "The debt/equity mix is universally preferable because the interest tax shield typically exceeds any erosion from the rating downgrade.", "The decision depends on the relative tax shield value, the change in operating EBIT from divesting the non-core line, and the impact on growth optionality; both alternatives have material tradeoffs.", "The decision should default to equity issuance to avoid any financial-distress costs."],
         "CorrectChoice": "C",
         "CognitiveLevel": "Evaluate",
-        "Difficulty": "Difficult",
+        "Difficulty": "Very Difficult",
         "DifficultyScore": 5,
         "ExplanationCorrect": "Capital-structure decisions require trade-off analysis because both alternatives carry costs and benefits. The asset sale preserves the BBB+ rating and avoids equity dilution but loses the EBIT contribution of the packaging line and forfeits tax shields. The debt/equity mix adds interest tax shields and preserves operating assets but raises financial-distress risk and dilutes shareholders. Applied to Flash Industrial, the optimal choice depends on the net present value of the foregone packaging-line cash flows, the present value of the additional interest tax shield, and management's view of growth optionality. Interpretation: the standard calls for an explicit comparison of after-tax cash flows and risk-adjusted WACC. A common trap is to recommend one option without weighing the lost EBIT and the rating impact.",
         "ExplanationWrongA": "Claiming the asset sale is universally preferable ignores the lost EBIT contribution and the forfeited interest tax shield on debt-funded acquisitions.",
@@ -4717,7 +4725,7 @@ var casePackP2_1 = [
         "Choices": ["Push D/E to the maximum the bond covenants allow, since debt is typically cheaper after tax.", "Set D/E to the static-tradeoff optimum by equating marginal tax-shield benefit with marginal expected financial-distress cost, while recognizing information asymmetry in any equity issuance.", "Refinance all existing debt at the new A- yield immediately, because spread compression will benefit the capital structure.", "Repurchase equity with the new debt issuance to maximize the leverage ratio and EPS impact."],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
-        "Difficulty": "Difficult",
+        "Difficulty": "Very Difficult",
         "DifficultyScore": 5,
         "ExplanationCorrect": "Optimal capital structure under the static-tradeoff framework is the D/E where the marginal present value of the interest tax shield equals the marginal expected cost of financial distress. Applied to Flash Industrial, the static-tradeoff optimum must be weighed against pecking-order's caution that external equity is the most expensive source because of asymmetric information. Interpretation: the practical recommendation combines both theories — choose a debt level consistent with the trade-off optimum while issuing equity only when debt capacity is exhausted, and disclose the rationale to the board. A common trap is to push leverage to covenant limits, ignoring the rising cost of distress and rating downgrade penalty.",
         "ExplanationWrongA": "Maximizing D/E ignores the rising marginal financial-distress cost and the rating-agency penalties captured in Exhibit 2.",

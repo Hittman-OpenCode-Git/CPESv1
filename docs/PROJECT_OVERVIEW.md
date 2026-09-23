@@ -1,4 +1,4 @@
-# Project Overview — CMA Part 1 Exam Simulator
+﻿# Project Overview — CMA Exam Simulator
 
 **Version:** 1.0
 **Status:** Active
@@ -11,7 +11,7 @@
 
 This repository is a professional-quality Certified Management Accountant (CMA) Part 1 examination simulator. It provides a complete examination platform consisting of a question bank, integrated case studies, scoring engine, review engine, knowledge library, and AI-assisted quality assurance framework.
 
-The goal is to produce the highest-quality open, AI-assisted CMA Part 1 examination simulator available — comparable to modern commercial CMA preparation platforms — while maintaining the highest standards of accounting accuracy, educational quality, and long-term maintainability.
+The goal is to produce the highest-quality open, AI-assisted CMA examination simulator available — comparable to modern commercial CMA preparation platforms — while maintaining the highest standards of accounting accuracy, educational quality, and long-term maintainability.
 
 ---
 

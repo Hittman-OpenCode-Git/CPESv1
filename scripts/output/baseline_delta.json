@@ -1,116 +1,116 @@
 {
-  "timestamp": "2026-07-31 21:07:34",
+  "timestamp": "2026-09-20 23:46:33",
   "runtime_hashes": {
     "app.js": {
-      "hash": "D390F6E66A86789E57434516673F99792AE0CC14B9B8715AF1B99B6D562E58A0",
-      "size": 309932,
+      "hash": "FILE_NOT_FOUND",
+      "size": -1,
       "label": "app.js"
     },
     "index_updated.html": {
-      "hash": "54DE5947B3ED5BD6EC64BE45D0C11241FE9EDF792BA2E865C5F523A36C713509",
-      "size": 9319,
+      "hash": "CFD6D4B62DEC72EAFD1BF5BACCA4254FF3048BF575A0D6F2C814550A86EEE68A",
+      "size": 14713,
       "label": "index_updated.html"
     },
     "styles.css": {
-      "hash": "B0C1350D116EB7AB6893BB5FF108E5CBEAC07BFC3D05CF3F59583DA63A9E35E6",
-      "size": 112170,
+      "hash": "6190DB342138F0A034C72B5DB9550E92674C03B5FE0AABD54D519680B1CF3F71",
+      "size": 160854,
       "label": "styles.css"
     },
     "pack_a_corrected.js": {
-      "hash": "860FD5898712D164F96C890FC686974F3DB6A999FB14AA76C40CD70A47988304",
-      "size": 2285082,
+      "hash": "BC748A76CBED5C5CFA1C54BE07BAC6DACF4B9FDACC9C41E4A1109DD4CF675D55",
+      "size": 2654026,
       "label": "pack_a_corrected.js"
     },
     "pack_b_corrected.js": {
-      "hash": "42EA8FBA9794BA1731B60644D944F276D81CAEB14FCDEEAEC65BDE33011CE93D",
-      "size": 1488520,
+      "hash": "714B944F9E76A3F22E0D87139D3E1ED8971EF6650CDE51F5E604AFDAA5AD2F43",
+      "size": 2076024,
       "label": "pack_b_corrected.js"
     },
     "pack_c_corrected.js": {
-      "hash": "447DFA97ECD2A0665EDE20E748CFD447888DB610FE16A7E15C703C8CEEB4FCB4",
-      "size": 2025682,
+      "hash": "4D302D7CF343E593C7A5BBC755EB365417002130883DF772FF7124FAD28D5553",
+      "size": 2732694,
       "label": "pack_c_corrected.js"
     },
     "pack_d_corrected.js": {
-      "hash": "5A901038CF8E54BE9B8426F6767CD2BE14F00F287381DB1E1A5BDAFDCB79D55B",
-      "size": 2413404,
+      "hash": "8DEE063CCE0287D917E1D28F449C41841A7555065E91B94F484061CB9E72B8C7",
+      "size": 3000692,
       "label": "pack_d_corrected.js"
     },
     "pack_e_corrected.js": {
-      "hash": "9020C95CC71075EEBE66618918AB29E928DE1D50894FB8503710C8548FA7F807",
-      "size": 1719942,
+      "hash": "7165D24FD3173A77B5314BE9FA40EF79267B91DFCDAC8BC2B7DA7E9B1FE5DBB6",
+      "size": 2664784,
       "label": "pack_e_corrected.js"
     },
     "case_pack_1_corrected.js": {
-      "hash": "46D83ED42B2D1C830808180418B63012143C2144EF97D49F8E53BD1D3953DA7D",
-      "size": 568583,
+      "hash": "FILE_NOT_FOUND",
+      "size": -1,
       "label": "case_pack_1_corrected.js"
     },
     "case_pack_2_corrected.js": {
-      "hash": "3BEB23F69C209A155F42CDB740E8076D927CD98E4ADDBE8DCED5BD750C5FED97",
-      "size": 409816,
+      "hash": "FILE_NOT_FOUND",
+      "size": -1,
       "label": "case_pack_2_corrected.js"
     },
     "case_pack_3_corrected.js": {
-      "hash": "6F53C0D34B0CAFD5F3B60F581E2DCDDCD664FE616AA7A8D2B6C5FA9AE3AA7365",
-      "size": 460664,
+      "hash": "0888635294F4F81F485DD956ED6EC5C22D9BC3F88D53D6D8F470339C769A4F3D",
+      "size": 553686,
       "label": "case_pack_3_corrected.js"
     },
     "may-core.js": {
-      "hash": "11F3A2AB027E67FCD5782BD6B6C44801923E477CF5AB193263423AA33B8F1AAB",
-      "size": 377728,
+      "hash": "FILE_NOT_FOUND",
+      "size": -1,
       "label": "may-core.js"
     },
     "may-learner-state.js": {
-      "hash": "18F3C753B6F986C0E5ABF3B0B025FB705D4415A49C975D49D84C027BB32E3CBB",
-      "size": 137429,
+      "hash": "FILE_NOT_FOUND",
+      "size": -1,
       "label": "may-learner-state.js"
     },
     ".opencode/plugins/governance-guard.js": {
-      "hash": "9DB595EF778B2F8FA6FDB12C1CEE7D31AE113739576CAD94E750FA25AD0008ED",
-      "size": 20841,
+      "hash": "6EC007E76464DAAC88799FA7E3758EB56F7B02BB7127190B956B6648F2515163",
+      "size": 43040,
       "label": "governance-guard.js"
     },
     "scripts/test_governance_guard.js": {
-      "hash": "E0F9BC2155A271B955B79638912AF07E3F197819784EA6703AD1A2054046347C",
-      "size": 42018,
+      "hash": "BAC2DB16714C2460CF7E589B1794FE05046A1380EDC6AB763854C6CF87147856",
+      "size": 62904,
       "label": "test_governance_guard.js"
     },
     "scripts/validators/ExplanationValidator.js": {
-      "hash": "99FD17C74D1556E7C0A3066647C33FA1F4FFCF2FC24A64193419A27A3CA07B8D",
-      "size": 10097,
+      "hash": "843988BD592503505E5DC9A494FBE0C0B1ED0FAA96DD889DC165258E7C442777",
+      "size": 10206,
       "label": "ExplanationValidator.js"
     },
     "scripts/build_master_registry.js": {
-      "hash": "B8917892F34124217D3DDB042C5F4F9B4635C5C4F3DB6B1CA9D8223A7C85FA7F",
-      "size": 24821,
+      "hash": "E6044255EBA9D16CDADE72E83E8171A6CE80363C1301B8C14C4C6C378BFFBB44",
+      "size": 25047,
       "label": "build_master_registry.js"
     }
   },
   "certified_pool": {
     "pack_a_corrected.js": {
-      "certified": 500,
-      "total": 500
+      "certified": 559,
+      "total": 560
     },
     "pack_b_corrected.js": {
-      "certified": 500,
-      "total": 500
+      "certified": 620,
+      "total": 620
     },
     "pack_c_corrected.js": {
-      "certified": 455,
-      "total": 500
+      "certified": 603,
+      "total": 620
     },
     "pack_d_corrected.js": {
-      "certified": 456,
-      "total": 500
+      "certified": 584,
+      "total": 590
     },
     "pack_e_corrected.js": {
-      "certified": 540,
-      "total": 545
+      "certified": 680,
+      "total": 680
     }
   },
-  "total_certified": 2451,
-  "total_qids": 2545,
+  "total_certified": 3046,
+  "total_qids": 3070,
   "total_case_items": 0,
   "governance_guard_tests": "54/54"
 }

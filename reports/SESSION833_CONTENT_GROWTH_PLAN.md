@@ -1,4 +1,4 @@
-# S833 — Content Growth Plan
+﻿# S833 — Content Growth Plan
 
 **Session:** S833  
 **Generated:** 2026-07-27  
@@ -9,7 +9,7 @@
 
 ## 1. Strategic Objective
 
-Transition the CMA Part 1 Exam Simulator from a certification-focused project to a content-mature examination platform. Current inventory has excellent coverage breadth but severe cognitive depth deficits.
+Transition the CMA Exam Simulator from a certification-focused project to a content-mature examination platform. Current inventory has excellent coverage breadth but severe cognitive depth deficits.
 
 ---
 

@@ -1,12 +1,17 @@
 /**
- * rebuild_baselines.js — Generic Baseline Rebuilder
- * 
- * Recaptures SHA-256 hashes, certified counts, QID counts for all
- * runtime-critical files and updates CURRENT_BASELINES.md §1 and §2.
- * 
+ * rebuild_baselines.js — Generic Baseline Rebuilder — DEPRECATED (2026-09-20 closeout, C3).
+ *
+ * WHY DEPRECATED: path table below predates the app/ + content/ reorganization
+ * (points at root-level pack_a_corrected.js etc. that no longer exist) and the
+ * delta stamp still reads '54/54' (suite is 98). The supported procedure is:
+ *   1. node scripts/baseline_coherence.js        (read-only check)
+ *   2. node scripts/baseline_coherence.js --fix  (authorized token-path recapture, Rule 7)
+ * This script now refuses to run; pass --legacy to execute the old behavior
+ * (dry-run capture only, for archaeology — never for recapture).
+ *
  * Usage: node scripts/rebuild_baselines.js [--dry-run]
  *   --dry-run: Print what would change without writing files
- * 
+ *
  * Governance: Rule 7 — filename contains "rebuild". Whitelisted.
  */
 
@@ -84,6 +89,13 @@ function getFileSize(filePath) {
 
 function main() {
   const dryRun = process.argv.includes('--dry-run');
+  const legacy = process.argv.includes('--legacy');
+  if (!legacy) {
+    console.log('REFUSED: rebuild_baselines.js is deprecated (C3 closeout 2026-09-20).');
+    console.log('Supported procedure: node scripts/baseline_coherence.js [--fix] (Rule 7 token path).');
+    console.log('Pass --legacy for dry-run archaeology only.');
+    process.exit(2);
+  }
   const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
 
   console.log('=== rebuild_baselines ===');

@@ -1,4 +1,4 @@
-# AI Orchestrator
+﻿# AI Orchestrator
 
 **Version:** 2.0
 **Status:** Active
@@ -19,7 +19,7 @@
 
 # Purpose
 
-The AI Orchestrator coordinates every AI interaction within the CMA Part 1 Exam Simulator. It governs two distinct AI roles distinguished by temporal scope:
+The AI Orchestrator coordinates every AI interaction within the CMA Exam Simulator. It governs two distinct AI roles distinguished by temporal scope:
 
 **Build-Time AI** — Audit-phase verification agent active during development. Verifies correctness, precision, difficulty calibration, distractor engineering, blueprint alignment, and CMA Part 1 relevance. Output is non-binding; final revision authority remains human. See `BUILD_TIME_VERIFICATION_STANDARD.md` for the full protocol.
 

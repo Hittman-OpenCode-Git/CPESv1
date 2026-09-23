@@ -1,4 +1,4 @@
-{
+﻿{
   "document": "SESSION208_TECHNICAL_DEBT_REGISTER",
   "session": "S208",
   "series": "200-Series Architecture Stewardship",
@@ -178,7 +178,7 @@
           "title": "No Production Deployment — All Validation at Build/Development Level",
           "severity": "MEDIUM",
           "priority": 9,
-          "scope": "Entire CMA Part 1 Exam Simulator. All certification, validation, and testing has been at build/development level.",
+          "scope": "Entire CMA Exam Simulator. All certification, validation, and testing has been at build/development level.",
           "impact": "Runtime performance, browser compatibility, loading behavior, and production-level crash scenarios are untested. The DL-022 crash guard fix (null-session restore) was developed from simulated localStorage corruption — not from observed production crashes.",
           "current_state": "S207 operational certification certified infrastructure stability. No production deployment has occurred.",
           "effort": "Deployment milestone, not session work",

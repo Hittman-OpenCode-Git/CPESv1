@@ -41,7 +41,9 @@ const BANKS = [
   { file: 'content/cases/case_pack_3_corrected.js', part: 'P1' },
   { file: 'p2/case_pack_p2_1.js', part: 'P2' },
   { file: 'p2/case_pack_p2_2.js', part: 'P2' },
-  { file: 'p2/case_pack_p2_3.js', part: 'P2' }
+  { file: 'p2/case_pack_p2_3.js', part: 'P2' },
+  { file: 'p2/case_pack_p2_authored.js', part: 'P2' },
+  { file: 'p2/case_pack_p2_C4_C8.js', part: 'P2' }
 ];
 
 const STOP = new Set(('a,an,the,and,or,of,to,in,on,for,with,by,as,at,from,is,are,was,were,be,been,being,it,its,this,that,these,those,which,what,when,where,who,whom,how,than,then,so,such,no,not,only,also,into,over,after,before,between,through,during,each,other,some,such,will,would,should,could,may,might,must,shall,do,does,did,have,has,had,having,all,any,both,few,more,most,own,same,too,very,can,just,per').split(','));

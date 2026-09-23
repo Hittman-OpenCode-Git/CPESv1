@@ -1,4 +1,4 @@
-﻿# CMA Part 1 Simulator â€” Project Pause Status
+﻿# CMA Simulator â€” Project Pause Status
 
 Generated: 2026-07-25 21:58:15
 

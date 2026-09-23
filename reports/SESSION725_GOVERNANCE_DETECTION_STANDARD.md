@@ -1,4 +1,4 @@
-# Governance Detection Standard v1.0
+﻿# Governance Detection Standard v1.0
 
 **Version:** 1.0
 **Status:** Active
@@ -13,7 +13,7 @@
 
 ### 1.1 Conceptual Blocks
 
-Every question in the CMA Part 1 Exam Simulator inventory is governed by two conceptual blocks, regardless of whether they are serialized as one JSON object or two within the source file:
+Every question in the CMA Exam Simulator inventory is governed by two conceptual blocks, regardless of whether they are serialized as one JSON object or two within the source file:
 
 | Block | Role | Purpose | Authoritative for |
 |-------|------|---------|-------------------|

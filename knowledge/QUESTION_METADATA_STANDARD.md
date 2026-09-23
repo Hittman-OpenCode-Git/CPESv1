@@ -1,4 +1,4 @@
-# CMA Part 1 Exam Simulator — Question Metadata Standard
+﻿# CMA Exam Simulator — Question Metadata Standard
 
 **Version:** 1.0  
 **Status:** Active  
@@ -10,7 +10,7 @@
 
 # Purpose
 
-This document defines the canonical metadata model for every artifact in the CMA Part 1 Exam Simulator.
+This document defines the canonical metadata model for every artifact in the CMA Exam Simulator.
 
 Every question, case study, exhibit, and explanation in the repository shall conform to this standard.
 

@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 /**
  * challenge_triage_engine.js — Board C Session 252
- * Automated challenge triage system for CMA Part 1 Exam Simulator.
+ * Automated challenge triage system for CMA Exam Simulator.
  *
  * Usage:
  *   node scripts/challenge_triage_engine.js --all
