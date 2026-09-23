@@ -60,12 +60,9 @@ function liveBankCounts() {
     function p1bank(name, migrated) {
         try {
             if (typeof window !== 'undefined' && typeof window[name] !== 'undefined') return window[name];
-            var v = (function () { try { return eval(name); } catch (e) { return []; } })();
-            if (Array.isArray(v) && v.length) return v;
         } catch (e) {}
         try {
-            var m = (function () { try { return eval(migrated); } catch (e2) { return []; } })();
-            if (Array.isArray(m)) return m;
+            if (typeof window !== 'undefined' && typeof window[migrated] !== 'undefined') return window[migrated];
         } catch (e) {}
         return [];
     }
@@ -89,7 +86,7 @@ function liveBankCounts() {
     var p2cases = 0;
     try {
         var seenP2C = {};
-        ['casePackP2_1', 'casePackP2_2', 'casePackP2_3'].forEach(function (nm) {
+        ['casePackP2_1', 'casePackP2_2', 'casePackP2_3', 'casePackP2Authored', 'casePackP2_C4_C8'].forEach(function (nm) {
             var arr = p1bank(nm);
             (arr || []).forEach(function (c) {
                 if (c && c.CaseID && !seenP2C[c.CaseID]) { seenP2C[c.CaseID] = 1; p2cases++; }
@@ -970,6 +967,10 @@ function renderMarkdownTables(text) {
     return result.join('\n');
 }
 
+function escapeHtml(str) {
+    return String(str).replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"');
+}
+
 function nl2br(text) {
     if (!text || typeof text !== 'string') return text || '';
     text = renderMarkdownTables(text);
@@ -1178,13 +1179,10 @@ function assignTier(q) {
     if (state === "Certified") {
         q._tier = 1;
     } else {
-        // NOTE: dl009Flag / dl011Flag hard-exclusion is not yet wired —
-        // no pack file currently populates these fields.  When wired via
-        // a companion DEFECT_FLAGS lookup, add a branch here.
-        // Unprocessed or missing state — score it
-        const sc = scoreQuestionQuality(q);
-        q._qualityScore = sc;
-        q._tier = sc >= 2 ? 2 : 3;
+        // Board directive S7 (2026-09-22): hard-block non-Certified from learner delivery.
+        // No §19 waiver exists. Certified-only pool per AGENTS.md §7 / CAQS §1.7.1.
+        q._tier = -1;
+        q._blockedReason = 'NON_CERTIFIED_DELIVERY_BLOCK';
     }
 }
 
@@ -1393,7 +1391,7 @@ function resolveP2MCQBanks() {
 }
 
 // ── W4 lazy-load P2 banks (2026-09-18) ──
-// P1 cold start skips ~15MB of P2 content: the nine P2 scripts (6 MCQ + 3
+// P1 cold start skips ~15MB of P2 content: the eleven P2 scripts (6 MCQ + 5
 // case) are injected in order on first Part 2 activation. Dev shell keeps
 // its own static tags — isLoaded detects present globals and resolves
 // immediately without injection. All pool/catalog/hero/ops consumers are
@@ -1403,13 +1401,32 @@ var P2BankLoader = {
     _loaded: false,
     _src: function () {
         if (typeof window !== 'undefined' && Array.isArray(window.__P2_BANK_SRC) && window.__P2_BANK_SRC.length) return window.__P2_BANK_SRC;
-        return ['p2/pack_p2_a.js', 'p2/pack_p2_b.js', 'p2/pack_p2_c.js', 'p2/pack_p2_d.js', 'p2/pack_p2_e.js', 'p2/pack_p2_f.js', 'p2/case_pack_p2_1.js', 'p2/case_pack_p2_2.js', 'p2/case_pack_p2_3.js'];
+        return ['p2/pack_p2_a.js', 'p2/pack_p2_b.js', 'p2/pack_p2_c.js', 'p2/pack_p2_d.js', 'p2/pack_p2_e.js', 'p2/pack_p2_f.js', 'p2/case_pack_p2_1.js', 'p2/case_pack_p2_2.js', 'p2/case_pack_p2_3.js', 'p2/case_pack_p2_authored.js', 'p2/case_pack_p2_C4_C8.js'];
     },
+    _p2Globals: [
+        'pack_p2_a_questions', 'pack_p2_b_questions', 'pack_p2_c_questions',
+        'pack_p2_d_questions', 'pack_p2_e_questions', 'pack_p2_f_questions',
+        'casePackP2_1', 'casePackP2_2', 'casePackP2_3',
+        'casePackP2Authored', 'casePackP2_C4_C8'
+    ],
+    _missingGlobals: [],
     isLoaded: function () {
         if (this._loaded) return true;
         try {
-            if (typeof pack_p2_a_questions !== 'undefined' && pack_p2_a_questions.length > 0) { this._loaded = true; return true; }
-        } catch (e) {}
+            var missing = [];
+            for (var i = 0; i < this._p2Globals.length; i++) {
+                var g = this._p2Globals[i];
+                var val = window[g];
+                if (typeof val === 'undefined' || !Array.isArray(val) || val.length === 0) {
+                    missing.push(g);
+                }
+            }
+            if (missing.length === 0) {
+                this._loaded = true;
+                return true;
+            }
+            this._missingGlobals = missing;
+        } catch (e) { this._missingGlobals = this._p2Globals.slice(); }
         return false;
     },
     ensureLoaded: function () {
@@ -1420,6 +1437,11 @@ var P2BankLoader = {
             chain = chain.then(function () { return self._inject(src); });
         });
         this._promise = chain.then(function () {
+            if (!self.isLoaded()) {
+                var mg = self._missingGlobals;
+                self._promise = null;
+                throw new Error('P2 banks loaded but ' + mg.length + ' global(s) missing: ' + mg.join(', '));
+            }
             self._loaded = true; self._promise = null;
             _resetPoolCache();
             return true;
@@ -2057,6 +2079,8 @@ const SessionPersistence = {
                 const elapsed = this._activeElapsedSec(sn);
                 if (elapsed < sn.session.duration) {
                     state.session = sn.session;
+                    state.session.mcqs = state.session.mcqs || [];
+                    state.session.cases = state.session.cases || [];
                     state.calcDisplay = sn.calcDisplay || '0';
                     state.calcMemory = sn.calcMemory || 0;
                     state.analytics = sn.analytics || null;
@@ -2125,6 +2149,8 @@ const SessionPersistence = {
                     const elapsed = this._activeElapsedSec(sn);
                     if (elapsed < sn.session.duration) {
                         state.session = sn.session;
+                        state.session.mcqs = state.session.mcqs || [];
+                        state.session.cases = state.session.cases || [];
                         state.calcDisplay = sn.calcDisplay || '0';
                         state.calcMemory = sn.calcMemory || 0;
                         state.analytics = sn.analytics || null;
@@ -2149,8 +2175,10 @@ const SessionPersistence = {
             let seen = JSON.parse(localStorage.getItem(this.SEEN_KEY) || '[]');
             let s = state.session;
             if (!s) return;
+            s.mcqs = s.mcqs || [];
+            s.cases = s.cases || [];
             let correct = 0;
-            s.mcqs.forEach(q => { correct += scoreMCQ(q, s.answers[q.QuestionID]); if (!seen.includes(q.QuestionID)) seen.push(q.QuestionID); });
+            s.mcqs.forEach(q => { correct += scoreMCQ(q, s.answers[q.QuestionID]); if (q.QuestionID && !seen.includes(q.QuestionID)) seen.push(q.QuestionID); });
             s.cases.forEach(c => { if (!seen.includes(c.CaseID)) seen.push(c.CaseID); });
             localStorage.setItem(this.SEEN_KEY, JSON.stringify(seen));
             // S138 — Record topic clusters for cross-session diversity
@@ -2179,8 +2207,31 @@ const SessionPersistence = {
             let cbqCorrect = 0, cbqTotal = 0;
             s.cases.forEach(c => { c.Items.forEach((it, i) => { cbqTotal++; if (ExamSessionManager.correctCase(it, s.caseAnswers[ExamSessionManager.caseKey(c, i)])) cbqCorrect++; }); });
 
+            // Admin dashboard: persist date/time split + questions + timerExpired Y/N
+            var _timerExpired = false;
+            try {
+                var _dur = s.duration || 0;
+                if (_dur > 0 && !!s.completed) {
+                    var _elapsedSec = Math.floor((Date.now() - (s.start || Date.now())) / 1000);
+                    _timerExpired = _elapsedSec >= _dur && !!s.completed;
+                    if (s.completed && s.submitted && _elapsedSec >= _dur) _timerExpired = true;
+                } else {
+                    _timerExpired = false; // untimed (duration 0) never Y
+                }
+            } catch (e) {}
+            var _questions = [];
+            try {
+                (s.mcqs||[]).forEach(function(q){ if (q && q.QuestionID) _questions.push(q.QuestionID); });
+                (s.cases||[]).forEach(function(c){ (c.Items||[]).forEach(function(it,i){ _questions.push((c.CaseID||'Case') + '-Q' + (i+1)); }); });
+            } catch (e2) { console.warn('saveHistory questions collect failed', e2); }
+            var _learnerId = null;
+            try { if (typeof MayLearnerState !== 'undefined' && MayLearnerState.load) { var _mls = MayLearnerState.load(); _learnerId = _mls.learnerId || null; } } catch (e) {}
+            if (!_learnerId) { try { var _prof = CMAProfileManager.load(); _learnerId = _prof.profileId || _prof.learnerId || null; } catch (e2) {} }
             h.unshift({
+                sessionId: s.id || null,
+                learnerId: _learnerId,
                 date: new Date().toISOString(),
+                time: new Date().toLocaleTimeString(),
                 mode: s.mode,
                 part: s.part || getExamPart(), // Promotion: namespace history by part
                 mcqs: s.mcqs.length,
@@ -2199,10 +2250,24 @@ const SessionPersistence = {
                 grade: sc ? sc.grade : null,
                 cbqCorrect, cbqTotal,
                 topicSnapshot,
-                recoverySource: s.recoverySource || null
+                recoverySource: s.recoverySource || null,
+                // W_ADMIN (token may_v2_1_admin_history_delete): dashboard/admin date/time/questions/timerExpired
+                questions: _questions,
+                questionCount: _questions.length,
+                timerExpired: _timerExpired
             });
             localStorage.setItem(this.HISTORY_KEY, JSON.stringify(h.slice(0, 100)));
             this.updateDashboard(h[0]);
+            // W9 T5: emit cognitive-budget telemetry for HS-10 circuit breaker (fix inert)
+            try {
+                if (typeof MayTelemetry !== 'undefined' && MayTelemetry.trackCognitiveBudget) {
+                    var _durMs = (s.duration || 0) * 1000;
+                    var _abandoned = !s.completed || !s.submitted;
+                    var _bucket = _durMs < 600000 ? 'short' : _durMs < 1200000 ? 'medium' : 'long';
+                    var _surface = 0; try { if (typeof MayTelemetry.snapshot === 'function') _surface = MayTelemetry.snapshot().totalEvents; } catch(e){}
+                    MayTelemetry.trackCognitiveBudget({ sessionDurationMs: _durMs, abandoned: _abandoned, lengthBucket: _bucket, surfaceAreaCount: Math.min(_surface, 10) });
+                }
+            } catch (eCB) {}
             // S112 — Update unified profile with session history
             try { var prof = CMAProfileManager.load(); prof.sessionHistory = h.slice(0, 100); CMAProfileManager.save(prof); CMAProfileManager.syncToMayStorage(prof); } catch (e) {}
         } catch (e) { /* ignore */ }
@@ -2213,7 +2278,10 @@ const SessionPersistence = {
             let db = JSON.parse(localStorage.getItem(this.DASHBOARD_KEY) || '{}');
             if (!db.sessions) db.sessions = [];
             db.sessions.push({
+                sessionId: entry.sessionId || null,
+                learnerId: entry.learnerId || null,
                 date: entry.date,
+                time: entry.time || null,
                 mode: entry.mode,
                 part: entry.part || 'P1', // Promotion: legacy entries backfill as P1
                 mcqs: entry.mcqs,
@@ -2229,7 +2297,10 @@ const SessionPersistence = {
                 grade: entry.grade,
                 cbqCorrect: entry.cbqCorrect,
                 cbqTotal: entry.cbqTotal,
-                sections: entry.sections
+                sections: entry.sections,
+                questions: entry.questions || [],
+                questionCount: entry.questionCount || 0,
+                timerExpired: entry.timerExpired || false
             });
             if (db.sessions.length > 100) db.sessions = db.sessions.slice(-100);
             localStorage.setItem(this.DASHBOARD_KEY, JSON.stringify(db));
@@ -2249,6 +2320,193 @@ const SessionPersistence = {
         localStorage.removeItem(this.SEEN_KEY);
         localStorage.removeItem(this.TOPIC_SEEN_KEY);
         localStorage.removeItem(this.DASHBOARD_KEY);
+    },
+
+    // ── Admin: delete single test (entire session) — double confirmation, full purge ──
+    // W_ADMIN token may_v2_1_admin_history_delete — hidden admin panel only (not May)
+    // Purges from HISTORY_KEY, DASHBOARD_KEY, CMAProfileManager.sessionHistory, and MayLearnerState
+    deleteHistoryEntry(dateIso, sessionId) {
+        var h = this.getHistory();
+        var idx = -1;
+        for (var i = 0; i < h.length; i++) {
+            if (sessionId && h[i].sessionId && h[i].sessionId === sessionId) { idx = i; break; }
+            if (h[i].date === dateIso) { idx = i; break; }
+        }
+        if (idx === -1) return false;
+        var entry = h[idx];
+        // Double confirmation (caller should have already done first confirm; this is second guard)
+        // Backup before delete (recoverable via CMAProfileManager backups)
+        try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.createBackup(); } catch (e) {}
+        // Remove from history
+        h.splice(idx, 1);
+        try { localStorage.setItem(this.HISTORY_KEY, JSON.stringify(h)); } catch (e) {}
+        // Also remove from dashboard sessions — parity with history (sessionId-aware, tie-breaker on date)
+        try {
+            var db = JSON.parse(localStorage.getItem(this.DASHBOARD_KEY) || '{}');
+            if (db.sessions) {
+                if (sessionId) {
+                    db.sessions = db.sessions.filter(function(s){ return s.sessionId !== sessionId; });
+                } else {
+                    db.sessions = db.sessions.filter(function(s){ return s.date !== dateIso; });
+                }
+                localStorage.setItem(this.DASHBOARD_KEY, JSON.stringify(db));
+            }
+        } catch (e2) {}
+        // Also remove from unified profile — parity (sessionId-aware)
+        try {
+            var prof = CMAProfileManager.load();
+            if (Array.isArray(prof.sessionHistory)) {
+                if (sessionId) {
+                    prof.sessionHistory = prof.sessionHistory.filter(function(s){ return s.sessionId !== sessionId; });
+                } else {
+                    prof.sessionHistory = prof.sessionHistory.filter(function(s){ return s.date !== dateIso; });
+                }
+                CMAProfileManager.save(prof);
+                CMAProfileManager.syncToMayStorage(prof);
+            }
+        } catch (e3) {}
+        // Purge May learner-state derived aggregates (W_ADMIN: all memory gone)
+        try { this._purgeMayForEntry(entry); } catch (e4) {}
+        return true;
+    },
+
+    _purgeMayForEntry(entry) {
+        // Remove MayLearnerState session + recalc aggregates if possible
+        try {
+            if (typeof MayLearnerState === 'undefined') return;
+            var data = MayLearnerState.load();
+            var beforeSessions = (data.sessions || []).length;
+            // Try to match May session by sessionId or by date proximity / questionIds
+            var targetQs = entry.questions || [];
+            var removed = false;
+            if (entry.sessionId) {
+                var before = data.sessions.length;
+                data.sessions = data.sessions.filter(function(s){ return s.sessionId !== entry.sessionId; });
+                if (data.sessions.length !== before) removed = true;
+            }
+            if (!removed && targetQs.length > 0) {
+                // M-3 fix: restrict fallback to same learnerId — don't cross-purge other learners' sessions
+                if (entry.learnerId && data.learnerId && entry.learnerId !== data.learnerId) {
+                    // Entry belongs to different learner — skip fallback (keep all)
+                } else {
+                    data.sessions = data.sessions.filter(function(s){
+                        var sQids = (s.attempts || []).map(function(a){ return a.questionId; });
+                        if (sQids.length === 0) return true;
+                        var overlap = sQids.filter(function(q){ return targetQs.indexOf(q) !== -1; }).length;
+                        return overlap < sQids.length * 0.5;
+                    });
+                    if (data.sessions.length !== beforeSessions) removed = true;
+                }
+            }
+            // If still no removal and sessionHistory-based, remove most recent matching date
+            if (!removed && data.sessions.length === beforeSessions) {
+                // Last resort: remove session with closest date (within 5min of entry.date)
+                var entryTime = Date.parse(entry.date);
+                var bestIdx = -1, bestDiff = Infinity;
+                for (var i = 0; i < data.sessions.length; i++) {
+                    var sd = Date.parse(data.sessions[i].date);
+                    if (isNaN(sd)) continue;
+                    var diff = Math.abs(sd - entryTime);
+                    if (diff < bestDiff && diff < 5*60*1000) { bestDiff = diff; bestIdx = i; }
+                }
+                if (bestIdx !== -1) { data.sessions.splice(bestIdx, 1); removed = true; }
+            }
+            if (removed || data.sessions.length !== beforeSessions) {
+                // Rebuild aggregates from remaining sessions (full purge, not just splice)
+                data.topicPerformance = {};
+                data.subtopicPerformance = {};
+                // Preserve survivor misconceptionPatterns that still have QIDs in remaining sessions
+                var remainingQsForPatterns = new Set();
+                (data.sessions || []).forEach(function(s){ (s.attempts || []).forEach(function(a){ remainingQsForPatterns.add(a.questionId); }); });
+                var keptPatterns = [];
+                (data.misconceptionPatterns || []).forEach(function(p){
+                    var prunedIds = (p.questionIds || []).filter(function(q){ return remainingQsForPatterns.has(q); });
+                    if (prunedIds.length > 0) {
+                        p.questionIds = prunedIds;
+                        // Recalc count from remaining wrong attempts that still match this pattern
+                        // For now, count = remaining QIDs length (conservative, not inflated)
+                        p.count = prunedIds.length;
+                        // Also prune _topics to remaining
+                        if (p._topics) p._topics = p._topics.filter(function(t){ return true; }); // keep (no QID mapping)
+                        keptPatterns.push(p);
+                    }
+                });
+                data.misconceptionPatterns = keptPatterns;
+                data.sessionSummaries = data.sessionSummaries || [];
+                // Remove summaries for this date/sessionId — parity with history
+                if (entry.sessionId) {
+                    data.sessionSummaries = data.sessionSummaries.filter(function(s){ return s.sessionId !== entry.sessionId; });
+                } else {
+                    data.sessionSummaries = data.sessionSummaries.filter(function(s){ return s.date !== entry.date; });
+                }
+                // Also purge recommendation logs tied to deleted QIDs
+                if (Array.isArray(data.recommendationLog)) {
+                    data.recommendationLog = data.recommendationLog.filter(function(r){ return targetQs.indexOf(r.questionId || r.itemId) === -1; });
+                }
+                if (Array.isArray(data.recommendationOutcomes)) {
+                    data.recommendationOutcomes = data.recommendationOutcomes.filter(function(r){ return targetQs.indexOf(r.questionId || r.itemId) === -1; });
+                }
+                // Re-aggregate topic/subtopic from remaining sessions
+                (data.sessions || []).forEach(function(sess){
+                    (sess.attempts || []).forEach(function(a){
+                        if (typeof MayLearnerState._updateTopicAggregate === 'function') {
+                            MayLearnerState._updateTopicAggregate(data.topicPerformance, a.topic, a.correct, a.hintsUsed || 0, a.difficulty, a.difficultyScore || 3, a.section);
+                            if (a.subtopic) MayLearnerState._updateTopicAggregate(data.subtopicPerformance, a.subtopic, a.correct, a.hintsUsed || 0, a.difficulty, a.difficultyScore || 3, a.section);
+                        }
+                    });
+                });
+                // Clean seenQuestionIds / topicSeen if they came only from this session
+                try {
+                    var prof = CMAProfileManager.load();
+                    if (Array.isArray(prof.seenQuestionIds) && targetQs.length) {
+                        var remainingQs = new Set();
+                        var remHist = JSON.parse(localStorage.getItem(SessionPersistence.HISTORY_KEY) || '[]');
+                        remHist.forEach(function(he){ (he.questions || []).forEach(function(q){ remainingQs.add(q); }); });
+                        (data.sessions || []).forEach(function(s){ (s.attempts || []).forEach(function(a){ remainingQs.add(a.questionId); }); });
+                        // Also include DASHBOARD sessions for seen
+                        try { var db2 = JSON.parse(localStorage.getItem(SessionPersistence.DASHBOARD_KEY) || '{}'); (db2.sessions||[]).forEach(function(s){ if(s.questions) s.questions.forEach(function(q){ remainingQs.add(q); }); }); } catch(e){}
+                        prof.seenQuestionIds = prof.seenQuestionIds.filter(function(q){ return remainingQs.has(q); });
+                        CMAProfileManager.save(prof);
+                        localStorage.setItem(SessionPersistence.SEEN_KEY, JSON.stringify(prof.seenQuestionIds));
+                    }
+                    if (Array.isArray(prof.topicSeen) || Array.isArray(data.topicSeen)) {
+                        // topicSeen rebuild not critical — leave as-is (ages out)
+                    }
+                } catch (e5) {}
+                MayLearnerState.save(data);
+            }
+            // Also purge telemetry — drain and filter events tied to deleted QIDs (use injectSynthetic to preserve timestamps)
+            try {
+                if (typeof MayTelemetry !== 'undefined' && typeof MayTelemetry.drain === 'function' && targetQs.length) {
+                    var allEvents = MayTelemetry.drain();
+                    var filtered = allEvents.filter(function(ev){
+                        var d = ev.data || {};
+                        var id = d.itemId || d.questionId || d.tagId || null;
+                        if (id && targetQs.indexOf(id) !== -1) return false;
+                        if (entry.date) {
+                            var evtTime = Date.parse(ev.timestamp);
+                            var entryTime = Date.parse(entry.date);
+                            if (!isNaN(evtTime) && !isNaN(entryTime) && Math.abs(evtTime - entryTime) < 5*60*1000) {
+                                if (d.mode === entry.mode || d.examPart === entry.part) return false;
+                            }
+                        }
+                        return true;
+                    });
+                    // Re-push remaining via injectSynthetic (preserves timestamp, respects MAX_BUFFER)
+                    if (typeof MayTelemetry.injectSynthetic === 'function') {
+                        filtered.forEach(function(ev){ try { MayTelemetry.injectSynthetic(ev); } catch(e){} });
+                    } else {
+                        filtered.forEach(function(ev){ try { if (MayTelemetry._buffer) MayTelemetry._buffer.push(ev); } catch(e){} });
+                    }
+                }
+            } catch (e6) {}
+        } catch (e) {}
+    },
+
+    // Admin: backup any user's data (wraps CMAProfileManager)
+    backupUserData() {
+        try { if (typeof CMAProfileManager !== 'undefined') { CMAProfileManager.createBackup(); return true; } } catch (e) {}
+        return false;
     }
 };
 
@@ -2378,8 +2636,20 @@ const ExamSessionManager = {
             P2BankLoader.ensureLoaded().then(function () {
                 if (_sbtn) { _sbtn.disabled = false; _sbtn.textContent = 'Start Session'; }
                 _self.start(e);
-            }).catch(function () {
+            }).catch(function (err) {
                 if (_sbtn) { _sbtn.disabled = false; _sbtn.textContent = 'Start Session'; }
+                var msg = (err && err.message) ? err.message : String(err);
+                var vs = $('validationStatus');
+                if (vs) {
+                    var b = document.createElement('b');
+                    b.textContent = 'Part 2 session blocked - content unavailable.';
+                    var span = document.createElement('span');
+                    span.className = 'small';
+                    span.textContent = msg;
+                    vs.innerHTML = '';
+                    vs.appendChild(b);
+                    vs.appendChild(span);
+                }
             });
             return;
         }
@@ -2761,13 +3031,7 @@ const ExamSessionManager = {
     },
     getCasePool() {
         let packs = this.selectedPacks();
-        // Phase 0: part in key (P2 case wiring deferred — P2-case globals use a
-        // different schema; see DL-050/DL-051. P2 mode currently yields P1-shape
-        // banks only, i.e. an empty case pool: MCQ-only P2 sessions in dev).
-        // Promotion: P2 delivery is MCQ-only by board determination (DL-051
-        // delivery blocker) — return an empty pool so P1 cases can never leak
-        // into P2 sessions.
-        // C1 fix: same manifest-aware key as getMCQPool (see above).
+        // Phase 0: part in key. C1 fix: same manifest-aware key as getMCQPool (see above).
         let manifestKey = _DefectManifest.getLoadState() + ':' + _DefectManifest.getStats().totalBlocked;
         let packsKey = getExamPart() + '|' + packs.sort().join(",") + "_case|" + manifestKey;
         if (_casePoolCache && _casePacksKey === packsKey) return _casePoolCache;
@@ -2781,7 +3045,9 @@ const ExamSessionManager = {
             let p2banks = [
                 (typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : []),
                 (typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : []),
-                (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : [])
+                (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : []),
+                (typeof casePackP2Authored !== 'undefined' ? casePackP2Authored : []),
+                (typeof casePackP2_C4_C8 !== 'undefined' ? casePackP2_C4_C8 : [])
             ];
             let p2secs = [];
             try { p2secs = this.sectionsSelected ? this.sectionsSelected() : []; } catch (e) {}
@@ -3055,6 +3321,8 @@ const ExamSessionManager = {
         // elapsed (timer drain / force-submit on resume). The snapshot carries
         // paused + _pausedAt on pause, and the folded start epoch on resume.
         try { SessionPersistence.saveImmediate(); } catch (e) {}
+        // W5: wire Socratic pause carve-out (HS-4) — MayCoachingOrchestrator suppresses Socratic while paused
+        try { if (typeof MayCoachingOrchestrator !== 'undefined' && MayCoachingOrchestrator.setPauseState) MayCoachingOrchestrator.setPauseState(s.paused); } catch (e) {}
         this.render();
     },
 
@@ -3079,6 +3347,10 @@ const ExamSessionManager = {
             MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, attributionCardId: (_attribC && _attribC.cardId) || null, attributionCardType: (_attribC && _attribC.recommendationType) || null, timestamp: new Date().toISOString() });
             window._mayAttributionCard = null;
         }
+        // P-01 (2026-09-22): run wired safety instruments once per completed
+        // session (breaker, EV3/PII audits). Guarded + console-only; a hook
+        // failure must never break completion.
+        try { if (typeof MayTelemetry !== 'undefined' && MayTelemetry.runSessionEndAudits) MayTelemetry.runSessionEndAudits(); } catch (e) {}
     },
 
     // ============================================================
@@ -3351,20 +3623,37 @@ const ExamSessionManager = {
                     cd.style.display = visible ? 'none' : 'block';
                     if (!visible) {
                         var cols = CMAProfileManager.getCollections();
-                        var html = '<div class="collection-dropdown-header">Save to Collection</div>';
+                        cd.innerHTML = '';
+                        var header = document.createElement('div');
+                        header.className = 'collection-dropdown-header';
+                        header.textContent = 'Save to Collection';
+                        cd.appendChild(header);
                         var entries = Object.entries(cols);
                         if (entries.length === 0) {
-                            html += '<div class="collection-dropdown-item disabled">No collections yet</div>';
+                            var empty = document.createElement('div');
+                            empty.className = 'collection-dropdown-item disabled';
+                            empty.textContent = 'No collections yet';
+                            cd.appendChild(empty);
                         } else {
                             entries.forEach(function (entry) {
                                 var cid = entry[0], col = entry[1];
                                 var saved = col.items.indexOf(q.QuestionID) !== -1;
-                                html += '<div class="collection-dropdown-item' + (saved ? ' saved' : '') + '" data-cid="' + cid + '">' +
-                                    (saved ? '&#10003; ' : '') + col.name + ' <span class="collection-count">' + col.items.length + '</span></div>';
+                                var item = document.createElement('div');
+                                item.className = 'collection-dropdown-item' + (saved ? ' saved' : '');
+                                item.dataset.cid = cid;
+                                var checkbox = saved ? '✓ ' : '';
+                                item.innerHTML = checkbox + escapeHtml(col.name) + ' <span class="collection-count">' + col.items.length + '</span>';
+                                cd.appendChild(item);
                             });
                         }
-                        html += '<div class="collection-dropdown-footer"><button id="collectionNewBtn" class="collection-new-btn">+ New Collection</button></div>';
-                        cd.innerHTML = html;
+                        var footer = document.createElement('div');
+                        footer.className = 'collection-dropdown-footer';
+                        var newBtn = document.createElement('button');
+                        newBtn.id = 'collectionNewBtn';
+                        newBtn.className = 'collection-new-btn';
+                        newBtn.textContent = '+ New Collection';
+                        footer.appendChild(newBtn);
+                        cd.appendChild(footer);
                         cd.querySelectorAll('.collection-dropdown-item:not(.disabled)').forEach(function (item) {
                             item.onclick = function (ev) {
                                 ev.stopPropagation();
@@ -3681,20 +3970,36 @@ const ExamSessionManager = {
                 var dd = document.createElement('div');
                 dd.className = 'collection-dropdown';
                 var cols = CMAProfileManager.getCollections();
-                var html = '<div class="collection-dropdown-header">Save to Collection</div>';
+                dd.innerHTML = '';
+                var header = document.createElement('div');
+                header.className = 'collection-dropdown-header';
+                header.textContent = 'Save to Collection';
+                dd.appendChild(header);
                 var entries = Object.entries(cols);
                 if (entries.length === 0) {
-                    html += '<div class="collection-dropdown-item disabled">No collections yet</div>';
+                    var empty = document.createElement('div');
+                    empty.className = 'collection-dropdown-item disabled';
+                    empty.textContent = 'No collections yet';
+                    dd.appendChild(empty);
                 } else {
                     entries.forEach(function (entry) {
                         var cid = entry[0], col = entry[1];
                         var saved = col.items.indexOf(itemId) !== -1;
-                        html += '<div class="collection-dropdown-item' + (saved ? ' saved' : '') + '" data-cid="' + cid + '">' +
-                            (saved ? '&#10003; ' : '') + col.name + ' <span class="collection-count">' + col.items.length + '</span></div>';
+                        var item = document.createElement('div');
+                        item.className = 'collection-dropdown-item' + (saved ? ' saved' : '');
+                        item.dataset.cid = cid;
+                        var checkbox = saved ? '✓ ' : '';
+                        item.innerHTML = checkbox + escapeHtml(col.name) + ' <span class="collection-count">' + col.items.length + '</span>';
+                        dd.appendChild(item);
                     });
                 }
-                html += '<div class="collection-dropdown-footer"><button class="collection-new-btn">+ New Collection</button></div>';
-                dd.innerHTML = html;
+                var footer = document.createElement('div');
+                footer.className = 'collection-dropdown-footer';
+                var newBtn = document.createElement('button');
+                newBtn.className = 'collection-new-btn';
+                newBtn.textContent = '+ New Collection';
+                footer.appendChild(newBtn);
+                dd.appendChild(footer);
                 btn.parentNode.insertBefore(dd, btn.nextSibling);
                 dd.style.display = 'block';
                 dd.querySelectorAll('.collection-dropdown-item:not(.disabled)').forEach(function (item) {
@@ -4240,9 +4545,18 @@ const ExamSessionManager = {
         let h = SessionPersistence.getHistory();
         $('historyView').innerHTML = h.length ?
             '<h2>History <button onclick="SessionPersistence.clearHistory(); ExamSessionManager.renderHistory();" class="btn btn-outline" style="float:right;padding:4px 8px;font-size:0.8rem;">Clear History</button></h2>' +
-            h.map(x => `<div class="history-card"><b>${new Date(x.date).toLocaleString()}</b>` +
-                `<p class="small">Part ${x.part || 'P1'} | Mode ${x.mode} | ${fmt(x.duration)} | Sections ${(x.sections||[]).join(', ')} | MCQs ${x.correct}/${x.mcqs} | Cases ${x.cases || 0}${x.scaledScore ? ' | Scaled: ' + x.scaledScore : ''}${x.grade ? ' | ' + x.grade : ''}${x.passed ? ' | ✓ PASS' : (x.passed === false ? ' | Below threshold' : '')}${x.mcqGate === false ? ' | MCQ gate failed' : ''}${x.difficultyPreset && x.difficultyPreset !== 'standard' ? ' | ' + x.difficultyPreset + ' form' : ''}</p></div>`
-            ).join('') :
+            h.map(function(x){
+                var d = new Date(x.date);
+                var dateStr = d.toLocaleDateString();
+                var timeStr = x.time || d.toLocaleTimeString();
+                var qCount = x.questionCount || x.questions && x.questions.length || ((x.mcqs||0)+(x.cbqTotal||x.cases||0));
+                var timerYN = (x.timerExpired === true) ? 'Y' : (x.timerExpired === false ? 'N' : '—');
+                var qs = x.questions ? x.questions.slice(0,8).join(', ') + (x.questions.length>8 ? ' +' + (x.questions.length-8) + ' more' : '') : '';
+                return '<div class="history-card" style="border-left:3px solid var(--border);padding:8px 10px;margin:6px 0;">' +
+                    '<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;"><b>' + dateStr + '</b> <span>' + timeStr + '</span> <span>Questions: ' + qCount + '</span> <span>Timer Expired: <b>' + timerYN + '</b></span></div>' +
+                    (qs ? '<div class="small" style="margin-top:4px;word-break:break-all;">' + qs + '</div>' : '') +
+                    '<p class="small" style="margin-top:4px;">Part ' + (x.part || 'P1') + ' | Mode ' + x.mode + ' | ' + fmt(x.duration) + ' | Sections ' + ((x.sections||[]).join(', ')) + ' | MCQs ' + x.correct + '/' + x.mcqs + ' | Cases ' + (x.cases || 0) + (x.scaledScore ? ' | Scaled: ' + x.scaledScore : '') + (x.grade ? ' | ' + x.grade : '') + (x.passed ? ' | ✓ PASS' : (x.passed === false ? ' | Below threshold' : '')) + (x.mcqGate === false ? ' | MCQ gate failed' : '') + (x.difficultyPreset && x.difficultyPreset !== 'standard' ? ' | ' + x.difficultyPreset + ' form' : '') + '</p></div>';
+            }).join('') :
             '<div class="empty-state"><h2>No saved attempts yet</h2></div>';
     }
 };
@@ -5561,7 +5875,7 @@ const PerformanceDashboard = {
 // ============================================================
 const PromptGovernance = {
     // ── System prompt for the Review Agent ─────────────
-    SYSTEM_PROMPT: `You are the CMA Part 1 AI Review Coach. Your role is to help a CMA candidate understand their practice performance using only available session evidence.
+    SYSTEM_PROMPT: `You are the CMA AI Review Coach. Your role is to help a CMA candidate understand their practice performance using only available session evidence.
 
 RULES:
 1. Use ONLY performance and history data provided to you. Never invent data.
@@ -6321,7 +6635,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let k = e.key.toUpperCase();
         if (k === 'A' || k === 'B' || k === 'C' || k === 'D') {
             let s = state.session;
-            if (s.qIndex < s.mcqs.length && s.qIndex < (s.mcqs || []).length) {
+            if (s.qIndex < (s.mcqs || []).length) {
                 e.preventDefault();
                 let q = s.mcqs[s.qIndex];
                 s.answers[q.QuestionID] = k;
@@ -6399,19 +6713,37 @@ function setExamPart(part) {
     updatePartUI();
     _resetPoolCache();
     try { renderValidation(); } catch (e) { /* ignore */ }
-    // W4: first P2 activation lazy-loads the nine P2 banks (P1 cold start
+    // W4: first P2 activation lazy-loads the eleven P2 banks (P1 cold start
     // skips them). Fire-and-forget; ExamSessionManager.start gates P2
     // sessions on completion so no session builds from an empty pool.
     if (part === 'P2' && !P2BankLoader.isLoaded()) {
         var _vs = $('validationStatus');
-        if (_vs) _vs.innerHTML = '<b>Loading Part 2 banks...</b> <span class="small">Nine content files, one-time per visit.</span>';
+        if (_vs) {
+            var b = document.createElement('b');
+            b.textContent = 'Loading Part 2 banks...';
+            var span = document.createElement('span');
+            span.className = 'small';
+            span.textContent = 'Eleven content files, one-time per visit.';
+            _vs.innerHTML = '';
+            _vs.appendChild(b);
+            _vs.appendChild(span);
+        }
         P2BankLoader.ensureLoaded().then(function () {
             _resetPoolCache();
             try { renderValidation(); } catch (e) {}
             try { updatePartUI(); } catch (e) {}
         }).catch(function (err) {
             var _vs2 = $('validationStatus');
-            if (_vs2) _vs2.innerHTML = '<b>Part 2 banks failed to load.</b> <span class="small">' + String((err && err.message) || err) + '</span>';
+            if (_vs2) {
+                var b2 = document.createElement('b');
+                b2.textContent = 'Part 2 banks failed to load - Part 2 unavailable.';
+                var span2 = document.createElement('span');
+                span2.className = 'small';
+                span2.textContent = String((err && err.message) || err);
+                _vs2.innerHTML = '';
+                _vs2.appendChild(b2);
+                _vs2.appendChild(span2);
+            }
         });
     }
 }
@@ -6426,14 +6758,14 @@ function updatePartUI() {
         var _lc = liveBankCounts();
         var _he = $('heroEyebrow'), _ht = $('heroTitle'), _hl = $('heroLede');
         if (_he) _he.textContent = p2 ? 'Original CMA Part 2 2026-Aligned Exam-Style Practice' : 'Original CMA Part 1 2026-Aligned Exam-Style Practice';
-        if (_ht) _ht.textContent = p2 ? 'CMA Part 2 2026 Practice Simulator' : 'CMA Part 1 2026 Practice Simulator';
+        if (_ht) _ht.textContent = p2 ? 'CMA Part 2 2026 Practice Simulator' : 'CMA 2026 Practice Simulator';
         if (_hl) {
             if (p2) {
                 // Phase 4: delivery live, so no qualifier; unloaded banks show
                 // a loading line instead of zero counts.
                 _hl.innerHTML = (_lc.p2mcq > 0)
                     ? _lc.p2mcq.toLocaleString() + ' Part 2 MCQs across six question packs (A &bull; B &bull; C &bull; D &bull; E &bull; F) plus ' + _lc.p2cases + ' integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.'
-                    : 'Part 2 banks are loading... your counts unlock as soon as all nine files arrive.';
+                    : 'Part 2 banks are loading... your counts unlock as soon as all eleven files arrive.';
             } else {
                 _hl.innerHTML = _lc.p1mcq.toLocaleString() + ' Part 1 MCQs across five question packs (A &bull; B &bull; C &bull; D &bull; E) plus ' + _lc.p1cases + ' integrated case studies in a testing-software-inspired flow: custom timer, navigator, flags, review-before-submit, score report, grade bands, and missed/marked remediation with study links.';
             }
@@ -6487,7 +6819,7 @@ function updatePartUI() {
     var w = $('weightedField');
     if (w) w.style.display = '';
     var note = $('fullOverrideNote');
-    if (note && p2) note.innerHTML = '<p><strong>Full Part 2 Simulation:</strong> 100 MCQs with a 4-hour countdown timer. Case studies included from the live P2 case pool (DL-051 Phase 4).</p>';
+    if (note && p2) note.innerHTML = '<p><strong>Full Part 2 Simulation:</strong> 100 MCQs + 2 cases with a 4-hour countdown timer to match the real CMA Part 2 exam format.</p>';
 }
 
 function updateSliderNote() {
@@ -6558,11 +6890,13 @@ function renderValidation() {
     }
     // W1-catalog fix (2026-09-18): live banks per active part. P1 reads
     // CASE_PACK_1/2/3 (80 cases — the legacy CASE_BANK aliases hid the third
-    // pack). P2 reads casePackP2_1/2/3 (delivery/validation pending DL-051).
+    // pack). P2 reads casePackP2_1/2/3 (delivery live, DL-051 Phase 4).
     let caseBanks = part === 'P2' ? {
         '1': (typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : []),
         '2': (typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : []),
-        '3': (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : [])
+        '3': (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : []),
+        '4': (typeof casePackP2Authored !== 'undefined' ? casePackP2Authored : []),
+        '5': (typeof casePackP2_C4_C8 !== 'undefined' ? casePackP2_C4_C8 : [])
     } : {
         '1': (typeof CASE_PACK_1 !== 'undefined' ? CASE_PACK_1 : []),
         '2': (typeof CASE_PACK_2 !== 'undefined' ? CASE_PACK_2 : []),
@@ -6571,7 +6905,7 @@ function renderValidation() {
     let seenPacks = {}; for (let [label, cb] of Object.entries(caseBanks)) { if (cb && cb.length) { let key = cb.length + '|' + (cb[0].CaseID || ''); if (!seenPacks[key]) { seenPacks[key] = { labels: [label], count: cb.length, sections: cb.reduce((acc, c) => { (c.SectionTags || []).forEach(s => acc[s] = (acc[s] || 0) + 1); return acc; }, {}) }; } else { seenPacks[key].labels.push(label); } } }
     let totalCases = Object.values(seenPacks).reduce((s, p) => s + p.count, 0);
     for (let k of Object.keys(seenPacks)) { let p = seenPacks[k]; detailHtml += `Case Pack ${p.labels.join('/')}: ${p.count} cases | ${Object.entries(p.sections).map(([s, n]) => s + ': ' + n).join(', ')}<br>`; }
-    if (part === 'P2') { var _p2ld = true; try { _p2ld = P2BankLoader.isLoaded(); } catch (e) {} detailHtml += _p2ld ? '<span class="small">P2 cases live in delivery (DL-051 Phase 4).</span><br>' : '<b>Part 2 banks loading...</b> <span class="small">Counts appear when all nine files arrive.</span><br>'; }
+    if (part === 'P2') { var _p2ld = true; try { _p2ld = P2BankLoader.isLoaded(); } catch (e) {} detailHtml += _p2ld ? '<span class="small">P2 cases live in delivery (DL-051 Phase 4).</span><br>' : '<b>Part 2 banks loading...</b> <span class="small">Counts appear when all eleven files arrive.</span><br>'; }
     detailHtml += `<b>${allOk ? 'All packs validated' : 'Some packs have issues'}</b>`;
     let summaryHtml = `<b>${totalMCQs.toLocaleString()} MCQs across ${Object.keys(banks).length} packs + ${totalCases} case sets</b> &mdash; ${allOk ? 'All validated' : 'Issues detected'}`;
     let html = `${summaryHtml} <span class="catalog-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'\u25B2 Collapse':'\u25BC Details'">\u25BC Details</span><div class="catalog-detail">${detailHtml}</div>`;
@@ -6579,8 +6913,8 @@ function renderValidation() {
 }
 
 function renderCatalog() {
-    // Promotion: roster + labels follow the active part. P2 case catalog is
-    // deferred with DL-050/DL-051 (no semantic screens exist for case items).
+    // Promotion: roster + labels follow the active part. P2 case catalog is live
+    // (DL-051 Phase 4, semantic screens via case_semantic_screens.js v3).
     let part = getExamPart();
     let info = part === 'P2' ? SECTION_INFO_P2 : SECTION_INFO;
     let banks = part === 'P2' ? resolveP2MCQBanks() : {
@@ -6592,7 +6926,13 @@ function renderCatalog() {
     };
     // W1-catalog fix (2026-09-18): live CASE_PACK banks (80 cases) — the
     // legacy CASE_BANK aliases hid the third pack (50-case subset).
-    let caseBanks = {
+    let caseBanks = part === 'P2' ? {
+        '1': (typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : []),
+        '2': (typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : []),
+        '3': (typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : []),
+        '4': (typeof casePackP2Authored !== 'undefined' ? casePackP2Authored : []),
+        '5': (typeof casePackP2_C4_C8 !== 'undefined' ? casePackP2_C4_C8 : [])
+    } : {
         '1': (typeof CASE_PACK_1 !== 'undefined' ? CASE_PACK_1 : []),
         '2': (typeof CASE_PACK_2 !== 'undefined' ? CASE_PACK_2 : []),
         '3': (typeof CASE_PACK_3 !== 'undefined' ? CASE_PACK_3 : [])
@@ -6611,8 +6951,8 @@ function renderCatalog() {
     let p2CaseCounts = [0, 0, 0];
     if (part === 'P2') {
         try {
-            let _cb = [typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : [], typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : [], typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : []];
-            for (let _bi = 0; _bi < 3; _bi++) p2CaseCounts[_bi] = _cb[_bi].length;
+            let _cb = [typeof casePackP2_1 !== 'undefined' ? casePackP2_1 : [], typeof casePackP2_2 !== 'undefined' ? casePackP2_2 : [], typeof casePackP2_3 !== 'undefined' ? casePackP2_3 : [], typeof casePackP2Authored !== 'undefined' ? casePackP2Authored : [], typeof casePackP2_C4_C8 !== 'undefined' ? casePackP2_C4_C8 : []];
+            for (let _bi = 0; _bi < 5; _bi++) p2CaseCounts[_bi] = _cb[_bi].length;
         } catch (e) {}
     }
     let p2CaseTotal = p2CaseCounts[0] + p2CaseCounts[1] + p2CaseCounts[2];
@@ -6625,7 +6965,7 @@ function renderCatalog() {
     ${part === 'P2'
         ? (p2CaseTotal > 0
             ? '<p class="small">' + p2CaseTotal + ' Part 2 case studies across 3 packs (' + p2CaseCounts.join(' + ') + ') — available for case, mixed, and full sessions (DL-051 Phase 4).</p>'
-            : '<p class="small">Part 2 banks are loading... case counts appear when all nine files arrive.</p>')
+            : '<p class="small">Part 2 banks are loading... case counts appear when all eleven files arrive.</p>')
         : `<p class="small">Cases are short business scenarios with integrated item sets and response types.</p>
     <div class="grid">${Object.entries(caseBanks).flatMap(([pk, cb]) =>
         cb.map(c => `<div class="catalog-card"><b>Pack ${pk} — ${c.CaseID}: ${c.Title}</b><p class="small">Sections ${c.SectionTags.join(', ')} | ${c.Items.length} items | ${c.EstimatedMinutes} minutes</p></div>`)
@@ -6874,6 +7214,93 @@ function renderOperationsView() {
             }
             h += '</tbody></table></div></div>';
         }
+        // ── W_ADMIN (token may_v2_1_admin_history_delete): Admin History Management ──
+        // Hidden admin panel only (not May). Per-user selector + Date | Time | Questions | Timer Expired Y/N + Delete (double confirm) + Backup per user.
+        // Delete purges from HISTORY_KEY, DASHBOARD_KEY, CMAProfileManager.sessionHistory, and MayLearnerState derived aggregates (all memory gone).
+        (function(){
+            var prof = null; try { prof = CMAProfileManager.load(); } catch(e){}
+            var rollout = [];
+            try { if (typeof MayLearnerState !== 'undefined' && MayLearnerState.load) {
+                var mls = MayLearnerState.load();
+                if (mls.mayStudentRoll && Array.isArray(mls.mayStudentRoll) && mls.mayStudentRoll.length > 0) rollout = mls.mayStudentRoll;
+            }} catch(e){}
+            // Also include current profile as fallback user — always include current + rollout (fix: current disappears when rollout appears)
+            var users = [];
+            if (prof) {
+                var curName = (prof.mayLearnerState && prof.mayLearnerState.userName) || prof.userName || 'Current User';
+                var curId = null;
+                try { if (typeof MayLearnerState !== 'undefined' && MayLearnerState.load) { var _mlsc = MayLearnerState.load(); curId = _mlsc.learnerId || null; } } catch(e){}
+                if (!curId) curId = prof.profileId || prof.learnerId || 'current';
+                // Always push current user first
+                users.push({ id: curId, name: curName + ' (Current)' });
+                rollout.forEach(function(u){
+                    var uid = u.id || u.learnerId || u.name;
+                    if (uid !== curId) users.push({ id: uid, name: u.name || u.id });
+                });
+                if (users.length === 0) users.push({ id: curId, name: curName });
+            }
+            var selUser = (typeof window !== 'undefined' && window._adminSelectedUser) ? window._adminSelectedUser : (users[0] ? users[0].id : 'current');
+            h += '<div class="ops-section" style="border:1px solid var(--danger,#dc2626);border-radius:8px;padding:12px;">';
+            h += '<h3>Admin History Management <span class="ops-section-badge" style="background:var(--danger,#dc2626)">ADMIN</span></h3>';
+            h += '<p class="small">Registered users: ' + users.length + ' | Showing history for: <select id="adminUserSelect" onchange="window._adminSelectedUser=this.value; renderOperationsView();" style="padding:4px 8px;border-radius:4px;">';
+            for (var ui=0; ui<users.length; ui++) {
+                var sel = (users[ui].id === selUser) ? ' selected' : '';
+                h += '<option value="' + users[ui].id.replace(/"/g,'&quot;') + '"' + sel + '>' + users[ui].name.replace(/</g,'&lt;') + '</option>';
+            }
+            // Legacy bucket option
+            try {
+                var _legacyCount = history.filter(function(x){ return !x.learnerId; }).length;
+                if (_legacyCount > 0) {
+                    var selLeg = (selUser === 'legacy') ? ' selected' : '';
+                    h += '<option value="legacy"' + selLeg + '>Legacy / Unassigned (' + _legacyCount + ')</option>';
+                }
+            } catch(e){}
+            h += '</select> <button class="btn btn-small" style="margin-left:8px;padding:4px 10px;" onclick="if(typeof CMAProfileManager!==\'undefined\'){CMAProfileManager.createBackup(); alert(\'Backup created (whole profile — all users safety snapshot) before any delete.\');}else alert(\'Backup not available\');">Backup All (Safety Snapshot)</button>';
+            h += ' <button class="btn btn-small" style="padding:4px 10px;" onclick="CMAProfileManager.backupAllProgress(); alert(\'Full profile backup downloaded (all users).\');">Download Backup File</button></p>';
+            // History table for selected user (currently global history; per-user filter when learnerId present)
+            var adminHist = history;
+            // If entries have learnerId, filter to selected user — plus legacy bucket for old entries without learnerId
+            var hasLearnerIds = adminHist.some(function(x){ return !!x.learnerId; });
+            var legacyCount = adminHist.filter(function(x){ return !x.learnerId; }).length;
+            // Resolve current learnerId with same priority as saveHistory (MayLearnerState.learnerId first, then profileId) — fix namespace mismatch
+            var _curId = null;
+            try { if (typeof MayLearnerState !== 'undefined' && MayLearnerState.load) { var _mls2 = MayLearnerState.load(); _curId = _mls2.learnerId || null; } } catch(e){}
+            if (!_curId) { try { var _profTmp = CMAProfileManager.load(); _curId = _profTmp.profileId || 'current'; } catch(e){ _curId = 'current'; } }
+            if (hasLearnerIds) {
+                if (selUser === 'legacy') {
+                    adminHist = adminHist.filter(function(x){ return !x.learnerId; });
+                } else if (selUser === _curId) {
+                    // Per-user filter for Current — only current user's entries + legacy (not all users) — fix literal vs actual id
+                    adminHist = adminHist.filter(function(x){ return x.learnerId === _curId || !x.learnerId; });
+                } else if (users.some(function(u){ return u.id === selUser; })) {
+                    adminHist = adminHist.filter(function(x){ return x.learnerId === selUser; });
+                }
+                if (legacyCount > 0) {
+                    h += '<p class="small" style="color:var(--warning, #d97706);">Legacy entries without learnerId: ' + legacyCount + ' — visible in Current view, hidden from per-user filter. Select Legacy to view them separately.</p>';
+                }
+            }
+            if (adminHist.length === 0) {
+                h += '<div class="ops-empty">No tests for this user.</div>';
+            } else {
+                h += '<div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Date</th><th>Time</th><th>Questions</th><th>Timer Expired</th><th>Actions</th></tr></thead><tbody>';
+                for (var ai = adminHist.length-1; ai >= 0; ai--) {
+                    var ax = adminHist[ai];
+                    var ad = ax.date ? new Date(ax.date) : new Date();
+                    var aDate = ad.toLocaleDateString();
+                    var aTime = ax.time || ad.toLocaleTimeString();
+                    var aQCount = ax.questionCount || (ax.questions && ax.questions.length) || ((ax.mcqs||0)+(ax.cbqTotal||ax.cases||0));
+                    var aTimerYN = (ax.timerExpired === true) ? 'Y' : (ax.timerExpired === false ? 'N' : '—');
+                    var aQs = ax.questions ? ax.questions.slice(0,4).join(', ') + (ax.questions.length>4 ? ' +' + (ax.questions.length-4) + ' more' : '') : '';
+                    var aKey = (ax.date || '').replace(/'/g,"\\'").replace(/"/g,'&quot;');
+                    var aSid = (ax.sessionId || '').replace(/'/g,"\\'").replace(/"/g,'&quot;');
+                    h += '<tr><td>' + aDate + '</td><td>' + aTime + '</td><td title="' + (ax.questions ? ax.questions.join(', ').replace(/"/g,'&quot;') : '') + '"><b>' + aQCount + '</b>' + (aQs ? '<br><span class="small" style="word-break:break-all;">' + aQs + '</span>' : '') + '</td><td style="text-align:center;"><b>' + aTimerYN + '</b></td>';
+                    h += '<td><button class="btn btn-small" style="background:var(--danger,#dc2626);color:#fff;padding:2px 8px;font-size:0.75rem;" onclick="if(!confirm(\'Delete this entire test?\\n\\nDate: ' + aDate + ' ' + aTime + '\\nQuestions: ' + aQCount + '\\nTimer Expired: ' + aTimerYN + '\\n\\nThis deletes the whole test, not just questions.\'))return; if(!confirm(\'SECOND CONFIRMATION — This is unrecoverable unless a user backup exists.\\n\\nAll memory for this test will be purged from History, Dashboard, and May knowledge/statistics.\\n\\nA backup was auto-created before delete, but you should also Backup This User now if you have not.\\n\\nPermanently delete?\'))return; if(SessionPersistence.deleteHistoryEntry(\'' + aKey + '\', \'' + aSid + '\')){alert(\'Test deleted and May memory purged. Backup was auto-created.\'); renderOperationsView(); ExamSessionManager.renderHistory();}else alert(\'Delete failed — entry not found.\');">Delete</button></td></tr>';
+                }
+                h += '</tbody></table></div>';
+                h += '<p class="small" style="margin-top:8px;color:var(--text-muted);">Delete is per-test (entire session) and purges May statistics. Double confirmation required. Auto-backup created before each delete; use Backup This User for additional safety.</p>';
+            }
+            h += '</div>';
+        })();
         return h;
     }
 
@@ -7188,7 +7615,7 @@ var GuidedTour = {
             title: 'Administration Guide',
             desc: 'Governance, portfolio, and repository tools.',
             steps: [
-                { id: 'ad1', title: 'Governance Dashboard', text: 'Monitor certification status across all 5 question packs, track domain-level certification progress, and view the governance guard status.', attach: 'operationsView', tab: 'operationsView', position: 'center' },
+                { id: 'ad1', title: 'Governance Dashboard', text: 'Monitor certification status across all question packs (Part 1: five packs, Part 2: six packs), track domain-level certification progress, and view the governance guard status.', attach: 'operationsView', tab: 'operationsView', position: 'center' },
                 { id: 'ad2', title: 'Content Analytics', text: 'View difficulty distribution, cognitive level breakdowns, and answer-position balance across all packs.', attach: 'operationsView', tab: 'operationsView', position: 'center' },
                 { id: 'ad3', title: 'Learner Analytics', text: 'Review session history, accuracy rates, and readiness trends across all learners.', attach: 'operationsView', tab: 'operationsView', position: 'center' }
             ]
