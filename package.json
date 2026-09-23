@@ -27,7 +27,7 @@
     "electron-dev": "electron . --dev"
   },
   "devDependencies": {
-    "@huggingface/transformers": "^4.2.0",
+    "@huggingface/transformers": "^4.3.0",
     "electron": "^44.4.3",
     "playwright": "^1.61.1"
   }
