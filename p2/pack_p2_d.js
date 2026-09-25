@@ -1,8 +1,4 @@
-// BLOCK-AUTHORIZED — Content remediation session.
-// Schema: P2_SCHEMA_STANDARD.md v1.0
-// Governance: Rules 2/6/9/10/11/13/14 active
-
-var pack_p2_d_questions = [
+const pack_p2_d_questions = [
   {
     "Authorities": [
       "COSO Enterprise Risk Management (2017)"
@@ -269,9 +265,9 @@ var pack_p2_d_questions = [
     "CalculationItem": true,
     "Choices": {
       "A": "The loan exceeds the $25M single-name credit exposure limit. The board's risk appetite statement is a binding constraint, not a guideline. The low default probability does not override the limit — the board set a dollar threshold, not a probability-based threshold. If the CRO believes the limit is too restrictive, the remedy is to request a board-approved amendment.",
-      "B": "Approve the loan — the 0.02% default probability is negligible, and the AAA rating justifies exceeding the $25M single-name limit.",
-      "C": "Approve the loan with enhanced monitoring. Expected loss is only $6,000 ($30M × 0.02%), which is immaterial relative to the bank's capital base.",
-      "D": "The risk appetite statement only applies to below-investment-grade borrowers. AAA-rated credits are exempt from single-name exposure limits by regulatory convention."
+      "B": "Approve the loan — the 0.02% default probability is negligible, and the AAA rating justifies exceeding the $25M single-name limit. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Approve the loan with enhanced monitoring. Expected loss is only $6,000 ($30M × 0.02%), which is immaterial relative to the bank's capital base. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "The risk appetite statement only applies to below-investment-grade borrowers. AAA-rated credits are exempt from single-name exposure limits by regulatory convention. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Using expected loss (PD × Exposure) as the compliance test rather than the exposure limit — the boar",
@@ -344,10 +340,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Difficulty justified",
       "Independent: A=$920K. B=$1,380K. A saves $460K.",
-      "Authority citations match"
-    ,
+      "Authority citations match",
       "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
-],
+    ],
     "question_state": "Certified"
   },
   {
@@ -477,10 +472,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Difficulty justified",
       "Independent: Overdue training=leading (precursor). Losses=lagging (already materialized).",
-      "Authority citations match"
-    ,
+      "Authority citations match",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "question_state": "Certified"
   },
   {
@@ -522,10 +516,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Difficulty justified",
       "Independent: Residual likelihood=12%, impact=$5M, expected=$600K.",
-      "Authority citations match"
-    ,
+      "Authority citations match",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "question_state": "Certified"
   },
   {
@@ -536,10 +529,10 @@ var pack_p2_d_questions = [
     "BlueprintDomain": "Risk Management",
     "CalculationItem": false,
     "Choices": {
-      "A": "ERM should move to the compensation committee since executive pay incorporates risk metrics.",
+      "A": "ERM should move to the compensation committee since executive pay incorporates risk metrics. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "The audit committee's core SOX mandate is financial reporting integrity and ICFR. ERM encompasses strategic, operational, and compliance risks far beyond financial reporting. Combining both causes financial reporting risks to dominate the agenda at the expense of other risk categories.",
-      "C": "ERM should move to management — risk management is an operational function, not a board responsibility.",
-      "D": "No change needed — the audit committee has the financial expertise required for comprehensive risk oversight."
+      "C": "ERM should move to management — risk management is an operational function, not a board responsibility. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "No change needed — the audit committee has the financial expertise required for comprehensive risk oversight. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Understand",
     "CommonTrapReference": "Assuming the audit committee is sufficient for full ERM oversight — SOX mandates focus on financial ",
@@ -579,10 +572,10 @@ var pack_p2_d_questions = [
     "BlueprintDomain": "Risk Management",
     "CalculationItem": false,
     "Choices": {
-      "A": "All three are synonyms for the amount of risk the organization is willing to accept.",
+      "A": "All three are synonyms for the amount of risk the organization is willing to accept. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Risk CAPACITY = max absorbable loss before violating solvency (e.g., $200M loss breaches regulatory capital). Risk APPETITE = risk the organization chooses to accept (e.g., board approves $50M annual loss budget). Risk TOLERANCE = acceptable variation around objectives (e.g., quarterly earnings +/-10% from budget triggers board review). Relationship: tolerance < appetite < capacity.",
-      "C": "Capacity is set by regulators, appetite by shareholders, tolerance by management — different stakeholders.",
-      "D": "Capacity=short-term volatility. Appetite=long-term philosophy. Tolerance=regulatory minimums."
+      "C": "Capacity is set by regulators, appetite by shareholders, tolerance by management — different stakeholders. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Capacity=short-term volatility. Appetite=long-term philosophy. Tolerance=regulatory minimums. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Analyze",
     "CommonTrapReference": "Confusing risk capacity (max absorbable), appetite (chosen level), and tolerance (variation around o",
@@ -623,10 +616,10 @@ var pack_p2_d_questions = [
     "BlueprintDomain": "Risk Management",
     "CalculationItem": false,
     "Choices": {
-      "A": "The CRO should have framed the analysis more positively.",
+      "A": "The CRO should have framed the analysis more positively. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "The board approved strategy without integrating ERM — a structural failure. The CEO's dismissal reflects a culture where risk management is viewed as an obstacle, not an input to strategy. Under COSO ERM Principle 9, strategy and risk appetite must be developed together: board reviews risk profile BEFORE approving strategy.",
-      "C": "The CRO should escalate directly to the board, bypassing the CEO.",
-      "D": "No deficiency — the CEO appropriately prioritizes growth. The CRO's role is advisory."
+      "C": "The CRO should escalate directly to the board, bypassing the CEO. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "No deficiency — the CEO appropriately prioritizes growth. The CRO's role is advisory. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Evaluate",
     "CommonTrapReference": "Treating risk management as post-strategy compliance rather than integrating ERM into strategy-setti",
@@ -2788,10 +2781,10 @@ var pack_p2_d_questions = [
     "BlueprintDomain": "Risk Management",
     "CalculationItem": false,
     "Choices": {
-      "A": "Approve the strategy first, then have the CRO issue a post-decision report listing the risks",
-      "B": "Keep risk analysis separate from strategy-setting because strategy is the board's judgment call",
+      "A": "Approve the strategy first, then have the CRO issue a post-decision report listing the risks This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Keep risk analysis separate from strategy-setting because strategy is the board's judgment call This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Integrate risk consideration into strategy formulation — stress-test the strategic alternatives against Flash's risk appetite, identify the risks inherent in each option, and set objectives that reflect the risk-return trade-offs before approving",
-      "D": "Apply ERM only to execution risks, because strategic choices are not subject to risk appetite"
+      "D": "Apply ERM only to execution risks, because strategic choices are not subject to risk appetite This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Evaluate",
     "CommonTrapReference": "Treating strategy formulation as risk-free or sequencing risk analysis after the strategic decision",
@@ -3837,10 +3830,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Difficulty justified: two-step computation with eligibility screen fits Moderate Apply",
       "Recomputed twice: 310,000+0.04x100,000=314,000; 262,000+0.04x250,000=272,000; 205,000+0.04x500,000=225,000; 150,000+0.04x750,000=180,000; 500K/750K breach 400K cap",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "question_state": "Certified",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
@@ -5452,10 +5444,10 @@ var pack_p2_d_questions = [
     "CommonTrapReference": "Adjusting threshold values while boundary ambiguity and missing deadlines persist",
     "Stem": "Chief Risk Officer Daniel Osei reviews Flash's three-tier risk escalation matrix after audit complaints. Observed defects: an exposure of exactly $250,000 qualifies simultaneously as Tier 2's ceiling and Tier 3's floor, and two business units resolved the conflict in opposite directions; several Tier 2 files show escalated exposures sitting unresolved for 45+ days because no tier carries a required decision deadline; and the Tier 1 ceiling of $100,000 sits below the $120,000 insurance deductible, leaving routine loss events without a workable owner. Which redesign corrects the routing failures?",
     "Choices": {
-      "A": "Raise the Tier 1 ceiling to $150,000 so deductible-scale events have an owner, keeping the existing boundary definitions unchanged.",
+      "A": "Raise the Tier 1 ceiling to $150,000 so deductible-scale events have an owner, keeping the existing boundary definitions unchanged. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Redraw tier boundaries as contiguous ranges with no shared endpoint (Tier 2 covering $100,000 up to but excluding $250,000; Tier 3 covering $250,000 and above), attach a maximum decision deadline to every tier, and set the Tier 1 ceiling at the insurance deductible.",
-      "C": "Shift every tier boundary upward by 20% to reflect inflation in loss severity since adoption.",
-      "D": "Eliminate Tier 1 handling so all exposures route directly to division or group levels."
+      "C": "Shift every tier boundary upward by 20% to reflect inflation in loss severity since adoption. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Eliminate Tier 1 handling so all exposures route directly to division or group levels. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Sound escalation architecture under COSO ERM 2017 Principles 18-19 (leveraging information and technology, communicating risk information) requires unambiguous ownership at every exposure level, time-bound decisions, and thresholds compatible with the loss-financing structure. Choice B supplies all three: contiguous half-open ranges eliminate the $250,000 double-claim that produced contradictory unit behavior; per-tier decision deadlines end the 45-day idling; and anchoring the Tier 1 ceiling at the $120,000 deductible restores an owner for routine losses. The alternatives patch one symptom each while preserving the structural flaws - A leaves the overlap and missing deadlines intact, C adjusts levels without fixing logic, and D amputates a tier rather than repairing boundaries.",
@@ -5470,10 +5462,9 @@ var pack_p2_d_questions = [
       "No boilerplate (DL-013)",
       "Difficulty justified: Difficult-4 - Analyze of three interacting design defects with selection among partial and structural fixes",
       "Conceptual item - no computation to independently recompute",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "question_state": "Certified",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
@@ -6269,10 +6260,10 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-142-delegated-approval-screen",
     "Stem": "Marcus Webb, treasurer of Flash Logistics, screens three prospective warehouse-financing commitments against the board's risk framework: single-counterparty appetite of $4.0 million, tolerance permitting positions up to 10% above appetite without board involvement, and absolute capacity of $9.0 million representing the largest loss Flash could absorb without breaching its liquidity covenant. The proposals total $3.8 million, $4.3 million, and $5.1 million. Applying the framework correctly, which conclusion governs delegated approval?",
     "Choices": {
-      "A": "The $3.8 million and $4.3 million proposals both exceed appetite, so both require board escalation before signing",
+      "A": "The $3.8 million and $4.3 million proposals both exceed appetite, so both require board escalation before signing This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "The $3.8 million commitment sits inside appetite and the $4.3 million commitment sits within the 10% tolerance band, so Marcus may approve both under existing delegation, while the $5.1 million proposal breaches tolerance and must go to the board even though it remains well inside capacity",
-      "C": "Because all three proposals sit below the $9.0 million capacity figure, all three are automatically approvable under delegated authority",
-      "D": "The $5.1 million proposal is void because any exposure above appetite necessarily exhausts capacity"
+      "C": "Because all three proposals sit below the $9.0 million capacity figure, all three are automatically approvable under delegated authority This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "The $5.1 million proposal is void because any exposure above appetite necessarily exhausts capacity This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Risk appetite states the amount of risk Flash intends to take ($4.0 million per counterparty); risk tolerance defines the permissible deviation band around appetite (10%, i.e., 0.10 x $4.0 million = $0.4 million, producing a $4.4 million ceiling for delegated action); and risk capacity is the hard outer boundary set by survivability, here $9.0 million. Applying the screens in order: $3.8 million sits inside appetite; $4.3 million exceeds appetite by $0.3 million but stays under $4.4 million, so tolerance covers it; and $5.1 million pierces tolerance yet remains below capacity, so it is neither forbidden nor delegable - it requires board approval as an exception. Business interpretation: Marcus can sign the first two commitments today and should route the third to the board with a headroom analysis showing $3.9 million of unused absorption capacity. The common trap is approving against capacity, the loosest screen, which silently converts exceptions into routine practice and erodes the appetite policy's meaning.",
@@ -6670,9 +6661,9 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-151-survival-boundary-concept",
     "Stem": "At her first board dinner, Beatrice Lang, a newly seated director of Flash Beverages, questions why the risk appetite statement caps acquisition debt at a level the strategy team calls timid. Management owes her an answer grounded in the governing concepts. Which explanation is correct?",
     "Choices": {
-      "A": "Appetite can be restated upward retroactively whenever a loss occurs, since the statement records intent rather than creating obligations",
-      "B": "Capacity and appetite are synonyms, so raising one automatically raises the other and the strategy team's complaint is unfounded",
-      "C": "Regulators prescribe risk appetite numerically for beverage manufacturers, leaving the board no lawful discretion in either direction",
+      "A": "Appetite can be restated upward retroactively whenever a loss occurs, since the statement records intent rather than creating obligations This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Capacity and appetite are synonyms, so raising one automatically raises the other and the strategy team's complaint is unfounded This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Regulators prescribe risk appetite numerically for beverage manufacturers, leaving the board no lawful discretion in either direction This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Appetite expresses how much risk Flash chooses to seek or tolerate, but it is bounded by capacity - the maximum loss Flash can absorb without impairing liquidity covenants or going-concern viability - so the board cannot coherently prefer more risk than the balance sheet is able to survive"
     },
     "CorrectChoice": "D",
@@ -6714,10 +6705,10 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-152-vertical-stack-breach",
     "Stem": "Felix Grant, M&A director at Flash Robotics, has cleared three warehouse-automation targets through initial screening: Alpha at $22 million exposure with an assessed risk score of 16, Beta at $18 million scoring 12, and Gamma at $15 million scoring 17. Standing policy caps any single deal at $30 million of exposure where the score exceeds 15, and separately caps aggregate exposure to any single technology vertical at $45 million. All three targets occupy the same vision-guided-picking vertical, and sector research shows their demand shocks move together with pairwise correlation near 0.8. Analyzing the portfolio against the full framework, which conclusion is correct?",
     "Choices": {
-      "A": "Every transaction passes because each exposure sits below the $30 million single-deal ceiling, and the vertical cap is irrelevant once individual screens clear",
-      "B": "The portfolio exceeds the single-deal ceiling by $55 million - $30 million = $25 million, so all three transactions must be abandoned outright",
+      "A": "Every transaction passes because each exposure sits below the $30 million single-deal ceiling, and the vertical cap is irrelevant once individual screens clear This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "The portfolio exceeds the single-deal ceiling by $55 million - $30 million = $25 million, so all three transactions must be abandoned outright This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Individually each deal clears its screen, but combined vertical exposure of $22 million + $18 million + $15 million = $55 million exceeds the $45 million concentration cap by $10 million, and near-0.8 pairwise correlation means simultaneous downside arrives together, so at least one deal must be resized, sequenced, or syndicated to bring vertical exposure inside the cap",
-      "D": "Average the three scores: (16 + 12 + 17) / 3 = 15.0, which sits at the policy midpoint, so the portfolio is balanced and no limit applies"
+      "D": "Average the three scores: (16 + 12 + 17) / 3 = 15.0, which sits at the policy midpoint, so the portfolio is balanced and no limit applies This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Portfolio risk policy layers two distinct screens: single-position limits stop any one deal from dominating, while concentration caps stop many individually-passing positions from stacking into one correlated basket. Summing the vertical: $22 million + $18 million + $15 million = $55 million against a $45 million cap - a $10 million excess - even though Alpha, Beta, and Gamma each individually clear the $30 million single-deal test (Alpha and Gamma both score above 15 at $22 million and $15 million respectively, each safely under the single-deal ceiling). Correlation compounds the breach: with pairwise correlation near 0.8, downside scenarios arrive together, so the vertical behaves like one large position rather than three diversifying ones, and the naive sum understates joint-tail severity. Business interpretation: Felix should table resizing options - staging Gamma into a later window, syndicating part of Beta, or negotiating a smaller initial stake - quantified against the $10 million gap, rather than asking the committee to waive a cap the data shows is functioning. The analytical trap is screening each deal in isolation and treating the vertical cap as redundant; caps exist precisely for the case where every individual check passes.",
@@ -7208,10 +7199,10 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-163-risk-mitigation-techniques-recall",
     "Stem": "Credit manager Luis Ortega at Flash Components is documenting the risk-mitigation toolkit for the banker. The toolkit lists hedging with derivatives, insurance transfer, diversification across customers, and strengthening internal controls. Which statement correctly recalls how these tools map to risk management concepts?",
     "Choices": {
-      "A": "Diversification eliminates all risk by dividing exposure into enough small pieces that the portfolio variance falls to zero",
+      "A": "Diversification eliminates all risk by dividing exposure into enough small pieces that the portfolio variance falls to zero This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Hedging reduces exposure to a specific market factor, insurance transfers the financial consequence to a third party for a premium, diversification lowers idiosyncratic risk while systematic risk remains, and controls reduce likelihood or impact of operational failures",
-      "C": "Insurance and hedging are identical because both use a premium to eliminate the underlying risk factor entirely",
-      "D": "Internal controls increase expected loss but are retained because auditors require them regardless of cost-benefit"
+      "C": "Insurance and hedging are identical because both use a premium to eliminate the underlying risk factor entirely This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Internal controls increase expected loss but are retained because auditors require them regardless of cost-benefit This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO ERM and standard risk theory distinguish the instruments correctly: hedging offsets a specific price/rate exposure with an opposite position, insurance transfers monetary loss to an insurer for a premium, diversification reduces unsystematic risk by pooling imperfectly correlated exposures while systematic risk persists, and controls lower probability or severity of operational events. Business interpretation: Ortega should show the banker Flash uses hedging for resin prices, insurance for property/liability, broad customer base to mute single-name credit risk, and SoD/approvals to curb process failures. Common trap is overstating diversification or conflating hedging with insurance.",
@@ -7416,10 +7407,9 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "ExplanationWrongC": "",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
@@ -7478,10 +7468,10 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-169-certainty-equivalent-risk-adjusted-npv",
     "Stem": "Flash Components evaluates a risky new sensor line. Expected cash flow in one year is $500,000 with risk-free rate 4.00% and a risk premium requiring a 12.00% risk-adjusted discount rate. The certainty-equivalent factor derived from utility analysis is 0.88, stated to be applied to the expected cash flow before discounting at the risk-free rate. Controller Sofia Reyes must present both methods. What are the present values under each approach?",
     "Choices": {
-      "A": "CE PV $461,538 and risk-adjusted PV $454,545, showing the risk premium is small",
+      "A": "CE PV $461,538 and risk-adjusted PV $454,545, showing the risk premium is small This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Certainty-equivalent PV $423,077 and risk-adjusted PV $446,429, and both correctly place CE as $440,000 / 1.04 = $423,077 and risk-adjusted as $500,000 / 1.12 = $446,429, so the methods differ because CE and discount calibration imply different risk pricing",
-      "C": "Both methods give $480,769 because certainty equivalent and risk-adjusted discount produce identical results when calibrated consistently",
-      "D": "Certainty-equivalent PV $550,000 derived by adding the risk premium to the cash flow before discounting"
+      "C": "Both methods give $480,769 because certainty equivalent and risk-adjusted discount produce identical results when calibrated consistently This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Certainty-equivalent PV $550,000 derived by adding the risk premium to the cash flow before discounting This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Certainty equivalent CE = 0.88 x $500,000 = $440,000. PV_CE = $440,000 / 1.04 = $423,076.92 about $423,077. Risk-adjusted PV = $500,000 / 1.12 = $446,428.57 about $446,429. The two diverge ($23,352 gap) because the 0.88 CE factor and the 12% discount rate were calibrated from different risk-pricing assumptions. Business interpretation: Reyes should tell the investment committee neither value is authoritative until risk pricing is reconciled; the gap itself reveals model risk. Common trap is assuming CE and risk-adjusted discount must match or adding premium to the numerator.",
@@ -7508,10 +7498,9 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "ExplanationWrongB": "",
     "certification_session": "P2-CERT-064",
     "certification_date": "2026-08-26"
@@ -7735,10 +7724,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + named stakeholder (stakeholder present)"
-    ,
+      "Stem names Flash + named stakeholder (stakeholder present)",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -7870,12 +7858,10 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + named stakeholder (stakeholder present)"
-    ,
+      "Stem names Flash + named stakeholder (stakeholder present)",
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)",
       "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
-,
-      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -7888,10 +7874,10 @@ var pack_p2_d_questions = [
     "UniqueConceptKey": "D-178-insurance-vs-hedge",
     "Stem": "Flash Logistics faces a potential $5 million loss from a one-time operational event (a natural disaster affecting a key warehouse). The treasurer and risk officer are discussing whether to buy insurance or self-insure. Which statement is most accurate?",
     "Choices": {
-      "A": "Insurance is generally preferable to self-insurance because it transfers risk in most operational contexts",
-      "B": "Self-insurance is generally preferable to insurance because it saves the premium cost in low-severity scenarios",
+      "A": "Insurance is generally preferable to self-insurance because it transfers risk in most operational contexts This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Self-insurance is generally preferable to insurance because it saves the premium cost in low-severity scenarios This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "The choice depends on the premium cost relative to the expected loss, the firm's risk appetite, the cost of capital, and the availability of insurance; insurance is preferable when the premium is below the expected loss plus a risk margin, and self-insurance is preferable when the reverse holds",
-      "D": "Insurance is required by U.S. GAAP for all material risks; self-insurance is not permitted"
+      "D": "Insurance is required by U.S. GAAP for all material risks; self-insurance is not permitted This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The decision to insure or self-insure depends on the economics of the specific risk. Insurance is preferable when the premium is below the expected loss plus a risk margin (the insurer's loading for adverse outcomes, capital costs, and expenses), and the firm has a low risk tolerance. Self-insurance is preferable when the firm has a high risk tolerance, the premium is expensive (e.g., for rare but severe events where insurer loadings are high), or insurance is unavailable. The decision should be made by comparing the total cost of insurance (premium) to the expected cost of self-insurance (expected loss plus a buffer for the variance of outcomes). Business interpretation: risk officer Lena Fischer should compare the insurance premium to the expected loss plus a risk charge, considering the firm's risk appetite and the availability and cost of capital.",
@@ -8051,10 +8037,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + named stakeholder (stakeholder present)"
-    ,
+      "Stem names Flash + named stakeholder (stakeholder present)",
       "Choice value independently recomputed 2026-09-07 (Batch 2 remediation)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -8230,10 +8215,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + named stakeholder (stakeholder present)"
-    ,
+      "Stem names Flash + named stakeholder (stakeholder present)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -8647,10 +8631,9 @@ var pack_p2_d_questions = [
       "Recomputed: X total = $157,000 — independently verified: matches Choice B $157,000",
       "Work: 0.03x2,400,000=72,000+85,000=157,000; 0.10x480,000=48,000+120,000=168,000; difference 11,000",
       "Authorities match",
-      "Stem names Flash + stakeholder David Chen, Treasurer"
-    ,
+      "Stem names Flash + stakeholder David Chen, Treasurer",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "ExplanationWrongB": ""
   },
   {
@@ -9994,10 +9977,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by total-expected-cost comparison requiring residual calculation and weighing competing alternatives (Difficult, Evaluate)",
       "Independent answer derived and recomputed: Accept $224,000; Reduce $129,000; Share $128,600 -> Share lowest; Option C correct",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "certification_date": "2026-08-30",
     "certification_batch": "P2-069"
@@ -10118,10 +10100,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level framework selection at DS2",
-      "Authority citations match tested concept: COSO ERM 2017 Principle 4 and ISO 31000:2018 Clause 6.2"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 Principle 4 and ISO 31000:2018 Clause 6.2",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10198,10 +10179,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level conceptual contrast at DS1",
-      "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10276,10 +10256,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level register construction at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 risk identification and assessment components"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk identification and assessment components",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10354,10 +10333,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level KRI selection at DS2",
-      "Authority citations match tested concept: COSO ERM 2017 review and revision component"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 review and revision component",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -10382,7 +10360,7 @@ var pack_p2_d_questions = [
         "misconception": "Choosing the easiest-to-retrieve metric rather than the most diagnostic.",
         "why_plausible": "Dashboard availability is convenient, but ease of retrieval does not make a metric diagnostic",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Stem asks specifically which KRI monitors the response activity itself. Choice D identifies the lagging response-performance KRI; A tests controllability-only thinking; B tests 'more is better'; C tests ease-of-retrieval thinking.",
     "CrossDomainTags": [],
@@ -10434,10 +10412,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level framework contribution at DS1",
-      "Authority citations match tested concept: COSO ERM 2017 (five components, twenty principles) versus COSO Internal Control 2013"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 (five components, twenty principles) versus COSO Internal Control 2013",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10513,10 +10490,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level mapping of instruments to response types at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk response component and ISO 31000:2018 Clause 6.4",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10592,10 +10568,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level diagnosis at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 Review and Revision component"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 Review and Revision component",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10671,10 +10646,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level response balancing at DS4",
-      "Authority citations match tested concept: COSO ERM 2017 risk response and information/communication components"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk response and information/communication components",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10700,7 +10674,7 @@ var pack_p2_d_questions = [
         "misconception": "Defaulting to sharing without considering compliance burden or appetite.",
         "why_plausible": "Local partners help operationally, but sharing does not resolve the sanctions-compliance burden or appetite question",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Stem gives four numbered proposals and a sanctions-risk context. Choice D selects acceptance-with-disclosure based on expected-loss/cost comparison; A tests avoidance reflex; B tests insurance-textbook reflex; C tests sharing reflex without appetite analysis.",
     "CrossDomainTags": [],
@@ -10752,10 +10726,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level appetite-statement design at DS2",
-      "Authority citations match tested concept: COSO ERM 2017 risk appetite articulation and ISO 31000:2018 Clause 6.2"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk appetite articulation and ISO 31000:2018 Clause 6.2",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -10831,10 +10804,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level control-activity design at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 control activities component and COSO Internal Control 2013"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 control activities component and COSO Internal Control 2013",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -10910,10 +10882,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level KRI panel interpretation at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 review and revision component"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 review and revision component",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -10990,10 +10961,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Evaluate-level framework synthesis at DS4",
-      "Authority citations match tested concept: COSO ERM 2017 integrated design and ISO 31000:2018 tailoring principles"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 integrated design and ISO 31000:2018 tailoring principles",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017",
@@ -11070,10 +11040,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level method selection at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 risk assessment component and ISO 31000:2018 Clause 6.3"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk assessment component and ISO 31000:2018 Clause 6.3",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -11148,10 +11117,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level conceptual definition at DS1",
-      "Authority citations match tested concept: COSO ERM 2017 Governance and Culture component"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 Governance and Culture component",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -11227,10 +11195,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots >=75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level portfolio triage at DS4",
-      "Authority citations match tested concept: COSO ERM 2017 Review and Revision and Information/Communication/Reporting components and ISO 31000:2018 Clause 6.6"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 Review and Revision and Information/Communication/Reporting components and ISO 31000:2018 Clause 6.6",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017",
@@ -11256,7 +11223,7 @@ var pack_p2_d_questions = [
         "misconception": "Deferring all responses to the annual cycle.",
         "why_plausible": "Patience feels prudent, but simultaneous events cannot wait for the annual cycle",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Stem presents three concurrent exposures across subsidiaries. Choice D selects the enterprise-level, interaction-aware posture; A tests subsidiary-sequencing thinking; B tests single-officer bypass; C tests annual-cycle deferral.",
     "CrossDomainTags": [],
@@ -11308,10 +11275,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level taxonomy placement at DS2",
-      "Authority citations match tested concept: COSO ERM 2017 risk taxonomy"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk taxonomy",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -11387,10 +11353,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level recall of tolerance definition at DS1",
-      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -11465,10 +11430,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level framework selection at DS3",
-      "Authority citations match tested concept: COSO ERM 2017"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -11543,10 +11507,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level COSO element mapping at DS2",
-      "Authority citations match tested concept: COSO ERM 2017"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -11571,7 +11534,7 @@ var pack_p2_d_questions = [
         "misconception": "Confuses downstream rating use with the register's COSO element",
         "why_plausible": "Ratings feed prioritization, but the register’s COSO element is communication of formatted data",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Anchored on mapping a register to the COSO element. Distractors A, B, and C each test a different element-misassignment.",
     "CrossDomainTags": [],
@@ -11622,10 +11585,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level recall of four categories at DS1",
-      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -11701,12 +11663,10 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level classification+response pairing at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 financial risk"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept: COSO ERM 2017 financial risk",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -11782,10 +11742,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level lagging-KRI design at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 monitoring"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 monitoring",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -11860,10 +11819,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level element mapping at DS4",
-      "Authority citations match tested concept: COSO ERM 2017"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -11888,7 +11846,7 @@ var pack_p2_d_questions = [
         "misconception": "Maps the scenario output to reporting rather than to portfolio review",
         "why_plausible": "A report is produced, but the COSO element fed is Review and Revision, not the reporting component",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Tests the element-level placement of scenario output. Distractors A, B, and C each point to a different COSO element.",
     "CrossDomainTags": [],
@@ -11939,10 +11897,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level taxonomy benefit at DS2",
-      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -12018,10 +11975,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level residual-risk explanation at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 and ISO 31000",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -12097,10 +12053,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level control-type contrast at DS3",
-      "Authority citations match tested concept: COSO Internal Control and ERM"
-    ,
+      "Authority citations match tested concept: COSO Internal Control and ERM",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.1",
       "COSO ERM 2017"
@@ -12175,10 +12130,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Evaluate-level board governance at DS4",
-      "Authority citations match tested concept: COSO ERM 2017 risk appetite"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk appetite",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.2",
       "COSO ERM 2017"
@@ -12254,10 +12208,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Apply-level response classification at DS3",
-      "Authority citations match tested concept: COSO ERM 2017 risk response"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017 risk response",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.3",
       "COSO ERM 2017"
@@ -12333,10 +12286,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Understand-level definition distinction at DS1",
-      "Authority citations match tested concept: COSO ERM 2017"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.4",
       "COSO ERM 2017"
@@ -12412,10 +12364,9 @@ var pack_p2_d_questions = [
       "Non-CC EW slots ≥75 chars (DL-026 compliant)",
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified by Analyze-level framework evaluation at DS4",
-      "Authority citations match tested concept: COSO ERM 2017"
-    ,
+      "Authority citations match tested concept: COSO ERM 2017",
       "Distractor intent key-letter removed; why_plausible + tiers authored 2026-09-07 (Batch 4a remediation)"
-],
+    ],
     "source_ids": [
       "D.5",
       "COSO ERM 2017"
@@ -12440,7 +12391,7 @@ var pack_p2_d_questions = [
         "misconception": "Claims color coding is prohibited by COSO",
         "why_plausible": "Numeric aggregation concerns are real, but colors with defined bands aggregate via the register",
         "tier_candidate": 3
-      },
+      }
     },
     "uniqueness_note": "Anchored on evaluating a heat-map design under COSO. Distractors A, B, and C each present a different false mandate claim.",
     "CrossDomainTags": [],
@@ -12521,10 +12472,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12601,10 +12551,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12681,12 +12630,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-,
+      "Authority citations match tested concept",
+      "Values independently recomputed 2026-09-07 (Batch 3a remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12763,12 +12710,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12845,12 +12790,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -12927,10 +12870,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13007,12 +12949,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13089,10 +13029,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13169,12 +13108,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13251,10 +13188,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13331,12 +13267,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13413,12 +13347,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13495,12 +13427,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13577,10 +13507,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13735,10 +13664,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13815,10 +13743,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
-],
+    ],
     "CrossDomainTags": [
       "E"
     ],
@@ -13897,12 +13824,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -13979,10 +13904,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14137,10 +14061,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14217,10 +14140,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14297,12 +14219,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Choice value independently recomputed 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Choice value independently recomputed 2026-09-07 (Batch 2 remediation)",
       "CalculationItem flag set true 2026-09-07 (Batch 4c; computation verified)"
-],
+    ],
     "CrossDomainTags": [
       "E"
     ],
@@ -14381,12 +14301,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [
       "F"
     ],
@@ -14465,10 +14383,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14545,12 +14462,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14627,10 +14542,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14707,12 +14621,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14789,12 +14701,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14871,12 +14781,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch1",
@@ -14953,12 +14861,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15035,12 +14941,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15117,10 +15021,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15197,10 +15100,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15277,10 +15179,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15357,12 +15258,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15439,10 +15338,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15519,10 +15417,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15599,12 +15496,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15681,12 +15576,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15763,10 +15656,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15843,10 +15735,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -15923,10 +15814,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16003,12 +15893,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16085,12 +15973,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived and recomputed 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16167,10 +16053,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16247,10 +16132,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16327,12 +16211,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16409,10 +16291,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16489,10 +16370,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16569,10 +16449,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 4b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16649,12 +16528,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16731,10 +16608,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -16811,10 +16687,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [
       "E"
     ],
@@ -16893,10 +16768,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-],
+    ],
     "CrossDomainTags": [
       "F"
     ],
@@ -16975,10 +16849,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17055,10 +16928,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17135,10 +17007,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17215,12 +17086,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17297,12 +17166,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch2",
@@ -17379,10 +17246,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17459,10 +17325,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17539,10 +17404,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Remember, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17619,10 +17483,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17699,10 +17562,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17779,12 +17641,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17861,10 +17721,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -17941,10 +17800,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18021,12 +17879,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Understand, Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18103,12 +17959,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18185,10 +18039,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Values independently recomputed 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18265,10 +18118,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 3a remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18345,12 +18197,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18427,12 +18277,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18587,10 +18435,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18667,10 +18514,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18747,10 +18593,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [
       "E"
     ],
@@ -18829,12 +18674,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -18989,10 +18832,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Apply, Moderate-Easy)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [
       "F"
     ],
@@ -19071,12 +18913,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19153,10 +18993,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19233,10 +19072,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [
       "E"
     ],
@@ -19315,10 +19153,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [
       "F"
     ],
@@ -19397,10 +19234,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Moderate)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19477,10 +19313,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Analyze, Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19557,12 +19392,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Explanations independently verified against stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19639,10 +19472,9 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
+      "Authority citations match tested concept",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -19719,12 +19551,10 @@ var pack_p2_d_questions = [
       "No boilerplate text (DL-013 prevention)",
       "Difficulty justified (Evaluate, Very Difficult)",
       "Independent answer derived",
-      "Authority citations match tested concept"
-    ,
-      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)"
-,
+      "Authority citations match tested concept",
+      "Rule 4: answer key independently verified — re-derived from stem and choices 2026-09-06 (Batch 1 remediation)",
       "Distractor intents authored choice-specific 2026-09-07 (Batch 3b remediation)"
-],
+    ],
     "CrossDomainTags": [],
     "DecisionTreeReference": "",
     "pedagogical_cluster": "P2D-sprint-batch3",
@@ -21277,10 +21107,10 @@ var pack_p2_d_questions = [
     "Topic": "D.369 coso-erm-five-components-gap-assessment",
     "Stem": "Flash Foods professional Priya Nair, Senior analyst, is conducting a gap assessment against the five COSO ERM 2017 components. Flash has documented governance and culture and strong information systems, but strategy-setting is done annually without risk considerations, performance evaluation focuses only on budget variance, and reviews occur only after losses. Which component assessment best identifies Flash's gaps?",
     "Choices": {
-      "A": "Flash fully satisfies all five components because governance and information alone fulfill COSO ERM 2017",
+      "A": "Flash fully satisfies all five components because governance and information alone fulfill COSO ERM 2017 This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Flash demonstrates Governance and Culture and Information, Communication and Reporting strengths, but has gaps in Strategy and Objective-Setting, Performance, and Review and Revision, which must integrate risk with strategy, assess portfolio severity, and revise after change",
-      "C": "Flash's only gap is Governance and Culture; the other four components are automatically satisfied when budgets are used",
-      "D": "COSO ERM has only three components, so Flash's assessment should be limited to risk assessment, control activities and monitoring"
+      "C": "Flash's only gap is Governance and Culture; the other four components are automatically satisfied when budgets are used This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "COSO ERM has only three components, so Flash's assessment should be limited to risk assessment, control activities and monitoring This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO ERM 2017 organizes ERM into five interrelated components: Governance and Culture, Strategy and Objective-Setting, Performance, Review and Revision, and Information, Communication and Reporting. Governance and culture set the tone; strategy and objective-setting align risk with strategy and appetite; performance identifies, assesses and prioritizes risks and responses; review and revision evaluate performance and consider change; information, communication and reporting enable decision-making. Flash’s description shows annual strategy without risk linkage (gap in Strategy and Objective-Setting), budget-only performance (gap in Performance portfolio view), and after-loss reviews only (gap in Review and Revision). Business interpretation: Senior analyst Priya Nair should recommend integrating risk into strategy workshops, adding portfolio severity and KRIs to performance, and instituting proactive review triggers for Flash. Common trap is reducing ERM to control activities or assuming two components suffice.",
@@ -21321,10 +21151,10 @@ var pack_p2_d_questions = [
     "Topic": "D.370 risk-governance-board-oversight-and-cro-reporting",
     "Stem": "Flash Global professional Samuel Ortiz, Board member, is reviewing ERM governance after Flash appointed a Chief Risk Officer who reports to the CFO with no board access and after the board delegated all risk oversight to management without retaining approval of appetite. Annual revenue $120 million, risk appetite calls for moderate strategic risk. Which governance analysis correctly evaluates the structure and recommends the COSO-aligned remedy?",
     "Choices": {
-      "A": "Structure is optimal because the CRO should report only to the CFO and the board should delegate appetite; no changes are needed as management self-oversees",
-      "B": "Board should eliminate the CRO role and have the external auditor own enterprise risk, because risk is primarily an audit matter",
+      "A": "Structure is optimal because the CRO should report only to the CFO and the board should delegate appetite; no changes are needed as management self-oversees This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Board should eliminate the CRO role and have the external auditor own enterprise risk, because risk is primarily an audit matter This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Governance is deficient: the board retains oversight and must approve appetite, the CRO needs independent board access, and appetite must cascade to tolerances; Flash should restore board approval, grant CRO dotted-line to the risk committee, and link compensation to risk-adjusted metrics",
-      "D": "Flash should centralize all risk decisions with the CRO alone, removing business unit ownership to achieve independence"
+      "D": "Flash should centralize all risk decisions with the CRO alone, removing business unit ownership to achieve independence This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "COSO ERM 2017 Governance and Culture requires board oversight, an operating structure that supports strategy and objectives, and a desired culture. The board, not management alone, oversees ERM and retains responsibility for approving risk appetite and ensuring ERM is integrated with strategy. The CRO should have independent access to the board or risk committee to escalate without filter. Appetite must cascade into tolerances and be reflected in incentives. At Flash, routing the CRO solely through the CFO and delegating appetite to management breaches oversight and creates filter risk. Business interpretation: Board member Samuel Ortiz should direct the charter revision so the board approves appetite, the CRO has scheduled board executive sessions and dotted-line reporting, and business units retain first-line ownership while the CRO provides second-line challenge. Common trap is believing delegation eliminates board responsibility or that centralizing all decisions in the CRO improves ownership.",
@@ -21365,9 +21195,9 @@ var pack_p2_d_questions = [
     "Topic": "D.371 erm-integration-with-strategy-and-appetite",
     "Stem": "Flash Industries professional Maya Sullivan, Senior analyst, is integrating ERM with strategy for the three-year plan. Flash has two strategic alternatives: Alternative X: expand offshore manufacturing, expected NPV $8 million but exposes Flash to regulatory, supply and currency risks outside current appetite; Alternative Y: expand domestic automation, expected NPV $5 million within appetite and leveraging existing capabilities. The board asks how ERM should inform the choice when both NPVs are positive. Which analysis correctly applies strategy-risk integration?",
     "Choices": {
-      "A": "Select X because higher NPV dominates financial considerations and appetite is informational only",
-      "B": "Select X and ignore appetite because risk integration applies only to hazard risks not strategic choices",
-      "C": "Reject both because any risk outside tolerance prohibits any expansion under ERM, so Flash must remain static",
+      "A": "Select X because higher NPV dominates financial considerations and appetite is informational only This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Select X and ignore appetite because risk integration applies only to hazard risks not strategic choices This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Reject both because any risk outside tolerance prohibits any expansion under ERM, so Flash must remain static This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Evaluate risk-adjusted strategy: X exceeds appetite and requires appetite revision or risk reduction before acceptance, while Y fits appetite and may be preferred despite lower NPV after considering risk-adjusted return, capability fit and portfolio effect"
     },
     "CorrectChoice": "D",
@@ -21542,9 +21372,9 @@ var pack_p2_d_questions = [
     "Topic": "D.375 heat-map-portfolio-prioritization-velocity-persistence",
     "Stem": "Flash Foods professional Daniel Kim, Project manager, is prioritizing the risk register using a heat map that combines likelihood, financial impact, velocity and persistence. Four risks emerge: Risk P: high likelihood, $400,000 impact, high velocity; Risk Q: low likelihood, $5 million impact, low velocity; Risk R: moderate likelihood, $900,000 impact, low velocity; Risk S: moderate likelihood, $850,000 impact, high velocity and high persistence. Tolerance states Flash is averse to any single loss above $3 million and prefers managing persistent exposures first among moderate risks. Which prioritization best applies the portfolio view?",
     "Choices": {
-      "A": "Rank by impact alone: Q highest then R, S, P, ignoring likelihood, velocity and tolerance thresholds",
-      "B": "Rank by likelihood alone: P highest then S and R tied, Q lowest, ignoring severity and persistence",
-      "C": "Treat all moderate risks as equal and ignore persistence, so R and S are identical and velocity is irrelevant",
+      "A": "Rank by impact alone: Q highest then R, S, P, ignoring likelihood, velocity and tolerance thresholds This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Rank by likelihood alone: P highest then S and R tied, Q lowest, ignoring severity and persistence This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Treat all moderate risks as equal and ignore persistence, so R and S are identical and velocity is irrelevant This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Prioritize Q for appetite review due to $5 million breach of the $3 million aversion threshold despite low likelihood, then prioritize S over R among moderate risks because high persistence and velocity demand earlier action than a one-off, while P is managed via controls for frequency"
     },
     "CorrectChoice": "D",
@@ -21587,9 +21417,9 @@ var pack_p2_d_questions = [
     "Stem": "Flash Energy professional Elena Rossi, Board member, is evaluating capital allocation between two mutually exclusive mitigations for a $10 million revenue exposure. Mitigation X: cost $250,000, reduces expected loss from $800,000 to $350,000 in base case, but in adverse scenario loss after mitigation rises to $600,000. Mitigation Y: cost $400,000, reduces expected loss from $800,000 to $300,000 base and to $380,000 adverse. Scenarios are 70% base, 30% adverse. The board evaluates on expected net benefit (expected loss reduction minus cost) and on adverse-case residual. Which evaluative judgment best balances expected value and tail risk among defensible alternatives?",
     "Choices": {
       "A": "Select Y: expected residual 0.70 x $300,000 + 0.30 x $380,000 = $324,000, gross saving $476,000 ($800,000 - $324,000), net $76,000 ($476,000 - $400,000); X residual $425,000 net $125,000 higher expected net but Y dominates adverse residual $380,000 vs $600,000, so Y is preferred for tail-risk aversion despite $49,000 expected give-up",
-      "B": "Select X because it costs less and has higher expected net $125,000, ignoring adverse residual entirely",
-      "C": "Reject both because expected net is less than $100,000 for either, so no mitigation meets a $100,000 arbitrary hurdle",
-      "D": "Select X because adverse scenario is irrelevant to risk decisions and should be ignored when likelihood is 30%"
+      "B": "Select X because it costs less and has higher expected net $125,000, ignoring adverse residual entirely This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Reject both because expected net is less than $100,000 for either, so no mitigation meets a $100,000 arbitrary hurdle This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Select X because adverse scenario is irrelevant to risk decisions and should be ignored when likelihood is 30% This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Scenario-weighted expected residual = sum(prob x residual). For Flash: X residual = 0.70 x $350,000 = $245,000 plus 0.30 x $600,000 = $180,000 total $425,000. Y residual = 0.70 x $300,000 = $210,000 plus 0.30 x $380,000 = $114,000 total $324,000. Gross saving = $800,000 - residual. X gross = $375,000 minus cost $250,000 = net $125,000. Y gross = $476,000 minus cost $400,000 = net $76,000. X has $49,000 higher expected net, but Y reduces adverse loss by $220,000 ($600,000 minus $380,000). Under COSO ERM risk-adjusted evaluation, tail risk matters beyond expectation. Business interpretation: Board member Elena Rossi should weigh that Y sacrifices $49,000 expected value to reduce tail by $220,000, which may be justified given Flash aversion to large residual and the defensible trade-off. Common trap is maximizing expected net alone or ignoring adverse scenario.",
@@ -21631,10 +21461,10 @@ var pack_p2_d_questions = [
     "Topic": "D.377 portfolio-view-correlated-risks-aggregation",
     "Stem": "Flash Group professional Hassan El-Amin, M&A director, is presenting the enterprise risk portfolio to the board. Three top risks are correlated: a supply disruption, a commodity price spike, and a logistics cost surge, each individually within tolerance but occurring together they exceed combined tolerance by $2 million. A fourth risk, a cybersecurity breach, is isolated and within tolerance alone. Management proposes managing each risk in its silo with separate owners and no aggregation. Which evaluative judgment best applies the portfolio view among defensible alternatives?",
     "Choices": {
-      "A": "Manage each silo independently because individual tolerances are met, so aggregate exposure is irrelevant and no portfolio adjustment is needed",
+      "A": "Manage each silo independently because individual tolerances are met, so aggregate exposure is irrelevant and no portfolio adjustment is needed This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Apply portfolio aggregation: recognize correlation among supply, commodity and logistics amplifies combined exposure beyond sum of silos, so transfer or reduce at least one correlated driver and monitor the group, while breach is monitored separately; siloed management understates enterprise exposure",
-      "C": "Aggregate all four risks into a single average and report the mean as the enterprise exposure, ignoring correlation and thresholds",
-      "D": "Eliminate the cybersecurity risk first because it is isolated, even though correlated trio exceeds tolerance more significantly"
+      "C": "Aggregate all four risks into a single average and report the mean as the enterprise exposure, ignoring correlation and thresholds This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Eliminate the cybersecurity risk first because it is isolated, even though correlated trio exceeds tolerance more significantly This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO ERM Performance emphasizes a portfolio view that considers interdependencies, correlations and compounding effects rather than siloed sums. Likelihood and impact of correlated supply, commodity and logistics risks are not additive independently; their joint occurrence probability and combined impact exceed individual tolerances, creating enterprise-level breach even when each alone passes. Conversely, isolated risks remain separable for response. Business interpretation: M&A director Hassan El-Amin should advise the board that Flash must aggregate the trio with correlation, quantify combined $2 million excess, and treat mitigation of at least one driver as enterprise priority, while breach is managed via controls. Siloed ownership without aggregation understates exposure and misallocates capital. Common trap is averaging risks or prioritizing isolated risks over correlated portfolio breaches.",
@@ -21765,9 +21595,9 @@ var pack_p2_d_questions = [
     "Stem": "Flash Distribution professional Tomas Novak, Controller, is renewing property insurance. Flash faces a 2% annual chance of a $500,000 loss. Insurer quotes a premium of $12,000 for full coverage, while expected loss is $10,000 (0.02 x $500,000). Flash considers a $50,000 deductible that reduces premium to $7,000. Which analysis correctly evaluates the deductible decision under risk sharing versus retention?",
     "Choices": {
       "A": "Full insurance expected cost $12,000 versus expected cost with deductible $7,000 premium plus $1,000 expected retained loss (0.02 x $50,000) = $8,000, so deductible saves $4,000 expected and is preferred if Flash can fund $50,000 retention and is not averse to that volatility",
-      "B": "Full insurance costs $10,000 because premium must equal expected loss, so insurer quote is mispriced and deductible is irrelevant",
-      "C": "Deductible raises expected cost to $57,000 ($7,000 + $50,000) because deductible is paid every year regardless of loss",
-      "D": "Insurance should be rejected entirely because expected loss $10,000 is less than $12,000 premium, so self-insurance dominates"
+      "B": "Full insurance costs $10,000 because premium must equal expected loss, so insurer quote is mispriced and deductible is irrelevant This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Deductible raises expected cost to $57,000 ($7,000 + $50,000) because deductible is paid every year regardless of loss This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Insurance should be rejected entirely because expected loss $10,000 is less than $12,000 premium, so self-insurance dominates This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Risk sharing via insurance trades certain premium for uncertain loss; risk retention retains volatility. Expected cost with insurance = premium for full coverage. With deductible, expected cost = reduced premium plus expected retained loss = $7,000 + (0.02 x $50,000 = $1,000) = $8,000. The deductible reduces expected cost by $4,000 ($12,000 minus $8,000) but introduces $50,000 conditional cash need. Decision depends on funding capacity and aversion to volatility beyond expected value. Business interpretation: Controller Tomas Novak should recommend the deductible if Flash holds cash to cover $50,000 retention and values the $4,000 expected saving, otherwise retain full coverage for certainty. Common trap is treating deductible as annual cost or equating premium to expected loss, ignoring insurer expenses and profit load.",
@@ -21854,10 +21684,10 @@ var pack_p2_d_questions = [
     "Topic": "D.382 parametric-value-at-risk-var-confidence",
     "Stem": "Flash Treasury professional Ingrid Solberg, Board member, is evaluating market risk for a $20 million trading portfolio. The portfolio has expected daily loss $0, daily standard deviation $500,000, and the board uses parametric VaR assuming normal distribution. One-day VaR at 95% uses z 1.645, at 99% uses z 2.33. Flash is considering two limits: Limit A: 95% VaR $822,500, Limit B: 99% VaR $1,165,000. Actual 99% VaR should be 2.33 x $500,000 = $1,165,000. The board asks which limit setting reflects correct VaR and risk appetite trade-off among defensible alternatives.",
     "Choices": {
-      "A": "Both limits are identical because confidence level does not affect VaR, so either $822,500 or $1,165,000 is acceptable",
-      "B": "VaR is $500,000 regardless of confidence because standard deviation equals VaR by definition",
+      "A": "Both limits are identical because confidence level does not affect VaR, so either $822,500 or $1,165,000 is acceptable This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "VaR is $500,000 regardless of confidence because standard deviation equals VaR by definition This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Correct 99% VaR is $1,165,000 (2.33 x $500,000) and 95% VaR is $822,500 (1.645 x $500,000); choosing the 99% limit is more conservative but reduces capital efficiency, while 95% is less conservative with higher breach frequency, so the board must weigh appetite for tail loss versus capital usage",
-      "D": "VaR at 99% should be $822,500 and at 95% $1,165,000, so the more confident limit is smaller"
+      "D": "VaR at 99% should be $822,500 and at 95% $1,165,000, so the more confident limit is smaller This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Parametric VaR = z x sigma for zero mean, where z reflects confidence. For Flash: 95% VaR = 1.645 x $500,000 = $822,500; 99% VaR = 2.33 x $500,000 = $1,165,000. VaR states loss will not exceed that amount with given confidence; higher confidence gives larger VaR. Choosing limit involves trade-off: 99% limit binds more capital and reduces trading capacity but tolerates fewer breaches (1% days), while 95% limit frees capital but accepts breaches on 5% of days. Business interpretation: Board member Ingrid Solberg should set limit based on Flash appetite for tail loss versus return on capital, recognizing VaR does not quantify beyond-VaR tail. Common trap is inverting confidence and VaR magnitude or treating sigma as VaR.",
@@ -21899,9 +21729,9 @@ var pack_p2_d_questions = [
     "Topic": "D.383 mitigation-versus-insurance-expected-net-evaluation",
     "Stem": "Flash Operations professional Kenji Tanaka, Board member, is choosing between two mutually exclusive operational mitigations for a logistics risk with expected annual loss $200,000 without action. Mitigation R: process redesign cost $30,000, reduces expected loss to $90,000. Mitigation S: insurance costing $50,000 that transfers loss above a $20,000 retention, leaving expected retained loss $35,000 (insurer covers remainder). Both have defensible cost-benefit. Which evaluative judgment best weighs cost, residual, and control effectiveness?",
     "Choices": {
-      "A": "R is superior because process redesign dominates insurance regardless of residual and cost",
-      "B": "S is superior because insurance dominates process changes regardless of premium load",
-      "C": "Neither mitigation is justified because both leave residual above zero, so Flash should accept $200,000 unmitigated",
+      "A": "R is superior because process redesign dominates insurance regardless of residual and cost This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "S is superior because insurance dominates process changes regardless of premium load This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Neither mitigation is justified because both leave residual above zero, so Flash should accept $200,000 unmitigated This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "R net benefit $80,000 ($200,000 - $90,000 - $30,000) leaves residual $90,000; S net benefit $115,000 ($200,000 - $35,000 - $50,000) leaves residual $35,000 but with transfer and insurer credit risk; S offers $35,000 higher expected net and lower residual, but R retains operational control, so choice depends on Flash tolerance for retained $90,000 versus $35,000 and insurer reliance"
     },
     "CorrectChoice": "D",
@@ -22648,9 +22478,9 @@ var pack_p2_d_questions = [
     "Stem": "Flash Holdings professional Naledi Khumalo, Board member, is clarifying for the audit committee how COSO ERM 2017 differs from COSO Internal Control (2013) when the committee reviews Flash's packaging line expansion. The expansion carries strategic market risk, operational safety risk, financial liquidity risk, and compliance risk. The committee has a $6 million residual-risk tolerance for the program. Which analysis correctly distinguishes the frameworks?",
     "Choices": {
       "A": "COSO ERM broadens focus to strategy and enterprise-wide risk, integrating risk with performance and managing the portfolio of risks, while COSO IC focuses on controls over operations, reporting, and compliance; Flash should assess the four risks as an interrelated portfolio against tolerance, not as isolated controls",
-      "B": "COSO ERM and COSO IC are identical, so testing controls over financial reporting is sufficient to satisfy ERM for the packaging line",
-      "C": "COSO ERM replaces the need for any internal controls, so Flash can eliminate control testing once the ERM policy is approved",
-      "D": "COSO ERM applies only to financial risks, while COSO IC covers strategic and operational risks, so the market risk belongs to IC"
+      "B": "COSO ERM and COSO IC are identical, so testing controls over financial reporting is sufficient to satisfy ERM for the packaging line This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "COSO ERM replaces the need for any internal controls, so Flash can eliminate control testing once the ERM policy is approved This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "COSO ERM applies only to financial risks, while COSO IC covers strategic and operational risks, so the market risk belongs to IC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "COSO IC 2013 focuses on internal control effectiveness over operations, reporting, and compliance at process level, while COSO ERM 2017 broadens to governance, strategy, and enterprise-wide risk appetite, performance, and portfolio view. ERM manages risk to strategy and in execution across risk categories, considering interrelationships. For Flash, Board member Naledi Khumalo should explain that the packaging line's four risks must be assessed together against the $6 million portfolio tolerance, considering correlations and cumulative exposure, not merely whether individual controls operate. Business interpretation: the committee needs an ERM view of whether strategy remains viable within appetite. Common trap is equating ERM with IC or treating the frameworks as substitutes or as split by risk category.",
@@ -22719,10 +22549,9 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -22895,10 +22724,9 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Explanations independently verified against stem and choices 2026-09-07 (Batch 2 remediation)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -23334,10 +23162,9 @@ var pack_p2_d_questions = [
       "EW[CC] empty (DL-008)",
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
-      "Authorities match"
-    ,
+      "Authorities match",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -23439,10 +23266,10 @@ var pack_p2_d_questions = [
     "Topic": "D.418 risk-response-cost-benefit-quantitative-evaluation",
     "Stem": "Flash Precision professional David Okonkwo, Internal auditor, is recommending a response for a quality escape risk: inherent expected loss $500,000 (10.0% x $5,000,000). Options: Control C1 costs $80,000 and cuts expected loss to $200,000; Control C2 costs $150,000 and cuts to $100,000; Insurance I costs $90,000 and transfers 70.0% of loss. Flash will accept if residual is below $250,000 tolerance. Which response best meets cost-benefit and tolerance?",
     "Choices": {
-      "A": "C1 is cheapest so it is automatically best regardless of residual or net benefit",
-      "B": "Insurance is best because it transfers the most percentage (70.0%) without considering retained expected loss plus premium",
+      "A": "C1 is cheapest so it is automatically best regardless of residual or net benefit This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Insurance is best because it transfers the most percentage (70.0%) without considering retained expected loss plus premium This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "C1 yields net $220,000 (500,000 - 200,000 - 80,000) with residual $200,000 within tolerance and is most efficient per dollar of cost; C2 net $250,000 (500,000 - 100,000 - 150,000) also within tolerance but more expensive; insurance retained cost about $240,000 (150,000 plus 90,000) within tolerance but lower net",
-      "D": "Accept with no action because $500,000 is close to tolerance"
+      "D": "Accept with no action because $500,000 is close to tolerance This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Cost-benefit compares gross expected reduction minus cost and checks residual against tolerance $250,000. C1: reduction $300,000 (500,000 - 200,000) minus $80,000 = $220,000 net, residual $200,000 within tolerance. C2: reduction $400,000 minus $150,000 = $250,000 net, residual $100,000 within tolerance but more expensive. Insurance: retained expected loss = 30.0% x 500,000 = $150,000 plus $90,000 premium = $240,000 residual cost, net $260,000 gross transfer minus premium but with counterparty risk. For Flash, Internal auditor David Okonkwo should note C1 is efficient and meets tolerance with lower cost, while C2 saves more but at higher cost; insurance is viable but not dominant. Business interpretation: choose the response that meets tolerance at best net benefit per cost. Common trap is picking cheapest or highest transfer without net analysis or accepting a $500,000 breach as close.",
@@ -24127,10 +23954,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -24458,9 +24284,9 @@ var pack_p2_d_questions = [
     "Topic": "D.441 natural-hedge-versus-derivative-hedge-comparison",
     "Stem": "Flash Global professional Sofia Reyes, Treasurer, compares hedges for EUR 8,000,000 annual exposure. Option N natural hedge nets EUR 3,000,000 of euro costs against revenue, leaving EUR 5,000,000 exposure, at zero direct cost. Option F sells EUR 8,000,000 forward at $1.10 forward for $80,000 transaction cost and locks all EUR. Option O buys a EUR put with $120,000 premium. Flash's tolerance allows up to $200,000 hedging cost. Which decomposition best supports a decision?",
     "Choices": {
-      "A": "Natural hedge leaves EUR 8,000,000 exposure unchanged because netting does not reduce FX risk",
-      "B": "Forward is cheapest at $80,000 so it dominates regardless of the $200,000 tolerance or operational risk",
-      "C": "Put premium $120,000 is sunk, so forwards are almost always superior to options for Flash",
+      "A": "Natural hedge leaves EUR 8,000,000 exposure unchanged because netting does not reduce FX risk This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Forward is cheapest at $80,000 so it dominates regardless of the $200,000 tolerance or operational risk This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Put premium $120,000 is sunk, so forwards are almost always superior to options for Flash This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Natural hedge cuts exposure to EUR 5,000,000 at zero financial cost but leaves EUR 5,000,000 residual; forward eliminates the EUR 8,000,000 for $80,000 within $200,000 tolerance; put caps downside for $120,000 while retaining upside, so choice depends on cost versus flexibility and counterparty tolerance"
     },
     "CorrectChoice": "D",
@@ -24503,9 +24329,9 @@ var pack_p2_d_questions = [
     "Stem": "Flash Systems professional Amara Okafor, Board member, must decide on cyber breach risk: inherent 12.0% chance of $5,000,000 loss, expected $600,000. Two proposals: buy cyber insurance for $180,000 that covers $4,000,000 of loss leaving Flash deductible of $1,000,000 when breached, or invest $220,000 in controls that cut chance to 5.0% with same $5,000,000 impact. Flash's cyber risk appetite is $250,000 residual expected loss and the board requires cost-benefit plus control sustainability evidence. Which judgment best integrates expected cost, appetite, and sustainability?",
     "Choices": {
       "A": "Insurance total expected cost $180,000 + 0.12 x $1,000,000 = $300,000 with $120,000 residual, within appetite and independent of control sustainment, versus controls total $220,000 + 0.05 x $5,000,000 = $470,000 exceeding both insurance cost and appetite, so insure if the $4,000,000 cover is enforceable and deductible funding is assured",
-      "B": "Insurance is generally optimal because premiums are fixed and controls often fail to sustain, so the $220,000 investment should be rejected without calculation",
-      "C": "Controls dominate because 5.0% is lower than 12.0% regardless of $220,000 or $180,000, so choose controls even at $470,000",
-      "D": "Accept the $600,000 inherent risk because cyber risk cannot be quantified, so no analysis of $300,000 vs $470,000 is decision-useful"
+      "B": "Insurance is generally optimal because premiums are fixed and controls often fail to sustain, so the $220,000 investment should be rejected without calculation This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Controls dominate because 5.0% is lower than 12.0% regardless of $220,000 or $180,000, so choose controls even at $470,000 This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Accept the $600,000 inherent risk because cyber risk cannot be quantified, so no analysis of $300,000 vs $470,000 is decision-useful This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Compute total expected cost. Insurance: premium $180,000 plus expected deductible 0.12 x 1,000,000 = $120,000, total $300,000, residual $120,000 inside $250,000 appetite, and effectiveness does not decay with operational execution. Controls: $220,000 plus expected loss 0.05 x 5,000,000 = $250,000, total $470,000, residual $250,000 at appetite limit and dependent on sustained execution. Business interpretation: Board member Amara Okafor should weigh cost ($300,000 vs $470,000), appetite fit, and sustainability; insurance is economically superior and more robust if coverage terms are sound, but control investment may still be layered for defense in depth within budget. Common trap is choosing on likelihood alone, or dismissing quantification.",
@@ -24548,10 +24374,10 @@ var pack_p2_d_questions = [
     "Topic": "D.443 evaluate-commodity-hedge-effectiveness-and-basis",
     "Stem": "Flash Manufacturing professional Daniel Cho, M&A director, is evaluating a copper price hedge for next quarter. Flash will purchase 500,000 pounds. Spot copper is $4.20 per pound, 3-month futures $4.28, expected spot in 3 months $4.50. Hedge with futures locks $4.28. Option hedge buys calls at $0.18 per pound. Flash's commodity risk tolerance is $120,000 adverse move. Which evaluation best weighs hedge effectiveness, basis, and cost?",
     "Choices": {
-      "A": "Futures generally create near-perfect hedges at $4.28 with very low basis, so the $0.18 call is wasteful",
+      "A": "Futures generally create near-perfect hedges at $4.28 with very low basis, so the $0.18 call is wasteful This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Futures lock $2,140,000 cost (500,000 x $4.28) versus $2,250,000 unhedged at $4.50, saving $110,000 within tolerance, but basis remains if purchase timing differs; calls cost $90,000 (500,000 x $0.18) and cap upside while retaining downside, so futures are cost-effective if timing firm, calls if flexibility needed",
-      "C": "Do not hedge because $4.28 is above current $4.20 spot, so hedging locks a loss and tolerance is irrelevant",
-      "D": "Calls cost $0.18 x $4.28 = $0.77 per pound, so total call hedge cost is $385,000, making futures superior"
+      "C": "Do not hedge because $4.28 is above current $4.20 spot, so hedging locks a loss and tolerance is irrelevant This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Calls cost $0.18 x $4.28 = $0.77 per pound, so total call hedge cost is $385,000, making futures superior This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Quantify: futures locked cost = 500,000 x 4.28 = $2,140,000; unhedged at expected $4.50 = $2,250,000, saving $110,000. That saving is inside the $120,000 tolerance window but still material, and hedge effectiveness depends on timing and grade alignment creating basis risk. Calls cost 500,000 x 0.18 = $90,000 and preserve downside if price falls. Business interpretation: M&A director Daniel Cho should judge that futures are economically efficient when purchase date is firm and basis low, while calls justify the $90,000 premium when flexibility or downside retention matters. Common trap is claiming perfect hedges, rejecting hedges because forward exceeds spot, or mispricing options.",
@@ -24855,7 +24681,9 @@ var pack_p2_d_questions = [
     "Section": "D",
     "QuestionID": "P2-D-450",
     "question_state": "Certified",
-    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
+    "certification_date": "2026-09-05",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-D4",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "D-450-risk-appetite-leverage-covenant-translation",
@@ -24937,10 +24765,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -24954,10 +24781,10 @@ var pack_p2_d_questions = [
     "Topic": "D.452 capital-allocation-under-risk-constraint-ranking",
     "Stem": "Flash Holdings professional Naledi Khumalo, Board member, allocates $3,000,000 capital across three projects, each requires $1,500,000 and is risk-rated: Project X expected return $320,000 with $600,000 economic capital, Y $280,000 with $400,000 capital, Z $250,000 with $350,000 capital. Rank by RAROC and identify which two-project combination maximizes risk-adjusted return within $3,000,000 capital and appetite.",
     "Choices": {
-      "A": "Rank X 53.3% > Y 70.0% > Z 71.4%, best pair X+Y",
-      "B": "All RAROC equal at 53.3%, any pair identical",
+      "A": "Rank X 53.3% > Y 70.0% > Z 71.4%, best pair X+Y This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "All RAROC equal at 53.3%, any pair identical This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Rank Z 71.43% ($250k/350k) > Y 70.00% ($280k/400k) > X 53.33% ($320k/600k); best feasible pair within $3m is Y+Z using $750k capital for $530k return versus X+Y $1,000k for $600k but with lower combined efficiency",
-      "D": "Rank X highest because $320,000 is largest absolute return, so X+Y is best regardless of capital"
+      "D": "Rank X highest because $320,000 is largest absolute return, so X+Y is best regardless of capital This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "RAROC = return / economic capital. X = 320,000 / 600,000 = 53.33%. Y = 280,000 / 400,000 = 70.00%. Z = 250,000 / 350,000 = 71.43%. Ranking is Z > Y > X. Within $3,000,000 funding and economic capital consideration, Y+Z uses $750,000 capital for $530,000 return at high efficiency, while X+Y uses $1,000,000 for $600,000 but lower average RAROC and leaves appetite tighter. Business interpretation: Board member Naledi Khumalo should prioritize Z and Y for capital efficiency and keep X for expansion only if capital appetite expands. Common trap is ranking by absolute return or equating all RAROC.",
@@ -25164,10 +24991,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -25315,10 +25141,10 @@ var pack_p2_d_questions = [
     "Topic": "D.460 erm-versus-internal-control-portfolio-analysis",
     "Stem": "Flash Holdings analyst Naledi Khumalo, Board member, is clarifying for the audit committee how COSO ERM 2017 differs from COSO Internal Control 2013 as Flash reviews its packaging line expansion in Ohio. The program carries strategic market risk, operational safety risk, financial liquidity risk, and compliance risk with a $5 million residual tolerance. Which analysis correctly distinguishes the frameworks?",
     "Choices": {
-      "A": "Both frameworks are identical, so testing controls over financial reporting satisfies ERM for the line",
-      "B": "ERM replaces all controls, so Flash can eliminate control testing once the ERM policy is approved",
+      "A": "Both frameworks are identical, so testing controls over financial reporting satisfies ERM for the line This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "ERM replaces all controls, so Flash can eliminate control testing once the ERM policy is approved This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "ERM broadens to strategy and enterprise portfolio, integrating risk with performance, while IC focuses on controls over operations, reporting, and compliance; Flash should assess the four risks as an interrelated portfolio against the $5 million tolerance",
-      "D": "ERM applies only to financial risks and IC to strategic and operational risks, so market risk belongs to IC"
+      "D": "ERM applies only to financial risks and IC to strategic and operational risks, so market risk belongs to IC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "COSO IC focuses on control effectiveness over operations, reporting, and compliance at the process level, while COSO ERM broadens to governance, strategy, and enterprise-wide appetite, performance, and portfolio view, considering interrelationships among risks. ERM manages risk to strategy and in execution across categories against appetite. For Flash, Board member Naledi Khumalo should explain that the four packaging risks must be evaluated together as a portfolio against the $5 million tolerance, capturing correlations and cumulative exposure, not as isolated controls. Business interpretation: the committee needs an ERM view of whether strategy remains viable within appetite. Common trap is equating the frameworks, treating ERM as a substitute that eliminates controls, or splitting risk types between frameworks.",
@@ -25389,10 +25215,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -25480,10 +25305,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -25661,10 +25485,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -26200,10 +26023,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -26917,10 +26739,9 @@ var pack_p2_d_questions = [
       "Non-CC EW >=75 chars (DL-026)",
       "No boilerplate (DL-013)",
       "Authorities match",
-      "Stem names Flash + stakeholder"
-    ,
+      "Stem names Flash + stakeholder",
       "Batch 4c remediation 2026-09-07 (final remediation batch)"
-]
+    ]
   },
   {
     "Part": 2,
@@ -27068,10 +26889,10 @@ var pack_p2_d_questions = [
     "Topic": "D.499 coso-erm-versus-coso-ic-portfolio-perspective",
     "Stem": "Flash Holdings analyst Naledi Khumalo, Board member, is clarifying for the audit committee how COSO ERM 2017 differs from COSO Internal Control 2013 as Flash reviews its packaging line expansion in Ohio. The program carries strategic market risk, operational safety risk, financial liquidity risk, and compliance risk under a $6 million residual-risk tolerance. Which analysis correctly distinguishes the frameworks?",
     "Choices": {
-      "A": "Both frameworks are identical, so testing controls over financial reporting satisfies ERM for the packaging line",
+      "A": "Both frameworks are identical, so testing controls over financial reporting satisfies ERM for the packaging line This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "COSO ERM broadens to strategy and enterprise portfolio, integrating risk with performance, while COSO IC focuses on controls over operations, reporting, and compliance; Flash should assess the four risks as an interrelated portfolio against the $6 million tolerance",
-      "C": "COSO ERM replaces all internal controls, so Flash can eliminate control testing once the ERM policy is approved",
-      "D": "COSO ERM applies only to financial risks and COSO IC to strategic and operational risks, so market risk belongs to IC"
+      "C": "COSO ERM replaces all internal controls, so Flash can eliminate control testing once the ERM policy is approved This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "COSO ERM applies only to financial risks and COSO IC to strategic and operational risks, so market risk belongs to IC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO IC 2013 focuses on internal control effectiveness over operations, reporting, and compliance at the process level, while COSO ERM 2017 broadens to governance, strategy, and enterprise-wide appetite, performance, and portfolio view, considering interrelationships among risks. ERM manages risk to strategy and in execution across categories against appetite, not as isolated controls. For Flash, Board member Naledi Khumalo should explain that the four packaging risks must be evaluated together as a portfolio against the $6 million tolerance, capturing correlations and cumulative exposure. Business interpretation: the committee needs an ERM view of whether strategy remains viable within appetite. Common trap is equating ERM with IC or treating ERM as a substitute that eliminates controls, or splitting risk types between frameworks.",

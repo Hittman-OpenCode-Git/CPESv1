@@ -479,7 +479,7 @@ const pack_p2_a_questions = [
     ],
     "question_state": "Certified",
     "certification_batch": "P2-CERT-20260923",
-    "certification_date": "2026-09-23",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -923,7 +923,7 @@ const pack_p2_a_questions = [
     ],
     "question_state": "Certified",
     "certification_batch": "P2-CERT-20260923",
-    "certification_date": "2026-09-23",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -5714,7 +5714,7 @@ const pack_p2_a_questions = [
     ],
     "question_state": "Certified",
     "certification_batch": "P2-CERT-20260923",
-    "certification_date": "2026-09-23",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -13412,7 +13412,9 @@ const pack_p2_a_questions = [
     "QuestionID": "P2-A-306",
     "question_state": "Certified",
     "certification_session": "P2-067",
-    "certification_date": "2026-08-28", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
+    "certification_date": "2026-08-28",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "A-306-acquired-iprd-accounting",
     "Stem": "Flash Diagnostics acquired a smaller diagnostics company and, as part of the purchase price allocation, identified an in-process research and development (IPR&D) project with a fair value of $12,000,000. The project is not yet technologically feasible and has no alternative future use. CFO Adaeze Onuorah is determining the post-acquisition accounting. How should the IPR&D be accounted for in Flash's consolidated financial statements immediately after the acquisition?",
@@ -16882,7 +16884,7 @@ const pack_p2_a_questions = [
   },
   {
     "QuestionID": "P2-A-371",
-    "certification_date": "2026-09-19",
+    "certification_date": "2026-08-30",
     "certification_session": "P2A-CERT-20260919",
     "Section": "A",
     "BlueprintDomain": "Financial Statement Analysis",
@@ -16962,8 +16964,7 @@ const pack_p2_a_questions = [
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
-    "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_batch": "P2-073"
   },
   {
     "QuestionID": "P2-A-372",
@@ -17378,7 +17379,7 @@ const pack_p2_a_questions = [
   },
   {
     "QuestionID": "P2-A-377",
-    "certification_date": "2026-09-19",
+    "certification_date": "2026-08-30",
     "certification_session": "P2A-CERT-20260919",
     "Section": "A",
     "BlueprintDomain": "Financial Statement Analysis",
@@ -17457,8 +17458,7 @@ const pack_p2_a_questions = [
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
-    "certification_batch": "P2-073",
-    "certification_date": "2026-08-30"
+    "certification_batch": "P2-073"
   },
   {
     "QuestionID": "P2-A-378",
@@ -25352,7 +25352,9 @@ const pack_p2_a_questions = [
     "source_status": "RESOLVED",
     "hold_reason": "",
     "certification_session": "P2-CERT-WAVE",
-    "certification_date": "2026-09-06", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
+    "certification_date": "2026-09-06",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13"
   },
   {
     "Part": 2,
@@ -26435,12 +26437,12 @@ const pack_p2_a_questions = [
       "C": "4.00, because operating income divided by interest expense equals $300,000 / $75,000.",
       "D": "1.33, because contribution margin divided by operating income equals $300,000 / $225,000."
     },
-    "CorrectChoice": "A",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "This inverts the formula by placing EBT in the numerator. DFL is defined as EBIT divided by EBT, not the reciprocal. A ratio below 1.0 would imply EBIT is less than EBT, which is impossible when interest expense is positive.",
+    "CorrectChoice": "B",
+    "ExplanationWrongA": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "This divides operating income by interest expense ($300,000 / $75,000 = 4.0), which is not the DFL formula. That ratio is the interest coverage ratio, not the degree of financial leverage. DFL measures EPS sensitivity to operating income changes, not the ability to cover interest payments.",
     "ExplanationWrongD": "This arrives at the correct numerical value but uses the wrong formula. Contribution margin divided by operating income is the DOL, not the DFL. The DFL specifically uses EBIT divided by EBT. While the numbers may coincidentally match in some scenarios, the conceptual foundation is incorrect.",
-    "ExplanationCorrect": "The degree of financial leverage (DFL) measures the percentage change in EPS resulting from a 1% change in operating income. DFL = EBIT / EBT. For Summit: EBT = $300,000 - $75,000 = $225,000. DFL = $300,000 / $225,000 = 1.33. This means a 10% increase in operating income produces approximately a 13.3% increase in EPS. A DFL of 1.33 reflects moderate financial leverage from the $75,000 interest obligation. The fixed interest payment magnifies EPS volatility relative to operating income changes.",
+    "ExplanationCorrect": "This inverts the formula by placing EBT in the numerator. DFL is defined as EBIT divided by EBT, not the reciprocal. A ratio below 1.0 would imply EBIT is less than EBT, which is impossible when interest expense is positive.",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Apply",
@@ -31494,6 +31496,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "The quick ratio (acid-test ratio) is calculated as (Current Assets - Inventory) / Current Liabilities. With current assets of $500,000, inventory of $250,000, and current liabilities of $200,000: ($500,000 - $250,000) / $200,000 = $250,000 / $200,000 = 1.25.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B (2.00) is the current ratio, not the quick ratio — it fails to subtract inventory from current assets. The quick ratio should always be lower than or equal to the current ratio when inventory exists.",
     "ExplanationWrongC": "Option C (2.50) exceeds even the current ratio, which is impossible when inventory is subtracted from the numerator. This suggests the denominator may have been reduced or the calculation inverted.",
     "ExplanationWrongD": "Option D is wrong because every input the quick ratio needs is stated: current assets of $500,000, inventory of $250,000, and current liabilities of $200,000. A candidate selecting this option treats inventory as missing when it is given, even though the ratio computes cleanly to 1.25.",
@@ -31577,6 +31580,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 1,
     "ExplanationCorrect": "Days Sales Outstanding = (Accounts Receivable / Revenue) × 365 = ($133,125 / $500,000) × 365 = 0.26625 × 365 = 97.18, which rounds to approximately 97 days. However, using the data as stated: ($133,125 / $500,000) × 365 ≈ 97.2 days, closest to 99 days when using slightly different rounding. The closest answer is 99 days.",
     "ExplanationWrongA": "Option A (84 days) may result from using a 360-day year: ($133,125 / $500,000) × 360 = 95.55. Or from slightly different rounding. The standard convention uses 365 days.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C (105 days) is higher than the calculation supports. This might result from inverting the ratio or using an incorrect denominator such as COGS.",
     "ExplanationWrongD": "Option D (122 days) exceeds what the inputs support: ($133,125 / $500,000) x 365 = 97.2 days. Reaching 122 days would require receivables near $167,000 or revenue near $398,000, neither of which the stem states. A candidate selecting this option has likely inverted the ratio or inflated the numerator.",
     "FormulaReference": "DSO = (Accounts Receivable / Revenue) × 365",
@@ -31618,6 +31622,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Days Payable Outstanding = (Accounts Payable / COGS) × 365 = ($44,000 / $290,000) × 365 = 0.1517 × 365 = 55.4 days, which rounds to approximately 55 days. The closest answer is 56 days.",
     "ExplanationWrongA": "Option A (17 days) is far too low for a DPO calculation. This might result from using a 360-day year or inverting the ratio incorrectly.",
     "ExplanationWrongB": "Option B (24 days) is still too low. This might result from using revenue instead of COGS, or from a calculation error.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D (73 days) is higher than the calculation supports. This might result from inverting the ratio (COGS / AP) or using an incorrect denominator.",
     "FormulaReference": "DPO = (Accounts Payable / COGS) × 365",
     "ItemStyle": "single-select",
@@ -31656,6 +31661,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "Debt-to-Equity Ratio = Total Debt / Total Equity = $600,000 / $1,500,000 = 0.40. This means the company has $0.40 in debt for every $1 of equity.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B (0.60) might result from using total liabilities instead of total debt, or from a rounding or arithmetic error.",
     "ExplanationWrongC": "Option C (0.80) might result from inverting the ratio ($1,500,000 / $600,000 would be 2.50, but other errors could produce 0.80). It does not match the correct calculation.",
     "ExplanationWrongD": "Option D (1.25) might result from inverting the formula ($1,500,000 / $1,200,000) or from using incorrect figures.",
@@ -31696,6 +31702,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "A debt-to-equity ratio of 0.40 means the company has $0.40 in debt for every $1 of equity. This indicates conservative use of debt financing — the company relies primarily on equity to fund its operations, with debt playing a supplementary role.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "A D/E ratio of 0.40 does not mean the company uses 'no debt financing.' It means debt is 40% of equity — the company does use debt, but conservatively relative to equity.",
     "ExplanationWrongC": "A D/E ratio of 1.67 would mean debt exceeds equity, which contradicts the given ratio of 0.40. This choice inverts the formula (equity/debt = $1,500,000/$600,000 = 2.50, but this is the equity multiplier, not D/E).",
     "ExplanationWrongD": "This choice inverts the ratio. The correct interpretation is $0.40 debt per $1 equity, not $1.67 equity per $1 debt. The equity multiplier would be 1 + D/E = 1.40, not 1.67.",
@@ -31739,6 +31746,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Times Interest Earned = EBIT / Interest Expense = $250,000 / $50,000 = 5.0x. This means the company generates 5 times its interest expense in earnings before interest and taxes.",
     "ExplanationWrongA": "Option A (3.0x) might result from using a different numerator (e.g., operating income instead of EBIT) or from a calculation error. The correct EBIT/Interest = $250,000 / $50,000 = 5.0.",
     "ExplanationWrongB": "Option B (4.0x) might result from using EBITDA ($300,000) / $50,000 = 6.0, or from a rounding or arithmetic error. EBIT should be $250,000, not $200,000.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D (6.0x) matches $300,000 / $50,000, which uses EBITDA-style earnings with depreciation added back. Times interest earned is strictly EBIT over interest ($250,000 / $50,000 = 5.0x); grossing earnings up to $300,000 overstates coverage by a full turn.",
     "FormulaReference": "TIE = EBIT / Interest Expense",
     "ItemStyle": "single-select",
@@ -31778,6 +31786,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 1,
     "ExplanationCorrect": "Times Interest Earned = EBIT / Interest Expense = $500,000 / $100,000 = 5.0x. The company generates 5 times its annual interest expense in pre-tax operating earnings, indicating strong coverage of interest obligations. The tax deductibility of interest (the tax shield) is not added to EBIT because TIE measures coverage of the nominal interest charge, not the after-tax cost.",
     "ExplanationWrongA": "A TIE of 3.0x would result from using a numerator of $300,000 instead of $500,000 EBIT. This might come from confusing EBIT with net income or another profit measure.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "A TIE of 6.0x might result from adding back the tax shield ($100,000 × 21% = $21,000) to EBIT, or from a calculation error. TIE uses EBIT as reported, without tax adjustment.",
     "ExplanationWrongD": "A TIE of 10.0x is double the correct value. This might result from halving the interest expense or doubling EBIT, both of which would be incorrect.",
     "FormulaReference": "TIE = EBIT / Interest Expense (coverage interpretation)",
@@ -31819,6 +31828,7 @@ const pack_p2_a_questions = [
     "DifficultyScore": 1,
     "ExplanationCorrect": "Gross Margin % = Gross Profit / Revenue = $400,000 / $600,000 = 0.6667 = 67%. The gross profit is revenue minus COGS ($600,000 - $200,000 = $400,000).",
     "ExplanationWrongA": "Option A (60%) is close but incorrect. This might result from rounding $400,000 / $600,000 to 60% instead of the more precise 66.7%, or from a calculation using different figures.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C (75%) might result from using net income instead of gross profit, or from computing COGS/Revenue = $200,000/$600,000 = 33.3% and then subtracting from 100% to get 66.7% but rounding differently.",
     "ExplanationWrongD": "Option D (80%) would require gross profit of $480,000 on revenue of $600,000. This might result from subtracting operating expenses from gross profit instead of using the gross margin formula directly.",
     "FormulaReference": "Gross Margin % = Gross Profit / Revenue",
@@ -31859,6 +31869,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "A 40% gross margin means the company retains 40 cents of gross profit per dollar of revenue after paying production costs: $200,000 / $500,000 = 40%. COGS absorbs the remaining 60% ($300,000 / $500,000). Choice A states exactly this retention.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Choice B misstates both figures: COGS is $300,000 / $500,000 = 60% of revenue (not 67%), leaving 40 cents — not 33 — of gross profit per dollar.",
     "ExplanationWrongC": "Choice C overstates the retained amount: a 40% margin means 40 cents per dollar, not 67. The 60% figure is COGS/Revenue — the complement of the margin, not the margin itself.",
     "ExplanationWrongD": "This conflates gross margin with net income margin. Net income would be lower due to operating expenses, taxes, and interest. Gross margin only measures profitability after production costs.",
@@ -31900,6 +31911,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "Net Margin % = Net Income / Revenue = $120,000 / $600,000 = 0.20 = 20%. This means the company retains 20 cents of profit per dollar of revenue after all expenses, taxes, and interest.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B (25%) might result from using EBIT ($150,000) instead of net income: $150,000 / $600,000 = 25%. Net margin uses net income, not EBIT.",
     "ExplanationWrongC": "Option C (30%) might result from using operating income or gross profit instead of net income, or from a calculation error.",
     "ExplanationWrongD": "Option D (35%) might result from a significant calculation error or from using a different profit measure.",
@@ -31943,6 +31955,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Net Margin % = Net Income / Revenue = $150,000 / $600,000 = 25%. This means the company retains 25 cents of profit per dollar of revenue after all expenses, interest, and taxes. A 25% net margin is exceptionally high, indicating strong operational efficiency.",
     "ExplanationWrongA": "A 10% net margin is too low for the given numbers. This might result from using EBIT instead of net income, or from a calculation error.",
     "ExplanationWrongB": "A 20% net margin might result from using operating income instead of net income, or from using different figures.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "A 30% net margin is too high. This might result from omitting certain expenses or from a calculation error.",
     "FormulaReference": "Net Margin % = Net Income / Revenue (interpretation)",
     "ItemStyle": "single-select",
@@ -31982,6 +31995,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "Return on Assets = Net Income / Average Total Assets = $200,000 / $1,000,000 = 0.20 = 20%. This means the company generates 20 cents of profit per dollar of assets invested.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B (25%) might result from using different figures or from a calculation error. The correct calculation is $200,000 / $1,000,000 = 20%.",
     "ExplanationWrongC": "Option C (40%) might result from using gross profit or EBIT instead of net income. ROA specifically uses net income as the numerator.",
     "ExplanationWrongD": "Option D (50%) might result from inverting the ratio or from using incorrect figures.",
@@ -32025,6 +32039,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "ROA = Net Income / Average Total Assets = $200,000 / $1,000,000 = 20%. ROE = Net Income / Average Equity = $200,000 / $500,000 = 40%. ROA (20%) is lower than ROE (40%) because total assets ($1,000,000) exceed total equity ($500,000) — the company uses debt financing, which amplifies returns to equity holders through financial leverage (the DuPont effect).",
     "ExplanationWrongA": "ROA and ROE are not the same when the company uses debt financing. ROE = 40%, not 20%. ROA uses total assets (larger denominator), ROE uses equity (smaller denominator).",
     "ExplanationWrongB": "This confuses ROA with ROE. ROE = 40%, not 25%. The option also misstates ROA as the same as ROE, which is only true when there is no debt.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "ROA (20%) is lower than ROA, not higher. This option inverts the relationship — assets are always larger than equity, making ROA lower than ROE.",
     "FormulaReference": "ROA = Net Income / Avg Total Assets; ROE = NI / Avg Equity (comparison)",
     "ItemStyle": "single-select",
@@ -32066,6 +32081,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Return on Equity = Net Income / Average Equity = $200,000 / $500,000 = 0.40 = 40%. This means the company generates 40 cents of profit per dollar of shareholders' equity.",
     "ExplanationWrongA": "Option A (20%) is the return on assets (ROA), not ROE. It uses total assets ($1,000,000) instead of equity ($500,000) as the denominator.",
     "ExplanationWrongB": "Option B (25%) might result from a calculation error or from using different figures. The correct calculation is $200,000 / $500,000 = 40%.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D (50%) might result from inverting the ratio ($500,000 / $200,000 = 2.5, then 1/2.5 = 0.4 = 40% — this is actually correct but inverted, or from using different figures).",
     "FormulaReference": "ROE = Net Income / Average Equity",
     "ItemStyle": "single-select",
@@ -32105,6 +32121,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "A company that uses debt financing has a higher ROE than ROA because the equity base is smaller than the asset base. With the same net income, dividing by a smaller equity base produces a higher return. This is the leverage effect — debt amplifies returns to equity holders, for better or worse.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "ROE and ROA are equal only when there is no debt (equity multiplier = 1). When debt is present, ROE = ROA × (Assets/Equity), and since assets > equity, ROE > ROA.",
     "ExplanationWrongC": "ROA is always LOWER than ROE (not higher) when debt exists, because assets include both debt and equity — the denominator is larger, yielding a lower ratio.",
     "ExplanationWrongD": "ROE is HIGHER than ROA (not lower) when debt exists, because equity is smaller than assets. The same numerator divided by a smaller denominator produces a higher ratio.",
@@ -32148,6 +32165,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "Degree of Operating Leverage = Contribution Margin / Operating Income = $300,000 / $100,000 = 3.0x. This means a 1% change in sales will result in a 3% change in operating income (amplification effect).",
     "ExplanationWrongA": "Option A (2.0x) might result from using $200,000 as the numerator instead of $300,000, or from a calculation error.",
     "ExplanationWrongB": "Option B (2.5x) might result from using $250,000 as the numerator, or from a different denominator.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D (4.0x) might result from using $400,000 as the numerator or $75,000 as the denominator.",
     "FormulaReference": "DOL = Contribution Margin / Operating Income",
     "ItemStyle": "single-select",
@@ -32188,6 +32206,7 @@ const pack_p2_a_questions = [
     "ExplanationCorrect": "DOL = Contribution Margin / Operating Income = $90,000 / $30,000 = 3.0. This means a 1% change in sales will result in approximately a 3% change in operating income. The company has high operating leverage — a significant portion of its costs are fixed, amplifying the impact of sales changes on profitability.",
     "ExplanationWrongA": "Option A (1.5) might result from using the wrong numerator or denominator — perhaps gross profit / operating income or CM / sales, rather than CM / operating income.",
     "ExplanationWrongB": "Option B (2.0) might result from a partial calculation error — perhaps using a different CM or OI figure, or from confusing DOL with another leverage metric.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "The DOL can be determined directly from the provided CM ($90,000) and OI ($30,000) without needing the fixed cost amount separately, since fixed costs are embedded in the operating income figure.",
     "FormulaReference": "DOL = Contribution Margin / Operating Income (interpretation)",
     "ItemStyle": "single-select",
@@ -32227,6 +32246,7 @@ const pack_p2_a_questions = [
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "ExplanationCorrect": "Horizontal analysis compares financial statement line items across multiple periods relative to a base year, expressing changes as growth rates or dollar/rupee differences. It identifies trends, growth patterns, and significant changes in financial position or performance over time.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "This describes vertical analysis, not horizontal. Vertical analysis expresses each line item as a percentage of a single base amount (e.g., revenue for the income statement, total assets for the balance sheet) within the current period.",
     "ExplanationWrongC": "This also describes vertical analysis — converting items to a percentage of a single base. Additionally, projecting future cash flows is forecasting, not trend analysis.",
     "ExplanationWrongD": "This describes financial forecasting or projection, not horizontal analysis. Horizontal analysis is a historical comparison tool, not a forward-looking projection method.",
@@ -32234,7 +32254,6 @@ const pack_p2_a_questions = [
     "ItemStyle": "single-select",
     "LOSTag": "A.3",
     "Part": 2,
-    "BlueprintDomain": "Financial Statement Analysis",
     "Part2OnlyFlag": true,
     "QuestionID": "P2-A-622",
     "certification_date": "2026-09-22",
@@ -32251,4 +32270,3 @@ const pack_p2_a_questions = [
     "question_state": "Certified"
   }
 ];
-

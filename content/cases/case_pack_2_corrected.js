@@ -1,8 +1,3 @@
-﻿// CMA Exam Simulator — Case Pack 2 (25 Cases)
-// Generated: SESSION 916-917 Case Study Reconsolidation
-// Source: Consolidated from scored_cases.js through scored_cases5.js
-// Architecture: 3-pack × 25-case structure for 2026 blueprint alignment
-
 const CASE_PACK_2 = [
   {
     "CaseID": "CBQ2-A3",
@@ -107,7 +102,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -135,7 +130,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -173,7 +168,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -207,7 +202,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -236,14 +231,14 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
         "question_status": "Active"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Production",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -345,7 +340,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -379,7 +374,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -409,7 +404,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -437,7 +432,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -476,14 +471,14 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
         "question_status": "Active"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Production",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -697,12 +692,12 @@ const CASE_PACK_2 = [
           "Decrease in accounts payable"
         ],
         "RightItems": [
-        "Add to Net Income (Operating) — decrease in current asset released cash, increasing operating cash flow",
-        "Deduct from Net Income (Operating) — decrease in current liability consumed cash, reducing operating cash flow",
-        "Add back to Net Income (Operating) — non-cash expense that reduced net income but did not consume cash",
-        "Deduct from Net Income (Operating) — remove non-operating gain included in net income that belongs in investing activities",
-        "Report in Investing Activities — cash flow from purchase or sale of long-term assets"
-],
+          "Add to Net Income (Operating) — decrease in current asset released cash, increasing operating cash flow",
+          "Deduct from Net Income (Operating) — decrease in current liability consumed cash, reducing operating cash flow",
+          "Add back to Net Income (Operating) — non-cash expense that reduced net income but did not consume cash",
+          "Deduct from Net Income (Operating) — remove non-operating gain included in net income that belongs in investing activities",
+          "Report in Investing Activities — cash flow from purchase or sale of long-term assets"
+        ],
         "ItemID": "CBQ3-A2-Q5",
         "CognitiveLevel": "Analyze",
         "CalculationComplexity": "None",
@@ -815,7 +810,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -844,7 +839,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -866,11 +861,11 @@ const CASE_PACK_2 = [
           "Goodwill"
         ],
         "RightItems": [
-        "Not amortized, tested for impairment at least annually",
-        "Not amortized, tested for impairment at reporting unit level",
-        "Amortized over useful life, tested for impairment if triggering event",
-        "Amortized over 15 years straight-line"
-],
+          "Not amortized, tested for impairment at least annually",
+          "Not amortized, tested for impairment at reporting unit level",
+          "Amortized over useful life, tested for impairment if triggering event",
+          "Amortized over 15 years straight-line"
+        ],
         "ItemID": "CBQ4-A1-Q3",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Difficult",
@@ -889,7 +884,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -927,7 +922,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -962,14 +957,14 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "A",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
         "question_status": "Active"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Production",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -1143,7 +1138,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1175,7 +1170,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1207,7 +1202,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1245,7 +1240,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1287,7 +1282,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1305,13 +1300,13 @@ const CASE_PACK_2 = [
           "Actual January sales exceed budget by 15%"
         ],
         "RightItems": [
-        "Increase both collections and COGS projections in the forecast",
-        "Defer purchase to February, increasing January cash available",
-        "Issue new shares of common stock to raise additional cash",
-        "Increase reliance on the line of credit in January",
-        "Negotiate extended payment terms with suppliers",
-        "Liquidate long-term investments to cover the shortfall"
-],
+          "Increase both collections and COGS projections in the forecast",
+          "Defer purchase to February, increasing January cash available",
+          "Issue new shares of common stock to raise additional cash",
+          "Increase reliance on the line of credit in January",
+          "Negotiate extended payment terms with suppliers",
+          "Liquidate long-term investments to cover the shortfall"
+        ],
         "Correct": {
           "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
           "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
@@ -1338,7 +1333,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -1347,7 +1342,7 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -1652,12 +1647,12 @@ const CASE_PACK_2 = [
           "Moving average"
         ],
         "RightItems": [
-        "Relies on expert judgment when historical data is limited",
-        "Splits costs into fixed and variable components using regression",
-        "Smooths random fluctuations by averaging consecutive periods",
-        "Applies periodic multipliers to account for recurring patterns",
-        "Projects future values based on historical growth rates"
-],
+          "Relies on expert judgment when historical data is limited",
+          "Splits costs into fixed and variable components using regression",
+          "Smooths random fluctuations by averaging consecutive periods",
+          "Applies periodic multipliers to account for recurring patterns",
+          "Projects future values based on historical growth rates"
+        ],
         "Correct": {
           "Trend analysis": "Projects future values based on historical growth rates",
           "Seasonal adjustment": "Applies periodic multipliers to account for recurring patterns",
@@ -2111,7 +2106,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2140,7 +2135,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2170,7 +2165,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2206,7 +2201,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2245,7 +2240,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2263,12 +2258,12 @@ const CASE_PACK_2 = [
           "Applied manufacturing overhead"
         ],
         "RightItems": [
-        "Units sold x Selling price",
-        "Predetermined OH rate x Actual activity",
-        "Actual DLH x Variable OH rate per DLH",
-        "Remains constant within the relevant range",
-        "Units produced x DLH per unit x Wage rate"
-],
+          "Units sold x Selling price",
+          "Predetermined OH rate x Actual activity",
+          "Actual DLH x Variable OH rate per DLH",
+          "Remains constant within the relevant range",
+          "Units produced x DLH per unit x Wage rate"
+        ],
         "Correct": {
           "Direct labor budget": "Units produced x DLH per unit x Wage rate",
           "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
@@ -2291,7 +2286,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "B",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2300,7 +2295,7 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -2462,7 +2457,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2498,7 +2493,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2535,7 +2530,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2572,7 +2567,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2610,7 +2605,7 @@ const CASE_PACK_2 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -2619,7 +2614,7 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -2744,12 +2739,12 @@ const CASE_PACK_2 = [
           "Achieve operating cash flow sufficient to fund capital expenditures"
         ],
         "RightItems": [
-        "Financial — revenue growth",
-        "Financial — profitability",
-        "Financial — cost efficiency",
-        "Customer — satisfaction",
-        "Financial — liquidity and investment"
-],
+          "Financial — revenue growth",
+          "Financial — profitability",
+          "Financial — cost efficiency",
+          "Customer — satisfaction",
+          "Financial — liquidity and investment"
+        ],
         "Correct": {
           "Increase return on capital employed (ROCE) to 18%": "Financial — profitability",
           "Reduce cost of goods sold by 5% through process improvements": "Financial — cost efficiency",
@@ -2793,12 +2788,12 @@ const CASE_PACK_2 = [
           "Increase market share in industrial automation from 12% to 18%"
         ],
         "RightItems": [
-        "Customer — customer retention",
-        "Financial — revenue growth",
-        "Customer — operational excellence",
-        "Customer — customer loyalty and satisfaction",
-        "Customer — market position"
-],
+          "Customer — customer retention",
+          "Financial — revenue growth",
+          "Customer — operational excellence",
+          "Customer — customer loyalty and satisfaction",
+          "Customer — market position"
+        ],
         "Correct": {
           "Improve on-time delivery rate from 91% to 98%": "Customer — operational excellence",
           "Increase Net Promoter Score (NPS) from +32 to +50": "Customer — customer loyalty and satisfaction",
@@ -2842,12 +2837,12 @@ const CASE_PACK_2 = [
           "Automate inventory replenishment to reduce stockouts by 50%"
         ],
         "RightItems": [
-        "Supplier management — quality assurance",
-        "Inventory management — efficiency",
-        "Customer management — satisfaction",
-        "Operations management — quality",
-        "Operations management — cycle time"
-],
+          "Supplier management — quality assurance",
+          "Inventory management — efficiency",
+          "Customer management — satisfaction",
+          "Operations management — quality",
+          "Operations management — cycle time"
+        ],
         "Correct": {
           "Reduce defect rate from 4.7 to below 2 per 1,000 units": "Operations management — quality",
           "Reduce order-to-delivery cycle time from 14 days to 7 days": "Operations management — cycle time",
@@ -2891,12 +2886,12 @@ const CASE_PACK_2 = [
           "Launch a leadership development program for middle managers"
         ],
         "RightItems": [
-        "Information capital — technology infrastructure",
-        "Human capital — employee skills and competencies",
-        "Human capital — leadership development",
-        "Financial capital — investment returns",
-        "Organization capital — culture and alignment"
-],
+          "Information capital — technology infrastructure",
+          "Human capital — employee skills and competencies",
+          "Human capital — leadership development",
+          "Financial capital — investment returns",
+          "Organization capital — culture and alignment"
+        ],
         "Correct": {
           "Increase employee certification rate from 62% to 85%": "Human capital — employee skills and competencies",
           "Implement an enterprise-wide CRM system to improve customer data analytics": "Information capital — technology infrastructure",
@@ -2940,12 +2935,12 @@ const CASE_PACK_2 = [
           "Return on capital employed (ROCE)"
         ],
         "RightItems": [
-        "Lagging indicator — employee turnover rate",
-        "Lagging indicator — measures the outcome of past strategic actions",
-        "Leading indicator — investments in human capital drive future performance",
-        "Leading indicator — customer satisfaction predicts future revenue",
-        "Leading indicator — operational quality drives customer retention"
-],
+          "Lagging indicator — employee turnover rate",
+          "Lagging indicator — measures the outcome of past strategic actions",
+          "Leading indicator — investments in human capital drive future performance",
+          "Leading indicator — customer satisfaction predicts future revenue",
+          "Leading indicator — operational quality drives customer retention"
+        ],
         "Correct": {
           "Employee training hours completed": "Leading indicator — investments in human capital drive future performance",
           "Customer satisfaction score (NPS)": "Leading indicator — customer satisfaction predicts future revenue",
@@ -3312,12 +3307,12 @@ const CASE_PACK_2 = [
           "Division A is located in a low-tax country; Division B is in a high-tax country; the company wants to minimize total global tax"
         ],
         "RightItems": [
-        "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return",
-        "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance",
-        "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
-        "Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts",
-        "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals"
-],
+          "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return",
+          "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance",
+          "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
+          "Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts",
+          "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals"
+        ],
         "Correct": {
           "Division A has excess capacity and Division B needs 40,000 chips; no external buyer exists for these units": "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
           "Division A sells identical chips externally at $50; the chip market is highly competitive with many suppliers": "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals",
@@ -3608,7 +3603,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3646,7 +3641,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3690,7 +3685,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3708,12 +3703,12 @@ const CASE_PACK_2 = [
           "Difference between actual fixed overhead and budgeted fixed overhead"
         ],
         "RightItems": [
-        "Production volume variance — measures fixed overhead capacity utilization",
-        "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
-        "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U",
-        "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
-        "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U"
-],
+          "Production volume variance — measures fixed overhead capacity utilization",
+          "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+          "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U",
+          "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+          "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U"
+        ],
         "Correct": {
           "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
           "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
@@ -3740,7 +3735,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3778,7 +3773,7 @@ const CASE_PACK_2 = [
         "Pack": 3,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3787,7 +3782,7 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -3884,7 +3879,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3912,7 +3907,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3940,7 +3935,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -3968,7 +3963,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -4002,14 +3997,14 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
         "question_status": "Active"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -4333,13 +4328,13 @@ const CASE_PACK_2 = [
           "Fixed manufacturing overhead"
         ],
         "RightItems": [
-        "Selling and administrative expense — period cost under both methods, never inventoried",
-        "Product cost — direct materials (variable, traceable to units produced)",
-        "Period cost — fixed manufacturing overhead (expensed in period incurred under variable costing)",
-        "Inventoriable cost — absorbed into inventory under both costing methods",
-        "Product cost — direct labor (variable, traceable to units produced)",
-        "Product cost — variable manufacturing overhead (indirect, varies with production volume)"
-],
+          "Selling and administrative expense — period cost under both methods, never inventoried",
+          "Product cost — direct materials (variable, traceable to units produced)",
+          "Period cost — fixed manufacturing overhead (expensed in period incurred under variable costing)",
+          "Inventoriable cost — absorbed into inventory under both costing methods",
+          "Product cost — direct labor (variable, traceable to units produced)",
+          "Product cost — variable manufacturing overhead (indirect, varies with production volume)"
+        ],
         "Correct": {
           "Direct materials": "Product cost — direct materials (variable, traceable to units produced)",
           "Direct labor": "Product cost — direct labor (variable, traceable to units produced)",
@@ -4686,13 +4681,13 @@ const CASE_PACK_2 = [
           "Overapplied overhead"
         ],
         "RightItems": [
-        "Applied overhead divided by estimated activity",
-        "Applied OH exceeds actual OH incurred",
-        "Estimated OH divided by estimated activity base",
-        "Actual overhead divided by actual activity base",
-        "Activity base that causes overhead costs",
-        "Uses estimated rate to apply OH during the period"
-],
+          "Applied overhead divided by estimated activity",
+          "Applied OH exceeds actual OH incurred",
+          "Estimated OH divided by estimated activity base",
+          "Actual overhead divided by actual activity base",
+          "Activity base that causes overhead costs",
+          "Uses estimated rate to apply OH during the period"
+        ],
         "Correct": {
           "Predetermined overhead rate": "Estimated OH divided by estimated activity base",
           "Normal costing": "Uses estimated rate to apply OH during the period",
@@ -5364,13 +5359,13 @@ const CASE_PACK_2 = [
           "Constraint"
         ],
         "RightItems": [
-        "Materials purchased but not yet sold",
-        "Sales price minus direct materials",
-        "All costs except direct materials",
-        "Contribution margin per unit",
-        "Net operating income",
-        "Resource that limits overall output"
-],
+          "Materials purchased but not yet sold",
+          "Sales price minus direct materials",
+          "All costs except direct materials",
+          "Contribution margin per unit",
+          "Net operating income",
+          "Resource that limits overall output"
+        ],
         "Correct": {
           "Throughput": "Sales price minus direct materials",
           "Operating expense": "All costs except direct materials",
@@ -5735,13 +5730,13 @@ const CASE_PACK_2 = [
           "Takt time"
         ],
         "RightItems": [
-        "Production pace that matches customer demand rate",
-        "Just-in-time (JIT) — a philosophy of producing only what is needed, when needed",
-        "Visual signal that authorizes production",
-        "Arranges machines in sequence to reduce movement and WIP",
-        "Continuous incremental improvement involving all employees",
-        "Value stream mapping — documents the flow of materials and information from supplier to customer"
-],
+          "Production pace that matches customer demand rate",
+          "Just-in-time (JIT) — a philosophy of producing only what is needed, when needed",
+          "Visual signal that authorizes production",
+          "Arranges machines in sequence to reduce movement and WIP",
+          "Continuous incremental improvement involving all employees",
+          "Value stream mapping — documents the flow of materials and information from supplier to customer"
+        ],
         "Correct": {
           "Cellular manufacturing": "Arranges machines in sequence to reduce movement and WIP",
           "Kanban": "Visual signal that authorizes production",
@@ -6235,12 +6230,12 @@ const CASE_PACK_2 = [
           "Communicating risk information to stakeholders through structured reporting channels"
         ],
         "RightItems": [
-        "Review and Revision",
-        "Information, Communication, and Reporting",
-        "Governance and Culture",
-        "Performance",
-        "Strategy and Objective-Setting"
-],
+          "Review and Revision",
+          "Information, Communication, and Reporting",
+          "Governance and Culture",
+          "Performance",
+          "Strategy and Objective-Setting"
+        ],
         "Correct": {
           "Establishing the board's risk oversight structure and defining risk culture expectations": "Governance and Culture",
           "Defining risk appetite and aligning risk tolerances with strategic planning": "Strategy and Objective-Setting",
@@ -6283,12 +6278,12 @@ const CASE_PACK_2 = [
           "Conducting semi-annual ERM program effectiveness reviews and updating the risk register"
         ],
         "RightItems": [
-        "Performance",
-        "Governance and Culture",
-        "Review and Revision",
-        "Information, Communication, and Reporting",
-        "Strategy and Objective-Setting"
-],
+          "Performance",
+          "Governance and Culture",
+          "Review and Revision",
+          "Information, Communication, and Reporting",
+          "Strategy and Objective-Setting"
+        ],
         "Correct": {
           "Training plant managers on the company's risk culture expectations and ethical values": "Governance and Culture",
           "Setting operational risk limits for each facility based on the board's risk appetite statement": "Strategy and Objective-Setting",
@@ -6332,12 +6327,12 @@ const CASE_PACK_2 = [
           "Market risk: Competitor is launching a similar surgical instrument at a 15% lower price point"
         ],
         "RightItems": [
-        "Mitigation — develop alternative supplier relationships and maintain safety stock",
-        "Acceptance — monitor competitor pricing and differentiate through quality and service",
-        "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
-        "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
-        "Avoidance — discontinue all products in the affected category"
-],
+          "Mitigation — develop alternative supplier relationships and maintain safety stock",
+          "Acceptance — monitor competitor pricing and differentiate through quality and service",
+          "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
+          "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
+          "Avoidance — discontinue all products in the affected category"
+        ],
         "Correct": {
           "Regulatory risk: New FDA traceability requirements may increase compliance costs by $500,000": "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
           "Supplier risk: Single-source supplier for titanium may face labor strike; probability is low but impact is severe": "Mitigation — develop alternative supplier relationships and maintain safety stock",
@@ -6381,12 +6376,12 @@ const CASE_PACK_2 = [
           "The risk committee's quarterly review found two emerging risks not previously identified"
         ],
         "RightItems": [
-        "Information and Communication — report the findings to the board",
-        "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile",
-        "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
-        "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
-        "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively"
-],
+          "Information and Communication — report the findings to the board",
+          "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile",
+          "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
+          "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
+          "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively"
+        ],
         "Correct": {
           "The company plans to acquire a smaller competitor with a different risk culture": "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
           "The FDA has proposed new quality reporting requirements that could affect product clearance timelines": "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
@@ -6429,12 +6424,12 @@ const CASE_PACK_2 = [
           "More effective board oversight through structured risk reporting and dashboards"
         ],
         "RightItems": [
-        "Review and Revision — evaluates ERM effectiveness",
-        "Governance and Culture — establishes tone at the top and risk culture",
-        "Information, Communication, and Reporting — delivers risk data to decision-makers",
-        "Strategy and Objective-Setting — integrates risk with strategic planning",
-        "Performance — provides systematic risk identification and assessment tools"
-],
+          "Review and Revision — evaluates ERM effectiveness",
+          "Governance and Culture — establishes tone at the top and risk culture",
+          "Information, Communication, and Reporting — delivers risk data to decision-makers",
+          "Strategy and Objective-Setting — integrates risk with strategic planning",
+          "Performance — provides systematic risk identification and assessment tools"
+        ],
         "Correct": {
           "Improved risk awareness and ethical decision-making throughout the organization": "Governance and Culture — establishes tone at the top and risk culture",
           "Better-informed strategic decisions because risk appetite is explicitly considered": "Strategy and Objective-Setting — integrates risk with strategic planning",
@@ -6774,12 +6769,12 @@ const CASE_PACK_2 = [
           "Teller transaction processing — RTO 4 hours; RPO 1 hour; high impact on branch operations"
         ],
         "RightItems": [
-        "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
-        "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred",
-        "Ignore — the function does not need any recovery plan",
-        "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
-        "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO"
-],
+          "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
+          "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred",
+          "Ignore — the function does not need any recovery plan",
+          "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
+          "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO"
+        ],
         "Correct": {
           "Online banking platform — RTO 2 hours; RPO 15 minutes; critical to member trust and regulatory compliance": "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
           "Loan origination system — RTO 24 hours; RPO 4 hours; moderate impact if unavailable for a day": "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
@@ -6990,7 +6985,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -7028,7 +7023,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -7065,7 +7060,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -7103,7 +7098,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -7140,7 +7135,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -7149,7 +7144,7 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -7594,12 +7589,12 @@ const CASE_PACK_2 = [
           "Proportion of total expenses by category (6 categories)"
         ],
         "RightItems": [
-        "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers",
-        "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories",
-        "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
-        "3D pie chart — visually engaging option that management prefers for presentations",
-        "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points"
-],
+          "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers",
+          "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories",
+          "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
+          "3D pie chart — visually engaging option that management prefers for presentations",
+          "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points"
+        ],
         "Correct": {
           "Monthly revenue trend over 24 months showing seasonal patterns": "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points",
           "Sales comparison across 30 stores to identify top and bottom performers": "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
@@ -7760,12 +7755,12 @@ const CASE_PACK_2 = [
           "Compare each store's actual sales to its individual target and prior year performance"
         ],
         "RightItems": [
-        "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks",
-        "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation",
-        "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
-        "3D exploded pie chart — makes the presentation visually impressive for the board meeting",
-        "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale"
-],
+          "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks",
+          "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation",
+          "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
+          "3D exploded pie chart — makes the presentation visually impressive for the board meeting",
+          "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale"
+        ],
         "Correct": {
           "Show that Q4 sales are consistently higher than other quarters across three years": "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale",
           "Identify which product categories have profit margins significantly above or below the company average": "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
@@ -8041,12 +8036,12 @@ const CASE_PACK_2 = [
           "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise"
         ],
         "RightItems": [
-        "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
-        "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
-        "Community cloud — shared infrastructure among several organizations with common compliance concerns",
-        "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
-        "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data"
-],
+          "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
+          "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+          "Community cloud — shared infrastructure among several organizations with common compliance concerns",
+          "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+          "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data"
+        ],
         "Correct": {
           "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
           "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
@@ -8072,7 +8067,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8109,7 +8104,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8152,7 +8147,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8189,7 +8184,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8207,12 +8202,12 @@ const CASE_PACK_2 = [
           "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process"
         ],
         "RightItems": [
-        "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
-        "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
-        "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment",
-        "Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity",
-        "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance"
-],
+          "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+          "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+          "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment",
+          "Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity",
+          "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance"
+        ],
         "Correct": {
           "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
           "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
@@ -8238,7 +8233,7 @@ const CASE_PACK_2 = [
         "Pack": 4,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8247,16 +8242,10 @@ const CASE_PACK_2 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
     "question_status": "Active"
   }
 ];
-
-// UI Catalog Aliases — resolves the 0-case display bug for Packs A/E
-const CASE_BANK_B = CASE_PACK_2;
-const MIGRATED_CASE_BASE_B = CASE_PACK_2;
-const CASE_BANK_E = CASE_PACK_2;
-const MIGRATED_CASE_BASE_E = CASE_PACK_2;

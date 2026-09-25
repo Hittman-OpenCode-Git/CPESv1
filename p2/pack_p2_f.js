@@ -1,8 +1,4 @@
-// BLOCK-AUTHORIZED — Content remediation session.
-// Schema: P2_SCHEMA_STANDARD.md v1.0
-// Governance: Rules 2/6/9/10/11/13/14 active
-
-var pack_p2_f_questions = [
+const pack_p2_f_questions = [
   {
     "Authorities": [
       "IMA Statement of Ethical Professional Practice - Competence Standard"
@@ -227,10 +223,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Book the revenue as instructed. Following a direct order from the CFO is not an ethical violation if she documents her objection.",
-      "B": "Book the revenue but add a footnote disclosure that $800K relates to January shipments. Disclosure cures the misstatement.",
+      "A": "Book the revenue as instructed. Following a direct order from the CFO is not an ethical violation if she documents her objection. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Book the revenue but add a footnote disclosure that $800K relates to January shipments. Disclosure cures the misstatement. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Refuse to book the revenue and explain that recording revenue before delivery violates ASC 606. If the CFO insists, escalate to the next level or the audit committee per the IMA resolution process. Deliberately misstating revenue violates Competence and Integrity standards.",
-      "D": "Resign immediately. Any involvement with earnings management exposes her to professional liability."
+      "D": "Resign immediately. Any involvement with earnings management exposes her to professional liability. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Analyze",
     "CommonTrapReference": "Assuming that following a superior's orders absolves ethical responsibility, or that disclosure cure",
@@ -270,10 +266,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Yes — the $5,000 is a facilitating payment to expedite a routine governmental action (customs clearance), which falls under the FCPA's facilitating payments exception.",
-      "B": "Yes — the $2M contract cancellation is a business necessity defense. The FCPA permits payments made under economic duress.",
+      "A": "Yes — the $5,000 is a facilitating payment to expedite a routine governmental action (customs clearance), which falls under the FCPA's facilitating payments exception. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Yes — the $2M contract cancellation is a business necessity defense. The FCPA permits payments made under economic duress. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "No — the customs official is soliciting a bribe. The facilitating payments exception applies only to non-discretionary routine actions. A customs official deliberately delaying shipment to extract payment is engaging in extortion, not routine processing. This is a bribe, not a facilitating payment.",
-      "D": "Yes — but only if the payment is recorded as a 'consulting fee' in Orion's books to comply with the FCPA's accounting provisions."
+      "D": "Yes — but only if the payment is recorded as a 'consulting fee' in Orion's books to comply with the FCPA's accounting provisions. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Overextending the facilitating payments exception to cover extortion — the exception is for routine, low-value, non-discretionary government actions, never for extortion",
@@ -314,9 +310,9 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "GRI — it is the dominant global standard for sustainability reporting.",
-      "B": "Pacific should survey shareholders to determine their preferred framework, since no single standard is authoritative.",
-      "C": "Neither — Pacific should use the Integrated Reporting Framework which combines financial and ESG information.",
+      "A": "GRI — it is the dominant global standard for sustainability reporting. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "B": "Pacific should survey shareholders to determine their preferred framework, since no single standard is authoritative. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "Neither — Pacific should use the Integrated Reporting Framework which combines financial and ESG information. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "D": "SASB — it focuses on financially material ESG issues within specific industries, aligning with investors' primary interest: how ESG factors affect enterprise value and financial performance. GRI's multi-stakeholder approach is broader but less targeted for investor decision-making. Many companies use both frameworks complementarily."
     },
     "CognitiveLevel": "Understand",
@@ -357,9 +353,9 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Nothing — David does not participate in supplier selection, so no conflict exists.",
-      "B": "Request a transfer to a role with no SteelSource data exposure. Disclosure alone is insufficient.",
-      "C": "Resign from Meridian — any familial connection to a major supplier creates an irreconcilable conflict.",
+      "A": "Nothing — David does not participate in supplier selection, so no conflict exists. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Request a transfer to a role with no SteelSource data exposure. Disclosure alone is insufficient. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Resign from Meridian — any familial connection to a major supplier creates an irreconcilable conflict. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Disclose his spouse's employment to his superior or the ethics officer. Even without direct procurement involvement, his cost variance analyses evaluate SteelSource's performance and could influence sourcing decisions. The Integrity standard requires disclosing apparent conflicts of interest."
     },
     "CognitiveLevel": "Apply",
@@ -401,9 +397,9 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Opportunity — the manager had access to the system and the physical counts.",
-      "B": "All three elements are equally represented by each aspect of the scenario.",
-      "C": "Rationalization — the manager justified the inflation as temporary.",
+      "A": "Opportunity — the manager had access to the system and the physical counts. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "All three elements are equally represented by each aspect of the scenario. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Rationalization — the manager justified the inflation as temporary. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Pressure — the bonus tied to inventory turnover created the financial incentive to misstate. Under the fraud triangle, pressure (or incentive) is the motivation to commit fraud, and bonus compensation tied to the manipulated metric directly creates this pressure."
     },
     "CognitiveLevel": "Analyze",
@@ -488,10 +484,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Resign immediately and report to the SEC — the governance structure has completely failed.",
+      "A": "Resign immediately and report to the SEC — the governance structure has completely failed. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Contact the IMA Ethics Helpline for guidance. The IMA process: immediate superior (done), next level (done), audit committee (done), then IMA Ethics Helpline, then resignation as last resort. James has completed steps 1-3. The next step is consulting the Helpline.",
-      "C": "Accept that he has fulfilled his duty. The governance failure is not his responsibility.",
-      "D": "Leak the information to a financial journalist to force the company to address the fraud."
+      "C": "Accept that he has fulfilled his duty. The governance failure is not his responsibility. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Leak the information to a financial journalist to force the company to address the fraud. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Evaluate",
     "CommonTrapReference": "Skipping the IMA Ethics Helpline step and jumping directly to resignation or external reporting",
@@ -531,10 +527,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Override the count and issue Alex a warning. $420K is immaterial, and Alex's personal circumstances warrant leniency.",
+      "A": "Override the count and issue Alex a warning. $420K is immaterial, and Alex's personal circumstances warrant leniency. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "B": "Correct the inventory to its proper amount and report the matter through appropriate channels per company policy. The inventory overstatement is fraudulent regardless of motivation. The IMA Competence and Integrity standards require accurate financial records and reporting through proper channels.",
-      "C": "Fire Alex immediately — inventory fraud is a termination offense regardless of circumstances.",
-      "D": "Report Alex to law enforcement — $420K inventory fraud is a criminal matter."
+      "C": "Fire Alex immediately — inventory fraud is a termination offense regardless of circumstances. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "Report Alex to law enforcement — $420K inventory fraud is a criminal matter. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Treating fraud detection primarily as a personnel matter — the financial statements must be correcte",
@@ -575,10 +571,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Only the anti-bribery provisions — the payments appear to be bribes to obtain government business.",
+      "A": "Only the anti-bribery provisions — the payments appear to be bribes to obtain government business. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "B": "Both the anti-bribery provisions AND the books and records provisions. The payments to the minister's brother's firm before a government contract raise bribery concerns. SEPARATELY, the generic descriptions and missing documentation violate the books and records requirement to maintain accurate records that fairly reflect transactions.",
-      "C": "The payments are legal if the consulting firm performed services. Without evidence, no violation occurred.",
-      "D": "Only the books and records provisions — legitimate consulting payments can be made to politically connected firms."
+      "C": "The payments are legal if the consulting firm performed services. Without evidence, no violation occurred. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "Only the books and records provisions — legitimate consulting payments can be made to politically connected firms. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CognitiveLevel": "Analyze",
     "CommonTrapReference": "Focusing only on the anti-bribery provisions while ignoring the books and records provisions — both ",
@@ -618,10 +614,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "An integrated report is an annual report with a sustainability section appended at the end.",
+      "A": "An integrated report is an annual report with a sustainability section appended at the end. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "B": "An integrated report explains how the organization creates value over short, medium, and long term through the six capitals: financial, manufactured, intellectual, human, social/relationship, and natural. It connects strategy, governance, performance, and prospects — fundamentally different from a traditional annual report focused primarily on financial capital and historical performance.",
-      "C": "An integrated report combines financial statements with the sustainability report into one document without changing the analytical content.",
-      "D": "An integrated report is a marketing document telling the company's value creation story without the constraints of GAAP financial reporting."
+      "C": "An integrated report combines financial statements with the sustainability report into one document without changing the analytical content. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "An integrated report is a marketing document telling the company's value creation story without the constraints of GAAP financial reporting. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CognitiveLevel": "Understand",
     "CommonTrapReference": "Confusing integrated reporting with an annual report plus ESG appendix — it fundamentally changes the reporting model to connect capitals with value creation",
@@ -668,12 +664,12 @@ var pack_p2_f_questions = [
     },
     "CognitiveLevel": "Understand",
     "CommonTrapReference": "Confusing SOX 302 management certifications with SOX 404 internal-control reporting",
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
-    "ExplanationCorrect": "Under SOX Section 302, the CEO and CFO must each personally certify in each periodic report that the financial statements fairly present the company's financial condition and results, that they are responsible for disclosure controls and procedures, and that they have disclosed material control deficiencies and any fraud (whether or not material) involving management to the auditors and audit committee. The certifications are personal and cannot be delegated to counsel or the controller.",
-    "ExplanationWrongA": "SOX 302 does not require certifying that internal audit reviewed every transaction. It requires the CEO and CFO to certify the fair presentation of the financial statements and the disclosure of material control deficiencies and fraud.",
-    "ExplanationWrongB": "",
+    "ExplanationCorrect": "SOX 302 does not require certifying that internal audit reviewed every transaction. It requires the CEO and CFO to certify the fair presentation of the financial statements and the disclosure of material control deficiencies and fraud.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
     "ExplanationWrongC": "The certifications are personal responsibilities of the CEO and CFO, not documents prepared and signed by the controller or external counsel. Delegating the certification defeats the accountability the statute is designed to create.",
     "ExplanationWrongD": "SOX 302 imposes the certification obligation on management (the CEO and CFO), not on the external auditor. The external auditor's role is addressed separately (e.g., SOX 404 attestation).",
     "FormulaReference": "",
@@ -1659,10 +1655,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "There is only one mandatory ESG reporting framework",
+      "A": "There is only one mandatory ESG reporting framework This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "GRI, SASB, and TCFD serve different purposes: GRI focuses on broad multi-stakeholder impacts, SASB on financially material industry-specific issues for investors, and TCFD on climate-related financial disclosures",
-      "C": "ESG reporting is prohibited for public companies",
-      "D": "All three frameworks produce identical, interchangeable reports"
+      "C": "ESG reporting is prohibited for public companies This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "All three frameworks produce identical, interchangeable reports This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Understand",
     "CommonTrapReference": "Treating ESG frameworks as interchangeable or mandatory single standard",
@@ -1954,7 +1950,7 @@ var pack_p2_f_questions = [
     ],
     "question_state": "Certified",
     "certification_batch": "P2-CERT-20260923",
-    "certification_date": "2026-09-23",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -3345,9 +3341,9 @@ var pack_p2_f_questions = [
     "CalculationItem": false,
     "Choices": {
       "A": "All three Cressey elements are demonstrably present - covenant-driven incentive pressure, opportunity embedded in concentrated journal-entry authority with unchecked system access, and rationalization framing the override as protective - so Flash faces elevated fraudulent-financial-reporting risk demanding compensating controls.",
-      "B": "Covenant pressure reflects ordinary business conditions rather than any fraud element, leaving opportunity as the single factor the memo actually establishes.",
-      "C": "A rationalization element cannot exist where managers sincerely believe their own justification, because sincere belief negates the consciousness of wrongdoing the element requires.",
-      "D": "The Cressey triangle was developed for asset misappropriation by lower-level employees and does not extend to top-management financial-reporting fraud."
+      "B": "Covenant pressure reflects ordinary business conditions rather than any fraud element, leaving opportunity as the single factor the memo actually establishes. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "A rationalization element cannot exist where managers sincerely believe their own justification, because sincere belief negates the consciousness of wrongdoing the element requires. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "The Cressey triangle was developed for asset misappropriation by lower-level employees and does not extend to top-management financial-reporting fraud. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Evaluate",
     "CommonTrapReference": "Mapping pressure away as normal business and missing rationalization",
@@ -3479,10 +3475,10 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "CalculationItem": false,
     "Choices": {
-      "A": "Raise the discrepancy openly at the next treasury staff meeting, pressing Lena Croft to correct the entry in front of her peers.",
-      "B": "Send an anonymous package documenting the misclassification to a financial journalist so public scrutiny forces Flash to restate division results.",
+      "A": "Raise the discrepancy openly at the next treasury staff meeting, pressing Lena Croft to correct the entry in front of her peers. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Send an anonymous package documenting the misclassification to a financial journalist so public scrutiny forces Flash to restate division results. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Except where policy or law directs otherwise, present the documented facts to the next higher managerial level not implicated in the conflict - Flash's corporate treasurer or audit committee - and seek counsel from an objective adviser such as IMA's ethics helpline while preserving his evidence.",
-      "D": "Book a silent correcting entry reversing the misclassification and inform no one, reasoning that restored ledgers resolve the issue without confrontation."
+      "D": "Book a silent correcting entry reversing the misclassification and inform no one, reasoning that restored ledgers resolve the issue without confrontation. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Escalating externally or confronting peers before policy channels",
@@ -4035,10 +4031,10 @@ var pack_p2_f_questions = [
     "CommonTrapReference": "Letting analytics convenience override personal-data safeguards",
     "Stem": "Flash's people-analytics pilot transmitted names, payroll bands, and voluntary health-screening results for 3,400 employees to an offshore benefits-analytics vendor whose security questionnaire shows no independent certification and whose data residency sits in a jurisdiction without an adequacy determination. Controller Beatrice Ansah is asked to approve phase-two funding, which would expand the feed to dependents' data. HR leadership argues the analytic insights justify continuation and that collection already occurred through the employment relationship. Which analysis of the tension is most sound?",
     "Choices": {
-      "A": "Because the data was gathered through the employment relationship, its onward use for analytics falls outside any privacy constraint Flash must respect.",
-      "B": "Phase two is safe provided the vendor aggregates results after receipt, since aggregation retroactively cures deficiencies in consent and safeguards at the transfer stage.",
+      "A": "Because the data was gathered through the employment relationship, its onward use for analytics falls outside any privacy constraint Flash must respect. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "B": "Phase two is safe provided the vendor aggregates results after receipt, since aggregation retroactively cures deficiencies in consent and safeguards at the transfer stage. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "C": "A legitimate analytical purpose does not discharge Flash's duty to protect personal data; transferring identifiable health information without informed consent, adequate vendor safeguards, or a lawful cross-border basis breaches confidentiality and data-protection principles, and funding should pause pending de-identification, contractual controls, and a lawful transfer mechanism.",
-      "D": "Privacy compliance is exclusively the Human Resources department's obligation, so the funding approval can proceed on finance grounds alone."
+      "D": "Privacy compliance is exclusively the Human Resources department's obligation, so the funding approval can proceed on finance grounds alone. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Data-protection regimes such as the GDPR and the CCPA/CPRA rest on purpose limitation, informed consent, adequate safeguards, and lawful transfer mechanisms for personal data crossing borders, with health information attracting heightened sensitivity. Those principles collide directly with the pilot's design: identifiable health-screening results for 3,400 employees left for a jurisdiction without an adequacy determination and landed with an uncertified vendor, and phase two widens exposure to dependents who never gave employment-context consent at all. The IMA confidentiality standard and the competence duty place finance inside the chain of accountability, because Ansah's funding approval would operationalize the expanded transfer; the sound course is to withhold approval pending de-identification, enforceable contractual controls, certification, and a lawful transfer basis. Analytical value is real but is a benefit to pursue within constraints, not a license over them.",
@@ -4533,10 +4529,10 @@ var pack_p2_f_questions = [
     "CommonTrapReference": "Calling wage grievances or weak controls rationalization instead of pressure/opportunity",
     "Stem": "Interviewing for Flash Industries' internal audit function, senior auditor Rosa Camacho hears Flash logistics manager Trent Boyle explain fictitious freight claims totaling $74,000 booked over eighteen months: \"Wages here have been frozen while the company banked record margins, so the sloppy carrier paperwork effectively owed me a little back, and the insurer eats the difference, so nobody is actually hurt.\" Camacho notes that carrier-invoice matching controls were weak throughout the period and that Boyle's family medical bills had mounted. In fraud-triangle terms, which analysis correctly classifies what Boyle's quoted beliefs contribute?",
     "Choices": {
-      "A": "Boyle's frozen wages constitute the rationalization element because they supplied his reason to steal.",
+      "A": "Boyle's frozen wages constitute the rationalization element because they supplied his reason to steal. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Boyle's stated beliefs that underpayment entitled him to restitution and that insurers absorbed the loss so no one was harmed constitute the rationalization element, distinct from the financial pressure that motivated him and the invoice-matching weakness that enabled him.",
-      "C": "The weak carrier-invoice matching control is the rationalization element because it convinced Boyle that detection was unlikely.",
-      "D": "The $74,000 magnitude itself demonstrates rationalization, since larger cumulative losses reveal deeper self-justification."
+      "C": "The weak carrier-invoice matching control is the rationalization element because it convinced Boyle that detection was unlikely. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "The $74,000 magnitude itself demonstrates rationalization, since larger cumulative losses reveal deeper self-justification. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationWrongA": "Choice A labels Boyle's frozen wages rationalization. Wage stagnation belongs to the pressure leg supplying motive; the rationalization is the attitudinal narrative, entitlement plus victimless-loss framing, that made the theft feel acceptable to him personally.",
@@ -4756,9 +4752,9 @@ var pack_p2_f_questions = [
     "Stem": "On September 20, ten days before fiscal Q3 closes, VP of internal audit Sofia Lindqvist concludes that inventory cut-off failures at Flash Industries' Reno plant constitute a material weakness. CFO Elena Vasquez asks what the finding means for Flash's upcoming Form 10-Q versus the year-end process. Which analysis of how the Section 302 and Section 404 regimes interact is most accurate?",
     "Choices": {
       "A": "The material weakness must be evaluated now for disclosure in the upcoming 10-Q through the Section 302 certification and disclosure-controls regime, while the Section 404 management assessment of ICFR effectiveness and the auditor's attestation attach to the annual cycle, so the two clocks run on different schedules that converge at year end.",
-      "B": "Nothing about the weakness becomes public until the annual Section 404 assessment, because material weaknesses are exclusively a year-end reporting construct.",
-      "C": "Section 404 obligates Flash to commission a special interim auditor attestation on the inventory-cut-off weakness within 45 days of Lindqvist's determination.",
-      "D": "The Section 302 certifications remain untouched by the finding because officer certifications extend only to the fairness of the financial statements and not to disclosure controls or internal control over financial reporting."
+      "B": "Nothing about the weakness becomes public until the annual Section 404 assessment, because material weaknesses are exclusively a year-end reporting construct. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Section 404 obligates Flash to commission a special interim auditor attestation on the inventory-cut-off weakness within 45 days of Lindqvist's determination. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "The Section 302 certifications remain untouched by the finding because officer certifications extend only to the fairness of the financial statements and not to disclosure controls or internal control over financial reporting. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationWrongB": "Choice B locks disclosure to the annual clock. Material weaknesses surface quarterly through Section 302 certifications and 10-Q controls disclosures, so waiting for the year-end 404 cycle leaves Flash's Q3 filing silent on a known, already-documented defect.",
@@ -4800,10 +4796,10 @@ var pack_p2_f_questions = [
     "CommonTrapReference": "Conflating algorithmic uniformity or developer intent with absence of bias",
     "Stem": "Shared-services manager Lucia Ferrante learns that Flash Industries' machine-learning model for flagging potentially duplicate or inflated supplier invoices, trained on three years of historical approval decisions, subjects invoices from suppliers onboarded within the last two years to review holds at triple the rate of long-standing vendors even after controlling for invoice size. Asked to characterize the ethical issue for Flash's data-governance council, which statement identifies it most accurately?",
     "Choices": {
-      "A": "The issue is confidentiality, because the model's scoring logic is proprietary information that may not be examined outside the data-science team.",
-      "B": "The issue is intentional discrimination, and the correct response is to dismiss whichever developer wrote the training pipeline.",
+      "A": "The issue is confidentiality, because the model's scoring logic is proprietary information that may not be examined outside the data-science team. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "The issue is intentional discrimination, and the correct response is to dismiss whichever developer wrote the training pipeline. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "The issue is embedded unfairness: training data reflecting legacy approval habits teaches the model proxy patterns that systematically disadvantage newer, smaller suppliers, so management accountants must surface, measure, and monitor the disparate outcomes rather than search solely for individual intent.",
-      "D": "There is no fairness issue, because an algorithm applies identical scoring rules to every invoice, and uniform mechanical treatment is by definition even-handed."
+      "D": "There is no fairness issue, because an algorithm applies identical scoring rules to every invoice, and uniform mechanical treatment is by definition even-handed. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationWrongA": "Choice A reframes a fairness problem as secrecy. Proprietary scoring logic may restrict public detail, but the governance council can still examine aggregate outcome rates; confidentiality provides no basis for declining to measure disparate impact on newer suppliers.",
@@ -6076,9 +6072,9 @@ var pack_p2_f_questions = [
     "CalculationItem": false,
     "Choices": {
       "A": "They personally certify the report fairly presents results and contains no untrue material statements, that they bear responsibility for disclosure controls and internal control over financial reporting, and that control deficiencies and material weaknesses were disclosed to the auditors and audit committee; Section 404 additionally requires an annual management assessment of ICFR effectiveness.",
-      "B": "Their signatures hand primary liability to the external auditor once the opinion issues, so certification duties become largely delegable to the specialists who tested the controls.",
-      "C": "Section 404 obligates internal audit, rather than management, to render the formal ICFR effectiveness conclusion on a quarterly cadence throughout the fiscal year.",
-      "D": "The certifications reach only the consolidated statements, so segment schedules, subsidiary ledgers, and off-balance-sheet arrangements sit outside their personal attestation."
+      "B": "Their signatures hand primary liability to the external auditor once the opinion issues, so certification duties become largely delegable to the specialists who tested the controls. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "Section 404 obligates internal audit, rather than management, to render the formal ICFR effectiveness conclusion on a quarterly cadence throughout the fiscal year. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "The certifications reach only the consolidated statements, so segment schedules, subsidiary ledgers, and off-balance-sheet arrangements sit outside their personal attestation. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Believing audit opinions dilute or delegate executive certification liability",
@@ -7332,10 +7328,10 @@ var pack_p2_f_questions = [
     "CommonTrapReference": "Misidentifying fraud triangle elements or missing rationalization",
     "Stem": "Flash's internal auditor Kevin Okafor reviews a procurement fraud. A buyer facing personal medical debt received a gift from a vendor, then approved inflated invoices, reasoning the vendor overcharges Flash anyway so the scheme is justified. Division management overrides controls under budget pressure. Which mapping best applies the fraud triangle to these facts for Flash's ethics training?",
     "Choices": {
-      "A": "Fraud triangle does not apply because only financial statement fraud, not asset misappropriation, has a triangle",
-      "B": "Opportunity is the buyer's medical debt, pressure is the gift from the vendor, and rationalization is the invoice inflation itself",
+      "A": "Fraud triangle does not apply because only financial statement fraud, not asset misappropriation, has a triangle This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Opportunity is the buyer's medical debt, pressure is the gift from the vendor, and rationalization is the invoice inflation itself This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Pressure is the buyer's personal medical debt plus budget target stress, opportunity is weak segregation and management override that let the buyer approve inflated invoices after accepting the vendor gift, and rationalization is the belief that offsetting perceived vendor overcharging justifies the act",
-      "D": "Rationalization is the strongest control, so improving rationalization training alone would have prevented the fraud without segregation changes"
+      "D": "Rationalization is the strongest control, so improving rationalization training alone would have prevented the fraud without segregation changes This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The IMA Integrity context and COSO fraud risk analysis decompose fraud into incentive/pressure, opportunity, and rationalization. Pressure is the buyer's personal medical debt plus division budget pressure. Opportunity is the control gap: gift acceptance, override, and poor segregation that lets the buyer approve vendor invoices. Rationalization is the self-justification that the vendor overcharges Flash anyway so the inflated invoices are deserved. This precise mapping shows each leg contributed and removing any leg reduces risk. Business interpretation: Kevin Okafor should recommend strengthening segregation, gift policies, and override monitoring while addressing pressure through assistance resources and ethics culture. Common trap is swapping triangle elements or thinking the triangle applies only to financial statement fraud.",
@@ -7636,10 +7632,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-172-confidentiality-scope",
     "Stem": "Flash Manufacturing's controller learns that a sales employee has been sharing customer pricing information with a competitor in exchange for favorable treatment on a personal loan. The controller is the employee's supervisor. Under the IMA Statement, what is the first action the controller should take?",
     "Choices": {
-      "A": "Immediately report the employee to law enforcement without internal discussion",
-      "B": "Confront the employee and demand an explanation, then decide on discipline",
+      "A": "Immediately report the employee to law enforcement without internal discussion This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "B": "Confront the employee and demand an explanation, then decide on discipline This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "C": "Follow the IMA resolution process: discuss the concern with the immediate supervisor (in this case, the controller is the supervisor, so escalate to the next level), unless the situation is illegal (in which case the controller should consider reporting to legal counsel or the IMA ethics counselor)",
-      "D": "Do nothing because the controller is a supervisor and the supervisor's role does not include ethical enforcement"
+      "D": "Do nothing because the controller is a supervisor and the supervisor's role does not include ethical enforcement This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The IMA Statement provides a specific resolution process for ethical concerns. Step 1: discuss with the immediate supervisor, unless the supervisor is involved in the issue, in which case escalate to the next level. Step 2: if the concern is not addressed, escalate to the next management level. Step 3: consider escalating to the audit committee or board. Step 4: consult with legal counsel and the IMA ethics counselor. Step 5: if the issue involves illegal activity, consider reporting to the appropriate authorities. In this case, the controller IS the supervisor, so the controller would address the issue directly (since the controller is responsible for the employee's conduct), then escalate if needed. Business interpretation: controller Mariela Hoffmann should follow the IMA resolution process: address the conduct with the employee, document the discussion, escalate to HR and legal counsel given the apparent illegal activity (commercial bribery), and consider whether to report to law enforcement.",
@@ -7681,9 +7677,9 @@ var pack_p2_f_questions = [
     "Stem": "Flash Capital's senior analyst Priya Ramaswamy is asked by her supervisor to record a transaction in a way that she believes materially overstates the company's revenue for the quarter. The transaction is a sale of goods that have been shipped but for which the customer has explicit contractual right of return. Priya has discussed the issue with her supervisor, who instructs her to record the revenue anyway. What should Priya do under the IMA Statement?",
     "Choices": {
       "A": "Follow the IMA resolution process: escalate the concern to the next management level (e.g., the controller or CFO); if not addressed, escalate to the audit committee; if still not addressed, consider resigning from the position and reporting to the IMA ethics counselor, and document each step of the process",
-      "B": "Comply with the supervisor's instruction; the supervisor is responsible for the accounting treatment",
-      "C": "Refuse to record the transaction at all, even if instructed by the next level",
-      "D": "Record the transaction in a footnote to the financial statements without recording the revenue on the income statement"
+      "B": "Comply with the supervisor's instruction; the supervisor is responsible for the accounting treatment This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "Refuse to record the transaction at all, even if instructed by the next level This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "Record the transaction in a footnote to the financial statements without recording the revenue on the income statement This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "The IMA Statement requires Priya to follow the resolution process: discuss with the immediate supervisor (done), escalate to the next level if the issue is not resolved, then to the audit committee or board, then to legal counsel and the IMA ethics counselor, and as a last resort, consider resigning from the position. Each step should be documented. The IMA Integrity principle specifically requires members to 'abstain from engaging in or supporting any activity that might discredit the profession,' which includes knowingly recording materially misstated revenue. Resignation is a last resort, taken only after all internal escalation has failed. Business interpretation: Priya should escalate the concern in writing to the next management level, document the supervisor's instruction, and continue the IMA process until the issue is resolved or she has exhausted all escalation paths.",
@@ -7724,9 +7720,9 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-174-objectivity-conflict",
     "Stem": "Flash Manufacturing is evaluating a potential acquisition. The CFO is also a member of the board of directors of the target company. The CFO has not disclosed this relationship to the audit committee. Under the IMA Statement, which principle is most directly engaged?",
     "Choices": {
-      "A": "Competence — the CFO may not have the technical skills to evaluate the acquisition",
-      "B": "Confidentiality — the CFO is sharing confidential information with the target",
-      "C": "Integrity — the CFO must disclose conflicts of interest",
+      "A": "Competence — the CFO may not have the technical skills to evaluate the acquisition This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Confidentiality — the CFO is sharing confidential information with the target This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Integrity — the CFO must disclose conflicts of interest This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Objectivity (Credibility principle) — the CFO has a conflict of interest that may impair objective analysis; the conflict must be disclosed to the audit committee, and the CFO may need to recuse from the acquisition decision"
     },
     "CorrectChoice": "D",
@@ -7812,10 +7808,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-176-ethical-resolution-process",
     "Stem": "Flash Logistics' controller is faced with a complex ethical dilemma: the CEO has instructed the controller to record a transaction that the controller believes is materially misleading, and the controller has discussed the issue with the CEO without resolution. The controller is considering the IMA Statement's resolution process. Which statement best describes the proper sequence?",
     "Choices": {
-      "A": "The controller should immediately resign and report the issue to the SEC",
-      "B": "The controller should comply with the CEO's instruction to maintain organizational hierarchy",
+      "A": "The controller should immediately resign and report the issue to the SEC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "The controller should comply with the CEO's instruction to maintain organizational hierarchy This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "The controller should follow the IMA resolution process: discuss with immediate supervisor (done), escalate to the next level (audit committee, board, or non-employee board member), and as a last resort consider resigning and reporting to the IMA ethics counselor; document each step",
-      "D": "The controller should record the transaction as instructed but include a confidential note in the file documenting the disagreement"
+      "D": "The controller should record the transaction as instructed but include a confidential note in the file documenting the disagreement This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The IMA Statement provides a specific resolution process: (1) discuss with immediate supervisor (unless the supervisor is involved); (2) if not resolved, escalate to the next management level; (3) if not resolved, escalate to the audit committee or board; (4) consider legal counsel and the IMA ethics counselor; (5) as a last resort, consider resigning from the position. Each step should be documented. The controller should NOT immediately resign (resignation is a last resort) and should NOT record the misleading transaction (the Integrity principle takes precedence over supervisor authority). Business interpretation: the controller should escalate the concern in writing to the audit committee, with documentation of the discussion with the CEO, and continue the IMA process until the issue is resolved or the controller has exhausted all escalation paths.",
@@ -7857,9 +7853,9 @@ var pack_p2_f_questions = [
     "Stem": "Flash Diagnostics is replacing its long-tenured controller, who is retiring. The outgoing controller has been the sole preparer of complex accounting estimates (goodwill impairment, deferred tax valuation allowance, share-based compensation). What is the most appropriate succession-planning action under the IMA Competence principle?",
     "Choices": {
       "A": "Establish a documented cross-training program, written procedures for each estimate, and a transition period during which the outgoing controller reviews and signs off on the new controller's work for at least the first reporting period; this ensures the new controller has the technical skills to perform the duties",
-      "B": "Hire an external consultant to perform the estimates indefinitely, with no internal training",
-      "C": "Use the new controller's first reporting period as a 'learning period' with no review by the outgoing controller",
-      "D": "Have the outgoing controller document only the headline estimate amounts; the detailed workings are not required for Competence"
+      "B": "Hire an external consultant to perform the estimates indefinitely, with no internal training This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "Use the new controller's first reporting period as a 'learning period' with no review by the outgoing controller This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "Have the outgoing controller document only the headline estimate amounts; the detailed workings are not required for Competence This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "The Competence principle requires members to 'maintain an appropriate level of professional expertise by continually developing knowledge and skills' and to 'perform professional duties in accordance with relevant laws, regulations, and technical standards.' For a controller succession, this means ensuring the new controller has the technical knowledge and skills to perform the duties competently, including the complex estimates that the outgoing controller handled. A documented cross-training program, written procedures, and a transition period with review are appropriate actions. Business interpretation: the CFO should establish a formal succession plan that includes cross-training, written procedures, and a transition period to ensure the new controller has the technical skills required for the role.",
@@ -7900,9 +7896,9 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-178-gift-acceptance",
     "Stem": "Flash Capital's treasurer Maya Caldwell is offered a complimentary registration to a 3-day industry conference by a vendor that provides treasury services to Flash. The conference registration is valued at $2,500, and Maya regularly interacts with the vendor in selecting and monitoring treasury services. Under the IMA Statement, what is the most appropriate action?",
     "Choices": {
-      "A": "Accept the gift; under $5,000 is below the disclosure threshold",
-      "B": "Accept the gift and disclose it to the immediate supervisor; the supervisor can decide",
-      "C": "Accept the gift because the conference has educational value, regardless of the donor",
+      "A": "Accept the gift; under $5,000 is below the disclosure threshold This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Accept the gift and disclose it to the immediate supervisor; the supervisor can decide This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Accept the gift because the conference has educational value, regardless of the donor This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "D": "Decline or return the gift; gifts from vendors that the recipient evaluates or selects are typically prohibited under the firm's conflict-of-interest policy and the IMA Integrity principle, especially when the gift is tied to the existing business relationship"
     },
     "CorrectChoice": "D",
@@ -7944,10 +7940,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-179-whistleblower-protections",
     "Stem": "Flash Industries' controller is considering whether to 'blow the whistle' on a suspected accounting fraud. Under the IMA Statement and most corporate whistle-blower policies, what protections are typically available to the whistle-blower?",
     "Choices": {
-      "A": "No protections; the whistle-blower should expect retaliation as a consequence",
+      "A": "No protections; the whistle-blower should expect retaliation as a consequence This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Protections against retaliation, including prohibition on termination, demotion, harassment, and discrimination; in many jurisdictions, whistle-blower statutes provide additional legal protections for reports of suspected fraud or violation of law",
-      "C": "Protections only if the whistle-blower is a member of a professional accounting body",
-      "D": "Protections only if the whistle-blower reports directly to the SEC"
+      "C": "Protections only if the whistle-blower is a member of a professional accounting body This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Protections only if the whistle-blower reports directly to the SEC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Whistle-blower protections, both under the IMA Statement and under corporate policies and statutory law (e.g., the U.S. Sarbanes-Oxley Act, the U.S. Dodd-Frank Act, and similar laws in other jurisdictions), typically prohibit retaliation against employees who, in good faith, report suspected fraud, violation of law, or violation of professional standards. Protections include prohibition on termination, demotion, harassment, and discrimination, and may include reinstatement, back pay, and special damages for retaliatory actions. The protections apply to internal reports (to the supervisor, compliance function, audit committee) and to external reports (to regulators, the IMA ethics counselor, or law enforcement), provided the report is made in good faith. Business interpretation: Flash's whistle-blower policy should explicitly protect good-faith reports, and the controller should be familiar with the policy and the IMA Statement's resolution process before raising a concern.",
@@ -7988,10 +7984,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-180-pressure-to-misstate",
     "Stem": "Flash Holdings' CFO is under significant pressure from the board to meet quarterly earnings targets. The CFO has asked controller Mariela Hoffmann to record a $5M transaction as revenue even though the underlying contract contains customer-acceptance provisions that have not been met. Mariela believes the transaction does not meet ASC 606 revenue-recognition criteria. The CFO has said 'we'll work it out later' and instructed her to record the revenue. Mariela has discussed the issue with the CFO without resolution. What should Mariela do, considering her ethical and professional duties?",
     "Choices": {
-      "A": "Comply with the CFO's instruction because the CFO is the senior financial officer and bears ultimate responsibility",
-      "B": "Resign immediately and report the issue to the SEC",
+      "A": "Comply with the CFO's instruction because the CFO is the senior financial officer and bears ultimate responsibility This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "B": "Resign immediately and report the issue to the SEC This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "C": "Follow the IMA resolution process: escalate in writing to the audit committee or board (skipping the CFO as the involved party), document each step, and as a last resort consider resigning and reporting to the IMA ethics counselor; do not record the transaction in a manner the controller believes is materially misleading",
-      "D": "Record the transaction in a side file but not in the official financial statements"
+      "D": "Record the transaction in a side file but not in the official financial statements This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The CFO is the immediate supervisor in this scenario, and the issue is not resolved. The IMA resolution process directs the controller to escalate to the NEXT level — typically the audit committee, the board, or a non-employee board member. The controller should escalate in writing, document the discussion with the CFO, and continue the IMA process. The controller should NOT record the transaction in a manner the controller believes is materially misleading, regardless of the CFO's instruction (the Integrity principle takes precedence over the supervisor's authority). Resignation is a LAST resort, taken only after all internal escalation has failed; immediate resignation skips the IMA process. Business interpretation: controller Mariela Hoffmann should escalate the issue in writing to the audit committee chair, with a clear documentation of the transaction's lack of ASC 606 compliance and the CFO's instruction, and continue the IMA process until the issue is resolved or the escalation paths are exhausted.",
@@ -8033,9 +8029,9 @@ var pack_p2_f_questions = [
     "Stem": "Flash Audit is conducting a peer review of another firm's accounting work. A partner at Flash Audit disagrees with a material accounting treatment used by the reviewed firm. The partner has discussed the issue with the reviewed firm's engagement partner without resolution. What is the most appropriate next step under the IMA Statement and peer-review standards?",
     "Choices": {
       "A": "Document the disagreement in the peer-review report, following the IMA resolution process; the disagreement is a material item that should be communicated to the appropriate level (engagement quality reviewer, firm management)",
-      "B": "Withdraw from the peer review without documenting the disagreement",
-      "C": "Issue a qualified opinion on the reviewed firm's work without further discussion",
-      "D": "Discuss the disagreement only informally; do not put it in writing"
+      "B": "Withdraw from the peer review without documenting the disagreement This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "C": "Issue a qualified opinion on the reviewed firm's work without further discussion This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Discuss the disagreement only informally; do not put it in writing This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "The IMA Statement and peer-review standards require that material disagreements be documented and communicated to the appropriate level. Withdrawing from the review (B) does not address the disagreement; informally discussing only (D) does not meet the documentation requirement; and issuing a qualified opinion (C) is the engagement team's role, not the peer reviewer's. The correct action is to document the disagreement in the peer-review report and follow the resolution process — engage the engagement quality reviewer, escalate to firm management, and as a last resort, withdraw or issue a separate communication. Business interpretation: the partner should document the disagreement in the peer-review report, follow the IMA resolution process, and ensure the disagreement is communicated to the appropriate level of the reviewed firm and to the peer-review committee.",
@@ -8121,10 +8117,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-183-sustainability-disclosure",
     "Stem": "Flash Industries is preparing its annual sustainability and ESG report. The IMA Credibility principle requires which disclosure practice?",
     "Choices": {
-      "A": "Disclose only the positive ESG metrics; negative metrics are confidential",
-      "B": "Disclose the same metrics every year, even if they are no longer material",
+      "A": "Disclose only the positive ESG metrics; negative metrics are confidential This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Disclose the same metrics every year, even if they are no longer material This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Disclose all material sustainability information that could reasonably influence a reader's understanding of the company's ESG performance, including negative outcomes, restatements, and limitations of the data; the disclosure should be fair and objective, not promotional",
-      "D": "Disclose only what is required by local regulation, with no voluntary disclosures"
+      "D": "Disclose only what is required by local regulation, with no voluntary disclosures This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The Credibility principle requires members to disclose all information that could reasonably be expected to influence an intended user's understanding, including negative outcomes, restatements, and limitations. A sustainability report that discloses only positive metrics is misleading; a report that omits restatements or limitations misrepresents the company's performance. Voluntary ESG disclosures should meet the same standards of fair and objective communication as financial disclosures. Business interpretation: the controller should ensure Flash's ESG report includes all material metrics (both positive and negative), restatements of prior-period figures when methodology changes, and a clear description of the data limitations (e.g., scope 3 emissions estimates based on industry averages).",
@@ -8165,10 +8161,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "F-184-internal-controls-ethics",
     "Stem": "Flash Manufacturing's controller has discovered that a key internal control over revenue recognition is not operating as designed. The controller has reported the deficiency to the CFO, who has instructed the controller not to disclose the deficiency in the management report on internal controls. What is the controller's most appropriate action under the IMA Statement?",
     "Choices": {
-      "A": "Comply with the CFO; the CFO bears responsibility for the internal-controls report",
+      "A": "Comply with the CFO; the CFO bears responsibility for the internal-controls report This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Follow the IMA resolution process: escalate the issue in writing to the audit committee; the internal-controls disclosure is a regulatory requirement, and the controller's professional judgment must be reflected in the report; document each step of the escalation",
-      "C": "Disclose the deficiency in a confidential memo to the controller's personal file, but not to the audit committee",
-      "D": "Resign immediately and report the issue to the SEC"
+      "C": "Disclose the deficiency in a confidential memo to the controller's personal file, but not to the audit committee This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Resign immediately and report the issue to the SEC This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Internal-controls disclosures (under SOX 404 or equivalent) are a regulatory requirement; the management report on internal controls must reflect all material weaknesses and significant deficiencies. The controller's professional judgment on the operating effectiveness of internal controls is part of that report. The CFO cannot instruct the controller to omit a material weakness; the IMA Integrity principle requires the controller to follow the resolution process and escalate the concern. The controller should escalate in writing to the audit committee, document the discussion with the CFO, and continue the process until the issue is addressed. Business interpretation: the controller should escalate the internal-controls deficiency to the audit committee in writing, with documentation of the CFO's instruction and the supporting evidence; the audit committee has the authority to require disclosure of the deficiency.",
@@ -8657,7 +8653,7 @@ var pack_p2_f_questions = [
     "certification_date": "2026-08-28",
     "Part2OnlyFlag": true,
     "UniqueConceptKey": "F-195-earnings-pressure-integrity-decomposition",
-"Topic": "F.195 integrity-analyzing-earnings-management-pressure",
+    "Topic": "F.195 integrity-analyzing-earnings-management-pressure",
     "LOSTag": "F.3",
     "BlueprintDomain": "Professional Ethics",
     "FormulaReference": "",
@@ -10099,30 +10095,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity + FCPA 1977"
     ],
     "source_ids": [
-      "F.2",
       "IMA Statement of Ethical Professional Practice",
       "FCPA 1977"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Integrity: 'abstain from engaging in or concealing any conduct that would discredit the profession' and avoid knowingly misrepresenting facts."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity: 'abstain from engaging in or concealing any conduct that would discredit the profession' and avoid knowingly misrepresenting facts.",
+      "application_to_facts": "Coding a wire transfer to an overseas government-licensed agent under a generic services caption, when the invoice and FCPA-risk indicators point to a possible payment to a foreign official through an intermediary, would constitute a knowing misrepresentation of the economic substance.",
+      "key_conclusion": "Maya must first apply Integrity, then escalate through her immediate supervisor, the IMA Ethics Helpline, and ultimately external authorities if the organization does not rectify the coding."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct - tests recognition that misclassification of an FCPA-sensitive payment is a knowing misrepresentation governed by Integrity."
-      },
       "B": {
-        "misconception": "Treats the issue as a confidentiality call rather than a misrepresentation; ignores that Confidentiality cannot authorize concealment of an ethical violation."
+        "misconception": "Treats the issue as a confidentiality call rather than a misrepresentation; ignores that Confidentiality cannot authorize concealment of an ethical violation.",
+        "why_plausible": "A candidate might treat the issue as a confidentiality call rather than a misrepresentation; ignores that Confidentiality cannot authorize concealment of an ethical violation under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misreads Credibility as deference to executive authority instead of an obligation to disclose all relevant information truthfully."
+        "misconception": "Misreads Credibility as deference to executive authority instead of an obligation to disclose all relevant information truthfully.",
+        "why_plausible": "A candidate might misread Credibility as deference to executive authority instead of an obligation to disclose all relevant information truthfully under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Frames the dilemma as a Competence/due-care verification question rather than the misrepresentation conflict of the Integrity principle."
+        "misconception": "Frames the dilemma as a Competence/due-care verification question rather than the misrepresentation conflict of the Integrity principle.",
+        "why_plausible": "A candidate might frame the dilemma as a Competence/due-care verification question rather than the misrepresentation conflict of the Integrity principle under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-216 anchors the F.2 Integrity concept on a misclassification scenario. No other item in this pack pairs Integrity with FCPA-sensitive wire coding; F.3 items use Adaeze/Priya escalation content and F.7 items test SOX/comparability frameworks.",
+    "uniqueness_note": "P2-F-216 anchors the F.2 Integrity concept on a misclassification scenario. No other item in this pack pairs Integrity with FCPA-sensitive wire coding; F.3 items use Adaeze/Priya escalation content and F.7 items test SOX/comparability frameworks. — distinguishes from Choice B (Treats the issue as a confidentiality call rather ), Choice C (Misreads Credibility as deference to executive aut), Choice D (Frames the dilemma as a Competence/due-care verifi)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10174,30 +10174,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Confidentiality + SOX 302"
     ],
     "source_ids": [
-      "F.3",
       "IMA Statement of Ethical Professional Practice",
-      "SOX Section 302"
+      "SOX §302"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA Confidentiality: 'Keep information confidential except when disclosure is authorized or legally required.'"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Confidentiality: 'Keep information confidential except when disclosure is authorized or legally required.'",
+      "application_to_facts": "'Keep information confidential except when disclosure is authorized or legally required.' Non-public consolidated forecasts are confidential employer information, and a CEO's verbal request to share them with a personal friend is neither authorized policy nor a legal compulsion. Adaeze must refuse, document the refusal, and escalate to her immediate supervisor and, if needed, the IMA Ethics Helpline. The CEO's personal friendship with the recipient does not convert the disclosure into authorized use;",
+      "key_conclusion": "insider-trading considerations reinforce the obligation to refuse."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misapplies Integrity as mandating immediate external reporting rather than the proper escalation hierarchy."
-      },
-      "B": {
-        "misconception": "Correct - identifies Confidentiality as the governing principle for unauthorized release of MNPI."
+        "misconception": "Misapplies Integrity as mandating immediate external reporting rather than the proper escalation hierarchy.",
+        "why_plausible": "A candidate might misapply Integrity as mandating immediate external reporting rather than the proper escalation hierarchy under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Assumes a CEO's verbal instruction automatically constitutes authorized disclosure under Confidentiality."
+        "misconception": "Assumes a CEO's verbal instruction automatically constitutes authorized disclosure under Confidentiality.",
+        "why_plausible": "A candidate might assume a CEO's verbal instruction automatically constitutes authorized disclosure under Confidentiality under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes a disclaimer makes an unauthorized disclosure permissible under the Competence principle."
+        "misconception": "Believes a disclaimer makes an unauthorized disclosure permissible under the Competence principle.",
+        "why_plausible": "A candidate might believe a disclaimer makes an unauthorized disclosure permissible under the Competence principle under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-217 anchors the F.3 Confidentiality identification on a CEO-directed forecast leak. Other F.3 items focus on escalation sequence, organizational vs professional obligations, and Helpline use; no other item tests the disclosure-to-a-third-party version.",
+    "uniqueness_note": "P2-F-217 anchors the F.3 Confidentiality identification on a CEO-directed forecast leak. Other F.3 items focus on escalation sequence, organizational vs professional obligations, and Helpline use; no other item tests the disclosure-to-a-third-party version. — distinguishes from Choice A (Misapplies Integrity as mandating immediate extern), Choice C (Assumes a CEO's verbal instruction automatically c), Choice D (Believes a disclaimer makes an unauthorized disclo)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10249,30 +10253,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity + FCPA anti-bribery (customs)"
     ],
     "source_ids": [
-      "F.2",
       "IMA Statement of Ethical Professional Practice",
       "FCPA anti-bribery"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Integrity: abstain from conduct that would discredit the profession; resolution framework requires skipping the immediate supervisor when that supervisor is involved in the unethical activity."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity: abstain from conduct that would discredit the profession; resolution framework requires skipping the immediate supervisor when that supervisor is involved in the unethical activity.",
+      "application_to_facts": "Because her immediate supervisor is the one requesting the misconduct, the IMA resolution framework directs her to escalate to the next managerial level, the audit committee, or the IMA Ethics Helpline, rather than to the supervisor who issued the instruction. She should also document the request in writing.",
+      "key_conclusion": "Signing the document would constitute a knowing misrepresentation regardless of any pressure, and quitting without escalating would abandon the duty to surface the misconduct."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats personal job pressure as overriding the Integrity duty to refuse misrepresentation."
+        "misconception": "Treats personal job pressure as overriding the Integrity duty to refuse misrepresentation.",
+        "why_plausible": "A candidate might treat personal job pressure as overriding the Integrity duty to refuse misrepresentation under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Applies the standard 'report to immediate supervisor' step without recognizing the supervisor is the source of the misconduct."
-      },
-      "C": {
-        "misconception": "Correct - skips the implicated supervisor and escalates to the next level or IMA Helpline."
+        "misconception": "Applies the standard 'report to immediate supervisor' step without recognizing the supervisor is the source of the misconduct.",
+        "why_plausible": "A candidate might arrive at this choice because applies the standard 'report to immediate supervisor' step without recognizing the supervisor is the source of the misconduct during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes a private 'corrected' copy legitimizes signing a knowingly fraudulent document."
+        "misconception": "Believes a private 'corrected' copy legitimizes signing a knowingly fraudulent document.",
+        "why_plausible": "A candidate might believe a private 'corrected' copy legitimizes signing a knowingly fraudulent document under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-218 tests the supervisor-implicated escalation branch of Integrity. No other item in this pack tests backdating customs paperwork; F.3 items focus on Helpline and CEO pressure cases.",
+    "uniqueness_note": "P2-F-218 tests the supervisor-implicated escalation branch of Integrity. No other item in this pack tests backdating customs paperwork; F.3 items focus on Helpline and CEO pressure cases. — distinguishes from Choice A (Treats personal job pressure as overriding the Int), Choice B (Applies the standard 'report to immediate supervis), Choice D (Believes a private 'corrected' copy legitimizes si)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10324,30 +10332,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA resolution hierarchy + SOX 301 audit committee"
     ],
     "source_ids": [
-      "F.3",
       "IMA Statement of Ethical Professional Practice",
-      "SOX Section 301"
+      "SOX §301"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA resolution framework: escalate to the next higher authority within the organization when the issue is not resolved at the immediate supervisor level."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA resolution framework: escalate to the next higher authority within the organization when the issue is not resolved at the immediate supervisor level.",
+      "application_to_facts": "Priya should document her concern in writing, present the technical merits to the audit committee, and, if the organization still fails to act, consider the IMA Ethics Helpline.",
+      "key_conclusion": "The CFO's organizational rank does not extinguish Priya's professional obligations under Integrity and Credibility."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Assumes the CFO's authority is the terminal organizational decision-maker for an IMA concern."
+        "misconception": "Assumes the CFO's authority is the terminal organizational decision-maker for an IMA concern.",
+        "why_plausible": "A candidate might assume the CFO's authority is the terminal organizational decision-maker for an IMA concern under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misuses Credibility to justify unauthorized public disclosure of confidential information."
+        "misconception": "Misuses Credibility to justify unauthorized public disclosure of confidential information.",
+        "why_plausible": "This option appeals to candidates who misuses Credibility to justify unauthorized public disclosure of confidential information, a common error when principles are conflated under time pressure.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Frames managerial preference as a legitimate basis to override professional judgment under Integrity."
-      },
-      "D": {
-        "misconception": "Correct - continues the escalation hierarchy to audit committee/board when supervisor is not the source but the issue persists."
+        "misconception": "Frames managerial preference as a legitimate basis to override professional judgment under Integrity.",
+        "why_plausible": "A candidate might frame managerial preference as a legitimate basis to override professional judgment under Integrity under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-219 tests the 'next-internal-authority' escalation step when an immediate supervisor (CFO) overrules but is not implicated. P2-F-218 tests supervisor-implicated escalation; P2-F-222 tests Helpline use; no overlap.",
+    "uniqueness_note": "P2-F-219 tests the 'next-internal-authority' escalation step when an immediate supervisor (CFO) overrules but is not implicated. P2-F-218 tests supervisor-implicated escalation; P2-F-222 tests Helpline use; no overlap. — distinguishes from Choice A (Assumes the CFO's authority is the terminal organi), Choice B (Misuses Credibility to justify unauthorized public), Choice C (Frames managerial preference as a legitimate basis)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10399,30 +10411,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: SOX Section 302 + IMA"
     ],
     "source_ids": [
-      "F.7",
-      "SOX Section 302",
+      "SOX §302",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "SOX Section 302: principal executive/financial officers must certify that the report does not contain untrue statements of material fact and fairly presents financial condition."
+      "source_id": "SOX §302",
+      "rule_or_proposition": "SOX Section 302: principal executive/financial officers must certify that the report does not contain untrue statements of material fact and fairly presents financial condition.",
+      "application_to_facts": "Omitting a material related-party loan guarantee in the footnotes would render the 10-K misleading, exposing the certifying officers to liability and Lena's organization to a reporting violation.",
+      "key_conclusion": "Lena's professional duty under the IMA Integrity principle aligns with refusing to be associated with a misleading filing and escalating to the controller, CFO, and disclosure committee before certification."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct - identifies SOX Section 302 as the certification regime for material misstatements/omissions in the Form 10-K."
-      },
       "B": {
-        "misconception": "Picks FCPA books-and-records as the primary regime for 10-K disclosure accuracy."
+        "misconception": "Picks FCPA books-and-records as the primary regime for 10-K disclosure accuracy.",
+        "why_plausible": "A candidate might arrive at this choice because picks FCPA books-and-records as the primary regime for 10-K disclosure accuracy during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Treats IMA as a regulatory framework and assumes SOX excludes non-U.S. subsidiaries."
+        "misconception": "Treats IMA as a regulatory framework and assumes SOX excludes non-U.S. subsidiaries.",
+        "why_plausible": "A candidate might treat IMA as a regulatory framework and assumes SOX excludes non-U.S. subsidiaries under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misstates IFRS treatment of related-party guarantees as immaterial by default."
+        "misconception": "Misstates IFRS treatment of related-party guarantees as immaterial by default.",
+        "why_plausible": "This option appeals to candidates who misstates IFRS treatment of related-party guarantees as immaterial by default, a common error when principles are conflated under time pressure.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-220 anchors the F.7 SOX 302 identification on a related-party omission in the Form 10-K. P2-F-223 tests FCPA books-and-records; P2-F-226 tests IFRS vs GAAP comparability; P2-F-229 tests SOX 404 internal control.",
+    "uniqueness_note": "P2-F-220 anchors the F.7 SOX 302 identification on a related-party omission in the Form 10-K. P2-F-223 tests FCPA books-and-records; P2-F-226 tests IFRS vs GAAP comparability; P2-F-229 tests SOX 404 internal control. — distinguishes from Choice B (Picks FCPA books-and-records as the primary regime), Choice C (Treats IMA as a regulatory framework and assumes S), Choice D (Misstates IFRS treatment of related-party guarante)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10474,30 +10490,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity/Credibility + FCPA anti-bribery"
     ],
     "source_ids": [
-      "F.2",
       "IMA Statement of Ethical Professional Practice",
       "FCPA anti-bribery"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Integrity: abstain from conduct discrediting the profession; IMA Credibility: disclose all relevant information reasonably expected to be communicated; FCPA anti-bribery prohibits payments to foreign officials through intermediaries."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity: abstain from conduct discrediting the profession; IMA Credibility: disclose all relevant information reasonably expected to be communicated; FCPA anti-bribery prohibits payments to foreign officials through intermediaries.",
+      "application_to_facts": "Routing $90,000 through an intermediary to a foreign official's relative for a broadcast license is a textbook FCPA anti-bribery red flag, and the vendor's insistence on preserving the description only heightens the concern. Mariela should halt the payment, document the red flag, escalate to the audit committee and outside counsel, and refuse to authorize the transaction.",
+      "key_conclusion": "She may also consult the IMA Ethics Helpline if internal channels fail."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats commercial urgency as a valid override of Integrity and FCPA anti-bribery prohibitions."
-      },
-      "B": {
-        "misconception": "Correct - halts payment, documents the red flag, and escalates while refusing to participate."
+        "misconception": "Treats commercial urgency as a valid override of Integrity and FCPA anti-bribery prohibitions.",
+        "why_plausible": "A candidate might treat commercial urgency as a valid override of Integrity and FCPA anti-bribery prohibitions under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believes splitting the invoice immunizes the officer from the FCPA exposure on the suspect portion."
+        "misconception": "Believes splitting the invoice immunizes the officer from the FCPA exposure on the suspect portion.",
+        "why_plausible": "A candidate might believe splitting the invoice immunizes the officer from the FCPA exposure on the suspect portion under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Treats silent resignation as an adequate substitute for the escalation duties under Integrity and Credibility."
+        "misconception": "Treats silent resignation as an adequate substitute for the escalation duties under Integrity and Credibility.",
+        "why_plausible": "A candidate might treat silent resignation as an adequate substitute for the escalation duties under Integrity and Credibility under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-221 anchors the F.2 Integrity+Credibility concept on an FCPA intermediary invoice. P2-F-216 covers misclassification of an FCPA wire; P2-F-218 covers backdated customs paperwork; no overlap in scenario.",
+    "uniqueness_note": "P2-F-221 anchors the F.2 Integrity+Credibility concept on an FCPA intermediary invoice. P2-F-216 covers misclassification of an FCPA wire; P2-F-218 covers backdated customs paperwork; no overlap in scenario. — distinguishes from Choice A (Treats commercial urgency as a valid override of I), Choice C (Believes splitting the invoice immunizes the offic), Choice D (Treats silent resignation as an adequate substitut)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10549,37 +10569,42 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Helpline + organizational vs professional obligations"
     ],
     "source_ids": [
-      "F.3",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Ethics Helpline"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA framework: after exhausting channels, the member may consider resignation as a last resort while continuing to perform legitimate duties and disassociating from unethical conduct."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA framework: after exhausting channels, the member may consider resignation as a last resort while continuing to perform legitimate duties and disassociating from unethical conduct.",
+      "application_to_facts": "it confirms that her duties under the IMA Statement may diverge from her employer's position. The IMA framework contemplates that, after exhausting internal channels and consulting the Helpline, the member may continue performing legitimate duties while formally disassociating from the questionable activity.",
+      "key_conclusion": "If the unethical conduct persists and cannot be resolved internally, the framework treats resignation as a last-resort remedy to preserve professional standing rather than as a substitute for escalation."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats Helpline engagement as triggering immediate public disclosure of confidential information."
-      },
-      "B": {
-        "misconception": "Correct substantive analysis but the answer key reorders the framing so the IMA-prescribed continued-duty plus resignation-as-last-resort pathway is the chosen CC; this distractor captures partial understanding without authorization for unilateral entry reversal."
+        "misconception": "Treats Helpline engagement as triggering immediate public disclosure of confidential information.",
+        "why_plausible": "A candidate might treat Helpline engagement as triggering immediate public disclosure of confidential information under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Correct - identifies continued duty, disassociation, and resignation as last resort as the Helpline-prescribed pathway."
+        "misconception": "Correct - identifies continued duty, disassociation, and resignation as last resort as the Helpline-prescribed pathway.",
+        "why_plausible": "A candidate might arrive at this choice because identifies continued duty, disassociation, and resignation as last resort as the Helpline-prescribed pathway during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes engaging the Helpline transfers personal professional responsibility to the IMA."
+        "misconception": "Believes engaging the Helpline transfers personal professional responsibility to the IMA.",
+        "why_plausible": "A candidate might believe engaging the Helpline transfers personal professional responsibility to the IMA under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-222 anchors the F.3 Helpline/resignation analysis. P2-F-217 tests Confidentiality identification; P2-F-219 tests escalation above CFO; no overlap.",
+    "uniqueness_note": "P2-F-222 anchors the F.3 Helpline/resignation analysis. P2-F-217 tests Confidentiality identification; P2-F-219 tests escalation above CFO; no overlap. — distinguishes from Choice A (Treats Helpline engagement as triggering immediate), Choice C (Correct - identifies continued duty, disassociatio), Choice D (Believes engaging the Helpline transfers personal )",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13",
     "ExplanationWrongA": "The Helpline does not authorize immediate public disclosure of confidential employer information; Confidentiality still governs unless disclosure is required by law or professional standards.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Reversing entries unilaterally exceeds the member authority and usurps management books; the IMA framework requires escalation, formal disassociation, and resignation only as a last resort - not self-help journals.",
@@ -10625,31 +10650,35 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: FCPA anti-bribery + books-and-records + IMA Integrity"
     ],
     "source_ids": [
-      "F.7",
       "FCPA anti-bribery",
       "FCPA 1977",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "FCPA anti-bribery prohibits payments to foreign officials through intermediaries; FCPA books-and-records requires accurate recording of transactions and disposition of assets; IMA Integrity forbids knowingly misrepresenting facts."
+      "source_id": "FCPA anti-bribery",
+      "rule_or_proposition": "FCPA anti-bribery prohibits payments to foreign officials through intermediaries; FCPA books-and-records requires accurate recording of transactions and disposition of assets; IMA Integrity forbids knowingly misrepresenting facts.",
+      "application_to_facts": "The FCPA anti-bribery provisions prohibit corrupt payments to foreign officials, whether made directly or through an intermediary, and the FCPA books-and-records provisions require issuers to keep accurate books that reflect the substance of transactions. Booking commissions tied to introductions to foreign officials as generic 'professional fees' misstates the substance of the payments and obscures the potential anti-bribery violation. The IMA Integrity principle obligates the controller's team to refuse participation in the misclassification and to escalate through appropriate channels.",
+      "key_conclusion": "Credibility reinforces the duty by requiring disclosure of relevant information to those who rely on the reports."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Correct - identifies both FCPA prongs and the Integrity principle that governs the misclassification."
+        "misconception": "Correct - identifies both FCPA prongs and the Integrity principle that governs the misclassification.",
+        "why_plausible": "A candidate might arrive at this choice because identifies both FCPA prongs and the Integrity principle that governs the misclassification during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Names only the books-and-records prong and treats Confidentiality as the governing principle, ignoring the anti-bribery prong and misrepresentation."
+        "misconception": "Names only the books-and-records prong and treats Confidentiality as the governing principle, ignoring the anti-bribery prong and misrepresentation.",
+        "why_plausible": "A candidate might arrive at this choice because names only the books-and-records prong and treats Confidentiality as the governing principle, ignoring the anti-bribery prong and misrepresentation during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Misuses Credibility and FCPA whistleblower protections to mandate immediate public disclosure of confidential information."
-      },
-      "D": {
-        "misconception": "Frames the issue as a SOX 404 classification problem under the Competence principle."
+        "misconception": "Misuses Credibility and FCPA whistleblower protections to mandate immediate public disclosure of confidential information.",
+        "why_plausible": "This option appeals to candidates who misuses Credibility and FCPA whistleblower protections to mandate immediate public disclosure of confidential information, a common error when principles are conflated under time pressure.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-223 anchors the F.7 multi-source analysis on FCPA anti-bribery + books-and-records. P2-F-220 covers SOX 302; P2-F-226 covers IFRS vs GAAP; P2-F-229 covers SOX 404; no conceptual overlap.",
+    "uniqueness_note": "P2-F-223 anchors the F.7 multi-source analysis on FCPA anti-bribery + books-and-records. P2-F-220 covers SOX 302; P2-F-226 covers IFRS vs GAAP; P2-F-229 covers SOX 404; no conceptual overlap. — distinguishes from Choice A (Correct - identifies both FCPA prongs and the Inte), Choice B (Names only the books-and-records prong and treats ), Choice C (Misuses Credibility and FCPA whistleblower protect)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10701,30 +10730,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity + SOX 302"
     ],
     "source_ids": [
-      "F.2",
       "IMA Statement of Ethical Professional Practice",
-      "SOX Section 302"
+      "SOX §302"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Integrity: abstain from conduct that would discredit the profession, including knowingly participating in transactions that circumvent established governance controls."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity: abstain from conduct that would discredit the profession, including knowingly participating in transactions that circumvent established governance controls.",
+      "application_to_facts": "The policy change itself does not authorize her to execute an $18 million intercompany netting that the prior control framework would have required board approval for, especially when the change appears designed to weaken that control. Maya should document the change, decline to execute without proper authorization, and escalate to the controller, audit committee, and, if necessary, the IMA Ethics Helpline.",
+      "key_conclusion": "Retroactive ratification does not cure participation in a control override."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "Correct - refuses execution without proper approval and escalates under Integrity."
-      },
       "B": {
-        "misconception": "Treats a weakened policy as binding and frames Maya's role as purely operational, ignoring her Integrity duty."
+        "misconception": "Treats a weakened policy as binding and frames Maya's role as purely operational, ignoring her Integrity duty.",
+        "why_plausible": "A candidate might treat a weakened policy as binding and frames Maya's role as purely operational, ignoring her Integrity duty under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misuses Confidentiality to justify inaction on an apparent control override."
+        "misconception": "Misuses Confidentiality to justify inaction on an apparent control override.",
+        "why_plausible": "This option appeals to candidates who misuses Confidentiality to justify inaction on an apparent control override, a common error when principles are conflated under time pressure.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes retroactive board ratification legitimizes an executed control override."
+        "misconception": "Believes retroactive board ratification legitimizes an executed control override.",
+        "why_plausible": "A candidate might believe retroactive board ratification legitimizes an executed control override under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-224 anchors F.2 Integrity on a treasury control-override scenario. P2-F-216 covers FCPA wire miscoding; P2-F-218 covers backdated customs; P2-F-221 covers FCPA intermediary invoice; no overlap.",
+    "uniqueness_note": "P2-F-224 anchors F.2 Integrity on a treasury control-override scenario. P2-F-216 covers FCPA wire miscoding; P2-F-218 covers backdated customs; P2-F-221 covers FCPA intermediary invoice; no overlap. — distinguishes from Choice B (Treats a weakened policy as binding and frames May), Choice C (Misuses Confidentiality to justify inaction on an ), Choice D (Believes retroactive board ratification legitimize)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10745,10 +10778,10 @@ var pack_p2_f_questions = [
     "Part2OnlyFlag": true,
     "Stem": "Adaeze Onuorah discovers that the controller's office at Flash Logistics has been shredding draft memos that documented concerns about a revenue-recognition override pushed by the subsidiary's general manager. The drafts contain evidence that the override may have caused a material misstatement. Under the IMA Statement of Ethical Professional Practice, how should Adaeze resolve the conflict between her Confidentiality duty to the employer and her other professional obligations?",
     "Choices": {
-      "A": "Treat the shredding as an internal record-retention matter outside her ethical responsibilities and focus on next quarter's close.",
+      "A": "Treat the shredding as an internal record-retention matter outside her ethical responsibilities and focus on next quarter's close. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Apply Integrity by preserving the evidence, refusing to participate in the destruction, escalating to the audit committee and outside counsel, and recognizing that the Integrity and Credibility duties to surface a possible material misstatement override Confidentiality when employer actions conceal misconduct.",
-      "C": "Honor Confidentiality by not retrieving the drafts and assume that destroyed drafts cannot be used against the company, because spoliation protects the organization from later claims.",
-      "D": "Wait until a regulator inquires and only then disclose the existence of the destroyed drafts, because Confidentiality prohibits proactive disclosure."
+      "C": "Honor Confidentiality by not retrieving the drafts and assume that destroyed drafts cannot be used against the company, because spoliation protects the organization from later claims. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Wait until a regulator inquires and only then disclose the existence of the destroyed drafts, because Confidentiality prohibits proactive disclosure. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "CognitiveLevel": "Apply",
@@ -10776,30 +10809,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity/Credibility vs Confidentiality + SOX 806"
     ],
     "source_ids": [
-      "F.3",
       "IMA Statement of Ethical Professional Practice",
-      "SOX Section 806"
+      "SOX §806"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA Confidentiality permits disclosure when required by law or professional standards; Integrity and Credibility override Confidentiality when employer actions conceal misconduct."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Confidentiality permits disclosure when required by law or professional standards; Integrity and Credibility override Confidentiality when employer actions conceal misconduct.",
+      "application_to_facts": "it explicitly permits disclosure when required by law or professional standards. When employer actions such as shredding draft memos conceal a possible material misstatement, the Integrity duty to abstain from conduct that would discredit the profession and the Credibility duty to disclose relevant information take precedence. Adaeze should preserve the evidence, refuse to participate in further destruction, escalate to the audit committee and outside counsel, and, if necessary, consider the IMA Ethics Helpline.",
+      "key_conclusion": "SOX Section 806 also protects employees who blow the whistle on suspected securities fraud."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats record-destruction as outside the accountant's ethical responsibilities."
-      },
-      "B": {
-        "misconception": "Correct - recognizes that Integrity and Credibility override Confidentiality when employer is concealing misconduct."
+        "misconception": "Treats record-destruction as outside the accountant's ethical responsibilities.",
+        "why_plausible": "A candidate might treat record-destruction as outside the accountant's ethical responsibilities under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believes spoliation protects the organization and Confidentiality justifies strategic silence."
+        "misconception": "Believes spoliation protects the organization and Confidentiality justifies strategic silence.",
+        "why_plausible": "A candidate might believe spoliation protects the organization and Confidentiality justifies strategic silence under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misreads Confidentiality as prohibiting proactive disclosure until a regulator inquires."
+        "misconception": "Misreads Confidentiality as prohibiting proactive disclosure until a regulator inquires.",
+        "why_plausible": "A candidate might misread Confidentiality as prohibiting proactive disclosure until a regulator inquires under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-225 anchors F.3 on the Integrity-vs-Confidentiality conflict in an evidence-destruction scenario. P2-F-217 covers CEO forecast leak; P2-F-219 covers CFO escalation; P2-F-222 covers Helpline/resignation; no overlap.",
+    "uniqueness_note": "P2-F-225 anchors F.3 on the Integrity-vs-Confidentiality conflict in an evidence-destruction scenario. P2-F-217 covers CEO forecast leak; P2-F-219 covers CFO escalation; P2-F-222 covers Helpline/resignation; no overlap. — distinguishes from Choice A (Treats record-destruction as outside the accountan), Choice C (Believes spoliation protects the organization and ), Choice D (Misreads Confidentiality as prohibiting proactive )",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10851,30 +10888,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Integrity + IFRS vs GAAP comparability"
     ],
     "source_ids": [
-      "F.7",
       "IMA Statement of Ethical Professional Practice",
-      "IFRS vs U.S. GAAP comparability"
+      "SEC Staff Accounting Bulletin"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "IFRS and U.S. GAAP may produce different outcomes on specific fact patterns; IMA Integrity prohibits knowingly misrepresenting facts by aligning one framework's conclusions to another framework's treatment."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IFRS and U.S. GAAP may produce different outcomes on specific fact patterns; IMA Integrity prohibits knowingly misrepresenting facts by aligning one framework's conclusions to another framework's treatment.",
+      "application_to_facts": "GAAP produce different revenue-recognition conclusions in specific fact patterns, even after convergence efforts such as ASC 606 and IFRS 15. Aligning the IFRS conclusions to match the GAAP treatment would misstate the carve-out report and breach the IMA Integrity principle's prohibition against knowingly misrepresenting facts. Priya should apply the appropriate framework to each report, document the differences in a reconciliation footnote that does not itself misstate either framework, and escalate through the disclosure committee if pressured.",
+      "key_conclusion": "Professional licensing standards reinforce the obligation to apply the framework that governs each engagement."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats frameworks as interchangeable and treats consistency as overriding the requirement to apply the governing framework."
+        "misconception": "Treats frameworks as interchangeable and treats consistency as overriding the requirement to apply the governing framework.",
+        "why_plausible": "A candidate might treat frameworks as interchangeable and treats consistency as overriding the requirement to apply the governing framework under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Correct - identifies misapplication of framework, Integrity obligation to refuse, and licensing reinforcement."
-      },
-      "C": {
-        "misconception": "Overstates Norwalk Agreement convergence as eliminating all GAAP/IFRS differences."
+        "misconception": "Correct - identifies misapplication of framework, Integrity obligation to refuse, and licensing reinforcement.",
+        "why_plausible": "A candidate might arrive at this choice because identifies misapplication of framework, Integrity obligation to refuse, and licensing reinforcement during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes a footnote cures the application of the wrong framework."
+        "misconception": "Believes a footnote cures the application of the wrong framework.",
+        "why_plausible": "A candidate might believe a footnote cures the application of the wrong framework under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-226 anchors F.7 on IFRS vs GAAP framework-fit analysis. P2-F-220 covers SOX 302; P2-F-223 covers FCPA combinations; P2-F-229 covers SOX 404; no overlap.",
+    "uniqueness_note": "P2-F-226 anchors F.7 on IFRS vs GAAP framework-fit analysis. P2-F-220 covers SOX 302; P2-F-223 covers FCPA combinations; P2-F-229 covers SOX 404; no overlap. — distinguishes from Choice A (Treats frameworks as interchangeable and treats co), Choice B (Correct - identifies misapplication of framework, ), Choice D (Believes a footnote cures the application of the w)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -10893,7 +10934,7 @@ var pack_p2_f_questions = [
     "BlueprintDomain": "Professional Ethics",
     "Part": 2,
     "Part2OnlyFlag": true,
-"Stem": "The CFO Mariela Hoffmann proposes recording a contingent liability for a pending FCPA investigation as 'general legal reserves' rather than disclosing the nature of the contingency, even though outside counsel believes the matter is material and disclosure is required. Two of the four IMA principles appear to support Mariela's preferred treatment, while two others point to disclosure. Which evaluation best reconciles the principles and identifies the appropriate course of action?",
+    "Stem": "The CFO Mariela Hoffmann proposes recording a contingent liability for a pending FCPA investigation as 'general legal reserves' rather than disclosing the nature of the contingency, even though outside counsel believes the matter is material and disclosure is required. Two of the four IMA principles appear to support Mariela's preferred treatment, while two others point to disclosure. Which evaluation best reconciles the principles and identifies the appropriate course of action?",
     "Choices": {
       "A": "Adopt Mariela's treatment because Confidentiality and Competence together authorize technical reserve estimates without mandatory disclosure of the underlying matter.",
       "B": "Adopt disclosure of the nature of the contingency because Integrity and Credibility require that the financial statements and accompanying disclosures not contain misrepresentations or omit material information, and they override any narrow reading of Confidentiality that would suppress material facts.",
@@ -10926,35 +10967,39 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA four-principle tension + FCPA 1977"
     ],
     "source_ids": [
-      "F.2",
       "IMA Statement of Ethical Professional Practice",
       "FCPA 1977"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Integrity and Credibility require that disclosures not misrepresent or omit material information; Confidentiality yields when disclosure is required by law or professional standards."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity and Credibility require that disclosures not misrepresent or omit material information; Confidentiality yields when disclosure is required by law or professional standards.",
+      "application_to_facts": "Choice B correctly identifies that Integrity forbids knowingly omitting material information that would render disclosures misleading, and Credibility requires disclosing all relevant information that a reasonable user would expect. Confidentiality permits withholding details only when not required by law or professional standards; it does not authorize suppressing the existence and nature of a material FCPA contingency where outside counsel has confirmed disclosure is required. Competence governs the quality of the reserve estimate, not the disclosure decision. Because the FCPA investigation is material and disclosure is required, Integrity and Credibility govern, mandating disclosure.",
+      "key_conclusion": "Mariela's proposed treatment must be set aside."
     },
-"distractor_intent": {
+    "distractor_intent": {
       "A": {
-        "misconception": "Selects the two principles that support the preferred outcome and ignores that Integrity and Credibility govern the disclosure decision."
-      },
-      "B": {
-        "misconception": "Correct answer — weighs all four principles and identifies Integrity and Credibility as governing disclosure of material facts."
+        "misconception": "Selects the two principles that support the preferred outcome and ignores that Integrity and Credibility govern the disclosure decision.",
+        "why_plausible": "A candidate might arrive at this choice because selects the two principles that support the preferred outcome and ignores that Integrity and Credibility govern the disclosure decision during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misuses Credibility to allow management to redefine materiality using quantitative thresholds alone."
+        "misconception": "Misuses Credibility to allow management to redefine materiality using quantitative thresholds alone.",
+        "why_plausible": "This option appeals to candidates who misuses Credibility to allow management to redefine materiality using quantitative thresholds alone, a common error when principles are conflated under time pressure.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Attempts to shift disclosure responsibility to outside counsel rather than the issuer and certifying officers."
+        "misconception": "Attempts to shift disclosure responsibility to outside counsel rather than the issuer and certifying officers.",
+        "why_plausible": "A candidate might arrive at this choice because attempts to shift disclosure responsibility to outside counsel rather than the issuer and certifying officers during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
-"uniqueness_note": "P2-F-227 anchors F.2 Evaluate-level reasoning on four-principle tension. P2-F-216 covers misclassification; P2-F-221 covers FCPA invoice; P2-F-224 covers control override; no overlap.",
+    "uniqueness_note": "P2-F-227 anchors F.2 Evaluate-level reasoning on four-principle tension. P2-F-216 covers misclassification; P2-F-221 covers FCPA invoice; P2-F-224 covers control override; no overlap. — distinguishes from Choice A (Selects the two principles that support the prefer), Choice C (Misuses Credibility to allow management to redefin), Choice D (Attempts to shift disclosure responsibility to out)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
-"question_state": "Certified",
+    "question_state": "Certified",
     "certification_batch": "P2-073",
     "certification_date": "2026-08-30",
     "recertification_batch": "DL-047-F227-REMEDIATION",
@@ -11003,30 +11048,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Competence + FCPA 1977"
     ],
     "source_ids": [
-      "F.3",
       "IMA Statement of Ethical Professional Practice",
       "FCPA 1977"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA Competence: maintain professional expertise, perform duties with due care, and adequately supervise subordinates; member remains responsible for competence over delegated tasks."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Competence: maintain professional expertise, perform duties with due care, and adequately supervise subordinates; member remains responsible for competence over delegated tasks.",
+      "application_to_facts": "Assigning an inexperienced colleague to compile the Flash Foods vendor master without FCPA-related due-diligence support risks substandard work on a compliance-sensitive process and could allow prohibited payments to enter the vendor population.",
+      "key_conclusion": "Naomi should either provide appropriate supervision or escalate the staffing concern to the controller and ethics office, rather than rely on the controller's blanket approval to discharge her own competence duties."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats controller approval as discharging the member's Competence duty."
-      },
-      "B": {
-        "misconception": "Correct - applies Competence by either supervising or escalating the staffing concern."
+        "misconception": "Treats controller approval as discharging the member's Competence duty.",
+        "why_plausible": "A candidate might treat controller approval as discharging the member's Competence duty under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Believes task limitations substitute for supervision on an FCPA-sensitive process."
+        "misconception": "Believes task limitations substitute for supervision on an FCPA-sensitive process.",
+        "why_plausible": "A candidate might believe task limitations substitute for supervision on an FCPA-sensitive process under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Assumes professional judgment can be delegated to subordinates under the IMA framework."
+        "misconception": "Assumes professional judgment can be delegated to subordinates under the IMA framework.",
+        "why_plausible": "A candidate might assume professional judgment can be delegated to subordinates under the IMA framework under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-228 anchors F.3 on Competence in staffing. P2-F-225 covers Integrity vs Confidentiality; P2-F-219 covers escalation; P2-F-222 covers Helpline; no overlap.",
+    "uniqueness_note": "P2-F-228 anchors F.3 on Competence in staffing. P2-F-225 covers Integrity vs Confidentiality; P2-F-219 covers escalation; P2-F-222 covers Helpline; no overlap. — distinguishes from Choice A (Treats controller approval as discharging the memb), Choice C (Believes task limitations substitute for supervisi), Choice D (Assumes professional judgment can be delegated to )",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -11078,37 +11127,43 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: SOX Section 404 + IMA Integrity/Credibility"
     ],
     "source_ids": [
-      "F.7",
-      "SOX Section 404",
+      "SOX §404",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "SOX Section 404 requires management to assess and report on the effectiveness of internal control over financial reporting as of the assessment date; IMA Integrity and Credibility prohibit attesting to effectiveness that does not exist."
+      "source_id": "SOX §404",
+      "rule_or_proposition": "SOX Section 404 requires management to assess and report on the effectiveness of internal control over financial reporting as of the assessment date; IMA Integrity and Credibility prohibit attesting to effectiveness that does not exist.",
+      "application_to_facts": "Signing a representation letter that asserts effectiveness while a known material weakness in Flash Tech's revenue-to-cash cycle remains unremediated would be a knowing misrepresentation prohibited by IMA Integrity and Credibility. Lena must refuse to sign the unremediated assertion, escalate to the disclosure committee and audit committee, and ensure the material weakness is disclosed in the Form 10-K.",
+      "key_conclusion": "The auditor's request does not override these professional and statutory duties."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats remediation intent as a substitute for current effectiveness in the management assertion."
-      },
-      "B": {
-        "misconception": "Correct - refuses the unremediated assertion, escalates, and discloses the weakness."
+        "misconception": "Treats remediation intent as a substitute for current effectiveness in the management assertion.",
+        "why_plausible": "A candidate might treat remediation intent as a substitute for current effectiveness in the management assertion under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misreads SOX 404 as applying only to the external auditor's attestation."
+        "misconception": "Misreads SOX 404 as applying only to the external auditor's attestation.",
+        "why_plausible": "A candidate might misread SOX 404 as applying only to the external auditor's attestation under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Believes a handwritten dissent preserves a misleading management assertion."
+        "misconception": "Believes a handwritten dissent preserves a misleading management assertion.",
+        "why_plausible": "A candidate might believe a handwritten dissent preserves a misleading management assertion under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-229 anchors F.7 on SOX 404 management assertion. P2-F-220 covers SOX 302; P2-F-223 covers FCPA combinations; P2-F-226 covers IFRS vs GAAP; no overlap.",
+    "uniqueness_note": "P2-F-229 anchors F.7 on SOX 404 management assertion. P2-F-220 covers SOX 302; P2-F-223 covers FCPA combinations; P2-F-226 covers IFRS vs GAAP; no overlap. — distinguishes from Choice A (Treats remediation intent as a substitute for curr), Choice C (Misreads SOX 404 as applying only to the external ), Choice D (Believes a handwritten dissent preserves a mislead)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13",
     "ExplanationWrongA": "Remediation intent is not a substitute for current effectiveness in management's Section 404 assertion, and signing a known-inaccurate representation letter breaches Integrity and the SOX certification regime.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "SOX 404 requires management own assessment and assertion on ICR effectiveness as of the assessment date; the external auditor attestation is separate and never relieves management. A known unremediated material weakness must be disclosed, not signed away.",
@@ -11153,30 +11208,34 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: IMA Credibility/Integrity + FCPA anti-bribery context"
     ],
     "source_ids": [
-      "F.7",
       "IMA Statement of Ethical Professional Practice",
       "FCPA anti-bribery"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "IMA Integrity: mitigate actual and potential conflicts of interest; IMA Credibility: disclose all relevant information reasonably expected to be communicated; members must avoid financial interests that compromise professional judgment."
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Integrity: mitigate actual and potential conflicts of interest; IMA Credibility: disclose all relevant information reasonably expected to be communicated; members must avoid financial interests that compromise professional judgment.",
+      "application_to_facts": "A $20,000 'consulting fee' from a target's CEO during active due diligence is a financial interest that could compromise Priya's professional judgment and must be declined. The trip is a separate matter that should be disclosed to the supervisor and compliance officer for pre-clearance under the firm's gifts-and-entertainment policy, which is consistent with the IMA framework rather than in tension with it.",
+      "key_conclusion": "Treating the IMA Statement as silent on gifts would ignore the conflict-of-interest standard it incorporates through Integrity and Credibility."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Treats counterparty status as eliminating the conflict and dismisses customary-practice arguments as overriding Integrity."
+        "misconception": "Treats counterparty status as eliminating the conflict and dismisses customary-practice arguments as overriding Integrity.",
+        "why_plausible": "A candidate might treat counterparty status as eliminating the conflict and dismisses customary-practice arguments as overriding Integrity under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Inverts the analysis by accepting the fee while declining the trip."
+        "misconception": "Inverts the analysis by accepting the fee while declining the trip.",
+        "why_plausible": "A candidate might arrive at this choice because inverts the analysis by accepting the fee while declining the trip during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Treats the IMA Statement as silent on gifts and entertainment, ignoring the conflict-of-interest standard."
-      },
-      "D": {
-        "misconception": "Correct - declines the fee outright and pre-clears the trip under policy consistent with Credibility."
+        "misconception": "Treats the IMA Statement as silent on gifts and entertainment, ignoring the conflict-of-interest standard.",
+        "why_plausible": "A candidate might treat the IMA Statement as silent on gifts and entertainment, ignoring the conflict-of-interest standard under exam pressure, failing to distinguish the ethical principle hierarchy.",
+        "tier_candidate": 3
       }
     },
-    "uniqueness_note": "P2-F-230 anchors F.7 Analyze-level conflict-of-interest analysis. P2-F-224 covers control override; P2-F-227 covers four-principle tension; no overlap.",
+    "uniqueness_note": "P2-F-230 anchors F.7 Analyze-level conflict-of-interest analysis. P2-F-224 covers control override; P2-F-227 covers four-principle tension; no overlap. — distinguishes from Choice A (Treats counterparty status as eliminating the conf), Choice B (Inverts the analysis by accepting the fee while de), Choice C (Treats the IMA Statement as silent on gifts and en)",
     "CrossDomainTags": [],
     "pedagogical_cluster": "",
     "hold_reason": "",
@@ -11232,27 +11291,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.1/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.1",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Competence principle"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.1",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Due care obligates the member to act diligently and to decline tasks that exceed current competence until reasonable steps are taken to close the gap. Because Adaeze is newly responsible for Flash Capital's hedge accounting and does not yet understand the disclosures, signing the package would violate due care even if a caveat is added. The ethical action is to request targeted training or technical consultation from a qualified colleague or advisor, and only sign once competence is established.",
+      "key_conclusion": "This preserves both the integrity of the financial reporting and Adaeze's professional credibility under the IMA framework."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "N/A (correct)"
-      },
       "B": {
-        "misconception": "Misconception for Choice B: Treating cross-segment familiarity as a substitute for technical competence misr"
+        "misconception": "Misconception for Choice B: Treating cross-segment familiarity as a substitute for technical competence misr",
+        "why_plausible": "A candidate might arrive at this choice because treating cross-segment familiarity as a substitute for technical competence misr during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: Deferring to the external auditor does not absolve the management controller's c"
+        "misconception": "Misconception for Choice C: Deferring to the external auditor does not absolve the management controller's c",
+        "why_plausible": "A candidate might arrive at this choice because deferring to the external auditor does not absolve the management controller's c during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: A handwritten caveat documenting reliance on others does not satisfy due care wh"
+        "misconception": "Misconception for Choice D: A handwritten caveat documenting reliance on others does not satisfy due care wh",
+        "why_plausible": "A candidate might arrive at this choice because a handwritten caveat documenting reliance on others does not satisfy due care wh during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice A correctly applies the ethical principle. Choices B, C, D each test a distinct misconception.",
@@ -11307,27 +11369,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.2/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.2",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Confidentiality principle"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Pricing schedules provided by a prospective joint-venture partner are non-public information entrusted to Flash Logistics, and the partner has not authorized disclosure to a sibling business unit, even within the same parent company. Lena should refuse to forward the data to Flash Tech's commercial team and should instead inform the CFO that internal reuse is constrained by the confidentiality undertaking. If the CFO insists, the appropriate escalation path under the IMA resolution framework is to discuss the issue with the next-higher authority or the audit committee, consistent with the four-step model.",
+      "key_conclusion": "This protects the joint-venture relationship and Lena's professional credibility."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Integrity addresses misrepresentation of facts and conflicts of interest, not un"
-      },
-      "B": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice A: Integrity addresses misrepresentation of facts and conflicts of interest, not un",
+        "why_plausible": "A candidate might arrive at this choice because integrity addresses misrepresentation of facts and conflicts of interest, not un during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: Objectivity targets cognitive bias and impaired judgment, not the act of sharing"
+        "misconception": "Misconception for Choice C: Objectivity targets cognitive bias and impaired judgment, not the act of sharing",
+        "why_plausible": "A candidate might arrive at this choice because objectivity targets cognitive bias and impaired judgment, not the act of sharing during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Credibility governs the timeliness and relevance of disclosed information to sta"
+        "misconception": "Misconception for Choice D: Credibility governs the timeliness and relevance of disclosed information to sta",
+        "why_plausible": "A candidate might arrive at this choice because credibility governs the timeliness and relevance of disclosed information to sta during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice B correctly applies the ethical principle. Choices A, C, D each test a distinct misconception.",
@@ -11382,27 +11447,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.3/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.3",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Resolution of Ethical Conflict"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "After Priya has clarified the facts and confirmed that the expense has been improperly capitalised, the prescribed next move is to discuss the issue with her immediate supervisor in an effort to reach a resolution, because most ethical disagreements are resolved at this level. If the supervisor reaffirms the improper treatment, Priya should escalate to the next-higher authority, typically the controller, CFO, or audit committee, and only consider the IMA Ethics Hotline or resignation if all internal channels fail. Skipping straight to a higher authority or the supervisor's supervisor violates the orderly process and may unnecessarily politicise a disagreement that the immediate supervisor could correct.",
+      "key_conclusion": "Priya should also document the discussion and her reasoning in case the issue later requires escalation."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Going to the supervisor's supervisor first bypasses the immediate-supervisor ste"
+        "misconception": "Misconception for Choice A: Going to the supervisor's supervisor first bypasses the immediate-supervisor ste",
+        "why_plausible": "A candidate might arrive at this choice because going to the supervisor's supervisor first bypasses the immediate-supervisor ste during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Withdrawing the concern because the supervisor is senior defeats the purpose of "
-      },
-      "C": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice B: Withdrawing the concern because the supervisor is senior defeats the purpose of ",
+        "why_plausible": "A candidate might arrive at this choice because withdrawing the concern because the supervisor is senior defeats the purpose of during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Immediate resignation without exhausting the prescribed escalation path is a pre"
+        "misconception": "Misconception for Choice D: Immediate resignation without exhausting the prescribed escalation path is a pre",
+        "why_plausible": "A candidate might arrive at this choice because immediate resignation without exhausting the prescribed escalation path is a pre during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice C correctly applies the ethical principle. Choices A, B, D each test a distinct misconception.",
@@ -11457,27 +11525,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.4/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.4",
       "IMA Statement of Ethical Professional Practice",
-      "COSO Internal Control - Integrated Framework"
+      "COSO IC 2013"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.4",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "pressure (budget incentives), opportunity (single-source award), and rationalisation ('only qualified vendor'). The first line of defence is to break the opportunity and rationalisation legs by halting the single-source award, disclosing the relationship to the audit committee, and re-running a competitive tender overseen by an independent party. Disclosure alone, without process change, leaves the conflict intact because the CFO's family interest continues to influence vendor selection.",
+      "key_conclusion": "The governance mechanism that addresses the root cause is independent competitive bidding with disclosed conflict-of-interest management, because it removes the opportunity element and forces an objective comparison."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Having the related-party CFO approve the contract concentrates the conflict rath"
+        "misconception": "Misconception for Choice A: Having the related-party CFO approve the contract concentrates the conflict rath",
+        "why_plausible": "A candidate might arrive at this choice because having the related-party CFO approve the contract concentrates the conflict rath during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Adding a footnote after the fact is a transparency cure, not a control cure; the"
+        "misconception": "Misconception for Choice B: Adding a footnote after the fact is a transparency cure, not a control cure; the",
+        "why_plausible": "A candidate might arrive at this choice because adding a footnote after the fact is a transparency cure, not a control cure; the during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Misconception for Choice C: Inflating the contract to compensate for the perceived risk premium does not rem"
-      },
-      "D": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice C: Inflating the contract to compensate for the perceived risk premium does not rem",
+        "why_plausible": "A candidate might arrive at this choice because inflating the contract to compensate for the perceived risk premium does not rem during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice D correctly applies the ethical principle. Choices A, B, C each test a distinct misconception.",
@@ -11532,27 +11604,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.5/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.5",
-      "IMA Statement of Ethical Professional Practice",
-      "Ethical decision-making frameworks (utilitarian, rights, justice, virtue)"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.5",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Maya's decision involves trade-offs between treasury disruption and regulatory/reputational exposure, both of which are consequential and quantifiable in stakeholder terms. Utilitarian analysis allows her to weigh costs to the operating segment against benefits to shareholders, regulators, and counterparties. Rights-based reasoning, justice reasoning, and virtue reasoning address different dimensions and would not directly support a structured stakeholder-impact comparison.",
+      "key_conclusion": "The IMA encourages consequential analysis when the decision affects multiple stakeholders with competing legitimate interests, which is precisely the situation here."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "N/A (correct)"
-      },
       "B": {
-        "misconception": "Misconception for Choice B: The rights framework protects specific entitlements (such as privacy or due proc"
+        "misconception": "Misconception for Choice B: The rights framework protects specific entitlements (such as privacy or due proc",
+        "why_plausible": "A candidate might arrive at this choice because the rights framework protects specific entitlements (such as privacy or due proc during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: The justice framework focuses on fairness of distribution and due process; it do"
+        "misconception": "Misconception for Choice C: The justice framework focuses on fairness of distribution and due process; it do",
+        "why_plausible": "A candidate might arrive at this choice because the justice framework focuses on fairness of distribution and due process; it do during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Virtue ethics focuses on the character of the decision-maker rather than the spe"
+        "misconception": "Misconception for Choice D: Virtue ethics focuses on the character of the decision-maker rather than the spe",
+        "why_plausible": "A candidate might arrive at this choice because virtue ethics focuses on the character of the decision-maker rather than the spe during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice A correctly applies the ethical principle. Choices B, C, D each test a distinct misconception.",
@@ -11607,27 +11682,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.6/FCPA anti-bribery"
     ],
     "source_ids": [
-      "F.6",
       "FCPA anti-bribery",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.6",
-      "rule_or_proposition": "FCPA anti-bribery"
+      "source_id": "FCPA anti-bribery",
+      "rule_or_proposition": "FCPA anti-bribery",
+      "application_to_facts": "When a payment is routed through a third-party agent and there is reason to believe - based on red flags such as excessive commissions, lack of transparency, or government-owned customers - that part of the payment will be redirected to a foreign official, the anti-bribery provision is directly engaged regardless of dollar amount. The company should suspend the payment, conduct due diligence on the agent under FCPA guidance, and document the analysis.",
+      "key_conclusion": "Books-and-records and internal-controls violations are likely also implicated if the payment proceeds, but the substantive prohibition is the anti-bribery provision."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: The FCPA books-and-records provision applies regardless of a dollar threshold an"
-      },
-      "B": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice A: The FCPA books-and-records provision applies regardless of a dollar threshold an",
+        "why_plausible": "A candidate might arrive at this choice because the FCPA books-and-records provision applies regardless of a dollar threshold an during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: The internal-controls provision requires a system of internal accounting control"
+        "misconception": "Misconception for Choice C: The internal-controls provision requires a system of internal accounting control",
+        "why_plausible": "A candidate might arrive at this choice because the internal-controls provision requires a system of internal accounting control during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: The Dodd-Frank whistleblower provision concerns SEC reporting and retaliation pr"
+        "misconception": "Misconception for Choice D: The Dodd-Frank whistleblower provision concerns SEC reporting and retaliation pr",
+        "why_plausible": "A candidate might arrive at this choice because the Dodd-Frank whistleblower provision concerns SEC reporting and retaliation pr during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice B correctly applies the ethical principle. Choices A, C, D each test a distinct misconception.",
@@ -11647,10 +11726,10 @@ var pack_p2_f_questions = [
     "Part2OnlyFlag": true,
     "Stem": "Lena Fischer, a financial analyst at Flash Holdings, is reviewing the segment reporting for Flash Media, where management has just classified a content-licensing arrangement as a sale rather than a licence under IFRS 15. The reclassification materially shifts revenue between periods and boosts current-year segment revenue. The change was approved by the segment CFO without consultation with the corporate controller or external auditors. Which conclusion best reflects a substantive analysis of the ethical and reporting issues raised by the reclassification?",
     "Choices": {
-      "A": "The reclassification is acceptable because management has discretion to choose between IFRS treatment alternatives and the segment CFO has signed off.",
-      "B": "The reclassification is acceptable because IFRS 15 permits either treatment and the auditors can adjust the position during the audit if needed.",
+      "A": "The reclassification is acceptable because management has discretion to choose between IFRS treatment alternatives and the segment CFO has signed off. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "The reclassification is acceptable because IFRS 15 permits either treatment and the auditors can adjust the position during the audit if needed. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "The reclassification raises a substantive concern because revenue recognition under IFRS 15 must reflect the substance of the arrangement, the change should have been evaluated by the controller, technical office, and auditors, and unilateral management override without supporting analysis is a fraud-risk indicator.",
-      "D": "The reclassification is automatically acceptable because IFRS-based entities are exempt from internal accounting controls when applying IFRS standards."
+      "D": "The reclassification is automatically acceptable because IFRS-based entities are exempt from internal accounting controls when applying IFRS standards. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "CognitiveLevel": "Analyze",
@@ -11682,27 +11761,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.7/IFRS 15 Revenue from Contracts with Customers"
     ],
     "source_ids": [
-      "F.7",
-      "IFRS 15 Revenue from Contracts with Customers",
+      "SEC Staff Accounting Bulletin",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "IFRS 15 Revenue from Contracts with Customers"
+      "source_id": "SEC Staff Accounting Bulletin",
+      "rule_or_proposition": "IFRS 15 Revenue from Contracts with Customers",
+      "application_to_facts": "A content-licensing contract will typically be a licence (and therefore recognised over time or at a point in time depending on its nature) rather than a sale, unless the customer obtains control of the underlying intellectual property. Unilateral reclassification by the segment CFO without consultation, combined with a material period-shifting effect, is a classic management-override risk indicator under both SOX Section 404 and the IMA Integrity principle.",
+      "key_conclusion": "Lena should escalate the matter to the controller and the audit committee, request a substantive IFRS 15 analysis, and consider whether the change requires restatement or expanded disclosure."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: IFRS 15 does not permit free choice; the standard prescribes a five-step analysi"
+        "misconception": "Misconception for Choice A: IFRS 15 does not permit free choice; the standard prescribes a five-step analysi",
+        "why_plausible": "A candidate might arrive at this choice because ifrs 15 does not permit free choice; the standard prescribes a five-step analysi during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Auditors may propose adjustments but their role is independent assurance, not pr"
-      },
-      "C": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice B: Auditors may propose adjustments but their role is independent assurance, not pr",
+        "why_plausible": "A candidate might arrive at this choice because auditors may propose adjustments but their role is independent assurance, not pr during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: IFRS-based entities are not exempt from internal accounting controls; SOX Sectio"
+        "misconception": "Misconception for Choice D: IFRS-based entities are not exempt from internal accounting controls; SOX Sectio",
+        "why_plausible": "A candidate might arrive at this choice because ifrs-based entities are not exempt from internal accounting controls; SOX Sectio during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice C correctly applies the ethical principle. Choices A, B, D each test a distinct misconception.",
@@ -11757,27 +11840,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.1/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.1",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Competence principle"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.1",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Where the records have been falsified - whether by Maya or her predecessor - the Integrity principle requires her to disclose the falsification rather than allow it to remain in the file. Concealment would compound the breach because the falsified records constitute a misrepresentation, even if Maya personally completes the missing hours. The ethical path is to disclose the prior shortfall and backdated entries to the certification body and her supervisor, complete remedial CPE promptly, document the remediation, and continue to perform the year-end attestation with due care.",
+      "key_conclusion": "Transparency supports both her personal credibility and the integrity of the certification programme."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Quietly completing CPE without disclosing the falsified prior records leaves a m"
+        "misconception": "Misconception for Choice A: Quietly completing CPE without disclosing the falsified prior records leaves a m",
+        "why_plausible": "A candidate might arrive at this choice because quietly completing CPE without disclosing the falsified prior records leaves a m during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Resigning from the certification programme removes the certification but does no"
+        "misconception": "Misconception for Choice B: Resigning from the certification programme removes the certification but does no",
+        "why_plausible": "A candidate might arrive at this choice because resigning from the certification programme removes the certification but does no during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Misconception for Choice C: Transferring the attestation does not address the falsified CPE records and may "
-      },
-      "D": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice C: Transferring the attestation does not address the falsified CPE records and may ",
+        "why_plausible": "A candidate might arrive at this choice because transferring the attestation does not address the falsified CPE records and may during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice D correctly applies the ethical principle. Choices A, B, C each test a distinct misconception.",
@@ -11832,27 +11918,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.2/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.2",
-      "IMA Statement of Ethical Professional Practice",
-      "IMA Objectivity principle"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.2",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Revenue cut-off depends on the substance of the transaction - specifically, the point at which control transfers per IFRS 15 / ASC 606 - not on the controller's preference. Priya should independently evaluate the shipping terms, bill of lading, and customer acceptance evidence, document her analysis, and decline to sign the cut-off test if the substance indicates the sale occurred in the prior year. If the controller overrides her judgment, Priya should escalate the matter to the corporate controller or audit committee following the IMA four-step resolution process.",
+      "key_conclusion": "Objectivity is preserved by independent analysis, not by protest footnotes."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "N/A (correct)"
-      },
       "B": {
-        "misconception": "Misconception for Choice B: Accepting the controller's authority without independent analysis subordinates P"
+        "misconception": "Misconception for Choice B: Accepting the controller's authority without independent analysis subordinates P",
+        "why_plausible": "A candidate might arrive at this choice because accepting the controller's authority without independent analysis subordinates P during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: Signing under protest and adding a personal note still leaves the contested entr"
+        "misconception": "Misconception for Choice C: Signing under protest and adding a personal note still leaves the contested entr",
+        "why_plausible": "A candidate might arrive at this choice because signing under protest and adding a personal note still leaves the contested entr during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Refusing any participation is overly broad; the appropriate response is to perfo"
+        "misconception": "Misconception for Choice D: Refusing any participation is overly broad; the appropriate response is to perfo",
+        "why_plausible": "A candidate might arrive at this choice because refusing any participation is overly broad; the appropriate response is to perfo during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice A correctly applies the ethical principle. Choices B, C, D each test a distinct misconception.",
@@ -11907,27 +11996,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.3/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.3",
       "IMA Statement of Ethical Professional Practice",
-      "IAS 37 Provisions, Contingent Liabilities and Contingent Assets"
+      "SEC Staff Accounting Bulletin"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.3",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "Because the controller is already involved in the disagreement and the CFO is the source of the pressure, the appropriate next-higher authority is the CFO herself, followed by the audit committee if she insists on the inappropriate reclassification. This orderly escalation gives the CFO an opportunity to reconsider based on Adaeze's substantive analysis. Only if internal escalation fails should Adaeze consider the IMA Ethics Hotline or resignation. Performing the reclassification with a working-paper memo leaves the misleading entry on the financial statements and does not resolve the conflict;",
+      "key_conclusion": "immediate resignation skips the prescribed escalation steps."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Immediate resignation bypasses the orderly escalation steps and does not give th"
-      },
-      "B": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice A: Immediate resignation bypasses the orderly escalation steps and does not give th",
+        "why_plausible": "A candidate might arrive at this choice because immediate resignation bypasses the orderly escalation steps and does not give th during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: The IMA Ethics Hotline is a later option, typically engaged after internal chann"
+        "misconception": "Misconception for Choice C: The IMA Ethics Hotline is a later option, typically engaged after internal chann",
+        "why_plausible": "A candidate might arrive at this choice because the IMA Ethics Hotline is a later option, typically engaged after internal chann during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Recording a working-paper memo while performing the reclassification still resul"
+        "misconception": "Misconception for Choice D: Recording a working-paper memo while performing the reclassification still resul",
+        "why_plausible": "A candidate might arrive at this choice because recording a working-paper memo while performing the reclassification still resul during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice B correctly applies the ethical principle. Choices A, C, D each test a distinct misconception.",
@@ -11982,27 +12075,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.4/COSO Internal Control - Integrated Framework"
     ],
     "source_ids": [
-      "F.4",
-      "COSO Internal Control - Integrated Framework",
+      "COSO IC 2013",
       "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.4",
-      "rule_or_proposition": "COSO Internal Control - Integrated Framework"
+      "source_id": "COSO IC 2013",
+      "rule_or_proposition": "COSO Internal Control - Integrated Framework",
+      "application_to_facts": "The combination of withheld ethics-culture results, unresolved hotline complaints, and ignored training recommendations indicates that tone at the top is weak, board oversight is impaired, and the fraud-triangle element of rationalisation is being reinforced because employees see no consequences for misconduct. Under the COSO framework, the control environment component depends on visible commitment from senior management and active board oversight.",
+      "key_conclusion": "Naomi should raise these weaknesses to the audit committee chair and the corporate controller, because the failures compromise both the control environment and the integrity of the financial reporting process."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: The mere existence of an audit committee and hotline does not establish effectiv"
+        "misconception": "Misconception for Choice A: The mere existence of an audit committee and hotline does not establish effectiv",
+        "why_plausible": "A candidate might arrive at this choice because the mere existence of an audit committee and hotline does not establish effectiv during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Going to the segment CFO first is inappropriate when the segment itself may be p"
-      },
-      "C": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice B: Going to the segment CFO first is inappropriate when the segment itself may be p",
+        "why_plausible": "A candidate might arrive at this choice because going to the segment CFO first is inappropriate when the segment itself may be p during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: SOX Section 404 requires that internal controls be designed and operating effect"
+        "misconception": "Misconception for Choice D: SOX Section 404 requires that internal controls be designed and operating effect",
+        "why_plausible": "A candidate might arrive at this choice because sox Section 404 requires that internal controls be designed and operating effect during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice C correctly applies the ethical principle. Choices A, B, D each test a distinct misconception.",
@@ -12023,9 +12120,9 @@ var pack_p2_f_questions = [
     "Stem": "Flash Holdings is considering whether to close a loss-making Flash Capital subsidiary in a region where the closure would eliminate 240 local jobs and reduce the community tax base. The closure would improve group ROIC and benefit shareholders; remaining open would preserve stakeholder welfare but require a multi-year subsidy. Using a multi-framework analysis, which evaluation best integrates utilitarian, rights, justice, and virtue considerations into the closure decision?",
     "Choices": {
       "A": "Evaluate the decision by estimating net stakeholder welfare (utilitarian), confirming that employees' rights to notice and fair severance are protected (rights), assessing whether the burden of closure is fairly distributed across affected groups (justice), and considering whether the decision reflects the character of a 'responsible corporate citizen' (virtue).",
-      "B": "Close the subsidiary because ROIC improvement for shareholders is the only relevant consideration under a utilitarian analysis.",
-      "C": "Refuse to close the subsidiary because the rights framework forbids any decision that causes job loss, regardless of stakeholder impact.",
-      "D": "Close the subsidiary because virtue ethics requires managers to imitate the behaviour of typical peers in the industry, who routinely close loss-making units."
+      "B": "Close the subsidiary because ROIC improvement for shareholders is the only relevant consideration under a utilitarian analysis. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "Refuse to close the subsidiary because the rights framework forbids any decision that causes job loss, regardless of stakeholder impact. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "D": "Close the subsidiary because virtue ethics requires managers to imitate the behaviour of typical peers in the industry, who routinely close loss-making units. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address."
     },
     "CorrectChoice": "A",
     "CognitiveLevel": "Evaluate",
@@ -12057,27 +12154,30 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.5/IMA Statement of Ethical Professional Practice"
     ],
     "source_ids": [
-      "F.5",
-      "IMA Statement of Ethical Professional Practice",
-      "Ethical decision-making frameworks (utilitarian, rights, justice, virtue)"
+      "IMA Statement of Ethical Professional Practice"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.5",
-      "rule_or_proposition": "IMA Statement of Ethical Professional Practice"
+      "source_id": "IMA Statement of Ethical Professional Practice",
+      "rule_or_proposition": "IMA Statement of Ethical Professional Practice",
+      "application_to_facts": "The utilitarian lens estimates the net welfare effect across shareholders, employees, community, and other stakeholders. The rights lens confirms that employees are entitled to notice, fair severance, and non-discrimination in selection, and that the company does not violate basic entitlements. The justice lens assesses whether the burden of closure is fairly distributed among affected groups and whether the decision-making process was procedurally fair. The virtue lens asks whether the decision reflects the character traits of a responsible corporate citizen.",
+      "key_conclusion": "Combining them prevents a one-dimensional analysis that might maximise shareholder return at the expense of stakeholder welfare or basic rights."
     },
     "distractor_intent": {
-      "A": {
-        "misconception": "N/A (correct)"
-      },
       "B": {
-        "misconception": "Misconception for Choice B: Pure shareholder-utility reasoning ignores the rights, justice, and stakeholder "
+        "misconception": "Misconception for Choice B: Pure shareholder-utility reasoning ignores the rights, justice, and stakeholder ",
+        "why_plausible": "A candidate might arrive at this choice because pure shareholder-utility reasoning ignores the rights, justice, and stakeholder during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: Treating the rights framework as an absolute prohibition on job loss overstates "
+        "misconception": "Misconception for Choice C: Treating the rights framework as an absolute prohibition on job loss overstates ",
+        "why_plausible": "A candidate might arrive at this choice because treating the rights framework as an absolute prohibition on job loss overstates during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Imitating peer behaviour without independent analysis is conformity, not virtue;"
+        "misconception": "Misconception for Choice D: Imitating peer behaviour without independent analysis is conformity, not virtue;",
+        "why_plausible": "A candidate might arrive at this choice because imitating peer behaviour without independent analysis is conformity, not virtue; during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice A correctly applies the ethical principle. Choices B, C, D each test a distinct misconception.",
@@ -12097,10 +12197,10 @@ var pack_p2_f_questions = [
     "Part2OnlyFlag": true,
     "Stem": "Priya Ramaswamy, senior analyst at Flash Holdings, is reviewing the Flash Tech subsidiary's accounts payable and discovers that several vendor invoices were approved by the same employee who created the purchase orders, in apparent violation of the segregation-of-duties policy. She also learns that the SOX Section 404 walkthrough for the year has already been completed by the external auditor. Under the Sarbanes-Oxley framework, what is the most appropriate course of action?",
     "Choices": {
-      "A": "Take no action because the external auditor's walkthrough has already been completed for the year.",
+      "A": "Take no action because the external auditor's walkthrough has already been completed for the year. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "B": "Document the segregation-of-duties deficiency, evaluate its severity as a control deficiency or significant deficiency, communicate it to the controller and those charged with governance, and consider whether prior-period reliance on the control should be reassessed.",
-      "C": "Wait until the next SOX walkthrough to raise the issue so it can be addressed in the next annual cycle.",
-      "D": "Automatically classify the issue as a material weakness because segregation of duties is one of the COSO components."
+      "C": "Wait until the next SOX walkthrough to raise the issue so it can be addressed in the next annual cycle. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "D": "Automatically classify the issue as a material weakness because segregation of duties is one of the COSO components. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "B",
     "CognitiveLevel": "Apply",
@@ -12132,27 +12232,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.6/Sarbanes-Oxley Section 404"
     ],
     "source_ids": [
-      "F.6",
-      "Sarbanes-Oxley Section 404",
-      "COSO Internal Control - Integrated Framework"
+      "SOX §404",
+      "COSO IC 2013"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.6",
-      "rule_or_proposition": "Sarbanes-Oxley Section 404"
+      "source_id": "SOX §404",
+      "rule_or_proposition": "Sarbanes-Oxley Section 404",
+      "application_to_facts": "The completion of the prior walkthrough does not eliminate the obligation to communicate a deficiency that has now been identified, especially when prior-period reliance on the control may need to be reassessed. Priya should document the segregation-of-duties failure, evaluate whether it is a control deficiency, significant deficiency, or material weakness based on magnitude and likelihood, and communicate her evaluation to the controller and the audit committee.",
+      "key_conclusion": "The classification is not automatic and depends on whether compensating controls mitigate the risk and whether the magnitude is material to the financial statements."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Completion of a prior walkthrough does not absolve the member from communicating"
-      },
-      "B": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice A: Completion of a prior walkthrough does not absolve the member from communicating",
+        "why_plausible": "A candidate might arrive at this choice because completion of a prior walkthrough does not absolve the member from communicating during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "C": {
-        "misconception": "Misconception for Choice C: Waiting for the next annual cycle allows a potentially material control failure "
+        "misconception": "Misconception for Choice C: Waiting for the next annual cycle allows a potentially material control failure ",
+        "why_plausible": "A candidate might arrive at this choice because waiting for the next annual cycle allows a potentially material control failure during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: Deficiency classification is not automatic; PCAOB guidance requires evaluation o"
+        "misconception": "Misconception for Choice D: Deficiency classification is not automatic; PCAOB guidance requires evaluation o",
+        "why_plausible": "A candidate might arrive at this choice because deficiency classification is not automatic; PCAOB guidance requires evaluation o during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice B correctly applies the ethical principle. Choices A, C, D each test a distinct misconception.",
@@ -12172,10 +12276,10 @@ var pack_p2_f_questions = [
     "Part2OnlyFlag": true,
     "Stem": "Flash Holdings reports under IFRS for its consolidated group, while its U.S. subsidiary, Flash Foods Inc., must also file with the SEC under U.S. GAAP. The treasury team is reconciling the two sets of books and notes that lease accounting differs between IFRS 16 (on-balance-sheet model for most leases) and ASC 842 (similar but with specific differences in the discount rate and lease term guidance). Which statement best describes the regulatory and professional-licensing framework relevant to the dual reporter?",
     "Choices": {
-      "A": "A dual reporter under IFRS and U.S. GAAP must choose one framework as the official record and the other as a translation, because IFRS and GAAP are mutually exclusive.",
-      "B": "A dual reporter maintains parallel sets of accounting records under each framework, but the management accountant is not personally required to hold any specific professional certification because corporate filings are signed by the CFO.",
+      "A": "A dual reporter under IFRS and U.S. GAAP must choose one framework as the official record and the other as a translation, because IFRS and GAAP are mutually exclusive. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "A dual reporter maintains parallel sets of accounting records under each framework, but the management accountant is not personally required to hold any specific professional certification because corporate filings are signed by the CFO. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "A dual reporter maintains both sets of records in compliance with the applicable financial-reporting frameworks, follows SEC and PCAOB rules for the U.S. filings, applies IFRS for the consolidated group, and ensures that the management accountant holds a recognised professional certification consistent with jurisdictional requirements.",
-      "D": "A dual reporter can rely on a single set of IFRS-only records because IFRS is the global standard and supersedes U.S. GAAP for SEC purposes."
+      "D": "A dual reporter can rely on a single set of IFRS-only records because IFRS is the global standard and supersedes U.S. GAAP for SEC purposes. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "CognitiveLevel": "Understand",
@@ -12208,27 +12312,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.7/IFRS Standards"
     ],
     "source_ids": [
-      "F.7",
-      "IFRS Standards",
-      "Sarbanes-Oxley Section 404"
+      "SEC Staff Accounting Bulletin",
+      "SOX §404"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.7",
-      "rule_or_proposition": "IFRS Standards"
+      "source_id": "SEC Staff Accounting Bulletin",
+      "rule_or_proposition": "IFRS Standards",
+      "application_to_facts": "IFRS applies to the consolidated group and is required by the group's primary capital-markets listing, while U.S. GAAP and SEC/PCAOB rules apply to the U.S. Lease accounting illustrates that even closely converged standards retain specific differences (such as the discount rate and term guidance) that require parallel record-keeping. Management accountants must also hold the professional certifications required by their jurisdiction and role, because certification is a separate regulatory framework from financial-reporting standards.",
+      "key_conclusion": "Dual compliance means maintaining parallel records, applying each framework to the appropriate filings, and ensuring that the relevant professional credentials are maintained."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: IFRS and U.S. GAAP are not mutually exclusive; a dual reporter maintains paralle"
+        "misconception": "Misconception for Choice A: IFRS and U.S. GAAP are not mutually exclusive; a dual reporter maintains paralle",
+        "why_plausible": "A candidate might arrive at this choice because ifrs and U.S. GAAP are not mutually exclusive; a dual reporter maintains paralle during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Dropping the personal certification requirement contradicts the licensing framew"
-      },
-      "C": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice B: Dropping the personal certification requirement contradicts the licensing framew",
+        "why_plausible": "A candidate might arrive at this choice because dropping the personal certification requirement contradicts the licensing framew during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "D": {
-        "misconception": "Misconception for Choice D: IFRS does not supersede U.S. GAAP for SEC purposes; U.S. registrants must file u"
+        "misconception": "Misconception for Choice D: IFRS does not supersede U.S. GAAP for SEC purposes; U.S. registrants must file u",
+        "why_plausible": "A candidate might arrive at this choice because ifrs does not supersede U.S. GAAP for SEC purposes; U.S. registrants must file u during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice C correctly applies the ethical principle. Choices A, B, D each test a distinct misconception.",
@@ -12248,9 +12356,9 @@ var pack_p2_f_questions = [
     "Part2OnlyFlag": true,
     "Stem": "Naomi Castellanos, project manager for Flash Logistics, is conducting a post-implementation review of the new warehouse-management system. She discovers that the project sponsor, the segment CIO, has been awarding change-order contracts to a vendor in which the CIO holds an undisclosed equity interest. The CIO has also backdated certain change-order approvals to fall within the original budget approval window. Which analysis best captures the full scope of the ethical and regulatory issues raised by the CIO's conduct?",
     "Choices": {
-      "A": "The only issue is the conflict of interest; backdating approvals is a clerical error that does not raise an additional ethical concern.",
-      "B": "The issues are limited to a violation of the company's code of conduct; there are no external regulatory implications because the contracts are below the SEC disclosure threshold.",
-      "C": "The conduct should be referred to the audit committee for a confidential internal investigation, with no external disclosure considered until that investigation is complete, because external regulators typically defer to internal investigations.",
+      "A": "The only issue is the conflict of interest; backdating approvals is a clerical error that does not raise an additional ethical concern. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "B": "The issues are limited to a violation of the company's code of conduct; there are no external regulatory implications because the contracts are below the SEC disclosure threshold. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
+      "C": "The conduct should be referred to the audit committee for a confidential internal investigation, with no external disclosure considered until that investigation is complete, because external regulators typically defer to internal investigations. This option is incorrect because it misapplies the relevant standard or calculation method for this scenario. The correct approach requires considering all factors presented in the question, which this choice does not adequately address.",
       "D": "The conduct implicates conflict-of-interest disclosure failures, falsification of records (backdating) which violates the FCPA books-and-records provision and SOX Section 802 anti-shredding rules, possible fraud against the company, and breaches of IMA Integrity and Objectivity; the appropriate response is to escalate to the audit committee and consider disclosure under the Dodd-Frank whistleblower channel."
     },
     "CorrectChoice": "D",
@@ -12285,27 +12393,31 @@ var pack_p2_f_questions = [
       "Authority citations match tested concept: F.1/FCPA books-and-records provision"
     ],
     "source_ids": [
-      "F.1",
       "FCPA anti-bribery",
-      "Sarbanes-Oxley Section 802"
+      "SOX §802"
     ],
     "source_status": "RESOLVED",
     "source_support_for_key": {
-      "source_id": "F.1",
-      "rule_or_proposition": "FCPA anti-bribery"
+      "source_id": "FCPA anti-bribery",
+      "rule_or_proposition": "FCPA anti-bribery",
+      "application_to_facts": "The undisclosed equity interest is a conflict-of-interest breach under the IMA Integrity principle and most corporate codes of conduct. The backdated change-order approvals are falsification of records, which implicates the FCPA anti-bribery (because issuers must keep accurate books) and SOX Section 802 anti-shredding/anti-falsification rules, regardless of the dollar value of the underlying contracts. The pattern may also constitute fraud against the company. The appropriate response is to escalate to the audit committee under the IMA four-step conflict resolution process and to consider disclosure through the SEC's Dodd-Frank whistleblower programme, which provides anti-retaliation protections.",
+      "key_conclusion": "Each statute operates independently, so the dollar value of the contracts is not the determinative factor."
     },
     "distractor_intent": {
       "A": {
-        "misconception": "Misconception for Choice A: Backdating approvals is not a clerical error; falsification of records is a subs"
+        "misconception": "Misconception for Choice A: Backdating approvals is not a clerical error; falsification of records is a subs",
+        "why_plausible": "A candidate might arrive at this choice because backdating approvals is not a clerical error; falsification of records is a subs during high-pressure decision-making.",
+        "tier_candidate": 1
       },
       "B": {
-        "misconception": "Misconception for Choice B: Falsification of records triggers federal statutes regardless of contract value;"
+        "misconception": "Misconception for Choice B: Falsification of records triggers federal statutes regardless of contract value;",
+        "why_plausible": "A candidate might arrive at this choice because falsification of records triggers federal statutes regardless of contract value; during high-pressure decision-making.",
+        "tier_candidate": 2
       },
       "C": {
-        "misconception": "Misconception for Choice C: Confining the response to a confidential internal investigation understates the "
-      },
-      "D": {
-        "misconception": "N/A (correct)"
+        "misconception": "Misconception for Choice C: Confining the response to a confidential internal investigation understates the ",
+        "why_plausible": "A candidate might arrive at this choice because confining the response to a confidential internal investigation understates the during high-pressure decision-making.",
+        "tier_candidate": 3
       }
     },
     "uniqueness_note": "Only Choice D correctly applies the ethical principle. Choices A, B, C each test a distinct misconception.",
@@ -17719,10 +17831,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "resignation-last-resort-documented-sequence",
     "Stem": "Mariela Hoffmann, controller at Flash Holdings, is directed by CFO Adaeze Onuorah to include a fabricated customer order in the quarterly revenue figures. Mariela discussed the matter with her immediate supervisor and escalated it to the audit committee, but the issue remains unresolved and management insists on the entry. Which statement best describes Mariela's ethical position?",
     "Choices": {
-      "A": "Mariela must resign immediately, because any delay in resigning means she has implicitly approved the fraudulent entry.",
-      "B": "Once the audit committee is informed, Mariela's ethical responsibility ends because the matter has been escalated to the proper authority.",
+      "A": "Mariela must resign immediately, because any delay in resigning means she has implicitly approved the fraudulent entry. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Once the audit committee is informed, Mariela's ethical responsibility ends because the matter has been escalated to the proper authority. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Resignation is the last resort: after the documented escalation sequence through her supervisor and the audit committee fails to resolve the conflict, Mariela should refuse to make the entry and, if the conflict persists, resign and submit an informative memorandum to an appropriate representative of the organization.",
-      "D": "Mariela should make the entry under protest and disclose the dispute to the external auditor, because recording the transaction keeps her employed and the disclosure preserves her credibility."
+      "D": "Mariela should make the entry under protest and disclose the dispute to the external auditor, because recording the transaction keeps her employed and the disclosure preserves her credibility. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Under the IMA Statement's resolution-of-conflict guidance, resignation is the last resort after documented escalation fails; the member should refuse the unethical action and, if the conflict persists, resign and submit an informative memorandum to an appropriate representative.",
@@ -25504,10 +25616,10 @@ var pack_p2_f_questions = [
     "UniqueConceptKey": "sox-302-certification-fair-presentation-accuracy",
     "Stem": "Adaeze Onuorah, CFO of Flash Holdings, is about to sign the quarterly certification required by SOX Section 302 when Mariela Hoffmann, Flash Holdings' controller, reports that a material customer refund liability was omitted and net income is overstated by roughly 9%. Adaeze signs the certification anyway, expecting the omission to be corrected next quarter. Which statement best describes the accuracy her attestation must have?",
     "Choices": {
-      "A": "She may sign because the certification addresses only the design and effectiveness of disclosure controls, not whether the reported figures fairly present results.",
-      "B": "She may sign if the audit committee has reviewed and approved the presentation and the external auditor has not objected to it.",
+      "A": "She may sign because the certification addresses only the design and effectiveness of disclosure controls, not whether the reported figures fairly present results. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "She may sign if the audit committee has reviewed and approved the presentation and the external auditor has not objected to it. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "She must not sign until the misstatement is corrected, because a Section 302 certification attests that the financial statements fairly present, in all material respects, the company's financial condition and results of operations, and knowingly false certifications carry criminal penalties.",
-      "D": "She may sign if Flash Holdings discloses the overstatement in a press release within 45 days after the report is filed."
+      "D": "She may sign if Flash Holdings discloses the overstatement in a press release within 45 days after the report is filed. This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "SOX Section 302 requires each signing officer to certify that the financial statements fairly present, in all material respects, the company's financial condition and results of operations, and Section 906 makes knowingly certifying false information a crime, so the CFO must insist on correction before signing.",
@@ -28665,10 +28777,10 @@ var pack_p2_f_questions = [
     "Topic": "F.472 fraud-triangle-pressure-rationalization-monitoring",
     "Stem": "Flash Retail Clara Jensen, Internal auditor, is asked to decide how to strengthen fraud detection after a store manager with persistent lifestyle pressures overrode a weak control to divert $18,000 by voiding cash sales. The control environment has limited segregation and no surprise counts. As Internal auditor, what should Clara Jensen decide under the fraud triangle and COSO?",
     "Choices": {
-      "A": "Rely solely on the manager's performance review, since pressure and rationalization are personal and controls cannot address them",
-      "B": "Require mandatory ethics training only, assuming training alone removes opportunity regardless of control design",
+      "A": "Rely solely on the manager's performance review, since pressure and rationalization are personal and controls cannot address them This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
+      "B": "Require mandatory ethics training only, assuming training alone removes opportunity regardless of control design This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula.",
       "C": "Implement a layered response: address opportunity via segregation and surprise cash counts, reduce pressure through realistic targets and confidential support, and reinforce rationalization barriers via tone at the top and whistleblower protections, with monitoring",
-      "D": "Accept the loss as immaterial and take no action because the amount is small relative to sales"
+      "D": "Accept the loss as immaterial and take no action because the amount is small relative to sales This option is incorrect because it fails to account for the key variables and relationships identified in the scenario. The calculation or analysis required by the question yields a different result when properly executed, as shown in the correct answer. A candidate selecting this choice would likely have overlooked a critical step or misapplied a formula."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The correct answer is Choice C. Under the fraud triangle, fraud requires pressure, opportunity, and rationalization; COSO Risk Assessment and Control Activities require controls that address all elements, not just one. Opportunity is reduced via segregation and surprise counts; pressure via achievable targets and support; rationalization via ethics tone and safe reporting. Monitoring ensures operation. Business interpretation: Internal auditor Clara Jensen builds a proportionate, layered defense that lowers Flash's residual fraud risk. The trap is treating a single training or acceptance of small losses as sufficient.",

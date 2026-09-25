@@ -142,6 +142,54 @@ async function main() {
     ? pass("May core API alive (renderView/handleAction/_speak)")
     : fail("May core API dead — may-core.js payload not intact");
 
+  // ── isExamIntegrityMode Logic Assertions ──────────────────────────
+  // Drift vector G: runtime exam-integrity-mode bypass via logic change.
+  // Assert the single-source-of-truth derivation logic is intact.
+  const integrityLogic = await page.evaluate(() => {
+    try {
+      // Read the isExamIntegrityMode function source and verify its logic
+      const fn = isExamIntegrityMode; // global function in app.js
+      if (typeof fn !== 'function') return { error: 'isExamIntegrityMode not a function' };
+
+      // Test cases: (session, expected)
+      const tests = [
+        { session: { mode: 'full', realConditions: false }, expect: true },
+        { session: { mode: 'full', realConditions: true }, expect: true },
+        { session: { mode: 'mcq', realConditions: true }, expect: true },
+        { session: { mode: 'mcq', realConditions: false }, expect: false },
+        { session: { mode: 'case', realConditions: true }, expect: true },
+        { session: { mode: 'case', realConditions: false }, expect: false },
+        { session: { mode: 'mixed', realConditions: true }, expect: true },
+        { session: { mode: 'mixed', realConditions: false }, expect: false },
+        { session: { mode: 'practice', realConditions: false }, expect: false },
+        { session: { mode: null, realConditions: false }, expect: false },
+        { session: { }, expect: false },
+        { session: null, expect: false },
+        { session: undefined, expect: false },
+      ];
+
+      const results = tests.map(t => {
+        const got = fn(t.session);
+        return { session: t.session, expected: t.expect, got, pass: got === t.expect };
+      });
+
+      const allPass = results.every(r => r.pass);
+      return { allPass, results };
+    } catch (e) {
+      return { error: e.message };
+    }
+  });
+
+  if (integrityLogic.error) {
+    fail("isExamIntegrityMode logic assertion: " + integrityLogic.error);
+  } else if (integrityLogic.allPass) {
+    pass("isExamIntegrityMode logic — all 13 test cases PASS");
+  } else {
+    const failed = integrityLogic.results.filter(r => !r.pass);
+    fail("isExamIntegrityMode logic — " + failed.length + " test(s) FAIL: " +
+      JSON.stringify(failed));
+  }
+
   // ── Script Integrity ─────────────────────────────────────────
 
   const scriptsLoaded = await page.evaluate(() => {

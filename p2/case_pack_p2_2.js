@@ -1,4 +1,4 @@
-var casePackP2_2 = [
+const casePackP2_2 = [
   {
     "CaseID": "CBQ22-B1",
     "Title": "Peak-Season Financing Plan",
@@ -325,7 +325,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-059",
     "Part": 2,
     "Part2OnlyFlag": true,
@@ -577,7 +577,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-059",
     "Part": 2,
     "Part2OnlyFlag": true,
@@ -873,7 +873,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-059",
     "Part": 2,
     "Part2OnlyFlag": true,
@@ -1390,7 +1390,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
   },
@@ -1694,7 +1694,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
   },
@@ -2018,7 +2018,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-065",
     "certification_date": "2026-08-26"
   },
@@ -2075,7 +2075,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-C2-E1",
@@ -2418,7 +2418,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-D3-E1",
@@ -3013,7 +3013,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-076",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -3132,9 +3132,17 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-A3-Q1",
-        "Type": "select", "Correct": "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates", "Explanation": "When the functional currency of a foreign subsidiary differs from the parent's reporting currency in a non-hyperinflationary economy, ASC 830 requires the current-rate method. Under this approach, all assets and liabilities are translated at the closing (current) exchange rate, income and expense items at average or transaction-date rates, and equity at historical rates. The resulting translation adjustment is reported in other comprehensive income (AOCI). The temporal method is reserved for subsidiaries operating in hyperinflationary economies where the books are first remeasured into the reporting currency.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates",
+        "Explanation": "When the functional currency of a foreign subsidiary differs from the parent's reporting currency in a non-hyperinflationary economy, ASC 830 requires the current-rate method. Under this approach, all assets and liabilities are translated at the closing (current) exchange rate, income and expense items at average or transaction-date rates, and equity at historical rates. The resulting translation adjustment is reported in other comprehensive income (AOCI). The temporal method is reserved for subsidiaries operating in hyperinflationary economies where the books are first remeasured into the reporting currency.",
+        "question_state": "In Audit",
         "Prompt": "Under ASC 830, which translation methodology is generally required for a foreign subsidiary whose functional currency differs from the parent's USD reporting currency in a non-hyperinflationary economy?",
-        "Choices": ["Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates", "Temporal method remeasuring monetary items at the closing rate and non-monetary items at historical rates", "Monetary/non-monetary method translating monetary items at average rates", "Current-cost method restating all assets to fair value before translation"],
+        "Choices": [
+          "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates",
+          "Temporal method remeasuring monetary items at the closing rate and non-monetary items at historical rates",
+          "Monetary/non-monetary method translating monetary items at average rates",
+          "Current-cost method restating all assets to fair value before translation"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3153,9 +3161,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q2",
-        "Type": "select", "Correct": "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580", "Explanation": "Under ASC 830-10-45, in a hyperinflationary economy the subsidiary first remeasures its financial statements so that non-monetary items (such as inventory carried at historical cost) are restated to current purchasing power using a general price index, while monetary items retain nominal amounts adjusted for inflation. After restatement, the entire set of remeasured statements is translated to the reporting currency using the closing exchange rate (1,580 ARS/USD at September 30, 2026). The historical rate of 177 would correspond to the 2022 base year and is not the closing translation rate.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580",
+        "Explanation": "Under ASC 830-10-45, in a hyperinflationary economy the subsidiary first remeasures its financial statements so that non-monetary items (such as inventory carried at historical cost) are restated to current purchasing power using a general price index, while monetary items retain nominal amounts adjusted for inflation. After restatement, the entire set of remeasured statements is translated to the reporting currency using the closing exchange rate (1,580 ARS/USD at September 30, 2026). The historical rate of 177 would correspond to the 2022 base year and is not the closing translation rate.",
+        "question_state": "In Audit",
         "Prompt": "Given that Argentina's economy is hyperinflationary under ASC 830-10-45, which rate should be applied to restate the ARS 18,500,000 inventory balance on the subsidiary's books before translation, and at what rate is the restated inventory translated to USD?",
-        "Choices": ["Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580", "Restate at the current CPI index (612.5); translate at the historical ARS/USD rate of 177", "Restate at the average CPI for the period; translate at the average ARS/USD rate of 1,520", "Restate at the closing CPI index only; translate at the closing ARS/USD rate after applying the closing rate a second time to inventory"],
+        "Choices": [
+          "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580",
+          "Restate at the current CPI index (612.5); translate at the historical ARS/USD rate of 177",
+          "Restate at the average CPI for the period; translate at the average ARS/USD rate of 1,520",
+          "Restate at the closing CPI index only; translate at the closing ARS/USD rate after applying the closing rate a second time to inventory"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3174,9 +3190,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q3",
-        "Type": "select", "Correct": "The translation difference is recognized immediately in net income under ASC 830-30-45-12", "Explanation": "Under ASC 830-30-45, when a foreign entity is in a hyperinflationary economy, the remeasurement gain or loss arising from translating remeasured net assets at the closing rate is generally recognized in net income rather than in OCI, because the underlying financial statements have already been remeasured to current purchasing power. ASC 830-10-45 and ASC 830-30-45-12 reflect this treatment: the post-remeasurement translation effect is taken to earnings because it results from changes in the exchange rate against a stable reporting currency after the entity's books have been restated for inflation. A cumulative translation adjustment in AOCI applies primarily to non-hyperinflationary translation of self-sustaining foreign operations.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "The translation difference is recognized immediately in net income under ASC 830-30-45-12",
+        "Explanation": "Under ASC 830-30-45, when a foreign entity is in a hyperinflationary economy, the remeasurement gain or loss arising from translating remeasured net assets at the closing rate is generally recognized in net income rather than in OCI, because the underlying financial statements have already been remeasured to current purchasing power. ASC 830-10-45 and ASC 830-30-45-12 reflect this treatment: the post-remeasurement translation effect is taken to earnings because it results from changes in the exchange rate against a stable reporting currency after the entity's books have been restated for inflation. A cumulative translation adjustment in AOCI applies primarily to non-hyperinflationary translation of self-sustaining foreign operations.",
+        "question_state": "In Audit",
         "Prompt": "If Flash Tech Argentina's remeasured net assets of ARS 40,000,000 are translated to USD using the closing rate of 1,580 ARS/USD, what is the impact of a translation gain or loss under ASC 830-30-45?",
-        "Choices": ["The translation difference flows through AOCI as a cumulative translation adjustment (CTA), with no effect on net income for the period", "The translation difference is recognized immediately in net income under ASC 830-30-45-12", "The translation difference is deferred on the balance sheet indefinitely until disposal of the subsidiary", "The translation difference is reclassified to retained earnings at each balance-sheet date"],
+        "Choices": [
+          "The translation difference flows through AOCI as a cumulative translation adjustment (CTA), with no effect on net income for the period",
+          "The translation difference is recognized immediately in net income under ASC 830-30-45-12",
+          "The translation difference is deferred on the balance sheet indefinitely until disposal of the subsidiary",
+          "The translation difference is reclassified to retained earnings at each balance-sheet date"
+        ],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3195,9 +3219,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q4",
-        "Type": "select", "Correct": "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs", "Explanation": "ASC 830-10-20 determines functional currency primarily by indicators such as cash flows, financing currency, intra-company transactions, and sales market indicators. Under ASC 830, a foreign operation whose functional currency is the local currency is treated as self-sustaining and translated using the current-rate method; one whose functional currency is the parent's currency is treated as 'integral' and is remeasured using the temporal method. IAS 21 (paragraphs 9-14) determines functional currency through a similar but distinct set of indicators emphasizing the primary economic environment in which the entity operates, and uses the term 'foreign operation' rather than 'integral vs self-sustaining,' although the translation outcomes are generally converged.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs",
+        "Explanation": "ASC 830-10-20 determines functional currency primarily by indicators such as cash flows, financing currency, intra-company transactions, and sales market indicators. Under ASC 830, a foreign operation whose functional currency is the local currency is treated as self-sustaining and translated using the current-rate method; one whose functional currency is the parent's currency is treated as 'integral' and is remeasured using the temporal method. IAS 21 (paragraphs 9-14) determines functional currency through a similar but distinct set of indicators emphasizing the primary economic environment in which the entity operates, and uses the term 'foreign operation' rather than 'integral vs self-sustaining,' although the translation outcomes are generally converged.",
+        "question_state": "In Audit",
         "Prompt": "Which of the following best describes the most material conceptual difference between ASC 830 (U.S. GAAP) and IAS 21 (IFRS) in classifying a foreign operation as 'integral' vs 'self-sustaining'?",
-        "Choices": ["ASC 830 and IAS 21 are identical and use the same terminology for integral and self-sustaining operations", "ASC 830 requires self-sustaining entities to be remeasured using the temporal method, whereas IAS 21 requires all foreign operations to use the closing-rate method", "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs", "ASC 830 and IAS 21 both prohibit translation adjustments in OCI and require all FX effects in profit or loss"],
+        "Choices": [
+          "ASC 830 and IAS 21 are identical and use the same terminology for integral and self-sustaining operations",
+          "ASC 830 requires self-sustaining entities to be remeasured using the temporal method, whereas IAS 21 requires all foreign operations to use the closing-rate method",
+          "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs",
+          "ASC 830 and IAS 21 both prohibit translation adjustments in OCI and require all FX effects in profit or loss"
+        ],
         "CorrectChoice": "C",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3216,9 +3248,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q5",
-        "Type": "select", "Correct": "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience", "Explanation": "Under ASC 830-10-45, the presentation currency of a consolidated reporting entity is generally the currency in which the parent entity's books are recorded. For a U.S. SEC registrant whose parent functional currency is USD, presenting in USD provides comparability for U.S. investors, aligns the consolidated statements with the parent's functional currency, and avoids unnecessary translation at the parent level. ASC 830 does not prohibit a presentation-currency change but requires prospective application and disclosure of the change and the rationale under ASC 830-10-45-7 through 45-10. Stability of the presentation currency is desirable, but switching to a third currency solely because one subsidiary's environment is hyperinflationary is generally not supported as the strongest basis.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience",
+        "Explanation": "Under ASC 830-10-45, the presentation currency of a consolidated reporting entity is generally the currency in which the parent entity's books are recorded. For a U.S. SEC registrant whose parent functional currency is USD, presenting in USD provides comparability for U.S. investors, aligns the consolidated statements with the parent's functional currency, and avoids unnecessary translation at the parent level. ASC 830 does not prohibit a presentation-currency change but requires prospective application and disclosure of the change and the rationale under ASC 830-10-45-7 through 45-10. Stability of the presentation currency is desirable, but switching to a third currency solely because one subsidiary's environment is hyperinflationary is generally not supported as the strongest basis.",
+        "question_state": "In Audit",
         "Prompt": "CFO Mariela Hoffmann asks whether to switch the consolidated reporting currency from USD to a stable third currency (for example, CHF) given ARS volatility. Which is the strongest evaluative basis for retaining the USD presentation currency under ASC 830?",
-        "Choices": ["The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience", "ASC 830 prohibits any presentation-currency change once a parent elects a reporting currency at incorporation", "A presentation-currency change automatically reclassifies all prior AOCI balances to retained earnings without disclosure", "Switching to CHF would be required if the Argentine peso is hyperinflationary, regardless of the parent's functional currency"],
+        "Choices": [
+          "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience",
+          "ASC 830 prohibits any presentation-currency change once a parent elects a reporting currency at incorporation",
+          "A presentation-currency change automatically reclassifies all prior AOCI balances to retained earnings without disclosure",
+          "Switching to CHF would be required if the Argentine peso is hyperinflationary, regardless of the parent's functional currency"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3237,9 +3277,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-A3-Q6",
-        "Type": "select", "Correct": "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life", "Explanation": "Under ASC 326 (CECL), the allowance for credit losses on a financial asset is measured as the lifetime expected credit loss, generally computed from probability of default, loss given default, and exposure at default, discounted to present value using the effective interest rate. For an FX-denominated receivable, expected recoverability depends on the obligor's ability to pay in USD; expected currency-driven shortfalls (such as ARS devaluation reducing the local-currency equivalent recoverable amount, or capital controls restricting USD outflow) are typically incorporated through reasonable-and-supportable forecasts and scenario adjustments. This integrates market risk with credit risk in the CECL estimate.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life",
+        "Explanation": "Under ASC 326 (CECL), the allowance for credit losses on a financial asset is measured as the lifetime expected credit loss, generally computed from probability of default, loss given default, and exposure at default, discounted to present value using the effective interest rate. For an FX-denominated receivable, expected recoverability depends on the obligor's ability to pay in USD; expected currency-driven shortfalls (such as ARS devaluation reducing the local-currency equivalent recoverable amount, or capital controls restricting USD outflow) are typically incorporated through reasonable-and-supportable forecasts and scenario adjustments. This integrates market risk with credit risk in the CECL estimate.",
+        "question_state": "In Audit",
         "Prompt": "Flash Tech Argentina holds a USD-denominated third-party receivable of ARS 4,200,000. Under ASC 326 (CECL), which combination of inputs most directly influences the allowance for credit losses on this FX-denominated receivable?",
-        "Choices": ["Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life", "Only the historical loss rate on peso-denominated receivables, with no adjustment for FX risk", "The current ARS/USD spot rate at quarter-end, used to translate the loss and then ignored for forward-looking expectations", "Solely the credit rating of the U.S. parent guarantor, ignoring the obligor's own credit profile"],
+        "Choices": [
+          "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life",
+          "Only the historical loss rate on peso-denominated receivables, with no adjustment for FX risk",
+          "The current ARS/USD spot rate at quarter-end, used to translate the loss and then ignored for forward-looking expectations",
+          "Solely the credit rating of the U.S. parent guarantor, ignoring the obligor's own credit profile"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3306,7 +3354,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-076",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -3404,9 +3452,17 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-F3-Q1",
-        "Type": "select", "Correct": "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement", "Explanation": "SAB 99 (and its successor guidance, SAB Topic 1.M) makes clear that quantitative thresholds alone are not conclusive; registrants must consider both quantitative measures (such as the percentage of pre-tax income, revenue, or equity implicated) and qualitative factors (such as whether the item masks a change in earnings, affects compliance with covenants, or could alter investor perception). The proper sequence is to perform a quantitative screen and then overlay qualitative factors. The SEC's enforcement posture in a particular inquiry is generally not by itself determinative of materiality, although it is a relevant qualitative factor.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement",
+        "Explanation": "SAB 99 (and its successor guidance, SAB Topic 1.M) makes clear that quantitative thresholds alone are not conclusive; registrants must consider both quantitative measures (such as the percentage of pre-tax income, revenue, or equity implicated) and qualitative factors (such as whether the item masks a change in earnings, affects compliance with covenants, or could alter investor perception). The proper sequence is to perform a quantitative screen and then overlay qualitative factors. The SEC's enforcement posture in a particular inquiry is generally not by itself determinative of materiality, although it is a relevant qualitative factor.",
+        "question_state": "In Audit",
         "Prompt": "Under SAB 99 and SAB Topic 1.M, which of the following is the correct sequence for assessing whether the pending SEC inquiry is material to Flash Media's Q3 Form 10-Q?",
-        "Choices": ["Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement", "Rely exclusively on a 5% pre-tax income benchmark with no qualitative overlay", "Default to materiality whenever the SEC contacts the registrant, regardless of dollar amount", "Apply materiality only after the SEC issues a Wells notice, ignoring the inquiry stage"],
+        "Choices": [
+          "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement",
+          "Rely exclusively on a 5% pre-tax income benchmark with no qualitative overlay",
+          "Default to materiality whenever the SEC contacts the registrant, regardless of dollar amount",
+          "Apply materiality only after the SEC issues a Wells notice, ignoring the inquiry stage"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3425,9 +3481,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q2",
-        "Type": "select", "Correct": "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required", "Explanation": "Under ASC 450-20-25, a loss contingency is accrued only when (i) it is probable that a loss has been incurred and (ii) the loss amount can be reasonably estimated. If the loss is reasonably possible (but not probable), or probable but not estimable, accrual is not permitted; instead, the contingency is disclosed in the footnotes, with a brief description and an estimate of the possible loss or a statement that such an estimate cannot be made. For an SEC inquiry where the staff's view is preliminary and management believes the original accounting is correct, a 'reasonably possible' characterization typically leads to footnote disclosure rather than accrual, with materiality driving the level of detail.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required",
+        "Explanation": "Under ASC 450-20-25, a loss contingency is accrued only when (i) it is probable that a loss has been incurred and (ii) the loss amount can be reasonably estimated. If the loss is reasonably possible (but not probable), or probable but not estimable, accrual is not permitted; instead, the contingency is disclosed in the footnotes, with a brief description and an estimate of the possible loss or a statement that such an estimate cannot be made. For an SEC inquiry where the staff's view is preliminary and management believes the original accounting is correct, a 'reasonably possible' characterization typically leads to footnote disclosure rather than accrual, with materiality driving the level of detail.",
+        "question_state": "In Audit",
         "Prompt": "Under ASC 450-20, when is accrual of a contingent liability required for an SEC inquiry where loss is not yet probable but is reasonably possible and estimable?",
-        "Choices": ["Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required", "Accrual is required for any SEC inquiry regardless of probability", "Accrual is required only if the loss exceeds 5% of pre-tax income", "Accrual is required if the inquiry is reasonably possible, even without a reliable estimate"],
+        "Choices": [
+          "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required",
+          "Accrual is required for any SEC inquiry regardless of probability",
+          "Accrual is required only if the loss exceeds 5% of pre-tax income",
+          "Accrual is required if the inquiry is reasonably possible, even without a reliable estimate"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3446,9 +3510,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q3",
-        "Type": "select", "Correct": "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable", "Explanation": "Section 302 of the Sarbanes-Oxley Act requires the principal executive and financial officers to certify that the periodic report fairly presents the financial condition and results of operations, that they are responsible for establishing and maintaining disclosure controls and procedures, and that they have evaluated the effectiveness of those controls as of the reporting date. Section 404 requires management to assess, and (for accelerated filers) the external auditor to attest to, the effectiveness of internal control over financial reporting. A material emerging matter such as a pending SEC inquiry falls within the scope of disclosure controls (because it may trigger a misstatement or omission) and may require evaluation of whether ICFR has been compromised.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable",
+        "Explanation": "Section 302 of the Sarbanes-Oxley Act requires the principal executive and financial officers to certify that the periodic report fairly presents the financial condition and results of operations, that they are responsible for establishing and maintaining disclosure controls and procedures, and that they have evaluated the effectiveness of those controls as of the reporting date. Section 404 requires management to assess, and (for accelerated filers) the external auditor to attest to, the effectiveness of internal control over financial reporting. A material emerging matter such as a pending SEC inquiry falls within the scope of disclosure controls (because it may trigger a misstatement or omission) and may require evaluation of whether ICFR has been compromised.",
+        "question_state": "In Audit",
         "Prompt": "Which statement best describes the interaction between SOX Section 302 (CEO/CFO certifications) and SOX Section 404 (management's assessment of internal control) for an emerging matter such as the SEC inquiry?",
-        "Choices": ["Both sections are identical and require the same procedures with no incremental duties", "SOX 302 requires external auditor attestation of internal controls, while SOX 404 is the management-only certification", "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable", "Neither section requires any evaluation of disclosure controls or internal control over financial reporting"],
+        "Choices": [
+          "Both sections are identical and require the same procedures with no incremental duties",
+          "SOX 302 requires external auditor attestation of internal controls, while SOX 404 is the management-only certification",
+          "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable",
+          "Neither section requires any evaluation of disclosure controls or internal control over financial reporting"
+        ],
         "CorrectChoice": "C",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3467,9 +3539,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q4",
-        "Type": "select", "Correct": "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading", "Explanation": "The Credibility principle of the IMA Statement of Ethical Professional Practice requires management accountants to disclose all relevant information that could influence a user's understanding of reports, analyses, or recommendations. In the context of a pending SEC inquiry, withholding information about the inquiry from the audit committee or from investors (when disclosure is required) would cause reports to be misleading and would violate the Credibility principle. Credibility operates alongside Confidentiality (which permits disclosure when authorized or legally required, including to the audit committee) and Integrity (which supports refusing to suppress material information).", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading",
+        "Explanation": "The Credibility principle of the IMA Statement of Ethical Professional Practice requires management accountants to disclose all relevant information that could influence a user's understanding of reports, analyses, or recommendations. In the context of a pending SEC inquiry, withholding information about the inquiry from the audit committee or from investors (when disclosure is required) would cause reports to be misleading and would violate the Credibility principle. Credibility operates alongside Confidentiality (which permits disclosure when authorized or legally required, including to the audit committee) and Integrity (which supports refusing to suppress material information).",
+        "question_state": "In Audit",
         "Prompt": "Under the IMA Statement of Ethical Professional Practice, which principle most directly supports Naomi's obligation to communicate the SEC inquiry to the audit committee and to ensure that any 10-Q disclosure reflects the matter fairly?",
-        "Choices": ["Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading", "Confidentiality — members must keep information confidential except when disclosure is authorized or legally required", "Competence — members must maintain professional expertise at a level needed to ensure employers receive competent service", "Integrity — members must abstain from engaging in conduct that would discredit the profession"],
+        "Choices": [
+          "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading",
+          "Confidentiality — members must keep information confidential except when disclosure is authorized or legally required",
+          "Competence — members must maintain professional expertise at a level needed to ensure employers receive competent service",
+          "Integrity — members must abstain from engaging in conduct that would discredit the profession"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3488,9 +3568,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q5",
-        "Type": "select", "Correct": "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing", "Explanation": "This response reconciles the principles: it satisfies Credibility (full and fair disclosure of material information) and Integrity (transparent communication with governance) while addressing the corporate risk by (i) keeping the disclosure brief, factual, and consistent with outside counsel guidance to minimize waiver-of-privilege and prejudicing-cooperation risks; (ii) updating the 10-Q's legal-proceedings and subsequent-events sections under ASC 450-20 and Reg S-K Item 103; and (iii) documenting the assessment in writing to the audit committee. SAB 99 requires a qualitative overlay on the quantitative screen, and even a sub-1% revenue item can be qualitatively material if it implicates revenue-recognition integrity, investor confidence, or potential restatement risk.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing",
+        "Explanation": "This response reconciles the principles: it satisfies Credibility (full and fair disclosure of material information) and Integrity (transparent communication with governance) while addressing the corporate risk by (i) keeping the disclosure brief, factual, and consistent with outside counsel guidance to minimize waiver-of-privilege and prejudicing-cooperation risks; (ii) updating the 10-Q's legal-proceedings and subsequent-events sections under ASC 450-20 and Reg S-K Item 103; and (iii) documenting the assessment in writing to the audit committee. SAB 99 requires a qualitative overlay on the quantitative screen, and even a sub-1% revenue item can be qualitatively material if it implicates revenue-recognition integrity, investor confidence, or potential restatement risk.",
+        "question_state": "In Audit",
         "Prompt": "Which recommendation to the audit committee best reconciles IMA Credibility and Integrity principles with the corporate risk of premature disclosure of a preliminary SEC inquiry?",
-        "Choices": ["Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing", "Omit all reference to the inquiry because it is non-public and the dollar amount is below 1% of revenue, treating the matter as immaterial under SAB 99", "Wait until the SEC issues a Wells notice before any disclosure, citing confidentiality and litigation privilege", "Disclose only the existence of the inquiry on social media without updating the legal proceedings disclosure in the 10-Q"],
+        "Choices": [
+          "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing",
+          "Omit all reference to the inquiry because it is non-public and the dollar amount is below 1% of revenue, treating the matter as immaterial under SAB 99",
+          "Wait until the SEC issues a Wells notice before any disclosure, citing confidentiality and litigation privilege",
+          "Disclose only the existence of the inquiry on social media without updating the legal proceedings disclosure in the 10-Q"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3509,9 +3597,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-F3-Q6",
-        "Type": "select", "Correct": "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach", "Explanation": "The Integrity principle obligates members to 'abstain from engaging in or supporting any activity that might discredit the profession' and to perform their duties with faithfulness and diligence. Withholding a material pending inquiry suppresses information that could affect investor decisions and may itself be characterized as misleading by omission, thereby discrediting both the profession and the registrant. The Integrity principle is broader than legal compliance and operates even where the SEC has not yet issued a Wells notice; it supports timely, faithful communication to governance and to investors when material.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach",
+        "Explanation": "The Integrity principle obligates members to 'abstain from engaging in or supporting any activity that might discredit the profession' and to perform their duties with faithfulness and diligence. Withholding a material pending inquiry suppresses information that could affect investor decisions and may itself be characterized as misleading by omission, thereby discrediting both the profession and the registrant. The Integrity principle is broader than legal compliance and operates even where the SEC has not yet issued a Wells notice; it supports timely, faithful communication to governance and to investors when material.",
+        "question_state": "In Audit",
         "Prompt": "CFO Hoffmann prefers to defer disclosure until the inquiry resolves. From the IMA Integrity principle perspective, what is the strongest ethical counter-argument to her position?",
-        "Choices": ["Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach", "Investors typically interpret disclosures pessimistically, so any disclosure necessarily harms them", "Integrity requires disclosure only after a Wells notice, making deferral appropriate until the SEC escalates", "Integrity has no application to disclosure timing; that is solely a legal compliance question"],
+        "Choices": [
+          "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach",
+          "Investors typically interpret disclosures pessimistically, so any disclosure necessarily harms them",
+          "Integrity requires disclosure only after a Wells notice, making deferral appropriate until the SEC escalates",
+          "Integrity has no application to disclosure timing; that is solely a legal compliance question"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3577,7 +3673,7 @@ var casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-076",
     "certification_date": "2026-08-30",
     "Part": 2,
@@ -3692,9 +3788,17 @@ var casePackP2_2 = [
     "Items": [
       {
         "ItemID": "CBQ22-B3-Q1",
-        "Type": "select", "Correct": "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings", "Explanation": "Under the residual dividend model, the company funds its investment opportunities (capex and working-capital needs) out of retained earnings first, then distributes any residual net income as dividends. Here, net income is $80M, capex is $90M, and working-capital needs are $30M, totaling $120M of investment needs. Because investment needs exceed net income, residual earnings are negative ($80M − $120M = −$40M), and the company should not pay any dividend; instead, it would use external financing or accumulated retained earnings to fund the gap. Applying a fixed 60% payout to net income or to net income plus capex does not reflect the residual model mechanics.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings",
+        "Explanation": "Under the residual dividend model, the company funds its investment opportunities (capex and working-capital needs) out of retained earnings first, then distributes any residual net income as dividends. Here, net income is $80M, capex is $90M, and working-capital needs are $30M, totaling $120M of investment needs. Because investment needs exceed net income, residual earnings are negative ($80M − $120M = −$40M), and the company should not pay any dividend; instead, it would use external financing or accumulated retained earnings to fund the gap. Applying a fixed 60% payout to net income or to net income plus capex does not reflect the residual model mechanics.",
+        "question_state": "In Audit",
         "Prompt": "Under the residual dividend model, with $80M net income, $90M capex, $30M working-capital needs, and a 60% target payout on residual earnings, what is the projected dividend in millions of dollars?",
-        "Choices": ["Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings", "Dividend = 0.60 × 80 = 48 because the target payout generally applies to net income", "Dividend = 0.60 × (80 − 90) = −6, implying the company pays a negative dividend", "Dividend = 0.60 × (80 + 90 + 30) = 120"],
+        "Choices": [
+          "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings",
+          "Dividend = 0.60 × 80 = 48 because the target payout generally applies to net income",
+          "Dividend = 0.60 × (80 − 90) = −6, implying the company pays a negative dividend",
+          "Dividend = 0.60 × (80 + 90 + 30) = 120"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3713,9 +3817,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q2",
-        "Type": "select", "Correct": "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS", "Explanation": "A quarterly DPS of $0.55 implies an annualized DPS of $0.55 × 4 = $2.20. With projected EPS of $1.60, the dividend-coverage ratio is EPS / DPS = $1.60 / $2.20 ≈ 0.73x, meaning earnings would not cover the dividend at projected EPS and the company would have to fund part of the dividend from accumulated retained earnings, cash, or external financing. A coverage ratio below 1.0 is generally a red flag for sustainable payout policy and is one reason the residual dividend model declines to declare a dividend when investment needs exceed earnings.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS",
+        "Explanation": "A quarterly DPS of $0.55 implies an annualized DPS of $0.55 × 4 = $2.20. With projected EPS of $1.60, the dividend-coverage ratio is EPS / DPS = $1.60 / $2.20 ≈ 0.73x, meaning earnings would not cover the dividend at projected EPS and the company would have to fund part of the dividend from accumulated retained earnings, cash, or external financing. A coverage ratio below 1.0 is generally a red flag for sustainable payout policy and is one reason the residual dividend model declines to declare a dividend when investment needs exceed earnings.",
+        "question_state": "In Audit",
         "Prompt": "If the board approves the dividend hike to $0.55 per share quarterly, what is the implied annualized dividend per share, and what is the dividend-coverage ratio (EPS divided by DPS) assuming projected EPS of $1.60?",
-        "Choices": ["Annual DPS = $1.65; coverage = $1.60 / $1.65 = 0.97x", "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS", "Annual DPS = $0.55; coverage = $1.60 / $0.55 = 2.91x", "Annual DPS = $0.40; coverage = $1.60 / $0.40 = 4.00x"],
+        "Choices": [
+          "Annual DPS = $1.65; coverage = $1.60 / $1.65 = 0.97x",
+          "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS",
+          "Annual DPS = $0.55; coverage = $1.60 / $0.55 = 2.91x",
+          "Annual DPS = $0.40; coverage = $1.60 / $0.40 = 4.00x"
+        ],
         "CorrectChoice": "B",
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
@@ -3734,9 +3846,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q3",
-        "Type": "select", "Correct": "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead", "Explanation": "In a perfect capital market with no taxes or transaction costs, MM dividend-irrelevance theory predicts that the form of cash distribution (dividend vs share repurchase) does not change shareholder wealth in aggregate. Shareholders who prefer cash can 'homemake' dividends by selling a proportional number of shares if the company repurchases instead, and shareholders who prefer capital appreciation can reinvest cash dividends in additional shares. The argument relies on the ability of shareholders to substitute at the margin, and it explains why repurchases and dividends are largely equivalent in well-functioning markets.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead",
+        "Explanation": "In a perfect capital market with no taxes or transaction costs, MM dividend-irrelevance theory predicts that the form of cash distribution (dividend vs share repurchase) does not change shareholder wealth in aggregate. Shareholders who prefer cash can 'homemake' dividends by selling a proportional number of shares if the company repurchases instead, and shareholders who prefer capital appreciation can reinvest cash dividends in additional shares. The argument relies on the ability of shareholders to substitute at the margin, and it explains why repurchases and dividends are largely equivalent in well-functioning markets.",
+        "question_state": "In Audit",
         "Prompt": "Modigliani-Miller dividend-irrelevance theory, with perfect capital markets and no taxes, predicts that for Flash Capital (a stable-FCF firm) the choice between $48M in dividends and an equivalent share repurchase would have what impact on shareholder wealth?",
-        "Choices": ["Both policies reduce shareholder wealth by an amount equal to the cash returned", "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead", "A dividend is strictly preferred to a repurchase because of the bird-in-hand argument", "A repurchase is strictly preferred because it concentrates ownership in remaining holders"],
+        "Choices": [
+          "Both policies reduce shareholder wealth by an amount equal to the cash returned",
+          "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead",
+          "A dividend is strictly preferred to a repurchase because of the bird-in-hand argument",
+          "A repurchase is strictly preferred because it concentrates ownership in remaining holders"
+        ],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3755,9 +3875,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q4",
-        "Type": "select", "Correct": "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need", "Explanation": "Clientele-effect theory holds that different investor groups sort themselves into companies whose payout policies suit their tax situations and cash-flow preferences. Tax-exempt investors (such as pension funds and endowments) generally prefer to defer taxes on capital gains and may find a share repurchase more flexible because they can choose whether to tender shares for cash or remain invested, and because there is no taxable dividend event when they do not tender. By contrast, taxable investors in high tax brackets who prefer current income may prefer dividends. The clientele-effect framework therefore predicts heterogeneous responses to a dividend hike.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need",
+        "Explanation": "Clientele-effect theory holds that different investor groups sort themselves into companies whose payout policies suit their tax situations and cash-flow preferences. Tax-exempt investors (such as pension funds and endowments) generally prefer to defer taxes on capital gains and may find a share repurchase more flexible because they can choose whether to tender shares for cash or remain invested, and because there is no taxable dividend event when they do not tender. By contrast, taxable investors in high tax brackets who prefer current income may prefer dividends. The clientele-effect framework therefore predicts heterogeneous responses to a dividend hike.",
+        "question_state": "In Audit",
         "Prompt": "Which clientele-effect argument best explains why Flash Capital's institutional shareholders, many of whom are tax-exempt retirement funds, might prefer a share repurchase over a higher cash dividend?",
-        "Choices": ["Tax-exempt investors generally prefer dividends because dividends are more predictable", "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need", "Tax-exempt investors prefer share repurchases only when the company is in financial distress", "Clientele effects do not exist for institutional investors because they all behave the same way"],
+        "Choices": [
+          "Tax-exempt investors generally prefer dividends because dividends are more predictable",
+          "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need",
+          "Tax-exempt investors prefer share repurchases only when the company is in financial distress",
+          "Clientele effects do not exist for institutional investors because they all behave the same way"
+        ],
         "CorrectChoice": "B",
         "CognitiveLevel": "Analyze",
         "Difficulty": "Moderate",
@@ -3776,9 +3904,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q5",
-        "Type": "select", "Correct": "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities", "Explanation": "A balanced approach preserves flexibility: a moderate dividend hike (less than the proposed $0.55, e.g., $0.45–$0.50 quarterly) captures some signaling benefit while reducing the cash drain, and pre-funding the $120M of maturing debt with a portion of the $210M cash and marketable securities reduces refinancing risk. Deferring the larger $200M buyback avoids overcommitting cash at a moment when debt rollover is the binding constraint and free cash flow is only $55M. This sequencing is consistent with pecking-order and financial-flexibility considerations, while still rewarding shareholders.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities",
+        "Explanation": "A balanced approach preserves flexibility: a moderate dividend hike (less than the proposed $0.55, e.g., $0.45–$0.50 quarterly) captures some signaling benefit while reducing the cash drain, and pre-funding the $120M of maturing debt with a portion of the $210M cash and marketable securities reduces refinancing risk. Deferring the larger $200M buyback avoids overcommitting cash at a moment when debt rollover is the binding constraint and free cash flow is only $55M. This sequencing is consistent with pecking-order and financial-flexibility considerations, while still rewarding shareholders.",
+        "question_state": "In Audit",
         "Prompt": "Given stable free cash flow of $55M, $120M of debt maturing in 18 months, $210M in cash and marketable securities, and a proposed $200M buyback authorization, which capital-return policy best preserves financial flexibility while supporting shareholder value?",
-        "Choices": ["Approve the full hike to $0.55 quarterly and execute the $200M buyback simultaneously to maximize immediate signaling", "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities", "Suspend the dividend and use all cash to repurchase shares", "Maintain the dividend at $0.40 quarterly with no buyback and no debt pre-funding"],
+        "Choices": [
+          "Approve the full hike to $0.55 quarterly and execute the $200M buyback simultaneously to maximize immediate signaling",
+          "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities",
+          "Suspend the dividend and use all cash to repurchase shares",
+          "Maintain the dividend at $0.40 quarterly with no buyback and no debt pre-funding"
+        ],
         "CorrectChoice": "B",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -3797,9 +3933,17 @@ var casePackP2_2 = [
       },
       {
         "ItemID": "CBQ22-B3-Q6",
-        "Type": "select", "Correct": "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF", "Explanation": "Under the dividend-signaling literature (e.g., Bhattacharya, Miller-Rock), dividend hikes are typically interpreted as credible long-term commitments because managers are reluctant to cut dividends once raised; the implied cost of a future cut (in terms of reputation and stock price) gives the signal credibility. Repurchases are more flexible (they can be paused or sized down without the stigma of a 'dividend cut') and therefore can also be credible signals, especially when supported by stable FCF and balance-sheet capacity. In practice, both mechanisms can convey information about management's confidence in future cash flows, with relative credibility depending on the firm's financial flexibility and history of dividend stability.", "question_state": "Certified",
+        "Type": "select",
+        "Correct": "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF",
+        "Explanation": "Under the dividend-signaling literature (e.g., Bhattacharya, Miller-Rock), dividend hikes are typically interpreted as credible long-term commitments because managers are reluctant to cut dividends once raised; the implied cost of a future cut (in terms of reputation and stock price) gives the signal credibility. Repurchases are more flexible (they can be paused or sized down without the stigma of a 'dividend cut') and therefore can also be credible signals, especially when supported by stable FCF and balance-sheet capacity. In practice, both mechanisms can convey information about management's confidence in future cash flows, with relative credibility depending on the firm's financial flexibility and history of dividend stability.",
+        "question_state": "In Audit",
         "Prompt": "From a signaling perspective, which statement best characterizes the announcement effect of a sustainable dividend hike versus a share repurchase for Flash Capital?",
-        "Choices": ["Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF", "Dividend hikes are generally negative signals because they imply management has no positive-NPV projects", "Repurchases are typically negative signals because they suggest management believes its own shares are overvalued", "Neither dividend hikes nor repurchases convey any information under strong-form market efficiency"],
+        "Choices": [
+          "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF",
+          "Dividend hikes are generally negative signals because they imply management has no positive-NPV projects",
+          "Repurchases are typically negative signals because they suggest management believes its own shares are overvalued",
+          "Neither dividend hikes nor repurchases convey any information under strong-form market efficiency"
+        ],
         "CorrectChoice": "A",
         "CognitiveLevel": "Evaluate",
         "Difficulty": "Difficult",
@@ -4263,7 +4407,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -5037,7 +5181,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -5320,7 +5464,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -5935,7 +6079,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -6228,7 +6372,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -6523,7 +6667,7 @@ var casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "certification_session": "P2-078",
     "certification_date": "2026-09-04",
     "Exhibits": [
@@ -6742,3310 +6886,3512 @@ var casePackP2_2 = [
     ]
   },
   {
-  "CaseID": "CBQ22-C4",
-  "Title": "Target Costing at SmartSense Electronics",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Compute allowable cost from market price and target margin",
-    "Determine value-engineering gap and prioritize cost-reduction candidates",
-    "Apply life-cycle pricing to evaluate long-run profitability of a new product",
-    "Identify relevant costs in a target-costing framework"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "SmartSense Electronics is launching a new IoT temperature sensor. Market research indicates a competitive selling price of $48.00 per unit, and SmartSense requires a 35% gross margin to meet its return-on-investment hurdle. The engineering team's current cost estimate is $37.50 per unit. CFO Diane Wu must evaluate whether the product can meet the target cost, which components offer the greatest value-engineering opportunities, and how life-cycle costs affect the go-forward recommendation.",
-  "Industry": "Consumer electronics",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "SmartSense Electronics",
-  "Stakeholder": "CFO Diane Wu",
-  "BusinessFunction": "Cost accounting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "target costing",
-    "value engineering",
-    "life-cycle pricing",
-    "gross margin"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-C4",
+    "Title": "Target Costing at SmartSense Electronics",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Compute allowable cost from market price and target margin",
+      "Determine value-engineering gap and prioritize cost-reduction candidates",
+      "Apply life-cycle pricing to evaluate long-run profitability of a new product",
+      "Identify relevant costs in a target-costing framework"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "SmartSense Electronics is launching a new IoT temperature sensor. Market research indicates a competitive selling price of $48.00 per unit, and SmartSense requires a 35% gross margin to meet its return-on-investment hurdle. The engineering team's current cost estimate is $37.50 per unit. CFO Diane Wu must evaluate whether the product can meet the target cost, which components offer the greatest value-engineering opportunities, and how life-cycle costs affect the go-forward recommendation.",
+    "Industry": "Consumer electronics",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "SmartSense Electronics",
+    "Stakeholder": "CFO Diane Wu",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "target costing",
+      "value engineering",
+      "life-cycle pricing",
+      "gross margin"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Derive allowable cost from target price and required margin",
-    "Compute the value-engineering gap between current and allowable cost",
-    "Evaluate which cost components to reduce using value-engineering analysis",
-    "Integrate life-cycle costs into a target-costing decision"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-C4-E1",
-      "CaseID": "CBQ22-C4",
-      "Type": "table",
-      "Title": "Exhibit 1 — Current Cost Build",
-      "Purpose": "Provides the component-level cost breakdown of the proposed IoT sensor, used to compute the total current cost and identify value-engineering targets.",
-      "ReferencedBy": [
-        "CBQ22-C4-Q1",
-        "CBQ22-C4-Q2",
-        "CBQ22-C4-Q5"
-      ],
-      "Headers": [
-        "Component",
-        "Current Cost per Unit"
-      ],
-      "Rows": [
-        [
-          "Temperature sensor module",
-          "$12.80"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Derive allowable cost from target price and required margin",
+      "Compute the value-engineering gap between current and allowable cost",
+      "Evaluate which cost components to reduce using value-engineering analysis",
+      "Integrate life-cycle costs into a target-costing decision"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-C4-E1",
+        "CaseID": "CBQ22-C4",
+        "Type": "table",
+        "Title": "Exhibit 1 — Current Cost Build",
+        "Purpose": "Provides the component-level cost breakdown of the proposed IoT sensor, used to compute the total current cost and identify value-engineering targets.",
+        "ReferencedBy": [
+          "CBQ22-C4-Q1",
+          "CBQ22-C4-Q2",
+          "CBQ22-C4-Q5"
         ],
-        [
-          "Printed circuit board (PCB)",
-          "$8.40"
+        "Headers": [
+          "Component",
+          "Current Cost per Unit"
         ],
-        [
-          "Housing and connectors",
-          "$5.60"
+        "Rows": [
+          [
+            "Temperature sensor module",
+            "$12.80"
+          ],
+          [
+            "Printed circuit board (PCB)",
+            "$8.40"
+          ],
+          [
+            "Housing and connectors",
+            "$5.60"
+          ],
+          [
+            "Assembly labor",
+            "$6.20"
+          ],
+          [
+            "Quality testing",
+            "$2.80"
+          ],
+          [
+            "Packaging and shipping prep",
+            "$1.70"
+          ],
+          [
+            "Total",
+            "$37.50"
+          ]
         ],
-        [
-          "Assembly labor",
-          "$6.20"
-        ],
-        [
-          "Quality testing",
-          "$2.80"
-        ],
-        [
-          "Packaging and shipping prep",
-          "$1.70"
-        ],
-        [
-          "Total",
-          "$37.50"
-        ]
-      ],
-      "DataFormat": "USD per unit; totals verified as sum of components",
-      "AccuracyCheck": "12.80 + 8.40 + 5.60 + 6.20 + 2.80 + 1.70 = 37.50 — confirmed"
-    },
-    {
-      "ExhibitID": "CBQ22-C4-E2",
-      "CaseID": "CBQ22-C4",
-      "Type": "text",
-      "Title": "Exhibit 2 — Market Research Summary",
-      "Purpose": "Provides competitive pricing context and life-cycle cost data needed for the life-cycle pricing evaluation.",
-      "ReferencedBy": [
-        "CBQ22-C4-Q3",
-        "CBQ22-C4-Q4",
-        "CBQ22-C4-Q6"
-      ],
-      "Body": "SmartSense's market research indicates that the competitive wholesale price for comparable IoT temperature sensors is $48.00 per unit. Two major competitors (TempTrak and SensiCore) already sell at this price point with similar specifications. SmartSense expects to sell 180,000 units over a 3-year product life. Beyond the manufacturing cost of $37.50 per unit, the following life-cycle costs have been identified: $420,000 in upfront tooling and模具 (mold) design, $180,000 in initial regulatory certification, $96,000 per year in warranty reserves (3-year life), and $0.85 per unit in end-of-life recycling compliance. The company's required return on investment for new products is 15% on total life-cycle costs."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-C4-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the allowable cost per unit for SmartSense's sensor, given the market price and required gross margin.",
-      "Correct": "31.20",
-      "Explanation": "Under target costing, the allowable cost equals the market price multiplied by one minus the target gross margin percentage. Allowable cost = $48.00 × (1 − 0.35) = $48.00 × 0.65 = $31.20. This means SmartSense must reduce its per-unit cost from $37.50 to $31.20 — a reduction of $6.30 — to achieve the required 35% margin at the market-clearing price. The allowable cost is the ceiling; any cost above it erodes the target return.",
-      "Topic": "Target costing",
-      "Subtopic": "Allowable cost computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Allowable Cost = Market Price × (1 − Target Gross Margin %)",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "target costing",
-        "allowable cost"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C4-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the value-engineering gap per unit — the amount by which the current cost exceeds the allowable cost.",
-      "Correct": "6.30",
-      "Explanation": "Value-engineering gap = Current cost − Allowable cost = $37.50 − $31.20 = $6.30 per unit. This gap represents the cost reduction that engineering must achieve through design changes, material substitution, or process improvement before the product can be launched at the required margin. Over 180,000 units, the total gap is $6.30 × 180,000 = $1,134,000 — a material shortfall that Diane must address before approving production. A common error is to compute the gap relative to selling price rather than relative to the allowable cost.",
-      "Topic": "Value engineering",
-      "Subtopic": "Gap computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Value-Engineering Gap = Current Cost − Allowable Cost",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "value engineering",
-        "cost gap"
-      ],
-      "Dependencies": [
-        "CBQ22-C4-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-C4-Q3",
-      "Type": "select",
-      "Prompt": "Which component should SmartSense target FIRST for value-engineering cost reduction?",
-      "Correct": "B",
-      "Choices": [
-        "Packaging and shipping prep ($1.70) because it has the lowest absolute cost and is easiest to change",
-        "Printed circuit board (PCB) at $8.40 and the temperature sensor module at $12.80 because together they represent 56.5% of total cost and offer the greatest absolute reduction potential",
-        "Quality testing ($2.80) because reducing inspection is the fastest way to cut cost",
-        "Assembly labor ($6.20) because automation always yields the highest ROI"
-      ],
-      "Explanation": "Value engineering focuses on components with the largest cost share because even a modest percentage reduction yields the greatest absolute savings. The sensor module ($12.80) and PCB ($8.40) together total $21.20, or 56.5% of the $37.50 current cost. A 20% reduction across these two components saves $4.24 per unit — covering 67% of the $6.30 gap by itself. Targeting packaging ($1.70) or testing ($2.80) first would require implausibly large percentage cuts to close the gap. Assembly labor reduction depends on capital investment lead times that may exceed the launch window.",
-      "Topic": "Value engineering",
-      "Subtopic": "Component prioritization",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "value engineering",
-        "prioritization"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C4-Q4",
-      "Type": "select",
-      "Prompt": "When evaluating whether to proceed with the sensor, which statement about life-cycle pricing is correct?",
-      "Correct": "D",
-      "Choices": [
-        "Life-cycle pricing only considers manufacturing cost — tooling and warranty are period expenses",
-        "The $48.00 market price should be compared to the $37.50 manufacturing cost alone, ignoring upstream and downstream costs",
-        "Life-cycle pricing assigns all non-manufacturing costs to the period incurred rather than allocating them to units",
-        "Life-cycle pricing considers all costs from product inception through end-of-life — including tooling, certification, warranty, and disposal — and allocates them across expected unit volume to determine true per-unit profitability"
-      ],
-      "Explanation": "Life-cycle pricing evaluates profitability across the entire product life, not just the manufacturing phase. SmartSense's life-cycle costs include $420,000 in tooling, $180,000 in certification, $288,000 in warranty ($96,000 × 3 years), and $153,000 in recycling compliance ($0.85 × 180,000 units) — totaling $1,041,000 beyond manufacturing. Spread over 180,000 units, these add $5.78 per unit. The true life-cycle cost per unit is $37.50 + $5.78 = $43.28, which exceeds the $31.20 allowable cost by an even wider margin. Ignoring life-cycle costs understates the true cost and overstates projected profitability.",
-      "Topic": "Life-cycle pricing",
-      "Subtopic": "Conceptual framework",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "life-cycle pricing",
-        "full cost"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C4-Q5",
-      "Type": "multi",
-      "Prompt": "Which THREE costs are relevant to SmartSense's decision to proceed with or reject the sensor launch? Select exactly three.",
-      "Correct": [
-        "The $6.30 per-unit value-engineering gap between current and allowable cost",
-        "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
-        "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
-      ],
-      "Choices": {
-        "A": "The $6.30 per-unit value-engineering gap between current and allowable cost",
-        "B": "The $37.50 per-unit manufacturing cost because it is a sunk cost once the design is finalized",
-        "C": "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
-        "D": "The $48.00 market price because it is fixed by competitors and cannot be changed",
-        "E": "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
+        "DataFormat": "USD per unit; totals verified as sum of components",
+        "AccuracyCheck": "12.80 + 8.40 + 5.60 + 6.20 + 2.80 + 1.70 = 37.50 — confirmed"
       },
-      "Explanation": "Relevant costs are future costs that differ between alternatives. The $6.30 gap (choice A) is relevant because it quantifies the cost reduction needed to make the project viable — it changes depending on whether SmartSense proceeds. The $420,000 tooling (choice C) is relevant because it is an avoidable future cost: if SmartSense cancels, the tooling expenditure is avoided entirely. The $0.85 recycling cost (choice E) is relevant because it is incurred only if production proceeds. The $37.50 manufacturing cost (B) is NOT relevant because it represents the current design estimate, not a differential cost between proceed and reject. The $48.00 market price (D) is a revenue parameter, not a cost — it is given and cannot be altered by SmartSense's decision.",
-      "Topic": "Relevant costing",
-      "Subtopic": "Cost identification",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "relevant costing",
-        "differential analysis"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C4-Q6",
-      "Type": "select",
-      "Prompt": "Based on the analysis, which recommendation should Diane present to the board?",
-      "Correct": "C",
-      "Choices": [
-        "Proceed immediately — the $48.00 market price exceeds the $37.50 manufacturing cost, so the product is profitable on a per-unit basis",
-        "Reject the product — the value-engineering gap of $6.30 is too large to close through component redesign",
-        "Delay launch by two quarters to allow engineering to close the value-engineering gap through PCB redesign and sensor-module sourcing changes, contingent on achieving at least $5.00 of the $6.30 gap in renegotiated component contracts, and re-evaluate life-cycle costs after tooling commitments are finalized",
-        "Launch at a higher price of $52.00 to cover the full life-cycle cost of $43.28 per unit while maintaining the 35% margin"
-      ],
-      "Explanation": "The correct recommendation balances the value-engineering gap against the life-cycle cost reality. Choice C is correct because it (a) acknowledges the gap must be closed before launch, (b) targets the highest-cost components (PCB and sensor module) for the most impactful reductions, (c) conditions the go-ahead on achieving concrete savings, and (d) schedules a re-evaluation after tooling commitments — the point of no return for the $420,000 investment. Choice A ignores the margin shortfall. Choice B is premature — the gap is addressable through component renegotiation. Choice D is unrealistic: competitors are at $48.00, and a $52.00 price likely destroys volume. A common exam trap is to focus only on manufacturing cost and ignore life-cycle costs entirely.",
-      "Topic": "Target costing",
-      "Subtopic": "Board recommendation",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "recommendation",
-        "target costing"
-      ],
-      "Dependencies": [
-        "CBQ22-C4-Q1",
-        "CBQ22-C4-Q2",
-        "CBQ22-C4-Q4"
-      ]
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-C4-E2",
+        "CaseID": "CBQ22-C4",
+        "Type": "text",
+        "Title": "Exhibit 2 — Market Research Summary",
+        "Purpose": "Provides competitive pricing context and life-cycle cost data needed for the life-cycle pricing evaluation.",
+        "ReferencedBy": [
+          "CBQ22-C4-Q3",
+          "CBQ22-C4-Q4",
+          "CBQ22-C4-Q6"
+        ],
+        "Body": "SmartSense's market research indicates that the competitive wholesale price for comparable IoT temperature sensors is $48.00 per unit. Two major competitors (TempTrak and SensiCore) already sell at this price point with similar specifications. SmartSense expects to sell 180,000 units over a 3-year product life. Beyond the manufacturing cost of $37.50 per unit, the following life-cycle costs have been identified: $420,000 in upfront tooling and模具 (mold) design, $180,000 in initial regulatory certification, $96,000 per year in warranty reserves (3-year life), and $0.85 per unit in end-of-life recycling compliance. The company's required return on investment for new products is 15% on total life-cycle costs."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-C4-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the allowable cost per unit for SmartSense's sensor, given the market price and required gross margin.",
+        "Correct": "31.20",
+        "Explanation": "Under target costing, the allowable cost equals the market price multiplied by one minus the target gross margin percentage. Allowable cost = $48.00 × (1 − 0.35) = $48.00 × 0.65 = $31.20. This means SmartSense must reduce its per-unit cost from $37.50 to $31.20 — a reduction of $6.30 — to achieve the required 35% margin at the market-clearing price. The allowable cost is the ceiling; any cost above it erodes the target return.",
+        "Topic": "Target costing",
+        "Subtopic": "Allowable cost computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Allowable Cost = Market Price × (1 − Target Gross Margin %)",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "target costing",
+          "allowable cost"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C4-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the value-engineering gap per unit — the amount by which the current cost exceeds the allowable cost.",
+        "Correct": "6.30",
+        "Explanation": "Value-engineering gap = Current cost − Allowable cost = $37.50 − $31.20 = $6.30 per unit. This gap represents the cost reduction that engineering must achieve through design changes, material substitution, or process improvement before the product can be launched at the required margin. Over 180,000 units, the total gap is $6.30 × 180,000 = $1,134,000 — a material shortfall that Diane must address before approving production. A common error is to compute the gap relative to selling price rather than relative to the allowable cost.",
+        "Topic": "Value engineering",
+        "Subtopic": "Gap computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Value-Engineering Gap = Current Cost − Allowable Cost",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "value engineering",
+          "cost gap"
+        ],
+        "Dependencies": [
+          "CBQ22-C4-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-C4-Q3",
+        "Type": "select",
+        "Prompt": "Which component should SmartSense target FIRST for value-engineering cost reduction?",
+        "Correct": "B",
+        "Choices": [
+          "Packaging and shipping prep ($1.70) because it has the lowest absolute cost and is easiest to change",
+          "Printed circuit board (PCB) at $8.40 and the temperature sensor module at $12.80 because together they represent 56.5% of total cost and offer the greatest absolute reduction potential",
+          "Quality testing ($2.80) because reducing inspection is the fastest way to cut cost",
+          "Assembly labor ($6.20) because automation always yields the highest ROI"
+        ],
+        "Explanation": "Value engineering focuses on components with the largest cost share because even a modest percentage reduction yields the greatest absolute savings. The sensor module ($12.80) and PCB ($8.40) together total $21.20, or 56.5% of the $37.50 current cost. A 20% reduction across these two components saves $4.24 per unit — covering 67% of the $6.30 gap by itself. Targeting packaging ($1.70) or testing ($2.80) first would require implausibly large percentage cuts to close the gap. Assembly labor reduction depends on capital investment lead times that may exceed the launch window.",
+        "Topic": "Value engineering",
+        "Subtopic": "Component prioritization",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "value engineering",
+          "prioritization"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C4-Q4",
+        "Type": "select",
+        "Prompt": "When evaluating whether to proceed with the sensor, which statement about life-cycle pricing is correct?",
+        "Correct": "D",
+        "Choices": [
+          "Life-cycle pricing only considers manufacturing cost — tooling and warranty are period expenses",
+          "The $48.00 market price should be compared to the $37.50 manufacturing cost alone, ignoring upstream and downstream costs",
+          "Life-cycle pricing assigns all non-manufacturing costs to the period incurred rather than allocating them to units",
+          "Life-cycle pricing considers all costs from product inception through end-of-life — including tooling, certification, warranty, and disposal — and allocates them across expected unit volume to determine true per-unit profitability"
+        ],
+        "Explanation": "Life-cycle pricing evaluates profitability across the entire product life, not just the manufacturing phase. SmartSense's life-cycle costs include $420,000 in tooling, $180,000 in certification, $288,000 in warranty ($96,000 × 3 years), and $153,000 in recycling compliance ($0.85 × 180,000 units) — totaling $1,041,000 beyond manufacturing. Spread over 180,000 units, these add $5.78 per unit. The true life-cycle cost per unit is $37.50 + $5.78 = $43.28, which exceeds the $31.20 allowable cost by an even wider margin. Ignoring life-cycle costs understates the true cost and overstates projected profitability.",
+        "Topic": "Life-cycle pricing",
+        "Subtopic": "Conceptual framework",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "life-cycle pricing",
+          "full cost"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C4-Q5",
+        "Type": "multi",
+        "Prompt": "Which THREE costs are relevant to SmartSense's decision to proceed with or reject the sensor launch? Select exactly three.",
+        "Correct": [
+          "The $6.30 per-unit value-engineering gap between current and allowable cost",
+          "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
+          "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
+        ],
+        "Choices": {
+          "A": "The $6.30 per-unit value-engineering gap between current and allowable cost",
+          "B": "The $37.50 per-unit manufacturing cost because it is a sunk cost once the design is finalized",
+          "C": "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
+          "D": "The $48.00 market price because it is fixed by competitors and cannot be changed",
+          "E": "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
+        },
+        "Explanation": "Relevant costs are future costs that differ between alternatives. The $6.30 gap (choice A) is relevant because it quantifies the cost reduction needed to make the project viable — it changes depending on whether SmartSense proceeds. The $420,000 tooling (choice C) is relevant because it is an avoidable future cost: if SmartSense cancels, the tooling expenditure is avoided entirely. The $0.85 recycling cost (choice E) is relevant because it is incurred only if production proceeds. The $37.50 manufacturing cost (B) is NOT relevant because it represents the current design estimate, not a differential cost between proceed and reject. The $48.00 market price (D) is a revenue parameter, not a cost — it is given and cannot be altered by SmartSense's decision.",
+        "Topic": "Relevant costing",
+        "Subtopic": "Cost identification",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "relevant costing",
+          "differential analysis"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C4-Q6",
+        "Type": "select",
+        "Prompt": "Based on the analysis, which recommendation should Diane present to the board?",
+        "Correct": "C",
+        "Choices": [
+          "Proceed immediately — the $48.00 market price exceeds the $37.50 manufacturing cost, so the product is profitable on a per-unit basis",
+          "Reject the product — the value-engineering gap of $6.30 is too large to close through component redesign",
+          "Delay launch by two quarters to allow engineering to close the value-engineering gap through PCB redesign and sensor-module sourcing changes, contingent on achieving at least $5.00 of the $6.30 gap in renegotiated component contracts, and re-evaluate life-cycle costs after tooling commitments are finalized",
+          "Launch at a higher price of $52.00 to cover the full life-cycle cost of $43.28 per unit while maintaining the 35% margin"
+        ],
+        "Explanation": "The correct recommendation balances the value-engineering gap against the life-cycle cost reality. Choice C is correct because it (a) acknowledges the gap must be closed before launch, (b) targets the highest-cost components (PCB and sensor module) for the most impactful reductions, (c) conditions the go-ahead on achieving concrete savings, and (d) schedules a re-evaluation after tooling commitments — the point of no return for the $420,000 investment. Choice A ignores the margin shortfall. Choice B is premature — the gap is addressable through component renegotiation. Choice D is unrealistic: competitors are at $48.00, and a $52.00 price likely destroys volume. A common exam trap is to focus only on manufacturing cost and ignore life-cycle costs entirely.",
+        "Topic": "Target costing",
+        "Subtopic": "Board recommendation",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "target costing"
+        ],
+        "Dependencies": [
+          "CBQ22-C4-Q1",
+          "CBQ22-C4-Q2",
+          "CBQ22-C4-Q4"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-C5",
-  "Title": "Product Mix Under Two Constraints at Alpine Plastics",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Formulate a linear programming problem with two decision variables and two binding constraints",
-    "Determine the optimal product mix using the graphical method and corner-point evaluation",
-    "Interpret the shadow price of a binding constraint",
-    "Conduct what-if analysis on constraint relaxation"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Very Difficult",
-  "DifficultyScore": 5,
-  "ScenarioText": "Alpine Plastics runs two extrusion lines producing industrial bins (Product A) and storage totes (Product B). Both products share two bottlenecks: extrusion machine hours and packaging line hours. Operations VP Raj Mehta must determine the product mix that maximizes total contribution margin given the available capacity and demand limits for each product.",
-  "Industry": "Plastics manufacturing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Alpine Plastics",
-  "Stakeholder": "Operations VP Raj Mehta",
-  "BusinessFunction": "Cost accounting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "linear programming",
-    "product mix",
-    "shadow price",
-    "constraint analysis"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-C5",
+    "Title": "Product Mix Under Two Constraints at Alpine Plastics",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Formulate a linear programming problem with two decision variables and two binding constraints",
+      "Determine the optimal product mix using the graphical method and corner-point evaluation",
+      "Interpret the shadow price of a binding constraint",
+      "Conduct what-if analysis on constraint relaxation"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ScenarioText": "Alpine Plastics runs two extrusion lines producing industrial bins (Product A) and storage totes (Product B). Both products share two bottlenecks: extrusion machine hours and packaging line hours. Operations VP Raj Mehta must determine the product mix that maximizes total contribution margin given the available capacity and demand limits for each product.",
+    "Industry": "Plastics manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Alpine Plastics",
+    "Stakeholder": "Operations VP Raj Mehta",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "linear programming",
+      "product mix",
+      "shadow price",
+      "constraint analysis"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Calculate contribution margin per unit for each product",
-    "Identify the feasible region and evaluate corner points graphically",
-    "Determine which constraint is binding at the optimal solution",
-    "Interpret the shadow price of the binding constraint for capacity decisions"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-C5-E1",
-      "CaseID": "CBQ22-C5",
-      "Type": "table",
-      "Title": "Exhibit 1 — Resource Requirements and Capacity",
-      "Purpose": "Provides the per-unit resource requirements for each product on each machine and the total available hours per period.",
-      "ReferencedBy": [
-        "CBQ22-C5-Q1",
-        "CBQ22-C5-Q2",
-        "CBQ22-C5-Q3"
-      ],
-      "Headers": [
-        "Resource",
-        "Product A (per unit)",
-        "Product B (per unit)",
-        "Available Hours"
-      ],
-      "Rows": [
-        [
-          "Extrusion machine hours",
-          "2.0",
-          "3.0",
-          "3,000"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Calculate contribution margin per unit for each product",
+      "Identify the feasible region and evaluate corner points graphically",
+      "Determine which constraint is binding at the optimal solution",
+      "Interpret the shadow price of the binding constraint for capacity decisions"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-C5-E1",
+        "CaseID": "CBQ22-C5",
+        "Type": "table",
+        "Title": "Exhibit 1 — Resource Requirements and Capacity",
+        "Purpose": "Provides the per-unit resource requirements for each product on each machine and the total available hours per period.",
+        "ReferencedBy": [
+          "CBQ22-C5-Q1",
+          "CBQ22-C5-Q2",
+          "CBQ22-C5-Q3"
         ],
-        [
-          "Packaging line hours",
-          "1.5",
-          "1.0",
-          "2,400"
+        "Headers": [
+          "Resource",
+          "Product A (per unit)",
+          "Product B (per unit)",
+          "Available Hours"
         ],
-        [
-          "Demand limit (units)",
-          "1,200",
-          "800",
-          "—"
-        ]
-      ],
-      "DataFormat": "Hours per unit; demand in units; available in hours per period",
-      "AccuracyCheck": "Constraints are consistent with corner-point solution — see analysis"
-    },
-    {
-      "ExhibitID": "CBQ22-C5-E2",
-      "CaseID": "CBQ22-C5",
-      "Type": "table",
-      "Title": "Exhibit 2 — Unit Economics",
-      "Purpose": "Provides selling price and variable cost data for computing contribution margin per unit.",
-      "ReferencedBy": [
-        "CBQ22-C5-Q1",
-        "CBQ22-C5-Q4"
-      ],
-      "Headers": [
-        "Item",
-        "Product A",
-        "Product B"
-      ],
-      "Rows": [
-        [
-          "Selling price per unit",
-          "$85.00",
-          "$62.00"
+        "Rows": [
+          [
+            "Extrusion machine hours",
+            "2.0",
+            "3.0",
+            "3,000"
+          ],
+          [
+            "Packaging line hours",
+            "1.5",
+            "1.0",
+            "2,400"
+          ],
+          [
+            "Demand limit (units)",
+            "1,200",
+            "800",
+            "—"
+          ]
         ],
-        [
-          "Variable material cost",
-          "$34.00",
-          "$22.00"
-        ],
-        [
-          "Variable labor cost",
-          "$15.00",
-          "$12.00"
-        ],
-        [
-          "Variable overhead",
-          "$12.00",
-          "$10.00"
-        ]
-      ],
-      "DataFormat": "USD per unit",
-      "AccuracyCheck": "CM_A = 85 − 34 − 15 − 12 = $24; CM_B = 62 − 22 − 12 − 10 = $18"
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-C5-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the contribution margin per unit for Product A.",
-      "Correct": "24",
-      "Explanation": "Contribution margin per unit = Selling price − Variable costs = $85.00 − ($34.00 + $15.00 + $12.00) = $85.00 − $61.00 = $24.00. This per-unit contribution is what each unit of Product A contributes toward covering fixed costs and generating profit. The CM is the basis for comparing products when a constraint exists — ranking by CM per unit alone can be misleading when products consume scarce resources at different rates. A common trap is to use gross margin (which includes fixed overhead allocation) instead of contribution margin.",
-      "Topic": "Contribution margin",
-      "Subtopic": "Per-unit computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Contribution Margin = Selling Price − Total Variable Costs",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "contribution margin",
-        "per unit"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C5-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the maximum total contribution margin Alpine can achieve under the given constraints.",
-      "Correct": "32400",
-      "Explanation": "The maximum total contribution margin is found by evaluating the feasible corner points: (0,0) = $0; (1,200 A, 0 B) = $28,800; (0, 800 B) = $14,400; and (1,200 A, 200 B) = $32,400, where A's demand limit binds and the remaining extrusion hours (3,000 − 2,400 = 600) produce 200 units of B at 3 hours each. Packaging at this corner uses 1,200 × 1.5 + 200 × 1.0 = 2,000 of 2,400 hours, leaving 400 hours of slack. Total CM = 1,200 × $24 + 200 × $18 = $28,800 + $3,600 = $32,400. The maximum is $32,400 at 1,200 units of A and 200 units of B, where extrusion (3,000 hours) and A's demand limit (1,200 units) are both binding. A common trap is to stop at (1,200, 0) = $28,800 without checking that leftover extrusion hours can still produce B, or to include the infeasible constraint intersection.",
-      "Topic": "Linear programming",
-      "Subtopic": "Optimal mix",
-      "Difficulty": "Very Difficult",
-      "DifficultyScore": 5,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-06: WACM and graphical LP method",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "linear programming",
-        "optimal mix"
-      ],
-      "Dependencies": [
-        "CBQ22-C5-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-C5-Q3",
-      "Type": "select",
-      "Prompt": "At the optimal product mix, which constraint is binding?",
-      "Correct": "A",
-      "Choices": [
-        "The extrusion machine hours are fully utilized at 3,000 hours, making extrusion the binding constraint",
-        "The packaging line hours are fully utilized at 2,400 hours, making packaging the binding constraint",
-        "Both constraints are binding simultaneously at the optimal solution",
-        "Neither constraint is binding because the optimal mix falls within all capacity limits"
-      ],
-      "Explanation": "At the optimal mix of 1,200 units of A and 200 units of B, extrusion hours consumed = 1,200 × 2.0 + 200 × 3.0 = 3,000 hours exactly — fully utilizing the 3,000-hour capacity. Packaging hours consumed = 1,200 × 1.5 + 200 × 1.0 = 2,000 hours, leaving 400 hours of slack. A binding constraint is one that is satisfied as an equality at the optimal solution — any reduction in the binding resource would force a lower objective value. The extrusion constraint limits Alpine's ability to produce more of either product, making it the bottleneck. A common error is to assume the tighter constraint (packaging, with 2,400 available vs. 3,000) is automatically binding.",
-      "Topic": "Constraint analysis",
-      "Subtopic": "Binding constraint identification",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "binding constraint",
-        "LP sensitivity"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C5-Q4",
-      "Type": "select",
-      "Prompt": "What is the shadow price of the binding extrusion constraint?",
-      "Correct": "A",
-      "Choices": ["$6.00 per hour — each additional extrusion hour increases total contribution margin by $6.00 because the demand constraint on Product A is binding", "$0.00 per hour — the constraint is not truly limiting because packaging has slack", "$24.00 per hour — equal to the contribution margin per unit of Product A", "$12.00 per hour — the average of the two products' contribution margins"],
-      "Explanation": "At the optimal mix of 1,200 A and 200 B, both extrusion capacity (3,000 hours) and Product A's demand limit (1,200 units) are binding. An additional extrusion hour cannot produce more A because A's demand is already saturated, so the hour is used to produce 1/3 of a unit of B (3 hours per unit), adding $18 ÷ 3 = $6.00 of contribution margin. The shadow price of the binding extrusion constraint is therefore $6.00 per hour. The $12.00 figure is the trap: it is valid only if the added hour could be used for A ($24 ÷ 2 hours), but A's demand cap prevents that. $0.00 is wrong because extrusion is fully utilized, and $24.00 confuses per-unit CM with CM per hour.",
-      "Topic": "Shadow price",
-      "Subtopic": "Interpretation",
-      "Difficulty": "Very Difficult",
-      "DifficultyScore": 5,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "Shadow Price = ΔObjective / ΔConstraint RHS",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "shadow price",
-        "sensitivity analysis"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C5-Q5",
-      "Type": "multi",
-      "Prompt": "Which THREE statements about Alpine's product mix are correct under what-if analysis? Select exactly three.",
-      "Correct": ["If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint","If Product A's contribution margin per unit falls below $12.00, Product B becomes more profitable per extrusion hour and the optimal mix shifts toward producing more of Product B","If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"],
-      "Choices": {
-        "A": "If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint",
-        "B": "Increasing packaging capacity will always improve the optimal objective value",
-        "C": "If Product A's contribution margin per unit falls below $12.00, Product B becomes more profitable per extrusion hour and the optimal mix shifts toward producing more of Product B",
-        "D": "The shadow price of the extrusion constraint remains constant for all possible increases in capacity",
-        "E": "If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"
+        "DataFormat": "Hours per unit; demand in units; available in hours per period",
+        "AccuracyCheck": "Constraints are consistent with corner-point solution — see analysis"
       },
-      "Explanation": "Statement A is correct: with 3,600 extrusion hours, A's demand limit of 1,200 units becomes the new binding constraint (1,200 × 2 = 2,400 hours for A, leaving 1,200 hours for 400 units of B). Statement C (repaired) is correct: A earns $24 ÷ 2 = $12 per extrusion hour versus B's $18 ÷ 3 = $6; if A's per-unit CM fell below $12, B's per-hour return would exceed A's and the mix would shift toward B. Statement E is correct: with no cap on A, all 3,000 hours produce 1,500 units of A and $36,000 of CM, above the constrained $32,400 optimum. Statement B is false: packaging has 400 hours of slack, so more packaging capacity cannot improve the objective. Statement D is false: the shadow price changes once capacity is relaxed enough that extrusion is no longer the limiting factor. The original statement C was false — if B's CM rose to $24, B would earn $24 ÷ 3 = $8 per hour, still below A's $12 per hour, so the mix would not shift toward B.",
-      "Topic": "What-if analysis",
-      "Subtopic": "Sensitivity analysis",
-      "Difficulty": "Very Difficult",
-      "DifficultyScore": 5,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "sensitivity analysis",
-        "what-if"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C5-Q6",
-      "Type": "match",
-      "Prompt": "Match each constraint concept from Alpine's analysis to its correct value or description.",
-      "LeftItems": [
-        "Binding constraint",
-        "Shadow price of the binding constraint",
-        "Slack on the non-binding constraint",
-        "Maximum CM if packaging were also binding"
-      ],
-      "RightItems": [
-        "Extrusion machine hours at 3,000 utilized",
-        "The marginal value of one additional extrusion hour in terms of CM gain",
-        "400 unused packaging hours at the optimal mix",
-        "Total CM at the intersection of both constraints",
-        "Demand limit on Product B at 800 units",
-        "The average CM across both products"
-      ],
-      "Correct": {
-        "Binding constraint": "Extrusion machine hours at 3,000 utilized",
-        "Shadow price of the binding constraint": "The marginal value of one additional extrusion hour in terms of CM gain",
-        "Slack on the non-binding constraint": "400 unused packaging hours at the optimal mix",
-        "Maximum CM if packaging were also binding": "Total CM at the intersection of both constraints"
+      {
+        "ExhibitID": "CBQ22-C5-E2",
+        "CaseID": "CBQ22-C5",
+        "Type": "table",
+        "Title": "Exhibit 2 — Unit Economics",
+        "Purpose": "Provides selling price and variable cost data for computing contribution margin per unit.",
+        "ReferencedBy": [
+          "CBQ22-C5-Q1",
+          "CBQ22-C5-Q4"
+        ],
+        "Headers": [
+          "Item",
+          "Product A",
+          "Product B"
+        ],
+        "Rows": [
+          [
+            "Selling price per unit",
+            "$85.00",
+            "$62.00"
+          ],
+          [
+            "Variable material cost",
+            "$34.00",
+            "$22.00"
+          ],
+          [
+            "Variable labor cost",
+            "$15.00",
+            "$12.00"
+          ],
+          [
+            "Variable overhead",
+            "$12.00",
+            "$10.00"
+          ]
+        ],
+        "DataFormat": "USD per unit",
+        "AccuracyCheck": "CM_A = 85 − 34 − 15 − 12 = $24; CM_B = 62 − 22 − 12 − 10 = $18"
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-C5-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the contribution margin per unit for Product A.",
+        "Correct": "24",
+        "Explanation": "Contribution margin per unit = Selling price − Variable costs = $85.00 − ($34.00 + $15.00 + $12.00) = $85.00 − $61.00 = $24.00. This per-unit contribution is what each unit of Product A contributes toward covering fixed costs and generating profit. The CM is the basis for comparing products when a constraint exists — ranking by CM per unit alone can be misleading when products consume scarce resources at different rates. A common trap is to use gross margin (which includes fixed overhead allocation) instead of contribution margin.",
+        "Topic": "Contribution margin",
+        "Subtopic": "Per-unit computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Contribution Margin = Selling Price − Total Variable Costs",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "contribution margin",
+          "per unit"
+        ],
+        "Dependencies": []
       },
-      "Explanation": "The binding constraint is the one satisfied as an equality at the optimum — extrusion at 3,000 hours. The shadow price measures the marginal improvement in the objective per unit increase in the binding resource. Slack on a non-binding constraint is the unused capacity — packaging has 2,400 − 2,000 = 400 hours of slack. If packaging were also binding, the optimal would shift to the intersection of both resource constraints, yielding a different total CM. Distractors: the demand limit on B is not binding at the optimum (only 200 of 800 units used), and the average CM across products is a descriptive statistic, not a constraint concept.",
-      "Topic": "Constraint analysis",
-      "Subtopic": "Concept mapping",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "constraint analysis",
-        "mapping"
-      ],
-      "Dependencies": []
-    }
-  ]
-},
+      {
+        "ItemID": "CBQ22-C5-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the maximum total contribution margin Alpine can achieve under the given constraints.",
+        "Correct": "32400",
+        "Explanation": "The maximum total contribution margin is found by evaluating the feasible corner points: (0,0) = $0; (1,200 A, 0 B) = $28,800; (0, 800 B) = $14,400; and (1,200 A, 200 B) = $32,400, where A's demand limit binds and the remaining extrusion hours (3,000 − 2,400 = 600) produce 200 units of B at 3 hours each. Packaging at this corner uses 1,200 × 1.5 + 200 × 1.0 = 2,000 of 2,400 hours, leaving 400 hours of slack. Total CM = 1,200 × $24 + 200 × $18 = $28,800 + $3,600 = $32,400. The maximum is $32,400 at 1,200 units of A and 200 units of B, where extrusion (3,000 hours) and A's demand limit (1,200 units) are both binding. A common trap is to stop at (1,200, 0) = $28,800 without checking that leftover extrusion hours can still produce B, or to include the infeasible constraint intersection.",
+        "Topic": "Linear programming",
+        "Subtopic": "Optimal mix",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-06: WACM and graphical LP method",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "linear programming",
+          "optimal mix"
+        ],
+        "Dependencies": [
+          "CBQ22-C5-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-C5-Q3",
+        "Type": "select",
+        "Prompt": "At the optimal product mix, which constraint is binding?",
+        "Correct": "A",
+        "Choices": [
+          "The extrusion machine hours are fully utilized at 3,000 hours, making extrusion the binding constraint",
+          "The packaging line hours are fully utilized at 2,400 hours, making packaging the binding constraint",
+          "Both constraints are binding simultaneously at the optimal solution",
+          "Neither constraint is binding because the optimal mix falls within all capacity limits"
+        ],
+        "Explanation": "At the optimal mix of 1,200 units of A and 200 units of B, extrusion hours consumed = 1,200 × 2.0 + 200 × 3.0 = 3,000 hours exactly — fully utilizing the 3,000-hour capacity. Packaging hours consumed = 1,200 × 1.5 + 200 × 1.0 = 2,000 hours, leaving 400 hours of slack. A binding constraint is one that is satisfied as an equality at the optimal solution — any reduction in the binding resource would force a lower objective value. The extrusion constraint limits Alpine's ability to produce more of either product, making it the bottleneck. A common error is to assume the tighter constraint (packaging, with 2,400 available vs. 3,000) is automatically binding.",
+        "Topic": "Constraint analysis",
+        "Subtopic": "Binding constraint identification",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "binding constraint",
+          "LP sensitivity"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C5-Q4",
+        "Type": "select",
+        "Prompt": "What is the shadow price of the binding extrusion constraint?",
+        "Correct": "A",
+        "Choices": [
+          "$6.00 per hour — each additional extrusion hour increases total contribution margin by $6.00 because the demand constraint on Product A is binding",
+          "$0.00 per hour — the constraint is not truly limiting because packaging has slack",
+          "$24.00 per hour — equal to the contribution margin per unit of Product A",
+          "$12.00 per hour — the average of the two products' contribution margins"
+        ],
+        "Explanation": "At the optimal mix of 1,200 A and 200 B, both extrusion capacity (3,000 hours) and Product A's demand limit (1,200 units) are binding. An additional extrusion hour cannot produce more A because A's demand is already saturated, so the hour is used to produce 1/3 of a unit of B (3 hours per unit), adding $18 ÷ 3 = $6.00 of contribution margin. The shadow price of the binding extrusion constraint is therefore $6.00 per hour. The $12.00 figure is the trap: it is valid only if the added hour could be used for A ($24 ÷ 2 hours), but A's demand cap prevents that. $0.00 is wrong because extrusion is fully utilized, and $24.00 confuses per-unit CM with CM per hour.",
+        "Topic": "Shadow price",
+        "Subtopic": "Interpretation",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Shadow Price = ΔObjective / ΔConstraint RHS",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "shadow price",
+          "sensitivity analysis"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C5-Q5",
+        "Type": "multi",
+        "Prompt": "Which THREE statements about Alpine's product mix are correct under what-if analysis? Select exactly three.",
+        "Correct": [
+          "If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint",
+          "If Product A's contribution margin per unit falls below $12.00, Product B becomes more profitable per extrusion hour and the optimal mix shifts toward producing more of Product B",
+          "If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"
+        ],
+        "Choices": {
+          "A": "If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint",
+          "B": "Increasing packaging capacity will always improve the optimal objective value",
+          "C": "If Product A's contribution margin per unit falls below $12.00, Product B becomes more profitable per extrusion hour and the optimal mix shifts toward producing more of Product B",
+          "D": "The shadow price of the extrusion constraint remains constant for all possible increases in capacity",
+          "E": "If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"
+        },
+        "Explanation": "Statement A is correct: with 3,600 extrusion hours, A's demand limit of 1,200 units becomes the new binding constraint (1,200 × 2 = 2,400 hours for A, leaving 1,200 hours for 400 units of B). Statement C (repaired) is correct: A earns $24 ÷ 2 = $12 per extrusion hour versus B's $18 ÷ 3 = $6; if A's per-unit CM fell below $12, B's per-hour return would exceed A's and the mix would shift toward B. Statement E is correct: with no cap on A, all 3,000 hours produce 1,500 units of A and $36,000 of CM, above the constrained $32,400 optimum. Statement B is false: packaging has 400 hours of slack, so more packaging capacity cannot improve the objective. Statement D is false: the shadow price changes once capacity is relaxed enough that extrusion is no longer the limiting factor. The original statement C was false — if B's CM rose to $24, B would earn $24 ÷ 3 = $8 per hour, still below A's $12 per hour, so the mix would not shift toward B.",
+        "Topic": "What-if analysis",
+        "Subtopic": "Sensitivity analysis",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "sensitivity analysis",
+          "what-if"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C5-Q6",
+        "Type": "match",
+        "Prompt": "Match each constraint concept from Alpine's analysis to its correct value or description.",
+        "LeftItems": [
+          "Binding constraint",
+          "Shadow price of the binding constraint",
+          "Slack on the non-binding constraint",
+          "Maximum CM if packaging were also binding"
+        ],
+        "RightItems": [
+          "Extrusion machine hours at 3,000 utilized",
+          "The marginal value of one additional extrusion hour in terms of CM gain",
+          "400 unused packaging hours at the optimal mix",
+          "Total CM at the intersection of both constraints",
+          "Demand limit on Product B at 800 units",
+          "The average CM across both products"
+        ],
+        "Correct": {
+          "Binding constraint": "Extrusion machine hours at 3,000 utilized",
+          "Shadow price of the binding constraint": "The marginal value of one additional extrusion hour in terms of CM gain",
+          "Slack on the non-binding constraint": "400 unused packaging hours at the optimal mix",
+          "Maximum CM if packaging were also binding": "Total CM at the intersection of both constraints"
+        },
+        "Explanation": "The binding constraint is the one satisfied as an equality at the optimum — extrusion at 3,000 hours. The shadow price measures the marginal improvement in the objective per unit increase in the binding resource. Slack on a non-binding constraint is the unused capacity — packaging has 2,400 − 2,000 = 400 hours of slack. If packaging were also binding, the optimal would shift to the intersection of both resource constraints, yielding a different total CM. Distractors: the demand limit on B is not binding at the optimum (only 200 of 800 units used), and the average CM across products is a descriptive statistic, not a constraint concept.",
+        "Topic": "Constraint analysis",
+        "Subtopic": "Concept mapping",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "constraint analysis",
+          "mapping"
+        ],
+        "Dependencies": []
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-C6",
-  "Title": "Staged Market Entry Decision at Cascade Therapeutics",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Construct a decision tree with probability-weighted outcomes",
-    "Compute expected monetary value for each decision alternative",
-    "Derive the expected value of perfect information (EVPI)",
-    "Apply maximin, maximax, and minimax regret decision criteria"
-  ],
-  "PrimaryCompetency": "Judgment",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Cascade Therapeutics must decide whether to enter a new specialty pharmaceutical market. Three options are on the table: (a) enter immediately with a full $12 million investment, (b) spend $1.5 million on a 6-month pilot study before deciding to enter or withdraw, or (c) wait 12 months for a competitor's clinical trial results before committing. CEO Amara Okafor needs a decision-tree analysis that weighs probability-weighted payoffs against the costs of staged entry.",
-  "Industry": "Pharmaceuticals",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Cascade Therapeutics",
-  "Stakeholder": "CEO Amara Okafor",
-  "BusinessFunction": "Strategic planning",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "decision trees",
-    "expected value",
-    "EVPI",
-    "maximin",
-    "real options"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-C6",
+    "Title": "Staged Market Entry Decision at Cascade Therapeutics",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Construct a decision tree with probability-weighted outcomes",
+      "Compute expected monetary value for each decision alternative",
+      "Derive the expected value of perfect information (EVPI)",
+      "Apply maximin, maximax, and minimax regret decision criteria"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Cascade Therapeutics must decide whether to enter a new specialty pharmaceutical market. Three options are on the table: (a) enter immediately with a full $12 million investment, (b) spend $1.5 million on a 6-month pilot study before deciding to enter or withdraw, or (c) wait 12 months for a competitor's clinical trial results before committing. CEO Amara Okafor needs a decision-tree analysis that weighs probability-weighted payoffs against the costs of staged entry.",
+    "Industry": "Pharmaceuticals",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Cascade Therapeutics",
+    "Stakeholder": "CEO Amara Okafor",
+    "BusinessFunction": "Strategic planning",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "decision trees",
+      "expected value",
+      "EVPI",
+      "maximin",
+      "real options"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Construct decision trees with chance nodes and decision nodes",
-    "Compute expected monetary value from probability-weighted payoffs",
-    "Derive and interpret the expected value of perfect information",
-    "Compare maximin, maximax, and minimax regret criteria for risk-averse and risk-seeking decision-makers"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-C6-E1",
-      "CaseID": "CBQ22-C6",
-      "Type": "table",
-      "Title": "Exhibit 1 — Market Probability Scenarios",
-      "Purpose": "Provides the probability distribution over market-size scenarios and the corresponding NPV payoffs for each decision alternative.",
-      "ReferencedBy": [
-        "CBQ22-C6-Q1",
-        "CBQ22-C6-Q2",
-        "CBQ22-C6-Q3"
-      ],
-      "Headers": [
-        "Market Scenario",
-        "Probability",
-        "Enter Immediately NPV",
-        "Pilot Then Enter/Withdraw NPV",
-        "Wait 12 Months NPV"
-      ],
-      "Rows": [
-        [
-          "Large market",
-          "0.30",
-          "$28,000,000",
-          "$24,800,000",
-          "$18,000,000"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Construct decision trees with chance nodes and decision nodes",
+      "Compute expected monetary value from probability-weighted payoffs",
+      "Derive and interpret the expected value of perfect information",
+      "Compare maximin, maximax, and minimax regret criteria for risk-averse and risk-seeking decision-makers"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-C6-E1",
+        "CaseID": "CBQ22-C6",
+        "Type": "table",
+        "Title": "Exhibit 1 — Market Probability Scenarios",
+        "Purpose": "Provides the probability distribution over market-size scenarios and the corresponding NPV payoffs for each decision alternative.",
+        "ReferencedBy": [
+          "CBQ22-C6-Q1",
+          "CBQ22-C6-Q2",
+          "CBQ22-C6-Q3"
         ],
-        [
-          "Medium market",
-          "0.45",
-          "$8,000,000",
-          "$5,200,000",
-          "$6,000,000"
+        "Headers": [
+          "Market Scenario",
+          "Probability",
+          "Enter Immediately NPV",
+          "Pilot Then Enter/Withdraw NPV",
+          "Wait 12 Months NPV"
         ],
-        [
-          "Small market",
-          "0.25",
-          "−$10,000,000",
-          "−$1,500,000",
-          "$1,000,000"
-        ]
-      ],
-      "DataFormat": "Probabilities sum to 1.00; NPV in USD after all costs including the $12M entry investment or $1.5M pilot cost",
-      "AccuracyCheck": "EV computation: 0.30×28M + 0.45×8M + 0.25×(−10M) = 8.4 + 3.6 − 2.5 = 9.5M for immediate entry"
-    },
-    {
-      "ExhibitID": "CBQ22-C6-E2",
-      "CaseID": "CBQ22-C6",
-      "Type": "text",
-      "Title": "Exhibit 2 — Pilot Study Information",
-      "Purpose": "Describes the pilot study's capabilities and limitations, providing context for interpreting the staged-entry option.",
-      "ReferencedBy": [
-        "CBQ22-C6-Q4",
-        "CBQ22-C6-Q5",
-        "CBQ22-C6-Q6"
-      ],
-      "Body": "The pilot study costs $1.5 million and takes 6 months. It provides a signal (favorable or unfavorable) about market demand, but the signal is not perfectly accurate: given a truly large market, the pilot signals favorable 80% of the time and unfavorable 20% of the time. Given a medium market, the pilot signals favorable 50% of the time and unfavorable 50% of the time. Given a small market, the pilot signals favorable 20% of the time and unfavorable 80% of the time. After receiving the pilot signal, Cascade decides whether to proceed with full entry (total additional investment of $12 million) or withdraw. If Cascade withdraws, the only cost is the $1.5 million pilot expense. The wait option costs nothing upfront but delays revenue by 12 months, resulting in discounted payoffs shown in Exhibit 1."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-C6-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the expected monetary value (EMV) of the immediate-entry alternative, in millions of dollars.",
-      "Correct": "9500000",
-      "Explanation": "EMV of immediate entry = Σ(Probability × NPV) = (0.30 × $28,000,000) + (0.45 × $8,000,000) + (0.25 × (−$10,000,000)) = $8,400,000 + $3,600,000 − $2,500,000 = $9,500,000. The expected value is a probability-weighted average of all possible outcomes. Even though there is a 25% chance of a $10 million loss, the large-market upside ($28M × 0.30 = $8.4M) drives the EMV to a positive $9.5M. This is the value Cascade should compare against the EMV of the pilot and wait alternatives. A common error is to weight the payoffs by equal probability (1/3 each) instead of using the given distribution.",
-      "Topic": "Expected value",
-      "Subtopic": "EMV computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-10: Expected Value = Σ(Pi × Outcomei)",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "expected value",
-        "EMV"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C6-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the expected value of perfect information (EVPI), in dollars.",
-      "Correct": "2750000",
-      "Explanation": "EVPI = EV with perfect information − EV without perfect information. With perfect information Cascade knows the market state before choosing: large → enter at $28M, medium → enter at $8M, small → wait at $1M. EVwPI = 0.30 × $28M + 0.45 × $8M + 0.25 × $1M = $8.4M + $3.6M + $0.25M = $12.25M. EVwoPI is the best expected value without information — immediate entry at $9.5M, since the wait option is $8.35M and the pilot is $9.41M, both below $9.5M. EVPI = $12.25M − $9.5M = $2.75M. A common trap is to confuse EVPI with EVwPI ($12.25M), or to anchor on the single best payoff ($28M) instead of the probability-weighted best outcomes.",
-      "Topic": "Expected value of perfect information",
-      "Subtopic": "EVPI computation",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-11: EVPI = EVwPI − EVwoPI",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "EVPI",
-        "perfect information"
-      ],
-      "Dependencies": [
-        "CBQ22-C6-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-C6-Q3",
-      "Type": "select",
-      "Prompt": "Based on the expected value analysis, which entry strategy should Cascade pursue?",
-      "Correct": "B",
-      "Choices": [
-        "Wait 12 months — it has the lowest downside risk across all scenarios",
-        "Enter immediately — it has the highest EMV at $9.5 million and should be selected regardless of risk attitude",
-        "Conduct the pilot study — it reduces the expected loss in the small-market scenario while preserving upside in the large-market scenario, and the $1.5 million pilot cost is less than the EVPI of $2.75 million",
-        "Enter immediately — the $28 million large-market payoff dominates all other alternatives"
-      ],
-      "Explanation": "The pilot option's EMV is computed from the posterior probabilities. P(favorable) = 0.30×0.80 + 0.45×0.50 + 0.25×0.20 = 0.515; P(unfavorable) = 0.485. After a favorable signal: P(large)=0.24/0.515=46.6%, P(medium)=0.225/0.515=43.7%, P(small)=0.05/0.515=9.7%; entering yields 0.466×$24.8M + 0.437×$5.2M + 0.097×(−$1.5M) = $13.68M versus −$1.5M to withdraw, so Cascade enters. After an unfavorable signal: P(large)=0.06/0.485=12.4%, P(medium)=0.225/0.485=46.4%, P(small)=0.20/0.485=41.2%; entering yields 0.124×$24.8M + 0.464×$5.2M + 0.412×(−$1.5M) = $4.86M versus −$1.5M to withdraw, so Cascade still enters. Pilot EMV = 0.515×$13.68M + 0.485×$4.86M = $9.41M, which is BELOW immediate entry's $9.5M. Under the EMV criterion the optimal strategy is to enter immediately (Choice B). Choice C overstates the pilot's value: the pilot cost of $1.5M is below EVPI, but the pilot does not lift the decision above the $9.5M no-information optimum. Choice A is the maximin alternative, not the EMV choice.",
-      "Topic": "Decision tree analysis",
-      "Subtopic": "Optimal strategy",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "decision tree",
-        "strategy"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C6-Q4",
-      "Type": "select",
-      "Prompt": "If Cascade uses the maximin criterion (pessimistic), which alternative should it choose?",
-      "Correct": "B",
-      "Choices": [
-        "Enter immediately — it has the highest possible payoff of $28 million",
-        "Wait 12 months — its worst-case payoff of $1 million is better than the worst cases of immediate entry (−$10M) and pilot (−$1.5M)",
-        "Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$10M",
-        "Enter immediately — the expected value dominates the other alternatives"
-      ],
-      "Explanation": "The maximin criterion selects the alternative with the best worst-case payoff (maximize the minimum). Immediate entry's worst case is −$10M (small market). The pilot's worst case is −$1.5M (small market, unfavorable signal, withdraw). Wait's worst case is $1M (small market). Maximin = max(−$10M, −$1.5M, $1M) = $1M → choose Wait. The maximin criterion is appropriate for risk-averse decision-makers who prioritize avoiding the largest loss. It ignores the probability distribution and the upside potential. A common exam trap is to confuse maximin (best worst case) with maximax (best best case), which would choose immediate entry for its $28M upside.",
-      "Topic": "Decision criteria",
-      "Subtopic": "Maximin",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "maximin",
-        "risk aversion"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C6-Q5",
-      "Type": "multi",
-      "Prompt": "Which THREE factors should Amara consider when choosing between the pilot and immediate-entry alternatives? Select exactly three.",
-      "Correct": [
-        "The pilot cost of $1.5 million must be compared against the EVPI of $2.75 million to determine if imperfect information has positive expected value",
-        "The pilot's signal accuracy (80%/50%/20% across scenarios) determines how much the posterior probabilities shift from the priors",
-        "The opportunity cost of the 6-month delay during the pilot period, during which a competitor may enter the market"
-      ],
-      "Choices": {
-        "A": "The pilot cost of $1.5 million must be compared against the EVPI of $2.75 million to determine if imperfect information has positive expected value",
-        "B": "The pilot's signal accuracy (80%/50%/20% across scenarios) determines how much the posterior probabilities shift from the priors",
-        "C": "The total sunk cost of $12 million that Cascade has already invested in R&D for the drug candidate",
-        "D": "The opportunity cost of the 6-month delay during the pilot period, during which a competitor may enter the market",
-        "E": "The fact that the pilot study eliminates all uncertainty about the market size"
+        "Rows": [
+          [
+            "Large market",
+            "0.30",
+            "$28,000,000",
+            "$24,800,000",
+            "$18,000,000"
+          ],
+          [
+            "Medium market",
+            "0.45",
+            "$8,000,000",
+            "$5,200,000",
+            "$6,000,000"
+          ],
+          [
+            "Small market",
+            "0.25",
+            "−$10,000,000",
+            "−$1,500,000",
+            "$1,000,000"
+          ]
+        ],
+        "DataFormat": "Probabilities sum to 1.00; NPV in USD after all costs including the $12M entry investment or $1.5M pilot cost",
+        "AccuracyCheck": "EV computation: 0.30×28M + 0.45×8M + 0.25×(−10M) = 8.4 + 3.6 − 2.5 = 9.5M for immediate entry"
       },
-      "Explanation": "Statement A applies the EVPI benchmark: since the pilot costs less than the EVPI, imperfect information has positive expected value. Statement B is correct because the posterior probabilities — the updated beliefs after observing the pilot signal — determine the value of the information. Higher accuracy (80% for large market) means the pilot more reliably separates good from bad outcomes. Statement D captures the real option cost: the 6-month pilot delay may allow a competitor to capture first-mover advantage, an opportunity cost not reflected in the NPV figures. Statement C is incorrect: the R&D cost is sunk regardless of the entry decision and should not influence the choice. Statement E is incorrect: the pilot is imperfect (accuracy ranges from 20% to 80%), so uncertainty remains after the signal.",
-      "Topic": "Decision factors",
-      "Subtopic": "Pilot vs. entry",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "decision factors",
-        "real options"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C6-Q6",
-      "Type": "select",
-      "Prompt": "Which statement correctly interprets the EVPI in Cascade's context?",
-      "Correct": "D",
-      "Choices": [
-        "EVPI represents the total NPV Cascade would earn if it had perfect information about the market",
-        "EVPI is the maximum amount Cascade should invest in R&D before entering the market",
-        "EVPI equals the probability-weighted average of the best outcomes across all market scenarios",
-        "EVPI of $2.75 million is the maximum Cascade should rationally pay for any information source — imperfect or perfect — that helps distinguish between market scenarios"
-      ],
-      "Explanation": "EVPI is the ceiling on the value of information. If a source of information — whether a perfect forecast or an imperfect pilot study — costs more than $2.75 million, Cascade should reject it and decide based on the prior probabilities alone. The pilot costs $1.5 million, which is below the EVPI ceiling, confirming positive expected net value from the pilot. Choice A describes EV with perfect information ($12.25M), not the value OF the information. Choice B is too narrow — EVPI applies to any information source, not just R&D. Choice C describes EV with PI, not EVPI itself. A common exam trap is to confuse EVPI with EV with perfect information.",
-      "Topic": "EVPI interpretation",
-      "Subtopic": "Information value",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "DA-11",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "EVPI",
-        "information value"
-      ],
-      "Dependencies": []
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-C6-E2",
+        "CaseID": "CBQ22-C6",
+        "Type": "text",
+        "Title": "Exhibit 2 — Pilot Study Information",
+        "Purpose": "Describes the pilot study's capabilities and limitations, providing context for interpreting the staged-entry option.",
+        "ReferencedBy": [
+          "CBQ22-C6-Q4",
+          "CBQ22-C6-Q5",
+          "CBQ22-C6-Q6"
+        ],
+        "Body": "The pilot study costs $1.5 million and takes 6 months. It provides a signal (favorable or unfavorable) about market demand, but the signal is not perfectly accurate: given a truly large market, the pilot signals favorable 80% of the time and unfavorable 20% of the time. Given a medium market, the pilot signals favorable 50% of the time and unfavorable 50% of the time. Given a small market, the pilot signals favorable 20% of the time and unfavorable 80% of the time. After receiving the pilot signal, Cascade decides whether to proceed with full entry (total additional investment of $12 million) or withdraw. If Cascade withdraws, the only cost is the $1.5 million pilot expense. The wait option costs nothing upfront but delays revenue by 12 months, resulting in discounted payoffs shown in Exhibit 1."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-C6-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the expected monetary value (EMV) of the immediate-entry alternative, in millions of dollars.",
+        "Correct": "9500000",
+        "Explanation": "EMV of immediate entry = Σ(Probability × NPV) = (0.30 × $28,000,000) + (0.45 × $8,000,000) + (0.25 × (−$10,000,000)) = $8,400,000 + $3,600,000 − $2,500,000 = $9,500,000. The expected value is a probability-weighted average of all possible outcomes. Even though there is a 25% chance of a $10 million loss, the large-market upside ($28M × 0.30 = $8.4M) drives the EMV to a positive $9.5M. This is the value Cascade should compare against the EMV of the pilot and wait alternatives. A common error is to weight the payoffs by equal probability (1/3 each) instead of using the given distribution.",
+        "Topic": "Expected value",
+        "Subtopic": "EMV computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-10: Expected Value = Σ(Pi × Outcomei)",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "expected value",
+          "EMV"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C6-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the expected value of perfect information (EVPI), in dollars.",
+        "Correct": "2750000",
+        "Explanation": "EVPI = EV with perfect information − EV without perfect information. With perfect information Cascade knows the market state before choosing: large → enter at $28M, medium → enter at $8M, small → wait at $1M. EVwPI = 0.30 × $28M + 0.45 × $8M + 0.25 × $1M = $8.4M + $3.6M + $0.25M = $12.25M. EVwoPI is the best expected value without information — immediate entry at $9.5M, since the wait option is $8.35M and the pilot is $9.41M, both below $9.5M. EVPI = $12.25M − $9.5M = $2.75M. A common trap is to confuse EVPI with EVwPI ($12.25M), or to anchor on the single best payoff ($28M) instead of the probability-weighted best outcomes.",
+        "Topic": "Expected value of perfect information",
+        "Subtopic": "EVPI computation",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-11: EVPI = EVwPI − EVwoPI",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "EVPI",
+          "perfect information"
+        ],
+        "Dependencies": [
+          "CBQ22-C6-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-C6-Q3",
+        "Type": "select",
+        "Prompt": "Based on the expected value analysis, which entry strategy should Cascade pursue?",
+        "Correct": "B",
+        "Choices": [
+          "Wait 12 months — it has the lowest downside risk across all scenarios",
+          "Enter immediately — it has the highest EMV at $9.5 million and should be selected regardless of risk attitude",
+          "Conduct the pilot study — it reduces the expected loss in the small-market scenario while preserving upside in the large-market scenario, and the $1.5 million pilot cost is less than the EVPI of $2.75 million",
+          "Enter immediately — the $28 million large-market payoff dominates all other alternatives"
+        ],
+        "Explanation": "The pilot option's EMV is computed from the posterior probabilities. P(favorable) = 0.30×0.80 + 0.45×0.50 + 0.25×0.20 = 0.515; P(unfavorable) = 0.485. After a favorable signal: P(large)=0.24/0.515=46.6%, P(medium)=0.225/0.515=43.7%, P(small)=0.05/0.515=9.7%; entering yields 0.466×$24.8M + 0.437×$5.2M + 0.097×(−$1.5M) = $13.68M versus −$1.5M to withdraw, so Cascade enters. After an unfavorable signal: P(large)=0.06/0.485=12.4%, P(medium)=0.225/0.485=46.4%, P(small)=0.20/0.485=41.2%; entering yields 0.124×$24.8M + 0.464×$5.2M + 0.412×(−$1.5M) = $4.86M versus −$1.5M to withdraw, so Cascade still enters. Pilot EMV = 0.515×$13.68M + 0.485×$4.86M = $9.41M, which is BELOW immediate entry's $9.5M. Under the EMV criterion the optimal strategy is to enter immediately (Choice B). Choice C overstates the pilot's value: the pilot cost of $1.5M is below EVPI, but the pilot does not lift the decision above the $9.5M no-information optimum. Choice A is the maximin alternative, not the EMV choice.",
+        "Topic": "Decision tree analysis",
+        "Subtopic": "Optimal strategy",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "decision tree",
+          "strategy"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C6-Q4",
+        "Type": "select",
+        "Prompt": "If Cascade uses the maximin criterion (pessimistic), which alternative should it choose?",
+        "Correct": "B",
+        "Choices": [
+          "Enter immediately — it has the highest possible payoff of $28 million",
+          "Wait 12 months — its worst-case payoff of $1 million is better than the worst cases of immediate entry (−$10M) and pilot (−$1.5M)",
+          "Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$10M",
+          "Enter immediately — the expected value dominates the other alternatives"
+        ],
+        "Explanation": "The maximin criterion selects the alternative with the best worst-case payoff (maximize the minimum). Immediate entry's worst case is −$10M (small market). The pilot's worst case is −$1.5M (small market, unfavorable signal, withdraw). Wait's worst case is $1M (small market). Maximin = max(−$10M, −$1.5M, $1M) = $1M → choose Wait. The maximin criterion is appropriate for risk-averse decision-makers who prioritize avoiding the largest loss. It ignores the probability distribution and the upside potential. A common exam trap is to confuse maximin (best worst case) with maximax (best best case), which would choose immediate entry for its $28M upside.",
+        "Topic": "Decision criteria",
+        "Subtopic": "Maximin",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "maximin",
+          "risk aversion"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C6-Q5",
+        "Type": "multi",
+        "Prompt": "Which THREE factors should Amara consider when choosing between the pilot and immediate-entry alternatives? Select exactly three.",
+        "Correct": [
+          "The pilot cost of $1.5 million must be compared against the EVPI of $2.75 million to determine if imperfect information has positive expected value",
+          "The pilot's signal accuracy (80%/50%/20% across scenarios) determines how much the posterior probabilities shift from the priors",
+          "The opportunity cost of the 6-month delay during the pilot period, during which a competitor may enter the market"
+        ],
+        "Choices": {
+          "A": "The pilot cost of $1.5 million must be compared against the EVPI of $2.75 million to determine if imperfect information has positive expected value",
+          "B": "The pilot's signal accuracy (80%/50%/20% across scenarios) determines how much the posterior probabilities shift from the priors",
+          "C": "The total sunk cost of $12 million that Cascade has already invested in R&D for the drug candidate",
+          "D": "The opportunity cost of the 6-month delay during the pilot period, during which a competitor may enter the market",
+          "E": "The fact that the pilot study eliminates all uncertainty about the market size"
+        },
+        "Explanation": "Statement A applies the EVPI benchmark: since the pilot costs less than the EVPI, imperfect information has positive expected value. Statement B is correct because the posterior probabilities — the updated beliefs after observing the pilot signal — determine the value of the information. Higher accuracy (80% for large market) means the pilot more reliably separates good from bad outcomes. Statement D captures the real option cost: the 6-month pilot delay may allow a competitor to capture first-mover advantage, an opportunity cost not reflected in the NPV figures. Statement C is incorrect: the R&D cost is sunk regardless of the entry decision and should not influence the choice. Statement E is incorrect: the pilot is imperfect (accuracy ranges from 20% to 80%), so uncertainty remains after the signal.",
+        "Topic": "Decision factors",
+        "Subtopic": "Pilot vs. entry",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "decision factors",
+          "real options"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C6-Q6",
+        "Type": "select",
+        "Prompt": "Which statement correctly interprets the EVPI in Cascade's context?",
+        "Correct": "D",
+        "Choices": [
+          "EVPI represents the total NPV Cascade would earn if it had perfect information about the market",
+          "EVPI is the maximum amount Cascade should invest in R&D before entering the market",
+          "EVPI equals the probability-weighted average of the best outcomes across all market scenarios",
+          "EVPI of $2.75 million is the maximum Cascade should rationally pay for any information source — imperfect or perfect — that helps distinguish between market scenarios"
+        ],
+        "Explanation": "EVPI is the ceiling on the value of information. If a source of information — whether a perfect forecast or an imperfect pilot study — costs more than $2.75 million, Cascade should reject it and decide based on the prior probabilities alone. The pilot costs $1.5 million, which is below the EVPI ceiling, confirming positive expected net value from the pilot. Choice A describes EV with perfect information ($12.25M), not the value OF the information. Choice B is too narrow — EVPI applies to any information source, not just R&D. Choice C describes EV with PI, not EVPI itself. A common exam trap is to confuse EVPI with EV with perfect information.",
+        "Topic": "EVPI interpretation",
+        "Subtopic": "Information value",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "DA-11",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "EVPI",
+          "information value"
+        ],
+        "Dependencies": []
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-C7",
-  "Title": "Transfer Pricing Dispute at Halcyon Group",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Determine the minimum transfer price from the selling division's perspective",
-    "Determine the maximum transfer price from the buying division's perspective",
-    "Evaluate the dual pricing approach when divisions have different tax rates",
-    "Analyze the impact of idle capacity on transfer-pricing policy"
-  ],
-  "PrimaryCompetency": "Judgment",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Halcyon Group's Components Division manufactures specialized circuit boards used by its Assembly Division. The Components Division currently has idle capacity and can produce additional units at a variable cost of $22 per unit. The external market price for comparable boards is $35 per unit. The Assembly Division can purchase equivalent boards from an outside supplier at $33 per unit. The divisions operate in different tax jurisdictions — the Components Division at 21% and the Assembly Division at 30%. CFO Kenji Tanaka must resolve the transfer-pricing dispute that has stalled inter-divisional orders for three months.",
-  "Industry": "Electronics manufacturing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Halcyon Group",
-  "Stakeholder": "CFO Kenji Tanaka",
-  "BusinessFunction": "Cost accounting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "transfer pricing",
-    "dual pricing",
-    "tax arbitrage",
-    "idle capacity"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-C7",
+    "Title": "Transfer Pricing Dispute at Halcyon Group",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Determine the minimum transfer price from the selling division's perspective",
+      "Determine the maximum transfer price from the buying division's perspective",
+      "Evaluate the dual pricing approach when divisions have different tax rates",
+      "Analyze the impact of idle capacity on transfer-pricing policy"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Halcyon Group's Components Division manufactures specialized circuit boards used by its Assembly Division. The Components Division currently has idle capacity and can produce additional units at a variable cost of $22 per unit. The external market price for comparable boards is $35 per unit. The Assembly Division can purchase equivalent boards from an outside supplier at $33 per unit. The divisions operate in different tax jurisdictions — the Components Division at 21% and the Assembly Division at 30%. CFO Kenji Tanaka must resolve the transfer-pricing dispute that has stalled inter-divisional orders for three months.",
+    "Industry": "Electronics manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Halcyon Group",
+    "Stakeholder": "CFO Kenji Tanaka",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "transfer pricing",
+      "dual pricing",
+      "tax arbitrage",
+      "idle capacity"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Compute minimum and maximum transfer prices under idle and full capacity",
-    "Evaluate the negotiated transfer price range",
-    "Analyze dual pricing as a resolution mechanism for divisional disputes",
-    "Assess tax implications of cross-jurisdictional transfer pricing"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-C7-E1",
-      "CaseID": "CBQ22-C7",
-      "Type": "table",
-      "Title": "Exhibit 1 — Divisional Financial Summary",
-      "Purpose": "Provides each division's cost structure, capacity utilization, and current financial performance for transfer-price analysis.",
-      "ReferencedBy": [
-        "CBQ22-C7-Q1",
-        "CBQ22-C7-Q2",
-        "CBQ22-C7-Q5"
-      ],
-      "Headers": [
-        "Item",
-        "Components Division",
-        "Assembly Division"
-      ],
-      "Rows": [
-        [
-          "Variable cost per unit",
-          "$22.00",
-          "$48.00 (excl. circuit board)"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute minimum and maximum transfer prices under idle and full capacity",
+      "Evaluate the negotiated transfer price range",
+      "Analyze dual pricing as a resolution mechanism for divisional disputes",
+      "Assess tax implications of cross-jurisdictional transfer pricing"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-C7-E1",
+        "CaseID": "CBQ22-C7",
+        "Type": "table",
+        "Title": "Exhibit 1 — Divisional Financial Summary",
+        "Purpose": "Provides each division's cost structure, capacity utilization, and current financial performance for transfer-price analysis.",
+        "ReferencedBy": [
+          "CBQ22-C7-Q1",
+          "CBQ22-C7-Q2",
+          "CBQ22-C7-Q5"
         ],
-        [
-          "Fixed cost per unit (allocated)",
-          "$14.00",
-          "$20.00"
+        "Headers": [
+          "Item",
+          "Components Division",
+          "Assembly Division"
         ],
-        [
-          "External purchase price (circuit board)",
-          "N/A",
-          "$33.00"
+        "Rows": [
+          [
+            "Variable cost per unit",
+            "$22.00",
+            "$48.00 (excl. circuit board)"
+          ],
+          [
+            "Fixed cost per unit (allocated)",
+            "$14.00",
+            "$20.00"
+          ],
+          [
+            "External purchase price (circuit board)",
+            "N/A",
+            "$33.00"
+          ],
+          [
+            "Market selling price (circuit board)",
+            "$35.00",
+            "N/A"
+          ],
+          [
+            "Current capacity utilization",
+            "70%",
+            "85%"
+          ],
+          [
+            "Units needed per period",
+            "5,000",
+            "5,000"
+          ],
+          [
+            "Tax rate",
+            "21%",
+            "30%"
+          ]
         ],
-        [
-          "Market selling price (circuit board)",
-          "$35.00",
-          "N/A"
-        ],
-        [
-          "Current capacity utilization",
-          "70%",
-          "85%"
-        ],
-        [
-          "Units needed per period",
-          "5,000",
-          "5,000"
-        ],
-        [
-          "Tax rate",
-          "21%",
-          "30%"
-        ]
-      ],
-      "DataFormat": "USD per unit; capacity as percentage of maximum",
-      "AccuracyCheck": "Components has 30% idle capacity = 30% of max; at 5,000 units needed, sufficient idle capacity exists"
-    },
-    {
-      "ExhibitID": "CBQ22-C7-E2",
-      "CaseID": "CBQ22-C7",
-      "Type": "table",
-      "Title": "Exhibit 2 — Tax and Margin Comparison",
-      "Purpose": "Shows the after-tax impact of different transfer prices on each division's profitability and the consolidated entity.",
-      "ReferencedBy": [
-        "CBQ22-C7-Q4",
-        "CBQ22-C7-Q5",
-        "CBQ22-C7-Q6"
-      ],
-      "Headers": [
-        "Transfer Price",
-        "Components Division After-Tax CM",
-        "Assembly Division After-Tax Profit",
-        "Consolidated After-Tax Impact"
-      ],
-      "Rows": [["$22.00 (variable cost)","$0","$38,500","$38,500 — benefit taxed at 30% in Assembly; lowest after-tax among feasible prices"],["$27.50 (midpoint)","$21,725","$19,250","$40,975 — benefit split between divisions"],["$33.00 (external price)","$43,450","$0","$43,450 — maximum after-tax benefit; surplus taxed at 21% in Components"],["$35.00 (market price)","$51,350 (only if Assembly accepted)","−$7,000 (worse than external)","$0 — Assembly rejects; no transfer"]],
-      "DataFormat": "After-tax amounts at stated transfer prices for 5,000 units",
-      "AccuracyCheck": "Components after-tax CM = (TP − $22.00) × 5,000 × (1 − 0.21); Assembly impact = ($33.00 − TP) × 5,000 × (1 − 0.30). Verified: at $28.50 → $25,675 / $15,750; at $33.00 → $43,450 / $0; at $22.00 → $0 / $38,500. At $35.00 Assembly is worse than external sourcing (−$7,000) so no transfer occurs."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-C7-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the minimum transfer price per unit that the Components Division should accept, given its idle capacity.",
-      "Correct": "22",
-      "Explanation": "Under the general transfer-pricing rule, the minimum price = variable cost + opportunity cost. With idle capacity (30% unused), the Components Division sacrifices no external sales by producing internally — opportunity cost = $0. Therefore, the minimum transfer price = $22.00 + $0 = $22.00 per unit. Any price above $22.00 contributes positively to the Components Division's contribution margin. The division would prefer the market price ($35), but $22 is the floor below which it loses money on each transferred unit. A common error is to include allocated fixed costs ($14) in the minimum — fixed costs are irrelevant because they do not change with the transfer decision.",
-      "Topic": "Transfer pricing",
-      "Subtopic": "Minimum price computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "DA-09: Transfer Price Minimum = Variable Cost + Opportunity Cost",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "transfer pricing",
-        "minimum"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C7-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the maximum transfer price per unit that the Assembly Division should be willing to pay.",
-      "Correct": "33",
-      "Explanation": "The maximum transfer price equals the cost the buying division would incur from the best external alternative. The Assembly Division can purchase equivalent circuit boards from an outside supplier at $33.00 per unit. Therefore, the maximum transfer price = $33.00. Any internal transfer price above $33.00 would make the Assembly Division worse off than buying externally — the division would rationally reject the transfer. The range for a mutually beneficial transfer is $22.00 ≤ TP ≤ $33.00. The Assembly Division's own variable cost ($48 excluding the board) and fixed cost ($20) are irrelevant to the maximum price — they are incurred regardless of the source of the circuit board.",
-      "Topic": "Transfer pricing",
-      "Subtopic": "Maximum price computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Transfer Price Maximum = Cost of external purchase (best alternative)",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "transfer pricing",
-        "maximum"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C7-Q3",
-      "Type": "select",
-      "Prompt": "What is the negotiated transfer price range within which both divisions benefit from the internal transfer?",
-      "Correct": "C",
-      "Choices": [
-        "$22.00 to $35.00 — from the Components Division's variable cost to the market selling price",
-        "$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Division's external purchase price",
-        "$22.00 to $33.00 — from the Components Division's variable cost (floor) to the Assembly Division's external purchase price (ceiling)",
-        "$28.50 to $35.00 — the midpoint of the range to the market price"
-      ],
-      "Explanation": "The negotiated range is bounded by the seller's minimum ($22.00 = variable cost with idle capacity) and the buyer's maximum ($33.00 = external purchase price). Any transfer price within this range improves both divisions' results relative to their outside alternatives. The Components Division earns positive CM at any price above $22.00, and the Assembly Division saves money at any price below $33.00. At $22.00, the Components Division breaks even on the transfer and the Assembly Division captures the full $11 benefit. At $33.00, the Assembly Division breaks even and the Components captures the benefit. The midpoint ($27.50) splits the $11 surplus equally. Choice A is too wide — the $35 market price exceeds the buyer's maximum. Choice B uses fixed cost, which is irrelevant.",
-      "Topic": "Negotiated range",
-      "Subtopic": "Range identification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "negotiated range",
-        "bilateral benefit"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C7-Q4",
-      "Type": "select",
-      "Prompt": "Why might Halcyon adopt a dual pricing system for this transfer?",
-      "Correct": "D",
-      "Choices": [
-        "Dual pricing is required by GAAP for all intercompany transfers",
-        "Dual pricing allows both divisions to report the market price, simplifying performance evaluation",
-        "Dual pricing eliminates the need for a transfer price entirely",
-        "Dual pricing lets the selling division record revenue at one price (e.g., market) and the buying division record cost at another (e.g., variable cost), resolving the dispute when no single price satisfies both divisions"
-      ],
-      "Explanation": "Dual pricing records two different prices for the same internal transaction: the selling division (Components) credits revenue at the market price ($35) while the buying division (Assembly) debits inventory at variable cost ($22) or another agreed price. The corporate office absorbs the difference as an intercompany elimination. This resolves the dispute because neither division is forced to accept a price that makes it worse off — Components gets market-price revenue and Assembly gets below-market cost. The consolidated entity benefits from the $11 per-unit savings ($33 external − $22 internal) without any division bearing a loss. Choice A is wrong: GAAP requires elimination of intercompany transactions but does not mandate dual pricing. Choice C is incorrect: a transfer price still exists for each division's books.",
-      "Topic": "Dual pricing",
-      "Subtopic": "Rationale",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "dual pricing",
-        "dispute resolution"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C7-Q5",
-      "Type": "multi",
-      "Prompt": "Which THREE statements about the tax implications of the transfer are correct? Select exactly three.",
-      "Correct": [
-        "A higher transfer price shifts more pre-tax profit to the Components Division, which pays tax at 21% — the lower-rate jurisdiction",
-        "The consolidated entity benefits when the selling division (21% tax rate) records more income than the buying division (30% tax rate) because the tax savings on the incremental income exceed the tax cost",
-        "If Halcyon uses a cost-based transfer price of $22, the Assembly Division captures all the savings in its 30% tax jurisdiction, resulting in higher consolidated taxes than a market-based price"
-      ],
-      "Choices": {
-        "A": "A higher transfer price shifts more pre-tax profit to the Components Division, which pays tax at 21% — the lower-rate jurisdiction",
-        "B": "The tax rate difference is irrelevant because consolidated financial statements eliminate all intercompany transactions",
-        "C": "The consolidated entity benefits when the selling division (21% tax rate) records more income than the buying division (30% tax rate) because the tax savings on the incremental income exceed the tax cost",
-        "D": "Transfer prices must always equal the market price to comply with IRS arm's-length requirements",
-        "E": "If Halcyon uses a cost-based transfer price of $22, the Assembly Division captures all the savings in its 30% tax jurisdiction, resulting in higher consolidated taxes than a market-based price"
+        "DataFormat": "USD per unit; capacity as percentage of maximum",
+        "AccuracyCheck": "Components has 30% idle capacity = 30% of max; at 5,000 units needed, sufficient idle capacity exists"
       },
-      "Explanation": "Statement A is correct: shifting profit to the 21% jurisdiction saves 9 cents per dollar of profit versus the 30% jurisdiction. Statement C is correct: when the selling division (21%) records the $11 surplus per unit, the tax on that surplus is $11 × 0.21 = $2.31, versus $11 × 0.30 = $3.30 if recorded by Assembly — a $0.99 per-unit tax saving. Statement E is correct: at a $22 cost-based price, the Assembly Division's cost is $22 (not $33 external), creating $11 of savings per unit taxed at 30% = $3.30 in tax. At a $35 market price, Components records the $13 surplus ($35 − $22) taxed at 21% = $2.73 — lower consolidated tax. Statement B is wrong: while intercompany profit is eliminated in consolidation, the tax jurisdiction allocation affects consolidated tax expense. Statement D is incorrect: the arm's-length standard applies to related-party transactions for tax purposes, but Halcyon can justify cost-based pricing if it has economic substance.",
-      "Topic": "Transfer pricing",
-      "Subtopic": "Tax implications",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "tax arbitrage",
-        "transfer pricing"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C7-Q6",
-      "Type": "select",
-      "Prompt": "Which transfer-pricing recommendation should Kenji implement?",
-      "Correct": "B",
-      "Choices": [
-        "Set the transfer price at $35.00 (market price) to fairly compensate the Components Division",
-        "Implement dual pricing at $35.00 for the Components Division and $22.00 for the Assembly Division, with the corporate office absorbing the difference — this resolves the dispute, maximizes consolidated after-tax income, and incentivizes both divisions to transfer internally",
-        "Set the transfer price at $22.00 (variable cost) to maximize the Assembly Division's profitability",
-        "Require the Assembly Division to buy externally at $33.00 to maintain divisional autonomy"
-      ],
-      "Explanation": "Dual pricing at $35/$22 is the optimal resolution. The Components Division records revenue at the market price ($35), earning full market compensation — it has no incentive to resist the transfer. The Assembly Division records cost at variable ($22), well below its external alternative ($33) — it has strong incentive to buy internally. The consolidated entity captures the full $11 per-unit savings ($33 external − $22 internal), and the tax benefit is maximized because the $13 surplus at the selling division ($35 − $22) is taxed at the lower 21% rate. The corporate intercompany elimination absorbs the $13 dual-pricing gap. Choice A creates an internal price above the Assembly's external alternative ($35 > $33), causing the Assembly to reject the transfer. Choice C gives Components zero profit — it will refuse. Choice D wastes idle capacity and sacrifices $11 per unit of consolidated savings.",
-      "Topic": "Transfer pricing",
-      "Subtopic": "Recommendation",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "recommendation",
-        "dual pricing"
-      ],
-      "Dependencies": [
-        "CBQ22-C7-Q1",
-        "CBQ22-C7-Q2",
-        "CBQ22-C7-Q5"
-      ]
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-C7-E2",
+        "CaseID": "CBQ22-C7",
+        "Type": "table",
+        "Title": "Exhibit 2 — Tax and Margin Comparison",
+        "Purpose": "Shows the after-tax impact of different transfer prices on each division's profitability and the consolidated entity.",
+        "ReferencedBy": [
+          "CBQ22-C7-Q4",
+          "CBQ22-C7-Q5",
+          "CBQ22-C7-Q6"
+        ],
+        "Headers": [
+          "Transfer Price",
+          "Components Division After-Tax CM",
+          "Assembly Division After-Tax Profit",
+          "Consolidated After-Tax Impact"
+        ],
+        "Rows": [
+          [
+            "$22.00 (variable cost)",
+            "$0",
+            "$38,500",
+            "$38,500 — benefit taxed at 30% in Assembly; lowest after-tax among feasible prices"
+          ],
+          [
+            "$27.50 (midpoint)",
+            "$21,725",
+            "$19,250",
+            "$40,975 — benefit split between divisions"
+          ],
+          [
+            "$33.00 (external price)",
+            "$43,450",
+            "$0",
+            "$43,450 — maximum after-tax benefit; surplus taxed at 21% in Components"
+          ],
+          [
+            "$35.00 (market price)",
+            "$51,350 (only if Assembly accepted)",
+            "−$7,000 (worse than external)",
+            "$0 — Assembly rejects; no transfer"
+          ]
+        ],
+        "DataFormat": "After-tax amounts at stated transfer prices for 5,000 units",
+        "AccuracyCheck": "Components after-tax CM = (TP − $22.00) × 5,000 × (1 − 0.21); Assembly impact = ($33.00 − TP) × 5,000 × (1 − 0.30). Verified: at $28.50 → $25,675 / $15,750; at $33.00 → $43,450 / $0; at $22.00 → $0 / $38,500. At $35.00 Assembly is worse than external sourcing (−$7,000) so no transfer occurs."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-C7-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the minimum transfer price per unit that the Components Division should accept, given its idle capacity.",
+        "Correct": "22",
+        "Explanation": "Under the general transfer-pricing rule, the minimum price = variable cost + opportunity cost. With idle capacity (30% unused), the Components Division sacrifices no external sales by producing internally — opportunity cost = $0. Therefore, the minimum transfer price = $22.00 + $0 = $22.00 per unit. Any price above $22.00 contributes positively to the Components Division's contribution margin. The division would prefer the market price ($35), but $22 is the floor below which it loses money on each transferred unit. A common error is to include allocated fixed costs ($14) in the minimum — fixed costs are irrelevant because they do not change with the transfer decision.",
+        "Topic": "Transfer pricing",
+        "Subtopic": "Minimum price computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "DA-09: Transfer Price Minimum = Variable Cost + Opportunity Cost",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "transfer pricing",
+          "minimum"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C7-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the maximum transfer price per unit that the Assembly Division should be willing to pay.",
+        "Correct": "33",
+        "Explanation": "The maximum transfer price equals the cost the buying division would incur from the best external alternative. The Assembly Division can purchase equivalent circuit boards from an outside supplier at $33.00 per unit. Therefore, the maximum transfer price = $33.00. Any internal transfer price above $33.00 would make the Assembly Division worse off than buying externally — the division would rationally reject the transfer. The range for a mutually beneficial transfer is $22.00 ≤ TP ≤ $33.00. The Assembly Division's own variable cost ($48 excluding the board) and fixed cost ($20) are irrelevant to the maximum price — they are incurred regardless of the source of the circuit board.",
+        "Topic": "Transfer pricing",
+        "Subtopic": "Maximum price computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Transfer Price Maximum = Cost of external purchase (best alternative)",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "transfer pricing",
+          "maximum"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C7-Q3",
+        "Type": "select",
+        "Prompt": "What is the negotiated transfer price range within which both divisions benefit from the internal transfer?",
+        "Correct": "C",
+        "Choices": [
+          "$22.00 to $35.00 — from the Components Division's variable cost to the market selling price",
+          "$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Division's external purchase price",
+          "$22.00 to $33.00 — from the Components Division's variable cost (floor) to the Assembly Division's external purchase price (ceiling)",
+          "$28.50 to $35.00 — the midpoint of the range to the market price"
+        ],
+        "Explanation": "The negotiated range is bounded by the seller's minimum ($22.00 = variable cost with idle capacity) and the buyer's maximum ($33.00 = external purchase price). Any transfer price within this range improves both divisions' results relative to their outside alternatives. The Components Division earns positive CM at any price above $22.00, and the Assembly Division saves money at any price below $33.00. At $22.00, the Components Division breaks even on the transfer and the Assembly Division captures the full $11 benefit. At $33.00, the Assembly Division breaks even and the Components captures the benefit. The midpoint ($27.50) splits the $11 surplus equally. Choice A is too wide — the $35 market price exceeds the buyer's maximum. Choice B uses fixed cost, which is irrelevant.",
+        "Topic": "Negotiated range",
+        "Subtopic": "Range identification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "negotiated range",
+          "bilateral benefit"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C7-Q4",
+        "Type": "select",
+        "Prompt": "Why might Halcyon adopt a dual pricing system for this transfer?",
+        "Correct": "D",
+        "Choices": [
+          "Dual pricing is required by GAAP for all intercompany transfers",
+          "Dual pricing allows both divisions to report the market price, simplifying performance evaluation",
+          "Dual pricing eliminates the need for a transfer price entirely",
+          "Dual pricing lets the selling division record revenue at one price (e.g., market) and the buying division record cost at another (e.g., variable cost), resolving the dispute when no single price satisfies both divisions"
+        ],
+        "Explanation": "Dual pricing records two different prices for the same internal transaction: the selling division (Components) credits revenue at the market price ($35) while the buying division (Assembly) debits inventory at variable cost ($22) or another agreed price. The corporate office absorbs the difference as an intercompany elimination. This resolves the dispute because neither division is forced to accept a price that makes it worse off — Components gets market-price revenue and Assembly gets below-market cost. The consolidated entity benefits from the $11 per-unit savings ($33 external − $22 internal) without any division bearing a loss. Choice A is wrong: GAAP requires elimination of intercompany transactions but does not mandate dual pricing. Choice C is incorrect: a transfer price still exists for each division's books.",
+        "Topic": "Dual pricing",
+        "Subtopic": "Rationale",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "dual pricing",
+          "dispute resolution"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C7-Q5",
+        "Type": "multi",
+        "Prompt": "Which THREE statements about the tax implications of the transfer are correct? Select exactly three.",
+        "Correct": [
+          "A higher transfer price shifts more pre-tax profit to the Components Division, which pays tax at 21% — the lower-rate jurisdiction",
+          "The consolidated entity benefits when the selling division (21% tax rate) records more income than the buying division (30% tax rate) because the tax savings on the incremental income exceed the tax cost",
+          "If Halcyon uses a cost-based transfer price of $22, the Assembly Division captures all the savings in its 30% tax jurisdiction, resulting in higher consolidated taxes than a market-based price"
+        ],
+        "Choices": {
+          "A": "A higher transfer price shifts more pre-tax profit to the Components Division, which pays tax at 21% — the lower-rate jurisdiction",
+          "B": "The tax rate difference is irrelevant because consolidated financial statements eliminate all intercompany transactions",
+          "C": "The consolidated entity benefits when the selling division (21% tax rate) records more income than the buying division (30% tax rate) because the tax savings on the incremental income exceed the tax cost",
+          "D": "Transfer prices must always equal the market price to comply with IRS arm's-length requirements",
+          "E": "If Halcyon uses a cost-based transfer price of $22, the Assembly Division captures all the savings in its 30% tax jurisdiction, resulting in higher consolidated taxes than a market-based price"
+        },
+        "Explanation": "Statement A is correct: shifting profit to the 21% jurisdiction saves 9 cents per dollar of profit versus the 30% jurisdiction. Statement C is correct: when the selling division (21%) records the $11 surplus per unit, the tax on that surplus is $11 × 0.21 = $2.31, versus $11 × 0.30 = $3.30 if recorded by Assembly — a $0.99 per-unit tax saving. Statement E is correct: at a $22 cost-based price, the Assembly Division's cost is $22 (not $33 external), creating $11 of savings per unit taxed at 30% = $3.30 in tax. At a $35 market price, Components records the $13 surplus ($35 − $22) taxed at 21% = $2.73 — lower consolidated tax. Statement B is wrong: while intercompany profit is eliminated in consolidation, the tax jurisdiction allocation affects consolidated tax expense. Statement D is incorrect: the arm's-length standard applies to related-party transactions for tax purposes, but Halcyon can justify cost-based pricing if it has economic substance.",
+        "Topic": "Transfer pricing",
+        "Subtopic": "Tax implications",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "tax arbitrage",
+          "transfer pricing"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C7-Q6",
+        "Type": "select",
+        "Prompt": "Which transfer-pricing recommendation should Kenji implement?",
+        "Correct": "B",
+        "Choices": [
+          "Set the transfer price at $35.00 (market price) to fairly compensate the Components Division",
+          "Implement dual pricing at $35.00 for the Components Division and $22.00 for the Assembly Division, with the corporate office absorbing the difference — this resolves the dispute, maximizes consolidated after-tax income, and incentivizes both divisions to transfer internally",
+          "Set the transfer price at $22.00 (variable cost) to maximize the Assembly Division's profitability",
+          "Require the Assembly Division to buy externally at $33.00 to maintain divisional autonomy"
+        ],
+        "Explanation": "Dual pricing at $35/$22 is the optimal resolution. The Components Division records revenue at the market price ($35), earning full market compensation — it has no incentive to resist the transfer. The Assembly Division records cost at variable ($22), well below its external alternative ($33) — it has strong incentive to buy internally. The consolidated entity captures the full $11 per-unit savings ($33 external − $22 internal), and the tax benefit is maximized because the $13 surplus at the selling division ($35 − $22) is taxed at the lower 21% rate. The corporate intercompany elimination absorbs the $13 dual-pricing gap. Choice A creates an internal price above the Assembly's external alternative ($35 > $33), causing the Assembly to reject the transfer. Choice C gives Components zero profit — it will refuse. Choice D wastes idle capacity and sacrifices $11 per unit of consolidated savings.",
+        "Topic": "Transfer pricing",
+        "Subtopic": "Recommendation",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "dual pricing"
+        ],
+        "Dependencies": [
+          "CBQ22-C7-Q1",
+          "CBQ22-C7-Q2",
+          "CBQ22-C7-Q5"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-C8",
-  "Title": "Special Order with Hidden Costs at Precision Fabricators",
-  "SectionTags": [
-    "C"
-  ],
-  "BlueprintDomain": "Decision Analysis",
-  "BlueprintObjectives": [
-    "Identify relevant costs in a special-order pricing decision",
-    "Compute the net financial impact of accepting a special order",
-    "Apply opportunity cost analysis to capacity-constrained special orders",
-    "Determine the minimum acceptable price for a special order"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Precision Fabricators has received a one-time special order for 2,000 precision brackets at $38.00 each — well below the normal selling price of $55.00. The plant is currently operating at 89% of practical capacity. The order requires a special setup costing $4,200, uses $12.00 of variable materials per unit, and would displace $9,300 of regular contribution margin from diverted production. VP of Operations Lisa Park must decide whether the order is financially attractive.",
-  "Industry": "Metal fabrication",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Precision Fabricators",
-  "Stakeholder": "VP of Operations Lisa Park",
-  "BusinessFunction": "Cost accounting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "special order",
-    "relevant costing",
-    "opportunity cost",
-    "capacity analysis"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-C8",
+    "Title": "Special Order with Hidden Costs at Precision Fabricators",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Identify relevant costs in a special-order pricing decision",
+      "Compute the net financial impact of accepting a special order",
+      "Apply opportunity cost analysis to capacity-constrained special orders",
+      "Determine the minimum acceptable price for a special order"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Precision Fabricators has received a one-time special order for 2,000 precision brackets at $38.00 each — well below the normal selling price of $55.00. The plant is currently operating at 89% of practical capacity. The order requires a special setup costing $4,200, uses $12.00 of variable materials per unit, and would displace $9,300 of regular contribution margin from diverted production. VP of Operations Lisa Park must decide whether the order is financially attractive.",
+    "Industry": "Metal fabrication",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Precision Fabricators",
+    "Stakeholder": "VP of Operations Lisa Park",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "special order",
+      "relevant costing",
+      "opportunity cost",
+      "capacity analysis"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Distinguish relevant from irrelevant costs in a special-order scenario",
-    "Compute the net contribution margin from a special order including opportunity costs",
-    "Apply the minimum-price rule with constrained capacity",
-    "Evaluate qualitative factors in special-order acceptance"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-C8-E1",
-      "CaseID": "CBQ22-C8",
-      "Type": "table",
-      "Title": "Exhibit 1 — Standard Cost Card",
-      "Purpose": "Provides the per-unit cost structure for normal production, used to identify variable and fixed cost components.",
-      "ReferencedBy": [
-        "CBQ22-C8-Q1",
-        "CBQ22-C8-Q2",
-        "CBQ22-C8-Q5"
-      ],
-      "Headers": [
-        "Cost Element",
-        "Per Unit",
-        "Behavior"
-      ],
-      "Rows": [["Direct materials","$12.00","Variable"],["Direct labor","$8.50","Variable"],["Variable overhead","$3.50","Variable"],["Fixed overhead (allocated)","$11.00","Fixed"],["Total standard cost","$35.00","Mixed"],["Normal selling price","$55.00","—"],["Normal contribution margin","$31.00","—"]],
-      "DataFormat": "USD per unit; behavior indicates cost response to volume changes",
-      "AccuracyCheck": "Variable cost per unit = $12.00 + $8.50 + $3.50 = $24.00; Normal CM = $55.00 − $24.00 = $31.00; Total standard cost = $24.00 + $11.00 = $35.00. Consistent."
-    },
-    {
-      "ExhibitID": "CBQ22-C8-E2",
-      "CaseID": "CBQ22-C8",
-      "Type": "table",
-      "Title": "Exhibit 2 — Capacity and Opportunity Cost",
-      "Purpose": "Provides capacity utilization data and quantifies the opportunity cost of diverting regular production to fill the special order.",
-      "ReferencedBy": [
-        "CBQ22-C8-Q3",
-        "CBQ22-C8-Q4",
-        "CBQ22-C8-Q6"
-      ],
-      "Headers": [
-        "Item",
-        "Value"
-      ],
-      "Rows": [["Practical capacity","15,000 units per year"],["Current production","13,300 units per year (89%)"],["Available capacity","1,700 units"],["Special order quantity","2,000 units"],["Regular CM per unit (displaced)","$31.00"],["Total opportunity cost (displaced CM)","$9,300"],["Special order setup cost","$4,200"]],
-      "DataFormat": "Units and USD; opportunity cost = displaced units × CM per unit",
-      "AccuracyCheck": "Available capacity 1,700 < order 2,000 → 300 units of regular production displaced; opportunity cost = 300 × $31.00 = $9,300. 13,300 + 1,700 = 15,000 practical capacity; 13,300/15,000 = 88.7% ≈ 89%."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-C8-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the relevant cost per unit for producing the special order, including variable cost, opportunity cost allocation, and setup cost allocation.",
-      "Correct": "30.75",
-      "Explanation": "Relevant cost per unit = Variable cost + (Opportunity cost + Setup cost) ÷ units. Variable cost = $12.00 + $8.50 + $3.50 = $24.00. The 2,000-unit order exceeds the 1,700 units of available capacity, so 300 units of regular production are displaced. Opportunity cost = 300 × $31.00 = $9,300. Setup = $4,200. Relevant cost per unit = $24.00 + ($9,300 + $4,200) ÷ 2,000 = $24.00 + $6.75 = $30.75. The $38.00 offer exceeds $30.75, contributing $7.25 per unit. The $11.00 fixed-overhead allocation is irrelevant — total fixed cost does not change with the order. A common error is to include it, or to ignore the opportunity cost of displaced regular sales.",
-      "Topic": "Relevant costing",
-      "Subtopic": "Special order cost computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Relevant Cost = Variable Cost + (Opportunity Cost + Incremental Fixed Cost) ÷ Units",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "relevant costing",
-        "special order"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C8-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the net financial impact (gain or loss) from accepting the special order, in dollars.",
-      "Correct": "14500",
-      "Explanation": "Net gain = (Special order price − Relevant cost per unit) × Units = ($38.00 − $30.75) × 2,000 = $7.25 × 2,000 = $14,500. Alternatively: revenue $38.00 × 2,000 = $76,000 less variable cost $24.00 × 2,000 = $48,000, less opportunity cost $9,300, less setup $4,200 → $76,000 − $61,500 = $14,500. The positive result confirms the order is financially attractive: it adds $14,500 of incremental profit above all relevant costs. A common trap is to ignore the $9,300 opportunity cost, which would overstate the gain to $23,800.",
-      "Topic": "Special order analysis",
-      "Subtopic": "Net impact computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "Net Gain = Revenue − Variable Costs − Opportunity Cost − Incremental Fixed Costs",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "net impact",
-        "special order"
-      ],
-      "Dependencies": [
-        "CBQ22-C8-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-C8-Q3",
-      "Type": "select",
-      "Prompt": "What is the minimum price per unit Precision Fabricators should accept for the special order?",
-      "Correct": "A",
-      "Choices": ["$30.75 — the relevant cost including variable cost, opportunity cost, and setup cost per unit", "$24.00 — the variable cost per unit, because fixed costs are irrelevant", "$35.00 — the total standard cost per unit", "$38.00 — the offered price, which is the only relevant benchmark"],
-      "Explanation": "The minimum acceptable price equals the relevant cost per unit: variable cost $24.00 + opportunity cost $9,300 ÷ 2,000 = $4.65 + setup $4,200 ÷ 2,000 = $2.10 → $30.75. Below this price Precision loses money on the order after covering all incremental and opportunity costs. Choice B ($24.00) ignores opportunity and setup costs. Choice C ($35.00) wrongly includes the allocated fixed-overhead allocation. Choice D is the offered price, not the minimum threshold.",
-      "Topic": "Minimum price rule",
-      "Subtopic": "Special order pricing",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "minimum price",
-        "relevant cost"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C8-Q4",
-      "Type": "select",
-      "Prompt": "Which cost represents the opportunity cost of accepting the special order?",
-      "Correct": "B",
-      "Choices": ["The $11.00 per unit fixed overhead allocation that will continue regardless of the order", "The $9,300 in regular contribution margin that Precision sacrifices by diverting 300 units of regular production", "The $4,200 setup cost that must be incurred to produce the special order", "The $35.00 total standard cost per unit for the special order units"],
-      "Explanation": "Opportunity cost is the contribution margin foregone from the next-best use of the constrained resource. Because the 2,000-unit order exceeds the 1,700 units of available capacity, 300 regular units are displaced, sacrificing 300 × $31.00 = $9,300 of regular contribution margin (the normal CM per unit from Exhibit 1). Choice A describes a sunk/committed fixed cost — fixed overhead continues regardless. Choice C is an incremental cost specific to the order, not an opportunity cost. Choice D is the absorption cost, which includes irrelevant fixed allocations. A common trap is to confuse opportunity cost with incremental fixed costs.",
-      "Topic": "Opportunity cost",
-      "Subtopic": "Identification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "opportunity cost",
-        "identification"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C8-Q5",
-      "Type": "multi",
-      "Prompt": "Which THREE costs are relevant to Precision Fabricators' special-order decision? Select exactly three.",
-      "Correct": ["The $12.00 per unit variable material cost that will be incurred only if the order is accepted","The $9,300 in displaced regular contribution margin that Precision sacrifices by filling the order","The $4,200 setup cost specific to the special order that would not exist without it"],
-      "Choices": {
-        "A": "The $12.00 per unit variable material cost that will be incurred only if the order is accepted",
-        "B": "The $11.00 per unit fixed overhead allocation that is assigned to all units regardless of the order",
-        "C": "The $9,300 in displaced regular contribution margin that Precision sacrifices by filling the order",
-        "D": "The $55.00 normal selling price because it establishes the value of the brackets",
-        "E": "The $4,200 setup cost specific to the special order that would not exist without it"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Distinguish relevant from irrelevant costs in a special-order scenario",
+      "Compute the net contribution margin from a special order including opportunity costs",
+      "Apply the minimum-price rule with constrained capacity",
+      "Evaluate qualitative factors in special-order acceptance"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-C8-E1",
+        "CaseID": "CBQ22-C8",
+        "Type": "table",
+        "Title": "Exhibit 1 — Standard Cost Card",
+        "Purpose": "Provides the per-unit cost structure for normal production, used to identify variable and fixed cost components.",
+        "ReferencedBy": [
+          "CBQ22-C8-Q1",
+          "CBQ22-C8-Q2",
+          "CBQ22-C8-Q5"
+        ],
+        "Headers": [
+          "Cost Element",
+          "Per Unit",
+          "Behavior"
+        ],
+        "Rows": [
+          [
+            "Direct materials",
+            "$12.00",
+            "Variable"
+          ],
+          [
+            "Direct labor",
+            "$8.50",
+            "Variable"
+          ],
+          [
+            "Variable overhead",
+            "$3.50",
+            "Variable"
+          ],
+          [
+            "Fixed overhead (allocated)",
+            "$11.00",
+            "Fixed"
+          ],
+          [
+            "Total standard cost",
+            "$35.00",
+            "Mixed"
+          ],
+          [
+            "Normal selling price",
+            "$55.00",
+            "—"
+          ],
+          [
+            "Normal contribution margin",
+            "$31.00",
+            "—"
+          ]
+        ],
+        "DataFormat": "USD per unit; behavior indicates cost response to volume changes",
+        "AccuracyCheck": "Variable cost per unit = $12.00 + $8.50 + $3.50 = $24.00; Normal CM = $55.00 − $24.00 = $31.00; Total standard cost = $24.00 + $11.00 = $35.00. Consistent."
       },
-      "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis.",
-      "Topic": "Relevant costing",
-      "Subtopic": "Cost identification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "relevant costing",
-        "cost identification"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-C8-Q6",
-      "Type": "select",
-      "Prompt": "Which recommendation should Lisa present to the CFO?",
-      "Correct": "C",
-      "Choices": ["Reject the order because $38.00 is below the $55.00 normal selling price and would undermine pricing integrity", "Accept the order at $38.00 with no conditions, because any price above variable cost contributes to fixed costs", "Accept the order at $38.00 — it covers all relevant costs ($30.75 per unit) and generates $14,500 in incremental profit, provided Precision confirms the displaced regular sales can be rescheduled without customer penalties and the order does not set a precedent for future below-market pricing", "Accept the order only if the customer pays $55.00 — the standard price — because all customers should be treated equally"],
-      "Explanation": "Choice C is correct: the $38.00 price exceeds the $30.75 relevant cost, yielding $14,500 of incremental profit, while acknowledging the qualitative risks — displaced regular customers must be rescheduled without penalties (otherwise the opportunity cost rises and the gain shrinks) and the discount must not establish a below-market pricing precedent. Choice A overstates the risk: $38.00 is above relevant cost even though it is below the $55.00 normal price. Choice B ignores the qualitative risks. Choice D is unrealistic — the customer offered $38.00 and insisting on $55.00 would likely lose the order entirely.",
-      "Topic": "Special order",
-      "Subtopic": "Recommendation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "recommendation",
-        "special order"
-      ],
-      "Dependencies": [
-        "CBQ22-C8-Q1",
-        "CBQ22-C8-Q2"
-      ]
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-C8-E2",
+        "CaseID": "CBQ22-C8",
+        "Type": "table",
+        "Title": "Exhibit 2 — Capacity and Opportunity Cost",
+        "Purpose": "Provides capacity utilization data and quantifies the opportunity cost of diverting regular production to fill the special order.",
+        "ReferencedBy": [
+          "CBQ22-C8-Q3",
+          "CBQ22-C8-Q4",
+          "CBQ22-C8-Q6"
+        ],
+        "Headers": [
+          "Item",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Practical capacity",
+            "15,000 units per year"
+          ],
+          [
+            "Current production",
+            "13,300 units per year (89%)"
+          ],
+          [
+            "Available capacity",
+            "1,700 units"
+          ],
+          [
+            "Special order quantity",
+            "2,000 units"
+          ],
+          [
+            "Regular CM per unit (displaced)",
+            "$31.00"
+          ],
+          [
+            "Total opportunity cost (displaced CM)",
+            "$9,300"
+          ],
+          [
+            "Special order setup cost",
+            "$4,200"
+          ]
+        ],
+        "DataFormat": "Units and USD; opportunity cost = displaced units × CM per unit",
+        "AccuracyCheck": "Available capacity 1,700 < order 2,000 → 300 units of regular production displaced; opportunity cost = 300 × $31.00 = $9,300. 13,300 + 1,700 = 15,000 practical capacity; 13,300/15,000 = 88.7% ≈ 89%."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-C8-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the relevant cost per unit for producing the special order, including variable cost, opportunity cost allocation, and setup cost allocation.",
+        "Correct": "30.75",
+        "Explanation": "Relevant cost per unit = Variable cost + (Opportunity cost + Setup cost) ÷ units. Variable cost = $12.00 + $8.50 + $3.50 = $24.00. The 2,000-unit order exceeds the 1,700 units of available capacity, so 300 units of regular production are displaced. Opportunity cost = 300 × $31.00 = $9,300. Setup = $4,200. Relevant cost per unit = $24.00 + ($9,300 + $4,200) ÷ 2,000 = $24.00 + $6.75 = $30.75. The $38.00 offer exceeds $30.75, contributing $7.25 per unit. The $11.00 fixed-overhead allocation is irrelevant — total fixed cost does not change with the order. A common error is to include it, or to ignore the opportunity cost of displaced regular sales.",
+        "Topic": "Relevant costing",
+        "Subtopic": "Special order cost computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Relevant Cost = Variable Cost + (Opportunity Cost + Incremental Fixed Cost) ÷ Units",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "relevant costing",
+          "special order"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C8-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the net financial impact (gain or loss) from accepting the special order, in dollars.",
+        "Correct": "14500",
+        "Explanation": "Net gain = (Special order price − Relevant cost per unit) × Units = ($38.00 − $30.75) × 2,000 = $7.25 × 2,000 = $14,500. Alternatively: revenue $38.00 × 2,000 = $76,000 less variable cost $24.00 × 2,000 = $48,000, less opportunity cost $9,300, less setup $4,200 → $76,000 − $61,500 = $14,500. The positive result confirms the order is financially attractive: it adds $14,500 of incremental profit above all relevant costs. A common trap is to ignore the $9,300 opportunity cost, which would overstate the gain to $23,800.",
+        "Topic": "Special order analysis",
+        "Subtopic": "Net impact computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Net Gain = Revenue − Variable Costs − Opportunity Cost − Incremental Fixed Costs",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "net impact",
+          "special order"
+        ],
+        "Dependencies": [
+          "CBQ22-C8-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-C8-Q3",
+        "Type": "select",
+        "Prompt": "What is the minimum price per unit Precision Fabricators should accept for the special order?",
+        "Correct": "A",
+        "Choices": [
+          "$30.75 — the relevant cost including variable cost, opportunity cost, and setup cost per unit",
+          "$24.00 — the variable cost per unit, because fixed costs are irrelevant",
+          "$35.00 — the total standard cost per unit",
+          "$38.00 — the offered price, which is the only relevant benchmark"
+        ],
+        "Explanation": "The minimum acceptable price equals the relevant cost per unit: variable cost $24.00 + opportunity cost $9,300 ÷ 2,000 = $4.65 + setup $4,200 ÷ 2,000 = $2.10 → $30.75. Below this price Precision loses money on the order after covering all incremental and opportunity costs. Choice B ($24.00) ignores opportunity and setup costs. Choice C ($35.00) wrongly includes the allocated fixed-overhead allocation. Choice D is the offered price, not the minimum threshold.",
+        "Topic": "Minimum price rule",
+        "Subtopic": "Special order pricing",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "minimum price",
+          "relevant cost"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C8-Q4",
+        "Type": "select",
+        "Prompt": "Which cost represents the opportunity cost of accepting the special order?",
+        "Correct": "B",
+        "Choices": [
+          "The $11.00 per unit fixed overhead allocation that will continue regardless of the order",
+          "The $9,300 in regular contribution margin that Precision sacrifices by diverting 300 units of regular production",
+          "The $4,200 setup cost that must be incurred to produce the special order",
+          "The $35.00 total standard cost per unit for the special order units"
+        ],
+        "Explanation": "Opportunity cost is the contribution margin foregone from the next-best use of the constrained resource. Because the 2,000-unit order exceeds the 1,700 units of available capacity, 300 regular units are displaced, sacrificing 300 × $31.00 = $9,300 of regular contribution margin (the normal CM per unit from Exhibit 1). Choice A describes a sunk/committed fixed cost — fixed overhead continues regardless. Choice C is an incremental cost specific to the order, not an opportunity cost. Choice D is the absorption cost, which includes irrelevant fixed allocations. A common trap is to confuse opportunity cost with incremental fixed costs.",
+        "Topic": "Opportunity cost",
+        "Subtopic": "Identification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "opportunity cost",
+          "identification"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C8-Q5",
+        "Type": "multi",
+        "Prompt": "Which THREE costs are relevant to Precision Fabricators' special-order decision? Select exactly three.",
+        "Correct": [
+          "The $12.00 per unit variable material cost that will be incurred only if the order is accepted",
+          "The $9,300 in displaced regular contribution margin that Precision sacrifices by filling the order",
+          "The $4,200 setup cost specific to the special order that would not exist without it"
+        ],
+        "Choices": {
+          "A": "The $12.00 per unit variable material cost that will be incurred only if the order is accepted",
+          "B": "The $11.00 per unit fixed overhead allocation that is assigned to all units regardless of the order",
+          "C": "The $9,300 in displaced regular contribution margin that Precision sacrifices by filling the order",
+          "D": "The $55.00 normal selling price because it establishes the value of the brackets",
+          "E": "The $4,200 setup cost specific to the special order that would not exist without it"
+        },
+        "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis.",
+        "Topic": "Relevant costing",
+        "Subtopic": "Cost identification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "relevant costing",
+          "cost identification"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-C8-Q6",
+        "Type": "select",
+        "Prompt": "Which recommendation should Lisa present to the CFO?",
+        "Correct": "C",
+        "Choices": [
+          "Reject the order because $38.00 is below the $55.00 normal selling price and would undermine pricing integrity",
+          "Accept the order at $38.00 with no conditions, because any price above variable cost contributes to fixed costs",
+          "Accept the order at $38.00 — it covers all relevant costs ($30.75 per unit) and generates $14,500 in incremental profit, provided Precision confirms the displaced regular sales can be rescheduled without customer penalties and the order does not set a precedent for future below-market pricing",
+          "Accept the order only if the customer pays $55.00 — the standard price — because all customers should be treated equally"
+        ],
+        "Explanation": "Choice C is correct: the $38.00 price exceeds the $30.75 relevant cost, yielding $14,500 of incremental profit, while acknowledging the qualitative risks — displaced regular customers must be rescheduled without penalties (otherwise the opportunity cost rises and the gain shrinks) and the discount must not establish a below-market pricing precedent. Choice A overstates the risk: $38.00 is above relevant cost even though it is below the $55.00 normal price. Choice B ignores the qualitative risks. Choice D is unrealistic — the customer offered $38.00 and insisting on $55.00 would likely lose the order entirely.",
+        "Topic": "Special order",
+        "Subtopic": "Recommendation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "special order"
+        ],
+        "Dependencies": [
+          "CBQ22-C8-Q1",
+          "CBQ22-C8-Q2"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-A6",
-  "Title": "DuPont Decomposition at Sentinel Defense",
-  "SectionTags": [
-    "A"
-  ],
-  "BlueprintDomain": "Financial Statement Analysis",
-  "BlueprintObjectives": [
-    "Compute ROE and decompose it using the DuPont identity to isolate profitability, efficiency, and leverage drivers",
-    "Evaluate earnings quality by reconciling net income to operating cash flow and analyzing accrual patterns",
-    "Interpret receivables aging trends as leading indicators of revenue quality risk"
-  ],
-  "PrimaryCompetency": "Analysis",
-  "EstimatedMinutes": 35,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Sentinel Defense Systems' CFO Maria Santos must explain to the board why ROE fell from approximately 18.4% in Year 1 to 6.4% in Year 3 despite a 12% revenue increase. The controller has prepared three-year condensed financials and a receivables aging report. Maria needs a full DuPont decomposition to isolate which component — profitability, asset efficiency, or financial leverage — drove the decline, and an earnings-quality review to determine whether the reported improvement in operations is sustainable.",
-  "Industry": "Aerospace and defense",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Sentinel Defense Systems",
-  "Stakeholder": "CFO Maria Santos",
-  "BusinessFunction": "Financial reporting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "DuPont",
-    "ROE",
-    "earnings quality",
-    "receivables aging",
-    "financial statement analysis"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-A6",
+    "Title": "DuPont Decomposition at Sentinel Defense",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute ROE and decompose it using the DuPont identity to isolate profitability, efficiency, and leverage drivers",
+      "Evaluate earnings quality by reconciling net income to operating cash flow and analyzing accrual patterns",
+      "Interpret receivables aging trends as leading indicators of revenue quality risk"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 35,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Sentinel Defense Systems' CFO Maria Santos must explain to the board why ROE fell from approximately 18.4% in Year 1 to 6.4% in Year 3 despite a 12% revenue increase. The controller has prepared three-year condensed financials and a receivables aging report. Maria needs a full DuPont decomposition to isolate which component — profitability, asset efficiency, or financial leverage — drove the decline, and an earnings-quality review to determine whether the reported improvement in operations is sustainable.",
+    "Industry": "Aerospace and defense",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Sentinel Defense Systems",
+    "Stakeholder": "CFO Maria Santos",
+    "BusinessFunction": "Financial reporting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "DuPont",
+      "ROE",
+      "earnings quality",
+      "receivables aging",
+      "financial statement analysis"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Compute ROE from condensed financial statements using average equity",
-    "Decompose ROE into net profit margin, asset turnover, and equity multiplier components",
-    "Identify the primary driver of ROE change through component analysis",
-    "Detect earnings-quality red flags from accrual-to-cash divergences and receivables trends",
-    "Select board-level findings supported by converging financial signals",
-    "Map specific red flags to their underlying risk categories"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-A6-E1",
-      "CaseID": "CBQ22-A6",
-      "Type": "table",
-      "Title": "Exhibit 1 — Three-Year Condensed Financials",
-      "Purpose": "Provides income statement and balance sheet data for computing ROE, DuPont components, and earnings-quality ratios across three years.",
-      "ReferencedBy": [
-        "CBQ22-A6-Q1",
-        "CBQ22-A6-Q2",
-        "CBQ22-A6-Q4"
-      ],
-      "Headers": [
-        "Item",
-        "Year 1",
-        "Year 2",
-        "Year 3"
-      ],
-      "Rows": [
-        [
-          "Net sales ($000s)",
-          "$250,000",
-          "$280,000",
-          "$313,600"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute ROE from condensed financial statements using average equity",
+      "Decompose ROE into net profit margin, asset turnover, and equity multiplier components",
+      "Identify the primary driver of ROE change through component analysis",
+      "Detect earnings-quality red flags from accrual-to-cash divergences and receivables trends",
+      "Select board-level findings supported by converging financial signals",
+      "Map specific red flags to their underlying risk categories"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-A6-E1",
+        "CaseID": "CBQ22-A6",
+        "Type": "table",
+        "Title": "Exhibit 1 — Three-Year Condensed Financials",
+        "Purpose": "Provides income statement and balance sheet data for computing ROE, DuPont components, and earnings-quality ratios across three years.",
+        "ReferencedBy": [
+          "CBQ22-A6-Q1",
+          "CBQ22-A6-Q2",
+          "CBQ22-A6-Q4"
         ],
-        [
-          "Cost of goods sold ($000s)",
-          "$155,000",
-          "$176,400",
-          "$200,704"
+        "Headers": [
+          "Item",
+          "Year 1",
+          "Year 2",
+          "Year 3"
         ],
-        [
-          "Gross profit ($000s)",
-          "$95,000",
-          "$103,600",
-          "$112,896"
+        "Rows": [
+          [
+            "Net sales ($000s)",
+            "$250,000",
+            "$280,000",
+            "$313,600"
+          ],
+          [
+            "Cost of goods sold ($000s)",
+            "$155,000",
+            "$176,400",
+            "$200,704"
+          ],
+          [
+            "Gross profit ($000s)",
+            "$95,000",
+            "$103,600",
+            "$112,896"
+          ],
+          [
+            "Operating expenses ($000s)",
+            "$68,000",
+            "$81,200",
+            "$99,968"
+          ],
+          [
+            "Operating income ($000s)",
+            "$27,000",
+            "$22,400",
+            "$12,928"
+          ],
+          [
+            "Interest expense ($000s)",
+            "$2,500",
+            "$2,800",
+            "$3,136"
+          ],
+          [
+            "Pre-tax income ($000s)",
+            "$24,500",
+            "$19,600",
+            "$9,792"
+          ],
+          [
+            "Income tax (25%)",
+            "$6,125",
+            "$4,900",
+            "$2,448"
+          ],
+          [
+            "Net income ($000s)",
+            "$18,375",
+            "$14,700",
+            "$7,344"
+          ],
+          [
+            "Cash dividends ($000s)",
+            "$7,350",
+            "$5,880",
+            "$2,938"
+          ],
+          [
+            "Accounts receivable ($000s)",
+            "$28,000",
+            "$39,200",
+            "$67,500"
+          ],
+          [
+            "Inventories ($000s)",
+            "$35,000",
+            "$42,000",
+            "$50,400"
+          ],
+          [
+            "Total current assets ($000s)",
+            "$80,000",
+            "$98,000",
+            "$130,900"
+          ],
+          [
+            "Net fixed assets ($000s)",
+            "$120,000",
+            "$122,000",
+            "$119,100"
+          ],
+          [
+            "Total assets ($000s)",
+            "$200,000",
+            "$220,000",
+            "$250,000"
+          ],
+          [
+            "Total current liabilities ($000s)",
+            "$35,000",
+            "$40,000",
+            "$48,000"
+          ],
+          [
+            "Long-term debt ($000s)",
+            "$65,000",
+            "$70,000",
+            "$82,000"
+          ],
+          [
+            "Total liabilities ($000s)",
+            "$100,000",
+            "$110,000",
+            "$130,000"
+          ],
+          [
+            "Total common equity ($000s)",
+            "$100,000",
+            "$110,000",
+            "$120,000"
+          ],
+          [
+            "Preferred dividends ($000s)",
+            "$0",
+            "$0",
+            "$0"
+          ]
         ],
-        [
-          "Operating expenses ($000s)",
-          "$68,000",
-          "$81,200",
-          "$99,968"
-        ],
-        [
-          "Operating income ($000s)",
-          "$27,000",
-          "$22,400",
-          "$12,928"
-        ],
-        [
-          "Interest expense ($000s)",
-          "$2,500",
-          "$2,800",
-          "$3,136"
-        ],
-        [
-          "Pre-tax income ($000s)",
-          "$24,500",
-          "$19,600",
-          "$9,792"
-        ],
-        [
-          "Income tax (25%)",
-          "$6,125",
-          "$4,900",
-          "$2,448"
-        ],
-        [
-          "Net income ($000s)",
-          "$18,375",
-          "$14,700",
-          "$7,344"
-        ],
-        [
-          "Cash dividends ($000s)",
-          "$7,350",
-          "$5,880",
-          "$2,938"
-        ],
-        [
-          "Accounts receivable ($000s)",
-          "$28,000",
-          "$39,200",
-          "$67,500"
-        ],
-        [
-          "Inventories ($000s)",
-          "$35,000",
-          "$42,000",
-          "$50,400"
-        ],
-        [
-          "Total current assets ($000s)",
-          "$80,000",
-          "$98,000",
-          "$130,900"
-        ],
-        [
-          "Net fixed assets ($000s)",
-          "$120,000",
-          "$122,000",
-          "$119,100"
-        ],
-        [
-          "Total assets ($000s)",
-          "$200,000",
-          "$220,000",
-          "$250,000"
-        ],
-        [
-          "Total current liabilities ($000s)",
-          "$35,000",
-          "$40,000",
-          "$48,000"
-        ],
-        [
-          "Long-term debt ($000s)",
-          "$65,000",
-          "$70,000",
-          "$82,000"
-        ],
-        [
-          "Total liabilities ($000s)",
-          "$100,000",
-          "$110,000",
-          "$130,000"
-        ],
-        [
-          "Total common equity ($000s)",
-          "$100,000",
-          "$110,000",
-          "$120,000"
-        ],
-        [
-          "Preferred dividends ($000s)",
-          "$0",
-          "$0",
-          "$0"
-        ]
-      ],
-      "DataFormat": "USD thousands; 365-day year; tax rate 25% flat; equity is common shareholders' equity only",
-      "AccuracyCheck": "Year 3 ROE = 7,344 / ((110,000 + 120,000)/2) = 7,344 / 115,000 = 6.39%. Year 3 EM = 235,000 / 115,000 = 2.04. Year 3 NPM = 7,344 / 313,600 = 2.34%. Year 1 ROE (avg equity (90,000 + 100,000)/2 = 95,000) = 18,375 / 95,000 = 19.34%; Year 1 NPM = 7.35%; Year 1 EM = 210,000 / 95,000 = 2.21. Exhibit rows themselves are internally consistent (totals add; aging 44% past 60 days confirmed)."
-    },
-    {
-      "ExhibitID": "CBQ22-A6-E2",
-      "CaseID": "CBQ22-A6",
-      "Type": "table",
-      "Title": "Exhibit 2 — Receivables Aging Report (Year 3)",
-      "Purpose": "Provides the aging distribution of year-end receivables for earnings-quality analysis and DSO computation.",
-      "ReferencedBy": [
-        "CBQ22-A6-Q3",
-        "CBQ22-A6-Q4",
-        "CBQ22-A6-Q5",
-        "CBQ22-A6-Q6"
-      ],
-      "Headers": [
-        "Aging Category",
-        "Balance ($000s)",
-        "Percentage"
-      ],
-      "Rows": [
-        [
-          "Current (0–30 days)",
-          "$20,250",
-          "30.0%"
-        ],
-        [
-          "31–60 days",
-          "$17,550",
-          "26.0%"
-        ],
-        [
-          "61–90 days",
-          "$14,850",
-          "22.0%"
-        ],
-        [
-          "Over 90 days",
-          "$14,850",
-          "22.0%"
-        ],
-        [
-          "Total receivables",
-          "$67,500",
-          "100.0%"
-        ]
-      ],
-      "DataFormat": "USD thousands; aging as of Year 3 balance sheet date",
-      "AccuracyCheck": "20,250 + 17,550 + 14,850 + 14,850 = 67,500 ✓; 44% past 60 days"
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-A6-Q1",
-      "Type": "numeric",
-      "Prompt": "Compute Sentinel's Year 3 return on equity (ROE) using average common shareholders' equity. Enter the result as a percentage rounded to two decimal places.",
-      "Correct": "6.39",
-      "Explanation": "ROE = Net Income / Average Common Equity. Year 3 net income = $7,344K; average common equity = ($110,000K + $120,000K) / 2 = $115,000K. ROE = $7,344 / $115,000 = 6.39%. The decline from Year 1 (18,375 / 95,000 = 19.34% on average equity) reflects the collapse of Year 3 net income to $7,344K despite higher revenue — an extreme margin compression. This is the starting point for the DuPont decomposition in Q2. A common trap is to use ending equity ($120,000K → 6.12%) instead of the average balance, or to carry forward the narrative Year 1 ROE.",
-      "Topic": "Return on equity",
-      "Subtopic": "ROE computation from condensed financials",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "FA-13: Return on Equity",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "ROE",
-        "profitability"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-A6-Q2",
-      "Type": "numeric",
-      "Prompt": "Compute the three DuPont components for Year 3: net profit margin (NPM), total asset turnover (TAT), and equity multiplier (EM). Enter the equity multiplier rounded to two decimal places.",
-      "Correct": "2.04",
-      "Explanation": "The three DuPont components for Year 3 are: NPM = Net Income / Sales = $7,344K / $313,600K = 2.34%; TAT = Sales / Average Total Assets = $313,600K / [($220,000K + $250,000K) / 2] = $313,600K / $235,000K = 1.33; EM = Average Total Assets / Average Equity = $235,000K / $115,000K = 2.04. Product check: 2.34% × 1.33 × 2.04 = 6.39%, matching the ROE from Q1. The equity multiplier of 2.04 means Sentinel holds $2.04 of assets for each $1.00 of equity. Compared with Year 1 (EM = $210,000K / $95,000K = 2.21), leverage declined modestly, so the ROE collapse is driven by margin, not leverage. A common trap is to use ending balances instead of averages, which distorts both TAT and EM.",
-      "Topic": "DuPont decomposition",
-      "Subtopic": "Three-factor ROE breakdown",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "FA-14: DuPont Identity",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "DuPont",
-        "decomposition"
-      ],
-      "Dependencies": [
-        "CBQ22-A6-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A6-Q3",
-      "Type": "select",
-      "Prompt": "Based on the DuPont decomposition, which component is the PRIMARY driver of Sentinel's ROE decline from Year 1 to Year 3?",
-      "Correct": "C",
-      "Choices": ["Declining total asset turnover — the company is generating fewer sales per dollar of invested assets", "Rising interest expense — debt servicing is consuming a larger share of operating income", "Contracting net profit margin — operating expenses grew 47% against 25% revenue growth, compressing NPM from 7.35% to 2.34%, which is the dominant force behind the ROE decline", "Increasing tax burden — the effective tax rate rose materially from Year 1 to Year 3"],
-      "Explanation": "Decomposing the ROE change from Year 1 to Year 3: NPM fell from 18,375/250,000 = 7.35% to 7,344/313,600 = 2.34% — a 5.01 percentage-point contraction and by far the largest component move. Total asset turnover actually improved (Year 1: 250,000/210,000 = 1.19; Year 3: 313,600/235,000 = 1.33). The equity multiplier declined modestly (Year 1: 210,000/95,000 = 2.21; Year 3: 235,000/115,000 = 2.04). Operating expenses grew 47% ($68,000K → $99,968K) against 25% revenue growth, directly compressing the bottom line. The board should focus on operating-expense discipline; both asset efficiency and leverage moved favorably or mildly.",
-      "Topic": "DuPont interpretation",
-      "Subtopic": "Component attribution",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-14: DuPont Identity",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "DuPont",
-        "attribution"
-      ],
-      "Dependencies": [
-        "CBQ22-A6-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A6-Q4",
-      "Type": "select",
-      "Prompt": "Which earnings-quality concern is MOST clearly supported by Exhibits 1 and 2 together?",
-      "Correct": "A",
-      "Choices": ["Accounts receivable grew 72% while net sales grew only 12% from Year 2 to Year 3, and 44% of receivables are past 60 days — revenue may include premature or channel-stuffed shipments that will not convert to cash", "Net income declined in absolute terms, which always signals deteriorating earnings quality regardless of the cause", "Operating expenses grew faster than sales, indicating that the company is liquidating long-lived assets to fund operations", "The dividend payout ratio increased, which reduces retained earnings and signals that management lacks confidence in future cash flows"],
-      "Explanation": "The receivables aging in Exhibit 2 shows 44% of the $67.5M balance is past 60 days ($14.85M at 61–90 days + $14.85M over 90 days = $29.7M). Receivables growth of ($67,500 − $39,200) / $39,200 = 72.2% far outpaced the 12% sales growth from Year 2 to Year 3. This divergence — ballooning receivables with deteriorating aging — is the classic channel-stuffing fingerprint: goods shipped to fill orders sit uncollected, or side arrangements extend payment terms beyond economic substance. Net income declining (B) is a result, not a quality indicator. Operating-expense growth (C) is an efficiency issue, not an earnings-quality issue. Dividend payout changes (D) affect capital allocation, not revenue quality.",
-      "Topic": "Earnings quality",
-      "Subtopic": "Receivables-sales divergence",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-05: Days Sales Outstanding",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "earnings quality",
-        "receivables"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-A6-Q5",
-      "Type": "multi",
-      "Prompt": "Which three findings should Maria present to the board as converging evidence of earnings-quality risk? Select exactly three.",
-      "Correct": ["Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns","Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition","44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor"],
-      "Choices": {
-        "A": "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
-        "B": "The equity multiplier declined from 2.22 to 2.00, indicating the company is underleveraged relative to its defense-industry peers and should increase debt",
-        "C": "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
-        "D": "Total asset turnover improved from Year 1 to Year 3, confirming that operational efficiency gains are the primary driver of the ROE change",
-        "E": "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor",
-        "F": "The company paid $2.9M in dividends despite declining earnings, which is unsustainable and indicates capital misallocation"
+        "DataFormat": "USD thousands; 365-day year; tax rate 25% flat; equity is common shareholders' equity only",
+        "AccuracyCheck": "Year 3 ROE = 7,344 / ((110,000 + 120,000)/2) = 7,344 / 115,000 = 6.39%. Year 3 EM = 235,000 / 115,000 = 2.04. Year 3 NPM = 7,344 / 313,600 = 2.34%. Year 1 ROE (avg equity (90,000 + 100,000)/2 = 95,000) = 18,375 / 95,000 = 19.34%; Year 1 NPM = 7.35%; Year 1 EM = 210,000 / 95,000 = 2.21. Exhibit rows themselves are internally consistent (totals add; aging 44% past 60 days confirmed)."
       },
-      "Explanation": "Statements A, C, and E form the converging earnings-quality narrative: margin erosion (A — NPM collapsed from 7.35% to 2.34%, a 5.01-point contraction) shows the income-statement side; receivables outpacing sales (C — AR up 72% from Year 2 to Year 3 versus 12% sales growth, a $28.3M increase in the AR balance) shows the balance-sheet symptom; aging deterioration (E — 44% past 60 days, $29.7M) shows the cash-conversion consequence. Statement B misreads the leverage decline: a lower equity multiplier reduces financial risk, and recommending more debt while margins compress and collections deteriorate would be imprudent. Statement D is factually true (TAT improved) but is not an earnings-quality concern — it is the offset that keeps the ROE decline from being even steeper. Statement F overstates the concern: $2.9M of dividends against $7.3M of net income is a 40% payout — elevated, but not by itself dispositive evidence of capital misallocation.",
-      "Topic": "Board reporting",
-      "Subtopic": "Converging evidence selection",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "board reporting",
-        "convergence"
-      ],
-      "Dependencies": [
-        "CBQ22-A6-Q3",
-        "CBQ22-A6-Q4"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A6-Q6",
-      "Type": "match",
-      "Prompt": "Match each earnings-quality red flag observed at Sentinel to the risk category it most directly indicates.",
-      "LeftItems": [
-        "Net profit margin declining despite revenue growth",
-        "Receivables growing 72% against 25% sales growth",
-        "44% of receivables past 60 days with $14.9M over 90 days",
-        "Operating expenses growing 47% against 25% revenue growth"
-      ],
-      "RightItems": [
-        "Margin erosion from uncontrolled cost structure",
-        "Potential premature or channel-stuffed revenue recognition",
-        "Cash conversion risk and possible future write-offs",
-        "Operational inefficiency or SGA bloat independent of revenue quality",
-        "Working capital mismanagement",
-        "Tax planning opportunity",
-        "Capital structure optimization"
-      ],
-      "Correct": {
-        "Net profit margin declining despite revenue growth": "Margin erosion from uncontrolled cost structure",
-        "Receivables growing 72% against 25% sales growth": "Potential premature or channel-stuffed revenue recognition",
-        "44% of receivables past 60 days with $14.9M over 90 days": "Cash conversion risk and possible future write-offs",
-        "Operating expenses growing 47% against 25% revenue growth": "Operational inefficiency or SGA bloat independent of revenue quality"
+      {
+        "ExhibitID": "CBQ22-A6-E2",
+        "CaseID": "CBQ22-A6",
+        "Type": "table",
+        "Title": "Exhibit 2 — Receivables Aging Report (Year 3)",
+        "Purpose": "Provides the aging distribution of year-end receivables for earnings-quality analysis and DSO computation.",
+        "ReferencedBy": [
+          "CBQ22-A6-Q3",
+          "CBQ22-A6-Q4",
+          "CBQ22-A6-Q5",
+          "CBQ22-A6-Q6"
+        ],
+        "Headers": [
+          "Aging Category",
+          "Balance ($000s)",
+          "Percentage"
+        ],
+        "Rows": [
+          [
+            "Current (0–30 days)",
+            "$20,250",
+            "30.0%"
+          ],
+          [
+            "31–60 days",
+            "$17,550",
+            "26.0%"
+          ],
+          [
+            "61–90 days",
+            "$14,850",
+            "22.0%"
+          ],
+          [
+            "Over 90 days",
+            "$14,850",
+            "22.0%"
+          ],
+          [
+            "Total receivables",
+            "$67,500",
+            "100.0%"
+          ]
+        ],
+        "DataFormat": "USD thousands; aging as of Year 3 balance sheet date",
+        "AccuracyCheck": "20,250 + 17,550 + 14,850 + 14,850 = 67,500 ✓; 44% past 60 days"
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-A6-Q1",
+        "Type": "numeric",
+        "Prompt": "Compute Sentinel's Year 3 return on equity (ROE) using average common shareholders' equity. Enter the result as a percentage rounded to two decimal places.",
+        "Correct": "6.39",
+        "Explanation": "ROE = Net Income / Average Common Equity. Year 3 net income = $7,344K; average common equity = ($110,000K + $120,000K) / 2 = $115,000K. ROE = $7,344 / $115,000 = 6.39%. The decline from Year 1 (18,375 / 95,000 = 19.34% on average equity) reflects the collapse of Year 3 net income to $7,344K despite higher revenue — an extreme margin compression. This is the starting point for the DuPont decomposition in Q2. A common trap is to use ending equity ($120,000K → 6.12%) instead of the average balance, or to carry forward the narrative Year 1 ROE.",
+        "Topic": "Return on equity",
+        "Subtopic": "ROE computation from condensed financials",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-13: Return on Equity",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "ROE",
+          "profitability"
+        ],
+        "Dependencies": []
       },
-      "Explanation": "Each red flag maps to a specific risk category: margin decline (NPM 7.35% → 2.34%) reflects cost growth outpacing revenue — a margin-erosion signal. The receivables-sales divergence (72% vs. 12% growth) is the textbook indicator of premature revenue recognition or channel stuffing — goods shipped but not yet earned. The aging concentration (44% past 60 days, $14.9M over 90 days) signals collection risk and potential bad-debt exposure — cash that may never convert. The operating-expense growth (47% vs. 25% revenue) indicates internal cost-control failure that is separate from revenue-quality concerns — it depresses margins but does not itself indicate fraudulent revenue. Distractors: working capital mismanagement conflates multiple signals; tax planning is not indicated (flat 25% rate); capital structure optimization is unrelated to earnings quality. Match key unchanged.",
-      "Topic": "Red flag classification",
-      "Subtopic": "Risk category mapping",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "red flags",
-        "classification"
-      ],
-      "Dependencies": [
-        "CBQ22-A6-Q4",
-        "CBQ22-A6-Q5"
-      ]
-    }
-  ]
-},
+      {
+        "ItemID": "CBQ22-A6-Q2",
+        "Type": "numeric",
+        "Prompt": "Compute the three DuPont components for Year 3: net profit margin (NPM), total asset turnover (TAT), and equity multiplier (EM). Enter the equity multiplier rounded to two decimal places.",
+        "Correct": "2.04",
+        "Explanation": "The three DuPont components for Year 3 are: NPM = Net Income / Sales = $7,344K / $313,600K = 2.34%; TAT = Sales / Average Total Assets = $313,600K / [($220,000K + $250,000K) / 2] = $313,600K / $235,000K = 1.33; EM = Average Total Assets / Average Equity = $235,000K / $115,000K = 2.04. Product check: 2.34% × 1.33 × 2.04 = 6.39%, matching the ROE from Q1. The equity multiplier of 2.04 means Sentinel holds $2.04 of assets for each $1.00 of equity. Compared with Year 1 (EM = $210,000K / $95,000K = 2.21), leverage declined modestly, so the ROE collapse is driven by margin, not leverage. A common trap is to use ending balances instead of averages, which distorts both TAT and EM.",
+        "Topic": "DuPont decomposition",
+        "Subtopic": "Three-factor ROE breakdown",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-14: DuPont Identity",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DuPont",
+          "decomposition"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q3",
+        "Type": "select",
+        "Prompt": "Based on the DuPont decomposition, which component is the PRIMARY driver of Sentinel's ROE decline from Year 1 to Year 3?",
+        "Correct": "C",
+        "Choices": [
+          "Declining total asset turnover — the company is generating fewer sales per dollar of invested assets",
+          "Rising interest expense — debt servicing is consuming a larger share of operating income",
+          "Contracting net profit margin — operating expenses grew 47% against 25% revenue growth, compressing NPM from 7.35% to 2.34%, which is the dominant force behind the ROE decline",
+          "Increasing tax burden — the effective tax rate rose materially from Year 1 to Year 3"
+        ],
+        "Explanation": "Decomposing the ROE change from Year 1 to Year 3: NPM fell from 18,375/250,000 = 7.35% to 7,344/313,600 = 2.34% — a 5.01 percentage-point contraction and by far the largest component move. Total asset turnover actually improved (Year 1: 250,000/210,000 = 1.19; Year 3: 313,600/235,000 = 1.33). The equity multiplier declined modestly (Year 1: 210,000/95,000 = 2.21; Year 3: 235,000/115,000 = 2.04). Operating expenses grew 47% ($68,000K → $99,968K) against 25% revenue growth, directly compressing the bottom line. The board should focus on operating-expense discipline; both asset efficiency and leverage moved favorably or mildly.",
+        "Topic": "DuPont interpretation",
+        "Subtopic": "Component attribution",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-14: DuPont Identity",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DuPont",
+          "attribution"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q4",
+        "Type": "select",
+        "Prompt": "Which earnings-quality concern is MOST clearly supported by Exhibits 1 and 2 together?",
+        "Correct": "A",
+        "Choices": [
+          "Accounts receivable grew 72% while net sales grew only 12% from Year 2 to Year 3, and 44% of receivables are past 60 days — revenue may include premature or channel-stuffed shipments that will not convert to cash",
+          "Net income declined in absolute terms, which always signals deteriorating earnings quality regardless of the cause",
+          "Operating expenses grew faster than sales, indicating that the company is liquidating long-lived assets to fund operations",
+          "The dividend payout ratio increased, which reduces retained earnings and signals that management lacks confidence in future cash flows"
+        ],
+        "Explanation": "The receivables aging in Exhibit 2 shows 44% of the $67.5M balance is past 60 days ($14.85M at 61–90 days + $14.85M over 90 days = $29.7M). Receivables growth of ($67,500 − $39,200) / $39,200 = 72.2% far outpaced the 12% sales growth from Year 2 to Year 3. This divergence — ballooning receivables with deteriorating aging — is the classic channel-stuffing fingerprint: goods shipped to fill orders sit uncollected, or side arrangements extend payment terms beyond economic substance. Net income declining (B) is a result, not a quality indicator. Operating-expense growth (C) is an efficiency issue, not an earnings-quality issue. Dividend payout changes (D) affect capital allocation, not revenue quality.",
+        "Topic": "Earnings quality",
+        "Subtopic": "Receivables-sales divergence",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-05: Days Sales Outstanding",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "earnings quality",
+          "receivables"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-A6-Q5",
+        "Type": "multi",
+        "Prompt": "Which three findings should Maria present to the board as converging evidence of earnings-quality risk? Select exactly three.",
+        "Correct": [
+          "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor"
+        ],
+        "Choices": {
+          "A": "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "B": "The equity multiplier declined from 2.22 to 2.00, indicating the company is underleveraged relative to its defense-industry peers and should increase debt",
+          "C": "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "D": "Total asset turnover improved from Year 1 to Year 3, confirming that operational efficiency gains are the primary driver of the ROE change",
+          "E": "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor",
+          "F": "The company paid $2.9M in dividends despite declining earnings, which is unsustainable and indicates capital misallocation"
+        },
+        "Explanation": "Statements A, C, and E form the converging earnings-quality narrative: margin erosion (A — NPM collapsed from 7.35% to 2.34%, a 5.01-point contraction) shows the income-statement side; receivables outpacing sales (C — AR up 72% from Year 2 to Year 3 versus 12% sales growth, a $28.3M increase in the AR balance) shows the balance-sheet symptom; aging deterioration (E — 44% past 60 days, $29.7M) shows the cash-conversion consequence. Statement B misreads the leverage decline: a lower equity multiplier reduces financial risk, and recommending more debt while margins compress and collections deteriorate would be imprudent. Statement D is factually true (TAT improved) but is not an earnings-quality concern — it is the offset that keeps the ROE decline from being even steeper. Statement F overstates the concern: $2.9M of dividends against $7.3M of net income is a 40% payout — elevated, but not by itself dispositive evidence of capital misallocation.",
+        "Topic": "Board reporting",
+        "Subtopic": "Converging evidence selection",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "board reporting",
+          "convergence"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q3",
+          "CBQ22-A6-Q4"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q6",
+        "Type": "match",
+        "Prompt": "Match each earnings-quality red flag observed at Sentinel to the risk category it most directly indicates.",
+        "LeftItems": [
+          "Net profit margin declining despite revenue growth",
+          "Receivables growing 72% against 25% sales growth",
+          "44% of receivables past 60 days with $14.9M over 90 days",
+          "Operating expenses growing 47% against 25% revenue growth"
+        ],
+        "RightItems": [
+          "Margin erosion from uncontrolled cost structure",
+          "Potential premature or channel-stuffed revenue recognition",
+          "Cash conversion risk and possible future write-offs",
+          "Operational inefficiency or SGA bloat independent of revenue quality",
+          "Working capital mismanagement",
+          "Tax planning opportunity",
+          "Capital structure optimization"
+        ],
+        "Correct": {
+          "Net profit margin declining despite revenue growth": "Margin erosion from uncontrolled cost structure",
+          "Receivables growing 72% against 25% sales growth": "Potential premature or channel-stuffed revenue recognition",
+          "44% of receivables past 60 days with $14.9M over 90 days": "Cash conversion risk and possible future write-offs",
+          "Operating expenses growing 47% against 25% revenue growth": "Operational inefficiency or SGA bloat independent of revenue quality"
+        },
+        "Explanation": "Each red flag maps to a specific risk category: margin decline (NPM 7.35% → 2.34%) reflects cost growth outpacing revenue — a margin-erosion signal. The receivables-sales divergence (72% vs. 12% growth) is the textbook indicator of premature revenue recognition or channel stuffing — goods shipped but not yet earned. The aging concentration (44% past 60 days, $14.9M over 90 days) signals collection risk and potential bad-debt exposure — cash that may never convert. The operating-expense growth (47% vs. 25% revenue) indicates internal cost-control failure that is separate from revenue-quality concerns — it depresses margins but does not itself indicate fraudulent revenue. Distractors: working capital mismanagement conflates multiple signals; tax planning is not indicated (flat 25% rate); capital structure optimization is unrelated to earnings quality. Match key unchanged.",
+        "Topic": "Red flag classification",
+        "Subtopic": "Risk category mapping",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "red flags",
+          "classification"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q4",
+          "CBQ22-A6-Q5"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-A5",
-  "Title": "Sustainable Growth Rate at Harborline Diagnostics",
-  "SectionTags": [
-    "A"
-  ],
-  "BlueprintDomain": "Financial Statement Analysis",
-  "BlueprintObjectives": [
-    "Compute the sustainable growth rate using the Higgins model",
-    "Quantify the growth gap between target growth and sustainable growth",
-    "Evaluate whether a company can fund planned expansion without issuing new equity"
-  ],
-  "PrimaryCompetency": "Analysis",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Harborline Diagnostics' CFO Dr. Rajiv Anand must decide whether to pursue a $45M expansion without issuing new equity. The company's ROE is 22%, dividend payout is 40%, and total equity is $180M. The board has asked whether the sustainable growth rate can support the planned 15% revenue growth. Dr. Anand must compute the sustainable growth rate, quantify any growth gap, and recommend which financial levers — if any — can bridge the shortfall.",
-  "Industry": "Medical diagnostics",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Harborline Diagnostics",
-  "Stakeholder": "CFO Dr. Rajiv Anand",
-  "BusinessFunction": "Corporate finance",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "sustainable growth rate",
-    "Higgins",
-    "dividend policy",
-    "retention ratio",
-    "growth financing"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-A5",
+    "Title": "Sustainable Growth Rate at Harborline Diagnostics",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute the sustainable growth rate using the Higgins model",
+      "Quantify the growth gap between target growth and sustainable growth",
+      "Evaluate whether a company can fund planned expansion without issuing new equity"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Harborline Diagnostics' CFO Dr. Rajiv Anand must decide whether to pursue a $45M expansion without issuing new equity. The company's ROE is 22%, dividend payout is 40%, and total equity is $180M. The board has asked whether the sustainable growth rate can support the planned 15% revenue growth. Dr. Anand must compute the sustainable growth rate, quantify any growth gap, and recommend which financial levers — if any — can bridge the shortfall.",
+    "Industry": "Medical diagnostics",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Harborline Diagnostics",
+    "Stakeholder": "CFO Dr. Rajiv Anand",
+    "BusinessFunction": "Corporate finance",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "sustainable growth rate",
+      "Higgins",
+      "dividend policy",
+      "retention ratio",
+      "growth financing"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Compute the sustainable growth rate from ROE and the retention ratio",
-    "Quantify the dollar and percentage gap between target growth and sustainable capacity",
-    "Evaluate whether existing financial policies can support planned expansion",
-    "Identify dividend policy levers that affect growth capacity",
-    "Select the combination of financial levers most likely to bridge a growth gap",
-    "Draft a recommendation memo integrating SGR analysis with financing constraints"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-A5-E1",
-      "CaseID": "CBQ22-A5",
-      "Type": "table",
-      "Title": "Exhibit 1 — Retention and Payout Schedule",
-      "Purpose": "Provides the dividend policy parameters and equity base for computing the sustainable growth rate and retention ratio.",
-      "ReferencedBy": [
-        "CBQ22-A5-Q1",
-        "CBQ22-A5-Q2",
-        "CBQ22-A5-Q3"
-      ],
-      "Headers": [
-        "Parameter",
-        "Value"
-      ],
-      "Rows": [
-        [
-          "Return on equity (ROE)",
-          "22.0%"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute the sustainable growth rate from ROE and the retention ratio",
+      "Quantify the dollar and percentage gap between target growth and sustainable capacity",
+      "Evaluate whether existing financial policies can support planned expansion",
+      "Identify dividend policy levers that affect growth capacity",
+      "Select the combination of financial levers most likely to bridge a growth gap",
+      "Draft a recommendation memo integrating SGR analysis with financing constraints"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-A5-E1",
+        "CaseID": "CBQ22-A5",
+        "Type": "table",
+        "Title": "Exhibit 1 — Retention and Payout Schedule",
+        "Purpose": "Provides the dividend policy parameters and equity base for computing the sustainable growth rate and retention ratio.",
+        "ReferencedBy": [
+          "CBQ22-A5-Q1",
+          "CBQ22-A5-Q2",
+          "CBQ22-A5-Q3"
         ],
-        [
-          "Dividend payout ratio",
-          "40.0%"
+        "Headers": [
+          "Parameter",
+          "Value"
         ],
-        [
-          "Retention ratio (b)",
-          "60.0%"
+        "Rows": [
+          [
+            "Return on equity (ROE)",
+            "22.0%"
+          ],
+          [
+            "Dividend payout ratio",
+            "40.0%"
+          ],
+          [
+            "Retention ratio (b)",
+            "60.0%"
+          ],
+          [
+            "Total common equity (beginning of year)",
+            "$180,000,000"
+          ],
+          [
+            "Net income (trailing twelve months)",
+            "$39,600,000"
+          ],
+          [
+            "Planned revenue growth rate",
+            "15.0%"
+          ],
+          [
+            "Planned capital expenditure",
+            "$45,000,000"
+          ],
+          [
+            "Total assets (current)",
+            "$400,000,000"
+          ],
+          [
+            "Total debt (current)",
+            "$220,000,000"
+          ],
+          [
+            "Debt-to-equity ratio",
+            "1.22"
+          ]
         ],
-        [
-          "Total common equity (beginning of year)",
-          "$180,000,000"
-        ],
-        [
-          "Net income (trailing twelve months)",
-          "$39,600,000"
-        ],
-        [
-          "Planned revenue growth rate",
-          "15.0%"
-        ],
-        [
-          "Planned capital expenditure",
-          "$45,000,000"
-        ],
-        [
-          "Total assets (current)",
-          "$400,000,000"
-        ],
-        [
-          "Total debt (current)",
-          "$220,000,000"
-        ],
-        [
-          "Debt-to-equity ratio",
-          "1.22"
-        ]
-      ],
-      "DataFormat": "USD; percentages rounded to one decimal; ROE computed as NI / beginning equity = $39.6M / $180M = 22.0%",
-      "AccuracyCheck": "Retention ratio = 1 - 0.40 = 0.60; SGR = ROE × b = 22% × 0.60 = 13.2%"
-    },
-    {
-      "ExhibitID": "CBQ22-A5-E2",
-      "CaseID": "CBQ22-A5",
-      "Type": "text",
-      "Title": "Exhibit 2 — Board Request Email",
-      "Purpose": "Provides the board's directive and financial context for the growth-funding decision.",
-      "ReferencedBy": [
-        "CBQ22-A5-Q4",
-        "CBQ22-A5-Q5",
-        "CBQ22-A5-Q6"
-      ],
-      "Body": "From: Patricia Voss, Board Chair\nTo: Dr. Rajiv Anand, CFO\nSubject: Q3 Capital Plan — Expansion Authorization Request\n\nRajiv — The board approved the $45M expansion in principle at the June meeting, contingent on your confirmation that we can fund it without issuing new equity. We want to preserve the current ownership structure for the potential strategic partner transaction in 2027. Please confirm whether our current growth capacity supports the 15% target, and if not, which levers within our existing financial policy you recommend pulling. We need your written recommendation by the July board session. Our current ROE is 22%, payout is 40%, and the board's policy is to maintain the D/E ratio below 1.5."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-A5-Q1",
-      "Type": "numeric",
-      "Prompt": "Compute Harborline's sustainable growth rate (SGR) using the Higgins model. Enter the result as a percentage rounded to two decimal places.",
-      "Correct": "13.20",
-      "Explanation": "SGR = ROE × Retention Ratio = 22.0% × 0.60 = 13.20%. The retention ratio is 1 minus the payout ratio (1 − 0.40 = 0.60). This means Harborline can grow equity-financed assets at 13.2% per year without issuing new equity or changing its dividend policy, assuming ROE and the payout ratio remain constant. The Higgins model implicitly assumes constant capital structure, constant dividend policy, and no new equity issuance — all conditions the board's email (Exhibit 2) explicitly wants to maintain. Any growth above 13.2% requires either reduced dividends, increased leverage, or new equity — each of which the board has constrained.",
-      "Topic": "Sustainable growth rate",
-      "Subtopic": "Higgins model computation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "FA-21: Sustainable Growth Rate",
-      "EstimatedMinutes": 4,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "SGR",
-        "Higgins"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-A5-Q2",
-      "Type": "numeric",
-      "Prompt": "Compute the annual growth gap: the difference between Harborline's planned 15% growth rate and the sustainable growth rate. Enter the gap in percentage points rounded to two decimal places.",
-      "Correct": "1.80",
-      "Explanation": "Growth gap = Target growth − SGR = 15.00% − 13.20% = 1.80 percentage points. In dollar terms, the sustainable growth supports $180M × 13.2% = $23.76M in additional equity-financed assets, while 15% growth requires $180M × 15% = $27.0M — leaving a $3.24M annual equity shortfall. Over a multi-year expansion, this gap compounds: Year 2 sustainable equity addition would be $23.76M × 1.132 = $26.9M while 15% growth demands $27.0M × 1.15 = $31.05M, widening the gap. The 1.80-point gap is small enough that modest adjustments to any single lever — dividend payout, asset turnover, or operating margin — can close it, but no single lever alone may be sufficient if the board's constraints bind.",
-      "Topic": "Growth gap analysis",
-      "Subtopic": "Quantifying the shortfall",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "FA-21: Sustainable Growth Rate",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "growth gap",
-        "SGR"
-      ],
-      "Dependencies": [
-        "CBQ22-A5-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A5-Q3",
-      "Type": "select",
-      "Prompt": "Based on the SGR analysis, can Harborline sustain 15% growth without issuing new equity?",
-      "Correct": "B",
-      "Choices": [
-        "Yes — 15% is well within the sustainable growth rate because ROE at 22% exceeds the cost of equity",
-        "No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percentage points, meaning the company would need to either increase retention, improve ROE, or accept a lower growth rate to avoid equity issuance",
-        "Yes — the company can issue debt instead of equity because the D/E ratio of 1.22 is below the board's 1.5 ceiling",
-        "No — the company must reduce dividends to zero because any payout above 0% makes growth impossible"
-      ],
-      "Explanation": "The SGR of 13.20% is the mathematical ceiling for equity-retained growth under current policies. At 15% target growth, Harborline falls 1.80 points short — meaning it cannot fund the expansion from internal equity generation alone while maintaining the 40% payout. Option C is tempting but misreads the analysis: increasing debt to fund growth changes the capital structure, which the board explicitly wants to preserve for the 2027 strategic partner transaction. The D/E ratio would rise above 1.5 if debt funds the gap. Option D overstates the constraint — zero dividends is not required; the gap can be closed by reducing the payout modestly (e.g., from 40% to approximately 27.3%) or by improving ROE through operational efficiency.",
-      "Topic": "SGR interpretation",
-      "Subtopic": "Sustainability assessment",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-21: Sustainable Growth Rate",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "SGR",
-        "sustainability"
-      ],
-      "Dependencies": [
-        "CBQ22-A5-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A5-Q4",
-      "Type": "select",
-      "Prompt": "Which dividend policy adjustment would close the 1.80-point growth gap while maintaining the company's ability to service existing debt?",
-      "Correct": "A",
-      "Choices": [
-        "Reduce the payout ratio from 40% to approximately 27.3%, increasing the retention ratio to 72.7% so that SGR = 22% × 0.727 = 16.0%, which exceeds the 15% target",
-        "Eliminate dividends entirely to maximize retention, increasing SGR to 22.0% — well above the 15% target",
-        "Maintain the 40% payout and issue a one-time special dividend to signal confidence before the expansion",
-        "Increase the payout ratio to 50% to attract income-focused investors who will provide the equity gap through secondary offerings"
-      ],
-      "Explanation": "Closing the gap requires SGR ≥ 15%. Solving: 15% = 22% × b, so b = 0.6818, meaning payout = 1 − 0.6818 = 31.82%. Rounding up to a clean policy: reducing payout from 40% to approximately 27.3% (retention = 72.7%) yields SGR = 22% × 0.727 = 16.0%, which covers the 15% target with a 1-point buffer. Option B (eliminating dividends) is extreme and would damage stock price and investor confidence — the gap is modest and does not require zero dividends. Option C is counterproductive — a special dividend drains equity, making the growth gap worse. Option D contradicts the board's no-new-equity directive.",
-      "Topic": "Dividend policy levers",
-      "Subtopic": "Payout ratio adjustment",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-22: Payout Ratio",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "dividend policy",
-        "payout"
-      ],
-      "Dependencies": [
-        "CBQ22-A5-Q3"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A5-Q5",
-      "Type": "multi",
-      "Prompt": "Which three levers could Dr. Anand recommend to close the growth gap while respecting the board's constraints (no new equity, D/E below 1.5)? Select exactly three.",
-      "Correct": [
-        "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
-        "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
-        "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator"
-      ],
-      "Choices": {
-        "A": "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
-        "B": "Issue additional long-term debt up to the 1.5 D/E ceiling to fund the equity gap, since debt is not equity and the board only prohibits new equity issuance",
-        "C": "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
-        "D": "Reduce the planned capital expenditure from $45M to $25M to match the internal funding capacity, accepting a slower rollout",
-        "E": "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator",
-        "F": "Issue new common equity through a private placement with the strategic partner, since the 2027 transaction will dilute ownership anyway"
+        "DataFormat": "USD; percentages rounded to one decimal; ROE computed as NI / beginning equity = $39.6M / $180M = 22.0%",
+        "AccuracyCheck": "Retention ratio = 1 - 0.40 = 0.60; SGR = ROE × b = 22% × 0.60 = 13.2%"
       },
-      "Explanation": "The three levers that raise SGR within the board's constraints are: (A) increasing retention by reducing payout, which directly raises the retention ratio; (C) improving asset turnover, which reduces the asset base needed per dollar of sales; and (E) improving operating margin, which raises net income and ROE. Option B is tempting — the D/E ratio of 1.22 leaves room to 1.5 — but the board's email explicitly states they want to preserve the ownership structure for the 2027 strategic partner transaction, and increasing leverage changes the capital structure that the partner is evaluating. Option D (cutting capex) does not raise SGR — it merely reduces the growth target. Option F contradicts the board's directive to avoid equity issuance.",
-      "Topic": "Growth-gap levers",
-      "Subtopic": "Multi-lever strategy",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-21: Sustainable Growth Rate",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "growth levers",
-        "multi-factor"
-      ],
-      "Dependencies": [
-        "CBQ22-A5-Q4"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-A5-Q6",
-      "Type": "select",
-      "Prompt": "Complete the recommendation memo: Which course of action best integrates Dr. Anand's analysis with the board's constraints?",
-      "Correct": "D",
-      "Choices": [
-        "Recommend issuing $3.24M in new equity to close the gap — the dilution is immaterial and the board will accept it once the math is presented",
-        "Recommend eliminating the dividend entirely, which raises SGR to 22% and provides ample headroom for 15% growth without any other changes",
-        "Recommend reducing the expansion budget to $30M so that internal equity alone can fund it at the current SGR of 13.2%, with no policy changes required",
-        "Recommend reducing the payout ratio from 40% to 30%, which raises SGR to 15.4% and covers the 15% target with a buffer; combined with modest margin-improvement initiatives, this approach preserves the ownership structure for the 2027 transaction while funding the expansion internally"
-      ],
-      "Explanation": "Option D integrates the SGR math with the board's constraint: reducing payout from 40% to 30% yields SGR = 22% × 0.70 = 15.4%, which exceeds the 15% target. The 0.4-point buffer accommodates minor ROE fluctuations. Combined with margin-improvement initiatives (operational efficiency that raises ROE further), this approach keeps the ownership structure clean for the 2027 strategic partner transaction. Option A violates the no-new-equity constraint. Option B (zero dividends) is extreme — the gap is 1.80 points, not 13.20 points. Option C (cutting capex) abandons the strategic expansion the board already approved in principle. The recommended approach demonstrates that the gap is closeable through policy adjustment alone, without structural changes the board opposes.",
-      "Topic": "Recommendation integration",
-      "Subtopic": "Memo completion",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "FA-21: Sustainable Growth Rate",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "recommendation",
-        "memo"
-      ],
-      "Dependencies": [
-        "CBQ22-A5-Q5"
-      ]
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-A5-E2",
+        "CaseID": "CBQ22-A5",
+        "Type": "text",
+        "Title": "Exhibit 2 — Board Request Email",
+        "Purpose": "Provides the board's directive and financial context for the growth-funding decision.",
+        "ReferencedBy": [
+          "CBQ22-A5-Q4",
+          "CBQ22-A5-Q5",
+          "CBQ22-A5-Q6"
+        ],
+        "Body": "From: Patricia Voss, Board Chair\nTo: Dr. Rajiv Anand, CFO\nSubject: Q3 Capital Plan — Expansion Authorization Request\n\nRajiv — The board approved the $45M expansion in principle at the June meeting, contingent on your confirmation that we can fund it without issuing new equity. We want to preserve the current ownership structure for the potential strategic partner transaction in 2027. Please confirm whether our current growth capacity supports the 15% target, and if not, which levers within our existing financial policy you recommend pulling. We need your written recommendation by the July board session. Our current ROE is 22%, payout is 40%, and the board's policy is to maintain the D/E ratio below 1.5."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-A5-Q1",
+        "Type": "numeric",
+        "Prompt": "Compute Harborline's sustainable growth rate (SGR) using the Higgins model. Enter the result as a percentage rounded to two decimal places.",
+        "Correct": "13.20",
+        "Explanation": "SGR = ROE × Retention Ratio = 22.0% × 0.60 = 13.20%. The retention ratio is 1 minus the payout ratio (1 − 0.40 = 0.60). This means Harborline can grow equity-financed assets at 13.2% per year without issuing new equity or changing its dividend policy, assuming ROE and the payout ratio remain constant. The Higgins model implicitly assumes constant capital structure, constant dividend policy, and no new equity issuance — all conditions the board's email (Exhibit 2) explicitly wants to maintain. Any growth above 13.2% requires either reduced dividends, increased leverage, or new equity — each of which the board has constrained.",
+        "Topic": "Sustainable growth rate",
+        "Subtopic": "Higgins model computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "SGR",
+          "Higgins"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-A5-Q2",
+        "Type": "numeric",
+        "Prompt": "Compute the annual growth gap: the difference between Harborline's planned 15% growth rate and the sustainable growth rate. Enter the gap in percentage points rounded to two decimal places.",
+        "Correct": "1.80",
+        "Explanation": "Growth gap = Target growth − SGR = 15.00% − 13.20% = 1.80 percentage points. In dollar terms, the sustainable growth supports $180M × 13.2% = $23.76M in additional equity-financed assets, while 15% growth requires $180M × 15% = $27.0M — leaving a $3.24M annual equity shortfall. Over a multi-year expansion, this gap compounds: Year 2 sustainable equity addition would be $23.76M × 1.132 = $26.9M while 15% growth demands $27.0M × 1.15 = $31.05M, widening the gap. The 1.80-point gap is small enough that modest adjustments to any single lever — dividend payout, asset turnover, or operating margin — can close it, but no single lever alone may be sufficient if the board's constraints bind.",
+        "Topic": "Growth gap analysis",
+        "Subtopic": "Quantifying the shortfall",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "growth gap",
+          "SGR"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q3",
+        "Type": "select",
+        "Prompt": "Based on the SGR analysis, can Harborline sustain 15% growth without issuing new equity?",
+        "Correct": "B",
+        "Choices": [
+          "Yes — 15% is well within the sustainable growth rate because ROE at 22% exceeds the cost of equity",
+          "No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percentage points, meaning the company would need to either increase retention, improve ROE, or accept a lower growth rate to avoid equity issuance",
+          "Yes — the company can issue debt instead of equity because the D/E ratio of 1.22 is below the board's 1.5 ceiling",
+          "No — the company must reduce dividends to zero because any payout above 0% makes growth impossible"
+        ],
+        "Explanation": "The SGR of 13.20% is the mathematical ceiling for equity-retained growth under current policies. At 15% target growth, Harborline falls 1.80 points short — meaning it cannot fund the expansion from internal equity generation alone while maintaining the 40% payout. Option C is tempting but misreads the analysis: increasing debt to fund growth changes the capital structure, which the board explicitly wants to preserve for the 2027 strategic partner transaction. The D/E ratio would rise above 1.5 if debt funds the gap. Option D overstates the constraint — zero dividends is not required; the gap can be closed by reducing the payout modestly (e.g., from 40% to approximately 27.3%) or by improving ROE through operational efficiency.",
+        "Topic": "SGR interpretation",
+        "Subtopic": "Sustainability assessment",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "SGR",
+          "sustainability"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q4",
+        "Type": "select",
+        "Prompt": "Which dividend policy adjustment would close the 1.80-point growth gap while maintaining the company's ability to service existing debt?",
+        "Correct": "A",
+        "Choices": [
+          "Reduce the payout ratio from 40% to approximately 27.3%, increasing the retention ratio to 72.7% so that SGR = 22% × 0.727 = 16.0%, which exceeds the 15% target",
+          "Eliminate dividends entirely to maximize retention, increasing SGR to 22.0% — well above the 15% target",
+          "Maintain the 40% payout and issue a one-time special dividend to signal confidence before the expansion",
+          "Increase the payout ratio to 50% to attract income-focused investors who will provide the equity gap through secondary offerings"
+        ],
+        "Explanation": "Closing the gap requires SGR ≥ 15%. Solving: 15% = 22% × b, so b = 0.6818, meaning payout = 1 − 0.6818 = 31.82%. Rounding up to a clean policy: reducing payout from 40% to approximately 27.3% (retention = 72.7%) yields SGR = 22% × 0.727 = 16.0%, which covers the 15% target with a 1-point buffer. Option B (eliminating dividends) is extreme and would damage stock price and investor confidence — the gap is modest and does not require zero dividends. Option C is counterproductive — a special dividend drains equity, making the growth gap worse. Option D contradicts the board's no-new-equity directive.",
+        "Topic": "Dividend policy levers",
+        "Subtopic": "Payout ratio adjustment",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-22: Payout Ratio",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "dividend policy",
+          "payout"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q3"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q5",
+        "Type": "multi",
+        "Prompt": "Which three levers could Dr. Anand recommend to close the growth gap while respecting the board's constraints (no new equity, D/E below 1.5)? Select exactly three.",
+        "Correct": [
+          "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
+          "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
+          "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator"
+        ],
+        "Choices": {
+          "A": "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
+          "B": "Issue additional long-term debt up to the 1.5 D/E ceiling to fund the equity gap, since debt is not equity and the board only prohibits new equity issuance",
+          "C": "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
+          "D": "Reduce the planned capital expenditure from $45M to $25M to match the internal funding capacity, accepting a slower rollout",
+          "E": "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator",
+          "F": "Issue new common equity through a private placement with the strategic partner, since the 2027 transaction will dilute ownership anyway"
+        },
+        "Explanation": "The three levers that raise SGR within the board's constraints are: (A) increasing retention by reducing payout, which directly raises the retention ratio; (C) improving asset turnover, which reduces the asset base needed per dollar of sales; and (E) improving operating margin, which raises net income and ROE. Option B is tempting — the D/E ratio of 1.22 leaves room to 1.5 — but the board's email explicitly states they want to preserve the ownership structure for the 2027 strategic partner transaction, and increasing leverage changes the capital structure that the partner is evaluating. Option D (cutting capex) does not raise SGR — it merely reduces the growth target. Option F contradicts the board's directive to avoid equity issuance.",
+        "Topic": "Growth-gap levers",
+        "Subtopic": "Multi-lever strategy",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "growth levers",
+          "multi-factor"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q4"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q6",
+        "Type": "select",
+        "Prompt": "Complete the recommendation memo: Which course of action best integrates Dr. Anand's analysis with the board's constraints?",
+        "Correct": "D",
+        "Choices": [
+          "Recommend issuing $3.24M in new equity to close the gap — the dilution is immaterial and the board will accept it once the math is presented",
+          "Recommend eliminating the dividend entirely, which raises SGR to 22% and provides ample headroom for 15% growth without any other changes",
+          "Recommend reducing the expansion budget to $30M so that internal equity alone can fund it at the current SGR of 13.2%, with no policy changes required",
+          "Recommend reducing the payout ratio from 40% to 30%, which raises SGR to 15.4% and covers the 15% target with a buffer; combined with modest margin-improvement initiatives, this approach preserves the ownership structure for the 2027 transaction while funding the expansion internally"
+        ],
+        "Explanation": "Option D integrates the SGR math with the board's constraint: reducing payout from 40% to 30% yields SGR = 22% × 0.70 = 15.4%, which exceeds the 15% target. The 0.4-point buffer accommodates minor ROE fluctuations. Combined with margin-improvement initiatives (operational efficiency that raises ROE further), this approach keeps the ownership structure clean for the 2027 strategic partner transaction. Option A violates the no-new-equity constraint. Option B (zero dividends) is extreme — the gap is 1.80 points, not 13.20 points. Option C (cutting capex) abandons the strategic expansion the board already approved in principle. The recommended approach demonstrates that the gap is closeable through policy adjustment alone, without structural changes the board opposes.",
+        "Topic": "Recommendation integration",
+        "Subtopic": "Memo completion",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "memo"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q5"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-F7",
-  "Title": "Earnings Pressure and Reserve Manipulation at Pinnacle Manufacturing",
-  "SectionTags": [
-    "F"
-  ],
-  "BlueprintDomain": "Professional Ethics",
-  "BlueprintObjectives": [
-    "Identify IMA ethical standards implicated by management-directed inventory reserve manipulation",
-    "Apply the IMA resolution process when the immediate chain of command is involved",
-    "Evaluate SOX certification exposure for officers aware of intentional misstatement",
-    "Classify the manipulation using fraud-triangle theory and assess control deficiencies"
-  ],
-  "PrimaryCompetency": "Judgment",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Pinnacle Manufacturing's Division Controller Sam Whitfield discovers that the division president, under pressure to hit quarterly targets, has directed the inventory team to overstate the allowance for obsolescent inventory by $2.3M — effectively inflating operating income by reducing COGS. Sam must apply the IMA ethical decision model, evaluate SOX certification implications, and recommend a resolution path that protects both the company and his professional standing.",
-  "Industry": "Industrial manufacturing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Pinnacle Manufacturing",
-  "Stakeholder": "Division Controller Sam Whitfield",
-  "BusinessFunction": "Financial reporting",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "IMA standards",
-    "inventory reserves",
-    "fraud triangle",
-    "SOX 302",
-    "ethical resolution"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-F7",
+    "Title": "Earnings Pressure and Reserve Manipulation at Pinnacle Manufacturing",
+    "SectionTags": [
+      "F"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "BlueprintObjectives": [
+      "Identify IMA ethical standards implicated by management-directed inventory reserve manipulation",
+      "Apply the IMA resolution process when the immediate chain of command is involved",
+      "Evaluate SOX certification exposure for officers aware of intentional misstatement",
+      "Classify the manipulation using fraud-triangle theory and assess control deficiencies"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Pinnacle Manufacturing's Division Controller Sam Whitfield discovers that the division president, under pressure to hit quarterly targets, has directed the inventory team to overstate the allowance for obsolescent inventory by $2.3M — effectively inflating operating income by reducing COGS. Sam must apply the IMA ethical decision model, evaluate SOX certification implications, and recommend a resolution path that protects both the company and his professional standing.",
+    "Industry": "Industrial manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Pinnacle Manufacturing",
+    "Stakeholder": "Division Controller Sam Whitfield",
+    "BusinessFunction": "Financial reporting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "IMA standards",
+      "inventory reserves",
+      "fraud triangle",
+      "SOX 302",
+      "ethical resolution"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Map inventory reserve manipulation to the four IMA ethical standards",
-    "Apply the IMA resolution process when the immediate supervisor is involved in misconduct",
-    "Identify which parties must be notified under SOX and IMA escalation protocols",
-    "Evaluate SOX certification exposure when officers are aware of intentional misstatement",
-    "Classify management-directed manipulation using fraud-triangle elements",
-    "Map specific scenario facts to ethical standards and fraud indicators"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-F7-E1",
-      "CaseID": "CBQ22-F7",
-      "Type": "table",
-      "Title": "Exhibit 1 — Inventory Reserve Analysis",
-      "Purpose": "Provides the quantitative evidence of the reserve manipulation showing the gap between supported and recorded allowance levels.",
-      "ReferencedBy": [
-        "CBQ22-F7-Q1",
-        "CBQ22-F7-Q3",
-        "CBQ22-F7-Q5"
-      ],
-      "Headers": [
-        "Reserve Component",
-        "Supportable Amount",
-        "Recorded Amount",
-        "Variance"
-      ],
-      "Rows": [
-        [
-          "Slow-moving raw materials (90+ days)",
-          "$1,200,000",
-          "$1,800,000",
-          "+$600,000"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Map inventory reserve manipulation to the four IMA ethical standards",
+      "Apply the IMA resolution process when the immediate supervisor is involved in misconduct",
+      "Identify which parties must be notified under SOX and IMA escalation protocols",
+      "Evaluate SOX certification exposure when officers are aware of intentional misstatement",
+      "Classify management-directed manipulation using fraud-triangle elements",
+      "Map specific scenario facts to ethical standards and fraud indicators"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-F7-E1",
+        "CaseID": "CBQ22-F7",
+        "Type": "table",
+        "Title": "Exhibit 1 — Inventory Reserve Analysis",
+        "Purpose": "Provides the quantitative evidence of the reserve manipulation showing the gap between supported and recorded allowance levels.",
+        "ReferencedBy": [
+          "CBQ22-F7-Q1",
+          "CBQ22-F7-Q3",
+          "CBQ22-F7-Q5"
         ],
-        [
-          "Obsolete finished goods (120+ days)",
-          "$2,400,000",
-          "$3,100,000",
-          "+$700,000"
+        "Headers": [
+          "Reserve Component",
+          "Supportable Amount",
+          "Recorded Amount",
+          "Variance"
         ],
-        [
-          "Excess work-in-process",
-          "$800,000",
-          "$1,400,000",
-          "+$600,000"
+        "Rows": [
+          [
+            "Slow-moving raw materials (90+ days)",
+            "$1,200,000",
+            "$1,800,000",
+            "+$600,000"
+          ],
+          [
+            "Obsolete finished goods (120+ days)",
+            "$2,400,000",
+            "$3,100,000",
+            "+$700,000"
+          ],
+          [
+            "Excess work-in-process",
+            "$800,000",
+            "$1,400,000",
+            "+$600,000"
+          ],
+          [
+            "Discontinued product line",
+            "$500,000",
+            "$1,000,000",
+            "+$500,000"
+          ],
+          [
+            "Total allowance for obsolescence",
+            "$4,900,000",
+            "$7,300,000",
+            "+$2,300,000"
+          ],
+          [
+            "Impact on COGS (reduction)",
+            "",
+            "$2,300,000",
+            "+$2,300,000"
+          ],
+          [
+            "Impact on operating income (inflation)",
+            "",
+            "$2,300,000",
+            "+$2,300,000"
+          ]
         ],
-        [
-          "Discontinued product line",
-          "$500,000",
-          "$1,000,000",
-          "+$500,000"
+        "DataFormat": "USD; variance = Recorded minus Supportable; positive variance overstates the reserve",
+        "AccuracyCheck": "600K + 700K + 600K + 500K = 2,300K ✓; overstatement reduces COGS by 2,300K, inflating operating income by 2,300K"
+      },
+      {
+        "ExhibitID": "CBQ22-F7-E2",
+        "CaseID": "CBQ22-F7",
+        "Type": "text",
+        "Title": "Exhibit 2 — Division President Email to Inventory Team",
+        "Purpose": "Provides direct evidence of management direction to overstate reserves, establishing intent and the ethical violation.",
+        "ReferencedBy": [
+          "CBQ22-F7-Q2",
+          "CBQ22-F7-Q4",
+          "CBQ22-F7-Q6"
         ],
-        [
-          "Total allowance for obsolescence",
-          "$4,900,000",
-          "$7,300,000",
-          "+$2,300,000"
+        "Body": "From: Division President Mark Caldwell\nTo: Inventory Accounting Team\nSubject: Q3 Reserve Adjustments — Priority\n\nTeam — We need to shore up the Q3 reserve to give us breathing room for Q4. I've asked Sarah to bump the obsolescence numbers to reflect 'worst-case' scenarios on the slow-moving categories. Please process the attached adjustments totaling $2.3M above the controller's recommendation. This is a one-time measure to smooth earnings. Do not copy Sam Whitfield on this email — he'll see the numbers when the package goes to corporate."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-F7-Q1",
+        "Type": "select",
+        "Prompt": "Which IMA ethical standards are MOST directly violated by directing the inventory team to overstate the obsolescence reserve?",
+        "Correct": "C",
+        "Choices": [
+          "Competence only — the issue is whether the reserve calculation was performed with adequate skill",
+          "Confidentiality only — the email instructs team members to withhold information from the controller",
+          "Integrity (refraining from activities that discredit the profession) and Credibility (communicating information fairly and disclosing all relevant facts) — with Confidentiality governing HOW Sam escalates, not WHETHER he does",
+          "No standards apply until the SEC opens an investigation"
         ],
-        [
-          "Impact on COGS (reduction)",
-          "",
-          "$2,300,000",
-          "+$2,300,000"
+        "Explanation": "The $2.3M overstatement intentionally misrepresents financial results — Integrity bars participation in activities that discredit the profession, and Credibility requires full and fair disclosure of all material facts. The division president's instruction to 'not copy Sam Whitfield' compounds the violation by attempting to suppress internal oversight. Confidentiality still governs HOW Sam communicates the issue (proper internal channels, not external leaks), but it never excuses participation in a known misstatement. Competence is not the operative failure — the team can compute reserves correctly; the problem is the direction to overstate them.",
+        "Topic": "IMA standards mapping",
+        "Subtopic": "Integrity and credibility",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "IMA standards",
+          "integrity"
         ],
-        [
-          "Impact on operating income (inflation)",
-          "",
-          "$2,300,000",
-          "+$2,300,000"
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F7-Q2",
+        "Type": "select",
+        "Prompt": "Under the IMA Statement of Ethical Professional Practice, what is Sam's correct FIRST step after discovering the manipulation?",
+        "Correct": "B",
+        "Choices": [
+          "Confront the division president directly and demand he reverse the entries",
+          "Bypass the division president — because the immediate supervisor appears involved, escalate to the next higher level (corporate controller or audit committee) with the Exhibit 1 and 2 evidence",
+          "Resign immediately and report to the SEC",
+          "Wait for the external auditors to identify the overstatement during year-end fieldwork"
+        ],
+        "Explanation": "The IMA resolution process starts with the immediate supervisor UNLESS that person appears involved — here the division president authored the directive (Exhibit 2), making direct confrontation both procedurally wrong and practically futile. The correct first step is escalation to the next higher level: corporate controller, CFO, or audit committee. The evidence (Exhibits 1 and 2) should be preserved contemporaneously. Resignation is the LAST resort after all internal channels are exhausted. Waiting for external auditors lets a knowing misstatement stand in interim filings, which compounds Sam's personal SOX exposure.",
+        "Topic": "Ethics resolution process",
+        "Subtopic": "Escalation sequence",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "escalation",
+          "IMA resolution"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F7-Q3",
+        "Type": "multi",
+        "Prompt": "Which parties must be notified as part of the ethical resolution process? Select exactly three.",
+        "Correct": [
+          "The corporate controller or CFO — the next management level above the division president, who has authority to direct reversal of the entries",
+          "The audit committee — the board-level body with fiduciary responsibility for financial reporting integrity and the authority to engage forensic investigators if needed",
+          "External legal counsel — to clarify Sam's personal SOX certification obligations, whistleblower protection eligibility, and potential mandatory reporting requirements"
+        ],
+        "Choices": {
+          "A": "The corporate controller or CFO — the next management level above the division president, who has authority to direct reversal of the entries",
+          "B": "The division president's direct supervisor — the CEO, who approved the earnings target that created the pressure",
+          "C": "The audit committee — the board-level body with fiduciary responsibility for financial reporting integrity and the authority to engage forensic investigators if needed",
+          "D": "The external auditors — immediately, before any internal investigation, so they can assess the impact on their audit opinion",
+          "E": "External legal counsel — to clarify Sam's personal SOX certification obligations, whistleblower protection eligibility, and potential mandatory reporting requirements",
+          "F": "The media — to ensure public accountability regardless of internal resolution efforts"
+        },
+        "Explanation": "The three essential notification parties are: corporate management (A) who can direct the reversal, the audit committee (C) who has board-level oversight authority, and legal counsel (E) who can advise on SOX obligations and whistleblower protections. Option B (CEO) may be appropriate but the CEO is typically briefed through the audit committee or corporate controller path — direct CEO notification without first informing the controller may bypass appropriate governance channels. Option D (external auditors) should be notified but not before internal escalation — the IMA process requires exhausting internal channels before external reporting, and premature auditor notification can compromise the internal investigation. Option F (media) breaches confidentiality and forfeits the protections that orderly internal reporting provides.",
+        "Topic": "Notification obligations",
+        "Subtopic": "Stakeholder identification",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "notification",
+          "stakeholders"
+        ],
+        "Dependencies": [
+          "CBQ22-F7-Q2"
         ]
-      ],
-      "DataFormat": "USD; variance = Recorded minus Supportable; positive variance overstates the reserve",
-      "AccuracyCheck": "600K + 700K + 600K + 500K = 2,300K ✓; overstatement reduces COGS by 2,300K, inflating operating income by 2,300K"
-    },
-    {
-      "ExhibitID": "CBQ22-F7-E2",
-      "CaseID": "CBQ22-F7",
-      "Type": "text",
-      "Title": "Exhibit 2 — Division President Email to Inventory Team",
-      "Purpose": "Provides direct evidence of management direction to overstate reserves, establishing intent and the ethical violation.",
-      "ReferencedBy": [
-        "CBQ22-F7-Q2",
-        "CBQ22-F7-Q4",
-        "CBQ22-F7-Q6"
-      ],
-      "Body": "From: Division President Mark Caldwell\nTo: Inventory Accounting Team\nSubject: Q3 Reserve Adjustments — Priority\n\nTeam — We need to shore up the Q3 reserve to give us breathing room for Q4. I've asked Sarah to bump the obsolescence numbers to reflect 'worst-case' scenarios on the slow-moving categories. Please process the attached adjustments totaling $2.3M above the controller's recommendation. This is a one-time measure to smooth earnings. Do not copy Sam Whitfield on this email — he'll see the numbers when the package goes to corporate."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-F7-Q1",
-      "Type": "select",
-      "Prompt": "Which IMA ethical standards are MOST directly violated by directing the inventory team to overstate the obsolescence reserve?",
-      "Correct": "C",
-      "Choices": [
-        "Competence only — the issue is whether the reserve calculation was performed with adequate skill",
-        "Confidentiality only — the email instructs team members to withhold information from the controller",
-        "Integrity (refraining from activities that discredit the profession) and Credibility (communicating information fairly and disclosing all relevant facts) — with Confidentiality governing HOW Sam escalates, not WHETHER he does",
-        "No standards apply until the SEC opens an investigation"
-      ],
-      "Explanation": "The $2.3M overstatement intentionally misrepresents financial results — Integrity bars participation in activities that discredit the profession, and Credibility requires full and fair disclosure of all material facts. The division president's instruction to 'not copy Sam Whitfield' compounds the violation by attempting to suppress internal oversight. Confidentiality still governs HOW Sam communicates the issue (proper internal channels, not external leaks), but it never excuses participation in a known misstatement. Competence is not the operative failure — the team can compute reserves correctly; the problem is the direction to overstate them.",
-      "Topic": "IMA standards mapping",
-      "Subtopic": "Integrity and credibility",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "IMA standards",
-        "integrity"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F7-Q2",
-      "Type": "select",
-      "Prompt": "Under the IMA Statement of Ethical Professional Practice, what is Sam's correct FIRST step after discovering the manipulation?",
-      "Correct": "B",
-      "Choices": [
-        "Confront the division president directly and demand he reverse the entries",
-        "Bypass the division president — because the immediate supervisor appears involved, escalate to the next higher level (corporate controller or audit committee) with the Exhibit 1 and 2 evidence",
-        "Resign immediately and report to the SEC",
-        "Wait for the external auditors to identify the overstatement during year-end fieldwork"
-      ],
-      "Explanation": "The IMA resolution process starts with the immediate supervisor UNLESS that person appears involved — here the division president authored the directive (Exhibit 2), making direct confrontation both procedurally wrong and practically futile. The correct first step is escalation to the next higher level: corporate controller, CFO, or audit committee. The evidence (Exhibits 1 and 2) should be preserved contemporaneously. Resignation is the LAST resort after all internal channels are exhausted. Waiting for external auditors lets a knowing misstatement stand in interim filings, which compounds Sam's personal SOX exposure.",
-      "Topic": "Ethics resolution process",
-      "Subtopic": "Escalation sequence",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "escalation",
-        "IMA resolution"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F7-Q3",
-      "Type": "multi",
-      "Prompt": "Which parties must be notified as part of the ethical resolution process? Select exactly three.",
-      "Correct": [
-        "The corporate controller or CFO — the next management level above the division president, who has authority to direct reversal of the entries",
-        "The audit committee — the board-level body with fiduciary responsibility for financial reporting integrity and the authority to engage forensic investigators if needed",
-        "External legal counsel — to clarify Sam's personal SOX certification obligations, whistleblower protection eligibility, and potential mandatory reporting requirements"
-      ],
-      "Choices": {
-        "A": "The corporate controller or CFO — the next management level above the division president, who has authority to direct reversal of the entries",
-        "B": "The division president's direct supervisor — the CEO, who approved the earnings target that created the pressure",
-        "C": "The audit committee — the board-level body with fiduciary responsibility for financial reporting integrity and the authority to engage forensic investigators if needed",
-        "D": "The external auditors — immediately, before any internal investigation, so they can assess the impact on their audit opinion",
-        "E": "External legal counsel — to clarify Sam's personal SOX certification obligations, whistleblower protection eligibility, and potential mandatory reporting requirements",
-        "F": "The media — to ensure public accountability regardless of internal resolution efforts"
       },
-      "Explanation": "The three essential notification parties are: corporate management (A) who can direct the reversal, the audit committee (C) who has board-level oversight authority, and legal counsel (E) who can advise on SOX obligations and whistleblower protections. Option B (CEO) may be appropriate but the CEO is typically briefed through the audit committee or corporate controller path — direct CEO notification without first informing the controller may bypass appropriate governance channels. Option D (external auditors) should be notified but not before internal escalation — the IMA process requires exhausting internal channels before external reporting, and premature auditor notification can compromise the internal investigation. Option F (media) breaches confidentiality and forfeits the protections that orderly internal reporting provides.",
-      "Topic": "Notification obligations",
-      "Subtopic": "Stakeholder identification",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "notification",
-        "stakeholders"
-      ],
-      "Dependencies": [
-        "CBQ22-F7-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-F7-Q4",
-      "Type": "select",
-      "Prompt": "If internal escalation stalls and the division president's directive stands, what is Sam's FINAL recourse under SOX and IMA?",
-      "Correct": "A",
-      "Choices": [
-        "Report in good faith to the SEC or OSHA under SOX §806 whistleblower protections — but only after internal remedies have been genuinely exhausted, and consult counsel first to ensure the report meets the 'reasonable belief' standard",
-        "Post the evidence on social media to force public accountability — whistleblower protections cover any disclosure method",
-        "Certify the results as instructed and disclose the manipulation anonymously after bonuses are paid",
-        "Quietly reverse the entries in the following quarter to avoid conflict, accepting the timing difference"
-      ],
-      "Explanation": "SOX §806 and Dodd-Frank §922 protect employees who report fraud to federal agencies in good faith and with a reasonable belief — but the protection attaches only after genuine exhaustion of internal channels. Sam must first escalate internally (corporate controller, audit committee, legal counsel), document the refusal to act, and THEN report externally. Option B (social media) is not protected activity under any whistleblower statute — protections require reporting to a federal agency, not the public. Option C (certify-and-disclose-later) is the classic pattern that turns a controller into an enforcement respondent — SOX §302/§906 exposure attaches at certification, not at later disclosure. Option D (quiet reversal) leaves investors misled in the current period and deepens complicity.",
-      "Topic": "Final recourse",
-      "Subtopic": "Whistleblower protections",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §806; Dodd-Frank §922",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "whistleblower",
-        "SOX 806"
-      ],
-      "Dependencies": [
-        "CBQ22-F7-Q3"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-F7-Q5",
-      "Type": "select",
-      "Prompt": "Classify the $2.3M reserve overstatement using fraud-triangle theory. Which element does the division president's conduct BEST satisfy?",
-      "Correct": "D",
-      "Choices": [
-        "Opportunity — the president had access to override the reserve calculation, but pressure and rationalization are not present",
-        "Rationalization — the president convinced himself the manipulation was justified, but opportunity and pressure are absent",
-        "Financial pressure — the president faced personal financial consequences from missing targets, but opportunity and rationalization are absent",
-        "All three elements are present: pressure (quarterly target shortfall), opportunity (ability to direct inventory team to override reserves), and rationalization ('one-time measure to smooth earnings')"
-      ],
-      "Explanation": "The fraud triangle requires all three elements: PRESSURE — the president is under quarterly-target pressure (Exhibit 2 references 'breathing room for Q4' and 'smooth earnings'); OPPORTUNITY — as division president, he has authority to direct the inventory team and override the controller's recommendation; RATIONALIZATION — the email frames the $2.3M as a 'one-time measure,' a classic minimization rationalization that reframes fraud as temporary smoothing. All three elements are clearly present. The IMA fraud perspective adds that the attempted exclusion of the controller ('Do not copy Sam Whitfield') is itself a red flag indicating awareness that the action violates internal controls.",
-      "Topic": "Fraud triangle",
-      "Subtopic": "Element classification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "fraud triangle",
-        "fraud indicators"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F7-Q6",
-      "Type": "match",
-      "Prompt": "Match each scenario fact from the Pinnacle case to the IMA ethical standard or fraud indicator it most directly implicates.",
-      "LeftItems": [
-        "Division president directs reserve overstatement of $2.3M above controller's recommendation",
-        "Email instructs team not to copy the controller on the adjustment direction",
-        "Reserve overstatement reduces COGS and inflates operating income by $2.3M",
-        "Email characterizes the manipulation as a 'one-time measure to smooth earnings'"
-      ],
-      "RightItems": [
-        "Integrity — participation in activities that discredit the profession",
-        "Confidentiality scope — the exclusion attempts to suppress legitimate internal oversight",
-        "Credibility — communicating information that is not fairly presented",
-        "Rationalization — minimization of fraudulent activity as temporary or routine",
-        "Competence — failure to apply adequate technical skill to the reserve calculation",
-        "Opportunity — access to override accounting controls"
-      ],
-      "Correct": {
-        "Division president directs reserve overstatement of $2.3M above controller's recommendation": "Integrity — participation in activities that discredit the profession",
-        "Email instructs team not to copy the controller on the adjustment direction": "Confidentiality scope — the exclusion attempts to suppress legitimate internal oversight",
-        "Reserve overstatement reduces COGS and inflates operating income by $2.3M": "Credibility — communicating information that is not fairly presented",
-        "Email characterizes the manipulation as a 'one-time measure to smooth earnings'": "Rationalization — minimization of fraudulent activity as temporary or routine"
+      {
+        "ItemID": "CBQ22-F7-Q4",
+        "Type": "select",
+        "Prompt": "If internal escalation stalls and the division president's directive stands, what is Sam's FINAL recourse under SOX and IMA?",
+        "Correct": "A",
+        "Choices": [
+          "Report in good faith to the SEC or OSHA under SOX §806 whistleblower protections — but only after internal remedies have been genuinely exhausted, and consult counsel first to ensure the report meets the 'reasonable belief' standard",
+          "Post the evidence on social media to force public accountability — whistleblower protections cover any disclosure method",
+          "Certify the results as instructed and disclose the manipulation anonymously after bonuses are paid",
+          "Quietly reverse the entries in the following quarter to avoid conflict, accepting the timing difference"
+        ],
+        "Explanation": "SOX §806 and Dodd-Frank §922 protect employees who report fraud to federal agencies in good faith and with a reasonable belief — but the protection attaches only after genuine exhaustion of internal channels. Sam must first escalate internally (corporate controller, audit committee, legal counsel), document the refusal to act, and THEN report externally. Option B (social media) is not protected activity under any whistleblower statute — protections require reporting to a federal agency, not the public. Option C (certify-and-disclose-later) is the classic pattern that turns a controller into an enforcement respondent — SOX §302/§906 exposure attaches at certification, not at later disclosure. Option D (quiet reversal) leaves investors misled in the current period and deepens complicity.",
+        "Topic": "Final recourse",
+        "Subtopic": "Whistleblower protections",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §806; Dodd-Frank §922",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "whistleblower",
+          "SOX 806"
+        ],
+        "Dependencies": [
+          "CBQ22-F7-Q3"
+        ]
       },
-      "Explanation": "Each fact maps to a specific ethical or fraud element: the directive to overstate (first pair) is an Integrity violation — participating in a knowingly misleading accounting treatment discredits the profession. The exclusion of the controller (second pair) goes beyond Confidentiality — it is an attempt to suppress legitimate oversight, which violates the spirit of Confidentiality as a governance safeguard. The financial impact of inflating income by $2.3M (third pair) is a Credibility failure — the resulting financial statements do not fairly present results. The 'one-time measure' framing (fourth pair) is textbook rationalization — minimizing fraud as temporary or routine to reduce psychological discomfort. Distractors: Competence is not the issue (the team can calculate reserves correctly); Opportunity is present but not specifically implicated by the email characterization.",
-      "Topic": "Ethics-fraud mapping",
-      "Subtopic": "Fact-to-standard classification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "ethics mapping",
-        "fraud elements"
-      ],
-      "Dependencies": [
-        "CBQ22-F7-Q1",
-        "CBQ22-F7-Q5"
-      ]
-    }
-  ]
-},
+      {
+        "ItemID": "CBQ22-F7-Q5",
+        "Type": "select",
+        "Prompt": "Classify the $2.3M reserve overstatement using fraud-triangle theory. Which element does the division president's conduct BEST satisfy?",
+        "Correct": "D",
+        "Choices": [
+          "Opportunity — the president had access to override the reserve calculation, but pressure and rationalization are not present",
+          "Rationalization — the president convinced himself the manipulation was justified, but opportunity and pressure are absent",
+          "Financial pressure — the president faced personal financial consequences from missing targets, but opportunity and rationalization are absent",
+          "All three elements are present: pressure (quarterly target shortfall), opportunity (ability to direct inventory team to override reserves), and rationalization ('one-time measure to smooth earnings')"
+        ],
+        "Explanation": "The fraud triangle requires all three elements: PRESSURE — the president is under quarterly-target pressure (Exhibit 2 references 'breathing room for Q4' and 'smooth earnings'); OPPORTUNITY — as division president, he has authority to direct the inventory team and override the controller's recommendation; RATIONALIZATION — the email frames the $2.3M as a 'one-time measure,' a classic minimization rationalization that reframes fraud as temporary smoothing. All three elements are clearly present. The IMA fraud perspective adds that the attempted exclusion of the controller ('Do not copy Sam Whitfield') is itself a red flag indicating awareness that the action violates internal controls.",
+        "Topic": "Fraud triangle",
+        "Subtopic": "Element classification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "fraud triangle",
+          "fraud indicators"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F7-Q6",
+        "Type": "match",
+        "Prompt": "Match each scenario fact from the Pinnacle case to the IMA ethical standard or fraud indicator it most directly implicates.",
+        "LeftItems": [
+          "Division president directs reserve overstatement of $2.3M above controller's recommendation",
+          "Email instructs team not to copy the controller on the adjustment direction",
+          "Reserve overstatement reduces COGS and inflates operating income by $2.3M",
+          "Email characterizes the manipulation as a 'one-time measure to smooth earnings'"
+        ],
+        "RightItems": [
+          "Integrity — participation in activities that discredit the profession",
+          "Confidentiality scope — the exclusion attempts to suppress legitimate internal oversight",
+          "Credibility — communicating information that is not fairly presented",
+          "Rationalization — minimization of fraudulent activity as temporary or routine",
+          "Competence — failure to apply adequate technical skill to the reserve calculation",
+          "Opportunity — access to override accounting controls"
+        ],
+        "Correct": {
+          "Division president directs reserve overstatement of $2.3M above controller's recommendation": "Integrity — participation in activities that discredit the profession",
+          "Email instructs team not to copy the controller on the adjustment direction": "Confidentiality scope — the exclusion attempts to suppress legitimate internal oversight",
+          "Reserve overstatement reduces COGS and inflates operating income by $2.3M": "Credibility — communicating information that is not fairly presented",
+          "Email characterizes the manipulation as a 'one-time measure to smooth earnings'": "Rationalization — minimization of fraudulent activity as temporary or routine"
+        },
+        "Explanation": "Each fact maps to a specific ethical or fraud element: the directive to overstate (first pair) is an Integrity violation — participating in a knowingly misleading accounting treatment discredits the profession. The exclusion of the controller (second pair) goes beyond Confidentiality — it is an attempt to suppress legitimate oversight, which violates the spirit of Confidentiality as a governance safeguard. The financial impact of inflating income by $2.3M (third pair) is a Credibility failure — the resulting financial statements do not fairly present results. The 'one-time measure' framing (fourth pair) is textbook rationalization — minimizing fraud as temporary or routine to reduce psychological discomfort. Distractors: Competence is not the issue (the team can calculate reserves correctly); Opportunity is present but not specifically implicated by the email characterization.",
+        "Topic": "Ethics-fraud mapping",
+        "Subtopic": "Fact-to-standard classification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "ethics mapping",
+          "fraud elements"
+        ],
+        "Dependencies": [
+          "CBQ22-F7-Q1",
+          "CBQ22-F7-Q5"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-F5",
-  "Title": "Fraud Investigation at Westfield Logistics",
-  "SectionTags": [
-    "F"
-  ],
-  "BlueprintDomain": "Professional Ethics",
-  "BlueprintObjectives": [
-    "Identify the fraud triangle elements present in suspicious journal-entry manipulation",
-    "Recognize red flags indicating fraudulent financial reporting",
-    "Evaluate internal control deficiencies that permitted the fraud",
-    "Apply fraud investigation procedures and document findings"
-  ],
-  "PrimaryCompetency": "Judgment",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Moderate",
-  "DifficultyScore": 3,
-  "ScenarioText": "Westfield Logistics' internal audit team has discovered suspicious journal entries at a subsidiary. The entries appear to shift $1.8M in operating expenses to capital accounts over three months, inflating both operating income and total assets. CFO Diane Foster must apply the fraud triangle, identify red flags, and recommend control responses to the audit committee.",
-  "Industry": "Logistics and transportation",
-  "CompanyType": "Service provider",
-  "CompanyName": "Westfield Logistics",
-  "Stakeholder": "CFO Diane Foster",
-  "BusinessFunction": "Internal audit",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "fraud triangle",
-    "journal entries",
-    "internal controls",
-    "fraud investigation",
-    "capitalization"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-F5",
+    "Title": "Fraud Investigation at Westfield Logistics",
+    "SectionTags": [
+      "F"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "BlueprintObjectives": [
+      "Identify the fraud triangle elements present in suspicious journal-entry manipulation",
+      "Recognize red flags indicating fraudulent financial reporting",
+      "Evaluate internal control deficiencies that permitted the fraud",
+      "Apply fraud investigation procedures and document findings"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Westfield Logistics' internal audit team has discovered suspicious journal entries at a subsidiary. The entries appear to shift $1.8M in operating expenses to capital accounts over three months, inflating both operating income and total assets. CFO Diane Foster must apply the fraud triangle, identify red flags, and recommend control responses to the audit committee.",
+    "Industry": "Logistics and transportation",
+    "CompanyType": "Service provider",
+    "CompanyName": "Westfield Logistics",
+    "Stakeholder": "CFO Diane Foster",
+    "BusinessFunction": "Internal audit",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "fraud triangle",
+      "journal entries",
+      "internal controls",
+      "fraud investigation",
+      "capitalization"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Classify journal-entry fraud using the fraud triangle framework",
-    "Identify specific red flags in suspicious journal-entry patterns",
-    "Evaluate control deficiencies that permitted unauthorized capitalization",
-    "Select appropriate investigation steps following fraud discovery",
-    "Map evidence to specific fraud-triangle elements",
-    "Recommend control responses proportional to the identified fraud risk"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-F5-E1",
-      "CaseID": "CBQ22-F5",
-      "Type": "erp-report",
-      "Title": "Exhibit 1 — Suspicious Journal Entries (Subsidiary GL)",
-      "Purpose": "Provides the specific journal entries that shifted operating expenses to capital accounts, establishing the mechanics and pattern of the fraud.",
-      "ReferencedBy": [
-        "CBQ22-F5-Q1",
-        "CBQ22-F5-Q2",
-        "CBQ22-F5-Q4",
-        "CBQ22-F5-Q6"
-      ],
-      "Headers": [
-        "Date",
-        "Entry #",
-        "Debit Account",
-        "Credit Account",
-        "Amount",
-        "Prepared By",
-        "Approved By"
-      ],
-      "Rows": [
-        [
-          "2026-04-15",
-          "JE-4201",
-          "Vehicles and Equipment (1500)",
-          "Repair and Maintenance Expense (6100)",
-          "$420,000",
-          "J. Marcus",
-          "None"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Classify journal-entry fraud using the fraud triangle framework",
+      "Identify specific red flags in suspicious journal-entry patterns",
+      "Evaluate control deficiencies that permitted unauthorized capitalization",
+      "Select appropriate investigation steps following fraud discovery",
+      "Map evidence to specific fraud-triangle elements",
+      "Recommend control responses proportional to the identified fraud risk"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-F5-E1",
+        "CaseID": "CBQ22-F5",
+        "Type": "erp-report",
+        "Title": "Exhibit 1 — Suspicious Journal Entries (Subsidiary GL)",
+        "Purpose": "Provides the specific journal entries that shifted operating expenses to capital accounts, establishing the mechanics and pattern of the fraud.",
+        "ReferencedBy": [
+          "CBQ22-F5-Q1",
+          "CBQ22-F5-Q2",
+          "CBQ22-F5-Q4",
+          "CBQ22-F5-Q6"
         ],
-        [
-          "2026-04-28",
-          "JE-4217",
-          "Vehicles and Equipment (1500)",
-          "Freight Expense (6200)",
-          "$380,000",
-          "J. Marcus",
-          "None"
+        "Headers": [
+          "Date",
+          "Entry #",
+          "Debit Account",
+          "Credit Account",
+          "Amount",
+          "Prepared By",
+          "Approved By"
         ],
-        [
-          "2026-05-12",
-          "JE-4302",
-          "Buildings and Improvements (1400)",
-          "Warehouse Labor Expense (6300)",
-          "$510,000",
-          "J. Marcus",
-          "None"
+        "Rows": [
+          [
+            "2026-04-15",
+            "JE-4201",
+            "Vehicles and Equipment (1500)",
+            "Repair and Maintenance Expense (6100)",
+            "$420,000",
+            "J. Marcus",
+            "None"
+          ],
+          [
+            "2026-04-28",
+            "JE-4217",
+            "Vehicles and Equipment (1500)",
+            "Freight Expense (6200)",
+            "$380,000",
+            "J. Marcus",
+            "None"
+          ],
+          [
+            "2026-05-12",
+            "JE-4302",
+            "Buildings and Improvements (1400)",
+            "Warehouse Labor Expense (6300)",
+            "$510,000",
+            "J. Marcus",
+            "None"
+          ],
+          [
+            "2026-05-30",
+            "JE-4318",
+            "Vehicles and Equipment (1500)",
+            "Insurance Expense (6400)",
+            "$290,000",
+            "J. Marcus",
+            "None"
+          ],
+          [
+            "2026-06-14",
+            "JE-4405",
+            "Buildings and Improvements (1400)",
+            "Utilities Expense (6500)",
+            "$200,000",
+            "J. Marcus",
+            "None"
+          ],
+          [
+            "Total",
+            "",
+            "",
+            "",
+            "$1,800,000",
+            "",
+            ""
+          ]
         ],
-        [
-          "2026-05-30",
-          "JE-4318",
-          "Vehicles and Equipment (1500)",
-          "Insurance Expense (6400)",
-          "$290,000",
-          "J. Marcus",
-          "None"
+        "DataFormat": "USD; all entries debit asset accounts and credit expense accounts; no approval signatures recorded",
+        "AccuracyCheck": "420K + 380K + 510K + 290K + 200K = 1,800K ✓"
+      },
+      {
+        "ExhibitID": "CBQ22-F5-E2",
+        "CaseID": "CBQ22-F5",
+        "Type": "text",
+        "Title": "Exhibit 2 — Internal Audit Investigation Notes",
+        "Purpose": "Provides the investigative context and background findings that supplement the journal-entry evidence.",
+        "ReferencedBy": [
+          "CBQ22-F5-Q3",
+          "CBQ22-F5-Q5",
+          "CBQ22-F5-Q6"
         ],
-        [
-          "2026-06-14",
-          "JE-4405",
-          "Buildings and Improvements (1400)",
-          "Utilities Expense (6500)",
-          "$200,000",
-          "J. Marcus",
-          "None"
+        "Body": "Investigation Notes — Westfield Logistics Subsidiary\n\nDate: June 28, 2026\nAuditor: Lead Internal Auditor Rebecca Torres\n\n1. All five entries were prepared by J. Marcus, a senior accountant in the subsidiary's finance department.\n2. None of the entries carry a supervisor approval signature, despite the subsidiary's written policy requiring dual approval for any journal entry exceeding $50,000.\n3. J. Marcus reports to the subsidiary CFO, who also serves as the subsidiary's controller — a combined role that eliminates the segregation of duties required by Westfield's corporate internal control manual.\n4. The capital account additions ($1.8M total) were not supported by any purchase orders, vendor invoices, or asset receiving reports.\n5. J. Marcus resigned on June 25, 2026, one week before the audit team's scheduled fieldwork.\n6. The subsidiary CFO approved all entries verbally but did not sign the approval field.\n7. Westfield's corporate ERP system has a configuration flag that allows subsidiary-level overrides of the capitalization threshold — this flag was activated on March 30, 2026, by the subsidiary CFO."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-F5-Q1",
+        "Type": "select",
+        "Prompt": "Which element of the fraud triangle is MOST directly evidenced by the journal entries shifting expenses to capital accounts?",
+        "Correct": "C",
+        "Choices": [
+          "Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries themselves do not prove pressure",
+          "Rationalization — the accountant convinced himself the entries were justified, but the pattern suggests deliberate concealment rather than self-justification",
+          "Opportunity — the combined CFO/Controller role, lack of approval signatures, and ERP override flag created the conditions that permitted the fraud to occur and persist undetected",
+          "All three elements are equally and directly evidenced by the journal entries alone"
         ],
-        [
-          "Total",
-          "",
-          "",
-          "",
-          "$1,800,000",
-          "",
-          ""
+        "Explanation": "The journal entries themselves most directly evidence OPPORTUNITY: five entries totaling $1.8M were processed without approval signatures (violating the $50K dual-approval policy), by a single preparer, in a subsidiary where the CFO and Controller roles are combined (eliminating segregation of duties), using an ERP override that was activated specifically to enable the capitalization. Pressure and rationalization are inferred from context (earnings targets, the 'verbal approval' pattern) but the ENTRIES specifically demonstrate the control failures that made the fraud possible. The fraud triangle is a framework — each element requires independent evidence, and the journal-entry pattern is the opportunity evidence.",
+        "Topic": "Fraud triangle",
+        "Subtopic": "Element identification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "fraud triangle",
+          "opportunity"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F5-Q2",
+        "Type": "select",
+        "Prompt": "Which red flag pattern in Exhibit 1 is MOST characteristic of fraudulent journal entries?",
+        "Correct": "A",
+        "Choices": [
+          "All entries debit capital accounts and credit expense accounts with no supporting documentation, no supervisor signatures, and amounts just below or at unusual thresholds",
+          "The entries were prepared on business days during normal working hours",
+          "The amounts are round numbers — $420,000, $380,000, $510,000, $290,000, $200,000",
+          "The entries were posted to the general ledger rather than subsidiary ledgers"
+        ],
+        "Explanation": "The hallmarks of fraudulent journal entries are: (1) consistent direction — all five entries shift expenses TO assets, never the reverse; (2) no supporting documentation — no POs, invoices, or receiving reports exist; (3) no approval signatures — all five violate the $50K dual-approval policy; and (4) the aggregate amount ($1.8M) is material. Round numbers (C) are a weak indicator — legitimate capitalizations can also be round. Business-day timing (B) is neutral. General-ledger posting (D) is normal for adjusting entries. The directional consistency and absence of documentation are the strong red flags that internal audit standards (IIA) and SAS 99 identify as fraud indicators.",
+        "Topic": "Red flags",
+        "Subtopic": "Journal entry fraud indicators",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "red flags",
+          "journal entries"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F5-Q3",
+        "Type": "select",
+        "Prompt": "Which internal control deficiency MOST directly enabled the fraud to persist undetected?",
+        "Correct": "D",
+        "Choices": [
+          "Failure to perform bank reconciliations monthly — but the fraud involved GL entries, not bank transactions",
+          "Lack of a formal code of ethics — but Westfield has a corporate internal control manual with segregation-of-duties requirements",
+          "Insufficient IT security training for end users — but the ERP override was performed by the CFO, not a rank-and-file user",
+          "Combined CFO/Controller role at the subsidiary eliminating segregation of duties, combined with an activated ERP override that bypassed the capitalization threshold"
+        ],
+        "Explanation": "The combined CFO/Controller role is the structural enabler: one person both authorizes AND records transactions, eliminating the segregation that would normally require a second independent party to detect or prevent the misclassification. The activated ERP override (flag turned on March 30, 2026) allowed capitalization entries that should have been blocked by system-level controls. Together these create the classic fraud-enabling condition: no independent check on the person with both motive (quarterly targets) and access (combined role + ERP override). Bank reconciliations (A) test cash, not GL classification. A code of ethics (B) addresses culture, not structural controls. IT training (C) addresses user competence, not management override.",
+        "Topic": "Control deficiency",
+        "Subtopic": "Segregation of duties",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "internal controls",
+          "SoD"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F5-Q4",
+        "Type": "multi",
+        "Prompt": "Which three investigation steps should Diane Foster recommend to the audit committee? Select exactly three.",
+        "Correct": [
+          "Engage forensic accounting specialists to trace the $1.8M through the capital accounts and determine whether any assets were actually acquired or if the entries are pure misclassification",
+          "Preserve all electronic evidence — ERP audit logs, email accounts, and system access records for J. Marcus and the subsidiary CFO — before the 30-day retention window expires",
+          "Review the ERP override configuration and determine whether similar overrides exist at other subsidiaries, assessing whether the control gap is systemic or isolated"
+        ],
+        "Choices": {
+          "A": "Engage forensic accounting specialists to trace the $1.8M through the capital accounts and determine whether any assets were actually acquired or if the entries are pure misclassification",
+          "B": "Confront J. Marcus directly, even though he has resigned, to obtain his explanation before the audit committee reviews the findings",
+          "C": "Preserve all electronic evidence — ERP audit logs, email accounts, and system access records for J. Marcus and the subsidiary CFO — before the 30-day retention window expires",
+          "D": "Reverse all five entries immediately to restore the correct account balances before the external audit begins",
+          "E": "Review the ERP override configuration and determine whether similar overrides exist at other subsidiaries, assessing whether the control gap is systemic or isolated",
+          "F": "Terminate the subsidiary CFO immediately to prevent evidence destruction, without first completing the forensic investigation"
+        },
+        "Explanation": "The three essential investigation steps are: forensic tracing (A) to determine the economic substance of the entries, evidence preservation (C) to maintain the audit trail before retention windows expire, and systemic review (E) to determine whether the ERP override gap affects other subsidiaries. Option B (confronting J. Marcus) is impractical — he resigned and has no obligation to cooperate; legal counsel should advise on subpoena options if his testimony is needed. Option D (immediate reversal) is premature — the entries must be forensically understood before reversal to avoid destroying evidence or creating new accounting issues. Option F (immediate termination) is disproportionate before the investigation completes — the CFO should be placed on administrative leave with system access revoked, not terminated, to preserve the ability to compel cooperation through employment obligations.",
+        "Topic": "Investigation procedures",
+        "Subtopic": "Forensic investigation steps",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "investigation",
+          "forensic"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F5-Q5",
+        "Type": "select",
+        "Prompt": "The investigation notes describe J. Marcus's resignation one week before scheduled fieldwork. Which fraud-triangle element does this timing MOST directly suggest?",
+        "Correct": "B",
+        "Choices": [
+          "Opportunity — the resignation created the opportunity for the fraud to continue without detection",
+          "Consciousness of guilt — the resignation timing suggests Marcus knew the fraud would be discovered and fled before the audit, indicating awareness that the entries were improper",
+          "Rationalization — the resignation was a personal choice unrelated to the fraud",
+          "Pressure — Marcus was pressured to resign by the subsidiary CFO"
+        ],
+        "Explanation": "Resignation immediately before scheduled audit fieldwork is a classic consciousness-of-guilt indicator — it suggests the individual knew the fraud would be discovered and chose to depart before investigators could question them. While the resignation does not PROVE guilt (it could be coincidental), the timing pattern is specifically identified in fraud investigation standards (SAS 99, IIA Practice Advisory) as a red flag requiring investigation. The three-week gap between the last fraudulent entry (June 14) and resignation (June 25) further suggests Marcus completed the scheme and then departed. Option A misreads the framework — resignation does not create opportunity; it is a response to perceived detection risk. Option C (rationalization) applies to the fraud itself, not the resignation. Option D (pressure to resign) is unsupported by the evidence.",
+        "Topic": "Fraud indicators",
+        "Subtopic": "Consciousness of guilt",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "fraud indicators",
+          "resignation"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F5-Q6",
+        "Type": "match",
+        "Prompt": "Match each piece of evidence from the Westfield investigation to the fraud-triangle element or control principle it most directly supports.",
+        "LeftItems": [
+          "Five entries debiting capital accounts and crediting expense accounts totaling $1.8M",
+          "No supervisor approval signatures on any entry despite $50K dual-approval policy",
+          "Subsidiary CFO and Controller roles combined in one person",
+          "ERP capitalization-override flag activated March 30, 2026 by the subsidiary CFO"
+        ],
+        "RightItems": [
+          "Opportunity — management override of capitalization controls",
+          "Opportunity — segregation-of-duties failure",
+          "Pressure — the direction of entries (expense-to-asset) indicates earnings manipulation motive",
+          "Opportunity — bypass of system-level authorization controls",
+          "Rationalization — the entries were intended to be reversed later",
+          "Pressure — quarterly earnings targets created the motivation"
+        ],
+        "Correct": {
+          "Five entries debiting capital accounts and crediting expense accounts totaling $1.8M": "Pressure — the direction of entries (expense-to-asset) indicates earnings manipulation motive",
+          "No supervisor approval signatures on any entry despite $50K dual-approval policy": "Opportunity — management override of capitalization controls",
+          "Subsidiary CFO and Controller roles combined in one person": "Opportunity — segregation-of-duties failure",
+          "ERP capitalization-override flag activated March 30, 2026 by the subsidiary CFO": "Opportunity — bypass of system-level authorization controls"
+        },
+        "Explanation": "The evidence maps as follows: the consistent expense-to-asset direction (first pair) indicates PRESSURE — the motive is earnings inflation, not random error. The missing approval signatures (second pair) demonstrate OPPORTUNITY through management override of authorization controls. The combined CFO/Controller role (third pair) is OPPORTUNITY through segregation-of-duties failure — one person both authorizes and records. The ERP override activation (fourth pair) is OPPORTUNITY through system-level control bypass. Note that three of the four evidence items map to Opportunity — this is characteristic of management-override fraud, where the perpetrator's position creates multiple overlapping control gaps. The pressure element is inferred from the entry direction, not from a single piece of documentary evidence.",
+        "Topic": "Evidence classification",
+        "Subtopic": "Fraud-triangle mapping",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "evidence mapping",
+          "fraud triangle"
+        ],
+        "Dependencies": [
+          "CBQ22-F5-Q1",
+          "CBQ22-F5-Q3"
         ]
-      ],
-      "DataFormat": "USD; all entries debit asset accounts and credit expense accounts; no approval signatures recorded",
-      "AccuracyCheck": "420K + 380K + 510K + 290K + 200K = 1,800K ✓"
-    },
-    {
-      "ExhibitID": "CBQ22-F5-E2",
-      "CaseID": "CBQ22-F5",
-      "Type": "text",
-      "Title": "Exhibit 2 — Internal Audit Investigation Notes",
-      "Purpose": "Provides the investigative context and background findings that supplement the journal-entry evidence.",
-      "ReferencedBy": [
-        "CBQ22-F5-Q3",
-        "CBQ22-F5-Q5",
-        "CBQ22-F5-Q6"
-      ],
-      "Body": "Investigation Notes — Westfield Logistics Subsidiary\n\nDate: June 28, 2026\nAuditor: Lead Internal Auditor Rebecca Torres\n\n1. All five entries were prepared by J. Marcus, a senior accountant in the subsidiary's finance department.\n2. None of the entries carry a supervisor approval signature, despite the subsidiary's written policy requiring dual approval for any journal entry exceeding $50,000.\n3. J. Marcus reports to the subsidiary CFO, who also serves as the subsidiary's controller — a combined role that eliminates the segregation of duties required by Westfield's corporate internal control manual.\n4. The capital account additions ($1.8M total) were not supported by any purchase orders, vendor invoices, or asset receiving reports.\n5. J. Marcus resigned on June 25, 2026, one week before the audit team's scheduled fieldwork.\n6. The subsidiary CFO approved all entries verbally but did not sign the approval field.\n7. Westfield's corporate ERP system has a configuration flag that allows subsidiary-level overrides of the capitalization threshold — this flag was activated on March 30, 2026, by the subsidiary CFO."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-F5-Q1",
-      "Type": "select",
-      "Prompt": "Which element of the fraud triangle is MOST directly evidenced by the journal entries shifting expenses to capital accounts?",
-      "Correct": "C",
-      "Choices": [
-        "Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries themselves do not prove pressure",
-        "Rationalization — the accountant convinced himself the entries were justified, but the pattern suggests deliberate concealment rather than self-justification",
-        "Opportunity — the combined CFO/Controller role, lack of approval signatures, and ERP override flag created the conditions that permitted the fraud to occur and persist undetected",
-        "All three elements are equally and directly evidenced by the journal entries alone"
-      ],
-      "Explanation": "The journal entries themselves most directly evidence OPPORTUNITY: five entries totaling $1.8M were processed without approval signatures (violating the $50K dual-approval policy), by a single preparer, in a subsidiary where the CFO and Controller roles are combined (eliminating segregation of duties), using an ERP override that was activated specifically to enable the capitalization. Pressure and rationalization are inferred from context (earnings targets, the 'verbal approval' pattern) but the ENTRIES specifically demonstrate the control failures that made the fraud possible. The fraud triangle is a framework — each element requires independent evidence, and the journal-entry pattern is the opportunity evidence.",
-      "Topic": "Fraud triangle",
-      "Subtopic": "Element identification",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "fraud triangle",
-        "opportunity"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F5-Q2",
-      "Type": "select",
-      "Prompt": "Which red flag pattern in Exhibit 1 is MOST characteristic of fraudulent journal entries?",
-      "Correct": "A",
-      "Choices": [
-        "All entries debit capital accounts and credit expense accounts with no supporting documentation, no supervisor signatures, and amounts just below or at unusual thresholds",
-        "The entries were prepared on business days during normal working hours",
-        "The amounts are round numbers — $420,000, $380,000, $510,000, $290,000, $200,000",
-        "The entries were posted to the general ledger rather than subsidiary ledgers"
-      ],
-      "Explanation": "The hallmarks of fraudulent journal entries are: (1) consistent direction — all five entries shift expenses TO assets, never the reverse; (2) no supporting documentation — no POs, invoices, or receiving reports exist; (3) no approval signatures — all five violate the $50K dual-approval policy; and (4) the aggregate amount ($1.8M) is material. Round numbers (C) are a weak indicator — legitimate capitalizations can also be round. Business-day timing (B) is neutral. General-ledger posting (D) is normal for adjusting entries. The directional consistency and absence of documentation are the strong red flags that internal audit standards (IIA) and SAS 99 identify as fraud indicators.",
-      "Topic": "Red flags",
-      "Subtopic": "Journal entry fraud indicators",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "red flags",
-        "journal entries"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F5-Q3",
-      "Type": "select",
-      "Prompt": "Which internal control deficiency MOST directly enabled the fraud to persist undetected?",
-      "Correct": "D",
-      "Choices": [
-        "Failure to perform bank reconciliations monthly — but the fraud involved GL entries, not bank transactions",
-        "Lack of a formal code of ethics — but Westfield has a corporate internal control manual with segregation-of-duties requirements",
-        "Insufficient IT security training for end users — but the ERP override was performed by the CFO, not a rank-and-file user",
-        "Combined CFO/Controller role at the subsidiary eliminating segregation of duties, combined with an activated ERP override that bypassed the capitalization threshold"
-      ],
-      "Explanation": "The combined CFO/Controller role is the structural enabler: one person both authorizes AND records transactions, eliminating the segregation that would normally require a second independent party to detect or prevent the misclassification. The activated ERP override (flag turned on March 30, 2026) allowed capitalization entries that should have been blocked by system-level controls. Together these create the classic fraud-enabling condition: no independent check on the person with both motive (quarterly targets) and access (combined role + ERP override). Bank reconciliations (A) test cash, not GL classification. A code of ethics (B) addresses culture, not structural controls. IT training (C) addresses user competence, not management override.",
-      "Topic": "Control deficiency",
-      "Subtopic": "Segregation of duties",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "internal controls",
-        "SoD"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F5-Q4",
-      "Type": "multi",
-      "Prompt": "Which three investigation steps should Diane Foster recommend to the audit committee? Select exactly three.",
-      "Correct": [
-        "Engage forensic accounting specialists to trace the $1.8M through the capital accounts and determine whether any assets were actually acquired or if the entries are pure misclassification",
-        "Preserve all electronic evidence — ERP audit logs, email accounts, and system access records for J. Marcus and the subsidiary CFO — before the 30-day retention window expires",
-        "Review the ERP override configuration and determine whether similar overrides exist at other subsidiaries, assessing whether the control gap is systemic or isolated"
-      ],
-      "Choices": {
-        "A": "Engage forensic accounting specialists to trace the $1.8M through the capital accounts and determine whether any assets were actually acquired or if the entries are pure misclassification",
-        "B": "Confront J. Marcus directly, even though he has resigned, to obtain his explanation before the audit committee reviews the findings",
-        "C": "Preserve all electronic evidence — ERP audit logs, email accounts, and system access records for J. Marcus and the subsidiary CFO — before the 30-day retention window expires",
-        "D": "Reverse all five entries immediately to restore the correct account balances before the external audit begins",
-        "E": "Review the ERP override configuration and determine whether similar overrides exist at other subsidiaries, assessing whether the control gap is systemic or isolated",
-        "F": "Terminate the subsidiary CFO immediately to prevent evidence destruction, without first completing the forensic investigation"
-      },
-      "Explanation": "The three essential investigation steps are: forensic tracing (A) to determine the economic substance of the entries, evidence preservation (C) to maintain the audit trail before retention windows expire, and systemic review (E) to determine whether the ERP override gap affects other subsidiaries. Option B (confronting J. Marcus) is impractical — he resigned and has no obligation to cooperate; legal counsel should advise on subpoena options if his testimony is needed. Option D (immediate reversal) is premature — the entries must be forensically understood before reversal to avoid destroying evidence or creating new accounting issues. Option F (immediate termination) is disproportionate before the investigation completes — the CFO should be placed on administrative leave with system access revoked, not terminated, to preserve the ability to compel cooperation through employment obligations.",
-      "Topic": "Investigation procedures",
-      "Subtopic": "Forensic investigation steps",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "investigation",
-        "forensic"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F5-Q5",
-      "Type": "select",
-      "Prompt": "The investigation notes describe J. Marcus's resignation one week before scheduled fieldwork. Which fraud-triangle element does this timing MOST directly suggest?",
-      "Correct": "B",
-      "Choices": [
-        "Opportunity — the resignation created the opportunity for the fraud to continue without detection",
-        "Consciousness of guilt — the resignation timing suggests Marcus knew the fraud would be discovered and fled before the audit, indicating awareness that the entries were improper",
-        "Rationalization — the resignation was a personal choice unrelated to the fraud",
-        "Pressure — Marcus was pressured to resign by the subsidiary CFO"
-      ],
-      "Explanation": "Resignation immediately before scheduled audit fieldwork is a classic consciousness-of-guilt indicator — it suggests the individual knew the fraud would be discovered and chose to depart before investigators could question them. While the resignation does not PROVE guilt (it could be coincidental), the timing pattern is specifically identified in fraud investigation standards (SAS 99, IIA Practice Advisory) as a red flag requiring investigation. The three-week gap between the last fraudulent entry (June 14) and resignation (June 25) further suggests Marcus completed the scheme and then departed. Option A misreads the framework — resignation does not create opportunity; it is a response to perceived detection risk. Option C (rationalization) applies to the fraud itself, not the resignation. Option D (pressure to resign) is unsupported by the evidence.",
-      "Topic": "Fraud indicators",
-      "Subtopic": "Consciousness of guilt",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "fraud indicators",
-        "resignation"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F5-Q6",
-      "Type": "match",
-      "Prompt": "Match each piece of evidence from the Westfield investigation to the fraud-triangle element or control principle it most directly supports.",
-      "LeftItems": [
-        "Five entries debiting capital accounts and crediting expense accounts totaling $1.8M",
-        "No supervisor approval signatures on any entry despite $50K dual-approval policy",
-        "Subsidiary CFO and Controller roles combined in one person",
-        "ERP capitalization-override flag activated March 30, 2026 by the subsidiary CFO"
-      ],
-      "RightItems": [
-        "Opportunity — management override of capitalization controls",
-        "Opportunity — segregation-of-duties failure",
-        "Pressure — the direction of entries (expense-to-asset) indicates earnings manipulation motive",
-        "Opportunity — bypass of system-level authorization controls",
-        "Rationalization — the entries were intended to be reversed later",
-        "Pressure — quarterly earnings targets created the motivation"
-      ],
-      "Correct": {
-        "Five entries debiting capital accounts and crediting expense accounts totaling $1.8M": "Pressure — the direction of entries (expense-to-asset) indicates earnings manipulation motive",
-        "No supervisor approval signatures on any entry despite $50K dual-approval policy": "Opportunity — management override of capitalization controls",
-        "Subsidiary CFO and Controller roles combined in one person": "Opportunity — segregation-of-duties failure",
-        "ERP capitalization-override flag activated March 30, 2026 by the subsidiary CFO": "Opportunity — bypass of system-level authorization controls"
-      },
-      "Explanation": "The evidence maps as follows: the consistent expense-to-asset direction (first pair) indicates PRESSURE — the motive is earnings inflation, not random error. The missing approval signatures (second pair) demonstrate OPPORTUNITY through management override of authorization controls. The combined CFO/Controller role (third pair) is OPPORTUNITY through segregation-of-duties failure — one person both authorizes and records. The ERP override activation (fourth pair) is OPPORTUNITY through system-level control bypass. Note that three of the four evidence items map to Opportunity — this is characteristic of management-override fraud, where the perpetrator's position creates multiple overlapping control gaps. The pressure element is inferred from the entry direction, not from a single piece of documentary evidence.",
-      "Topic": "Evidence classification",
-      "Subtopic": "Fraud-triangle mapping",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "evidence mapping",
-        "fraud triangle"
-      ],
-      "Dependencies": [
-        "CBQ22-F5-Q1",
-        "CBQ22-F5-Q3"
-      ]
-    }
-  ]
-},
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-F6",
-  "Title": "SOX Compliance and Whistleblower Retaliation at Nexus Industries",
-  "SectionTags": [
-    "F"
-  ],
-  "BlueprintDomain": "Professional Ethics",
-  "BlueprintObjectives": [
-    "Identify SOX provisions applicable to earnings restatement and whistleblower retaliation",
-    "Evaluate audit committee responsibilities under SOX and stock exchange listing standards",
-    "Assess whistleblower protections under SOX §806 and Dodd-Frank §922",
-    "Recommend governance actions proportional to the identified compliance failures"
-  ],
-  "PrimaryCompetency": "Judgment",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Nexus Industries' audit committee must respond after a whistleblower alleges that management retaliated against the employee for reporting revenue-timing irregularities. The company recently restated Q2 earnings. The audit committee chair, Patricia Voss, must evaluate SOX 302/404/806 exposure, assess Dodd-Frank whistleblower protections, and recommend next steps to the full board.",
-  "Industry": "Technology manufacturing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Nexus Industries",
-  "Stakeholder": "Audit Committee Chair Patricia Voss",
-  "BusinessFunction": "Corporate governance",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "SOX",
-    "whistleblower",
-    "audit committee",
-    "restatement",
-    "Dodd-Frank",
-    "retaliation"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-F6",
+    "Title": "SOX Compliance and Whistleblower Retaliation at Nexus Industries",
+    "SectionTags": [
+      "F"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "BlueprintObjectives": [
+      "Identify SOX provisions applicable to earnings restatement and whistleblower retaliation",
+      "Evaluate audit committee responsibilities under SOX and stock exchange listing standards",
+      "Assess whistleblower protections under SOX §806 and Dodd-Frank §922",
+      "Recommend governance actions proportional to the identified compliance failures"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Nexus Industries' audit committee must respond after a whistleblower alleges that management retaliated against the employee for reporting revenue-timing irregularities. The company recently restated Q2 earnings. The audit committee chair, Patricia Voss, must evaluate SOX 302/404/806 exposure, assess Dodd-Frank whistleblower protections, and recommend next steps to the full board.",
+    "Industry": "Technology manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Nexus Industries",
+    "Stakeholder": "Audit Committee Chair Patricia Voss",
+    "BusinessFunction": "Corporate governance",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "SOX",
+      "whistleblower",
+      "audit committee",
+      "restatement",
+      "Dodd-Frank",
+      "retaliation"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "In Audit",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "LearningObjectives": [
-    "Identify which SOX sections apply to earnings restatement, internal control failure, and whistleblower retaliation",
-    "Evaluate the audit committee's specific responsibilities under SOX and listing standards",
-    "Assess the scope of whistleblower protections under SOX §806 and Dodd-Frank",
-    "Apply the legal test for retaliation to the facts presented",
-    "Recommend governance actions that address both the restatement and the retaliation"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-F6-E1",
-      "CaseID": "CBQ22-F6",
-      "Type": "text",
-      "Title": "Exhibit 1 — Q2 Restatement Memo",
-      "Purpose": "Provides the factual basis for the earnings restatement, establishing the scope and materiality of the original misstatement.",
-      "ReferencedBy": [
-        "CBQ22-F6-Q1",
-        "CBQ22-F6-Q3",
-        "CBQ22-F6-Q6"
-      ],
-      "Body": "MEMORANDUM — Nexus Industries Q2 Earnings Restatement\n\nDate: August 12, 2026\nFrom: Office of the General Counsel\nTo: Audit Committee\n\nSummary: Management has determined that Q2 revenue was overstated by $4.2M (2.8% of reported revenue) due to premature recognition of three channel-partner shipments that had not met ASC 606 transfer-of-control criteria at the recording date. The shipments were invoiced on June 28 (last day of Q2) but customer acceptance occurred in July.\n\nImpact: Q2 revenue reduced from $150.0M to $145.8M; Q2 operating income reduced from $22.5M to $18.3M; Q2 net income reduced from $16.9M to $13.7M (after 25% tax). The restatement was initiated after employee 'A.M.' reported the timing irregularity to the CFO on July 8.\n\nRestatement process: Q2 10-Q will be amended; prior-period comparatives will not be affected. External auditors have been notified and concur with the adjustment. Management's assessment of internal controls over financial reporting (SOX §404) identified the revenue-recognition override as a material weakness."
-    },
-    {
-      "ExhibitID": "CBQ22-F6-E2",
-      "CaseID": "CBQ22-F6",
-      "Type": "email",
-      "Title": "Exhibit 2 — Whistleblower Retaliation Complaint",
-      "Purpose": "Provides the whistleblower's account of retaliation, establishing the factual basis for SOX §806 and Dodd-Frank analysis.",
-      "ReferencedBy": [
-        "CBQ22-F6-Q2",
-        "CBQ22-F6-Q4",
-        "CBQ22-F6-Q5"
-      ],
-      "Body": "From: A.M. (Employee, Revenue Accounting)\nTo: Audit Committee Chair Patricia Voss\nSubject: Retaliation Complaint — Confidential\n\nDear Ms. Voss,\n\nI am writing to report that I have been subjected to retaliation after reporting revenue-timing irregularities to the CFO on July 8, 2026.\n\nTimeline of events:\n- July 8: I reported to CFO Daniel Reeves that three June 28 shipments were recorded as Q2 revenue despite customer acceptance not occurring until July. I provided emails and shipping documents.\n- July 12: My manager, VP of Revenue Sarah Kim, informed me I was being 'reassigned' from the Q3 audit-preparation team, citing 'restructuring.'\n- July 19: My system access to the revenue subledger was revoked — the same access I need to perform my job functions.\n- July 26: I received a performance improvement plan (PIP) citing 'incomplete work product' — the same work product I was blocked from accessing.\n\nI believe these actions constitute retaliation for my good-faith report of accounting irregularities. I request protection under SOX §806 and any other applicable whistleblower statutes.\n\nSincerely,\nA.M."
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-F6-Q1",
-      "Type": "select",
-      "Prompt": "Which SOX section MOST directly addresses the CEO and CFO's personal certification obligations related to the Q2 restatement?",
-      "Correct": "C",
-      "Choices": [
-        "SOX §404 — requires management assessment of internal controls, but does not create personal officer certification liability for the financial statements themselves",
-        "SOX §806 — addresses whistleblower protections, not officer certification obligations",
-        "SOX §302 — requires the CEO and CFO to personally certify that financial statements fairly present results and that disclosure controls are effective; §906 adds criminal penalties for knowing false certifications",
-        "SOX §201 — restricts auditor services, which is irrelevant to officer certification"
-      ],
-      "Explanation": "SOX §302 requires the principal officers (CEO and CFO) to personally certify both that the financial statements fairly present the company's financial condition AND that disclosure controls and procedures are effective. When a restatement reveals that the originally certified statements were materially misstated, the officers' personal exposure under §302 is immediate — they certified statements they knew or should have known were inaccurate. Section §906 layers criminal penalties (up to $5M fine and 20 years imprisonment) for WILLFUL false certifications. Section 404 addresses internal controls but creates the separate material-weakness disclosure, not officer personal liability for statement accuracy. Section 806 addresses whistleblower protections. Section 201 restricts auditor services.",
-      "Topic": "SOX certification",
-      "Subtopic": "Officer obligations",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §302; §906",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "SOX 302",
-        "officer certification"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F6-Q2",
-      "Type": "select",
-      "Prompt": "What is the audit committee's PRIMARY responsibility regarding the whistleblower retaliation allegation?",
-      "Correct": "A",
-      "Choices": [
-        "Independently investigate the retaliation claim — the audit committee must ensure the investigation is conducted by qualified personnel (internal audit, external counsel, or forensic specialists) who report directly to the committee, not to management",
-        "Refer the complaint to HR for standard employee-relations processing — retaliation allegations follow the same procedure as any other workplace complaint",
-        "Defer to management's explanation that the reassignment and PIP were legitimate business decisions unrelated to the July 8 report",
-        "Notify the SEC immediately before completing any internal investigation"
-      ],
-      "Explanation": "The audit committee's responsibility under SOX §301 and NYSE/NASDAQ listing standards is to oversee the investigation of accounting and auditing matters, including whistleblower complaints. The committee must ensure the investigation is independent of management — meaning it is conducted by or reports directly to the committee, not through the management chain that is the subject of the complaint. HR processing (B) is insufficient because the complaint involves potential management misconduct. Deferring to management's explanation (C) compromises independence. SEC notification (D) is premature before the investigation establishes facts — premature external reporting can damage the company without establishing whether retaliation occurred.",
-      "Topic": "Audit committee responsibility",
-      "Subtopic": "Independent investigation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §301",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "audit committee",
-        "investigation"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F6-Q3",
-      "Type": "multi",
-      "Prompt": "Which three protections or provisions apply to employee A.M.? Select exactly three.",
-      "Correct": [
-        "SOX §806 — protects employees of publicly traded companies who report fraud to federal agencies, Congress, or internally, from retaliation including demotion, suspension, and harassment",
-        "Dodd-Frank §922 — extends whistleblower protections to include a private right of action for retaliation and provides for double back pay plus litigation costs",
-        "Company non-retaliation policy — Nexus's own code of conduct prohibits retaliation against good-faith reporters, providing an additional contractual remedy independent of federal statute"
-      ],
-      "Choices": {
-        "A": "SOX §806 — protects employees of publicly traded companies who report fraud to federal agencies, Congress, or internally, from retaliation including demotion, suspension, and harassment",
-        "B": "Dodd-Frank §922 — extends whistleblower protections to include a private right of action for retaliation and provides for double back pay plus litigation costs",
-        "C": "Sarbanes-Oxley §404 — provides whistleblower protection through the internal control assessment process",
-        "D": "Company non-retaliation policy — Nexus's own code of conduct prohibits retaliation against good-faith reporters, providing an additional contractual remedy independent of federal statute",
-        "E": "SEC Rule 21F — provides financial awards to whistleblowers, which protects A.M. by incentivizing the report",
-        "F": "OSHA whistleblower protection program — OSHA administers SOX §806 claims but does not provide an independent substantive protection"
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Identify which SOX sections apply to earnings restatement, internal control failure, and whistleblower retaliation",
+      "Evaluate the audit committee's specific responsibilities under SOX and listing standards",
+      "Assess the scope of whistleblower protections under SOX §806 and Dodd-Frank",
+      "Apply the legal test for retaliation to the facts presented",
+      "Recommend governance actions that address both the restatement and the retaliation"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-F6-E1",
+        "CaseID": "CBQ22-F6",
+        "Type": "text",
+        "Title": "Exhibit 1 — Q2 Restatement Memo",
+        "Purpose": "Provides the factual basis for the earnings restatement, establishing the scope and materiality of the original misstatement.",
+        "ReferencedBy": [
+          "CBQ22-F6-Q1",
+          "CBQ22-F6-Q3",
+          "CBQ22-F6-Q6"
+        ],
+        "Body": "MEMORANDUM — Nexus Industries Q2 Earnings Restatement\n\nDate: August 12, 2026\nFrom: Office of the General Counsel\nTo: Audit Committee\n\nSummary: Management has determined that Q2 revenue was overstated by $4.2M (2.8% of reported revenue) due to premature recognition of three channel-partner shipments that had not met ASC 606 transfer-of-control criteria at the recording date. The shipments were invoiced on June 28 (last day of Q2) but customer acceptance occurred in July.\n\nImpact: Q2 revenue reduced from $150.0M to $145.8M; Q2 operating income reduced from $22.5M to $18.3M; Q2 net income reduced from $16.9M to $13.7M (after 25% tax). The restatement was initiated after employee 'A.M.' reported the timing irregularity to the CFO on July 8.\n\nRestatement process: Q2 10-Q will be amended; prior-period comparatives will not be affected. External auditors have been notified and concur with the adjustment. Management's assessment of internal controls over financial reporting (SOX §404) identified the revenue-recognition override as a material weakness."
       },
-      "Explanation": "The three applicable protections are: SOX §806 (A) which specifically protects employees of publicly traded companies from retaliation for reporting fraud; Dodd-Frank §922 (B) which strengthens those protections with a private right of action and double back pay; and the company's own non-retaliation policy (D) which provides contractual remedies independent of federal law. Section 404 (C) addresses internal controls, not whistleblower protection — it is the internal-control assessment process, not a protection statute. Rule 21F (E) provides financial incentives for SEC whistleblower tips but does not itself provide retaliation protection — that comes from §806 and Dodd-Frank. OSHA (F) administers §806 claims but is the procedural mechanism, not an independent substantive protection.",
-      "Topic": "Whistleblower protections",
-      "Subtopic": "Applicable statutes",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §806; Dodd-Frank §922",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "whistleblower",
-        "protections"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F6-Q4",
-      "Type": "select",
-      "Prompt": "Applying the legal test for retaliation, which facts from A.M.'s complaint would MOST strongly support a retaliation claim?",
-      "Correct": "B",
-      "Choices": [
-        "A.M. received a performance improvement plan citing incomplete work product — PIPs are routine management tools and do not alone indicate retaliation",
-        "System access to the revenue subledger was revoked within 11 days of the report, directly blocking A.M. from performing the very job function related to the irregularity reported — the temporal proximity and functional connection create strong circumstantial evidence of retaliatory motive",
-        "A.M. was reassigned from the Q3 audit-preparation team — reassignment is a legitimate business decision that does not require justification",
-        "A.M. reported to the CFO rather than the audit committee — the reporting channel affects protection eligibility, not the retaliation analysis"
-      ],
-      "Explanation": "The strongest retaliation evidence is the SYSTEM ACCESS REVOCATION: it occurred 11 days after the report, directly targeted the specific function (revenue subledger access) related to A.M.'s disclosure, and made it impossible for A.M. to perform the job for which the subsequent PIP cited 'incomplete work product.' This creates a causal chain: report → access revoked → unable to work → PIP issued. The temporal proximity (11 days) plus the functional connection (access to the exact system A.M. flagged) satisfies both prongs of the retaliation test: (1) protected activity (the report) and (2) adverse action causally connected to it. The PIP (A) alone is weak — PIPs are common. Reassignment (C) alone is weak — legitimate restructuring occurs. The reporting channel (D) affects whether A.M. qualifies for protection, not whether retaliation occurred.",
-      "Topic": "Retaliation test",
-      "Subtopic": "Causal connection",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §806; Dodd-Frank §922",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "retaliation",
-        "causation"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F6-Q5",
-      "Type": "select",
-      "Prompt": "Under Dodd-Frank §922, what remedies are available to A.M. if retaliation is proven?",
-      "Correct": "B",
-      "Choices": [
-        "Reinstatement with seniority plus single back pay — Dodd-Frank mirrors SOX §806 remedies exactly",
-        "Reinstatement with seniority plus DOUBLE back pay, plus compensation for litigation costs including expert witness fees — Dodd-Frank strengthens SOX §806 remedies",
-        "Monetary damages capped at the employee's annual salary — Dodd-Frank limits recovery to actual losses",
-        "Criminal penalties against the retaliator — Dodd-Frank provides for imprisonment of managers who retaliate"
-      ],
-      "Explanation": "Dodd-Frank §922 significantly strengthens whistleblower remedies beyond SOX §806: it provides for REINSTATEMENT with full seniority PLUS DOUBLE back pay (not single back pay as under §806), plus compensation for litigation costs including expert witness fees and attorney fees. The double-back-pay remedy is a key distinction from SOX §806 — it creates a financial incentive for whistleblowers to pursue claims and a financial deterrent against retaliation. Option A understates the remedy (single back pay). Option C is incorrect — there is no cap on recovery. Option D is incorrect — Dodd-Frank does not provide criminal penalties for retaliation; criminal penalties apply to the underlying fraud, not the retaliatory act itself.",
-      "Topic": "Dodd-Frank remedies",
-      "Subtopic": "Whistleblower compensation",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": false,
-      "FormulaReference": "Dodd-Frank §922",
-      "EstimatedMinutes": 5,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "Dodd-Frank",
-        "remedies"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-F6-Q6",
-      "Type": "select",
-      "Prompt": "Which governance recommendation best addresses BOTH the restatement and the retaliation issues?",
-      "Correct": "A",
-      "Choices": [
-        "Engage independent forensic counsel to investigate the retaliation claim, direct management to reverse the Q2 entries and file an amended 10-Q, require the CEO and CFO to re-certify under §302/§906, and restore A.M.'s system access and team assignment pending the investigation outcome",
-        "Accept management's characterization that the reassignment was legitimate restructuring and focus solely on the Q2 restatement, since the retaliation complaint is an HR matter separate from financial reporting",
-        "Terminate A.M. for breach of confidentiality — reporting to the audit committee before completing internal channels violates the company's chain-of-command policy",
-        "Delay the restatement filing until the retaliation investigation is complete, since the two issues are interrelated and should be resolved simultaneously"
-      ],
-      "Explanation": "Option A addresses both issues comprehensively: independent forensic counsel ensures the retaliation investigation is credible and committee-overseen; the restatement corrects the financial misstatement; re-certification resets the officers' personal liability clock; and restoring A.M.'s access and assignment prevents further retaliation pending investigation while preserving the evidence chain. Option B incorrectly separates the issues — the retaliation arose FROM the restatement, making them inseparable. Option C (terminating A.M.) would compound the retaliation and expose Nexus to doubling damages under Dodd-Frank §922. Option D (delaying the restatement) violates the company's filing obligations — the restatement must be filed promptly regardless of parallel investigations; delaying could itself become a separate disclosure violation.",
-      "Topic": "Governance recommendation",
-      "Subtopic": "Integrated response",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "SOX §302; §806; Dodd-Frank §922",
-      "EstimatedMinutes": 6,
-      "ExplanationVersion": 1,
-      "Tags": [
-        "governance",
-        "recommendation"
-      ],
-      "Dependencies": [
-        "CBQ22-F6-Q3",
-        "CBQ22-F6-Q4",
-        "CBQ22-F6-Q5"
-      ]
-    }
-  ]
-},
+      {
+        "ExhibitID": "CBQ22-F6-E2",
+        "CaseID": "CBQ22-F6",
+        "Type": "email",
+        "Title": "Exhibit 2 — Whistleblower Retaliation Complaint",
+        "Purpose": "Provides the whistleblower's account of retaliation, establishing the factual basis for SOX §806 and Dodd-Frank analysis.",
+        "ReferencedBy": [
+          "CBQ22-F6-Q2",
+          "CBQ22-F6-Q4",
+          "CBQ22-F6-Q5"
+        ],
+        "Body": "From: A.M. (Employee, Revenue Accounting)\nTo: Audit Committee Chair Patricia Voss\nSubject: Retaliation Complaint — Confidential\n\nDear Ms. Voss,\n\nI am writing to report that I have been subjected to retaliation after reporting revenue-timing irregularities to the CFO on July 8, 2026.\n\nTimeline of events:\n- July 8: I reported to CFO Daniel Reeves that three June 28 shipments were recorded as Q2 revenue despite customer acceptance not occurring until July. I provided emails and shipping documents.\n- July 12: My manager, VP of Revenue Sarah Kim, informed me I was being 'reassigned' from the Q3 audit-preparation team, citing 'restructuring.'\n- July 19: My system access to the revenue subledger was revoked — the same access I need to perform my job functions.\n- July 26: I received a performance improvement plan (PIP) citing 'incomplete work product' — the same work product I was blocked from accessing.\n\nI believe these actions constitute retaliation for my good-faith report of accounting irregularities. I request protection under SOX §806 and any other applicable whistleblower statutes.\n\nSincerely,\nA.M."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-F6-Q1",
+        "Type": "select",
+        "Prompt": "Which SOX section MOST directly addresses the CEO and CFO's personal certification obligations related to the Q2 restatement?",
+        "Correct": "C",
+        "Choices": [
+          "SOX §404 — requires management assessment of internal controls, but does not create personal officer certification liability for the financial statements themselves",
+          "SOX §806 — addresses whistleblower protections, not officer certification obligations",
+          "SOX §302 — requires the CEO and CFO to personally certify that financial statements fairly present results and that disclosure controls are effective; §906 adds criminal penalties for knowing false certifications",
+          "SOX §201 — restricts auditor services, which is irrelevant to officer certification"
+        ],
+        "Explanation": "SOX §302 requires the principal officers (CEO and CFO) to personally certify both that the financial statements fairly present the company's financial condition AND that disclosure controls and procedures are effective. When a restatement reveals that the originally certified statements were materially misstated, the officers' personal exposure under §302 is immediate — they certified statements they knew or should have known were inaccurate. Section §906 layers criminal penalties (up to $5M fine and 20 years imprisonment) for WILLFUL false certifications. Section 404 addresses internal controls but creates the separate material-weakness disclosure, not officer personal liability for statement accuracy. Section 806 addresses whistleblower protections. Section 201 restricts auditor services.",
+        "Topic": "SOX certification",
+        "Subtopic": "Officer obligations",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §302; §906",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "SOX 302",
+          "officer certification"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F6-Q2",
+        "Type": "select",
+        "Prompt": "What is the audit committee's PRIMARY responsibility regarding the whistleblower retaliation allegation?",
+        "Correct": "A",
+        "Choices": [
+          "Independently investigate the retaliation claim — the audit committee must ensure the investigation is conducted by qualified personnel (internal audit, external counsel, or forensic specialists) who report directly to the committee, not to management",
+          "Refer the complaint to HR for standard employee-relations processing — retaliation allegations follow the same procedure as any other workplace complaint",
+          "Defer to management's explanation that the reassignment and PIP were legitimate business decisions unrelated to the July 8 report",
+          "Notify the SEC immediately before completing any internal investigation"
+        ],
+        "Explanation": "The audit committee's responsibility under SOX §301 and NYSE/NASDAQ listing standards is to oversee the investigation of accounting and auditing matters, including whistleblower complaints. The committee must ensure the investigation is independent of management — meaning it is conducted by or reports directly to the committee, not through the management chain that is the subject of the complaint. HR processing (B) is insufficient because the complaint involves potential management misconduct. Deferring to management's explanation (C) compromises independence. SEC notification (D) is premature before the investigation establishes facts — premature external reporting can damage the company without establishing whether retaliation occurred.",
+        "Topic": "Audit committee responsibility",
+        "Subtopic": "Independent investigation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §301",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "audit committee",
+          "investigation"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F6-Q3",
+        "Type": "multi",
+        "Prompt": "Which three protections or provisions apply to employee A.M.? Select exactly three.",
+        "Correct": [
+          "SOX §806 — protects employees of publicly traded companies who report fraud to federal agencies, Congress, or internally, from retaliation including demotion, suspension, and harassment",
+          "Dodd-Frank §922 — extends whistleblower protections to include a private right of action for retaliation and provides for double back pay plus litigation costs",
+          "Company non-retaliation policy — Nexus's own code of conduct prohibits retaliation against good-faith reporters, providing an additional contractual remedy independent of federal statute"
+        ],
+        "Choices": {
+          "A": "SOX §806 — protects employees of publicly traded companies who report fraud to federal agencies, Congress, or internally, from retaliation including demotion, suspension, and harassment",
+          "B": "Dodd-Frank §922 — extends whistleblower protections to include a private right of action for retaliation and provides for double back pay plus litigation costs",
+          "C": "Sarbanes-Oxley §404 — provides whistleblower protection through the internal control assessment process",
+          "D": "Company non-retaliation policy — Nexus's own code of conduct prohibits retaliation against good-faith reporters, providing an additional contractual remedy independent of federal statute",
+          "E": "SEC Rule 21F — provides financial awards to whistleblowers, which protects A.M. by incentivizing the report",
+          "F": "OSHA whistleblower protection program — OSHA administers SOX §806 claims but does not provide an independent substantive protection"
+        },
+        "Explanation": "The three applicable protections are: SOX §806 (A) which specifically protects employees of publicly traded companies from retaliation for reporting fraud; Dodd-Frank §922 (B) which strengthens those protections with a private right of action and double back pay; and the company's own non-retaliation policy (D) which provides contractual remedies independent of federal law. Section 404 (C) addresses internal controls, not whistleblower protection — it is the internal-control assessment process, not a protection statute. Rule 21F (E) provides financial incentives for SEC whistleblower tips but does not itself provide retaliation protection — that comes from §806 and Dodd-Frank. OSHA (F) administers §806 claims but is the procedural mechanism, not an independent substantive protection.",
+        "Topic": "Whistleblower protections",
+        "Subtopic": "Applicable statutes",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §806; Dodd-Frank §922",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "whistleblower",
+          "protections"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F6-Q4",
+        "Type": "select",
+        "Prompt": "Applying the legal test for retaliation, which facts from A.M.'s complaint would MOST strongly support a retaliation claim?",
+        "Correct": "B",
+        "Choices": [
+          "A.M. received a performance improvement plan citing incomplete work product — PIPs are routine management tools and do not alone indicate retaliation",
+          "System access to the revenue subledger was revoked within 11 days of the report, directly blocking A.M. from performing the very job function related to the irregularity reported — the temporal proximity and functional connection create strong circumstantial evidence of retaliatory motive",
+          "A.M. was reassigned from the Q3 audit-preparation team — reassignment is a legitimate business decision that does not require justification",
+          "A.M. reported to the CFO rather than the audit committee — the reporting channel affects protection eligibility, not the retaliation analysis"
+        ],
+        "Explanation": "The strongest retaliation evidence is the SYSTEM ACCESS REVOCATION: it occurred 11 days after the report, directly targeted the specific function (revenue subledger access) related to A.M.'s disclosure, and made it impossible for A.M. to perform the job for which the subsequent PIP cited 'incomplete work product.' This creates a causal chain: report → access revoked → unable to work → PIP issued. The temporal proximity (11 days) plus the functional connection (access to the exact system A.M. flagged) satisfies both prongs of the retaliation test: (1) protected activity (the report) and (2) adverse action causally connected to it. The PIP (A) alone is weak — PIPs are common. Reassignment (C) alone is weak — legitimate restructuring occurs. The reporting channel (D) affects whether A.M. qualifies for protection, not whether retaliation occurred.",
+        "Topic": "Retaliation test",
+        "Subtopic": "Causal connection",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §806; Dodd-Frank §922",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "retaliation",
+          "causation"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F6-Q5",
+        "Type": "select",
+        "Prompt": "Under Dodd-Frank §922, what remedies are available to A.M. if retaliation is proven?",
+        "Correct": "B",
+        "Choices": [
+          "Reinstatement with seniority plus single back pay — Dodd-Frank mirrors SOX §806 remedies exactly",
+          "Reinstatement with seniority plus DOUBLE back pay, plus compensation for litigation costs including expert witness fees — Dodd-Frank strengthens SOX §806 remedies",
+          "Monetary damages capped at the employee's annual salary — Dodd-Frank limits recovery to actual losses",
+          "Criminal penalties against the retaliator — Dodd-Frank provides for imprisonment of managers who retaliate"
+        ],
+        "Explanation": "Dodd-Frank §922 significantly strengthens whistleblower remedies beyond SOX §806: it provides for REINSTATEMENT with full seniority PLUS DOUBLE back pay (not single back pay as under §806), plus compensation for litigation costs including expert witness fees and attorney fees. The double-back-pay remedy is a key distinction from SOX §806 — it creates a financial incentive for whistleblowers to pursue claims and a financial deterrent against retaliation. Option A understates the remedy (single back pay). Option C is incorrect — there is no cap on recovery. Option D is incorrect — Dodd-Frank does not provide criminal penalties for retaliation; criminal penalties apply to the underlying fraud, not the retaliatory act itself.",
+        "Topic": "Dodd-Frank remedies",
+        "Subtopic": "Whistleblower compensation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": false,
+        "FormulaReference": "Dodd-Frank §922",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "Dodd-Frank",
+          "remedies"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-F6-Q6",
+        "Type": "select",
+        "Prompt": "Which governance recommendation best addresses BOTH the restatement and the retaliation issues?",
+        "Correct": "A",
+        "Choices": [
+          "Engage independent forensic counsel to investigate the retaliation claim, direct management to reverse the Q2 entries and file an amended 10-Q, require the CEO and CFO to re-certify under §302/§906, and restore A.M.'s system access and team assignment pending the investigation outcome",
+          "Accept management's characterization that the reassignment was legitimate restructuring and focus solely on the Q2 restatement, since the retaliation complaint is an HR matter separate from financial reporting",
+          "Terminate A.M. for breach of confidentiality — reporting to the audit committee before completing internal channels violates the company's chain-of-command policy",
+          "Delay the restatement filing until the retaliation investigation is complete, since the two issues are interrelated and should be resolved simultaneously"
+        ],
+        "Explanation": "Option A addresses both issues comprehensively: independent forensic counsel ensures the retaliation investigation is credible and committee-overseen; the restatement corrects the financial misstatement; re-certification resets the officers' personal liability clock; and restoring A.M.'s access and assignment prevents further retaliation pending investigation while preserving the evidence chain. Option B incorrectly separates the issues — the retaliation arose FROM the restatement, making them inseparable. Option C (terminating A.M.) would compound the retaliation and expose Nexus to doubling damages under Dodd-Frank §922. Option D (delaying the restatement) violates the company's filing obligations — the restatement must be filed promptly regardless of parallel investigations; delaying could itself become a separate disclosure violation.",
+        "Topic": "Governance recommendation",
+        "Subtopic": "Integrated response",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "SOX §302; §806; Dodd-Frank §922",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "governance",
+          "recommendation"
+        ],
+        "Dependencies": [
+          "CBQ22-F6-Q3",
+          "CBQ22-F6-Q4",
+          "CBQ22-F6-Q5"
+        ]
+      }
+    ]
+  },
   {
-  "CaseID": "CBQ22-B6",
-  "Title": "Cost of Capital with Flotation at Orion Semiconductors",
-  "SectionTags": [
-    "B"
-  ],
-  "BlueprintDomain": "Corporate Finance",
-  "BlueprintObjectives": [
-    "Compute component costs of capital (debt, preferred stock, common equity) under flotation",
-    "Calculate WACC using market-value weights adjusted for flotation costs",
-    "Evaluate whether a project return exceeds the after-tax WACC"
-  ],
-  "PrimaryCompetency": "Calculation",
-  "EstimatedMinutes": 30,
-  "Difficulty": "Difficult",
-  "DifficultyScore": 4,
-  "ScenarioText": "Orion Semiconductors is evaluating a $55,000,000 expansion into advanced chip packaging. CFO Daniel Marsh must compute the after-tax cost of debt, cost of preferred stock, and cost of retained earnings and new common equity (including flotation) to determine whether the project expected return exceeds the company weighted average cost of capital. The target capital structure is 40% debt, 10% preferred, and 50% common equity.",
-  "Industry": "Semiconductor manufacturing",
-  "CompanyType": "Manufacturer",
-  "CompanyName": "Orion Semiconductors",
-  "Stakeholder": "CFO Daniel Marsh",
-  "BusinessFunction": "Treasury",
-  "QuestionCount": 6,
-  "ExhibitCount": 2,
-  "ProductionStatus": "Draft",
-  "Version": "1.0",
-  "Tags": [
-    "cost of capital",
-    "WACC",
-    "flotation costs",
-    "CAPM",
-    "YTM"
-  ],
-  "CreatedDate": "2026-09-04",
-  "ModifiedDate": "2026-09-04",
-  "Author": "Case Author",
-  "Confidence": 90,
-  "RevisionHistory": [
-    {
-      "Date": "2026-09-04",
-      "Version": "1.0",
-      "Author": "Case Author",
-      "Summary": "Initial creation"
-    }
-  ],
-  "question_state": "Certified",
+    "CaseID": "CBQ22-B6",
+    "Title": "Cost of Capital with Flotation at Orion Semiconductors",
+    "SectionTags": [
+      "B"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "BlueprintObjectives": [
+      "Compute component costs of capital (debt, preferred stock, common equity) under flotation",
+      "Calculate WACC using market-value weights adjusted for flotation costs",
+      "Evaluate whether a project return exceeds the after-tax WACC"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Orion Semiconductors is evaluating a $55,000,000 expansion into advanced chip packaging. CFO Daniel Marsh must compute the after-tax cost of debt, cost of preferred stock, and cost of retained earnings and new common equity (including flotation) to determine whether the project expected return exceeds the company weighted average cost of capital. The target capital structure is 40% debt, 10% preferred, and 50% common equity.",
+    "Industry": "Semiconductor manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Orion Semiconductors",
+    "Stakeholder": "CFO Daniel Marsh",
+    "BusinessFunction": "Treasury",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "cost of capital",
+      "WACC",
+      "flotation costs",
+      "CAPM",
+      "YTM"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Certified",
     "certification_date": "2026-09-05",
     "certification_session": "P2-B6-REMEDIATE",
-  "Part": 2,
-  "Part2OnlyFlag": true,
-  "Dependencies": [],
-  "LearningObjectives": [
-    "Calculate the after-tax cost of debt using YTM",
-    "Calculate the cost of preferred stock net of flotation",
-    "Calculate the cost of retained earnings using CAPM",
-    "Calculate the cost of new common equity adjusted for flotation",
-    "Compute WACC using market-value weights",
-    "Compare project return to WACC for investment decisions"
-  ],
-  "Exhibits": [
-    {
-      "ExhibitID": "CBQ22-B6-E1",
-      "CaseID": "CBQ22-B6",
-      "Type": "table",
-      "Title": "Exhibit 1 - Capital Structure and Market Data",
-      "Purpose": "Provides bond characteristics, preferred and common equity market data, flotation costs, tax rate, and CAPM inputs.",
-      "ReferencedBy": [
-        "CBQ22-B6-Q1",
-        "CBQ22-B6-Q2",
-        "CBQ22-B6-Q3",
-        "CBQ22-B6-Q4",
-        "CBQ22-B6-Q6"
-      ],
-      "Headers": [
-        "Metric",
-        "Value"
-      ],
-      "Rows": [["Outstanding bonds: 10-year, 7.5% coupon, semiannual","$255,000,000 face value"],["Current bond price","102.3% of par"],["Preferred stock: $4.98 dividend, perpetual","400,000 shares outstanding"],["Current preferred price","$60.50"],["Common shares outstanding","12,000,000"],["Current market price per share","$68.00"],["Expected dividend per share (D1)","$3.40 (5.0% of $68.00)"],["Flotation cost on new common equity","5.0% of issue price"],["Flotation cost on new preferred","3.0% of issue price"],["Marginal tax rate","25%"],["Risk-free rate","4.2%"],["Market risk premium","6.0%"],["Beta (equity)","1.35"]]
-    },
-    {
-      "ExhibitID": "CBQ22-B6-E2",
-      "CaseID": "CBQ22-B6",
-      "Type": "table",
-      "Title": "Exhibit 2 - Project Summary",
-      "Purpose": "Provides expansion project investment, expected annual after-tax operating income, project life, and salvage value.",
-      "ReferencedBy": [
-        "CBQ22-B6-Q3",
-        "CBQ22-B6-Q6"
-      ],
-      "Headers": [
-        "Metric",
-        "Value"
-      ],
-      "Rows": [["Initial investment","$55,000,000"],["Expected annual after-tax operating income","$13,200,000"],["Project life","12 years"],["Salvage value","$0"]]
-    }
-  ],
-  "Items": [
-    {
-      "ItemID": "CBQ22-B6-Q1",
-      "Type": "numeric",
-      "Prompt": "Enter the after-tax cost of debt (rd x (1 - t)), rounded to two decimal places.",
-      "Correct": "5.38%",
-      "Explanation": "The after-tax cost of debt equals the YTM on Orion's bonds multiplied by (1 - tax rate). The bonds have a 7.5% annual coupon paid semiannually, 10 years remaining, trading at 102.3% of par. Solving the bond pricing equation yields a semiannual YTM of approximately 3.587%, or a simple annualized (APR) pre-tax YTM of 7.17%. After-tax cost = 7.17% x (1 - 0.25) = 5.38%. This uses the standard CMA convention of doubling the semiannual rate (APR) rather than compounding it into an effective annual rate, which would give 5.48%. Interest is tax-deductible under the Internal Revenue Code, creating a tax shield that reduces Orion's effective borrowing cost.",
-      "Topic": "After-tax cost of debt",
-      "Subtopic": "Yield-to-maturity approach",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-03",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "YTM",
-        "cost of debt",
-        "tax shield"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-B6-Q2",
-      "Type": "numeric",
-      "Prompt": "Enter the cost of new common equity including flotation costs, rounded to two decimal places.",
-      "Correct": "12.56%",
-      "Explanation": "The cost of new common equity adjusts the retained-earnings cost for flotation. Using CAPM: rs = Rf + beta x MRP = 4.2% + 1.35 x 6.0% = 12.30%. Flotation costs are 5.0% of the $68.00 issue price, so net proceeds = $68.00 x (1 - 0.05) = $64.60. The dividend growth model gives re = D1 / (P0 x (1 - F)) + g. With D1 = $68.00 x 5% = $3.40 and implied growth g = rs - D1/P0 = 12.30% - 5.0% = 7.30%, the cost of new equity = $3.40/$64.60 + 7.30% = 5.26% + 7.30% = 12.56%. The flotation premium is 12.56% - 12.30% = 26 basis points, meaningful because equity is 74.1% of the market-value capital structure.",
-      "Topic": "Cost of equity with flotation",
-      "Subtopic": "New equity issuance costs",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Apply",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-04",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "flotation",
-        "new equity",
-        "CAPM"
-      ],
-      "Dependencies": [
-        "CBQ22-B6-Q1"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-B6-Q3",
-      "Type": "select",
-      "Prompt": "Based on the WACC, should Orion proceed with the expansion?",
-      "Correct": "A",
-      "Choices": [
-        "Yes, the project return exceeds WACC",
-        "No, the project return is below WACC",
-        "Yes, but only if financed entirely with debt",
-        "Cannot be determined without IRR"
-      ],
-      "Explanation": "Market-value WACC using retained earnings: equity = 12,000,000 x $68.00 = $816,000,000 (74.1%), preferred = 400,000 x $60.50 = $24,200,000 (2.2%), debt = $255,000,000 x 1.023 = $260,865,000 (23.7%). Total = $1,101,065,000. Component costs: debt 5.38%, preferred 8.49% ($4.98/$58.685), retained earnings 12.30% (CAPM). WACC = 0.741 x 12.30% + 0.022 x 8.49% + 0.237 x 5.38% = 9.11% + 0.19% + 1.28% = 10.58%. The project generates $13.2M on a $55M investment, a simplified return of 24.00% that substantially exceeds the 10.58% hurdle. The expansion creates shareholder value regardless of financing mix.",
-      "Topic": "WACC investment decision",
-      "Subtopic": "Hurdle rate comparison",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-05",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "WACC",
-        "investment decision",
-        "NPV"
-      ],
-      "Dependencies": [
-        "CBQ22-B6-Q1",
-        "CBQ22-B6-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-B6-Q4",
-      "Type": "select",
-      "Prompt": "Which component cost is most sensitive to the flotation-cost assumption?",
-      "Correct": "C",
-      "Choices": [
-        "Cost of debt - bond pricing is volatile",
-        "Cost of preferred - perpetual structure amplifies flotation impact",
-        "Cost of new common equity - flotation adds 26 bps over retained earnings",
-        "WACC is equally sensitive to all three components"
-      ],
-      "Explanation": "Flotation costs directly affect only newly issued securities, not retained earnings. For preferred stock, 3% flotation raises effective cost from 8.24% to 8.49%, a 25-basis-point increase on a component that is only 2.2% of total capital. For new common equity, 5% flotation raises cost from 12.30% to 12.56%, a 26-basis-point increase on a component that is 74.1% of total capital. Because equity dominates the capital structure, even a modest flotation premium produces the largest absolute WACC impact. The cost of debt is unaffected because existing bonds were issued previously - flotation applies only to new issuances.",
-      "Topic": "Flotation sensitivity",
-      "Subtopic": "Capital structure impact",
-      "Difficulty": "Difficult",
-      "DifficultyScore": 4,
-      "CognitiveLevel": "Analyze",
-      "CalculationRequired": false,
-      "FormulaReference": "CB-04",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "flotation",
-        "sensitivity",
-        "equity dominance"
-      ],
-      "Dependencies": [
-        "CBQ22-B6-Q2"
-      ]
-    },
-    {
-      "ItemID": "CBQ22-B6-Q5",
-      "Type": "multi",
-      "Prompt": "Which of the following are valid reasons to use retained earnings rather than issue new equity?",
-      "Correct": [
-        "A",
-        "B",
-        "C"
-      ],
-      "Choices": [
-        "Avoid flotation costs",
-        "Maintain EPS if ROE > cost of equity",
-        "Signal confidence to the market",
-        "Reduce the debt-to-equity ratio",
-        "Satisfy bond covenant requirements"
-      ],
-      "Explanation": "Three rationales favor retained earnings. A - Avoid flotation costs: issuing new shares incurs underwriting fees, legal costs, and registration expenses (5% for Orion), directly reducing net proceeds and raising the effective cost of equity. Retained earnings bypass these costs. B - Maintain EPS: when ROE exceeds the cost of equity, retaining earnings lets the equity base grow while generating returns above shareholders' required rate, supporting EPS growth without dilution. C - Market signaling: retaining earnings signals management confidence that internal projects can generate returns exceeding the cost of capital; issuing new equity may signal the stock is overvalued. D is incorrect: both retained earnings and new common equity increase the equity balance equally, so the debt-to-equity ratio does not change differently under either source - retention is not a distinguishing lever on leverage. E is incorrect: bond covenants typically restrict additional debt, not equity retention.",
-      "Topic": "Retained earnings vs new equity",
-      "Subtopic": "Financing policy",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": false,
-      "FormulaReference": "CB-04",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "retained earnings",
-        "flotation",
-        "signaling"
-      ],
-      "Dependencies": []
-    },
-    {
-      "ItemID": "CBQ22-B6-Q6",
-      "Type": "fill",
-      "Prompt": "If Orion board requires a minimum 200-basis-point risk premium above WACC for expansion projects, what is the minimum acceptable project return?",
-      "Correct": "12.58%",
-      "Explanation": "The minimum acceptable project return equals WACC plus the board-mandated risk premium. The WACC using retained earnings is 10.58% (from Question 3: market-value weighted average of debt at 5.38%, preferred at 8.49%, and retained earnings at 12.30%, weighted 23.7%, 2.2%, and 74.1% respectively). Adding the 200-basis-point (2.00%) risk premium: 10.58% + 2.00% = 12.58%. Since the project expected return of 24.00% exceeds this hurdle, the project clears the risk-adjusted threshold. The risk premium compensates for project-specific uncertainty - semiconductor expansion into advanced chip packaging carries technology adoption risk, capacity utilization uncertainty, and competitive timing risk that generic WACC does not fully capture.",
-      "Topic": "Risk-adjusted hurdle rate",
-      "Subtopic": "Project-specific required return",
-      "Difficulty": "Moderate",
-      "DifficultyScore": 3,
-      "CognitiveLevel": "Evaluate",
-      "CalculationRequired": true,
-      "FormulaReference": "CB-05",
-      "ExplanationVersion": 1,
-      "Tags": [
-        "hurdle rate",
-        "risk premium"
-      ],
-      "Dependencies": [
-        "CBQ22-B6-Q3"
-      ]
-    }
-  ]
-}
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Calculate the after-tax cost of debt using YTM",
+      "Calculate the cost of preferred stock net of flotation",
+      "Calculate the cost of retained earnings using CAPM",
+      "Calculate the cost of new common equity adjusted for flotation",
+      "Compute WACC using market-value weights",
+      "Compare project return to WACC for investment decisions"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-B6-E1",
+        "CaseID": "CBQ22-B6",
+        "Type": "table",
+        "Title": "Exhibit 1 - Capital Structure and Market Data",
+        "Purpose": "Provides bond characteristics, preferred and common equity market data, flotation costs, tax rate, and CAPM inputs.",
+        "ReferencedBy": [
+          "CBQ22-B6-Q1",
+          "CBQ22-B6-Q2",
+          "CBQ22-B6-Q3",
+          "CBQ22-B6-Q4",
+          "CBQ22-B6-Q6"
+        ],
+        "Headers": [
+          "Metric",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Outstanding bonds: 10-year, 7.5% coupon, semiannual",
+            "$255,000,000 face value"
+          ],
+          [
+            "Current bond price",
+            "102.3% of par"
+          ],
+          [
+            "Preferred stock: $4.98 dividend, perpetual",
+            "400,000 shares outstanding"
+          ],
+          [
+            "Current preferred price",
+            "$60.50"
+          ],
+          [
+            "Common shares outstanding",
+            "12,000,000"
+          ],
+          [
+            "Current market price per share",
+            "$68.00"
+          ],
+          [
+            "Expected dividend per share (D1)",
+            "$3.40 (5.0% of $68.00)"
+          ],
+          [
+            "Flotation cost on new common equity",
+            "5.0% of issue price"
+          ],
+          [
+            "Flotation cost on new preferred",
+            "3.0% of issue price"
+          ],
+          [
+            "Marginal tax rate",
+            "25%"
+          ],
+          [
+            "Risk-free rate",
+            "4.2%"
+          ],
+          [
+            "Market risk premium",
+            "6.0%"
+          ],
+          [
+            "Beta (equity)",
+            "1.35"
+          ]
+        ]
+      },
+      {
+        "ExhibitID": "CBQ22-B6-E2",
+        "CaseID": "CBQ22-B6",
+        "Type": "table",
+        "Title": "Exhibit 2 - Project Summary",
+        "Purpose": "Provides expansion project investment, expected annual after-tax operating income, project life, and salvage value.",
+        "ReferencedBy": [
+          "CBQ22-B6-Q3",
+          "CBQ22-B6-Q6"
+        ],
+        "Headers": [
+          "Metric",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Initial investment",
+            "$55,000,000"
+          ],
+          [
+            "Expected annual after-tax operating income",
+            "$13,200,000"
+          ],
+          [
+            "Project life",
+            "12 years"
+          ],
+          [
+            "Salvage value",
+            "$0"
+          ]
+        ]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-B6-Q1",
+        "Type": "numeric",
+        "Prompt": "Enter the after-tax cost of debt (rd x (1 - t)), rounded to two decimal places.",
+        "Correct": "5.38%",
+        "Explanation": "The after-tax cost of debt equals the YTM on Orion's bonds multiplied by (1 - tax rate). The bonds have a 7.5% annual coupon paid semiannually, 10 years remaining, trading at 102.3% of par. Solving the bond pricing equation yields a semiannual YTM of approximately 3.587%, or a simple annualized (APR) pre-tax YTM of 7.17%. After-tax cost = 7.17% x (1 - 0.25) = 5.38%. This uses the standard CMA convention of doubling the semiannual rate (APR) rather than compounding it into an effective annual rate, which would give 5.48%. Interest is tax-deductible under the Internal Revenue Code, creating a tax shield that reduces Orion's effective borrowing cost.",
+        "Topic": "After-tax cost of debt",
+        "Subtopic": "Yield-to-maturity approach",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-03",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "YTM",
+          "cost of debt",
+          "tax shield"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-B6-Q2",
+        "Type": "numeric",
+        "Prompt": "Enter the cost of new common equity including flotation costs, rounded to two decimal places.",
+        "Correct": "12.56%",
+        "Explanation": "The cost of new common equity adjusts the retained-earnings cost for flotation. Using CAPM: rs = Rf + beta x MRP = 4.2% + 1.35 x 6.0% = 12.30%. Flotation costs are 5.0% of the $68.00 issue price, so net proceeds = $68.00 x (1 - 0.05) = $64.60. The dividend growth model gives re = D1 / (P0 x (1 - F)) + g. With D1 = $68.00 x 5% = $3.40 and implied growth g = rs - D1/P0 = 12.30% - 5.0% = 7.30%, the cost of new equity = $3.40/$64.60 + 7.30% = 5.26% + 7.30% = 12.56%. The flotation premium is 12.56% - 12.30% = 26 basis points, meaningful because equity is 74.1% of the market-value capital structure.",
+        "Topic": "Cost of equity with flotation",
+        "Subtopic": "New equity issuance costs",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-04",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "flotation",
+          "new equity",
+          "CAPM"
+        ],
+        "Dependencies": [
+          "CBQ22-B6-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-B6-Q3",
+        "Type": "select",
+        "Prompt": "Based on the WACC, should Orion proceed with the expansion?",
+        "Correct": "A",
+        "Choices": [
+          "Yes, the project return exceeds WACC",
+          "No, the project return is below WACC",
+          "Yes, but only if financed entirely with debt",
+          "Cannot be determined without IRR"
+        ],
+        "Explanation": "Market-value WACC using retained earnings: equity = 12,000,000 x $68.00 = $816,000,000 (74.1%), preferred = 400,000 x $60.50 = $24,200,000 (2.2%), debt = $255,000,000 x 1.023 = $260,865,000 (23.7%). Total = $1,101,065,000. Component costs: debt 5.38%, preferred 8.49% ($4.98/$58.685), retained earnings 12.30% (CAPM). WACC = 0.741 x 12.30% + 0.022 x 8.49% + 0.237 x 5.38% = 9.11% + 0.19% + 1.28% = 10.58%. The project generates $13.2M on a $55M investment, a simplified return of 24.00% that substantially exceeds the 10.58% hurdle. The expansion creates shareholder value regardless of financing mix.",
+        "Topic": "WACC investment decision",
+        "Subtopic": "Hurdle rate comparison",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-05",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "WACC",
+          "investment decision",
+          "NPV"
+        ],
+        "Dependencies": [
+          "CBQ22-B6-Q1",
+          "CBQ22-B6-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-B6-Q4",
+        "Type": "select",
+        "Prompt": "Which component cost is most sensitive to the flotation-cost assumption?",
+        "Correct": "C",
+        "Choices": [
+          "Cost of debt - bond pricing is volatile",
+          "Cost of preferred - perpetual structure amplifies flotation impact",
+          "Cost of new common equity - flotation adds 26 bps over retained earnings",
+          "WACC is equally sensitive to all three components"
+        ],
+        "Explanation": "Flotation costs directly affect only newly issued securities, not retained earnings. For preferred stock, 3% flotation raises effective cost from 8.24% to 8.49%, a 25-basis-point increase on a component that is only 2.2% of total capital. For new common equity, 5% flotation raises cost from 12.30% to 12.56%, a 26-basis-point increase on a component that is 74.1% of total capital. Because equity dominates the capital structure, even a modest flotation premium produces the largest absolute WACC impact. The cost of debt is unaffected because existing bonds were issued previously - flotation applies only to new issuances.",
+        "Topic": "Flotation sensitivity",
+        "Subtopic": "Capital structure impact",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "CB-04",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "flotation",
+          "sensitivity",
+          "equity dominance"
+        ],
+        "Dependencies": [
+          "CBQ22-B6-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-B6-Q5",
+        "Type": "multi",
+        "Prompt": "Which of the following are valid reasons to use retained earnings rather than issue new equity?",
+        "Correct": [
+          "A",
+          "B",
+          "C"
+        ],
+        "Choices": [
+          "Avoid flotation costs",
+          "Maintain EPS if ROE > cost of equity",
+          "Signal confidence to the market",
+          "Reduce the debt-to-equity ratio",
+          "Satisfy bond covenant requirements"
+        ],
+        "Explanation": "Three rationales favor retained earnings. A - Avoid flotation costs: issuing new shares incurs underwriting fees, legal costs, and registration expenses (5% for Orion), directly reducing net proceeds and raising the effective cost of equity. Retained earnings bypass these costs. B - Maintain EPS: when ROE exceeds the cost of equity, retaining earnings lets the equity base grow while generating returns above shareholders' required rate, supporting EPS growth without dilution. C - Market signaling: retaining earnings signals management confidence that internal projects can generate returns exceeding the cost of capital; issuing new equity may signal the stock is overvalued. D is incorrect: both retained earnings and new common equity increase the equity balance equally, so the debt-to-equity ratio does not change differently under either source - retention is not a distinguishing lever on leverage. E is incorrect: bond covenants typically restrict additional debt, not equity retention.",
+        "Topic": "Retained earnings vs new equity",
+        "Subtopic": "Financing policy",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "CB-04",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "retained earnings",
+          "flotation",
+          "signaling"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-B6-Q6",
+        "Type": "fill",
+        "Prompt": "If Orion board requires a minimum 200-basis-point risk premium above WACC for expansion projects, what is the minimum acceptable project return?",
+        "Correct": "12.58%",
+        "Explanation": "The minimum acceptable project return equals WACC plus the board-mandated risk premium. The WACC using retained earnings is 10.58% (from Question 3: market-value weighted average of debt at 5.38%, preferred at 8.49%, and retained earnings at 12.30%, weighted 23.7%, 2.2%, and 74.1% respectively). Adding the 200-basis-point (2.00%) risk premium: 10.58% + 2.00% = 12.58%. Since the project expected return of 24.00% exceeds this hurdle, the project clears the risk-adjusted threshold. The risk premium compensates for project-specific uncertainty - semiconductor expansion into advanced chip packaging carries technology adoption risk, capacity utilization uncertainty, and competitive timing risk that generic WACC does not fully capture.",
+        "Topic": "Risk-adjusted hurdle rate",
+        "Subtopic": "Project-specific required return",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": true,
+        "FormulaReference": "CB-05",
+        "ExplanationVersion": 1,
+        "Tags": [
+          "hurdle rate",
+          "risk premium"
+        ],
+        "Dependencies": [
+          "CBQ22-B6-Q3"
+        ]
+      }
+    ]
+  }
 ];

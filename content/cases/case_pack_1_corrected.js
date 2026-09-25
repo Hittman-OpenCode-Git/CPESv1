@@ -1,8 +1,3 @@
-﻿// CMA Exam Simulator — Case Pack 1 (25 Cases)
-// Generated: SESSION 916-917 Case Study Reconsolidation
-// Source: Consolidated from scored_cases.js through scored_cases5.js
-// Architecture: 3-pack × 25-case structure for 2026 blueprint alignment
-
 const CASE_PACK_1 = [
   {
     "CaseID": "CBQ-A1",
@@ -681,13 +676,13 @@ const CASE_PACK_1 = [
           "Translation loss"
         ],
         "RightItems": [
-        "Recognize loss when carrying amount exceeds fair value after recoverability failure",
-        "Defer and amortize over the asset's remaining useful life",
-        "Report in OCI as cumulative translation adjustment",
-        "Eliminate in consolidation",
-        "Report in OCI when applicable",
-        "Recognize as current-period expense in the income statement"
-],
+          "Recognize loss when carrying amount exceeds fair value after recoverability failure",
+          "Defer and amortize over the asset's remaining useful life",
+          "Report in OCI as cumulative translation adjustment",
+          "Eliminate in consolidation",
+          "Report in OCI when applicable",
+          "Recognize as current-period expense in the income statement"
+        ],
         "Correct": {
           "Intercompany sale": "Eliminate in consolidation",
           "Asset impairment": "Recognize loss when carrying amount exceeds fair value after recoverability failure",
@@ -1037,13 +1032,13 @@ const CASE_PACK_1 = [
           "Equipment purchase"
         ],
         "RightItems": [
-        "Classify as cash equivalent",
-        "Write down inventory",
-        "Classify as investing cash outflow",
-        "Classify as operating cash outflow",
-        "Recognize as a prior-period adjustment",
-        "Record liability and add to asset cost"
-],
+          "Classify as cash equivalent",
+          "Write down inventory",
+          "Classify as investing cash outflow",
+          "Classify as operating cash outflow",
+          "Recognize as a prior-period adjustment",
+          "Record liability and add to asset cost"
+        ],
         "Correct": {
           "FIFO inventory below NRV": "Write down inventory",
           "ARO present value": "Record liability and add to asset cost",
@@ -1268,11 +1263,11 @@ const CASE_PACK_1 = [
           "Weighted Average"
         ],
         "RightItems": [
-        "Ending inventory reflects current costs",
-        "Smooths out price fluctuations",
-        "Always yields highest income",
-        "Matches recent costs to revenue"
-],
+          "Ending inventory reflects current costs",
+          "Smooths out price fluctuations",
+          "Always yields highest income",
+          "Matches recent costs to revenue"
+        ],
         "ItemID": "CBQ2-A2-Q4",
         "CognitiveLevel": "Analyze",
         "CalculationComplexity": "None",
@@ -2035,13 +2030,13 @@ const CASE_PACK_1 = [
           "Regression R-squared"
         ],
         "RightItems": [
-        "Supply-chain constraint signal",
-        "Measure of forecast accuracy relative to a random guess",
-        "Committed demand not yet shipped",
-        "Actual sales revenue recognized in the current period",
-        "Potential demand, subject to cancellation",
-        "Model explanatory power"
-],
+          "Supply-chain constraint signal",
+          "Measure of forecast accuracy relative to a random guess",
+          "Committed demand not yet shipped",
+          "Actual sales revenue recognized in the current period",
+          "Potential demand, subject to cancellation",
+          "Model explanatory power"
+        ],
         "Correct": {
           "Bookings": "Potential demand, subject to cancellation",
           "Firm backlog": "Committed demand not yet shipped",
@@ -3003,13 +2998,13 @@ const CASE_PACK_1 = [
           "Labor efficiency"
         ],
         "RightItems": [
-        "HR or staffing",
-        "Production supervision",
-        "Purchasing",
-        "Quality control",
-        "Production",
-        "Cost accounting department"
-],
+          "HR or staffing",
+          "Production supervision",
+          "Purchasing",
+          "Quality control",
+          "Production",
+          "Cost accounting department"
+        ],
         "Correct": {
           "Material price": "Purchasing",
           "Material quantity": "Production",
@@ -3211,7 +3206,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3244,7 +3239,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3285,7 +3280,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3329,7 +3324,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3360,7 +3355,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3379,13 +3374,13 @@ const CASE_PACK_1 = [
           "Market price"
         ],
         "RightItems": [
-        "Full cost plus an arbitrary markup",
-        "Operating income divided by invested capital",
-        "External benchmark when available",
-        "Variable cost plus opportunity cost",
-        "Income after required asset charge",
-        "Operating income divided by assets"
-],
+          "Full cost plus an arbitrary markup",
+          "Operating income divided by invested capital",
+          "External benchmark when available",
+          "Variable cost plus opportunity cost",
+          "Income after required asset charge",
+          "Operating income divided by assets"
+        ],
         "Correct": {
           "ROI": "Operating income divided by assets",
           "Residual income": "Income after required asset charge",
@@ -3409,7 +3404,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3419,7 +3414,7 @@ const CASE_PACK_1 = [
         "ModifiedDate": "2026-07-26"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Certified",
     "pedagogical_cluster": "",
     "question_tier": "Tier1",
@@ -3585,7 +3580,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3614,7 +3609,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3653,7 +3648,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3696,7 +3691,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3715,13 +3710,13 @@ const CASE_PACK_1 = [
           "Learning and growth"
         ],
         "RightItems": [
-        "Employee satisfaction score",
-        "Defect rate",
-        "Operating income",
-        "On-time delivery",
-        "Customer satisfaction index",
-        "Training hours per employee"
-],
+          "Employee satisfaction score",
+          "Defect rate",
+          "Operating income",
+          "On-time delivery",
+          "Customer satisfaction index",
+          "Training hours per employee"
+        ],
         "Correct": {
           "Financial": "Operating income",
           "Customer": "On-time delivery",
@@ -3745,7 +3740,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3786,7 +3781,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "C",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -3796,7 +3791,7 @@ const CASE_PACK_1 = [
         "ModifiedDate": "2026-07-26"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Certified",
     "pedagogical_cluster": "",
     "question_tier": "Tier1",
@@ -3947,12 +3942,12 @@ const CASE_PACK_1 = [
           "Labor rate variance"
         ],
         "RightItems": [
-        "Requires comparing the flexible budget to the master budget at actual output — the sales volume variance arises from the difference between budgeted and actual sales volume, not from cost variances",
-        "Cannot be determined from a flexible budget report alone",
-        "Requires actual hourly labor rate paid x actual hours worked — the flexible budget splits total variance but does not isolate the rate component without separate payroll rate data",
-        "Requires actual price paid per material unit x actual quantity purchased — the flexible budget splits total variance but does not isolate the price component without separate purchase price data",
-        "Requires actual quantity of materials used x standard price — the flexible budget splits total variance but does not isolate the efficiency (quantity) component without separate usage data"
-],
+          "Requires comparing the flexible budget to the master budget at actual output — the sales volume variance arises from the difference between budgeted and actual sales volume, not from cost variances",
+          "Cannot be determined from a flexible budget report alone",
+          "Requires actual hourly labor rate paid x actual hours worked — the flexible budget splits total variance but does not isolate the rate component without separate payroll rate data",
+          "Requires actual price paid per material unit x actual quantity purchased — the flexible budget splits total variance but does not isolate the price component without separate purchase price data",
+          "Requires actual quantity of materials used x standard price — the flexible budget splits total variance but does not isolate the efficiency (quantity) component without separate usage data"
+        ],
         "Correct": {
           "Sales price variance": "Cannot be determined from a flexible budget report alone",
           "Direct materials efficiency variance": "Requires actual quantity of materials used x standard price — the flexible budget splits total variance but does not isolate the efficiency (quantity) component without separate usage data",
@@ -3996,12 +3991,12 @@ const CASE_PACK_1 = [
           "Sales volume 4.0% unfavorable"
         ],
         "RightItems": [
-        "Fixed overhead spending exceeded the budget; review fixed cost commitments",
-        "Fewer units sold than budgeted; investigate demand or market share changes",
-        "Possible material waste or higher input prices requiring purchasing and production review",
-        "Lower variable overhead spending or usage than expected at actual production levels",
-        "Small labor inefficiency within normal tolerance; monitor but no immediate action"
-],
+          "Fixed overhead spending exceeded the budget; review fixed cost commitments",
+          "Fewer units sold than budgeted; investigate demand or market share changes",
+          "Possible material waste or higher input prices requiring purchasing and production review",
+          "Lower variable overhead spending or usage than expected at actual production levels",
+          "Small labor inefficiency within normal tolerance; monitor but no immediate action"
+        ],
         "Correct": {
           "Direct materials variance 15.2% unfavorable": "Possible material waste or higher input prices requiring purchasing and production review",
           "Direct labor variance 2.4% unfavorable": "Small labor inefficiency within normal tolerance; monitor but no immediate action",
@@ -4045,12 +4040,12 @@ const CASE_PACK_1 = [
           "Sales volume variance in dollars"
         ],
         "RightItems": [
-        "Actual units sold x Actual selling price per unit",
-        "Actual units sold x Budgeted selling price per unit",
-        "(Actual units sold - Budgeted units sold) x Budgeted contribution margin per unit",
-        "Actual units produced x Standard variable overhead rate per unit",
-        "Actual units produced x Standard material cost per unit"
-],
+          "Actual units sold x Actual selling price per unit",
+          "Actual units sold x Budgeted selling price per unit",
+          "(Actual units sold - Budgeted units sold) x Budgeted contribution margin per unit",
+          "Actual units produced x Standard variable overhead rate per unit",
+          "Actual units produced x Standard material cost per unit"
+        ],
         "Correct": {
           "Flexible budget revenue": "Actual units sold x Budgeted selling price per unit",
           "Flexible budget direct materials cost": "Actual units produced x Standard material cost per unit",
@@ -4093,12 +4088,12 @@ const CASE_PACK_1 = [
           "Review fixed overhead commitments"
         ],
         "RightItems": [
-        "Unfavorable direct materials price variance above threshold",
-        "Unfavorable fixed overhead spending variance",
-        "Favorable sales volume variance with backlog",
-        "Favorable labor efficiency variance",
-        "Unfavorable sales volume variance due to lost market share"
-],
+          "Unfavorable direct materials price variance above threshold",
+          "Unfavorable fixed overhead spending variance",
+          "Favorable sales volume variance with backlog",
+          "Favorable labor efficiency variance",
+          "Unfavorable sales volume variance due to lost market share"
+        ],
         "Correct": {
           "Authorize overtime production": "Favorable sales volume variance with backlog",
           "Renegotiate supplier contracts": "Unfavorable direct materials price variance above threshold",
@@ -4142,12 +4137,12 @@ const CASE_PACK_1 = [
           "Variable overhead spending variance"
         ],
         "RightItems": [
-        "Sales and marketing department",
-        "Corporate treasury",
-        "Department manager controlling indirect costs",
-        "Production manager",
-        "Human resources or union contract terms"
-],
+          "Sales and marketing department",
+          "Corporate treasury",
+          "Department manager controlling indirect costs",
+          "Production manager",
+          "Human resources or union contract terms"
+        ],
         "Correct": {
           "Direct materials usage variance": "Production manager",
           "Labor rate variance": "Human resources or union contract terms",
@@ -4790,13 +4785,13 @@ const CASE_PACK_1 = [
           "Warranty repairs"
         ],
         "RightItems": [
-        "External failure",
-        "Prevention",
-        "Appraisal",
-        "Correction",
-        "Internal failure",
-        "Detection"
-],
+          "External failure",
+          "Prevention",
+          "Appraisal",
+          "Correction",
+          "Internal failure",
+          "Detection"
+        ],
         "Correct": {
           "Supplier certification": "Prevention",
           "Final inspection": "Appraisal",
@@ -4993,7 +4988,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5023,7 +5018,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5063,7 +5058,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5107,7 +5102,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5137,7 +5132,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5156,13 +5151,13 @@ const CASE_PACK_1 = [
           "Continuous homogeneous output"
         ],
         "RightItems": [
-        "Activity-based costing",
-        "Lean waste review",
-        "Process costing",
-        "Equivalent units",
-        "Throughput accounting",
-        "Bottleneck analysis"
-],
+          "Activity-based costing",
+          "Lean waste review",
+          "Process costing",
+          "Equivalent units",
+          "Throughput accounting",
+          "Bottleneck analysis"
+        ],
         "Correct": {
           "Partially complete WIP": "Equivalent units",
           "Lowest capacity resource": "Bottleneck analysis",
@@ -5187,7 +5182,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "D",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -5197,7 +5192,7 @@ const CASE_PACK_1 = [
         "ModifiedDate": "2026-07-26"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Certified",
     "pedagogical_cluster": "",
     "question_tier": "Tier1",
@@ -5866,13 +5861,13 @@ const CASE_PACK_1 = [
           "Constant gross-margin NRV method"
         ],
         "RightItems": [
-        "Joint cost allocated so every product has the same gross margin percentage",
-        "Weighted-average method — average cost across all products regardless of volume",
-        "Volume of output",
-        "By-product reversal method — allocate joint costs using net realizable value of by-products",
-        "Final sales value minus further processing costs",
-        "Market value at split-off point"
-],
+          "Joint cost allocated so every product has the same gross margin percentage",
+          "Weighted-average method — average cost across all products regardless of volume",
+          "Volume of output",
+          "By-product reversal method — allocate joint costs using net realizable value of by-products",
+          "Final sales value minus further processing costs",
+          "Market value at split-off point"
+        ],
         "Correct": {
           "NRV method": "Final sales value minus further processing costs",
           "Physical-units method": "Volume of output",
@@ -6370,7 +6365,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6417,7 +6412,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6446,7 +6441,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6476,7 +6471,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6495,13 +6490,13 @@ const CASE_PACK_1 = [
           "Bank reconciliation"
         ],
         "RightItems": [
-        "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
-        "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
-        "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist",
-        "Corrective — remediates errors or weaknesses after they are identified through detective control findings",
-        "Directive — establishes policies that mandate or prohibit specific actions to guide employee behavior",
-        "Detective — identifies duplicate payments already processed, after disbursement has occurred"
-],
+          "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+          "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+          "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist",
+          "Corrective — remediates errors or weaknesses after they are identified through detective control findings",
+          "Directive — establishes policies that mandate or prohibit specific actions to guide employee behavior",
+          "Detective — identifies duplicate payments already processed, after disbursement has occurred"
+        ],
         "Correct": {
           "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
           "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
@@ -6524,7 +6519,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6564,7 +6559,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -6574,7 +6569,7 @@ const CASE_PACK_1 = [
         "ExplanationVersion": 2
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Production",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -6718,7 +6713,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6747,7 +6742,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6790,7 +6785,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6819,7 +6814,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6838,13 +6833,13 @@ const CASE_PACK_1 = [
           "Failed interface reconciliation"
         ],
         "RightItems": [
-        "Unauthorized access",
-        "Lack of accountability",
-        "Segregation of duties violation",
-        "Unauthorized or erroneous report logic",
-        "Incomplete or inaccurate data transfer",
-        "Data privacy breach"
-],
+          "Unauthorized access",
+          "Lack of accountability",
+          "Segregation of duties violation",
+          "Unauthorized or erroneous report logic",
+          "Incomplete or inaccurate data transfer",
+          "Data privacy breach"
+        ],
         "Correct": {
           "Shared administrator IDs": "Lack of accountability",
           "Terminated users active": "Unauthorized access",
@@ -6867,7 +6862,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6908,7 +6903,7 @@ const CASE_PACK_1 = [
         "Pack": 1,
         "ProductionStatus": "Production",
         "Section": "E",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Certified",
         "pedagogical_cluster": "",
         "question_tier": "Tier1",
@@ -6918,7 +6913,7 @@ const CASE_PACK_1 = [
         "ModifiedDate": "2026-07-26"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Certified",
     "pedagogical_cluster": "",
     "question_tier": "Tier1",
@@ -7243,13 +7238,13 @@ const CASE_PACK_1 = [
           "No false-positive review"
         ],
         "RightItems": [
-        "Periodic access recertification",
-        "Encryption at rest and in transit",
-        "Model monitoring",
-        "Master-data governance",
-        "Change management",
-        "Unique credentials and access logging"
-],
+          "Periodic access recertification",
+          "Encryption at rest and in transit",
+          "Model monitoring",
+          "Master-data governance",
+          "Change management",
+          "Unique credentials and access logging"
+        ],
         "Correct": {
           "Shared bot account": "Unique credentials and access logging",
           "Unapproved rule changes": "Change management",
@@ -7408,12 +7403,12 @@ const CASE_PACK_1 = [
           "Program development controls"
         ],
         "RightItems": [
-        "Processing errors, data loss, or incomplete processing going undetected",
-        "Flawed or malicious code introduced into production systems",
-        "Unauthorized users gaining system access",
-        "Hardware theft or environmental damage to data center",
-        "Unauthorized or untested system modifications causing errors or security gaps"
-],
+          "Processing errors, data loss, or incomplete processing going undetected",
+          "Flawed or malicious code introduced into production systems",
+          "Unauthorized users gaining system access",
+          "Hardware theft or environmental damage to data center",
+          "Unauthorized or untested system modifications causing errors or security gaps"
+        ],
         "Correct": {
           "Logical access controls": "Unauthorized users gaining system access",
           "Change management controls": "Unauthorized or untested system modifications causing errors or security gaps",
@@ -7457,12 +7452,12 @@ const CASE_PACK_1 = [
           "No batch job completion review"
         ],
         "RightItems": [
-        "Implement automated job monitoring with alerts for failures and independent review of logs",
-        "Implement individual accounts with multi-factor authentication and periodic access reviews",
-        "Establish a change advisory board with formal approval, testing, and rollback procedures",
-        "Install video surveillance and biometric access controls in the server room",
-        "Enforce environment segregation and restrict production access to operations team only"
-],
+          "Implement automated job monitoring with alerts for failures and independent review of logs",
+          "Implement individual accounts with multi-factor authentication and periodic access reviews",
+          "Establish a change advisory board with formal approval, testing, and rollback procedures",
+          "Install video surveillance and biometric access controls in the server room",
+          "Enforce environment segregation and restrict production access to operations team only"
+        ],
         "Correct": {
           "Shared admin accounts without MFA": "Implement individual accounts with multi-factor authentication and periodic access reviews",
           "Changes approved only via email": "Establish a change advisory board with formal approval, testing, and rollback procedures",
@@ -7506,12 +7501,12 @@ const CASE_PACK_1 = [
           "Compensating control"
         ],
         "RightItems": [
-        "Provides alternative oversight when primary controls are not feasible",
-        "Documents all system changes for audit trail purposes",
-        "Stops errors or unauthorized actions before they occur",
-        "Resolves issues after detection to restore normal operations",
-        "Identifies errors or irregularities after they have occurred"
-],
+          "Provides alternative oversight when primary controls are not feasible",
+          "Documents all system changes for audit trail purposes",
+          "Stops errors or unauthorized actions before they occur",
+          "Resolves issues after detection to restore normal operations",
+          "Identifies errors or irregularities after they have occurred"
+        ],
         "Correct": {
           "Preventive control": "Stops errors or unauthorized actions before they occur",
           "Detective control": "Identifies errors or irregularities after they have occurred",
@@ -7554,12 +7549,12 @@ const CASE_PACK_1 = [
           "Access control"
         ],
         "RightItems": [
-        "User authentication required to access the application",
-        "Range check ensuring dollar amounts fall within expected limits",
-        "Run-to-run control totals verifying data processed completely",
-        "Review of printed reports for reasonableness before distribution",
-        "Quarterly physical inventory count verification"
-],
+          "User authentication required to access the application",
+          "Range check ensuring dollar amounts fall within expected limits",
+          "Run-to-run control totals verifying data processed completely",
+          "Review of printed reports for reasonableness before distribution",
+          "Quarterly physical inventory count verification"
+        ],
         "Correct": {
           "Input validation": "Range check ensuring dollar amounts fall within expected limits",
           "Processing control": "Run-to-run control totals verifying data processed completely",
@@ -7603,12 +7598,12 @@ const CASE_PACK_1 = [
           "Database administrator also approves system access requests"
         ],
         "RightItems": [
-        "The CFO could override system controls and approve their own transactions",
-        "Access could be granted without independent approval, bypassing access controls",
-        "The administrator could grant excessive privileges and conceal the action during review",
-        "Changes could be made without independent verification of completion",
-        "Code could be deployed without independent testing or approval"
-],
+          "The CFO could override system controls and approve their own transactions",
+          "Access could be granted without independent approval, bypassing access controls",
+          "The administrator could grant excessive privileges and conceal the action during review",
+          "Changes could be made without independent verification of completion",
+          "Code could be deployed without independent testing or approval"
+        ],
         "Correct": {
           "System administrator also performs user access reviews": "The administrator could grant excessive privileges and conceal the action during review",
           "Developer also moves code to production": "Code could be deployed without independent testing or approval",
@@ -7911,13 +7906,13 @@ const CASE_PACK_1 = [
           "Recommend inspection threshold"
         ],
         "RightItems": [
-        "Inferential — drawing conclusions from sample data using statistical tests",
-        "Prescriptive",
-        "Descriptive",
-        "Exploratory — discovering patterns without a specific hypothesis",
-        "Diagnostic",
-        "Predictive"
-],
+          "Inferential — drawing conclusions from sample data using statistical tests",
+          "Prescriptive",
+          "Descriptive",
+          "Exploratory — discovering patterns without a specific hypothesis",
+          "Diagnostic",
+          "Predictive"
+        ],
         "Correct": {
           "Summarize failure rate": "Descriptive",
           "Investigate supplier batch relationship": "Diagnostic",
@@ -8161,7 +8156,7 @@ const CASE_PACK_1 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8199,7 +8194,7 @@ const CASE_PACK_1 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8236,7 +8231,7 @@ const CASE_PACK_1 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8274,7 +8269,7 @@ const CASE_PACK_1 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8311,7 +8306,7 @@ const CASE_PACK_1 = [
         "Pack": 2,
         "ProductionStatus": "Draft",
         "Section": "F",
-        "question_state": "Certified",
+        "question_state": "In Audit",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
@@ -8320,7 +8315,7 @@ const CASE_PACK_1 = [
         "DifficultyScore": 4
       }
     ],
-    "question_state": "Certified",
+    "question_state": "In Audit",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",
@@ -8597,9 +8592,3 @@ const CASE_PACK_1 = [
     "question_status": "Active"
   }
 ];
-
-// UI Catalog Aliases — resolves the 0-case display bug for Packs A/E
-const CASE_BANK_A = CASE_PACK_1;
-const MIGRATED_CASE_BASE_A = CASE_PACK_1;
-const CASE_BANK_D = CASE_PACK_1;
-const MIGRATED_CASE_BASE_D = CASE_PACK_1;

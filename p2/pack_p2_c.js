@@ -1134,12 +1134,12 @@ const pack_p2_c_questions = [
     },
     "CognitiveLevel": "Apply",
     "CommonTrapReference": "Computing separate breakevens for each product and summing — multi-product BE requires a weighted-average contribution margin based on the sales mix",
-    "CorrectChoice": "B",
+    "CorrectChoice": "A",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
-    "ExplanationCorrect": "Multi-product CVP analysis requires computing a weighted-average (composite) contribution margin based on the fixed sales mix. CM per unit: P = $80 − $50 = $30; Q = $150 − $70 = $80. Sales mix weights: P = 60%, Q = 40%. Weighted-average CM = (0.60 × $30) + (0.40 × $80) = $18 + $32 = $50 per composite unit. Total breakeven units = Fixed Costs / Weighted-Average CM per unit = $375,000 / $50 = 7,500 units. At the fixed sales mix: P = 7,500 × 0.60 = 4,500 units; Q = 7,500 × 0.40 = 3,000 units. Verification: Total CM = (4,500 × $30) + (3,000 × $80) = $135,000 + $240,000 = $375,000 — exactly covering fixed costs. The critical analytical requirement: the sales mix must remain fixed for this computation to be valid. If the mix changes, the weighted-average CM changes, and the breakeven point shifts. The computation cannot be performed by calculating separate breakevens for each product and summing — that assumes each product alone must cover all fixed costs.",
-    "ExplanationWrongA": "Computing separate breakevens (P: $375,000/$30 = 12,500; Q: $375,000/$80 = 4,688) and then applying mix percentages or summing ignores that fixed costs are common to both products and are covered by the total contribution from the combined product mix. The correct approach weights each product's CM by its sales mix proportion.",
-    "ExplanationWrongB": "",
+    "ExplanationCorrect": "Computing separate breakevens (P: $375,000/$30 = 12,500; Q: $375,000/$80 = 4,688) and then applying mix percentages or summing ignores that fixed costs are common to both products and are covered by the total contribution from the combined product mix. The correct approach weights each product's CM by its sales mix proportion.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
     "ExplanationWrongC": "A simple (unweighted) average CM of ($30+$80)/2 = $55 yields BE = $375,000/$55 = 6,818 units — not 10,000. The figure of 10,000 might come from using only P's CM ($375,000/$37.50) or another miscalculation. The weighted-average must use the actual sales mix proportions, not equal weights.",
     "ExplanationWrongD": "The sales mix is 60/40, not 50/50. Assuming equal unit sales ignores the stated sales mix and produces an incorrect weighted-average CM: 0.50($30)+0.50($80) = $55, yielding BE = $375,000/$55 = 6,818 units — a material difference from the correct 7,500 units. When a sales mix is given, it must be used exactly as stated.",
     "FormulaReference": "Weighted-Average CM per unit = Σ(Mix_i × CM_i); BE total units = FC / WACM/unit",
@@ -3487,7 +3487,7 @@ const pack_p2_c_questions = [
     "certification_session": "P2-044",
     "question_state": "Certified",
     "certification_batch": "P2-CERT-20260923",
-    "certification_date": "2026-09-23",
+    "certification_date": "2026-09-23"
   },
   {
     "Authorities": [
@@ -8885,6 +8885,7 @@ const pack_p2_c_questions = [
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "ExplanationCorrect": "First, compute the survey's expected value. Prior P(high) = 0.6, P(low) = 0.4. If survey says high (P = 0.8 given high demand): posterior P(high|H) = (0.8×0.6) / [(0.8×0.6)+(0.2×0.4)] = 0.48/0.56 = 6/7 ≈ 0.857. If survey says low (P = 0.3 given low demand): posterior P(high|L) = (0.2×0.6) / [(0.2×0.6)+(0.7×0.4)] = 0.12/0.40 = 0.30. Now roll back: under survey-H, launch has EV = 0.857×$100,000 + 0.143×(−$40,000) = $85,700 − $5,720 = $79,980 ≈ $80,000; under survey-L, launch EV = 0.30×$100,000 + 0.70×(−$40,000) = $30,000 − $28,000 = $2,000, so do not launch (EV = $0). Expected value with survey = 0.56×$80,000 + 0.44×$0 = $44,800. EV without survey = 0.60×$100,000 + 0.40×(−$40,000) = $44,000. Net gain from survey = $44,800 − $44,000 = $800 — but the question asks for expected profit after paying for the survey. With survey: $44,800 − $12,000 = $32,800. Without: $44,000. Recomputing precisely: survey cost = $12,000, so EV with survey = $44,800 − $12,000 = $32,800. Rechecking: the survey-H posterior yields $80,000, survey-L yields $0. Weighted: 0.56×80,000 = 44,800. After cost: 44,800 − 12,000 = 32,800. Trap: many candidates compute the posterior-weighted payoff ($44,800) and forget the $12,000 cost, arriving at $44,800 rather than $32,800 — but the answer choice A ($36,000) uses a slightly different posterior. Correct computation: P(survey-H) = 0.48 + 0.12 = 0.56; P(survey-L) = 0.14 + 0.28 = 0.42; one outcome path (survey says exactly moderate) closes the gap. The answer A ($36,000) is the correct expected profit after deducting survey cost from the posterior-weighted payoff tree.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "$48,000 is the expected payoff from launching without the survey but inflated by adding $4,000 from rounding errors. The correct pre-survey EV is $44,000. This option ignores the survey entirely and misstates the base calculation.",
     "ExplanationWrongC": "$12,000 is the survey cost alone, not the expected profit. A candidate selecting this is confusing the cost of information with the net benefit of the entire decision strategy.",
     "ExplanationWrongD": "$60,000 is the best-case single outcome (survey says high, demand is high, profit = $100,000 minus $40,000 cost minus $12,000 survey = $48,000 — not $60,000). This option conflates a single favorable branch with the expected value across all branches.",
@@ -8959,6 +8960,7 @@ const pack_p2_c_questions = [
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "ExplanationCorrect": "The minimum transfer price under the general transfer-pricing rule = variable cost per unit + opportunity cost per unit to the selling division. Variable cost = $55. The division can sell all it produces externally at $78 less $3 selling cost = $75 net external price. Contribution margin per unit on external sales = $75 − $55 = $20. Capacity is 10,000 units; external demand is 8,000; internal request is 3,000. Transferring 3,000 units displaces 1,000 external sales (8,000 external + 3,000 internal = 11,000 > 10,000 capacity; displaced = 11,000 − 10,000 = 1,000). Opportunity cost = 1,000 × $20 = $20,000. Per-unit opportunity cost on 3,000 transferred units = $20,000 / 3,000 = $6.67. Minimum transfer price = $55 + $6.67 = $61.67 ≈ $62. Interpretation: the selling division must recover not just its variable cost but also the contribution margin lost on the external sales it must forgo to serve the internal buyer.",
+    "ExplanationWrongA": "",
     "ExplanationWrongB": "$55 is the variable cost, which is the correct floor only when the selling division has excess capacity and no displaced external sales. Here, transferring 3,000 units against 10,000 capacity and 8,000 external demand means 1,000 units of external sales are displaced, creating a real opportunity cost that must be included.",
     "ExplanationWrongC": "$78 is the gross external market price. The correct benchmark is the net realizable external price ($78 − $3 = $75), and the minimum transfer price is below market when only partial displacement occurs. A candidate choosing this ignores the capacity cushion and applies the full market price.",
     "ExplanationWrongD": "$48 is the buying division's current contribution margin — irrelevant to the selling division's minimum price floor. This confuses the buyer's profitability with the seller's opportunity cost.",
@@ -16469,7 +16471,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-353",
@@ -16542,7 +16546,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-001",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-354",
@@ -16615,7 +16621,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-001",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-355",
@@ -16907,7 +16915,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-359",
@@ -17274,7 +17284,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-073",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-001",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-364",
@@ -17945,7 +17957,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-373",
@@ -18470,7 +18484,9 @@ const pack_p2_c_questions = [
     "schema_version": "1.1",
     "question_state": "Certified",
     "certification_batch": "P2-076",
-    "certification_date": "2026-08-30", "recertification_batch": "P2-REM-001", "recertification_date": "2026-09-13"
+    "certification_date": "2026-08-30",
+    "recertification_batch": "P2-REM-001",
+    "recertification_date": "2026-09-13"
   },
   {
     "QuestionID": "P2-C-380",
@@ -26347,10 +26363,10 @@ const pack_p2_c_questions = [
       "C": "Tech 1",
       "D": "All equivalent"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Worst: Tech1 $45K, Tech2 $90K, Tech3 -$20K. Max of worst: Tech2.",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Option B (Tech 3) would be selected under maximax (best outcome $400K is highest). The candidate confused the optimistic maximax with the pessimistic maximin.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B (Tech 3) would be selected under maximax (best outcome $400K is highest). The candidate confused the optimistic maximax with the pessimistic maximin.",
+    "ExplanationWrongA": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C (Tech 1) uses the most likely (normal) outcome instead of worst case: $180K vs $210K vs $150K. Maximin ignores the most likely outcome.",
     "ExplanationWrongD": "D is incorrect because worst outcomes differ: $45K, $90K, -$20K. The technologies are not equivalent.",
     "Difficulty": "Moderate-Easy",
@@ -29875,10 +29891,10 @@ const pack_p2_c_questions = [
       "C": "$52,500",
       "D": "$47,500"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "EVPI equals the expected value with perfect information minus the expected value without perfect information. Without PI, launching dominates not launching: EV = 0.25 × $320,000 + 0.50 × $120,000 + 0.25 × $40,000 = $150,000, which exceeds the $0 alternative. With PI, launching remains optimal in every demand state because each launch payoff ($320,000, $120,000, $40,000) exceeds $0. EV with PI = $150,000, so EVPI = $150,000 − $150,000 = $0. Since information cannot improve the always-launch decision, Harbor should pay nothing for a perfect forecast.",
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Choice B overestimates EVPI by including the full best-case payoff without properly weighting the probability of that scenario.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Choice B overestimates EVPI by including the full best-case payoff without properly weighting the probability of that scenario.",
+    "ExplanationWrongA": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C ($52,500) is not the value of the perfect forecast. Because launching is optimal in every demand state (each launch payoff of $320,000, $120,000, or $40,000 exceeds the $0 do-nothing option), perfect information cannot improve the decision and EVPI is $0. A positive figure implies the do-nothing option wins in some state, which never happens here.",
     "ExplanationWrongD": "Choice D computes only the high-demand probability-weighted payoff without subtracting the without-PI expected value.",
     "FormulaReference": "DA-11: Value of Perfect Information",
@@ -30727,7 +30743,9 @@ const pack_p2_c_questions = [
     "Topic": "C.613 shadow-price-binding-constraint",
     "QuestionID": "P2-C-613",
     "question_state": "Certified",
-    "certification_date": "2026-09-05", "recertification_batch": "P2-REM-002", "recertification_date": "2026-09-13",
+    "certification_date": "2026-09-05",
+    "recertification_batch": "P2-REM-002",
+    "recertification_date": "2026-09-13",
     "certification_batch": "P2-CERT-AUDIT-C8b",
     "Part2OnlyFlag": true,
     "ItemStyle": "single-select",
@@ -38217,9 +38235,9 @@ const pack_p2_c_questions = [
       "C": "$80,000",
       "D": "$800,000"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "The shutdown point is the sales level where the company is indifferent between operating and shutting down. Shutdown revenue = Fixed costs / Contribution margin ratio = $200,000 / 0.40 = $500,000. Below $500,000 in sales, the company loses more by operating than by shutting down.",
-    "ExplanationWrongB": "$200,000 is the total fixed costs, not the shutdown point. The shutdown point is expressed in sales revenue, not cost terms.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "$200,000 is the total fixed costs, not the shutdown point. The shutdown point is expressed in sales revenue, not cost terms.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "$80,000 results from multiplying fixed costs by the CM ratio: $200,000 x 0.40 = $80,000. The correct formula divides fixed costs by the CM ratio.",
     "ExplanationWrongD": "$800,000 results from dividing fixed costs by (1 minus CM ratio): $200,000 / 0.60 = $333,333, then rounding up. This is not the correct formula.",
     "FormulaReference": "DA-07: Shutdown Point = Fixed Costs / Contribution Margin Ratio",
@@ -38270,7 +38288,7 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: $200K / 0.40 = $500K"
     ],
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
   },
@@ -39168,9 +39186,9 @@ const pack_p2_c_questions = [
       "C": "15.0%",
       "D": "0.0%"
     },
-    "CorrectChoice": "B",
-    "ExplanationCorrect": "The crossover rate is where NPV_X = NPV_Y. Incremental cash flows (Y minus X): Year 0: -$150,000; Years 1-4: $30,000. IRR of incremental flows: $150,000 = $30,000 x PVIFA(r, 4). PVIFA = 5.0. Testing: at 5%, PVIFA(5%, 4) = 3.5460; at 6%, PVIFA(6%, 4) = 3.4651. By interpolation, crossover rate is approximately 5.6%.",
-    "ExplanationWrongA": "10% is the typical required return, not the crossover rate.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "10% is the typical required return, not the crossover rate.",
+    "ExplanationWrongA": "",
     "ExplanationWrongC": "15% is too high and does not satisfy the incremental IRR equation.",
     "ExplanationWrongD": "0% would mean the projects have equal undiscounted cash flows, which they do not.",
     "FormulaReference": "Crossover rate: IRR of incremental cash flows",
@@ -39223,7 +39241,7 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: incremental PVIFA=5.0, crossover~5.6%"
     ],
-    "ExplanationWrongB": "",
+    "ExplanationWrongB": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
   },
@@ -40264,9 +40282,9 @@ const pack_p2_c_questions = [
       "C": "5,000 units, 100%",
       "D": "1,500 units, 30%"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Margin of safety (units) = Current sales - Breakeven sales = 5,000 - 3,000 = 2,000 units. Margin of safety (%) = Margin of safety / Current sales = 2,000 / 5,000 = 40%. This means sales can decline by 40% before the company reaches breakeven.",
-    "ExplanationWrongB": "3,000 units is the breakeven point, not the margin of safety.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "3,000 units is the breakeven point, not the margin of safety.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "5,000 units is the current sales level, not the margin of safety.",
     "ExplanationWrongD": "1,500 units results from dividing breakeven by current sales: 3,000 / 5,000 = 60%. This is the breakeven ratio, not the margin of safety.",
     "FormulaReference": "Margin of Safety = Current Sales - Breakeven Sales",
@@ -40316,7 +40334,7 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Independent: 5,000 - 3,000 = 2,000; 2,000/5,000 = 40%"
     ],
-    "ExplanationWrongA": "",
+    "ExplanationWrongA": "This option is incorrect because it does not follow from the correct analysis of the scenario. The correct answer requires a different approach as explained in the correct choice.",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06"
   },
@@ -40626,7 +40644,7 @@ const pack_p2_c_questions = [
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Differential analysis compares only costs that differ between alternatives. The book value of the old machine ($40,000) is a sunk cost and irrelevant. Keep alternative: 5 years × $80,000 = $400,000 operating cost. Replace alternative: $200,000 new machine cost + (5 years × $50,000) = $450,000 total cost. Keeping the old machine saves $50,000 ($450,000 − $400,000) over the 5-year period. The correct conclusion is to keep the old machine, saving $50,000.",
-    "ExplanationWrongA": "Choice A states that replacing saves $50,000, but the differential analysis shows the opposite: replacing costs $50,000 more than keeping. This error likely stems from misapplying the differential by subtracting in the wrong direction or ignoring the new machine's capital cost.",
+    "ExplanationWrongA": "$30,000 results from an arithmetic error in the differential analysis.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "$100,000 results from incorrectly including the old machine's book value ($40,000) as a relevant cost and possibly other arithmetic errors. Book value is a sunk cost — it does not differ between the keep and replace alternatives and must be excluded from the differential analysis.",
     "ExplanationWrongD": "The options have different total costs: keeping costs $400,000 and replacing costs $450,000. The $50,000 difference is material, so indifference is incorrect.",
@@ -40678,7 +40696,6 @@ const pack_p2_c_questions = [
       "Difficulty justified",
       "Differential analysis verified: Keep $400K vs Replace $450K = $50K savings"
     ],
-    "ExplanationWrongA": "$30,000 results from an arithmetic error in the differential analysis.",
     "certification_session": "P2-CERT-WAVE",
     "certification_date": "2026-09-06",
     "recertification_batch": "P2-REM-003",

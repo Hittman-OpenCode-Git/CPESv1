@@ -120,6 +120,55 @@ try {
   warn("Baseline coherence — DIVERGENT (see output above)");
 }
 
+// ── 4c. Case Bank Global Health Check ───────────────────────────
+// Verifies that case bank globals evaluate to non-empty arrays.
+// Drift vector F: case bank global rename → empty pool silently.
+try {
+  const caseBankContent = fs.readFileSync(
+    path.join(ROOT, "content/cases/case_pack_1_corrected.js"), "utf8"
+  );
+  const pack2Content = fs.readFileSync(
+    path.join(ROOT, "content/cases/case_pack_2_corrected.js"), "utf8"
+  );
+  const pack3Content = fs.readFileSync(
+    path.join(ROOT, "content/cases/case_pack_3_corrected.js"), "utf8"
+  );
+  const p2Pack1Content = fs.readFileSync(
+    path.join(ROOT, "p2/case_pack_p2_1.js"), "utf8"
+  );
+  const p2Pack2Content = fs.readFileSync(
+    path.join(ROOT, "p2/case_pack_p2_2.js"), "utf8"
+  );
+  const p2Pack3Content = fs.readFileSync(
+    path.join(ROOT, "p2/case_pack_p2_3.js"), "utf8"
+  );
+
+  // Extract and evaluate the case bank arrays
+  const caseBanks = [
+    { name: "CASE_PACK_1", content: caseBankContent },
+    { name: "CASE_PACK_2", content: pack2Content },
+    { name: "CASE_PACK_3", content: pack3Content },
+    { name: "casePackP2_1", content: p2Pack1Content },
+    { name: "casePackP2_2", content: p2Pack2Content },
+    { name: "casePackP2_3", content: p2Pack3Content },
+  ];
+
+  for (const bank of caseBanks) {
+    try {
+      const arr = new Function(bank.content + "\nreturn " + bank.name + ";")();
+      if (Array.isArray(arr) && arr.length > 0) {
+        ok("Case bank " + bank.name + " — " + arr.length + " cases");
+      } else {
+        warn("Case bank " + bank.name + " — EMPTY or not an array (length=" + (arr ? arr.length : typeof arr) + ")");
+      }
+    } catch (e) {
+      warn("Case bank " + bank.name + " — evaluation FAILED: " + e.message.substring(0, 80));
+    }
+  }
+} catch (e) {
+  warn("Case bank health check — FAILED: " + (e.message || "").substring(0, 80));
+}
+
 // ── 5. Report ─────────────────────────────────────────────────────
 
 console.log("\n=== PREFLIGHT — " + new Date().toISOString() + " ===");

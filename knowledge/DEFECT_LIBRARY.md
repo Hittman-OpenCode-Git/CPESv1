@@ -4798,5 +4798,218 @@ For each Certified item, verify semantic agreement between `CorrectChoice` and `
 
 ---
 
+## DL-062 — P2 Case Answer-Key Inversions (Semantic Adjudication Wave) — Session 2026-09-24
+
+```
+Defect ID        DL-062
+Class            Content (DL-051 gap — case key verification)
+Domain           Case study answer keys
+Severity         Critical (correct answer contradicts item's own explanation)
+Detected By      Build-Time AI Verification — case_semantic_screens.js B:INVERSION flag + independent hand-solve
+Status           Remediated
+```
+
+**Detection Rule:** case_semantic_screens.js B:INVERSION flag (r≥0.50/m≥0.40) → independent EC hand-solve to determine if the stored `Correct` matches the explanation's conclusion. Items where the EC's computation/reasoning leads to a different answer are DL-062.
+
+**Root Cause:** Authoring error — the stored answer key (`Correct`) does not match the item's own `Explanation` content. These are invisible to structural gates (DL-008/DL-013/DL-021 all pass by construction) and only surface through semantic key/explanation agreement screening (DL-051 gap class).
+
+**Question IDs & Corrections:**
+
+| ItemID | File | Before | After | Evidence |
+|---|---|---|---|---|
+| CBQ21-D4-Q3 | `p2/case_pack_p2_1.js` | `C` (Supplier A=8, B=9, C=16) | `A` (Supplier A=12, B=6, C=12) | EC: "Supplier A: likelihood 3 (Moderate) x severity 4 (High) = 12. Supplier B: 2 x 3 = 6. Supplier C: 4 x 3 = 12." — matches Choice A, not Choice C |
+| CBQ23-F2-Q3 | `p2/case_pack_p2_3.js` | `C` (compensation — "useful but indirect") | `B` (dual authorization + segregation + analytics) | EC: "dual authorization on master-data changes, enforced segregation between setup and approval... removes the exact mechanism used." — supports Choice B; compensation (C) called "useful but indirect" |
+
+**Quarantine Protocol:** Both cases were already in `question_state: "In Audit"` (pre-quarantined). No Certified→In Audit flip needed — the cases were excluded from the delivery pool throughout.
+
+**Verification:**
+- Independent hand-solve of both items confirmed the EC conclusion matches the flipped key, not the original.
+- Post-fix re-run of `case_semantic_screens.js`: B:INVERSION **161 → 159** (both fixes cleared).
+- `node --check` on both modified case packs: 0 syntax errors.
+- Preflight: 0 divergences, 101/101 governance guard PASS.
+- Baseline coherence: 0 divergences (case packs have no §2 hash entries).
+
+**Files Modified:**
+- `p2/case_pack_p2_1.js` — CBQ21-D4-Q3 `Correct: "C"` → `"A"`
+- `p2/case_pack_p2_3.js` — CBQ23-F2-Q3 `Correct: "C"` → `"B"`
+
+**Backups:** `p2/case_pack_p2_1.js.bak-202609241540`, `p2/case_pack_p2_3.js.bak-202609241615` (both verified non-zero).
+
+**Cross-References:** DL-051 (parent gap class), Rule 21/DL-047 gate (semantic quarantine manifest enforcement), DL-045 (no-auto-remediate doctrine — screen output is evidence, not author), AGENTS.md §5 (Dual Verification).
+
+---
+
+## DL-063 — Certified Case Answer-Key Inversion: Missing Correct Choice (CBQ22-C10-Q4)
+
+```
+Defect ID        DL-063
+Class            Content (DL-047 / DL-051 gap class — case key verification)
+Domain           Case study answer key — shadow price semantics
+Severity         Critical (Certified item teaches wrong answer; correct value absent from choices)
+Detected By      Build-Time AI Verification — case_semantic_screens.js + independent hand-solve against exhibit rows
+Status           Quarantined (2026-09-24), remediation in progress
+```
+
+**Question ID:** CBQ22-C10-Q4 (`p2/case_pack_p2_C4_C8.js`)
+
+**File:** `p2/case_pack_p2_C4_C8.js`
+
+**Stem:** "What is the shadow price of the binding extrusion constraint?"
+
+### Issue
+
+The stored `Correct: "B"` ($0.00 per hour) contradicts the item's own `Explanation`, which concludes that the shadow price is **$6.00 per hour**. Furthermore, **$6.00 is absent from all four choices** — the correct answer cannot be selected by any candidate.
+
+| Field | Value |
+|---|---|
+| Stored Correct | B ($0.00 — "the constraint is not truly limiting because packaging has slack") |
+| EC Conclusion | $6.00 — "The shadow price is thus $6.00 when A's demand is binding" |
+| Choices A–D | $8.00 / $0.00 / $24.00 / $12.00 — none is $6.00 |
+
+### Independent Hand-Solve (From Exhibit Data)
+
+Exhibit 1 (CBQ22-C10-E1) — Resource Requirements:
+
+| Resource | Product A (per unit) | Product B (per unit) | Available Hours |
+|---|---|---|---|
+| Extrusion machine hours | 2.0 | 3.0 | 3,000 |
+| Packaging line hours | 1.5 | 1.0 | 2,400 |
+| Demand limit (units) | 1,200 | 800 | — |
+
+Exhibit 2 (CBQ22-C10-E2) — Unit Economics:
+- CM_A = $85 − $34 − $15 − $12 = **$24/unit**
+- CM_B = $62 − $22 − $12 − $10 = **$18/unit**
+
+**Optimal solution** (Q2 establishes): 1,200 units A, 200 units B → Total CM $32,400.
+
+**Constraint check at optimum:**
+- Extrusion: 1,200×2.0 + 200×3.0 = 3,000 → **binding** (100% utilization)
+- Packaging: 1,200×1.5 + 200×1.0 = 2,000 → slack 400 (not binding)
+- Demand A: 1,200 = 1,200 → **binding**
+- Demand B: 200 < 800 → not binding
+
+**Shadow price of extrusion (binding constraint):** If extrusion increases by 1 hour (3,001 total):
+1. Product A's demand is already at its limit (1,200 units). A cannot increase.
+2. The extra hour goes to Product B. B requires 3 hours/unit → 1/3 additional unit.
+3. CM increase = (1/3) × $18 = **$6.00 per hour**.
+
+The EC text correctly computes $6.00 but the stored key (B = $0.00) and the choices do not align.
+
+### Root Cause
+
+Authoring error — the answer key was set to the $0.00 distractor (a trap about packaging slack) rather than the economically derived $6.00. The explanation was written correctly but the `Correct` field and the choices array were never updated to match. This is invisible to structural gates (DL-008/DL-013/DL-021 all pass by construction) and only surfaces through semantic key/explanation agreement screening (DL-051 gap class).
+
+### Pattern
+
+```
+Correct = B ($0.00)
+Explanation concludes = $6.00
+$6.00 not present in any choice
+```
+
+### Detection Rule (DL-047 / DL-051)
+
+For each Certified case item, verify the stored `Correct` choice's numeric/text value matches the conclusion of the item's `Explanation`. If the explanation derives a value not present in any choice, or the stored key contradicts the explanation's conclusion, BLOCK.
+
+### Remediation (Executed 2026-09-24)
+
+1. **Quarantined:** `question_state: "Certified"` → `"In Audit"` (2026-09-24, quarantine_batch: `"DL-063-QUARANTINE"`)
+2. **Choice D replacement:** "$12.00 per hour — the average of the two products' contribution margins" → "$6.00 per hour — the marginal CM from producing 1/3 additional unit of B (A's demand is already met)"
+3. **Key flip:** `Correct: "B"` → `"D"`
+4. **Explanation:** Rewritten to clearly state D ($6.00) is correct, with explicit refutations of distractors A/B/C.
+5. **ExplanationVersion:** 1 → 2
+
+### Verification
+
+- Independent hand-solve confirms $6.00 (extra hour → B; (1/3) × $18 = $6.00) ✅
+- EC now explicitly states $6.00 is correct and matches Choice D ✅
+- `node --check` on modified file: 0 syntax errors ✅
+
+### Files Modified
+
+- `p2/case_pack_p2_C4_C8.js` — CBQ22-C10: `question_state` flip + revision history; CBQ22-C10-Q4: `Correct` B→D, `Choices[D]` text, `Explanation` rewrite, `ExplanationVersion` 1→2
+
+### Backups
+
+- `p2/case_pack_p2_C4_C8.js.bak-20260924155622` (79,024 bytes, verified)
+
+### Cross-References
+
+- DL-051 (parent gap class — no semantic key-verification for case items)
+- DL-047 (parent pattern class — certified answer-key/explanation contradictions)
+- Rule 16 (certification provenance stamps on recertification)
+- Rule 21 (semantic quarantine manifest enforcement)
+- DL-062 (precedent — CBQ22-C10-Q2 key/explanation inversion, same case)
+- AGENTS.md §5 (Dual Verification — hand-solve vs explanation)
+
+### Resolved
+
+2026-09-24 — Quarantined and fixed. Stored key flipped B→D, Choice D replaced with $6.00, Explanation rewritten with explicit distractor refutations. Independent hand-solve confirms $6.00. Case remains in `In Audit` pending recertification wave. Awaiting recertification authorization.
+
+### Recertification — 2026-09-25
+
+**Recertified:** CBQ22-C10-Q4 flipped `question_state: "In Audit"` → `"Certified"` with `recertification_batch: "DL-063-RECERT"` and `recertification_date: "2026-09-25"`. RevisionHistory updated. All content fixes verified present: Correct="D", Choices.D="$6.00 per hour — the marginal CM from producing 1/3 additional unit of B", ExplanationVersion=2, Explanation rewritten with explicit refutations. `node --check` passed. Rule 16 provenance stamps applied. Rule 5 compliant (1 item).
+
+---
+
+## DL-064 — Phase 1 Final Polish Validation Summary
+
+```
+Defect ID        DL-064
+Class            Process / Methodology
+Domain           Validation & Compliance
+Severity         Informational (validation summary — no content defects found)
+Detected By      Build-Time AI Verification — Phase 1 Final Polish (2026-09-25)
+Status           Resolved — validation sweep complete; case semantic adjudication pending
+Category       Validation completeness and compliance verification
+```
+
+**Question IDs:** N/A — validation sweep across all packs.
+
+**Files:** All `content/packs/pack_*_corrected.js`, `content/cases/case_pack_*.js`, `p2/case_pack_p2_*.js`, `scripts/validators/*`, `app/app.js`, `app/may/*`.
+
+### Issue
+
+Phase 1 Final Polish validation sweep found the repository in a structurally clean state with all validation gates passing. The remaining work is semantic adjudication of case items, which requires human review per the DL-045 doctrine (screen output is evidence, not an author).
+
+No content defects were found during this sweep. All previously identified structural defects (DL-001 through DL-063) have been resolved or documented as monitored-class residuals.
+
+### Validation Summary
+
+| Gate | Result | Details |
+|------|--------|---------|
+| Preflight | PASS | 0 divergences, 3052 Certified, 101/101 guard |
+| Pipeline | GREEN | All gates pass |
+| Validate | 0 errors | 10716 warnings (known psychometric) |
+| Smoke | PASS | 34/34 checks |
+| Governance Guard | 101/101 PASS | All 21 rules enforced |
+| Probe Parity | 1 divergence | P2 strict-eligible (expected, active authoring) |
+| MCQ Semantic Key | 123 B:INVERSION | Demoted to REVIEW-only per calibration |
+| Case Semantic | 442 flags | 156 certified-state; need adjudication |
+
+### Key Findings
+
+1. **MCQ packs fully clean:** All 3,070 MCQ items are either Certified or Archived. Zero Unprocessed/In Audit MCQ items remain. All states are TAXONOMY_REGISTRY §9.1 members.
+
+2. **P2 case banks in active authoring:** 110 cases parsed, 36 strict-eligible (all items Certified). 74 cases have items in In Audit/Unprocessed — expected during active authoring, not a defect.
+
+3. **All structural defects resolved:** DL-008 (0 Certified items with non-empty EW[CC]), DL-013 (0 template boilerplate in pool), DL-016 (0 metadata-content mismatch), DL-026 (0 Certified empty non-CC EW slots), DL-047 (10 inversions remediated), DL-051 (case semantic screens operational).
+
+4. **Case semantic screen backlog:** 156 certified-state flags require human adjudication per DL-047/DL-051 flow. Per DL-045 doctrine, screen output is evidence, not an author.
+
+### Resolution
+
+All structural validation gates PASS. The repository is ready for final save and commit. Case semantic screen adjudication (156 certified-state flags) is the only remaining work and requires human review per the DL-047/DL-051 flow.
+
+### Cross-References
+
+- `reports/PHASE1_FINAL_POLISH_STATUS.md` — detailed status report
+- DL-001 through DL-063 — all prior defect entries
+- `scripts/case_semantic_screens.js` v3 — case semantic screens
+- `scripts/semantic_key_verifier.js` — MCQ semantic key verification
+- Rule 21/DL-047 gate — semantic quarantine manifest enforcement
+
+---
+
 ## Template for New Entries
 

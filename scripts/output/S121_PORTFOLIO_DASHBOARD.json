@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22 17:11:07",
+  "generated": "2026-09-25 02:53:03",
   "session": "S121",
   "pools": {
     "part1": {
@@ -21,9 +21,9 @@
       },
       "correctChoice": {
         "A": 752,
-        "B": 882,
+        "B": 879,
         "C": 751,
-        "D": 685
+        "D": 688
       },
       "certified": 3052,
       "unprocessed": 0,
@@ -51,10 +51,10 @@
         "Understand": 620
       },
       "correctChoice": {
-        "A": 981,
-        "B": 968,
-        "C": 851,
-        "D": 730
+        "A": 983,
+        "B": 978,
+        "C": 844,
+        "D": 725
       },
       "certified": 3530,
       "unprocessed": 0,
@@ -87,9 +87,9 @@
       },
       "correctChoice": {
         "A": 146,
-        "B": 185,
+        "B": 182,
         "C": 124,
-        "D": 105
+        "D": 108
       },
       "certified": 560,
       "unprocessed": 0,
@@ -197,9 +197,9 @@
           },
           "correctChoice": {
             "A": 22,
-            "B": 24,
+            "B": 21,
             "C": 17,
-            "D": 12
+            "D": 15
           }
         },
         "F": {
@@ -292,17 +292,17 @@
         {
           "dimension": "answer_position",
           "label": "B",
-          "actual": 33,
+          "actual": 32.5,
           "target": 25,
-          "delta": 8,
+          "delta": 7.5,
           "flag": "OVER"
         },
         {
           "dimension": "answer_position",
           "label": "D",
-          "actual": 18.8,
+          "actual": 19.3,
           "target": 25,
-          "delta": -6.3,
+          "delta": -5.7,
           "flag": "UNDER"
         }
       ],
@@ -1236,8 +1236,8 @@
         "Understand": 104
       },
       "correctChoice": {
-        "A": 157,
-        "B": 176,
+        "A": 156,
+        "B": 177,
         "C": 156,
         "D": 133
       },
@@ -1264,8 +1264,8 @@
             "Understand": 104
           },
           "correctChoice": {
-            "A": 157,
-            "B": 176,
+            "A": 156,
+            "B": 177,
             "C": 156,
             "D": 133
           }
@@ -1307,9 +1307,9 @@
         {
           "dimension": "answer_position",
           "label": "B",
-          "actual": 28.3,
+          "actual": 28.5,
           "target": 25,
-          "delta": 3.3,
+          "delta": 3.5,
           "flag": "OVER"
         },
         {
@@ -1344,10 +1344,10 @@
         "Remember": 52
       },
       "correctChoice": {
-        "A": 173,
-        "B": 161,
-        "C": 151,
-        "D": 135
+        "A": 177,
+        "B": 169,
+        "C": 144,
+        "D": 130
       },
       "certified": 620,
       "unprocessed": 0,
@@ -1372,10 +1372,10 @@
             "Remember": 52
           },
           "correctChoice": {
-            "A": 173,
-            "B": 161,
-            "C": 151,
-            "D": 135
+            "A": 177,
+            "B": 169,
+            "C": 144,
+            "D": 130
           }
         }
       },
@@ -1398,10 +1398,18 @@
         },
         {
           "dimension": "answer_position",
-          "label": "D",
-          "actual": 21.8,
+          "label": "A",
+          "actual": 28.5,
           "target": 25,
-          "delta": -3.2,
+          "delta": 3.5,
+          "flag": "OVER"
+        },
+        {
+          "dimension": "answer_position",
+          "label": "D",
+          "actual": 21,
+          "target": 25,
+          "delta": -4,
           "flag": "UNDER"
         }
       ],
@@ -1428,8 +1436,8 @@
         "Evaluate": 85
       },
       "correctChoice": {
-        "A": 252,
-        "B": 214,
+        "A": 250,
+        "B": 216,
         "C": 169,
         "D": 153
       },
@@ -1456,8 +1464,8 @@
             "Evaluate": 85
           },
           "correctChoice": {
-            "A": 252,
-            "B": 214,
+            "A": 250,
+            "B": 216,
             "C": 169,
             "D": 153
           }
@@ -1483,9 +1491,9 @@
         {
           "dimension": "answer_position",
           "label": "A",
-          "actual": 32,
+          "actual": 31.7,
           "target": 25,
-          "delta": 7,
+          "delta": 6.7,
           "flag": "OVER"
         },
         {
@@ -1612,8 +1620,8 @@
         "Remember": 16
       },
       "correctChoice": {
-        "A": 135,
-        "B": 144,
+        "A": 136,
+        "B": 143,
         "C": 117,
         "D": 104
       },
@@ -1640,8 +1648,8 @@
             "Remember": 16
           },
           "correctChoice": {
-            "A": 135,
-            "B": 144,
+            "A": 136,
+            "B": 143,
             "C": 117,
             "D": 104
           }
@@ -1699,9 +1707,9 @@
         {
           "dimension": "answer_position",
           "label": "B",
-          "actual": 28.8,
+          "actual": 28.6,
           "target": 25,
-          "delta": 3.8,
+          "delta": 3.6,
           "flag": "OVER"
         },
         {
