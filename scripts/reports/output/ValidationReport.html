@@ -19,30 +19,30 @@ th { background: #f0f0f0; }
 </head>
 <body>
 <h1>CMA Part 1 Validation Report</h1>
-<p>Generated: 2026-09-25T02:57:01.876Z</p>
+<p>Generated: 2026-09-25T05:11:38.309Z</p>
 <p>Project: CMA Exam Simulator v2.0</p>
 <h2>Results</h2>
 <table><tr><th>Validator</th><th>Status</th><th>Errors</th><th>Warnings</th><th>Duration</th></tr>
-<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>8ms</td></tr>
-<tr><td>Metadata Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>884ms</td></tr>
-<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>188</td><td>696ms</td></tr>
-<tr><td>Part 2 Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>3263</td><td>1177ms</td></tr>
-<tr><td>Difficulty Validator</td><td class="warn">WARN</td><td>0</td><td>72</td><td>1127ms</td></tr>
-<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>77</td><td>1089ms</td></tr>
-<tr><td>Explanation Validator</td><td class="warn">WARN</td><td>0</td><td>6</td><td>5751ms</td></tr>
-<tr><td>Case Integrity Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>1169ms</td></tr>
-<tr><td>Case Identity Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>218ms</td></tr>
-<tr><td>PsychometricValidator</td><td class="warn">WARN</td><td>0</td><td>7108</td><td>16261ms</td></tr>
+<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>1ms</td></tr>
+<tr><td>Metadata Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>339ms</td></tr>
+<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>188</td><td>215ms</td></tr>
+<tr><td>Part 2 Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>3263</td><td>411ms</td></tr>
+<tr><td>Difficulty Validator</td><td class="warn">WARN</td><td>0</td><td>72</td><td>312ms</td></tr>
+<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>77</td><td>227ms</td></tr>
+<tr><td>Explanation Validator</td><td class="warn">WARN</td><td>0</td><td>6</td><td>973ms</td></tr>
+<tr><td>Case Integrity Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>232ms</td></tr>
+<tr><td>Case Identity Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>56ms</td></tr>
+<tr><td>PsychometricValidator</td><td class="warn">WARN</td><td>0</td><td>7108</td><td>7026ms</td></tr>
 </table>
 <p><strong>Total Errors:</strong> 0 | <strong>Total Warnings:</strong> 10716 | <strong>Overall:</strong> <span class="badge warn">WARN</span></p>
 <h2 id="Repository Validator">Repository Validator</h2>
-<p>Status: <span class="badge pass">PASS</span> | Duration: 8ms</p>
+<p>Status: <span class="badge pass">PASS</span> | Duration: 1ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Question Packs</td><td>5</td></tr>
 <tr><td>Case Banks</td><td>5</td></tr>
 </table>
 <h2 id="Metadata Validator">Metadata Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 884ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 339ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 </table>
@@ -50,7 +50,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6</td></tr>
 </table>
 <h2 id="Blueprint Validator">Blueprint Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 696ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 215ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Cross-Domain Cases</td><td>2</td></tr>
@@ -258,7 +258,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Domain "Technology and Analytics" has 11 cases (expected 22-42). Underrepresented.</td></tr>
 </table>
 <h2 id="Part 2 Blueprint Validator">Part 2 Blueprint Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 1177ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 411ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>P2 MCQ Packs Found</td><td>6</td></tr>
 <tr><td>P2 Case Packs Found</td><td>5</td></tr>
@@ -3537,7 +3537,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>p2/pack_p2_f.js[499] (P2-F-500): Topic "F.500 technology-ethics-ai-governance-transparency" may not align with domain "Professional Ethics". Available topics: [IMA Ethical Standards, Competence, Confidentiality, Integrity, Credibility, Ethical Decision Model, Fraud Triangle, SOX 2002, FCPA, Audit Committee, Corporate Governance, International Ethics]</td></tr>
 </table>
 <h2 id="Difficulty Validator">Difficulty Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 1127ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 312ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Items Checked</td><td>1085</td></tr>
@@ -3627,7 +3627,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Difficulty "Difficult": 76/190 (40.0%) deviates from target 25.0% by more than 10%</td></tr>
 </table>
 <h2 id="Reference Validator">Reference Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 1089ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 227ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Total References</td><td>0</td></tr>
@@ -3714,7 +3714,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>content/cases/case_pack_3_corrected.js[13] (CBQ5-D2) exhibit "CBQ5-D2-E2": Exhibit is never referenced by any item</td></tr>
 </table>
 <h2 id="Explanation Validator">Explanation Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 5751ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 973ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>MCQ Questions Checked</td><td>6600</td></tr>
 <tr><td>Case Items Checked</td><td>1485</td></tr>
@@ -3733,7 +3733,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>2 explanations are shorter than the recommended 50-character minimum.</td></tr>
 </table>
 <h2 id="Case Integrity Validator">Case Integrity Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 1169ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 232ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Total Cases Checked</td><td>190</td></tr>
 <tr><td>Total Items Checked</td><td>1085</td></tr>
@@ -3751,7 +3751,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Placeholder choices found in cases: CBQ3-E2, CBQ21-E5, CBQ23-E3</td></tr>
 </table>
 <h2 id="Case Identity Validator">Case Identity Validator</h2>
-<p>Status: <span class="badge pass">PASS</span> | Duration: 218ms</p>
+<p>Status: <span class="badge pass">PASS</span> | Duration: 56ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>content/cases/case_pack_1_corrected.js :: Moderate-Easy</td><td>38 (27.0%)</td></tr>
 <tr><td>content/cases/case_pack_1_corrected.js :: Moderate</td><td>36 (25.5%)</td></tr>
@@ -3805,7 +3805,7 @@ th { background: #f0f0f0; }
 <tr><td>Score/Label Mismatches</td><td>0</td></tr>
 </table>
 <h2 id="PsychometricValidator">PsychometricValidator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 16261ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 7026ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>AbsoluteLanguageValidator.questionsScanned</td><td>6600</td></tr>
 <tr><td>AbsoluteLanguageValidator.findings</td><td>2571</td></tr>

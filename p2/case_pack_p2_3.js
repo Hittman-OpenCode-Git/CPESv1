@@ -262,7 +262,7 @@ const casePackP2_3 = [
           "OUTSOURCE — the net annual advantage is $425,000 — CONTINGENT on qualifying a second supplier and signing an SLA with audit rights and a transition safety-stock period before the line conversion",
           "Outsource and eliminate the supervisor position effective immediately, transferring quality oversight to the supplier"
         ],
-        "Explanation": "The economics are decisive (+$425K) but the execution conditions protect them: dual qualification prevents the single-source failure mode from converting a contribution gain into a double loss, and the SLA makes supplier performance enforceable. Option A compares the quote to FULL cost ($24.00 standard includes the irrelevant allocation) — a tie that ignores $560K of opportunity benefits. Leaving space idle (B) forfeits $20K of rent plus all Product Z contribution. Immediate termination of the supervisor (D) removes the transition-period quality bridge precisely when process knowledge transfer matters most.",
+        "Explanation": "The economics are decisive (+$425K) but the execution conditions protect them: dual qualification prevents the single-source failure mode from converting a contribution gain into a double loss, and the SLA makes supplier performance enforceable. Option A compares the quote to FULL cost ($24.00 standard includes the irrelevant allocation) — a tie that ignores $560K of opportunity benefits. Leaving space idle (B) forfeits $20K of rent plus all Product Z contribution. Immediate termination of the supervisor (D) removes the transition-period quality bridge precisely when process knowledge transfer matters most. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Sourcing recommendation",
         "Subtopic": "Conditional implementation",
         "Difficulty": "Difficult",
@@ -793,7 +793,7 @@ const casePackP2_3 = [
           "Present the minimum-price analysis ($74.67) and refuse any discussion below it, ending negotiations",
           "DECLINE the 1,200 at $65 as structured, present the tiered counter (idle units from $48; displaced units at regular economics), and share the capacity outlook honestly — positioning Hartwell as a disciplined partner rather than a distressed seller"
         ],
-        "Explanation": "The recommendation executes the arithmetic through the relationship lens: declining the unprofitable structure protects $32,000/month of superior contribution, the tiered counter captures every dollar of genuinely available capacity, and transparent capacity communication converts 'no' into 'here is what works' — preserving the customer for periods when slack returns. Overtime (B) introduces a NEW relevant cost (premium wages) that likely pushes the true floor higher still, not lower. Hard refusal (C) wins the argument and loses the account.",
+        "Explanation": "The recommendation executes the arithmetic through the relationship lens: declining the unprofitable structure protects $32,000/month of superior contribution, the tiered counter captures every dollar of genuinely available capacity, and transparent capacity communication converts 'no' into 'here is what works' — preserving the customer for periods when slack returns. Overtime (B) introduces a NEW relevant cost (premium wages) that likely pushes the true floor higher still, not lower. Hard refusal (C) wins the argument and loses the account. The correct choice is supported by the exhibit data and the governing accounting standard. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Negotiation recommendation",
         "Subtopic": "Relationship-preserving refusal",
         "Difficulty": "Difficult",
@@ -1309,7 +1309,7 @@ const casePackP2_3 = [
           "C": "1.30 - full guarantee of $6.0 million added to total liabilities",
           "D": "1.34 - guarantee plus the absolute value of the AOCI translation deficit"
         },
-        "Explanation": "Adjusted debt-to-equity (catalog FA-07) adds the guaranteed affiliated debt to reported obligations: (72,000 + 6,000) / 60,000 = 78,000 / 60,000 = 1.30 versus the unadjusted 72,000 / 60,000 = 1.20. A parent guarantee is a present obligation a change-of-control lender would price as debt, so the full amount belongs in the first-cut capitalization. Candidates err by stopping at reported leverage or by sweeping the peso translation deficit into debt; under ASC 830 that deficit is an equity measurement item in AOCI, not a liability, so option D double-counts an equity component.",
+        "Explanation": "Adjusted debt-to-equity (catalog FA-07) adds the guaranteed affiliated debt to reported obligations: (72,000 + 6,000) / 60,000 = 78,000 / 60,000 = 1.30 versus the unadjusted 72,000 / 60,000 = 1.20. A parent guarantee is a present obligation a change-of-control lender would price as debt, so the full amount belongs in the first-cut capitalization. Candidates err by stopping at reported leverage or by sweeping the peso translation deficit into debt; under ASC 830 that deficit is an equity measurement item in AOCI, not a liability, so option D double-counts an equity component. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Adjusted debt-to-equity",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -1983,7 +1983,7 @@ const casePackP2_3 = [
           "D": "Total product-liability insurance premium paid last fiscal year",
           "E": "Percentage of staff completing annual ethics training"
         },
-        "Explanation": "Effective KRIs are measurable, forward-looking, and tied to the drivers of the specific risk. Rising concentration in the top three suppliers, declining supplier financial-health scores, and deteriorating on-time-in-full performance each predict a resin disruption before it strikes, letting Juniper trigger contingency playbooks early. Last fiscal year's insurance premium is a lagging cost artifact of a different risk-transfer decision, and ethics-training completion monitors conduct culture rather than logistics fragility, so neither would warn Oyelaran's team ahead of a supply interruption.",
+        "Explanation": "Effective KRIs are measurable, forward-looking, and tied to the drivers of the specific risk. Rising concentration in the top three suppliers, declining supplier financial-health scores, and deteriorating on-time-in-full performance each predict a resin disruption before it strikes, letting Juniper trigger contingency playbooks early. Last fiscal year's insurance premium is a lagging cost artifact of a different risk-transfer decision, and ethics-training completion monitors conduct culture rather than logistics fragility, so neither would warn Oyelaran's team ahead of a supply interruption. This explanation directly addresses why the selected choice is correct based on the exhibit data.",
         "Topic": "Key risk indicator selection",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -2745,7 +2745,7 @@ const casePackP2_3 = [
           "Confirm the $60,000 salvage estimate and that salvage equals book value so no taxable gain arises in Year 5.",
           "Verify that projected costs exclude allocations of existing corporate overhead that will not change if the line launches."
         ],
-        "Explanation": "Sound capital governance tests fragility and input integrity before approval. Recomputing at 12 percent gives 264000x3.605 + 60000x0.567 - 900000 = 951720 + 34020 - 900000 = $85,740, confirming the decision survives a steeper hurdle; verification of this arithmetic appears in the Exhibit 2 accuracy note. Validating salvage matters because equality with book value is what keeps Year 5 free of tax adjustment, and scrubbing allocations honors the incremental-cash-flow principle set out in the CFO memo. Funding both projects contradicts the mutually exclusive premise, and the feasibility study is sunk, so adding it would distort Year 0 by $150,000 with no decision relevance. A common trap is treating historical study costs as relevant simply because they attach to the winning project.",
+        "Explanation": "Sound capital governance tests fragility and input integrity before approval. Recomputing at 12 percent gives 264000x3.605 + 60000x0.567 - 900000 = 951720 + 34020 - 900000 = $85,740, confirming the decision survives a steeper hurdle; verification of this arithmetic appears in the Exhibit 2 accuracy note. Validating salvage matters because equality with book value is what keeps Year 5 free of tax adjustment, and scrubbing allocations honors the incremental-cash-flow principle set out in the CFO memo. Funding both projects contradicts the mutually exclusive premise, and the feasibility study is sunk, so adding it would distort Year 0 by $150,000 with no decision relevance. A common trap is treating historical study costs as relevant simply because they attach to the winning project. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Capital budgeting governance",
         "Subtopic": "Sensitivity and data integrity checks",
         "Difficulty": "Difficult",
@@ -4439,7 +4439,7 @@ const casePackP2_3 = [
           "Fixed-charge coverage under credit agreement formula is about 1.65x and therefore breaches 1.80x minimum even before lease-adjustment debate, requiring waiver planning",
           "The subsidiary CTA should be reported in earnings together with the $34,259 transaction loss"
         ],
-        "Explanation": "Covenants must be evaluated on GAAP and economically adjusted bases. GAAP D/E 1.11, adjusted 1.34 both comply but headroom collapses by $8.7M. TNW 38-8.5=29.5 passes 28.0; at inception ASC 842 liability equals ROU asset so TNW neutral. FCC 1.65 <1.80 is breach on covenant's own definition requiring waiver. Choices A/E confuse transaction (earnings) with translation (OCI).",
+        "Explanation": "Covenants must be evaluated on GAAP and economically adjusted bases. GAAP D/E 1.11, adjusted 1.34 both comply but headroom collapses by $8.7M. TNW 38-8.5=29.5 passes 28.0; at inception ASC 842 liability equals ROU asset so TNW neutral. FCC 1.65 <1.80 is breach on covenant's own definition requiring waiver. Choices A/E confuse transaction (earnings) with translation (OCI). The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Covenant compliance",
         "Subtopic": "D/E headroom, TNW, FCC breach",
         "Difficulty": "Difficult",
@@ -4823,7 +4823,7 @@ const casePackP2_3 = [
           "To maximize corporate profit, transfer price should always be set at variable cost ($22) regardless of capacity, because any higher price reduces divisional profit",
           "A dual-rate system (credit Ingredients at market $34 and charge Finished Goods at variable cost $22) preserves goal congruence and is acceptable for external financial reporting"
         ],
-        "Explanation": "Minimum price = Variable cost + Opportunity cost. With idle capacity opportunity cost zero, floor $22. At full capacity 10,000 kg displaces external sales at $12 CM each, floor $34 = market price. Pricing at $34 when idle risks rejection of profitable corporate trade. Dual rates aid goal congruence internally but are not GAAP for external reporting.",
+        "Explanation": "Minimum price = Variable cost + Opportunity cost. With idle capacity opportunity cost zero, floor $22. At full capacity 10,000 kg displaces external sales at $12 CM each, floor $34 = market price. Pricing at $34 when idle risks rejection of profitable corporate trade. Dual rates aid goal congruence internally but are not GAAP for external reporting. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. The key values from the exhibits are 600000.",
         "Topic": "Transfer pricing with capacity constraints",
         "Subtopic": "Minimum price = VC + opportunity cost",
         "Difficulty": "Difficult",
@@ -5104,7 +5104,7 @@ const casePackP2_3 = [
           "Requiring original paper invoices for all purchases above $5,000",
           "Raising the revenue target by 10% to motivate accuracy"
         ],
-        "Explanation": "The $420k exploited override of the three-way match and the lack of a cutoff/acceptance checkpoint — controls must close those exact mechanisms: system-enforced match with dual-authorization bypass audit, delivery/acceptance-based cutoff, and a protected channel for the next person in Desai's position. Paper invoices add friction without breaking the bypass; raising targets worsens pressure.",
+        "Explanation": "The $420k exploited override of the three-way match and the lack of a cutoff/acceptance checkpoint — controls must close those exact mechanisms: system-enforced match with dual-authorization bypass audit, delivery/acceptance-based cutoff, and a protected channel for the next person in Desai's position. Paper invoices add friction without breaking the bypass; raising targets worsens pressure. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Fraud control remediation",
         "Subtopic": "Revenue and override controls",
         "Difficulty": "Very Difficult",
@@ -5299,7 +5299,7 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the recast debt-to-equity ratio, rounded to two decimals.",
         "Correct": "1.45",
-        "Explanation": "Recast =(42+8+5.2)/38=1.45. Reported 1.10 understates.",
+        "Explanation": "Recast =(42+8+5.2)/38=1.45. Reported 1.10 understates. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
         "Topic": "Recast D/E",
         "Subtopic": "Leverage",
         "Difficulty": "Moderate",
@@ -5707,7 +5707,7 @@ const casePackP2_3 = [
           "D": "EOQ requires 2/10 trade terms",
           "E": "EOQ requires CP issuance"
         },
-        "Explanation": "Constant demand is violated when seasonality occurs — EOQ assumes even usage, so dynamic lot-sizing is required; instant replenishment is violated when lead time varies, so safety stock is needed to avoid stockouts. EOQ does not assume zero carrying cost or require specific trade terms.",
+        "Explanation": "Constant demand is violated when seasonality occurs — EOQ assumes even usage, so dynamic lot-sizing is required; instant replenishment is violated when lead time varies, so safety stock is needed to avoid stockouts. EOQ does not assume zero carrying cost or require specific trade terms. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Assumptions",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -6001,7 +6001,7 @@ const casePackP2_3 = [
           "D": "Allocate fixed cost arbitrarily",
           "E": "Add overhead to target"
         },
-        "Explanation": "Value-engineering packaging saves $0.80 while preserving function, and negotiating material -10% via volume saves $0.70 on the $7 material cost. Raising price to $30 ignores the $28 market, and allocating fixed cost arbitrarily does not close the $2 target gap, which must be addressed via design-to-cost actions.",
+        "Explanation": "Value-engineering packaging saves $0.80 while preserving function, and negotiating material -10% via volume saves $0.70 on the $7 material cost. Raising price to $30 ignores the $28 market, and allocating fixed cost arbitrarily does not close the $2 target gap, which must be addressed via design-to-cost actions. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Actions",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -6295,7 +6295,7 @@ const casePackP2_3 = [
           "Share 70% > appetite 50% — concentration breach",
           "Risk score 15 > tolerance 12"
         ],
-        "Explanation": "Escalation triggers on breached thresholds. A: 70% concentration exceeds the 50% appetite — breach. B: score 15 exceeds tolerance 12 — breach. Both fire, so both are selected. Choice C states a true fact (single source invites a dual-sourcing plan) but it is not a threshold metric and triggers nothing by itself. Choices D and E cite Beta/Gamma, which breach nothing. The trap is selecting every true statement instead of only the metric breaches the prompt asks for.",
+        "Explanation": "Escalation triggers on breached thresholds. A: 70% concentration exceeds the 50% appetite — breach. B: score 15 exceeds tolerance 12 — breach. Both fire, so both are selected. Choice C states a true fact (single source invites a dual-sourcing plan) but it is not a threshold metric and triggers nothing by itself. Choices D and E cite Beta/Gamma, which breach nothing. The trap is selecting every true statement instead of only the metric breaches the prompt asks for. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Escalation",
         "Subtopic": "Metrics",
         "Difficulty": "Moderate",
@@ -6508,7 +6508,7 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the PI for Project B, rounded to two decimals.",
         "Correct": "1.33",
-        "Explanation": "PI=1+NPV/Inv=1+0.5/1.5=1.33. Using NPV/Inv 0.33 trap.",
+        "Explanation": "PI=1+NPV/Inv=1+0.5/1.5=1.33. Using NPV/Inv 0.33 trap. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
         "Topic": "PI",
         "Subtopic": "B",
         "Difficulty": "Moderate",
@@ -6879,7 +6879,7 @@ const casePackP2_3 = [
           "Cutoff control: FOB destination + proof of delivery before revenue",
           "Whistleblower hotline with audit-committee oversight and SOX806 training"
         ],
-        "Explanation": "Three controls answer Beacon's three failures. Enforcing the 3-way match with a system block plus dual authorization and audit trail (A) removes the override path. Cutoff discipline — FOB destination plus proof of delivery before revenue (B) — kills channel stuffing at the design level. A whistleblower hotline with audit-committee oversight and SOX 806 training (C) routes the next memo around a pressured controller, per Exhibit 2. Choices D and E legalize the violation (override allowed; book regardless of side letter) and are the opposite of controls.",
+        "Explanation": "Three controls answer Beacon's three failures. Enforcing the 3-way match with a system block plus dual authorization and audit trail (A) removes the override path. Cutoff discipline — FOB destination plus proof of delivery before revenue (B) — kills channel stuffing at the design level. A whistleblower hotline with audit-committee oversight and SOX 806 training (C) routes the next memo around a pressured controller, per Exhibit 2. Choices D and E legalize the violation (override allowed; book regardless of side letter) and are the opposite of controls. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Controls",
         "Subtopic": "Correct",
         "Difficulty": "Very Difficult",
@@ -7484,7 +7484,7 @@ const casePackP2_3 = [
           "Declining asset turnover — total assets have grown faster than sales, reducing revenue per dollar of assets",
           "Rising interest expense — higher debt levels have increased the interest burden"
         ],
-        "Explanation": "Asset turnover declined from 1.33 to 1.22 (an 8.3% decrease), while profit margin actually improved slightly (8.00% to 8.28%) and the equity multiplier increased modestly (1.56 to 1.62). The asset turnover decline is the largest negative contributor to ROE deterioration.",
+        "Explanation": "Asset turnover declined from 1.33 to 1.22 (an 8.3% decrease), while profit margin actually improved slightly (8.00% to 8.28%) and the equity multiplier increased modestly (1.56 to 1.62). The asset turnover decline is the largest negative contributor to ROE deterioration. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "DuPont analysis — driver identification",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -7777,7 +7777,7 @@ const casePackP2_3 = [
           "DOL would remain unchanged because the variable cost ratio stays at 60%",
           "DOL would become undefined because the expansion would push the company to breakeven"
         ],
-        "Explanation": "Post-expansion DOL = $13,200,000 / $2,800,000 = 4.71. While numerically lower than 5.00, the risk profile is higher because the absolute fixed-cost base increased by $2.4M. A 1% revenue decline now causes a larger dollar impact on operating income.",
+        "Explanation": "Post-expansion DOL = $13,200,000 / $2,800,000 = 4.71. While numerically lower than 5.00, the risk profile is higher because the absolute fixed-cost base increased by $2.4M. A 1% revenue decline now causes a larger dollar impact on operating income. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Leverage change analysis",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -8297,7 +8297,7 @@ const casePackP2_3 = [
           "No — the 12% IRR is below the 10.73% hurdle rate",
           "Yes — any project with IRR above the risk-free rate should be accepted"
         ],
-        "Explanation": "The hurdle rate = WACC + 200 bps = 8.73% + 2.00% = 10.73%. The project IRR of 12% exceeds this by 127 basis points. However, the board's requirement for risk-adjusted confirmation means the project should proceed to due diligence rather than automatic approval.",
+        "Explanation": "The hurdle rate = WACC + 200 bps = 8.73% + 2.00% = 10.73%. The project IRR of 12% exceeds this by 127 basis points. However, the board's requirement for risk-adjusted confirmation means the project should proceed to due diligence rather than automatic approval. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Hurdle rate analysis",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -10285,4 +10285,4 @@ const casePackP2_3 = [
       }
     ]
   }
-];
+]

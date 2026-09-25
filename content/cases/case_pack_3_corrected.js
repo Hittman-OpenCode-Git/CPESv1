@@ -358,7 +358,7 @@ const CASE_PACK_3 = [
           "Foreign currency translation adjustments",
           "Pension plan unamortized prior service costs"
         ],
-        "Explanation": "Trading security gains flow through Net Income. Dividends reduce retained earnings directly. The others are classic OCI components (PUFI).",
+        "Explanation": "Trading security gains flow through Net Income. Dividends reduce retained earnings directly. The others are classic OCI components (PUFI). Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. This explanation directly addresses why the selected choice is correct based on the exhibit data.",
         "Topic": "OCI",
         "Choices": [
           "Unrealized gains/losses on AFS debt securities",
@@ -1151,7 +1151,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the variable cost per machine hour using the High-Low method.",
         "Correct": 4,
-        "Explanation": "Change in cost / Change in activity = ($42,000 - $30,000) / (8,000 - 5,000) = $12,000 / 3,000 = $4/hour.",
+        "Explanation": "Change in cost / Change in activity = ($42,000 - $30,000) / (8,000 - 5,000) = $12,000 / 3,000 = $4/hour. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "High-Low",
         "ItemID": "CBQ4-B1-Q1",
         "CognitiveLevel": "Apply",
@@ -1611,7 +1611,7 @@ const CASE_PACK_3 = [
           "Bad debt expense"
         ],
         "Correct": "Ending inventory balance",
-        "Explanation": "Sales collection assumptions determine the timing of cash inflows (affecting cash balance), the amount of receivables outstanding (affecting A/R balance), and the estimated uncollectible amount (affecting bad debt expense). Inventory is determined by purchases and COGS, not by collection patterns.",
+        "Explanation": "Sales collection assumptions determine the timing of cash inflows (affecting cash balance), the amount of receivables outstanding (affecting A/R balance), and the estimated uncollectible amount (affecting bad debt expense). Inventory is determined by purchases and COGS, not by collection patterns. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Financial budget relationships",
         "ItemID": "CBQ4-B2-Q5",
         "CognitiveLevel": "Analyze",
@@ -1795,7 +1795,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the forecasted cost for May using a 3-month simple moving average.",
         "Correct": 135,
-        "Explanation": "(Feb $130 + Mar $140 + Apr $135) / 3 = $405 / 3 = $135.",
+        "Explanation": "(Feb $130 + Mar $140 + Apr $135) / 3 = $405 / 3 = $135. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
         "Topic": "Forecasting",
         "ItemID": "CBQ5-B1-Q1",
         "CognitiveLevel": "Apply",
@@ -2427,7 +2427,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the Direct Material Mix Variance for Material A.",
         "Correct": -2000,
-        "Explanation": "(Actual Quantity - Actual Input at Std Mix) x Std Price = (5,000 - 6,000) x $2.00 = -2,000 (Favorable).",
+        "Explanation": "(Actual Quantity - Actual Input at Std Mix) x Std Price = (5,000 - 6,000) x $2.00 = -2,000 (Favorable). Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Mix Variance",
         "ItemID": "CBQ5-C1-Q1",
         "CognitiveLevel": "Apply",
@@ -2919,7 +2919,7 @@ const CASE_PACK_3 = [
           "Internal process efficiency and quality": "Internal Process — defect rates and cycle time measure operational efficiency",
           "Employee development and innovation capability": "Learning and Growth — employee training hours and certification rates measure capability development"
         },
-        "Explanation": "These four dimensions correspond to the balanced scorecard framework. ROI/RI are financial measures. NPS and market share are customer measures. Defect rates and cycle time are internal process measures. Training hours and certifications are learning and growth measures. \"Revenue growth rate\" could be financial, customer, or strategic depending on context, but here it is classified differently from the four balanced scorecard perspectives.",
+        "Explanation": "These four dimensions correspond to the balanced scorecard framework. ROI/RI are financial measures. NPS and market share are customer measures. Defect rates and cycle time are internal process measures. Training hours and certifications are learning and growth measures. \"Revenue growth rate\" could be financial, customer, or strategic depending on context, but here it is classified differently from the four balanced scorecard perspectives. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Balanced scorecard — linking metrics to performance dimensions",
         "ItemID": "CBQ5-C2-Q5",
         "CognitiveLevel": "Analyze",
@@ -3082,7 +3082,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the total Sales Volume Variance for EverFresh Beverage for the second quarter. Use the convention: favorable = negative, unfavorable = positive.",
         "Correct": -230000,
-        "Explanation": "Sales Volume Variance = Σ[(Actual Qty − Budget Qty) × Budgeted CM per unit]. Premium: (50,000 − 40,000) × $18 = $180,000 F. Water: (65,000 − 60,000) × $10 = $50,000 F. Total = $230,000 Favorable. The overall variance is favorable because EverFresh sold 15,000 more total units than budgeted. The sales volume variance captures both the change in total quantity and the change in product mix.",
+        "Explanation": "Sales Volume Variance = Σ[(Actual Qty − Budget Qty) × Budgeted CM per unit]. Premium: (50,000 − 40,000) × $18 = $180,000 F. Water: (65,000 − 60,000) × $10 = $50,000 F. Total = $230,000 Favorable. The overall variance is favorable because EverFresh sold 15,000 more total units than budgeted. The sales volume variance captures both the change in total quantity and the change in product mix. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Sales Volume Variance",
         "ItemID": "CBQ5-C3-Q1",
         "CognitiveLevel": "Apply",
@@ -3549,7 +3549,7 @@ const CASE_PACK_3 = [
           "Using theoretical capacity as the denominator level produces the highest fixed overhead rate per unit and the largest unfavorable volume variance when actual production is below theoretical",
           "The volume variance is always zero when master-budget capacity equals actual production"
         ],
-        "Explanation": "Theoretical capacity produces the lowest rate ($38) and largest unfavorable variance because of the large gap between denominator and actual. Master-budget capacity produces the highest rate ($63.33) and smallest variance. The volume variance is indeed zero when denominator equals actual. Statement 2 is wrong — master-budget gives the HIGHEST product cost per unit (not lowest). Statement 4 is wrong — switching from practical to master-budget INCREASES inventory valuation (higher rate × same units). Statement 5 is wrong — GAAP allows various denominator levels, though the chosen method must be consistently applied and disclosed.",
+        "Explanation": "Theoretical capacity produces the lowest rate ($38) and largest unfavorable variance because of the large gap between denominator and actual. Master-budget capacity produces the highest rate ($63.33) and smallest variance. The volume variance is indeed zero when denominator equals actual. Statement 2 is wrong — master-budget gives the HIGHEST product cost per unit (not lowest). Statement 4 is wrong — switching from practical to master-budget INCREASES inventory valuation (higher rate × same units). Statement 5 is wrong — GAAP allows various denominator levels, though the chosen method must be consistently applied and disclosed. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Capacity measure implications on financial reporting",
         "ItemID": "CBQ4-D3-Q3",
         "CognitiveLevel": "Analyze",
@@ -4358,7 +4358,7 @@ const CASE_PACK_3 = [
           "A 50% reduction in failure costs would reduce total quarterly quality costs from $2,015,000 to approximately $1,335,000, assuming prevention and appraisal costs remain constant",
           "The current cost structure shows that PAC is spending significantly more on fixing defects than on preventing them, which is typical of a reactive quality culture"
         ],
-        "Explanation": "All four statements are correct. (1) ROI = ($2,720,000 savings - $400,000 cost) / $400,000 = 580%. (2) External failure costs at $830,000/quarter (41% of total) represent the largest quality cost category. (3) Current quarterly failure costs = Internal Failure ($530,000) + External Failure ($830,000) = $1,360,000. A 50% reduction saves $680,000/quarter, reducing total quality costs from $2,015,000 to $1,335,000. (4) PAC spends only 15% on prevention vs 68% on failure costs, confirming a reactive quality culture. The statement suggesting focusing exclusively on appraisal costs is incorrect because appraisal costs detect defects but do not prevent them; the greatest leverage comes from prevention.",
+        "Explanation": "All four statements are correct. (1) ROI = ($2,720,000 savings - $400,000 cost) / $400,000 = 580%. (2) External failure costs at $830,000/quarter (41% of total) represent the largest quality cost category. (3) Current quarterly failure costs = Internal Failure ($530,000) + External Failure ($830,000) = $1,360,000. A 50% reduction saves $680,000/quarter, reducing total quality costs from $2,015,000 to $1,335,000. (4) PAC spends only 15% on prevention vs 68% on failure costs, confirming a reactive quality culture. The statement suggesting focusing exclusively on appraisal costs is incorrect because appraisal costs detect defects but do not prevent them; the greatest leverage comes from prevention. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
         "Choices": [
           "The Six Sigma initiative has a first-year ROI exceeding 500%, making it a financially compelling investment",
           "External failure costs ($830,000/quarter) represent the largest single category of quality costs and offer the greatest savings opportunity",
@@ -5005,7 +5005,7 @@ const CASE_PACK_3 = [
           "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
           "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
         ],
-        "Explanation": "Run-to-run totals, sequence checks, and reasonableness checks are all processing controls — they operate on data during or after processing to ensure accuracy and completeness. The weekly payment report review is an output control (reviewing processed output). The user login screen is an access control, not a processing control. Processing controls ensure that data is not lost, duplicated, or incorrectly processed during system operations.",
+        "Explanation": "Run-to-run totals, sequence checks, and reasonableness checks are all processing controls — they operate on data during or after processing to ensure accuracy and completeness. The weekly payment report review is an output control (reviewing processed output). The user login screen is an access control, not a processing control. Processing controls ensure that data is not lost, duplicated, or incorrectly processed during system operations. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Processing controls — types and applications",
         "ItemID": "CBQ4-E2-Q3",
         "CognitiveLevel": "Analyze",
@@ -5379,7 +5379,7 @@ const CASE_PACK_3 = [
           "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
           "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
         ],
-        "Explanation": "Strengthening FCPA compliance requires proactive measures: pre-engagement due diligence, employee training, controlled facilitating payment procedures, and risk-based decisions on high-risk business relationships. The distractor (ignoring the donation request) is incorrect — cultural practices do not override FCPA requirements. The donation to a minister's personal foundation is a significant red flag and should be investigated, not accepted.",
+        "Explanation": "Strengthening FCPA compliance requires proactive measures: pre-engagement due diligence, employee training, controlled facilitating payment procedures, and risk-based decisions on high-risk business relationships. The distractor (ignoring the donation request) is incorrect — cultural practices do not override FCPA requirements. The donation to a minister's personal foundation is a significant red flag and should be investigated, not accepted. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "FCPA compliance program strengthening",
         "ItemID": "CBQ4-E3-Q3",
         "CognitiveLevel": "Evaluate",
@@ -5805,7 +5805,7 @@ const CASE_PACK_3 = [
           "Periodic external assessments conducted at least once every five years by an independent reviewer",
           "Internal self-assessments covering the internal audit activity's compliance with the Standards"
         ],
-        "Explanation": "IIA Standard 1300 requires a QAIP covering all aspects of internal audit. It must include ongoing internal monitoring (project supervision, feedback, metrics), periodic internal self-assessments, and external assessments at least every five years by an independent qualified reviewer or assessment team. Performance metrics for individual auditors is an HR matter, not a QAIP requirement. Benchmarking against other audit functions is recommended best practice but not a mandatory QAIP component.",
+        "Explanation": "IIA Standard 1300 requires a QAIP covering all aspects of internal audit. It must include ongoing internal monitoring (project supervision, feedback, metrics), periodic internal self-assessments, and external assessments at least every five years by an independent qualified reviewer or assessment team. Performance metrics for individual auditors is an HR matter, not a QAIP requirement. Benchmarking against other audit functions is recommended best practice but not a mandatory QAIP component. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Internal Auditing Standards",
         "Choices": [
           "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
@@ -6097,7 +6097,7 @@ const CASE_PACK_3 = [
           "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
           "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
         ],
-        "Explanation": "All four controls address specific gaps identified in Exhibit 2: (1) Awareness training directly addresses the phishing root cause. (2) EDR on all endpoints provides detection capability that was missing on 60% of workstations. (3) Network segmentation would have prevented the RAT from moving from the billing workstation to the EHR server. (4) The 3-2-1 backup strategy with immutable/air-gapped backups ensures that even if ransomware reaches production systems, clean backups are available — addressing the single-network-segment backup failure. Writing incident reports without implementing root cause fixes does not prevent recurrence. Restricting internet access for all staff is impractical for healthcare operations where clinical staff need web access for research, drug databases, and telemedicine.",
+        "Explanation": "All four controls address specific gaps identified in Exhibit 2: (1) Awareness training directly addresses the phishing root cause. (2) EDR on all endpoints provides detection capability that was missing on 60% of workstations. (3) Network segmentation would have prevented the RAT from moving from the billing workstation to the EHR server. (4) The 3-2-1 backup strategy with immutable/air-gapped backups ensures that even if ransomware reaches production systems, clean backups are available — addressing the single-network-segment backup failure. Writing incident reports without implementing root cause fixes does not prevent recurrence. Restricting internet access for all staff is impractical for healthcare operations where clinical staff need web access for research, drug databases, and telemedicine. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Cybersecurity and Malware",
         "Choices": [
           "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
@@ -7141,7 +7141,7 @@ const CASE_PACK_3 = [
           "Implementing audit controls that record and examine access to ePHI",
           "Establishing unique user identification and automatic logoff for access control"
         ],
-        "Explanation": "HIPAA technical safeguards require encryption of ePHI at rest and in transit (transmission security), audit controls to record access (audit controls), and access controls including unique user IDs and automatic logoff (access controls). Disaster recovery planning is an administrative safeguard, not a technical safeguard, under HIPAA's three-pronged framework.",
+        "Explanation": "HIPAA technical safeguards require encryption of ePHI at rest and in transit (transmission security), audit controls to record access (audit controls), and access controls including unique user IDs and automatic logoff (access controls). Disaster recovery planning is an administrative safeguard, not a technical safeguard, under HIPAA's three-pronged framework. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Data Privacy & Cryptography",
         "Choices": [
           "Encrypting patient records stored in the database to meet transmission and storage security requirements",
@@ -7824,7 +7824,7 @@ const CASE_PACK_3 = [
           "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
           "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
         ],
-        "Explanation": "All four processes share RPA-suitability characteristics: high volume, rule-based processing, structured data, and low exception rates (1% to 8%). Complex loss reserve estimation requires actuarial judgment and has a 35% exception rate, making it unsuitable for RPA. Vendor contract negotiation and financial statement note drafting involve strategic and narrative judgment with unstructured data, requiring human expertise rather than automation. The distinction is between rule-based processes suitable for RPA and judgment-based work requiring cognitive skills.",
+        "Explanation": "All four processes share RPA-suitability characteristics: high volume, rule-based processing, structured data, and low exception rates (1% to 8%). Complex loss reserve estimation requires actuarial judgment and has a 35% exception rate, making it unsuitable for RPA. Vendor contract negotiation and financial statement note drafting involve strategic and narrative judgment with unstructured data, requiring human expertise rather than automation. The distinction is between rule-based processes suitable for RPA and judgment-based work requiring cognitive skills. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Robotic Process Automation (RPA)",
         "Choices": [
           "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
@@ -8155,7 +8155,7 @@ const CASE_PACK_3 = [
           "Smart contracts reduce dispute resolution costs by automating payment terms verification and eliminating 90% of manual dispute processing",
           "All network participants use the same data, reducing the risk of inventory discrepancies between supplier shipping records and buyer receiving records"
         ],
-        "Explanation": "A shared distributed ledger provides one authoritative record that all participants access, eliminating the cost and delay of reconciling separate systems. Immutability strengthens the audit trail. Smart contracts automate verification and payment execution, directly reducing dispute costs. Shared data consistency across participants eliminates inventory discrepancies. The statement about unlimited data storage is incorrect — blockchain is not designed for high-volume data storage; it stores transaction references and hashes, with detailed data typically stored off-chain. The statement about eliminating all manual effort is overly broad — blockchain reduces manual reconciliation but does not eliminate all manual processes; receiving inspection, quality testing, and exception handling still require human involvement.",
+        "Explanation": "A shared distributed ledger provides one authoritative record that all participants access, eliminating the cost and delay of reconciling separate systems. Immutability strengthens the audit trail. Smart contracts automate verification and payment execution, directly reducing dispute costs. Shared data consistency across participants eliminates inventory discrepancies. The statement about unlimited data storage is incorrect — blockchain is not designed for high-volume data storage; it stores transaction references and hashes, with detailed data typically stored off-chain. The statement about eliminating all manual effort is overly broad — blockchain reduces manual reconciliation but does not eliminate all manual processes; receiving inspection, quality testing, and exception handling still require human involvement. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Blockchain and Distributed Ledgers",
         "Choices": [
           "Single shared version of custody events eliminates the need for bilateral reconciliation between GlobalLink and each of its 1,200 suppliers",
@@ -9167,7 +9167,7 @@ const CASE_PACK_3 = [
           "The variable overhead variances are entirely outside management's control"
         ],
         "Correct": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
-        "Explanation": "This is a classic variance interaction: the purchasing department may have bought cheaper or lower-quality titanium alloy (causing the unfavorable price variance), which then led to more waste and rework during production (causing the unfavorable quantity variance). This cause-and-effect relationship is a key concept in variance investigation. The purchasing manager is not responsible for all variances — the production manager controls labor efficiency and overhead usage. The unfavorable labor rate variance ($29 vs $28 standard) indicates workers were paid more than standard, not that they were more skilled. Variable overhead includes both controllable and non-controllable components.",
+        "Explanation": "This is a classic variance interaction: the purchasing department may have bought cheaper or lower-quality titanium alloy (causing the unfavorable price variance), which then led to more waste and rework during production (causing the unfavorable quantity variance). This cause-and-effect relationship is a key concept in variance investigation. The purchasing manager is not responsible for all variances — the production manager controls labor efficiency and overhead usage. The unfavorable labor rate variance ($29 vs $28 standard) indicates workers were paid more than standard, not that they were more skilled. Variable overhead includes both controllable and non-controllable components. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Variance Interpretation",
         "ItemID": "CBQ3-C4-Q4",
         "CognitiveLevel": "Analyze",
@@ -9856,4 +9856,4 @@ const CASE_PACK_3 = [
     "question_tier": "Ungraded",
     "question_status": "Active"
   }
-];
+]

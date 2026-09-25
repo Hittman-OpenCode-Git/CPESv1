@@ -756,7 +756,7 @@ const casePackP2_2 = [
           "Cash covers only 60% of earnings, receivables grow three-and-a-half times faster than sales while DSO deteriorates nearly eleven days, and gross margin expands five points AGAINST an industry declining two — the classic overstatement profile; value the company on normalized, cash-supported earnings pending evidence",
           "Gross margin expansion confirms the receivables growth reflects premium pricing power rather than channel pressure"
         ],
-        "Explanation": "Individually each signal admits an innocent explanation; jointly they form the recognized overstatement pattern — accrual-heavy earnings, collection stress, and counter-consensus margin moves. The correct analytical posture is neither accusation nor acceptance but normalization: anchor on the $22.5M core figure, demand aging schedules and sell-through data, and price the uncertainty. A single ratio never proves fraud (B) — it triggers evidence-gathering — and margin expansion against the industry trend (D) is itself the anomaly requiring explanation, not reassurance.",
+        "Explanation": "Individually each signal admits an innocent explanation; jointly they form the recognized overstatement pattern — accrual-heavy earnings, collection stress, and counter-consensus margin moves. The correct analytical posture is neither accusation nor acceptance but normalization: anchor on the $22.5M core figure, demand aging schedules and sell-through data, and price the uncertainty. A single ratio never proves fraud (B) — it triggers evidence-gathering — and margin expansion against the industry trend (D) is itself the anomaly requiring explanation, not reassurance. The key values from the exhibits are 22500000.",
         "Topic": "Composite earnings quality",
         "Subtopic": "Signal convergence",
         "Difficulty": "Difficult",
@@ -1264,7 +1264,7 @@ const casePackP2_2 = [
           "C": "$16,000, the soft-state contribution spread between the two commitments",
           "D": "$42,000, the range between the best and worst outcomes across states"
         },
-        "Explanation": "EVPI = EV with perfect information − EV without it (DA-11). With perfect foresight the committee picks the better schedule state by state and expects (0.40 × $388,000) + (0.35 × $374,000) + (0.25 × $346,000) = $155,200 + $130,900 + $86,500 = $372,600; without it the best commitment is worth $368,600. EVPI = $372,600 − $368,600 = $4,000, which equals the weighted regret of being locked into Cascade-priority in the soft state (0.25 × $16,000). Choice A subtracts the two schedules' unconditional EVs ($368,600 − $359,250 = $9,350)—that measures how much the winner beats the loser, not what information is worth.",
+        "Explanation": "EVPI = EV with perfect information − EV without it (DA-11). With perfect foresight the committee picks the better schedule state by state and expects (0.40 × $388,000) + (0.35 × $374,000) + (0.25 × $346,000) = $155,200 + $130,900 + $86,500 = $372,600; without it the best commitment is worth $368,600. EVPI = $372,600 − $368,600 = $4,000, which equals the weighted regret of being locked into Cascade-priority in the soft state (0.25 × $16,000). Choice A subtracts the two schedules' unconditional EVs ($368,600 − $359,250 = $9,350)—that measures how much the winner beats the loser, not what information is worth. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Value of perfect information",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -1617,7 +1617,7 @@ const casePackP2_2 = [
           "D": "Raising the capital ceiling to $1,440,000 would leave this year's adopted package unchanged",
           "E": "The EAA comparison implicitly assumes both compressors can be replaced with economically similar assets when their lives expire"
         },
-        "Explanation": "Statement A captures the rationing doctrine from Q1/Q4: PI screens, but bundle-level NPV decides. Statement C states the unequal-life problem that EAA (ID-05) solves, and statement E names EAA's standard replication assumption — chains of like-for-like replacement make annualized values comparable. Statement B fails arithmetically: the adopted package spends $1,260,000 of $1,300,000, leaving $40,000 of headroom, far short of P4's $260,000. Statement D fails because a $1,440,000 ceiling would admit {P1, P2, P3} at exactly $1,440,000 with $373,600 of NPV, displacing the current $322,000 package. The recurring candidate error is treating heuristics and single-snapshot NPVs as sufficient once constraints or unequal lives enter.",
+        "Explanation": "Statement A captures the rationing doctrine from Q1/Q4: PI screens, but bundle-level NPV decides. Statement C states the unequal-life problem that EAA (ID-05) solves, and statement E names EAA's standard replication assumption — chains of like-for-like replacement make annualized values comparable. Statement B fails arithmetically: the adopted package spends $1,260,000 of $1,300,000, leaving $40,000 of headroom, far short of P4's $260,000. Statement D fails because a $1,440,000 ceiling would admit {P1, P2, P3} at exactly $1,440,000 with $373,600 of NPV, displacing the current $322,000 package. The recurring candidate error is treating heuristics and single-snapshot NPVs as sufficient once constraints or unequal lives enter. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Rationing and EAA judgment",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -1941,7 +1941,7 @@ const casePackP2_2 = [
           "D": "An eleven-day CCC deterioration ties up roughly $1.3 million of additional cash at current sales velocity, weakening the renewal narrative",
           "E": "Negotiating longer supplier payment terms would raise DPO and shorten the cash conversion cycle"
         },
-        "Explanation": "Statement A applies firm-wide WACC to average-risk projects — the correct scope discipline. Statement D quantifies the drift: 11.13 days × ($42,000,000 ÷ 365) ≈ $1,280,700 of incremental cash tied up, material to the credit story. Statement E is mechanically right: longer terms lift DPO, and DPO enters CCC negatively. Statement B fails because WACC requires the after-tax cost (6.6667% × 0.75 = 5.00%); deductibility is precisely why the adjustment exists. Statement C confuses reporting conventions with valuation theory — WACC uses market-value weights ($44,000,000 here), while book statements serve the bank's separate collateral analysis.",
+        "Explanation": "Statement A applies firm-wide WACC to average-risk projects — the correct scope discipline. Statement D quantifies the drift: 11.13 days × ($42,000,000 ÷ 365) ≈ $1,280,700 of incremental cash tied up, material to the credit story. Statement E is mechanically right: longer terms lift DPO, and DPO enters CCC negatively. Statement B fails because WACC requires the after-tax cost (6.6667% × 0.75 = 5.00%); deductibility is precisely why the adjustment exists. Statement C confuses reporting conventions with valuation theory — WACC uses market-value weights ($44,000,000 here), while book statements serve the bank's separate collateral analysis. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Renewal-readiness evaluation",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -2304,7 +2304,7 @@ const casePackP2_2 = [
           "Internal quality records indicate supplier-built modules have historically shown a higher defect rate, raising expected warranty exposure",
           "The assembly team holds proprietary calibration expertise that would be difficult to rebuild if the supplier relationship failed"
         ],
-        "Explanation": "Sound evaluation pairs the $162,000 quantitative disadvantage with strategic evidence. The first statement reflects Exhibit 2's contractual price hold, a genuine risk-transfer benefit; the second flags a quality-driven cost not captured in the model; the third warns about irreversible loss of tacit capability that could raise future switching costs. The fourth statement is factually wrong because unavoidable means the $252,000 persists under either alternative, by definition and per Exhibit 1. The fifth misreads the numbers: the apparent $12,000 recorded-cost saving reverses into a $162,000 economic loss once opportunity cost enters, and even where arithmetic favored buying, qualitative factors could still overturn it. Verification anchor: $1,104,000 - $78,000 = $1,026,000 versus $864,000 to make.",
+        "Explanation": "Sound evaluation pairs the $162,000 quantitative disadvantage with strategic evidence. The first statement reflects Exhibit 2's contractual price hold, a genuine risk-transfer benefit; the second flags a quality-driven cost not captured in the model; the third warns about irreversible loss of tacit capability that could raise future switching costs. The fourth statement is factually wrong because unavoidable means the $252,000 persists under either alternative, by definition and per Exhibit 1. The fifth misreads the numbers: the apparent $12,000 recorded-cost saving reverses into a $162,000 economic loss once opportunity cost enters, and even where arithmetic favored buying, qualitative factors could still overturn it. Verification anchor: $1,104,000 - $78,000 = $1,026,000 versus $864,000 to make. This explanation directly addresses why the selected choice is correct based on the exhibit data. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Qualitative factors",
         "Subtopic": "Strategic considerations in outsourcing",
         "Difficulty": "Moderate",
@@ -2614,7 +2614,7 @@ const casePackP2_2 = [
           "Assign a named executive owner and a dated treatment milestone to every risk scored 6 or higher",
           "Refresh key-risk-indicator dashboards quarterly so trend movements trigger reassessment between annual cycles"
         ],
-        "Explanation": "Register credibility rests on traceability, accountability, and monitoring. Anchoring scores to the adopted definitions lets two assessors reach the same number and survives audit challenge; ownership with dated milestones operationalizes the board's own requirement for monitored-band risks; and quarterly indicator refresh catches drift before the annual cycle, converting the register from a static artifact into a live control. Deflating scores to signal confidence corrupts the appetite test the board relies on and invites the external assurance review flagged in the scenario. Withholding most of the inventory defeats enterprise-wide visibility and hides aggregate concentration effects. Consistency check: every band in Exhibit 2 presumes honest scores, so any systematic bias invalidates the exception logic applied to R-01's residual 10.",
+        "Explanation": "Register credibility rests on traceability, accountability, and monitoring. Anchoring scores to the adopted definitions lets two assessors reach the same number and survives audit challenge; ownership with dated milestones operationalizes the board's own requirement for monitored-band risks; and quarterly indicator refresh catches drift before the annual cycle, converting the register from a static artifact into a live control. Deflating scores to signal confidence corrupts the appetite test the board relies on and invites the external assurance review flagged in the scenario. Withholding most of the inventory defeats enterprise-wide visibility and hides aggregate concentration effects. Consistency check: every band in Exhibit 2 presumes honest scores, so any systematic bias invalidates the exception logic applied to R-01's residual 10. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Risk governance",
         "Subtopic": "Register quality practices",
         "Difficulty": "Moderate",
@@ -4293,7 +4293,7 @@ const casePackP2_2 = [
           "Pecking order predicts Meridian will issue new external equity before using retained earnings because external equity has the lowest information cost",
           "CCC improvements are unrelated to capital structure — a 70-day cycle never affects how much debt or equity Meridian must raise"
         ],
-        "Explanation": "Trade-off theory: optimum where marginal shield equals marginal distress cost. At 30% debt Meridian is conservatively levered, so moderate added debt still adds value. Pecking order ranks retained earnings first, then debt, then external equity last — reverse of choice D. Choice C confuses component cost with WACC. Choice E is false — CCC tie-up directly raises total funding requirement.",
+        "Explanation": "Trade-off theory: optimum where marginal shield equals marginal distress cost. At 30% debt Meridian is conservatively levered, so moderate added debt still adds value. Pecking order ranks retained earnings first, then debt, then external equity last — reverse of choice D. Choice C confuses component cost with WACC. Choice E is false — CCC tie-up directly raises total funding requirement. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Optimal leverage and financing hierarchy",
         "Subtopic": "Trade-off vs pecking order",
         "Difficulty": "Difficult",
@@ -4676,7 +4676,7 @@ const casePackP2_2 = [
           "R3 residual at $160,000 after enhanced controls — within appetite, monitor via recordable-incident KRI",
           "R5 — Permit & regulatory delay at $300,000 — at appetite, no escalation unless tolerance is breached"
         ],
-        "Explanation": "Appetite test is residual EL ≤ $300k per class. Inherent ELs are R1 480k, R2 450k, R4 400k — all exceed appetite requiring funded action. R3 at 400k inherent would breach, but controls cut residual to 160k which clears appetite. R5 at 300k sits exactly at appetite — acceptable with contingency, escalate only if $350k red crossed. Correlation (+0.40 between R2/R5) argues for escalating R2.",
+        "Explanation": "Appetite test is residual EL ≤ $300k per class. Inherent ELs are R1 480k, R2 450k, R4 400k — all exceed appetite requiring funded action. R3 at 400k inherent would breach, but controls cut residual to 160k which clears appetite. R5 at 300k sits exactly at appetite — acceptable with contingency, escalate only if $350k red crossed. Correlation (+0.40 between R2/R5) argues for escalating R2. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Appetite breach and escalation",
         "Subtopic": "Residual vs inherent",
         "Difficulty": "Difficult",
@@ -4983,7 +4983,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter Alpha's NPV at 10% (including after-tax salvage), in dollars rounded to nearest dollar.",
         "Correct": "323646",
-        "Explanation": "ATCFs: Y1 520k*0.75+240k*0.25=450,000; Y2 486,000; Y3 520k*0.75+230.4k*0.25=447,600; Y4 operating 520k*0.75+138.24k*0.25=424,560 plus salvage 126,840 =551,400. Discounted at 10%: Y1 409,091; Y2 401,653; Y3 336,289; Y4 376,614. Sum PV=1,523,646 minus 1,200,000 = $323,646. Positive NPV adds shareholder value. Omitting MACRS shield or taxing salvage on full proceeds misstates NPV >$50k.",
+        "Explanation": "ATCFs: Y1 520k*0.75+240k*0.25=450,000; Y2 486,000; Y3 520k*0.75+230.4k*0.25=447,600; Y4 operating 520k*0.75+138.24k*0.25=424,560 plus salvage 126,840 =551,400. Discounted at 10%: Y1 409,091; Y2 401,653; Y3 336,289; Y4 376,614. Sum PV=1,523,646 minus 1,200,000 = $323,646. Positive NPV adds shareholder value. Omitting MACRS shield or taxing salvage on full proceeds misstates NPV >$50k. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Net present value",
         "Subtopic": "After-tax salvage terminal value",
         "Difficulty": "Difficult",
@@ -5249,7 +5249,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the annualized yen premium (positive) for the 90-day forward, in percent rounded to two decimals.",
         "Correct": "8.11",
-        "Explanation": "Premium=(148-145)/148×360/90=3/148=2.027%×4=8.11%. Yen at premium.",
+        "Explanation": "Premium=(148-145)/148×360/90=3/148=2.027%×4=8.11%. Yen at premium. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
         "Topic": "FX premium",
         "Subtopic": "Annualized",
         "Difficulty": "Difficult",
@@ -5589,7 +5589,7 @@ const casePackP2_2 = [
           "C": "Capacity breached — Strategy",
           "D": "No breach"
         },
-        "Explanation": "Tolerance breached — Performance component triggers review.",
+        "Explanation": "Tolerance breached — Performance component triggers review. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
         "Topic": "Boundary vs component",
         "Subtopic": "Breach",
         "Difficulty": "Moderate",
@@ -5973,7 +5973,7 @@ const casePackP2_2 = [
           "D": "Allocated overhead $10k",
           "E": "Y's salvage if Y chosen"
         },
-        "Explanation": "Relevant items for the truck choice are the differential pre-tax savings ($52k Alpha vs $48k Beta = $4k/yr) and the MACRS shield differential (5yr 20/32% vs 3yr 33/44% of investment). Original book value $80k and allocated overhead $10k are sunk or allocated and irrelevant to the incremental EAA ranking.",
+        "Explanation": "Relevant items for the truck choice are the differential pre-tax savings ($52k Alpha vs $48k Beta = $4k/yr) and the MACRS shield differential (5yr 20/32% vs 3yr 33/44% of investment). Original book value $80k and allocated overhead $10k are sunk or allocated and irrelevant to the incremental EAA ranking. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Items",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -6160,7 +6160,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the degree of operating leverage at current sales, rounded to two decimals.",
         "Correct": "2.50",
-        "Explanation": "DOL=CM/OI=50/20=2.50. 10% sales →25% OI. Using sales/OI trap.",
+        "Explanation": "DOL=CM/OI=50/20=2.50. 10% sales →25% OI. Using sales/OI trap. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
         "Topic": "DOL",
         "Subtopic": "CM/OI",
         "Difficulty": "Moderate",
@@ -6450,7 +6450,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter joint cost allocated to Product A via NRV, in dollars.",
         "Correct": "53333",
-        "Explanation": "A =120k×80/180=53,333. Physical tons trap. 44.4% of joint.",
+        "Explanation": "A =120k×80/180=53,333. Physical tons trap. 44.4% of joint. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
         "Topic": "NRV allocation",
         "Subtopic": "A",
         "Difficulty": "Moderate",
@@ -7678,7 +7678,7 @@ const casePackP2_2 = [
           "Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$10M",
           "Enter immediately — the expected value dominates the other alternatives"
         ],
-        "Explanation": "The maximin criterion selects the alternative with the best worst-case payoff (maximize the minimum). Immediate entry's worst case is −$10M (small market). The pilot's worst case is −$1.5M (small market, unfavorable signal, withdraw). Wait's worst case is $1M (small market). Maximin = max(−$10M, −$1.5M, $1M) = $1M → choose Wait. The maximin criterion is appropriate for risk-averse decision-makers who prioritize avoiding the largest loss. It ignores the probability distribution and the upside potential. A common exam trap is to confuse maximin (best worst case) with maximax (best best case), which would choose immediate entry for its $28M upside.",
+        "Explanation": "The maximin criterion selects the alternative with the best worst-case payoff (maximize the minimum). Immediate entry's worst case is −$10M (small market). The pilot's worst case is −$1.5M (small market, unfavorable signal, withdraw). Wait's worst case is $1M (small market). Maximin = max(−$10M, −$1.5M, $1M) = $1M → choose Wait. The maximin criterion is appropriate for risk-averse decision-makers who prioritize avoiding the largest loss. It ignores the probability distribution and the upside potential. A common exam trap is to confuse maximin (best worst case) with maximax (best best case), which would choose immediate entry for its $28M upside. The key values from the exhibits are 2750000.",
         "Topic": "Decision criteria",
         "Subtopic": "Maximin",
         "Difficulty": "Moderate",
@@ -8354,7 +8354,7 @@ const casePackP2_2 = [
           "D": "The $55.00 normal selling price because it establishes the value of the brackets",
           "E": "The $4,200 setup cost specific to the special order that would not exist without it"
         },
-        "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis.",
+        "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Relevant costing",
         "Subtopic": "Cost identification",
         "Difficulty": "Moderate",
@@ -10394,4 +10394,4 @@ const casePackP2_2 = [
       }
     ]
   }
-];
+]

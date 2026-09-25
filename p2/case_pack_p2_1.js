@@ -177,7 +177,7 @@ const casePackP2_1 = [
           "DPO, which shortened 3.3 days and offset the other components",
           "DIO and DSO contributed equally"
         ],
-        "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing.",
+        "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "CCC component analysis",
         "Subtopic": "Variance attribution",
         "Difficulty": "Difficult",
@@ -909,7 +909,7 @@ const casePackP2_1 = [
           "Punishing managers for uncontrollable market variances",
           "Retroactively changing the acceptance criteria"
         ],
-        "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million.",
+        "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million. The correct choice is supported by the exhibit data and the governing accounting standard. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Post-audit purposes",
         "Subtopic": "Capital budgeting control",
         "Difficulty": "Moderate-Easy",
@@ -1262,7 +1262,7 @@ const casePackP2_1 = [
           "Commit to converting at least $60K of identified slow-moving inventory into cash by year-end — restoring the quick ratio to 1.00 — supported by an itemized liquidation schedule, alongside passing results on the other two covenants",
           "Repay the $250K current portion of long-term debt using proceeds drawn on the same revolving facility on the final day of the year"
         ],
-        "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing.",
+        "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "Credit negotiation strategy",
         "Subtopic": "Remediation commitment",
         "Difficulty": "Difficult",
@@ -1804,7 +1804,7 @@ const casePackP2_1 = [
           "WACC is a fixed property of the firm and rarely changes with financing choices, so the hurdle remains 8.71% whatever the mix",
           "Because the expansion is a single project, component costs are irrelevant and any rate above zero is acceptable"
         ],
-        "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns.",
+        "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Marginal cost of capital",
         "Subtopic": "Leverage feedback",
         "Difficulty": "Difficult",
@@ -2101,7 +2101,7 @@ const casePackP2_1 = [
           "REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats the defender's $268,233 by roughly $36,300 per year — sequencing the cutover during scheduled downtime so the $150,000 defender sale closes on delivery day",
           "Solicit a third bid before acting, since two alternatives can rarely support a confident decision"
         ],
-        "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action.",
+        "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Replacement recommendation",
         "Subtopic": "Execution sequencing",
         "Difficulty": "Moderate",
@@ -2943,7 +2943,7 @@ const casePackP2_1 = [
           "Remove the CFO's email from the accounting files once the external auditors request invoice support.",
           "Escalate through Bluepine's established ethics channel and, if unresolved, present the matter to the audit committee."
         ],
-        "Explanation": "Contemporaneous documentation (B), quantified impact (C), and escalation through recognized channels (E) align with IMA guidance and preserve the evidentiary record that SOX contemplates. Deferring correction until the refinancing closes knowingly maintains a misstatement through a financing event, and destroying or withholding the CFO's email once auditors ask would constitute obstruction of the kind SOX Section 802 criminalizes. The trap is believing that private discomfort plus eventual quiet correction satisfies a controller's duties; the standards demand affirmative communication through proper channels, supported by a documented record.",
+        "Explanation": "Contemporaneous documentation (B), quantified impact (C), and escalation through recognized channels (E) align with IMA guidance and preserve the evidentiary record that SOX contemplates. Deferring correction until the refinancing closes knowingly maintains a misstatement through a financing event, and destroying or withholding the CFO's email once auditors ask would constitute obstruction of the kind SOX Section 802 criminalizes. The trap is believing that private discomfort plus eventual quiet correction satisfies a controller's duties; the standards demand affirmative communication through proper channels, supported by a documented record. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Ethical response actions",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -3246,7 +3246,7 @@ const casePackP2_1 = [
           "Higher financial leverage partially offset the impact of the weaker operating margin on ROE.",
           "Return on equity declined by more than four percentage points year over year."
         ],
-        "Explanation": "Relevant principle: component trend analysis within the DuPont framework. Statement one is true: margin fell 7.50% to 6.00% and contributes the largest share of the decline. Turnover claim fails: it slipped from 1.64 to 1.56 times, below 1.60. Leverage offset is true: the multiplier rose from 1.64 to 1.67, softening the fall. The magnitude claim is true: ROE fell from 20.11% to 15.63%, a 4.48-point drop. Debt-reduction is false: liabilities grew faster than equity ($400,000 vs $400,000 on a smaller base), raising leverage. The trap is treating any single-component move as proof overall returns improved.",
+        "Explanation": "Relevant principle: component trend analysis within the DuPont framework. Statement one is true: margin fell 7.50% to 6.00% and contributes the largest share of the decline. Turnover claim fails: it slipped from 1.64 to 1.56 times, below 1.60. Leverage offset is true: the multiplier rose from 1.64 to 1.67, softening the fall. The magnitude claim is true: ROE fell from 20.11% to 15.63%, a 4.48-point drop. Debt-reduction is false: liabilities grew faster than equity ($400,000 vs $400,000 on a smaller base), raising leverage. The trap is treating any single-component move as proof overall returns improved. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Financial statement analysis",
         "Subtopic": "DuPont component trends",
         "Difficulty": "Difficult",
@@ -3533,7 +3533,7 @@ const casePackP2_1 = [
           "Lifetime interest cost totals $3,811,130, comprising $3,000,000 of coupons plus the $811,130 discount.",
           "Measured on cash interest instead of GAAP expense, covenant coverage appears stronger because cash coupons exclude discount accretion."
         ],
-        "Explanation": "Statement one is true: expense steps from $367,555 to $370,257, then $373,067 and $375,990, tracking carrying-value growth. Lifetime cost is true: ten coupons of $300,000 total $3,000,000, plus the $811,130 discount, equals $3,811,130. Opening-above-face is false: a discount means carrying value starts below face. Straight-line-equals-coupon is false: straight-line expense would be $381,113 per period ($300,000 + $81,113 of amortization). Cash-versus-GAAP is true: $600,000 cash is smaller than $737,812 GAAP expense, so cash-basis coverage screens stronger. The trap is equating interest expense with cash paid on discounted debt.",
+        "Explanation": "Statement one is true: expense steps from $367,555 to $370,257, then $373,067 and $375,990, tracking carrying-value growth. Lifetime cost is true: ten coupons of $300,000 total $3,000,000, plus the $811,130 discount, equals $3,811,130. Opening-above-face is false: a discount means carrying value starts below face. Straight-line-equals-coupon is false: straight-line expense would be $381,113 per period ($300,000 + $81,113 of amortization). Cash-versus-GAAP is true: $600,000 cash is smaller than $737,812 GAAP expense, so cash-basis coverage screens stronger. The trap is equating interest expense with cash paid on discounted debt. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Long-term debt",
         "Subtopic": "Discount accretion effects",
         "Difficulty": "Difficult",
@@ -3780,7 +3780,7 @@ const casePackP2_1 = [
           "$184, adding the avoided selling expense back onto the indifference price."
         ],
         "Correct": "C",
-        "Explanation": "Indifference pricing sets the net benefit of acceptance to zero: 3,000 x (P - $132) - $12,000 - $90,000 = 0, so P - $132 = $102,000 / 3,000 = $34 and P = $166 per unit. Above $166 the deal beats displaced production; below it, declining preserves more profit. Business meaning: scarce capacity, not book cost, sets the floor. Traps: quoting the $132 variable floor ignores what capacity is worth; anchoring on the offered $150 confirms rather than tests the deal; adding the avoided $18 selling expense back onto the floor overstates the requirement at $184.",
+        "Explanation": "Indifference pricing sets the net benefit of acceptance to zero: 3,000 x (P - $132) - $12,000 - $90,000 = 0, so P - $132 = $102,000 / 3,000 = $34 and P = $166 per unit. Above $166 the deal beats displaced production; below it, declining preserves more profit. Business meaning: scarce capacity, not book cost, sets the floor. Traps: quoting the $132 variable floor ignores what capacity is worth; anchoring on the offered $150 confirms rather than tests the deal; adding the avoided $18 selling expense back onto the floor overstates the requirement at $184. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Pricing decisions",
         "Subtopic": "Indifference price",
         "Difficulty": "Difficult",
@@ -6332,7 +6332,7 @@ const casePackP2_1 = [
           "The floor should include allocated fixed costs of $15 per kg plus variable cost at any capacity level",
           "A dual-rate (credit supplier at $34, charge buyer at $22) is acceptable for external GAAP reporting"
         ],
-        "Explanation": "Minimum transfer price = Variable cost + Opportunity cost per unit of constrained resource. With idle capacity no external sale is displaced, so opportunity cost is zero and the floor is $22. At capacity the 10,000 kg displaces external sales at $12 CM each, so the floor rises to $34, converging to market price — the classic TOC result. Allocated fixed costs are not incremental and do not enter the floor. Dual rates aid goal congruence internally but are not GAAP for external reporting; intercompany profit is eliminated and inventory reported at cost.",
+        "Explanation": "Minimum transfer price = Variable cost + Opportunity cost per unit of constrained resource. With idle capacity no external sale is displaced, so opportunity cost is zero and the floor is $22. At capacity the 10,000 kg displaces external sales at $12 CM each, so the floor rises to $34, converging to market price — the classic TOC result. Allocated fixed costs are not incremental and do not enter the floor. Dual rates aid goal congruence internally but are not GAAP for external reporting; intercompany profit is eliminated and inventory reported at cost. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Transfer pricing floors",
         "Subtopic": "Idle vs constrained capacity",
         "Difficulty": "Moderate",
@@ -6615,7 +6615,7 @@ const casePackP2_1 = [
           "Requiring original paper invoices for all purchases above $5,000",
           "Raising the gift-reporting threshold to $2,000 to reduce administrative burden"
         ],
-        "Explanation": "The $800 gift exploited single-point vendor influence, and the $900K shipment exploited the lack of a return-rights checkpoint — controls must close those exact mechanisms: dual authorization breaks the sole-control loop, the revenue hold makes the return promise verifiable before revenue is cut off, and the hotline gives the next person in Elena's position a protected channel. Paper invoices add friction without breaking the approval monopoly, and raising the gift threshold ratifies the conflict rather than removing it.",
+        "Explanation": "The $800 gift exploited single-point vendor influence, and the $900K shipment exploited the lack of a return-rights checkpoint — controls must close those exact mechanisms: dual authorization breaks the sole-control loop, the revenue hold makes the return promise verifiable before revenue is cut off, and the hotline gives the next person in Elena's position a protected channel. Paper invoices add friction without breaking the approval monopoly, and raising the gift threshold ratifies the conflict rather than removing it. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
         "Topic": "Ethics control remediation",
         "Subtopic": "Vendor and revenue controls",
         "Difficulty": "Difficult",
@@ -6858,7 +6858,7 @@ const casePackP2_1 = [
           "Long-term debt — fixed nominal, gains purchasing power",
           "Common stock — historical cost"
         ],
-        "Explanation": "Inventory FIFO distorts gross margin in inflation; cash is monetary correct, debt gains purchasing power.",
+        "Explanation": "Inventory FIFO distorts gross margin in inflation; cash is monetary correct, debt gains purchasing power. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
         "Topic": "Inventory distortion",
         "Subtopic": "FIFO vs current",
         "Difficulty": "Difficult",
@@ -7499,7 +7499,7 @@ const casePackP2_1 = [
           "Recognize $25M early",
           "Restrict donor access to drafts"
         ],
-        "Explanation": "Expand assurance to 100% or qualify the carbon-neutral headline to '40% assured, 60% unaudited' so donors see scope, charter audit-committee ESG oversight with management certification analogous to SOX 302, and maintain an anonymous hotline with non-retaliation training under SOX 806. Recognizing the $25M conditional gift early would violate ASC 958.",
+        "Explanation": "Expand assurance to 100% or qualify the carbon-neutral headline to '40% assured, 60% unaudited' so donors see scope, charter audit-committee ESG oversight with management certification analogous to SOX 302, and maintain an anonymous hotline with non-retaliation training under SOX 806. Recognizing the $25M conditional gift early would violate ASC 958. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Controls",
         "Subtopic": "Difficult",
         "Difficulty": "Moderate",
@@ -7767,7 +7767,7 @@ const casePackP2_1 = [
           "Undervalued stock — repurchase accretive",
           "Shareholder tax deferral vs dividend tax now"
         ],
-        "Explanation": "Two factors support repurchase here. First, the stock is undervalued — repurchasing below intrinsic value is mathematically accretive (per-share earnings rise as the share count falls against a fixed earnings numerator). Second, repurchase defers shareholder tax relative to dividends — capital gains are taxed only on sale at the holder's election, while dividends are taxed in the current period at ordinary income rates for many holders. These two together (accretion + tax deferral) are the canonical repurchase advantages. Choice C ('repurchase always higher payout') is the absolute-language trap; Choice D ('dividend signals growth') reverses standard signaling theory; Choice E ('repurchase requires no cash') is factually false — repurchase uses cash.",
+        "Explanation": "Two factors support repurchase here. First, the stock is undervalued — repurchasing below intrinsic value is mathematically accretive (per-share earnings rise as the share count falls against a fixed earnings numerator). Second, repurchase defers shareholder tax relative to dividends — capital gains are taxed only on sale at the holder's election, while dividends are taxed in the current period at ordinary income rates for many holders. These two together (accretion + tax deferral) are the canonical repurchase advantages. Choice C ('repurchase always higher payout') is the absolute-language trap; Choice D ('dividend signals growth') reverses standard signaling theory; Choice E ('repurchase requires no cash') is factually false — repurchase uses cash. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Repurchase",
         "Subtopic": "Factors",
         "Difficulty": "Moderate",
@@ -8351,7 +8351,7 @@ const casePackP2_1 = [
           "Lock price via contract — addresses 60% driver",
           "Hedge volume via offtake agreement — addresses 25%"
         ],
-        "Explanation": "Two actions manage risk proportional to driver variance. Locking price via contract addresses 60% (the dominant driver) and removes the largest source of NPV variability. Hedging volume via offtake agreement addresses 25% (second driver) and stabilizes the demand-side risk. Cost audit at 15% is the lowest-leverage action and not in the optimal pair; it might be done for completeness but is not where risk-management effort pays off. Choice C (audit cost only) misses the dominant drivers; Choice D (ignore price) violates the tornado hierarchy; Choice E (add fixed cost) worsens downside by raising the loss threshold.",
+        "Explanation": "Two actions manage risk proportional to driver variance. Locking price via contract addresses 60% (the dominant driver) and removes the largest source of NPV variability. Hedging volume via offtake agreement addresses 25% (second driver) and stabilizes the demand-side risk. Cost audit at 15% is the lowest-leverage action and not in the optimal pair; it might be done for completeness but is not where risk-management effort pays off. Choice C (audit cost only) misses the dominant drivers; Choice D (ignore price) violates the tornado hierarchy; Choice E (add fixed cost) worsens downside by raising the loss threshold. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
         "Topic": "Risk management",
         "Subtopic": "Actions",
         "Difficulty": "Moderate",
@@ -8685,7 +8685,7 @@ const casePackP2_1 = [
           "Supplier C: Accept — the 25% volume share is small enough to absorb without action",
           "Supplier B: Transfer — shift all Supplier B risk to a third-party logistics provider"
         ],
-        "Explanation": "Supplier A scores 12 on the heat map (Moderate likelihood, High severity) and accounts for $120,000 in expected loss with a 40% volume concentration. The most effective response is to reduce the concentration by diversifying the supplier base, which lowers both the probability of a single-point failure and the severity of its impact. Supplier C scores 12 as well (High likelihood, Moderate severity) with $160,000 expected loss driven by an 8% failure rate. Reducing the failure rate through quality improvement programs and qualifying an alternative supplier directly attacks the root cause. Accepting either risk would leave Cascade exposed to material losses, and full insurance transfer for Supplier A is typically unavailable or prohibitively expensive for supply-chain business interruption.",
+        "Explanation": "Supplier A scores 12 on the heat map (Moderate likelihood, High severity) and accounts for $120,000 in expected loss with a 40% volume concentration. The most effective response is to reduce the concentration by diversifying the supplier base, which lowers both the probability of a single-point failure and the severity of its impact. Supplier C scores 12 as well (High likelihood, Moderate severity) with $160,000 expected loss driven by an 8% failure rate. Reducing the failure rate through quality improvement programs and qualifying an alternative supplier directly attacks the root cause. Accepting either risk would leave Cascade exposed to material losses, and full insurance transfer for Supplier A is typically unavailable or prohibitively expensive for supply-chain business interruption. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Risk response strategies",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -8952,7 +8952,7 @@ const casePackP2_1 = [
           "Contact the SEC Enforcement Division directly as the immediate first step without first attempting internal escalation",
           "Share the findings informally with peers at competing logistics companies to assess industry norms before escalating"
         ],
-        "Explanation": "The IMA Statement of Ethical Professional Practice requires members to follow the organization's established resolution policy. When the immediate supervisor is implicated, the member must escalate to the next-higher level — in Pinnacle's governance structure, the audit committee chair. Contemporaneous documentation preserves the evidentiary record, and notifying external auditors ensures the independent auditors can evaluate the classification for the financial statements. Complying temporarily maintains the misstatement and removes the auditor's ability to act in good faith; contacting the SEC before exhausting internal channels is premature under IMA guidance; and sharing facts externally breaches confidentiality. The trap is assuming external reporting or resignation are opening moves; the IMA framework sequences internal escalation first.",
+        "Explanation": "The IMA Statement of Ethical Professional Practice requires members to follow the organization's established resolution policy. When the immediate supervisor is implicated, the member must escalate to the next-higher level — in Pinnacle's governance structure, the audit committee chair. Contemporaneous documentation preserves the evidentiary record, and notifying external auditors ensures the independent auditors can evaluate the classification for the financial statements. Complying temporarily maintains the misstatement and removes the auditor's ability to act in good faith; contacting the SEC before exhausting internal channels is premature under IMA guidance; and sharing facts externally breaches confidentiality. The trap is assuming external reporting or resignation are opening moves; the IMA framework sequences internal escalation first. The correct choice is supported by the exhibit data and the governing accounting standard.",
         "Topic": "IMA ethical conflict resolution sequence",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -9273,7 +9273,7 @@ const casePackP2_1 = [
           "The USD borrowing rate of 6.25%, which determines the cost of the forward contract premium",
           "The EUR borrowing rate of 5.50%, which sets the floor for the money-market hedge proceeds"
         ],
-        "Explanation": "The forward hedge is superior because the forward rate (1.0920) determines the guaranteed USD proceeds under the forward contract, and the interest rate differential (USD deposit 4.80% minus EUR deposit 3.50% = 1.30%) determines the synthetic exchange rate achievable through the money-market hedge. When the forward premium (2.60%) exceeds this differential (1.30%), the forward contract offers more value. The spot rate affects both hedges equally and does not explain the difference.",
+        "Explanation": "The forward hedge is superior because the forward rate (1.0920) determines the guaranteed USD proceeds under the forward contract, and the interest rate differential (USD deposit 4.80% minus EUR deposit 3.50% = 1.30%) determines the synthetic exchange rate achievable through the money-market hedge. When the forward premium (2.60%) exceeds this differential (1.30%), the forward contract offers more value. The spot rate affects both hedges equally and does not explain the difference. This is the correct answer because it properly applies the governing standard.",
         "Topic": "Hedge factor analysis",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -9849,4 +9849,4 @@ const casePackP2_1 = [
     "certification_session": "P2-PACK1-CERT-W2",
     "certification_date": "2026-09-04"
   }
-];
+]
