@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@huggingface/transformers": "^4.2.0",
-    "electron": "^44.4.3",
+    "electron": "^44.4.5",
     "playwright": "^1.61.1"
   }
 }
