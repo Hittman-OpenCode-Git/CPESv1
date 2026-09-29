@@ -40,6 +40,8 @@
 "question_state": "Certified",
     "certification_batch": "P2-CASE-CERT-20260921",
     "certification_date": "2026-09-21",
+    "recertification_batch": "DL-065-RECERT",
+    "recertification_date": "2026-09-28",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -177,18 +179,18 @@
         "Type": "multi",
         "Prompt": "Which THREE costs are relevant to SmartSense's decision to proceed with or reject the sensor launch? Select exactly three.",
         "Correct": [
-          "The $6.30 per-unit value-engineering gap between current and allowable cost",
+          "The $37.50 per-unit manufacturing cost that will be incurred only if the product is launched",
           "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
           "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
         ],
         "Choices": {
           "A": "The $6.30 per-unit value-engineering gap between current and allowable cost",
-          "B": "The $37.50 per-unit manufacturing cost because it is a sunk cost once the design is finalized",
+          "B": "The $37.50 per-unit manufacturing cost that will be incurred only if the product is launched",
           "C": "The $420,000 in upfront tooling investment that has no alternative use if the product is cancelled",
           "D": "The $48.00 market price because it is fixed by competitors and cannot be changed",
           "E": "The $0.85 per-unit end-of-life recycling compliance cost that will be incurred only if the product is manufactured"
         },
-        "Explanation": "Relevant costs are future costs that differ between alternatives. The $6.30 gap (choice A) is relevant because it quantifies the cost reduction needed to make the project viable â€” it changes depending on whether SmartSense proceeds. The $420,000 tooling (choice C) is relevant because it is an avoidable future cost: if SmartSense cancels, the tooling expenditure is avoided entirely. The $0.85 recycling cost (choice E) is relevant because it is incurred only if production proceeds. The $37.50 manufacturing cost (B) is NOT relevant because it represents the current design estimate, not a differential cost between proceed and reject. The $48.00 market price (D) is a revenue parameter, not a cost â€” it is given and cannot be altered by SmartSense's decision.",
+        "Explanation": "Relevant costs are future costs that differ between the proceed and reject alternatives. The $37.50 manufacturing cost (choice B) is relevant: it is a future cost incurred only if the product launches, and the design is not yet finalized, so it is not sunk. The $420,000 tooling (choice C) is relevant because it is an avoidable future cost: if SmartSense cancels, the tooling expenditure is avoided entirely. The $0.85 recycling cost (choice E) is relevant because it is incurred only if production proceeds. The $6.30 value-engineering gap (choice A) is a derived metric, not a cost that will be incurred. The $48.00 market price (choice D) is a revenue parameter, not a cost, and it is given and cannot be altered by SmartSense's decision.",
         "Topic": "Relevant costing",
         "Subtopic": "Cost identification",
         "Difficulty": "Difficult",
@@ -280,8 +282,8 @@
 "question_state": "Certified",
 "certification_batch": "P2-CASE-CERT-20260921",
 "certification_date": "2026-09-21",
-"recertification_batch": "DL-063-RECERT",
-    "recertification_date": "2026-09-25",
+"recertification_batch": "DL-065-RECERT",
+    "recertification_date": "2026-09-28",
 "quarantine_batch": "DL-063-QUARANTINE",
 "quarantine_date": "2026-09-24",
 "quarantine_reason": "DL-063: CBQ22-C10-Q4 answer-key/explanation inversion â€” stored Correct B ($0.00) contradicts EC conclusion $6.00; correct answer absent from choices",
@@ -426,17 +428,17 @@
         "Prompt": "Which THREE statements about Alpine's product mix are correct under what-if analysis? Select exactly three.",
         "Correct": [
           "If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint",
-          "If Product B's contribution margin rises to $24 per unit, the optimal mix shifts toward producing more B",
+          "If Product B's contribution margin rises to $40 per unit, the optimal mix shifts toward producing more B",
           "If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"
         ],
         "Choices": {
           "A": "If extrusion capacity increases to 3,600 hours, the demand constraint on Product A (1,200 units) becomes the new binding constraint",
           "B": "Increasing packaging capacity will always improve the optimal objective value",
-          "C": "If Product B's contribution margin rises to $24 per unit, the optimal mix shifts toward producing more B",
+          "C": "If Product B's contribution margin rises to $40 per unit, the optimal mix shifts toward producing more B",
           "D": "The shadow price of the extrusion constraint remains constant for all possible increases in capacity",
           "E": "If the demand limit for Product A is removed entirely, Alpine would produce only Product A using all extrusion hours"
         },
-        "Explanation": "Statement A is correct: with 3,600 extrusion hours, the binding constraint shifts from extrusion to Product A's demand limit of 1,200 units (1,200 Ã— 2 = 2,400 hours for A, leaving 1,200 hours for B, or 400 units of B at 3 hours each). Statement C is correct: if B's CM rises to $24, the CM per extrusion hour for B becomes $24/3 = $8, matching A's $24/2 = $12 per hour â€” B becomes relatively more attractive, shifting the mix. Statement E is correct: without A's demand limit, all 3,000 extrusion hours go to A (3,000/2 = 1,500 units), yielding $36,000 CM â€” higher than the constrained optimum. Statement B is false: packaging already has slack; adding more slack does not improve the objective. Statement D is false: the shadow price changes once the constraint is relaxed beyond the range where it remains binding.",
+        "Explanation": "Statement A is correct: with 3,600 extrusion hours, the binding constraint shifts from extrusion to Product A's demand limit of 1,200 units (1,200 Ã— 2 = 2,400 hours for A, leaving 1,200 hours for B, or 400 units of B at 3 hours each). Statement C is correct: if B's CM rises to $40, the CM per extrusion hour for B becomes $40/3 = $13.33, exceeding A's $24/2 = $12 per hour â€” B becomes relatively more attractive on the binding extrusion constraint, shifting the mix toward B. Statement E is correct: without A's demand limit, all 3,000 extrusion hours go to A (3,000/2 = 1,500 units), yielding $36,000 CM â€” higher than the constrained optimum. Statement B is false: packaging already has slack; adding more slack does not improve the objective. Statement D is false: the shadow price changes once the constraint is relaxed beyond the range where it remains binding.",
         "Topic": "What-if analysis",
         "Subtopic": "Sensitivity analysis",
         "Difficulty": "Very Difficult",

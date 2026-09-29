@@ -1148,8 +1148,8 @@ const CASE_PACK_1 = [
       {
         "Type": "select",
         "Prompt": "Under US GAAP for a FIFO firm, inventory is valued at:",
-        "Correct": "Lower of cost or NRV",
-        "Explanation": "Under US GAAP, FIFO inventory is valued at the lower of cost or net realizable value (NRV); LIFO and Retail methods use lower of cost or market (LCM). Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. This explanation directly addresses why the selected choice is correct based on the exhibit data.",
+        "Correct": "Lower of cost or market",
+        "Explanation": "Under US GAAP (ASC 330), FIFO inventory is valued at the lower of cost or market, where market is replacement cost constrained by a ceiling (NRV) and a floor (NRV less normal profit margin). The lower-of-cost-or-NRV rule is the IFRS (IAS 2) requirement, not US GAAP. A common error is confusing the two standards' terminology.",
         "Topic": "Inventory",
         "Choices": [
           "Lower of cost or NRV",
@@ -1166,7 +1166,7 @@ const CASE_PACK_1 = [
           "DistractorSimilarity"
         ],
         "CommonTrapReference": "Trap 10: FIFO vs Weighted Average",
-        "AccountingPrinciple": "FIFO inventory valued at lower of cost or NRV under GAAP.",
+        "AccountingPrinciple": "FIFO inventory valued at lower of cost or market under US GAAP (ASC 330).",
         "CalculationRequired": false,
         "CaseID": "CBQ2-A2",
         "DecisionTreeReference": "Financial Statement Ratios",
@@ -1186,8 +1186,8 @@ const CASE_PACK_1 = [
       {
         "Type": "numeric",
         "Prompt": "What is the per-unit valuation for the inventory at year-end?",
-        "Correct": 13,
-        "Explanation": "Cost of $15 exceeds NRV of $13; per the LCNRV rule, inventory is written down to the lower value of $13 per unit.",
+        "Correct": 12,
+        "Explanation": "Under US GAAP (ASC 330), FIFO inventory is valued at the lower of cost or market. Market is replacement cost ($12), constrained by the ceiling (NRV $13) and floor (NRV less normal profit, $10); replacement cost falls within the range, so market = $12. LCM = min($15 cost, $12 market) = $12 per unit. A common error is applying the IFRS lower-of-cost-or-NRV rule ($13) instead of US GAAP LCM.",
         "Topic": "Inventory",
         "ItemID": "CBQ2-A2-Q2",
         "CognitiveLevel": "Apply",
@@ -1198,7 +1198,7 @@ const CASE_PACK_1 = [
           "Terminology"
         ],
         "CommonTrapReference": "Trap 10: FIFO vs Weighted Average",
-        "AccountingPrinciple": "FIFO inventory valued at lower of cost or NRV under GAAP.",
+        "AccountingPrinciple": "FIFO inventory valued at lower of cost or market under US GAAP (ASC 330).",
         "CalculationRequired": true,
         "CaseID": "CBQ2-A2",
         "DecisionTreeReference": "Financial Statement Ratios",
@@ -1218,8 +1218,8 @@ const CASE_PACK_1 = [
       {
         "Type": "numeric",
         "Prompt": "What is the total inventory write-down required?",
-        "Correct": 20000,
-        "Explanation": "Write-down = ($15 - $13) × 10,000 units = $20,000 total inventory write-down required at year-end.",
+        "Correct": 30000,
+        "Explanation": "Write-down = (cost $15 - LCM market $12) × 10,000 units = $30,000 total inventory write-down required at year-end. Under US GAAP LCM, the per-unit carrying value is $12 (replacement cost within the ceiling/floor range), not the $13 NRV.",
         "Topic": "Inventory",
         "ItemID": "CBQ2-A2-Q3",
         "CognitiveLevel": "Apply",
@@ -1230,7 +1230,7 @@ const CASE_PACK_1 = [
           "Terminology"
         ],
         "CommonTrapReference": "Trap 10: FIFO vs Weighted Average",
-        "AccountingPrinciple": "FIFO inventory valued at lower of cost or NRV under GAAP.",
+        "AccountingPrinciple": "FIFO inventory valued at lower of cost or market under US GAAP (ASC 330).",
         "CalculationRequired": true,
         "CaseID": "CBQ2-A2",
         "DecisionTreeReference": "Financial Statement Ratios",
@@ -1277,7 +1277,7 @@ const CASE_PACK_1 = [
           "Terminology"
         ],
         "CommonTrapReference": "Trap 10: FIFO vs Weighted Average",
-        "AccountingPrinciple": "FIFO inventory valued at lower of cost or NRV under GAAP.",
+        "AccountingPrinciple": "FIFO inventory valued at lower of cost or market under US GAAP (ASC 330).",
         "CalculationRequired": false,
         "CaseID": "CBQ2-A2",
         "DecisionTreeReference": "Financial Statement Ratios",
@@ -1320,7 +1320,7 @@ const CASE_PACK_1 = [
           "DistractorSimilarity"
         ],
         "CommonTrapReference": "Trap 10: FIFO vs Weighted Average",
-        "AccountingPrinciple": "FIFO inventory valued at lower of cost or NRV under GAAP.",
+        "AccountingPrinciple": "FIFO inventory valued at lower of cost or market under US GAAP (ASC 330).",
         "CalculationRequired": false,
         "CaseID": "CBQ2-A2",
         "DecisionTreeReference": "Financial Statement Ratios",
@@ -1339,6 +1339,8 @@ const CASE_PACK_1 = [
       }
     ],
     "question_state": "Certified",
+    "recertification_batch": "DL-065-RECERT",
+    "recertification_date": "2026-09-28",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",

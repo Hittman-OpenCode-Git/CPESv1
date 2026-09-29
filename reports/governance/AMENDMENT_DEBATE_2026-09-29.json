@@ -1,0 +1,57 @@
+{
+  "session": "Governance/Process Subcommittee - Amendment Debate",
+  "date": "2026-09-29",
+  "amendments": [
+    {
+      "id": "A",
+      "title": "Consolidate RULE 6 + RULE 10 → Single EW Completeness Rule",
+      "recommendation": "REJECT",
+      "vote": "No",
+      "keyArguments": [
+        "RULE 6 (DL-026) and RULE 10 (DL-021) catch fundamentally different defect classes: absent field vs present-but-empty field",
+        "Root causes differ: DL-021 = extractor/schema gap; DL-026 = content-authoring gap where writer left placeholder",
+        "Audit trail value: distinguishing 'field missing entirely' vs 'field present but empty' enables targeted remediation and forensic traceability",
+        "Consolidation loses diagnostic precision — a single rule cannot differentiate the two failure modes in violation reports",
+        "Rule count reduction is not a valid governance objective; clarity and auditability trump brevity"
+      ],
+      "dissentingOpinion": "None — unanimous that diagnostic separation provides operational value"
+    },
+    {
+      "id": "B",
+      "title": "Add RULE 22 — Evidence-Basis Traceability",
+      "recommendation": "MODIFY",
+      "vote": "Yes (as modified)",
+      "keyArguments": [
+        "DL-045 doctrine (screen output is evidence, not an author) should be codified for certification-impacting changes",
+        "RULE 17 already covers mass rewrites (≥3 objects) — RULE 22 should extend evidence-basis requirement to certification state changes and answer-key modifications, not all single-item editorial fixes",
+        "Proposed modification: Require evidence-basis citation for (a) any question_state transition to/from Certified, (b) CorrectChoice/Correct changes, (c) ExplanationCorrect/ExplanationWrong rewrites on Certified items. Exempt: metadata-only fixes, formatting, typo corrections on non-Certified items",
+        "Overhead concern valid for pure editorial velocity; scope limitation preserves DL-045 intent without burdening routine cleanup"
+      ],
+      "dissentingOpinion": "Minority view: evidence basis should be required for ALL content changes to build complete audit trail; exemptions create loopholes"
+    },
+    {
+      "id": "C",
+      "title": "Add RULE 23 — Delivery Pool Integrity Continuous Check",
+      "recommendation": "REJECT",
+      "vote": "No",
+      "keyArguments": [
+        "probe:parity (npm run probe:parity) already provides comprehensive delivery pool validation: Certified-only filter, blocklist enforcement, quarantined ID exclusion, per-validator coverage",
+        "Preflight (npm run preflight) runs at T0 for Full Governance Lane; probe:parity runs at Tend — adding a 'lightweight' duplicate creates maintenance burden and divergence risk",
+        "If T0 delivery-pool check is desired, the correct path is to make probe:parity a mandatory preflight step (update package.json pipeline), not create a new rule with parallel implementation",
+        "Rule 21 (semantic quarantine manifest) already blocks Certified flips for quarantined QIDs — delivery pool integrity is gatekept at certification, not runtime"
+      ],
+      "dissentingOpinion": "One member favors MODIFY: integrate probe:parity into preflight as mandatory step rather than new rule; achieves same continuous assurance without rule proliferation"
+    }
+  ],
+  "summary": {
+    "totalAmendments": 3,
+    "passed": 0,
+    "rejected": 2,
+    "modified": 1,
+    "nextSteps": [
+      "Amendment B to be redrafted with scoped evidence-basis requirement (certification/answer-key/explanation changes on Certified items only)",
+      "Amendment C concern addressed by updating preflight to require probe:parity at T0 (package.json change, not new rule)",
+      "Amendment A remains rejected — no further action"
+    ]
+  }
+}

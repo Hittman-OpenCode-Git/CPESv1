@@ -1,5 +1,42 @@
 # REVISION_HISTORY.md
 
+## DL-065 Semantic-Screen Adjudication and Genuine-Defect Remediation — 2026-09-28
+
+**Session:** Full Governance Lane — LLM adjudication of 216 semantic-screen flags (68 MCQ B:INVERSION REVIEW + 148 case certified-state)
+**Trigger:** User workflow: hand-adjudicate screen flags → FP/GENUINE/UNDETERMINED; fix GENUINE + re-stamp + re-verify
+**Scope:** 3 case pack files modified. Backups: `backups/*.bak-20260928215124` (3 files). T0 preflight passed (0 divergences) before writes.
+
+### Adjudication Result
+
+| Workflow | Items | FP | GENUINE | UNDETERMINED |
+|----------|-------|----|---------|--------------|
+| MCQ B:INVERSION REVIEW | 68 | 68 | 0 | 0 |
+| Case certified-state flags | 148 | 143 | 5 | 0 |
+| **Total** | **216** | **211** | **5** | **0** |
+
+All 5 GENUINE verdicts dual-verified against raw pack evidence (independent re-solve) before any write, per AGENTS.md §5.
+
+### Files Modified
+
+| File | Change |
+|------|--------|
+| `content/cases/case_pack_1_corrected.js` | CBQ2-A2-Q1 key "Lower of cost or NRV"→"Lower of cost or market" + boilerplate explanation replaced; CBQ2-A2-Q2 key 13→12; CBQ2-A2-Q3 key 20000→30000; explanations rewritten to ASC 330 LCM; `AccountingPrinciple` corrected on all 5 items; case-level recert stamp |
+| `content/cases/case_pack_3_corrected.js` | CBQ3-D4-Q4 key "-226500"→"223500"; self-contradictory explanation rewritten (POHR 150% × $287,000 DL = $430,500 applied vs $207,000 actual → +223,500 over-applied); case-level recert stamp |
+| `p2/case_pack_p2_C4_C8.js` | CBQ22-C9-Q5 key {A,C,E}→{B,C,E}, choice B text de-sunked, explanation rewritten; CBQ22-C10-Q5 choice C premise $24→$40 (makes statement true), explanation arithmetic corrected; case-level recert stamps |
+
+### Rule 16 Recertification Stamps
+
+All 4 affected cases stamped `recertification_batch: DL-065-RECERT`, `recertification_date: 2026-09-28` (case-level; P1 cases had no prior cert fields — backfill-on-touch).
+
+### Verification
+
+- Backups confirmed non-zero before edits (3 files, `.bak-20260928215124`)
+- All 3 files re-parse cleanly post-edit; fixed values re-read and verified
+- `npm run pipeline` re-run at Tend — see entry tail for result
+- DEFECT_LIBRARY.md: DL-065 entry filed
+
+---
+
 ## P2 Delivery Readiness Certification — Board Stretch Goal Priority 1 — 2026-09-21
 
 **Session:** Full Governance Lane — P2 Delivery Readiness Board Certification

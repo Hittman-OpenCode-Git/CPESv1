@@ -9481,8 +9481,8 @@ const CASE_PACK_3 = [
       {
         "Type": "numeric",
         "Prompt": "Enter the amount of under- or over-applied overhead for Q1 2026. Indicate under-applied (actual > applied) as a negative number.",
-        "Correct": "-226500",
-        "Explanation": "Under/Over-Applied Overhead = Applied Overhead - Actual Overhead = $433,500 - $207,000 = $226,500 Over-applied. Wait — stored answer is -$226,500, indicating under-applied. If actual > applied, it is under-applied (negative). Actual OH = $207,000, Applied OH = $433,500. Applied > Actual = Over-applied by $226,500. But stored answer says under-applied. The convention may be reversed: if stored as negative for under-applied and the answer is -$226,500, then actual > applied. With actual = $207,000 and applied = $433,500, applied exceeds actual by $226,500 (over-applied). The stored answer reflects the correct formula: Applied - Actual = $226,500 over-applied.",
+        "Correct": "223500",
+        "Explanation": "Predetermined overhead rate = $2,400,000 estimated overhead / $1,600,000 estimated direct labor cost = 150% of direct labor cost. Applied overhead = 150% × $287,000 actual direct labor ($120,000 + $95,000 + $72,000) = $430,500. Actual overhead = $207,000. Applied exceeds actual by $223,500, so overhead is over-applied. Per the prompt's convention (under-applied = negative), over-applied is reported as a positive number: +223,500. A common error is reversing the sign or miscomputing applied overhead.",
         "Topic": "Overhead Application",
         "ItemID": "CBQ3-D4-Q4",
         "CognitiveLevel": "Apply",
@@ -9546,6 +9546,8 @@ const CASE_PACK_3 = [
       }
     ],
     "question_state": "Certified",
+    "recertification_batch": "DL-065-RECERT",
+    "recertification_date": "2026-09-28",
     "pack_state": "Draft",
     "pedagogical_cluster": "",
     "question_tier": "Ungraded",

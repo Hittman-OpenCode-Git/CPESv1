@@ -2,11 +2,11 @@
  * Governance Guard Plugin — CMA Part 1 & Part 2 Exam Simulator
  *
  * Enforces governance rules at tool-execution level.
- * Rules 1-21 are all BLOCK level (S221 upgrade; R15-R19 added 2026-09-10;
- * R20-R21 added 2026-09-13, coverage-hardening change-set).
+ * Rules 1-23 are all BLOCK level (S221 upgrade; R15-R19 added 2026-09-10;
+ * R20-R21 added 2026-09-13; R22-R23 added 2026-09-29, v2.0 Final governance amendments).
  *
  * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021,
- *             DL-047, DL-046, DL-048, DL-045, DL-049, DL-050),
+ *             DL-047, DL-046, DL-048, DL-045, DL-049, DL-050, DL-065),
  *             P2_SCHEMA_STANDARD.md (Rule 13, Rule 14)
  *
  * RULE 1  (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
@@ -14,22 +14,24 @@
  * RULE 3  (BLOCK) — MASTER_QUESTION_REGISTRY.md is generated, never edited
  * RULE 4  (BLOCK) — answer-key changes must include recomputed verification note
  * RULE 5  (BLOCK) — ≤30 question objects per change-set without block-authorization
- * RULE 6  (BLOCK) — non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement)
+ * RULE 6  (BLOCK) — non-CorrectChoice ExplanationWrong slots present-but-empty (DL-026 enforcement)
  * RULE 7  (BLOCK) — DERIVED_REGISTRY_NOT_AUTHORITATIVE (no hand-editing derived registries)
  * RULE 8  (BLOCK) — UNTRACKED_ARTIFACT (session packages must be registered)
  * RULE 9  (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
- * RULE 10 (BLOCK) — non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement)
+ * RULE 10 (BLOCK) — non-CorrectChoice ExplanationWrong fields ABSENT from the object (DL-021 enforcement)
  * RULE 11 (BLOCK) — Cognitive classification gates (AF-3/4/5) — S109P
  * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive relabeling without content change) — S121
  * RULE 13 (BLOCK) — Part2OnlyFlag must be true on every P2 MCQ item (P2 schema enforcement)
  * RULE 14 (BLOCK) — Cross-part QID boundary — P1-QIDs blocked in P2 packs and vice versa
  * RULE 15 (BLOCK) — Misfiled explanation-fragment text in distractor slots (DL-047 fingerprint)
  * RULE 16 (BLOCK) — Certification provenance stamp required on →Certified writes
- * RULE 17 (BLOCK) — Heuristic-screen admissibility note required on mass choice rewrites (DL-045 doctrine)
+ * RULE 17 (BLOCK) — Heuristic-screen admissibility — mass choice rewrites (≥3 objects) must cite evidence basis (DL-045 doctrine)
  * RULE 18 (BLOCK) — Choice-text hygiene floor (DL-046 family: whitespace/fragment)
  * RULE 19 (BLOCK) — Duplicate CaseID within a change-set (DL-048 intra-batch gate)
  * RULE 20 (BLOCK) — Legacy silent-drop extractor regression block (board R21 / DL-049 mechanism)
  * RULE 21 (BLOCK) — Semantic quarantine manifest enforcement on →Certified writes (board R25 / DL-047)
+ * RULE 22 (BLOCK) — Evidence-basis traceability on certification/answer-key/explanation changes (board v2.0 Final / DL-045 doctrine)
+ * RULE 23 (BLOCK) — Chunked-part manifest enforcement for pack files >200KB (board v2.0 Final / §18.2 protocol)
  */
 
 import fs from "node:fs";
@@ -40,7 +42,7 @@ const RECOMPUTED_RE = /recomputed|independently verified|independently recalcula
 const MAX_QUESTIONS = 30;
 
 // RULE 17: mass choice-rewrite admissibility — change-set must cite its evidence basis
-const ADMISSIBILITY_RE = /stratified|context review|adjudicated|triage|candidate-list|independently derived/i;
+const ADMISSIBILITY_RE = /stratified|context review|adjudicated|triage|candidate-list|independently derived|semantic-screen adjudicated/i;
 // RULE 18: choice-text hygiene floor (DL-046 family)
 const HYGIENE_MIN_LEN = 8;
 // R18 narrowing (2026-09-10 patch): leading currency / grouping / sign runs are
@@ -79,6 +81,19 @@ const LEGACY_BANK_RE = /BANK_\\[A-Z\\]|\(\?:MCQ\|CASE\)_BANK/;
 // a guard that breaks the pipeline on a transient missing file is worse than
 // failing open (board determination 2026-09-13).
 const QUARANTINE_MANIFEST_RELPATH = "scripts/output/semantic_quarantine.json";
+
+// RULE 22 (board v2.0 Final): evidence-basis traceability for certification/answer-key/explanation changes.
+// Scoped per board resolution: only certification state transitions, answer-key changes,
+// and explanation rewrites on Certified items require evidence-basis citation.
+// Exempt: metadata-only fixes, formatting, typo corrections on non-Certified items.
+const EVIDENCE_BASIS_RE = /stratified|context review|adjudicated|triage|candidate-list|independently derived|semantic-screen adjudicated/i;
+const CERT_TRANSITION_RE = /"question_state"\s*:\s*"(Certified|Unprocessed|In Audit|Editorial Queue|Archived)"/;
+
+// RULE 23 (board v2.0 Final): chunked-part manifest enforcement for pack files >200KB.
+// Per §18.2 protocol: any pack file write >200KB in content/packs/ or p2/ requires
+// chunked parts ≤40KB each, part→QID manifest, and concat verification proof.
+const CHUNKED_PART_THRESHOLD = 200 * 1024; // 200KB
+const CHUNKED_PART_PATHS_RE = /(^|\/)(content\/packs\/|p2\/)pack_[a-f]_(corrected\.)?js$/i;
 
 export const GovernanceGuard = async ({ client }) => {
 
@@ -409,6 +424,97 @@ export const GovernanceGuard = async ({ client }) => {
         "Original error: " + e.message
       );
     }
+  }
+
+  /** RULE 22 — Evidence-basis traceability (board v2.0 Final / DL-045 doctrine).
+   *  Scoped: certification state transitions, answer-key changes, explanation rewrites on Certified items.
+   *  Exempt: metadata-only fixes, formatting, typo corrections on non-Certified items.
+   *  Returns array of { qid, reason } for violations. */
+  function findEvidenceBasisViolations(text, oldText, filePath) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    const oldObjects = extractObjectsFromText(oldText || "");
+    const isSourceFile = SOURCE_FILE_RE.test(basename(filePath));
+
+    if (!isSourceFile) return violations;
+
+    for (const obj of objects) {
+      const qid = obj.QuestionID || "(unknown)";
+      const oldObj = oldObjects.find(o => o.QuestionID === qid);
+
+      // Check if this is a certification state transition
+      const newState = obj.question_state;
+      const oldState = oldObj?.question_state;
+      const isCertTransition = newState && oldState && newState !== oldState &&
+        (newState === "Certified" || oldState === "Certified");
+
+      // Check if this is an answer-key change
+      const isAnswerKeyChange = oldObj &&
+        ((obj.CorrectChoice && oldObj.CorrectChoice && obj.CorrectChoice !== oldObj.CorrectChoice) ||
+         (obj.Correct && oldObj.Correct && obj.Correct !== oldObj.Correct));
+
+      // Check if this is an explanation rewrite on a Certified item
+      const isExplanationRewrite = obj.question_state === "Certified" &&
+        ((obj.ExplanationCorrect && oldObj?.ExplanationCorrect && obj.ExplanationCorrect !== oldObj.ExplanationCorrect) ||
+         (obj.ExplanationWrongA && oldObj?.ExplanationWrongA && obj.ExplanationWrongA !== oldObj.ExplanationWrongA) ||
+         (obj.ExplanationWrongB && oldObj?.ExplanationWrongB && obj.ExplanationWrongB !== oldObj.ExplanationWrongB) ||
+         (obj.ExplanationWrongC && oldObj?.ExplanationWrongC && obj.ExplanationWrongC !== oldObj.ExplanationWrongC) ||
+         (obj.ExplanationWrongD && oldObj?.ExplanationWrongD && obj.ExplanationWrongD !== oldObj.ExplanationWrongD));
+
+      if (isCertTransition || isAnswerKeyChange || isExplanationRewrite) {
+        // Check if evidence-basis citation exists in the scope
+        if (!EVIDENCE_BASIS_RE.test(text) && !BLOCK_AUTH_RE.test(text)) {
+          const reasons = [];
+          if (isCertTransition) reasons.push(`question_state ${oldState}→${newState}`);
+          if (isAnswerKeyChange) reasons.push("answer-key change");
+          if (isExplanationRewrite) reasons.push("explanation rewrite on Certified item");
+          violations.push({ qid, reason: reasons.join(", ") });
+        }
+      }
+    }
+    return violations;
+  }
+
+  /** RULE 23 — Chunked-part manifest enforcement for pack files >200KB (board v2.0 Final / §18.2).
+   *  Any pack file write >200KB in content/packs/ or p2/ requires:
+   *  1. Chunked parts ≤40KB each (verbatim split)
+   *  2. Part→QID manifest (QID ranges, part count, source SHA256)
+   *  3. Concat verification proof (EXACT MATCH byte-for-byte)
+   *  Returns array of { reason, detail } for violations. */
+  function findChunkedPartViolations(filePath, text) {
+    const violations = [];
+    const normalizedPath = String(filePath || "").replace(/\\/g, "/");
+
+    // Only enforce on pack files in content/packs/ or p2/
+    if (!CHUNKED_PART_PATHS_RE.test(normalizedPath)) return violations;
+
+    const size = Buffer.byteLength(text || "", "utf8");
+    if (size <= CHUNKED_PART_THRESHOLD) return violations;
+
+    // Check for chunked-part manifest in session registry or as adjacent files
+    // The protocol requires: chunked parts ≤40KB, part→QID manifest, concat verification
+    // We verify by checking if the content references the protocol or if adjacent chunk files exist
+    const hasChunkedProtocol = /CHUNKED_PART_MANIFEST|chunked.part.manifest|part.*QID.*manifest/i.test(text);
+    const dir = path.dirname(normalizedPath);
+    const base = basename(normalizedPath).replace(/\.js$/, "");
+    let hasManifest = false;
+    let hasChunkFiles = false;
+
+    try {
+      const files = fs.readdirSync(path.join(process.cwd(), dir));
+      hasManifest = files.some(f => f.startsWith(base) && f.includes("manifest") && f.endsWith(".json"));
+      hasChunkFiles = files.some(f => f.startsWith(base) && /part\d+/.test(f) && f.endsWith(".js"));
+    } catch (e) {
+      // Directory read failed
+    }
+
+    if (!hasChunkedProtocol && !hasManifest && !hasChunkFiles) {
+      violations.push({
+        reason: `Pack file ${base} (${Math.round(size/1024)}KB) exceeds 200KB threshold without chunked-part protocol`,
+        detail: "Per §18.2: split into ≤40KB parts, emit part→QID manifest (QID ranges, part count, SHA256), prove concat EXACT MATCH"
+      });
+    }
+    return violations;
   }
 
   /** RULE 19 — Duplicate CaseID within a change-set (DL-048 intra-batch gate).
@@ -754,6 +860,44 @@ export const GovernanceGuard = async ({ client }) => {
             "active list only after the fix verifies, or proceed BLOCK-AUTHORIZED."
           );
         }
+      }
+
+      // ── RULE 22: BLOCK certification/answer-key/explanation changes without evidence basis (board v2.0 Final) ──
+      if (SOURCE_FILE_RE.test(basename(filePath))) {
+        const evidenceViolations = findEvidenceBasisViolations(newContent, oldContent, filePath);
+        if (evidenceViolations.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
+          const lines = evidenceViolations
+            .map(v => `  ${v.qid}: ${v.reason}`)
+            .join("\n");
+          throw new Error(
+            `GOVERNANCE RULE 22 — BLOCKED (evidence-basis traceability)\n` +
+            `${evidenceViolations.length} change(s) require evidence-basis citation:\n` +
+            `${lines}\n\n` +
+            "Per board v2.0 Final / DL-045 doctrine: the following require evidence-basis note:\n" +
+            "  - Any question_state transition to/from Certified\n" +
+            "  - Any CorrectChoice/Correct/CorrectAnswer change\n" +
+            "  - Any ExplanationCorrect/ExplanationWrong rewrite on Certified items\n\n" +
+            "Valid evidence bases: stratified | context review | adjudicated | triage | candidate-list | independently derived | semantic-screen adjudicated\n" +
+            "Exempt: metadata-only fixes, formatting, typo corrections on non-Certified items.\n" +
+            "Override: include BLOCK-AUTHORIZED marker with justification."
+          );
+        }
+      }
+
+      // ── RULE 23: BLOCK pack files >200KB without chunked-part protocol (board v2.0 Final / §18.2) ──
+      const chunkedViolations = findChunkedPartViolations(filePath, newContent);
+      if (chunkedViolations.length > 0 && !BLOCK_AUTH_RE.test(scopeContent)) {
+        const lines = chunkedViolations
+          .map(v => `  ${v.reason}: ${v.detail}`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 23 — BLOCKED (chunked-part manifest)\n` +
+          `${chunkedViolations.length} pack file(s) exceed 200KB without §18.2 protocol:\n` +
+          `${lines}\n\n` +
+          "Per board v2.0 Final / §18.2: pack files >200KB in content/packs/ or p2/ must be\n" +
+          "split into verbatim parts ≤40KB each with part→QID manifest and concat EXACT MATCH proof.\n" +
+          "Override: include BLOCK-AUTHORIZED marker with justification."
+        );
       }
 
       // ── RULE 16: BLOCK →Certified writes without provenance stamps ──

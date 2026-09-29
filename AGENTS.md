@@ -11,7 +11,7 @@
 
 The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` and listed in `opencode.json` under `"plugin"`. It enforces 21 rules, all at BLOCK level (upgraded S221; R15–R19 added 2026-09-10; R20–R21 added 2026-09-13, coverage-hardening change-set). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
 
-**Board-proposal → guard-rule mapping (2026-09-13; recorded so numbering never drifts — DL-011 precedent):** board **R21** (canonical-parser mandate) = guard **RULE 20**; board **R25** (semantic-key gate) = guard **RULE 21**. Board **R20** (validator coverage assertions) and **R23** (portfolio coverage gate) are enforced in code + pipeline (`extractor.js` / `p2_schema_validator.js` / `s121_portfolio_dashboard.js` throws; `baseline_coherence.js`; `npm run pipeline`), NOT as write-guard rules — a write-guard cannot verify scan completeness.
+**Board-proposal → guard-rule mapping (2026-09-29; recorded so numbering never drifts — DL-011 precedent):** board **R21** (canonical-parser mandate) = guard **RULE 20**; board **R25** (semantic-key gate) = guard **RULE 21**; board **v2.0 Final** (evidence-basis traceability) = guard **RULE 22**; board **v2.0 Final** (chunked-part manifest §18.2) = guard **RULE 23**. Board **R20** (validator coverage assertions) and **R23** (portfolio coverage gate) are enforced in code + pipeline (`extractor.js` / `p2_schema_validator.js` / `s121_portfolio_dashboard.js` throws; `baseline_coherence.js`; `npm run pipeline`), NOT as write-guard rules — a write-guard cannot verify scan completeness.
 
 | Rule | Level | Behavior |
 |------|-------|----------|
@@ -36,6 +36,8 @@ The `governance-guard` plugin is registered at `.opencode/plugins/governance-gua
 | RULE 19 | **BLOCK** | Duplicate CaseID within a change-set (DL-048 intra-batch gate; cross-file enforced by CaseIdentityValidator) |
 | RULE 20 | **BLOCK** | Legacy silent-drop extractor regression block — validator/screen writes reintroducing bank-name-regex extraction without `pack_parser` (board R21 / DL-049 mechanism; regex-literal shapes only, prose mentions exempt) |
 | RULE 21 | **BLOCK** | Semantic quarantine manifest enforcement — pack writes flipping listed QIDs to `Certified` (board R25 / DL-047; manifest `scripts/output/semantic_quarantine.json`; BLOCK-AUTHORIZED bypass for adjudicated restores; fail-open on missing manifest is explicit documented behavior) |
+| RULE 22 | **BLOCK** | Evidence-basis traceability on certification/answer-key/explanation changes (board v2.0 Final / DL-045 doctrine; scoped: question_state transitions, answer-key changes, explanation rewrites on Certified items; exempt: metadata/formatting on non-Certified) |
+| RULE 23 | **BLOCK** | Chunked-part manifest enforcement — pack files >200KB in content/packs/ or p2/ require verbatim parts ≤40KB, part→QID manifest, concat EXACT MATCH proof (board v2.0 Final / §18.2 protocol; BLOCK-AUTHORIZED bypass) |
 
 **The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (98 tests, all validated; run via `npm run preflight`).
 
@@ -201,11 +203,14 @@ Determine the lane at session start. If the session touches ANY Full Governance 
 
 | Requirement | When |
 |-------------|------|
-| `npm run preflight` | **Mandatory at T0** — before any write operation |
+| `npm run preflight` | **Mandatory at T0** — before any write operation (includes mandatory `probe:parity` check) |
+| `npm run probe-model` | **Mandatory at T0** for any wave using local models — token budget probe |
 | Backup-before-write | **Mandatory** per §3 for all pack/case file edits |
 | Raw evidence verification | **Mandatory** per §5 (Dual Verification) for all self-reported claims |
-| `npm run pipeline` | **Required at Tend** after content/regeneration work |
+| RULE 11 calibration | **Mandatory at T0** for P2 authoring waves — calibrate AF-3/4/5 on S122 Gold Standard + P2 gold |
+| `npm run pipeline` | **Required at Tend** after content/regeneration work (includes coverage assertion WARNING gate) |
 | Semantic screens re-run (`case_semantic_screens.js` + MCQ screens) | **Required at Tend** on every certification batch — no state flip without a clean re-run; no auto-remediation per DL-045 |
+| Case certification batch gate | **Required at Tend** — case batch with item semantic re-run gate (Hybrid model per board v2.0 Final) |
 | `knowledge/REVISION_HISTORY.md` entry | **Required** for content, certification, or governance changes per §4 |
 | `knowledge/DEFECT_LIBRARY.md` entry | **Required** for any newly discovered defect |
 | Destructive script authorization | **Required** per §3.1 — staged authorization, no exceptions |
@@ -363,11 +368,11 @@ Five npm scripts are available for session workflow:
 
 | Command | What It Does | When To Use |
 |---------|-------------|-------------|
-| `npm run preflight` | QID counts, parse check, certified counts, cross-check against CURRENT_BASELINES.md, governance guard test suite | **Full Lane: T0 mandatory.** Light Lane: recommended. |
+| `npm run preflight` | QID counts, parse check, certified counts, cross-check against CURRENT_BASELINES.md, governance guard test suite, **mandatory `probe:parity` check** | **Full Lane: T0 mandatory.** Light Lane: recommended. |
 | `npm run smoke` | Playwright UI smoke test — verifies app loads, MCQ banks present, May coaching layer active | **Light Lane: Tend mandatory** after app/UI changes. Full Lane: optional. |
-| `npm run pipeline` | validate → case-screens → build-registry → dashboard → baseline-coherence (full content validation + case semantic screens + registry rebuild + dashboard + baseline check) | **Full Lane: Tend required** after content/regeneration work. |
-| `npm run probe-model` | Dynamic agent/model token-budget probe (`scripts/model_limit_probe.js`) — measures real per-item emission demand from the P2 packs, projects v1.1 evidence-package size, probes the provider endpoint for each model's live max context, and reports whether declared `opencode.json` limits are adequate. Report-only by default; `--apply` writes recommended limits (auto-backup). Exit 1 = undersized. | **Before any authoring wave that depends on local models**, and before any P2_SCHEMA_STANDARD gate flip (e.g., v1.1 `--enforce`). Do not trust static limits when demand grows. |
-| `npm run probe:parity` | Delivery/pipeline contract probe (`scripts/pool_parity_probe.js`) — asserts Tier-1 Certified-only MCQ pools, P2 strict-tier case pool from casePackP2_* globals, blocklist enforcement data, and per-validator scanned-vs-raw coverage (DL-044/049/050 family). Strict-FAIL on any mismatch/missing bank. Versioned summary: `scripts/output/coverage_summary.v1.json`. | **Both lanes:** run at Tend alongside preflight/smoke after any delivery, loader, config, or validator change; re-run after validator-wiring follow-ups clear the 3 known coverage FAILs. |
+| `npm run pipeline` | validate → case-screens → build-registry → dashboard → baseline-coherence (full content validation + case semantic screens + registry rebuild + dashboard + baseline check) **includes coverage assertion WARNING gate** | **Full Lane: Tend required** after content/regeneration work. |
+| `npm run probe-model` | Dynamic agent/model token-budget probe (`scripts/model_limit_probe.js`) — measures real per-item emission demand from the P2 packs, projects v1.1 evidence-package size, probes the provider endpoint for each model's live max context, and reports whether declared `opencode.json` limits are adequate. Report-only by default; `--apply` writes recommended limits (auto-backup). Exit 1 = undersized. | **Mandatory at T0 before any authoring wave that depends on local models**, and before any P2_SCHEMA_STANDARD gate flip (e.g., v1.1 `--enforce`). Do not trust static limits when demand grows. |
+| `npm run probe:parity` | Delivery/pipeline contract probe (`scripts/pool_parity_probe.js`) — asserts Tier-1 Certified-only MCQ pools, P2 strict-tier case pool from casePackP2_* globals, blocklist enforcement data, and per-validator scanned-vs-raw coverage (DL-044/049/050 family). Strict-FAIL on any mismatch/missing bank. Versioned summary: `scripts/output/coverage_summary.v1.json`. | **Both lanes: T0 mandatory** (via preflight); **Tend mandatory** alongside preflight/smoke after any delivery, loader, config, or validator change; re-run after validator-wiring follow-ups clear the 3 known coverage FAILs. |
 
 All five scripts exit 0 on pass, non-zero on failure. Preflight/smoke/pipeline/probe:parity are READ-ONLY and safe to run at any time. `probe-model` is read-only unless `--apply` is passed explicitly.
 
