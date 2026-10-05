@@ -1,0 +1,38 @@
+{
+  "batch_id": "P2-HAND-SOLVE-WAVE-B12",
+  "session": "P2-HAND-SOLVE-WAVE",
+  "certification_date": "2026-09-30",
+  "evidence_basis": "adjudicated",
+  "cases": [
+    {
+      "case_id": "CBQ23-F5",
+      "bank": "p2/case_pack_p2_3.js",
+      "expected_items": 6
+    },
+    {
+      "case_id": "CBQ23-A5",
+      "bank": "p2/case_pack_p2_3.js",
+      "expected_items": 6
+    },
+    {
+      "case_id": "CBQ23-A6",
+      "bank": "p2/case_pack_p2_3.js",
+      "expected_items": 6
+    },
+    {
+      "case_id": "CBQ23-A7",
+      "bank": "p2/case_pack_p2_3.js",
+      "expected_items": 6
+    },
+    {
+      "case_id": "CBQ23-A8",
+      "bank": "p2/case_pack_p2_3.js",
+      "expected_items": 6
+    }
+  ],
+  "declared_false_positives": [
+    "CBQ23-F5-Q3|C",
+    "CBQ23-A6-Q4|B",
+    "CBQ23-A7-Q3|C"
+  ]
+}

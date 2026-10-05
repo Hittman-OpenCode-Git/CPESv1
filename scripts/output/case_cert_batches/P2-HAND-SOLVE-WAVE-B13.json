@@ -1,0 +1,17 @@
+{
+  "batch_id": "P2-HAND-SOLVE-WAVE-B13",
+  "session": "P2-HAND-SOLVE-WAVE",
+  "certification_date": "2026-10-02",
+  "evidence_basis": "adjudicated",
+  "cases": [
+    { "case_id": "CBQ23-B3", "bank": "p2/case_pack_p2_3.js", "expected_items": 6 },
+    { "case_id": "CBQ23-B4", "bank": "p2/case_pack_p2_3.js", "expected_items": 6 },
+    { "case_id": "CBQ23-B5", "bank": "p2/case_pack_p2_3.js", "expected_items": 6 },
+    { "case_id": "CBQ23-B6", "bank": "p2/case_pack_p2_3.js", "expected_items": 6 },
+    { "case_id": "CBQ23-C6", "bank": "p2/case_pack_p2_3.js", "expected_items": 6 }
+  ],
+  "declared_false_positives": [
+    "CBQ23-B3-Q3|C"
+  ],
+  "_note": "Created 2026-10-04 after the fact. Batch 13 was certified on 2026-10-02 without a manifest file; this reconstructs it from the wave plan and the live certified state so the gate is reproducible from the batch record. The one declared false positive is a FLAG-severity screen-C hit (low lexical overlap between a numeric key and prose explanation — the documented class) whose key was re-derived independently and confirmed correct at 8.67%."
+}
