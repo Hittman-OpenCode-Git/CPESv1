@@ -143,7 +143,7 @@ const CASE_PACK_2 = [
           "Customer can benefit from good/service on its own",
           "The promise is separately identifiable in the contract"
         ],
-        "Explanation": "Under ASC 606-10-25-19, a promised good or service is distinct if both criteria are met: (1) the customer can benefit from the good or service on its own or together with other readily available resources, and (2) the promise is separately identifiable from other promises in the contract. Physical delivery and payment receipt are consequences of contract performance, not criteria for determining whether a performance obligation is distinct. A candidate selecting either 'The good is physically delivered' or 'Payment has been received' may confuse the timing of revenue recognition with the identification of performance obligations under ASC 606. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Under ASC 606-10-25-19, a promised good or service is distinct if both criteria are met: (1) the customer can benefit from the good or service on its own or together with other readily available resources, and (2) the promise is separately identifiable from other promises in the contract. Physical delivery and payment receipt are consequences of contract performance, not criteria for determining whether a performance obligation is distinct. A candidate selecting either 'The good is physically delivered' or 'Payment has been received' may confuse the timing of revenue recognition with the identification of performance obligations under ASC 606..",
         "Topic": "Revenue",
         "Choices": [
           "Customer can benefit from good/service on its own",
@@ -446,7 +446,7 @@ const CASE_PACK_2 = [
           "PV of lease payments equals or exceeds substantially all fair value",
           "Ownership transfers at end of lease"
         ],
-        "Explanation": "Under ASC 842-10-25-2, a lease is a finance lease if ANY of five criteria are met: (1) ownership transfers to the lessee by the end of the lease term; (2) the lessee has a purchase option reasonably certain to be exercised; (3) the lease term is for the major part of the asset's remaining economic life; (4) the present value of lease payments equals or exceeds substantially all of the fair value; (5) the asset is of a specialized nature with no alternative use to the lessor at the end of the term. The fourth option — 'The underlying asset is standard and easily replaced by the lessor' — is NOT a finance lease criterion; in fact, it may indicate an operating lease because the lessor can readily redeploy the asset. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Under ASC 842-10-25-2, a lease is a finance lease if ANY of five criteria are met: (1) ownership transfers to the lessee by the end of the lease term; (2) the lessee has a purchase option reasonably certain to be exercised; (3) the lease term is for the major part of the asset's remaining economic life; (4) the present value of lease payments equals or exceeds substantially all of the fair value; (5) the asset is of a specialized nature with no alternative use to the lessor at the end of the term. The fourth option — 'The underlying asset is standard and easily replaced by the lessor' — is NOT a finance lease criterion; in fact, it may indicate an operating lease because the lessor can readily redeploy the asset..",
         "Topic": "Lease Criteria",
         "Choices": [
           "Lease term is major part of economic life",
@@ -556,7 +556,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Net Cash Provided by Operating Activities.",
         "Correct": 455000,
-        "Explanation": "NI(450k) + Depr(60k) - Gain(15k) - AR inc(25k) + Inv dec(15k) - AP dec(30k) = 455,000 Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "Under the indirect method, operating cash flow starts from net income and adjusts for non-cash items and changes in working capital. Net income of $450,000 is the starting point. Depreciation of $60,000 is added back because it is a non-cash expense that reduced net income without a matching cash outflow. The $15,000 gain on the equipment sale is subtracted, because the related cash proceeds sit in investing activities and leaving the gain in would double-count it. Accounts receivable increased $25,000, meaning revenue was recognized ahead of collection, so $25,000 is subtracted. Inventory decreased $15,000, so prior-period inventory was sold and the cash is collected now, adding $15,000. Accounts payable decreased $30,000, so cash paid out exceeded expenses recorded, subtracting $30,000. Net cash provided by operating activities = 450,000 + 60,000 - 15,000 - 25,000 + 15,000 - 30,000 = $455,000. Recomputed independently: 450 + 60 = 510; 510 - 15 = 495; 495 - 25 = 470; 470 + 15 = 485; 485 - 30 = 455. A common error is adding the $15,000 gain instead of subtracting it, which would report $485,000 and leave the investing section uncorrected for the sale.",
         "Topic": "Cash Flows",
         "ItemID": "CBQ3-A2-Q1",
         "CognitiveLevel": "Apply",
@@ -897,7 +897,7 @@ const CASE_PACK_2 = [
           "Successful legal defense costs",
           "Registration fees"
         ],
-        "Explanation": "Under ASC 730, research and development costs are expensed as incurred — they are NOT capitalized as part of a patent's cost. Only direct costs of obtaining and defending the patent are capitalized. Successful legal defense costs are capitalized because they preserve the patent's economic benefit. Registration fees are a direct cost of obtaining the patent right. R&D costs are expensed (ASC 730-10-25-1) — this is a fundamental principle in U.S. GAAP. General administrative overhead is a period expense, not traceable to the patent. A candidate selecting R&D may not realize that U.S. GAAP requires immediate expensing of R&D unlike IFRS which may permit capitalization of development costs. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Under ASC 730, research and development costs are expensed as incurred — they are NOT capitalized as part of a patent's cost. Only direct costs of obtaining and defending the patent are capitalized. Successful legal defense costs are capitalized because they preserve the patent's economic benefit. Registration fees are a direct cost of obtaining the patent right. R&D costs are expensed (ASC 730-10-25-1) — this is a fundamental principle in U.S. GAAP. General administrative overhead is a period expense, not traceable to the patent. A candidate selecting R&D may not realize that U.S. GAAP requires immediate expensing of R&D unlike IFRS which may permit capitalization of development costs..",
         "Topic": "Intangibles",
         "Choices": [
           "Successful legal defense costs",
@@ -1182,7 +1182,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Enter the ending cash balance before financing for January. Use a negative sign if the balance is negative.",
         "Correct": "-90000",
-        "Explanation": "Beginning cash $45,000 + collections $540,000 - disbursements $675,000 = -$90,000. Before any borrowing, January cash is $90,000 below zero. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. Note: Negative values are shown in parentheses per standard accounting sign convention. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Beginning cash $45,000 + collections $540,000 - disbursements $675,000 = -$90,000. Before any borrowing, January cash is $90,000 below zero. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Cash budget",
         "ItemID": "CBQ2-B2-Q3",
         "CognitiveLevel": "Apply",
@@ -1507,7 +1507,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Using the trend growth method, enter Advanced Modules' budgeted Q3 unit sales.",
         "Correct": "5500",
-        "Explanation": "5,000 x 1.10 = 5,500 units. Both segments share the same growth rate but use different base values. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. This explanation directly addresses why the selected choice is correct based on the exhibit data. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "5,000 x 1.10 = 5,500 units. Both segments share the same growth rate but use different base values. This explanation directly addresses why the selected choice is correct based on the exhibit data.",
         "Topic": "Sales forecasting",
         "ItemID": "CBQ2-B3-Q2",
         "CognitiveLevel": "Apply",
@@ -1821,7 +1821,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Accounts Receivable balance at the end of April (arising from March and April sales only).",
         "Correct": 140000,
-        "Explanation": "April uncollected: 300k * 80% * 50% = 120k. March uncollected: 250k * 80% * 10% = 20k. Total = 140,000. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The ending accounts receivable balance is the credit portion of sales that has not yet been collected. April sales of $300,000 are 20% cash and 80% credit, so credit sales are $240,000; of that, 50% is collected in the month of sale, leaving 50% uncollected at month end, or $120,000. March sales of $250,000 give credit sales of $200,000; by the end of April, 50% was collected in March and 40% in April, so 10% remains uncollected, or $20,000. February sales are fully collected by the end of April apart from the 2% that is never collected, so they contribute nothing. Ending accounts receivable = 120,000 + 20,000 = $140,000. Recomputed independently: 300,000 x 0.80 x 0.50 = 120,000, and 250,000 x 0.80 x 0.10 = 20,000, giving 140,000. A common error is including the 2% uncollectible portion, which would overstate the receivable by $4,800 and understate the allowance for doubtful accounts.",
         "Topic": "Cash Budgeting",
         "ItemID": "CBQ3-B1-Q2",
         "CognitiveLevel": "Apply",
@@ -2183,7 +2183,7 @@ const CASE_PACK_2 = [
           "Fixed overhead becomes a variable cost under the second shift"
         ],
         "Correct": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
-        "Explanation": "Fixed overhead is a capacity cost that does not change within the relevant range. Higher production volume spreads fixed costs over more units, reducing per-unit fixed overhead. Adding a second shift may eventually increase total fixed cost if capacity is exceeded, but within the existing range, total fixed cost stays constant. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Fixed overhead is a capacity cost that does not change within the relevant range. Higher production volume spreads fixed costs over more units, reducing per-unit fixed overhead. Adding a second shift may eventually increase total fixed cost if capacity is exceeded, but within the existing range, total fixed cost stays constant.",
         "Topic": "Overhead cost behavior",
         "ItemID": "CBQ3-B2-Q4",
         "CognitiveLevel": "Analyze",
@@ -3319,7 +3319,7 @@ const CASE_PACK_2 = [
           "Division A's chips are customized for Division B and have no external market; costs are stable and well-documented": "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return",
           "Division A is located in a low-tax country; Division B is in a high-tax country; the company wants to minimize total global tax": "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance"
         },
-        "Explanation": "Each scenario requires a different transfer pricing approach. With excess capacity, variable cost ($30) is appropriate because any contribution above variable cost benefits the company. With a competitive market, market price ($50) provides the correct economic signal. Customized products with no market require cost-based pricing — full cost plus a reasonable markup ensures the selling division recovers costs and earns a return. International tax considerations may override purely economic transfer pricing, but companies must navigate complex regulations including OECD guidelines and IRS Section 482. Dual pricing is an alternative internal solution but does not correspond to any single scenario. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Each scenario requires a different transfer pricing approach. With excess capacity, variable cost ($30) is appropriate because any contribution above variable cost benefits the company. With a competitive market, market price ($50) provides the correct economic signal. Customized products with no market require cost-based pricing — full cost plus a reasonable markup ensures the selling division recovers costs and earns a return. International tax considerations may override purely economic transfer pricing, but companies must navigate complex regulations including OECD guidelines and IRS Section 482. Dual pricing is an alternative internal solution but does not correspond to any single scenario.",
         "Topic": "Transfer pricing method selection — scenario matching",
         "ItemID": "CBQ3-C2-Q4",
         "CognitiveLevel": "Evaluate",
@@ -3584,7 +3584,7 @@ const CASE_PACK_2 = [
           "Unfavorable $11,000 — actual operating income of $41,000 exceeded the flexible budget operating income of $30,000 by $11,000",
           "Favorable $11,000 — actual operating income of $41,000 exceeded static budget operating income of $30,000 by $11,000"
         ],
-        "Explanation": "The sales volume variance isolates the effect of changes in sales volume on operating income while holding selling prices and costs at budgeted amounts. Per Exhibit 2, the standard contribution margin per unit is $75 selling price − $20 DM − $15 DL − $10 VOH − $5 VS&A = $25 per unit. Flexible budget operating income at 12,000 units = (12,000 × $25 CM) − $180,000 fixed MOH − $40,000 fixed S&A = $300,000 − $220,000 = $80,000. The static budget operating income at 10,000 units is $30,000. Sales volume variance = $80,000 − $30,000 = $50,000 Favorable. Equivalently, (12,000 − 10,000) × $25 = $50,000 F. A common error is to compare actual revenue ($876,000) to static budget revenue ($750,000) and claim a $126,000 F variance — this confuses the total revenue change with the volume-only effect. The flexible budget controls for volume changes and isolates the volume impact on profitability, which is $50,000 F attributable solely to selling 2,000 more units. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The sales volume variance isolates the effect of changes in sales volume on operating income while holding selling prices and costs at budgeted amounts. Per Exhibit 2, the standard contribution margin per unit is $75 selling price − $20 DM − $15 DL − $10 VOH − $5 VS&A = $25 per unit. Flexible budget operating income at 12,000 units = (12,000 × $25 CM) − $180,000 fixed MOH − $40,000 fixed S&A = $300,000 − $220,000 = $80,000. The static budget operating income at 10,000 units is $30,000. Sales volume variance = $80,000 − $30,000 = $50,000 Favorable. Equivalently, (12,000 − 10,000) × $25 = $50,000 F. A common error is to compare actual revenue ($876,000) to static budget revenue ($750,000) and claim a $126,000 F variance — this confuses the total revenue change with the volume-only effect. The flexible budget controls for volume changes and isolates the volume impact on profitability, which is $50,000 F attributable solely to selling 2,000 more units.",
         "Topic": "Sales volume variance for operating income",
         "ItemID": "CBQ3-C3-Q1",
         "CognitiveLevel": "Apply",
@@ -3889,7 +3889,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Variable Overhead Efficiency Variance.",
         "Correct": 600,
-        "Explanation": "The Variable Overhead Efficiency Variance measures the difference between actual hours worked and the standard hours allowed for actual output, valued at the standard VOH rate. Standard hours for actual output: 4,800 units x 2 DLH/unit = 9,600 DLH. Actual hours: 9,800 DLH. Efficiency variance = (9,800 - 9,600) x $3/DLH = 200 x $3 = $600 Unfavorable. The 200 excess hours indicate lower labor efficiency, which drives higher variable overhead (since VOH is applied based on DLH). The efficiency variance is distinct from the spending variance � together they reconcile actual VOH to applied VOH (the 3-way analysis).",
+        "Explanation": "The Variable Overhead Efficiency Variance measures the difference between actual hours worked and the standard hours allowed for actual output, valued at the standard VOH rate. Standard hours for actual output: 4,800 units x 2 DLH/unit = 9,600 DLH. Actual hours: 9,800 DLH. Efficiency variance = (9,800 - 9,600) x $3/DLH = 200 x $3 = $600 Unfavorable. The 200 excess hours indicate lower labor efficiency, which drives higher variable overhead (since VOH is applied based on DLH). The efficiency variance is distinct from the spending variance ; together they reconcile actual VOH to applied VOH (the 3-way analysis).",
         "Topic": "VOH Variances",
         "ItemID": "CBQ4-C1-Q2",
         "CognitiveLevel": "Apply",
@@ -3917,7 +3917,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Fixed Overhead Production-Volume Variance.",
         "Correct": 2000,
-        "Explanation": "The Fixed Overhead Production-Volume Variance measures whether the company produced at, above, or below the denominator level of activity used to set the fixed overhead rate. Denominator hours: 10,000 DLH (budgeted capacity). Standard hours for actual output: 4,800 units x 2 DLH = 9,600 DLH. Volume variance = (10,000 - 9,600) x $5/DLH = 400 x $5 = $2,000 Unfavorable. The unfavorable variance means production volume was below the denominator level � the fixed overhead was underapplied because fewer units were produced than planned. This is NOT controllable by the production supervisor; it reflects capacity utilization decisions made at a higher management level.",
+        "Explanation": "The Fixed Overhead Production-Volume Variance measures whether the company produced at, above, or below the denominator level of activity used to set the fixed overhead rate. Denominator hours: 10,000 DLH (budgeted capacity). Standard hours for actual output: 4,800 units x 2 DLH = 9,600 DLH. Volume variance = (10,000 - 9,600) x $5/DLH = 400 x $5 = $2,000 Unfavorable. The unfavorable variance means production volume was below the denominator level — the fixed overhead was underapplied because fewer units were produced than planned. This is NOT controllable by the production supervisor; it reflects capacity utilization decisions made at a higher management level.",
         "Topic": "FOH Variances",
         "ItemID": "CBQ4-C1-Q3",
         "CognitiveLevel": "Apply",
@@ -3945,7 +3945,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Fixed Overhead Spending (Budget) Variance.",
         "Correct": 2000,
-        "Explanation": "The Fixed Overhead Spending (Budget) Variance measures the difference between actual fixed overhead incurred and the budgeted fixed overhead. Actual FOH: $52,000. Budgeted FOH: $50,000. Spending variance = $52,000 - $50,000 = $2,000 Unfavorable. This unfavorable variance indicates Nova spent $2,000 more on fixed overhead than budgeted. Unlike variable overhead, the spending variance is the only controllable element for fixed overhead � the volume variance is a capacity utilization measure. In a 4-way analysis, FOH is split into spending variance and volume variance.",
+        "Explanation": "The Fixed Overhead Spending (Budget) Variance measures the difference between actual fixed overhead incurred and the budgeted fixed overhead. Actual FOH: $52,000. Budgeted FOH: $50,000. Spending variance = $52,000 - $50,000 = $2,000 Unfavorable. This unfavorable variance indicates Nova spent $2,000 more on fixed overhead than budgeted. Unlike variable overhead, the spending variance is the only controllable element for fixed overhead — the volume variance is a capacity utilization measure. In a 4-way analysis, FOH is split into spending variance and volume variance.",
         "Topic": "FOH Variances",
         "ItemID": "CBQ4-C1-Q4",
         "CognitiveLevel": "Apply",
@@ -3973,7 +3973,7 @@ const CASE_PACK_2 = [
         "Type": "select",
         "Prompt": "Which variance is NEVER considered controllable by the production supervisor?",
         "Correct": "Fixed overhead production-volume variance",
-        "Explanation": "The fixed overhead production-volume variance is NEVER controllable by the production supervisor because it arises from the difference between the denominator activity level (set by top management for capacity planning) and actual production volume. The supervisor controls spending and efficiency on the shop floor but cannot influence how many units the company produces relative to budgeted capacity. VOH spending and efficiency variances are directly affected by supervisor decisions (material prices, labor efficiency). FOH spending variance reflects deviations from budget that may include supervisor-influenced items. But the volume variance is purely a function of whether production met the denominator level � a management decision, not a shop-floor performance measure.",
+        "Explanation": "The fixed overhead production-volume variance is NEVER controllable by the production supervisor because it arises from the difference between the denominator activity level (set by top management for capacity planning) and actual production volume. The supervisor controls spending and efficiency on the shop floor but cannot influence how many units the company produces relative to budgeted capacity. VOH spending and efficiency variances are directly affected by supervisor decisions (material prices, labor efficiency). FOH spending variance reflects deviations from budget that may include supervisor-influenced items. But the volume variance is purely a function of whether production met the denominator level — a management decision, not a shop-floor performance measure.",
         "Topic": "Overhead Variances",
         "Choices": [
           "Variable overhead spending variance",
@@ -4294,7 +4294,7 @@ const CASE_PACK_2 = [
         "Type": "fill",
         "Prompt": "Under variable costing, fixed manufacturing overhead is classified as a ______ cost.",
         "Correct": "period",
-        "Explanation": "Variable costing expenses all fixed manufacturing overhead in the period incurred, classifying it as a period cost rather than a product cost. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "Variable costing treats only variable manufacturing costs as product costs; all fixed manufacturing overhead is charged to the period in which it is incurred. Under absorption costing, fixed manufacturing overhead is attached to units as they are produced and released to income as goods are sold, so a portion sits in inventory until then. Because the chairs are produced for an upcoming promotion and production exceeds sales, absorption costing defers some fixed overhead in ending inventory and reports higher income; variable costing expenses the same overhead immediately, so the two methods differ by the change in inventory. The correct classification under variable costing is therefore a period cost, incurred in the period of production rather than deferred as inventory. A common error is answering product cost, which is the absorption-costing treatment and is precisely what variable costing exists to avoid.",
         "Topic": "Variable costing classification",
         "ItemID": "CBQ3-D1-Q5",
         "CognitiveLevel": "Understand",
@@ -4647,7 +4647,7 @@ const CASE_PACK_2 = [
         "Type": "fill",
         "Prompt": "The system that accumulates costs by individual customer orders is called ______ costing.",
         "Correct": "job-order",
-        "Explanation": "Job-order costing tracks costs for each unique job or customer order. It is used when products are customized rather than mass-produced in a continuous process. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "Job-order costing tracks costs for each unique job or customer order. It is used when products are customized rather than mass-produced in a continuous process.",
         "Topic": "Costing system types",
         "ItemID": "CBQ3-D2-Q5",
         "CognitiveLevel": "Understand",
@@ -4886,7 +4886,7 @@ const CASE_PACK_2 = [
           "Maintenance hours used is an appropriate allocation base for Maintenance department costs",
           "Number of IT support tickets is an appropriate allocation base for IT Support department costs"
         ],
-        "Explanation": "Maintenance hours and IT support tickets are cause-effect allocation bases that reflect how production departments consume each service. Machine hours in Assembly is a potential base for Maintenance but Exhibit 1 shows maintenance hours as the measured driver. Number of employees is not given as a driver and may not have a cause-effect relationship with IT or maintenance costs. Direct labor hours is one possible base but not the only acceptable one. The best allocation base captures a cause-effect relationship between the service and its consumption. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Maintenance hours and IT support tickets are cause-effect allocation bases that reflect how production departments consume each service. Machine hours in Assembly is a potential base for Maintenance but Exhibit 1 shows maintenance hours as the measured driver. Number of employees is not given as a driver and may not have a cause-effect relationship with IT or maintenance costs. Direct labor hours is one possible base but not the only acceptable one. The best allocation base captures a cause-effect relationship between the service and its consumption..",
         "Topic": "Allocation base selection",
         "ItemID": "CBQ3-D3-Q2",
         "CognitiveLevel": "Analyze",
@@ -5194,7 +5194,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the throughput contribution per unit for Product Z.",
         "Correct": "150",
-        "Explanation": "Throughput = Selling price − Direct materials = $250 − $100 = $150 per unit. Only direct materials is treated as a truly variable cost in TOC throughput accounting. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "Throughput = Selling price − Direct materials = $250 − $100 = $150 per unit. Only direct materials is treated as a truly variable cost in TOC throughput accounting.",
         "Topic": "Throughput contribution",
         "ItemID": "CBQ4-D1-Q1",
         "CognitiveLevel": "Apply",
@@ -5696,7 +5696,7 @@ const CASE_PACK_2 = [
         "Type": "fill",
         "Prompt": "In a JIT system, production is authorized by a visual signal called a ______ card.",
         "Correct": "kanban",
-        "Explanation": "A kanban is a signal — often a physical card — that triggers production or material movement from an upstream operation. Kanban systems implement the pull principle in JIT manufacturing. The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "A kanban is a signal — often a physical card — that triggers production or material movement from an upstream operation. Kanban systems implement the pull principle in JIT manufacturing.",
         "Topic": "Kanban",
         "ItemID": "CBQ4-D2-Q5",
         "CognitiveLevel": "Understand",
@@ -5997,7 +5997,7 @@ const CASE_PACK_2 = [
           "Control activities",
           "Monitoring activities"
         ],
-        "Explanation": "The COSO framework identifies five components of internal control: control environment, risk assessment, control activities, information and communication, and monitoring activities. Profitability analysis is a management reporting tool, not an internal control component. The internal audit function is an important governance function but is part of monitoring activities, not a separate component. This is the correct answer because it properly applies the governing standard. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The COSO framework identifies five components of internal control: control environment, risk assessment, control activities, information and communication, and monitoring activities. Profitability analysis is a management reporting tool, not an internal control component. The internal audit function is an important governance function but is part of monitoring activities, not a separate component..",
         "Topic": "COSO internal control framework components",
         "ItemID": "CBQ2-E2-Q3",
         "CognitiveLevel": "Analyze",
@@ -6339,7 +6339,7 @@ const CASE_PACK_2 = [
           "Technology risk: Current ERP system is obsolete and requires immediate upgrade to avoid operational disruption": "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
           "Market risk: Competitor is launching a similar surgical instrument at a 15% lower price point": "Acceptance — monitor competitor pricing and differentiate through quality and service"
         },
-        "Explanation": "Risk responses include avoidance, reduction (mitigation), sharing (transfer), and acceptance. Regulatory compliance costs are accepted as a cost of doing business. Supplier risk is mitigated through alternative sourcing. Technology risk is mitigated through a planned upgrade. Competitive market risk is accepted with monitoring — the company's competitive advantage is quality, not price. Avoidance would mean exiting the product category, which is disproportionate for a competitive threat. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Risk responses include avoidance, reduction (mitigation), sharing (transfer), and acceptance. Regulatory compliance costs are accepted as a cost of doing business. Supplier risk is mitigated through alternative sourcing. Technology risk is mitigated through a planned upgrade. Competitive market risk is accepted with monitoring — the company's competitive advantage is quality, not price. Avoidance would mean exiting the product category, which is disproportionate for a competitive threat.",
         "Topic": "Risk response strategies — ERM Performance component",
         "ItemID": "CBQ3-E1-Q3",
         "CognitiveLevel": "Evaluate",
@@ -6732,7 +6732,7 @@ const CASE_PACK_2 = [
           "A communication plan for notifying employees, customers, regulators, and other stakeholders during and after a disruption event",
           "Regular training and awareness programs so that employees understand their BC/DR roles before an incident occurs"
         ],
-        "Explanation": "Risk assessment, documented procedures, communication plans, and training are all essential BCP components per COSO and ITIL/COBIT frameworks. The distractor (guaranteed zero downtime) is unrealistic — BCP aims to manage and minimize downtime within acceptable thresholds, not eliminate it entirely. BC/DR planning acknowledges that disruptions will occur and focuses on resilience and recovery rather than prevention of all possible failures. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Risk assessment, documented procedures, communication plans, and training are all essential BCP components per COSO and ITIL/COBIT frameworks. The distractor (guaranteed zero downtime) is unrealistic — BCP aims to manage and minimize downtime within acceptable thresholds, not eliminate it entirely. BC/DR planning acknowledges that disruptions will occur and focuses on resilience and recovery rather than prevention of all possible failures.",
         "Topic": "Essential BCP components",
         "ItemID": "CBQ3-E2-Q3",
         "CognitiveLevel": "Analyze",
@@ -7681,7 +7681,7 @@ const CASE_PACK_2 = [
           "Including a sparkline next to each store's monthly number to show the 12-month trend in a compact format",
           "Arranging charts in a logical left-to-right, top-to-bottom flow: executive summary → financial overview → operational detail → action items"
         ],
-        "Explanation": "Removing non-data elements (gridlines, decorative borders) follows the data-ink ratio principle. Purposeful color coding (red = below target) is a recommended practice. Sparklines provide compact trend context alongside current numbers. Logical chart arrangement supports data storytelling. The distractor (dual Y-axis) is problematic — different scales can mislead the viewer about the relationship between the two metrics; a better approach is to use separate charts with aligned time axes or indexed scales. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Removing non-data elements (gridlines, decorative borders) follows the data-ink ratio principle. Purposeful color coding (red = below target) is a recommended practice. Sparklines provide compact trend context alongside current numbers. Logical chart arrangement supports data storytelling. The distractor (dual Y-axis) is problematic — different scales can mislead the viewer about the relationship between the two metrics; a better approach is to use separate charts with aligned time axes or indexed scales.",
         "Topic": "Dashboard design principles and best practices",
         "ItemID": "CBQ3-F2-Q3",
         "CognitiveLevel": "Evaluate",
@@ -8248,4 +8248,4 @@ const CASE_PACK_2 = [
     "question_tier": "Ungraded",
     "question_status": "Active"
   }
-]
+];

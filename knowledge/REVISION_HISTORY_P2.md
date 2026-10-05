@@ -1,3 +1,245 @@
+## Session P2-085 Phase 1 — Governance Gates Built: RULE 11 P2 Calibration, Clone Gate, Batch Gate, Coverage FAIL Mode — 2026-09-30
+
+**Date:** 2026-09-30
+**Session Type:** Full Governance Lane — Phase 1 gate construction (board v2.0 Final prerequisites)
+**Defects Filed:** `DL-P2-024` (5 whole-case duplicates, open) · `DL-P2-025` (CaseExtractor silent-drop + self-incident, open)
+**Guard suite:** 101 → **117 tests**
+
+---
+
+### 1.1 RULE 11 P2 Calibration — outcome differed from the board's assumption
+
+The board mandate was "calibrate AF-3/4/5 for P2 and hit zero FP on the gold standard." Measurement showed the target was **P1, not P2**:
+
+| Finding | Evidence |
+|---|---|
+| **P1 already failed the gate** | 13 false positives on 67 S122-gold Analyze/Evaluate items |
+| Root cause | v1 scanned `ExplanationCorrect` only, 5 tokens. All 13 share one signature — `"Under COSO Principle N"` is a *definitional citation*, so the explanation can only restate the principle and no trade-off token can appear |
+| **AF-5 had nothing to calibrate** | The "P2 thresholds" in `audit_p2_pack1_cases.js:184/187` (`ds<3`, `ds<2`) are arithmetically identical to P1's (`≤2`, `==1`). Fires **0 times across 4,190 P2 items** |
+| P2 was already correctly gated | 48/51 items the P1 patterns flagged are genuine. The P2-variant regex I first drafted would have **added** false positives (it dropped `balance`, wrongly flagging P2-A-049 and P2-A-310) |
+
+**AF-3 v4 changes:** scan stem **and** explanation; widen to P2 decision vocabulary (`judgment`, `prioriti[sz]`, `alternative course`, …); exempt a numbered standard citation **only when paired with judgment framing**. Also reads `Prompt`/`ItemID`/`Explanation` so P2 case items are covered.
+
+**Validation** (against the SHIPPED plugin regexes, extracted from the file — not a duplicated copy):
+
+| Set | Analyze/Evaluate | AF-3 fires |
+|---|---|---|
+| **S122 GOLD** | 67 | **0 ✓ gate met** |
+| P1 MCQ pool | 940 | 6 |
+| P2 MCQ pool | 1,157 | 32 |
+| P2 case items | 412 | 6 |
+
+Two rejected iterations are recorded because they nearly shipped: v3 hit 0 gold FP but went **inert on P1** (0 fires / 940 items — a rule that never fires catches nothing), and a narrow judgment regex re-introduced 5 gold FPs while passing `P1-A-012`'s existing BLOCK test.
+
+### 1.2 Case Certification Batch Gate — `scripts/case_cert_batch_gate.js`
+
+Hybrid model implemented: a batch manifest schema plus a gate that refuses certification without a clean per-item re-run. Dry-run by default (AGENTS.md §3.1).
+
+Verified against deliberately bad input — all five failure modes fire: Rule 22 evidence basis, wrong case state, item-count mismatch, item-state mismatch, missing bank. Verified against `CBQ22-F7`/`CBQ22-F8`: **blocks**, correctly catching DL-P2-024 in the certification path.
+
+### 1.3 P2 Case Clone Gate — `scripts/p2_case_clone_gate.js`
+
+Was **MISSING entirely** (zero prior hits). Implements AGENTS.md §19.4 (normalized numeric-multiset + Topic) plus a whole-case text fingerprint, reported as two classes.
+
+**Found a live defect on first run — DL-P2-024:** 190 cases hash to 185 unique fingerprints. Five are byte-identical cross-bank duplicates; **CBQ22-F7 / CBQ22-F8 are both Certified**, so the same case ships to learners twice. The 43 item-level flags are downstream symptoms — 42 resolve into those 5 duplicates.
+
+Gate distinguishes *acknowledged* (filed, blocked from certification) from *new*; 48 acknowledged, 0 new.
+
+### 1.4 Coverage Assertion — real FAIL mode
+
+`coverage_assert.js` previously had **no `return 1` anywhere** — the header claimed hardening it never performed. Implemented state-driven FAIL mode (`cleanRuns >= 2` persisted in the state file).
+
+Also fixed the probe constant that blocked everything upstream: `P2_STRICT_CASES` was `110` with the comment "preflight:p2 shows 110/110 Certified" — true pre-2026-09-24, false after DL-P2-023. Recaptured to the verified **36**.
+
+**Fail path verified, not assumed:** armed + gap → exit 1; unarmed + gap → exit 0; two clean runs re-arm → gap → exit 1 again.
+
+### 1.5 Governance Guard Suite
+
+RULE 22 and RULE 23 were implemented in the plugin with **zero** test coverage, and the suite was invoked by **no npm script** despite AGENTS.md §8 claiming otherwise. Added 16 tests (RULE 11 P2 ×8, RULE 22 ×4, RULE 23 ×4), fixed the mirror-drift at the AF-5 `actual` field, and wired `guard-tests` into both `preflight` and `pipeline` — making the AGENTS.md §8 claim true.
+
+### Self-incident (disclosed) — DL-P2-025
+
+Negative-control testing of the clone gate corrupted the live `p2/case_pack_p2_1.js`: a test case was injected, and the restore wrote back a `JSON.stringify`-mangled string, leaving the pack 1,161 bytes short. Recovered byte-exact from commit `7f8f65f`, verified by SHA-256 `7e2082aa…` against the P2-085 baseline. **No content lost.**
+
+Two near-misses worth recording: `git checkout HEAD` produced a plausible, correctly-shaped file that was simply the **wrong version** (566,571 vs the correct 556,720) — byte size is not an identity check. And the Wave A backup would have been worse still: it is pre-quarantine and would have reverted DL-063's fixes.
+
+Root cause of the tooling gap: `CaseExtractor.extractFromContent` swallows parse errors and returns `null` (lines 90-92), and consumers treated `null` as "skip this bank" — the Rule 20 silent-drop class. The gate now **fails closed** on null/short extraction; the extractor itself remains **unfixed** and open.
+
+### Process notes / deviations (disclosed)
+
+1. **Three negative controls failed before the fourth worked** (wrong injection anchor, then a parse error, then the corrupting restore). A negative control that cannot fail proves nothing — the first three "passes" were meaningless.
+2. **Plan §1.1 premise was wrong**: this was a P1 gold-standard repair, not a P2 extension. Recorded rather than reported as P2 calibration.
+3. **Plan §1.3 expected a new scanner; it found an unfiled live defect** the project had never detected.
+4. Baseline drift (3 divergences) was caused by this session's own edits and corrected before closeout — caught by the baseline gate, not by assumption.
+
+### Files Modified
+
+| File | Change |
+|---|---|
+| `.opencode/plugins/governance-guard.js` | AF-3 v4 + P2 case-item field support |
+| `scripts/test_governance_guard.js` | 101 → 117 tests; mirror-drift fixed |
+| `scripts/coverage_assert.js` | Real FAIL mode (`process.exit(main())`, armed via persisted state) |
+| `scripts/pool_parity_probe.js` | `P2_STRICT_CASES` 110 → 36, with provenance |
+| `scripts/preflight_p2.js` | BOM-tolerant global-var match |
+| `package.json` | `clone-gate`, `guard-tests`, `case-batch-gate` scripts; both wired into `pipeline`/`preflight` |
+| `knowledge/CURRENT_BASELINES.md` | Test count 101→117; two governance hashes recaptured; stray table fragment removed |
+| `p2/DEFECT_LIBRARY_P2.md` | DL-P2-024, DL-P2-025 |
+| `knowledge/REVISION_HISTORY_P2.md` | This entry |
+
+**Created:** `scripts/p2_case_clone_gate.js` · `scripts/case_cert_batch_gate.js`
+
+**No `question_state` was flipped. No content pack was modified** (the one accidental corruption was restored byte-exact and disclosed above).
+
+### Verification (All Green)
+
+| Gate | Result |
+|---|---|
+| `npm run pipeline` | **EXIT 0** |
+| `test_governance_guard.js` | **117 PASS, 0 FAIL** |
+| `validate:p2` | 3,530 items, **0 errors** |
+| `baseline-coherence` | **0 divergences — BASELINE COHERENT** |
+| `preflight:p2` | **0 divergences** (110 caseIDs / 36 Certified) |
+| `probe:parity` | **PROBE PASS — 0 divergences** |
+| `coverage_assert` | **FAIL mode armed**, blocks on gap (verified exit 1) |
+| `clone-gate` | PASS — 48 acknowledged, **0 new** |
+| `case_cert_batch_gate` | 5 failure modes verified |
+| S122 gold AF-3 FP | **13 → 0** |
+| Pack integrity after incident | SHA-256 `7e2082aa…` **exact match** |
+
+### Cross-References
+
+DL-P2-023 · DL-P2-024 · DL-P2-025 · DL-045 · DL-049/Rule 20 · DL-065 (FP-rate precedent) · AGENTS.md §18.2/§19.4 · Board Resolution 2026-09-29
+
+---
+
+## Session P2-085 — Forensic Recovery & Brief Verification: Undocumented Bulk Quarantine (DL-P2-023) — 2026-09-30
+
+**Date:** 2026-09-30
+**Session Type:** Full Governance Lane — forensic reconstruction + documentation reconciliation
+**Board Findings:** Executing `PROMPT_P2_CONTENT_CERTIFICATION_COMPLETE.md` required verifying its claims first. Four were false and one invalidated Phase 2 as written.
+**Defects Filed:** `DL-P2-023` (P2, resolved) · `DL-066` (P1, open/tracked)
+
+---
+
+### T0 Preflight
+
+`npm run preflight:p2` initially reported **1 divergence**: `P2 Case Pack C4_C8 — NO GLOBAL VAR (bare array)`. Root cause: `p2/case_pack_p2_C4_C8.js` carries a UTF-8 BOM (char 0 = U+FEFF) injected by the quarantine script's `JSON.stringify` reserialization, which defeats the `^`-anchored match at `scripts/preflight_p2.js:213`. Fixed with a BOM-tolerant match; `preflight:p2` now reports **0 divergences**, guard 101/101 PASS.
+
+### Brief-claim verification (pre-execution)
+
+| # | Brief claim | Verified live state | Verdict |
+|---|---|---|---|
+| 1 | P2 cases 110 total, 36 strict, 74 mixed | 110 / 36 / 74 (11+9+6+5+5) | ✅ correct |
+| 2 | Per-bank strict ≈ 6/5/5/5/5 | **11/9/6/5/5** | ❌ narrative wrong |
+| 3 | 425 P1 case items Certified | **262 Certified / 163 In Audit** | ❌ **DoD #3 was false** |
+| 4 | Guard suite 104 tests | **101**; RULE 22/23 implemented, **zero** coverage; suite orphaned from all npm scripts | ❌ Gate 5.1 unmeetable |
+| 5 | "Phase 1 prerequisites" runs first | T0 preflight was **already red**; Gate 1.4 needs 2 clean `probe:parity` runs | ❌ ordering inverted |
+| 6 | Phase 2 = certify ~600 items | **215 items, all quarantined, 0 authored content pending** | ❌ ~3× overstatement |
+| 7 | "Micropolis integration" | 9 occurrences, **all inside the brief itself**; no code, spec, module, or file in the repo | ❌ no referent — Phase 4 struck |
+
+### The finding that reordered the program
+
+`scripts/quarantine_all_case_inversions.js` ran **2026-09-24T03:37–03:42Z** and demoted **106 cases / 215 items** from `Certified` to `In Audit` across all 8 case banks.
+
+It is **orphaned** — zero references in any npm script, REVISION_HISTORY entry, or defect-library entry before this filing. It wrote **zero provenance stamps**, emitted **no manifest/log/JSON**, and dropped the `certifiedItems === 0` case-level guard its sanctioned siblings carry (`quarantine_case_inversions.js:183`, `_v2.js:178`), sweeping every Certified item in a listed case (lines 87-89).
+
+**0 of the 215 In Audit items carried a recorded reason.** The only `quarantine_reason` in the repo (CBQ22-C10, DL-063) belongs to a case since restored to `Certified`.
+
+Violations: AGENTS.md §4, Rule 16, Rule 21 manifest discipline, DL-045 no-auto-remediate doctrine.
+
+### Forensic reconstruction (two independent implementations, AGENTS.md §6)
+
+| Measure | Value |
+|---|---|
+| Ground truth | Wave A backups (epoch `1790221063xxx`) |
+| Cross-validation | git ref `54144674` — **6/6 banks agree** |
+| Pool | 190 cases / 1085 items — **0 deleted, 0 added** |
+| Certified before → after | **180 → 75** |
+| Cases demoted | 105 (P2 74 + P1 31) |
+| Script CaseIDs | 123 listed; 17 correctly skipped (already In Audit); **0 demoted off-list** |
+
+All 24 `.bak-quarantine-*` files verified present and non-zero (3 waves × 8 banks) before any reliance on them.
+
+### Re-adjudication — and a discarded first attempt
+
+A first adjudication used `scripts/output/case_inversion_analysis.json`, yielding A=49/B=22/C=34. **That artifact is undated** and cannot be proven to predate the quarantine.
+
+An ad-hoc screen reimplementation was written and **discarded on validation**: it keyed on `ExplanationCorrect`/`Choices`, but 162/198 items store content in `Explanation`/`Correct` — an 82% false-negative blind spot producing a false "0 flags" result. (Field-shape finding mirrors the documented `case_semantic_screens.js:130,136-144` schema audit.)
+
+Instead, the project's own `case_semantic_screens.js` was run against a Wave A pre-quarantine mirror (`2026-09-30T03:12:28Z`):
+
+- **444 flags**; **161 INVERSION** — matching the undated artifact's count exactly, independently corroborating it
+- Severity: 100 FLAG / 282 weak / 62 info
+
+| Bucket | Count | Meaning |
+|---|---|---|
+| A_collateral | **4** | No FLAG-severity evidence; demotion attributable to the unguarded wildcard |
+| B_needsHandSolve | **101** | Strong key/explanation-contradiction evidence present |
+| C_ambiguous | 0 | — |
+
+**Bucket B means NEEDS HAND-SOLVE, not confirmed-defective.** DL-065 measured 97.7% false-positive rate on this screen family (211 FP / 216). Nothing was certified or archived on screen output alone (DL-045).
+
+### Plan correction — wholesale restore withdrawn
+
+The approved plan called for wholesale restore from Wave A. **Measurement disproved it:** 58 of the 105 demoted cases also carry legitimate post-quarantine content fixes (132 `Explanation`, 13 `Choices`, 10 `Correct`, 8 `FormulaReference`, 5 `AccountingPrinciple`, 2 other), attributable by mtime to DL-063 (2026-09-25) and DL-065 (2026-09-28).
+
+A wholesale restore would have reverted every one and reintroduced resolved defects. Plan §0.5 amended to **state-only, content-preserving** restore with a byte-identity assertion. **No restore was executed this session.**
+
+### Net position on the quarantine's legitimacy
+
+The corrected evidence **partially vindicates** the script's case selection: 101 of 105 demoted cases have genuine key/explanation-contradiction evidence in pre-quarantine content. Its failure was **procedural** — no manifest, no provenance, no per-item adjudication, unguarded case-level sweep — not that it demoted innocent cases wholesale. Recorded as such; not overstated as mass false-positive.
+
+### Files Modified
+
+| File | Change |
+|---|---|
+| `scripts/output/quarantine_reconciliation_20260930.json` | **CREATED** (43,982 B) — the manifest the script never wrote |
+| `scripts/preflight_p2.js` | BOM-tolerant global-var match (line 213) |
+| `scripts/quarantine_all_case_inversions.js` | Refuses by default; `--dry-run` / `--archaeology` escape hatches |
+| `p2/DEFECT_LIBRARY_P2.md` | DL-P2-023 filed |
+| `knowledge/DEFECT_LIBRARY.md` | DL-066 filed (P1 exposure, open) |
+| `p2/CURRENT_BASELINES_P2.md` | §1b recaptured — prior table claimed a false 100/100 and omitted 2 live banks; added P2 case-pack + Wave A SHA-256 hashes (previously absent) |
+| `knowledge/CURRENT_BASELINES.md` | Correction note — "425 P1 Certified" was true 2026-09-20, invalidated 2026-09-24; "88 strict-eligible" stale (36 verified) |
+| `knowledge/REVISION_HISTORY_P2.md` | This entry |
+
+**No content pack files were modified.** No `question_state` was flipped. No item was certified or archived.
+
+### Backups Created
+
+None — this session made no content writes. The 24 pre-existing `.bak-quarantine-*` files were read-only inputs, all verified non-zero.
+
+### Verification
+
+| Gate | Result |
+|---|---|
+| `node --check` (2 modified scripts) | exit 0 |
+| `npm run preflight:p2` | **0 divergences**, guard **101/101 PASS** |
+| Impl #1 vs #2 agreement | **6/6 banks** |
+| Manifest on disk | verified, 43,982 B |
+| Guard refuses by default | verified, exit 2 |
+
+### Process notes / deviations (disclosed)
+
+1. **Plan §0.5 withdrawn mid-execution** after the 58-case content-mutation measurement. The wholesale-restore instruction would have destroyed documented fixes.
+2. **First adjudication discarded** — undated evidence base.
+3. **Ad-hoc screen discarded** — 82% blind spot; project screen used instead.
+4. **Counts corrected twice**: 126 → 123 script CaseIDs (earlier overcount double-counted a segment); 215 items → 105 cases + 215 items (case-vs-item unit distinction).
+5. **Shell constraints**: `head` unavailable (Windows); `%TEMP%` does not expand under cmd; `Get-FileHash` unavailable in the sandbox shell — used Node `crypto` instead; `node -e` with embedded newlines produces no output — used file-based scripts.
+6. **P1 remediation deliberately NOT performed** — out of authorized scope, tracked as DL-066.
+
+### Baseline Updates
+
+`p2/CURRENT_BASELINES_P2.md` §1b and `knowledge/CURRENT_BASELINES.md` correction note. No `rebuild_baselines` recapture — no runtime-critical content file changed.
+
+### Cross-References
+
+- `p2/DEFECT_LIBRARY_P2.md` DL-P2-023 · `knowledge/DEFECT_LIBRARY.md` DL-066
+- `scripts/output/quarantine_reconciliation_20260930.json`
+- `~/.commandcode/plans/p2-certification-forensic-recovery.md` (§0.5 amended)
+- DL-045, DL-047, DL-051, DL-063, DL-065 (post-quarantine content sessions), DL-051 v3 screen method
+
+---
+
 ## Session P2-F4 — WS-F4 CBQ22-C10-Q4 Answer-Key Inversion Remediation — 2026-09-24
 
 **Date:** 2026-09-24
@@ -7334,3 +7576,2917 @@ Parent case CBQ22-A7 already `Certified` with `recertification_batch: "DL-P2-022
 - DL-061 (parent — P2-F-227 recertification)
 - Rule 16 (provenance stamp requirement)
 - CAQS §1.7.1 (certification state governance)
+---
+
+## 2026-09-30 — P2 Hand-Solve Wave: Batch 1 (5 cases / 30 items)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-A1`, `CBQ21-A3`, `CBQ21-A4`, `CBQ21-A6`, `CBQ21-B1` — 30 items, all `p2/case_pack_p2_1.js`
+**Evidence basis:** adjudicated (independent hand-solve, keys withheld during derivation)
+
+### Result
+
+| Metric | Value |
+|---|---|
+| Items hand-solved | 30 / 30 |
+| Answer mismatches | **0** |
+| Cases certified | 0 (certification deferred — see below) |
+| Explanation defects found | 4 of 5 cases |
+
+Every answer was derived independently from stem + exhibits before the stored key was read. All 30
+matched. Representative derivations: current ratio 1,300/800 = 1.63; quick ratio 740/800 = 0.93;
+DSO 455/10.0 = 45.5; DuPont ROE 750,000/4,800,000 = 15.63%; TIE 1,240,000/240,000 = 5.17×;
+CCC = 93.0 + 103.7 − 65.7 = 131.0 days; goodwill 180 − 85 − 50 − 25 = 20; ASC 280 bakery assets
+220/1,855 = 11.9%; constant-dollar NI 22.4/1.045 = 21.43.
+
+`CBQ21-A4` was additionally confirmed fully DL-008 / Rule 10 compliant: `ExplanationWrong[CorrectChoice]`
+is `""` on all 6 items and every non-CC slot is ≥138 characters.
+
+### Certification withheld
+
+Batch 1 was **not** certified. Four of the five cases carried generic boilerplate explanations
+(`CBQ21-A1-Q6`, `CBQ21-A3-Q5`, `CBQ21-A6-Q3`, `CBQ21-B1-Q3`), which `PROMPT_P2_HAND_SOLVE_WAVE.md`
+§3 step 7 forbids. `CBQ21-A6-Q3` was the serious case: its explanation was entirely filler, naming
+neither the exhibit figures nor the ASC 255 current-cost requirement.
+
+Sizing the class showed it was not local: **51 occurrences across 37 items in 3 banks**, of which
+**5 items were already `Certified`** and therefore learner-reachable. Certifying Batch 1 over a
+defect class that remains open in sibling packs produces a locally-green batch with the class still
+live, so remediation was authorized and run first (DL-P2-026, below). `CBQ21-A4` is now the only
+Batch 1 case with a clean explanation and is the sole case eligible for certification.
+
+### Gates at T0 and Tend
+
+| Gate | Result |
+|---|---|
+| `preflight_p2` (T0) | 0 divergences, guard 123/123 |
+| `case_semantic_screens.js` | 425 flags, deterministic, re-run identical |
+| `p2_case_clone_gate.js` | PASS, 0 unacknowledged clones |
+| `case_cert_batch_gate.js` | FAIL as designed pre-flip (validates post-certification) |
+
+The batch gate's correct operating order is **fix → flip → gate**, not the spec's gate → flip: it
+reads the live case and item states and requires `Certified`, so a pre-flip run necessarily fails.
+Gate behaviour is otherwise correct and was not modified.
+
+---
+
+## 2026-09-30 — DL-P2-026 Remediation: 51 boilerplate occurrences across 37 case items
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `p2/case_pack_p2_1.js` (12 items), `p2/case_pack_p2_2.js` (12), `p2/case_pack_p2_3.js` (13)
+**Defect:** DL-P2-026 (generic explanation boilerplate, DL-013 class)
+**Evidence basis:** adjudicated — Tier 1 rewrites authored from independent hand-solve, not from screen output (DL-045)
+
+### Change-sets (Rule 5)
+
+| Change-set | Items | Banks | States | Backup |
+|---|---|---|---|---|
+| 1 | 24 | pack_1, pack_2 | 20 In Audit, 4 Certified | `backups/case_pack_p2_*.js.bak-20260930hand01` |
+| 2 | 13 | pack_3 | 12 In Audit, 1 Certified | (same snapshot) |
+
+Both are ≤ 30 items. A single timestamped snapshot of all three banks was taken **before** any write
+and verified non-zero and hash-identical to the sources
+(`7e2082aab58a78c6` / `2501a0132a876bf1` / `1c431753df5d1420`).
+
+### What changed
+
+- **Tier 1 (4 items, entirely filler):** explanations replaced with authored text carrying the
+  governing standard, substituted figures, and a named distractor trap — each hand-solved
+  independently first. `CBQ21-A6-Q3`, `CBQ22-B5-Q1`, `CBQ22-D5-Q3`, `CBQ23-A4-Q1`.
+- **Tier 2 (33 items, trailing padding):** the filler sentences were removed and punctuation
+  tidied. Explanatory content left intact.
+
+**No answer key, correct-choice letter, or choice text was altered.** The class is explanation-prose
+only. All 30 Batch 1 hand-solved answers were confirmed correct before any edit and remain so.
+
+### Disclosed deviation — corrected before commit
+
+The `CBQ23-A4-Q1` rewrite initially cited ASC 842 as measuring the lease liability at "the lower of
+the right-of-use asset and the present value of lease payments." That is not the standard; ASC
+842-20-25 measures the liability at the present value of remaining lease payments discounted at the
+implicit or incremental borrowing rate. The explanation was corrected **before** the change-set was
+written to disk. The item's answer (1.45, using the exhibit's $5.2M present value rather than the $6M
+right-of-use amount) was unaffected. Recorded here because a wrong governing citation in a
+certification-grade explanation is the same defect class as the filler it replaced.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 51 occurrences → 37 items | Occurrence scan grouped by owning ItemID | ✅ |
+| Class closed | Raw `indexOf` across 5 banks = 0 | ✅ |
+| Class closed (2nd method) | `CaseExtractor` per-item field scan = 0 | ✅ |
+| Methods independent and agreeing | Two separate implementations, both return 0 | ✅ |
+| Bank syntax intact | `node --check` on all 3 packs | ✅ |
+| Case counts unchanged | Extractor re-parse: 33 / 33 / 34 | ✅ |
+| Item count unchanged | 660 items across 5 banks | ✅ |
+| Tier 1 answers correct | 4 independent hand-solves (8.11, 1.45, 4.2>3.5, FIFO) | ✅ |
+| Backups valid | Non-zero, hash-identical, pre-write | ✅ |
+| Screen stability | 425 → 426 flags; zero new FLAG-severity | ✅ |
+| Rule 5 compliance | 24 and 13 items, both ≤ 30 | ✅ |
+| No content-correctness regression | No key/choice/exhibit field touched | ✅ |
+
+### Screen delta disclosure
+
+Net +1 flag (425 → 426), within the ±2 stability criterion. The delta is **not** five new defects:
+five "added" entries are re-scored versions of flags that already existed on the same
+item/screen/severity pair — their jaccard values shifted because the explanation text changed. One
+genuinely new flag appeared: a *weak*-severity INVERSION on the rewritten `CBQ22-D5-Q3`. No
+FLAG-severity flag was added. Per DL-045 the new weak flag is a review trigger, not a basis for
+further automated edits.
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 12 items
+- `p2/case_pack_p2_2.js` — 12 items
+- `p2/case_pack_p2_3.js` — 13 items
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-026 appended
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Files deliberately NOT modified
+
+- `p2/case_pack_p2_authored.js`, `p2/case_pack_p2_C4_C8.js` — scanned, 0 occurrences, out of scope
+- `scripts/output/CASE_REVIEW_ITEMS.txt` — cited by the spec but does not exist; the real file
+  (`reports/CASE_REVIEW_ITEMS.txt`) lists 148 flags on already-`Certified` cases, a different
+  population. Not modified — it is a report artifact, not a bank.
+- `scripts/case_batch_certify.js` — cited by the spec but does not exist; the real gate is
+  `scripts/case_cert_batch_gate.js` and was used as-is. Not modified.
+- Answer keys, choice text, `CorrectChoice`, `Correct`, `question_state` — untouched throughout this
+  remediation. Certification is a separate change-set.
+- `PROMPT_P2_HAND_SOLVE_WAVE.md` — contains four verified factual errors (item count, batch sizing,
+  two script paths, and the `--batch` CLI contract). Left unedited; corrections belong in a
+  regenerated spec, not a silent patch.
+
+### Open items carried forward
+
+1. `CBQ22-D5-Q3` weak INVERSION flag — review trigger only, not remediated (DL-045).
+2. Batch 1 certification of `CBQ21-A4` (the one clean case) — not yet flipped.
+3. Remaining 13 change-sets of the 408-item In Audit population, 63 cases.
+4. No automated screen covers explanation boilerplate; this class survived 3 prior waves. A
+   boilerplate-phrase screen is the candidate prevention control.
+5. `PROMPT_P2_HAND_SOLVE_WAVE.md` needs regeneration against verified reality before it is run again.
+
+---
+
+### Post-verification addendum — absolute-language regression caught and fixed
+
+A pre/post comparison of the 37 remediated items against the pre-edit backup (run in a temp mirror
+against `backups/*.bak-20260930hand01`, never against live files) found that **two of my own Tier-1
+rewrites introduced absolute-language matches** that the `AbsoluteLanguageValidator` flags:
+
+| Item | Trigger | Fix |
+|---|---|---|
+| `CBQ22-B5-Q1` | 3× "must" ("must be computed", "must pay", "must compare") | Reworded to "is measured against spot", "pays", "needs to compare" |
+| `CBQ23-A4-Q1` | 1× "must" ("exposures ... must be recast") | Reworded to "are recast onto the balance sheet" |
+
+Re-applied as a 2-item change-set (within Rule 5), then re-verified: **0 absolute-language matches
+introduced** across all 37 items. The pre-existing absolute-language matches on `CBQ21-F3-Q5`,
+`CBQ21-F5-Q3`, `CBQ23-A3-Q5`, and `CBQ23-F4-Q5` (1 each) are unchanged from the backup and are
+**not** part of this remediation — they are in choice text, not explanations, and are out of scope
+for DL-P2-026.
+
+Worth stating plainly: in both cases "must" was describing an actual requirement of ASC 842 / the
+forward-pricing convention, not an unjustifiable absolute claim. The wording was still changed,
+because a validator warning that fires on correct text trains reviewers to discount the validator.
+The alternative — leaving a known-flagging line in certification-grade content — is worse.
+
+Re-verification after the addendum: boilerplate 0/660 (two methods), `node --check` clean on all
+three packs, preflight 0 divergences, screens 426 (stable), validate 0 errors, `probe:parity` PASS
+(0 divergences), governance guard 123/123.
+
+### Final gate status
+
+| Gate | Result |
+|---|---|
+| `preflight_p2` | 0 divergences |
+| `validate` | 0 errors |
+| `test_governance_guard` | 123/123 PASS |
+| `probe:parity` | 0 divergences |
+| `case_semantic_screens` | 426 flags, stable, 0 new FLAG-severity |
+| `p2_case_clone_gate` | PASS |
+| `node --check` (3 packs) | PASS |
+| Boilerplate class | 0 / 660, two independent methods agree |
+
+
+---
+
+## 2026-09-30 — P2 Hand-Solve Wave Batch 1 CERTIFIED (5 cases / 30 items)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-A1`, `CBQ21-A3`, `CBQ21-A4`, `CBQ21-A6`, `CBQ21-B1` — 30 items, `p2/case_pack_p2_1.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld during derivation
+**Batch:** P2-HAND-SOLVE-WAVE-B1 · **Date:** 2026-09-30
+
+### Certified
+
+| Case | Items | Hand-solve | Mismatches |
+|---|---|---|---|
+| `CBQ21-A1` | 6 | 6/6 | 0 |
+| `CBQ21-A3` | 6 | 6/6 | 0 |
+| `CBQ21-A4` | 6 | 6/6 | 0 |
+| `CBQ21-A6` | 6 | 6/6 | 0 |
+| `CBQ21-B1` | 6 | 6/6 | 0 |
+| **Total** | **30** | **30/30** | **0** |
+
+**Before:** 38 P2 cases Certified / 33 strict-eligible · **After:** 43 Certified / 38 strict-eligible
+(preflight: P2 Case Certified 33 → 38; pack_1 Certified 11 → 16)
+
+Certification was gated on DL-P2-026 remediation completing first — the case-level flips ran only
+after all 37 affected items were clean, so no case was ever in a certified state carrying known
+boilerplate.
+
+### Item-level state shadowing (CBQ21-A4)
+
+`CBQ21-A4` is the only Batch 1 case whose **items carry their own `question_state`** (6 of 6 set to
+`In Audit`, shadowing the case-level value). The batch gate reads the item field, so flipping only
+the case state produced `GATE: FAIL — 6/6 items not 'Certified'`. The 6 items were then flipped
+explicitly with their own `certification_batch` / `certification_date` stamps. This is the
+item-state-vs-case-state inheritance trap noted in the project's own guidance; it is recorded here
+because it changes what "certify a case" means for a mixed-schema bank.
+
+The other 4 cases inherit state from the case object (0 items carry their own state), so a case-level
+flip is sufficient and correct for them.
+
+### Certification mechanism
+
+The gate (`scripts/case_cert_batch_gate.js`) explicitly does not perform state flips — it validates a
+post-certification state. No sanctioned P2 case-flip script was found that was safe to reuse:
+`scripts/_certify_cases.js` is hardcoded to session P2-078, targets a different state
+(`Unprocessed`), does an unscoped global string replace, and restores from a stale hardcoded backup on
+parse failure. A scoped flipper was written instead (allow-listed CaseIDs, preconditions verified,
+pre-write parse + per-field diff verification proving only state/stamp fields changed, own timestamped
+backup, fail-closed).
+
+**Three defects in my own flipper were caught by the pre-write parse gate, not by inspection** — each
+produced a malformed bank that was refused before writing:
+
+1. Double comma (`"Certified"::`) from appending a stamp after an existing separator.
+2. Missing separator when replacing the whole `"key": "value"` span instead of the value alone.
+3. Offset arithmetic that landed on the **key** token rather than the value, because both are quoted.
+
+The final implementation parses → mutates → re-serializes and verifies that all 28 non-target cases
+round-trip byte-identically, which is why it is schema-agnostic and immune to the heterogeneous field
+layouts across these 5 cases (A1/A3/A4/B1 carry `certification_session` in different positions; A6
+carries none). Nothing malformed was ever written to a pack.
+
+### Rule 16 provenance
+
+Every certified case carries `certification_session` and `certification_date` = 2026-09-30, plus
+`certification_batch` = P2-HAND-SOLVE-WAVE. Pre-existing stale session stamps (P2-059, P2-060,
+P2-076, P2-CERT-064) were **replaced**, not duplicated — a duplicate JSON key silently overrides, which
+would have left stale provenance as the effective value. A duplicate-key assertion runs on every
+certified case to prevent that failure mode recurring.
+
+### Semantic flags declared as known false positives
+
+Three FLAG-severity screen hits fall inside this batch and were hand-verified as screen false positives
+(keys independently confirmed correct before declaration):
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ21-A1-Q6` | B | UNSUPPORTED-CORRECT on a long Evaluate option; the key is correct on hand-solve |
+| `CBQ21-A3-Q5` | B | multi-select; screen expects a single letter, the item stores three |
+| `CBQ21-A3-Q6` | C | low lexical overlap between a match-type key and its explanation |
+
+Declared in `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B1.json`. Per DL-045 these are
+declared from adjudication, not auto-remediated.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation per item, keys withheld | ✅ |
+| 5 cases Certified | Extractor re-parse: pack_1 Certified 11 → 16 | ✅ |
+| 30 items Certified | Gate PASS; A4's 6 items individually stamped | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → GATE: PASS | ✅ |
+| Case count intact | 33 cases before and after | ✅ |
+| Item count intact | 660 items across 5 banks | ✅ |
+| Syntax | `node --check` on all modified packs | ✅ |
+| Non-target cases untouched | All 28 round-trip byte-identical | ✅ |
+| No duplicate stamp keys | Per-case assertion, 1 occurrence each | ✅ |
+| No absolute language introduced | Pre/post diff vs backup = 0 | ✅ |
+| Boilerplate class closed | 0/660, two independent methods | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 38 cases / 228 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Tooling change
+
+`scripts/pool_parity_probe.js` — `P2_STRICT_CASES` re-bumped **33 → 38** with a dated provenance
+comment recording the cause (Batch 1 certification). This constant is an assertion, not a target: the
+probe FAILed immediately after certification precisely because it still expected the pre-certification
+figure. Re-bumping it is the sanctioned response to a genuine pool change. The assertion was
+**correct to fail**; deleting or relaxing it would have removed a real safety check.
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 12 explanation items (DL-P2-026) + 5 cases / 6 items certified
+- `p2/case_pack_p2_2.js` — 12 explanation items (DL-P2-026)
+- `p2/case_pack_p2_3.js` — 13 explanation items (DL-P2-026)
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 33 → 38
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-026
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B1.json` — batch manifest
+
+### Files deliberately NOT modified
+
+- Answer keys, choice text, `CorrectChoice`, `Correct` — untouched throughout
+- `p2/case_pack_p2_authored.js`, `p2/case_pack_p2_C4_C8.js` — scanned, 0 boilerplate, no changes
+- `scripts/_certify_cases.js` and the other 20 legacy `certify_wave*.js` scripts — inspected, found
+  unsafe for this purpose (hardcoded session, unscoped global replace, stale-backup restore). Left in
+  place; they are other sessions' artifacts. **Recommend a follow-up to add a refuse-by-default guard**
+  so they cannot be run against the current pool.
+- `PROMPT_P2_HAND_SOLVE_WAVE.md` — four verified factual errors. Needs regeneration, not a silent patch.
+
+### Backups
+
+| Backup | Size | Verified |
+|---|---|---|
+| `backups/case_pack_p2_1.js.bak-20260930hand01` | 556720 | non-zero, hash-identical |
+| `backups/case_pack_p2_2.js.bak-20260930hand01` | 566875 | non-zero, hash-identical |
+| `backups/case_pack_p2_3.js.bak-20260930hand01` | 533226 | non-zero, hash-identical |
+| `backups/case_pack_p2_1.js.bak-cert-20260930cert01` | 556066 | non-zero, size-matched |
+| `backups/case_pack_p2_1.js.bak-cert2-20260930cert02` | 555285 | non-zero, size-matched |
+| `p2/DEFECT_LIBRARY_P2.md.bak-20260930hand01` | 79782 | non-zero, size-matched |
+| `knowledge/REVISION_HISTORY_P2.md.bak-20260930hand01` | 610136 | non-zero, size-matched |
+
+All exist on disk with non-zero size; no backup claim in this entry is unverified.
+
+### Open items carried forward
+
+1. **Remaining 63 cases / 378 items** of the In Audit population (13 more Rule-5 change-sets at
+   5 cases each).
+2. **`CBQ22-D5-Q3` weak INVERSION flag** — review trigger only, not remediated (DL-045).
+3. **No automated screen covers explanation boilerplate.** The class survived 3 prior waves; a
+   boilerplate-phrase screen is the candidate prevention control. It is now cheap to add — the
+   six phrases are enumerated in DL-P2-026.
+4. **20 legacy `certify_wave*.js` / `_certify_cases.js` scripts** are runnable and unsafe against the
+   current pool. Recommend refuse-by-default guards.
+5. **`PROMPT_P2_HAND_SOLVE_WAVE.md`** must be regenerated before reuse: wrong item count (99 vs 408),
+   wrong batch sizing (4 change-sets vs 13), two non-existent script paths, and a wrong `--batch` CLI
+   contract (the real gate takes a manifest path, not a CaseID list; `case_semantic_screens.js` has
+   no `--batch` flag at all).
+6. **Per-item vs case-level state is bank-dependent.** A future certification wave should not assume
+   a case-level flip is sufficient; probe for own-state items first.
+
+---
+
+
+---
+
+## 2026-09-30 — P2 Hand-Solve Wave Batch 2 CERTIFIED (5 cases / 30 items)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-C1`, `CBQ21-E1`, `CBQ21-D1`, `CBQ21-B2`, `CBQ21-E2` — 30 items, `p2/case_pack_p2_1.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld during derivation
+**Batch:** P2-HAND-SOLVE-WAVE-B2 · **Date:** 2026-09-30
+
+### Certified
+
+| Case | Items | Hand-solve | Mismatches | Defects found |
+|---|---|---|---|---|
+| `CBQ21-C1` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-E1` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-D1` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-B2` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-E2` | 6 | 6/6 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | **0** |
+
+**Before:** 38 P2 cases Certified / 43 after. First batch requiring no remediation — Batch 1's
+DL-P2-026 cleanup did not recur.
+
+### Hand-solve evidence (representative)
+
+Every answer derived from exhibits with stored keys withheld, then revealed and compared.
+
+| Case | Item | Derivation | Stored |
+|---|---|---|---|
+| CBQ21-C1 | Q1 | Segment margin = 480,000 − 260,000 − 150,000 (allocated common **excluded**) | 70,000 |
+| CBQ21-C1 | Q2 | 3,000 × 42 − 3,000 × (34−3) − 12,000 tooling = 126,000 − 93,000 − 12,000 | 21,000 |
+| CBQ21-C1 | Q4 | 20,000 × (25−22) − 0.05 × 150,000 + 25,000 | 77,500 |
+| CBQ21-E1 | Q1 | PI = (1,500,000 + 500,000) / 1,500,000 | 1.33 |
+| CBQ21-E1 | Q3 | Exhaustive subset search under the $5.0M cap → A,C,D,F at $5.0M / NPV $1.48M | C |
+| CBQ21-D1 | Q1–Q3 | 0.25 × 4.0M = 1,000,000; 0.10 × 4.0M = 400,000; net = 1,000,000 − 400,000 − 150,000 | 1,000,000 / 400,000 / 450,000 |
+| CBQ21-B2 | Q1–Q4 | Kd(1−T) = 4.50; Kp = 2.50/25 = 10.00; Ke = 4.0 + 1.20×5.5 = 10.60; WACC = 1,742/200 | 4.50 / 10.00 / 10.60 / 8.71 |
+| CBQ21-E2 | Q1–Q3 | PV(keep) incl. forgone $150,000 salvage = 667,054; challenger EAA = 231,899; defender EAA = 268,233 | 667,054 / 231,899 / 268,233 |
+
+`CBQ21-E2-Q1` confirms the foregone $150,000 current salvage is correctly treated as a cost of
+keeping, and the derived defender EAA (268,232.63) is independently corroborated by option A of
+Q5 citing the same figure — a cross-check within the item set.
+
+### Defect scan — 0 issues, no remediation required
+
+Scanned all 30 items for boilerplate, generic filler, empty/short explanations, and MCQ-schema
+EW-slot defects. **Zero findings.** Two scanner false positives were identified and corrected
+rather than acted on:
+
+1. **Rule 10 / Rule 6 "EW absent" on 14 items** — false positive. The scanner treated
+   `Correct` + `Explanation` case items as if they used the P2 MCQ schema. Confirmed by direct
+   inspection: those items carry no `CorrectChoice`, no `ExplanationCorrect`, and no
+   `ExplanationWrong[A-F]` fields at all. Rule 6/10 govern the MCQ schema; EW-absence on a
+   Schema-A case item is by design. Scanner now gates on schema detection.
+2. **"must" in 4 explanations** — not a defect. `AbsoluteLanguageValidator` scans only
+   `Choices` and `Prompt`, never explanations, and skips case items entirely
+   (`AbsoluteLanguageValidator.js:34,39-41,57`). All 4 occurrences are pre-existing (confirmed
+   unchanged vs `backups/case_pack_p2_1.js.bak-20260930hand01`), so this batch introduced none.
+
+Acting on either would have meant remediating non-defects and weakening a working scanner.
+
+### Semantic flags declared as adjudicated false positives
+
+Five FLAG-severity hits, each individually hand-verified before declaration (DL-045):
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ21-E1-Q5` | B | UNSUPPORTED-CORRECT recall=0.00 on choice B; the stored A,B,C is correct on hand-solve. The screen's per-choice token-overlap heuristic scores B low because its wording shares few tokens with the explanation. |
+| `CBQ21-B2-Q2` | C | jaccard 0.0455 — numeric answer `10.00` vs prose explanation. Correct: 2.50/25. |
+| `CBQ21-B2-Q3` | C | jaccard 0.0462 — same artifact. Correct: 4.0 + 1.20 × 5.5 = 10.60. |
+| `CBQ21-B2-Q4` | C | jaccard 0.0282 — same artifact. Correct: (270+200+1,272)/200 = 8.71. |
+| `CBQ21-E2-Q3` | C | jaccard 0.0488 — same artifact. Correct: 667,055 × 0.402115 = 268,233. |
+
+The four screen-C hits share one root cause worth naming: **the C screen measures lexical overlap
+between a stored answer and its explanation, and a bare numeric answer has almost no shared
+vocabulary with explanatory prose.** Every numeric item in a case bank is therefore structurally
+predisposed to this flag. That is a screen-design limitation, not a content defect.
+
+Declared in `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B2.json`.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation per item, keys withheld | ✅ |
+| 5 cases Certified | preflight P2 Case Certified 38 → 43 | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → GATE: PASS | ✅ |
+| 0 defects, no remediation | 30-item scan, 0 findings after 2 FP corrections | ✅ |
+| Case count intact | 33 cases before and after | ✅ |
+| Item count intact | 660 items across 5 banks | ✅ |
+| Syntax | `node --check` on `case_pack_p2_1.js` | ✅ |
+| Non-target cases untouched | All 28 round-trip byte-identical | ✅ |
+| No duplicate stamp keys | Per-case assertion, 1 occurrence each | ✅ |
+| Boilerplate class still closed | 0/660, two independent methods | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 43 cases / 258 items | ✅ |
+
+### Tooling
+
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` re-bumped **38 → 43** with dated provenance.
+  The probe FAILed immediately after certification because it still expected 38, which is the
+  assertion working as designed.
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 38 → 43
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B2.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_1.js.bak-b2---commit` (557,034 bytes, non-zero, pre-certification snapshot
+of `case_pack_p2_1.js`). The filename contains a literal `--commit` because the certifier's
+timestamp argument initially accepted the flag as a positional value; the file itself is valid and
+verified. The argument handling was corrected immediately after, so later batches use clean
+names. Disclosed rather than renamed, since renaming would break the audit trail.
+
+### Open items carried forward
+
+1. **Batches 3–14: 58 cases / 348 items** remain In Audit.
+2. **Screen C is structurally biased against numeric items** (low jaccard by construction). Worth a
+   screen-design review so the C family stops producing a FLAG on every calculation item. Not
+   remediated here — changing a validator is a separate, separately-authorized change.
+3. Remaining side-notes unchanged: boilerplate screen, 20 legacy `certify_wave*.js` retirement,
+   `PROMPT_P2_HAND_SOLVE_WAVE.md` regeneration.
+
+---
+
+
+---
+
+## 2026-09-30 — DL-P2-026 CORRECTION: zero-assertion incomplete, 20 items repaired, screen C NOT calibrated
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `p2/case_pack_p2_1.js` (7), `p2/case_pack_p2_2.js` (5), `p2/case_pack_p2_3.js` (8) — 20 items
+**Evidence basis:** adjudicated — 5 authored replacements hand-solved from exhibits with keys withheld
+
+### Why this session exists
+
+A screen-C calibration was authorized on the theory that its low-jaccard FLAGs were artifacts of
+value-shaped (numeric) answers. **Measuring before editing showed the theory was wrong.** The
+measurement is what caught the error, and the decision was reversed before any validator code changed.
+
+### The correction
+
+The earlier DL-P2-026 closure ("51 occurrences across 37 items; 0/660 remain") is **retracted as
+incomplete**. Its zero-assertion covered six hand-curated phrases and missed a seventh:
+
+| | Items | Of which already `Certified` (learner-reachable) |
+|---|---|---|
+| 7th phrase: "This is the correct answer because it properly applies the governing standard" | 18 | 8 |
+| — of which entirely filler (no real content) | 3 | 0 |
+| — of which trailing padding | 15 | 8 |
+
+Zero-assertions are bounded by the phrase list they test. The original claim should have read
+"0 occurrences of these six phrases," not "the class is closed."
+
+### Two genuine defects screen C had caught
+
+**`CBQ23-E4-Q2`** (case `CBQ23-E4`, In Audit) — raw authoring scratchwork in a learner-facing
+explanation, internally self-contradicting: "…Hmm simplify: optimum is … NPV1.62? **We key 1.58
+approx.** … **Set 1.62?** We'll set 1.62." Independent hand-solve confirms the stored key **1.62**
+is correct (exhaustive subset search under the $6M cap → A+B+C+D at $5.3M). The key was right;
+the explanation was unusable. Exempting numeric items from screen C would have certified it.
+
+**`CBQ23-B3-Q3`** (case `CBQ23-B3`, In Audit) — explanation's own printed sum read **8.68** while
+the stored key is **8.67**. Re-derived from Exhibit 1: Ke = 3.20 + 1.42 × 5.50 = 11.01%; after-tax
+Kd = 6.50 × 0.65 = 4.225%; Kp = 8.00%; weights 60/30/10 → 6.606 + 1.2675 + 0.800 = 8.6735 → 8.67.
+Both intermediates were correct; the defect was an unexplained rounding inconsistency between the
+displayed arithmetic and the key.
+
+**Conclusion: fix the content, not the detector.** Screen C's threshold does no discriminating work
+(all 49 FLAGs below 0.05, nothing in 0.05–0.12) and that remains an open calibration weakness — but
+on the sampled population it was catching real defects, so it was left unchanged.
+
+### Change-set (Rule 5: 20 items, one change-set)
+
+| Group | Items | Action |
+|---|---|---|
+| 7th-phrase trailing padding | 15 | Phrase stripped, punctuation tidied |
+| 7th-phrase entirely filler | 3 | Authored replacement |
+| Scratchwork / arithmetic inconsistency | 2 | Authored replacement |
+| **Total** | **20** | pack_1: 7, pack_2: 5, pack_3: 8 |
+
+All 5 replacements hand-solved first, keys confirmed:
+
+| Item | Derivation | Key |
+|---|---|---|
+| `CBQ22-A4-Q1` | DOL = CM/OI = (120−70)/(50−30) = 50/20 | 2.50 ✓ |
+| `CBQ22-C3-Q1` | 120,000 × 80,000/180,000 | 53,333 ✓ |
+| `CBQ23-E4-Q1` | 1 + 0.50/1.5 | 1.33 ✓ |
+| `CBQ23-E4-Q2` | Exhaustive search under $6M cap → A+B+C+D, $5.3M | 1.62 ✓ |
+| `CBQ23-B3-Q3` | 0.60×11.01 + 0.30×4.225 + 0.10×8.00 = 8.6735 | 8.67 ✓ |
+
+**No answer key was altered.** All five keys were already correct; explanations only.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 7th phrase present in 18 items | Canonical-extractor field scan, 3 banks | ✅ |
+| 8 of the 18 were `Certified` | State census from the same scan | ✅ |
+| 3 were entirely filler | Residual < 25 words after stripping | ✅ |
+| Class now closed | Raw `indexOf`, 9 phrases, 5 banks = 0 | ✅ |
+| Class now closed | Extractor field scan = 0 | ✅ |
+| No scratchwork survives | Marker regex across 660 items = 0 | ✅ |
+| All 5 keys correct | Independent derivations above | ✅ |
+| No key changed | Only `Explanation` fields written; per-field diff enforced | ✅ |
+| Bank integrity | `node --check` on all 3 packs | ✅ |
+| Case / item counts | 33/33/34 cases, 660 items — unchanged | ✅ |
+| Screen delta | 426 → 423; 0 new FLAG-severity | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 7 items · `p2/case_pack_p2_2.js` — 5 · `p2/case_pack_p2_3.js` — 8
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-026 correction addendum
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_1.js.bak-20260930dl026fix` (557,544), `case_pack_p2_2.js.bak-20260930dl026fix`
+(567,191), `case_pack_p2_3.js.bak-20260930dl026fix` (532,728) — all non-zero and hash-identical to
+their sources at capture time. Also `p2/DEFECT_LIBRARY_P2.md.bak-corr-20260930` (86,405).
+
+### Open items carried forward
+
+1. **Batches 3–14: 58 cases / 348 items** remain In Audit. Batch 3 not yet started.
+2. **The boilerplate screen is now load-bearing**, not hardening. It must cover the **9 phrases**
+   plus scratchwork markers, or the 7th phrase recurs. This is the strongest argument yet for it.
+3. **Screen C threshold remains uncalibrated** — 49 FLAGs below 0.05 with an empty 0.05–0.12 band.
+   Deliberately left alone this session. Any future work should add negative-control testing
+   before changing it, and must not weaken its reach over numeric items.
+4. Remaining side-notes: retire 20 legacy `certify_wave*.js` scripts; regenerate
+   `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-01 — Screen D added: boilerplate + authoring-scratchwork detection (DL-P2-026 prevention)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `scripts/case_semantic_screens.js` (detector only — no content changed this session)
+**Evidence basis:** independently measured; negative-controlled
+
+### What was added
+
+A fourth screen inside the existing `case_semantic_screens.js`, so it runs automatically via
+`npm run pipeline` (`case-screens` is already a pipeline target). Two independent checks per item:
+
+- **BOILERPLATE** — any of the **9 verified filler phrases** from DL-P2-026 (original 6 + the 7th
+  phrase and its lead-in found during the correction).
+- **SCRATCHWORK** — authoring reasoning left in learner-facing text via
+  `Hmm | We key | Set N[?] | ? Actually | Need compute | simplify: we key`.
+
+Both fire at FLAG severity: an item with a correct key but an unusable explanation is unteachable,
+which is a content defect independent of key correctness. Per DL-045 the screen emits evidence only
+and never rewrites.
+
+### Result: the class is P1-wide, and mostly already live
+
+**45 flags — all 45 in P1, zero in P2** (P2 is clean from the DL-P2-026 remediation). By state:
+**29 Certified (learner-reachable), 16 In Audit.** By type: multi 25, numeric 9, fill 4, match 4,
+select 3.
+
+DL-P2-026 was scoped to the P2 banks, so this P1 exposure is newly discovered rather than newly
+created. Sample of the real content that survives after stripping the filler:
+
+| Item | State | Real content remaining |
+|---|---|---|
+| `CBQ2-B1-Q1` (numeric) | **Certified** | 36 words — derivation then filler |
+| `CBQ2-D2-Q5` (fill) | **Certified** | 55 words |
+| `CBQ4-D1-Q1` (numeric) | **Certified** | 56 words |
+| `CBQ4-F3-Q5` (multi) | **Certified** | 64 words |
+| `CBQ5-D2-Q5` (multi) | **Certified** | 119 words |
+| `CBQ-A2-Q5` (multi) | **Certified** | 319 words — filler is trailing only |
+
+The distribution matters: several Certified items retain only 36–64 words of real reasoning behind
+the filler, and at least one carries four stacked filler phrases.
+
+### Negative controls (a gate is not verified until a broken input makes it fire)
+
+| Control | Result |
+|---|---|
+| All 9 phrases must match synthetic text | 9/9 match, 0 missed |
+| All 6 scratchwork markers must match | 6/6 match, 0 missed |
+| Clean realistic text must NOT match | 3 samples, 0 false positives |
+
+The scratchwork control **initially failed** — `Set 1.62?` did not match because `?` was absent
+from the accepted suffix. The regex was corrected to `(?:approx|for|\?)` and the control re-run
+until it passed. That failure is the reason the control exists; a screen that had never been
+negative-controlled would have shipped silently missing the exact form found in the wild.
+
+### Determinism
+
+Two consecutive runs: 468 flags, **identical flag sets** (set equality, not just count).
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| Screen D added to the pipeline-wired tool | `case-screens` already in `pipeline` target | ✅ |
+| Fires on the live pool | 45 flags (not 0 — reaches real defects) | ✅ |
+| Zero false positives on clean text | 3-sample negative control | ✅ |
+| All 9 phrases detected | Synthetic-phrase control, 9/9 | ✅ |
+| All scratchwork forms detected | Synthetic-marker control, 6/6 | ✅ |
+| Deterministic | Two runs, identical flag sets | ✅ |
+| P2 unaffected | 0 P2 flags; zero-assert still 0/660 | ✅ |
+| `node --check` | `case_semantic_screens.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+
+### Files modified
+
+- `scripts/case_semantic_screens.js` — screen D + updated `method` string
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Open items carried forward
+
+1. **45 P1 items now flagged, 29 of them Certified and learner-reachable.** This is a new, unfixed
+   defect class in P1 that the P2-focused DL-P2-026 remediation never covered. It needs its own
+   remediation change-set (Rule 5) and a new DL entry. Not started — flagged, not remediated,
+   because mass remediation from screen output alone is BLOCK-AUTHORIZED-only (DL-045).
+2. Batches 3–14: 58 cases / 348 items remain In Audit.
+3. Screen C threshold still uncalibrated (deliberately).
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-01 — DL-067: P1 boilerplate remediated (45 items, 29 were learner-reachable)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `content/cases/case_pack_1_corrected.js` (11), `_2_corrected.js` (19), `_3_corrected.js` (15)
+**Evidence basis:** adjudicated — 7 authored replacements hand-computed from scenario/exhibit values
+with keys withheld; 38 strip-only remediations from a verified detector
+
+### Why this preceded Batch 3
+
+Screen D, added earlier this session, immediately reported **45 items** carrying filler — **all in
+P1, none in P2**, and **29 of them already `Certified` and learner-reachable**. DL-P2-026 had closed
+this class across the P2 banks only. A live learner-facing defect outranked certifying more In Audit
+items, so the P1 pool was fixed first.
+
+### Change-sets (Rule 5)
+
+| Change-set | Items | Composition | Banks |
+|---|---|---|---|
+| 1 | 30 | all 7 authored rewrites + 23 strip-only | p1_1 (11), p1_2 (16), p1_3 (3) |
+| 2 | 15 | strip-only | p1_2 (3), p1_3 (12) |
+
+**Tier 1 — entirely filler (7 items), all Certified and live.** Stripping left 16–22 words of real
+content; six were a bare figure with no reasoning at all (e.g. `CBQ5-B1-Q1` retained only
+"(130+140+135)/3 = 135"). Each was hand-computed first, then given an authored explanation:
+
+| Item | Independent derivation | Key |
+|---|---|---|
+| `CBQ2-B1-Q1` | 10,000 + (20% x 12,000) − 2,000 | 10,400 ✓ |
+| `CBQ3-A2-Q1` | 450 + 60 − 15 − 25 + 15 − 30 (thousands) | 455,000 ✓ |
+| `CBQ3-B1-Q2` | 300,000 x 0.80 x 0.50 + 250,000 x 0.80 x 0.10 | 140,000 ✓ |
+| `CBQ3-D1-Q5` | Variable costing expenses all fixed MOH as incurred | "period" ✓ |
+| `CBQ4-B1-Q1` | (42,000 − 30,000) / (8,000 − 5,000) | 4 ✓ |
+| `CBQ5-B1-Q1` | (130 + 140 + 135) / 3 | 135 ✓ |
+| `CBQ5-C1-Q1` | (5,000 − 6,000) x $2.00 | −2,000 ✓ |
+
+**Tier 2 — trailing padding (38 items), 17 of them thin.** Phrase stripped, punctuation tidied; real
+explanation retained.
+
+**No answer key was altered in either tier.** All 7 keys were already correct.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 45 items, all P1 | Screen D first run, 45 flags, 0 in P2 | ✅ |
+| 29 were Certified | State census from the same scan | ✅ |
+| Class closed | Screen D re-run: 45 → **0** | ✅ |
+| P2 still closed | 9-phrase + scratchwork zero-assert, 0/660, two methods | ✅ |
+| Screen still reaches defects | Live-tool negative control in temp mirror: fires on injected defect, silent on clean | ✅ |
+| 7 keys correct | Independent derivations above | ✅ |
+| No key altered | Per-field diff enforced on every write | ✅ |
+| Bank integrity | `node --check` on all 3 P1 banks | ✅ |
+| P1 case count | 80, unchanged | ✅ |
+| P2 unaffected | `preflight_p2` 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+
+### Files modified
+
+- `content/cases/case_pack_1_corrected.js` — 11 items
+- `content/cases/case_pack_2_corrected.js` — 19 items
+- `content/cases/case_pack_3_corrected.js` — 15 items
+- `knowledge/DEFECT_LIBRARY.md` — DL-067
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_1_corrected.js.bak-20261001p1fix` (571,222), `case_pack_2_corrected.js.bak-20261001p1fix`
+(413,802), `case_pack_3_corrected.js.bak-20261001p1fix` (557,136) — all non-zero and hash-identical to
+their sources at capture. Per-change-set snapshots also written as `.bak-p1fix-cs1` / `-cs2`.
+Also `knowledge/DEFECT_LIBRARY.md.bak-dl067` (9,811).
+
+### Process note
+
+A closure claim is only as wide as its scan. DL-P2-026's zero-assertion was true and complete for
+P2 and silent about P1, and a session later read it as "class closed". Two closure claims in three
+days were bounded by their scan rather than by the population. The generalisable rule: state the
+scan boundary inside the closure claim itself.
+
+### Open items carried forward
+
+1. **Batches 3–14: 58 cases / 348 items** remain In Audit. Batch 3 is dumped with keys withheld.
+2. Screen C threshold still uncalibrated (deliberate — it caught two real defects).
+3. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 3 CERTIFIED (5 cases / 30 items) + 1 key defect re-keyed
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-C3`, `CBQ21-D2`, `CBQ21-F2`, `CBQ21-E3`, `CBQ21-B4` — 30 items, `p2/case_pack_p2_1.js`
+**Evidence basis:** adjudicated — independent hand-solve, keys withheld; 21 of 30 items are own-state
+
+### Hand-solve: 29 of 30 correct, 1 genuine key defect
+
+| Case | Items | Correct | Mismatches | Defects remediated |
+|---|---|---|---|---|
+| `CBQ21-C3` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-D2` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-F2` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-E3` | 6 | 6/6 | 0 | 0 |
+| `CBQ21-B4` | 6 | 5/6 | **1** | **1 (answer key)** |
+| **Total** | **30** | **29/30** | **1** | **1** |
+
+**Before:** 43 P2 cases Certified · **After:** 48. First batch containing an answer-key defect, and
+the first where 21 of 30 items required individual state flips.
+
+### The key defect: `CBQ21-B4-Q1` (WACC), re-keyed 7.45% → 7.48%
+
+Exhibit 1 gives the post-acquisition structure unambiguously: D/V = 0.600, E/V = 0.400, Kd = 6.40%,
+Ke = 11.50%, T = 25%.
+
+```
+WACC = (D/V) x Kd x (1 - T) + (E/V) x Ke
+     = 0.600 x 6.40% x 0.75 + 0.400 x 11.50%
+     = 2.88% + 4.60%
+     = 7.48%
+```
+
+Recomputed independently: 0.60 x 6.40 x 0.75 = 2.88; 0.40 x 11.50 = 4.60; sum = 7.48%.
+
+The stored key was **7.45%** and the item was **unanswerable as keyed** — no choice equalled 7.48%.
+The old explanation rationalized the gap as *"total = 7.48% (≈7.45%, reflecting rounding)"*, which
+is not rounding: 7.48 ≠ 7.45, and it also conceded *"the most defensible answer is 7.45%–7.48%"*.
+
+Every alternative weighting was tested and none produces 7.45%: pre-deal weights 8.53%, no tax shield
+8.44%, pre-deal Kd/Ke on post weights 6.66%, full pre-deal 7.74%. **The key was not defensible under
+any reading of the exhibit.**
+
+**Change (single atomic change-set, Rule 4 + Rule 22):** key → `7.48%`; choice B `7.45%` → `7.48%`;
+explanation rewritten with the full arithmetic, an explicit "Recomputed independently:" line, the
+interpretation (the debt-weight benefit partly offset by Kd rising 5.20% → 6.40% as the rating slips),
+and the corrected distractor (omitting (1 − T) gives 8.44%, not 7.45%). Verified post-write that the
+key resolves to exactly one real choice and no duplicate choices exist.
+
+### Items where my first derivation was wrong, and the key was right
+
+```CBQ21-C3-Q1``` — I initially derived **$0** by deducting the $18 variable selling expense from
+the special order. Exhibit 2 is an email from Cascadia's purchasing director stating *"we handle all
+outbound freight and store marketing ourselves"*, so the expense does not arise on this order.
+Incremental CM = 3,000 x ($150 − $132) = **$54,000**. The stored key was correct and my reading was
+wrong. Recorded because it is the second time in this session that a confident first derivation was
+overturned by reading the source exhibit rather than the scenario summary.
+
+### Adjudications that confirmed without incident
+
+- `CBQ21-C3-Q2/Q3/Q4` — displaced CM 1,000 x $90 = **$90,000**; net effect 54,000 − 12,000 − 90,000 =
+  **−$102,000** (decline, B); indifference price (552,000 / 3,000) = **$166** (C).
+- `CBQ21-E3-Q1/Q2/Q3` — Alpha **14.8**, Beta **12.3**, Gamma **15.0**; all three matched exactly, with
+  the NPV ranking Gamma > Alpha > Beta.
+- `CBQ21-D2` (6/6) — risk capacity vs appetite, COSO 2017 Governance-and-Culture foundation, the
+  vendor/third-party +3 with the 63-day longest detection lag, proportionate Option-3 sequencing,
+  CRO sponsorship with named accountabilities, and escalation to ISO 31000 rather than leap to COSO.
+- `CBQ21-F2` (6/6) — IMA "Resolve Ethical Conflicts" sequencing, ASC 606-10-25 recognition point,
+  the 6.6% of as-billed revenue and 7.0% overstatement arithmetic, Integrity/Credibility, hotline
+  before internal action, and the non-retaliation framing of the follow-up discussion.
+- `CBQ21-B4-Q2`–`Q6` — one-notch notching under the D/E > 1.0 with FFO/Debt < 40% rule, pecking
+  order vs static tradeoff, the $2.11M tax shield, the asset-sale alternative, and the
+  marginal-benefit-equals-marginal-cost D/E optimum.
+
+### Defect scan — 0 content issues
+
+30-item scan for boilerplate, filler, empty/short explanations, and MCQ-schema EW-slot defects:
+**0 findings.** Two scanner false positives from Batch 2 recurred and were correctly suppressed by the
+schema-aware guard: Rule 10/6 "EW absent" on Schema-A case items, and "must" in case-item
+explanations (a field `AbsoluteLanguageValidator` never scans).
+
+**Zero FLAG-severity screen flags fell inside Batch 3**, so no `declared_false_positives` were needed
+for this batch — the first batch where that was true.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 29/30 hand-solve correct | Independent derivation, keys withheld | ✅ |
+| 1 key defect found and fixed | 7.45% unreachable under 5 weightings; re-keyed to 7.48% | ✅ |
+| Key resolves to a real choice | Post-write parse: `Choices.includes(Correct)` | ✅ |
+| Only key/choice/explanation changed | Per-field diff, all other cases byte-identical | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 43 → 48 | ✅ |
+| 21 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| Case / item counts | 33 cases, 660 items — unchanged | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_1.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 48 cases / 288 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 1 item re-keyed, 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 43 → 48
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B3.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_1.js.bak-20261001b3` (556,998), `case_pack_p2_1.js.bak-b4q1-20261001b3q1`
+(556,998, taken immediately before the re-key), `case_pack_p2_1.js.bak-b3-20260930b03` (taken before
+the certification write). All non-zero and hash-identical to their sources at capture. Also
+`case_pack_p2_2.js.bak-20261001b3` (568,365) and `case_pack_p2_3.js.bak-20261001b3` (534,161), which
+this batch did not modify.
+
+### Tooling defect caught and fixed this batch
+
+The certifier's duplicate-stamp-key guard initially counted per-item stamps inside a case-level
+segment, so a case with 6 own-state items reported "7 `certification_date` keys". Two rounds of
+correction followed: the first narrowed the case segment by text position, which broke because
+`JSON.stringify` appends newly-added keys at the **end** of each object; the second asserted on the
+**parsed objects** rather than the source text, and bounded item segments by the next ItemID, the end
+of the `Items` array, or the next case. The lesson is the one already recorded for content writes:
+**`JSON.stringify` moves new keys to the end of the object, so any positional assumption about where
+a field lands is wrong.** The gate was correct in refusing to write; nothing malformed was written.
+
+### Open items carried forward
+
+1. **Batches 4–14: 53 cases / 318 items** remain In Audit. Batch 4 is `CBQ21-C4/F3/F4/B5/D3`
+   (6 own-state items).
+2. **No screen caught the B4-Q1 key defect.** It was found only by independent hand-solve. Screen B
+   and B-num both passed it because the explanation contained the correct 7.48% figure — the screen
+   saw the arithmetic and not the key. A key-vs-explanation-numeric-agreement check would be the
+   candidate control; not built, and not authorized.
+3. Screen C threshold still uncalibrated (deliberate — it caught two real defects).
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 4 CERTIFIED (5 cases / 30 items), zero defects
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-C4`, `CBQ21-F3`, `CBQ21-F4`, `CBQ21-B5`, `CBQ21-D3` — 30 items, `p2/case_pack_p2_1.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Mismatches | Defects | Own-state items |
+|---|---|---|---|---|---|
+| `CBQ21-C4` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ21-F3` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ21-F4` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ21-B5` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ21-D3` | 6 | 6/6 | 0 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | **0** | 6 |
+
+**Before:** 48 P2 cases Certified · **After:** 53. Second consecutive batch with zero defects and
+zero remediation required.
+
+### Hand-solve evidence (all 30 derived from exhibits before keys were revealed)
+
+- **`CBQ21-C4`** — PV factor 5yr @ 9% = 3.8897; in-house net $5M/yr → $19.45M PV; outsource
+  $12M/yr → $46.68M PV; differential **$27.23M in-house advantage**, matching Exhibit 2 exactly.
+  Relevant costing = incremental avoidable future flows; breakeven Q* = (FixedO − FixedI)/(vI − vO);
+  hybrid core/commodity split; arm's-length transfer pricing under OECD/G20 BEPS.
+- **`CBQ21-D3`** — RAROC = (Revenue − Expected Loss)/Economic Capital. Auto (10−4)/20 = **30.00%**;
+  Property (8−3.5)/15 = 30.0%; Life (6−1)/10 = **50.0%**; Health (12−7)/25 = **20.00%**. Life is the
+  only line at 50% and clears the 15% hurdle decisively.
+- **`CBQ21-B5`** — residual dividend ($14M − $8M)/2M shares = **$3.00 per share**; repurchase
+  EPS accretion: pre $7.00, post $14M/1.8M = $7.78, accretion **$0.78**.
+- **`CBQ21-F3` / `CBQ21-F4`** — IMA/FCPA gift and revenue-timing sequencing (12 items): Integrity +
+  Credibility implicated, escalation above an involved request chain, variable consideration reducing
+  the transaction price, SOX 806/Dodd-Frank as a last step not the opening move, limited-vs-reasonable
+  assurance on a 40%-covered carbon-neutral claim, and the three control sets (A/B/C in both cases).
+
+### One derivation of mine was wrong, and the key was right
+
+```CBQ21-B5-Q1``` — I computed the residual as **$6M** (earnings less positive-NPV investments).
+The stored key is **$3.00**, which is the residual **per share**: ($14M − $8M) ÷ 2M shares. The prompt
+reads "Enter the residual dividend, in dollars," which is ambiguous between the total and the
+per-share figure, but the stem frames the question per share ("2M shares at $30") and the item's
+own distractor set is built on the per-share basis (gross payout $7.00 = $14M/2M). The key is
+defensible; my reading was wrong. Recorded because this is the third time in this session a
+confident first derivation was corrected by reading the surrounding exhibit and distractor set
+rather than the prompt alone.
+
+### Defect scan — 0 issues, no remediation
+
+30-item scan for boilerplate, filler, empty/short explanations, and MCQ-schema EW-slot defects:
+**0 findings.** The two scanner false positives seen in earlier batches (Rule 10 EW-absence on
+Schema-A case items, and "must" in case-item explanations) were correctly suppressed by the
+schema-aware guard and did not fire.
+
+### Semantic flag declared as an adjudicated false positive
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ21-F3-Q5` | B | UNSUPPORTED-CORRECT, stored(C) recall=0.09 on the whistleblower-hotline control. The stored A,B,C set is correct: A and B address the vendor-gift and revenue-pressuring risks directly, and C is the standard SOX 806 control for this fact pattern. D (paper invoices above $5,000) is irrelevant and E (raising the gift threshold to $2,000) weakens a control that had already caught an $800 gift. The screen's per-choice recall heuristic scores C low because its wording shares few tokens with the explanation. |
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation per item, keys withheld | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 48 → 53 | ✅ |
+| 6 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 33 cases, 660 items — unchanged | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_1.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 53 cases / 318 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 48 → 53
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B4.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_1.js.bak-20261002b4` (559,410) taken before the certification write, plus
+`case_pack_p2_1.js.bak-b4-20260930b04` from the certifier. Non-zero and hash-identical at capture.
+`case_pack_p2_2.js.bak-20261002b4` (568,365) and `case_pack_p2_3.js.bak-20261002b4` (534,161) were
+captured but not modified by this batch.
+
+### Open items carried forward
+
+1. **Batches 5–14: 48 cases / 288 items** remain In Audit. Batch 5 is
+   `CBQ21-D4/F5` + `CBQ22-F1/A2/D2`.
+2. **No screen has yet caught an answer-key defect other than by hand-solve.** The B4-Q1 WACC defect
+   in Batch 3 passed both screens B and B-num because the explanation contained the correct figure.
+   A key-vs-explanation numeric-agreement control is the candidate; not built, not authorized.
+3. Screen C threshold still uncalibrated (deliberate — it caught two real defects).
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 6 CERTIFIED (5 cases / 30 items), 10 numeric derivations
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ22-C1`, `CBQ22-E1`, `CBQ22-B2`, `CBQ22-C2`, `CBQ22-D3` — 30 items, `p2/case_pack_p2_2.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Mismatches | Defects | Own-state |
+|---|---|---|---|---|---|
+| `CBQ22-C1` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ22-E1` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ22-B2` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ22-C2` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ22-D3` | 6 | 6/6 | 0 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | **0** | 0 |
+
+**Before:** 53 P2 cases Certified · **After:** 58. Heaviest computational batch so far —
+**10 numeric items**, all derived independently before keys were revealed.
+
+### Hand-solve evidence
+
+- **`CBQ22-C1`** — CM per constrained stitching-hour: Alpine $60/2.0 = **$30** vs Cascade $96/3.0 =
+  **$32**, so Cascade ranks first. Profit-maximizing mix on 12,000 hours = 3,000 Cascade (9,000 hrs)
+  + 1,500 Alpine (3,000 hrs) → **$378,000**. EV Cascade-priority
+  0.40(388,000) + 0.35(374,000) + 0.25(330,000) = **$368,600**. EVPI = EV with perfect
+  information $372,600 − $368,600 = **$4,000**, which is **less than the $5,500 fee** → decline.
+- **`CBQ22-E1`** — Exhaustive search over all feasible bundles under $1.3M: optimum
+  **P1+P2+P5** = $1,260,000 cost / **$322,000** aggregate NPV. The PI-greedy shortcut takes
+  P2+P3+P5 = $1,120,000 / $302,800, short by **$19,200**. Compressor EAAs:
+  Unit X NPV $108,164 ÷ 3.1699 = **$34,122**; Unit Y NPV $137,494 ÷ 4.3553 = **$31,569** —
+  X wins on equalized basis despite Y's higher raw NPV.
+- **`CBQ22-B2`** — Blended pre-tax Kd = (8M×6% + 4M×8%)/12M = **6.67%**; Kp = $3.75/$46.875 = 8%;
+  Ke = 4.0 + 1.20×5.5 = 10.60%. WACC at $44M market weights = 1.3636 + 0.3636 + 7.2273 =
+  **8.95%**, i.e. **falling** from 9.25%. CCC: DSO 48.67 (+4.8), DIO 44.12 (+2.6), DPO 40.56
+  (−3.7) → CCC **52.23**, an **11.1-day** deterioration driven by collections.
+- **`CBQ22-C2`** — Relevant make cost = 336,000 + 192,000 + 120,000 + 216,000 = **$864,000**;
+  buy net of sublease $1,026,000 → **$162,000** annual disadvantage; indifference price
+  (864,000 + 78,000)/24,000 = **$39.25**.
+- **`CBQ22-D3`** — R-04 inherent 3×4 = **12**; R-01 residual 2×5 = **10**, breaching the ceiling
+  of 8 → Reduce further with zero-trust phases, tabletop drills, and vendor-access reviews.
+
+### Two derivations of mine were wrong, and both keys were right
+
+```CBQ22-C2-Q2``` — I computed the disadvantage as $1,104,000 − $864,000 + $78,000 = **$318,000**.
+The error was adding the sublease instead of netting it. The $78,000 is income Kestrel earns **only
+if it buys** and vacates the bay, so it reduces the cost of buying: $1,104,000 − $78,000 − $864,000 =
+**$162,000**. Key correct.
+
+```CBQ22-C2-Q4``` — I derived **$32.75** by subtracting the $3.25/unit opportunity charge from the
+$36.00 avoidable make cost. Same sign error. Indifference requires the make side to **carry** the
+forgone rent as an opportunity cost: (864,000 + 78,000)/24,000 = **$39.25** (key D). The stored
+explanation's distractor map was independently verified: $36.00 omits the opportunity charge,
+$32.75 subtracts it, $43.25 anchors on the $46.50 full cost.
+
+Both errors were the same mistake in the same case — **inverting the sign of an opportunity cost** —
+and both were caught by recomputing after the reveal rather than accepting the first number. That is
+the fifth first-derivation error this session, all in the same family: treating an item's framing
+without reading the surrounding exhibit.
+
+### Nine FLAG-severity screen hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ22-E1-Q5` | B ×2 | UNSUPPORTED (stored E, recall 0.17) + DISJOINT. Stored A,C,E verified correct; B is arithmetically false (adopted package spends $1,260,000 of $1,300,000, leaving $40,000 headroom against P4's $260,000) and D is false (at a $1,440,000 ceiling, P1+P2+P3 at $1,440,000 / $373,600 NPV displaces the current package). |
+| `CBQ22-B2-Q5` | B ×2 | Stored A,D,E verified. D's arithmetic checked: 11.13 days × ($42M/365) = **$1,280,700**, matching "roughly $1.3 million". B false (after-tax debt is 5.00%, which is precisely why the (1−T) adjustment exists); C false (WACC uses market weights). |
+| `CBQ22-C2-Q5` | B ×2 | Stored A,B,C verified. D false (unavoidable $252,000 persists by definition); E false — the apparent $12,000 recorded-cost saving reverses to a $162,000 economic loss. |
+| `CBQ22-C2-Q1` | C | Value-shaped answer `864000` vs prose explanation; jaccard 0.0476 is structural. Key verified. |
+| `CBQ22-D3-Q1` | C | Same artifact (`12` vs prose); key verified. |
+| `CBQ22-D3-Q5` | B | Stored A,C,D verified; B (deflating scores) corrupts the appetite test, E (withholding inventory) defeats enterprise visibility. |
+
+The four screen-B DISJOINT/UNSUPPORTED pairs share one root cause already documented: the screen's
+per-choice recall heuristic scores long, carefully-qualified choice text low against explanation
+prose. The two screen-C hits are the documented numeric-item bias. None is a content defect.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation, keys withheld | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 53 → 58 | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| 9 flags adjudicated | Each verified against item logic + exhibit arithmetic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 33 cases in pack_2, 660 items total — unchanged | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_2.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 58 cases / 348 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_2.js` — 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 53 → 58
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B6.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_2.js.bak-20261002b6` (568,365) plus the certifier's `.bak-b6-20260930b06`.
+Non-zero and hash-identical at capture. `case_pack_p2_1.js.bak-20261002b6` (560,280) and
+`case_pack_p2_3.js.bak-20261002b6` (534,161) captured but not modified by this batch.
+
+### Open items carried forward
+
+1. **Batch 5 is unresolved and still uncertified.** Hand-solve found `CBQ21-F5-Q1` keyed to **C
+   (SOX 806)** while its own explanation argues for **A (SOX 302)** — a whistleblower-protection
+   section cannot impose liability on the certifying CFO, and sibling items in the same case correctly
+   key 302-for-certification and 806-for-whistleblowing. Options were presented (re-key to A, or
+   certify the 4 clean cases and file F5); no authorization has been given. **This batch was run on
+   top of that open item rather than after resolving it.**
+2. **Batches 7–14: 43 cases / 258 items** remain In Audit. Batch 7 is
+   `CBQ22-A3/F3/B3/D4/B5` with **18 own-state items**.
+3. Screen C threshold still uncalibrated (deliberate). A key-vs-explanation numeric-agreement control
+   remains the candidate for the B4-Q1-class defects.
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 5 CERTIFIED (5 cases / 30 items) + SOX 302 key re-keyed
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ21-D4`, `CBQ21-F5` (pack_1) + `CBQ22-F1`, `CBQ22-A2`, `CBQ22-D2` (pack_2) — 30 items
+**Evidence basis:** adjudicated — 29/30 independent hand-solve, 1 key defect found and corrected
+
+### Result
+
+| Case | Items | Hand-solve | Defects | Bank |
+|---|---|---|---|---|
+| `CBQ21-D4` | 6 | 6/6 | 0 | pack_2 → no, pack_1 |
+| `CBQ21-F5` | 6 | 5/6 | **1 (key)** | pack_1 |
+| `CBQ22-F1` | 6 | 6/6 | 0 | pack_2 |
+| `CBQ22-A2` | 6 | 6/6 | 0 | pack_2 |
+| `CBQ22-D2` | 6 | 6/6 | 0 | pack_2 |
+| **Total** | **30** | **29/30** | **1** | 2 banks |
+
+**Before:** 58 P2 cases Certified · **After:** 63.
+
+### The key defect: `CBQ21-F5-Q1`, re-keyed C → A (SOX 806 → SOX 302)
+
+The question asked which SOX section exposes the **personally-certifying CFO** to liability for
+knowingly certifying misstated financials. The stored key was **C = Section 806**, the
+**whistleblower anti-retaliation** provision — which protects employees who *report* fraud and
+confers no liability on the officer who certifies.
+
+The item's own explanation already contradicted its key twice:
+
+> *"SOX Section 302 requires the CEO and CFO to personally certify each periodic report…"*
+> *"The trap is conflating officer certification liability (Section 302) with internal control
+> assessment (Section 404)"*
+
+**Cross-check against sibling items in the same case confirmed the inconsistency was unique to Q1:**
+
+| Item | Role | Key / mapping |
+|---|---|---|
+| `CBQ21-F5-Q2` | auditor reporting fraud | **A** = §806 anti-retaliation |
+| `CBQ21-F5-Q5` | CFO personally certifying | maps to **§302** |
+| `CBQ21-F5-Q1` | CFO personally certifying | **was keyed §806** ← the outlier |
+
+**Change (single atomic change-set, Rule 4 + Rule 22):** `Correct` "C" → **"A"**; explanation rewritten
+to lead with Section 302, add the Section 906 criminal overlay, distinguish 404 / 806 / 802 by role, and
+name the trap as crediting the certifying officer with 806 because it is the section most often cited in
+whistleblower discussions. Verified post-write that only `Correct` and `Explanation` changed, all five
+sibling F5 items were byte-identical, and all 32 other cases in pack_1 were byte-identical.
+
+### One derivation of mine was wrong, and the key was right
+
+`CB21-D4-Q4` — I computed Option 1 = $419,000 vs Option 2 = $399,000 and initially read the direction
+as ambiguous between including and excluding the $5,000 claims-processing cost. Re-deriving cleanly:
+Option 2 is cheaper by **$20,000**, matching the key (**B**). The processing cost is identical under both
+options and cancels, so it does not affect the comparison. Key correct.
+
+### Hand-solve evidence (all 30 derived from exhibits before reveal)
+
+- **`CBQ21-D4`** — Supplier C expected loss 8% × $2.0M = **$160,000**; total
+  120,000 + 54,000 + 160,000 = **$334,000**; heat map A = 3×4 = 12, B = 2×3 = 6, C = 4×3 = 12 (**A**).
+- **`CBQ22-A2`** — QOI 14.4/24.0 = **0.60**; core earnings 24.0 − 5.0(0.75) + 3.0(0.75) =
+  **$22.5M**; DSO 26.1/200 × 365 = **47.6** days, up 10.8 from 36.8.
+- **`CBQ22-D2`** — inherent **$450,000**; residual under MFA **$180,000**; net year-one benefit
+  **$210,000**; Reduce / Share / Avoid (**D**).
+- **`CBQ21-F5`** — §806 anti-retaliation for the auditor (**A**); A/B/C resolution sequence; material
+  weakness because senior management directed it (**B**); integrated committee response (**D**).
+- **`CBQ22-F1`** — all 6 correct (Integrity/Credibility, bypass the implicated supervisor, ASC 606
+  variable consideration, §302/§906, §806 as the last step, document-and-escalate).
+
+### Six FLAG-severity screen hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ21-F5-Q3` | B | stored(A) recall 0.21 on a long, qualified choice. A/B/C verified correct. |
+| `CBQ22-F1-Q6` | B | stored(D) recall 0.22. Document-decline-certify-escalate-counsel verified correct. |
+| `CBQ22-A2-Q2` | **B-num** | **New artifact class: scale mismatch.** Stored `22500000` vs the explanation's "$22.5M" / `22.5`. The values are identical; the screen compares numeric tokens literally and cannot see 22.5M ≡ 22,500,000. |
+| `CBQ22-A2-Q4` | B | stored(C) recall 0.19. The composite overstatement profile verified against both exhibits. |
+| `CBQ22-A2-Q5` | B | stored(A) recall 0.23. Sell-through data + side letters are the confirming artifacts. |
+| `CBQ22-A2-Q6` | B | stored(B) recall 0.21. Core base with verification conditions verified. |
+
+The **B-num scale-mismatch** artifact is new in this batch and is worth naming separately from the
+documented screen-B recall bias and the screen-C numeric bias: it fires whenever a key stores whole
+dollars while the explanation writes the same value in millions. It is a **false positive by
+construction**, not a content defect, and it will recur on every such item.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 29/30 hand-solve correct | Independent derivation, keys withheld | ✅ |
+| 1 key defect found and fixed | §806 → §302, contradiction with own explanation | ✅ |
+| Sibling F5 items untouched | Per-field diff; all 5 byte-identical | ✅ |
+| Other cases untouched | All 32 non-target cases byte-identical | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 58 → 63 | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| 6 flags adjudicated | Each verified against item logic + exhibit arithmetic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 33 cases in each of pack_1 and pack_2; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | both banks | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 63 cases / 378 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_1.js` — 1 item re-keyed, 2 cases / 12 items certified
+- `p2/case_pack_p2_2.js` — 3 cases / 18 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 58 → 63
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B5.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_1.js.bak-20261002b5fix` (560,280), `case_pack_p2_1.js.bak-f5q1-20261002b5fix`
+(560,280, taken immediately before the re-key), `case_pack_p2_2.js.bak-20261002b5fix` (568,665),
+plus the certifier's `.bak-b5-20260930b05` snapshots. All non-zero and hash-identical at capture.
+
+### Open items carried forward
+
+1. **Batches 7–14: 38 cases / 228 items** remain In Audit. Batch 7 is
+   `CBQ22-A3/F3/B3/D4/B5` with **18 own-state items** — the highest own-state density since Batch 3.
+2. **Screen B-num has a scale-mismatch false-positive class** (key in whole dollars, explanation in
+   millions). First seen on `CBQ22-A2-Q2`. Not remediated — a screen change is separately
+   authorized work, and this batch declared it as an adjudicated FP instead.
+3. **Two of eight batches have now contained a genuine key defect** (B4-Q1 WACC, F5-Q1 SOX), both
+   caught only by independent hand-solve. Screens B, B-num and C passed both. A key-vs-explanation
+   numeric-agreement control is the candidate; not built, not authorized.
+4. Screen C threshold still uncalibrated (deliberate).
+5. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+### Correction note — 2026-10-02 (Batch 5 entry, bank column)
+
+The bank column in the Batch 5 result table above carried a stray editing artifact in the
+`CBQ21-D4` row. Verified against the raw banks: `CBQ21-D4` and `CBQ21-F5` are both in
+`p2/case_pack_p2_1.js`; `CBQ22-F1`, `CBQ22-A2`, and `CBQ22-D2` are all in `p2/case_pack_p2_2.js`.
+The prior prose above is retained; this note is authoritative for that one cell. No other
+figure in the entry is affected — the certification totals, hand-solve counts, re-key record,
+flag adjudications, and gate results are unaffected.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 7 CERTIFIED (5 cases / 30 items, 18 own-state)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ22-A3`, `CBQ22-F3`, `CBQ22-B3`, `CBQ22-D4`, `CBQ22-B5` — 30 items, `p2/case_pack_p2_2.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Key mismatches | Other defects | Own-state |
+|---|---|---|---|---|---|
+| `CBQ22-A3` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ22-F3` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ22-B3` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ22-D4` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ22-B5` | 6 | 6/6 | 0 | **1 (explanation)** | 0 |
+| **Total** | **30** | **30/30** | **0** | **1** | 18 |
+
+**Before:** 63 P2 cases Certified · **After:** 68. Highest own-state density since Batch 3 (18 of 30
+items required individual state flips).
+
+### Hand-solve evidence
+
+- **`CBQ22-D4`** — R3 score 4×5 = **20**; R3 residual under enhanced controls 4% × $4M =
+  **$160,000**. Full register expected losses, each verified against Exhibit 1: R1 8% × $6M =
+  $480,000; R2 15% × $3M = $450,000; R3 10% × $4M = $400,000 inherent → $160,000 residual; R4 5% ×
+  $8M = $400,000; R5 20% × $1.5M = $300,000. R1/R2/R4 exceed the $300K appetite; R5 sits exactly at
+  it. Appetite/tolerance/capacity distinctions (**C**), Reduce/Share/Avoid/Accept (**C**), A+B+C.
+- **`CBQ22-B5`** — Annualized yen premium (148−145)/148 × (360/90) = **8.11%**; forward cost
+  200,000,000/145 = **$1,379,310**; unhedged at 142 = 200,000,000/142 = **$1,408,451**, i.e. $29,141
+  above the forward (**A**). Money-market hedge ≈ $1,348,000 before fees, so MMH is marginally cheaper
+  and the choice turns on all-in cost (**B**).
+- **`CBQ22-B3`** — Residual model: 80 − (90 + 30) = **−40**, so no dividend and retain all net
+  income (**A**). New annual DPS $0.55 × 4 = **$2.20**; coverage $1.60/$2.20 = **0.73×**, uncovered
+  (**B**). MM irrelevance via homemaking (**B**), tax-exempt clientele preferring repurchase (**B**),
+  moderate hike plus debt pre-funding (**B**), dividend-hike signalling credibility (**A**).
+- **`CBQ22-A3` / `CBQ22-F3`** — all 12 correct (ASC 830 method selection, hyperinflationary
+  remeasurement and translation, CTA routing, ASC 830 vs IAS 21 framing, presentation currency, CECL
+  inputs; SAB 99 quantitative-then-qualitative, ASC 450-20 disclose-not-accrue, SOX 302 vs 404, IMA
+  Credibility, disclosure recommendation, Integrity counter-argument).
+
+### Explanation defect fixed: `CBQ22-B5-Q3`
+
+The item's entire explanation was **53 characters**: *"MMH slightly cheaper, choose lower all-in after
+fees."* That is a restatement of the correct answer, not an explanation — a learner received no
+reasoning, no figures, and no trap identification. It was the only content defect found in this batch,
+and it is the same class as the DL-P2-026 filler items but reduced to its shortest form: the field was
+populated with something that occupies the explanation's slot without serving it.
+
+Rewritten to **1,403 characters** after hand-computing the money-market hedge from Exhibit 1
+(borrow JPY 200M PV at 1%, convert at spot 148 → $1,351,351, apply the 90-day JPY interest cost →
+≈ $1,348,000, against $1,379,310 for the forward) and reading Exhibit 2, which states the parity
+relationship explicitly. The new text names the all-in-cost decision rule, the single-contract versus
+two-position distinction, and the trap (asserting the forward is always cheaper when the yen is at a
+premium). **The key was not changed** — B was correct on independent derivation.
+
+### Three apparent mismatches that were my errors, not key defects
+
+All three were in the ASC 830 hyperinflation case, and all three were resolved by checking the
+standard rather than my own reasoning:
+
+| Item | I derived | Key | Why I was wrong |
+|---|---|---|---|
+| `CBQ22-A3-Q1` | temporal method (**B**) | **A** current-rate | For a self-sustaining subsidiary in a **non-hyperinflationary** economy, ASC 830 requires the **current-rate** method; temporal applies only to integral operations. The stem's own framing pointed at this. |
+| `CBQ22-A3-Q2` | restate at current CPI, translate at closing (**A**) | stored restate-at-acquisition + closing rate 1,580 | Under highly inflationary accounting non-monetary items are restated using the general price index **relative to acquisition**, then the remeasured statements are translated at the **closing** rate. |
+| `CBQ22-A3-Q3` | difference to AOCI as CTA, no NI effect (**A**) | stored **B** immediate net income | Once a highly inflationary economy is remeasured to current purchasing power, the subsequent translation effect is recognized in **net income**; CTA in OCI applies to non-hyperinflationary self-sustaining operations. |
+
+Each was verified against the codification rather than accepted or rejected on my own reading. That
+is the sixth first-derivation error this session, and again the pattern held: the standard's
+exception is usually the thing being tested, and my first answer was the rule rather than the
+exception.
+
+### One FLAG-severity hit, adjudicated false positive
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ22-D4-Q5` | B | UNSUPPORTED-CORRECT, stored(A) recall 0.00 on "R1 — Midstream pipeline release at $480,000". All five expected losses recomputed and matched exactly; R1/R2/R4 exceed appetite, R3 residual and R5 sit within/at. The screen scored choice A at zero because its wording closely mirrors the prompt's own phrasing — the highest-recall case a token-overlap heuristic can misread. |
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 key mismatches | Independent derivation, keys withheld | ✅ |
+| 3 apparent mismatches resolved as my errors | Verified against ASC 830 codification | ✅ |
+| 1 explanation defect found and fixed | 53 → 1,403 chars, key unchanged | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 63 → 68 | ✅ |
+| 18 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Content defects after fix | 30-item scan → 0 | ✅ |
+| 1 flag adjudicated | All 5 expected losses recomputed | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 33 cases in pack_2; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_2.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 68 cases / 408 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_2.js` — 1 explanation rewritten, 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 63 → 68
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B7.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_2.js.bak-20261002b7` (568,971) captured before any write;
+`case_pack_p2_2.js.bak-b7fix-20261002b7` (568,971) taken immediately before the explanation rewrite;
+`case_pack_p2_2.js.bak-b7-20260930b07` from the certifier. All non-zero and hash-identical at capture.
+`case_pack_p2_1.js.bak-20261002b7` (560,916) and `case_pack_p2_3.js.bak-20261002b7` (534,161)
+captured but unmodified by this batch.
+
+### Open items carried forward
+
+1. **Batches 8–14: 33 cases / 198 items** remain In Audit. Batch 8 is
+   `CBQ22-D5/A4/C3/F4/C8` with 0 own-state items.
+2. **An explanation occupying the field without serving it** is a distinct defect class from
+   DL-P2-026 boilerplate: the text is not filler, it is the answer restated. Screen D's phrase and
+   scratchwork checks do not catch it; the batch scan's length check does. Worth deciding whether the
+   length check should become a standing screen.
+3. Screen B-num scale-mismatch FP class (key in dollars, explanation in millions) remains open and
+   unremediated.
+4. Two of nine batches have contained a genuine key defect (B4-Q1, F5-Q1), both caught only by
+   hand-solve. The key-vs-explanation numeric-agreement control is still unbuilt and unauthorized.
+5. Screen C threshold still uncalibrated (deliberate).
+6. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 8 CERTIFIED (30/30) + short-explanation class closed P2-wide
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ22-D5`, `CBQ22-A4`, `CBQ22-C3`, `CBQ22-F4`, `CBQ22-C8` — 30 items, `p2/case_pack_p2_2.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Mismatches | Own-state |
+|---|---|---|---|---|
+| `CBQ22-D5` | 6 | 6/6 | 0 | 0 |
+| `CBQ22-A4` | 6 | 6/6 | 0 | 0 |
+| `CBQ22-C3` | 6 | 6/6 | 0 | 0 |
+| `CBQ22-F4` | 6 | 6/6 | 0 | 0 |
+| `CBQ22-C8` | 6 | 6/6 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | 0 |
+
+**Before:** 68 P2 cases Certified · **After:** 73. **No key mismatches and no first-derivation
+corrections** — the only batch so far where every initial derivation survived the reveal unchanged.
+
+### Hand-solve evidence — all 9 numeric items matched exactly
+
+- **`CBQ22-D5`** — risk score 4×4 = **16**; expected loss 4% × $8M = **$320,000**; tolerance breach
+  4.2% > 3.5% with appetite 2.0% and capacity $8M both intact (**B**); Reduce (**A**).
+- **`CBQ22-A4`** — CM = 120 − 70 = 50; OI = 20; EBT = 12. DOL = 50/20 = **2.50**;
+  DFL = 20/12 = **1.67**; TDTL = 2.50 × 1.67 = **4.17** (cross-checked as CM/EBT = 50/12 = 4.17).
+  FCC 1.92 > 1.80 passes, but a small sales miss hits coverage hard (**A**).
+- **`CBQ22-C3`** — NRV allocations: A = 120,000 × 80/180 = **$53,333**; B = 120,000 × 60/180 =
+  **$40,000**; C = $26,667. Further processing: A adds 25,000 − 18,000 = **+$7,000** → process
+  (**A**); B loses 15,000 − 20,000 = **−$5,000** → sell at split-off (**B**). Joint cost is sunk for
+  sell-or-process (**A + E**).
+- **`CBQ22-C8`** — variable cost/unit = 12.00 + 8.50 + 3.50 = **$24.00**; opportunity cost
+  $9,300 over 2,000 units = **$4.65**/unit; setup $4,200 / 2,000 = **$2.10**/unit. Relevant cost =
+  **$30.75**/unit. Net impact = 76,000 − 48,000 − 9,300 − 4,200 = **+$14,500**; minimum acceptable
+  price **$30.75**; opportunity cost is the displaced regular contribution (**B**); relevant costs are
+  **A, C, E**.
+- **`CBQ22-F4`** — all 6 correct (anti-bribery violation **A**, misclassification is a separate
+  books-and-records violation **A**, facilitating exception unavailable for a discretionary contract
+  **B**, SOX 404 deficiency **B**, three controls A/B/C).
+
+### Defect class closed: explanation occupying the field without serving it
+
+`CBQ22-A4-Q2` had a **54-character** explanation: *"DFL= OI/(OI-Interest)=20/(12)=1.67. 10% OI →
+16.7% EPS."* The arithmetic is right, but a learner receives the formula, the substitution, and the
+answer with no governing principle, no interpretation, and no trap.
+
+Rather than fix only that item, I swept all 660 P2 items at a <100-character threshold. **Exactly two
+qualified**, and one of them was worse than the batch-local defect:
+
+| Item | Length | State at discovery |
+|---|---|---|
+| `CBQ22-A4-Q2` | 54 | In Audit |
+| `CBQ22-B5-Q2` | 78 | **Certified — learner-reachable** |
+
+`CBQ22-B5-Q2` had been certified in Batch 7 in exactly this state, and Batch 7's scan flagged only
+its sibling Q3 (53 chars) — the batch scan is scoped to the batch's own items, so a Certified item in
+a *previously certified* batch can only be caught by a pool-wide sweep. Both were rewritten after
+hand-computing from exhibits: **54 → 940** and **78 → 1,041** characters, **keys unchanged**.
+Re-swept: **0 of 660** items under 100 characters.
+
+### One stale-read incident in the gate, disclosed
+
+The first Batch 8 gate run returned FAIL with two undeclared FLAG-severity flags on `CBQ22-A4-Q1` and
+`CBQ22-C3-Q1`. Those flags were **not present in any current screen output** — they were read from
+`scripts/output/case_semantic_flags.json` while I was writing screen runs to per-batch filenames via
+`--json`, leaving the gate's default input stale. Regenerating the default file and re-running gave
+zero FLAG hits for the batch, and the gate then returned PASS. Recorded because a FAIL that resolves
+on re-read must be traced, not assumed to be flaky: had I "retried until green" without identifying
+the cause, the assertion would have stopped meaning anything.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation, keys withheld | ✅ |
+| 0 first-derivation corrections | Every initial answer survived the reveal | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 68 → 73 | ✅ |
+| Short-explanation class closed | Pool-wide sweep, 0/660 under 100 chars | ✅ |
+| 1 Certified item repaired | `CBQ22-B5-Q2` was learner-reachable | ✅ |
+| Content defects after fix | 30-item scan → 0 | ✅ |
+| FLAG hits in batch | 0 after regenerating screen input | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 33 cases in pack_2; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_2.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 73 cases / 438 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_2.js` — 2 explanations rewritten, 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 68 → 73
+- `scripts/output/case_semantic_flags.json` — regenerated (the gate's default input)
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B8.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_2.js.bak-20261002b8` (572,395) captured before any write;
+`case_pack_p2_2.js.bak-b7fix-20261002b8fix` (572,395) taken immediately before the two rewrites;
+`case_pack_p2_2.js.bak-b8-20260930b08` from the certifier. All non-zero and hash-identical.
+`case_pack_p2_1.js.bak-20261002b8` (560,916) and `case_pack_p2_3.js.bak-20261002b8` (534,161)
+captured but unmodified.
+
+### Open items carried forward
+
+1. **Batches 9–14: 28 cases / 168 items** remain In Audit. Batch 9 is
+   `CBQ23-C1/E1/C2/F2/A1` with 0 own-state items.
+2. **The short-explanation threshold should become a standing screen.** It found a Certified,
+   learner-reachable defect that batch-scoped scanning had missed. Screen D covers phrase boilerplate
+   and scratchwork but not a field occupied by an answer restated; the length check is what catches it.
+3. **Batch-scoped scans cannot see previously-certified defects.** Both short-explanation items this
+   session were found outside the current batch's scope (one in the same case, one in an earlier
+   certified batch). Pool-wide sweeps should run alongside batch scans, not only when a batch happens
+   to surface the class.
+4. Screen B-num scale-mismatch FP class remains open and unremediated.
+5. Two of ten batches have contained a genuine key defect (B4-Q1, F5-Q1), both caught only by
+   hand-solve. The key-vs-explanation numeric-agreement control is still unbuilt and unauthorized.
+6. Screen C threshold still uncalibrated (deliberate).
+7. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 9 CERTIFIED (12 numeric derivations), 0 key defects
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ23-C1`, `CBQ23-E1`, `CBQ23-C2`, `CBQ23-F2`, `CBQ23-A1` — 30 items, `p2/case_pack_p2_3.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Key mismatches | Content defects | Own-state |
+|---|---|---|---|---|---|
+| `CBQ23-C1` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-E1` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-C2` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-F2` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-A1` | 6 | 6/6 | 0 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | **0** | 0 |
+
+**Before:** 73 P2 cases Certified · **After:** 78. **12 numeric items** — the heaviest computational
+load of any batch so far.
+
+### Hand-solve evidence — all 12 numeric items verified
+
+- **`CBQ23-C1`** — Relevant in-house cost $18.00 + supervisor $45,000/30,000 = **$19.50**/unit (the
+  $6.00 allocated corporate cost continues under either alternative and is excluded). Premium
+  **$4.50**/unit. Net annual advantage = freed-capacity Product Z CM (15,000 h × $36 = $540,000) +
+  $20,000 rental − $135,000 premium = **$425,000**.
+- **`CBQ23-E1`** — Depreciation $100,000; ATCF = ($160,000 − $10,000) × 0.75 + $100,000 × 0.25 =
+  **$137,500**. NPV = −$500,000 + $137,500 × 3.7908 + after-tax salvage PV = **$49,176**. Payback
+  **3.64** years. PI ≈ **1.10**.
+- **`CBQ23-C2`** — Idle capacity 200 units; incremental CM on unlimited capacity = 1,200 × ($65 − $48)
+  = **$20,400**; displaced 1,000 regular units cost **$32,000**; net **−$11,600**/month; minimum price
+  ($48,000 + $32,000)/1,200 = **$74.67**.
+- **`CBQ23-A1`** — Current ratio 47,000/20,000 = **2.35**; TIE 16,700/4,175 = **4.00**; adjusted D/E
+  (72,000 + 6,000)/60,000 = **1.30** (guarantee only, per the term sheet); CTA reported in OCI until
+  disposal (**B**); debt-like items **A, B, D**.
+
+### Two apparent mismatches that were my errors, not key defects
+
+```CBQ23-E1-Q2``` — I computed NPV = **$58,490** by discounting the full $60,000 salvage and never
+taxing it. Exhibit 1 specifies five-year straight-line **to zero salvage**, so book value at
+disposal is zero and the entire $60,000 is taxable: after-tax salvage $45,000, PV $27,941, NPV
+**$49,176**. The keyed answer is correct, and the "to zero salvage" wording is precisely the detail
+that signals the tax treatment.
+
+```CBQ23-C2-Q1``` — I computed **$38,400** using the *regular* price ($80 − $48 = $32) rather than
+the order's own offer price. The prompt asks what the order adds **if idle capacity were unlimited**,
+and the order sells at $65, so the figure is 1,200 × ($65 − $48) = **$20,400**. The keyed answer is
+correct; I answered a different question.
+
+Both errors share a family with the earlier ones this session: applying the *default* rule rather than
+the condition the item actually specifies (tax on fully-depreciated salvage; the special order's price
+rather than list). This is the seventh first-derivation error and the first batch since Batch 8 in
+which one occurred.
+
+### Five FLAG-severity screen hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ23-C1-Q6` | B | stored(C) recall 0.20. The keyed option states the **$425,000** net advantage verbatim, which matches the independent derivation, and correctly makes the recommendation contingent on dual qualification and an SLA with audit rights. |
+| `CBQ23-C2-Q6` | B | stored(D) recall 0.12. The tiered counter (decline as structured; idle units at ≥$48; displaced units at regular) matches the Q5 key on identical reasoning. |
+| `CBQ23-F2-Q2` | B | stored(B) recall 0.17. Preserve evidence, block further payments, escalate to the audit committee chair who directs the investigation through counsel. Confronting the manager or notifying law enforcement personally would compromise it. |
+| `CBQ23-F2-Q4` | B | stored(C) recall 0.08. The item asks which action **would violate** investigation boundaries; a covert interview run by the auditor herself before counsel is engaged is the violation. |
+| `CBQ23-F2-Q6` | B | stored(D) recall 0.20. The layered program is the only option covering prevention across the network; A/B/C each address a single weak lever. |
+
+All five are the documented screen-B recall artifact on long, carefully-qualified option text — recall
+scores of 0.08–0.20 against explanation prose. None is a content defect.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 key mismatches | Independent derivation, keys withheld | ✅ |
+| 12 numeric items verified | Each recomputed from exhibits | ✅ |
+| 2 apparent mismatches resolved as my errors | Tax on salvage; offer vs list price | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 73 → 78 | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| 5 flags adjudicated | Each verified against item logic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 34 cases in pack_3; 660 items total | ✅ |
+| Short-explanation class still closed | Pool-wide sweep 0/660 under 100 chars | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| `node --check` | `case_pack_p2_3.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 78 cases / 468 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_3.js` — 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 73 → 78
+- `scripts/output/case_semantic_flags.json` — regenerated (gate's default input)
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B9.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_3.js.bak-20261002b9` (534,161) captured before the certification write, plus
+the certifier's `.bak-b9-20260930b09`. Non-zero and hash-identical at capture.
+`case_pack_p2_1.js.bak-20261002b9` (560,916) and `case_pack_p2_2.js.bak-20261002b9` (574,544)
+captured but unmodified by this batch.
+
+### Open items carried forward
+
+1. **Batches 10–14: 23 cases / 138 items** remain In Audit. Batch 10 is
+   `CBQ23-E2/C3/D2/E3/A3` with **18 own-state items**.
+2. **Seven first-derivation errors this session, one family:** applying the default rule instead of
+   the condition the item specifies (tax on zero-book-value salvage, offer price vs list price,
+   opportunity-cost sign, temporal vs current rate, CTA vs net income). None produced a defective
+   key, but each was a real risk of one being missed.
+3. Screen B-num scale-mismatch FP class; short-explanation length check should become a standing
+   screen; key-vs-explanation numeric-agreement control still unbuilt; screen C uncalibrated.
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 10 CERTIFIED (18 own-state) + cross-item figure consistency fixed
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ23-E2`, `CBQ23-C3`, `CBQ23-D2`, `CBQ23-E3`, `CBQ23-A3` — 30 items, `p2/case_pack_p2_3.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Key mismatches | Other changes | Own-state |
+|---|---|---|---|---|---|
+| `CBQ23-E2` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-C3` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ23-D2` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ23-E3` | 6 | 6/6 | 0 | 0 | 6 |
+| `CBQ23-A3` | 6 | 6/6 | 0 | **3 option strings** | 0 |
+| **Total** | **30** | **30/30** | **0** | 3 | 18 |
+
+**Before:** 78 P2 cases Certified · **After:** 83. **18 own-state items** — tied with Batch 7 for the
+highest density, and the largest batch dump of the wave at 34,913 characters.
+
+### Hand-solve evidence — all 4 numeric items verified exactly
+
+- **`CBQ23-E2`** — Atlas NPV = $264,000 × 3.791 + $60,000 × 0.621 − $900,000 = **$138,084**;
+  Delta NPV = $136,000 × 3.791 − $400,000 = **$115,576**. Atlas has the higher NPV and governs
+  (**A**); IRR favours the smaller outlay but NPV decides the mutually exclusive choice (**C**).
+- **`CBQ23-A3`** — Remeasurement loss: 120,000,000/148 = 810,811 vs 120,000,000/142 = 845,070, an
+  increase of **$34,260** which is a loss reducing pre-tax income. Lease PV at 6% = **$8,737,707**;
+  lease-adjusted D/E = (42.0M + 8.74M)/38.0M = **1.34**. GAAP TIE = 9,600,000/3,360,000 = **2.86**.
+  Fixed-charge coverage = (9,600,000 + 2,400,000)/(3,360,000 + 2,400,000 + 1,500,000) = **1.65x**,
+  which **breaches** the 1.80x minimum.
+- **`CBQ23-D2`** — Green-amber z-score = (2.5 − 1.6)/0.7 = **1.29σ**, so amber triggers are frequent
+  and false-positive noise is elevated (**A**).
+- **`CBQ23-E3`** — Year 3 MACRS after-tax cash flow = $32M × 0.79 + $34.56M × 0.21 = **$32.5M**;
+  deferral option +$7.2M on a $46.5M base; NPV falls ~31% from $46.5M to $32.0M across the 7.5%–9.5%
+  WACC band.
+
+### Cross-item figure inconsistency corrected: `CBQ23-A3`
+
+`CBQ23-A3-Q1` asks for the remeasurement loss "rounded to nearest dollar." The exact figure is
+120,000,000 × (1/148 − 1/142) = **$34,259.61**, which rounds to **$34,260** — and that is the key.
+Three option strings in sibling items quoted **$34,259** instead:
+
+| Item | Option | Quoted |
+|---|---|---|
+| `CBQ23-A3-Q3` | A | "...remeasured at Dec 31 spot with the $34,259 loss in earnings" |
+| `CBQ23-A3-Q5` | A | "The $34,259 remeasurement loss should be deferred in AOCI as part of CTA" |
+| `CBQ23-A3-Q5` | E | "...together with the $34,259 transaction loss" |
+
+$34,259 arises only from rounding each USD leg *before* subtracting (810,811 − 845,070 = −34,259),
+which is not the method the prompt specifies. **The key was correct**; the published option text was
+inaccurate. Corrected to $34,260.
+
+Severity assessed before acting: no key was wrong, and no learner path requires a learner to
+reconcile the two figures — Q1 asks for the number, Q3/Q5 are qualitative items that merely reference
+it. So this is an internal-consistency fix, not a defect remediation, and it is a **choice-text edit
+only** — no key, no explanation, no item order touched. Q1's own explanation legitimately cites both
+34,260 (the key) and 34,259.59 (the exact value) and was left alone.
+
+Verification: per-field diff confirmed only `Choices` changed and only by the $34,259 → $34,260
+substitution; the `34260` key was asserted unchanged post-write; all 33 other cases byte-identical.
+
+### Three FLAG-severity screen hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ23-E2-Q5` | B | stored(E) recall 0.18. A (12% stress test), B (confirm salvage = book value, so no taxable gain) and E (exclude non-changing corporate allocations) are the three sound diligence steps. D would capitalize a **sunk** feasibility study; C is invalid because the committee funds only one mutually exclusive project. |
+| `CBQ23-A3-Q5` | B | stored(D) recall 0.18. Fixed-charge coverage recomputed independently at **1.6529** against the 1.80x minimum, so the breach statement is correct. |
+| `CBQ23-A3-Q6` | C | jaccard 0.0441, explWords 31. A match-type item's explanation is a short label list sharing no vocabulary with the scenario prose — structurally low overlap, not a content defect. |
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 key mismatches | Independent derivation, keys withheld | ✅ |
+| 4 numeric items verified | Each recomputed from exhibits | ✅ |
+| Key 34260 correct | Exact value 34,259.61 rounds to 34,260 per the prompt's stated method | ✅ |
+| 3 option strings corrected | Per-field diff; only Choices changed, only by the substitution | ✅ |
+| Key untouched | Post-write assertion of `Correct === "34260"` | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 78 → 83 | ✅ |
+| 18 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| 3 flags adjudicated | Each verified against item logic + arithmetic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 34 cases in pack_3; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| Short-explanation class still closed | Pool-wide sweep 0/660 under 100 chars | ✅ |
+| `node --check` | `case_pack_p2_3.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 83 cases / 498 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_3.js` — 3 option strings corrected, 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 78 → 83
+- `scripts/output/case_semantic_flags.json` — regenerated (gate's default input)
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B10.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_3.js.bak-20261002b10` (534,543) captured before any write;
+`case_pack_p2_3.js.bak-a3txt-20261002b10` (534,543) taken immediately before the option-text
+correction; `case_pack_p2_3.js.bak-b10-20260930b10` from the certifier. All non-zero and
+hash-identical at capture. `case_pack_p2_1.js.bak-20261002b10` (560,916) and
+`case_pack_p2_2.js.bak-20261002b10` (574,544) captured but unmodified by this batch.
+
+### Process note — one tooling slip, disclosed
+
+The option-text correction script reported `*** POST FAIL` after writing, on a post-check that
+searched the whole case object for "34,259" — which correctly found Q1's *explanation*, where the
+string legitimately appears alongside the exact 34,259.59 value. The write itself was correct and was
+already gated pre-write on per-field verification. The post-check was too broad; a narrower check
+(choices only) confirmed the intended state. Recorded because a post-write assertion that fires
+without cause trains you to re-run writes, and re-running writes is how double-applied edits happen.
+
+### Open items carried forward
+
+1. **Batches 11–14: 18 cases / 108 items** remain In Audit. Batch 11 is
+   `CBQ23-F4/A4/C5/D3/E4`; Batch 12 is `CBQ23-F5/A5/A6/A7/A8` with **24 own-state items**, the
+   highest density remaining; Batch 13 `CBQ23-B3/B4/B5/B6/C6` with **30 own-state items** — every
+   item in the batch; Batch 14 `CBQ23-C7/C8/C9` with 18.
+2. Screen B-num scale-mismatch FP class; short-explanation length check should become a standing
+   screen; key-vs-explanation numeric-agreement control unbuilt; screen C uncalibrated.
+3. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-02 — P2 Hand-Solve Wave Batch 11 CERTIFIED (30/30, zero defects, zero corrections)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ23-F4`, `CBQ23-A4`, `CBQ23-C5`, `CBQ23-D3`, `CBQ23-E4` — 30 items, `p2/case_pack_p2_3.js`
+**Evidence basis:** adjudicated — 30/30 independent hand-solve, keys withheld
+
+### Result
+
+| Case | Items | Hand-solve | Mismatches | Defects | Own-state |
+|---|---|---|---|---|---|
+| `CBQ23-F4` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-A4` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-C5` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-D3` | 6 | 6/6 | 0 | 0 | 0 |
+| `CBQ23-E4` | 6 | 6/6 | 0 | 0 | 0 |
+| **Total** | **30** | **30/30** | **0** | **0** | 0 |
+
+**Before:** 83 P2 cases Certified · **After:** 88. **No key mismatches, no first-derivation
+corrections, and no content defects** — the first batch since Batch 8 to need no remediation of any
+kind, and the second consecutive batch where every initial derivation survived the reveal.
+
+### Hand-solve evidence — all 8 numeric items verified
+
+- **`CBQ23-A4`** — Recast debt = $42M + $8M guarantee + $5.2M lease PV = $55.2M; D/E =
+  55.2/38 = **1.45**, which Exhibit 2 independently corroborates. Lease liability recognized at the
+  **present value $5.2M**, not the $6.0M right-of-use amount, because ASC 842-20-25 measures the
+  liability at the PV of remaining lease payments. Recast D/E 1.45 breaches the 1.40 maximum (**A**).
+- **`CBQ23-C5`** — Target cost = $28 market − $6 required profit = **$22.00**; Year 1 kaizen-adjusted
+  cost = $24 − $0.60 = **$23.40**, where kaizen is 5% of the $12 conversion. Value-engineering
+  packaging ($0.80) plus a 10% material negotiation ($0.70) yields $1.50 of the $2.00 gap.
+- **`CBQ23-D3`** — Alpha risk score L3 × S5 = **15**; expected loss 8% × $4M = **$320,000**.
+- **`CBQ23-E4`** — PI for B = 1 + 0.50/1.5 = **1.33**; exhaustive search over all 27 feasible subsets
+  under the $6M cap gives optimum **A+B+C+D** at $5.3M / NPV **$1.62M**, ahead of A+B+E (1.50) and
+  A+B+C (1.42). Post-audit: revenue −$50k dominates the −$80k total, against +$20k variable and
+  +$10k fixed.
+
+`CBQ23-A4` is a useful positive case: the ASC 842 PV-versus-ROU distinction — the same point caught
+me wrong in an earlier session's C2 indifference-price derivation — is now an *item's own
+discriminator*, correctly keyed.
+
+### Three FLAG-severity screen hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ23-F4-Q5` | B | stored(C) recall 0.09. Stored A,B,C verified correct: A (system-enforced three-way match with no bypass) addresses the override that occurred, B (FOB-destination cutoff requiring proof of delivery) addresses the $420k recorded before title transfer, C (hotline + SOX 806) is the standard override control. D (paper invoices) is irrelevant to a shipping override; E (raising the revenue target) worsens the pressure that drove the fraud. |
+| `CBQ23-E4-Q1` | C | jaccard 0.0270, explWords 91. Numeric item; the explanation quotes figures and formula tokens, giving low structural overlap with scenario prose. PI verified as 1.33. |
+| `CBQ23-E4-Q3` | C | jaccard 0.0159, explWords 54. Same artifact. The PI-greedy failure statement verified independently: greedy fills B,C,A at $4.5M/$1.42M, leaving $1.5M idle that accommodates D, lifting the bundle to $5.3M/$1.62M. |
+
+All three are the two documented FP classes — screen-B per-choice recall on long option text, and
+screen C on explanations that quote figures.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 30/30 hand-solve, 0 mismatches | Independent derivation, keys withheld | ✅ |
+| 0 first-derivation corrections | Every initial answer survived the reveal | ✅ |
+| 8 numeric items verified | Each recomputed from exhibits | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 83 → 88 | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| 3 flags adjudicated | Each verified against item logic + arithmetic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 34 cases in pack_3; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| Short-explanation class still closed | Pool-wide sweep 0/660 under 100 chars | ✅ |
+| `node --check` | `case_pack_p2_3.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 88 cases / 528 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_3.js` — 5 cases / 30 items certified
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 83 → 88
+- `scripts/output/case_semantic_flags.json` — regenerated (gate's default input)
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B11.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_3.js.bak-20261002b11` (536,612) captured before the certification write, plus
+the certifier's `.bak-b11-20260930b11`. Non-zero and hash-identical at capture.
+`case_pack_p2_1.js.bak-20261002b11` (560,916) and `case_pack_p2_2.js.bak-20261002b11` (574,544)
+captured but unmodified.
+
+### Open items carried forward
+
+1. **Batches 12–14: 13 cases / 78 items** remain In Audit — the final stretch of the wave.
+   - Batch 12: `CBQ23-F5/A5/A6/A7/A8` — **24 own-state items**
+   - Batch 13: `CBQ23-B3/B4/B5/B6/C6` — **30 own-state items, every item in the batch**
+   - Batch 14: `CBQ23-C7/C8/C9` — 18 own-state items
+2. `CBQ23-E4` contains `CBQ23-E4-Q2`, whose explanation was rewritten earlier in this session as
+   part of the DL-P2-026 correction (raw authoring scratchwork). It was hand-solved again here and
+   confirmed at 1.62 — so a previously-repaired defect has now been independently re-verified.
+3. Screen B-num scale-mismatch FP class; short-explanation length check should become a standing
+   screen; key-vs-explanation numeric-agreement control unbuilt; screen C uncalibrated.
+4. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-03 — Batch 12 CERTIFIED (24 own-state, 2 genuine key defects found and re-keyed)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ23-F5`, `CBQ23-A5`, `CBQ23-A6`, `CBQ23-A7`, `CBQ23-A8` — 30 items, `p2/case_pack_p2_3.js`
+**Evidence basis:** adjudicated — 27/30 correct on first derivation, 3 items corrected
+
+### Result
+
+| Case | Items | Hand-solve | Key defects corrected | Own-state |
+|---|---|---|---|---|
+| `CBQ23-F5` | 6 | 6/6 | 0 | 0 |
+| `CBQ23-A5` | 6 | 6/6 | 0 | 6 |
+| `CBQ23-A6` | 6 | 5/6 (1 my error) | 0 | 6 |
+| `CBQ23-A7` | 6 | 6/6 | **1 (`CBQ23-A7-Q4`)** | 6 |
+| `CBQ23-A8` | 6 | 6/6 | **1 (`CBQ23-A8-Q2`)** | 6 |
+| **Total** | **30** | **29/30** | **2** | **24** |
+
+**Before:** 88 P2 cases Certified · **After:** 93. **24 own-state items** — the highest density of the
+wave, and the third batch in a row where the item-level flip path carried most of the work.
+
+### Two genuine key defects — both keys contradicted their own explanations
+
+These are the clearest examples yet of the failure mode hand-solve exists to catch, and both share
+one structure: **the stored key asserts something its own explanation refutes.**
+
+**`CBQ23-A7-Q4` — DOL direction reversed.** Exhibit 1 gives contribution margin $10,000,000 and
+operating income $2,000,000, so current DOL = **5.00**. Exhibit 2's post-expansion column gives
+$13,200,000 and $2,800,000, so post-expansion DOL = **4.71**. Recomputed independently:
+13,200,000 / 2,800,000 = 4.7143. **The ratio falls.** The stored key was **B — "DOL would increase"**,
+contradicted by the exhibit, while option **A ("DOL would decrease because the higher revenue base
+dilutes the fixed-cost burden")** states both the correct direction and the correct reasoning. The
+stored explanation itself conceded the point: *"While **numerically lower** than 5.00, the risk
+profile is higher…"* — then keyed the option claiming it rose.
+
+Re-keyed **B → A**. The replacement explanation preserves the genuine economic insight the original
+was reaching for (a higher absolute fixed base still means a 1% revenue decline costs more in dollars,
+and net income falls $1,050,000 → $770,000) while correctly stating that the DOL *ratio* declines,
+and points to Q5 for the net-income concern. As written, the item taught the wrong **direction**,
+which is worse for a learner than an imprecise number.
+
+**`CBQ23-A8-Q2` — CCC arithmetically impossible.** DSO = ($1,200,000 / $10,000,000) × 365 = 43.8;
+DIO = ($1,000,000 / $7,500,000) × 365 = 48.7; DPO = ($665,000 / $7,800,000) × 365 = 31.1.
+CCC = 43.8 + 48.7 − 31.1 = **61.35 → 61 days**. Recomputed independently: 43.80 + 48.67 − 31.12 =
+61.35. The stored key was **60**, and the stored explanation read *"43.8 + 48.7 − 31.0 = 61.5 = 60
+days (rounded per question specification)"* — an impossibility, since 61.5 rounds to 62 and the
+correct precise value is 61.35. The key was unreachable by the method the explanation states.
+
+Re-keyed **60 → 61**. The replacement explanation shows the per-component work, notes that DPO uses
+**Purchases ($7,800,000) rather than COGS ($7,500,000)** because payables arise from purchases
+(substituting COGS would overstate DPO to 32.4 and understate the cycle by about a day), and names
+the add-instead-of-subtract trap.
+
+### One derivation of mine that was wrong
+
+`CBQ23-A6-Q2` — I computed asset turnover on **ending** assets ($5,000,000 / $4,200,000 = 1.19).
+The correct basis is **average** assets: ($4,000,000 + $4,200,000)/2 = $4,100,000, giving
+5,000,000 / 4,100,000 = **1.22**, which is the key. My error was assuming one balance-sheet
+convention across both A6 items when they legitimately differ — the multiplier question uses
+**ending** equity ($4,200,000 / $2,600,000 = 1.62) while turnover uses **average** assets. Both keys
+are correct; only my reading of the convention was wrong. Eighth first-derivation error this session,
+and again the rule rather than the item's own specified basis.
+
+### Hand-solve evidence — all other numeric items verified
+
+- **`CBQ23-A5`** — current ratio 1,760,000/580,000 = **3.03** (Y1 3.00 → Y3 3.03, *rising*); net
+  profit margin 301,500/5,400,000 = **5.58%**; inventory turnover 3,780,000/840,000 = **4.50**; DSO
+  36.5 → 40.1 → 44.6 days, the clearest operational-efficiency deterioration (**B**).
+- **`CBQ23-A6`** — margin 414,000/5,000,000 = **8.28%**; multiplier **1.62**; turnover **1.22**;
+  ROE reconstructed at 16.31%, against the stem's 16.00% prior figure.
+- **`CBQ23-A7`** — DOL **5.00**, DFL 2,000,000/1,500,000 = **1.33**, DCL **6.67** (cross-checked as
+  CM/EBT = 10/1.5 = 6.67); post-expansion DOL 4.71; net income falls $1.05M → $0.77M.
+- **`CBQ23-A8`** — DSO **44**, DIO 48.7, DPO 31.1, CCC **61**; DSO-to-30-days releases
+  $1,200,000 − $821,918 = $378,082; inventory route nets $185,479 against a payables route of
+  $942,411 on the exhibit arithmetic.
+
+### Three FLAG-severity hits, all adjudicated false positives
+
+| Item | Screen | Why FP |
+|---|---|---|
+| `CBQ23-F5-Q3` | C | jaccard 0.0260, explWords 53. SOX 302 vs 404 distinction verified. |
+| `CBQ23-A6-Q4` | B | stored(C) recall 0.17. The item's own explanation confirms the reasoning independently: *"profit margin actually improved slightly (8.00% to 8.28%) and the equity multiplier increased modestly (1.56 to 1.62)"* — leaving asset turnover as the only deteriorating component, which is what option C states. |
+| `CBQ23-A7-Q3` | C | jaccard 0.0328, explWords 33. DCL 6.67 verified. |
+
+### Tracked observation filed: DL-P2-028
+
+`CBQ23-A8-Q4` option B states a $300,822 cash release and a $156,000 cost, **neither derivable from
+the exhibits** (the payables route yields $961,644 released and $19,233 discount forgone). The keyed
+answer A is correct and uniquely so on exhibit arithmetic, so this does not block certification.
+
+Filed as **DL-P2-028** rather than silently fixed, because it is a choice-text edit inside an
+already-Certified case (Rule 16/22 scrutiny) and because the substantive issue is larger than the
+numbers: **on the exhibit inputs the payables route is in fact the better financial choice**, so the
+item's premise needs a deliberate authoring decision rather than a find-and-replace. Three remediation
+options are set out in the entry.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 29/30 correct, 2 key defects found | Independent derivation, keys withheld | ✅ |
+| A7-Q4 DOL direction | 4.7143 < 5.00, re-keyed B → A | ✅ |
+| A8-Q2 CCC | 61.35 → 61, re-keyed 60 → 61 | ✅ |
+| Only Correct + Explanation changed | Per-field diff; all 28 other items and all cases byte-identical | ✅ |
+| Choice text untouched | `Choices` asserted identical on both corrected items | ✅ |
+| 5 cases / 30 items Certified | preflight P2 Case Certified 88 → 93 | ✅ |
+| 24 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Content defects after fix | 30-item scan → 0 | ✅ |
+| 3 flags adjudicated | Each verified against item logic + arithmetic | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Case / item counts | 34 cases in pack_3; 660 items total | ✅ |
+| Boilerplate + scratchwork | 0/660, two methods | ✅ |
+| Short-explanation class still closed | Pool-wide sweep 0/660 under 100 chars | ✅ |
+| `node --check` | `case_pack_p2_3.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 93 cases / 558 items | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_3.js` — 2 items re-keyed, 5 cases / 30 items certified
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-028 appended
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 88 → 93
+- `scripts/output/case_semantic_flags.json` — regenerated (gate's default input)
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B12.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_3.js.bak-20261002b12fix` (536,922) captured before any write;
+`case_pack_p2_3.js.bak-b12keys-20261002b12fix` (536,922) taken immediately before the two key
+corrections; `case_pack_p2_3.js.bak-b12-20260930b12` from the certifier. All non-zero and
+hash-identical at capture. `case_pack_p2_1.js.bak-20261002b12fix` (560,916) and
+`case_pack_p2_2.js.bak-20261002b12fix` (574,544) captured but unmodified.
+Also `p2/DEFECT_LIBRARY_P2.md.bak-dl028` (93,604).
+
+### Process note
+
+Four of five batches have now contained a genuine key defect (B4-Q1 WACC, F5-Q1 SOX, A7-Q4 DOL
+direction, A8-Q2 CCC), and **every one contradicted its own explanation**. No screen caught any of
+them: screen B and B-num both passed items whose explanations quoted the correct figure, and screen C
+flags on lexical overlap rather than numeric agreement. This is now the single strongest piece of
+evidence in the session for the unbuilt key-vs-explanation numeric-agreement control.
+
+### Open items carried forward
+
+1. **Batches 13–14: 8 cases / 48 items** remain In Audit — the wave's final stretch.
+   - Batch 13: `CBQ23-B3/B4/B5/B6/C6` — **30 own-state items, every item in the batch**
+   - Batch 14: `CBQ23-C7/C8/C9` — 18 own-state items
+2. **DL-P2-028** — `CBQ23-A8-Q4` option-B fabricated figures; open, three remediation options.
+3. Key-vs-explanation numeric-agreement control: unbuilt, unauthorized, and now supported by four
+   instances of the exact failure it would catch.
+4. Screen B-num scale-mismatch FP class; short-explanation length check should become a standing
+   screen; screen C uncalibrated.
+5. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+---
+
+## Batch 13 Certification — CBQ23-B3/B4/B5/B6/C6 — 2026-10-02
+
+**Date:** 2026-10-02
+**Session Type:** Full Governance Lane — P2 case certification wave, Batch 13 of 14
+**Cases:** CBQ23-B3, CBQ23-B4, CBQ23-B5, CBQ23-B6, CBQ23-C6 (5 cases / 30 items, all own-state)
+**Trigger:** User hand-solve of all 30 items; 2 genuine key defects found and remediated before certification
+
+### Hand-Solve Result
+
+| Metric | Count |
+|--------|-------|
+| Items hand-solved | 30/30 |
+| Verified correct on first derivation | 27 |
+| Genuine key defects | 2 |
+| Adjudicator errors (key was right) | 1 |
+
+### Key Defects Remediated
+
+| Item | Before | After | Explanation |
+|------|--------|-------|-------------|
+| CBQ23-C6-Q2 | `"86"` | `"38.50"` | Explanation was raw authoring scratchwork ("Wait —… I'll use $38.50 as the mathematically correct answer") contradicting the key. Fully rewritten (357 chars) with correct weighted-average derivation: (3,000×$60 + 2,000×$40 + 5,000×$25) / 10,000 = $38.50. |
+| CBQ23-B3-Q5 | `"8.89"` | `"8.66"` | Explanation computed 8.66% then asserted 8.89% via an unsupported "blended" rate matching no exhibit figure. Rewritten (345 chars) with consistent weights: (0.577×11.01%) + (0.327×4.71%) + (0.096×8.00%) = 8.66%. |
+
+### Adjudicator Error (Key Was Right)
+
+**CBQ23-B4-Q3** — Adjudicator computed the tax shield as debt × rate × tax = $825,000 (single-period interest). The key is $15,000,000: under MM with taxes, PV of the shield on **perpetual** debt is D × t = $50,000,000 × 0.30. The item says "perpetual debt" and option B in Q4 uses the same $15M figure — internally consistent. Key confirmed correct; no change.
+
+### Certification
+
+- **Own-state flips:** 30/30 (6 items × 5 cases), all `In Audit` → `Certified`
+- **Case-level stamps:** `certification_session: P2-HAND-SOLVE-WAVE`, `certification_date: 2026-10-02`, `certification_batch: P2-HAND-SOLVE-WAVE` on all 5 cases
+- **Backup:** `backups/case_pack_p2_3.js.bak-20261002214943` (539,935 bytes, verified non-zero before writes)
+- **Probe constant:** `P2_STRICT_CASES` updated 93 → 98 in `scripts/pool_parity_probe.js` with batch provenance comment
+
+### Gate Results
+
+| Gate | Result |
+|------|--------|
+| preflight:p2 | 0 divergences — 98/110 Certified |
+| validate | 0 errors |
+| test_governance_guard | 123/123 |
+| probe:parity | 0 divergences (98 cases / 588 items) |
+
+### Pattern Note
+
+This is the fifth consecutive batch with a key defect. All five share one structure: **the key contradicts its own explanation.** No screen caught any of them — Screen B checks lexical overlap (an explanation dense with numeric tokens passes even when those tokens disagree with the key), and Screen C flags lexical mismatch rather than numeric disagreement. The numeric-agreement control (parse explanation arithmetic, flag unsupported key values) remains the strongest unbuilt candidate.
+
+---
+
+
+---
+
+## 2026-10-04 — Batch 14 CERTIFIED (6 key defects found and remediated) — WAVE COMPLETE
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `CBQ23-C7`, `CBQ23-C8`, `CBQ23-C9` — 18 items, all own-state, `p2/case_pack_p2_3.js`
+**Evidence basis:** adjudicated — 12/18 correct on first derivation; 6 items remediated before certification
+
+### Result
+
+| Case | Items | Hand-solve | Defects remediated |
+|---|---|---|---|
+| `CBQ23-C7` | 6 | 4/6 | **3** (Q1, Q5 + explanation) |
+| `CBQ23-C8` | 6 | 4/6 | **2** (Q2, Q4) |
+| `CBQ23-C9` | 6 | 6/6 | **2** (Q1, Q5) |
+| **Total** | **18** | **14/18** | **6** |
+
+**Before:** 98 Certified · **After:** 101. **Highest defect count of any batch** — 6 of 18 items,
+the only batch where remediation was structural rather than incidental.
+
+### WAVE COMPLETE — final P2 census
+
+| State | Cases |
+|---|---|
+| **Certified** | **101** |
+| Archived | 9 (`CBQ22-C4/C5/C6/C7`, `A5`, `A6`, `F5`, `F6`, `F7` — all in `case_pack_p2_2.js`) |
+| **In Audit** | **0** |
+| Total | 110 |
+
+The 9 Archived cases were archived before this wave (DL-P2-024 duplicate work) and were never part
+of the In Audit population. **Every case that was ever In Audit is now Certified.**
+
+### The 6 defects — all key-contradicts-own-explanation
+
+| Item | Before | After | Basis |
+|---|---|---|---|
+| `CBQ23-C7-Q1` | `63` | **`81.50`** | Stem explicitly raises the shortfall; only 1,000 units of idle capacity exist against a 2,000-unit order, so 1,000 units displace regular production at $37 CM. Floor = ($126,000 + $37,000)/2,000 = $81.50 |
+| `CBQ23-C7-Q5` | `D` (−28,000) | **`A` (+9,000)** | Net = $14,000 CM − $5,000 *incremental* outsource cost (the $63,000 in-house cost was going to be incurred anyway) |
+| `CBQ23-C8-Q2` | `155000` | **`355000`** | Question asks TOTAL 5-yr relevant cost; the old key was net capital only, omitting $200,000 of maintenance |
+| `CBQ23-C8-Q4` | `6000` | **`-1000`** | Keep $70,000/yr vs new $40,000 + $31,000 capital recovery = $71,000/yr — new is $1,000/yr **more** costly |
+| `CBQ23-C9-Q1` | `73` | **`50.63`** | 73 traced to nothing in the item; it appears borrowed from Q6's option text ("between $73 and $80"). Correct: $30 + $20 + (3,000 × $55)/8,000 = $50.63 |
+| `CBQ23-C9-Q5` | `C` | **`B`** | Corporate profit **falls $165,000** — 3,000 sacrificed external sales × $55 contribution. The "internal transfer cancels out" reasoning is the classic misconception |
+
+### A defect I introduced and the gate caught
+
+While fixing `CBQ23-C7-Q5` I wrote the **numeric value `9000` into a `select` item's `Correct`
+field**. A select item's key must be a choice letter. My per-field diff passed because I had verified
+the *value* was arithmetically right, not that it was in the right *field* — a select item and a
+numeric item both accept a `Correct` value, so nothing in the diff objected.
+
+The batch gate refused certification with `UNRESOLVABLE-CORRECT: stored "9000" matches no choice key
+or text`. **Nothing was shipped**, and the item was rebuilt with option A rewritten to state +$9,000,
+key set to **A**, and a key-type assertion added to the pre-write gate
+(`typeof Correct === "string" && /^[A-F]$/` plus membership in the choice keys).
+
+A second defect surfaced in the same item: its `Choices` were keyed **0/1/2/3** (numeric) rather
+than letters, and option D's justification invented a "$40,000 contribution" figure that appears
+nowhere in the case. Both were repaired — a numeric-keyed select item and an incoherent distractor
+are separate failure modes from the wrong key.
+
+### Scope discovery — DL-P2-029 filed
+
+A pool-wide sweep for authoring scratchwork across all 660 P2 items found **8** carrying it:
+**5 already `Certified`** (`CBQ23-A7-Q6`, `CBQ23-B5-Q1`, `CBQ22-C11-Q1/Q2/Q4`) and 3
+`Archived`. None has been hand-solved; they are flagged by pattern only.
+
+The count is **pattern-set dependent** and DL-P2-029 states this explicitly rather than asserting a
+number: strict net 12 / tighter net 3 / wider net ~40, with the wide net heavily false-positive on
+"actually" and ordinary prose. Publishing the pattern list alongside the count is the only way a
+count like this is meaningful.
+
+### Screen design — three checks, not one
+
+The numeric-agreement screen as first proposed would **not** have caught this class. All six defects
+need three independent signals:
+
+| Check | Catches | Misses |
+|---|---|---|
+| **1. Key supported by explanation arithmetic** | `C8-Q2`, `C9-Q1` | items whose explanation is correct and key disagrees |
+| **2. Explanation/key disagreement** | `C9-Q5` (no scratchwork marker at all — pure conceptual error) | `C7-Q5` before repair |
+| **3. Key type matches item type** | `C7-Q5` (my own error) | key-value errors where the type happens to be right |
+
+Check 3 is the cheapest and is the one I omitted; it would have blocked the write on first attempt.
+The scratchwork-marker check runs alongside as a fourth signal.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 14/18 correct first derivation | Independent solve, keys withheld | ✅ |
+| 6 defects found and remediated | Each re-keyed with rewritten explanation | ✅ |
+| Wave complete | 101 Certified / 9 Archived / 0 In Audit | ✅ |
+| Key-type gate now enforced | `typeof/^[A-F]$/` + membership assertion | ✅ |
+| 3 cases / 18 items Certified | preflight P2 Case Certified 98 → 101 | ✅ |
+| 18 own-state items flipped | Certifier item-level stamp assertion | ✅ |
+| Scratchwork in batch | 0/18 after remediation (was 4) | ✅ |
+| Content defects | 30-item scan → 0 | ✅ |
+| FLAG-severity in batch | 0 | ✅ |
+| Batch gate | `case_cert_batch_gate.js` → **GATE: PASS** | ✅ |
+| Boilerplate + scratchwork class | 0 in this batch; 8 pool-wide flagged | ✅ |
+| `node --check` | `case_pack_p2_3.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences; 101 cases / 606 items | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `p2/case_pack_p2_3.js` — 6 items re-keyed, 1 item rebuilt (Q5 choices + key), 3 cases certified
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-029 filed
+- `scripts/pool_parity_probe.js` — `P2_STRICT_CASES` 98 → 101
+- `scripts/output/case_semantic_flags.json` — regenerated
+- `scripts/output/case_cert_batches/P2-HAND-SOLVE-WAVE-B14.json` — manifest
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`case_pack_p2_3.js.bak-20261003b14fix` (540,184) · `.bak-20261003b14b` (541,543) ·
+`.bak-20261003c7q5` (543,688) · `.bak-b14fix-20261003b14fix` · `.bak-b14b-20261003b14b` ·
+`.bak-c7q5-20261003c7q5` · `.bak-b14-20260930b14`. Also `p2/DEFECT_LIBRARY_P2.md.bak-dl029` (98,137).
+All non-zero and hash-identical at capture.
+
+### Open items carried forward
+
+1. **5 `Certified` items still carry scratchwork** (DL-P2-029): `CBQ23-A7-Q6`, `CBQ23-B5-Q1`,
+   `CBQ22-C11-Q1/Q2/Q4`. Not hand-solved. Learner-facing; same priority as Batch 14 received.
+2. **Build the screen with three checks** (supported / disagreement / key-type) plus scratchwork
+   markers. Across this wave **9 of 14 batches contained a genuine key defect, every one
+   key-contradicts-own-explanation, and not one was caught by any screen.**
+3. Retire 20 legacy `certify_wave*.js` scripts; regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+4. `CBQ22-C6` and `CBQ22-C11` share a numbering shape suggesting one authoring run; check as a unit.
+
+---
+
+
+---
+
+## 2026-10-04 — Screen E built and wired (4 checks); 26 encoding repairs; 3 new defect entries
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `scripts/key_agreement_screen.js` (new), `package.json`, `p2/case_pack_p2_C4_C8.js`
+**Evidence basis:** measured against ground truth before shipping; negative-controlled
+
+### What was built
+
+`scripts/key_agreement_screen.js` — a fourth-content screen covering **both P1 and P2**, wired into
+`npm run pipeline` via a new `key-agreement` target. Four checks, each earned by a specific
+verified defect from this wave:
+
+| Check | Catches | Earned from |
+|---|---|---|
+| **E1** key unsupported by explanation arithmetic | key not present in, or derivable from, the explanation's numbers | `CBQ21-B4-Q1`, `CBQ23-C8-Q2`, `CBQ23-C6-Q2`, `CBQ23-A8-Q2` |
+| **E2** context-aware scratchwork markers | `Wait`/`Hmm`/`Let me…`/`Using the answer`/`stored answer is` | `CBQ23-C8-Q2`, `CBQ23-C8-Q4`, `CBQ23-C9-Q1` |
+| **E3** key type matches item type | numeric key on a select item | **my own error** on `CBQ23-C7-Q5` |
+| **E4** encoding corruption | mojibake sequences + U+FFFD | DL-P2-030 |
+
+### Calibration before shipping — three of four checks were broken
+
+First run produced **247 flags**, which is noise, not a screen. Measured against ground truth:
+
+| Check | First run | After calibration | Real defects |
+|---|---|---|---|
+| E3 KEY-TYPE | 189 | **8** | 8 |
+| E2 SCRATCHWORK | 8 | **7** | 6 |
+| E1 KEY-UNSUPPORTED | 15 | **3** | 3 |
+| E4 ENCODING | 35 | 35 | 35 |
+
+Three fixes were required before any check could be trusted:
+
+1. **E3 treated select items keyed by choice TEXT as errors.** 181 false positives — that is a valid
+   schema in this pool (`Correct: "Recognize 84,000 revenue…"`). Now fires only on a bare number
+   keyed to a choice item, which is the actual `CBQ23-C7-Q5` defect class.
+2. **E1 ran on array/object keys.** multi and match items store arrays of choice text, which the
+   numeric comparison cannot evaluate. Now restricted to scalar numeric keys.
+3. **E2's exclusion list missed separator classes.** The known false positives were `"choose Wait."`
+   (period) and `Wait —` (em dash), neither covered by the original possessive/digit exclusions.
+   Rewritten to require a trailing separator **class** rather than an enumerated word list.
+
+### Negative control — 5/5
+
+The live tool was run against a temp mirror carrying one injected defect per check plus one clean
+control item. Result: **fires on all four, silent on the clean control.** Live content files were
+never modified by the test.
+
+### The screen found two defect classes nobody was looking for
+
+**6 P1 items with authoring scratchwork** (DL-P2-031) — 4 of them **Certified**. This is the
+DL-P2-029 class, in Part 1, which the P2-scoped scan never covered. Two of them disclose the stored
+key inside the reasoning and then contradict it: `CBQ3-D4-Q3` (key 433500, explanation computes
+430,500 twice, then *"Wait — stored answer is $433,500"*) and `CBQ3-A3-Q2` (key 486842,
+explanation computes 495,238 then *"Actually the Correct value stored is $486,842"*). **Both are
+key-contradiction candidates of exactly the class this wave catalogued 14 batches for — and they sit
+in a part of the corpus the certification effort never examined.**
+
+**35 encoding-damaged items** (DL-P2-030 scope correction) — the screen found mojibake in both P1 and
+P2, including items certified months earlier.
+
+### The Ã· judgement was wrong, and file-level context is why
+
+DL-P2-030 asserted that `Ã·` occurrences were "legitimate, not damage." That reasoning was scoped to
+one case and generalised without testing.
+
+**`Ã·` is not classifiable per token.** A token test cannot distinguish a consistently mis-decoded
+file from a UTF-8-aware file containing damaged bytes. The correct test is **per file**: if the same
+file also contains properly-encoded `×` (U+00D7) or `−` (U+2212), it is demonstrably UTF-8 aware, so
+an `Ã·` in it is damage.
+
+**All eight banks are UTF-8 aware** — hundreds of correct `×`, `−`, `—` each. Therefore every
+mojibake token in every file is damage, `Ã·` included. `CBQ22-C13` proves it directly: it contains
+correct `×` *and* damaged `Ã·`, which is only possible if the damage came from a later narrow edit.
+
+### 26 deterministic encoding repairs applied
+
+`p2/case_pack_p2_C4_C8.js`: **26 items, 48 sequences** — 24 em dashes (`â€”` → `—`) and 2
+multiplication signs (`Ã·` → `×`, context-read). All **Certified**, therefore learner-facing.
+Verified: only `Explanation` fields changed on touched items, keys untouched, no new mojibake
+introduced, 0 em-dash/mult mojibake remaining in the bank.
+
+### 9 U+FFFD items deliberately NOT repaired (DL-P2-032)
+
+A replacement character means the original bytes were **destroyed**, not mis-decoded — the missing
+character is unrecoverable from the file. Repairing would require inferring it from context, and the
+affected text *is the answer* a learner reads to learn the rule. Guessing there would produce an item
+that appears repaired while its reasoning is wrong. Filed for authoring judgement instead.
+
+Two are **Certified** (`CBQ4-A2-Q4`, `CBQ4-A2-Q5`), where a missing conjunction sits in the middle
+of a contingency-classification sentence: *"(1) probable and estimable � accrue"*.
+
+### Screen state after remediation
+
+```
+items scanned: 1085 | flags: 27
+  KEY-TYPE        8   (real, pre-existing — bank needs hand review)
+  SCRATCHWORK     7   (6 real P1 = DL-P2-031; 1 known FP `CBQ23-B5-Q1`)
+  ENCODING        9   (all U+FFFD = DL-P2-032, intentionally unrepaired)
+  KEY-UNSUPPORTED 3   (all documented scale-mismatch class)
+```
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| Screen wired into pipeline | `npm run key-agreement` in `pipeline` and `pipeline:audit` | ✅ |
+| Negative control | 5/5 assertions, temp mirror, clean control silent | ✅ |
+| Calibration measured | Ground-truth regression before and after | ✅ |
+| 26 items / 48 sequences repaired | Per-field diff, keys untouched, 0 mojibake remain | ✅ |
+| U+FFFD untouched | Encoding flags 35 → 9, all U+FFFD | ✅ |
+| `node --check` | `case_pack_p2_C4_C8.js` | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+| `coverage-assert` | All coverage checks PASSED, gate armed | ✅ |
+
+### Files modified
+
+- `scripts/key_agreement_screen.js` — **new**, 4 checks
+- `package.json` — `key-agreement` target; added to `pipeline` and `pipeline:audit`
+- `p2/case_pack_p2_C4_C8.js` — 26 explanations repaired (48 sequences)
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-031, DL-P2-032 added; DL-P2-030 scope correction added
+- `scripts/output/key_agreement_flags.json` — screen output
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_p2_C4_C8.js.bak-encfix-20261004enc` (82,239) — taken before the encoding repair.
+Plus `p2/DEFECT_LIBRARY_P2.md.bak-dl031` (120,399), `.bak-dl032` (124,507), `.bak-dl030scope`
+(114,448), `.bak-dl029corr` (106,918), `.bak-dl030` (111,333), `.bak-dl029` (98,137). All
+non-zero and size-verified at capture.
+
+### Open items carried forward
+
+1. **DL-P2-031** — 6 P1 scratchwork items, 4 Certified. Two carry live key-disagreement questions
+   needing hand-solve. Learner-facing.
+2. **DL-P2-032** — 9 U+FFFD items, 2 Certified. Requires authoring judgement; not scripted.
+3. **E3 KEY-TYPE: 8 items** — 3 select items keyed with a bare number (`CBQ2-C3-Q1`, `CBQ2-C3-Q3`,
+   `CBQ21-B4-Q1`) and 5 numeric items keyed with text (`CBQ2-C2-Q1`–`Q5`). Same class as the
+   `CBQ23-C7-Q5` error. Unadjudicated.
+4. **E1 KEY-UNSUPPORTED: 3 items** — all the documented scale-mismatch class (key in whole dollars,
+   explanation in millions). Documented as a known FP class; a scale-aware check would resolve it.
+5. Retire 20 legacy `certify_wave*.js` scripts.
+6. Regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-04 — DL-P2-031 remediated: 4 genuine key defects in P1, one Certified
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `content/cases/case_pack_3_corrected.js` (4 re-keyed), `content/cases/case_pack_1_corrected.js` (2 explanation-only)
+**Evidence basis:** adjudicated — independent hand-solve from exhibits, keys withheld
+
+### Result — hand-solve found 4 wrong keys, not just scratchwork
+
+| Item | Case state | Hand-solved | Was | Action |
+|---|---|---|---|---|
+| `CBQ3-D4-Q3` | **Certified** | 287,000 × 1.50 = **430,500** | 433500 | **re-keyed** |
+| `CBQ3-A3-Q2` | In Audit | (600,000 − 18,000) × 520/630 = **480,381** | 486842 | **re-keyed** |
+| `CBQ3-C4-Q2` | In Audit | (10,800 − 10,000) × $40 = **−32,000** | −72000 | **re-keyed** |
+| `CBQ3-C4-Q3` | In Audit | (3,400 − 3,200) × $28 = **−5,600** | −11200 | **re-keyed** |
+| `CBQ2-D3-Q2` | **Certified** | FIFO EU = 3,000 + 13,000 + 3,500 = **19,500** | 19500 | explanation only |
+| `CBQ2-D3-Q4` | **Certified** | 138,000 ÷ 21,500 × 18,000 = **$115,535** | 115535 | explanation only |
+
+The screen found *scratchwork*; the hand-solve it enabled found that **four of the six keys were
+simply wrong**, including one in a **Certified, learner-reachable** case. The stored explanation
+computed the correct figure and then narrated its way to the wrong key.
+
+### The old keys were proven unreachable, not merely different
+
+Each was tested against the exhibits before re-keying:
+
+- **`CBQ3-D4-Q3`** — 433,500 ÷ 287,000 implies a 150.145% overhead rate. Exhibit 1 states
+  2,400,000 ÷ 1,600,000 = **150.00%**; the key would require a $2,642,182 overhead estimate.
+  Per-job check: 180,000 + 142,500 + 108,000 = **430,500**.
+- **`CBQ3-A3-Q2`** — 486,842 implies a transaction price of **$589,828**. Exhibit 1 states
+  $600,000; the rebate-constrained price is $582,000 (5% × $600,000 × 60%). The correct treatment
+  applies the variable-consideration constraint **before** allocating on relative SSPs — the old
+  explanation allocated the full $600,000, producing $495,238, then adopted an unexplained key.
+- **`CBQ3-C4-Q2`** — −72,000 ÷ $40 = 1,800 lbs excess, implying 11,800 lbs used. Exhibit 2 states
+  **10,800 lbs**.
+- **`CBQ3-C4-Q3`** — −11,200 ÷ $28 = 400 hrs excess, implying 3,600 hrs. Exhibit 2 states
+  **3,400 hrs**.
+
+Tested for a single systematic cause first — there is none. The key-to-correct ratios are 1.0134,
+2.25, 2.00, and 1.0070: four different failure shapes.
+
+### Two keys correct, explanations rewritten
+
+`CBQ2-D3-Q2` and `CBQ2-D3-Q4` (both **Certified**) had correct keys and correct arithmetic; their
+defect was the *"Wait — recalculating"* narration, which in both cases re-derived the same answer
+already computed. Explanations rewritten to a single clean derivation. **Keys untouched** — the write
+gate asserts this explicitly, since an explanation-only fix that silently moves a key would be the
+same defect class as `CBQ23-C7-Q5`.
+
+### The third scope-boundary-as-clean-result
+
+| Entry | Claim | Actual scope |
+|---|---|---|
+| DL-P2-026 | "class closed, 0/660" | P2 banks only — P1 was never scanned |
+| DL-P2-029 | "0 pool-wide scratchwork" | P2 banks only; the "0" was true for P2 and false for P1 |
+| DL-P2-031 | **6 P1 items with live key defects** | found only once a screen looked at P1 |
+
+All three share one cause: a result computed over a subset reported as a property of the whole. Each
+of these entries now states its scan boundary explicitly.
+
+### Screen E state after remediation
+
+```
+items scanned: 1085 | flags: 21 (was 247 pre-calibration, 27 before this fix)
+  SCRATCHWORK      1   (the documented FP `CBQ23-B5-Q1`)
+  KEY-TYPE         8   (unadjudicated — same class as the `CBQ23-C7-Q5` error)
+  ENCODING         9   (all U+FFFD = DL-P2-032, intentionally unrepaired)
+  KEY-UNSUPPORTED  3   (documented scale-mismatch class)
+```
+
+Screen D (the earlier boilerplate/scratchwork screen) and Screen E now cover **both P1 and P2**.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 4 keys re-keyed to hand-solved values | Each recomputed from exhibits; old keys proven unreachable | ✅ |
+| 2 keys preserved on explanation-only fixes | Write gate asserts no key drift | ✅ |
+| No other field touched | Per-field diff against a pre-edit snapshot, all items and cases | ✅ |
+| No scratchwork remains in either bank | Post-write scan = 0 | ✅ |
+| Screen E re-run | 27 → 21 flags | ✅ |
+| `node --check` | both P1 banks | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+| `smoke_test` | PASS — all UI surfaces | ✅ |
+
+### Files modified
+
+- `content/cases/case_pack_3_corrected.js` — 4 items re-keyed with rewritten explanations
+- `content/cases/case_pack_1_corrected.js` — 2 explanations rewritten, keys preserved
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-031 remediation entry
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_3_corrected.js.bak-dl031-20261004dl031` (557,095) ·
+`case_pack_1_corrected.js.bak-dl031-20261004dl031` (570,269) ·
+`p2/DEFECT_LIBRARY_P2.md.bak-dl031fix` (128,397). All non-zero and size-verified at capture.
+
+### Open items carried forward
+
+1. **E3 KEY-TYPE: 8 items** — 3 select items keyed with a bare number, 5 numeric items keyed with
+   text. Same class as the `CBQ23-C7-Q5` error; unadjudicated.
+2. **DL-P2-032** — 9 U+FFFD items, 2 Certified, requires authoring judgement.
+3. **E1 KEY-UNSUPPORTED: 3** — documented scale-mismatch class.
+4. Retire 20 legacy `certify_wave*.js` scripts.
+5. Regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-04 — Post-remediation verifier built; it immediately caught a documentation defect in DL-P2-031
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `scripts/verify_remediation.js` (new), `package.json`, DL-P2-031 table layout
+**Evidence basis:** the verifier is the verification
+
+### The failure that prompted it
+
+A remediation summary reported **`CBQ2-D3-Q1` as rewritten** when that item had never been touched
+— the items actually remediated in that case were `Q2` and `Q4`. The repository's DL-P2-031 entry was
+**correct**; the chat summary drifted, and the next work item was started without re-reading the banks.
+
+That is the DL-P2-026 shape in its purest form: **a summary that drifts from the files becomes the
+only source of truth for a change nobody made.** It went undetected because verifying the claim
+required reading the banks, and nobody did.
+
+### What the verifier does
+
+Reads all 8 banks back (1,085 items) and asserts, per DL entry:
+
+1. every named item **exists** in a bank
+2. every stated **case state** matches reality
+3. every **re-key** claim: the live key equals the claimed new value
+4. every "key unchanged" claim: the live key equals the stated value
+
+Exits non-zero on any failure. Wired as `npm run verify-remediation` into `pipeline` and
+`pipeline:audit`, so a remediation whose entry has drifted fails the build.
+
+### It found a real defect on first run — in my own entry
+
+```
+FAIL  CBQ3-D4-Q3    key is 433500    | actual: 430500
+FAIL  CBQ3-A3-Q2    key is 486842    | actual: 480381
+```
+
+Not a false positive. The DL-P2-031 table put the **current** key inside derivation prose and the
+**stale** key in a dedicated column, so a machine reading the entry could only see the pre-remediation
+value. The remediation was real and correct; the **entry was not machine-checkable**, which defeats the
+purpose of recording it.
+
+Fixed by restructuring the table to `| Item | Case state | Key now | Key was | Derivation | Verdict |`
+so both values sit in their own columns. After the fix: **26/26 assertions pass**, and the verifier
+confirms Q2 and Q4 remediated with keys preserved, Q1 absent from every claim.
+
+### Three parser bugs found and fixed before the tool could be trusted
+
+Building it exposed the same discipline problem in reverse — a verifier that silently passes is worse
+than none:
+
+| Bug | Symptom | Fix |
+|---|---|---|
+| `norm` out of scope | ReferenceError crash | hoisted to module scope |
+| state read from any cell | False FAIL on `CBQ2-D3-Q4` (an "In Audit" word elsewhere in the row) | read state only from the cell adjacent to the item ID |
+| key claims read from non-key tables | Ratio table rows (`| id | 1.0070 | +3,000 |`) asserted keys | require an explicit verdict marker on the row before treating it as a key claim |
+
+The first version reported **21/21 PASS** while asserting **zero** key values — it was checking item
+existence and little else. It looked green and was nearly empty. A passing gate that checks almost
+nothing is the exact hazard this project has been guarding against all session.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| Tool reads banks back, not summaries | 1,085 items indexed from 8 banks | ✅ |
+| Key values actually asserted | 6 key assertions across DL-P2-031 | ✅ |
+| Found a real defect in a DL entry | 2 FAILs on first run against my own entry | ✅ |
+| Entry made machine-checkable | Table restructured to explicit `Key now`/`Key was` | ✅ |
+| Post-fix assertions | 26/26 pass | ✅ |
+| Pipeline wiring | `verify-remediation` in `pipeline` and `pipeline:audit` | ✅ |
+| Parser bugs resolved | 3 found, 3 fixed | ✅ |
+| Extraction fails closed | Aborts if any bank fails to parse | ✅ |
+
+### Files modified
+
+- `scripts/verify_remediation.js` — **new**
+- `package.json` — `verify-remediation` target; added to `pipeline` and `pipeline:audit`
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-031 remediation table restructured for machine verification
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`p2/DEFECT_LIBRARY_P2.md.bak-colfix` (132,780) · `knowledge/REVISION_HISTORY_P2.md.bak-verify`.
+All non-zero and size-verified at capture; prior DL and revision-history headings asserted intact
+(37/37 and 153/153 respectively) on every append.
+
+### Open items carried forward
+
+1. **E3 KEY-TYPE: 8 items** — 3 select items keyed with a bare number, 5 numeric keyed with text.
+2. **DL-P2-032** — 9 U+FFFD items, 2 Certified, requires authoring judgement.
+3. **E1 KEY-UNSUPPORTED: 3** — documented scale-mismatch class.
+4. Retire 20 legacy `certify_wave*.js` scripts.
+5. Regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-04 — DL-P2-032 remediated: 13 U+FFFD characters restored; Screen E down to 4 flags
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `content/cases/case_pack_2_corrected.js` (4), `content/cases/case_pack_3_corrected.js` (9)
+**Evidence basis:** adjudicated — intended characters inferred from parallel sentence structure
+
+### What changed
+
+The 9 items filed as "unrecoverable" were in fact **recoverable**: a replacement character destroys
+the original *bytes*, but where the sentence carries parallel structure, the intended *character* is
+determined by the relationship between clauses. Combined with the corpus's own convention (~480
+correctly-encoded em dashes per bank), all 13 sites resolved at high confidence.
+
+| Item | Case state | Sites → intended |
+|---|---|---|
+| `CBQ4-C1-Q2` | In Audit | 1 → `;` |
+| `CBQ4-C1-Q3` / `Q4` / `Q5` | In Audit | 3 → `—` |
+| `CBQ4-A2-Q4` | **Certified** | 4 → `→` ×3, `—` ×1 |
+| `CBQ4-A2-Q5` | **Certified** | 1 → `—` |
+| `CBQ5-B2-Q1` / `Q3` | In Audit | 2 → `—` |
+| `CBQ5-B2-Q5` | In Audit | 2 → `—` |
+
+The ASC 450 item is the clearest case. It now reads:
+
+> (1) probable and estimable → accrue; (2) reasonably possible → disclose in footnotes;
+> (3) remote → no disclosure required.
+
+The arrows **are** the teaching device, and their loss had degraded the exact distinction the item
+tests — in a **Certified**, learner-reachable item.
+
+### Correction to the prior entry
+
+The original DL-P2-032 concluded these were "unrecoverable, requires authoring judgement." **That
+overstated the problem.** Byte values are unrecoverable; character identity often is not. The
+distinction that matters: a repair *inferred from structure* is legitimate; a guess would not be.
+Nothing here was guessed — each site is backed by a stated parallel-structure argument.
+
+### Screen E — all four checks clean
+
+```
+items scanned: 1085 | flags: 4
+  KEY-UNSUPPORTED  3   (documented scale-mismatch class)
+  SCRATCHWORK      1   (documented FP CBQ23-B5-Q1)
+  KEY-TYPE         0
+  ENCODING         0
+```
+
+Screen E has gone 247 → 53 → 27 → 21 → 13 → **4** since first calibration. Of the 4 remaining, 3 are a
+single documented family and 1 is a known false positive.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 13 characters restored | Ordered per-item plan, occurrence-by-occurrence | ✅ |
+| Correct count asserted pre-write | Found exactly the planned number per item | ✅ |
+| Only Explanation changed | Per-field diff; keys untouched on all 9 | ✅ |
+| 0 U+FFFD remain | Post-write scan of both banks | ✅ |
+| Screen ENCODING cleared | 9 → 0 | ✅ |
+| Repaired sentences read correctly | Inspected ASC 450 arrows and appositive dashes | ✅ |
+| `node --check` | both banks | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+
+### Files modified
+
+- `content/cases/case_pack_2_corrected.js` — 4 characters
+- `content/cases/case_pack_3_corrected.js` — 9 characters
+- `p2/DEFECT_LIBRARY_P2.md` — DL-P2-032 remediation entry
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Backups
+
+`backups/case_pack_2_corrected.js.bak-fffd-20261004fffd` (412,598) ·
+`case_pack_3_corrected.js.bak-fffd-20261004fffd` (557,202). Non-zero and size-verified at capture.
+
+### Open items carried forward
+
+1. **E1 KEY-UNSUPPORTED: 3** — all the documented scale-mismatch class (key in whole dollars,
+   explanation in millions). Needs a scale-aware check or an adjudication entry.
+2. **SCRATCHWORK: 1** — `CBQ23-B5-Q1`, the documented false positive; the marker pattern should
+   exclude legitimate side-by-side derivations.
+3. Retire 20 legacy `certify_wave*.js` scripts.
+4. Regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`.
+
+---
+
+
+---
+
+## 2026-10-04 — 17 legacy certification scripts archived; Screen E at 1 adjudicated flag
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `scripts/` (17 files moved), `backups/legacy-certify-scripts/` (17 backups), `scripts/archive/legacy-certify/` (README)
+**Evidence basis:** inventory + hazard assessment before any move
+
+### Archive, not deletion
+
+All 17 files moved to `scripts/archive/legacy-certify/` with a README, backed up first to
+`backups/legacy-certify-scripts/` and **byte-verified identical** at archive time. Post-move each
+archived copy was re-compared against its backup and matched. Originals verified absent from
+`scripts/`.
+
+| Item | Count |
+|---|---|
+| Scripts archived | 17 |
+| Backups written and hash-verified | 17 |
+| Archived copies re-verified post-move | 17 |
+| Still present in `scripts/` | none |
+| `s853_certify_wave_a.js` deliberately left in place | yes |
+
+### The correction that reframed the task
+
+This was originally queued as "retire 20 scripts that are runnable and unsafe against the current
+pool." **Both numbers and the hazard claim were wrong.**
+
+- **17 scripts, not 20.** The 18th, `s853_certify_wave_a.js`, is larger, guarded, and
+  `--dry-run`-capable — a different animal, left in place.
+- **"Runnable and unsafe" was wrong.** Every script flips `"Unprocessed"` → `"Certified"`, and the
+  pool contains **zero** `Unprocessed` items across all 8 banks. They cannot alter a current item.
+- **"Unscoped global replace" was also wrong.** On reading the code, the replacement is
+  segment-scoped and guarded: each script locates a specific `qid`, asserts the segment contains
+  `"question_state": "Unprocessed"`, throws otherwise, and post-asserts the result. My inventory
+  regex (matching `.split().join()`) could not see the guard.
+
+So the archive rationale is **staleness and the discovery hazard**, not active risk. That is a
+weaker claim than the one I made, and it is the one the evidence supports. The README states it in
+those terms so a future reader does not inherit the overstated hazard.
+
+### Screen E final state
+
+```
+items scanned: 1085 | flags: 1
+  KEY-UNSUPPORTED  0
+  KEY-TYPE         0
+  ENCODING         0
+  SCRATCHWORK      1   (CBQ23-B5-Q1 — adjudicated false positive, deliberately retained)
+```
+
+The single remaining flag is left standing rather than suppressed: excluding
+`"Wait, the question says"` would fit the rule to the one observation that failed and would
+suppress the key-narration class the marker exists to catch. The verdict lives in DL-P2-034 with
+its evidence, not in a widened regex.
+
+### Verifier table
+
+| Claim | Raw evidence | Verdict |
+|---|---|---|
+| 17 scripts archived | Originals absent from `scripts/` | ✅ |
+| No data loss | Every archived copy byte-identical to backup, re-verified post-move | ✅ |
+| Backups exist | `backups/legacy-certify-scripts/`, 17 files | ✅ |
+| `s853` untouched | Present in `scripts/` | ✅ |
+| Nothing references the moved paths | `validate`, `preflight`, `probe:parity`, guard tests all pass | ✅ |
+| `preflight_p2` | 0 divergences | ✅ |
+| `validate` | 0 errors | ✅ |
+| `test_governance_guard` | 123/123 PASS | ✅ |
+| `probe:parity` | 0 divergences | ✅ |
+| `verify_remediation` | 39/39 assertions | ✅ |
+
+### Files modified
+
+- `scripts/archive/legacy-certify/` — 17 scripts + README (new)
+- `backups/legacy-certify-scripts/` — 17 backups (new)
+- `scripts/` — 17 files removed from active directory
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Open items carried forward
+
+1. **Regenerate `PROMPT_P2_HAND_SOLVE_WAVE.md`** — the last item. The original spec had four
+   verified factual errors (item count 99 vs 408; batch sizing 4 vs 14 change-sets; two
+   non-existent script paths; a wrong `--batch` CLI contract) and should record what the wave
+   actually did, including the own-state lesson and the DL entries it produced.
+2. **DL-P2-032's original conclusion** remains superseded by its remediation entry in place — no
+   further action.
+3. Batch certification is complete: **101/110 P2 cases Certified**, 9 Archived, 0 In Audit.
+
+---
+
+
+---
+
+## 2026-10-04 — Wave closed: spec regenerated and machine-verified (30/30 claims)
+
+**Session:** P2-HAND-SOLVE-WAVE · **Lane:** Full Governance Lane
+**Scope:** `PROMPT_P2_HAND_SOLVE_WAVE.md` (rewritten v1.0 → v2.0)
+**Evidence basis:** every factual claim verified against the banks, scripts, and files
+
+### The spec is now a record, not an instruction
+
+v1.0 contained **four verified factual errors** and would have failed on execution:
+
+| v1.0 claimed | Reality |
+|---|---|
+| 99 In Audit items | **408** items across 68 P2 cases |
+| 4 change-sets of 25 items | **14** batches; the gate caps 30 **cases**, so the real unit is 5 cases = 30 items |
+| `scripts/case_batch_certify.js` | Does not exist; gate is `case_cert_batch_gate.js` and takes `--batch <manifest.json>` |
+| `scripts/output/CASE_REVIEW_ITEMS.txt` | Does not exist; the real file lists 148 flags on **Certified** cases |
+
+v2.0 records the outcome, the tooling that replaced those paths, the procedure that worked, the
+own-state lesson, the 14 key defects, and the standing cautions — so a future session reads what
+happened rather than re-running an instruction set that cannot work.
+
+### The spec's own claims were machine-checked, and 3 were wrong first
+
+A verification script was written to assert every factual claim in the new spec against the banks,
+scripts, and files. It failed **5 of 28** on first run. Diagnosis:
+
+| Failure | Whose error |
+|---|---|
+| Census counted all 8 banks, not P2 | The **check** — but the spec itself mixed P1 and P2 figures in one document |
+| "3 corrections" | The **spec** — it lists 5 (026 correction, 029 correction, 030 scope, 031 remediation, 032 remediation) and under-counted its own entries |
+| `CBQ21-B4-Q1` recorded as `1.45` | The **spec** — the item is a select keyed by choice text `7.48%`; transcription slip |
+| "408 items" vs pool of 660 | The **check** — 408 is the 68 In Audit cases, correctly stated in the spec |
+
+After correcting the two spec errors and the two check errors: **30/30 claims verified.**
+
+The census fix is the one that matters. v2.0 originally stated "101 / 110 P2 Certified" alongside a
+"150 cases Certified, 31 In Audit" figure from the archive finding — **two populations in one
+document.** That is the exact scope conflation the spec's own failure-mode section warns about, so it
+was corrected: P2 and P1 figures are now separately labelled throughout, with an explicit
+do-not-conflate note.
+
+### Wave closeout
+
+| | |
+|---|---|
+| P2 cases | **101 Certified / 9 Archived / 0 In Audit** (110) |
+| P2 items hand-solved | **408** across 68 cases, 14 batches |
+| P1 (separate population) | 49 Certified / 31 In Audit |
+| Key defects found and fixed | **14** |
+| DL records | 9 entries + 5 corrections/remediations |
+| Screens | D and E, both wired into `pipeline` |
+| Screen E final | 1 flag — adjudicated false positive, deliberately retained |
+| Screens calibration arc | 247 → 53 → 27 → 21 → 13 → 4 → 1 |
+
+### Final gate state
+
+| Gate | Result |
+|---|---|
+| `preflight_p2` | 0 divergences |
+| `validate` | 0 errors |
+| `test_governance_guard` | 123/123 PASS |
+| `probe:parity` | 0 divergences |
+| `verify_remediation` | 39/39 assertions |
+| `smoke_test` | PASS — all UI surfaces |
+| spec claim verification | **30/30** |
+
+### Files modified
+
+- `PROMPT_P2_HAND_SOLVE_WAVE.md` — rewritten (v1.0 → v2.0)
+- `knowledge/REVISION_HISTORY_P2.md` — this entry
+
+### Remaining
+
+- **Open:** DL-P2-028 (`CBQ23-A8-Q4` distractor states fabricated figures — option A).
+- **Open candidate:** a key-vs-explanation numeric-agreement screen. Four of five Screen E
+  calibration passes went to teaching existing checks about scale and containers, which is itself
+  evidence a purpose-built check would earn its keep.
+- **Routine:** `P2_STRICT_CASES` in `pool_parity_probe.js` must be re-bumped whenever the
+  certified count changes. It is an assertion, not a target.
+
+### Closing note
+
+The wave's through-line is that **no automated check found any of the 14 key defects** — every one
+was found by hand-solving from the exhibits. The two screens built here were valuable for the *other*
+classes (boilerplate, scratchwork, encoding, key type), and their calibration cost more than their
+rules did: 247 flags down to 1, every reduction earned by adjudicating output against content. The
+verifier exists because a summary drifted from the files once, and the spec now carries a machine
+check because a document of claims is only as good as its verification.
+
+---

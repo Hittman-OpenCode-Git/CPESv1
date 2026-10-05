@@ -1,3 +1,42 @@
+## DL-066
+
+```
+Defect ID        DL-066
+Class            Governance / Process
+Domain           Certification state integrity — P1 case banks
+Severity         High (163 P1 case items In Audit following the same unattributed bulk quarantine as DL-P2-023)
+Detected By      P2-085 forensic reconstruction (2026-09-30)
+Status           Open — tracked, out of scope for P2-085; remediation requires per-item hand-solve
+```
+
+**Files:** `content/cases/case_pack_1_corrected.js`, `content/cases/case_pack_2_corrected.js`, `content/cases/case_pack_3_corrected.js`
+
+### Issue
+
+`scripts/quarantine_all_case_inversions.js` (2026-09-24) demoted **31 P1 cases** across the three P1 case banks as collateral to its 105 P2 demotions. All were `Certified` pre-quarantine (verified: 25/25, 25/25, 30/30 = 80 cases Certified at Wave A, cross-validated against git ref `54144674`).
+
+Current P1 case item census: **262 Certified / 163 In Audit** of 425.
+
+The P1 exposure is the same defect class as **DL-P2-023** but was **not** remediated in that session — P2 was the authorized scope. Of the 31 P1 demoted cases, 3 fell in Bucket A (collateral, no FLAG-severity screen evidence) and 28 require independent hand-solve.
+
+Note that DL-065 (2026-09-28) already remediated genuine P1 case defects in `case_pack_1_corrected.js` and `case_pack_3_corrected.js` — those content fixes are post-quarantine and must be preserved. **Any P1 remediation is state-only and content-preserving**, exactly as specified for P2 in DL-P2-023.
+
+### Why this matters
+
+`PROMPT_P2_CONTENT_CERTIFICATION_COMPLETE.md` asserts "425 P1 Certified" as a DoD criterion. That claim is false against live state (262/163) and the brief's Scope table contradicts its own DoD. DoD criterion #3 was struck in the P2-085 plan; the real gap is now tracked here rather than silently dropped.
+
+### Remediation path (NOT executed)
+
+Per-item independent hand-solve across the 163 In Audit items → DL-047 flow (quarantine → solve → verify → restore) → Rule 16 `recertification_batch` / `recertification_date` stamps. No bulk clear (DL-045). Requires its own session and authorization.
+
+### Cross-references
+
+- DL-P2-023 (same-class P2 defect, remediated 2026-09-30) · DL-045 (no-auto-remediate) · DL-065 (post-quarantine P1 content session)
+- `scripts/output/quarantine_reconciliation_20260930.json`
+- `knowledge/REVISION_HISTORY_P2.md` Session P2-085
+
+---
+
 ## DL-065
 
 ```
@@ -100,6 +139,128 @@ All structural validation gates PASS. The repository is ready for final save and
 - `scripts/case_semantic_screens.js` v3 — case semantic screens
 - `scripts/semantic_key_verifier.js` — MCQ semantic key verification
 - Rule 21/DL-047 gate — semantic quarantine manifest enforcement
+
+---
+
+---
+
+## DL-067 — Generic Explanation Boilerplate in 45 Part 1 Case Items (29 learner-reachable)
+
+```
+Defect ID        DL-067
+Class            Content / Explanation quality (DL-013 boilerplate family; sibling of DL-P2-026)
+Domain           P1 case bank explanation authoring
+Severity         Medium — 7 items were entirely filler; 38 carried trailing padding
+Detected By      Screen D (scripts/case_semantic_screens.js), added this session; 45/45 confirmed
+Status           **Resolved — 2026-10-01.** 45 items across 3 P1 banks; screen D now reports 0
+```
+
+### Finding
+
+The DL-P2-026 remediation (2026-09-30) closed the boilerplate class across the **P2** banks only and
+zero-asserted 0/660 P2 items. Building the prevention screen on 2026-10-01 immediately showed the
+same class was **P1-wide and entirely unaddressed**: **45 items** in the three P1 case banks, of
+which **29 were already `Certified` and therefore learner-reachable**.
+
+| Bank | Items |
+|---|---|
+| `content/cases/case_pack_1_corrected.js` | 11 |
+| `content/cases/case_pack_2_corrected.js` | 19 |
+| `content/cases/case_pack_3_corrected.js` | 15 |
+| **Total** | **45** |
+
+By state: **29 Certified, 16 In Audit.** By type: multi 25, numeric 9, fill 4, match 4, select 3.
+The same 9 filler phrases confirmed in DL-P2-026 were present; no new phrase family was found.
+
+### Why it survived
+
+Three waves of P1 certification preceded the DL-P2-026 work, and its scan was scoped to P2 banks by
+the session that wrote it. A P1 scanner did not exist. The defect was not hidden — it was simply
+outside the scan boundary, which is the same failure mode as the incomplete 6-phrase list
+documented in the DL-P2-026 correction: **a closure claim is only as wide as its scan.**
+
+### Two severity tiers
+
+**Tier 1 — entirely filler (7 items).** Stripping the phrases left under 25 words of real content.
+Six are Certified and live:
+
+| Item | Type | State | Real content that remained |
+|---|---|---|---|
+| `CBQ2-B1-Q1` | numeric | **Certified** | 16 words — a bare `= 10,400` with no reasoning |
+| `CBQ3-A2-Q1` | numeric | **Certified** | 16 words — a bare `= 455,000` |
+| `CBQ3-B1-Q2` | numeric | **Certified** | 21 words |
+| `CBQ3-D1-Q5` | fill | **Certified** | 22 words |
+| `CBQ5-B1-Q1` | numeric | **Certified** | 16 words — `(130+140+135)/3 = 135` |
+| `CBQ5-C1-Q1` | numeric | **Certified** | 20 words |
+| `CBQ4-B1-Q1` | numeric | In Audit | 21 words |
+
+**Tier 2 — trailing padding (38 items).** Real explanation followed by 1–4 stacked filler
+sentences. **17 of these were thin** (25–69 real words) once stripped, so the learner-facing loss was
+larger than the occurrence count suggests.
+
+### Resolution
+
+Two Rule-5-compliant change-sets (30 + 15). Tier 1 items were **hand-computed from the scenario and
+exhibit values with the stored key withheld**, then given authored explanations carrying the governing
+treatment, an independent recomputation, a stated interpretation, and a named distractor trap.
+Tier 2 items had only the filler sentences removed and punctuation tidied.
+
+Hand-solve verification of the 7 rewrites — all keys confirmed correct, **no answer key altered**:
+
+| Item | Independent derivation | Stored key |
+|---|---|---|
+| `CBQ2-B1-Q1` | 10,000 sales + 2,400 desired end FG (20% of Feb 12,000) − 2,000 beginning FG | 10,400 ✓ |
+| `CBQ3-A2-Q1` | 450 + 60 − 15 gain − 25 AR + 15 inv − 30 AP | 455,000 ✓ |
+| `CBQ3-B1-Q2` | April 300,000 × 0.80 × 0.50 = 120,000; March 250,000 × 0.80 × 0.10 = 20,000 | 140,000 ✓ |
+| `CBQ3-D1-Q5` | Variable costing expenses all fixed MOH as incurred → period cost | "period" ✓ |
+| `CBQ4-B1-Q1` | (42,000 − 30,000) / (8,000 − 5,000) = 12,000 / 3,000 | 4 ✓ |
+| `CBQ5-B1-Q1` | (130 + 140 + 135) / 3 = 405 / 3 | 135 ✓ |
+| `CBQ5-C1-Q1` | (5,000 − 10,000 × 0.60) × $2.00 = (5,000 − 6,000) × 2 | −2,000 ✓ |
+
+### Prevention — screen D (the reason this was found at all)
+
+Rather than re-scan by hand, a fourth screen was added to `scripts/case_semantic_screens.js`
+(already a `npm run pipeline` target, so it runs automatically):
+
+- **BOILERPLATE** — any of the 9 verified phrases, FLAG.
+- **SCRATCHWORK** — `Hmm | We key | Set N[?] | ? Actually | Need compute | simplify: we key`, FLAG.
+
+The screen found all 45 in its first run. Its scratchwork control **initially failed** — `Set 1.62?`
+did not match because `?` was missing from the accepted suffix — and the regex was corrected until
+the control passed. A live-tool negative control in a temp mirror then confirmed the detector fires
+on an injected defect and stays silent on clean text.
+
+### Verification
+
+| Claim | Method | Result |
+|---|---|---|
+| Class closed (P1) | Screen D on the live pool | 45 → **0** |
+| Class closed (P2) | 9-phrase + scratchwork zero-assertion | 0/660, two methods |
+| Screen still reaches defects | Live-tool negative control, temp mirror | Fires on injected defect, silent on clean |
+| Phrase detection | Synthetic-phrase control | 9/9 |
+| Scratchwork detection | Synthetic-marker control | 6/6 |
+| False positives on clean text | 3-sample control | 0 |
+| Determinism | Two consecutive screen runs | Identical flag sets |
+| Bank integrity | `node --check` on all 3 P1 banks | PASS |
+| Case counts | P1 live case count | 80, unchanged |
+| P2 unaffected | `preflight_p2` | 0 divergences |
+| `validate` | — | 0 errors |
+| `test_governance_guard` | — | 123/123 PASS |
+| `probe:parity` | — | 0 divergences |
+
+### Process note
+
+The scan that found this class was built in the same session that had just closed it for P2, from
+the same 9 phrases, and it found 45 items the P2 scan could not. The lesson generalises past
+boilerplate: **when closing a defect class, scan the whole population before declaring it closed,
+and state the boundary of the scan in the closure claim.**
+
+### Cross-references
+
+- `knowledge/DEFECT_LIBRARY.md` DL-P2-026 (P2 sibling) and its correction addendum
+- `scripts/case_semantic_screens.js` screen D
+- `knowledge/REVISION_HISTORY_P2.md` Session P2-HAND-SOLVE-WAVE, DL-067 entry
+- AGENTS.md §5 dual verification · DL-045 (screen output is evidence, not an author)
 
 ---
 

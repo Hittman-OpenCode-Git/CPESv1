@@ -49,8 +49,8 @@ const casePackP2_1 = [
         "Summary": "Stated the annualized-flow measurement convention in Exhibit 1; clarified Q2's cross-reference to Question 1; corrected the Q3 DPO distractor from 3.7 to 3.3 days"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-060",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -177,7 +177,7 @@ const casePackP2_1 = [
           "DPO, which shortened 3.3 days and offset the other components",
           "DIO and DSO contributed equally"
         ],
-        "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The three components moved 103.7 - 91.3 = +12.4 days (DSO), 93.0 - 81.1 = +11.9 days (DIO), and 65.7 - 69.1 = -3.3 days (DPO). DSO's 12.4-day worsening is the largest single driver, though inventory buildup and slightly faster supplier payment compounded it. The board should hear that collections are the priority, not purchasing.",
         "Topic": "CCC component analysis",
         "Subtopic": "Variance attribution",
         "Difficulty": "Difficult",
@@ -297,7 +297,9 @@ const casePackP2_1 = [
           "CBQ21-B1-Q2"
         ]
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-C1",
@@ -348,8 +350,8 @@ const casePackP2_1 = [
         "Summary": "Reordered items to satisfy the numeric(2)-select(2)-multi-match progression; expanded Q3 to five choices with a relative-margin distractor that consumes the Cookware and Utensils exhibit rows; updated exhibit ReferencedBy"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-060",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -636,7 +638,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-E1",
@@ -687,8 +691,8 @@ const casePackP2_1 = [
         "Summary": "Q1 corrected to standard PI convention (1.33, PV of inflows / investment); Q2 rebuilt around the true optimum A+C+D+F ($5.0M, $1.48M) with the PI-greedy trap as a distractor; items reordered to numeric-numeric-select-select-multi-match; Q3/Q4 FormulaReference corrected from after-tax cash flow to post-audit variance analysis; Q5/Q6 blank FormulaReference fields populated; Q6 match text updated to standard PI terminology"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-060",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -909,7 +913,7 @@ const casePackP2_1 = [
           "Punishing managers for uncontrollable market variances",
           "Retroactively changing the acceptance criteria"
         ],
-        "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million. The correct choice is supported by the exhibit data and the governing accounting standard. Note: Negative values are shown in parentheses per standard accounting sign convention.",
+        "Explanation": "A post-audit improves future decisions by comparing forecasts with actuals, exposing whether estimates were systematically optimistic, and holding managers accountable for the outcomes they control. It is not a punishment tool for uncontrollable market swings, and changing acceptance criteria after the fact destroys the audit's learning value. These three purposes are why Harborview runs post-audits on every project above $1 million. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Post-audit purposes",
         "Subtopic": "Capital budgeting control",
         "Difficulty": "Moderate-Easy",
@@ -965,7 +969,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-A1",
@@ -1010,8 +1016,8 @@ const casePackP2_1 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -1262,7 +1268,7 @@ const casePackP2_1 = [
           "Commit to converting at least $60K of identified slow-moving inventory into cash by year-end — restoring the quick ratio to 1.00 — supported by an itemized liquidation schedule, alongside passing results on the other two covenants",
           "Repay the $250K current portion of long-term debt using proceeds drawn on the same revolving facility on the final day of the year"
         ],
-        "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "The credible package pairs the measured breach with a specific, verifiable operational fix: $740 of quick assets plus $60 of converted inventory equals $800, exactly meeting the 1.00 floor. Option A misstates rounding conventions (the covenant tests reported figures). Option B forfeits negotiating leverage by asking for relief without remediation. Option D is circular financing — repaying the bank with the bank's own money leaves total obligations unchanged, violates typical revolver covenants against such usage, and lenders and auditors treat it as ineffective window dressing.",
         "Topic": "Credit negotiation strategy",
         "Subtopic": "Remediation commitment",
         "Difficulty": "Difficult",
@@ -1279,7 +1285,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-D1",
@@ -1325,8 +1333,8 @@ const casePackP2_1 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -1571,7 +1579,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-B2",
@@ -1617,8 +1627,8 @@ const casePackP2_1 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -1804,7 +1814,7 @@ const casePackP2_1 = [
           "WACC is a fixed property of the firm and rarely changes with financing choices, so the hurdle remains 8.71% whatever the mix",
           "Because the expansion is a single project, component costs are irrelevant and any rate above zero is acceptable"
         ],
-        "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns.",
         "Topic": "Marginal cost of capital",
         "Subtopic": "Leverage feedback",
         "Difficulty": "Difficult",
@@ -1849,7 +1859,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-E2",
@@ -1894,8 +1906,8 @@ const casePackP2_1 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -2101,7 +2113,7 @@ const casePackP2_1 = [
           "REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats the defender's $268,233 by roughly $36,300 per year — sequencing the cutover during scheduled downtime so the $150,000 defender sale closes on delivery day",
           "Solicit a third bid before acting, since two alternatives can rarely support a confident decision"
         ],
-        "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action.",
         "Topic": "Replacement recommendation",
         "Subtopic": "Execution sequencing",
         "Difficulty": "Moderate",
@@ -2117,7 +2129,9 @@ const casePackP2_1 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-A2",
@@ -2943,7 +2957,7 @@ const casePackP2_1 = [
           "Remove the CFO's email from the accounting files once the external auditors request invoice support.",
           "Escalate through Bluepine's established ethics channel and, if unresolved, present the matter to the audit committee."
         ],
-        "Explanation": "Contemporaneous documentation (B), quantified impact (C), and escalation through recognized channels (E) align with IMA guidance and preserve the evidentiary record that SOX contemplates. Deferring correction until the refinancing closes knowingly maintains a misstatement through a financing event, and destroying or withholding the CFO's email once auditors ask would constitute obstruction of the kind SOX Section 802 criminalizes. The trap is believing that private discomfort plus eventual quiet correction satisfies a controller's duties; the standards demand affirmative communication through proper channels, supported by a documented record. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Contemporaneous documentation (B), quantified impact (C), and escalation through recognized channels (E) align with IMA guidance and preserve the evidentiary record that SOX contemplates. Deferring correction until the refinancing closes knowingly maintains a misstatement through a financing event, and destroying or withholding the CFO's email once auditors ask would constitute obstruction of the kind SOX Section 802 criminalizes. The trap is believing that private discomfort plus eventual quiet correction satisfies a controller's duties; the standards demand affirmative communication through proper channels, supported by a documented record.",
         "Topic": "Ethical response actions",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -3246,7 +3260,7 @@ const casePackP2_1 = [
           "Higher financial leverage partially offset the impact of the weaker operating margin on ROE.",
           "Return on equity declined by more than four percentage points year over year."
         ],
-        "Explanation": "Relevant principle: component trend analysis within the DuPont framework. Statement one is true: margin fell 7.50% to 6.00% and contributes the largest share of the decline. Turnover claim fails: it slipped from 1.64 to 1.56 times, below 1.60. Leverage offset is true: the multiplier rose from 1.64 to 1.67, softening the fall. The magnitude claim is true: ROE fell from 20.11% to 15.63%, a 4.48-point drop. Debt-reduction is false: liabilities grew faster than equity ($400,000 vs $400,000 on a smaller base), raising leverage. The trap is treating any single-component move as proof overall returns improved. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Relevant principle: component trend analysis within the DuPont framework. Statement one is true: margin fell 7.50% to 6.00% and contributes the largest share of the decline. Turnover claim fails: it slipped from 1.64 to 1.56 times, below 1.60. Leverage offset is true: the multiplier rose from 1.64 to 1.67, softening the fall. The magnitude claim is true: ROE fell from 20.11% to 15.63%, a 4.48-point drop. Debt-reduction is false: liabilities grew faster than equity ($400,000 vs $400,000 on a smaller base), raising leverage. The trap is treating any single-component move as proof overall returns improved.",
         "Topic": "Financial statement analysis",
         "Subtopic": "DuPont component trends",
         "Difficulty": "Difficult",
@@ -3333,9 +3347,10 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-B3",
@@ -3533,7 +3548,7 @@ const casePackP2_1 = [
           "Lifetime interest cost totals $3,811,130, comprising $3,000,000 of coupons plus the $811,130 discount.",
           "Measured on cash interest instead of GAAP expense, covenant coverage appears stronger because cash coupons exclude discount accretion."
         ],
-        "Explanation": "Statement one is true: expense steps from $367,555 to $370,257, then $373,067 and $375,990, tracking carrying-value growth. Lifetime cost is true: ten coupons of $300,000 total $3,000,000, plus the $811,130 discount, equals $3,811,130. Opening-above-face is false: a discount means carrying value starts below face. Straight-line-equals-coupon is false: straight-line expense would be $381,113 per period ($300,000 + $81,113 of amortization). Cash-versus-GAAP is true: $600,000 cash is smaller than $737,812 GAAP expense, so cash-basis coverage screens stronger. The trap is equating interest expense with cash paid on discounted debt. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Statement one is true: expense steps from $367,555 to $370,257, then $373,067 and $375,990, tracking carrying-value growth. Lifetime cost is true: ten coupons of $300,000 total $3,000,000, plus the $811,130 discount, equals $3,811,130. Opening-above-face is false: a discount means carrying value starts below face. Straight-line-equals-coupon is false: straight-line expense would be $381,113 per period ($300,000 + $81,113 of amortization). Cash-versus-GAAP is true: $600,000 cash is smaller than $737,812 GAAP expense, so cash-basis coverage screens stronger. The trap is equating interest expense with cash paid on discounted debt..",
         "Topic": "Long-term debt",
         "Subtopic": "Discount accretion effects",
         "Difficulty": "Difficult",
@@ -3780,7 +3795,7 @@ const casePackP2_1 = [
           "$184, adding the avoided selling expense back onto the indifference price."
         ],
         "Correct": "C",
-        "Explanation": "Indifference pricing sets the net benefit of acceptance to zero: 3,000 x (P - $132) - $12,000 - $90,000 = 0, so P - $132 = $102,000 / 3,000 = $34 and P = $166 per unit. Above $166 the deal beats displaced production; below it, declining preserves more profit. Business meaning: scarce capacity, not book cost, sets the floor. Traps: quoting the $132 variable floor ignores what capacity is worth; anchoring on the offered $150 confirms rather than tests the deal; adding the avoided $18 selling expense back onto the floor overstates the requirement at $184. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "Indifference pricing sets the net benefit of acceptance to zero: 3,000 x (P - $132) - $12,000 - $90,000 = 0, so P - $132 = $102,000 / 3,000 = $34 and P = $166 per unit. Above $166 the deal beats displaced production; below it, declining preserves more profit. Business meaning: scarce capacity, not book cost, sets the floor. Traps: quoting the $132 variable floor ignores what capacity is worth; anchoring on the offered $150 confirms rather than tests the deal; adding the avoided $18 selling expense back onto the floor overstates the requirement at $184.",
         "Topic": "Pricing decisions",
         "Subtopic": "Indifference price",
         "Difficulty": "Difficult",
@@ -3898,9 +3913,10 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-D2",
@@ -3949,9 +3965,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-070"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-071",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -4070,7 +4086,7 @@ const casePackP2_1 = [
         "Type": "select",
         "Correct": "Risk capacity is the maximum loss Flash Capital can absorb without threatening solvency, while risk appetite is the board-set boundary of acceptable risk-taking the firm chooses to operate within.",
         "Explanation": "Risk capacity is the maximum loss an entity can absorb without threatening its viability (typically measured against capital, liquidity, and earnings thresholds). Risk appetite is the aggregate level and type of risk the board is willing to assume to meet strategic objectives. Capacity is the outer bound; appetite is the chosen operating zone within it.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which statement best distinguishes risk capacity from risk appetite in Flash Capital's context?",
         "Choices": [
           "Risk capacity is the maximum loss Flash Capital can absorb without threatening solvency, while risk appetite is the board-set boundary of acceptable risk-taking the firm chooses to operate within.",
@@ -4094,7 +4110,9 @@ const casePackP2_1 = [
           "Non-CC EW slots ≥75 chars (DL-026 compliant)",
           "Choice A definition correct per COSO ERM Principle 7 vocabulary",
           "Difficulty justified by Apply-level recall of risk-capacity vs risk-appetite distinction at DS3"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-D2-Q2",
@@ -4102,7 +4120,7 @@ const casePackP2_1 = [
         "Correct": "Governance and Culture — because it sets the tone at the top, board oversight, and risk-culture norms that condition all other ERM activity.",
         "Explanation": "COSO ERM 2017 places Governance and Culture as Component 1, foundational to the others. It encompasses board risk oversight, operating-model structures, risk-culture norms, and the tone-at-the-top that conditions how risk identification, assessment, response, and information/communication operate. Without governance and culture, the other components lack the authority and norms to function.",
         "Topic": "ERM governance and culture",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under COSO ERM 2017, which of the five components is the FOUNDATION on which the other four rely?",
         "Choices": [
           "Risk Assessment — because without measurement, no response can be sized.",
@@ -4118,7 +4136,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Risk Assessment is the foundation under COSO ERM 2017 — wrong; Component 3 is downstream of governance and culture, which set the tone-at-the-top that conditions how assessment is conducted. Governance comes first by design.",
         "ExplanationWrongB": "Control Activities are Component 5 in COSO ERM 2017, not the foundation. They operationalize responses but depend on governance to define acceptable response levels.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Information, Communication, and Reporting is Component 4 in COSO ERM 2017. It is essential but downstream of governance; without tone-at-the-top, data flows are not actioned."
+        "ExplanationWrongD": "Information, Communication, and Reporting is Component 4 in COSO ERM 2017. It is essential but downstream of governance; without tone-at-the-top, data flows are not actioned.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-D2-Q3",
@@ -4126,7 +4146,7 @@ const casePackP2_1 = [
         "Correct": "Vendor/third-party incidents rose from 2 to 5 (+3, a 150% increase) with the longest detection lag (63 days), suggesting third-party risk controls are the weakest control posture and the highest undetected-loss exposure.",
         "Explanation": "Vendor/third-party incidents rose by 3 in absolute terms (2→5), tying with credit and operational for the largest absolute increase, but at a 150% rate (vs 27% credit, 50% operational). Critically, the 63-day detection lag is more than double the next-longest category (credit at 47), indicating third-party incidents are not only growing fastest proportionally but also taking the longest to surface — a compounding control-weakness signal.",
         "Topic": "Risk assessment and aggregation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Decompose the recent 22% YoY incident increase across Flash Capital's risk categories per Exhibit 1. Which category contributed the LARGEST absolute increase in incident count from FY2024 to FY2025, and what does the detection-lag column suggest about that category's control posture?",
         "Choices": [
           "Vendor/third-party incidents rose from 2 to 5 (+3, a 150% increase) with the longest detection lag (63 days), suggesting third-party risk controls are the weakest control posture and the highest undetected-loss exposure.",
@@ -4142,7 +4162,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Credit rose by 3 (tied for largest absolute) but only at 27%, and its 47-day lag is shorter than vendor/third-party's 63. Same absolute delta does not equate to same control posture — growth rate and detection lag both matter.",
         "ExplanationWrongC": "Compliance rose by only 1 (+25%); its growth is neither the largest absolute nor the highest rate, and the 31-day lag is mid-range.",
-        "ExplanationWrongD": "Operational rose by 3 (tied absolute) at 50% — higher rate than credit but lower than vendor/third-party (150%). The 22-day lag is actually the shortest, suggesting operational issues are detected quickly even if frequent."
+        "ExplanationWrongD": "Operational rose by 3 (tied absolute) at 50% — higher rate than credit but lower than vendor/third-party (150%). The 22-day lag is actually the shortest, suggesting operational issues are detected quickly even if frequent.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-D2-Q4",
@@ -4150,7 +4172,7 @@ const casePackP2_1 = [
         "Correct": "Pursue Option 3 (in-house risk register) for the next quarter to address the two near-misses with minimal distraction from the Meridian integration, while scoping Option 1 or Option 2 for FY2026 once integration stabilizes.",
         "Explanation": "Treasurer Maya Caldwell's brief to the board is precisely this trade-off: address the two immediate near-misses with the lowest-cost, fastest-deploying option (Option 3 — in-house risk register), preserve optionality by scoping a deeper framework for FY2026, and avoid burdening the Meridian integration with a parallel 18-month program. This is proportionate to the actual exposure and respects CFO Hoffmann's 'proportionate, not performative' guidance.",
         "Topic": "Risk response selection",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Given Flash Holdings' recent $340M Meridian Foods acquisition and Flash Capital's two near-misses ($14M factoring fraud and vendor concentration failure), which risk-response sequencing is MOST defensible for the next 90 days?",
         "Choices": [
           "Pursue Option 1 (full COSO ERM 2017) immediately to maximize board-level risk discipline and signal institutional maturity to regulators.",
@@ -4166,7 +4188,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Pursuing Option 1 (full COSO ERM 2017) immediately is wrong — 18 months and $2.4M during the Meridian integration is disproportionate to actual exposure and signals project over-commitment. The board chair explicitly favored a proportionate, not performative framework.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Deferring until integration closes leaves the two near-misses unaddressed for 6+ months and signals to the board that Flash Capital is treating risk discipline as a back-burner item. Deferral compounds the control-weakness signal.",
-        "ExplanationWrongD": "Outsourcing to a Big Four firm under managed service does not solve the capability-gap problem — it relocates it. The internal risk-culture and governance components (COSO ERM Component 1) cannot be outsourced; tone-at-the-top must remain with Flash Capital's own board and executives."
+        "ExplanationWrongD": "Outsourcing to a Big Four firm under managed service does not solve the capability-gap problem — it relocates it. The internal risk-culture and governance components (COSO ERM Component 1) cannot be outsourced; tone-at-the-top must remain with Flash Capital's own board and executives.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-D2-Q5",
@@ -4174,7 +4198,7 @@ const casePackP2_1 = [
         "Correct": "The Chief Risk Officer (or equivalent — in Flash Capital's case, Treasurer Maya Caldwell) should sponsor with board-defined accountability for: (i) cross-functional risk taxonomy alignment, (ii) quarterly board reporting on top-10 risks with named owners, and (iii) escalation protocol for any single risk exceeding the appetite threshold.",
         "Explanation": "Risk-management sponsorship at the operating-subsidiary level typically belongs to the CRO or, where no CRO exists, the treasurer or CFO. The sponsor needs authority over cross-functional risk taxonomy (so siloed reporting is broken down) and direct board access (so escalation works). The board must define three pieces of written accountability: cross-functional taxonomy alignment, quarterly top-10 reporting with named owners, and a clear escalation protocol — otherwise the sponsor lacks the mandate to enforce participation from credit, operations, and compliance silos.",
         "Topic": "Risk ownership and sponsorship",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Evaluate which entity-level role should SPONSOR the recommended 90-day risk-register rollout, and what specific sponsor accountability should the board define in writing?",
         "Choices": [
           "The Chief Compliance Officer should sponsor because compliance is the only function with regulatory authority over risk policy.",
@@ -4190,7 +4214,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "CCO sponsorship is wrong — compliance is one function with regulatory authority over policy but lacks cross-functional reach needed for ERM taxonomy alignment across credit, operations, and compliance silos. Sponsorship without cross-functional authority fails the mandate.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Group-CEO sponsorship is too distant from Flash Capital's day-to-day risk decisions and dilutes accountability for the two specific near-misses. Subsidiary-level sponsorship with group-board oversight is the correct governance balance.",
-        "ExplanationWrongD": "Board chairs do not manage — they oversee. Sponsoring an operational rollout directly would invert the governance hierarchy and crowd out the sponsor role for an executive who must run the program day-to-day."
+        "ExplanationWrongD": "Board chairs do not manage — they oversee. Sponsoring an operational rollout directly would invert the governance hierarchy and crowd out the sponsor role for an executive who must run the program day-to-day.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-D2-Q6",
@@ -4198,7 +4224,7 @@ const casePackP2_1 = [
         "Correct": "Escalate to Option 2 (ISO 31000) now: the in-house register has produced useful top-10 visibility but cannot resolve the cross-functional taxonomy and incident-aggregation gap demonstrated by persistent vendor incidents and the unfunded factoring control; ISO 31000 provides the process framework without the full 18-month COSO commitment.",
         "Explanation": "The right response to a proportionate-framework pilot that surfaces a deeper issue is to escalate to the next-proportionate step, not to leap to the most-comprehensive option or to defer. Option 2 (ISO 31000) is the intermediate step: it provides the cross-functional risk-management process (identification, assessment, response, monitoring, communication) that Option 3 cannot deliver, in 9 months at $900K rather than Option 1's 18 months at $2.4M. The two trigger signals — persistent vendor incidents and unfunded factoring gap — both indicate that risk-aggregation discipline, not just visibility, is what's missing. ISO 31000 delivers process; COSO ERM 2017 is still disproportionate to Flash Capital's current maturity and integration distractions.",
         "Topic": "Risk response escalation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Six months into the Option 3 rollout, vendor/third-party incidents continue at FY2025 cadence and the factoring-fraud control gap remains unfunded. Evaluate whether to escalate to Option 2 (ISO 31000) now, defer further, or pivot to Option 1 (COSO ERM).",
         "Choices": [
           "Continue Option 3 — the board approved a proportionate register approach and any acceleration signals project drift; staying the course builds discipline.",
@@ -4214,9 +4240,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Continuing Option 3 is wrong — the in-house register has not resolved the cross-functional taxonomy gap demonstrated by persistent vendor incidents and unfunded factoring control. Staying the course in the face of demonstrated control-weakness signals is itself a red flag.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Pivoting directly to Option 1 violates the 'proportionate, not performative' guidance, ignores CFO Hoffmann's framing, and commits $2.4M and 18 months during a period of integration distraction — a high probability of project failure with sunk cost.",
-        "ExplanationWrongD": "Deferral in the face of demonstrated control-weakness signals compounds the original problem and undermines the board's confidence in the sponsor. Escalation is the proportional response."
+        "ExplanationWrongD": "Deferral in the face of demonstrated control-weakness signals compounds the original problem and undermines the board's confidence in the sponsor. Escalation is the proportional response.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-F2",
@@ -4266,11 +4295,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-070"
       }
     ],
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch2",
-    "recertification_date": "2026-09-20",
-    "certification_session": "P2-071",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -4395,7 +4422,7 @@ const casePackP2_1 = [
         "Correct": "Discuss the concern with the immediate supervisor (the CFO), unless that discussion is futile — and Hoffmann has already attempted this with the CFO dismissing her concern, so the next step is to escalate to the next higher authority: the audit committee chair.",
         "Explanation": "IMA's 'Resolve Ethical Conflicts' framework prescribes a hierarchy: discuss with the immediate supervisor first (unless that conversation is clearly futile, e.g., the supervisor is the one creating the conflict), then escalate to the next higher authority — in a public company, the audit committee chair is the canonical next step. Hoffmann has already spoken to the CFO; the CFO has dismissed her concern, so the supervisor-level step is exhausted and audit-committee escalation is the next required step.",
         "Topic": "IMA resolution framework first steps",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under IMA's 'Resolve Ethical Conflicts' framework, what is the CORRECT first step Mariela Hoffmann should take when the CFO instructs her to sign a quarterly close package she believes misstates revenue?",
         "Choices": [
           "Immediately resign in protest and contact the IMA Ethics Hotline the same day to report the CFO.",
@@ -4411,7 +4438,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Immediate resignation and IMA hotline is wrong — IMA ethics requires exhausting internal escalation paths (supervisor, audit committee) before external action; resigning first abandons the organization to the misstatement and removes the controller's influence over resolution.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Engaging external counsel before internal escalation is permissible but not required by IMA ethics and is not the first step; the IMA framework prioritizes internal resolution paths before external legal action. Premature counsel engagement can also chill the internal resolution process.",
-        "ExplanationWrongD": "Signing a package believed to misstate revenue — even 'under protest' — would itself violate IMA Credibility and Objectivity. The controller's signature is not a passive endorsement; it is an assertion that the financial statements are fairly presented. A memo to the file does not cure the public misrepresentation."
+        "ExplanationWrongD": "Signing a package believed to misstate revenue — even 'under protest' — would itself violate IMA Credibility and Objectivity. The controller's signature is not a passive endorsement; it is an assertion that the financial statements are fairly presented. A memo to the file does not cure the public misrepresentation.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-F2-Q2",
@@ -4419,7 +4448,7 @@ const casePackP2_1 = [
         "Correct": "When the performance obligation is satisfied — for freight services, generally over time as the shipment moves from origin to destination, or at a point in time upon delivery.",
         "Explanation": "ASC 606-10-25-1 requires an entity to recognize revenue when (or as) it satisfies a performance obligation by transferring control of a promised good or service. For freight services, control typically transfers over time as the shipment moves (ASC 606-10-25-27 over-time criteria) or at a point in time upon delivery. Cash collection and invoicing are not the recognition triggers — performance is.",
         "Topic": "Revenue recognition timing",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under ASC 606-10-25, when is revenue recognized for a freight-service performance obligation?",
         "Choices": [
           "When cash is collected from the customer.",
@@ -4435,7 +4464,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Cash collection is wrong — ASC 606-10-25-1 triggers recognition on performance, not on cash; cash collection is a separate cash-flow event and is not a substitute for performance-based recognition. CFO Onuorah's deferral rationale conflates the two.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Invoicing is an administrative event, not the recognition trigger. Under ASC 606, performance determines recognition; invoicing schedules are negotiated separately and may precede or follow recognition.",
-        "ExplanationWrongD": "Customer acceptance and bill-of-lading signing is one possible point-in-time indicator but is not the universal trigger; for over-time freight services, recognition occurs as the service is performed, not at delivery."
+        "ExplanationWrongD": "Customer acceptance and bill-of-lading signing is one possible point-in-time indicator but is not the universal trigger; for over-time freight services, recognition occurs as the service is performed, not at delivery.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-F2-Q3",
@@ -4443,7 +4474,7 @@ const casePackP2_1 = [
         "Correct": "The $11.4M represents 6.6% of as-billed Q3 revenue ($173.8M) and a 7.0% overstatement of Q3 if billed — a level that, if intentional, would constitute a material misstatement under ASC 250 and SOX §302 certification standards, exposing Flash Logistics to restatement risk and Section 10(b) / 10b-5 securities-fraud exposure.",
         "Explanation": "The math: $11.4M deferred out of $173.8M as-billed = 6.6% of as-billed revenue, which translates to a 7.0% overstatement of Q3 if billed and recognized as proposed. SEC Staff Accounting Bulletin No. 99 and SAB Topic 1.M consider qualitative factors alongside quantitative ones — intentional misstatement of 6.6% is presumptively material regardless of management discretion. SOX §302 requires the CFO and controller to certify that financial statements fairly present the financial condition; intentional misstatement is a criminal-certification violation. The 10% restatement threshold for accelerated filers under Item 4.02 of Form 8-K may also be implicated cumulatively.",
         "Topic": "Revenue misstatement quantification",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Analyze the magnitude of the proposed Q3 revenue misstatement (Exhibit 1: $11.4M deferred out of $173.8M) and its likely disclosure impact. Which characterization is MOST accurate?",
         "Choices": [
           "The $11.4M deferral is a routine timing adjustment within management's discretion and does not require disclosure because all $11.4M will be recognized in Q4.",
@@ -4459,7 +4490,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Routine timing adjustment is wrong — intentional deferral that misstates a public-company quarter by 6.6% is not a routine adjustment and crosses SAB 99 qualitative materiality. SAB 99 expressly states that intentional misstatement is presumptively material regardless of management discretion.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Subsidiary financials are not 'absorbed' — they roll up into consolidated Flash Holdings, but misstatement at any level that flows into 10-Q reporting triggers parent-level disclosure. SEC enforcement extends to subsidiaries whose financials are consolidated.",
-        "ExplanationWrongD": "There is no single '5% SEC materiality threshold.' Materiality under SAB 99 is a multi-factor qualitative and quantitative assessment; intentional timing manipulation by management to smooth results is a strong qualitative materiality indicator independent of any quantitative percentage."
+        "ExplanationWrongD": "There is no single '5% SEC materiality threshold.' Materiality under SAB 99 is a multi-factor qualitative and quantitative assessment; intentional timing manipulation by management to smooth results is a strong qualitative materiality indicator independent of any quantitative percentage.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-F2-Q4",
@@ -4467,7 +4500,7 @@ const casePackP2_1 = [
         "Correct": "Integrity and Credibility are most directly violated — Integrity because the CFO is creating a conflict of interest and suppressing unfavorable information, and Credibility because the misstatement withholds relevant information from users; the remedy is for the controller to refuse to sign the package, escalate to the audit committee, document the concern in writing, and if the issue remains unresolved, consider the IMA Ethics Hotline and resigning.",
         "Explanation": "CFO Onuorah's instruction most directly violates Integrity ('mitigate conflicts of interest; communicate unfavorable as well as favorable information') and Credibility ('disclose all relevant information that credibly informs users'). Objectivity is also implicated but is downstream of these. The IMA-aligned remedy sequence: (1) refuse to sign the package, (2) escalate to the audit committee chair with written documentation of the disagreement, (3) if the audit committee does not act, contact the IMA Ethics Hotline for confidential guidance, and (4) if the issue remains unresolved at the audit-committee level, consider resignation as a last-resort fiduciary act. Resignation without prior escalation is itself a violation because it abandons the organization to the misstatement.",
         "Topic": "IMA Integrity and Credibility",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which IMA principle is MOST directly violated by CFO Onuorah's instruction to defer the $11.4M, and what is the controller's corresponding remedy under IMA?",
         "Choices": [
           "Confidentiality is most directly violated; the remedy is to maintain confidentiality about the CFO's directive and not discuss it with the audit committee.",
@@ -4483,7 +4516,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Confidentiality most violated is wrong — the CFO's directive does implicate confidentiality, but the more direct principles are Integrity (suppressing unfavorable information) and Credibility (withholding relevant information from users). Confidentiality yields to the public interest under IMA ethics.",
         "ExplanationWrongB": "Competence most violated is wrong — competence is implicated (ASC 606 timing) but is downstream of the Integrity and Credibility violations; a training memo is not the right remedy for an integrity conflict between a CFO and a controller over financial-reporting direction.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Objectivity is not the only principle — Integrity, Credibility, and Competence are all implicated. Recusal alone does not cure the underlying misstatement; the controller has an affirmative duty under IMA to escalate, not to step aside."
+        "ExplanationWrongD": "Objectivity is not the only principle — Integrity, Credibility, and Competence are all implicated. Recusal alone does not cure the underlying misstatement; the controller has an affirmative duty under IMA to escalate, not to step aside.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-F2-Q5",
@@ -4491,7 +4526,7 @@ const casePackP2_1 = [
         "Correct": "IMA Ethics Hotline first (to obtain guidance before any internal action) → audit committee → resign if needed (skip the protest-signing step entirely because signing is itself a violation).",
         "Explanation": "The most defensible sequence begins with confidential counsel from the IMA Ethics Hotline (which provides free guidance to CMA/CFM holders on exactly this type of conflict), followed by formal audit-committee escalation with documented evidence, followed by resignation if the audit committee is unresponsive. The 'sign under protest' option is correctly omitted because signing a package believed to be materially misstated is itself a credibility and objectivity violation — a written protest memo does not cure the public misrepresentation to investors. Resignation as a first step is also weak because it abandons the organization to the misstatement and removes Hoffmann's ability to influence resolution.",
         "Topic": "Ethics escalation alternatives",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Evaluate the comparative merits of (i) signing under protest, (ii) escalating to the audit committee, (iii) contacting the IMA Ethics Hotline, and (iv) resigning. Which ordering of these options is MOST defensible for Hoffmann?",
         "Choices": [
           "Sign under protest → audit committee → IMA Ethics Hotline → resign (in that order, with each step conditional on the prior failing).",
@@ -4507,7 +4542,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Sign under protest first is wrong — signing a believed-misstated package violates Credibility and Objectivity regardless of any written protest memo. The controller's signature is a public assertion of fair presentation, not a passive endorsement; a memo to the file does not cure public misrepresentation.",
         "ExplanationWrongB": "Audit committee then sign under protest is wrong — inserting the sign under protest step between audit committee and hotline reintroduces the Credibility violation that escalation was meant to avoid. Each signed quarter compounds the misrepresentation; the only cure is refusal plus escalation.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Resignation as the first step removes Hoffmann's leverage and influence over the disclosure decision and leaves the misstatement in place with no internal champion for correction. IMA ethics values resolution, not just personal integrity preservation."
+        "ExplanationWrongD": "Resignation as the first step removes Hoffmann's leverage and influence over the disclosure decision and leaves the misstatement in place with no internal champion for correction. IMA ethics values resolution, not just personal integrity preservation.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-F2-Q6",
@@ -4515,7 +4552,7 @@ const casePackP2_1 = [
         "Correct": "Discuss the episode generically as a 'stress test of our values' without naming the prior CFO, using the four IMA principles as the framework, and announce a new controller-level escalation protocol and a renewed commitment to ASC 606 timing-recognition discipline.",
         "Explanation": "The defensible approach is to use the episode as a teaching moment — anonymized, principle-framed, and forward-looking. Naming the prior CFO or the dollar amount invites litigation, violates confidentiality obligations that survive departure, and is unnecessary for the deterrent signal. Generic framing using the four IMA principles reinforces the expected standards without exposing the organization to defamation or breach-of-confidentiality claims. Announcing a concrete escalation protocol and renewed ASC 606 discipline converts the episode into operational improvement rather than mere narrative.",
         "Topic": "Ethics case review and lessons",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Six months later, the CFO has been removed, the Q3 financials restated, and Hoffmann has been promoted to CFO. Evaluate whether and how Hoffmann should reference this episode in her first all-hands address to Flash Logistics' finance team.",
         "Choices": [
           "Avoid the topic entirely to protect the departed CFO's reputation and avoid litigation risk from any prior employee's defamation claim.",
@@ -4531,9 +4568,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Avoid entirely is wrong — silence misses the teachable-moment window when staff are most attentive to ethics messaging; avoidance also signals the issue is being buried, which corrodes the credibility of any future tone-at-the-top messaging.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Naming the prior CFO creates litigation exposure and violates confidentiality norms. The deterrent signal comes from clear principle-based messaging and procedural reinforcement, not from personal naming.",
-        "ExplanationWrongD": "Deferring to the annual training cycle misses the teachable-moment window when staff are most attentive and most likely to internalize the lesson. The all-hands address is the higher-leverage venue for tone-at-the-top messaging."
+        "ExplanationWrongD": "Deferring to the annual training cycle misses the teachable-moment window when staff are most attentive and most likely to internalize the lesson. The all-hands address is the higher-leverage venue for tone-at-the-top messaging.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-E3",
@@ -4583,11 +4623,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-070"
       }
     ],
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
-    "certification_session": "P2-071",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -4748,7 +4786,7 @@ const casePackP2_1 = [
         "Correct": "Project Gamma — highest NPV ($15.0M) and a defensible qualitative score (10), with strongest customer-base expansion (5/5) and strongest terminal-value liquidity optionality.",
         "Explanation": "Gamma has the highest NPV ($15.0M), the highest customer-base expansion score (5/5), and a defensible total qualitative score (10/15). Beta has the highest qualitative score (12/15) but the lowest NPV of the three ($12.3M). Alpha has the second-highest NPV ($14.8M) but a low customer-base score (2/5). Under standard capital-allocation rules — NPV-dominant with strategic overlay — Gamma wins on both dimensions. The qualitative profile (customer-base 5, manufacturing 3, ESG 2) is the right strategic posture for Flash Industrial at this stage of growth (post-Meridian integration, broadening customer reach).",
         "Topic": "NPV with qualitative scoring",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Given the NPVs you computed for Alpha ($14.8M), Beta ($12.3M), and Gamma ($15.0M), and the strategic-factor scores in Exhibit 2, which project is the BEST recommendation under standard capital-allocation decision rules?",
         "Choices": [
           "Project Alpha — highest NPV among the three and a strong qualitative score.",
@@ -4764,7 +4802,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Alpha best is wrong — Alpha's NPV ($14.8M) is second to Gamma ($15.0M) and its customer-base score (2/5) is the weakest of the three; the qualitative gap is not offset by the small NPV difference. Standard capital allocation pairs NPV-dominance with strategic overlay, and Alpha underperforms on both axes versus Gamma.",
         "ExplanationWrongB": "Beta best is wrong — Beta has the lowest NPV ($12.3M) of the three and fails the 5-year payback criterion (5.3y > 5y); the highest qualitative score does not offset the weakest quantitative profile. The board's stated criteria require both NPV-positive AND payback within 5 years; Beta fails one of the two.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "All three projects have positive NPV at WACC and Alpha (3.4y) and Gamma (4.4y) meet the 5-year payback criterion; Beta (5.3y) narrowly fails payback but is still NPV-positive. Rejecting all three would be value-destructive and contradicts the board's stated criteria of any project demonstrating positive NPV at WACC, payback within 5 years, and at least one qualitative factor."
+        "ExplanationWrongD": "All three projects have positive NPV at WACC and Alpha (3.4y) and Gamma (4.4y) meet the 5-year payback criterion; Beta (5.3y) narrowly fails payback but is still NPV-positive. Rejecting all three would be value-destructive and contradicts the board's stated criteria of any project demonstrating positive NPV at WACC, payback within 5 years, and at least one qualitative factor.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-E3-Q5",
@@ -4772,7 +4812,7 @@ const casePackP2_1 = [
         "Correct": "IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Gamma ($15.0M); NPV-dominance is the theoretically correct ranking because NPV measures the dollar value created and is consistent with shareholder wealth maximization, while IRR-ranking is unreliable for projects that differ in scale, life, and cash-flow timing — here, Alpha's IRR advantage reflects its shorter 6-year payback, not higher shareholder value.",
         "Explanation": "IRR-ranking would prefer Alpha (18.4% > 16.9% > 14.2%) but NPV-ranking prefers Gamma ($15.0M > $14.8M > $12.3M). The IRR-NPV conflict arises because Alpha's shorter 6-year life concentrates cash flows earlier (high IRR reflects early payback), while Gamma's 7-year life plus $14M terminal value produces higher absolute dollar value. For mutually exclusive projects, NPV-dominance is the theoretically correct criterion because NPV measures the dollar value added to shareholders, is consistent with wealth maximization, and properly handles scale and timing differences. IRR-ranking penalizes longer-life projects and ignores the reinvestment-rate assumption.",
         "Topic": "IRR computation and ranking",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Compute each project's IRR: Alpha IRR approximately 18.4%, Beta IRR approximately 14.2%, Gamma IRR approximately 16.9%. Under NPV the ranking is Gamma ($15.0M) > Alpha ($14.8M) > Beta ($12.3M). Which statement BEST characterizes this conflict and which ranking is theoretically correct?",
         "Choices": [
           "IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Gamma ($15.0M); IRR-ranking is theoretically correct because higher IRR typically means higher value creation for mutually exclusive projects.",
@@ -4788,7 +4828,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "IRR-ranking correct is wrong — for mutually exclusive projects with different scale, life, and timing, IRR-ranking is unreliable. NPV measures dollar value created and is consistent with wealth maximization; IRR can mislead when project lives differ.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The three projects do NOT have similar IRRs or NPVs; Alpha IRR is meaningfully higher than Beta's, and Gamma NPV is meaningfully higher than Alpha's. The criteria conflict on the Alpha-vs-Gamma ordering — that is the analytically interesting case.",
-        "ExplanationWrongD": "IRR is fully computable for projects with terminal value — the terminal value is just a year-N cash flow. The IRR criterion is meaningful; it is the ranking that is unreliable for mutually exclusive projects."
+        "ExplanationWrongD": "IRR is fully computable for projects with terminal value — the terminal value is just a year-N cash flow. The IRR criterion is meaningful; it is the ranking that is unreliable for mutually exclusive projects.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-E3-Q6",
@@ -4796,7 +4838,7 @@ const casePackP2_1 = [
         "Correct": "Gamma's terminal value ($14M at year 7) is nearer-term and more auditable than Beta's ($6M at year 10) for a specialty line facing technology risk; combined with Gamma's highest NPV ($15.02M) and top customer-base score, the nearer horizon and superior quantified value outweigh Beta's qualitative edge.",
         "Explanation": "The strongest counter-argument is that NPV is only as reliable as its terminal-value assumption. Gamma's $14M terminal value falls at year 7, three years sooner than Beta's $6M salvage estimate on a specialty-alloy line facing technology risk — nearer-horizon terminals carry materially less forecasting risk. On the quantified side, Gamma leads with the highest NPV ($15.02M vs $12.30M) and the top customer-base expansion score among the board's stated alignment factors. The $2.7M NPV gap alone is thin enough to debate, which is why the defense rests on the horizon-plus-customer differentiation rather than the gap itself. Acquisitions are not 'typically preferable' — Beta's longer tail and ESG contribution are real arguments — but on this specific case, the nearer horizon and stronger customer-base expansion justify Gamma.",
         "Topic": "Terminal value credibility",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "CFO Hoffmann recommends Gamma. The board pushes back, asking why a $48M acquisition (no debt assumed, all-equity) is preferable to Beta (organic capex in Tennessee) given Beta's higher qualitative score and ESG contribution. Evaluate the strongest single counter-argument Hoffmann can deploy to defend Gamma.",
         "Choices": [
           "Gamma's NPV is only $2.7M higher than Beta's; this gap is within the noise of any DCF analysis and cannot be defended to the board.",
@@ -4812,9 +4854,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "NPV gap within noise is wrong — the $2.7M gap is real and the qualitative differentiation (customer reach, terminal-value credibility) compounds rather than dissipates the difference. DCF noise bands apply to the NPV point estimate, not to the combined NPV-plus-qualitative case for selection.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Acquisitions are not categorically preferable to organic capex; the answer must rest on this project's specific economics and strategic context, not a categorical claim.",
-        "ExplanationWrongD": "CFO Hoffmann is the analytic authority on capital allocation; she should not capitulate to the board's qualitative preference when quantitative and contextual analysis support Gamma. The defensible move is to deploy the strongest counter-argument, not to defer."
+        "ExplanationWrongD": "CFO Hoffmann is the analytic authority on capital allocation; she should not capitulate to the board's qualitative preference when quantitative and contextual analysis support Gamma. The defensible move is to deploy the strongest counter-argument, not to defer.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-A4",
@@ -4864,9 +4909,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -4971,7 +5016,7 @@ const casePackP2_1 = [
         "Correct": "$20 million, the residual after allocating fair value to identifiable net assets ($180M less $85M less $50M less $25M)",
         "Explanation": "Under ASC 805-10-30, the acquisition method requires the acquirer to recognize goodwill as of the acquisition date measured as the excess of the consideration transferred over the net of the acquisition-date amounts of the identifiable assets acquired and liabilities assumed, measured at fair value. Applied to the scenario, $180M consideration less ($85M book value of identifiable net assets + $50M PPE fair-value uplift + $25M intangible allocation = $160M fair value of identifiable net assets) yields $20M residual. The correct answer recognizes goodwill as the residual. A common trap is to capitalize only identifiable intangibles or to record the entire purchase price as goodwill; both ignore the requirement to allocate fair value first.",
         "Topic": "Goodwill measurement in acquisition",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under ASC 805, Flash Foods paid $180M cash for the regional bakery chain. The acquired net assets had a book value of $85M, with fair-value uplifts of $50M to PPE and $25M to identifiable intangibles. Mariela Hoffmann must record goodwill on the acquisition date. What amount of goodwill should Flash Foods recognize?",
         "Choices": [
           "$25 million, equal to the identifiable intangible uplift only",
@@ -4987,7 +5032,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Choosing $25M would record only the intangible allocation as goodwill, ignoring PPE fair-value uplift and the consideration-paid framework under ASC 805.",
         "ExplanationWrongB": "Choosing $75M would sum the fair-value uplifts themselves, but that total is part of allocated fair value, not the unallocated residual that becomes goodwill.",
         "ExplanationWrongD": "Choosing $180M treats the full consideration as goodwill and skips the ASC 805 requirement to first measure identifiable assets and liabilities at fair value.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-A4-Q2",
@@ -4995,7 +5042,7 @@ const casePackP2_1 = [
         "Correct": "The bakery segment fails the revenue and profit thresholds but exceeds the 10% asset threshold (11.9%), so it is reportable.",
         "Explanation": "ASC 280-10-50 requires a segment to be reported separately if any of three 10% tests is met: revenue ≥10% of combined revenue, absolute profit/loss ≥10% of combined profit/loss, or identifiable assets ≥10% of combined assets. Applied to Exhibit 2, bakery revenue of $180M is 8.5% (just below 10%), bakery operating profit of $11M is 4.8%, and bakery identifiable assets of $220M is 11.9%, which exceeds the asset threshold. Therefore the bakery segment is reportable. Interpretation: the bakery's asset base, inflated by the $50M PPE fair-value uplift and $25M intangibles, drives separability rather than current-period profit. A common trap is to test only revenue, missing the asset threshold that ASC 280 applies in parallel.",
         "Topic": "Business combination assessment",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 2, Adaeze Onuorah must determine whether the acquired bakery chain constitutes a separately reportable operating segment under ASC 280. The quantitative thresholds are 10% of combined revenue, 10% of combined operating profit (absolute), and 10% of combined identifiable assets. What is the correct conclusion?",
         "Choices": [
           "The bakery segment fails the revenue and profit thresholds but exceeds the 10% asset threshold (11.9%), so it is reportable.",
@@ -5011,7 +5058,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "",
         "ExplanationWrongC": "Invoking the 75% revenue-coverage test is an ASC 280 practical limit, not a fail-the-test mechanism, and is misapplied here because the bakery only needs to meet one 10% test.",
         "ExplanationWrongD": "ASC 280 provides no three-year exemption for acquired businesses; the 10% tests apply in every reporting period following the acquisition.",
-        "ExplanationWrongB": "Choice B reaches the right conclusion for the wrong reason: bakery revenue of $180M is 8.5% of combined revenue, below the 10% threshold — only the asset test (11.9%) is met. Selecting B endorses a false computation even where the verdict coincides."
+        "ExplanationWrongB": "Choice B reaches the right conclusion for the wrong reason: bakery revenue of $180M is 8.5% of combined revenue, below the 10% threshold — only the asset test (11.9%) is met. Selecting B endorses a false computation even where the verdict coincides.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-A4-Q3",
@@ -5019,7 +5068,7 @@ const casePackP2_1 = [
         "Correct": "The qualitative assessment considers macroeconomic, industry, and reporting-unit-specific factors to determine whether it is not more likely than not that fair value is below carrying amount.",
         "Explanation": "ASC 350-20-35-3 permits an entity to first perform a qualitative assessment of whether it is not more likely than not (i.e., less than 50% likelihood) that the fair value of a reporting unit is less than its carrying amount, considering events and circumstances such as macroeconomic conditions, industry and market considerations, cost factors, and reporting-unit-specific operating trends. Applied to Flash Foods, an 18% EBITDA decline is a relevant negative indicator but is only one factor, not a stand-alone trigger. Interpretation: the qualitative step is a holistic weighing process, and management must document the weight of evidence. A common trap is to treat a single negative trend as automatically conclusive of impairment.",
         "Topic": "Goodwill impairment qualitative assessment",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Three years after the acquisition, bakery-segment EBITDA has declined 18% from the acquisition-date projection of $32M. Mariela Hoffmann must assess goodwill impairment under ASC 350-20-35. Which analysis of the qualitative assessment is most appropriate?",
         "Choices": [
           "The 18% EBITDA shortfall is, by itself, determinative evidence of impairment, and a full quantitative test is mandatory.",
@@ -5035,7 +5084,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Treating the EBITDA decline as determinative overlooks the qualitative-assessment framework, which weighs multiple indicators before a quantitative test becomes mandatory.",
         "ExplanationWrongB": "Skipping the qualitative assessment is contrary to ASC 350-20-35, which explicitly permits it as an optional first step in the annual test.",
         "ExplanationWrongD": "ASC 350 imposes no year-of-acquisition limit on the qualitative assessment; reporting entities may elect it in any subsequent annual test.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-A4-Q4",
@@ -5043,7 +5094,7 @@ const casePackP2_1 = [
         "Correct": "Eliminate the $2M of unrealized intercompany profit still embedded in ending inventory to prevent overstating consolidated assets and profit.",
         "Explanation": "ASC 810-10-45 requires elimination of all intercompany balances, transactions, revenues, and expenses in the consolidated financial statements, including the deferred profit element. Applied to Flash Foods, the $14M sale and $14M cost of sales must be eliminated in their entirety, and the $2M markup still residing in the bakery's ending inventory must be removed because that profit is unrealized from the consolidated group's perspective. Interpretation: leaving the deferred profit on the books overstates consolidated inventory and consolidated net income. A common trap is to defer the elimination to the period of external sale, which would still overstate the current period.",
         "Topic": "Intercompany profit elimination",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "During consolidation, the bakery segment purchased $14M of flour annually from Flash Foods' Grocery segment at a markup that produced $2M of intercompany profit still sitting in ending inventory. How should Adaeze Onuorah eliminate this intercompany activity in consolidation?",
         "Choices": [
           "Eliminate $14M of revenue and $14M of cost of sales, with no further adjustment because inventory is sold to third parties.",
@@ -5059,7 +5110,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Eliminating only revenue and cost of sales without removing the unrealized markup leaves $2M of phantom profit in consolidated inventory and net income.",
         "ExplanationWrongC": "Deferring elimination until external sale violates the requirement under ASC 810 to remove unrealized intercompany profit in the period it arises for consolidation purposes.",
         "ExplanationWrongD": "Reclassifying to noncontrolling interest is inappropriate because Flash Foods owns 100% of the bakery and there is no noncontrolling-interest counterparty to recognize.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-A4-Q5",
@@ -5067,7 +5120,7 @@ const casePackP2_1 = [
         "Correct": "Document the qualitative assessment weighing negative indicators (EBITDA decline) against neutral or positive factors and conclude whether it is not more likely than not that fair value is below carrying amount; quantitative test only if that conclusion cannot be reached.",
         "Explanation": "ASC 350-20-35-3 allows management to perform a qualitative assessment as a screening step. When negative indicators such as an 18% EBITDA shortfall appear, management must weigh those against positive factors such as the long-term growth outlook, recoverable PPE fair value, and recent acquisitions to determine whether it is not more likely than not (less than 50% likelihood) that fair value is below carrying amount. If the qualitative assessment cannot support that conclusion, a quantitative test is required. Interpretation: the qualitative step avoids unnecessary valuation costs when no impairment is more likely than not, while protecting auditability when the indicators are mixed. A common trap is to either always do the quantitative test (wasting audit cost) or skip it when indicators are negative (missing required evidence).",
         "Topic": "Impairment documentation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Mariela Hoffmann must choose between completing only the ASC 350-20-35 qualitative assessment and proceeding directly to a quantitative goodwill impairment test for the bakery reporting unit. Which recommendation best balances cost, auditability, and the 18% EBITDA shortfall?",
         "Choices": [
           "typically perform the quantitative test, because auditors will not accept the qualitative assessment in any circumstance.",
@@ -5083,7 +5136,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Auditors generally accept a well-documented qualitative assessment under ASC 350; mandating a quantitative test in all circumstances ignores the standard's express permission.",
         "ExplanationWrongB": "ASC 350 does not require a quantitative test whenever any negative indicator exists; the qualitative assessment is precisely designed to weigh mixed evidence before deciding.",
         "ExplanationWrongD": "Held-for-sale classification is appropriate only when the criteria in ASC 360-10-45 are met, and reclassification does not eliminate the goodwill impairment analysis for a continuing reporting unit.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-A4-Q6",
@@ -5091,7 +5146,7 @@ const casePackP2_1 = [
         "Correct": "Disclose segment revenue, segment profit/loss, segment assets, and the basis of measurement, including reconciliations to consolidated totals.",
         "Explanation": "ASC 280-10-50 requires disclosure of revenue, profit/loss, and assets for each reportable segment, plus the basis of measurement and reconciliations to consolidated totals, so users can evaluate the segment's contribution and management's resource allocation. Applied to Flash Foods, expanding to four reportable segments requires full quantitative disclosures and clear reconciliation. Interpretation: minimal disclosure fails the standard's 'full segment disclosure' objective and reduces decision-usefulness for analysts. A common trap is to treat segment disclosure as competitive-sensitive and therefore omit required line items, which is not permitted by the standard.",
         "Topic": "Segment disclosure under ASC 280",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Mariela is considering how aggressively to expand segment disclosure under ASC 280 now that the bakery chain is reportable. Which disclosure strategy is most consistent with the standard and the information needs of capital providers?",
         "Choices": [
           "Report only segment revenue and total assets to minimize disclosure burden and protect competitive information.",
@@ -5107,9 +5162,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Disclosing only revenue and assets omits segment profit/loss, which ASC 280-10-50 explicitly requires for each reportable operating segment.",
         "ExplanationWrongC": "ASC 280 contains no 5% profit threshold that limits disclosure; once a segment is reportable, the full set of required disclosures applies.",
         "ExplanationWrongD": "Omitting segment disclosure is not permitted under ASC 280 simply because the segments are consolidated; the standard exists precisely to disaggregate consolidated results.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-B4",
@@ -5159,11 +5217,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch2",
-    "recertification_date": "2026-09-20",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -5267,14 +5323,14 @@ const casePackP2_1 = [
       {
         "ItemID": "CBQ21-B4-Q1",
         "Type": "select",
-        "Correct": "7.45%",
-        "Explanation": "WACC is computed as Wd × Kd × (1 − T) + We × Ke. Applied to Flash Industrial post-acquisition: 0.60 × 6.40% × (1 − 0.25) = 0.60 × 4.80% = 2.88%; plus 0.40 × 11.50% = 4.60%; total = 7.48% (≈7.45%, reflecting rounding). The most defensible answer is 7.45%–7.48%. Interpretation: a higher debt weight lowers WACC because debt is cheaper after-tax, but the rising Kd partially offsets the tax shield. A common trap is to use Kd without the (1 − T) adjustment, which inflates WACC by ignoring the tax shield.",
+        "Correct": "7.48%",
+        "Explanation": "WACC is the weighted average of the after-tax cost of debt and the cost of equity: WACC = (D/V) x Kd x (1 - T) + (E/V) x Ke. Exhibit 1 gives the post-acquisition capital structure as D/V = 0.600, E/V = 0.400, pre-tax Kd = 6.40%, Ke = 11.50%, and a marginal tax rate of 25%. The debt component = 0.600 x 6.40% x (1 - 0.25) = 0.600 x 4.80% = 2.88%. The equity component = 0.400 x 11.50% = 4.60%. WACC = 2.88% + 4.60% = 7.48%. Recomputed independently: 0.60 x 6.40 x 0.75 = 2.88, plus 0.40 x 11.50 = 4.60, giving 7.48%. Interpretation: weighting toward debt lowers the blended cost because debt is cheaper after tax, but the rise in Kd from 5.20% to 6.40% as the rating slips from BBB+ to A- partly offsets that benefit, so the shield is not free. A common trap is omitting the (1 - T) adjustment, which would inflate the WACC to 8.44%.",
         "Topic": "Post-acquisition WACC",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 1, compute Flash Industrial's post-acquisition WACC under the proposed 60% debt / 40% equity structure. Pre-tax Kd = 6.40%, Ke = 11.50%, tax rate = 25%.",
         "Choices": [
           "8.13%",
-          "7.45%",
+          "7.48%",
           "9.44%",
           "10.18%"
         ],
@@ -5286,7 +5342,9 @@ const casePackP2_1 = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Selecting 9.44% uses pre-tax Kd without the tax shield and ignores the equity weight, producing a weighted cost well above the actual post-deal WACC.",
         "ExplanationWrongD": "Selecting 10.18% corresponds to using Ke alone or averaging Ke with Kd without weighting, which does not reflect the capital structure proportions.",
-        "ExplanationWrongA": "Selecting 8.13% overstates post-acquisition WACC. The shielded computation is 0.60 x 6.40% x (1 - 0.25) = 2.88% plus 0.40 x 11.50% = 4.60%, totaling 7.48% (about 7.45%), not 8.13%."
+        "ExplanationWrongA": "Selecting 8.13% overstates post-acquisition WACC. The shielded computation is 0.60 x 6.40% x (1 - 0.25) = 2.88% plus 0.40 x 11.50% = 4.60%, totaling 7.48% (about 7.45%), not 8.13%.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-B4-Q2",
@@ -5294,7 +5352,7 @@ const casePackP2_1 = [
         "Correct": "A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/Debt < 40%.",
         "Explanation": "S&P-style rating methodologies apply notching adjustments based on financial-risk indicators and structural features. Applied to Flash Industrial, the post-deal D/E of 1.4 with FFO/Debt below 40% triggers the one-notch downgrade rule from BBB+. Interpretation: the matrix is a rule-based overlay on the issuer's anchor credit profile, and a single negative trigger is calibrated to one notch, not two. A common trap is to assume any D/E above 1.0 automatically drives the maximum adjustment, which would be inconsistent with notching calibration.",
         "Topic": "Credit rating notching",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under S&P-style notching rules (Exhibit 2), Flash Industrial's pre-deal D/E of 0.8 supports a BBB+ rating. The post-deal D/E rises to 1.4, and FFO/Debt falls below 40%. Using the matrix, what is the most likely rating outcome?",
         "Choices": [
           "No change; rating agencies do not adjust notches on the basis of D/E movements alone.",
@@ -5310,7 +5368,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Claiming no change ignores the matrix rule, which explicitly ties notching to leverage and FFO/Debt thresholds for senior unsecured issuers.",
         "ExplanationWrongB": "Two notches is the matrix convention for subordination, not for the D/E / FFO/Debt rule cited for this scenario.",
         "ExplanationWrongD": "An upgrade is not produced by senior-unsecured status when D/E and FFO/Debt move adversely; the matrix rule is a downward adjustment.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-B4-Q3",
@@ -5318,7 +5378,7 @@ const casePackP2_1 = [
         "Correct": "Pecking-order theory predicts a strict preference for retained earnings, then debt, then equity, while static-tradeoff theory balances interest tax shields against bankruptcy costs at a target D/E.",
         "Explanation": "Pecking-order theory (Myers and Majluf, 1984) argues that firms prefer internal financing first, then debt, and finally equity, because of asymmetric information and flotation costs. Static-tradeoff theory posits that firms target an optimal D/E where the marginal tax-shield benefit equals marginal financial-distress cost. Applied to Flash Industrial, pecking-order would suggest debt before equity given sufficient debt capacity, while static-tradeoff would target a D/E of 1.4 only if the marginal tax shield exceeds marginal distress cost at that leverage. Interpretation: the two theories yield different predictions about whether the post-deal D/E is optimal or simply the natural outcome of depleted debt capacity. A common trap is to treat the theories as interchangeable or to assign a numerical target to pecking-order that does not exist.",
         "Topic": "Pecking-order theory application",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Maya Caldwell must articulate how pecking-order theory applies to Flash Industrial's financing choice versus static-tradeoff theory. Which statement best captures the distinction in this scenario?",
         "Choices": [
           "Pecking-order theory predicts a strict preference for retained earnings, then debt, then equity, while static-tradeoff theory balances interest tax shields against bankruptcy costs at a target D/E.",
@@ -5334,7 +5394,9 @@ const casePackP2_1 = [
         "ExplanationWrongB": "Pecking-order theory does not specify a numerical D/E target; the cited 1.4 D/E is the result of the financing decision, not an objective of pecking-order.",
         "ExplanationWrongC": "Pecking-order does not predict equity is always preferred; it specifically argues against equity issuance due to information asymmetry when external financing is required.",
         "ExplanationWrongD": "Neither theory is confined to a particular credit-quality bucket; both apply across the credit spectrum, though their predictions may differ in magnitude.",
-        "ExplanationWrongA": ""
+        "ExplanationWrongA": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-B4-Q4",
@@ -5342,7 +5404,7 @@ const casePackP2_1 = [
         "Correct": "$2.11 million, equal to 25% of $8.448M interest on the new debt tranche ($132M x 6.40% x 0.25 = $2.11M)",
         "Explanation": "The annual interest tax shield equals the marginal tax rate multiplied by the interest expense on the new debt: Interest = $132M × 6.40% = $8.448M; tax shield = 0.25 × $8.448M = $2.112M, rounded to $2.11M. Among the choices, B is exact. Interpretation: the rating downgrade raises the pre-tax Kd, which increases nominal interest expense but the tax shield also scales linearly. A common trap is to apply the tax rate to the principal amount rather than to the interest expense, which materially overstates the shield.",
         "Topic": "Interest tax shield quantification",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "After the downgrade to A-, Flash Industrial's pre-tax cost of debt rises from 5.20% to 6.40%. Given a 25% marginal tax rate and $132M of new debt (60% of $220M), what is the approximate annual tax shield on the new debt tranche?",
         "Choices": [
           "$0.99 million, equal to 25% of the post-deal interest expense of $8.45M.",
@@ -5358,7 +5420,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Selecting $0.99M applies the tax rate to total post-deal interest on a much larger base ($8.45M × 25% = $2.11M); the calculation must isolate the new debt tranche's interest.",
         "ExplanationWrongC": "Applying the 25% rate to $13.2M (a discounted principal) treats the tax shield as a function of principal rather than of deductible interest expense.",
         "ExplanationWrongD": "Using 25% of $22M spread over five years incorrectly amortizes the acquisition cost rather than the debt-service interest deduction.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-B4-Q5",
@@ -5366,7 +5430,7 @@ const casePackP2_1 = [
         "Correct": "The decision depends on the relative tax shield value, the change in operating EBIT from divesting the non-core line, and the impact on growth optionality; both alternatives have material tradeoffs.",
         "Explanation": "Capital-structure decisions require trade-off analysis because both alternatives carry costs and benefits. The asset sale preserves the BBB+ rating and avoids equity dilution but loses the EBIT contribution of the packaging line and forfeits tax shields. The debt/equity mix adds interest tax shields and preserves operating assets but raises financial-distress risk and dilutes shareholders. Applied to Flash Industrial, the optimal choice depends on the net present value of the foregone packaging-line cash flows, the present value of the additional interest tax shield, and management's view of growth optionality. Interpretation: the standard calls for an explicit comparison of after-tax cash flows and risk-adjusted WACC. A common trap is to recommend one option without weighing the lost EBIT and the rating impact.",
         "Topic": "Financing alternative comparison",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "The CFO has asked Maya to compare the debt/equity financing with the alternative of selling a non-core packaging line for $220M and funding the acquisition entirely with the proceeds. Which evaluation is most appropriate?",
         "Choices": [
           "The asset sale is universally preferable because it preserves the BBB+ rating and avoids dilution.",
@@ -5382,7 +5446,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Claiming the asset sale is universally preferable ignores the lost EBIT contribution and the forfeited interest tax shield on debt-funded acquisitions.",
         "ExplanationWrongB": "Claiming the debt/equity mix is universally preferable ignores rating downgrade costs, financial-distress risk, and the dilution absorbed by existing shareholders.",
         "ExplanationWrongD": "Defaulting to equity issuance avoids debt distress costs but ignores flotation costs, information asymmetry, and the underpricing penalty associated with external equity.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-B4-Q6",
@@ -5390,7 +5456,7 @@ const casePackP2_1 = [
         "Correct": "Set D/E to the static-tradeoff optimum by equating marginal tax-shield benefit with marginal expected financial-distress cost, while recognizing information asymmetry in any equity issuance.",
         "Explanation": "Optimal capital structure under the static-tradeoff framework is the D/E where the marginal present value of the interest tax shield equals the marginal expected cost of financial distress. Applied to Flash Industrial, the static-tradeoff optimum must be weighed against pecking-order's caution that external equity is the most expensive source because of asymmetric information. Interpretation: the practical recommendation combines both theories — choose a debt level consistent with the trade-off optimum while issuing equity only when debt capacity is exhausted, and disclose the rationale to the board. A common trap is to push leverage to covenant limits, ignoring the rising cost of distress and rating downgrade penalty.",
         "Topic": "Static-tradeoff capital structure",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "After considering rating impact, tax shields, and dilution, what is the most defensible recommendation for Flash Industrial's optimal post-acquisition leverage and financing mix?",
         "Choices": [
           "Push D/E to the maximum the bond covenants allow, since debt is typically cheaper after tax.",
@@ -5406,9 +5472,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Maximizing D/E ignores the rising marginal financial-distress cost and the rating-agency penalties captured in Exhibit 2.",
         "ExplanationWrongC": "Refinancing existing debt at a higher yield increases interest expense and contradicts the goal of preserving capital cost advantages; rate compression is not the binding issue here.",
         "ExplanationWrongD": "Repurchasing equity with debt to maximize leverage is a leveraged-recapitalization strategy that conflicts with the rating-agency thresholds already at risk for Flash Industrial.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-C4",
@@ -5458,9 +5527,9 @@ const casePackP2_1 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -5568,7 +5637,7 @@ const casePackP2_1 = [
         "Correct": "Incremental, avoidable future cash flows that differ between in-house and outsource, including avoidable fixed costs.",
         "Explanation": "Relevant-cost analysis under CMA guidance requires that only incremental, avoidable, future cash flows that differ between alternatives be included; sunk costs, allocated overhead, and non-differential items are excluded because they do not change with the decision. Applied to Flash Logistics, the in-house incremental cost is $9M of engineering and integration expense less $4M of avoidable fixed costs = $5M, while outsourcing adds $12M of SaaS expense and eliminates the $4M of avoidable fixed costs (already excluded from the outsource side). Interpretation: this isolates the decision-relevant cash flows and avoids double counting. A common trap is to include allocated corporate overhead, which inflates both sides equally and does not change the ranking.",
         "Topic": "Relevant cost identification",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Priya Ramaswamy has assembled the annual operating cost streams for both alternatives. Under relevant-cost analysis, which cash flow set should she use to evaluate the make-vs-buy decision?",
         "Choices": [
           "Total fully allocated costs including corporate overhead regardless of the alternative chosen.",
@@ -5584,7 +5653,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Fully allocated overhead includes non-differential items, which violate the relevant-cost principle and distort the incremental comparison.",
         "ExplanationWrongC": "Sunk costs are by definition excluded from incremental analysis, regardless of historical magnitude, because they cannot be recovered under either alternative.",
         "ExplanationWrongD": "Using $9M versus $12M without netting avoidable fixed costs overstates the in-house cost and biases the decision against building the platform in-house.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-C4-Q2",
@@ -5592,7 +5663,7 @@ const casePackP2_1 = [
         "Correct": "In-house is preferred by approximately $27M in present-value terms.",
         "Explanation": "The PV differential is computed as the difference between the two annuity streams at 9% over five years: PV(outsource) = $12M × 3.8897 = $46.68M; PV(in-house net) = $5M × 3.8897 = $19.45M; differential = $46.68M − $19.45M = $27.23M, with in-house cheaper by approximately $27M. Interpretation: under purely quantitative relevant-cost analysis, the in-house option is preferred. However, the qualitative option-value premium and vendor-concentration risk must be considered before final recommendation. A common trap is to use gross $9M versus $12M, which understates the in-house advantage because it ignores avoidable fixed costs.",
         "Topic": "Outsourcing NPV comparison",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 2, compute the present-value differential between outsourcing ($12M/yr for five years) and in-house ($9M/yr less $4M avoidable fixed costs = $5M/yr net for five years), discounted at 9%. What does the analysis indicate?",
         "Choices": [
           "In-house is preferred by approximately $27M in present-value terms.",
@@ -5608,7 +5679,9 @@ const casePackP2_1 = [
         "ExplanationWrongB": "Selecting outsource as preferred by $27M reverses the calculation sign and would imply in-house is more expensive, contradicting the exhibit's figures.",
         "ExplanationWrongC": "The cash flows are five-year finite annuities, not perpetuities; an annuity factor of 3.8897 reflects the five-year horizon.",
         "ExplanationWrongD": "Adjusting for the strategic option-value premium would only partially close the $27M gap and would still leave in-house more attractive under quantitative NPV.",
-        "ExplanationWrongA": ""
+        "ExplanationWrongA": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-C4-Q3",
@@ -5616,7 +5689,7 @@ const casePackP2_1 = [
         "Correct": "Outsourcing preserves capital, accelerates deployment, and shifts scalability risk to the vendor; however, it reduces control over proprietary algorithms and may create vendor concentration risk.",
         "Explanation": "Qualitative factors in make-vs-buy include preservation of capital, speed-to-deployment, scalability risk transfer, control over proprietary technology, and vendor concentration. Applied to Flash Logistics, outsourcing shifts scalability risk to the SaaS vendor, accelerates deployment, and preserves capital, but reduces control over proprietary algorithms central to Flash Logistics' competitive advantage and introduces vendor concentration risk. Interpretation: the qualitative factors may or may not offset the $27M NPV advantage; the option-value premium in Exhibit 2 of $10M–$18M provides a quantitative anchor for the qualitative discussion. A common trap is to assume outsourcing eliminates integration risk, which is rarely the case in practice.",
         "Topic": "Qualitative make-or-buy factors",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Beyond the quantitative model, Priya must consider qualitative factors. Which qualitative consideration is most likely to justify choosing outsourcing despite the favorable $27M in-house NPV differential?",
         "Choices": [
           "Outsourcing eliminates the need to comply with internal control standards under SOX because the SaaS provider is external.",
@@ -5632,7 +5705,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "SOX internal-control compliance remains the responsibility of Flash Logistics as the reporting entity; outsourcing to a SaaS provider does not exempt the registrant from controls over financial reporting.",
         "ExplanationWrongC": "Integration cost typically remains significant when outsourcing because Flash Logistics' ERP and operational systems must interface with the SaaS platform.",
         "ExplanationWrongD": "Citing a 50% budget overrun is a stereotype, not an analytical input, and is not supported by the data in this scenario.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-C4-Q4",
@@ -5640,7 +5715,7 @@ const casePackP2_1 = [
         "Correct": "Breakeven occurs where total in-house cost equals total outsource cost; algebraically, FixedI + vI × Q = FixedO + vO × Q, yielding Q* = (FixedO − FixedI) / (vI − vO).",
         "Explanation": "The make-vs-buy breakeven on volume is the quantity Q* at which total in-house cost equals total outsource cost. Setting FixedI + vI × Q* = FixedO + vO × Q* and solving yields Q* = (FixedO − FixedI) / (vI − vO), where vI < vO is the usual case for in-house platforms (lower variable cost per unit, higher fixed cost). Applied to Flash Logistics, breakeven analysis identifies the warehouse volume above which the in-house platform's lower per-unit cost outweighs its higher fixed cost. Interpretation: the breakeven Q is a decision-relevant threshold that complements the NPV analysis. A common trap is to assume breakeven is independent of variable cost, which would imply fixed costs alone determine the decision.",
         "Topic": "Make-or-buy breakeven volume",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Priya must compute the make-vs-buy breakeven on warehouse volume, given that the in-house platform has higher fixed cost but lower variable cost per unit processed, while outsourcing has lower fixed cost but higher variable cost per unit. Which breakeven analysis is correct?",
         "Choices": [
           "Breakeven occurs where total in-house cost equals total outsource cost; algebraically, FixedI + vI × Q = FixedO + vO × Q, yielding Q* = (FixedO − FixedI) / (vI − vO).",
@@ -5656,7 +5731,9 @@ const casePackP2_1 = [
         "ExplanationWrongB": "Setting breakeven at Q = 0 ignores the variable-cost differential and is inconsistent with the algebraic identity of total cost comparison.",
         "ExplanationWrongC": "Cost of capital matters for NPV but is not the relevant input for a volume breakeven, which is a unit-cost crossover analysis.",
         "ExplanationWrongD": "Using expected throughput divided by two has no theoretical foundation in breakeven analysis and would lead to an arbitrary threshold.",
-        "ExplanationWrongA": ""
+        "ExplanationWrongA": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-C4-Q5",
@@ -5664,7 +5741,7 @@ const casePackP2_1 = [
         "Correct": "Build a hybrid solution: in-house for core proprietary algorithms and outsource for non-core commoditized functionality, preserving control and capturing scale economics.",
         "Explanation": "Under uncertainty, a hybrid make-vs-buy approach is often optimal because it preserves proprietary control where it creates differentiation while outsourcing non-core functionality to capture scale and speed. Applied to Flash Logistics, building the core algorithmic engine in-house and outsourcing non-core modules such as RFID tag management or standard reporting aligns with the strategic option-value premium. Interpretation: the recommendation is defensible because it captures both the quantitative NPV advantage of in-house and the qualitative flexibility of outsourcing for non-core modules. A common trap is to treat the decision as binary, ignoring the spectrum of partial make-and-buy solutions that align with strategy.",
         "Topic": "Hybrid sourcing with real options",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "After considering the $27M in-house NPV advantage, the $10M–$18M strategic option-value premium, and the volume breakeven analysis, what is Priya's most defensible recommendation under uncertainty?",
         "Choices": [
           "Build in-house unconditionally because quantitative NPV typically dominates qualitative factors.",
@@ -5680,7 +5757,9 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Unconditionally choosing in-house ignores the strategic option-value premium and the speed-to-deployment advantages that outsourcing offers for non-core modules.",
         "ExplanationWrongB": "Unconditionally outsourcing ignores the $27M NPV advantage and the control loss over proprietary algorithms that distinguish Flash Logistics.",
         "ExplanationWrongD": "Deferring indefinitely destroys value; Flash Logistics must commit to a decision to capture either the NPV advantage or the strategic option value.",
-        "ExplanationWrongC": ""
+        "ExplanationWrongC": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ21-C4-Q6",
@@ -5688,7 +5767,7 @@ const casePackP2_1 = [
         "Correct": "The interest rate charged by Flash Capital must be arm's-length, supported by a benchmarking study, and aligned with the OECD/G20 BEPS framework to avoid profit shifting between Flash Logistics and Flash Capital.",
         "Explanation": "Internal financing by Flash Capital is intra-group financing that must be priced at arm's length under OECD Transfer Pricing Guidelines and the G20 BEPS framework, supported by a benchmarking study (typically credit-rating-based pricing). Applied to Flash Logistics, any interest charged by Flash Capital must reflect the credit profile of the borrower and the economic substance of the financing arrangement; mispricing creates transfer-pricing exposure for the Flash Holdings group. Interpretation: the recommendation depends on whether the chosen alternative is financed by Flash Capital at arm's length, because that affects Flash Logistics' after-tax cost and the group's overall tax footprint. A common trap is to assume intra-group financing is automatically at cost, which violates the arm's-length principle.",
         "Topic": "Arm-length transfer pricing",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "If Flash Capital (the captive finance arm of Flash Holdings) provides internal financing for either alternative, what transfer-pricing consideration most affects the make-vs-buy recommendation?",
         "Choices": [
           "Transfer pricing is irrelevant because intra-group financing is recorded at cost.",
@@ -5704,9 +5783,12 @@ const casePackP2_1 = [
         "ExplanationWrongA": "Intra-group financing is not automatically recorded at cost; arm's-length pricing is required under OECD guidelines and most domestic transfer-pricing regimes.",
         "ExplanationWrongC": "Charging the maximum allowable rate is not arm's-length and would expose Flash Holdings to transfer-pricing penalties and double taxation.",
         "ExplanationWrongD": "The U.S. Treasury yield curve is one possible benchmark but is not the only acceptable basis; arm's-length pricing typically uses comparable-uncontrolled-price or yield-curve analysis specific to the borrower's credit profile.",
-        "ExplanationWrongB": ""
+        "ExplanationWrongB": "",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-A5",
@@ -6332,7 +6414,7 @@ const casePackP2_1 = [
           "The floor should include allocated fixed costs of $15 per kg plus variable cost at any capacity level",
           "A dual-rate (credit supplier at $34, charge buyer at $22) is acceptable for external GAAP reporting"
         ],
-        "Explanation": "Minimum transfer price = Variable cost + Opportunity cost per unit of constrained resource. With idle capacity no external sale is displaced, so opportunity cost is zero and the floor is $22. At capacity the 10,000 kg displaces external sales at $12 CM each, so the floor rises to $34, converging to market price — the classic TOC result. Allocated fixed costs are not incremental and do not enter the floor. Dual rates aid goal congruence internally but are not GAAP for external reporting; intercompany profit is eliminated and inventory reported at cost. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Minimum transfer price = Variable cost + Opportunity cost per unit of constrained resource. With idle capacity no external sale is displaced, so opportunity cost is zero and the floor is $22. At capacity the 10,000 kg displaces external sales at $12 CM each, so the floor rises to $34, converging to market price — the classic TOC result. Allocated fixed costs are not incremental and do not enter the floor. Dual rates aid goal congruence internally but are not GAAP for external reporting; intercompany profit is eliminated and inventory reported at cost..",
         "Topic": "Transfer pricing floors",
         "Subtopic": "Idle vs constrained capacity",
         "Difficulty": "Moderate",
@@ -6449,7 +6531,7 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ21-F3-E1",
@@ -6615,7 +6697,7 @@ const casePackP2_1 = [
           "Requiring original paper invoices for all purchases above $5,000",
           "Raising the gift-reporting threshold to $2,000 to reduce administrative burden"
         ],
-        "Explanation": "The $800 gift exploited single-point vendor influence, and the $900K shipment exploited the lack of a return-rights checkpoint — controls must close those exact mechanisms: dual authorization breaks the sole-control loop, the revenue hold makes the return promise verifiable before revenue is cut off, and the hotline gives the next person in Elena's position a protected channel. Paper invoices add friction without breaking the approval monopoly, and raising the gift threshold ratifies the conflict rather than removing it. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The $800 gift exploited single-point vendor influence, and the $900K shipment exploited the lack of a return-rights checkpoint — controls must close those exact mechanisms: dual authorization breaks the sole-control loop, the revenue hold makes the return promise verifiable before revenue is cut off, and the hotline gives the next person in Elena's position a protected channel. Paper invoices add friction without breaking the approval monopoly, and raising the gift threshold ratifies the conflict rather than removing it.",
         "Topic": "Ethics control remediation",
         "Subtopic": "Vendor and revenue controls",
         "Difficulty": "Difficult",
@@ -6675,8 +6757,9 @@ const casePackP2_1 = [
         "Dependencies": []
       }
     ],
-    "certification_session": "P2-PACK1-CERT",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-A6",
@@ -6727,7 +6810,7 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ21-A6-E1",
@@ -6858,7 +6941,7 @@ const casePackP2_1 = [
           "Long-term debt — fixed nominal, gains purchasing power",
           "Common stock — historical cost"
         ],
-        "Explanation": "Inventory FIFO distorts gross margin in inflation; cash is monetary correct, debt gains purchasing power. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "Governing principle: under ASC 255 constant-dollar accounting, FIFO inventory is the line most distorted by general price-level inflation, because the cost flow assumption matches new costs to new revenue and old costs to old revenue. Exhibit 1 shows inventory rising from $30.0M to $36.0M, a 20.0% nominal build against a 4.5% CPI increase, so roughly 14.8% of that build is real volume rather than price. Under FIFO, ending inventory carries recent (inflated) costs while the cost of goods sold charged against the same units carries pre-inflation costs, which overstates reported gross margin and leaves the balance sheet carrying inventory at an amount that no longer reflects current replacement cost. This is why ASC 255 requires a current-cost disclosure for nonmonetary inventory in a period of significant inflation. The distractors fail because cash and long-term debt are monetary items: cash is already correct at nominal, and fixed-nominal debt gains purchasing power, which flatters rather than distorts. Common stock is carried at historical cost but is an equity claim, not an operating asset measured through the income statement, so its FIFO/NIFO mechanics do not affect gross margin.",
         "Topic": "Inventory distortion",
         "Subtopic": "FIFO vs current",
         "Difficulty": "Difficult",
@@ -6973,8 +7056,9 @@ const casePackP2_1 = [
         "Dependencies": []
       }
     ],
-    "certification_session": "P2-PACK1-CERT",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-C6",
@@ -7340,7 +7424,7 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ21-F4-E1",
@@ -7499,7 +7583,7 @@ const casePackP2_1 = [
           "Recognize $25M early",
           "Restrict donor access to drafts"
         ],
-        "Explanation": "Expand assurance to 100% or qualify the carbon-neutral headline to '40% assured, 60% unaudited' so donors see scope, charter audit-committee ESG oversight with management certification analogous to SOX 302, and maintain an anonymous hotline with non-retaliation training under SOX 806. Recognizing the $25M conditional gift early would violate ASC 958. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Expand assurance to 100% or qualify the carbon-neutral headline to '40% assured, 60% unaudited' so donors see scope, charter audit-committee ESG oversight with management certification analogous to SOX 302, and maintain an anonymous hotline with non-retaliation training under SOX 806. Recognizing the $25M conditional gift early would violate ASC 958..",
         "Topic": "Controls",
         "Subtopic": "Difficult",
         "Difficulty": "Moderate",
@@ -7554,8 +7638,9 @@ const casePackP2_1 = [
         "Dependencies": []
       }
     ],
-    "certification_session": "P2-PACK1-CERT",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-B5",
@@ -7606,7 +7691,7 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ21-B5-E1",
@@ -7767,7 +7852,7 @@ const casePackP2_1 = [
           "Undervalued stock — repurchase accretive",
           "Shareholder tax deferral vs dividend tax now"
         ],
-        "Explanation": "Two factors support repurchase here. First, the stock is undervalued — repurchasing below intrinsic value is mathematically accretive (per-share earnings rise as the share count falls against a fixed earnings numerator). Second, repurchase defers shareholder tax relative to dividends — capital gains are taxed only on sale at the holder's election, while dividends are taxed in the current period at ordinary income rates for many holders. These two together (accretion + tax deferral) are the canonical repurchase advantages. Choice C ('repurchase always higher payout') is the absolute-language trap; Choice D ('dividend signals growth') reverses standard signaling theory; Choice E ('repurchase requires no cash') is factually false — repurchase uses cash. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Two factors support repurchase here. First, the stock is undervalued — repurchasing below intrinsic value is mathematically accretive (per-share earnings rise as the share count falls against a fixed earnings numerator). Second, repurchase defers shareholder tax relative to dividends — capital gains are taxed only on sale at the holder's election, while dividends are taxed in the current period at ordinary income rates for many holders. These two together (accretion + tax deferral) are the canonical repurchase advantages. Choice C ('repurchase always higher payout') is the absolute-language trap; Choice D ('dividend signals growth') reverses standard signaling theory; Choice E ('repurchase requires no cash') is factually false — repurchase uses cash..",
         "Topic": "Repurchase",
         "Subtopic": "Factors",
         "Difficulty": "Moderate",
@@ -7831,8 +7916,9 @@ const casePackP2_1 = [
         ]
       }
     ],
-    "certification_session": "P2-PACK1-CERT",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-D3",
@@ -7883,7 +7969,7 @@ const casePackP2_1 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ21-D3-E1",
@@ -8118,8 +8204,9 @@ const casePackP2_1 = [
         ]
       }
     ],
-    "certification_session": "P2-PACK1-CERT",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-E4",
@@ -8351,7 +8438,7 @@ const casePackP2_1 = [
           "Lock price via contract — addresses 60% driver",
           "Hedge volume via offtake agreement — addresses 25%"
         ],
-        "Explanation": "Two actions manage risk proportional to driver variance. Locking price via contract addresses 60% (the dominant driver) and removes the largest source of NPV variability. Hedging volume via offtake agreement addresses 25% (second driver) and stabilizes the demand-side risk. Cost audit at 15% is the lowest-leverage action and not in the optimal pair; it might be done for completeness but is not where risk-management effort pays off. Choice C (audit cost only) misses the dominant drivers; Choice D (ignore price) violates the tornado hierarchy; Choice E (add fixed cost) worsens downside by raising the loss threshold. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Two actions manage risk proportional to driver variance. Locking price via contract addresses 60% (the dominant driver) and removes the largest source of NPV variability. Hedging volume via offtake agreement addresses 25% (second driver) and stabilizes the demand-side risk. Cost audit at 15% is the lowest-leverage action and not in the optimal pair; it might be done for completeness but is not where risk-management effort pays off. Choice C (audit cost only) misses the dominant drivers; Choice D (ignore price) violates the tornado hierarchy; Choice E (add fixed cost) worsens downside by raising the loss threshold..",
         "Topic": "Risk management",
         "Subtopic": "Actions",
         "Difficulty": "Moderate",
@@ -8463,7 +8550,7 @@ const casePackP2_1 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -8685,7 +8772,7 @@ const casePackP2_1 = [
           "Supplier C: Accept — the 25% volume share is small enough to absorb without action",
           "Supplier B: Transfer — shift all Supplier B risk to a third-party logistics provider"
         ],
-        "Explanation": "Supplier A scores 12 on the heat map (Moderate likelihood, High severity) and accounts for $120,000 in expected loss with a 40% volume concentration. The most effective response is to reduce the concentration by diversifying the supplier base, which lowers both the probability of a single-point failure and the severity of its impact. Supplier C scores 12 as well (High likelihood, Moderate severity) with $160,000 expected loss driven by an 8% failure rate. Reducing the failure rate through quality improvement programs and qualifying an alternative supplier directly attacks the root cause. Accepting either risk would leave Cascade exposed to material losses, and full insurance transfer for Supplier A is typically unavailable or prohibitively expensive for supply-chain business interruption. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Supplier A scores 12 on the heat map (Moderate likelihood, High severity) and accounts for $120,000 in expected loss with a 40% volume concentration. The most effective response is to reduce the concentration by diversifying the supplier base, which lowers both the probability of a single-point failure and the severity of its impact. Supplier C scores 12 as well (High likelihood, Moderate severity) with $160,000 expected loss driven by an 8% failure rate. Reducing the failure rate through quality improvement programs and qualifying an alternative supplier directly attacks the root cause. Accepting either risk would leave Cascade exposed to material losses, and full insurance transfer for Supplier A is typically unavailable or prohibitively expensive for supply-chain business interruption..",
         "Topic": "Risk response strategies",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -8747,8 +8834,9 @@ const casePackP2_1 = [
         ]
       }
     ],
-    "certification_session": "P2-PACK1-CERT-W2",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-F5",
@@ -8883,14 +8971,14 @@ const casePackP2_1 = [
         "ItemID": "CBQ21-F5-Q1",
         "Type": "select",
         "Prompt": "Daniel Grant personally certifies Pinnacle's quarterly financial reports. Under which SOX section does Grant face personal liability if he knowingly certifies financial statements that contain the misstated software maintenance costs?",
-        "Correct": "C",
+        "Correct": "A",
         "Choices": [
           "SOX Section 302, which requires the CEO and CFO to certify that financial statements are fairly presented and that disclosure controls are effective, with personal liability for knowing violations",
           "SOX Section 404, which requires management to assess the effectiveness of internal controls over financial reporting annually",
           "SOX Section 806, which provides whistleblower protection for employees who report suspected securities law violations",
           "SOX Section 802, which imposes criminal penalties for altering or destroying documents to impede an official proceeding"
         ],
-        "Explanation": "SOX Section 302 requires the CEO and CFO to personally certify each periodic report, affirming that the financial statements are fairly presented and that they have disclosed any material deficiencies in internal controls. A knowing certification of misstated financials exposes the certifying officer to personal civil and criminal liability. Section 404 addresses internal control assessment, not officer certification; Section 806 protects whistleblowers from retaliation; Section 802 criminalizes document destruction. The trap is conflating officer certification liability (Section 302) with internal control assessment (Section 404), which are distinct obligations under the Sarbanes-Oxley Act.",
+        "Explanation": "Section 302 of the Sarbanes-Oxley Act requires the CEO and CFO to personally certify each periodic report, affirming that the financial statements are fairly presented in all material respects, that responsibility for internal control has been designated, and that any material weaknesses in internal control have been disclosed. Grant is the CFO who certifies, so a knowing certification of statements carrying the improperly capitalized $1,200,000 exposes him personally to civil liability under 302, with separate criminal exposure under Section 906 for knowingly certifying false financial statements. The other sections govern different roles: Section 404 is management's annual assessment of internal control over financial reporting, not officer certification; Section 806 protects employees from retaliation when they report suspected violations, which is the role Sarah Okafor is in rather than Grant's; and Section 802 criminalizes destroying or altering documents to impede a proceeding, which is not at issue here. A common trap is crediting the certifying officer with Section 806, because 806 is the section most often cited in whistleblower discussions — but it protects the reporter, not the officer who certifies.",
         "Topic": "SOX Section 302 officer certification",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -8952,7 +9040,7 @@ const casePackP2_1 = [
           "Contact the SEC Enforcement Division directly as the immediate first step without first attempting internal escalation",
           "Share the findings informally with peers at competing logistics companies to assess industry norms before escalating"
         ],
-        "Explanation": "The IMA Statement of Ethical Professional Practice requires members to follow the organization's established resolution policy. When the immediate supervisor is implicated, the member must escalate to the next-higher level — in Pinnacle's governance structure, the audit committee chair. Contemporaneous documentation preserves the evidentiary record, and notifying external auditors ensures the independent auditors can evaluate the classification for the financial statements. Complying temporarily maintains the misstatement and removes the auditor's ability to act in good faith; contacting the SEC before exhausting internal channels is premature under IMA guidance; and sharing facts externally breaches confidentiality. The trap is assuming external reporting or resignation are opening moves; the IMA framework sequences internal escalation first. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "The IMA Statement of Ethical Professional Practice requires members to follow the organization's established resolution policy. When the immediate supervisor is implicated, the member must escalate to the next-higher level — in Pinnacle's governance structure, the audit committee chair. Contemporaneous documentation preserves the evidentiary record, and notifying external auditors ensures the independent auditors can evaluate the classification for the financial statements. Complying temporarily maintains the misstatement and removes the auditor's ability to act in good faith; contacting the SEC before exhausting internal channels is premature under IMA guidance; and sharing facts externally breaches confidentiality. The trap is assuming external reporting or resignation are opening moves; the IMA framework sequences internal escalation first.",
         "Topic": "IMA ethical conflict resolution sequence",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -9066,11 +9154,12 @@ const casePackP2_1 = [
         "Dependencies": []
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Part": 2,
     "Part2OnlyFlag": true,
-    "certification_session": "P2-PACK1-CERT-W2",
-    "certification_date": "2026-09-04"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ21-B6",
@@ -9273,7 +9362,7 @@ const casePackP2_1 = [
           "The USD borrowing rate of 6.25%, which determines the cost of the forward contract premium",
           "The EUR borrowing rate of 5.50%, which sets the floor for the money-market hedge proceeds"
         ],
-        "Explanation": "The forward hedge is superior because the forward rate (1.0920) determines the guaranteed USD proceeds under the forward contract, and the interest rate differential (USD deposit 4.80% minus EUR deposit 3.50% = 1.30%) determines the synthetic exchange rate achievable through the money-market hedge. When the forward premium (2.60%) exceeds this differential (1.30%), the forward contract offers more value. The spot rate affects both hedges equally and does not explain the difference. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "The forward hedge is superior because the forward rate (1.0920) determines the guaranteed USD proceeds under the forward contract, and the interest rate differential (USD deposit 4.80% minus EUR deposit 3.50% = 1.30%) determines the synthetic exchange rate achievable through the money-market hedge. When the forward premium (2.60%) exceeds this differential (1.30%), the forward contract offers more value. The spot rate affects both hedges equally and does not explain the difference..",
         "Topic": "Hedge factor analysis",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -9849,4 +9938,4 @@ const casePackP2_1 = [
     "certification_session": "P2-PACK1-CERT-W2",
     "certification_date": "2026-09-04"
   }
-]
+];

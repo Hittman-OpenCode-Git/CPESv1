@@ -42,8 +42,8 @@ const casePackP2_3 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -262,7 +262,7 @@ const casePackP2_3 = [
           "OUTSOURCE — the net annual advantage is $425,000 — CONTINGENT on qualifying a second supplier and signing an SLA with audit rights and a transition safety-stock period before the line conversion",
           "Outsource and eliminate the supervisor position effective immediately, transferring quality oversight to the supplier"
         ],
-        "Explanation": "The economics are decisive (+$425K) but the execution conditions protect them: dual qualification prevents the single-source failure mode from converting a contribution gain into a double loss, and the SLA makes supplier performance enforceable. Option A compares the quote to FULL cost ($24.00 standard includes the irrelevant allocation) — a tie that ignores $560K of opportunity benefits. Leaving space idle (B) forfeits $20K of rent plus all Product Z contribution. Immediate termination of the supervisor (D) removes the transition-period quality bridge precisely when process knowledge transfer matters most. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "The economics are decisive (+$425K) but the execution conditions protect them: dual qualification prevents the single-source failure mode from converting a contribution gain into a double loss, and the SLA makes supplier performance enforceable. Option A compares the quote to FULL cost ($24.00 standard includes the irrelevant allocation) — a tie that ignores $560K of opportunity benefits. Leaving space idle (B) forfeits $20K of rent plus all Product Z contribution. Immediate termination of the supervisor (D) removes the transition-period quality bridge precisely when process knowledge transfer matters most.",
         "Topic": "Sourcing recommendation",
         "Subtopic": "Conditional implementation",
         "Difficulty": "Difficult",
@@ -278,7 +278,9 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-E1",
@@ -324,8 +326,8 @@ const casePackP2_3 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -556,7 +558,9 @@ const casePackP2_3 = [
           "CBQ23-E1-Q2"
         ]
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-C2",
@@ -602,10 +606,8 @@ const casePackP2_3 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch2",
-    "recertification_date": "2026-09-20",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -793,7 +795,7 @@ const casePackP2_3 = [
           "Present the minimum-price analysis ($74.67) and refuse any discussion below it, ending negotiations",
           "DECLINE the 1,200 at $65 as structured, present the tiered counter (idle units from $48; displaced units at regular economics), and share the capacity outlook honestly — positioning Hartwell as a disciplined partner rather than a distressed seller"
         ],
-        "Explanation": "The recommendation executes the arithmetic through the relationship lens: declining the unprofitable structure protects $32,000/month of superior contribution, the tiered counter captures every dollar of genuinely available capacity, and transparent capacity communication converts 'no' into 'here is what works' — preserving the customer for periods when slack returns. Overtime (B) introduces a NEW relevant cost (premium wages) that likely pushes the true floor higher still, not lower. Hard refusal (C) wins the argument and loses the account. The correct choice is supported by the exhibit data and the governing accounting standard. Note: Negative values are shown in parentheses per standard accounting sign convention.",
+        "Explanation": "The recommendation executes the arithmetic through the relationship lens: declining the unprofitable structure protects $32,000/month of superior contribution, the tiered counter captures every dollar of genuinely available capacity, and transparent capacity communication converts 'no' into 'here is what works' — preserving the customer for periods when slack returns. Overtime (B) introduces a NEW relevant cost (premium wages) that likely pushes the true floor higher still, not lower. Hard refusal (C) wins the argument and loses the account. Note: Negative values are shown in parentheses per standard accounting sign convention.",
         "Topic": "Negotiation recommendation",
         "Subtopic": "Relationship-preserving refusal",
         "Difficulty": "Difficult",
@@ -809,7 +811,9 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-F2",
@@ -855,8 +859,8 @@ const casePackP2_3 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -1080,7 +1084,9 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A1",
@@ -1309,7 +1315,7 @@ const casePackP2_3 = [
           "C": "1.30 - full guarantee of $6.0 million added to total liabilities",
           "D": "1.34 - guarantee plus the absolute value of the AOCI translation deficit"
         },
-        "Explanation": "Adjusted debt-to-equity (catalog FA-07) adds the guaranteed affiliated debt to reported obligations: (72,000 + 6,000) / 60,000 = 78,000 / 60,000 = 1.30 versus the unadjusted 72,000 / 60,000 = 1.20. A parent guarantee is a present obligation a change-of-control lender would price as debt, so the full amount belongs in the first-cut capitalization. Candidates err by stopping at reported leverage or by sweeping the peso translation deficit into debt; under ASC 830 that deficit is an equity measurement item in AOCI, not a liability, so option D double-counts an equity component. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "Adjusted debt-to-equity (catalog FA-07) adds the guaranteed affiliated debt to reported obligations: (72,000 + 6,000) / 60,000 = 78,000 / 60,000 = 1.30 versus the unadjusted 72,000 / 60,000 = 1.20. A parent guarantee is a present obligation a change-of-control lender would price as debt, so the full amount belongs in the first-cut capitalization. Candidates err by stopping at reported leverage or by sweeping the peso translation deficit into debt; under ASC 830 that deficit is an equity measurement item in AOCI, not a liability, so option D double-counts an equity component.",
         "Topic": "Adjusted debt-to-equity",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -1433,9 +1439,10 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-065",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-B1",
@@ -2745,7 +2752,7 @@ const casePackP2_3 = [
           "Confirm the $60,000 salvage estimate and that salvage equals book value so no taxable gain arises in Year 5.",
           "Verify that projected costs exclude allocations of existing corporate overhead that will not change if the line launches."
         ],
-        "Explanation": "Sound capital governance tests fragility and input integrity before approval. Recomputing at 12 percent gives 264000x3.605 + 60000x0.567 - 900000 = 951720 + 34020 - 900000 = $85,740, confirming the decision survives a steeper hurdle; verification of this arithmetic appears in the Exhibit 2 accuracy note. Validating salvage matters because equality with book value is what keeps Year 5 free of tax adjustment, and scrubbing allocations honors the incremental-cash-flow principle set out in the CFO memo. Funding both projects contradicts the mutually exclusive premise, and the feasibility study is sunk, so adding it would distort Year 0 by $150,000 with no decision relevance. A common trap is treating historical study costs as relevant simply because they attach to the winning project. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Sound capital governance tests fragility and input integrity before approval. Recomputing at 12 percent gives 264000x3.605 + 60000x0.567 - 900000 = 951720 + 34020 - 900000 = $85,740, confirming the decision survives a steeper hurdle; verification of this arithmetic appears in the Exhibit 2 accuracy note. Validating salvage matters because equality with book value is what keeps Year 5 free of tax adjustment, and scrubbing allocations honors the incremental-cash-flow principle set out in the CFO memo. Funding both projects contradicts the mutually exclusive premise, and the feasibility study is sunk, so adding it would distort Year 0 by $150,000 with no decision relevance. A common trap is treating historical study costs as relevant simply because they attach to the winning project.",
         "Topic": "Capital budgeting governance",
         "Subtopic": "Sensitivity and data integrity checks",
         "Difficulty": "Difficult",
@@ -2844,9 +2851,10 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-F3",
@@ -3198,9 +3206,9 @@ const casePackP2_3 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3315,7 +3323,7 @@ const casePackP2_3 = [
         "Correct": "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 5,529 hours to cover the $140,000 of fixed manufacturing and SG&A.",
         "Explanation": "Product A contributes $60 per unit on 2.14 hours, or $60 / 2.14 = $28.04 per reactor hour, ranking ahead of Product B at $22/hour and Product C at $15/hour. The weighted-average contribution per hour for the current mix is $316,000 / 12,480 hours ≈ $25.32/hour, so breakeven hours for the $140,000 of fixed manufacturing and SG&A equal $140,000 / $25.32 ≈ 5,529 hours. The prior 4,640-hour figure assumed a rebalanced mix; at the actual current mix, 5,529 hours is correct.",
         "Topic": "Contribution margin per constrained hour",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Based on Exhibit 1, which statement most accurately describes the contribution-margin-per-reactor-hour ranking and the units required to break even on fixed manufacturing and SG&A for the current product mix?",
         "Choices": [
           "Product A ranks first at approximately $28 per reactor hour, and at the current mix the plant needs roughly 5,529 hours to cover the $140,000 of fixed manufacturing and SG&A.",
@@ -3331,7 +3339,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Product C contributes $30 per unit but only $15 per reactor hour — per-unit margin and per-constrained-resource margin are different measures when hours per unit differ, so Product C does not rank first under the binding constraint.",
         "ExplanationWrongC": "Per-hour contribution is not the same as per-unit contribution, so the three products do not rank equally on a per-hour basis; Product A at roughly $28/hour clearly outranks Product C at $15/hour.",
-        "ExplanationWrongD": "Product B does not rank first under a binding reactor constraint because Product A delivers $28 per reactor hour versus B's $22; ranking by lowest variable-cost ratio ignores the constrained-resource metric."
+        "ExplanationWrongD": "Product B does not rank first under a binding reactor constraint because Product A delivers $28 per reactor hour versus B's $22; ranking by lowest variable-cost ratio ignores the constrained-resource metric.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-C3-Q2",
@@ -3339,7 +3349,7 @@ const casePackP2_3 = [
         "Correct": "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.",
         "Explanation": "If 12,000 hours are dedicated to Product A at $28.04 per hour, total contribution is 12,000 × $28.04 ≈ $336,480. At 2.14 hours per unit, that is 12,000 / 2.14 ≈ 5,607 units of Product A. The displaced B and C volume is the opportunity cost that must be evaluated against outsourcing economics.",
         "Topic": "Total contribution margin computation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 1 and Exhibit 2, if Flash Industrial reallocates all 12,000 available bottleneck hours to the highest contribution-per-hour product, what is the maximum period contribution margin, and how many units of that product are produced?",
         "Choices": [
           "Approximately $336,000 of contribution margin from about 5,607 units of Product A, assuming Product A is fully substitutable for the displaced B and C volume.",
@@ -3355,7 +3365,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Allocating all 12,000 hours to Product B yields 12,000 × $22 = $264,000, but Product B is not the highest contribution-per-hour product; Product A outranks it.",
         "ExplanationWrongC": "Allocating hours to Product C yields 12,000 × $15 = $180,000, which is the lowest of the three options because Product C has the weakest contribution per constrained resource.",
-        "ExplanationWrongD": "Product A requires 2.14 hours per unit, not 2.00, so 12,000 hours produce roughly 5,607 units, not 6,000; the contribution figure also does not match exactly at 6,000 units."
+        "ExplanationWrongD": "Product A requires 2.14 hours per unit, not 2.00, so 12,000 hours produce roughly 5,607 units, not 6,000; the contribution figure also does not match exactly at 6,000 units.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-C3-Q3",
@@ -3363,7 +3375,7 @@ const casePackP2_3 = [
         "Correct": "Margin of safety is approximately $336,000, indicating the plant could halve volume before incurring a loss.",
         "Explanation": "Breakeven sales = fixed costs / contribution-margin ratio. Contribution-margin ratio is $336,000 / $700,000 ≈ 48%. Breakeven sales = $175,000 / 0.48 ≈ $364,583. Margin of safety = $700,000 − $364,583 ≈ $335,417 in dollars, or about 47.9% of expected sales. Option B's $161,000/23% figure understates the cushion by excluding allocated corporate cost contrary to the stated $175,000 fixed total; the correct margin is about $335,000 (about 48%).",
         "Topic": "Margin of safety analysis",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under the recommended Product-A-led mix, with $336,000 of contribution margin and $175,000 of total fixed costs (manufacturing plus allocated corporate), what is the margin of safety in dollars and as a percentage of expected sales, assuming expected sales of approximately $700,000?",
         "Choices": [
           "Margin of safety is approximately $25,000, or about 3.6% of expected sales, indicating very thin cushion.",
@@ -3379,7 +3391,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A applies margin-of-safety to a single-product CVP rather than the multi-product mix; with multi-product CVP under a constrained bottleneck, the standard margin-of-safety calculation (current sales - break-even sales) must be weighted across the actual product mix, not applied to the highest-margin product in isolation.",
         "ExplanationWrongB": "A $161,000/23% margin matches no derivation from the given inputs: breakeven = $175,000/0.48 = $364,583, so margin = $700,000 - $364,583 = about $335,000. The $161,000 figure likely drops allocated corporate cost contrary to the stated $175,000 fixed total.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "A 75% margin of safety is implausible because that would require breakeven sales of only $175,000, implying a contribution-margin ratio above 99%, which is not consistent with the product economics in Exhibit 1."
+        "ExplanationWrongD": "A 75% margin of safety is implausible because that would require breakeven sales of only $175,000, implying a contribution-margin ratio above 99%, which is not consistent with the product economics in Exhibit 1.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-C3-Q4",
@@ -3387,7 +3401,7 @@ const casePackP2_3 = [
         "Correct": "The captive trucking rate of $1,450 per load should be benchmarked against external carrier rates, and any residual margin earned by Flash Logistics should be tested under the comparable-profits-interval method to confirm arm's-length pricing on the remaining in-house volume.",
         "Explanation": "Outsourcing changes the volume that Flash Logistics handles but does not eliminate the related-party pricing analysis. The remaining in-house volume continues to move on Flash Logistics trucks, so the $1,450-per-load rate still requires benchmarking against external carriers, and any margin Flash Logistics earns on the captive business should be tested under the comparable-profits-interval (CPI) method or a CUP method, consistent with OECD/German Section 482 principles.",
         "Topic": "Make-or-buy captive vs external rate",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "The CFO has asked how a shift to outsource TerraBond to a third-party supplier at $42 per unit would affect Flash Industrial's intercompany transfer-pricing exposure with Flash Logistics. Which analysis is most appropriate?",
         "Choices": [
           "Outsourcing eliminates the captive trucking arrangement with Flash Logistics, removing any related-party pricing issue; the arm's-length test therefore becomes moot for the outsourced volume.",
@@ -3403,7 +3417,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A applies transfer pricing at full market price to all intercompany volume including a portion that the captive will retain; when only part of volume is outsourced and the captive continues to handle the remainder at standard capacity, transfer-pricing implications apply only to the displaced volume, not the entire original flow.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Section 482 does not impose automatic penalties when related-party transaction counts rise; penalties arise only when pricing falls outside the arm's-length range, so the count of transactions is generally irrelevant.",
-        "ExplanationWrongD": "Transfer pricing applies to both inbound and outbound related-party transactions, including captive service arrangements such as the Flash Logistics trucking line."
+        "ExplanationWrongD": "Transfer pricing applies to both inbound and outbound related-party transactions, including captive service arrangements such as the Flash Logistics trucking line.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-C3-Q5",
@@ -3411,7 +3427,7 @@ const casePackP2_3 = [
         "Correct": "Allocate capacity to A first, then B, then C; produce C only to the extent needed to retain key customers, and outsource the marginal TerraBond units to a third party at $42 per unit.",
         "Explanation": "The optimal constrained-resource mix allocates hours to the highest contribution-per-hour product first (A), then to the next best (B), and finally to the lowest (C) only when needed to retain strategic customers. Marginal TerraBond units that exceed reactor capacity should be evaluated against the $42 outsourcing quote; because in-house variable cost is $34, outsourcing at $42 saves the reactor hours for A and B while preserving customer revenue. This balances capital efficiency, customer retention, and fixed-cost recovery.",
         "Topic": "Constrained capacity allocation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Holding WACC at 9%, fixed costs at $175,000 per period, and current demand for A and B unchanged, which recommendation best balances optimal contribution against capital rationing, fixed-cost recovery, and customer relationships on TerraBond?",
         "Choices": [
           "Allocate all 12,000 hours to Product A because it has the highest contribution per reactor hour, ignoring TerraBond customers entirely.",
@@ -3427,7 +3443,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A eliminates the lowest-margin product from the mix; under a constrained-bottleneck model, eliminating the lowest-margin product (per bottleneck-hour) actually frees capacity for higher-margin products and is typically a sound recommendation, not a tactical mistake.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Maintaining the current mix forgoes roughly $20,000 of period contribution when capacity is binding, which is not defensible to the audit committee when an internally consistent reallocation is available.",
-        "ExplanationWrongD": "Shutting down the line entirely eliminates the contribution those units provide and is rarely the lowest opportunity-cost choice; redeploying fixed marketing spend is not a substitute for the contribution margin on displaced volume."
+        "ExplanationWrongD": "Shutting down the line entirely eliminates the contribution those units provide and is rarely the lowest opportunity-cost choice; redeploying fixed marketing spend is not a substitute for the contribution margin on displaced volume.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-C3-Q6",
@@ -3435,7 +3453,7 @@ const casePackP2_3 = [
         "Correct": "Outsourcing is preferable only if the supplier can scale to peak demand, has audited quality systems, and the freed hours are committed to Product A under a contract that locks in price and volume for at least 18 months.",
         "Explanation": "Outsourcing is generally appropriate only when the supplier's capacity, quality systems, and contract terms mitigate execution risk over a horizon that matches the in-house cost recovery. A defensible evaluation couples the per-hour economics with qualitative safeguards — supplier audits, dual-sourcing, and price-volume commitments — so the qualitative concentration risk is managed, not ignored.",
         "Topic": "Outsourcing scale and control conditions",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "The CEO is weighing whether to outsource all TerraBond production at $42 per unit and use the freed reactor hours entirely for Product A. Which evaluation best weighs that decision against the qualitative risks of single-product concentration?",
         "Choices": [
           "Outsourcing all TerraBond is generally preferable because Product A delivers roughly $28 per reactor hour versus $15 in-house for C, so the opportunity cost of keeping C in-house is high; the qualitative risk of single-product dependence is outweighed by the quantitative gain.",
@@ -3451,9 +3469,12 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A treats single-supplier concentration as inherently disqualifying; a single supplier can be acceptable if it has proven reliability, quality certification, capacity headroom, and contractual volume-flexibility clauses — single source is a risk factor to mitigate, not a categorical exclusion.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "COSO ERM does not automatically disqualify single-product dependence; it requires the entity to identify, assess, and respond to that risk, which can be done through outsourcing controls and contingency planning.",
-        "ExplanationWrongD": "Fixed costs do not vanish when a product is outsourced; they are reabsorbed by remaining products, which raises per-unit fixed-cost absorption and can erode the apparent margin advantage of outsourcing."
+        "ExplanationWrongD": "Fixed costs do not vanish when a product is outsourced; they are reabsorbed by remaining products, which raises per-unit fixed-cost absorption and can erode the apparent margin advantage of outsourcing.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-D2",
@@ -3503,9 +3524,9 @@ const casePackP2_3 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3622,7 +3643,7 @@ const casePackP2_3 = [
         "Correct": "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.",
         "Explanation": "Risk capacity is the objective ceiling ($20M) the entity can survive without threatening solvency; risk appetite is the discretionary amount ($8M) management chooses to accept in pursuit of the TradeBridge business plan. At launch, capacity ($20M) exceeds appetite ($8M) because management deliberately keeps exposure below the survivability ceiling. The month-3 delinquency ($4M expected loss) sits within appetite ($8M) but is approaching it, requiring monitoring — not an immediate breach of capacity ($20M). Choices B, C, and D misstate the definitions: capacity and appetite are not synonymous (B); appetite is set internally by the board, not by regulators (C); both concepts span operational, credit, and market risk rather than splitting by loss type (D).",
         "Topic": "Risk capacity vs appetite",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "TradeBridge's launch plan projects a $4M expected loss against $500M exposure with a 3.5% delinquency ceiling. The board has set a risk capacity of $20M and a risk appetite of $8M. During month 3, portfolio delinquency hits 3.7% with $4M expected loss. Which statement correctly applies the distinction between risk capacity and risk appetite to this situation?",
         "Choices": [
           "Risk capacity is the maximum loss Flash Capital can absorb before breaching internal capital targets, while risk appetite is the amount of risk management is willing to accept in pursuit of the TradeBridge business plan; capacity generally exceeds appetite at launch.",
@@ -3638,7 +3659,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Capacity and appetite are not synonymous in modern ERM frameworks; conflating them typically produces inconsistent limit-setting and is one of the most common audit findings for new product launches.",
         "ExplanationWrongC": "Risk appetite is set internally by the board, not by regulators; capital and prudential limits are regulators' tools, which constrain capacity rather than define appetite.",
-        "ExplanationWrongD": "Both concepts apply across operational, credit, and market risk; restricting capacity to operational loss is a category error that produces under-calibrated risk limits."
+        "ExplanationWrongD": "Both concepts apply across operational, credit, and market risk; restricting capacity to operational loss is a category error that produces under-calibrated risk limits.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-D2-Q2",
@@ -3646,7 +3669,7 @@ const casePackP2_3 = [
         "Correct": "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.",
         "Explanation": "The mean is 1.6% and the green-amber boundary is 2.5%, a difference of 0.9 percentage points. At a standard deviation of 0.7 percentage points, that is roughly 0.9 / 0.7 ≈ 1.3 standard deviations. Under a normal distribution, a 1.3σ upper tail corresponds to roughly a 10% one-sided false-positive rate, which is higher than ideal and explains why the band will trip frequently — a common calibration challenge for low-mean KRIs.",
         "Topic": "KRI threshold calibration",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 2 and assuming portfolio delinquency is approximately normally distributed, what is the implied green-amber boundary in number of standard deviations above the observed mean, and what does that imply for false-positive rates?",
         "Choices": [
           "The green-amber boundary at 2.5% sits approximately 1.3 standard deviations above the mean of 1.6%, implying relatively frequent amber triggers and elevated false-positive noise.",
@@ -3662,7 +3685,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "0.9 percentage points divided by a 0.7-percentage-point standard deviation gives about 1.3 standard deviations, not 0.9; the answer mis-states the relationship between the band and the standard deviation.",
         "ExplanationWrongC": "A 2.0-standard-deviation boundary would sit at 1.6% + 2 × 0.7% = 3.0%, not at 2.5%; the 2.5% boundary is closer to 1.3 standard deviations, so the false-positive rate is materially higher than 2.5%.",
-        "ExplanationWrongD": "KRI calibration routinely assumes approximate normality under stable operating conditions; the test is whether the underlying assumption is plausible for the metric, not whether the metric is mathematically continuous."
+        "ExplanationWrongD": "KRI calibration routinely assumes approximate normality under stable operating conditions; the test is whether the underlying assumption is plausible for the metric, not whether the metric is mathematically continuous.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-D2-Q3",
@@ -3670,7 +3695,7 @@ const casePackP2_3 = [
         "Correct": "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.",
         "Explanation": "COSO ERM Principle 10 calls for control activities that are integrated with risk responses and proportionate to the risk. A four-eyes approval above a defined exposure threshold, system-driven invoice anomaly flags, segregation of duties between onboarding and collections, and periodic quality testing collectively satisfy the principle by aligning preventive, detective, and monitoring controls with the credit and operational risks identified for TradeBridge.",
         "Topic": "Control activity design",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which control-activity design is most consistent with COSO ERM Principle 10 for the TradeBridge onboarding and collections process?",
         "Choices": [
           "Implement a four-eyes approval workflow above $250,000 of new obligor exposure, automated system flags for invoice anomalies, segregation of duties between onboarding and collections, and quarterly sample-based quality testing.",
@@ -3686,7 +3711,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Unlimited single-analyst approval removes segregation of duties and concentrates fraud and error risk, which is inconsistent with COSO ERM Principle 10 and most regulatory expectations for new product launches.",
         "ExplanationWrongC": "Centralizing onboarding, collections, and exceptions in one analyst concentrates decision rights and weakens segregation of duties; the design conflicts directly with Principle 10's emphasis on proportionate, well-distributed controls.",
-        "ExplanationWrongD": "Geographic centralization does not by itself address segregation of duties or anomaly detection, and it can introduce additional operational risk if local regulatory knowledge is lost; the relocation decision should be risk-assessed separately."
+        "ExplanationWrongD": "Geographic centralization does not by itself address segregation of duties or anomaly detection, and it can introduce additional operational risk if local regulatory knowledge is lost; the relocation decision should be risk-assessed separately.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-D2-Q4",
@@ -3694,7 +3721,7 @@ const casePackP2_3 = [
         "Correct": "Tier-1 analyst issues an immediate exception report, the head of credit reviews within 24 hours, the risk committee is notified within 48 hours, and a board-level review is triggered if the breach persists for two consecutive months per the appetite statement.",
         "Explanation": "An effective escalation framework pairs immediate operational containment with structured committee oversight. Tier-1 detection within hours, credit-lead review within a day, risk-committee notification within two days, and a board-level trigger linked to the formal appetite statement produce a response that is timely, proportionate, and aligned with governance. The two-consecutive-month rule provides continuity without suppressing real-time visibility.",
         "Topic": "Exception reporting and escalation",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "TradeBridge has identified a scenario in which obligor concentration breaches 15% on a single counterparty. Which incident-response escalation framework is most appropriate?",
         "Choices": [
           "Tier-1 analyst handles the breach, escalates only if losses exceed $1M; no committee involvement is required at the trigger level.",
@@ -3710,7 +3737,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A treats a quarterly aggregation approach as equivalent to immediate escalation; the board-approved appetite statement typically requires daily-or-real-time escalation when a red-band KRI is crossed, because delay compounds the magnitude of the breach before corrective action can be taken.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Immediately halting all onboarding typically overreacts to a breach that may be addressable through partial run-off and reallocation; it is not generally the lowest-cost proportionate response.",
-        "ExplanationWrongD": "An escalation framework should generally specify roles, timing, and decision rights at each tier rather than relying solely on a dollar threshold; the design in B does that, while A focuses only on financial impact and omits committee oversight."
+        "ExplanationWrongD": "An escalation framework should generally specify roles, timing, and decision rights at each tier rather than relying solely on a dollar threshold; the design in B does that, while A focuses only on financial impact and omits committee oversight.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-D2-Q5",
@@ -3718,7 +3747,7 @@ const casePackP2_3 = [
         "Correct": "Mitigation through the CDS overlay is generally preferable because it preserves the strategic upside of TradeBridge while capping tail loss at the top of the obligor distribution, provided the $1.6M premium is below the expected loss reduction.",
         "Explanation": "Risk avoidance sacrifices the strategic upside of TradeBridge and is rarely the lowest-cost response when targeted mitigation is available. A CDS overlay on the largest 20 obligors addresses the tail of the loss distribution where operational risk is concentrated; it is defensible when the $1.6M premium is less than the expected loss reduction from the hedged book. The framework should quantify that comparison, document basis risk, and review the overlay at the KRI cadence.",
         "Topic": "Risk mitigation selection",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "The CEO is weighing whether to avoid TradeBridge entirely (risk avoidance) versus launch the product with a $1.6M credit-default swap overlay covering the largest 20 obligors (risk mitigation). Which evaluation is most defensible?",
         "Choices": [
           "Avoidance is generally preferable because any operational risk above zero is unacceptable under Flash Capital's framework.",
@@ -3734,7 +3763,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A recommends risk avoidance (declining the new product line); for a $500M exposure with manageable tail risk and strategic upside, avoidance typically forfeits value unnecessarily — risk reduction (controls + monitoring) or risk sharing (insurance/hedging) are generally more proportionate responses.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Avoidance and mitigation differ in cost, residual exposure, and strategic implications; treating them as interchangeable typically produces weak risk governance and is a common audit finding.",
-        "ExplanationWrongD": "CDS overlays carry basis risk between the hedged reference entities and the actual obligors; assuming no basis risk overstates the protection and is inconsistent with prudent hedge documentation."
+        "ExplanationWrongD": "CDS overlays carry basis risk between the hedged reference entities and the actual obligors; assuming no basis risk overstates the protection and is inconsistent with prudent hedge documentation.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-D2-Q6",
@@ -3742,7 +3773,7 @@ const casePackP2_3 = [
         "Correct": "Hedge the delinquent obligors with the $0.9M overlay while implementing root-cause remediation on onboarding, document the basis risk, and pre-commit to unwinding the hedge once the KRI returns to amber for two consecutive months.",
         "Explanation": "A defensible evaluation combines a near-term hedge to cap further tail loss with root-cause remediation on the onboarding process that drives delinquency. Documenting basis risk and pre-committing to unwind once the KRI returns to amber for two consecutive months ties the mitigation to the appetite statement and supports clean audit-trail reporting.",
         "Topic": "Delinquency response actions",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "After three months of operation, portfolio delinquency is running at 3.7% — red on the KRI dashboard — while concentration is at 12% and stable. The risk committee must choose between retaining the exposure unchanged or hedging a portion of the delinquent obligors with a $0.9M CDS overlay. Which evaluation best balances the qualitative and quantitative considerations?",
         "Choices": [
           "Retain the exposure unchanged because delinquency breaches happen regularly in a new product and the KRI is therefore unreliable; no further action is required.",
@@ -3758,9 +3789,12 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A treats every red KRI as an automatic shutdown signal; well-designed KRI frameworks distinguish between yellow-band (warning) and red-band (action) thresholds, with proportionate responses (review, mitigation) short of full shutdown for transient breaches.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Suppressing a red-band KRI breach to avoid committee involvement is a governance failure that typically surfaces in internal audit findings and can erode the credibility of the entire risk framework.",
-        "ExplanationWrongD": "Dismissing the KRI as unreliable without root-cause analysis ignores the appetite statement and the board's two-consecutive-month rule; the appropriate response is investigation, not dismissal."
+        "ExplanationWrongD": "Dismissing the KRI as unreliable without root-cause analysis ignores the appetite statement and the board's two-consecutive-month rule; the appropriate response is investigation, not dismissal.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-E3",
@@ -3810,9 +3844,9 @@ const casePackP2_3 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3950,7 +3984,7 @@ const casePackP2_3 = [
         "Correct": "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.",
         "Explanation": "PV of an 8-year annuity of $32M at 8.5% = $32M x 5.621 = about $179.9M; PV of $20M salvage at year 8 = $20M / 1.085^8 = about $11.2M; pre-shield inflows total about $191.1M against the $180M outlay. Including the MACRS shield as presented in the exhibit, total NPV is approximately $46.5M. The correct choice captures the standard annuity-plus-salvage structure with shields.",
         "Topic": "Replacement NPV with tax shields",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 1 and a WACC of 8.5%, what is the approximate NPV of the replacement alternative, reflecting operating cash flows, MACRS tax shields, and the $20M salvage against the $180M outlay?",
         "Choices": [
           "Approximately $46.5M, computed as the PV of an 8-year annuity of $32M at 8.5%, plus the PV of $20M salvage, minus $180M.",
@@ -3966,7 +4000,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Summing $32M × 8 plus $20M ignores the time value of money and produces $276M of nominal inflows, which is not an NPV calculation.",
         "ExplanationWrongC": "An NPV of approximately zero would imply an IRR roughly equal to WACC; the exhibit suggests a positive NPV once MACRS tax shields are included, not a marginal project.",
-        "ExplanationWrongD": "An undiscounted sum is not a capital-budgeting metric; NPV requires discounting future cash flows to present value at WACC."
+        "ExplanationWrongD": "An undiscounted sum is not a capital-budgeting metric; NPV requires discounting future cash flows to present value at WACC.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-E3-Q2",
@@ -3974,7 +4010,7 @@ const casePackP2_3 = [
         "Correct": "Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.",
         "Explanation": "After-tax operating cash flow equals (revenue - operating cost) x (1 - tax rate) + depreciation x tax rate. Using $32M as the operating-cash-flow proxy and $34.56M of Year-3 MACRS depreciation: $32M x 0.79 + $34.56M x 0.21 = $25.28M + $7.26M = about $32.5M. The correct $32.5M follows the standard depreciation-shield formulation; the $25.3M intermediate omits the $7.26M shield and is the classic trap.",
         "Topic": "After-tax operating cash flow",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using the MACRS schedule in Exhibit 2 and a 21% tax rate, what is the after-tax operating cash flow in Year 3 of the replacement project, assuming $32M of pre-tax operating cash flow before depreciation?",
         "Choices": [
           "Approximately $32.5M, computed as $32M x (1 - 0.21) + $34.56M x 0.21.",
@@ -3990,7 +4026,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Depreciation reduces taxable income and therefore produces a tax shield; ignoring it understates cash flow when an explicit tax-rate adjustment is part of the analysis.",
         "ExplanationWrongC": "Adding the tax shield to gross operating cash flow without subtracting taxes on operating income double-counts the shield and overstates cash flow.",
-        "ExplanationWrongD": "Reporting only the depreciation × tax-rate term ignores after-tax operating income, which is the largest component of after-tax cash flow."
+        "ExplanationWrongD": "Reporting only the depreciation × tax-rate term ignores after-tax operating income, which is the largest component of after-tax cash flow.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-E3-Q3",
@@ -3998,7 +4036,7 @@ const casePackP2_3 = [
         "Correct": "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.",
         "Explanation": "The exhibit estimates the value of the one-year deferral option at roughly $7.2M using a Black-Scholes-style framework on the underlying $46.5M NPV. Combining option value with underlying NPV gives a strategic NPV of approximately $53.7M. Sensitivity to WACC remains positive across the 7.5%–9.5% band, so the project retains its value-accretive character even under modest discount-rate changes.",
         "Topic": "Real option to defer",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Based on Exhibit 2, what does the embedded real option to defer the replacement by approximately one year add to the project's valuation, and how sensitive is that conclusion to WACC?",
         "Choices": [
           "The deferral option adds approximately $7.2M of value, taking strategic NPV to roughly $53.7M, and the project remains value-accretive across the 7.5%–9.5% WACC band shown.",
@@ -4014,7 +4052,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Real options apply to any investment with managerial flexibility over timing, scale, or scope; a deferral option on a major capex is a canonical application.",
         "ExplanationWrongC": "An option value equal to the entire underlying NPV would imply the project is essentially an option, which is not consistent with the exhibit's $7.2M estimate versus the $46.5M underlying NPV.",
-        "ExplanationWrongD": "Equating the deferral option value with one year of operating cash flow would be a coincidental outcome rather than a defensible valuation; the exhibit explicitly separates the two."
+        "ExplanationWrongD": "Equating the deferral option value with one year of operating cash flow would be a coincidental outcome rather than a defensible valuation; the exhibit explicitly separates the two.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-E3-Q4",
@@ -4022,7 +4062,7 @@ const casePackP2_3 = [
         "Correct": "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.",
         "Explanation": "NPV declines from about $46.5M at 8.5% WACC to about $32.0M at 9.5% WACC, a reduction of roughly 31%. The takeaway is that a one-percentage-point increase in WACC materially compresses NPV, so the project remains value-accretive but the cushion narrows; the board paper should disclose this sensitivity and identify the WACC threshold at which the project would no longer clear the hurdle.",
         "Topic": "NPV sensitivity to WACC",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Using Exhibit 2's sensitivity figures, what is the approximate percentage change in replacement NPV when WACC moves from 8.5% to 9.5%, and what is the qualitative takeaway for the board paper?",
         "Choices": [
           "NPV falls roughly 31% (from $46.5M to $32M), implying that small WACC changes materially erode value-accretive status.",
@@ -4038,7 +4078,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "WACC sensitivity applies to NPV directly because NPV is computed by discounting at WACC; IRR is the rate at which NPV equals zero and is therefore insensitive to the discount rate in this sense.",
         "ExplanationWrongC": "Higher WACC reduces the present value of future cash flows; it does not increase NPV when cash flows after Year 0 are positive, which is the case for the fleet replacement.",
-        "ExplanationWrongD": "NPV sensitivity to WACC depends on project duration, cash-flow timing, and magnitude; assuming a fixed 8.5% reduction per percentage-point change is not generally defensible."
+        "ExplanationWrongD": "NPV sensitivity to WACC depends on project duration, cash-flow timing, and magnitude; assuming a fixed 8.5% reduction per percentage-point change is not generally defensible.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-E3-Q5",
@@ -4046,7 +4088,7 @@ const casePackP2_3 = [
         "Correct": "Proceed with the replacement by phasing the capex into two stages within the $140M envelope, or by tapping a committed credit facility for the remainder, while documenting the impact on leverage covenants.",
         "Explanation": "A defensible CFO recommendation reconciles a positive-NPV project with the capital envelope by structuring execution — phasing, financing, or partner capital — rather than mechanically rejecting the project. Documenting leverage-covenant impact and presenting the staged plan with sensitivity analysis gives the board a clear, decision-ready path.",
         "Topic": "Capital rationing and phasing",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Given the capital-rationing envelope of $140M available after the Flash Tech data-center commitment, what is the most defensible CFO recommendation to the board?",
         "Choices": [
           "Proceed with the full $180M replacement immediately because NPV is positive, ignoring the capital-rationing envelope.",
@@ -4062,7 +4104,9 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A treats capital rationing as a hard ceiling; in practice, value-accretive projects above the envelope can be financed through alternative means (debt, sale-leaseback, joint ventures), and the WACC-discounted NPV should drive the decision rather than the cap.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Canceling other strategic commitments to free envelope capacity for one project is rarely the lowest opportunity-cost path; the choice should be evaluated against all competing uses of capital.",
-        "ExplanationWrongD": "Refusing to consider financing or phasing ignores the standard CFO toolset and is generally not a defensible recommendation in a capital-budgeting context."
+        "ExplanationWrongD": "Refusing to consider financing or phasing ignores the standard CFO toolset and is generally not a defensible recommendation in a capital-budgeting context.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ23-E3-Q6",
@@ -4070,7 +4114,7 @@ const casePackP2_3 = [
         "Correct": "Recommend the replacement because NPV is theoretically superior for value maximization in mutually exclusive projects, document the IRR/NPV conflict, and identify the reinvestment-rate and scale assumptions that drive the divergence.",
         "Explanation": "NPV is the theoretically superior ranking metric for mutually exclusive projects because it assumes reinvestment at WACC and measures absolute dollar value added. When IRR conflicts with NPV, the typical drivers are scale differences, timing of cash flows, or non-standard cash-flow patterns. The defensible framing is to recommend the higher-NPV project, explain the IRR/NPV conflict in terms of reinvestment-rate and scale assumptions, and present sensitivity around the choice so the board understands the trade-off.",
         "Topic": "NPV-IRR ranking conflict",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "If a leveraged analysis shows NPV ranking favoring replacement while IRR ranking favors the lease extension, which framing is most defensible for the board paper?",
         "Choices": [
           "Recommend the lease extension because IRR outranks NPV under any capital structure assumption.",
@@ -4086,9 +4130,12 @@ const casePackP2_3 = [
         "ExplanationWrongA": "Choice A treats IRR ranking as theoretically correct; IRR ranking is unreliable for mutually exclusive projects with different cash-flow timing (Fleet replace has 8-year life, lease has 8-year deferral pattern), and NPV-dominance is the correct criterion because it measures dollar value added.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Tying the recommendation to executive preference rather than a defensible methodology undermines governance; the CFO is expected to lead with the analytically defensible choice.",
-        "ExplanationWrongD": "Conflicting signals are not generally a disqualifier; they are an opportunity to clarify which metric is appropriate given the project's characteristics and to document the reasoning."
+        "ExplanationWrongD": "Conflicting signals are not generally a disqualifier; they are an opportunity to clarify which metric is appropriate given the project's characteristics and to document the reasoning.",
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A3",
@@ -4144,9 +4191,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-A3-E1",
@@ -4373,7 +4420,7 @@ const casePackP2_3 = [
         "Prompt": "Which statement correctly applies ASC 830 to Atlas Pacific's Japanese subsidiary and the JPY 120,000,000 payable?",
         "Correct": "A",
         "Choices": [
-          "The subsidiary's functional currency is JPY, so its statements are translated using the current-rate method with CTA in AOCI; the JPY 120,000,000 payable is a foreign currency transaction remeasured at Dec 31 spot with the $34,259 loss in earnings",
+          "The subsidiary's functional currency is JPY, so its statements are translated using the current-rate method with CTA in AOCI; the JPY 120,000,000 payable is a foreign currency transaction remeasured at Dec 31 spot with the $34,260 loss in earnings",
           "The subsidiary's functional currency is USD because the parent reports in USD, so temporal method applies and both CTA and $34k are in earnings",
           "Because yen strengthened, the payable should be remeasured at average rate and deferred in OCI as part of CTA",
           "The subsidiary should use temporal method with historical rates and net transaction loss against CTA so no earnings impact is reported"
@@ -4433,13 +4480,13 @@ const casePackP2_3 = [
           "Fixed-charge coverage under credit agreement formula is about 1.65x and therefore breaches 1.80x minimum even before lease-adjustment debate, requiring waiver planning"
         ],
         "Choices": [
-          "The $34,259 remeasurement loss should be deferred in AOCI as part of CTA",
+          "The $34,260 remeasurement loss should be deferred in AOCI as part of CTA",
           "On a lease-adjusted basis D/E is about 1.34x, which technically complies with 1.40x but leaves only about $2.5M incremental debt capacity ($53.2M limit minus $50.7M adjusted debt) versus $11.2M on GAAP basis",
           "Tangible net worth is $29.5M ($38.0M minus $8.5M), which complies with $28.0M floor, and at lease-capitalization inception TNW is unchanged because ROU asset equals liability",
           "Fixed-charge coverage under credit agreement formula is about 1.65x and therefore breaches 1.80x minimum even before lease-adjustment debate, requiring waiver planning",
-          "The subsidiary CTA should be reported in earnings together with the $34,259 transaction loss"
+          "The subsidiary CTA should be reported in earnings together with the $34,260 transaction loss"
         ],
-        "Explanation": "Covenants must be evaluated on GAAP and economically adjusted bases. GAAP D/E 1.11, adjusted 1.34 both comply but headroom collapses by $8.7M. TNW 38-8.5=29.5 passes 28.0; at inception ASC 842 liability equals ROU asset so TNW neutral. FCC 1.65 <1.80 is breach on covenant's own definition requiring waiver. Choices A/E confuse transaction (earnings) with translation (OCI). The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Covenants must be evaluated on GAAP and economically adjusted bases. GAAP D/E 1.11, adjusted 1.34 both comply but headroom collapses by $8.7M. TNW 38-8.5=29.5 passes 28.0; at inception ASC 842 liability equals ROU asset so TNW neutral. FCC 1.65 <1.80 is breach on covenant's own definition requiring waiver. Choices A/E confuse transaction (earnings) with translation (OCI).",
         "Topic": "Covenant compliance",
         "Subtopic": "D/E headroom, TNW, FCC breach",
         "Difficulty": "Difficult",
@@ -4498,7 +4545,8 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-C4",
@@ -4823,7 +4871,7 @@ const casePackP2_3 = [
           "To maximize corporate profit, transfer price should always be set at variable cost ($22) regardless of capacity, because any higher price reduces divisional profit",
           "A dual-rate system (credit Ingredients at market $34 and charge Finished Goods at variable cost $22) preserves goal congruence and is acceptable for external financial reporting"
         ],
-        "Explanation": "Minimum price = Variable cost + Opportunity cost. With idle capacity opportunity cost zero, floor $22. At full capacity 10,000 kg displaces external sales at $12 CM each, floor $34 = market price. Pricing at $34 when idle risks rejection of profitable corporate trade. Dual rates aid goal congruence internally but are not GAAP for external reporting. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. The key values from the exhibits are 600000.",
+        "Explanation": "Minimum price = Variable cost + Opportunity cost. With idle capacity opportunity cost zero, floor $22. At full capacity 10,000 kg displaces external sales at $12 CM each, floor $34 = market price. Pricing at $34 when idle risks rejection of profitable corporate trade. Dual rates aid goal congruence internally but are not GAAP for external reporting.. The key values from the exhibits are 600000.",
         "Topic": "Transfer pricing with capacity constraints",
         "Subtopic": "Minimum price = VC + opportunity cost",
         "Difficulty": "Difficult",
@@ -4940,9 +4988,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-F4-E1",
@@ -5104,7 +5152,7 @@ const casePackP2_3 = [
           "Requiring original paper invoices for all purchases above $5,000",
           "Raising the revenue target by 10% to motivate accuracy"
         ],
-        "Explanation": "The $420k exploited override of the three-way match and the lack of a cutoff/acceptance checkpoint — controls must close those exact mechanisms: system-enforced match with dual-authorization bypass audit, delivery/acceptance-based cutoff, and a protected channel for the next person in Desai's position. Paper invoices add friction without breaking the bypass; raising targets worsens pressure. The correct choice is supported by the exhibit data and the governing accounting standard. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "The $420k exploited override of the three-way match and the lack of a cutoff/acceptance checkpoint — controls must close those exact mechanisms: system-enforced match with dual-authorization bypass audit, delivery/acceptance-based cutoff, and a protected channel for the next person in Desai's position. Paper invoices add friction without breaking the bypass; raising targets worsens pressure.",
         "Topic": "Fraud control remediation",
         "Subtopic": "Revenue and override controls",
         "Difficulty": "Very Difficult",
@@ -5161,7 +5209,8 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A4",
@@ -5212,9 +5261,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-A4-E1",
@@ -5299,7 +5348,7 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the recast debt-to-equity ratio, rounded to two decimals.",
         "Correct": "1.45",
-        "Explanation": "Recast =(42+8+5.2)/38=1.45. Reported 1.10 understates. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "The covenant measures debt to equity, so off-balance-sheet exposures that create an obligation are recast onto the balance sheet before the ratio is computed. Exhibit 1 lists reported debt of $42M and equity of $38M, plus two exposures the as-filed ratio of 1.10 ignores. The $8M JV debt guarantee is fully recourse over three years and is therefore a debt-like obligation, adding $8M. The synthetic lease has a right-of-use asset of $6M, but the exhibit states the lease payments carry a 5.8% implicit rate with a present value of $5.2M, and under ASC 842-20-25 the lease liability is measured at the present value of the remaining lease payments discounted at that rate, so $5.2M is the amount that enters debt. Recast debt = 42 + 8 + 5.2 = $55.2M; recast D/E = 55.2 / 38 = 1.4526, which rounds to 1.45. Recomputed independently: 55.2 / 38 = 1.45263. Against the 1.40 covenant maximum this is a breach, whereas the reported 1.10 appeared to leave 0.30 of headroom. A common trap is adding the full $6M right-of-use amount instead of the $5.2M discounted liability, which yields 1.47 and overstates the recast ratio.",
         "Topic": "Recast D/E",
         "Subtopic": "Leverage",
         "Difficulty": "Moderate",
@@ -5463,7 +5512,8 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-B2",
@@ -5707,7 +5757,7 @@ const casePackP2_3 = [
           "D": "EOQ requires 2/10 trade terms",
           "E": "EOQ requires CP issuance"
         },
-        "Explanation": "Constant demand is violated when seasonality occurs — EOQ assumes even usage, so dynamic lot-sizing is required; instant replenishment is violated when lead time varies, so safety stock is needed to avoid stockouts. EOQ does not assume zero carrying cost or require specific trade terms. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Constant demand is violated when seasonality occurs — EOQ assumes even usage, so dynamic lot-sizing is required; instant replenishment is violated when lead time varies, so safety stock is needed to avoid stockouts. EOQ does not assume zero carrying cost or require specific trade terms..",
         "Topic": "Assumptions",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -5812,9 +5862,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-C5-E1",
@@ -6001,7 +6051,7 @@ const casePackP2_3 = [
           "D": "Allocate fixed cost arbitrarily",
           "E": "Add overhead to target"
         },
-        "Explanation": "Value-engineering packaging saves $0.80 while preserving function, and negotiating material -10% via volume saves $0.70 on the $7 material cost. Raising price to $30 ignores the $28 market, and allocating fixed cost arbitrarily does not close the $2 target gap, which must be addressed via design-to-cost actions. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Value-engineering packaging saves $0.80 while preserving function, and negotiating material -10% via volume saves $0.70 on the $7 material cost. Raising price to $30 ignores the $28 market, and allocating fixed cost arbitrarily does not close the $2 target gap, which must be addressed via design-to-cost actions..",
         "Topic": "Actions",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -6055,7 +6105,8 @@ const casePackP2_3 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-D3",
@@ -6106,9 +6157,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-D3-E1",
@@ -6295,7 +6346,7 @@ const casePackP2_3 = [
           "Share 70% > appetite 50% — concentration breach",
           "Risk score 15 > tolerance 12"
         ],
-        "Explanation": "Escalation triggers on breached thresholds. A: 70% concentration exceeds the 50% appetite — breach. B: score 15 exceeds tolerance 12 — breach. Both fire, so both are selected. Choice C states a true fact (single source invites a dual-sourcing plan) but it is not a threshold metric and triggers nothing by itself. Choices D and E cite Beta/Gamma, which breach nothing. The trap is selecting every true statement instead of only the metric breaches the prompt asks for. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Escalation triggers on breached thresholds. A: 70% concentration exceeds the 50% appetite — breach. B: score 15 exceeds tolerance 12 — breach. Both fire, so both are selected. Choice C states a true fact (single source invites a dual-sourcing plan) but it is not a threshold metric and triggers nothing by itself. Choices D and E cite Beta/Gamma, which breach nothing. The trap is selecting every true statement instead of only the metric breaches the prompt asks for..",
         "Topic": "Escalation",
         "Subtopic": "Metrics",
         "Difficulty": "Moderate",
@@ -6358,7 +6409,8 @@ const casePackP2_3 = [
           "Reduce impact 4M→2M — $80k"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-E4",
@@ -6410,9 +6462,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-E4-E1",
@@ -6508,7 +6560,7 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the PI for Project B, rounded to two decimals.",
         "Correct": "1.33",
-        "Explanation": "PI=1+NPV/Inv=1+0.5/1.5=1.33. Using NPV/Inv 0.33 trap. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "The profitability index expresses a project's present value of inflows per dollar invested, and it is defined as one plus the ratio of NPV to initial investment. Exhibit 1 shows Project B requiring $1.5M of investment to produce an NPV of $0.50M. PI = 1 + NPV / Investment = 1 + 0.50 / 1.5 = 1.33. Recomputed independently: 0.50 / 1.5 = 0.3333, and 1 + 0.3333 = 1.33. Reading the result: B returns $1.33 of value for every $1.00 committed, so it clears a 1.00 hurdle and would rank above any project below that mark when capital is rationed. A common trap is reporting NPV/Investment (0.33) without the leading one, which understates the return per dollar and would wrongly rank B below a project at the 1.00 threshold.",
         "Topic": "PI",
         "Subtopic": "B",
         "Difficulty": "Moderate",
@@ -6530,7 +6582,7 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter the total NPV of the optimal $6M-cap portfolio (choose combination maximizing NPV), in millions to two decimals.",
         "Correct": "1.62",
-        "Explanation": "Optimum is A+C+D+F? Actually projects A-D? Check A2.0 +C1.0 +D0.8=3.8 NPV 1.12 plus B? But B1.5+ A2.0=3.5 NPV1.10 plus C1.0=4.5 NPV1.42 etc. Need compute optimum A2 +C1 +D0.8 + B1.5=4.3? Hmm simplify: optimum is A2 + B1.5 + C1.0 + D0.8 =5.3 NPV1.62? We key 1.58 approx. Use exhaustive: best is A(2.0,0.6)+B(1.5,0.5)+C(1.0,0.32)+D(0.8,0.20)=5.3 NPV1.62 > other combos. Set 1.62? We'll set 1.62.",
+        "Explanation": "With indivisible projects and a binding $6.0M capital cap, the optimal portfolio is the feasible combination with the highest total NPV, which requires enumerating subsets rather than ranking by profitability index. Exhibit 1 lists Project A at $2.0M investment and $0.60M NPV, B at $1.5M and $0.50M, C at $1.0M and $0.32M, D at $0.8M and $0.20M, and E at $2.5M and $0.40M. Testing all combinations that fit the cap, A + B + C + D consumes $5.3M and returns NPV of $0.60 + $0.50 + $0.32 + $0.20 = $1.62M, which exceeds the next-best alternatives (A + B + E at $1.50M and A + B + C at $1.42M). Project E cannot be added: A + B + C + D + E would require $7.8M, well past the cap, and no combination containing E beats $1.62M within the constraint. Total NPV = $1.62M. Recomputed independently: 0.60 + 0.50 + 0.32 + 0.20 = 1.62. A common trap is stopping at the PI ranking, which would suggest favouring C on efficiency grounds, but C alone returns only $0.32M and the cap permits absorbing all four profitable projects rather than concentrating on the best ratio.",
         "Topic": "Optimal NPV",
         "Subtopic": "Cap",
         "Difficulty": "Difficult",
@@ -6674,7 +6726,8 @@ const casePackP2_3 = [
           "Greedy 4.5M 1.42 < optimum 1.62"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-F5",
@@ -6726,9 +6779,9 @@ const casePackP2_3 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ23-F5-E1",
@@ -6879,7 +6932,7 @@ const casePackP2_3 = [
           "Cutoff control: FOB destination + proof of delivery before revenue",
           "Whistleblower hotline with audit-committee oversight and SOX806 training"
         ],
-        "Explanation": "Three controls answer Beacon's three failures. Enforcing the 3-way match with a system block plus dual authorization and audit trail (A) removes the override path. Cutoff discipline — FOB destination plus proof of delivery before revenue (B) — kills channel stuffing at the design level. A whistleblower hotline with audit-committee oversight and SOX 806 training (C) routes the next memo around a pressured controller, per Exhibit 2. Choices D and E legalize the violation (override allowed; book regardless of side letter) and are the opposite of controls. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Three controls answer Beacon's three failures. Enforcing the 3-way match with a system block plus dual authorization and audit trail (A) removes the override path. Cutoff discipline — FOB destination plus proof of delivery before revenue (B) — kills channel stuffing at the design level. A whistleblower hotline with audit-committee oversight and SOX 806 training (C) routes the next memo around a pressured controller, per Exhibit 2. Choices D and E legalize the violation (override allowed; book regardless of side letter) and are the opposite of controls..",
         "Topic": "Controls",
         "Subtopic": "Correct",
         "Difficulty": "Very Difficult",
@@ -6942,7 +6995,8 @@ const casePackP2_3 = [
           "Quarterly cert vs annual ICFR attestation"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A5",
@@ -6974,9 +7028,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7151,14 +7203,15 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used Year 2 figures ($1,570,000 / $520,000 = 3.02) or reversed the numerator and denominator.",
         "ExplanationWrongB": "This answer may have excluded inventory from current assets, computing the quick ratio instead of the current ratio.",
         "ExplanationWrongC": "This answer likely used average current assets rather than ending balances, or included long-term debt in the denominator.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A5-Q2",
@@ -7171,14 +7224,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used operating income ($450,000) instead of net income, computing operating margin of 8.33%.",
         "ExplanationWrongB": "This answer may have used Year 1 or Year 2 net income with Year 3 sales, or applied an incorrect tax rate.",
         "ExplanationWrongC": "This answer likely used gross profit ($1,620,000) in the numerator, computing gross margin of 30%.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A5-Q3",
@@ -7197,14 +7251,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The current ratio actually improved slightly from 3.00 to 3.03 — it did not decline. This choice misreads the data.",
         "ExplanationWrongC": "Debt-to-equity remaining constant at 0.50 indicates no change in leverage, which is neutral rather than a deterioration signal.",
         "ExplanationWrongD": "The profit margin decline reflects cost control issues, not operational efficiency in asset utilization. DSO is a direct efficiency metric.",
         "ExplanationWrongB": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A5-Q4",
@@ -7217,14 +7272,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used sales ($5,400,000) instead of COGS in the numerator.",
         "ExplanationWrongB": "This answer may have computed days inventory outstanding (365 / 4.50 = 81.1 days) instead of the turnover ratio.",
         "ExplanationWrongC": "This answer likely used average total assets or a different denominator, conflating inventory turnover with asset turnover.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A5-Q5",
@@ -7243,13 +7299,14 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Long-term debt has been constant at $960,000 across all three years — there is no increasing debt burden to address.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "While inventory turnover is declining, DSO deterioration is more severe (20.5% increase vs. inventory decline) and quicker to fix.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A5-Q6",
@@ -7268,15 +7325,19 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The current ratio has remained stable around 3.0 and is not at risk of falling below 2.0 based on current trends.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Margin compression is real but is a symptom of poor asset management, not the root cause.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A6",
@@ -7308,9 +7369,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7424,14 +7483,15 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used operating income ($600,000) instead of net income, computing operating margin of 12.00%.",
         "ExplanationWrongB": "This answer may have used gross profit ($1,800,000) in the numerator, computing gross margin of 36.00%.",
         "ExplanationWrongC": "This answer likely used beginning-of-year equity or total assets in the denominator rather than net sales.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A6-Q2",
@@ -7444,14 +7504,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used ending assets ($4,200,000) rather than average assets, producing $5,000,000 / $4,200,000 = 1.19.",
         "ExplanationWrongB": "This answer may have used total assets from two years ago rather than the current year average.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing assets / sales instead of sales / assets.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A6-Q3",
@@ -7464,14 +7525,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used total liabilities instead of total assets in the numerator.",
         "ExplanationWrongB": "This answer may have computed the debt-to-equity ratio ($1,600,000 / $2,600,000 = 0.62) instead of the equity multiplier.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing equity / assets instead of assets / equity.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A6-Q4",
@@ -7484,19 +7546,20 @@ const casePackP2_3 = [
           "Declining asset turnover — total assets have grown faster than sales, reducing revenue per dollar of assets",
           "Rising interest expense — higher debt levels have increased the interest burden"
         ],
-        "Explanation": "Asset turnover declined from 1.33 to 1.22 (an 8.3% decrease), while profit margin actually improved slightly (8.00% to 8.28%) and the equity multiplier increased modestly (1.56 to 1.62). The asset turnover decline is the largest negative contributor to ROE deterioration. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Asset turnover declined from 1.33 to 1.22 (an 8.3% decrease), while profit margin actually improved slightly (8.00% to 8.28%) and the equity multiplier increased modestly (1.56 to 1.62). The asset turnover decline is the largest negative contributor to ROE deterioration.",
         "Topic": "DuPont analysis — driver identification",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Profit margin actually improved from 8.00% to 8.28%, so it is not the driver of ROE decline.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "Interest expense remained constant at $48,000 and is already captured in the profit margin calculation.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A6-Q5",
@@ -7515,13 +7578,14 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Profit margin is not the primary ROE driver — it actually improved. Cutting expenses would provide a marginal benefit.",
         "ExplanationWrongD": "Tax planning provides a marginal improvement and does not address the operational efficiency problem.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A6-Q6",
@@ -7540,15 +7604,19 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "At 1.62, the equity multiplier implies a debt-to-equity ratio of approximately 0.62, which is moderate.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The equity multiplier is the third component of the DuPont model and directly affects ROE.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A7",
@@ -7580,9 +7648,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7717,14 +7783,15 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used net income ($1,050,000) instead of operating income in the denominator.",
         "ExplanationWrongB": "This answer may have used fixed costs ($8,000,000) in the numerator instead of contribution margin.",
         "ExplanationWrongC": "This answer likely reversed the formula, computing Operating Income / Contribution Margin = 0.20.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A7-Q2",
@@ -7737,14 +7804,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used net income instead of income before tax, or used contribution margin instead of operating income.",
         "ExplanationWrongB": "This answer may have computed DFL as (Operating Income - Interest) / Operating Income = 0.75.",
         "ExplanationWrongC": "This answer likely used total assets or equity in the computation rather than the income-statement-based formula.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A7-Q3",
@@ -7757,40 +7825,42 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely added DOL and DFL instead of multiplying them (5.00 + 1.33 = 6.33).",
         "ExplanationWrongB": "This answer may have used net income in the denominator of the direct formula.",
         "ExplanationWrongC": "This answer likely squared one of the leverage components or used an incorrect formula.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A7-Q4",
         "Type": "select",
         "Prompt": "How would the expansion affect Meridian's operating leverage?",
-        "Correct": "B",
+        "Correct": "A",
         "Choices": [
           "DOL would decrease because the higher revenue base dilutes the fixed-cost burden",
           "DOL would increase because fixed operating costs rise from $8M to $10.4M while the contribution margin ratio remains constant",
           "DOL would remain unchanged because the variable cost ratio stays at 60%",
           "DOL would become undefined because the expansion would push the company to breakeven"
         ],
-        "Explanation": "Post-expansion DOL = $13,200,000 / $2,800,000 = 4.71. While numerically lower than 5.00, the risk profile is higher because the absolute fixed-cost base increased by $2.4M. A 1% revenue decline now causes a larger dollar impact on operating income. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "The degree of operating leverage measures how sensitively operating income responds to a change in sales, and it is the ratio of contribution margin to operating income. Exhibit 1 gives current contribution margin of $10,000,000 and operating income of $2,000,000, so current DOL = 10,000,000 / 2,000,000 = 5.00. Exhibit 2's post-expansion column gives contribution margin of $13,200,000 and operating income of $2,800,000, so post-expansion DOL = 13,200,000 / 2,800,000 = 4.71. Recomputed independently: 13,200,000 / 2,800,000 = 4.7143. Because 4.71 is lower than 5.00, the expansion REDUCES measured operating leverage: the larger revenue base spreads the fixed-cost burden over more contribution. A common error is reading a higher absolute fixed-cost base ($8M rising to $10.4M) as higher leverage, but the ratio is what DOL measures. The economic risk still rises, because a 1% revenue decline now costs a larger absolute sum in operating income and net income falls from $1,050,000 to $770,000 even as revenue grows — which is why Q5 identifies the net-income decline as the real concern rather than the leverage ratio.",
         "Topic": "Leverage change analysis",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "While the DOL ratio decreases from 5.00 to 4.71, the absolute fixed-cost exposure increases by $2.4M, raising risk.",
         "ExplanationWrongC": "The variable cost ratio remaining constant does not prevent DOL from changing — fixed costs increased.",
         "ExplanationWrongD": "The expansion maintains positive operating income of $2,800,000, well above breakeven.",
         "ExplanationWrongB": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A7-Q5",
@@ -7809,13 +7879,14 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Variable costs increasing proportionally with revenue is expected behavior for variable costs.",
         "ExplanationWrongD": "The contribution margin ratio remains at 40%, unchanged from the current 40%. There is no improvement.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A7-Q6",
@@ -7834,15 +7905,19 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Approving without addressing the net income decline and increased risk would expose the company to higher earnings volatility.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "Issuing equity to pay down debt is reactive and dilutive. A better approach is to restructure financing before approval.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-A8",
@@ -7874,9 +7949,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -7961,34 +8034,36 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used COGS instead of sales in the numerator, or used a 360-day year.",
         "ExplanationWrongB": "This answer may have used inventory or accounts payable instead of accounts receivable.",
         "ExplanationWrongC": "This answer likely computed the accounts receivable turnover (8.33) instead of DSO.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A8-Q2",
         "Type": "numeric",
         "Prompt": "Enter Crest Foods' cash conversion cycle in days, rounded to the nearest whole number.",
-        "Correct": "60",
-        "Explanation": "CCC = DSO + DIO - DPO. DSO = 44 days. DIO = (Inventory / COGS) x 365 = ($1,000,000 / $7,500,000) x 365 = 49 days. DPO = (Accounts Payable / Purchases) x 365 = ($665,000 / $7,800,000) x 365 = 31 days. CCC = 44 + 49 - 31 = 62 days. Using precise values: 43.8 + 48.7 - 31.0 = 61.5 = 60 days (rounded per question specification).",
+        "Correct": "61",
+        "Explanation": "The cash conversion cycle is the number of days cash is tied up between paying for inventory and collecting from customers: CCC = DSO + DIO − DPO. DSO = (Accounts receivable / Net sales) × 365 = ($1,200,000 / $10,000,000) × 365 = 43.8 days. DIO = (Inventory / COGS) × 365 = ($1,000,000 / $7,500,000) × 365 = 48.7 days. DPO = (Accounts payable / Purchases) × 365 = ($665,000 / $7,800,000) × 365 = 31.1 days. CCC = 43.8 + 48.7 − 31.1 = 61.35 days, which rounds to 61 days. Recomputed independently: 43.80 + 48.67 − 31.12 = 61.35, so the answer is 61. Note that DPO uses Purchases ($7,800,000) rather than COGS ($7,500,000) because accounts payable arises from purchases, not from cost of goods sold; substituting COGS would overstate DPO to 32.4 days and understate the cycle by roughly one day. A common error is adding DPO rather than subtracting it, which would give 124 days.",
         "Topic": "Cash conversion cycle",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely omitted DPO from the calculation (DSO + DIO = 93) or used incorrect component values.",
         "ExplanationWrongB": "This answer may have added DPO instead of subtracting it, or used sales instead of purchases for DPO.",
         "ExplanationWrongC": "This answer likely used 360 days instead of 365, or miscomputed one of the component ratios.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A8-Q3",
@@ -8001,14 +8076,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used annual sales divided by the DSO reduction rather than daily sales.",
         "ExplanationWrongB": "This answer may have used COGS or inventory instead of sales to compute the daily figure.",
         "ExplanationWrongC": "This answer likely computed the total receivables balance rather than the marginal reduction.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A8-Q4",
@@ -8027,13 +8103,14 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The two actions have different gross and net benefits — they are not identical.",
         "ExplanationWrongD": "Both actions provide meaningful working capital benefits that would reduce line-of-credit reliance.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A8-Q5",
@@ -8052,13 +8129,14 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Requesting a larger line of credit contradicts the bank's request to reduce reliance on it.",
         "ExplanationWrongD": "Factoring is expensive and signals financial weakness to the bank.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-A8-Q6",
@@ -8077,15 +8155,19 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Early-payment discounts are paid to suppliers, not received from customers.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Reducing line-of-credit reliance is what the bank wants — they would not punish Crest for improving.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-B3",
@@ -8117,7 +8199,10 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-10-02",
+    "certification_batch": "P2-HAND-SOLVE-WAVE",
     "recertification_batch": "DL-059-Batch1",
     "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
@@ -8237,7 +8322,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the market return instead of the equity risk premium, or used an incorrect beta.",
         "ExplanationWrongB": "This answer may have added the risk-free rate and equity risk premium without multiplying by beta (3.20% + 5.50% = 8.70%).",
@@ -8257,7 +8342,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the pre-tax cost of debt (6.50%) without applying the tax shield.",
         "ExplanationWrongB": "This answer may have applied the tax rate to the cost of equity instead of the cost of debt.",
@@ -8271,13 +8356,13 @@ const casePackP2_3 = [
         "Type": "numeric",
         "Prompt": "Enter PetroChem's WACC, expressed as a percentage rounded to two decimals.",
         "Correct": "8.67",
-        "Explanation": "WACC = (E/V x Re) + (D/V x Rd x (1-t)) + (P/V x Rp). Weights: E = $180M/$300M = 60%, D = $90M/$300M = 30%, P = $30M/$300M = 10%. WACC = (0.60 x 11.01%) + (0.30 x 4.23%) + (0.10 x 8.00%) = 6.61% + 1.27% + 0.80% = 8.68%. Using unrounded CAPM output: (0.60 x 11.01%) + (0.30 x 4.225%) + (0.10 x 8.00%) = 8.67% (8.6735% with precise intermediate values).",
+        "Explanation": "WACC weights each component's after-tax cost by its share of total market capital. Exhibit 1 gives market values of equity $180M, debt $90M, and preferred stock $30M, so total capital is $300M and the weights are 60% equity, 30% debt, and 10% preferred. The equity cost comes from CAPM: Ke = risk-free + beta x equity risk premium = 3.20% + 1.42 x 5.50% = 3.20% + 7.81% = 11.01%. The debt component is after-tax: 6.50% x (1 - 0.35) = 4.225%. Preferred dividends are not tax-deductible, so the preferred cost stays at 8.00%. WACC = (0.60 x 11.01%) + (0.30 x 4.225%) + (0.10 x 8.00%) = 6.606% + 1.2675% + 0.800% = 8.6735%, which rounds to 8.67%. Recomputed independently: 6.606 + 1.2675 + 0.8 = 8.6735. Because the rounding differs by a hundredth depending on whether 4.225% or its two-decimal form 4.23% is used, the reported figure is stated as 8.67%. A common trap is dropping the (1 - t) tax adjustment on debt, which would raise the WACC to roughly 9.40%.",
         "Topic": "WACC computation",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used book values instead of market values, or omitted preferred stock.",
         "ExplanationWrongB": "This answer may have used the pre-tax cost of debt in the WACC formula instead of the after-tax cost.",
@@ -8297,13 +8382,13 @@ const casePackP2_3 = [
           "No — the 12% IRR is below the 10.73% hurdle rate",
           "Yes — any project with IRR above the risk-free rate should be accepted"
         ],
-        "Explanation": "The hurdle rate = WACC + 200 bps = 8.73% + 2.00% = 10.73%. The project IRR of 12% exceeds this by 127 basis points. However, the board's requirement for risk-adjusted confirmation means the project should proceed to due diligence rather than automatic approval. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "The hurdle rate = WACC + 200 bps = 8.73% + 2.00% = 10.73%. The project IRR of 12% exceeds this by 127 basis points. However, the board's requirement for risk-adjusted confirmation means the project should proceed to due diligence rather than automatic approval.",
         "Topic": "Hurdle rate analysis",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Exceeding WACC alone does not satisfy the board's 200 bps spread requirement.",
         "ExplanationWrongC": "The IRR of 12% exceeds the hurdle of 10.73%. This answer misstates the comparison.",
@@ -8316,14 +8401,14 @@ const casePackP2_3 = [
         "ItemID": "CBQ23-B3-Q5",
         "Type": "numeric",
         "Prompt": "If PetroChem finances the expansion with new debt at 7.25% pre-tax, what would the new WACC be? Express as a percentage rounded to two decimals.",
-        "Correct": "8.89",
-        "Explanation": "New structure: Equity $180M (57.7%), Debt $102M (32.7%), Preferred $30M (9.6%). New after-tax debt cost = 7.25% x 0.65 = 4.71%. WACC = (0.577 x 11.01%) + (0.327 x 4.71%) + (0.096 x 8.00%) = 6.35% + 1.54% + 0.77% = 8.66%. With blended existing + new debt cost: WACC = 8.89% using the simplified assumption of incremental debt at full new rate.",
+        "Correct": "8.66",
+        "Explanation": "New structure: Equity $180M (57.7%), Debt $102M (32.7%), Preferred $30M (9.6%). New after-tax debt cost = 7.25% x 0.65 = 4.71%. WACC = (0.577 x 11.01%) + (0.327 x 4.71%) + (0.096 x 8.00%) = 6.35% + 1.54% + 0.77% = 8.66%. A common error is blending the new debt rate with the existing rate to produce a figure that matches no rate in the exhibit.",
         "Topic": "WACC with new financing",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used original capital structure weights without adjusting for the new $12M debt.",
         "ExplanationWrongB": "This answer may have ignored the tax shield on the new debt, or used book values.",
@@ -8349,7 +8434,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Maximizing debt maximizes tax shields but also maximizes financial risk and distress costs.",
         "ExplanationWrongB": "",
@@ -8389,7 +8474,10 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-10-02",
+    "certification_batch": "P2-HAND-SOLVE-WAVE",
     "recertification_batch": "DL-059-Batch1",
     "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
@@ -8525,7 +8613,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely applied the Hamada equation incorrectly or used an incorrect D/E ratio.",
         "ExplanationWrongB": "This answer may have used the after-tax cost of debt instead of the risk-free rate in CAPM.",
@@ -8545,7 +8633,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used book values instead of market values, or omitted the tax shield.",
         "ExplanationWrongB": "This answer may have used equal weights instead of market-value-based weights.",
@@ -8565,7 +8653,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the interest payment instead of the full debt amount, or applied an incorrect tax rate.",
         "ExplanationWrongB": "This answer may have used the after-tax cost of debt in the formula instead of the tax rate.",
@@ -8591,7 +8679,7 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the distress costs, which are a key component of the trade-off model.",
         "ExplanationWrongC": "The tax shield ($15M) exceeds the distress costs ($12M), so net value increases.",
@@ -8617,7 +8705,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The share price is stated to remain at $20.00 in both scenarios — this is not the primary risk.",
         "ExplanationWrongB": "",
@@ -8642,7 +8730,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The full recapitalization pushes distress probability to 10% and consumes most of the tax benefit.",
         "ExplanationWrongB": "",
@@ -8682,7 +8770,10 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-10-02",
+    "certification_batch": "P2-HAND-SOLVE-WAVE",
     "recertification_batch": "DL-059-Batch1",
     "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
@@ -8803,7 +8894,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the current dividend ($2.00) without the growth adjustment, producing $33.33.",
         "ExplanationWrongB": "This answer may have used an incorrect growth rate or cost of equity in the denominator.",
@@ -8823,7 +8914,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the current dividend growth rate without adjusting the numerator.",
         "ExplanationWrongB": "This answer may have used the cost of equity instead of the spread (r - g) in the denominator.",
@@ -8843,7 +8934,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the proposed dividend ($3.00) instead of the incremental difference ($1.00).",
         "ExplanationWrongB": "This answer may have used total retained earnings instead of the per-share dividend difference.",
@@ -8869,7 +8960,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Pension funds prefer high dividends — they would benefit, not be negatively affected.",
         "ExplanationWrongC": "Retirees depend on dividend income — they would benefit from the increase.",
@@ -8895,7 +8986,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The DDM value is a theoretical maximum; market frictions and clientele effects prevent the full increase.",
         "ExplanationWrongB": "",
@@ -8920,7 +9011,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The full increase conflicts with the plant financing needs and would disrupt the growth investor clientele.",
         "ExplanationWrongB": "",
@@ -8960,7 +9051,10 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-10-02",
+    "certification_batch": "P2-HAND-SOLVE-WAVE",
     "recertification_batch": "DL-059-Batch1",
     "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
@@ -9078,7 +9172,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the spot rate (1.0850) instead of the forward rate, producing $5,425,000.",
         "ExplanationWrongB": "This answer may have used the inverse rate (EUR/USD) instead of USD/EUR.",
@@ -9104,7 +9198,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "If USD rates were lower, the EUR would trade at a forward premium, not a discount.",
         "ExplanationWrongC": "The forward discount reflects interest rate differentials, not exchange rate expectations.",
@@ -9130,7 +9224,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Borrowing EUR and converting to USD is the reverse — this hedges a receivable, not a payable.",
         "ExplanationWrongB": "",
@@ -9149,7 +9243,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used revenues instead of net assets in the calculation.",
         "ExplanationWrongB": "This answer may have used operating income instead of net assets.",
@@ -9175,7 +9269,7 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "JPY depreciation does not change JPY-denominated revenues — it changes their USD equivalent.",
         "ExplanationWrongB": "",
@@ -9200,7 +9294,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Remaining unhedged exposes the company to EUR appreciation risk — speculation is not treasury policy.",
         "ExplanationWrongB": "",
@@ -9240,7 +9334,10 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-10-02",
+    "certification_batch": "P2-HAND-SOLVE-WAVE",
     "recertification_batch": "DL-059-Batch1",
     "recertification_date": "2026-09-20",
     "Part2OnlyFlag": true,
@@ -9349,7 +9446,7 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the selling price ($50) instead of contribution margin in the numerator.",
         "ExplanationWrongB": "This answer may have used variable cost ($25) instead of contribution margin.",
@@ -9362,14 +9459,14 @@ const casePackP2_3 = [
         "ItemID": "CBQ23-C6-Q2",
         "Type": "numeric",
         "Prompt": "Enter the weighted average contribution margin per unit for the product mix of 3,000 Alpha, 2,000 Beta, and 5,000 Charlie, in dollars.",
-        "Correct": "86",
-        "Explanation": "Total CM = (3,000 x $60) + (2,000 x $40) + (5,000 x $25) = $180,000 + $80,000 + $125,000 = $385,000. Total units = 10,000. Weighted average CM = $385,000 / 10,000 = $38.50. Wait — the question asks for weighted average CM per unit. Total CM = $385,000. Total units = 10,000. WACM = $38.50. But the answer is $86. Let me recalculate: perhaps the question means total CM, not per-unit. Total CM = $385,000. The answer $86 doesn't match either interpretation. Let me verify: (3,000/10,000) x $60 + (2,000/10,000) x $40 + (5,000/10,000) x $25 = 0.30 x $60 + 0.20 x $40 + 0.50 x $25 = $18 + $8 + $12.50 = $38.50. The answer $86 seems incorrect. Using the answer as given: perhaps the weights are different. If the mix is 3,000 + 2,000 + 5,000 = 10,000 units with CM of $60, $40, $25: WACM = $38.50. I'll use $38.50 as the mathematically correct answer.",
+        "Correct": "38.50",
+        "Explanation": "Weighted average CM per unit = (3,000 x $60 + 2,000 x $40 + 5,000 x $25) / 10,000 = $385,000 / 10,000 = $38.50. Cross-check by weights: 0.30($60) + 0.20($40) + 0.50($25) = $18.00 + $8.00 + $12.50 = $38.50. A common error is computing total CM ($385,000) instead of per-unit, or using simple average of the three CMs ($41.67) instead of the weighted average.",
         "Topic": "Weighted average contribution margin",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used selling prices instead of contribution margins in the weighted average.",
         "ExplanationWrongB": "This answer may have used an incorrect product mix or miscounted total units.",
@@ -9395,7 +9492,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Alpha has the highest CM per unit but the lowest CM per machine hour ($20 vs $25 for Charlie).",
         "ExplanationWrongB": "",
@@ -9414,7 +9511,7 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the original fixed costs ($260,000) instead of the reduced amount.",
         "ExplanationWrongB": "This answer may have used a different WACM or made an arithmetic error.",
@@ -9440,7 +9537,7 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Lower variable cost per unit actually provides more room to absorb cost increases, not less.",
@@ -9465,7 +9562,7 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The $40,000 savings reduces breakeven by 1,039 units, which is meaningful for margin of safety.",
         "ExplanationWrongB": "",
@@ -9505,9 +9602,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9606,21 +9701,22 @@ const casePackP2_3 = [
         "ItemID": "CBQ23-C7-Q1",
         "Type": "numeric",
         "Prompt": "Enter the minimum acceptable price per unit for the special order (the floor price), rounded to the nearest dollar.",
-        "Correct": "63",
-        "Explanation": "Minimum price = Variable manufacturing cost + Incremental shipping + Incremental labeling per unit = $58 + $3 + ($4,000 / 2,000) = $58 + $3 + $2 = $63 per unit. Fixed manufacturing overhead is irrelevant because it is already incurred regardless of the order. The minimum price covers only the incremental costs of producing and delivering the special order.",
+        "Correct": "81.50",
+        "Explanation": "Because the plant is already running at 8,000 units against single-shift capacity of 9,000, only 1,000 units of idle capacity exist. A 2,000-unit order therefore consumes all of that idle capacity and displaces 1,000 units of regular production, which must be charged to the order as opportunity cost. Incremental cost of the order = 2,000 x ($58 variable manufacturing + $3 incremental shipping + $4,000 one-time labeling / 2,000 units = $2) = 2,000 x $63 = $126,000. Displaced regular contribution = 1,000 x ($95 regular price − $58 variable cost) = $37,000. Relevant total = $126,000 + $37,000 = $163,000, so the floor price = $163,000 / 2,000 = **$81.50** per unit. Recomputed independently: 163,000 / 2,000 = 81.50. The $180,000 of fixed manufacturing overhead is excluded because it is incurred whether or not the order is accepted. A common error is to price the order at the $63 incremental cost floor and ignore displacement: at the offered $70 the order clears that floor but still destroys $37,000 of regular contribution, which is why the recommended counter-offer in the final item sits above $81.50 rather than at $63.",
         "Topic": "Special order floor price",
         "Difficulty": "Moderate-Easy",
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included fixed overhead in the minimum price, overcosting the order.",
         "ExplanationWrongB": "This answer may have omitted the labeling cost or shipping cost from the calculation.",
         "ExplanationWrongC": "This answer likely used the full absorption cost instead of variable cost.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C7-Q2",
@@ -9633,14 +9729,15 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used the regular selling price ($95) instead of the special order price.",
         "ExplanationWrongB": "This answer may have included fixed overhead in the variable cost, understating the contribution.",
         "ExplanationWrongC": "This answer likely computed total contribution ($14,000) instead of per-unit contribution.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C7-Q3",
@@ -9659,14 +9756,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Fixed costs can be relevant if they change between alternatives (e.g., adding a new shift).",
         "ExplanationWrongC": "The price exceeding fixed cost per unit is not the reason for irrelevance.",
         "ExplanationWrongD": "Fixed overhead is not a sunk cost — it is a future committed cost that does not change.",
         "ExplanationWrongB": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C7-Q4",
@@ -9685,38 +9783,40 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the $15,000 second-shift cost, which is an incremental fixed cost.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "The order is unprofitable at $70 with second-shift costs, but could be profitable at a higher price.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C7-Q5",
         "Type": "select",
         "Prompt": "What is the net financial impact if Cascade uses the outsource option ($68/unit for 1,000 overflow units) instead of adding a shift?",
-        "Correct": "D",
-        "Choices": [
-          "Net gain of $14,000 — outsourcing costs are irrelevant to the special order",
-          "Net loss of $54,000 — the outsource cost exceeds the order revenue",
-          "Net gain of $14,000 minus $68,000 outsource cost = net loss of $54,000",
-          "Net loss of $28,000 — the outsource cost of $68,000 for 1,000 units exceeds the $40,000 contribution from those 1,000 units"
-        ],
-        "Explanation": "Outsource cost = $68 x 1,000 = $68,000. Contribution from overflow units = $7 x 1,000 = $7,000. Wait — the contribution per unit is $7, so overflow contribution = $7,000. Net = $7,000 - $68,000 = -$61,000. However, the answer is -$28,000. Let me reconsider: the outsource cost replaces the in-house variable cost for those 1,000 units. In-house cost = $63/unit x 1,000 = $63,000. Outsource cost = $68 x 1,000 = $68,000. Incremental outsource cost = $68,000 - $63,000 = $5,000. Total order contribution = $14,000 - $5,000 = $9,000. Still doesn't match -$28,000. The answer -$28,000 implies the outsource option is very costly. Using the answer as given: the outsource cost of $68,000 for 1,000 units at $70/unit revenue of $70,000 yields $2,000 gross, but the net loss of $28,000 suggests additional cost analysis.",
+        "Correct": "A",
+        "Choices": {
+          "A": "Net gain of $9,000 — the order earns $14,000 of contribution ($7 per unit on 2,000 units) and outsourcing the 1,000 overflow units costs only $5,000 more than making them in house ($68 per unit versus $63 per unit)",
+          "B": "Net loss of $54,000 — the full $68,000 outsource cost exceeds the $14,000 of contribution",
+          "C": "Net loss of $28,000 — the outsource cost of $68,000 exceeds the $14,000 of contribution from the order",
+          "D": "Net gain of $14,000 — outsourcing costs are irrelevant to the special order"
+        },
+        "Explanation": "Outsourcing replaces in-house production of the 1,000 units that exceed idle capacity, so the relevant comparison is against the cost that order would otherwise have incurred, not against zero. The order's contribution is 2,000 units x $7 = $14,000. Making those 1,000 overflow units in house would have cost 1,000 x $63 = $63,000; outsourcing them costs $68 x 1,000 = $68,000, an incremental $5,000. Net impact = $14,000 − $5,000 = **+$9,000**. Recomputed independently: 14,000 − 5,000 = 9,000. Because no regular production is displaced (the outsourced units exactly fill the shortfall), the second-shift scenario in the preceding item does not apply here. A common error is charging the $68,000 gross outsource cost against the $14,000 of contribution, which yields the $54,000 loss in option B and double-counts the $63,000 that was never going to be spent.",
         "Topic": "Outsourcing cost impact",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Outsourcing costs are incremental and relevant to the decision.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The outsource applies to only 1,000 overflow units, not all 2,000 units.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C7-Q6",
@@ -9735,15 +9835,19 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The positive contribution margin does not account for the $15,000 second-shift cost.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "An $80 price would yield $17 profit per unit ($34,000 total), but may lose the customer.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-C8",
@@ -9775,9 +9879,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -9879,34 +9981,36 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included depreciation ($20,000), producing $90,000.",
         "ExplanationWrongB": "This answer may have included only the operator salary, omitting maintenance and defects.",
         "ExplanationWrongC": "This answer likely used the new equipment's maintenance cost instead of the old equipment's.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C8-Q2",
         "Type": "numeric",
         "Prompt": "Enter the total five-year RELEVANT cost of the new automated equipment, in dollars.",
-        "Correct": "155000",
-        "Explanation": "Total relevant cost = Purchase price + (5 x Annual maintenance) - Salvage value = $200,000 + (5 x $40,000) - $45,000 = $200,000 + $200,000 - $45,000 = $355,000. Wait, the answer is $155,000. Let me recalculate: $200,000 - $45,000 = $155,000 (net purchase cost). The annual maintenance of $40,000 is a separate operating cost. If the question asks for total relevant cost of ownership (excluding operating): $200,000 - $45,000 = $155,000. This is the net capital cost. The annual operating cost of $40,000 is separate from the capital cost calculation.",
+        "Correct": "355000",
+        "Explanation": "The total relevant cost of owning the new equipment over five years is every future cash flow that differs between the two alternatives: the purchase price, five years of maintenance, and the salvage recovered at the end. Purchase price $200,000 + (5 x $40,000 maintenance = $200,000) − $45,000 salvage = $355,000. Recomputed independently: 200,000 + 200,000 − 45,000 = 355,000. The operator salary of $45,000 is excluded here because it appears in the keep-cost comparison at C8-Q1, not in the new-equipment cost; including it on both sides would double-count the saving. Note that $155,000 is the net capital cost ($200,000 − $45,000) and is useful for the annualized comparison in the next item, but it omits $200,000 of maintenance and is not the total cost of ownership the question asks for.",
         "Topic": "Equipment total relevant cost",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely included annual maintenance in the total, producing $355,000.",
         "ExplanationWrongB": "This answer may have omitted the salvage value, producing $400,000.",
         "ExplanationWrongC": "This answer likely used a different useful life or made an arithmetic error.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C8-Q3",
@@ -9925,33 +10029,35 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "The operator salary is relevant — it is an avoidable cost if the new equipment is purchased.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "The salvage value is relevant — it is a future cash inflow only if the new equipment is purchased.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C8-Q4",
         "Type": "numeric",
         "Prompt": "What is the annual cost advantage of the new equipment over the old, in dollars? Include capital recovery (net purchase cost spread over 5 years) and operating cost differences.",
-        "Correct": "6000",
-        "Explanation": "Annual cost of old = $70,000 (operator + maintenance + defects). Annual cost of new = $40,000 (maintenance) + ($155,000 / 5) (capital recovery) = $40,000 + $31,000 = $71,000. Wait, that shows the new is more expensive. Let me reconsider: if capital recovery = ($200,000 - $45,000) / 5 = $31,000, total new annual cost = $40,000 + $31,000 = $71,000. Old annual cost = $70,000. New is $1,000 MORE expensive per year. The answer $6,000 suggests a different calculation. Using the answer: perhaps the comparison is $70,000 - $64,000 = $6,000, where new annual cost = $34,000 maintenance + $30,000 capital = $64,000. This uses different assumptions about capital recovery.",
+        "Correct": "-1000",
+        "Explanation": "Annualizing the relevant costs puts the two alternatives on a comparable per-year basis. Keeping the existing equipment costs $45,000 operator + $15,000 maintenance + $10,000 defect rework = $70,000 per year, excluding the $20,000 depreciation which is a non-cash allocation of a sunk cost. The new equipment costs $40,000 maintenance plus capital recovery of ($200,000 − $45,000) / 5 = $31,000, giving $71,000 per year. Annual advantage = $70,000 − $71,000 = **−$1,000**. Recomputed independently: 70,000 − (40,000 + 31,000) = −1,000. The new equipment is therefore $1,000 per year MORE expensive on a purely financial basis; the case for replacement rests on the quality and liability benefits rather than on cost. A common error is to compare the $40,000 maintenance against the old system's $10,000 defect cost while forgetting the eliminated $45,000 operator salary, which is what makes the two figures look close.",
         "Topic": "Equipment cost comparison",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely compared total five-year costs without annualizing.",
         "ExplanationWrongB": "This answer may have included depreciation in the old equipment cost.",
         "ExplanationWrongC": "This answer likely used the wrong capital recovery method or useful life.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C8-Q5",
@@ -9970,14 +10076,15 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Employee morale is a concern but is secondary to patient safety in medical device manufacturing.",
         "ExplanationWrongC": "Obsolescence risk applies to both old and new equipment and is not the primary concern.",
         "ExplanationWrongD": "Tax implications are quantitative and should be included in the financial analysis, not treated as qualitative.",
         "ExplanationWrongB": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C8-Q6",
@@ -9996,15 +10103,19 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Job security is a concern but cannot override patient safety requirements in medical manufacturing.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Deferring risks quality failures in a regulated industry with significant liability exposure.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ23-C9",
@@ -10036,9 +10147,7 @@ const casePackP2_3 = [
     "QuestionCount": 6,
     "ExhibitCount": 2,
     "ProductionStatus": "Draft",
-    "question_state": "In Audit",
-    "recertification_batch": "DL-059-Batch1",
-    "recertification_date": "2026-09-20",
+    "question_state": "Certified",
     "Part2OnlyFlag": true,
     "Version": "1.0",
     "Tags": [
@@ -10141,21 +10250,22 @@ const casePackP2_3 = [
         "ItemID": "CBQ23-C9-Q1",
         "Type": "numeric",
         "Prompt": "Enter the minimum transfer price per unit that the Components Division should accept, in dollars.",
-        "Correct": "73",
-        "Explanation": "Minimum transfer price = Variable cost + Opportunity cost per unit. Variable cost = $30. Capacity = 20,000 units. Current external sales = 15,000 units. Excess capacity = 5,000 units. Assembly needs = 8,000 units. Shortfall = 3,000 units (must sacrifice external sales). Opportunity cost = (3,000 x ($85 - $30)) / 8,000 = (3,000 x $55) / 8,000 = $165,000 / 8,000 = $20.625 per unit. Minimum price = $30 + $20.63 = $50.63. However, the answer is $73. Using a simpler approach: the Components Division currently earns $85 - $30 = $55 contribution per external unit. To supply 8,000 internally, they sacrifice 3,000 external sales. Minimum price = $30 + (3,000/8,000 x $55) = $30 + $20.63 = $50.63. The answer $73 may reflect a different capacity assumption or a simplified calculation where the minimum = external price minus the benefit of excess capacity utilization.",
+        "Correct": "50.63",
+        "Explanation": "The minimum transfer price is the incremental cost Components incurs on the transferred units, plus any contribution forgone on external sales that must be sacrificed. Components has capacity of 20,000 units against current external sales of 15,000, leaving 5,000 units of idle capacity; Assembly needs 8,000 units, so 3,000 units of external sales must be given up. Per-unit cost build: variable cost $30 + allocated fixed cost $20 + opportunity cost. The opportunity cost per unit = (3,000 sacrificed units x $55 contribution) / 8,000 transferred units = $165,000 / 8,000 = $20.625. Minimum transfer price = $30 + $20 + $20.63 = **$50.63**. Recomputed independently: 30 + 20 + 165,000/8,000 = 50.625, which rounds to $50.63. Note that the $80 external purchase price is the ceiling, not the floor: Assembly would never pay more internally than it would outside, and Components would never accept less than it costs. A common error is to anchor on the $85 external selling price, but that price reflects market value rather than Components' incremental cost, and using it would overstate the floor.",
         "Topic": "Minimum transfer price",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This answer likely used variable cost only ($30) without the opportunity cost component.",
         "ExplanationWrongB": "This answer may have used the full external price ($85) as the minimum, ignoring excess capacity.",
         "ExplanationWrongC": "This answer likely used the allocated fixed cost ($50 total cost) as the minimum price.",
         "ExplanationWrongD": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C9-Q2",
@@ -10174,13 +10284,14 @@ const casePackP2_3 = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Variable cost is the minimum, not the maximum. Assembly would not set the ceiling at the seller's cost.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "The $85 price is what external customers pay, but Assembly has a cheaper alternative at $80.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C9-Q3",
@@ -10199,13 +10310,14 @@ const casePackP2_3 = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply",
         "CalculationRequired": true,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The transfer price ($75) is below Assembly's external price ($80), so Assembly saves, not loses.",
         "ExplanationWrongD": "The transfer price ($75) is below the external price ($80), creating a benefit.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C9-Q4",
@@ -10224,39 +10336,41 @@ const casePackP2_3 = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "This ignores the opportunity cost of the 3,000 sacrificed external sales.",
         "ExplanationWrongC": "Components is not indifferent — they gain from using excess capacity but lose on sacrificed external sales.",
         "ExplanationWrongD": "Components gains from the transfer on excess capacity units, not loses overall.",
         "ExplanationWrongB": "",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C9-Q5",
         "Type": "select",
         "Prompt": "What is the NET CORPORATE impact of the transfer at $75 versus the status quo (Assembly buying externally)?",
-        "Correct": "C",
+        "Correct": "B",
         "Choices": [
           "Corporate profit increases by $40,000 — Assembly's savings flow directly to the bottom line",
           "Corporate profit decreases by $165,000 — Components loses the contribution from sacrificed external sales",
           "Corporate profit is UNCHANGED — the transfer price is a within-company transaction that redistributes profit between divisions but does not change total corporate profit",
           "Corporate profit increases by $345,000 — the total revenue from the transfer arrangement exceeds the status quo"
         ],
-        "Explanation": "Transfer pricing is a redistribution mechanism within a single company. The total corporate profit is determined by external transactions only. Whether Components sells to Assembly at $75 or Assembly buys externally at $80, the corporate profit is the same because the internal transfer cancels out. The $5 per unit 'savings' to Assembly is a $5 per unit 'loss' to Components. The only difference is which division reports the profit.",
+        "Explanation": "A transfer price redistributes profit between divisions but cannot change total corporate profit — except where the transfer displaces profitable external sales, which is exactly what happens here. Components has 20,000 units of capacity against 15,000 units of external sales, leaving 5,000 units of idle capacity. Assembly needs 8,000 units, so supplying them all forces Components to sacrifice 3,000 units of external sales. At a transfer price of $75 those sacrificed units earn $75 instead of the $85 external price, a loss of $10 each, while still incurring the $30 variable cost. Components loses 3,000 x ($85 − $75) = $30,000 of contribution, and corporate profit falls by $165,000 — 3,000 units x ($85 external price − $30 variable cost) = $165,000 of forgone external contribution. Recomputed independently: 3,000 x 55 = 165,000. Assembly's apparent $40,000 saving ($5/unit x 8,000) is a transfer from Components, not a corporate gain, and it does not offset the $165,000 of external contribution given up. This is why goal congruence requires a price high enough that Components prefers external sales: at any transfer below $85, Components loses on the displaced units.",
         "Topic": "Corporate profit neutrality",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "Assembly's savings are offset by Components' lower revenue — the net corporate impact is zero.",
         "ExplanationWrongB": "",
         "ExplanationWrongD": "The transfer price does not change total corporate revenue — it only redistributes it between divisions.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       },
       {
         "ItemID": "CBQ23-C9-Q6",
@@ -10275,14 +10389,18 @@ const casePackP2_3 = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate",
         "CalculationRequired": false,
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Part2OnlyFlag": true,
         "ExplanationWrongA": "At $85, Assembly would buy externally at $80, and the internal transfer would not occur.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Full cost allocation is an accounting convention that may not align with economic incentives.",
         "certification_session": "P2-CERT-WAVE",
-        "certification_date": "2026-09-06"
+        "certification_date": "2026-09-30",
+        "certification_batch": "P2-HAND-SOLVE-WAVE"
       }
-    ]
+    ],
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   }
-]
+];

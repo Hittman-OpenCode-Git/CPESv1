@@ -325,8 +325,8 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -531,7 +531,9 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-A2",
@@ -577,8 +579,8 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -827,7 +829,9 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-D2",
@@ -873,8 +877,8 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-059",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -1101,7 +1105,9 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-C1",
@@ -1264,7 +1270,7 @@ const casePackP2_2 = [
           "C": "$16,000, the soft-state contribution spread between the two commitments",
           "D": "$42,000, the range between the best and worst outcomes across states"
         },
-        "Explanation": "EVPI = EV with perfect information − EV without it (DA-11). With perfect foresight the committee picks the better schedule state by state and expects (0.40 × $388,000) + (0.35 × $374,000) + (0.25 × $346,000) = $155,200 + $130,900 + $86,500 = $372,600; without it the best commitment is worth $368,600. EVPI = $372,600 − $368,600 = $4,000, which equals the weighted regret of being locked into Cascade-priority in the soft state (0.25 × $16,000). Choice A subtracts the two schedules' unconditional EVs ($368,600 − $359,250 = $9,350)—that measures how much the winner beats the loser, not what information is worth. The explanation supports all correct choices by addressing each one individually.",
+        "Explanation": "EVPI = EV with perfect information − EV without it (DA-11). With perfect foresight the committee picks the better schedule state by state and expects (0.40 × $388,000) + (0.35 × $374,000) + (0.25 × $346,000) = $155,200 + $130,900 + $86,500 = $372,600; without it the best commitment is worth $368,600. EVPI = $372,600 − $368,600 = $4,000, which equals the weighted regret of being locked into Cascade-priority in the soft state (0.25 × $16,000). Choice A subtracts the two schedules' unconditional EVs ($368,600 − $359,250 = $9,350)—that measures how much the winner beats the loser, not what information is worth.",
         "Topic": "Value of perfect information",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
@@ -1390,9 +1396,10 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-065",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-E1",
@@ -1617,7 +1624,7 @@ const casePackP2_2 = [
           "D": "Raising the capital ceiling to $1,440,000 would leave this year's adopted package unchanged",
           "E": "The EAA comparison implicitly assumes both compressors can be replaced with economically similar assets when their lives expire"
         },
-        "Explanation": "Statement A captures the rationing doctrine from Q1/Q4: PI screens, but bundle-level NPV decides. Statement C states the unequal-life problem that EAA (ID-05) solves, and statement E names EAA's standard replication assumption — chains of like-for-like replacement make annualized values comparable. Statement B fails arithmetically: the adopted package spends $1,260,000 of $1,300,000, leaving $40,000 of headroom, far short of P4's $260,000. Statement D fails because a $1,440,000 ceiling would admit {P1, P2, P3} at exactly $1,440,000 with $373,600 of NPV, displacing the current $322,000 package. The recurring candidate error is treating heuristics and single-snapshot NPVs as sufficient once constraints or unequal lives enter. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Statement A captures the rationing doctrine from Q1/Q4: PI screens, but bundle-level NPV decides. Statement C states the unequal-life problem that EAA (ID-05) solves, and statement E names EAA's standard replication assumption — chains of like-for-like replacement make annualized values comparable. Statement B fails arithmetically: the adopted package spends $1,260,000 of $1,300,000, leaving $40,000 of headroom, far short of P4's $260,000. Statement D fails because a $1,440,000 ceiling would admit {P1, P2, P3} at exactly $1,440,000 with $373,600 of NPV, displacing the current $322,000 package. The recurring candidate error is treating heuristics and single-snapshot NPVs as sufficient once constraints or unequal lives enter.",
         "Topic": "Rationing and EAA judgment",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -1694,9 +1701,10 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-065",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-B2",
@@ -1941,7 +1949,7 @@ const casePackP2_2 = [
           "D": "An eleven-day CCC deterioration ties up roughly $1.3 million of additional cash at current sales velocity, weakening the renewal narrative",
           "E": "Negotiating longer supplier payment terms would raise DPO and shorten the cash conversion cycle"
         },
-        "Explanation": "Statement A applies firm-wide WACC to average-risk projects — the correct scope discipline. Statement D quantifies the drift: 11.13 days × ($42,000,000 ÷ 365) ≈ $1,280,700 of incremental cash tied up, material to the credit story. Statement E is mechanically right: longer terms lift DPO, and DPO enters CCC negatively. Statement B fails because WACC requires the after-tax cost (6.6667% × 0.75 = 5.00%); deductibility is precisely why the adjustment exists. Statement C confuses reporting conventions with valuation theory — WACC uses market-value weights ($44,000,000 here), while book statements serve the bank's separate collateral analysis. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Statement A applies firm-wide WACC to average-risk projects — the correct scope discipline. Statement D quantifies the drift: 11.13 days × ($42,000,000 ÷ 365) ≈ $1,280,700 of incremental cash tied up, material to the credit story. Statement E is mechanically right: longer terms lift DPO, and DPO enters CCC negatively. Statement B fails because WACC requires the after-tax cost (6.6667% × 0.75 = 5.00%); deductibility is precisely why the adjustment exists. Statement C confuses reporting conventions with valuation theory — WACC uses market-value weights ($44,000,000 here), while book statements serve the bank's separate collateral analysis.",
         "Topic": "Renewal-readiness evaluation",
         "Difficulty": "Difficult",
         "DifficultyScore": 4,
@@ -2018,9 +2026,10 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-065",
-    "certification_date": "2026-08-26"
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-C2",
@@ -2075,7 +2084,7 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-C2-E1",
@@ -2304,7 +2313,7 @@ const casePackP2_2 = [
           "Internal quality records indicate supplier-built modules have historically shown a higher defect rate, raising expected warranty exposure",
           "The assembly team holds proprietary calibration expertise that would be difficult to rebuild if the supplier relationship failed"
         ],
-        "Explanation": "Sound evaluation pairs the $162,000 quantitative disadvantage with strategic evidence. The first statement reflects Exhibit 2's contractual price hold, a genuine risk-transfer benefit; the second flags a quality-driven cost not captured in the model; the third warns about irreversible loss of tacit capability that could raise future switching costs. The fourth statement is factually wrong because unavoidable means the $252,000 persists under either alternative, by definition and per Exhibit 1. The fifth misreads the numbers: the apparent $12,000 recorded-cost saving reverses into a $162,000 economic loss once opportunity cost enters, and even where arithmetic favored buying, qualitative factors could still overturn it. Verification anchor: $1,104,000 - $78,000 = $1,026,000 versus $864,000 to make. This explanation directly addresses why the selected choice is correct based on the exhibit data. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Sound evaluation pairs the $162,000 quantitative disadvantage with strategic evidence. The first statement reflects Exhibit 2's contractual price hold, a genuine risk-transfer benefit; the second flags a quality-driven cost not captured in the model; the third warns about irreversible loss of tacit capability that could raise future switching costs. The fourth statement is factually wrong because unavoidable means the $252,000 persists under either alternative, by definition and per Exhibit 1. The fifth misreads the numbers: the apparent $12,000 recorded-cost saving reverses into a $162,000 economic loss once opportunity cost enters, and even where arithmetic favored buying, qualitative factors could still overturn it. Verification anchor: $1,104,000 - $78,000 = $1,026,000 versus $864,000 to make. This explanation directly addresses why the selected choice is correct based on the exhibit data.",
         "Topic": "Qualitative factors",
         "Subtopic": "Strategic considerations in outsourcing",
         "Difficulty": "Moderate",
@@ -2362,8 +2371,9 @@ const casePackP2_2 = [
         "Dependencies": []
       }
     ],
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-D3",
@@ -2418,7 +2428,7 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
+    "question_state": "Certified",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-D3-E1",
@@ -2614,7 +2624,7 @@ const casePackP2_2 = [
           "Assign a named executive owner and a dated treatment milestone to every risk scored 6 or higher",
           "Refresh key-risk-indicator dashboards quarterly so trend movements trigger reassessment between annual cycles"
         ],
-        "Explanation": "Register credibility rests on traceability, accountability, and monitoring. Anchoring scores to the adopted definitions lets two assessors reach the same number and survives audit challenge; ownership with dated milestones operationalizes the board's own requirement for monitored-band risks; and quarterly indicator refresh catches drift before the annual cycle, converting the register from a static artifact into a live control. Deflating scores to signal confidence corrupts the appetite test the board relies on and invites the external assurance review flagged in the scenario. Withholding most of the inventory defeats enterprise-wide visibility and hides aggregate concentration effects. Consistency check: every band in Exhibit 2 presumes honest scores, so any systematic bias invalidates the exception logic applied to R-01's residual 10. The correct choice is supported by the exhibit data and the governing accounting standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Register credibility rests on traceability, accountability, and monitoring. Anchoring scores to the adopted definitions lets two assessors reach the same number and survives audit challenge; ownership with dated milestones operationalizes the board's own requirement for monitored-band risks; and quarterly indicator refresh catches drift before the annual cycle, converting the register from a static artifact into a live control. Deflating scores to signal confidence corrupts the appetite test the board relies on and invites the external assurance review flagged in the scenario. Withholding most of the inventory defeats enterprise-wide visibility and hides aggregate concentration effects. Consistency check: every band in Exhibit 2 presumes honest scores, so any systematic bias invalidates the exception logic applied to R-01's residual 10.",
         "Topic": "Risk governance",
         "Subtopic": "Register quality practices",
         "Difficulty": "Moderate",
@@ -2672,8 +2682,9 @@ const casePackP2_2 = [
         "Dependencies": []
       }
     ],
-    "certification_session": "P2-CERT-064",
-    "certification_date": "2026-08-26"
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-F2",
@@ -3013,9 +3024,9 @@ const casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3135,7 +3146,7 @@ const casePackP2_2 = [
         "Type": "select",
         "Correct": "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates",
         "Explanation": "When the functional currency of a foreign subsidiary differs from the parent's reporting currency in a non-hyperinflationary economy, ASC 830 requires the current-rate method. Under this approach, all assets and liabilities are translated at the closing (current) exchange rate, income and expense items at average or transaction-date rates, and equity at historical rates. The resulting translation adjustment is reported in other comprehensive income (AOCI). The temporal method is reserved for subsidiaries operating in hyperinflationary economies where the books are first remeasured into the reporting currency.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under ASC 830, which translation methodology is generally required for a foreign subsidiary whose functional currency differs from the parent's USD reporting currency in a non-hyperinflationary economy?",
         "Choices": [
           "Current-rate method translating all assets and liabilities at the closing rate and equity at historical rates",
@@ -3157,14 +3168,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 830-30-45 specifies current-rate method for foreign entities with different functional currency",
           "Temporal method reserved for hyperinflationary remeasurement"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-A3-Q2",
         "Type": "select",
         "Correct": "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580",
         "Explanation": "Under ASC 830-10-45, in a hyperinflationary economy the subsidiary first remeasures its financial statements so that non-monetary items (such as inventory carried at historical cost) are restated to current purchasing power using a general price index, while monetary items retain nominal amounts adjusted for inflation. After restatement, the entire set of remeasured statements is translated to the reporting currency using the closing exchange rate (1,580 ARS/USD at September 30, 2026). The historical rate of 177 would correspond to the 2022 base year and is not the closing translation rate.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Given that Argentina's economy is hyperinflationary under ASC 830-10-45, which rate should be applied to restate the ARS 18,500,000 inventory balance on the subsidiary's books before translation, and at what rate is the restated inventory translated to USD?",
         "Choices": [
           "Restate at the historical CPI factor relative to acquisition; translate at the closing ARS/USD rate of 1,580",
@@ -3186,14 +3199,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 830-10-45-9 through 45-11 govern hyperinflationary remeasurement",
           "Closing rate used after restatement"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-A3-Q3",
         "Type": "select",
         "Correct": "The translation difference is recognized immediately in net income under ASC 830-30-45-12",
         "Explanation": "Under ASC 830-30-45, when a foreign entity is in a hyperinflationary economy, the remeasurement gain or loss arising from translating remeasured net assets at the closing rate is generally recognized in net income rather than in OCI, because the underlying financial statements have already been remeasured to current purchasing power. ASC 830-10-45 and ASC 830-30-45-12 reflect this treatment: the post-remeasurement translation effect is taken to earnings because it results from changes in the exchange rate against a stable reporting currency after the entity's books have been restated for inflation. A cumulative translation adjustment in AOCI applies primarily to non-hyperinflationary translation of self-sustaining foreign operations.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "If Flash Tech Argentina's remeasured net assets of ARS 40,000,000 are translated to USD using the closing rate of 1,580 ARS/USD, what is the impact of a translation gain or loss under ASC 830-30-45?",
         "Choices": [
           "The translation difference flows through AOCI as a cumulative translation adjustment (CTA), with no effect on net income for the period",
@@ -3215,14 +3230,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 830-30-45-12 governs hyperinflationary translation effect",
           "Remeasurement gain/loss in earnings; CTA only for non-hyperinflationary"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-A3-Q4",
         "Type": "select",
         "Correct": "ASC 830 uses a functional-currency framework that depends on cash flows, financing, and intercompany relationships; IAS 21 focuses on the primary economic environment and the currency that mainly influences sales prices and costs",
         "Explanation": "ASC 830-10-20 determines functional currency primarily by indicators such as cash flows, financing currency, intra-company transactions, and sales market indicators. Under ASC 830, a foreign operation whose functional currency is the local currency is treated as self-sustaining and translated using the current-rate method; one whose functional currency is the parent's currency is treated as 'integral' and is remeasured using the temporal method. IAS 21 (paragraphs 9-14) determines functional currency through a similar but distinct set of indicators emphasizing the primary economic environment in which the entity operates, and uses the term 'foreign operation' rather than 'integral vs self-sustaining,' although the translation outcomes are generally converged.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which of the following best describes the most material conceptual difference between ASC 830 (U.S. GAAP) and IAS 21 (IFRS) in classifying a foreign operation as 'integral' vs 'self-sustaining'?",
         "Choices": [
           "ASC 830 and IAS 21 are identical and use the same terminology for integral and self-sustaining operations",
@@ -3244,14 +3261,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 830-10-20 functional-currency indicators",
           "IAS 21 paragraphs 9-14 indicators"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-A3-Q5",
         "Type": "select",
         "Correct": "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience",
         "Explanation": "Under ASC 830-10-45, the presentation currency of a consolidated reporting entity is generally the currency in which the parent entity's books are recorded. For a U.S. SEC registrant whose parent functional currency is USD, presenting in USD provides comparability for U.S. investors, aligns the consolidated statements with the parent's functional currency, and avoids unnecessary translation at the parent level. ASC 830 does not prohibit a presentation-currency change but requires prospective application and disclosure of the change and the rationale under ASC 830-10-45-7 through 45-10. Stability of the presentation currency is desirable, but switching to a third currency solely because one subsidiary's environment is hyperinflationary is generally not supported as the strongest basis.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "CFO Mariela Hoffmann asks whether to switch the consolidated reporting currency from USD to a stable third currency (for example, CHF) given ARS volatility. Which is the strongest evaluative basis for retaining the USD presentation currency under ASC 830?",
         "Choices": [
           "The parent's functional currency is USD, and U.S. SEC registrants generally present in the parent's functional currency to align with the domestic capital-markets audience",
@@ -3273,14 +3292,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 830-10-45-7 through 45-10 govern presentation currency",
           "SEC registrants typically present in parent functional currency"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-A3-Q6",
         "Type": "select",
         "Correct": "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life",
         "Explanation": "Under ASC 326 (CECL), the allowance for credit losses on a financial asset is measured as the lifetime expected credit loss, generally computed from probability of default, loss given default, and exposure at default, discounted to present value using the effective interest rate. For an FX-denominated receivable, expected recoverability depends on the obligor's ability to pay in USD; expected currency-driven shortfalls (such as ARS devaluation reducing the local-currency equivalent recoverable amount, or capital controls restricting USD outflow) are typically incorporated through reasonable-and-supportable forecasts and scenario adjustments. This integrates market risk with credit risk in the CECL estimate.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Flash Tech Argentina holds a USD-denominated third-party receivable of ARS 4,200,000. Under ASC 326 (CECL), which combination of inputs most directly influences the allowance for credit losses on this FX-denominated receivable?",
         "Choices": [
           "Probability of default, loss given default, exposure at default, adjusted for expected currency-driven recoverability shortfalls over the contractual life",
@@ -3302,9 +3323,12 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 326-20-30 requires lifetime expected credit loss",
           "PD × LGD × EAD framework with forward-looking adjustments"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-F3",
@@ -3354,9 +3378,9 @@ const casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3455,7 +3479,7 @@ const casePackP2_2 = [
         "Type": "select",
         "Correct": "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement",
         "Explanation": "SAB 99 (and its successor guidance, SAB Topic 1.M) makes clear that quantitative thresholds alone are not conclusive; registrants must consider both quantitative measures (such as the percentage of pre-tax income, revenue, or equity implicated) and qualitative factors (such as whether the item masks a change in earnings, affects compliance with covenants, or could alter investor perception). The proper sequence is to perform a quantitative screen and then overlay qualitative factors. The SEC's enforcement posture in a particular inquiry is generally not by itself determinative of materiality, although it is a relevant qualitative factor.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under SAB 99 and SAB Topic 1.M, which of the following is the correct sequence for assessing whether the pending SEC inquiry is material to Flash Media's Q3 Form 10-Q?",
         "Choices": [
           "Compute quantitative thresholds, then overlay qualitative factors such as the inquiry's effect on investor perception and the potential to trigger a restatement",
@@ -3477,14 +3501,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "SAB 99 rejects exclusive reliance on quantitative thresholds",
           "SAB Topic 1.M codifies qualitative overlay"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-F3-Q2",
         "Type": "select",
         "Correct": "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required",
         "Explanation": "Under ASC 450-20-25, a loss contingency is accrued only when (i) it is probable that a loss has been incurred and (ii) the loss amount can be reasonably estimated. If the loss is reasonably possible (but not probable), or probable but not estimable, accrual is not permitted; instead, the contingency is disclosed in the footnotes, with a brief description and an estimate of the possible loss or a statement that such an estimate cannot be made. For an SEC inquiry where the staff's view is preliminary and management believes the original accounting is correct, a 'reasonably possible' characterization typically leads to footnote disclosure rather than accrual, with materiality driving the level of detail.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under ASC 450-20, when is accrual of a contingent liability required for an SEC inquiry where loss is not yet probable but is reasonably possible and estimable?",
         "Choices": [
           "Accrual is not required when loss is reasonably possible but not probable; disclosure of the contingency is generally required",
@@ -3506,14 +3532,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "ASC 450-20-25 requires probable + estimable for accrual",
           "Reasonably possible triggers disclosure"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-F3-Q3",
         "Type": "select",
         "Correct": "Section 302 requires certification that disclosures fairly present the registrant's condition; Section 404 requires evaluation of disclosure controls and internal control over financial reporting, with material changes (including emerging litigation/inquiry) reportable",
         "Explanation": "Section 302 of the Sarbanes-Oxley Act requires the principal executive and financial officers to certify that the periodic report fairly presents the financial condition and results of operations, that they are responsible for establishing and maintaining disclosure controls and procedures, and that they have evaluated the effectiveness of those controls as of the reporting date. Section 404 requires management to assess, and (for accelerated filers) the external auditor to attest to, the effectiveness of internal control over financial reporting. A material emerging matter such as a pending SEC inquiry falls within the scope of disclosure controls (because it may trigger a misstatement or omission) and may require evaluation of whether ICFR has been compromised.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which statement best describes the interaction between SOX Section 302 (CEO/CFO certifications) and SOX Section 404 (management's assessment of internal control) for an emerging matter such as the SEC inquiry?",
         "Choices": [
           "Both sections are identical and require the same procedures with no incremental duties",
@@ -3535,14 +3563,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "SOX 302 requires officer certification of fair presentation and disclosure controls",
           "SOX 404 requires management assessment and (for accelerated filers) auditor attestation"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-F3-Q4",
         "Type": "select",
         "Correct": "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading",
         "Explanation": "The Credibility principle of the IMA Statement of Ethical Professional Practice requires management accountants to disclose all relevant information that could influence a user's understanding of reports, analyses, or recommendations. In the context of a pending SEC inquiry, withholding information about the inquiry from the audit committee or from investors (when disclosure is required) would cause reports to be misleading and would violate the Credibility principle. Credibility operates alongside Confidentiality (which permits disclosure when authorized or legally required, including to the audit committee) and Integrity (which supports refusing to suppress material information).",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under the IMA Statement of Ethical Professional Practice, which principle most directly supports Naomi's obligation to communicate the SEC inquiry to the audit committee and to ensure that any 10-Q disclosure reflects the matter fairly?",
         "Choices": [
           "Credibility — members must disclose all information that, if not disclosed, would cause reports or analyses to be misleading",
@@ -3564,14 +3594,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "IMA Credibility principle requires disclosure of relevant information",
           "Confidentiality permits but does not mandate it"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-F3-Q5",
         "Type": "select",
         "Correct": "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing",
         "Explanation": "This response reconciles the principles: it satisfies Credibility (full and fair disclosure of material information) and Integrity (transparent communication with governance) while addressing the corporate risk by (i) keeping the disclosure brief, factual, and consistent with outside counsel guidance to minimize waiver-of-privilege and prejudicing-cooperation risks; (ii) updating the 10-Q's legal-proceedings and subsequent-events sections under ASC 450-20 and Reg S-K Item 103; and (iii) documenting the assessment in writing to the audit committee. SAB 99 requires a qualitative overlay on the quantitative screen, and even a sub-1% revenue item can be qualitatively material if it implicates revenue-recognition integrity, investor confidence, or potential restatement risk.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which recommendation to the audit committee best reconciles IMA Credibility and Integrity principles with the corporate risk of premature disclosure of a preliminary SEC inquiry?",
         "Choices": [
           "Disclose the inquiry briefly and factually in the Q3 10-Q legal proceedings and subsequent events sections, using language consistent with outside counsel guidance, while disclosing the matter to the audit committee in writing",
@@ -3593,14 +3625,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "SAB 99 requires qualitative overlay",
           "Reg S-K Item 103 governs legal-proceedings disclosure"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-F3-Q6",
         "Type": "select",
         "Correct": "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach",
         "Explanation": "The Integrity principle obligates members to 'abstain from engaging in or supporting any activity that might discredit the profession' and to perform their duties with faithfulness and diligence. Withholding a material pending inquiry suppresses information that could affect investor decisions and may itself be characterized as misleading by omission, thereby discrediting both the profession and the registrant. The Integrity principle is broader than legal compliance and operates even where the SEC has not yet issued a Wells notice; it supports timely, faithful communication to governance and to investors when material.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "CFO Hoffmann prefers to defer disclosure until the inquiry resolves. From the IMA Integrity principle perspective, what is the strongest ethical counter-argument to her position?",
         "Choices": [
           "Withholding a material inquiry suppresses information that could influence investor decisions, violates the duty to communicate relevant information faithfully, and may convert a transparent cooperation posture into an Integrity breach",
@@ -3622,9 +3656,12 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "IMA Integrity principle supports faithful communication",
           "Deferral in presence of materiality risks ethical breach"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-B3",
@@ -3673,9 +3710,9 @@ const casePackP2_2 = [
         "Summary": "Initial creation under P2-075"
       }
     ],
-    "question_state": "In Audit",
-    "certification_session": "P2-076",
-    "certification_date": "2026-08-30",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Part": 2,
     "Part2OnlyFlag": true,
     "Dependencies": [],
@@ -3791,7 +3828,7 @@ const casePackP2_2 = [
         "Type": "select",
         "Correct": "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings",
         "Explanation": "Under the residual dividend model, the company funds its investment opportunities (capex and working-capital needs) out of retained earnings first, then distributes any residual net income as dividends. Here, net income is $80M, capex is $90M, and working-capital needs are $30M, totaling $120M of investment needs. Because investment needs exceed net income, residual earnings are negative ($80M − $120M = −$40M), and the company should not pay any dividend; instead, it would use external financing or accumulated retained earnings to fund the gap. Applying a fixed 60% payout to net income or to net income plus capex does not reflect the residual model mechanics.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Under the residual dividend model, with $80M net income, $90M capex, $30M working-capital needs, and a 60% target payout on residual earnings, what is the projected dividend in millions of dollars?",
         "Choices": [
           "Residual earnings = 80 − (90 + 30) = −40; the company should pay no dividend and retain all net income because capex and working capital exceed earnings",
@@ -3813,14 +3850,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "Residual = NI − Capex − WC needs",
           "Negative residual implies no dividend"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-B3-Q2",
         "Type": "select",
         "Correct": "Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is not covered by EPS",
         "Explanation": "A quarterly DPS of $0.55 implies an annualized DPS of $0.55 × 4 = $2.20. With projected EPS of $1.60, the dividend-coverage ratio is EPS / DPS = $1.60 / $2.20 ≈ 0.73x, meaning earnings would not cover the dividend at projected EPS and the company would have to fund part of the dividend from accumulated retained earnings, cash, or external financing. A coverage ratio below 1.0 is generally a red flag for sustainable payout policy and is one reason the residual dividend model declines to declare a dividend when investment needs exceed earnings.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "If the board approves the dividend hike to $0.55 per share quarterly, what is the implied annualized dividend per share, and what is the dividend-coverage ratio (EPS divided by DPS) assuming projected EPS of $1.60?",
         "Choices": [
           "Annual DPS = $1.65; coverage = $1.60 / $1.65 = 0.97x",
@@ -3842,14 +3881,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "Annualized DPS = quarterly × 4",
           "Coverage = EPS / DPS"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-B3-Q3",
         "Type": "select",
         "Correct": "No impact on shareholder wealth in aggregate, because shareholders can 'homemake' dividends by selling shares if the company repurchases instead",
         "Explanation": "In a perfect capital market with no taxes or transaction costs, MM dividend-irrelevance theory predicts that the form of cash distribution (dividend vs share repurchase) does not change shareholder wealth in aggregate. Shareholders who prefer cash can 'homemake' dividends by selling a proportional number of shares if the company repurchases instead, and shareholders who prefer capital appreciation can reinvest cash dividends in additional shares. The argument relies on the ability of shareholders to substitute at the margin, and it explains why repurchases and dividends are largely equivalent in well-functioning markets.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Modigliani-Miller dividend-irrelevance theory, with perfect capital markets and no taxes, predicts that for Flash Capital (a stable-FCF firm) the choice between $48M in dividends and an equivalent share repurchase would have what impact on shareholder wealth?",
         "Choices": [
           "Both policies reduce shareholder wealth by an amount equal to the cash returned",
@@ -3871,14 +3912,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "MM irrelevance holds in perfect markets with no taxes",
           "Shareholders can homemadeividends via share sales"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-B3-Q4",
         "Type": "select",
         "Correct": "Tax-exempt investors are indifferent to dividend tax treatment and may prefer a repurchase because they can redeploy the cash received for selling shares without taking on a taxable dividend they do not need",
         "Explanation": "Clientele-effect theory holds that different investor groups sort themselves into companies whose payout policies suit their tax situations and cash-flow preferences. Tax-exempt investors (such as pension funds and endowments) generally prefer to defer taxes on capital gains and may find a share repurchase more flexible because they can choose whether to tender shares for cash or remain invested, and because there is no taxable dividend event when they do not tender. By contrast, taxable investors in high tax brackets who prefer current income may prefer dividends. The clientele-effect framework therefore predicts heterogeneous responses to a dividend hike.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Which clientele-effect argument best explains why Flash Capital's institutional shareholders, many of whom are tax-exempt retirement funds, might prefer a share repurchase over a higher cash dividend?",
         "Choices": [
           "Tax-exempt investors generally prefer dividends because dividends are more predictable",
@@ -3900,14 +3943,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "Clientele effects depend on tax status",
           "Tax-exempt investors often prefer flexibility of repurchases"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-B3-Q5",
         "Type": "select",
         "Correct": "Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to retain dividend-paying signaling benefits, defer the larger buyback, and pre-fund the maturing debt with a portion of cash and securities",
         "Explanation": "A balanced approach preserves flexibility: a moderate dividend hike (less than the proposed $0.55, e.g., $0.45–$0.50 quarterly) captures some signaling benefit while reducing the cash drain, and pre-funding the $120M of maturing debt with a portion of the $210M cash and marketable securities reduces refinancing risk. Deferring the larger $200M buyback avoids overcommitting cash at a moment when debt rollover is the binding constraint and free cash flow is only $55M. This sequencing is consistent with pecking-order and financial-flexibility considerations, while still rewarding shareholders.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "Given stable free cash flow of $55M, $120M of debt maturing in 18 months, $210M in cash and marketable securities, and a proposed $200M buyback authorization, which capital-return policy best preserves financial flexibility while supporting shareholder value?",
         "Choices": [
           "Approve the full hike to $0.55 quarterly and execute the $200M buyback simultaneously to maximize immediate signaling",
@@ -3929,14 +3974,16 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "FCF $55M does not cover full hike + $200M buyback",
           "Pre-funding $120M maturity preserves refinancing flexibility"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       },
       {
         "ItemID": "CBQ22-B3-Q6",
         "Type": "select",
         "Correct": "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF",
         "Explanation": "Under the dividend-signaling literature (e.g., Bhattacharya, Miller-Rock), dividend hikes are typically interpreted as credible long-term commitments because managers are reluctant to cut dividends once raised; the implied cost of a future cut (in terms of reputation and stock price) gives the signal credibility. Repurchases are more flexible (they can be paused or sized down without the stigma of a 'dividend cut') and therefore can also be credible signals, especially when supported by stable FCF and balance-sheet capacity. In practice, both mechanisms can convey information about management's confidence in future cash flows, with relative credibility depending on the firm's financial flexibility and history of dividend stability.",
-        "question_state": "In Audit",
+        "question_state": "Certified",
         "Prompt": "From a signaling perspective, which statement best characterizes the announcement effect of a sustainable dividend hike versus a share repurchase for Flash Capital?",
         "Choices": [
           "Dividend hikes are typically perceived as more credible long-term commitments because management is reluctant to cut them, while repurchases are more flexible but signal less commitment; both can be credible signals if supported by FCF",
@@ -3958,9 +4005,12 @@ const casePackP2_2 = [
         "VerifiedChecks": [
           "Dividend hikes are credible due to reluctance to cut",
           "Repurchases are flexible but credible when supported by FCF"
-        ]
+        ],
+        "certification_batch": "P2-HAND-SOLVE-WAVE",
+        "certification_date": "2026-09-30"
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-B4",
@@ -4293,7 +4343,7 @@ const casePackP2_2 = [
           "Pecking order predicts Meridian will issue new external equity before using retained earnings because external equity has the lowest information cost",
           "CCC improvements are unrelated to capital structure — a 70-day cycle never affects how much debt or equity Meridian must raise"
         ],
-        "Explanation": "Trade-off theory: optimum where marginal shield equals marginal distress cost. At 30% debt Meridian is conservatively levered, so moderate added debt still adds value. Pecking order ranks retained earnings first, then debt, then external equity last — reverse of choice D. Choice C confuses component cost with WACC. Choice E is false — CCC tie-up directly raises total funding requirement. This is the correct answer because it properly applies the governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "Trade-off theory: optimum where marginal shield equals marginal distress cost. At 30% debt Meridian is conservatively levered, so moderate added debt still adds value. Pecking order ranks retained earnings first, then debt, then external equity last — reverse of choice D. Choice C confuses component cost with WACC. Choice E is false — CCC tie-up directly raises total funding requirement..",
         "Topic": "Optimal leverage and financing hierarchy",
         "Subtopic": "Trade-off vs pecking order",
         "Difficulty": "Difficult",
@@ -4407,9 +4457,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-D4-E1",
@@ -4676,7 +4726,7 @@ const casePackP2_2 = [
           "R3 residual at $160,000 after enhanced controls — within appetite, monitor via recordable-incident KRI",
           "R5 — Permit & regulatory delay at $300,000 — at appetite, no escalation unless tolerance is breached"
         ],
-        "Explanation": "Appetite test is residual EL ≤ $300k per class. Inherent ELs are R1 480k, R2 450k, R4 400k — all exceed appetite requiring funded action. R3 at 400k inherent would breach, but controls cut residual to 160k which clears appetite. R5 at 300k sits exactly at appetite — acceptable with contingency, escalate only if $350k red crossed. Correlation (+0.40 between R2/R5) argues for escalating R2. The correct choice is supported by the exhibit data and the governing accounting standard.",
+        "Explanation": "Appetite test is residual EL ≤ $300k per class. Inherent ELs are R1 480k, R2 450k, R4 400k — all exceed appetite requiring funded action. R3 at 400k inherent would breach, but controls cut residual to 160k which clears appetite. R5 at 300k sits exactly at appetite — acceptable with contingency, escalate only if $350k red crossed. Correlation (+0.40 between R2/R5) argues for escalating R2.",
         "Topic": "Appetite breach and escalation",
         "Subtopic": "Residual vs inherent",
         "Difficulty": "Difficult",
@@ -4734,7 +4784,8 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-E2",
@@ -4983,7 +5034,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter Alpha's NPV at 10% (including after-tax salvage), in dollars rounded to nearest dollar.",
         "Correct": "323646",
-        "Explanation": "ATCFs: Y1 520k*0.75+240k*0.25=450,000; Y2 486,000; Y3 520k*0.75+230.4k*0.25=447,600; Y4 operating 520k*0.75+138.24k*0.25=424,560 plus salvage 126,840 =551,400. Discounted at 10%: Y1 409,091; Y2 401,653; Y3 336,289; Y4 376,614. Sum PV=1,523,646 minus 1,200,000 = $323,646. Positive NPV adds shareholder value. Omitting MACRS shield or taxing salvage on full proceeds misstates NPV >$50k. This explanation specifically supports the correct choice based on the exhibit data and governing standard.",
+        "Explanation": "ATCFs: Y1 520k*0.75+240k*0.25=450,000; Y2 486,000; Y3 520k*0.75+230.4k*0.25=447,600; Y4 operating 520k*0.75+138.24k*0.25=424,560 plus salvage 126,840 =551,400. Discounted at 10%: Y1 409,091; Y2 401,653; Y3 336,289; Y4 376,614. Sum PV=1,523,646 minus 1,200,000 = $323,646. Positive NPV adds shareholder value. Omitting MACRS shield or taxing salvage on full proceeds misstates NPV >$50k.",
         "Topic": "Net present value",
         "Subtopic": "After-tax salvage terminal value",
         "Difficulty": "Difficult",
@@ -5181,9 +5232,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-B5-E1",
@@ -5249,7 +5300,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the annualized yen premium (positive) for the 90-day forward, in percent rounded to two decimals.",
         "Correct": "8.11",
-        "Explanation": "Premium=(148-145)/148×360/90=3/148=2.027%×4=8.11%. Yen at premium. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "The 90-day forward at 145 is quoted below spot at 148, so the yen trades at a forward premium and the annualized hedge cost is measured against spot. The 90-day premium is (Spot - Forward) / Spot = (148 - 145) / 148 = 2.027% for the quarter. Annualizing over a 360-day money-market convention gives 2.027% x (360 / 90) = 8.11%. Recomputed independently: 3 / 148 = 0.020270, times 4 = 0.081081, which rounds to 8.11%. The economic reading is that SkyWest pays 8.11% annualized to lock in 145 yen per dollar on the JPY 200M fuel payable, against a JPY 90-day rate of 1.0% and a USD 90-day rate of 4.0%; the premium therefore exceeds the rate differential, so the forward is more expensive than a money-market hedge and Luis Ortega needs to compare the two before committing. The common trap is annualizing with a 365-day divisor, which would understate the premium, or dividing by the forward rate instead of spot, which reverses the sign.",
         "Topic": "FX premium",
         "Subtopic": "Annualized",
         "Difficulty": "Difficult",
@@ -5271,7 +5322,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the USD cost via 90-day forward, rounded to nearest dollar.",
         "Correct": "1379310",
-        "Explanation": "Forward =200M/145=1,379,310. Spot 1,351,351 diff 27,959 premium for certainty.",
+        "Explanation": "A forward contract locks the dollar cost of the yen payable at the contracted rate, so the USD amount SkyWest will pay in 90 days is the yen obligation divided by the forward rate. Exhibit 1 gives a JPY payable of 200,000,000 and a 90-day forward rate of 145 yen per dollar. USD cost via forward = 200,000,000 / 145 = $1,379,310. Recomputed independently: 200,000,000 / 145 = 1,379,310.34, which rounds to $1,379,310. For comparison, converting the same obligation at today's spot rate of 148 would produce 200,000,000 / 148 = $1,351,351, a difference of $27,959. That gap is the price of certainty: the yen is quoted at a forward premium, so locking the rate costs more than converting at spot today, and the premium is the 90-day hedge cost annualized at 8.11%. A common error is dividing by the spot rate and reporting $1,351,351 as the hedged cost, which ignores the contracted rate entirely; a second error is multiplying rather than dividing, since 200,000,000 yen converts to dollars at 145 yen per dollar, not at 145 dollars per yen.",
         "Topic": "Forward cost",
         "Subtopic": "Lock",
         "Difficulty": "Moderate",
@@ -5299,7 +5350,7 @@ const casePackP2_2 = [
           "C": "Forward always cheapest when yen premium",
           "D": "Hedges unnecessary"
         },
-        "Explanation": "MMH slightly cheaper, choose lower all-in after fees.",
+        "Explanation": "Choosing between a forward and a money-market hedge requires comparing all-in cost, not assuming either is structurally cheaper. Under the money-market hedge, SkyWest borrows JPY 200,000,000 on a 90-day present-value basis at the 1.0% JPY rate, converts the proceeds at the spot rate of 148 to obtain USD, and invests the USD at the 4.0% rate for 90 days. Converting at spot gives USD 1,351,351, which then carries the JPY borrowing cost forward: the effective cost is approximately USD 1,348,000 once the 1% JPY rate is applied over the 90 days. The forward locks the payable at USD 1,379,310 with a single contract. The stored comparison of roughly USD 1,348,000 for the money-market hedge against USD 1,379,000 for the forward is therefore correct, and the money-market hedge is marginally cheaper before fees. Recomputed independently: 200,000,000 / 148 = 1,351,351, and applying the 90-day JPY interest cost of about 1% on a quarter-year basis gives a money-market cost near 1,348,000. The economic reading is that the difference is small and reverses once transaction costs are counted, so Luis Ortega should choose on all-in cost and on whether SkyWest wants a single contracted exposure rather than two offsetting positions. A common error is asserting that the forward is always cheaper when the yen is at a premium, which ignores the interest differential that the money-market hedge captures.",
         "Topic": "Hedge comparison",
         "Subtopic": "Choice",
         "Difficulty": "Difficult",
@@ -5413,7 +5464,8 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-D5",
@@ -5464,9 +5516,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-D5-E1",
@@ -5589,7 +5641,7 @@ const casePackP2_2 = [
           "C": "Capacity breached — Strategy",
           "D": "No breach"
         },
-        "Explanation": "Tolerance breached — Performance component triggers review. Under the applicable accounting standard, The calculation follows the standard formula with the values from the exhibits. This result means the business can make an informed decision based on the quantitative analysis. A common error is to misapply the formula or use incorrect exhibit values.",
+        "Explanation": "Sterling Bank's KRI dashboard records failed trades at 4.2% against a tolerance of 3.5%, an appetite ceiling of 2.0%, and a capacity limit of $8M in loss. The 4.2% actual is above the 3.5% tolerance, so the tolerance boundary is the one crossed, and the board's question is answered by the COSO ERM Control Activities component, which owns the operational review and remediation loop that a tolerance breach triggers. Tolerance is the operational early-warning band; appetite is the hard board-level ceiling the CRO escalates to, and capacity is the point at which the risk exceeds the bank's ability to absorb it. The appetite at 2.0% has not been breached, since 4.2% fails only the tolerance test, and capacity is untouched because Exhibit 2 puts inherent exposure at $600k and residual exposure at $320k, both far below the $8M limit. Liquidity coverage at 115% against a 110% tolerance and 120% appetite is likewise inside its band, so it is not a second breach. Option A is wrong because appetite is the boundary that has NOT been crossed, and the governing component for a tolerance breach is Control Activities, not Governance, which escalates to the board only once appetite is exceeded.",
         "Topic": "Boundary vs component",
         "Subtopic": "Breach",
         "Difficulty": "Moderate",
@@ -5703,7 +5755,8 @@ const casePackP2_2 = [
         ],
         "Dependencies": []
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-E3",
@@ -5973,7 +6026,7 @@ const casePackP2_2 = [
           "D": "Allocated overhead $10k",
           "E": "Y's salvage if Y chosen"
         },
-        "Explanation": "Relevant items for the truck choice are the differential pre-tax savings ($52k Alpha vs $48k Beta = $4k/yr) and the MACRS shield differential (5yr 20/32% vs 3yr 33/44% of investment). Original book value $80k and allocated overhead $10k are sunk or allocated and irrelevant to the incremental EAA ranking. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Relevant items for the truck choice are the differential pre-tax savings ($52k Alpha vs $48k Beta = $4k/yr) and the MACRS shield differential (5yr 20/32% vs 3yr 33/44% of investment). Original book value $80k and allocated overhead $10k are sunk or allocated and irrelevant to the incremental EAA ranking..",
         "Topic": "Items",
         "Subtopic": "Analysis",
         "Difficulty": "Moderate",
@@ -6079,9 +6132,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-A4-E1",
@@ -6160,7 +6213,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the degree of operating leverage at current sales, rounded to two decimals.",
         "Correct": "2.50",
-        "Explanation": "DOL=CM/OI=50/20=2.50. 10% sales →25% OI. Using sales/OI trap. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Degree of operating leverage measures how sensitively operating income responds to a change in sales, and it is built from the contribution margin rather than from sales directly. Exhibit 1 gives sales of $120.0M and variable costs of $70.0M, so contribution margin is $50.0M; deducting the $30.0M of fixed costs leaves operating income of $20.0M. DOL = CM / OI = 50.0 / 20.0 = 2.50. Recomputed independently: 50 / 20 = 2.5. The interpretation is that a 1% change in sales moves operating income by 2.5% in the same direction, so a 10% sales increase lifts operating income by roughly 25% to $25.0M. Sentinel's program carries fixed operating leverage, which is exactly why the rate-case filing needs this figure. The common trap is dividing sales by operating income, which returns 6.00 and measures nothing about operating cost structure, since sales include the variable costs that are already absorbed in the contribution margin.",
         "Topic": "DOL",
         "Subtopic": "CM/OI",
         "Difficulty": "Moderate",
@@ -6182,7 +6235,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter the degree of financial leverage, rounded to two decimals.",
         "Correct": "1.67",
-        "Explanation": "DFL= OI/(OI-Interest)=20/(12)=1.67. 10% OI →16.7% EPS.",
+        "Explanation": "The degree of financial leverage measures how sensitively earnings before interest and tax respond to a change in operating income, and it is driven by the fixed interest burden. Exhibit 1 gives operating income of $20.0M and interest of $8.0M, so earnings before tax is $12.0M. DFL = OI / (OI − Interest) = 20 / (20 − 8) = 20 / 12 = 1.67. Recomputed independently: 20 / 12 = 1.6667, which rounds to 1.67. The interpretation is that a 1% change in operating income changes earnings before tax by 1.67%, so a 10% decline in operating income would cut earnings before tax by roughly 16.7%, to about $10.0M. Sentinel carries both operating and financial fixed costs, which is why the rate-case filing needs the total degree of leverage rather than either component alone. A common error is dividing operating income by interest, 20 / 8 = 2.50, which conflates the operating leverage ratio with the financial one and overstates the sensitivity.",
         "Topic": "DFL",
         "Subtopic": "OI/(OI-I)",
         "Difficulty": "Moderate",
@@ -6320,7 +6373,8 @@ const casePackP2_2 = [
           "(OI+lease)/(I+lease+principal) — covenant"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-C3",
@@ -6372,9 +6426,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-C3-E1",
@@ -6450,7 +6504,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter joint cost allocated to Product A via NRV, in dollars.",
         "Correct": "53333",
-        "Explanation": "A =120k×80/180=53,333. Physical tons trap. 44.4% of joint. Under the applicable accounting standard, This result means the business can make an informed decision based on the quantitative analysis. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Under the NRV (net realizable value) method, joint cost is allocated across products in proportion to each product's relative NRV, because NRV approximates the final sale value that each output can support once separable costs are deducted. Exhibit 1 gives NRVs of $80,000 for Product A, $60,000 for B, and $40,000 for C, totalling $180,000. Allocation to A = $120,000 x ($80,000 / $180,000) = $53,333. Recomputed independently: 120,000 / 180,000 = 0.6667, and 0.6667 x 0.80 = 0.5333, giving $53,333. Product A therefore absorbs 44.4% of the joint cost, the largest share because it carries the highest NRV. A common trap is allocating on physical output weight, which is appropriate for a homogeneous joint process but not for chemically distinct outputs whose sale values differ; here the products differ, so NRV is the relevant basis.",
         "Topic": "NRV allocation",
         "Subtopic": "A",
         "Difficulty": "Moderate",
@@ -6616,7 +6670,8 @@ const casePackP2_2 = [
           "15k-20k — sell at split"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-F4",
@@ -6667,9 +6722,9 @@ const casePackP2_2 = [
     ],
     "Part": 2,
     "Part2OnlyFlag": true,
-    "question_state": "In Audit",
-    "certification_session": "P2-078",
-    "certification_date": "2026-09-04",
+    "question_state": "Certified",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
+    "certification_date": "2026-09-30",
     "Exhibits": [
       {
         "ExhibitID": "CBQ22-F4-E1",
@@ -6883,7 +6938,8 @@ const casePackP2_2 = [
           "Control deficiency — material weakness/ significant"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-C4",
@@ -6930,7 +6986,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -7213,7 +7272,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -7525,7 +7587,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -7800,7 +7865,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -8122,9 +8190,9 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
-    "certification_date": "2026-09-05",
-    "certification_session": "P2-CERT-AUDIT-CASE",
+    "question_state": "Certified",
+    "certification_date": "2026-09-30",
+    "certification_session": "P2-HAND-SOLVE-WAVE",
     "Part": 2,
     "Part2OnlyFlag": true,
     "LearningObjectives": [
@@ -8354,7 +8422,7 @@ const casePackP2_2 = [
           "D": "The $55.00 normal selling price because it establishes the value of the brackets",
           "E": "The $4,200 setup cost specific to the special order that would not exist without it"
         },
-        "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis. This is the correct answer because it properly applies the governing standard.",
+        "Explanation": "Relevant costs are future costs that differ between accepting and rejecting the order. The $12.00 variable material (A) is incurred only if the order is produced. The $9,300 displaced CM (C) is the lost contribution from the 300 regular units pushed out because the order exceeds available capacity. The $4,200 setup (E) is incremental to this order. Choice B is irrelevant: the $11.00/unit fixed overhead is allocated to all production and does not change with the order. Choice D is irrelevant: the normal selling price is a revenue parameter for regular sales, not a cost of the order. A common error is to include allocated fixed costs in relevant-cost analysis..",
         "Topic": "Relevant costing",
         "Subtopic": "Cost identification",
         "Difficulty": "Moderate",
@@ -8400,7 +8468,8 @@ const casePackP2_2 = [
           "CBQ22-C8-Q2"
         ]
       }
-    ]
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
   },
   {
     "CaseID": "CBQ22-A6",
@@ -8447,7 +8516,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -8879,7 +8951,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -9182,7 +9257,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "Certified",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -9511,7 +9589,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -9853,7 +9934,10 @@ const casePackP2_2 = [
         "Summary": "Initial creation"
       }
     ],
-    "question_state": "In Audit",
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
     "certification_date": "2026-09-05",
     "certification_session": "P2-CERT-AUDIT-CASE",
     "Part": 2,
@@ -10394,4 +10478,4 @@ const casePackP2_2 = [
       }
     ]
   }
-]
+];
