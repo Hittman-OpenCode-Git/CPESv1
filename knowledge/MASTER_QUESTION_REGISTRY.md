@@ -2,14 +2,14 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-09-29 21:58:22
+  Last generated: 2026-10-14 02:54:41
   Source hash: 14e6823a
 -->
 
 # Master Question Registry — CMA Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-09-29 21:58:22
+**Generated:** 2026-10-14 02:54:41
 **Source Hash:** `14e6823a`
 **Total Questions:** 3495
 
@@ -11502,21 +11502,21 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 7ms)
-- **Metadata Validator**: WARN (0 errors, 1 warnings, 589ms)
-- **Blueprint Validator**: WARN (0 errors, 188 warnings, 290ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 3263 warnings, 492ms)
-- **Difficulty Validator**: WARN (0 errors, 72 warnings, 623ms)
-- **Reference Validator**: WARN (0 errors, 77 warnings, 270ms)
-- **Explanation Validator**: WARN (0 errors, 6 warnings, 1562ms)
-- **Case Integrity Validator**: WARN (0 errors, 1 warnings, 301ms)
-- **Case Identity Validator**: PASS (0 errors, 0 warnings, 104ms)
-- **PsychometricValidator**: WARN (0 errors, 7108 warnings, 7644ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 4ms)
+- **Metadata Validator**: WARN (0 errors, 1 warnings, 356ms)
+- **Blueprint Validator**: WARN (0 errors, 188 warnings, 262ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 3263 warnings, 473ms)
+- **Difficulty Validator**: WARN (0 errors, 72 warnings, 1027ms)
+- **Reference Validator**: WARN (0 errors, 77 warnings, 260ms)
+- **Explanation Validator**: WARN (0 errors, 6 warnings, 1228ms)
+- **Case Integrity Validator**: WARN (0 errors, 1 warnings, 241ms)
+- **Case Identity Validator**: PASS (0 errors, 0 warnings, 57ms)
+- **PsychometricValidator**: WARN (0 errors, 7108 warnings, 7832ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-09-29 21:58:22
+  Registry regenerated on 2026-10-14 02:54:41
   Source hash: 14e6823a
   Questions: 3495
   To regenerate: node scripts/generate_registry.js

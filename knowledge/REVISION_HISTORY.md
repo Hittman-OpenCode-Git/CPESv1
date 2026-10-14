@@ -36843,3 +36843,52 @@ All structural validation gates PASS. The repository is ready for final save and
 - Rule 21/DL-047 gate — semantic quarantine manifest enforcement
 
 ---
+
+## 2026-10-13 — DL-068 Fill-Item Prompt Word-Count Mismatch (CBQ3-F1-Q2)
+
+**Session:** Full Governance Lane — user-reported content defect
+**Scope:** 1 item, 1 case (`content/cases/case_pack_2_corrected.js`, case CBQ3-F1)
+**Authority:** AGENTS.md §4 (REVISION_HISTORY entry required for every content change), §12.1 (DEFECT_LIBRARY entry)
+
+### Change Summary
+
+**Defect:** CBQ3-F1-Q2 (fill, Certified) prompt stated "Enter the **two-word** term for the testing
+phase where loan officers and credit analysts validate that the new system meets their business
+requirements before it is deployed to production." Stored `Correct` = "User acceptance testing"
+(three words). A candidate told to enter a two-word term could reasonably answer "acceptance
+testing" or "user acceptance" and be incorrectly rejected.
+
+**Fix:** Prompt corrected `two-word` → `three-word` (line 7294). **Answer key unchanged** —
+"User acceptance testing" verified as the unambiguous correct term for the described phase
+(end-user validation pre-go-live, distinct from unit and system integration testing).
+
+**Recertification (Rule 16):** Touched Certified item re-stamped —
+`recertification_batch: DL-068-RECERT`, `recertification_date: 2026-10-13`.
+Case `ModifiedDate` → 2026-10-13; `RevisionHistory` entry added (Version 2.1).
+
+**Backup:** `backups/case_pack_2_corrected.js.bak-20261013224231` (412,596 bytes, pre-write).
+
+### Detection & Scan Boundary
+
+First externally reported defect in the repository's history — detected by a learner, not by any
+screen. Targeted scan of all live P1 banks (`case_pack_{1,2,3}_corrected.js`) and all live P2
+banks (`p2/case_pack_p2_*.js`) for prompts containing word-count phrases ("single word", "N-word",
+"N words"): P1 = 4 prompts, 1 mismatch; P2 = 0 prompts state word counts. Same defect present in
+frozen legacy copy `content/cases/legacy/scored_cases3.js:4518` — not learner-facing, untouched.
+
+### Validation Results
+
+| Gate | Result |
+|------|--------|
+| npm run preflight (T0, pre-write) | PASS — 0 divergences, 3052 Certified, 123/123 guard |
+| npm run probe:parity (T0) | PASS — 0 divergences |
+| node --check (post-write) | PASS |
+| npm run pipeline (Tend) | GREEN — see pipeline output |
+
+### Cross-References
+
+- `knowledge/DEFECT_LIBRARY.md` — DL-068 entry (new defect class: prompt/answer word-count mismatch)
+- DL-067 — scan-boundary lesson (closure claims must state scan scope)
+- AGENTS.md §5 dual verification · §12.1 closeout logging
+
+---

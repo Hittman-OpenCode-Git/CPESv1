@@ -264,4 +264,77 @@ and state the boundary of the scan in the closure claim.**
 
 ---
 
+## DL-068 — Fill-item prompt states wrong word count (CBQ3-F1-Q2)
+
+```
+Defect ID        DL-068
+Class            Content / Prompt accuracy (prompt-stated word count ≠ stored answer length)
+Domain           P1 case bank — fill items (Technology and Analytics, SDLC case CBQ3-F1)
+Severity         Medium — learner-reachable misleading prompt on a Certified item; answer key itself was correct
+Detected By      User report (learner, 2026-10-13) — first externally reported defect; no screen existed for this class
+Status           Resolved — 2026-10-13. Prompt corrected, item recertified (DL-068-RECERT)
+```
+
+**Files:** `content/cases/case_pack_2_corrected.js` (item CBQ3-F1-Q2)
+
+### Finding
+
+Case CBQ3-F1 ("System Development Life Cycle (SDLC)", Coastal Financial Services) contains four fill
+items whose prompts state a word count. One was wrong:
+
+| Item | Prompt states | Stored `Correct` | Actual words | Verdict |
+|---|---|---|---|---|
+| CBQ3-F1-Q1 | "single word" | Analysis | 1 | OK |
+| CBQ3-F1-Q2 | "two-word term" | User acceptance testing | **3** | **MISMATCH** |
+| CBQ3-F1-Q4 | "two-word term" | Change management | 2 | OK |
+| CBQ3-F1-Q5 | "two-word term" | Production environment | 2 | OK |
+
+The defect was in the prompt, not the key: "User acceptance testing" is the unambiguous term for the
+described phase (end users validating the system pre-go-live). A candidate told to enter a "two-word
+term" could reasonably answer "acceptance testing" or "user acceptance" and be incorrectly rejected.
+
+Scan boundary: all live P1 banks (`content/cases/case_pack_{1,2,3}_corrected.js`) and all live P2
+banks (`p2/case_pack_p2_*.js`) searched for prompts containing word-count phrases ("single word",
+"N-word", "N words"). P1: 4 prompts, 1 mismatch. P2: 0 prompts state word counts. The same defect
+exists in the frozen legacy copy `content/cases/legacy/scored_cases3.js:4518` — not learner-facing,
+left untouched.
+
+### Why it survived
+
+No validator or semantic screen compared prompt-stated word counts against stored answer length, and
+no authoring standard required it. Detection came from a user report — the scan-boundary lesson of
+DL-067 applies in reverse: classes with no screen are found only by accident or by learners.
+
+### Resolution
+
+One-word prompt correction (`two-word` → `three-word`) at `case_pack_2_corrected.js:7294`. Answer key
+unchanged (verified correct against the scenario and SDLC standards). Rule 16 recertification stamps
+applied to the touched Certified item: `recertification_batch: DL-068-RECERT`,
+`recertification_date: 2026-10-13`. Case `ModifiedDate` updated and a `RevisionHistory` entry added
+(Version 2.1). Backup: `backups/case_pack_2_corrected.js.bak-20261013224231` (412,596 bytes).
+
+### Prevention
+
+No screen covers this class. Candidate check for `scripts/case_semantic_screens.js` or a validator:
+for `Type: "fill"` items, extract the stated word count from the prompt ("single word" → 1,
+`"N-word"` / `"N words"` → N) and compare against the whitespace-delimited word count of `Correct`;
+flag on mismatch. The control set is the 4 CBQ3-F1 prompts (1 known defect, 3 known clean).
+
+### Verification
+
+| Claim | Method | Result |
+|---|---|---|
+| Defect located | Targeted scan, all live P1+P2 banks | 1 mismatch of 4 word-count prompts |
+| Bank integrity | `node --check` | PASS |
+| Change scope | `git diff` | 1 prompt line + stamps + metadata, no key change |
+| Pool state | `npm run preflight` (T0) | 0 divergences before write |
+
+### Cross-references
+
+- DL-067 (scan-boundary lesson — closure claims must state scan scope)
+- AGENTS.md §5 dual verification · §12.1 (DEFECT_LIBRARY entry required for new defects)
+- `knowledge/REVISION_HISTORY.md` — DL-068 entry
+
+---
+
 ## Template for New Entries

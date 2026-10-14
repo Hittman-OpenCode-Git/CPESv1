@@ -7185,7 +7185,7 @@ const CASE_PACK_2 = [
       "Analyze system development life cycle (sdlc)",
       "Analyze system development life cycle (sdlc)"
     ],
-    "ModifiedDate": "2026-07-20",
+    "ModifiedDate": "2026-10-13",
     "ProductionStatus": "Draft",
     "QAReviewer": "Validator",
     "QuestionCount": 5,
@@ -7196,6 +7196,12 @@ const CASE_PACK_2 = [
         "Version": "2.0",
         "Author": "Case Author",
         "Summary": "Full content authoring — SDLC phases, methodologies, and system development controls"
+      },
+      {
+        "Date": "2026-10-13",
+        "Version": "2.1",
+        "Author": "AI — Governance Repair",
+        "Summary": "DL-068: corrected CBQ3-F1-Q2 prompt word count (two-word → three-word) to match stored answer 'User acceptance testing'; item recertified with DL-068-RECERT stamp"
       }
     ],
     "Stakeholder": "VP of Information Technology",
@@ -7291,7 +7297,7 @@ const CASE_PACK_2 = [
       },
       {
         "Type": "fill",
-        "Prompt": "Enter the two-word term for the testing phase where loan officers and credit analysts validate that the new system meets their business requirements before it is deployed to production.",
+        "Prompt": "Enter the three-word term for the testing phase where loan officers and credit analysts validate that the new system meets their business requirements before it is deployed to production.",
         "Correct": "User acceptance testing",
         "Explanation": "User acceptance testing (UAT) is the phase where end users validate that the system meets their business requirements and is ready for production use. UAT occurs after system integration testing and before go-live. Unit testing is done by developers. System integration testing verifies component interaction. UAT is the final quality gate before production deployment.",
         "Topic": "SDLC — testing phases",
@@ -7312,6 +7318,8 @@ const CASE_PACK_2 = [
         "ProductionStatus": "Draft",
         "Section": "F",
         "question_state": "Certified",
+        "recertification_batch": "DL-068-RECERT",
+        "recertification_date": "2026-10-13",
         "pack_state": "Draft",
         "pedagogical_cluster": "",
         "question_tier": "Ungraded",
