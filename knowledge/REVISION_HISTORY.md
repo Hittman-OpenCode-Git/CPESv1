@@ -36892,3 +36892,164 @@ frozen legacy copy `content/cases/legacy/scored_cases3.js:4518` — not learner-
 - AGENTS.md §5 dual verification · §12.1 closeout logging
 
 ---
+
+## 2026-10-14 — Independent Hand-Solve Wave: 27 P1 Case Items (17 Cases)
+
+**Session:** Full Governance Lane — verification wave (no content changes)
+**Scope:** 27 items across 17 cases in the three P1 case banks
+**Authority:** CAQS §5.1 (independent recalculation) · Rule 22 (evidence-basis traceability) · Rule 17 (DL-045 doctrine)
+
+### Method
+
+1. **Masked extraction** — `scripts/handsolve_wave_masked_extract.js` printed scenario, exhibits, prompts, and choices only. Output objects are built from a key whitelist, making stored-key leakage structurally impossible.
+2. **Independent hand-solve** — each item solved from the masked material with a documented derivation, before any stored key was read.
+3. **Comparison** — `scripts/handsolve_wave_compare.js` diffed independent answers against stored `Correct` values (numeric tolerance ±1.5 for rounding; case-insensitive string match for fills).
+
+### Result: 26/27 stored keys confirmed correct
+
+| Verdict | Count | Items |
+|---|---|---|
+| MATCH (key confirmed) | 26 | C2-Q1, C2-Q5, C3-Q1, D2-Q1, E1-Q3, E1-Q4, E2-Q4, 2-A3-Q1, 2-A3-Q5, 3-A1-Q3, 3-B2-Q3, 4-A1-Q1, 4-C1-Q1, 4-C1-Q3, 5-A2-Q1, 5-A2-Q5, 5-B2-Q1, 5-B2-Q3, 5-B2-Q4, 4-B1-Q1, 5-E2-Q3, 3-C4-Q1, 3-C4-Q3, 3-A4-Q1, 4-B2-Q3, 4-B2-Q4 |
+| MISMATCH — adjudicated non-defect | 1 | D2-Q5 (see below) |
+
+### Adjudication — CBQ-D2-Q5 (non-defect)
+
+Prompt: "Equivalent units combine completed units and partially completed work expressed as _____ units."
+Independent solve: "equivalent". Stored key: "complete". Standard cost-accounting
+terminology defines equivalent units as complete units that could have been produced
+given the effort expended — i.e., partial work expressed in terms of **complete**
+units (Horngren). The stored key matches the textbook definition and is non-circular
+(the sentence's subject is already "Equivalent units"). Both phrasings are defensible;
+the stored key is not wrong. **Verdict: stored key stands. No remediation.**
+
+### Item States
+
+All 27 items are `question_state: "In Audit"` — not learner-reachable (delivery pool
+pulls Certified only). Key correctness confirmed by this wave supports — but does not
+itself constitute — any future certification decision, which requires the full
+six-dimension verification per CAQS §1.7.2.
+
+### Screens & Gates
+
+| Gate | Result |
+|------|--------|
+| npm run preflight | PASS — 0 divergences, 3052 Certified |
+| npm run case-screens (re-run) | Deterministic — 448 flags (335 certified-state), byte-identical to this session's pipeline run, gate PASS |
+| Semantic quarantine | 0 active — no quarantined ID touched |
+
+### Evidence Trail
+
+- `scripts/handsolve_wave_masked_extract.js` — masked extractor (key-whitelist redaction)
+- `scripts/output/handsolve_wave_masked.json` — solver input (92 items, 17 cases)
+- `scripts/handsolve_wave_compare.js` — comparison script with embedded derivations
+- `scripts/output/handsolve_wave_results.json` — full 27-row comparison table
+
+### Cross-References
+
+- CAQS §5.1 · Rule 17 (DL-045) · Rule 22 — independence requirements this wave satisfies
+- DL-066 — prior hand-solve wave (P1 case banks); this wave confirms key correctness only
+- AGENTS.md §5 dual verification · §12.1 closeout logging
+- No DEFECT_LIBRARY entry: no genuine defect found (CBQ-D2-Q5 adjudicated non-defect)
+
+---
+
+## 2026-10-14 — Independent Hand-Solve Wave 2: Remaining 136 In Audit Items (31 Cases)
+
+**Session:** Full Governance Lane — verification wave (1 content defect found; fix pending authorization)
+**Scope:** 136 unverified In Audit items across all 31 DL-066-scope cases (163 In Audit total − 27 wave-1 verified)
+**Authority:** CAQS §5.1 · Rule 17 (DL-045) · Rule 22
+
+### Method
+
+Same protocol as wave 1: masked extraction (`scripts/handsolve_wave2_masked_extract.js`, key-whitelist
+redaction) → independent hand-solve with derivations → comparison
+(`scripts/handsolve_wave2_compare.js`) → DL-047 adjudication per mismatch.
+
+### Result: 125/136 stored keys confirmed correct
+
+| Verdict | Count |
+|---|---|
+| MATCH (key confirmed) | 125 |
+| MISMATCH — adjudicated non-defect | 10 (see below) |
+| MISMATCH — GENUINE DEFECT | 1 (CBQ3-A3-Q2 → DL-069, Status: Open) |
+| MISSING | 0 |
+
+### Non-defect adjudications (stored key stands in each)
+
+| Item | Independent | Stored | Adjudication |
+|---|---|---|---|
+| C2-Q4 | 2 choices | 3 choices | "Charges divisions for assets employed" is a defensible goal-congruence mechanism — stored stands |
+| C2-Q6 | ROI→"invested capital" | ROI→"assets" | both standard ROI definitions — non-defect |
+| C3-Q5 | Customer→satisfaction index | Customer→on-time delivery | OTD is a defensible Customer-perspective metric — non-defect |
+| E2-Q5 | emergency changes→SoD violation | →unauthorized/erroneous report logic | stored is the precise match to "report changes without approval" — non-defect |
+| 2-F1-Q2 | dashboard = descriptive | dashboard = diagnostic | real-time regional dashboards are defensibly diagnostic (drill-down) — non-defect |
+| 3-A1-Q5 | 2 criteria | 3 criteria | "ownership transfers" IS an ASC 842 criterion (question asks criteria in general) — my solve error, stored correct |
+| 4-C1-Q2 | −600 | 600 | no sign convention in prompt; case convention is positive magnitudes — non-defect |
+| 4-C1-Q4 | −2000 | 2000 | same convention — non-defect |
+| 4-B2-Q2 | 280,000 | 300,000 | "gross, before allowance" includes the 2% uncollectible: 30% × 1,000,000 — my solve error, stored correct |
+| 3-A3-Q4 | $30,000 (most-likely) | $0 (excluded) | exclusion defensible under ASC 606 constraint (40% reversal risk) — non-defect |
+
+### Genuine defect
+
+**CBQ3-A3-Q2** — stored 480,381 = (600,000 − 18,000 expected rebate) × 520/630 contradicts the
+case's own Q4 stored key ($0, rebate excluded). Filed as **DL-069**, Status: Open. Remediation
+(key → 495238, explanation rewrite) NOT executed — pending per-batch authorization per DL-045.
+
+### Screens & Gates
+
+| Gate | Result |
+|------|--------|
+| npm run case-screens (re-run) | Deterministic — 448 flags (335 certified-state), gate PASS, unchanged from wave 1 run |
+| Semantic quarantine | 0 active |
+| Content changes this wave | None (defect fix pending authorization) |
+
+### Evidence Trail
+
+- `scripts/handsolve_wave2_masked_extract.js` → `scripts/output/handsolve_wave2_masked.json` (31 cases, 136 items)
+- `scripts/handsolve_wave2_compare.js` (derivations embedded) → `scripts/output/handsolve_wave2_results.json`
+- `knowledge/DEFECT_LIBRARY.md` — DL-069 entry
+
+### Cross-references
+
+- DL-069 (genuine defect, Open) · DL-045 (per-batch authorization) · DL-047 (adjudication flow)
+- Wave 1 entry above (2026-10-14) · AGENTS.md §5 dual verification
+
+---
+
+## 2026-10-14 — DL-069 Remediation: CBQ3-A3-Q2 Key Corrected (495,238)
+
+**Session:** Full Governance Lane — authorized content fix (DL-069, per-batch authorization)
+**Scope:** 1 item (`content/cases/case_pack_3_corrected.js`, case CBQ3-A3)
+**Authority:** DL-047 adjudication record + user authorization (2026-10-14) · Rule 17 evidence basis: independently derived (wave-2 hand-solve)
+
+### Change Summary
+
+**Defect (DL-069):** CBQ3-A3-Q2 stored key 480,381 = (600,000 − 18,000 expected rebate) × 520/630,
+contradicting the case's own Q4 stored key ($0, rebate excluded under the ASC 606 constraint).
+
+**Fix (executed 2026-10-14):**
+
+| Field | Before | After |
+|---|---|---|
+| `Correct` | "480381" | **"495238"** |
+| Explanation | Defended 480,381; labeled 495,238 a "common error" | Rewritten: rebate excluded per Q4; $600,000 × $520,000/$630,000 = $495,238; installation = $104,762; recomputed 600,000 × 0.8253968 = 495,238.10 |
+
+**Case metadata:** `ModifiedDate` → 2026-10-14; `RevisionHistory` entry added (Version 1.1).
+**Backup:** `backups/case_pack_3_corrected.js.bak-20261014214127` (557,202 bytes, pre-write).
+**Rule 16 stamps:** NOT applied — item is `question_state: "In Audit"`, not Certified.
+
+### Validation Results
+
+| Gate | Result |
+|------|--------|
+| `node --check` | PASS |
+| `npm run case-screens` | 448 flags, deterministic, gate PASS — zero new flags from the fix |
+| `npm run key-agreement` | 1 flag (pre-existing P2 SCRATCHWORK, CBQ23-B5-Q1) — unchanged |
+
+### Cross-References
+
+- `knowledge/DEFECT_LIBRARY.md` — DL-069 entry (Status: Resolved)
+- DL-045 (per-batch authorization) · DL-047 (adjudication) · CAQS §5.1
+- Wave-2 entry above (discovery record)
+
+---

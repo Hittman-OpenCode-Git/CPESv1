@@ -1,0 +1,1475 @@
+{
+ "rows": [
+  {
+   "id": "CBQ-C2-Q2",
+   "type": "numeric",
+   "ind": "15",
+   "stored": "15",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C2-Q3",
+   "type": "select",
+   "ind": "70 variable cost",
+   "stored": "70 variable cost",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C2-Q4",
+   "type": "multi",
+   "ind": [
+    "It can encourage accepting projects above the required return",
+    "It avoids rejecting investments that lower ROI but exceed the required return"
+   ],
+   "stored": [
+    "It can encourage accepting projects above the required return",
+    "It charges divisions for assets employed",
+    "It avoids rejecting investments that lower ROI but exceed the required return"
+   ],
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ-C2-Q6",
+   "type": "match",
+   "ind": {
+    "ROI": "Operating income divided by invested capital",
+    "Residual income": "Income after required asset charge",
+    "Minimum transfer price with idle capacity": "Variable cost plus opportunity cost",
+    "Market price": "External benchmark when available"
+   },
+   "stored": {
+    "ROI": "Operating income divided by assets",
+    "Residual income": "Income after required asset charge",
+    "Minimum transfer price with idle capacity": "Variable cost plus opportunity cost",
+    "Market price": "External benchmark when available"
+   },
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ-C3-Q2",
+   "type": "numeric",
+   "ind": "5",
+   "stored": "5",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C3-Q3",
+   "type": "select",
+   "ind": "Training hours per employee",
+   "stored": "Training hours per employee",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C3-Q4",
+   "type": "multi",
+   "ind": [
+    "Defect rate",
+    "On-time delivery",
+    "Training hours per employee"
+   ],
+   "stored": [
+    "Defect rate",
+    "On-time delivery",
+    "Training hours per employee"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C3-Q5",
+   "type": "match",
+   "ind": {
+    "Financial": "Operating income",
+    "Customer": "Customer satisfaction index",
+    "Internal process": "Defect rate",
+    "Learning and growth": "Training hours per employee"
+   },
+   "stored": {
+    "Financial": "Operating income",
+    "Customer": "On-time delivery",
+    "Internal process": "Defect rate",
+    "Learning and growth": "Training hours per employee"
+   },
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ-C3-Q6",
+   "type": "select",
+   "ind": "Machine setup errors",
+   "stored": "Machine setup errors",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q2",
+   "type": "numeric",
+   "ind": "12.5",
+   "stored": "12.5",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q3",
+   "type": "select",
+   "ind": "Welding",
+   "stored": "Welding",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q4",
+   "type": "multi",
+   "ind": [
+    "Reduce waiting time before welding",
+    "Investigate rework causes",
+    "Simplify material movement"
+   ],
+   "stored": [
+    "Reduce waiting time before welding",
+    "Investigate rework causes",
+    "Simplify material movement"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q6",
+   "type": "match",
+   "ind": {
+    "Partially complete WIP": "Equivalent units",
+    "Lowest capacity resource": "Bottleneck analysis",
+    "Unnecessary movement": "Lean waste review",
+    "Continuous homogeneous output": "Process costing"
+   },
+   "stored": {
+    "Partially complete WIP": "Equivalent units",
+    "Lowest capacity resource": "Bottleneck analysis",
+    "Unnecessary movement": "Lean waste review",
+    "Continuous homogeneous output": "Process costing"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E1-Q1",
+   "type": "select",
+   "ind": "Same AP clerk can create vendors and enter invoices",
+   "stored": "Same AP clerk can create vendors and enter invoices",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E1-Q2",
+   "type": "multi",
+   "ind": [
+    "Independent vendor-master approval",
+    "Preventive three-way match before payment where applicable",
+    "Documented review of duplicate-payment reports"
+   ],
+   "stored": [
+    "Independent vendor-master approval",
+    "Preventive three-way match before payment where applicable",
+    "Documented review of duplicate-payment reports"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E1-Q5",
+   "type": "match",
+   "ind": {
+    "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+    "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+    "Duplicate-payment report review": "Detective — identifies duplicate payments already processed, after disbursement has occurred",
+    "Bank reconciliation": "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist"
+   },
+   "stored": {
+    "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+    "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+    "Duplicate-payment report review": "Detective — identifies duplicate payments already processed, after disbursement has occurred",
+    "Bank reconciliation": "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E1-Q6",
+   "type": "select",
+   "ind": "The report was generated but not reviewed for two months",
+   "stored": "The report was generated but not reviewed for two months",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E2-Q1",
+   "type": "select",
+   "ind": "Unique privileged IDs with MFA and periodic access review",
+   "stored": "Unique privileged IDs with MFA and periodic access review",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E2-Q2",
+   "type": "numeric",
+   "ind": "3.5",
+   "stored": "3.5",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E2-Q3",
+   "type": "multi",
+   "ind": [
+    "Logical access controls",
+    "Change-management controls",
+    "Computer operations/interface monitoring"
+   ],
+   "stored": [
+    "Logical access controls",
+    "Change-management controls",
+    "Computer operations/interface monitoring"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E2-Q5",
+   "type": "match",
+   "ind": {
+    "Shared administrator IDs": "Lack of accountability",
+    "Terminated users active": "Unauthorized access",
+    "Unapproved emergency changes": "Segregation of duties violation",
+    "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+   },
+   "stored": {
+    "Shared administrator IDs": "Lack of accountability",
+    "Terminated users active": "Unauthorized access",
+    "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+    "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+   },
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ-E2-Q6",
+   "type": "select",
+   "ind": "It may prevent investigation of issues discovered after logs are overwritten",
+   "stored": "It may prevent investigation of issues discovered after logs are overwritten",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-F1-Q1",
+   "type": "select",
+   "ind": "Descriptive analytics — reporting on historical performance",
+   "stored": "Descriptive analytics — reporting on historical performance",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-F1-Q2",
+   "type": "select",
+   "ind": "Descriptive analytics — the dashboard simply displays historical data",
+   "stored": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ2-F1-Q3",
+   "type": "select",
+   "ind": "Predictive analytics — using historical data and models to forecast future outcomes",
+   "stored": "Predictive analytics — using historical data and models to forecast future outcomes",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-F1-Q4",
+   "type": "select",
+   "ind": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+   "stored": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-F1-Q5",
+   "type": "select",
+   "ind": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+   "stored": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-A3-Q2",
+   "type": "numeric",
+   "ind": "43000",
+   "stored": 43000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-A3-Q3",
+   "type": "multi",
+   "ind": [
+    "Customer can benefit from good/service on its own",
+    "The promise is separately identifiable in the contract"
+   ],
+   "stored": [
+    "Customer can benefit from good/service on its own",
+    "The promise is separately identifiable in the contract"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-A3-Q4",
+   "type": "select",
+   "ind": "$48,000",
+   "stored": "$48,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A1-Q1",
+   "type": "numeric",
+   "ind": "231660",
+   "stored": 231660,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A1-Q2",
+   "type": "select",
+   "ind": "Finance lease",
+   "stored": "Finance lease",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A1-Q4",
+   "type": "numeric",
+   "ind": "190560",
+   "stored": 190560,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A1-Q5",
+   "type": "multi",
+   "ind": [
+    "Lease term is major part of economic life",
+    "PV of lease payments equals or exceeds substantially all fair value"
+   ],
+   "stored": [
+    "Lease term is major part of economic life",
+    "PV of lease payments equals or exceeds substantially all fair value",
+    "Ownership transfers at end of lease"
+   ],
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ4-A1-Q2",
+   "type": "numeric",
+   "ind": "150000",
+   "stored": 150000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-A1-Q3",
+   "type": "match",
+   "ind": {
+    "Patent": "Amortized over useful life, tested for impairment if triggering event",
+    "Trademark": "Not amortized, tested for impairment at least annually",
+    "Goodwill": "Not amortized, tested for impairment at reporting unit level"
+   },
+   "stored": {
+    "Patent": "Amortized over useful life, tested for impairment if triggering event",
+    "Trademark": "Not amortized, tested for impairment at least annually",
+    "Goodwill": "Not amortized, tested for impairment at reporting unit level"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-A1-Q4",
+   "type": "multi",
+   "ind": [
+    "Successful legal defense costs",
+    "Registration fees"
+   ],
+   "stored": [
+    "Successful legal defense costs",
+    "Registration fees"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-A1-Q5",
+   "type": "select",
+   "ind": "No impairment loss is recognized, and no further testing is required",
+   "stored": "No impairment loss is recognized, and no further testing is required",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q1",
+   "type": "numeric",
+   "ind": "540000",
+   "stored": "540000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q2",
+   "type": "numeric",
+   "ind": "675000",
+   "stored": "675000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q3",
+   "type": "numeric",
+   "ind": "-90000",
+   "stored": "-90000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q4",
+   "type": "select",
+   "ind": "$125,000",
+   "stored": "$125,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q5",
+   "type": "multi",
+   "ind": [
+    "Raising the cash-sales percentage from 20% to 30% would decrease the borrowing requirement",
+    "If the following-month collection rate increased from 45% to 50%, December credit collections in January would increase by $20,000",
+    "The 5% uncollectible portion of credit sales means $20,000 of December credit sales will never be collected"
+   ],
+   "stored": [
+    "Raising the cash-sales percentage from 20% to 30% would decrease the borrowing requirement",
+    "If the following-month collection rate increased from 45% to 50%, December credit collections in January would increase by $20,000",
+    "The 5% uncollectible portion of credit sales means $20,000 of December credit sales will never be collected"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-B2-Q6",
+   "type": "match",
+   "ind": {
+    "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
+    "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
+    "Equipment supplier offers a January discount but payment is due in February": "Defer purchase to February, increasing January cash available",
+    "Actual January sales exceed budget by 15%": "Increase both collections and COGS projections in the forecast"
+   },
+   "stored": {
+    "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
+    "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
+    "Equipment supplier offers a January discount but payment is due in February": "Defer purchase to February, increasing January cash available",
+    "Actual January sales exceed budget by 15%": "Increase both collections and COGS projections in the forecast"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q1",
+   "type": "numeric",
+   "ind": "264000",
+   "stored": "264000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q2",
+   "type": "numeric",
+   "ind": "276000",
+   "stored": "276000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q4",
+   "type": "select",
+   "ind": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+   "stored": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q5",
+   "type": "multi",
+   "ind": [
+    "Fixed manufacturing overhead per unit decreases as production volume increases",
+    "The predetermined overhead rate is calculated at the beginning of the budget period",
+    "Applied overhead equals the predetermined rate multiplied by actual activity"
+   ],
+   "stored": [
+    "Fixed manufacturing overhead per unit decreases as production volume increases",
+    "The predetermined overhead rate is calculated at the beginning of the budget period",
+    "Applied overhead equals the predetermined rate multiplied by actual activity"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q6",
+   "type": "match",
+   "ind": {
+    "Direct labor budget": "Units produced x DLH per unit x Wage rate",
+    "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
+    "Fixed overhead budget": "Remains constant within the relevant range",
+    "Applied manufacturing overhead": "Predetermined OH rate x Actual activity"
+   },
+   "stored": {
+    "Direct labor budget": "Units produced x DLH per unit x Wage rate",
+    "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
+    "Fixed overhead budget": "Remains constant within the relevant range",
+    "Applied manufacturing overhead": "Predetermined OH rate x Actual activity"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-C3-Q1",
+   "type": "select",
+   "ind": "16.0%",
+   "stored": "16.0%",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-C3-Q2",
+   "type": "select",
+   "ind": "$120,000",
+   "stored": "$120,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-C3-Q3",
+   "type": "select",
+   "ind": "16.0%",
+   "stored": "16.0%",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-C3-Q4",
+   "type": "select",
+   "ind": "Yes, because residual income will increase by $20,000",
+   "stored": "Yes, because residual income will increase by $20,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-C3-Q5",
+   "type": "select",
+   "ind": "Division A",
+   "stored": "Division A",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C3-Q1",
+   "type": "select",
+   "ind": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+   "stored": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C3-Q2",
+   "type": "select",
+   "ind": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+   "stored": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C3-Q3",
+   "type": "multi",
+   "ind": [
+    "The favorable sales volume variance indicates that selling more units than budgeted contributed positively to operating income",
+    "Actual selling price of $73 per unit was $2 below the standard of $75, creating an unfavorable selling price variance of $24,000 (12,000 × $2)",
+    "Fixed manufacturing overhead variance of $5,000 unfavorable indicates actual fixed costs exceeded the budgeted amount",
+    "The total flexible budget variance for variable costs was unfavorable, meaning actual variable costs exceeded the standard costs allowed for actual output"
+   ],
+   "stored": [
+    "The favorable sales volume variance indicates that selling more units than budgeted contributed positively to operating income",
+    "Actual selling price of $73 per unit was $2 below the standard of $75, creating an unfavorable selling price variance of $24,000 (12,000 × $2)",
+    "Fixed manufacturing overhead variance of $5,000 unfavorable indicates actual fixed costs exceeded the budgeted amount",
+    "The total flexible budget variance for variable costs was unfavorable, meaning actual variable costs exceeded the standard costs allowed for actual output"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C3-Q4",
+   "type": "match",
+   "ind": {
+    "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
+    "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+    "Difference between static budget operating income and flexible budget operating income": "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+    "Difference between actual fixed overhead and budgeted fixed overhead": "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U"
+   },
+   "stored": {
+    "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
+    "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+    "Difference between static budget operating income and flexible budget operating income": "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+    "Difference between actual fixed overhead and budgeted fixed overhead": "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C3-Q5",
+   "type": "select",
+   "ind": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control",
+   "stored": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-C1-Q2",
+   "type": "numeric",
+   "ind": "-600",
+   "stored": 600,
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ4-C1-Q4",
+   "type": "numeric",
+   "ind": "-2000",
+   "stored": 2000,
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ4-C1-Q5",
+   "type": "select",
+   "ind": "Fixed overhead production-volume variance",
+   "stored": "Fixed overhead production-volume variance",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E1-Q1",
+   "type": "select",
+   "ind": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+   "stored": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E1-Q2",
+   "type": "select",
+   "ind": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+   "stored": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E1-Q3",
+   "type": "select",
+   "ind": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+   "stored": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E1-Q4",
+   "type": "select",
+   "ind": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+   "stored": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E1-Q5",
+   "type": "select",
+   "ind": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+   "stored": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F1-Q1",
+   "type": "match",
+   "ind": {
+    "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+    "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
+    "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+    "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+   },
+   "stored": {
+    "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+    "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
+    "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+    "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F1-Q2",
+   "type": "select",
+   "ind": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+   "stored": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F1-Q3",
+   "type": "multi",
+   "ind": [
+    "In cloud models, MedTech retains responsibility for its data regardless of where it is stored; the company must ensure the cloud provider's controls meet FDA and HIPAA requirements",
+    "Data residency requirements may restrict where patient data can be stored; the cloud provider must offer data centers in approved geographic locations",
+    "Cloud service providers typically offer SOC 2 Type II reports that can be used to assess their controls; MedTech should review these reports as part of vendor due diligence",
+    "Vendor lock-in is a risk — migrating data and applications between cloud providers can be complex and costly"
+   ],
+   "stored": [
+    "In cloud models, MedTech retains responsibility for its data regardless of where it is stored; the company must ensure the cloud provider's controls meet FDA and HIPAA requirements",
+    "Data residency requirements may restrict where patient data can be stored; the cloud provider must offer data centers in approved geographic locations",
+    "Cloud service providers typically offer SOC 2 Type II reports that can be used to assess their controls; MedTech should review these reports as part of vendor due diligence",
+    "Vendor lock-in is a risk — migrating data and applications between cloud providers can be complex and costly"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F1-Q4",
+   "type": "select",
+   "ind": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+   "stored": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F1-Q5",
+   "type": "match",
+   "ind": {
+    "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+    "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+    "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+    "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+   },
+   "stored": {
+    "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+    "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+    "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+    "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-A2-Q2",
+   "type": "multi",
+   "ind": [
+    "Unrealized gains/losses on AFS debt securities",
+    "Foreign currency translation adjustments",
+    "Pension plan unamortized prior service costs"
+   ],
+   "stored": [
+    "Unrealized gains/losses on AFS debt securities",
+    "Foreign currency translation adjustments",
+    "Pension plan unamortized prior service costs"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-A2-Q3",
+   "type": "numeric",
+   "ind": "150000",
+   "stored": 150000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-A2-Q4",
+   "type": "select",
+   "ind": "The total reduction to equity would be exactly the same",
+   "stored": "The total reduction to equity would be exactly the same",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-B2-Q2",
+   "type": "numeric",
+   "ind": "922768",
+   "stored": 922768,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-B2-Q5",
+   "type": "select",
+   "ind": "Deducted from the carrying value of the bond liability",
+   "stored": "Deducted from the carrying value of the bond liability",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B1-Q2",
+   "type": "numeric",
+   "ind": "10000",
+   "stored": 10000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B1-Q3",
+   "type": "numeric",
+   "ind": "38300",
+   "stored": 38300,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B1-Q4",
+   "type": "select",
+   "ind": "85% of the variation in total cost is explained by machine hours",
+   "stored": "85% of the variation in total cost is explained by machine hours",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B1-Q5",
+   "type": "multi",
+   "ind": [
+    "It only uses two data points",
+    "It is heavily influenced by outliers"
+   ],
+   "stored": [
+    "It only uses two data points",
+    "It is heavily influenced by outliers"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q1",
+   "type": "numeric",
+   "ind": "170000",
+   "stored": "170000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q2",
+   "type": "numeric",
+   "ind": "280000",
+   "stored": "300000",
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q5",
+   "type": "select",
+   "ind": "Ending inventory balance",
+   "stored": "Ending inventory balance",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q6",
+   "type": "match",
+   "ind": {
+    "Cash": "Cash budget and collection/disbursement timing",
+    "Accounts receivable": "Sales budget and credit collection policy",
+    "Inventory": "Cost of goods sold budget and purchases budget",
+    "Accounts payable": "Purchases budget and supplier payment terms"
+   },
+   "stored": {
+    "Cash": "Cash budget and collection/disbursement timing",
+    "Accounts receivable": "Sales budget and credit collection policy",
+    "Inventory": "Cost of goods sold budget and purchases budget",
+    "Accounts payable": "Purchases budget and supplier payment terms"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-D3-Q1",
+   "type": "select",
+   "ind": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+   "stored": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-D3-Q2",
+   "type": "select",
+   "ind": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+   "stored": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-D3-Q3",
+   "type": "multi",
+   "ind": [
+    "Using theoretical capacity as the denominator level produces the highest fixed overhead rate per unit and the largest unfavorable volume variance when actual production is below theoretical",
+    "The volume variance is always zero when master-budget capacity equals actual production"
+   ],
+   "stored": [
+    "Using theoretical capacity as the denominator level produces the highest fixed overhead rate per unit and the largest unfavorable volume variance when actual production is below theoretical",
+    "The volume variance is always zero when master-budget capacity equals actual production"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-D3-Q4",
+   "type": "match",
+   "ind": {
+    "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+    "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
+    "Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M": "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+    "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle": "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+   },
+   "stored": {
+    "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+    "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
+    "Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M": "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+    "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle": "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-D3-Q5",
+   "type": "select",
+   "ind": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency",
+   "stored": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E2-Q1",
+   "type": "match",
+   "ind": {
+    "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+    "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+    "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+    "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+   },
+   "stored": {
+    "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+    "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+    "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+    "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E2-Q2",
+   "type": "select",
+   "ind": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+   "stored": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E2-Q3",
+   "type": "multi",
+   "ind": [
+    "A run-to-run control that compares the total dollar value of invoices entered in a batch to the total posted to the general ledger",
+    "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
+    "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
+   ],
+   "stored": [
+    "A run-to-run control that compares the total dollar value of invoices entered in a batch to the total posted to the general ledger",
+    "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
+    "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E2-Q4",
+   "type": "match",
+   "ind": {
+    "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
+    "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+    "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+    "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices": "Access control — role-based security prevents users from performing incompatible functions"
+   },
+   "stored": {
+    "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
+    "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+    "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+    "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices": "Access control — role-based security prevents users from performing incompatible functions"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E2-Q5",
+   "type": "select",
+   "ind": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+   "stored": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E3-Q1",
+   "type": "select",
+   "ind": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+   "stored": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E3-Q2",
+   "type": "select",
+   "ind": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+   "stored": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E3-Q3",
+   "type": "multi",
+   "ind": [
+    "Conduct enhanced due diligence on all third-party agents and intermediaries in high-risk countries before entering into agreements",
+    "Require all international employees to complete annual FCPA training covering anti-bribery provisions, red flags, and reporting procedures",
+    "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
+    "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
+   ],
+   "stored": [
+    "Conduct enhanced due diligence on all third-party agents and intermediaries in high-risk countries before entering into agreements",
+    "Require all international employees to complete annual FCPA training covering anti-bribery provisions, red flags, and reporting procedures",
+    "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
+    "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E3-Q4",
+   "type": "match",
+   "ind": {
+    "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+    "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+    "Charitable donation request — $50,000 to minister's personal foundation": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+    "Luxury client entertainment — $1,200/person including spouses for government clients": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+   },
+   "stored": {
+    "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+    "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+    "Charitable donation request — $50,000 to minister's personal foundation": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+    "Luxury client entertainment — $1,200/person including spouses for government clients": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-E3-Q5",
+   "type": "select",
+   "ind": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+   "stored": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E1-Q1",
+   "type": "match",
+   "ind": {
+    "Attribute Standards": "Define the characteristics and capabilities required for internal audit activities and individuals",
+    "Performance Standards": "Describe the nature of internal audit work and quality criteria for measuring performance",
+    "Implementation Standards": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+   },
+   "stored": {
+    "Attribute Standards": "Define the characteristics and capabilities required for internal audit activities and individuals",
+    "Performance Standards": "Describe the nature of internal audit work and quality criteria for measuring performance",
+    "Implementation Standards": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E1-Q2",
+   "type": "select",
+   "ind": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+   "stored": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E1-Q3",
+   "type": "multi",
+   "ind": [
+    "The internal audit activity's purpose, authority, and responsibility",
+    "The CAE's functional and administrative reporting relationships",
+    "The scope of internal audit activities including assurance and consulting services"
+   ],
+   "stored": [
+    "The internal audit activity's purpose, authority, and responsibility",
+    "The CAE's functional and administrative reporting relationships",
+    "The scope of internal audit activities including assurance and consulting services"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E1-Q4",
+   "type": "select",
+   "ind": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+   "stored": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E1-Q5",
+   "type": "multi",
+   "ind": [
+    "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
+    "Periodic external assessments conducted at least once every five years by an independent reviewer",
+    "Internal self-assessments covering the internal audit activity's compliance with the Standards"
+   ],
+   "stored": [
+    "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
+    "Periodic external assessments conducted at least once every five years by an independent reviewer",
+    "Internal self-assessments covering the internal audit activity's compliance with the Standards"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E2-Q1",
+   "type": "match",
+   "ind": {
+    "Phishing email": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+    "Remote Access Trojan (RAT)": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+    "Ransomware": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+    "DDoS (distraction attack)": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+   },
+   "stored": {
+    "Phishing email": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+    "Remote Access Trojan (RAT)": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+    "Ransomware": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+    "DDoS (distraction attack)": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E2-Q2",
+   "type": "select",
+   "ind": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+   "stored": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E2-Q4",
+   "type": "multi",
+   "ind": [
+    "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
+    "Deploy endpoint detection and response (EDR) software on all workstations and servers to enable real-time threat detection and automated containment of malware",
+    "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
+    "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
+   ],
+   "stored": [
+    "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
+    "Deploy endpoint detection and response (EDR) software on all workstations and servers to enable real-time threat detection and automated containment of malware",
+    "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
+    "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E2-Q5",
+   "type": "select",
+   "ind": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+   "stored": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E3-Q1",
+   "type": "select",
+   "ind": "€32,000,000",
+   "stored": "€32,000,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E3-Q2",
+   "type": "select",
+   "ind": "€1,440,000",
+   "stored": "€1,440,000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E3-Q3",
+   "type": "select",
+   "ind": "72 hours",
+   "stored": "72 hours",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E3-Q4",
+   "type": "select",
+   "ind": "Right to erasure (right to be forgotten)",
+   "stored": "Right to erasure (right to be forgotten)",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E3-Q5",
+   "type": "select",
+   "ind": "Standard Contractual Clauses (SCCs)",
+   "stored": "Standard Contractual Clauses (SCCs)",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F2-Q1",
+   "type": "select",
+   "ind": "Supervised learning",
+   "stored": "Supervised learning",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F2-Q2",
+   "type": "match",
+   "ind": {
+    "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+    "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+    "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+    "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
+   },
+   "stored": {
+    "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+    "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+    "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+    "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F2-Q3",
+   "type": "multi",
+   "ind": [
+    "Training on insufficient data for newer stores",
+    "Model complexity exceeding the available training sample size",
+    "Learning noise from limited transaction records rather than general patterns"
+   ],
+   "stored": [
+    "Training on insufficient data for newer stores",
+    "Model complexity exceeding the available training sample size",
+    "Learning noise from limited transaction records rather than general patterns"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F2-Q4",
+   "type": "select",
+   "ind": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+   "stored": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-F2-Q5",
+   "type": "multi",
+   "ind": [
+    "Targeting high-value clusters with personalized promotions to increase basket size",
+    "Designing store layout and product placement strategies based on cluster purchasing patterns",
+    "Identifying underpenetrated customer segments for acquisition marketing campaigns"
+   ],
+   "stored": [
+    "Targeting high-value clusters with personalized promotions to increase basket size",
+    "Designing store layout and product placement strategies based on cluster purchasing patterns",
+    "Identifying underpenetrated customer segments for acquisition marketing campaigns"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-F2-Q1",
+   "type": "match",
+   "ind": {
+    "Rule-based processing": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+    "User interface interaction": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+    "Exception handling": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+    "Attended vs unattended mode": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+   },
+   "stored": {
+    "Rule-based processing": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+    "User interface interaction": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+    "Exception handling": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+    "Attended vs unattended mode": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+   },
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-F2-Q2",
+   "type": "select",
+   "ind": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+   "stored": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-F2-Q3",
+   "type": "numeric",
+   "ind": "525000",
+   "stored": 525000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-F2-Q4",
+   "type": "multi",
+   "ind": [
+    "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
+    "Bank account reconciliation — high-volume matching of structured data against defined reconciliation rules",
+    "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
+    "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
+   ],
+   "stored": [
+    "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
+    "Bank account reconciliation — high-volume matching of structured data against defined reconciliation rules",
+    "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
+    "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
+   ],
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-F2-Q5",
+   "type": "select",
+   "ind": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+   "stored": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A3-Q1",
+   "type": "select",
+   "ind": "Two — equipment delivery and installation service",
+   "stored": "Two — equipment delivery and installation service",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A3-Q2",
+   "type": "numeric",
+   "ind": "495238",
+   "stored": "480381",
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ3-A3-Q3",
+   "type": "select",
+   "ind": "On October 15 when the equipment is delivered to the hospital",
+   "stored": "On October 15 when the equipment is delivered to the hospital",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A3-Q4",
+   "type": "select",
+   "ind": "$30,000 — the full rebate amount weighted by 100% probability",
+   "stored": "$0 — the rebate should be excluded until the threshold is met",
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ3-A3-Q5",
+   "type": "select",
+   "ind": "As a separate contract because the additional goods are distinct and priced at standalone selling price",
+   "stored": "As a separate contract because the additional goods are distinct and priced at standalone selling price",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A4-Q2",
+   "type": "numeric",
+   "ind": "0",
+   "stored": "0",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A4-Q3",
+   "type": "select",
+   "ind": "Record no journal entry because cost does not exceed NRV for any product line",
+   "stored": "Record no journal entry because cost does not exceed NRV for any product line",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A4-Q4",
+   "type": "select",
+   "ind": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line",
+   "stored": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A4-Q5",
+   "type": "select",
+   "ind": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable",
+   "stored": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C4-Q2",
+   "type": "numeric",
+   "ind": "-32000",
+   "stored": "-32000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C4-Q4",
+   "type": "select",
+   "ind": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
+   "stored": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C4-Q5",
+   "type": "select",
+   "ind": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production",
+   "stored": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  }
+ ],
+ "match": 125,
+ "mismatch": 11,
+ "missing": 0
+}

@@ -8274,7 +8274,7 @@ const CASE_PACK_3 = [
       "Account for contract modifications under ASC 606",
       "Determine revenue recognition timing for bundled arrangements"
     ],
-    "ModifiedDate": "2026-09-04",
+    "ModifiedDate": "2026-10-14",
     "ProductionStatus": "Draft",
     "QAReviewer": "Validator",
     "QuestionCount": 5,
@@ -8285,6 +8285,12 @@ const CASE_PACK_3 = [
         "Version": "1.0",
         "Author": "Case Author",
         "Summary": "Initial creation — ASC 606 multi-element arrangement"
+      },
+      {
+        "Date": "2026-10-14",
+        "Version": "1.1",
+        "Author": "AI — Governance Repair",
+        "Summary": "DL-069: corrected CBQ3-A3-Q2 equipment allocation key (480,381 -> 495,238) — rebate excluded per case Q4 constraint treatment; explanation rewritten with derivation"
       }
     ],
     "Stakeholder": "CFO Laura Chen",
@@ -8400,8 +8406,8 @@ const CASE_PACK_3 = [
       {
         "Type": "numeric",
         "Prompt": "Enter the amount of revenue Crestline should allocate to the equipment performance obligation (round to nearest whole dollar).",
-        "Correct": "480381",
-        "Explanation": "Under ASC 606-10-32-31 the transaction price is allocated to each performance obligation on relative standalone selling prices, and variable consideration must be constrained and included in the transaction price BEFORE that allocation. Total standalone selling price = $520,000 equipment + $110,000 installation = $630,000. The volume rebate is variable consideration: 5% x $600,000 x 60% probability = $18,000, which reduces the transaction price to $600,000 - $18,000 = $582,000. Equipment allocation = $582,000 x ($520,000 / $630,000 = 0.825397) = **$480,381**. Recomputed independently: 582,000 x 0.8253968 = 480,380.95. A common error is to allocate the full $600,000 before applying the rebate, which yields $495,238 and overstates equipment revenue by the rebate amount allocated to it.",
+        "Correct": "495238",
+        "Explanation": "Under ASC 606-10-32-31 the transaction price is allocated to each performance obligation on relative standalone selling prices. The volume rebate is variable consideration; per the case's Q4 treatment it is excluded from the transaction price under the variable-consideration constraint (40% probability of reversal; the $500,000 threshold is not yet met), so the transaction price remains $600,000. Total standalone selling price = $520,000 equipment + $110,000 installation = $630,000. Equipment allocation = $600,000 x ($520,000 / $630,000 = 0.825397) = **$495,238**. Recomputed independently: 600,000 x 0.8253968 = 495,238.10; installation allocation = $600,000 x ($110,000 / $630,000) = $104,762. A common error is to deduct the probability-weighted rebate ($18,000) from the transaction price before allocation, which yields $480,381 and contradicts the constraint-based exclusion in Q4.",
         "Topic": "Revenue Recognition",
         "ItemID": "CBQ3-A3-Q2",
         "CognitiveLevel": "Apply",

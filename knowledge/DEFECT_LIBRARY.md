@@ -337,4 +337,69 @@ flag on mismatch. The control set is the 4 CBQ3-F1 prompts (1 known defect, 3 kn
 
 ---
 
+## DL-069 — ASC 606 Equipment Allocation Contradicts Case's Own Rebate Treatment (CBQ3-A3-Q2)
+
+```
+Defect ID        DL-069
+Class            Content / Answer Key (ASC 606 allocation error — internal inconsistency)
+Domain           P1 case bank — Revenue Recognition case CBQ3-A3 (case_pack_3_corrected.js)
+Severity         Medium — stored key contradicts the case's own Q4 answer; item is In Audit (not learner-reachable)
+Detected By      Independent hand-solve wave 2 (2026-10-14) — comparison step
+Status           Resolved — 2026-10-14. Key corrected to 495,238, explanation rewritten (DL-069-RECERT not required — item In Audit)
+```
+
+**Files:** `content/cases/case_pack_3_corrected.js` (item CBQ3-A3-Q2)
+
+### Finding
+
+CBQ3-A3: contract price $600,000; standalone selling prices equipment $520,000 /
+installation $110,000 (total $630,000). Q2 asks for the revenue allocated to the equipment
+performance obligation. Stored key: **480,381**.
+
+Independent hand-solve: the stored value is reproducible ONLY as
+(600,000 − 18,000) × 520/630 = 480,381 — i.e., the transaction price was reduced by the
+$18,000 expected value of the volume rebate (5% × $600,000 × 60% probability) before
+allocation.
+
+The case's own Q4 stored key is **$0 — "the rebate should be excluded until the threshold is
+met."** The two stored keys are mutually inconsistent:
+
+| Rebate treatment | Q4 (most-likely) | Q2 allocation |
+|---|---|---|
+| Excluded (constraint) | $0 ✓ stored | 600,000 × 520/630 = **495,238** |
+| Most-likely amount (60% → earned) | 30,000 | 570,000 × 520/630 = 470,476 |
+| Expected value | 18,000 | 582,000 × 520/630 = 480,381 ✓ stored |
+
+The stored Q2 (480,381) is consistent ONLY with expected-value inclusion, which contradicts
+the stored Q4 ($0, excluded). Under either consistent reading, the stored Q2 is wrong.
+
+### Adjudication
+
+Q4 stored ($0) is defensible under the ASC 606 variable-consideration constraint (40%
+reversal probability; threshold not yet met) — **Q4 stands**. With the rebate excluded,
+Q2 = $600,000 × 520,000/630,000 = **495,238.10 → 495,238**. **Q2 stored key (480,381) is
+a genuine defect.**
+
+### Resolution (executed 2026-10-14, per-batch authorization)
+
+1. Key: 480381 → **495238** (case_pack_3_corrected.js:8403)
+2. Explanation: rewritten with derivation — "Rebate excluded from transaction price under
+   the ASC 606 constraint (see Q4). Equipment allocation = $600,000 × $520,000/$630,000 =
+   $495,238; installation = $600,000 × $110,000/$630,000 = $104,762. Recomputed
+   independently: 600,000 × 0.8253968 = 495,238.10."
+3. Backup: `backups/case_pack_3_corrected.js.bak-20261014214127` (557,202 bytes).
+   `node --check` PASS. Case `ModifiedDate` → 2026-10-14; RevisionHistory v1.1 added.
+4. Rule 16 stamps NOT required — item is `question_state: "In Audit"`, not Certified.
+5. Semantic re-run: case-screens deterministic (448 flags, gate PASS); key-agreement 1
+   pre-existing P2 SCRATCHWORK flag (CBQ23-B5-Q1), unchanged.
+
+### Cross-references
+
+- DL-045 (per-batch authorization required for remediation; no auto-remediate)
+- DL-047 (adjudication flow), CAQS §5.1 (independent recalculation)
+- `knowledge/REVISION_HISTORY.md` — wave-2 entry (2026-10-14)
+- `scripts/output/handsolve_wave2_results.json` — comparison evidence
+
+---
+
 ## Template for New Entries

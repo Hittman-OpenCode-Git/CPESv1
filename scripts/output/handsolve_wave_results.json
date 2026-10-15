@@ -1,0 +1,196 @@
+{
+ "rows": [
+  {
+   "id": "CBQ-C2-Q1",
+   "ind": "84000",
+   "stored": "84000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C2-Q5",
+   "ind": "congruence",
+   "stored": "congruence",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-C3-Q1",
+   "ind": "60000",
+   "stored": "60000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q1",
+   "ind": "20400",
+   "stored": "20400",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-D2-Q5",
+   "ind": "equivalent",
+   "stored": "complete",
+   "state": "In Audit",
+   "verdict": "MISMATCH"
+  },
+  {
+   "id": "CBQ-E1-Q3",
+   "ind": "3.0",
+   "stored": "3.0",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E1-Q4",
+   "ind": "absolute",
+   "stored": "absolute",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ-E2-Q4",
+   "ind": "approval",
+   "stored": "approval",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-A3-Q1",
+   "ind": "363636",
+   "stored": 363636,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ2-A3-Q5",
+   "ind": "balance sheet",
+   "stored": "balance sheet",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A1-Q3",
+   "ind": "right-of-use",
+   "stored": "right-of-use",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-B2-Q3",
+   "ind": "20",
+   "stored": "20",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-A1-Q1",
+   "ind": "400000",
+   "stored": 400000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-C1-Q1",
+   "ind": "1600",
+   "stored": 1600,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-C1-Q3",
+   "ind": "2000",
+   "stored": 2000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-A2-Q1",
+   "ind": "510000",
+   "stored": 510000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-A2-Q5",
+   "ind": "owners",
+   "stored": "owners",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-B2-Q1",
+   "ind": "40000",
+   "stored": 40000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-B2-Q3",
+   "ind": "46138",
+   "stored": 46138,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-B2-Q4",
+   "ind": "928906",
+   "stored": 928906,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B1-Q1",
+   "ind": "4",
+   "stored": 4,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ5-E2-Q3",
+   "ind": "1218000",
+   "stored": 1218000,
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C4-Q1",
+   "ind": "-21600",
+   "stored": "-21600",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-C4-Q3",
+   "ind": "-5600",
+   "stored": "-5600",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ3-A4-Q1",
+   "ind": "228",
+   "stored": "228",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q3",
+   "ind": "130000",
+   "stored": "130000",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  },
+  {
+   "id": "CBQ4-B2-Q4",
+   "ind": "31500",
+   "stored": "31500",
+   "state": "In Audit",
+   "verdict": "MATCH"
+  }
+ ],
+ "match": 26,
+ "mismatch": 1,
+ "missing": 0
+}
