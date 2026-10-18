@@ -152,11 +152,7 @@ module.exports = {
 
         "p2/case_pack_p2_2.js",
 
-        "p2/case_pack_p2_3.js",
-
-        "p2/case_pack_p2_authored.js",
-
-        "p2/case_pack_p2_C4_C8.js"
+        "p2/case_pack_p2_3.js"
 
     ],
 

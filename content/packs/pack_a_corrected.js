@@ -18252,8 +18252,8 @@ const MCQ_BANK_A = [
       "C": "Classify the issue as a Part 2 capital budgeting matter",
       "D": "Wait for the external audit before designing internal controls"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Waiting for the external audit before designing information and communication channels reverses management's responsibility under COSO. Principle 13 requires management to establish the information systems and communication channels that support internal control as part of ongoing operations. At Yukon, exception reports must be designed, distributed, and acted upon before the external audit — not deferred until the auditor arrives. External auditors may evaluate whether communication is effective, but management bears primary responsibility for the information and communication component.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B is correct. Under COSO Principle 13, an organization must obtain or generate and use relevant, quality information to support the functioning of internal control, and Principle 14 requires it to communicate that information internally in a form and timeframe that enables personnel to carry out their control responsibilities. Communicating relevant, timely information to the people who perform controls is the essence of the information and communication component. At Yukon, designing exception reports and distributing them so that responsible personnel can act on deviations is exactly what Principles 13 and 14 require. A common error is to defer this responsibility to the external audit; management, not the auditor, owns information and communication.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -18271,18 +18271,21 @@ const MCQ_BANK_A = [
     "question_state": "Certified",
     "certification_date": "2026-07-22",
     "certification_batch": "Section E Block 1",
+    "recertification_batch": "DL-070 Correct-Key Inversion Remediation",
+    "recertification_date": "2026-10-18",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Correct key (B) independently derived and independently verified by hand-solve against the COSO Internal Control framework; the prior key-D refutation was reclassified to ExplanationWrongD."
     ],
     "ExplanationWrongA": "Yukon must rely on structured information, not trust, for internal control. COSO Principle 13 requires the organization to obtain or generate and use relevant, quality information to support internal control. Exception reports are formal control mechanisms that communicate deviations to responsible personnel — relying on trust rather than documented communication channels eliminates the structured information flow that COSO requires. Without exception reports, Yukon cannot confirm that control performers received timely notice of deviations or that corrective action was taken. A candidate selecting this option may believe informal verbal communication is sufficient, but COSO explicitly requires information to be delivered in a form and timeframe enabling proper response.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Capital budgeting is a Part 2 topic involving long-term investment evaluation. The information and communication component of the COSO framework — Principles 13 and 14 — addresses how relevant information is identified, captured, and communicated to enable personnel to carry out internal control responsibilities. Yukon's exception reports fall squarely within this COSO component, not within Part 2 capital budgeting. A candidate selecting this option may be attempting to redirect an unfamiliar COSO component question to a more familiar Part 2 topic.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Waiting for the external audit before designing information and communication channels reverses management's responsibility under COSO. Principle 13 requires management to establish the information systems and communication channels that support internal control as part of ongoing operations. At Yukon, exception reports must be designed, distributed, and acted upon before the external audit — not deferred until the auditor arrives. External auditors may evaluate whether communication is effective, but management bears primary responsibility for the information and communication component.",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand"
   },
@@ -18305,8 +18308,8 @@ const MCQ_BANK_A = [
       "C": "Rely on trust and remove documentation to speed processing",
       "D": "Classify the issue as a Part 2 capital budgeting matter"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Capital budgeting is a Part 2 topic involving long-term investment decisions. Monitoring activities are the fifth component of the COSO Internal Control framework — evaluating whether controls are present and functioning has no connection to capital budgeting analysis. Zephyr's monitoring activities belong within the COSO framework under Principle 16, which addresses ongoing and separate evaluations. A candidate selecting this option may be misidentifying the topical domain, a common CMA exam trap where distractors reference Part 2 topics in Part 1 questions.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B is correct. Monitoring is the fifth component of the COSO Internal Control framework, and Principle 16 requires the organization to select, develop, and perform ongoing and separate evaluations to ascertain whether the components of internal control are present and functioning. Using ongoing or separate evaluations — such as continuous supervision, control self-assessments, and periodic internal audits — is precisely the mechanism COSO prescribes for monitoring. At Zephyr, evaluating through ongoing or separate evaluations whether controls remain present and functioning satisfies Principle 16. A common error is to assume the external auditor performs this monitoring; the external audit is a periodic, independent check, whereas management must monitor throughout the period.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -18324,18 +18327,21 @@ const MCQ_BANK_A = [
     "question_state": "Certified",
     "certification_date": "2026-07-22",
     "certification_batch": "Section E Block 1",
+    "recertification_batch": "DL-070 Correct-Key Inversion Remediation",
+    "recertification_date": "2026-10-18",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Correct key (B) independently derived and independently verified by hand-solve against the COSO Internal Control framework; the prior key-D refutation was reclassified to ExplanationWrongD."
     ],
     "ExplanationWrongA": "Waiting for the external audit before designing monitoring activities contradicts COSO Principle 16, which assigns management — not the external auditor — the responsibility to use ongoing or separate evaluations to ascertain whether controls are present and functioning. External audits are periodic, not continuous; the organization needs monitoring throughout the reporting period. Zephyr must conduct its own evaluations, such as internal audits or control self-assessments, rather than deferring to the external auditor. A candidate selecting this option may confuse the external auditor's evaluation of controls with management's ongoing monitoring responsibility.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Relying on trust and removing documentation undermines the monitoring component. COSO Principle 16 requires ongoing and separate evaluations to ascertain whether each component of internal control is present and functioning — and these evaluations must be supported by evidence. At Zephyr, removing documentation eliminates the record of control performance that ongoing evaluations depend upon to determine whether controls operated as designed. A candidate selecting this option may believe that informal observation is sufficient for monitoring, but COSO requires documented, structured evaluations to produce reliable evidence of control effectiveness.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Capital budgeting is a Part 2 topic involving long-term investment decisions. Monitoring activities are the fifth component of the COSO Internal Control framework — evaluating whether controls are present and functioning has no connection to capital budgeting analysis. Zephyr's monitoring activities belong within the COSO framework under Principle 16, which addresses ongoing and separate evaluations. A candidate selecting this option may be misidentifying the topical domain, a common CMA exam trap where distractors reference Part 2 topics in Part 1 questions.",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand"
   },
@@ -18463,8 +18469,8 @@ const MCQ_BANK_A = [
       "C": "Implement continuous monitoring software and write off the historical $12,000 — this addresses the root cause (manual reconciliation failing to detect the discrepancy for three months) at a lower cost than a forensic investigation, while the write-off resolves the current period's unreconciled difference",
       "D": "Defer action to the external auditors — the significant deficiency has already been communicated in the management letter, and the auditors are best positioned to determine whether the discrepancy represents a material weakness requiring disclosure. Management should focus resources on operational issues"
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Under COSO Principle 1 (tone at the top), management — not the external auditors — bears primary responsibility for designing, implementing, and maintaining internal controls. The external auditors' role is to evaluate and report on the effectiveness of controls, not to investigate specific discrepancies or design management's response to them. Deferring investigation to the auditors abdicates management's responsibility under the COSO framework and is inconsistent with Principle 1's emphasis that the board and senior management demonstrate a commitment to integrity. A candidate selecting this option may be confusing the external auditor's attestation role with management's operational accountability for internal control.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B is correct. Under COSO Principle 8, management must assess the risk of fraud and evaluate the incentives and pressures that could lead to misappropriation, and under Principle 16 it must perform ongoing and separate evaluations to determine whether controls are present and functioning. A persistent three-month unreconciled difference in cash receipts — where recorded collections never appear on the bank statement — is an indicator of potential misappropriation, and the external auditors have already reported a significant deficiency over cash in the prior-year management letter. COSO therefore requires management to investigate the indicator regardless of dollar materiality, because the applicable standard is control effectiveness, not financial-statement materiality. A forensic investigation is the recommendation the controller should present. Writing the amount off (A and C) or deferring the matter to the external auditors (D) leaves a known fraud indicator unresolved and cedes management's responsibility; a misappropriation that is never investigated continues undetected.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -18482,18 +18488,21 @@ const MCQ_BANK_A = [
     "question_state": "Certified",
     "certification_date": "2026-07-22",
     "certification_batch": "Section E Block 1",
+    "recertification_batch": "DL-070 Correct-Key Inversion Remediation",
+    "recertification_date": "2026-10-18",
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
       "Original practice item with unique micro-topic and stem",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as plausible CMA-style traps",
+      "Correct key (B) independently derived and independently verified by hand-solve against the COSO Internal Control framework; the prior key-D refutation was reclassified to ExplanationWrongD."
     ],
     "ExplanationWrongA": "Writing off the $12,000 treats the discrepancy as an accounting adjustment rather than a control failure. Under COSO Principle 8 (fraud risk assessment), a three-month persistent unreconciled cash discrepancy is a fraud indicator regardless of dollar amount relative to total assets. Materiality for control evaluation is determined by the nature and circumstances of the deficiency, not solely by the dollar amount. A recurring unexplained difference in cash receipts suggests the control may be compromised, and writing it off without investigation condones a known control weakness — which the external auditors have already flagged as a significant deficiency. A candidate selecting this option may be applying financial-statement materiality thresholds to an internal control evaluation, where the applicable framework is COSO, not audit materiality guidance.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Implementing continuous monitoring software is a sound prospective control improvement, but it does not address the existing three-month unexplained discrepancy. Under COSO Principle 16, monitoring activities should both identify and prompt correction of deficiencies. Installing daily reconciliation software going forward is a preventive/detective improvement for future periods, but it leaves the historical $12,000 discrepancy unresolved. If the discrepancy was caused by fraud, implementing new software without investigating the loss means the perpetrator continues undetected. A candidate selecting this option may be prioritizing operational efficiency over control remediation — the correct sequencing is to investigate the existing discrepancy first (to determine whether it represents fraud or error), then implement improved controls to prevent recurrence.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongD": "Under COSO Principle 1 (tone at the top), management — not the external auditors — bears primary responsibility for designing, implementing, and maintaining internal controls. The external auditors' role is to evaluate and report on the effectiveness of controls, not to investigate specific discrepancies or design management's response to them. Deferring investigation to the auditors abdicates management's responsibility under the COSO framework and is inconsistent with Principle 1's emphasis that the board and senior management demonstrate a commitment to integrity. A candidate selecting this option may be confusing the external auditor's attestation role with management's operational accountability for internal control.",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate"
   },

@@ -61,18 +61,19 @@ const P1_TOTAL_CERT = 3052;
 const P2_PACKS = [
   { file: 'p2/pack_p2_a.js', label: 'P2-A', raw: 622, cert: 622 },
   { file: 'p2/pack_p2_b.js', label: 'P2-B', raw: 620, cert: 620 },
-  { file: 'p2/pack_p2_c.js', label: 'P2-C', raw: 788, cert: 788 },
+  { file: 'p2/pack_p2_c.js', label: 'P2-C', raw: 788, cert: 787 },
   { file: 'p2/pack_p2_d.js', label: 'P2-D', raw: 500, cert: 500 },
   { file: 'p2/pack_p2_e.js', label: 'P2-E', raw: 500, cert: 500 },
   { file: 'p2/pack_p2_f.js', label: 'P2-F', raw: 500, cert: 500 },
 ];
-const P2_TOTAL_CERT = 3530; // WSC-CERT-20260922: 80 Easy certified (A+22/B+20/C+38)
+const P2_TOTAL_CERT = 3529; // 2026-10-18: DL-074 clone archive (P2-C-732) — was 3530 (WSC-CERT-20260922)
 const P2_CASE_FILES = [
   { file: 'p2/case_pack_p2_1.js', global: 'casePackP2_1' },
   { file: 'p2/case_pack_p2_2.js', global: 'casePackP2_2' },
   { file: 'p2/case_pack_p2_3.js', global: 'casePackP2_3' },
-  { file: 'p2/case_pack_p2_authored.js', global: 'casePackP2Authored' },
-  { file: 'p2/case_pack_p2_C4_C8.js', global: 'casePackP2_C4_C8' },
+  // Consolidation 2026-10-18: banks 4/5 (case_pack_p2_authored.js,
+  // case_pack_p2_C4_C8.js) retired as empty shims — their 10 Certified CBQ22-*
+  // cases moved verbatim into case_pack_p2_2.js. No longer delivery banks.
 ];
 // Expected strict-eligible P2 cases (case-level AND every item Certified).
 //
@@ -235,7 +236,14 @@ function check2() {
     else pass(p.label + ' Part2OnlyFlag true on all ' + recs.length);
     if (partBad.length) fail(p.label + ' P1- QIDs in P2 pack (Rule 14): ' + partBad.slice(0, 5).join(', '));
     else pass(p.label + ' Rule-14 part eligibility clean');
-    if (Object.keys(bad).length) fail(p.label + ' non-Certified states: ' + JSON.stringify(bad));
+    if (Object.keys(bad).length) {
+      // Archived is the designed excluded state (QUESTION_METADATA_STANDARD §9.2,
+      // DL-012 / DL-074): reconcile the count, do not fail on it alone.
+      const archN = bad['Archived'] || 0;
+      const other = Object.keys(bad).filter(k => k !== 'Archived');
+      if (other.length) fail(p.label + ' non-Certified states: ' + JSON.stringify(other.reduce((o, k) => { o[k] = bad[k]; return o; }, {})));
+      else pass(p.label + ' Tier-1-only clean (' + archN + ' Archived reconciled, excluded from delivery by design)');
+    }
     else pass(p.label + ' Tier-1-only clean');
   }
   if (totPool !== P2_TOTAL_CERT) fail('P2 Tier-1 pool total ' + totPool + ' != ' + P2_TOTAL_CERT);
@@ -454,14 +462,16 @@ function check5() {
       else pass('semantic_key_verifier lists 5 P1 + 6 P2 banks (P1=' + p1 + ' P2=' + p2 + ' refs)');
     }
   }
-  // 5e. case_semantic_screens BANKS: expects 8 live (3 P1 + 5 P2)
+  // 5e. case_semantic_screens BANKS: expects 6 live (3 P1 + 3 P2)
+  //     Consolidation 2026-10-18: banks 4/5 retired as empty shims (CBQ22-*
+  //     survivors moved into case_pack_p2_2.js); listing them would scan shims.
   {
     const src = readOrFail('scripts/case_semantic_screens.js');
     if (src) {
-      const hasAuthored = src.includes('case_pack_p2_authored');
-      const hasC4C8 = src.includes('case_pack_p2_C4_C8');
-      if (!hasAuthored || !hasC4C8) fail('case_semantic_screens BANKS missing ' + (!hasAuthored ? 'case_pack_p2_authored ' : '') + (!hasC4C8 ? 'case_pack_p2_C4_C8' : '') + '(listed vs 8 live — unscanned banks = FAIL)');
-      else pass('case_semantic_screens covers all 8 live case banks');
+      const liveP2 = (src.match(/p2\/case_pack_p2_\d+\.js/g) || []).length >= 3;
+      const stale = src.includes('case_pack_p2_authored') || src.includes('case_pack_p2_C4_C8');
+      if (!liveP2 || stale) fail('case_semantic_screens BANKS must list the 3 live P2 packs and no retired shim banks (consolidation 2026-10-18)');
+      else pass('case_semantic_screens covers the 3 live P2 case banks (shim banks excluded)');
     }
   }
   // 5f. s121 dashboard P2_PACKS: expects 6

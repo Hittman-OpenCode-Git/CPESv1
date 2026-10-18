@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T20:51:55.620Z",
+  "generated": "2026-10-18T19:13:44.716Z",
   "method": "key_agreement_screen.js v1 (E1 key-unsupported / E2 scratchwork+disagreement / E3 key-type / E4 encoding)",
   "scanned": 1085,
   "census": {
@@ -7,10 +7,8 @@
     "content/cases/case_pack_2_corrected.js": 25,
     "content/cases/case_pack_3_corrected.js": 30,
     "p2/case_pack_p2_1.js": 33,
-    "p2/case_pack_p2_2.js": 33,
-    "p2/case_pack_p2_3.js": 34,
-    "p2/case_pack_p2_authored.js": 5,
-    "p2/case_pack_p2_C4_C8.js": 5
+    "p2/case_pack_p2_2.js": 43,
+    "p2/case_pack_p2_3.js": 34
   },
   "summary": {
     "SCRATCHWORK": 1

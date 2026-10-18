@@ -19,38 +19,40 @@ th { background: #f0f0f0; }
 </head>
 <body>
 <h1>CMA Part 1 Validation Report</h1>
-<p>Generated: 2026-10-17T20:51:52.775Z</p>
+<p>Generated: 2026-10-18T18:51:55.566Z</p>
 <p>Project: CMA Exam Simulator v2.0</p>
 <h2>Results</h2>
 <table><tr><th>Validator</th><th>Status</th><th>Errors</th><th>Warnings</th><th>Duration</th></tr>
-<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>2ms</td></tr>
-<tr><td>Metadata Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>323ms</td></tr>
-<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>188</td><td>240ms</td></tr>
-<tr><td>Part 2 Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>3263</td><td>363ms</td></tr>
-<tr><td>Difficulty Validator</td><td class="warn">WARN</td><td>0</td><td>72</td><td>505ms</td></tr>
-<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>77</td><td>225ms</td></tr>
-<tr><td>Explanation Validator</td><td class="warn">WARN</td><td>0</td><td>6</td><td>1134ms</td></tr>
-<tr><td>Case Integrity Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>214ms</td></tr>
-<tr><td>Case Identity Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>49ms</td></tr>
-<tr><td>PsychometricValidator</td><td class="warn">WARN</td><td>0</td><td>7108</td><td>6084ms</td></tr>
+<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>1ms</td></tr>
+<tr><td>Metadata Validator</td><td class="warn">WARN</td><td>0</td><td>3</td><td>548ms</td></tr>
+<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>188</td><td>468ms</td></tr>
+<tr><td>Part 2 Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>3263</td><td>590ms</td></tr>
+<tr><td>Difficulty Validator</td><td class="warn">WARN</td><td>0</td><td>72</td><td>396ms</td></tr>
+<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>77</td><td>822ms</td></tr>
+<tr><td>Explanation Validator</td><td class="warn">WARN</td><td>0</td><td>6</td><td>1551ms</td></tr>
+<tr><td>Case Integrity Validator</td><td class="warn">WARN</td><td>0</td><td>3</td><td>362ms</td></tr>
+<tr><td>Case Identity Validator</td><td class="warn">WARN</td><td>0</td><td>2</td><td>114ms</td></tr>
+<tr><td>PsychometricValidator</td><td class="warn">WARN</td><td>0</td><td>7108</td><td>10813ms</td></tr>
 </table>
-<p><strong>Total Errors:</strong> 0 | <strong>Total Warnings:</strong> 10716 | <strong>Overall:</strong> <span class="badge warn">WARN</span></p>
+<p><strong>Total Errors:</strong> 0 | <strong>Total Warnings:</strong> 10722 | <strong>Overall:</strong> <span class="badge warn">WARN</span></p>
 <h2 id="Repository Validator">Repository Validator</h2>
-<p>Status: <span class="badge pass">PASS</span> | Duration: 2ms</p>
+<p>Status: <span class="badge pass">PASS</span> | Duration: 1ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Question Packs</td><td>5</td></tr>
 <tr><td>Case Banks</td><td>5</td></tr>
 </table>
 <h2 id="Metadata Validator">Metadata Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 323ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 548ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 </table>
 <h3>Warnings</h3><table>
 <tr class="warning"><td>content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6</td></tr>
+<tr class="warning"><td>No cases found in p2/case_pack_p2_authored.js</td></tr>
+<tr class="warning"><td>No cases found in p2/case_pack_p2_C4_C8.js</td></tr>
 </table>
 <h2 id="Blueprint Validator">Blueprint Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 240ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 468ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Cross-Domain Cases</td><td>2</td></tr>
@@ -206,6 +208,16 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>p2/case_pack_p2_2.js[30] (CBQ22-F5): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_2.js[31] (CBQ22-F6): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_2.js[32] (CBQ22-B6): 6 item topic(s) not in domain topic list for "Corporate Finance": After-tax cost of debt, Cost of equity with flotation, WACC investment decision, Flotation sensitivity, Retained earnings vs new equity...</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[33] (CBQ22-A7): 5 item topic(s) not in domain topic list for "Financial Statement Analysis": Return on equity, DuPont decomposition, DuPont interpretation, Board reporting, Red flag classification</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[34] (CBQ22-A8): 6 item topic(s) not in domain topic list for "Financial Statement Analysis": Sustainable growth rate, Growth gap analysis, SGR interpretation, Dividend policy levers, Growth-gap levers...</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[35] (CBQ22-F8): 6 item topic(s) not in domain topic list for "Professional Ethics": IMA standards mapping, Ethics resolution process, Notification obligations, Final recourse, Fraud triangle...</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[36] (CBQ22-F9): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[37] (CBQ22-F10): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[38] (CBQ22-C9): 3 item topic(s) not in domain topic list for "Decision Analysis": Target costing, Value engineering, Life-cycle pricing</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[39] (CBQ22-C10): 5 item topic(s) not in domain topic list for "Decision Analysis": Contribution margin, Linear programming, Constraint analysis, Shadow price, What-if analysis</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[40] (CBQ22-C11): 4 item topic(s) not in domain topic list for "Decision Analysis": Decision tree analysis, Decision criteria, Decision factors, EVPI interpretation</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[41] (CBQ22-C12): 2 item topic(s) not in domain topic list for "Decision Analysis": Negotiated range, Dual pricing</td></tr>
+<tr class="warning"><td>p2/case_pack_p2_2.js[42] (CBQ22-C13): 3 item topic(s) not in domain topic list for "Decision Analysis": Special order analysis, Minimum price rule, Opportunity cost</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_3.js[0] (CBQ23-C1): 6 item topic(s) not in domain topic list for "Decision Analysis": Relevant cost identification, Outsourcing premium, Net benefit of outsourcing, Cost relevance test, Sourcing risk...</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_3.js[1] (CBQ23-E1): 3 item topic(s) not in domain topic list for "Investment Decisions": After-tax cash flow, NPV versus IRR, Investment recommendation</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_3.js[2] (CBQ23-C2): 6 item topic(s) not in domain topic list for "Decision Analysis": Special order margin, Opportunity cost, Special order net effect, Minimum acceptable price, Counterproposal design...</td></tr>
@@ -240,16 +252,6 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>p2/case_pack_p2_3.js[31] (CBQ23-C7): 6 item topic(s) not in domain topic list for "Decision Analysis": Special order floor price, Special order contribution, Cost relevance, Capacity cost impact, Outsourcing cost impact...</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_3.js[32] (CBQ23-C8): 6 item topic(s) not in domain topic list for "Decision Analysis": Relevant cost identification, Equipment total relevant cost, Sunk cost identification, Equipment cost comparison, Qualitative analysis...</td></tr>
 <tr class="warning"><td>p2/case_pack_p2_3.js[33] (CBQ23-C9): 6 item topic(s) not in domain topic list for "Decision Analysis": Minimum transfer price, Maximum transfer price, Divisional benefit analysis, Divisional cost analysis, Corporate profit neutrality...</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_authored.js[0] (CBQ22-A7): 5 item topic(s) not in domain topic list for "Financial Statement Analysis": Return on equity, DuPont decomposition, DuPont interpretation, Board reporting, Red flag classification</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_authored.js[1] (CBQ22-A8): 6 item topic(s) not in domain topic list for "Financial Statement Analysis": Sustainable growth rate, Growth gap analysis, SGR interpretation, Dividend policy levers, Growth-gap levers...</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_authored.js[2] (CBQ22-F8): 6 item topic(s) not in domain topic list for "Professional Ethics": IMA standards mapping, Ethics resolution process, Notification obligations, Final recourse, Fraud triangle...</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_authored.js[3] (CBQ22-F9): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_authored.js[4] (CBQ22-F10): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_C4_C8.js[0] (CBQ22-C9): 3 item topic(s) not in domain topic list for "Decision Analysis": Target costing, Value engineering, Life-cycle pricing</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_C4_C8.js[1] (CBQ22-C10): 5 item topic(s) not in domain topic list for "Decision Analysis": Contribution margin, Linear programming, Constraint analysis, Shadow price, What-if analysis</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_C4_C8.js[2] (CBQ22-C11): 4 item topic(s) not in domain topic list for "Decision Analysis": Decision tree analysis, Decision criteria, Decision factors, EVPI interpretation</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_C4_C8.js[3] (CBQ22-C12): 2 item topic(s) not in domain topic list for "Decision Analysis": Negotiated range, Dual pricing</td></tr>
-<tr class="warning"><td>p2/case_pack_p2_C4_C8.js[4] (CBQ22-C13): 3 item topic(s) not in domain topic list for "Decision Analysis": Special order analysis, Minimum price rule, Opportunity cost</td></tr>
 <tr class="warning"><td>Domain "External Financial Reporting Decisions" has 13 cases (expected 22-42). Underrepresented.</td></tr>
 <tr class="warning"><td>Domain "Planning, Budgeting, and Forecasting" has 13 cases (expected 22-42). Underrepresented.</td></tr>
 <tr class="warning"><td>Domain "Performance Management" has 15 cases (expected 22-42). Underrepresented.</td></tr>
@@ -258,7 +260,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Domain "Technology and Analytics" has 11 cases (expected 22-42). Underrepresented.</td></tr>
 </table>
 <h2 id="Part 2 Blueprint Validator">Part 2 Blueprint Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 363ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 590ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>P2 MCQ Packs Found</td><td>6</td></tr>
 <tr><td>P2 Case Packs Found</td><td>5</td></tr>
@@ -3537,7 +3539,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>p2/pack_p2_f.js[499] (P2-F-500): Topic "F.500 technology-ethics-ai-governance-transparency" may not align with domain "Professional Ethics". Available topics: [IMA Ethical Standards, Competence, Confidentiality, Integrity, Credibility, Ethical Decision Model, Fraud Triangle, SOX 2002, FCPA, Audit Committee, Corporate Governance, International Ethics]</td></tr>
 </table>
 <h2 id="Difficulty Validator">Difficulty Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 505ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 396ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Items Checked</td><td>1085</td></tr>
@@ -3627,7 +3629,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Difficulty "Difficult": 76/190 (40.0%) deviates from target 25.0% by more than 10%</td></tr>
 </table>
 <h2 id="Reference Validator">Reference Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 225ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 822ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>190</td></tr>
 <tr><td>Total References</td><td>0</td></tr>
@@ -3714,7 +3716,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>content/cases/case_pack_3_corrected.js[13] (CBQ5-D2) exhibit "CBQ5-D2-E2": Exhibit is never referenced by any item</td></tr>
 </table>
 <h2 id="Explanation Validator">Explanation Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 1134ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 1551ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>MCQ Questions Checked</td><td>6600</td></tr>
 <tr><td>Case Items Checked</td><td>1485</td></tr>
@@ -3733,7 +3735,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>2 explanations are shorter than the recommended 50-character minimum.</td></tr>
 </table>
 <h2 id="Case Integrity Validator">Case Integrity Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 214ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 362ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Total Cases Checked</td><td>190</td></tr>
 <tr><td>Total Items Checked</td><td>1085</td></tr>
@@ -3748,10 +3750,12 @@ th { background: #f0f0f0; }
 <tr><td>Cases with Missing Exhibits</td><td>0</td></tr>
 </table>
 <h3>Warnings</h3><table>
+<tr class="warning"><td>No cases found in p2/case_pack_p2_authored.js</td></tr>
+<tr class="warning"><td>No cases found in p2/case_pack_p2_C4_C8.js</td></tr>
 <tr class="warning"><td>Placeholder choices found in cases: CBQ3-E2, CBQ21-E5, CBQ23-E3</td></tr>
 </table>
 <h2 id="Case Identity Validator">Case Identity Validator</h2>
-<p>Status: <span class="badge pass">PASS</span> | Duration: 49ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 114ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>content/cases/case_pack_1_corrected.js :: Moderate-Easy</td><td>38 (27.0%)</td></tr>
 <tr><td>content/cases/case_pack_1_corrected.js :: Moderate</td><td>36 (25.5%)</td></tr>
@@ -3784,19 +3788,14 @@ th { background: #f0f0f0; }
 <tr><td>p2/case_pack_p2_1.js :: Difficult</td><td>65 (32.8%)</td></tr>
 <tr><td>p2/case_pack_p2_1.js :: Moderate-Easy</td><td>14 (7.1%)</td></tr>
 <tr><td>p2/case_pack_p2_1.js :: Very Difficult</td><td>6 (3.0%)</td></tr>
-<tr><td>p2/case_pack_p2_2.js :: Moderate-Easy</td><td>8 (4.0%)</td></tr>
-<tr><td>p2/case_pack_p2_2.js :: Difficult</td><td>70 (35.4%)</td></tr>
-<tr><td>p2/case_pack_p2_2.js :: Moderate</td><td>117 (59.1%)</td></tr>
-<tr><td>p2/case_pack_p2_2.js :: Very Difficult</td><td>3 (1.5%)</td></tr>
+<tr><td>p2/case_pack_p2_2.js :: Moderate-Easy</td><td>8 (3.1%)</td></tr>
+<tr><td>p2/case_pack_p2_2.js :: Difficult</td><td>94 (36.4%)</td></tr>
+<tr><td>p2/case_pack_p2_2.js :: Moderate</td><td>150 (58.1%)</td></tr>
+<tr><td>p2/case_pack_p2_2.js :: Very Difficult</td><td>6 (2.3%)</td></tr>
 <tr><td>p2/case_pack_p2_3.js :: Moderate</td><td>101 (49.5%)</td></tr>
 <tr><td>p2/case_pack_p2_3.js :: Moderate-Easy</td><td>18 (8.8%)</td></tr>
 <tr><td>p2/case_pack_p2_3.js :: Difficult</td><td>61 (29.9%)</td></tr>
 <tr><td>p2/case_pack_p2_3.js :: Very Difficult</td><td>24 (11.8%)</td></tr>
-<tr><td>p2/case_pack_p2_authored.js :: Moderate</td><td>18 (60.0%)</td></tr>
-<tr><td>p2/case_pack_p2_authored.js :: Difficult</td><td>12 (40.0%)</td></tr>
-<tr><td>p2/case_pack_p2_C4_C8.js :: Moderate</td><td>15 (50.0%)</td></tr>
-<tr><td>p2/case_pack_p2_C4_C8.js :: Difficult</td><td>12 (40.0%)</td></tr>
-<tr><td>p2/case_pack_p2_C4_C8.js :: Very Difficult</td><td>3 (10.0%)</td></tr>
 <tr><td>Total Cases Checked</td><td>265</td></tr>
 <tr><td>Unique CaseIDs</td><td>190</td></tr>
 <tr><td>Total Items Checked</td><td>1485</td></tr>
@@ -3804,8 +3803,12 @@ th { background: #f0f0f0; }
 <tr><td>Archived↔Live Overlaps (expected, S916)</td><td>75</td></tr>
 <tr><td>Score/Label Mismatches</td><td>0</td></tr>
 </table>
+<h3>Warnings</h3><table>
+<tr class="warning"><td>No cases parsed in p2/case_pack_p2_authored.js</td></tr>
+<tr class="warning"><td>No cases parsed in p2/case_pack_p2_C4_C8.js</td></tr>
+</table>
 <h2 id="PsychometricValidator">PsychometricValidator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 6084ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 10813ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>AbsoluteLanguageValidator.questionsScanned</td><td>6600</td></tr>
 <tr><td>AbsoluteLanguageValidator.findings</td><td>2571</td></tr>

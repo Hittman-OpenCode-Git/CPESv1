@@ -1,47 +1,49 @@
 # Validation Report Summary
 
-**Generated:** 2026-10-17T20:51:52.764Z
+**Generated:** 2026-10-18T18:51:55.552Z
 **Project:** CMA Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 2ms |
-| Metadata Validator | WARN | 0 | 1 | 323ms |
-| Blueprint Validator | WARN | 0 | 188 | 240ms |
-| Part 2 Blueprint Validator | WARN | 0 | 3263 | 363ms |
-| Difficulty Validator | WARN | 0 | 72 | 505ms |
-| Reference Validator | WARN | 0 | 77 | 225ms |
-| Explanation Validator | WARN | 0 | 6 | 1134ms |
-| Case Integrity Validator | WARN | 0 | 1 | 214ms |
-| Case Identity Validator | PASS | 0 | 0 | 49ms |
-| PsychometricValidator | WARN | 0 | 7108 | 6084ms |
+| Repository Validator | PASS | 0 | 0 | 1ms |
+| Metadata Validator | WARN | 0 | 3 | 548ms |
+| Blueprint Validator | WARN | 0 | 188 | 468ms |
+| Part 2 Blueprint Validator | WARN | 0 | 3263 | 590ms |
+| Difficulty Validator | WARN | 0 | 72 | 396ms |
+| Reference Validator | WARN | 0 | 77 | 822ms |
+| Explanation Validator | WARN | 0 | 6 | 1551ms |
+| Case Integrity Validator | WARN | 0 | 3 | 362ms |
+| Case Identity Validator | WARN | 0 | 2 | 114ms |
+| PsychometricValidator | WARN | 0 | 7108 | 10813ms |
 
 **Total Errors:** 0
-**Total Warnings:** 10716
+**Total Warnings:** 10722
 **Overall Status:** WARN
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 2ms
+**Duration:** 1ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 323ms
+**Duration:** 548ms
 **Statistics:**
 - Cases Checked: 190
 **Warnings:**
 - content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6
+- No cases found in p2/case_pack_p2_authored.js
+- No cases found in p2/case_pack_p2_C4_C8.js
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 240ms
+**Duration:** 468ms
 **Statistics:**
 - Cases Checked: 190
 - Cross-Domain Cases: 2
@@ -196,6 +198,16 @@
 - p2/case_pack_p2_2.js[30] (CBQ22-F5): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...
 - p2/case_pack_p2_2.js[31] (CBQ22-F6): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...
 - p2/case_pack_p2_2.js[32] (CBQ22-B6): 6 item topic(s) not in domain topic list for "Corporate Finance": After-tax cost of debt, Cost of equity with flotation, WACC investment decision, Flotation sensitivity, Retained earnings vs new equity...
+- p2/case_pack_p2_2.js[33] (CBQ22-A7): 5 item topic(s) not in domain topic list for "Financial Statement Analysis": Return on equity, DuPont decomposition, DuPont interpretation, Board reporting, Red flag classification
+- p2/case_pack_p2_2.js[34] (CBQ22-A8): 6 item topic(s) not in domain topic list for "Financial Statement Analysis": Sustainable growth rate, Growth gap analysis, SGR interpretation, Dividend policy levers, Growth-gap levers...
+- p2/case_pack_p2_2.js[35] (CBQ22-F8): 6 item topic(s) not in domain topic list for "Professional Ethics": IMA standards mapping, Ethics resolution process, Notification obligations, Final recourse, Fraud triangle...
+- p2/case_pack_p2_2.js[36] (CBQ22-F9): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...
+- p2/case_pack_p2_2.js[37] (CBQ22-F10): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...
+- p2/case_pack_p2_2.js[38] (CBQ22-C9): 3 item topic(s) not in domain topic list for "Decision Analysis": Target costing, Value engineering, Life-cycle pricing
+- p2/case_pack_p2_2.js[39] (CBQ22-C10): 5 item topic(s) not in domain topic list for "Decision Analysis": Contribution margin, Linear programming, Constraint analysis, Shadow price, What-if analysis
+- p2/case_pack_p2_2.js[40] (CBQ22-C11): 4 item topic(s) not in domain topic list for "Decision Analysis": Decision tree analysis, Decision criteria, Decision factors, EVPI interpretation
+- p2/case_pack_p2_2.js[41] (CBQ22-C12): 2 item topic(s) not in domain topic list for "Decision Analysis": Negotiated range, Dual pricing
+- p2/case_pack_p2_2.js[42] (CBQ22-C13): 3 item topic(s) not in domain topic list for "Decision Analysis": Special order analysis, Minimum price rule, Opportunity cost
 - p2/case_pack_p2_3.js[0] (CBQ23-C1): 6 item topic(s) not in domain topic list for "Decision Analysis": Relevant cost identification, Outsourcing premium, Net benefit of outsourcing, Cost relevance test, Sourcing risk...
 - p2/case_pack_p2_3.js[1] (CBQ23-E1): 3 item topic(s) not in domain topic list for "Investment Decisions": After-tax cash flow, NPV versus IRR, Investment recommendation
 - p2/case_pack_p2_3.js[2] (CBQ23-C2): 6 item topic(s) not in domain topic list for "Decision Analysis": Special order margin, Opportunity cost, Special order net effect, Minimum acceptable price, Counterproposal design...
@@ -230,16 +242,6 @@
 - p2/case_pack_p2_3.js[31] (CBQ23-C7): 6 item topic(s) not in domain topic list for "Decision Analysis": Special order floor price, Special order contribution, Cost relevance, Capacity cost impact, Outsourcing cost impact...
 - p2/case_pack_p2_3.js[32] (CBQ23-C8): 6 item topic(s) not in domain topic list for "Decision Analysis": Relevant cost identification, Equipment total relevant cost, Sunk cost identification, Equipment cost comparison, Qualitative analysis...
 - p2/case_pack_p2_3.js[33] (CBQ23-C9): 6 item topic(s) not in domain topic list for "Decision Analysis": Minimum transfer price, Maximum transfer price, Divisional benefit analysis, Divisional cost analysis, Corporate profit neutrality...
-- p2/case_pack_p2_authored.js[0] (CBQ22-A7): 5 item topic(s) not in domain topic list for "Financial Statement Analysis": Return on equity, DuPont decomposition, DuPont interpretation, Board reporting, Red flag classification
-- p2/case_pack_p2_authored.js[1] (CBQ22-A8): 6 item topic(s) not in domain topic list for "Financial Statement Analysis": Sustainable growth rate, Growth gap analysis, SGR interpretation, Dividend policy levers, Growth-gap levers...
-- p2/case_pack_p2_authored.js[2] (CBQ22-F8): 6 item topic(s) not in domain topic list for "Professional Ethics": IMA standards mapping, Ethics resolution process, Notification obligations, Final recourse, Fraud triangle...
-- p2/case_pack_p2_authored.js[3] (CBQ22-F9): 6 item topic(s) not in domain topic list for "Professional Ethics": Fraud triangle, Red flags, Control deficiency, Investigation procedures, Fraud indicators...
-- p2/case_pack_p2_authored.js[4] (CBQ22-F10): 6 item topic(s) not in domain topic list for "Professional Ethics": SOX certification, Audit committee responsibility, Whistleblower protections, Retaliation test, Dodd-Frank remedies...
-- p2/case_pack_p2_C4_C8.js[0] (CBQ22-C9): 3 item topic(s) not in domain topic list for "Decision Analysis": Target costing, Value engineering, Life-cycle pricing
-- p2/case_pack_p2_C4_C8.js[1] (CBQ22-C10): 5 item topic(s) not in domain topic list for "Decision Analysis": Contribution margin, Linear programming, Constraint analysis, Shadow price, What-if analysis
-- p2/case_pack_p2_C4_C8.js[2] (CBQ22-C11): 4 item topic(s) not in domain topic list for "Decision Analysis": Decision tree analysis, Decision criteria, Decision factors, EVPI interpretation
-- p2/case_pack_p2_C4_C8.js[3] (CBQ22-C12): 2 item topic(s) not in domain topic list for "Decision Analysis": Negotiated range, Dual pricing
-- p2/case_pack_p2_C4_C8.js[4] (CBQ22-C13): 3 item topic(s) not in domain topic list for "Decision Analysis": Special order analysis, Minimum price rule, Opportunity cost
 - Domain "External Financial Reporting Decisions" has 13 cases (expected 22-42). Underrepresented.
 - Domain "Planning, Budgeting, and Forecasting" has 13 cases (expected 22-42). Underrepresented.
 - Domain "Performance Management" has 15 cases (expected 22-42). Underrepresented.
@@ -249,7 +251,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 363ms
+**Duration:** 590ms
 **Statistics:**
 - P2 MCQ Packs Found: 6
 - P2 Case Packs Found: 5
@@ -3528,7 +3530,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 505ms
+**Duration:** 396ms
 **Statistics:**
 - Cases Checked: 190
 - Items Checked: 1085
@@ -3618,7 +3620,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 225ms
+**Duration:** 822ms
 **Statistics:**
 - Cases Checked: 190
 - Total References: 0
@@ -3705,7 +3707,7 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 1134ms
+**Duration:** 1551ms
 **Statistics:**
 - MCQ Questions Checked: 6600
 - Case Items Checked: 1485
@@ -3724,7 +3726,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 214ms
+**Duration:** 362ms
 **Statistics:**
 - Total Cases Checked: 190
 - Total Items Checked: 1085
@@ -3738,11 +3740,13 @@
 - Cases with Duplicate Explanations: 0
 - Cases with Missing Exhibits: 0
 **Warnings:**
+- No cases found in p2/case_pack_p2_authored.js
+- No cases found in p2/case_pack_p2_C4_C8.js
 - Placeholder choices found in cases: CBQ3-E2, CBQ21-E5, CBQ23-E3
 
 ### Case Identity Validator
-**Status:** PASS
-**Duration:** 49ms
+**Status:** WARN
+**Duration:** 114ms
 **Statistics:**
 - content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
 - content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
@@ -3775,29 +3779,27 @@
 - p2/case_pack_p2_1.js :: Difficult: 65 (32.8%)
 - p2/case_pack_p2_1.js :: Moderate-Easy: 14 (7.1%)
 - p2/case_pack_p2_1.js :: Very Difficult: 6 (3.0%)
-- p2/case_pack_p2_2.js :: Moderate-Easy: 8 (4.0%)
-- p2/case_pack_p2_2.js :: Difficult: 70 (35.4%)
-- p2/case_pack_p2_2.js :: Moderate: 117 (59.1%)
-- p2/case_pack_p2_2.js :: Very Difficult: 3 (1.5%)
+- p2/case_pack_p2_2.js :: Moderate-Easy: 8 (3.1%)
+- p2/case_pack_p2_2.js :: Difficult: 94 (36.4%)
+- p2/case_pack_p2_2.js :: Moderate: 150 (58.1%)
+- p2/case_pack_p2_2.js :: Very Difficult: 6 (2.3%)
 - p2/case_pack_p2_3.js :: Moderate: 101 (49.5%)
 - p2/case_pack_p2_3.js :: Moderate-Easy: 18 (8.8%)
 - p2/case_pack_p2_3.js :: Difficult: 61 (29.9%)
 - p2/case_pack_p2_3.js :: Very Difficult: 24 (11.8%)
-- p2/case_pack_p2_authored.js :: Moderate: 18 (60.0%)
-- p2/case_pack_p2_authored.js :: Difficult: 12 (40.0%)
-- p2/case_pack_p2_C4_C8.js :: Moderate: 15 (50.0%)
-- p2/case_pack_p2_C4_C8.js :: Difficult: 12 (40.0%)
-- p2/case_pack_p2_C4_C8.js :: Very Difficult: 3 (10.0%)
 - Total Cases Checked: 265
 - Unique CaseIDs: 190
 - Total Items Checked: 1485
 - Duplicate CaseIDs (live banks incl. P2): 0
 - Archived↔Live Overlaps (expected, S916): 75
 - Score/Label Mismatches: 0
+**Warnings:**
+- No cases parsed in p2/case_pack_p2_authored.js
+- No cases parsed in p2/case_pack_p2_C4_C8.js
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 6084ms
+**Duration:** 10813ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 6600
 - AbsoluteLanguageValidator.findings: 2571

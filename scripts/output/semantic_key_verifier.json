@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-18T04:08:52.004Z",
+  "timestamp": "2026-10-18T19:13:23.060Z",
   "mode": "gate",
   "thresholds": {
     "block": {
@@ -26,7 +26,7 @@
       "p2/pack_p2_f.js"
     ],
     "totalQuestions": 6600,
-    "totalCertified": 6582
+    "totalCertified": 6581
   },
   "gateResult": "PASS",
   "bFlags": {
@@ -97,7 +97,7 @@
         "bestLeadWordCount": 12,
         "ecPreview": "Under COSO Principle 13 (Obtains, Generates, and Uses Relevant, Quality Information), control information must be releva",
         "file": "content/packs/pack_a_corrected.js",
-        "line": 21217
+        "line": 21226
       },
       {
         "qid": "P1-A-091",
@@ -110,7 +110,7 @@
         "bestLeadWordCount": 4,
         "ecPreview": "ASC 740's more-likely-than-not test (>50% probability) applies dollar by dollar: $80,000 backed by signed contracts clea",
         "file": "content/packs/pack_a_corrected.js",
-        "line": 26787
+        "line": 26796
       },
       {
         "qid": "P1-A-093",
@@ -123,7 +123,7 @@
         "bestLeadWordCount": 5,
         "ecPreview": "ASC 820 ranks by the lowest-level significant input: (1) Apple — quoted price for the identical asset in an active marke",
         "file": "content/packs/pack_a_corrected.js",
-        "line": 26895
+        "line": 26904
       },
       {
         "qid": "P1B-F-100",
@@ -760,7 +760,7 @@
         "bestLeadWordCount": 5,
         "ecPreview": "Breakeven units = fixed costs / unit contribution margin = $120,000 / ($50 - $20) = $120,000 / $30 = 4,000 units. At 4,0",
         "file": "p2/pack_p2_c.js",
-        "line": 40777
+        "line": 40779
       },
       {
         "qid": "P2-C-755",
@@ -773,7 +773,7 @@
         "bestLeadWordCount": 5,
         "ecPreview": "Breakeven = $80,000 / $16 = 5,000 units. The $16 margin per unit is the divisor; dividing the fixed base by it yields th",
         "file": "p2/pack_p2_c.js",
-        "line": 40941
+        "line": 40943
       },
       {
         "qid": "P2-C-766",
@@ -786,7 +786,7 @@
         "bestLeadWordCount": 8,
         "ecPreview": "Only separable cost vs. incremental revenue matters: $35,000 - $20,000 = $15,000 gain from processing. The $50,000 joint",
         "file": "p2/pack_p2_c.js",
-        "line": 41392
+        "line": 41394
       },
       {
         "qid": "P2-D-193",
@@ -944,7 +944,7 @@
         "bestLeadWordCount": 4,
         "ecPreview": "ASC 350's simplified test (ASU 2017-04 eliminated Step 2): impairment = carrying amount minus fair value = $1,500,000 − ",
         "file": "content/packs/pack_a_corrected.js",
-        "line": 26301
+        "line": 26310
       },
       {
         "qid": "P1B-A-135",
@@ -1393,7 +1393,7 @@
           "bestLeadWordCount": 12,
           "ecPreview": "Under COSO Principle 13 (Obtains, Generates, and Uses Relevant, Quality Information), control information must be releva",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 21217
+          "line": 21226
         },
         {
           "qid": "P1-A-081",
@@ -1406,7 +1406,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "ASC 350's simplified test (ASU 2017-04 eliminated Step 2): impairment = carrying amount minus fair value = $1,500,000 − ",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 26301
+          "line": 26310
         },
         {
           "qid": "P1-A-091",
@@ -1419,7 +1419,7 @@
           "bestLeadWordCount": 4,
           "ecPreview": "ASC 740's more-likely-than-not test (>50% probability) applies dollar by dollar: $80,000 backed by signed contracts clea",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 26787
+          "line": 26796
         },
         {
           "qid": "P1-A-093",
@@ -1432,7 +1432,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "ASC 820 ranks by the lowest-level significant input: (1) Apple — quoted price for the identical asset in an active marke",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 26895
+          "line": 26904
         },
         {
           "qid": "P1-C-115",
@@ -1445,7 +1445,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Negotiation range: floor = S's variable cost $30 (excess capacity → no opportunity cost; below $30 S loses cash per unit",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 28353,
+          "line": 28362,
           "knownFP": true
         },
         {
@@ -2692,7 +2692,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Breakeven units = fixed costs / unit contribution margin = $120,000 / ($50 - $20) = $120,000 / $30 = 4,000 units. At 4,0",
           "file": "p2/pack_p2_c.js",
-          "line": 40777
+          "line": 40779
         },
         {
           "qid": "P2-C-755",
@@ -2705,7 +2705,7 @@
           "bestLeadWordCount": 5,
           "ecPreview": "Breakeven = $80,000 / $16 = 5,000 units. The $16 margin per unit is the divisor; dividing the fixed base by it yields th",
           "file": "p2/pack_p2_c.js",
-          "line": 40941
+          "line": 40943
         },
         {
           "qid": "P2-C-766",
@@ -2718,7 +2718,7 @@
           "bestLeadWordCount": 8,
           "ecPreview": "Only separable cost vs. incremental revenue matters: $35,000 - $20,000 = $15,000 gain from processing. The $50,000 joint",
           "file": "p2/pack_p2_c.js",
-          "line": 41392
+          "line": 41394
         },
         {
           "qid": "P2-D-193",
@@ -3673,7 +3673,7 @@
           "bestOtherRecall": 60,
           "ewPreview": "A foreign key links to another table, but the vendor master table still needs its own unique primary key.",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 22522
+          "line": 22531
         },
         {
           "qid": "P1-F-016",
@@ -3685,7 +3685,7 @@
           "bestOtherRecall": 50,
           "ewPreview": "Adding more data does not correct the misleading effect of a truncated or inconsistent axis.",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 22789
+          "line": 22798
         },
         {
           "qid": "P1-F-035",
@@ -3697,7 +3697,7 @@
           "bestOtherRecall": 55,
           "ewPreview": "Identifying only Path-2 as a gap understates the scope. While Path-2 is a genuine encryption gap, Paths 4 and 5 also lack adequate protection. Path-4's unencryp",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 23764
+          "line": 23773
         },
         {
           "qid": "P1-F-044",
@@ -3709,7 +3709,7 @@
           "bestOtherRecall": 62.5,
           "ewPreview": "Automation does not remove version-control risk; automated analytics can still run the wrong model, assumptions, or data set.",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 24217
+          "line": 24226
         },
         {
           "qid": "P1-A-090",
@@ -3721,7 +3721,7 @@
           "bestOtherRecall": 55.6,
           "ewPreview": "Option C computes $230,000 correctly but requires no disclosure. The $40,000 phantom profit is material and non-recurring — earnings quality requires segregatin",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 26733
+          "line": 26742
         },
         {
           "qid": "P1-A-102",
@@ -3733,7 +3733,7 @@
           "bestOtherRecall": 60,
           "ewPreview": "Option A capitalizes all $550,000 as 'major overhaul,' booking $400,000 of non-benefit (restoration + routine) as an asset. Invoice labels do not create future ",
           "file": "content/packs/pack_a_corrected.js",
-          "line": 27381
+          "line": 27390
         },
         {
           "qid": "P1B-A-080",
@@ -7081,7 +7081,7 @@
           "bestOtherRecall": 60,
           "ewPreview": "Past R&D costs are sunk and cannot be changed by any future decision. They are irrelevant.",
           "file": "p2/pack_p2_c.js",
-          "line": 40557
+          "line": 40559
         },
         {
           "qid": "P2-D-018",

@@ -21,8 +21,6 @@ const BANKS = [
   { file: 'p2/case_pack_p2_1.js', part: 'P2' },
   { file: 'p2/case_pack_p2_2.js', part: 'P2' },
   { file: 'p2/case_pack_p2_3.js', part: 'P2' },
-  { file: 'p2/case_pack_p2_authored.js', part: 'P2' },
-  { file: 'p2/case_pack_p2_C4_C8.js', part: 'P2' },
 ];
 
 // ── numeric extraction ────────────────────────────────────────────────────────

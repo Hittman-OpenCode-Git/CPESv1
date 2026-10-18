@@ -32,8 +32,6 @@ const CASE_PACKS = [
   { file: "case_pack_p2_1.js", label: "P2 Case Pack 1" },
   { file: "case_pack_p2_2.js", label: "P2 Case Pack 2" },
   { file: "case_pack_p2_3.js", label: "P2 Case Pack 3" },
-  { file: "case_pack_p2_authored.js", label: "P2 Case Pack Authored" },
-  { file: "case_pack_p2_C4_C8.js", label: "P2 Case Pack C4_C8" },
 ];
 
 let divergences = 0;

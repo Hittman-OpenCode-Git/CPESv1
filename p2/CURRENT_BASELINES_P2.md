@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,530/3,530 Certified** (2026-10-17 coherence refresh)
+**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,529/3,530 Certified** (2026-10-18 coherence refresh)
 **Preflight script:** `scripts/preflight_p2.js` (read-only T0/Tend gate; cross-checks counts here)
 
 **2026-09-04 — Portfolio Target Amendment (user-authorized):** New pool targets ratified — **3,450 MCQs (A=600, B=600, C=750, D=500, E=500, F=500)** and **100 cases (Pack 1=33, Pack 2=33, Pack 3=34)**. Supersedes prior 2,500-MCQ / 75-case allocation. Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500. Per-pack Section QID ranges re-allocated in this session; current authoritative QID-range table at §5.
@@ -15,11 +15,13 @@
 |------|------|-------------|-------------|-----------|-------------|----------|--------------------------|
 | A | p2/pack_p2_a.js | **600** | 622 | 622 | 0 | 0 | `ea398abe300d0b127cc5c3331c75ea34ec0885c38900f31b80daf1c7466f0123` |
 | B | p2/pack_p2_b.js | **600** | 620 | 620 | 0 | 0 | `d0888d6353269b52bcdfa82193e4ab3368129b6d075df79125218604376e01bc` |
-| C | p2/pack_p2_c.js | **750** | 788 | 788 | 0 | 0 | `64da5c3ce90fc9a705efb397bd24ba42d4b2b667ef9217ddf0737c1e4be67789` |
+| C | p2/pack_p2_c.js | **750** | 788 | 787 | 0 | 1 | `19634bbab86b09efd616eac682317fc33bd6cf48c2c5c511618d2227010c6d2e` |
 | D | p2/pack_p2_d.js | **500** | 500 | 500 | 0 | 0 | `8297753f87f6f6af8024f00dae2916041c6717e71e92af90d913ea70c2168154` |
 | E | p2/pack_p2_e.js | **500** | 500 | 500 | 0 | 0 | `735e30ebe478b6aba7de481415fafe75ee8ad5b42489b7625791126dab869092` |
 | F | p2/pack_p2_f.js | **500** | 500 | 500 | 0 | 0 | `c348cc47a6b82bc36b97624941bcf1468f1f11003035385add60b72bb4c8163d` |
-| **Total** | | **3,450** | **3,450** | **3,450** | **0** | **0** | |
+| **Total** | | **3,450** | **3,450** | **3,449** | **0** | **1** | |
+
+*2026-10-18 — DL-074 CLONE-ARCHIVE: P2-C-732 archived (learner-reachable whole-item duplicate of P2-C-710 — identical Stem/Choices/CorrectChoice/ExplanationCorrect, byte-compared; both certified 2026-09-06). Survivor P2-C-710 unchanged. Detected by the runtime validation panel's duplicate-Stem gate (app.js renderValidation); the §19.4 numeric-multiset+Topic clone gate missed it because the Topics differ ("payback-uneven-cash-flows" vs "…-extended"). Certified total 3,449 (raw 3,450). Backup `backups/pack_p2_c.js.bak-CLONE-20261018144220`.*
 
 *2026-09-05 — P2-CERT-AUDIT certification wave: +812 MCQs certified (B +100, C +234, D +165, E +238, F +75). All 141 answer-key defects (DL-P2-017) repaired before flip; 13 UNCLEAR items held Unprocessed (P2-C-534/558/594/595/607/614, P2-E-267/274/279/282/305/310/311). Certified total 3,105.*
 
@@ -38,18 +40,23 @@
 > literals in `case_pack_p2_C4_C8.js` were repaired. **Strict-eligible fell 36 → 33**
 > because 3 of the archived duplicates were Certified learner-reachable copies.
 
-| File | Target Cases | Current Cases | Certified | In Audit | Archived | Items | Hash (SHA256, post-DL-P2-024) |
-|------|--------------|---------------|-----------|----------|----------|-------|------------------------------|
-| p2/case_pack_p2_1.js | 33 | 33 | **11** | 22 | 0 | 198 | `7e2082aab58a78c699326208bef13b894b5f6678c6dd703d061f8365bc57eeae` |
-| p2/case_pack_p2_2.js | 33 | 33 | **6** | 18 | **9** | 198 | `2501A0132A876BF1F433628014655300B054CBC20058DD1659D5153C76DE4A11` |
-| p2/case_pack_p2_3.js | 34 | 34 | **6** | 28 | 0 | 204 | `1c431753df5d1420b9383ee5027562d4d10699b179f674a53ec777b8872aa056` |
-| p2/case_pack_p2_authored.js | — | 5 | **5** | 0 | 0 | 30 | `082143e41fca93295c00b0da4f18477c2582ea3990c10be866288497ea4850b5` |
-| p2/case_pack_p2_C4_C8.js | — | 5 | **5** | 0 | 0 | 30 | `CEB84C815F576C10B5AE18B186BC13783D95F6119C647DCDF4F4F9CE58C44729` |
-| **Total (P2)** | 100 | **110** | **33** | **68** | **9** | **660** | |
+| File | Target Cases | Current Cases | Certified | In Audit | Archived | Items | Hash (SHA256, post-consolidation 2026-10-18) |
+|------|--------------|---------------|-----------|----------|----------|-------|----------------------------------------------|
+| p2/case_pack_p2_1.js | 33 | 33 | **33** | 0 | 0 | 198 | `d52ef13621d7e068…` (truncated — see probe output) |
+| p2/case_pack_p2_2.js | 33 | 43 | **34** | 0 | **9** | 258 | `ff5b6ebdf2faab7b…` (truncated — see probe output) |
+| p2/case_pack_p2_3.js | 34 | 34 | **34** | 0 | 0 | 204 | `7c8fdef3a5fde3a1…` (truncated — see probe output) |
+| ~~p2/case_pack_p2_authored.js~~ RETIRED SHIM (empty array, 2026-10-18) | — | 0 | 0 | 0 | 0 | 0 | — |
+| ~~p2/case_pack_p2_C4_C8.js~~ RETIRED SHIM (empty array, 2026-10-18) | — | 0 | 0 | 0 | 0 | 0 | — |
+| **Total (P2)** | 100 | **110** | **101** | **0** | **9** | **660** | |
 
-**Strict-eligible = 33.** Live (non-Archived) P2 cases = **101**. The pool remains 110
-CaseIDs; 9 are terminal-state Archived duplicates of cases retained in the
-`authored` / `C4_C8` banks. Whole-case duplicate groups: **0** (clone gate Class A).
+**Strict-eligible = 101.** Live (non-Archived) P2 cases = **101**. The pool remains 110
+CaseIDs; the 9 Archived terminal duplicates (DL-P2-024) live in `case_pack_p2_2.js`
+alongside their retained survivors. **Consolidation 2026-10-18:** the 10 survivor cases
+(CBQ22-A7/A8/F8/F9/F10/C9–C13) moved verbatim from the retired shim banks into
+`case_pack_p2_2.js`; delivery now reads the three pack files only. Whole-case duplicate
+groups: **0** (clone gate Class A). Current full hashes are recomputed by
+`baseline_coherence.js` / `pool_parity_probe.js` from raw files — truncated prefixes here
+for identification only.
 
 ### DL-P2-024 archived duplicates (2026-09-30)
 
@@ -182,7 +189,7 @@ Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500.
 | D | Enterprise Risk Management | 10% | P2-D-001–500 | **500** | 500 | 0 |
 | E | Capital Investment Decisions | 10% | P2-E-001–500 | **500** | 500 | 0 |
 | F | Professional Ethics | 15% | P2-F-001–500 | **500** | 500 | 0 |
-| **Total** | | **100%** | | **3,450** | **3,450** | **0** |
+| **Total** | | **100%** | | **3,449** | **3,449** | **1** |
 
 ---
 

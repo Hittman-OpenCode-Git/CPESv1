@@ -1,3 +1,163 @@
+## DL-073 â€” P2 Bank Loader `window[]`/`const` Global-Resolution Bug (P2 delivery dead)
+
+```
+Defect ID        DL-073
+Class            Runtime / Delivery (loader verification resolves globals via window only)
+Domain           P2BankLoader â€” app/app.js; index_updated.html __P2_BANK_SRC injection path
+Severity         High â€” P2 mode fully unavailable in browser ("P2 banks loaded but 9 global(s) missing")
+Detected By      User learner report (2026-10-18) â€” emergency session
+Status           Resolved â€” 2026-10-18. isLoaded() switched to global-lexical resolution (Function constructor).
+```
+
+**Files:** `app/app.js` Â· `index_updated.html` (touched in same change-set: bank manifest, see consolidation note)
+
+### Issue
+
+`P2BankLoader.isLoaded()` verified the 11 P2 bank globals via `window[g]`. In a classic
+browser script, top-level `const`/`let` bindings do NOT create `window` properties â€”
+only `var` does. 9 of the 11 P2 banks declare with `const` (pack_p2_{a..f}.js,
+case_pack_p2_{1,2,3}.js); the 2 `var` banks (case_pack_p2_authored/C4_C8) passed.
+Fingerprint matched bitwise: user-reported missing list = exactly the 9 `const` files.
+`ensureLoaded()` threw, P2 mode aborted. All 11 files were syntactically valid
+(`node --check` PASS) â€” the bug was purely the verification gate.
+
+**Why prior PASS claims never caught it:** W1W4 probe (2026-09-18) and smoke passes ran
+on Node/VM harnesses that never exercised the browser injection path; with this bug a
+browser P2 activation could never have succeeded. Harness/runtime-path divergence â€” the
+same class the Â§19.2 test-coupling rule targets. Follow-up: drive a real browser P2
+activation in the smoke test (filed, deferred).
+
+### Resolution
+
+`isLoaded()` now resolves each global via `new Function('return ' + g + ';')()` in
+try/catch â€” Function-constructor bodies resolve through the global environment record,
+seeing `var` **and** const/let bindings. Same trust pattern used by the repo's validators.
+
+**Dual verification:** OLD code harness-reproduced the exact 9-missing failure
+(bit-for-bit name list, same order); NEW code resolves 11/11 â†’ later 9/9 after
+consolidation. `node --check` PASS; probe:parity 0 divergences; smoke PASS (34+ checks,
+zero page errors).
+
+### Cross-references
+- DL-067 (negative-control discipline â€” the harness reproduces the reported failure)
+- DL-011 (verifier-matching precedent) Â· Â§5 dual verification
+- `governance/RUNTIME_CHANGE_CONTROL_POLICY.md` (P2BankLoader hash-baseline)
+- `knowledge/REVISION_HISTORY.md` â€” DL-073 entry (2026-10-18)
+
+
+
+## DL-074 â€” Learner-Reachable Whole-Item Clone in P2 Pack C (P2-C-732 == P2-C-710)
+
+```
+Defect ID        DL-074
+Class            Content / Duplicate (whole-item clone; Â§19.4 clone-gate miss)
+Domain           P2 MCQ bank â€” Decision Analysis (p2/pack_p2_c.js)
+Severity         Medium â€” identical stem/choices/key/explanation served twice per session roster
+Detected By      Runtime validation panel duplicate-Stem gate (app.js renderValidation), 2026-10-18
+Status           Resolved â€” 2026-10-18. P2-C-732 archived (DL-074-CLONE-ARCHIVE); survivor P2-C-710 untouched.
+```
+
+**Files:** `p2/pack_p2_c.js`
+
+### Finding
+
+`P2-C-710` and `P2-C-732` are byte-identical at learner level: same Stem (Summit Plastics
+$200,000 payback-uneven-cash-flows), identical Choices, same CorrectChoice (D), identical
+ExplanationCorrect â€” verified by direct object compare. Both were Certified 2026-09-06
+(Â§19.4 clone gate passed them because it compares numeric-literal multiset + **Topic**,
+and the dupes carry different Topics: "payback-uneven-cash-flows" vs "â€¦-extended").
+Process lesson: when the only basis for a clone gate treats Topic strings as identity,
+a re-suffixed Topic defeats it. Standing follow-up: add a normalized-stem hash to the
+clone gate (p2_case_clone_gate.js).
+
+### Resolution
+
+Span-bounded single-object flip: P2-C-732 `question_state` â†’ "Archived" with
+`archive_batch: DL-074-CLONE-ARCHIVE` / `archive_date: 2026-10-18` (1 object; Rule 5
+compliant). Survivor P2-C-710 unchanged. Post-asserts: 788 raw / 787 Certified /
+duplicate-stem check clean among Certified; `node --check` PASS. Pack C panel âœ“ restored.
+The Â§19.4 gate registered ZERO new clones after the archive (p2_case_clone_gate.js,
+2026-10-18 run).
+
+The same session's runtime change to `renderValidation` (app.js:6886) aligns the panel's
+duplicate-Stem roster health check with delivery semantics (Archived excluded).
+
+### Cross-references
+- DL-P2-024 (whole-case duplicate archive precedent) Â· Â§19.4 (Part 2 clone gate)
+- `knowledge/REVISION_HISTORY.md` â€” DL-074 entry (2026-10-18)
+
+
+
+---
+
+## DL-071 — Delivery-blocklist runtime/source divergence (dead JSON manifest; stale over-block; DL-047 under-block)
+
+```
+Defect ID        DL-071
+Class            Governance / Delivery safety (manifest-runtime divergence)
+Domain           Learner delivery-pool gating — governance/ manifests + app.js/may-core.js
+Severity         Medium-High — runtime under-blocked 105/110 flagged items; over-blocked 364 clean Certified items
+Detected By      A-06 blocklist census + consumer trace (2026-10-18)
+Status           Resolved (part 1, 2026-10-18) — manifests reconciled to census; app.js wiring declined by user
+```
+
+**Files:** `governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json`, `governance/DEFECT_MANIFEST_DL008_DL026.json`, `governance/delivery_blocklist.js`, `app/app.js`, `app/may/may-core.js`
+
+### Issue (two parts)
+
+**Part 1 — Dead manifest.** `app.js:1342` `_isDeliveryBlocked()` delegates to `_DefectManifest`, which ingests only `DEFECT_MANIFEST_DL008_DL026.json` (async fetch in `may-core.js:242`) and the legacy `window._cmaDeliveryBlocklist` from `delivery_blocklist.js` (`app.js:1268-1270`). `DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json` is never fetched by the app — only by `scripts/pool_parity_probe.js`. The app.js:1171 comment claiming it is loaded is stale. Consequence: the runtime block set (383 entries) ≠ the probe's presumed block set (477).
+
+**Part 2 — Stale/under set.** The 2026-07-27 DEFECT_MANIFEST still listed 264 entries (250 Certified) for DL-008/DL-026 that had since been remediated → 364 clean Certified items blocked at runtime. Meanwhile the DL-047 family (110 Certified) lived only in the dead JSON → 105 of them were not blocked at runtime. Net: the blocklist both over-blocked (availability) and under-blocked (flagged items still served) relative to the current census.
+
+### Resolution (2026-10-18)
+
+Per user authorization ("block the 110 DL-047 everywhere"; "no app.js change"), all three artifacts were regenerated from a single current-census generator, `scripts/build_blocklist.js`: blocklist JSON 114→110; DEFECT_MANIFEST 264→110; legacy 122→110. Runtime block set is now exactly the 110 DL-047 defectives (0 stale). `probe:parity` Check 4 PASS (220 entries resolve; no drift). Backups `backups/*.bak-2026-10-18-18-4`.
+
+The app.js wiring (making the runtime consume the JSON manifest so the source sets match) was explicitly declined. Residual risk: the runtime/probe source-set mismatch persists; if a future family is written only to the JSON manifest it will not block at runtime. Recorded as a standing follow-up.
+
+### Cross-references
+
+- DL-047 (semantic-inversion fingerprint; FP-dominated), DL-065 (family FP verdict), DL-045 (screen output is evidence, not an author)
+- `scripts/pool_parity_probe.js` Check 4 · AGENTS.md §7 (delivery-pool safety) · §15 (`probe:parity`)
+- `knowledge/REVISION_HISTORY.md` — A-06 refresh entry (2026-10-18)
+
+---
+
+## DL-070 — P1 Section E Correct-Key Inversions (DL-026 fingerprint; live/learner-reachable)
+
+```
+Defect ID        DL-070
+Class            Content / Answer Key (correct-key inversion; DL-026 fingerprint family)
+Domain           P1 MCQ bank — Section E Internal Controls (content/packs/pack_a_corrected.js)
+Severity         High — 3 Certified, learner-reachable items with inverted keys; 1 is Gold Standard (#25)
+Detected By      A-06 delivery-blocklist census (2026-10-18) — Certified DL-026 = 3
+Status           Resolved — 2026-10-18. 3 keys corrected (D→B), explanations repaired, Rule 16 recert stamps applied
+```
+
+**Question IDs:** P1-E-004, P1-E-005, P1-E-008
+
+**Files:** `content/packs/pack_a_corrected.js`
+
+### Issue
+
+Three Certified Section-E items were served with `CorrectChoice: "D"` while the semantically correct answer is **B**. Each item's stored `ExplanationCorrect` refuted D rather than justifying the key, and `ExplanationWrongB` was present-but-empty (the DL-026 fingerprint). All three certified 2026-07-22 (batch "Section E Block 1"); the empty-B slot was treated as benign rather than as the inversion signal it was. None of the three was in any delivery blocklist, so all three were live. P1-E-008 is a Gold Standard item (S122 library #25) — evidence that a curated exemplar can still carry an inverted key.
+
+### Resolution
+
+Keys corrected D→B. `ExplanationCorrect` rewritten to justify B against COSO Principle 13/14 (E-004), Principle 16 (E-005), and Principle 8/16 (E-008). The prior D-refutations were relocated to `ExplanationWrongD`; `ExplanationWrongB` left empty (now the CC slot). Rule 16 recert stamps `recertification_batch: "DL-070 Correct-Key Inversion Remediation"` / `recertification_date: "2026-10-18"`; original certification stamps preserved. Backup `backups/pack_a_corrected.js.bak-20261018143052`. Hand-solve verification per CAQS §5.1. Census after fix: Certified DL-008 = 0, DL-026 = 0, DL-047 = 110. `node --check` PASS.
+
+### Prevention / follow-up
+
+The DL-026 screen (a present-but-empty non-CorrectChoice `ExplanationWrong` slot) is a **positive inversion indicator**, not merely a formatting gap — it must be hand-adjudicated, never auto-cleared. Standing follow-up: the 110 remaining DL-047 "hits" are under independent hand-solve adjudication (batch DL-070-A) to determine whether the DL-047 family also conceals genuine inversions (DL-065 had dismissed the family as ~98% false-positive).
+
+### Cross-references
+
+- DL-026 · DL-047 · DL-045 · DL-065
+- AGENTS.md §3 (backup) · §4 (revision history) · Rule 16 · Rule 22
+- `knowledge/REVISION_HISTORY.md` — DL-070 entry (2026-10-18)
+
+---
+
 ## DL-066
 
 ```

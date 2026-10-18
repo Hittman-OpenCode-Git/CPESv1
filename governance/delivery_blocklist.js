@@ -1,10 +1,27 @@
-// Session 88 — Delivery Blocklist Loader (Revised: derived from authoritative JSON manifest)
-// Source: governance/DEFECT_MANIFEST_DL008_DL026.json (117 entries, 2026-07-24)
+// Session 88 — Delivery Blocklist Loader (derived from build_blocklist.js census)
+// Sources: governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json + governance/DEFECT_MANIFEST_DL008_DL026.json
 // Regenerate with: node scripts/build_blocklist.js
 window._cmaDeliveryBlocklist = (function () {
     var entries = [
-        {qid:"P1-B-001"},{qid:"P1-B-025"},{qid:"P1-AC-001"},
-        {qid:"P1-BC-001"},{qid:"P1-BC-002"},{qid:"P1-BC-003"},{qid:"P1-BC-004"},{qid:"P1-BC-005"},{qid:"P1-BC-006"},{qid:"P1-BC-007"},{qid:"P1-BC-009"},{qid:"P1-BC-010"},{qid:"P1-BC-013"},{qid:"P1-BC-016"},{qid:"P1-BC-017"},{qid:"P1-BC-020"},{qid:"P1-BC-021"},{qid:"P1-BC-024"},{qid:"P1-BC-025"},{qid:"P1-BC-028"},{qid:"P1-BC-029"},{qid:"P1-BC-032"},{qid:"P1-BC-033"},{qid:"P1-BC-037"},{qid:"P1-BC-041"},{qid:"P1-BC-045"},{qid:"P1-BC-049"},{qid:"P1-BC-053"},{qid:"P1-BC-057"},{qid:"P1-BC-058"},{qid:"P1-BC-059"},{qid:"P1-BC-061"},{qid:"P1-BC-065"},{qid:"P1-BC-069"},{qid:"P1-BC-073"},{qid:"P1-BC-074"},{qid:"P1-BC-075"},{qid:"P1-BC-076"},{qid:"P1-BC-077"},{qid:"P1-BC-078"},{qid:"P1-BC-079"},{qid:"P1-BC-080"},{qid:"P1-BC-081"},{qid:"P1-BC-082"},{qid:"P1-BC-083"},{qid:"P1-BC-084"},{qid:"P1-BC-088"},{qid:"P1-BC-095"},{qid:"P1-BC-096"},{qid:"P1-BC-097"},{qid:"P1-BC-098"},{qid:"P1-BC-099"},{qid:"P1-BC-100"},{qid:"P1-AD-047"},{qid:"P1-AD-048"},{qid:"P1-AD-054"},{qid:"P1-AD-055"},{qid:"P1-BD-017"},{qid:"P1-BD-021"},{qid:"P1-BD-022"},{qid:"P1-BD-023"},{qid:"P1-BD-024"},{qid:"P1-BD-057"},{qid:"P1-BD-058"},{qid:"P1-BD-059"},{qid:"P1-DD-028"},{qid:"P1-DD-029"},{qid:"P1-CD-002"},{qid:"P1-CD-003"},{qid:"P1-CD-006"},{qid:"P1-CD-007"},{qid:"P1-CD-010"},{qid:"P1-CD-011"},{qid:"P1-CD-014"},{qid:"P1-CD-015"},{qid:"P1-CD-018"},{qid:"P1-CD-019"},{qid:"P1-CD-022"},{qid:"P1-CD-023"},{qid:"P1-CD-026"},{qid:"P1-CD-027"},{qid:"P1-CD-030"},{qid:"P1-CD-031"},{qid:"P1-CD-034"},{qid:"P1-CD-035"},{qid:"P1-CD-038"},{qid:"P1-CD-039"},{qid:"P1-CD-042"},{qid:"P1-CD-043"},{qid:"P1-CD-046"},{qid:"P1-CD-047"},{qid:"P1-CD-050"},{qid:"P1-CD-051"},{qid:"P1-CD-054"},{qid:"P1-CD-055"},{qid:"P1-CD-058"},{qid:"P1-CD-059"},{qid:"P1-CD-062"},{qid:"P1-CD-063"},{qid:"P1-CD-066"},{qid:"P1-CD-067"},{qid:"P1-CD-070"},{qid:"P1-CD-071"},{qid:"P1-CD-074"},{qid:"P1-CD-075"},{qid:"P1-CD-078"},{qid:"P1-CD-079"},{qid:"P1-CD-082"},{qid:"P1-CD-083"},{qid:"P1-CD-086"},{qid:"P1-CD-087"},{qid:"P1-CD-090"},{qid:"P1-CD-091"},{qid:"P1-CD-094"},{qid:"P1-CD-095"},{qid:"P1-CD-098"},{qid:"P1-CD-099"},{qid:"P1B-B-119"},{qid:"P1B-F-084"},{qid:"P1B-F-116"},{qid:"P1B-F-121"},{qid:"P1E-E-037"}
+        {qid:"P1-B-071"},{qid:"P1-C-004"},{qid:"P1-C-024"},{qid:"P1-D-060"},{qid:"P1-E-048"},{qid:"P1-A-078"},
+        {qid:"P1-A-104"},{qid:"P1-C-112"},{qid:"P1-C-115"},{qid:"P1-C-116"},{qid:"P1-C-123"},{qid:"P1B-A-132"},
+        {qid:"P1B-A-146"},{qid:"P1B-B-102"},{qid:"P1B-B-110"},{qid:"P1B-B-190"},{qid:"P1B-C-160"},{qid:"P1B-C-179"},
+        {qid:"P1B-D-109"},{qid:"P1B-D-139"},{qid:"P1B-E-076"},{qid:"P1B-F-100"},{qid:"P1B-B-219"},{qid:"P1B-C-202"},
+        {qid:"P1B-A-169"},{qid:"P1B-A-176"},{qid:"P1B-C-214"},{qid:"P1B-C-220"},{qid:"P1B-C-221"},{qid:"P1B-C-225"},
+        {qid:"P1B-C-226"},{qid:"P1B-C-229"},{qid:"P1B-C-236"},{qid:"P1B-C-240"},{qid:"P1-AC-071"},{qid:"P1-AC-072"},
+        {qid:"P1-AC-073"},{qid:"P1-AC-074"},{qid:"P1-AC-075"},{qid:"P1-BC-019"},{qid:"P1-BC-020"},{qid:"P1-BC-021"},
+        {qid:"P1-EC-022"},{qid:"P1-EC-041"},{qid:"P1-CC-107"},{qid:"P1-AC-102"},{qid:"P1-AC-114"},{qid:"P1-BC-111"},
+        {qid:"P1-DC-112"},{qid:"P1-DC-113"},{qid:"P1-DC-118"},{qid:"P1-DC-128"},{qid:"P1-BD-017"},{qid:"P1-BD-064"},
+        {qid:"P1-ED-052"},{qid:"P1-ED-070"},{qid:"P1-CD-107"},{qid:"P1-CD-110"},{qid:"P1-CD-121"},{qid:"P1-CD-126"},
+        {qid:"P1-AD-098"},{qid:"P1E-A-009"},{qid:"P1E-A-020"},{qid:"P1E-A-036"},{qid:"P1E-A-045"},{qid:"P1E-A-054"},
+        {qid:"P1E-A-065"},{qid:"P1E-A-076"},{qid:"P1E-B-006"},{qid:"P1E-B-023"},{qid:"P1E-B-027"},{qid:"P1E-B-039"},
+        {qid:"P1E-C-009"},{qid:"P1E-C-017"},{qid:"P1E-C-040"},{qid:"P1E-D-027"},{qid:"P1E-E-003"},{qid:"P1E-E-006"},
+        {qid:"P1E-E-008"},{qid:"P1E-F-008"},{qid:"P1E-F-009"},{qid:"P1E-F-010"},{qid:"P1E-F-014"},{qid:"P1E-F-018"},
+        {qid:"P1E-B-077"},{qid:"P1E-B-081"},{qid:"P1E-B-082"},{qid:"P1E-C-061"},{qid:"P1E-C-064"},{qid:"P1E-D-043"},
+        {qid:"P1E-D-053"},{qid:"P1E-D-057"},{qid:"P1E-D-059"},{qid:"P1E-E-051"},{qid:"P1E-E-053"},{qid:"P1E-E-057"},
+        {qid:"P1E-E-064"},{qid:"P1E-F-050"},{qid:"P1E-F-066"},{qid:"P1E-C-080"},{qid:"P1E-C-089"},{qid:"P1E-D-062"},
+        {qid:"P1E-D-065"},{qid:"P1-E-R04"},{qid:"P1-E-R11"},{qid:"P1-E-R32"},{qid:"P1E-B-109"},{qid:"P1E-B-110"},
+        {qid:"P1E-B-115"},{qid:"P1E-E-124"}
     ];
     var set = {};
     entries.forEach(function (e) { set[e.qid] = true; });

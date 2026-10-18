@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-17T20:51:52.762Z",
+  "timestamp": "2026-10-18T18:51:55.549Z",
   "validators": [
     {
       "validator": "Repository Validator",
@@ -128,7 +128,7 @@
     },
     {
       "validator": "Case Identity Validator",
-      "status": "PASS",
+      "status": "WARN",
       "statistics": {
         "content/cases/case_pack_1_corrected.js :: Moderate-Easy": "38 (27.0%)",
         "content/cases/case_pack_1_corrected.js :: Moderate": "36 (25.5%)",
@@ -161,19 +161,14 @@
         "p2/case_pack_p2_1.js :: Difficult": "65 (32.8%)",
         "p2/case_pack_p2_1.js :: Moderate-Easy": "14 (7.1%)",
         "p2/case_pack_p2_1.js :: Very Difficult": "6 (3.0%)",
-        "p2/case_pack_p2_2.js :: Moderate-Easy": "8 (4.0%)",
-        "p2/case_pack_p2_2.js :: Difficult": "70 (35.4%)",
-        "p2/case_pack_p2_2.js :: Moderate": "117 (59.1%)",
-        "p2/case_pack_p2_2.js :: Very Difficult": "3 (1.5%)",
+        "p2/case_pack_p2_2.js :: Moderate-Easy": "8 (3.1%)",
+        "p2/case_pack_p2_2.js :: Difficult": "94 (36.4%)",
+        "p2/case_pack_p2_2.js :: Moderate": "150 (58.1%)",
+        "p2/case_pack_p2_2.js :: Very Difficult": "6 (2.3%)",
         "p2/case_pack_p2_3.js :: Moderate": "101 (49.5%)",
         "p2/case_pack_p2_3.js :: Moderate-Easy": "18 (8.8%)",
         "p2/case_pack_p2_3.js :: Difficult": "61 (29.9%)",
         "p2/case_pack_p2_3.js :: Very Difficult": "24 (11.8%)",
-        "p2/case_pack_p2_authored.js :: Moderate": "18 (60.0%)",
-        "p2/case_pack_p2_authored.js :: Difficult": "12 (40.0%)",
-        "p2/case_pack_p2_C4_C8.js :: Moderate": "15 (50.0%)",
-        "p2/case_pack_p2_C4_C8.js :: Difficult": "12 (40.0%)",
-        "p2/case_pack_p2_C4_C8.js :: Very Difficult": "3 (10.0%)",
         "Total Cases Checked": 265,
         "Unique CaseIDs": 190,
         "Total Items Checked": 1485,

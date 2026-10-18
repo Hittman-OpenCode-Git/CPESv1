@@ -1401,13 +1401,12 @@ var P2BankLoader = {
     _loaded: false,
     _src: function () {
         if (typeof window !== 'undefined' && Array.isArray(window.__P2_BANK_SRC) && window.__P2_BANK_SRC.length) return window.__P2_BANK_SRC;
-        return ['p2/pack_p2_a.js', 'p2/pack_p2_b.js', 'p2/pack_p2_c.js', 'p2/pack_p2_d.js', 'p2/pack_p2_e.js', 'p2/pack_p2_f.js', 'p2/case_pack_p2_1.js', 'p2/case_pack_p2_2.js', 'p2/case_pack_p2_3.js', 'p2/case_pack_p2_authored.js', 'p2/case_pack_p2_C4_C8.js'];
+        return ['p2/pack_p2_a.js', 'p2/pack_p2_b.js', 'p2/pack_p2_c.js', 'p2/pack_p2_d.js', 'p2/pack_p2_e.js', 'p2/pack_p2_f.js', 'p2/case_pack_p2_1.js', 'p2/case_pack_p2_2.js', 'p2/case_pack_p2_3.js'];
     },
     _p2Globals: [
         'pack_p2_a_questions', 'pack_p2_b_questions', 'pack_p2_c_questions',
         'pack_p2_d_questions', 'pack_p2_e_questions', 'pack_p2_f_questions',
-        'casePackP2_1', 'casePackP2_2', 'casePackP2_3',
-        'casePackP2Authored', 'casePackP2_C4_C8'
+        'casePackP2_1', 'casePackP2_2', 'casePackP2_3'
     ],
     _missingGlobals: [],
     isLoaded: function () {
@@ -1416,8 +1415,13 @@ var P2BankLoader = {
             var missing = [];
             for (var i = 0; i < this._p2Globals.length; i++) {
                 var g = this._p2Globals[i];
-                var val = window[g];
-                if (typeof val === 'undefined' || !Array.isArray(val) || val.length === 0) {
+                // Resolve via global lexical scope: const/let bank declarations
+                // do not attach to window, but Function constructor bodies
+                // resolve identifiers through the global environment record.
+                var val;
+                try { val = new Function('return ' + g + ';')(); }
+                catch (e) { val = undefined; }
+                if (!Array.isArray(val) || val.length === 0) {
                     missing.push(g);
                 }
             }
@@ -6880,7 +6884,11 @@ function renderValidation() {
     let allOk = true;
     let detailHtml = '';
     for (let [label, bank] of Object.entries(banks)) {
-        let ok = bank.length === 0 || (bank.length >= 75 && new Set(bank.map(q => q.Stem)).size === bank.length);
+        // Mirror delivery semantics: Archived items are excluded from the
+        // delivery pool (QUESTION_METADATA_STANDARD Pt 9), so roster health
+        // checks the Certified-rest roster, not the raw file array.
+        let live = bank.filter(q => (q.question_state || 'Certified') !== 'Archived');
+        let ok = bank.length === 0 || (live.length >= 75 && new Set(live.map(q => q.Stem)).size === live.length);
         if (bank.length > 0 && !ok) allOk = false;
         let counts = {};
         bank.forEach(q => counts[q.Section] = (counts[q.Section] || 0) + 1);
