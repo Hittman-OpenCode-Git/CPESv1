@@ -1,4 +1,4 @@
-﻿00_PROJECT_CONSTITUTION.md
+00_PROJECT_CONSTITUTION.md
 
 Version: 2.0
 Status: Active
@@ -358,7 +358,26 @@ AI does not define quality.
 
 Quality is defined by the standards contained in this Constitution.
 
+
+
+13. Verification Doctrine
+
+Adopted 2026-10-18 (board vote 8-0). This doctrine states principles; subordinate standards (AGENTS.md, CAQS) instantiate the mechanics and own the detail.
+
+13.1 No claim stands without executable verification. Certification, remediation, and quality verdicts are decisions, and decisions require raw evidence: an instrument the decider ran, producing output the repository can audit.
+
+13.2 Verification tooling is governed. Every verifier, scorer, or screen that ranks real work must have demonstrated both directions of correctness: that it passes known-good samples and fails seeded-defect samples. A counter not proven in both directions is meaningless in both directions.
+
+13.3 Screen output is evidence, not an author. No content remediation may be executed from screen or validator output alone; remediation must cite an independent evidence basis.
+
+13.4 The answer key is verified by independent solve. No item may be certified whose stored answer has not been independently re-derived from the stem and exhibits, unless the change-set documents the verification basis used instead.
+
+13.5 Test environments must match the asserted runtime. A PASS observed outside the user-visible runtime path is environment-conditional and must be labeled as such until the runtime path itself is exercised.
+
+13.6 Claims are charged to evidence, not authority. Subagent, chat, and self-reported summaries are hypotheses to verify — never evidence — regardless of the confidence they express.
+
 Revision History
 Version	Date	Summary
 2.0	July 2026	Initial project constitution replacing Project Rules
 2.1	July 2026	Added Section 11 — Repository Organization mandating subfolder organization for non-application files
+2.2	2026-10-18	Added Section 13 — Verification Doctrine (board vote 8-0; ballot-session lineage)

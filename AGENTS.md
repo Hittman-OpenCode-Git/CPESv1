@@ -1,6 +1,6 @@
 # AGENTS.md — CMA Exam Simulator Standing Instructions
 
-**Version:** 2.1 (Session P2-032 — Third-Party Content Review Handoffs)
+**Version:** 2.2 (2026-10-18 — §20 Verification & Certification Doctrine added; ballot-board lineage)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
 **Applies to:** All Computer/AI sessions in this repository
@@ -524,3 +524,38 @@ Before any Part 2 certification batch flips state, run a **clone scan across ALL
 - Identical multiset + identical Topic = suspected rotation-clone; confirm by human review before archiving the newer duplicate.
 - Jaccard/similarity checks alone miss these (prose differs across the traded pair); the numeric-multiset + Topic pair is the reliable screen.
 - Survivor repair must also fix any shared distractor value errors inherited by the paired items (precedent: P2-C-181 $1,364,000 padding distractor corrected to $1,369,600).
+
+---
+
+## 20. Verification & Certification Doctrine
+
+**Effective:** 2026-10-18 (board vote 8-0; ballot-board lineage). This section instantiates PROJECT_CONSTITUTION.md §13. It binds all lanes.
+
+### 20.1 Agent-Speak Is Not Evidence (L-01, DL-066 lineage)
+
+Subagent, sub-batch, and chat self-reports ("verified 44/44", "0 mismatches", "scan clean") are **hypotheses to verify**, never evidence. Any subagent claim that gates a content, certification, or governance decision must be reproduced by a raw tool call in the parent session before it affects that decision. Wording on record: "trust, then verify with tools you ran, not tools the subagent claims to have run."
+
+### 20.2 Verifier Control Standard (L-03, DL-066 B1–B3 lineage)
+
+Every new verifier, scorer, ledger, or screen script must, **at its debut session**, demonstrate both directions of correctness:
+
+1. A **known-good control** sample that passes.
+2. A **seeded-defect control** sample that fails.
+
+Evidence of both controls is recorded in the script's debut session. A counter not proven in both directions is meaningless in both directions — and may not be cited to gate work.
+
+### 20.3 Certification Hand-Solve Attestation (A-07; CAQS §1.7.4)
+
+No certification batch may flip `question_state → Certified` without an **independent re-solve of the answer key** for each item in the batch (or a batch-level documented verification basis, e.g., verified-at-authoring lineage, recorded in the change-set). Rule 16 stamps record which basis was used. Solve tolerances follow CAQS §5.3 (stated-tolerance items adjudicated tolerance-aware; precedent CBQ4-A1-Q3).
+
+### 20.4 Environment-Conditional PASS Labeling (L-10, DL-073 lineage)
+
+A PASS observed outside the user-visible runtime path (e.g., Node/VM harness vs browser injection path) is **environment-conditional** and must be labeled as such in the result note until the runtime path itself is exercised. Any load/control/IO behavior validated only in a harness states that condition explicitly.
+
+### 20.5 Identity-Key Hardening (L-11, DL-074 lineage)
+
+Any duplicate/clone gate that keys on content plus a mutable text field (Topic, Title, SectionTags) must pair it with a durable stem-body fingerprint (normalized Stem hash). Metadata re-suffixing cannot defeat a pool-integrity identity check. Extends §19.4; implementation tracked as A-03.
+
+### 20.6 Authoring-Time Gates (A-08; §17.3 cross-ref)
+
+Authoring waves run the S122 demand-check checklist (definition match, stakeholder check, decomposition check, difficulty floors) in the wave harness **pre-commit** — not as post-certification screens. Cognitive labels are never silently relabeled post-certification (Rule 12 reaffirmed); gaps are closed through new authoring per §17.3.

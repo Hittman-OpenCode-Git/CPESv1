@@ -93,6 +93,19 @@ A question transitions from In Audit to Certified when:
 
 **Correctness over throughput** is an explicit operating principle. The HIGH-confidence certification gate is non-negotiable. No question may enter the learner pool as Certified without passing all six verification dimensions at HIGH confidence. Warning-count targets never override the certification requirement.
 
+#### 1.7.4 Certification Hand-Solve Attestation (2026-10-18)
+
+Effective for all certification batches on or after 2026-10-18 (board vote 7-0-1). No batch may flip `question_state → Certified` without an **independent re-solve of the answer key** for each item in the batch — the solver reproduces the key from the stem and exhibits without consulting the stored value first. Each batch records one of the following bases in the change-set (reflected in Rule 16 stamps):
+
+- **HANDSOLVE** — per-item independent re-solve with the derivation recorded (precedent: DL-066-HANDSOLVE, 163/163).
+- **VERIFIED-AUTHORING** — batch-level documented verification basis where the key was independently solved at authoring time and the stored key is unchanged since (precedent: verified-at-authoring lineage).
+
+Stated-tolerance items are adjudicated tolerance-aware (§5.3; precedent CBQ4-A1-Q3). A batch that cannot state which basis was used does not certify. This requirement is prospective only — no retroactive recertification sweep is authorized by this amendment (existing Certified items remain Certified; concealed-key verification continues through the DL-047-A adjudication wave).
+
+#### 1.7.5 Certification-Blocking Conditions (cross-reference)
+
+Certification is also blocked by the conditions in `QUESTION_METADATA_STANDARD.md` §9.4 (topic-mismatch EW contamination, dual-block source-of-truth divergence, case explanation sufficiency).
+
 ### 1.8 Definition of "Exam-Ready"
 
 Content is exam-ready when it:
@@ -899,6 +912,7 @@ Any content that does not meet the Gold Standard Checklist but is approved for p
 | Version | Date | Author | Summary |
 |---------|------|--------|---------|
 | 1.0 | 2026-07-21 | AI — Quality Standard Agent | Initial version. Establishes CAQS as governing quality standard for CMA Exam Simulator |
+| 1.1 | 2026-10-18 | Board (7-0-1) | Added §1.7.4 Certification Hand-Solve Attestation (prospective); §1.7.5 blocking-conditions cross-reference. Lineage: Top-10 ballot Item 1; DL-066/DL-070 |
 
 ### B. Document Dependencies
 

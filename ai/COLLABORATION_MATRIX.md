@@ -355,6 +355,7 @@ No persona may:
 - Skip validation.
 - Skip documentation.
 - Modify unrelated files.
+- Accept subagent self-reports, chat summaries, or screen output as evidence without raw-tool reproduction (AGENTS §5/§20.1; CAQS §1.7.4).
 
 ---
 
