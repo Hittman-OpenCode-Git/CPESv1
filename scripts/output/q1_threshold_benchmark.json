@@ -1,0 +1,246 @@
+{
+  "generatedAt": "2026-09-21T02:26:58.754Z",
+  "seed": 20260921,
+  "days": 30,
+  "q1Thresholds": {
+    "resumeWithin30min": 0.15,
+    "recontextualizationRate": 0.2
+  },
+  "baseline": {
+    "totalSessions": 500,
+    "abandonRate": 0.08,
+    "avgSessionDurationMin": 19,
+    "t1AcceptanceRate": 0.55,
+    "t6DegradationRate": 0.012
+  },
+  "results": {
+    "conservative": {
+      "scenario": "Conservative (low engagement)",
+      "metrics": {
+        "totalSessions": 500,
+        "resumeCount": 50,
+        "resumeRate": 0.1,
+        "resumeWithin30MinCount": 19,
+        "resumeWithin30MinRate": 0.38,
+        "resumeWithin30MinOverallRate": 0.038,
+        "recontextualizedCount": 5,
+        "recontextSessionRate": 0.01,
+        "totalQuestions": 3196,
+        "totalReAsked": 9,
+        "recontextQuestionRate": 0.002816020025031289,
+        "avgDurationMs": 1057344.192,
+        "avgDurationMin": 17.6224032,
+        "abandonCount": 38,
+        "abandonRate": 0.076,
+        "q1ResumeTrigger": false,
+        "q1RecontextTrigger": false,
+        "q1GateOpen": false
+      },
+      "benchmarks": [
+        {
+          "metric": "Abandon rate",
+          "synthetic": "7.6%",
+          "baseline": "8.0%",
+          "delta": "-0.4%",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Avg session duration",
+          "synthetic": "17.6 min",
+          "baseline": "19 min",
+          "delta": "-1.4 min",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Resume rate",
+          "synthetic": "10.0%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        },
+        {
+          "metric": "Re-contextualization rate (sessions)",
+          "synthetic": "1.0%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        }
+      ]
+    },
+    "moderate": {
+      "scenario": "Moderate (typical usage)",
+      "metrics": {
+        "totalSessions": 500,
+        "resumeCount": 101,
+        "resumeRate": 0.202,
+        "resumeWithin30MinCount": 48,
+        "resumeWithin30MinRate": 0.4752475247524752,
+        "resumeWithin30MinOverallRate": 0.096,
+        "recontextualizedCount": 20,
+        "recontextSessionRate": 0.04,
+        "totalQuestions": 3831,
+        "totalReAsked": 42,
+        "recontextQuestionRate": 0.01096319498825372,
+        "avgDurationMs": 1061179.32,
+        "avgDurationMin": 17.686322,
+        "abandonCount": 43,
+        "abandonRate": 0.086,
+        "q1ResumeTrigger": false,
+        "q1RecontextTrigger": false,
+        "q1GateOpen": false
+      },
+      "benchmarks": [
+        {
+          "metric": "Abandon rate",
+          "synthetic": "8.6%",
+          "baseline": "8.0%",
+          "delta": "+0.6%",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Avg session duration",
+          "synthetic": "17.7 min",
+          "baseline": "19 min",
+          "delta": "-1.3 min",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Resume rate",
+          "synthetic": "20.2%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        },
+        {
+          "metric": "Re-contextualization rate (sessions)",
+          "synthetic": "4.0%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        }
+      ]
+    },
+    "aggressive": {
+      "scenario": "Aggressive (power users)",
+      "metrics": {
+        "totalSessions": 500,
+        "resumeCount": 146,
+        "resumeRate": 0.292,
+        "resumeWithin30MinCount": 119,
+        "resumeWithin30MinRate": 0.815068493150685,
+        "resumeWithin30MinOverallRate": 0.238,
+        "recontextualizedCount": 40,
+        "recontextSessionRate": 0.08,
+        "totalQuestions": 4267,
+        "totalReAsked": 76,
+        "recontextQuestionRate": 0.01781110850714788,
+        "avgDurationMs": 1064567.938,
+        "avgDurationMin": 17.74279896666667,
+        "abandonCount": 36,
+        "abandonRate": 0.072,
+        "q1ResumeTrigger": true,
+        "q1RecontextTrigger": false,
+        "q1GateOpen": false
+      },
+      "benchmarks": [
+        {
+          "metric": "Abandon rate",
+          "synthetic": "7.2%",
+          "baseline": "8.0%",
+          "delta": "-0.8%",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Avg session duration",
+          "synthetic": "17.7 min",
+          "baseline": "19 min",
+          "delta": "-1.3 min",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Resume rate",
+          "synthetic": "29.2%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        },
+        {
+          "metric": "Re-contextualization rate (sessions)",
+          "synthetic": "8.0%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        }
+      ]
+    },
+    "stress": {
+      "scenario": "Stress (max engagement)",
+      "metrics": {
+        "totalSessions": 1000,
+        "resumeCount": 414,
+        "resumeRate": 0.414,
+        "resumeWithin30MinCount": 414,
+        "resumeWithin30MinRate": 1,
+        "resumeWithin30MinOverallRate": 0.414,
+        "recontextualizedCount": 161,
+        "recontextSessionRate": 0.161,
+        "totalQuestions": 9933,
+        "totalReAsked": 324,
+        "recontextQuestionRate": 0.03261854424645122,
+        "avgDurationMs": 1057775.2,
+        "avgDurationMin": 17.629586666666665,
+        "abandonCount": 93,
+        "abandonRate": 0.093,
+        "q1ResumeTrigger": true,
+        "q1RecontextTrigger": false,
+        "q1GateOpen": false
+      },
+      "benchmarks": [
+        {
+          "metric": "Abandon rate",
+          "synthetic": "9.3%",
+          "baseline": "8.0%",
+          "delta": "+1.3%",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Avg session duration",
+          "synthetic": "17.6 min",
+          "baseline": "19 min",
+          "delta": "-1.4 min",
+          "withinTolerance": true,
+          "verdict": "MATCH"
+        },
+        {
+          "metric": "Resume rate",
+          "synthetic": "41.4%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        },
+        {
+          "metric": "Re-contextualization rate (sessions)",
+          "synthetic": "16.1%",
+          "baseline": "N/A (new)",
+          "delta": "anchor",
+          "withinTolerance": true,
+          "verdict": "ANCHOR"
+        }
+      ]
+    }
+  }
+}

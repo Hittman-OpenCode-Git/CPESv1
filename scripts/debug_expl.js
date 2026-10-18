@@ -1,0 +1,18 @@
+const fs = require('fs');
+const content = fs.readFileSync('content/cases/case_pack_1_corrected.js', 'utf8');
+let code = content.replace(/^const CASE_PACK_\d+ = /, '').trim();
+if (code.endsWith(';')) code = code.slice(0, -1);
+const cases = eval(code);
+const c = cases.find(x => x.CaseID === 'CBQ-C2');
+const item = c.Items.find(i => i.ItemID === 'CBQ-C2-Q1');
+const expl = item.Explanation;
+console.log('Raw explanation (first 500 chars):');
+console.log(expl.substring(0, 500));
+console.log('---');
+console.log('Contains \\\\:', expl.includes('\\'));
+console.log('Contains \\":', expl.includes('"'));
+console.log('---');
+console.log('Test regex:');
+const divChain = [...expl.matchAll(/(\w+(?:\s+\w+){0,3})\s*=\s*\$?(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*\/\s*\$?(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*=\s*([^.]+)/g)];
+console.log('Division chain matches:', divChain.length);
+for (const m of divChain) console.log('  Match:', m[0].substring(0, 100));

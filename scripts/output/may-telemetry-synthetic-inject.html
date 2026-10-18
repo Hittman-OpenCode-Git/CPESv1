@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>May Synthetic Inject (500)</title>
+<h1>May Synthetic Baseline — 500 sessions / 30d</h1>
+<p>Open <code>index_updated.html</code> in this same browser profile first, then open this file and click Inject.</p>
+<button id="inject" style="font-size:18px;padding:12px 24px">Inject 500 synthetic sessions live</button>
+<pre id="log" style="background:#f5f5f5;padding:12px;white-space:pre-wrap"></pre>
+<script src="../app/may/may-telemetry.js"></script>
+<script src="may-telemetry-synthetic-inject.js"></script>
+<script>document.getElementById("log").textContent = "Inject script loaded. Check console for snapshot. If MayTelemetry was not found, open index_updated.html first.";</script>

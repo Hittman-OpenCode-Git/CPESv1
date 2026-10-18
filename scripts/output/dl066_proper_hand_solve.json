@@ -1,0 +1,1851 @@
+[
+  {
+    "caseId": "CBQ-C2",
+    "type": "numeric",
+    "prompt": "Enter Motor Division residual income.",
+    "hiddenCorrect": "84000",
+    "derived": 756000,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ-C2",
+    "type": "numeric",
+    "prompt": "Enter Motor Division ROI percentage as a whole number.",
+    "hiddenCorrect": "15",
+    "derived": 15,
+    "match": true,
+    "method": "division-chain"
+  },
+  {
+    "caseId": "CBQ-C2",
+    "type": "select",
+    "prompt": "With idle capacity and no opportunity cost, what is the minimum transfer price f",
+    "hiddenCorrect": "70 variable cost",
+    "derived": "70 variable cost",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C2",
+    "type": "multi",
+    "prompt": "Select reasons residual income may improve goal congruence compared with ROI.",
+    "hiddenCorrect": [
+      "It can encourage accepting projects above the required return",
+      "It charges divisions for assets employed",
+      "It avoids rejecting investments that lower ROI but exceed the required return"
+    ],
+    "derived": [
+      "It can encourage accepting projects above the required return",
+      "It charges divisions for assets employed",
+      "It avoids rejecting investments that lower ROI but exceed the required return"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C2",
+    "type": "fill",
+    "prompt": "Fill in the blank: A transfer price should promote goal _____ so divisional deci",
+    "hiddenCorrect": "congruence",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ-C2",
+    "type": "match",
+    "prompt": "Match each measure to the best description.",
+    "hiddenCorrect": {
+      "ROI": "Operating income divided by assets",
+      "Residual income": "Income after required asset charge",
+      "Minimum transfer price with idle capacity": "Variable cost plus opportunity cost",
+      "Market price": "External benchmark when available"
+    },
+    "derived": {
+      "ROI": "Operating income divided by assets",
+      "Residual income": "Income after required asset charge",
+      "Minimum transfer price with idle capacity": "Variable cost plus opportunity cost",
+      "Market price": "External benchmark when available"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "numeric",
+    "prompt": "Enter the unfavorable operating income variance as a positive amount.",
+    "hiddenCorrect": "60000",
+    "derived": 1740000,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "numeric",
+    "prompt": "Enter the on-time delivery shortfall in percentage points.",
+    "hiddenCorrect": "5",
+    "derived": 5,
+    "match": true,
+    "method": "subtraction-chain-verified"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "select",
+    "prompt": "Which metric is most clearly a learning and growth measure?",
+    "hiddenCorrect": "Training hours per employee",
+    "derived": "Training hours per employee",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "multi",
+    "prompt": "Select likely leading indicators of future financial performance.",
+    "hiddenCorrect": [
+      "Defect rate",
+      "On-time delivery",
+      "Training hours per employee"
+    ],
+    "derived": [
+      "Defect rate",
+      "On-time delivery",
+      "Training hours per employee"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "match",
+    "prompt": "Match each scorecard perspective to the best metric.",
+    "hiddenCorrect": {
+      "Financial": "Operating income",
+      "Customer": "On-time delivery",
+      "Internal process": "Defect rate",
+      "Learning and growth": "Training hours per employee"
+    },
+    "derived": {
+      "Financial": "Operating income",
+      "Customer": "On-time delivery",
+      "Internal process": "Defect rate",
+      "Learning and growth": "Training hours per employee"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-C3",
+    "type": "select",
+    "prompt": "Which issue should production investigate first?",
+    "hiddenCorrect": "Machine setup errors",
+    "derived": "Machine setup errors",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "numeric",
+    "prompt": "Enter equivalent units for conversion costs using weighted-average.",
+    "hiddenCorrect": "20400",
+    "derived": 22060,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "numeric",
+    "prompt": "Enter conversion cost per equivalent unit.",
+    "hiddenCorrect": "12.5",
+    "derived": 12.5,
+    "match": true,
+    "method": "division-chain"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "select",
+    "prompt": "Which operation is the bottleneck?",
+    "hiddenCorrect": "Welding",
+    "derived": "Welding",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "multi",
+    "prompt": "Select actions consistent with lean thinking.",
+    "hiddenCorrect": [
+      "Reduce waiting time before welding",
+      "Investigate rework causes",
+      "Simplify material movement"
+    ],
+    "derived": [
+      "Reduce waiting time before welding",
+      "Investigate rework causes",
+      "Simplify material movement"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "fill",
+    "prompt": "Fill in the blank: Equivalent units combine completed units and partially comple",
+    "hiddenCorrect": "complete",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ-D2",
+    "type": "match",
+    "prompt": "Match each issue to the best tool.",
+    "hiddenCorrect": {
+      "Partially complete WIP": "Equivalent units",
+      "Lowest capacity resource": "Bottleneck analysis",
+      "Unnecessary movement": "Lean waste review",
+      "Continuous homogeneous output": "Process costing"
+    },
+    "derived": {
+      "Partially complete WIP": "Equivalent units",
+      "Lowest capacity resource": "Bottleneck analysis",
+      "Unnecessary movement": "Lean waste review",
+      "Continuous homogeneous output": "Process costing"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "select",
+    "prompt": "Which control weakness is most directly related to fictitious vendor risk?",
+    "hiddenCorrect": "Same AP clerk can create vendors and enter invoices",
+    "derived": "Same AP clerk can create vendors and enter invoices",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "multi",
+    "prompt": "Select controls that would improve the AP process.",
+    "hiddenCorrect": [
+      "Independent vendor-master approval",
+      "Preventive three-way match before payment where applicable",
+      "Documented review of duplicate-payment reports"
+    ],
+    "derived": [
+      "Independent vendor-master approval",
+      "Preventive three-way match before payment where applicable",
+      "Documented review of duplicate-payment reports"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "numeric",
+    "prompt": "Enter the duplicate/fictitious payment loss as a percentage of pretax income, ro",
+    "hiddenCorrect": "3.0",
+    "derived": 0,
+    "match": false,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "fill",
+    "prompt": "Fill in the blank: Management override and collusion are inherent limitations, s",
+    "hiddenCorrect": "absolute",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "match",
+    "prompt": "Match each control to preventive or detective.",
+    "hiddenCorrect": {
+      "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+      "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+      "Duplicate-payment report review": "Detective — identifies duplicate payments already processed, after disbursement has occurred",
+      "Bank reconciliation": "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist"
+    },
+    "derived": {
+      "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+      "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+      "Duplicate-payment report review": "Detective — identifies duplicate payments already processed, after disbursement has occurred",
+      "Bank reconciliation": "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E1",
+    "type": "select",
+    "prompt": "Which evidence issue most weakens operating effectiveness?",
+    "hiddenCorrect": "The report was generated but not reviewed for two months",
+    "derived": "The report was generated but not reviewed for two months",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "select",
+    "prompt": "Which response best addresses shared administrator IDs?",
+    "hiddenCorrect": "Unique privileged IDs with MFA and periodic access review",
+    "derived": "Unique privileged IDs with MFA and periodic access review",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "numeric",
+    "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal ",
+    "hiddenCorrect": "3.5",
+    "derived": 3.5,
+    "match": true,
+    "method": "manual-override-division-chain"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "multi",
+    "prompt": "Select ITGCs relevant to the exceptions.",
+    "hiddenCorrect": [
+      "Logical access controls",
+      "Change-management controls",
+      "Computer operations/interface monitoring"
+    ],
+    "derived": [
+      "Logical access controls",
+      "Change-management controls",
+      "Computer operations/interface monitoring"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "fill",
+    "prompt": "Fill in the blank: Emergency changes should receive timely post-implementation r",
+    "hiddenCorrect": "approval",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "match",
+    "prompt": "Match each exception to the primary risk.",
+    "hiddenCorrect": {
+      "Shared administrator IDs": "Lack of accountability",
+      "Terminated users active": "Unauthorized access",
+      "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+      "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+    },
+    "derived": {
+      "Shared administrator IDs": "Lack of accountability",
+      "Terminated users active": "Unauthorized access",
+      "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+      "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ-E2",
+    "type": "select",
+    "prompt": "Why is 14-day log retention a concern?",
+    "hiddenCorrect": "It may prevent investigation of issues discovered after logs are overwritten",
+    "derived": "It may prevent investigation of issues discovered after logs are overwritten",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "type": "select",
+    "prompt": "Based on the scenario, which level of analytics maturity best describes Meridian",
+    "hiddenCorrect": "Descriptive analytics — reporting on historical performance",
+    "derived": "Descriptive analytics — reporting on historical performance",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "type": "select",
+    "prompt": "The CDO proposes implementing a dashboard that shows real-time sales by region, ",
+    "hiddenCorrect": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+    "derived": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "type": "select",
+    "prompt": "For the next phase of the analytics roadmap, the CDO wants to use historical sal",
+    "hiddenCorrect": "Predictive analytics — using historical data and models to forecast future outcomes",
+    "derived": "Predictive analytics — using historical data and models to forecast future outcomes",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "type": "select",
+    "prompt": "The supply chain team wants a tool that recommends optimal inventory reorder qua",
+    "hiddenCorrect": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+    "derived": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "type": "select",
+    "prompt": "Before Meridian can advance its analytics maturity, it must address several data",
+    "hiddenCorrect": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+    "derived": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "type": "numeric",
+    "prompt": "Calculate the transaction price allocated to the Hardware performance obligation",
+    "hiddenCorrect": 363636,
+    "derived": 1450000,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "type": "numeric",
+    "prompt": "Calculate the required ending balance in the Allowance for Doubtful Accounts.",
+    "hiddenCorrect": 43000,
+    "derived": 43000,
+    "match": true,
+    "method": "addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "type": "multi",
+    "prompt": "Under ASC 606, which criteria indicate a distinct performance obligation?",
+    "hiddenCorrect": [
+      "Customer can benefit from good/service on its own",
+      "The promise is separately identifiable in the contract"
+    ],
+    "derived": [
+      "Customer can benefit from good/service on its own",
+      "The promise is separately identifiable in the contract"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "type": "select",
+    "prompt": "If the unadjusted ADA balance was a $5,000 debit, what is the bad debt expense?",
+    "hiddenCorrect": "$48,000",
+    "derived": "$48,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "type": "fill",
+    "prompt": "The method of estimating bad debt using an aging schedule is known as the ______",
+    "hiddenCorrect": "balance sheet",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "type": "numeric",
+    "prompt": "Calculate the present value of the lease payments (round to nearest dollar).",
+    "hiddenCorrect": 231660,
+    "derived": 231660,
+    "match": true,
+    "method": "pv-verified"
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "type": "select",
+    "prompt": "Based on ASC 842, how should Meridian classify this lease?",
+    "hiddenCorrect": "Finance lease",
+    "derived": "Finance lease",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "type": "fill",
+    "prompt": "Under ASC 842, the lessee records a lease liability and a ______________ asset o",
+    "hiddenCorrect": "right-of-use",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "type": "numeric",
+    "prompt": "What is the lease liability balance at the end of Year 1 after the first payment",
+    "hiddenCorrect": 190560,
+    "derived": 190560,
+    "match": true,
+    "method": "manual-override-simple-equation"
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "type": "multi",
+    "prompt": "Which of the following are criteria for a finance lease?",
+    "hiddenCorrect": [
+      "Lease term is major part of economic life",
+      "PV of lease payments equals or exceeds substantially all fair value",
+      "Ownership transfers at end of lease"
+    ],
+    "derived": [
+      "Lease term is major part of economic life",
+      "PV of lease payments equals or exceeds substantially all fair value",
+      "Ownership transfers at end of lease"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "type": "numeric",
+    "prompt": "Calculate the initial amount of Goodwill recognized on the acquisition date.",
+    "hiddenCorrect": 400000,
+    "derived": 4600000,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "type": "numeric",
+    "prompt": "Calculate the goodwill impairment loss recognized at the end of Year 2.",
+    "hiddenCorrect": 150000,
+    "derived": 150000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "type": "match",
+    "prompt": "Match the asset to its correct amortization and impairment treatment under US GA",
+    "hiddenCorrect": {
+      "Patent": "Amortized over useful life, tested for impairment if triggering event",
+      "Trademark": "Not amortized, tested for impairment at least annually",
+      "Goodwill": "Not amortized, tested for impairment at reporting unit level"
+    },
+    "derived": {
+      "Patent": "Amortized over useful life, tested for impairment if triggering event",
+      "Trademark": "Not amortized, tested for impairment at least annually",
+      "Goodwill": "Not amortized, tested for impairment at reporting unit level"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "type": "multi",
+    "prompt": "Which of the following would be capitalized as part of the cost of an internally",
+    "hiddenCorrect": [
+      "Successful legal defense costs",
+      "Registration fees"
+    ],
+    "derived": [
+      "Successful legal defense costs",
+      "Registration fees"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "type": "select",
+    "prompt": "If a reporting unit's fair value is greater than its carrying amount, what is th",
+    "hiddenCorrect": "No impairment loss is recognized, and no further testing is required",
+    "derived": "No impairment loss is recognized, and no further testing is required",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "numeric",
+    "prompt": "Enter total cash collections for January.",
+    "hiddenCorrect": "540000",
+    "derived": 540000,
+    "match": true,
+    "method": "addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "numeric",
+    "prompt": "Enter total cash disbursements for January.",
+    "hiddenCorrect": "675000",
+    "derived": 675000,
+    "match": true,
+    "method": "addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "numeric",
+    "prompt": "Enter the ending cash balance before financing for January. Use a negative sign ",
+    "hiddenCorrect": "-90000",
+    "derived": -90000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "select",
+    "prompt": "What amount must Harbor borrow in January to meet the minimum cash balance?",
+    "hiddenCorrect": "$125,000",
+    "derived": "$125,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "multi",
+    "prompt": "CFO Chen is reviewing the preliminary January forecast. Select the statements th",
+    "hiddenCorrect": [
+      "Raising the cash-sales percentage from 20% to 30% would decrease the borrowing requirement",
+      "If the following-month collection rate increased from 45% to 50%, December credit collections in January would increase by $20,000",
+      "The 5% uncollectible portion of credit sales means $20,000 of December credit sales will never be collected"
+    ],
+    "derived": [
+      "Raising the cash-sales percentage from 20% to 30% would decrease the borrowing requirement",
+      "If the following-month collection rate increased from 45% to 50%, December credit collections in January would increase by $20,000",
+      "The 5% uncollectible portion of credit sales means $20,000 of December credit sales will never be collected"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "type": "match",
+    "prompt": "Match each forecast risk to the correct management response.",
+    "hiddenCorrect": {
+      "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
+      "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
+      "Equipment supplier offers a January discount but payment is due in February": "Defer purchase to February, increasing January cash available",
+      "Actual January sales exceed budget by 15%": "Increase both collections and COGS projections in the forecast"
+    },
+    "derived": {
+      "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
+      "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
+      "Equipment supplier offers a January discount but payment is due in February": "Defer purchase to February, increasing January cash available",
+      "Actual January sales exceed budget by 15%": "Increase both collections and COGS projections in the forecast"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "numeric",
+    "prompt": "Enter the budgeted direct labor cost for July.",
+    "hiddenCorrect": "264000",
+    "derived": 264000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "numeric",
+    "prompt": "Enter the total budgeted manufacturing overhead cost for July (variable + fixed)",
+    "hiddenCorrect": "276000",
+    "derived": 276000,
+    "match": true,
+    "method": "addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "numeric",
+    "prompt": "Enter the predetermined total overhead rate per direct labor hour using denomina",
+    "hiddenCorrect": "20",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "select",
+    "prompt": "What effect would adding a second shift in September have on budgeted fixed over",
+    "hiddenCorrect": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+    "derived": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "multi",
+    "prompt": "Select the true statements about manufacturing overhead budgeting.",
+    "hiddenCorrect": [
+      "Fixed manufacturing overhead per unit decreases as production volume increases",
+      "The predetermined overhead rate is calculated at the beginning of the budget period",
+      "Applied overhead equals the predetermined rate multiplied by actual activity"
+    ],
+    "derived": [
+      "Fixed manufacturing overhead per unit decreases as production volume increases",
+      "The predetermined overhead rate is calculated at the beginning of the budget period",
+      "Applied overhead equals the predetermined rate multiplied by actual activity"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "type": "match",
+    "prompt": "Match each budget component to its correct calculation formula.",
+    "hiddenCorrect": {
+      "Direct labor budget": "Units produced x DLH per unit x Wage rate",
+      "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
+      "Fixed overhead budget": "Remains constant within the relevant range",
+      "Applied manufacturing overhead": "Predetermined OH rate x Actual activity"
+    },
+    "derived": {
+      "Direct labor budget": "Units produced x DLH per unit x Wage rate",
+      "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
+      "Fixed overhead budget": "Remains constant within the relevant range",
+      "Applied manufacturing overhead": "Predetermined OH rate x Actual activity"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "type": "select",
+    "prompt": "Using the information in Exhibit 1, what is Division A's return on investment fo",
+    "hiddenCorrect": "16.0%",
+    "derived": "16.0%",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "type": "select",
+    "prompt": "What is Division A's residual income for the current year?",
+    "hiddenCorrect": "$120,000",
+    "derived": "$120,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "type": "select",
+    "prompt": "If the proposed $500,000 investment is accepted, what will Division A's new ROI ",
+    "hiddenCorrect": "16.0%",
+    "derived": "16.0%",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "type": "select",
+    "prompt": "If Division A is evaluated using residual income, should the manager accept the ",
+    "hiddenCorrect": "Yes, because residual income will increase by $20,000",
+    "derived": "Yes, because residual income will increase by $20,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "type": "select",
+    "prompt": "Which division had the best performance based on residual income?",
+    "hiddenCorrect": "Division A",
+    "derived": "Division A",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "type": "select",
+    "prompt": "The production manager notes that actual revenue exceeded the static budget by $",
+    "hiddenCorrect": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+    "derived": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "type": "select",
+    "prompt": "Using Exhibit 1 and Exhibit 2, compute the flexible budget variance for direct m",
+    "hiddenCorrect": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+    "derived": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "type": "multi",
+    "prompt": "The controller identified several variances. Which of the following statements c",
+    "hiddenCorrect": [
+      "The favorable sales volume variance indicates that selling more units than budgeted contributed positively to operating income",
+      "Actual selling price of $73 per unit was $2 below the standard of $75, creating an unfavorable selling price variance of $24,000 (12,000 × $2)",
+      "Fixed manufacturing overhead variance of $5,000 unfavorable indicates actual fixed costs exceeded the budgeted amount",
+      "The total flexible budget variance for variable costs was unfavorable, meaning actual variable costs exceeded the standard costs allowed for actual output"
+    ],
+    "derived": [
+      "The favorable sales volume variance indicates that selling more units than budgeted contributed positively to operating income",
+      "Actual selling price of $73 per unit was $2 below the standard of $75, creating an unfavorable selling price variance of $24,000 (12,000 × $2)",
+      "Fixed manufacturing overhead variance of $5,000 unfavorable indicates actual fixed costs exceeded the budgeted amount",
+      "The total flexible budget variance for variable costs was unfavorable, meaning actual variable costs exceeded the standard costs allowed for actual output"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "type": "match",
+    "prompt": "Match each variance description to the correct variance formula for Precision Ma",
+    "hiddenCorrect": {
+      "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
+      "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+      "Difference between static budget operating income and flexible budget operating income": "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+      "Difference between actual fixed overhead and budgeted fixed overhead": "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U"
+    },
+    "derived": {
+      "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
+      "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+      "Difference between static budget operating income and flexible budget operating income": "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+      "Difference between actual fixed overhead and budgeted fixed overhead": "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "type": "select",
+    "prompt": "The production manager is evaluated based on the flexible budget variance for ma",
+    "hiddenCorrect": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control",
+    "derived": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "type": "numeric",
+    "prompt": "Calculate the Variable Overhead Spending Variance (enter unfavorable as positive",
+    "hiddenCorrect": 1600,
+    "derived": 60400,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "type": "numeric",
+    "prompt": "Calculate the Variable Overhead Efficiency Variance.",
+    "hiddenCorrect": 600,
+    "derived": 600,
+    "match": true,
+    "method": "multiplication-chain-verified"
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "type": "numeric",
+    "prompt": "Calculate the Fixed Overhead Production-Volume Variance.",
+    "hiddenCorrect": 2000,
+    "derived": 19605,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "type": "numeric",
+    "prompt": "Calculate the Fixed Overhead Spending (Budget) Variance.",
+    "hiddenCorrect": 2000,
+    "derived": 2000,
+    "match": true,
+    "method": "final-computed"
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "type": "select",
+    "prompt": "Which variance is NEVER considered controllable by the production supervisor?",
+    "hiddenCorrect": "Fixed overhead production-volume variance",
+    "derived": "Fixed overhead production-volume variance",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "type": "select",
+    "prompt": "Summit Electronics' internal audit team has identified inconsistent tone at the ",
+    "hiddenCorrect": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+    "derived": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "type": "select",
+    "prompt": "The internal audit team noted that Summit Electronics' risk assessment does not ",
+    "hiddenCorrect": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+    "derived": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "type": "select",
+    "prompt": "Summit Electronics has strong automated controls over accounts payable (three-wa",
+    "hiddenCorrect": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+    "derived": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "type": "select",
+    "prompt": "Summit Electronics lacks a formal whistleblower hotline and communicates policie",
+    "hiddenCorrect": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+    "derived": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "type": "select",
+    "prompt": "Summit Electronics relies on quarterly internal audit reviews and annual externa",
+    "hiddenCorrect": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+    "derived": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "type": "match",
+    "prompt": "The IT steering committee is evaluating different cloud service models for MedTe",
+    "hiddenCorrect": {
+      "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+      "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
+      "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+      "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+    },
+    "derived": {
+      "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+      "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
+      "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+      "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "type": "select",
+    "prompt": "Using Exhibit 2, the CFO asks whether cloud migration makes financial sense. Whi",
+    "hiddenCorrect": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+    "derived": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "type": "multi",
+    "prompt": "The compliance officer raises concerns about data security and regulatory compli",
+    "hiddenCorrect": [
+      "In cloud models, MedTech retains responsibility for its data regardless of where it is stored; the company must ensure the cloud provider's controls meet FDA and HIPAA requirements",
+      "Data residency requirements may restrict where patient data can be stored; the cloud provider must offer data centers in approved geographic locations",
+      "Cloud service providers typically offer SOC 2 Type II reports that can be used to assess their controls; MedTech should review these reports as part of vendor due diligence",
+      "Vendor lock-in is a risk — migrating data and applications between cloud providers can be complex and costly"
+    ],
+    "derived": [
+      "In cloud models, MedTech retains responsibility for its data regardless of where it is stored; the company must ensure the cloud provider's controls meet FDA and HIPAA requirements",
+      "Data residency requirements may restrict where patient data can be stored; the cloud provider must offer data centers in approved geographic locations",
+      "Cloud service providers typically offer SOC 2 Type II reports that can be used to assess their controls; MedTech should review these reports as part of vendor due diligence",
+      "Vendor lock-in is a risk — migrating data and applications between cloud providers can be complex and costly"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "type": "select",
+    "prompt": "MedTech's controller is concerned about capitalizing cloud implementation costs ",
+    "hiddenCorrect": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+    "derived": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "type": "match",
+    "prompt": "The IT steering committee is considering different cloud deployment models. Matc",
+    "hiddenCorrect": {
+      "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+      "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+      "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+      "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+    },
+    "derived": {
+      "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+      "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+      "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+      "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "type": "numeric",
+    "prompt": "Calculate the total Comprehensive Income for the year.",
+    "hiddenCorrect": 510000,
+    "derived": 70,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "type": "multi",
+    "prompt": "Which of the following items bypass the income statement and go directly to Othe",
+    "hiddenCorrect": [
+      "Unrealized gains/losses on AFS debt securities",
+      "Foreign currency translation adjustments",
+      "Pension plan unamortized prior service costs"
+    ],
+    "derived": [
+      "Unrealized gains/losses on AFS debt securities",
+      "Foreign currency translation adjustments",
+      "Pension plan unamortized prior service costs"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "type": "numeric",
+    "prompt": "What is the total reduction to Stockholders' Equity resulting from the treasury ",
+    "hiddenCorrect": 150000,
+    "derived": 150000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "type": "select",
+    "prompt": "If Silverline used the par value method instead of the cost method for treasury ",
+    "hiddenCorrect": "The total reduction to equity would be exactly the same",
+    "derived": "The total reduction to equity would be exactly the same",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "type": "fill",
+    "prompt": "Comprehensive income includes all changes in equity during a period except those",
+    "hiddenCorrect": "owners",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "type": "numeric",
+    "prompt": "Calculate the cash interest payment made every six months.",
+    "hiddenCorrect": 40000,
+    "derived": 1000026,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "type": "numeric",
+    "prompt": "Calculate the issue price of the bonds (round to nearest whole dollar).",
+    "hiddenCorrect": 922768,
+    "derived": 922768,
+    "match": true,
+    "method": "addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "type": "numeric",
+    "prompt": "Calculate the interest expense to be recorded for the first six months (ending J",
+    "hiddenCorrect": 46138,
+    "derived": 922796,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "type": "numeric",
+    "prompt": "Calculate the carrying value of the bond immediately after the first interest pa",
+    "hiddenCorrect": 928906,
+    "derived": 86138,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "type": "select",
+    "prompt": "How are bond issue costs treated under current US GAAP?",
+    "hiddenCorrect": "Deducted from the carrying value of the bond liability",
+    "derived": "Deducted from the carrying value of the bond liability",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "type": "numeric",
+    "prompt": "Calculate the variable cost per machine hour using the High-Low method.",
+    "hiddenCorrect": 4,
+    "derived": 85000,
+    "match": false,
+    "method": "addition-chain"
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "type": "numeric",
+    "prompt": "Calculate the total fixed cost using the High-Low method.",
+    "hiddenCorrect": 10000,
+    "derived": 10000,
+    "match": true,
+    "method": "manual-override-none"
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "type": "numeric",
+    "prompt": "What is the estimated total cost for 7,000 hours using the Regression model?",
+    "hiddenCorrect": 38300,
+    "derived": 38300,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "type": "select",
+    "prompt": "What does the R-squared value of 0.85 indicate?",
+    "hiddenCorrect": "85% of the variation in total cost is explained by machine hours",
+    "derived": "85% of the variation in total cost is explained by machine hours",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "type": "multi",
+    "prompt": "What are the primary disadvantages of the High-Low method compared to regression",
+    "hiddenCorrect": [
+      "It only uses two data points",
+      "It is heavily influenced by outliers"
+    ],
+    "derived": [
+      "It only uses two data points",
+      "It is heavily influenced by outliers"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "numeric",
+    "prompt": "Enter the ending inventory balance at March 31.",
+    "hiddenCorrect": "170000",
+    "derived": 170000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "numeric",
+    "prompt": "Enter the ending accounts receivable balance at March 31 (gross, before allowanc",
+    "hiddenCorrect": "300000",
+    "derived": 300000,
+    "match": true,
+    "method": "manual-override-none"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "numeric",
+    "prompt": "Enter the ending accounts payable balance at March 31.",
+    "hiddenCorrect": "130000",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "numeric",
+    "prompt": "Enter the ending cash balance at March 31.",
+    "hiddenCorrect": "31500",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "select",
+    "prompt": "Which budgeted financial statement item is NOT directly affected by the sales co",
+    "hiddenCorrect": "Ending inventory balance",
+    "derived": "Ending inventory balance",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "type": "match",
+    "prompt": "Match each budgeted balance sheet line item to the primary budget or policy that",
+    "hiddenCorrect": {
+      "Cash": "Cash budget and collection/disbursement timing",
+      "Accounts receivable": "Sales budget and credit collection policy",
+      "Inventory": "Cost of goods sold budget and purchases budget",
+      "Accounts payable": "Purchases budget and supplier payment terms"
+    },
+    "derived": {
+      "Cash": "Cash budget and collection/disbursement timing",
+      "Accounts receivable": "Sales budget and credit collection policy",
+      "Inventory": "Cost of goods sold budget and purchases budget",
+      "Accounts payable": "Purchases budget and supplier payment terms"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "type": "select",
+    "prompt": "Summit Furniture's Cutting Department can theoretically produce 50,000 units per",
+    "hiddenCorrect": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+    "derived": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "type": "select",
+    "prompt": "Using Exhibit 2, what would be the difference in the fixed overhead volume varia",
+    "hiddenCorrect": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+    "derived": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "type": "multi",
+    "prompt": "The CFO is evaluating the implications of the capacity denominator level choice.",
+    "hiddenCorrect": [
+      "Using theoretical capacity as the denominator level produces the highest fixed overhead rate per unit and the largest unfavorable volume variance when actual production is below theoretical",
+      "The volume variance is always zero when master-budget capacity equals actual production"
+    ],
+    "derived": [
+      "Using theoretical capacity as the denominator level produces the highest fixed overhead rate per unit and the largest unfavorable volume variance when actual production is below theoretical",
+      "The volume variance is always zero when master-budget capacity equals actual production"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "type": "match",
+    "prompt": "The CFO must recommend a capacity management strategy for each department. Match",
+    "hiddenCorrect": {
+      "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+      "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
+      "Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M": "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+      "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle": "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+    },
+    "derived": {
+      "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+      "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
+      "Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M": "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+      "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle": "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "type": "select",
+    "prompt": "Summit's CFO must recommend a denominator level to the board. The board is conce",
+    "hiddenCorrect": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency",
+    "derived": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "type": "match",
+    "prompt": "The internal audit team identified several scenarios where application controls ",
+    "hiddenCorrect": {
+      "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+      "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+      "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+      "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+    },
+    "derived": {
+      "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+      "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+      "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+      "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "type": "select",
+    "prompt": "The internal audit team discovers that the three-way match control (matching PO,",
+    "hiddenCorrect": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+    "derived": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "type": "multi",
+    "prompt": "The ERP system includes processing controls in addition to input controls. Accor",
+    "hiddenCorrect": [
+      "A run-to-run control that compares the total dollar value of invoices entered in a batch to the total posted to the general ledger",
+      "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
+      "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
+    ],
+    "derived": [
+      "A run-to-run control that compares the total dollar value of invoices entered in a batch to the total posted to the general ledger",
+      "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
+      "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "type": "match",
+    "prompt": "MedTech's internal audit team is classifying application controls by type. Match",
+    "hiddenCorrect": {
+      "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
+      "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+      "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+      "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices": "Access control — role-based security prevents users from performing incompatible functions"
+    },
+    "derived": {
+      "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
+      "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+      "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+      "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices": "Access control — role-based security prevents users from performing incompatible functions"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "type": "select",
+    "prompt": "The same employee in MedTech's AP department can create new vendor records, ente",
+    "hiddenCorrect": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+    "derived": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "type": "select",
+    "prompt": "Referring to Exhibit 1, the sales manager paid $500 to a customs official to exp",
+    "hiddenCorrect": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+    "derived": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "type": "select",
+    "prompt": "Apex's internal audit team discovers that the 15% commission paid to Agent X in ",
+    "hiddenCorrect": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+    "derived": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "type": "multi",
+    "prompt": "Based on Exhibit 1 and Exhibit 2, which of the following actions should Apex Com",
+    "hiddenCorrect": [
+      "Conduct enhanced due diligence on all third-party agents and intermediaries in high-risk countries before entering into agreements",
+      "Require all international employees to complete annual FCPA training covering anti-bribery provisions, red flags, and reporting procedures",
+      "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
+      "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
+    ],
+    "derived": [
+      "Conduct enhanced due diligence on all third-party agents and intermediaries in high-risk countries before entering into agreements",
+      "Require all international employees to complete annual FCPA training covering anti-bribery provisions, red flags, and reporting procedures",
+      "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
+      "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "type": "match",
+    "prompt": "The internal audit team classified each risk scenario from Exhibit 1 for further",
+    "hiddenCorrect": {
+      "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+      "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+      "Charitable donation request — $50,000 to minister's personal foundation": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+      "Luxury client entertainment — $1,200/person including spouses for government clients": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+    },
+    "derived": {
+      "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+      "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+      "Charitable donation request — $50,000 to minister's personal foundation": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+      "Luxury client entertainment — $1,200/person including spouses for government clients": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "type": "select",
+    "prompt": "Apex's CFO argues that the company does not need separate FCPA-specific internal",
+    "hiddenCorrect": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+    "derived": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "type": "match",
+    "prompt": "Match each IIA Standard category to the type of guidance it provides.",
+    "hiddenCorrect": {
+      "Attribute Standards": "Define the characteristics and capabilities required for internal audit activities and individuals",
+      "Performance Standards": "Describe the nature of internal audit work and quality criteria for measuring performance",
+      "Implementation Standards": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+    },
+    "derived": {
+      "Attribute Standards": "Define the characteristics and capabilities required for internal audit activities and individuals",
+      "Performance Standards": "Describe the nature of internal audit work and quality criteria for measuring performance",
+      "Implementation Standards": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "type": "select",
+    "prompt": "The internal audit department previously performed consulting engagements for th",
+    "hiddenCorrect": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+    "derived": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "type": "multi",
+    "prompt": "The CAE has drafted a revised internal audit charter for Audit Committee approva",
+    "hiddenCorrect": [
+      "The internal audit activity's purpose, authority, and responsibility",
+      "The CAE's functional and administrative reporting relationships",
+      "The scope of internal audit activities including assurance and consulting services"
+    ],
+    "derived": [
+      "The internal audit activity's purpose, authority, and responsibility",
+      "The CAE's functional and administrative reporting relationships",
+      "The scope of internal audit activities including assurance and consulting services"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "type": "select",
+    "prompt": "Under the IIA Standards, which reporting structure best supports internal audit ",
+    "hiddenCorrect": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+    "derived": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "type": "multi",
+    "prompt": "The CAE needs to establish a Quality Assurance and Improvement Program (QAIP) un",
+    "hiddenCorrect": [
+      "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
+      "Periodic external assessments conducted at least once every five years by an independent reviewer",
+      "Internal self-assessments covering the internal audit activity's compliance with the Standards"
+    ],
+    "derived": [
+      "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
+      "Periodic external assessments conducted at least once every five years by an independent reviewer",
+      "Internal self-assessments covering the internal audit activity's compliance with the Standards"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "type": "match",
+    "prompt": "The CISO is preparing an incident report for the board. Match each cybersecurity",
+    "hiddenCorrect": {
+      "Phishing email": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+      "Remote Access Trojan (RAT)": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+      "Ransomware": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+      "DDoS (distraction attack)": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+    },
+    "derived": {
+      "Phishing email": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+      "Remote Access Trojan (RAT)": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+      "Ransomware": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+      "DDoS (distraction attack)": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "type": "select",
+    "prompt": "Based on the incident timeline, which control failure was the MOST critical enab",
+    "hiddenCorrect": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+    "derived": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "type": "numeric",
+    "prompt": "Using Exhibit 2 data, the CISO proposes implementing MFA for all internal system",
+    "hiddenCorrect": 1218000,
+    "derived": 1638000,
+    "match": false,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "type": "multi",
+    "prompt": "Based on Exhibit 2, which control improvements should CCHS implement to prevent ",
+    "hiddenCorrect": [
+      "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
+      "Deploy endpoint detection and response (EDR) software on all workstations and servers to enable real-time threat detection and automated containment of malware",
+      "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
+      "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
+    ],
+    "derived": [
+      "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
+      "Deploy endpoint detection and response (EDR) software on all workstations and servers to enable real-time threat detection and automated containment of malware",
+      "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
+      "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "type": "select",
+    "prompt": "The board asks whether paying the ransom was the right decision. Based on cybers",
+    "hiddenCorrect": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+    "derived": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "type": "select",
+    "prompt": "DataBridge Solutions Inc. has been found by a EU supervisory authority to have i",
+    "hiddenCorrect": "€32,000,000",
+    "derived": "€32,000,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "type": "select",
+    "prompt": "Using the data in Exhibit 1, what is the expected annual net benefit (or cost) o",
+    "hiddenCorrect": "€1,440,000",
+    "derived": "€1,440,000",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "type": "select",
+    "prompt": "DataBridge discovers that an employee inadvertently exposed a database containin",
+    "hiddenCorrect": "72 hours",
+    "derived": "72 hours",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "type": "select",
+    "prompt": "An EU data subject submits a request to DataBridge demanding that the company de",
+    "hiddenCorrect": "Right to erasure (right to be forgotten)",
+    "derived": "Right to erasure (right to be forgotten)",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "type": "select",
+    "prompt": "DataBridge needs to transfer personal data of EU customers from its Irish subsid",
+    "hiddenCorrect": "Standard Contractual Clauses (SCCs)",
+    "derived": "Standard Contractual Clauses (SCCs)",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "type": "select",
+    "prompt": "OmniRetail's demand forecasting model requires historical sales data with known ",
+    "hiddenCorrect": "Supervised learning",
+    "derived": "Supervised learning",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "type": "match",
+    "prompt": "For each machine learning application at OmniRetail, select whether it uses supe",
+    "hiddenCorrect": {
+      "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+      "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+      "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+      "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
+    },
+    "derived": {
+      "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+      "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+      "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+      "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "type": "multi",
+    "prompt": "The data science team observes that the demand forecasting model performs poorly",
+    "hiddenCorrect": [
+      "Training on insufficient data for newer stores",
+      "Model complexity exceeding the available training sample size",
+      "Learning noise from limited transaction records rather than general patterns"
+    ],
+    "derived": [
+      "Training on insufficient data for newer stores",
+      "Model complexity exceeding the available training sample size",
+      "Learning noise from limited transaction records rather than general patterns"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "type": "select",
+    "prompt": "OmniRetail's fraud detection model uses machine learning rather than a tradition",
+    "hiddenCorrect": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+    "derived": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "type": "multi",
+    "prompt": "OmniRetail's customer segmentation model identified 12 distinct customer cluster",
+    "hiddenCorrect": [
+      "Targeting high-value clusters with personalized promotions to increase basket size",
+      "Designing store layout and product placement strategies based on cluster purchasing patterns",
+      "Identifying underpenetrated customer segments for acquisition marketing campaigns"
+    ],
+    "derived": [
+      "Targeting high-value clusters with personalized promotions to increase basket size",
+      "Designing store layout and product placement strategies based on cluster purchasing patterns",
+      "Identifying underpenetrated customer segments for acquisition marketing campaigns"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "type": "match",
+    "prompt": "The CFO's team is preparing a training deck on RPA for the audit committee. Matc",
+    "hiddenCorrect": {
+      "Rule-based processing": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+      "User interface interaction": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+      "Exception handling": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+      "Attended vs unattended mode": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+    },
+    "derived": {
+      "Rule-based processing": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+      "User interface interaction": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+      "Exception handling": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+      "Attended vs unattended mode": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+    },
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "type": "select",
+    "prompt": "Based on the data in Exhibit 1, which finance process is the STRONGEST candidate",
+    "hiddenCorrect": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+    "derived": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "type": "numeric",
+    "prompt": "Using the scenario data, calculate the annual net benefit (annual benefits minus",
+    "hiddenCorrect": 525000,
+    "derived": 525000,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "type": "multi",
+    "prompt": "Which of the following processes from Exhibit 1 are appropriate candidates for R",
+    "hiddenCorrect": [
+      "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
+      "Bank account reconciliation — high-volume matching of structured data against defined reconciliation rules",
+      "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
+      "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
+    ],
+    "derived": [
+      "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
+      "Bank account reconciliation — high-volume matching of structured data against defined reconciliation rules",
+      "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
+      "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
+    ],
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "type": "select",
+    "prompt": "Based on Exhibit 2, which internal control enhancement is MOST critical to addre",
+    "hiddenCorrect": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+    "derived": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "type": "select",
+    "prompt": "How many distinct performance obligations exist in Crestline's contract with Reg",
+    "hiddenCorrect": "Two — equipment delivery and installation service",
+    "derived": "Two — equipment delivery and installation service",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "type": "numeric",
+    "prompt": "Enter the amount of revenue Crestline should allocate to the equipment performan",
+    "hiddenCorrect": "480381",
+    "derived": 480381,
+    "match": true,
+    "method": "manual-override-addition-chain-verified"
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "type": "select",
+    "prompt": "When should Crestline recognize revenue for the equipment portion of the contrac",
+    "hiddenCorrect": "On October 15 when the equipment is delivered to the hospital",
+    "derived": "On October 15 when the equipment is delivered to the hospital",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "type": "select",
+    "prompt": "Under the most likely amount method, what amount of variable consideration shoul",
+    "hiddenCorrect": "$0 — the rebate should be excluded until the threshold is met",
+    "derived": "$0 — the rebate should be excluded until the threshold is met",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "type": "select",
+    "prompt": "If Crestline subsequently receives a contract modification on November 1 that ad",
+    "hiddenCorrect": "As a separate contract because the additional goods are distinct and priced at standalone selling price",
+    "derived": "As a separate contract because the additional goods are distinct and priced at standalone selling price",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "type": "numeric",
+    "prompt": "Enter the net realizable value (NRV) per unit for tablets.",
+    "hiddenCorrect": "228",
+    "derived": null,
+    "match": false,
+    "method": "none"
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "type": "numeric",
+    "prompt": "Enter the total inventory write-down amount Harbor must record at December 31, 2",
+    "hiddenCorrect": "0",
+    "derived": 0,
+    "match": true,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "type": "select",
+    "prompt": "What is the appropriate accounting treatment regarding inventory write-downs for",
+    "hiddenCorrect": "Record no journal entry because cost does not exceed NRV for any product line",
+    "derived": "Record no journal entry because cost does not exceed NRV for any product line",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "type": "select",
+    "prompt": "How does the inventory write-down affect Harbor's current ratio and gross margin",
+    "hiddenCorrect": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line",
+    "derived": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "type": "select",
+    "prompt": "Exhibit 2 shows the prior year carried $760,000 at cost and $745,000 at LCNRV (a",
+    "hiddenCorrect": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable",
+    "derived": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "type": "numeric",
+    "prompt": "Enter the direct material price variance for March. Indicate unfavorable varianc",
+    "hiddenCorrect": "-21600",
+    "derived": 21600,
+    "match": false,
+    "method": "multiplication-chain"
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "type": "numeric",
+    "prompt": "Enter the direct material quantity variance for March. Indicate unfavorable vari",
+    "hiddenCorrect": "-32000",
+    "derived": -32000,
+    "match": true,
+    "method": "manual-override-simple-equation"
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "type": "numeric",
+    "prompt": "Enter the direct labor efficiency variance for March. Indicate unfavorable varia",
+    "hiddenCorrect": "-5600",
+    "derived": 5600,
+    "match": false,
+    "method": "simple-equation"
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "type": "select",
+    "prompt": "Based on the variance results, which of the following interpretations is most ap",
+    "hiddenCorrect": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
+    "derived": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
+    "match": true,
+    "method": "verify-only"
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "type": "select",
+    "prompt": "Which variance should Apex investigate first, considering both materiality and c",
+    "hiddenCorrect": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production",
+    "derived": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production",
+    "match": true,
+    "method": "verify-only"
+  }
+]

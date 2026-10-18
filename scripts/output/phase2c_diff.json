@@ -1,0 +1,387 @@
+{
+  "compared": 550,
+  "selected": 550,
+  "derivedCount": 550,
+  "agreement": 509,
+  "discordant": 41,
+  "rawAgreement": 0.9254545454545454,
+  "kappaDerived": 0.9003178336037204,
+  "kappaKeyAgree": 0.5370586859948564,
+  "discordantItems": [
+    {
+      "qid": "P1-AD-055",
+      "pack": "D",
+      "stratum": "H",
+      "p1": "C",
+      "p2": "B",
+      "cc": "C",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1-DD-070",
+      "pack": "D",
+      "stratum": "H",
+      "p1": "B",
+      "p2": "A",
+      "cc": "B",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1-B-060",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "A",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1-B-091",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1-B-046",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "B",
+      "cc": "D",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1B-B-111",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "A",
+      "cc": "D",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1B-C-108",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "B",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1B-C-118",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "C",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-C-143",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "C",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-C-148",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "D",
+      "cc": "A",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1B-C-154",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-C-169",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-D-081",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-D-113",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1B-D-123",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-D-133",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1B-D-143",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1-AC-021",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-DC-013",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "A",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1-AD-056",
+      "pack": "D",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "needs-human"
+    },
+    {
+      "qid": "P1-BD-019",
+      "pack": "D",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-BD-054",
+      "pack": "D",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "C",
+      "cc": "B",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1-BD-091",
+      "pack": "D",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "C",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1E-C-006",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "D",
+      "cc": "B",
+      "p1disp": "confirm-misassignment"
+    },
+    {
+      "qid": "P1E-C-042",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "C",
+      "cc": "B",
+      "p1disp": "agree"
+    },
+    {
+      "qid": "P1E-A-S20",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "B",
+      "cc": "C",
+      "p1disp": "confirm-misassignment"
+    },
+    {
+      "qid": "P1-A-023",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-F-045",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "C",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-F-070",
+      "pack": "A",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1B-C-147",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1B-D-115",
+      "pack": "B",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-DC-066",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "C",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-EC-069",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "A",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-FC-004",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "B",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-FC-035",
+      "pack": "C",
+      "stratum": "L",
+      "p1": "D",
+      "p2": "A",
+      "cc": "A",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-BD-007",
+      "pack": "D",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1E-A-039",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1E-A-040",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "C",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1E-D-049",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "D",
+      "cc": "D",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1E-E-035",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "C",
+      "cc": "C",
+      "p1disp": "confirm-key-error"
+    },
+    {
+      "qid": "P1-E-R13",
+      "pack": "E",
+      "stratum": "L",
+      "p1": "A",
+      "p2": "B",
+      "cc": "B",
+      "p1disp": "confirm-key-error"
+    }
+  ],
+  "coverage": {
+    "H": 229,
+    "L": 2391,
+    "selH": 46,
+    "selL": 504
+  }
+}

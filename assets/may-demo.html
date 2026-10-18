@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>May Avatar Demo</title>
+<link rel="stylesheet" href="may-avatar.css">
+<style>
+  body { font: 15px/1.4 system-ui, sans-serif; margin: 40px; background:#faf7ee; }
+  #stage { display:flex; gap:24px; align-items:flex-start; }
+  .panel { max-width:360px; }
+  button { margin:4px 4px 4px 0; padding:6px 12px; cursor:pointer; }
+  #explanation { border:1px solid #ddd; border-radius:8px; padding:12px; background:#fff; }
+  #timer { font-weight:600; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <!-- Inline the SVG markup from may-avatar.svg here (or fetch+inject it) -->
+  <object id="may-obj" data="may-avatar.svg" type="image/svg+xml" width="160" height="192"></object>
+
+  <div class="panel">
+    <p><strong>renderView() boundary demo</strong></p>
+    <button id="btn-idle">renderView: idle</button>
+    <button id="btn-speaking">renderView: speaking</button>
+    <button id="btn-pointing">renderView: pointing-to-explanation</button>
+    <button id="btn-reduced">renderView: reduced (T6 / DL-060)</button>
+
+    <p>
+      <button id="btn-timer-start">Start exam timer</button>
+      <button id="btn-timer-stop">Stop exam timer</button>
+      <span id="timer">timer: stopped</span>
+    </p>
+
+    <div class="may-toggle-row">
+      <input type="checkbox" id="may-disable-anim">
+      <label for="may-disable-anim">Disable animations (HS-10)</label>
+    </div>
+
+    <div id="explanation" style="margin-top:16px;">
+      <strong>Explanation panel</strong>
+      <p>May points here in the "pointing-to-explanation" state.</p>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  import { MayAvatar } from './may-avatar.js';
+
+  const obj = document.getElementById('may-obj');
+
+  function init() {
+    const svgRoot = obj.contentDocument.getElementById('may-avatar');
+    const may = new MayAvatar(svgRoot);
+    may.bindDisableToggle(document.getElementById('may-disable-anim'));
+
+    // Simulated app: renderView() is the single seam where state changes
+    // are allowed to animate. Wire buttons to mimic a real view transition.
+    function renderView(nextState) {
+      may.setState(nextState);      // state always updates
+      may.onRenderViewBoundary();   // but only animates if this boundary is open
+    }
+
+    document.getElementById('btn-idle').onclick = () => renderView('idle');
+    document.getElementById('btn-speaking').onclick = () => renderView('speaking');
+    document.getElementById('btn-pointing').onclick = () => renderView('pointing-to-explanation');
+    document.getElementById('btn-reduced').onclick = () => renderView('reduced');
+
+    const timerLabel = document.getElementById('timer');
+    document.getElementById('btn-timer-start').onclick = () => {
+      may.onExamTimerStart();
+      timerLabel.textContent = 'timer: running (May will not animate)';
+    };
+    document.getElementById('btn-timer-stop').onclick = () => {
+      may.onExamTimerStop();
+      timerLabel.textContent = 'timer: stopped';
+    };
+  }
+
+  if (obj.contentDocument && obj.contentDocument.readyState === 'complete') {
+    init();
+  } else {
+    obj.addEventListener('load', init);
+  }
+</script>
+</body>
+</html>

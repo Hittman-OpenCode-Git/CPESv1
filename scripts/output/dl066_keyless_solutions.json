@@ -1,0 +1,355 @@
+{
+  "blockAuthorization": "BLOCK-AUTHORIZED: DL-066 keyless hand-solve audit — 31 P1 In-Audit cases, single read-only output file in scripts/output/; no pack/registry/governance files modified",
+  "method": "CAQS §5.1 keyless derivation — Exhibits + Prompts + Choices + Explanations only; Correct fields excluded from derivation",
+  "cases": [
+  {
+    "caseId": "CBQ-C2",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ-C2-Q1", "type": "numeric", "derived": 84000, "derivationNotes": "RI = 420,000 - (0.12 x 2,800,000) = 420,000 - 336,000" },
+      { "itemId": "CBQ-C2-Q2", "type": "numeric", "derived": 15, "derivationNotes": "ROI = 420,000 / 2,800,000 = 0.15 = 15%" },
+      { "itemId": "CBQ-C2-Q3", "type": "select", "derived": "70 variable cost", "derivationNotes": "Min TP = variable cost + opportunity cost = 70 + 0 (idle capacity)" },
+      { "itemId": "CBQ-C2-Q4", "type": "multi", "derived": "1,2,4", "derivationNotes": "Choice 3 (RI always increases when assets increase) is the only false statement" },
+      { "itemId": "CBQ-C2-Q5", "type": "fill", "derived": "congruence", "derivationNotes": "Explanation: goal congruence is the term of art" },
+      { "itemId": "CBQ-C2-Q6", "type": "match", "derived": "ROI->Operating income divided by assets;Residual income->Income after required asset charge;Minimum transfer price with idle capacity->Variable cost plus opportunity cost;Market price->External benchmark when available", "derivationNotes": "Explanation matches each measure to its defining description" }
+    ]
+  },
+  {
+    "caseId": "CBQ-C3",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ-C3-Q1", "type": "numeric", "derived": 60000, "derivationNotes": "900,000 target - 840,000 actual = 60,000 unfavorable" },
+      { "itemId": "CBQ-C3-Q2", "type": "numeric", "derived": 5, "derivationNotes": "96% - 91% = 5 percentage points" },
+      { "itemId": "CBQ-C3-Q3", "type": "select", "derived": "Training hours per employee", "derivationNotes": "Explanation: training hours is the classic Learning & Growth measure" },
+      { "itemId": "CBQ-C3-Q4", "type": "multi", "derived": "1,2,3", "derivationNotes": "Prior-period operating income is lagging; defect rate, on-time delivery, training hours are leading" },
+      { "itemId": "CBQ-C3-Q5", "type": "match", "derived": "Financial->Operating income;Customer->On-time delivery;Internal process->Defect rate;Learning and growth->Training hours per employee", "derivationNotes": "Explanation assigns each perspective to its metric" },
+      { "itemId": "CBQ-C3-Q6", "type": "select", "derived": "Machine setup errors", "derivationNotes": "Explanation: machine setup errors fall within production's span of control" }
+    ]
+  },
+  {
+    "caseId": "CBQ-D2",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ-D2-Q1", "type": "numeric", "derived": 20400, "derivationNotes": "18,000 + (4,000 x 60%) = 18,000 + 2,400" },
+      { "itemId": "CBQ-D2-Q2", "type": "numeric", "derived": 12.5, "derivationNotes": "255,000 / 20,400 = 12.50" },
+      { "itemId": "CBQ-D2-Q3", "type": "select", "derived": "Welding", "derivationNotes": "Welding has lowest capacity (19,500 < 21,000 < 24,000)" },
+      { "itemId": "CBQ-D2-Q4", "type": "multi", "derived": "1,3,4", "derivationNotes": "Increase batch queues (choice 2) contradicts lean thinking" },
+      { "itemId": "CBQ-D2-Q5", "type": "fill", "derived": "complete", "derivationNotes": "Explanation: equivalent units express partial work in terms of complete units" },
+      { "itemId": "CBQ-D2-Q6", "type": "match", "derived": "Partially complete WIP->Equivalent units;Lowest capacity resource->Bottleneck analysis;Unnecessary movement->Lean waste review;Continuous homogeneous output->Process costing", "derivationNotes": "Explanation matches each issue to the cost management tool" }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ-E1-Q1", "type": "select", "derived": "Same AP clerk can create vendors and enter invoices", "derivationNotes": "Explanation: incompatible-duty combination enables the fictitious vendor lifecycle" },
+      { "itemId": "CBQ-E1-Q2", "type": "multi", "derived": "1,2,4", "derivationNotes": "Post-payment approval of high-dollar invoices only (choice 3) degrades control design" },
+      { "itemId": "CBQ-E1-Q3", "type": "numeric", "derived": 3.0, "derivationNotes": "180,000 / 6,000,000 = 0.03 = 3.0%" },
+      { "itemId": "CBQ-E1-Q4", "type": "fill", "derived": "absolute", "derivationNotes": "Explanation: internal control provides reasonable, not absolute, assurance" },
+      { "itemId": "CBQ-E1-Q5", "type": "match", "derived": "Independent vendor approval->Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed;Three-way match before payment->Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed;Duplicate-payment report review->Detective — identifies duplicate payments already processed, after disbursement has occurred;Bank reconciliation->Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist", "derivationNotes": "Explanation classifies each control as preventive or detective" },
+      { "itemId": "CBQ-E1-Q6", "type": "select", "derived": "The report was generated but not reviewed for two months", "derivationNotes": "Explanation: definitive evidence of non-performance most weakens operating effectiveness" }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ-E2-Q1", "type": "select", "derived": "Unique privileged IDs with MFA and periodic access review", "derivationNotes": "Explanation: unique IDs, MFA, and periodic review establish individual accountability" },
+      { "itemId": "CBQ-E2-Q2", "type": "numeric", "derived": 3.5, "derivationNotes": "12 / 340 = 3.529% rounds to 3.5%" },
+      { "itemId": "CBQ-E2-Q3", "type": "multi", "derived": "1,2,3", "derivationNotes": "Sales price variance analysis (choice 4) is a performance tool, not an ITGC" },
+      { "itemId": "CBQ-E2-Q4", "type": "fill", "derived": "approval", "derivationNotes": "Explanation: emergency changes require post-implementation review and approval" },
+      { "itemId": "CBQ-E2-Q5", "type": "match", "derived": "Shared administrator IDs->Lack of accountability;Terminated users active->Unauthorized access;Unapproved emergency changes->Unauthorized or erroneous report logic;Failed interface reconciliation->Incomplete or inaccurate data transfer", "derivationNotes": "Explanation maps each exception to its primary risk" },
+      { "itemId": "CBQ-E2-Q6", "type": "select", "derived": "It may prevent investigation of issues discovered after logs are overwritten", "derivationNotes": "Explanation: 14-day retention destroys evidence needed for retrospective investigation" }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "bank": "case_pack_1_corrected.js",
+    "items": [
+      { "itemId": "CBQ2-F1-Q1", "type": "select", "derived": "Descriptive analytics — reporting on historical performance", "derivationNotes": "Explanation: current Excel-based historical reporting is descriptive (Level 1)" },
+      { "itemId": "CBQ2-F1-Q2", "type": "select", "derived": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers", "derivationNotes": "Explanation: real-time drill-down capability distinguishes the dashboard as diagnostic" },
+      { "itemId": "CBQ2-F1-Q3", "type": "select", "derived": "Predictive analytics — using historical data and models to forecast future outcomes", "derivationNotes": "Explanation: forecasting next quarter's revenue is predictive" },
+      { "itemId": "CBQ2-F1-Q4", "type": "select", "derived": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints", "derivationNotes": "Explanation: recommending optimal reorder quantities and routes is prescriptive" },
+      { "itemId": "CBQ2-F1-Q5", "type": "select", "derived": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments", "derivationNotes": "Explanation: data governance is the foundational prerequisite for analytics maturity" }
+    ]
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ2-A3-Q1", "type": "numeric", "derived": 363636, "derivationNotes": "500,000 x (400,000/550,000) = 363,636.36 rounds to 363,636" },
+      { "itemId": "CBQ2-A3-Q2", "type": "numeric", "derived": 43000, "derivationNotes": "800,000x1% + 300,000x5% + 100,000x20% = 8,000+15,000+20,000" },
+      { "itemId": "CBQ2-A3-Q3", "type": "multi", "derived": "1,2", "derivationNotes": "ASC 606-10-25-19: distinct if customer can benefit on its own AND separately identifiable; delivery/payment are consequences, not criteria" },
+      { "itemId": "CBQ2-A3-Q4", "type": "select", "derived": "$48,000", "derivationNotes": "43,000 required credit + 5,000 existing debit = 48,000" },
+      { "itemId": "CBQ2-A3-Q5", "type": "fill", "derived": "balance sheet", "derivationNotes": "Explanation: aging method focuses on desired ending ADA balance — balance sheet approach" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-A1-Q1", "type": "numeric", "derived": 231660, "derivationNotes": "55,000 x 4.212 (PV ordinary annuity 6%, 5 periods)" },
+      { "itemId": "CBQ3-A1-Q2", "type": "select", "derived": "Finance lease", "derivationNotes": "PV 231,660 > 90% x 250,000 = 225,000 (substantially all of fair value)" },
+      { "itemId": "CBQ3-A1-Q3", "type": "fill", "derived": "right-of-use", "derivationNotes": "Explanation: lessee records a right-of-use asset and lease liability" },
+      { "itemId": "CBQ3-A1-Q4", "type": "numeric", "derived": 190560, "derivationNotes": "Interest 231,660x6% = 13,900; principal 55,000-13,900 = 41,100; 231,660-41,100 = 190,560" },
+      { "itemId": "CBQ3-A1-Q5", "type": "multi", "derived": "1,2,3", "derivationNotes": "Choice 4 (standard, easily replaced asset) is not a finance lease criterion; 1/2/3 are ASC 842-10-25-2 criteria" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-A1-Q1", "type": "numeric", "derived": 400000, "derivationNotes": "Goodwill = 2,500,000 purchase price - 2,100,000 FV of identifiable net assets" },
+      { "itemId": "CBQ4-A1-Q2", "type": "numeric", "derived": 150000, "derivationNotes": "Carrying 2,400,000 > FV 2,250,000; impairment = 150,000 (within 400,000 goodwill balance)" },
+      { "itemId": "CBQ4-A1-Q3", "type": "match", "derived": null, "derivationNotes": "SKIPPED per task instruction — known empty-string array artifact on this item" },
+      { "itemId": "CBQ4-A1-Q4", "type": "multi", "derived": "1,2", "derivationNotes": "Successful legal defense costs and registration fees capitalized; R&D expensed under ASC 730; admin overhead is period cost" },
+      { "itemId": "CBQ4-A1-Q5", "type": "select", "derived": "No impairment loss is recognized, and no further testing is required", "derivationNotes": "Explanation: under simplified one-step test, FV > carrying amount means no impairment" }
+    ]
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ2-B2-Q1", "type": "numeric", "derived": 540000, "derivationNotes": "Cash sales 600,000x20%=120,000; Jan credit 480,000x50%=240,000; Dec credit 400,000x45%=180,000; total 540,000" },
+      { "itemId": "CBQ2-B2-Q2", "type": "numeric", "derived": 675000, "derivationNotes": "COGS 600,000x65%=390,000 + opex 175,000 + equipment 110,000; depreciation 18,000 excluded as non-cash" },
+      { "itemId": "CBQ2-B2-Q3", "type": "numeric", "derived": -90000, "derivationNotes": "45,000 + 540,000 - 675,000 = -90,000" },
+      { "itemId": "CBQ2-B2-Q4", "type": "select", "derived": "$125,000", "derivationNotes": "Deficit 90,000 + minimum balance 35,000 = 125,000" },
+      { "itemId": "CBQ2-B2-Q5", "type": "multi", "derived": "1,3,4", "derivationNotes": "Choice 2 false: without equipment purchase cash would be 20,000, still 15,000 below minimum" },
+      { "itemId": "CBQ2-B2-Q6", "type": "match", "derived": "Cash deficit exceeds $100,000 in January->Negotiate extended payment terms with suppliers;December credit collections arrive slower than budgeted->Increase reliance on the line of credit in January;Equipment supplier offers a January discount but payment is due in February->Defer purchase to February, increasing January cash available;Actual January sales exceed budget by 15%->Increase both collections and COGS projections in the forecast", "derivationNotes": "Explanation maps each risk to its management response" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-B2-Q1", "type": "numeric", "derived": 264000, "derivationNotes": "8,000 units x 1.5 DLH x $22" },
+      { "itemId": "CBQ3-B2-Q2", "type": "numeric", "derived": 276000, "derivationNotes": "VOH 12,000x8=96,000 + FOH 180,000" },
+      { "itemId": "CBQ3-B2-Q3", "type": "numeric", "derived": 20, "derivationNotes": "Variable 8 + fixed 180,000/15,000=12; total 20/DLH" },
+      { "itemId": "CBQ3-B2-Q4", "type": "select", "derived": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases", "derivationNotes": "Explanation: fixed overhead is a capacity cost within the relevant range" },
+      { "itemId": "CBQ3-B2-Q5", "type": "multi", "derived": "1,2,3", "derivationNotes": "Choice 4 false: variable OH is always included in the predetermined rate" },
+      { "itemId": "CBQ3-B2-Q6", "type": "match", "derived": "Direct labor budget->Units produced x DLH per unit x Wage rate;Variable overhead budget->Actual DLH x Variable OH rate per DLH;Fixed overhead budget->Remains constant within the relevant range;Applied manufacturing overhead->Predetermined OH rate x Actual activity", "derivationNotes": "Explanation matches each budget component to its formula" }
+    ]
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ2-C3-Q1", "type": "select", "derived": "16.0%", "derivationNotes": "ROI = 480,000/3,000,000 = 16.0% (total assets, not net assets)" },
+      { "itemId": "CBQ2-C3-Q2", "type": "select", "derived": "$120,000", "derivationNotes": "RI = 480,000 - (12% x 3,000,000) = 480,000 - 360,000" },
+      { "itemId": "CBQ2-C3-Q3", "type": "select", "derived": "16.0%", "derivationNotes": "New ROI = (480,000+80,000)/(3,000,000+500,000) = 560,000/3,500,000 = 16.0%" },
+      { "itemId": "CBQ2-C3-Q4", "type": "select", "derived": "Yes, because residual income will increase by $20,000", "derivationNotes": "Incremental RI = 80,000 - (12% x 500,000) = 80,000 - 60,000 = 20,000" },
+      { "itemId": "CBQ2-C3-Q5", "type": "select", "derived": "Division A", "derivationNotes": "RI: A=120,000; B=350,000-300,000=50,000; C=600,000-600,000=0; A highest" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-C3-Q1", "type": "select", "derived": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance", "derivationNotes": "CM/unit = 75-20-15-10-5 = 25; (12,000-10,000) x 25 = 50,000 F" },
+      { "itemId": "CBQ3-C3-Q2", "type": "select", "derived": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)", "derivationNotes": "252,000 - (12,000x20) = 12,000 U" },
+      { "itemId": "CBQ3-C3-Q3", "type": "multi", "derived": "1,3,4,5", "derivationNotes": "Choice 2 false: DL flexible budget 12,000x15=180,000 vs actual 168,000 = 12,000 FAVORABLE, not unfavorable" },
+      { "itemId": "CBQ3-C3-Q4", "type": "match", "derived": "Difference between actual revenue and flexible budget revenue at 12,000 units->Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U;Difference between flexible budget variable cost at 12,000 units and actual variable cost->Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A;Difference between static budget operating income and flexible budget operating income->Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F;Difference between actual fixed overhead and budgeted fixed overhead->Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U", "derivationNotes": "Explanation maps each variance description to its formula" },
+      { "itemId": "CBQ3-C3-Q5", "type": "select", "derived": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control", "derivationNotes": "Explanation: static budget would penalize manager for volume outside their control" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-C1-Q1", "type": "numeric", "derived": 1600, "derivationNotes": "Actual VOH 31,000 - (9,800 x 3 = 29,400) = 1,600 U" },
+      { "itemId": "CBQ4-C1-Q2", "type": "numeric", "derived": 600, "derivationNotes": "(9,800 - 9,600) x 3 = 200 x 3 = 600 U (SQ = 4,800x2 = 9,600)" },
+      { "itemId": "CBQ4-C1-Q3", "type": "numeric", "derived": 2000, "derivationNotes": "(10,000 - 9,600) x 5 = 400 x 5 = 2,000 U" },
+      { "itemId": "CBQ4-C1-Q4", "type": "numeric", "derived": 2000, "derivationNotes": "Actual FOH 52,000 - budgeted 50,000 = 2,000 U" },
+      { "itemId": "CBQ4-C1-Q5", "type": "select", "derived": "Fixed overhead production-volume variance", "derivationNotes": "Explanation: volume variance reflects capacity decisions, not shop-floor control" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-E1-Q1", "type": "select", "derived": "Control Environment — management's philosophy and operating style set the tone for control consciousness", "derivationNotes": "Explanation: root cause is management attitude — a control environment issue" },
+      { "itemId": "CBQ4-E1-Q2", "type": "select", "derived": "The organization identifies and assesses changes that could significantly impact the system of internal control", "derivationNotes": "Explanation: new contracts are a significant change requiring risk assessment (COSO principle 9)" },
+      { "itemId": "CBQ4-E1-Q3", "type": "select", "derived": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks", "derivationNotes": "Explanation: strong controls in one area do not compensate for missing controls elsewhere" },
+      { "itemId": "CBQ4-E1-Q4", "type": "select", "derived": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system", "derivationNotes": "Explanation: whistleblower hotline and ad hoc communication violate Information and Communication principles" },
+      { "itemId": "CBQ4-E1-Q5", "type": "select", "derived": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness", "derivationNotes": "Explanation: relying solely on point-in-time audits means deficiencies go undetected for months" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "bank": "case_pack_2_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-F1-Q1", "type": "match", "derived": "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser->SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access;The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure->PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data;The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves->IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure;The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise->On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data", "derivationNotes": "Explanation matches each requirement to the cloud service model" },
+      { "itemId": "CBQ4-F1-Q2", "type": "select", "derived": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case", "derivationNotes": "Steady-state savings 985,000-525,000=460,000; one-time costs 150,000+40,000=190,000; payback 190,000/460,000 = 0.41 yr" },
+      { "itemId": "CBQ4-F1-Q3", "type": "multi", "derived": "1,2,4,5", "derivationNotes": "Choice 3 false: internal controls are not eliminated — they shift to vendor management" },
+      { "itemId": "CBQ4-F1-Q4", "type": "select", "derived": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract", "derivationNotes": "Explanation: under ASC 350-40/ASU 2018-15 treatment depends on software license vs service contract" },
+      { "itemId": "CBQ4-F1-Q5", "type": "match", "derived": "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center->Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs;MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure->Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads;MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud->Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance;MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process->Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment", "derivationNotes": "Explanation matches each deployment scenario to the deployment model" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-A2-Q1", "type": "numeric", "derived": 510000, "derivationNotes": "CI = NI 500,000 + AFS 40,000 - translation 30,000; trading gains 15,000 already in NI" },
+      { "itemId": "CBQ5-A2-Q2", "type": "multi", "derived": "1,2,3", "derivationNotes": "Trading securities flow through NI; dividends reduce retained earnings — neither is OCI" },
+      { "itemId": "CBQ5-A2-Q3", "type": "numeric", "derived": 150000, "derivationNotes": "10,000 shares x $15 = 150,000 contra-equity reduction" },
+      { "itemId": "CBQ5-A2-Q4", "type": "select", "derived": "The total reduction to equity would be exactly the same", "derivationNotes": "Explanation: both methods remove the cash paid; only sub-account distribution differs" },
+      { "itemId": "CBQ5-A2-Q5", "type": "fill", "derived": "owners", "derivationNotes": "Explanation: ASC 220-10-20 — comprehensive income excludes owner investments and distributions" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-B2-Q1", "type": "numeric", "derived": 40000, "derivationNotes": "1,000,000 x 8% x 6/12 = 40,000" },
+      { "itemId": "CBQ5-B2-Q2", "type": "numeric", "derived": 922768, "derivationNotes": "PV principal 1,000,000x0.6139=613,900 + PV annuity 40,000x7.7217=308,868; total 922,768" },
+      { "itemId": "CBQ5-B2-Q3", "type": "numeric", "derived": 46138, "derivationNotes": "922,768 x 5% = 46,138.40 rounds to 46,138" },
+      { "itemId": "CBQ5-B2-Q4", "type": "numeric", "derived": 928906, "derivationNotes": "Discount amortization 46,138-40,000=6,138; 922,768+6,138=928,906" },
+      { "itemId": "CBQ5-B2-Q5", "type": "select", "derived": "Deducted from the carrying value of the bond liability", "derivationNotes": "Explanation: under ASC 470/ASU 2015-03 issue costs are a direct deduction from the liability" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-B1-Q1", "type": "numeric", "derived": 4, "derivationNotes": "(42,000-30,000)/(8,000-5,000) = 12,000/3,000 = 4.00" },
+      { "itemId": "CBQ4-B1-Q2", "type": "numeric", "derived": 10000, "derivationNotes": "42,000 - (4 x 8,000) = 42,000 - 32,000" },
+      { "itemId": "CBQ4-B1-Q3", "type": "numeric", "derived": 38300, "derivationNotes": "Regression Y = 11,000 + 3.90x = 11,000 + 27,300" },
+      { "itemId": "CBQ4-B1-Q4", "type": "select", "derived": "85% of the variation in total cost is explained by machine hours", "derivationNotes": "Explanation: R-squared is the proportion of variance explained" },
+      { "itemId": "CBQ4-B1-Q5", "type": "multi", "derived": "1,2", "derivationNotes": "High-Low disadvantages: uses only two data points and is outlier-sensitive" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-B2-Q1", "type": "numeric", "derived": 170000, "derivationNotes": "120,000 + 650,000 - 600,000" },
+      { "itemId": "CBQ4-B2-Q2", "type": "numeric", "derived": 300000, "derivationNotes": "1,000,000 x (28% + 2%) = 300,000 gross A/R" },
+      { "itemId": "CBQ4-B2-Q3", "type": "numeric", "derived": 130000, "derivationNotes": "650,000 x 20% = 130,000" },
+      { "itemId": "CBQ4-B2-Q4", "type": "numeric", "derived": 31500, "derivationNotes": "100,000+200,000+700,000-100,000-520,000-140,000-100,000-20,000-15,000-73,500 = 31,500 (tax = (1,000,000-600,000-140,000-15,000)x30% = 73,500)" },
+      { "itemId": "CBQ4-B2-Q5", "type": "select", "derived": "Ending inventory balance", "derivationNotes": "Explanation: inventory is determined by purchases and COGS, not collection patterns" },
+      { "itemId": "CBQ4-B2-Q6", "type": "match", "derived": "Cash->Cash budget and collection/disbursement timing;Accounts receivable->Sales budget and credit collection policy;Inventory->Cost of goods sold budget and purchases budget;Accounts payable->Purchases budget and supplier payment terms", "derivationNotes": "Explanation matches each balance sheet line item to its driver" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-D3-Q1", "type": "select", "derived": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities", "derivationNotes": "Explanation: practical capacity treats unused capacity cost as period cost" },
+      { "itemId": "CBQ4-D3-Q2", "type": "select", "derived": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance", "derivationNotes": "Verified: (38,000-28,000)x50=500,000 U vs (30,000-28,000)x63.33=126,667 U; matches Exhibit 2" },
+      { "itemId": "CBQ4-D3-Q3", "type": "multi", "derived": "3", "derivationNotes": "DL-047-SUSPECT: keyless derivation yields only choice 3. Choice 1 as written is FALSE — per Exhibit 2, theoretical capacity produces the LOWEST fixed OH rate ($38/unit vs $63.33 master-budget), not the highest; its 'largest unfavorable volume variance' clause is true but the rate claim is inverted. Choices 2/4 are inverted (master-budget gives HIGHEST product cost and INCREASES inventory valuation); choice 5 false (GAAP does not mandate practical capacity exclusively). Stored key (1,3) relies on the defective choice 1" },
+      { "itemId": "CBQ4-D3-Q4", "type": "match", "derived": "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle->Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap;Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000->Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint;Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M->Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput;All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle->Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle", "derivationNotes": "Explanation matches each department situation to a capacity strategy" },
+      { "itemId": "CBQ4-D3-Q5", "type": "select", "derived": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency", "derivationNotes": "Explanation: sound accounting plus transparent disclosure balances board concerns" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-E2-Q1", "type": "match", "derived": "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order->Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection;A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table->Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found;An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits->Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid;An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit->Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded", "derivationNotes": "Explanation matches each scenario to the input control that addresses it" },
+      { "itemId": "CBQ4-E2-Q2", "type": "select", "derived": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control", "derivationNotes": "Explanation: 47 overrides in 6 months for one vendor is a control breakdown" },
+      { "itemId": "CBQ4-E2-Q3", "type": "multi", "derived": "1,2,3", "derivationNotes": "Weekly payment report review is an output control; login screen is an access control — neither is a processing control" },
+      { "itemId": "CBQ4-E2-Q4", "type": "match", "derived": "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%->Input control — quantity reasonableness check prevents receiving errors from entering the system;The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches->Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing;The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days->Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies;The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices->Access control — role-based security prevents users from performing incompatible functions", "derivationNotes": "Explanation classifies each control description into input/processing/output/access" },
+      { "itemId": "CBQ4-E2-Q5", "type": "select", "derived": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match", "derivationNotes": "Explanation: automation does not eliminate the need for segregation of duties" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-E3-Q1", "type": "select", "derived": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation", "derivationNotes": "Explanation: narrow facilitating-payment exception applies to routine customs clearance" },
+      { "itemId": "CBQ4-E3-Q2", "type": "select", "derived": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments", "derivationNotes": "Explanation: third-party intermediary with red flags is a common FCPA violation mechanism" },
+      { "itemId": "CBQ4-E3-Q3", "type": "multi", "derived": "1,2,4,5", "derivationNotes": "Choice 3 (ignore donation as cultural practice) is incorrect — cultural practices do not override FCPA" },
+      { "itemId": "CBQ4-E3-Q4", "type": "match", "derived": "Customs expediting fee — $500 paid to customs official; recorded as expense->Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring;Agent commission — 15% via shell company; agent related to procurement minister->Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ;Charitable donation request — $50,000 to minister's personal foundation->Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options;Luxury client entertainment — $1,200/person including spouses for government clients->Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper", "derivationNotes": "Explanation matches each scenario to its compliance response" },
+      { "itemId": "CBQ4-E3-Q5", "type": "select", "derived": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books", "derivationNotes": "Explanation: FCPA accounting provisions apply to all SEC registrants regardless of separate controls" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-E1-Q1", "type": "match", "derived": "Attribute Standards->Define the characteristics and capabilities required for internal audit activities and individuals;Performance Standards->Describe the nature of internal audit work and quality criteria for measuring performance;Implementation Standards->Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting", "derivationNotes": "Explanation maps each IIA standard category to its guidance type" },
+      { "itemId": "CBQ5-E1-Q2", "type": "select", "derived": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there", "derivationNotes": "Explanation: cooling-off period is the appropriate safeguard for the familiarity threat" },
+      { "itemId": "CBQ5-E1-Q3", "type": "multi", "derived": "1,2,3", "derivationNotes": "Annual review duration not mandated (choice 4); methodology belongs in procedures (choice 5)" },
+      { "itemId": "CBQ5-E1-Q4", "type": "select", "derived": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters", "derivationNotes": "Explanation: IIA 1110 requires functional reporting to the board; reporting to the CFO impairs independence" },
+      { "itemId": "CBQ5-E1-Q5", "type": "multi", "derived": "1,2,3", "derivationNotes": "Individual auditor metrics (choice 4) and benchmarking (choice 5) are not mandatory QAIP components" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-E2-Q1", "type": "match", "derived": "Phishing email->The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation;Remote Access Trojan (RAT)->The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement;Ransomware->The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses;DDoS (distraction attack)->A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment", "derivationNotes": "Explanation maps each threat to its role in the kill chain" },
+      { "itemId": "CBQ5-E2-Q2", "type": "select", "derived": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators", "derivationNotes": "Explanation: the human control failure enabled the attack to begin" },
+      { "itemId": "CBQ5-E2-Q3", "type": "numeric", "derived": 1218000, "derivationNotes": "EL without MFA 18.2M x 12% = 2,184,000; with MFA 18.2M x 3% = 546,000; net = 2,184,000-546,000-420,000 = 1,218,000" },
+      { "itemId": "CBQ5-E2-Q4", "type": "multi", "derived": "1,2,3,4", "derivationNotes": "Post-incident reports (choice 5) do not prevent recurrence; internet whitelist (choice 6) is impractical for healthcare" },
+      { "itemId": "CBQ5-E2-Q5", "type": "select", "derived": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy", "derivationNotes": "Explanation: structured decision-making with stakeholders; prevention preferred" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-E3-Q1", "type": "select", "derived": "€32,000,000", "derivationNotes": "Art. 83(5): higher of €20M or 4% x €800M global turnover = €32M" },
+      { "itemId": "CBQ5-E3-Q2", "type": "select", "derived": "€1,440,000", "derivationNotes": "EV losses 0.30x8M + 0.45x1.2M = 2,940,000; minus program cost 1,500,000" },
+      { "itemId": "CBQ5-E3-Q3", "type": "select", "derived": "72 hours", "derivationNotes": "Explanation: GDPR Art. 33(1) — notify supervisory authority within 72 hours" },
+      { "itemId": "CBQ5-E3-Q4", "type": "select", "derived": "Right to erasure (right to be forgotten)", "derivationNotes": "Explanation: GDPR Art. 17 — deletion request" },
+      { "itemId": "CBQ5-E3-Q5", "type": "select", "derived": "Standard Contractual Clauses (SCCs)", "derivationNotes": "Explanation: SCCs are the standard mechanism for routine B2B transfers post-Schrems II" }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ4-F2-Q1", "type": "select", "derived": "Supervised learning", "derivationNotes": "Explanation: labeled historical data with known outcomes = supervised regression" },
+      { "itemId": "CBQ4-F2-Q2", "type": "match", "derived": "Demand forecasting->Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand;Fraud detection->Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent;Customer segmentation->Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories;Anomaly detection->Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels", "derivationNotes": "Explanation maps each application to its learning approach" },
+      { "itemId": "CBQ4-F2-Q3", "type": "multi", "derived": "1,2,3", "derivationNotes": "Choice 4 (simpler model) reduces overfitting rather than contributing to it" },
+      { "itemId": "CBQ4-F2-Q4", "type": "select", "derived": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates", "derivationNotes": "Explanation: ML detects novel patterns that rule-based systems miss" },
+      { "itemId": "CBQ4-F2-Q5", "type": "multi", "derived": "1,2,3", "derivationNotes": "Choice 4 false: reorder quantities require demand forecasting, not segmentation" }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ5-F2-Q1", "type": "match", "derived": "Rule-based processing->RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment;User interface interaction->RPA bots interact with applications through the same user interface as human users, requiring no system integration changes;Exception handling->Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member;Attended vs unattended mode->Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention", "derivationNotes": "Explanation matches each RPA characteristic to its description" },
+      { "itemId": "CBQ5-F2-Q2", "type": "select", "derived": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%", "derivationNotes": "Explanation: AP invoice processing is the classic RPA use case" },
+      { "itemId": "CBQ5-F2-Q3", "type": "numeric", "derived": 525000, "derivationNotes": "Benefits 620,000+85,000=705,000 - ongoing costs 180,000 = 525,000" },
+      { "itemId": "CBQ5-F2-Q4", "type": "multi", "derived": "1,2,3,4", "derivationNotes": "Complex loss reserve estimation (choice 5) requires actuarial judgment — unsuitable for RPA" },
+      { "itemId": "CBQ5-F2-Q5", "type": "select", "derived": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization", "derivationNotes": "Explanation: transaction-level SOD is the critical control for the bot service-account conflict" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-A3-Q1", "type": "select", "derived": "Two — equipment delivery and installation service", "derivationNotes": "Explanation: both are distinct; the rebate is variable consideration, not a performance obligation" },
+      { "itemId": "CBQ3-A3-Q2", "type": "numeric", "derived": 495238, "derivationNotes": "600,000 x (520,000/630,000) = 495,238.10; rebate excluded from transaction price per Q4 constraint (40% reversal probability, threshold unmet)" },
+      { "itemId": "CBQ3-A3-Q3", "type": "select", "derived": "On October 15 when the equipment is delivered to the hospital", "derivationNotes": "Explanation: equipment is a point-in-time obligation satisfied at delivery" },
+      { "itemId": "CBQ3-A3-Q4", "type": "select", "derived": "$0 — the rebate should be excluded until the threshold is met", "derivationNotes": "Explanation: 60% probability does not meet the probable threshold; constraint requires $0 inclusion" },
+      { "itemId": "CBQ3-A3-Q5", "type": "select", "derived": "As a separate contract because the additional goods are distinct and priced at standalone selling price", "derivationNotes": "Explanation: ASC 606-10-25-12 — distinct goods at standalone price = separate contract" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-A4-Q1", "type": "numeric", "derived": 228, "derivationNotes": "NRV = 240 - (240 x 5%) = 240 - 12" },
+      { "itemId": "CBQ3-A4-Q2", "type": "numeric", "derived": 0, "derivationNotes": "Laptops 680<807.50; tablets 220<228; accessories 35<39.90 — cost below NRV for all lines" },
+      { "itemId": "CBQ3-A4-Q3", "type": "select", "derived": "Record no journal entry because cost does not exceed NRV for any product line", "derivationNotes": "Explanation: no impairment exists; the $12,000 write-down choices assume a defect not in the data" },
+      { "itemId": "CBQ3-A4-Q4", "type": "select", "derived": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line", "derivationNotes": "Explanation: no journal entry means no effect on current assets or COGS" },
+      { "itemId": "CBQ3-A4-Q5", "type": "select", "derived": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable", "derivationNotes": "Explanation: trend is 15,000 prior year to 0 current year" }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "bank": "case_pack_3_corrected.js",
+    "items": [
+      { "itemId": "CBQ3-C4-Q1", "type": "numeric", "derived": -21600, "derivationNotes": "(42-40) x 10,800 = 21,600 unfavorable, shown as negative per prompt convention" },
+      { "itemId": "CBQ3-C4-Q2", "type": "numeric", "derived": -32000, "derivationNotes": "(10,800 - 10,000) x 40 = 800 x 40 = 32,000 unfavorable; SQ = 4,000 x 2.5 = 10,000 lbs" },
+      { "itemId": "CBQ3-C4-Q3", "type": "numeric", "derived": -5600, "derivationNotes": "(3,400 - 3,200) x 28 = 200 x 28 = 5,600 unfavorable; SH = 4,000 x 0.8 = 3,200 hrs" },
+      { "itemId": "CBQ3-C4-Q4", "type": "select", "derived": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased", "derivationNotes": "Explanation: classic price-quality trade-off causing cascading variances" },
+      { "itemId": "CBQ3-C4-Q5", "type": "select", "derived": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production", "derivationNotes": "Explanation: management by exception — material and controllable (32,000 U is the largest)" }
+    ]
+  }
+  ]
+}

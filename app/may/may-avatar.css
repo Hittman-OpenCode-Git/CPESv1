@@ -1,0 +1,173 @@
+/* =========================================================================
+   may-avatar.css
+   W6 (token may_v2_1_may_avatar) — May ledger mascot.
+
+   States: idle | speaking | pointing-to-explanation | reduced (T6 / DL-060).
+   HS-10: all motion is gated by (a) prefers-reduced-motion and
+   (b) a manual "Disable animations" toggle (.anim-disabled / [data-motion="off"]).
+   Only .may-animate-boundary (set for one animation frame by JS at a
+   renderView() boundary) actually plays transition/keyframe animation;
+   outside that window state changes are instantaneous (no motion), which is
+   what keeps May from animating while the exam timer is running.
+
+   Scoping: every selector is namespaced under .may-companion-avatar so
+   that the existing code base `.may-avatar` (small 44x44 text avatar at
+   styles.css:2789 and may-core.js:4639/4875) is NOT affected. The SVG
+   root keeps its `may-avatar may-idle` class set (consumed by MayAvatar
+   JS); only the CSS rules that would otherwise collide are scoped here.
+   ========================================================================= */
+
+.may-companion-avatar .may-avatar {
+  width: 160px;
+  height: 192px;
+  overflow: visible;
+  transform-origin: center bottom;
+}
+
+/* ---------------------------------------------------------------------
+   Default: NO animation runs unless explicitly enabled by JS adding
+   .may-animate-boundary AND the user has not disabled motion.
+   This satisfies "animate on renderView() boundaries, not during the
+   exam timer" -- ticking the timer never adds .may-animate-boundary.
+--------------------------------------------------------------------- */
+
+.may-companion-avatar .may-avatar * {
+  animation: none;
+}
+
+.may-companion-avatar .pupil-group,
+.may-companion-avatar #eye-left-lid,
+.may-companion-avatar #eye-right-lid,
+.may-companion-avatar #mouth-group,
+.may-companion-avatar #may-arm-rotate {
+  transition: none;
+}
+
+/* ======================= BASE POSES (static, always safe) ============= */
+
+/* idle: neutral, closed-ish resting mouth, arm down */
+.may-companion-avatar .may-idle #mouth { d: path("M-16 0 Q0 10 16 0 Q0 4 -16 0 Z"); }
+.may-companion-avatar .may-idle #may-arm-rotate { transform: rotate(0deg); }
+.may-companion-avatar .may-idle .pupil-group { transform: translate(0,0); }
+
+/* speaking: mouth open pose, brows slightly raised */
+.may-companion-avatar .may-speaking #mouth-group { transform: scaleY(1); }
+.may-companion-avatar .may-speaking #brow-left { transform: translateY(-1px); }
+.may-companion-avatar .may-speaking #brow-right { transform: translateY(-1px); }
+
+/* pointing-to-explanation: arm raised toward panel, eyes look toward pointer */
+.may-companion-avatar .may-pointing #may-arm-rotate { transform: rotate(-38deg); }
+.may-companion-avatar .may-pointing .pupil-group { transform: translate(3px,-2px); }
+
+/* reduced (T6 degraded indicator DL-060): flattened, low-emphasis, static */
+.may-companion-avatar .may-reduced { filter: grayscale(55%) saturate(70%); opacity: 0.85; }
+.may-companion-avatar .may-reduced #dl060-badge { display: inline; }
+.may-companion-avatar .may-reduced #mouth { d: path("M-14 2 Q0 2 14 2 Z"); }
+.may-companion-avatar .may-reduced #may-arm-rotate { transform: rotate(0deg); }
+.may-companion-avatar .may-reduced .pupil-group { transform: translate(0,1px) scale(0.92); }
+
+.may-companion-avatar #dl060-badge { display: none; }
+
+/* ======================= MOTION (only during a boundary window) ======== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled) #eye-left-lid,
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled) #eye-right-lid {
+    animation: may-blink 4.8s ease-in-out infinite;
+  }
+
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-idle {
+    animation: may-sway 3.6s ease-in-out infinite;
+  }
+
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-speaking #mouth-group {
+    animation: may-talk 0.42s ease-in-out infinite;
+  }
+
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-speaking #brow-left,
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-speaking #brow-right {
+    animation: may-brow-bounce 1.6s ease-in-out infinite;
+  }
+
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-pointing #may-arm-rotate {
+    animation: may-point-swing 0.5s ease-out 1;
+  }
+
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-pointing .pupil-group {
+    animation: may-look 0.4s ease-out 1;
+  }
+
+  /* Reduced state gets at most a single, gentle badge pulse -- never
+     continuous motion, since it signals a degraded/low-emphasis mode. */
+  .may-companion-avatar .may-avatar.may-animate-boundary:not(.anim-disabled).may-reduced #dl060-badge {
+    animation: may-badge-pulse 0.6s ease-out 1;
+  }
+}
+
+/* Explicit escape hatches: both must fully kill motion regardless of state */
+.may-companion-avatar .may-avatar.anim-disabled,
+.may-companion-avatar .may-avatar.anim-disabled * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .may-companion-avatar .may-avatar,
+  .may-companion-avatar .may-avatar * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ======================= KEYFRAMES ====================================== */
+
+@keyframes may-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.08); }
+}
+
+@keyframes may-sway {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes may-talk {
+  0%, 100% { transform: scaleY(0.9); }
+  50% { transform: scaleY(1.25); }
+}
+
+@keyframes may-brow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5px); }
+}
+
+@keyframes may-point-swing {
+  0% { transform: rotate(0deg); }
+  60% { transform: rotate(-44deg); }
+  100% { transform: rotate(-38deg); }
+}
+
+@keyframes may-look {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(3px,-2px); }
+}
+
+@keyframes may-badge-pulse {
+  0% { opacity: 0.4; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ======================= Disable-animations control ==================== */
+
+.may-companion-avatar .may-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 14px/1.3 system-ui, sans-serif;
+  margin-top: 8px;
+}
+
+.may-companion-avatar .may-toggle-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}

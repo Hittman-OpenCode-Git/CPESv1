@@ -1,0 +1,24 @@
+{
+  "total": 442,
+  "screens": {
+    "B": 335,
+    "C": 96,
+    "B-num": 11
+  },
+  "severities": {
+    "weak": 280,
+    "FLAG": 100,
+    "info": 62
+  },
+  "states": {
+    "unknown": 442
+  },
+  "generated": "2026-09-25T04:57:45.539Z",
+  "remediation_plan": {
+    "batch_1_category": "C:SHORT",
+    "batch_2_category": "B:UNSUPPORTED-CORRECT",
+    "batch_3_category": "B:EXTRA-REFUTED",
+    "batch_4_category": "B:INVERSION (calibration FPs)",
+    "batch_5_category": "B:DISJOINT + B-num"
+  }
+}

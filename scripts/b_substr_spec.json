@@ -1,0 +1,14 @@
+[
+  {"qid":"P2-B-311","find":"Choice B narrows WACC to the cost of common equity.","replace":"Choice A narrows WACC to the cost of common equity."},
+  {"qid":"P2-B-319","find":"Choice C is a maximally conservative posture, not an aggressive one.","replace":"Choice A is a maximally conservative posture, not an aggressive one."},
+  {"qid":"P2-B-330","find":"so option A \u2014 which concludes the incremental profit exceeds the incremental bad-debt and carrying costs \u2014 is the correct decision.","replace":"so option D \u2014 which concludes the incremental profit exceeds the incremental bad-debt and carrying costs \u2014 is the correct decision."},
+  {"qid":"P2-B-337","find":"currently trades at a premium","replace":"currently trades at a discount"},
+  {"qid":"P2-B-349","find":"Among the choices, A (9.90%) is closest but does not match the recomputed 9.36% \u2014 the correct WACC is 9.36% using the stated weights and costs.","replace":"Among the choices, B (9.90%) omits the tax adjustment and is too high; the after-tax WACC is 9.36%, matching choice D exactly."},
+  {"qid":"P2-B-366","find":"$1,127,451 \u2014 the receivable converted at spot and invested at the dollar rate","replace":"$1,157,188 \u2014 the receivable converted at spot and invested at the dollar rate"},
+  {"qid":"P2-B-366","find":"$1,127,451 \u2014 the present value of the receivable invested at the euro rate, converted at spot","replace":"$1,144,278 \u2014 the present value of the receivable invested at the euro rate, converted at spot"},
+  {"qid":"P2-B-366","find":"This differs from the listed choices \u2014 the closest is A ($1,127,451), which uses a slightly different rate convention; the correct money-market-hedge dollar amount is $1,144,278 on the stated rates.","replace":"Among the listed choices, D ($1,144,278) matches the recomputed hedge exactly; choice B ($1,150,000) reflects the un-discounted spot conversion, choice A ($1,157,188) adds a dollar-rate interest credit, and choice C ($1,104,000) discounts at the wrong rate."},
+  {"qid":"P2-B-386","find":"3.05% \u2014 ($1,500/$100,000) \u00d7 (360/180)","replace":"3.00% \u2014 ($1,500/$100,000) \u00d7 (360/180)"},
+  {"qid":"P2-B-386","find":"3.07% \u2014 ($1,500/$98,500) \u00d7 (360/180)","replace":"3.05% \u2014 ($1,500/$98,500) \u00d7 (360/180)"},
+  {"qid":"P2-B-399","find":"NAL is positive at approximately $51,000","replace":"NAL is positive at approximately $17,700"},
+  {"qid":"P2-B-399","find":"so leasing is cheaper by approximately $17,700 \u2014 Flash Manufacturing should lease (choice A is the closest correct decision, though the exact NAL is ~$17,700, not $51,000; the correct decision is to lease).","replace":"so leasing is cheaper by approximately $17,700 (NAL \u2248 +$17,714) \u2014 Flash Manufacturing should lease (choice A)."}
+]

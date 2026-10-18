@@ -1,0 +1,189 @@
+{
+  "grandTotals": {
+    "totalUniqueQIDs": 15,
+    "actionable": 1,
+    "ccSlotKeeps": 14
+  },
+  "bySection": [
+    {
+      "section": "A",
+      "itemCount": 514,
+      "totalChoiceHits": 2,
+      "totalUniqueQIDs": 2,
+      "actionableCount": 0,
+      "ccSlotCount": 2,
+      "choices": [
+        {
+          "qid": "P1B-A-161",
+          "pack": "pack_b",
+          "choice": "D",
+          "term": "never",
+          "isCC": true,
+          "context": "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying p"
+        },
+        {
+          "qid": "P1-AC-125",
+          "pack": "pack_c",
+          "choice": "C",
+          "term": "never",
+          "isCC": true,
+          "context": "$140,000 to APIC (equity transaction, no gain) with NCI established at $360,000 carrying — control retained means owner-"
+        }
+      ]
+    },
+    {
+      "section": "B",
+      "itemCount": 604,
+      "totalChoiceHits": 3,
+      "totalUniqueQIDs": 3,
+      "actionableCount": 0,
+      "ccSlotCount": 3,
+      "choices": [
+        {
+          "qid": "P1B-B-206",
+          "pack": "pack_b",
+          "choice": "B",
+          "term": "never",
+          "isCC": true,
+          "context": "$542,000 — $360,000 January + $150,000 December + $32,000 November; 2% never arrives"
+        },
+        {
+          "qid": "P1-BD-006",
+          "pack": "pack_d",
+          "choice": "B",
+          "term": "impossible",
+          "isCC": true,
+          "context": "Recommend the board defer recognition until the flexible budget cost assumptions are independently re-benchmarked agains"
+        },
+        {
+          "qid": "P1-BD-012",
+          "pack": "pack_d",
+          "choice": "B",
+          "term": "never",
+          "isCC": true,
+          "context": "The three findings share a common structural cause — incremental budgeting's core mechanism of starting each year's budg"
+        }
+      ]
+    },
+    {
+      "section": "C",
+      "itemCount": 643,
+      "totalChoiceHits": 1,
+      "totalUniqueQIDs": 1,
+      "actionableCount": 0,
+      "ccSlotCount": 1,
+      "choices": [
+        {
+          "qid": "P1-CD-119",
+          "pack": "pack_d",
+          "choice": "C",
+          "term": "never",
+          "isCC": true,
+          "context": "Between Learning and Process — 40% more training with zero cycle-efficiency gain means capability investment never reach"
+        }
+      ]
+    },
+    {
+      "section": "D",
+      "itemCount": 462,
+      "totalChoiceHits": 2,
+      "totalUniqueQIDs": 2,
+      "actionableCount": 0,
+      "ccSlotCount": 2,
+      "choices": [
+        {
+          "qid": "P1-DC-118",
+          "pack": "pack_c",
+          "choice": "B",
+          "term": "never",
+          "isCC": true,
+          "context": "No — forcing 35.42% on S requires COGS $38,750 (64.58%×$60,000) against $25,000 separable, implying $13,750 joint; posit"
+        },
+        {
+          "qid": "P1-DD-076",
+          "pack": "pack_d",
+          "choice": "A",
+          "term": "impossible",
+          "isCC": true,
+          "context": "Exclude Q3 (strike); VC $4.00/unit, FC $42,000 — naive high-low gives −$3.67, an impossible negative rate proving contam"
+        }
+      ]
+    },
+    {
+      "section": "E",
+      "itemCount": 464,
+      "totalChoiceHits": 2,
+      "totalUniqueQIDs": 2,
+      "actionableCount": 1,
+      "ccSlotCount": 1,
+      "choices": [
+        {
+          "qid": "P1B-E-150",
+          "pack": "pack_b",
+          "choice": "D",
+          "term": "always",
+          "isCC": false,
+          "context": "Management override of established controls is always possible"
+        },
+        {
+          "qid": "P1E-E-124",
+          "pack": "pack_e",
+          "choice": "C",
+          "term": "never",
+          "isCC": true,
+          "context": "Keep the mix — $120,000 buys 98% coverage with same-day detection on 70%; analytics is the highest-yield leg, and cuts m"
+        }
+      ]
+    },
+    {
+      "section": "F",
+      "itemCount": 383,
+      "totalChoiceHits": 5,
+      "totalUniqueQIDs": 5,
+      "actionableCount": 0,
+      "ccSlotCount": 5,
+      "choices": [
+        {
+          "qid": "P1B-F-138",
+          "pack": "pack_b",
+          "choice": "B",
+          "term": "never",
+          "isCC": true,
+          "context": "An access control failure — users were provisioned with system privileges substantially exceeding their business require"
+        },
+        {
+          "qid": "P1B-F-148",
+          "pack": "pack_b",
+          "choice": "C",
+          "term": "impossible",
+          "isCC": true,
+          "context": "Deficiency A (Bot Credential Sharing) — a single compromised bot runtime grants an attacker the ability to post journal "
+        },
+        {
+          "qid": "P1-FC-056",
+          "pack": "pack_c",
+          "choice": "A",
+          "term": "always",
+          "isCC": true,
+          "context": "A mandatory callback verification policy requiring the controller to confirm all wire transfer requests above $50,000 by"
+        },
+        {
+          "qid": "P1-FC-057",
+          "pack": "pack_c",
+          "choice": "A",
+          "term": "never",
+          "isCC": true,
+          "context": "The AP function is vulnerable because clerks process high transaction volumes under payment deadlines, are accustomed to"
+        },
+        {
+          "qid": "P1-FD-011",
+          "pack": "pack_d",
+          "choice": "D",
+          "term": "never",
+          "isCC": true,
+          "context": "The encryption was cryptographically sound but the key management architecture failed in multiple dimensions; the incide"
+        }
+      ]
+    }
+  ]
+}

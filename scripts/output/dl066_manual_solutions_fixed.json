@@ -1,0 +1,482 @@
+[
+  {
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "caseId": "CBQ-E1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-E1-Q1: 1,2,4",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E1-Q1",
+        "type": "multi",
+        "derived": "1,2,4",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1 observations map to choices: (1) AP clerk creates vendors AND enters invoices → independent vendor-master approval fixes segregation-of-duties gap; (2) three-way match disabled for service invoices → preventive three-way match before payment closes the gap; (4) duplicate-payment report not reviewed → documented review provides SOX evidence. Choice 3 (post-payment approval of high-dollar invoices only) is incorrect: reactive detective control after cash is disbursed, with a materiality loophole for smaller fraudulent payments."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "caseId": "CBQ-E2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-E2-Q1: 3.5",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E2-Q1",
+        "type": "numeric",
+        "derived": 3.5,
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: 12 of 340 users active more than 30 days after termination. Rate = 12/340 = 0.0352941 = 3.52941%. Rounded to one decimal place: 3.5%."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "caseId": "CBQ2-F1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ2-F1-Q1: Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-F1-Q1",
+        "type": "select",
+        "derived": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+        "keyHidden": true,
+        "derivationNotes": "The dashboard shows real-time sales by region, inventory turnover, and customer foot traffic with drill-down capability. Drill-down to identify patterns, correlations, and root causes is the defining characteristic of diagnostic analytics (answers 'why did it happen?'). Descriptive merely displays what happened; predictive requires statistical models; prescriptive requires optimization algorithms. 'Operational analytics' is not a standard analytics maturity level."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ3-A1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-A1-Q1: Finance lease; CBQ3-A1-Q3: 190560",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A1-Q1",
+        "type": "select",
+        "derived": "Finance lease",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1 provides PV annuity factor 4.212 (6%, 5 periods). Annual payment $55,000 × 4.212 = $231,660 PV of lease payments. Fair value $250,000 × 90% = $225,000. PV/fair value = $231,660/$250,000 = 92.66% > 90%, meeting the ASC 842 'substantially all' criterion → finance lease. Operating lease fails the PV test; short-term lease fails (5-year term > 12 months); sale-leaseback inapplicable (Meridian is lessee, not seller-lessee)."
+      },
+      {
+        "itemId": "CBQ3-A1-Q3",
+        "type": "numeric",
+        "derived": 190560,
+        "keyHidden": true,
+        "derivationNotes": "Beginning lease liability $231,660. Year 1 interest = $231,660 × 6% = $13,899.60. Principal reduction = $55,000 − $13,899.60 = $41,100.40. Ending balance = $231,660 − $41,100.40 = $190,559.60 ≈ $190,560 (rounded)."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ2-B2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ2-B2-Q4: 1,3,4",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-B2-Q4",
+        "type": "multi",
+        "derived": "1,3,4",
+        "keyHidden": true,
+        "derivationNotes": "Base case: Jan collections $540,000 (cash $120,000 + Jan credit $240,000 + Dec credit $180,000); disbursements $675,000 (inventory $390,000 + opex $175,000 + equipment $110,000); net −$135,000; ending cash −$90,000; borrowing $125,000. Statement 1 TRUE: 30% cash-sales → collections $570,000 (+$30,000), borrowing decreases. Statement 2 FALSE: without equipment, ending cash $20,000 < $35,000 minimum → still $15,000 borrowing. Statement 3 TRUE: Dec credit at 50% = $200,000 vs $180,000 at 45% → +$20,000. Statement 4 TRUE: $500,000 × 80% × 5% = $20,000 uncollectible."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ3-B2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-B2-Q4: 1,2,3",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-B2-Q4",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "Statement 1 TRUE: fixed OH per unit decreases as production volume increases (spreading effect — $180,000 fixed over more units). Statement 2 TRUE: predetermined overhead rate is calculated at the beginning of the budget period for timely product costing. Statement 3 TRUE: applied overhead = predetermined rate × actual activity. Statement 4 FALSE: variable manufacturing overhead IS included in the predetermined overhead rate (Exhibit 2 shows $8/DLH variable rate is part of the rate)."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ2-C3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ2-C3-Q1: $120,000",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-C3-Q1",
+        "type": "select",
+        "derived": "$120,000",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Division A operating income $480,000, total assets $3,000,000, required rate 12%. Residual income = $480,000 − (12% × $3,000,000) = $480,000 − $360,000 = $120,000."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ3-C3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-C3-Q1: Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget); CBQ3-C3-Q2: 1,3,4,5",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C3-Q1",
+        "type": "select",
+        "derived": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: standard DM $20/unit (2 lbs × $10/lb). Exhibit 1: actual DM $252,000 at 12,000 units. Flexible budget DM = 12,000 × $20 = $240,000. Variance = $252,000 − $240,000 = $12,000 unfavorable."
+      },
+      {
+        "itemId": "CBQ3-C3-Q2",
+        "type": "multi",
+        "derived": "1,3,4,5",
+        "keyHidden": true,
+        "derivationNotes": "Statement 1 TRUE: 12,000 actual vs 10,000 budgeted units → favorable volume variance contributes positively to operating income. Statement 2 FALSE: flexible budget DL = 12,000 × $15 = $180,000; actual DL $168,000 < $180,000 → variance is $12,000 FAVORABLE, not unfavorable. Statement 3 TRUE: ($75 − $73) × 12,000 = $24,000 unfavorable selling price variance. Statement 4 TRUE: actual FOH $185,000 vs budgeted $180,000 → $5,000 unfavorable. Statement 5 TRUE: flexible budget variable costs = $240,000 + $180,000 + $120,000 + $60,000 = $600,000; actual = $252,000 + $168,000 + $126,000 + $62,000 = $608,000 → $8,000 unfavorable."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ4-E1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-E1-Q1: The organization identifies and assesses changes that could significantly impact the system of internal control",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E1-Q1",
+        "type": "select",
+        "derived": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1 Risk Assessment row: 'Risk assessment does not specifically address financial reporting risks for new contracts.' New contracts represent a significant change that could introduce new financial reporting risks. COSO Principle 9 requires identifying and assessing changes that could significantly impact the system of internal control. The failure to assess risks of new contracts directly violates Principle 9."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "caseId": "CBQ4-F1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-F1-Q1: IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case; CBQ4-F1-Q2: 1,2,4,5",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F1-Q1",
+        "type": "select",
+        "derived": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: On-premise steady state $985,000; IaaS steady state $525,000 → annual savings $460,000. One-time migration = $150,000 + $40,000 = $190,000. Payback = $190,000 / $460,000 = 0.413 years ≈ 5 months. IaaS Year 1 total $715,000 < on-premise $985,000. SaaS steady state $645,000 (savings $340,000) but higher subscription costs. IT staff reduced from $280,000 to $100,000 (not eliminated). Facility costs eliminated ($120,000 → $0). Downtime reduced ($85,000 → $35,000)."
+      },
+      {
+        "itemId": "CBQ4-F1-Q2",
+        "type": "multi",
+        "derived": "1,2,4,5",
+        "keyHidden": true,
+        "derivationNotes": "Statement 1 TRUE: Exhibit 1 shows Data responsibility = Customer for all cloud models including IaaS/SaaS; MedTech retains data responsibility and must ensure provider controls meet FDA/HIPAA. Statement 2 TRUE: data residency requirements may restrict where patient data is stored. Statement 3 FALSE: internal controls are not eliminated — they shift from technology controls to vendor relationship controls (contract review, SLA monitoring, third-party audit oversight). Statement 4 TRUE: SOC 2 Type II reports are the standard mechanism for evaluating cloud provider controls. Statement 5 TRUE: vendor lock-in is a real risk — migrating between cloud providers is complex and costly."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ5-A2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-A2-Q1: 1,2,3",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-A2-Q1",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "Under US GAAP: (1) Unrealized gains/losses on AFS debt securities → OCI (ASC 320). (2) Foreign currency translation adjustments → OCI (ASC 830). (3) Pension plan unamortized prior service costs → OCI (ASC 715). (4) Unrealized gains/losses on trading securities → Net Income, not OCI. (5) Dividends paid → reduce retained earnings directly, bypass both income statement and OCI."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ4-B1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-B1-Q1: 10000; CBQ4-B1-Q4: 1,2",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B1-Q1",
+        "type": "numeric",
+        "derived": 10000,
+        "keyHidden": true,
+        "derivationNotes": "High-Low method: fixed cost = Total cost at high point − (Variable cost per hour × High hours) = $42,000 − ($4 × 8,000) = $42,000 − $32,000 = $10,000. The high activity level is 8,000 machine hours with total cost $42,000; variable cost is $4 per machine hour."
+      },
+      {
+        "itemId": "CBQ4-B1-Q4",
+        "type": "multi",
+        "derived": "1,2",
+        "keyHidden": true,
+        "derivationNotes": "Statement 1 TRUE: High-Low uses only two data points (highest and lowest activity), ignoring all intermediate data. Statement 2 TRUE: the method is heavily influenced by outliers — if the high or low point is atypical, the cost equation is skewed. Statement 3 FALSE: High-Low is simple to calculate by hand; it does not require statistical software (that is regression). Statement 4 FALSE: High-Low CAN separate fixed from variable costs — that is its primary purpose."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ4-B2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-B2-Q1: 300000",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B2-Q1",
+        "type": "numeric",
+        "derived": 300000,
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Q1 budgeted sales $1,000,000 (all on credit). Exhibit 2: 70% collected in quarter of sale, 28% collected in following quarter, 2% uncollectible. Ending gross A/R at March 31 = portion not yet collected = 28% + 2% = 30% × $1,000,000 = $300,000. The 2% uncollectible is still owed by customers and included in gross A/R (the allowance reduces it to net realizable value of $280,000)."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ4-D3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-D3-Q1: The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance; CBQ4-D3-Q2: 3",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-D3-Q1",
+        "type": "select",
+        "derived": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: Practical capacity (38,000 units) → volume variance $500,000 U. Master-budget capacity (30,000 units) → volume variance $126,667 U. Difference = $500,000 − $126,667 = $373,333 reduction. Lower denominator reduces the gap between denominator and actual production (28,000), producing a smaller unfavorable volume variance. (Note: the fixed MOH rate actually increases with lower denominator — $50.00 → $63.33 — but the volume variance still decreases because the denominator-to-actual gap shrinks.)"
+      },
+      {
+        "itemId": "CBQ4-D3-Q2",
+        "type": "multi",
+        "derived": "3",
+        "keyHidden": true,
+        "derivationNotes": "Statement 1 FALSE: theoretical capacity (50,000 units) produces the LOWEST fixed OH rate ($38.00/unit, not highest) because the denominator is largest. It does produce the largest unfavorable volume variance ($836,000 U), but the rate claim is wrong. Statement 2 FALSE: master-budget capacity (30,000 units) gives the HIGHEST rate ($63.33/unit) and therefore the HIGHEST product cost per unit, not lowest. Statement 3 TRUE: volume variance = (denominator − actual) × rate; when denominator = actual production, variance = 0. Statement 4 FALSE: switching from practical ($50.00 rate) to master-budget ($63.33 rate) INCREASES inventory valuation per unit because the overhead rate is higher. Statement 5 FALSE: GAAP does not require practical capacity; various denominator levels are allowed with consistent application and disclosure."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ4-E2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-E2-Q1: Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control; CBQ4-E2-Q2: 1,2,4",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E2-Q1",
+        "type": "select",
+        "derived": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+        "keyHidden": true,
+        "derivationNotes": "The three-way match (PO, receiving report, invoice) is a key control. Senior procurement managers overriding it 47 times in 6 months for one vendor indicates systematic management override — one of the most significant internal control weaknesses under COSO. Even well-designed controls are ineffective if routinely bypassed. The $100 threshold is reasonable; increasing it would weaken controls. Segregation of duties is a secondary concern, not the primary issue."
+      },
+      {
+        "itemId": "CBQ4-E2-Q2",
+        "type": "multi",
+        "derived": "1,2,4",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2 defines processing controls as ensuring data is processed accurately and completely, with examples: run-to-run totals, reasonableness checks, sequence checks. Choice 1 (run-to-run control comparing batch invoices to GL posting) = processing control. Choice 2 (sequence check on PO numbers) = processing control. Choice 4 (reasonableness check on inventory write-offs vs historical averages) = processing control. Choice 3 (weekly payment report reviewed by AP manager) = output control (reviewing processed output). Choice 5 (user login screen) = access control."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ5-E1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-E1-Q1: Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there; CBQ5-E1-Q2: 1,2,3; CBQ5-E1-Q4: 1,2,3",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E1-Q1",
+        "type": "select",
+        "derived": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: 'The charter prohibits internal auditors from assuming operational responsibilities or performing audit work in areas where they held operational roles within the past 12 months.' IIA Standard 1100 requires independence and objectivity. After performing consulting engagements for the lending department, internal auditors' objectivity is impaired for assurance work in that area. The most critical action is a cooling-off period prohibiting assurance engagements in the lending department."
+      },
+      {
+        "itemId": "CBQ5-E1-Q2",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1 (Attribute Standard 1000): charter must define purpose, authority, and responsibility. Exhibit 2: charter must establish CAE's functional reporting to the board and administrative reporting to the CEO, and define the scope of assurance and consulting services. Choice 4 (annual board review) is recommended but not mandated by IIA Standards. Choice 5 (specific audit methodology) belongs in procedures, not the charter."
+      },
+      {
+        "itemId": "CBQ5-E1-Q4",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "IIA Standard 1300 requires a QAIP covering all aspects of internal audit. Required components: (1) ongoing internal monitoring through project supervision, feedback, and metrics; (2) periodic internal self-assessments covering compliance with the Standards; (3) external assessments at least once every five years by an independent qualified reviewer. Choice 4 (annual performance metrics for compensation) is an HR matter, not QAIP. Choice 5 (quarterly benchmarking) is recommended best practice but not mandatory."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ5-E2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-E2-Q1: Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector and without training the employee had no basis to recognize the social engineering indicators; CBQ5-E2-Q3: 1,2,3,4",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E2-Q1",
+        "type": "select",
+        "derived": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector and without training the employee had no basis to recognize the social engineering indicators",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Phishing email = 'Initial access vector - bypassed human controls.' Exhibit 2: '(1) No mandatory cybersecurity awareness training for staff — phishing simulation had never been conducted.' The entire attack chain began with the phishing email. Without training, the employee had no basis to recognize social engineering indicators. MFA, EDR, and segmentation gaps contributed to severity but the root cause enabling the initial compromise was the human control failure."
+      },
+      {
+        "itemId": "CBQ5-E2-Q3",
+        "type": "multi",
+        "derived": "1,2,3,4",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2 gaps: (1) no awareness training → choice 1 addresses; (2) MFA not for internal systems → not directly addressed by choices; (3) EDR on only 40% → choice 2 addresses; (4) inadequate network segmentation → choice 3 addresses; (5) backups on same network segment → choice 4 addresses. Choice 5 (post-incident reports) does not prevent recurrence. Choice 6 (restrict all internet access) is impractical for healthcare operations requiring web access for research, drug databases, and telemedicine."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ5-E3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-E3-Q1: €1,440,000",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E3-Q1",
+        "type": "select",
+        "derived": "€1,440,000",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: GDPR fine probability 30% × €8,000,000 = €2,400,000. Remediation/litigation probability 45% × €1,200,000 = €540,000. Expected loss without program = €2,400,000 + €540,000 = €2,940,000. Program cost = €1,500,000. Expected net benefit = €2,940,000 − €1,500,000 = €1,440,000."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ4-F2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-F2-Q1: Demand forecasting->Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand;Fraud detection->Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent;Customer segmentation->Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories;Anomaly detection->Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels; CBQ4-F2-Q2: 1,2,3; CBQ4-F2-Q4: 1,2,3",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F2-Q1",
+        "type": "match",
+        "derived": "Demand forecasting->Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand;Fraud detection->Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent;Customer segmentation->Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories;Anomaly detection->Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Demand forecasting = supervised (labeled historical data with known outcomes, regression). Fraud detection = supervised (labeled transaction data with fraud flags, classification). Customer segmentation = unsupervised (unlabeled customer purchase history, clustering). Anomaly detection = unsupervised (unlabeled transaction data, anomaly score). Right items matched by learning type and method description."
+      },
+      {
+        "itemId": "CBQ4-F2-Q2",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: forecasting model 'shows significantly higher error rates on the 12 newest stores with limited historical data.' Overfitting occurs when a model learns noise rather than underlying patterns. Choice 1 TRUE: insufficient data for newer stores → model memorizes specific transactions. Choice 2 TRUE: model complexity exceeding sample size increases overfitting risk. Choice 3 TRUE: learning noise from limited records rather than general patterns is the definition of overfitting. Choice 4 FALSE: using a simpler model with fewer parameters causes underfitting, not overfitting."
+      },
+      {
+        "itemId": "CBQ4-F2-Q4",
+        "type": "multi",
+        "derived": "1,2,3",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 2: segmentation 'identified 12 distinct customer clusters, enabling targeted promotions that increased basket size by 15% in three test markets.' Choice 1 TRUE: targeting high-value clusters with personalized promotions increases basket size. Choice 2 TRUE: store layout and product placement based on cluster purchasing patterns is a valid merchandising application. Choice 3 TRUE: identifying underpenetrated segments for acquisition marketing is valid. Choice 4 FALSE: setting inventory reorder quantities and safety stock requires demand forecasting, not segmentation."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ5-F2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-F2-Q1: Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%; CBQ5-F2-Q3: 1,2,3,4",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-F2-Q1",
+        "type": "select",
+        "derived": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Invoice data entry to ERP — 3,750 invoices/month, Yes rule-based (vendor, PO, GL fields), Standardized PDF/EDI, 4% exceptions, RPA Suitable: Yes. It meets all RPA suitability criteria: high volume, rule-based, structured data, low exception rate. Bank reconciliation has higher volume (12,000) but higher exception rate (8%). Standard journal entry posting has lowest exception rate (1%) but lower volume (800). Complex loss reserve estimation and vendor contract negotiation are not rule-based."
+      },
+      {
+        "itemId": "CBQ5-F2-Q3",
+        "type": "multi",
+        "derived": "1,2,3,4",
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1 RPA Suitable = Yes for: Invoice data entry to ERP (3,750/month, rule-based, structured, 4%), Bank account reconciliation (12,000/month, rule-based, structured, 8%), Intercompany transaction matching (2,400/month, rule-based, structured, 6%), Standard journal entry posting (800/month, rule-based, structured, 1%). RPA Suitable = No for: Complex loss reserve estimation (actuarial judgment, 35% exceptions), Vendor contract negotiation (strategic judgment, unstructured), Financial statement note drafting (narrative judgment, unstructured)."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ3-A3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-A3-Q1: 480381",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A3-Q1",
+        "type": "numeric",
+        "derived": 480381,
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Equipment SSP $520,000, Installation SSP $110,000, Total SSP $630,000. Contract price $600,000. Exhibit 2: volume rebate = 5% × $600,000 × 60% probability = $18,000 (constrained variable consideration). Transaction price = $600,000 − $18,000 = $582,000. Equipment allocation = $582,000 × ($520,000/$630,000) = $582,000 × 0.8253968 = $480,380.95 → $480,381 (rounded)."
+      }
+    ]
+  },
+  {
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "caseId": "CBQ3-C4",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-C4-Q1: -32000",
+    "stampSession": "DL-066-manual-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C4-Q1",
+        "type": "numeric",
+        "derived": -32000,
+        "keyHidden": true,
+        "derivationNotes": "Exhibit 1: Standard DM = 2.5 lbs/unit at $40.00/lb. Exhibit 2: Actual = 10,800 lbs used, 4,000 units produced. Standard quantity allowed = 4,000 × 2.5 = 10,000 lbs. Quantity variance = (10,800 − 10,000) × $40.00 = 800 lbs × $40.00 = $32,000 unfavorable. Prompt requires unfavorable as negative: −32,000."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1615 @@
+{
+  "CBQ-E1": {
+    "Title": "Accounts Payable Controls and SOX Evaluation",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Process Observations",
+        "Headers": [
+          "Observation",
+          "Detail"
+        ],
+        "Rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "ExhibitID": "CBQ-E1-E1",
+        "CaseID": "CBQ-E1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2 - Materiality Context",
+        "Headers": [
+          "Measure",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "ExhibitID": "CBQ-E1-E2",
+        "CaseID": "CBQ-E1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ-E2": {
+    "Title": "IT General Controls, Change Management, and Access Review",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Control Exceptions",
+        "Headers": [
+          "Area",
+          "Exception"
+        ],
+        "Rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "ExhibitID": "CBQ-E2-E1",
+        "CaseID": "CBQ-E2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ2-F1": {
+    "Title": "Data Analytics Maturity",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 — Current Analytics Practices by Department",
+        "Headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ],
+        "Rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "ExhibitID": "CBQ2-F1-E1",
+        "CaseID": "CBQ2-F1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ3-A1": {
+    "Title": "Lease Accounting and Classification",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Present Value Factors",
+        "Headers": [
+          "Rate",
+          "Periods",
+          "PV of Ordinary Annuity"
+        ],
+        "Rows": [
+          [
+            "6%",
+            "5",
+            "4.212"
+          ],
+          [
+            "6%",
+            "6",
+            "4.917"
+          ]
+        ],
+        "ExhibitID": "CBQ3-A1-E1",
+        "CaseID": "CBQ3-A1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ2-B2": {
+    "Title": "Cash Budgeting and Forecasting",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Sales Forecast",
+        "Headers": [
+          "Month",
+          "Sales"
+        ],
+        "Rows": [
+          [
+            "December (Actual)",
+            "$500,000"
+          ],
+          [
+            "January (Budget)",
+            "$600,000"
+          ]
+        ],
+        "ExhibitID": "CBQ2-B2-E1",
+        "CaseID": "CBQ2-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2 - Budget Policies",
+        "Headers": [
+          "Item",
+          "Detail"
+        ],
+        "Rows": [
+          [
+            "Cash sales",
+            "20% of total sales"
+          ],
+          [
+            "Credit sales",
+            "80% of total sales"
+          ],
+          [
+            "Credit collected in month of sale",
+            "50%"
+          ],
+          [
+            "Credit collected in following month",
+            "45%"
+          ],
+          [
+            "Uncollectible",
+            "5% of credit sales"
+          ],
+          [
+            "Cost of goods sold",
+            "65% of sales; paid in month incurred"
+          ],
+          [
+            "Cash operating expenses (monthly)",
+            "$175,000"
+          ],
+          [
+            "Depreciation (monthly)",
+            "$18,000"
+          ],
+          [
+            "Equipment purchase (January)",
+            "$110,000"
+          ],
+          [
+            "Beginning cash balance (January 1)",
+            "$45,000"
+          ],
+          [
+            "Minimum required cash balance",
+            "$35,000"
+          ]
+        ],
+        "ExhibitID": "CBQ2-B2-E2",
+        "CaseID": "CBQ2-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ3-B2": {
+    "Title": "Direct Labor and Manufacturing Overhead Budget",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Production Plan",
+        "Headers": [
+          "Month",
+          "Budgeted Units",
+          "Direct Labor Hours per Unit"
+        ],
+        "Rows": [
+          [
+            "July",
+            "8,000",
+            "1.5"
+          ],
+          [
+            "August",
+            "10,000",
+            "1.5"
+          ],
+          [
+            "September",
+            "12,000",
+            "1.5"
+          ]
+        ],
+        "ExhibitID": "CBQ3-B2-E1",
+        "CaseID": "CBQ3-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2 - Cost Standards",
+        "Headers": [
+          "Cost Component",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Direct labor rate per hour",
+            "$22"
+          ],
+          [
+            "Variable overhead rate per DLH",
+            "$8"
+          ],
+          [
+            "Fixed manufacturing overhead (monthly)",
+            "$180,000"
+          ],
+          [
+            "Denominator activity (monthly DLH)",
+            "15,000"
+          ]
+        ],
+        "ExhibitID": "CBQ3-B2-E2",
+        "CaseID": "CBQ3-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ2-C3": {
+    "Title": "Investment Center Performance Evaluation",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 — Divisional Financial Data (Current Year)",
+        "Headers": [
+          "Metric",
+          "Division A",
+          "Division B",
+          "Division C"
+        ],
+        "Rows": [
+          [
+            "Operating income",
+            "$480,000",
+            "$350,000",
+            "$600,000"
+          ],
+          [
+            "Total assets",
+            "$3,000,000",
+            "$2,500,000",
+            "$5,000,000"
+          ],
+          [
+            "Current liabilities",
+            "$400,000",
+            "$300,000",
+            "$500,000"
+          ],
+          [
+            "Required rate of return",
+            "12%",
+            "12%",
+            "12%"
+          ],
+          [
+            "Proposed investment - Division A",
+            "",
+            "",
+            ""
+          ],
+          [
+            "  Investment cost",
+            "$500,000",
+            "",
+            ""
+          ],
+          [
+            "  Expected annual operating income",
+            "$80,000",
+            "",
+            ""
+          ]
+        ],
+        "ExhibitID": "CBQ2-C3-E1",
+        "CaseID": "CBQ2-C3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ3-C3": {
+    "Title": "Flexible Budget Variances",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1: July Budget and Actual Results",
+        "Headers": [
+          "Item",
+          "Static Budget",
+          "Actual Results"
+        ],
+        "Rows": [
+          [
+            "Units produced and sold",
+            "10,000",
+            "12,000"
+          ],
+          [
+            "Selling price per unit",
+            "$75",
+            "$73"
+          ],
+          [
+            "Revenue",
+            "$750,000",
+            "$876,000"
+          ],
+          [
+            "Direct materials cost",
+            "$200,000",
+            "$252,000"
+          ],
+          [
+            "Direct labor cost",
+            "$150,000",
+            "$168,000"
+          ],
+          [
+            "Variable manufacturing overhead",
+            "$100,000",
+            "$126,000"
+          ],
+          [
+            "Fixed manufacturing overhead",
+            "$180,000",
+            "$185,000"
+          ],
+          [
+            "Variable selling & admin",
+            "$50,000",
+            "$62,000"
+          ],
+          [
+            "Fixed selling & admin",
+            "$40,000",
+            "$42,000"
+          ],
+          [
+            "Total costs",
+            "$720,000",
+            "$835,000"
+          ],
+          [
+            "Operating income",
+            "$30,000",
+            "$41,000"
+          ]
+        ],
+        "ExhibitID": "CBQ3-C3-E1",
+        "CaseID": "CBQ3-C3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ3-C3-Q1",
+          "CBQ3-C3-Q2",
+          "CBQ3-C3-Q3"
+        ]
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2: Standard Cost per Unit",
+        "Headers": [
+          "Cost Element",
+          "Standard Cost per Unit"
+        ],
+        "Rows": [
+          [
+            "Direct materials (2 lbs at $10/lb)",
+            "$20"
+          ],
+          [
+            "Direct labor (1.5 hrs at $10/hr)",
+            "$15"
+          ],
+          [
+            "Variable manufacturing overhead (1.5 hrs at $6.67/hr)",
+            "$10"
+          ],
+          [
+            "Total variable cost per unit",
+            "$45"
+          ],
+          [
+            "Budgeted fixed MOH per unit ($180,000 / 10,000 units)",
+            "$18"
+          ],
+          [
+            "Budgeted selling price per unit",
+            "$75"
+          ]
+        ],
+        "ExhibitID": "CBQ3-C3-E2",
+        "CaseID": "CBQ3-C3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ3-C3-Q3",
+          "CBQ3-C3-Q4"
+        ]
+      }
+    ]
+  },
+  "CBQ4-E1": {
+    "Title": "COSO Internal Control Framework",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 — Summit Electronics Control Environment Assessment",
+        "Headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ],
+        "Rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "ExhibitID": "CBQ4-E1-E1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ4-F1": {
+    "Title": "Cloud Computing Models",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1: Cloud Service Models — Responsibility Matrix",
+        "Headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ],
+        "Rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "ExhibitID": "CBQ4-F1-E1",
+        "CaseID": "CBQ4-F1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-F1-Q1",
+          "CBQ4-F1-Q3"
+        ]
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2: Cloud Migration — Cost-Benefit Analysis (Annual)",
+        "Headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ],
+        "Rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "ExhibitID": "CBQ4-F1-E2",
+        "CaseID": "CBQ4-F1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-F1-Q2",
+          "CBQ4-F1-Q4"
+        ]
+      }
+    ]
+  },
+  "CBQ5-A2": {
+    "Title": "Comprehensive Income and Stockholders' Equity",
+    "Exhibits": [
+      {
+        "Type": "text",
+        "Title": "Treasury Stock",
+        "Body": "Silverline also repurchased 10,000 shares of its $1 par value common stock for $15 per share using the cost method.",
+        "ExhibitID": "CBQ5-A2-E1",
+        "CaseID": "CBQ5-A2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-A2-Q3",
+          "CBQ5-A2-Q4"
+        ]
+      }
+    ]
+  },
+  "CBQ4-B1": {
+    "Title": "Cost Estimation and High-Low Method",
+    "Exhibits": [
+      {
+        "Type": "text",
+        "Title": "Manager's Note",
+        "Body": "We need to compare the High-Low method results against the Simple Linear Regression results to budget for 7,000 machine hours next month.",
+        "ExhibitID": "CBQ4-B1-E1",
+        "CaseID": "CBQ4-B1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ4-B2": {
+    "Title": "Budgeted Balance Sheet and Financial Budget",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Operating Budget Data (Q1)",
+        "Headers": [
+          "Item",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Budgeted Q1 sales (all on credit)",
+            "$1,000,000"
+          ],
+          [
+            "Budgeted Q1 cost of goods sold",
+            "$600,000"
+          ],
+          [
+            "Budgeted Q1 merchandise purchases",
+            "$650,000"
+          ],
+          [
+            "Q1 selling and administrative expenses (all cash)",
+            "$140,000"
+          ],
+          [
+            "Q1 equipment purchase (cash)",
+            "$100,000"
+          ],
+          [
+            "Q1 dividends declared and paid",
+            "$20,000"
+          ],
+          [
+            "Q1 interest expense (paid in cash)",
+            "$15,000"
+          ],
+          [
+            "Income tax rate (paid in quarter earned)",
+            "30%"
+          ]
+        ],
+        "ExhibitID": "CBQ4-B2-E1",
+        "CaseID": "CBQ4-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2 - Beginning Balances and Policies",
+        "Headers": [
+          "Item",
+          "Amount or Detail"
+        ],
+        "Rows": [
+          [
+            "Cash (January 1)",
+            "$100,000"
+          ],
+          [
+            "Accounts receivable (December sales, all collected Q1)",
+            "$200,000"
+          ],
+          [
+            "Inventory (January 1)",
+            "$120,000"
+          ],
+          [
+            "Accounts payable (January 1, all paid Q1)",
+            "$100,000"
+          ],
+          [
+            "Credit sales collected in quarter of sale",
+            "70%"
+          ],
+          [
+            "Credit sales collected in following quarter",
+            "28%"
+          ],
+          [
+            "Uncollectible",
+            "2%"
+          ],
+          [
+            "Purchases paid in quarter of purchase",
+            "80%"
+          ],
+          [
+            "Purchases paid in following quarter",
+            "20%"
+          ]
+        ],
+        "ExhibitID": "CBQ4-B2-E2",
+        "CaseID": "CBQ4-B2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": []
+      }
+    ]
+  },
+  "CBQ4-D3": {
+    "Title": "Capacity Management Concepts",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1: Summit Furniture — Annual Capacity and Operating Data",
+        "Headers": [
+          "Capacity Measure",
+          "Cutting Dept",
+          "Assembly Dept",
+          "Finishing Dept",
+          "Comments"
+        ],
+        "Rows": [
+          [
+            "Theoretical capacity (units)",
+            "50,000",
+            "50,000",
+            "50,000",
+            "Assumes 24/7 operation, no downtime, no delays"
+          ],
+          [
+            "Practical capacity (units)",
+            "38,000",
+            "42,000",
+            "40,000",
+            "Theoretical minus unavoidable downtime (maintenance, breaks, setup)"
+          ],
+          [
+            "Normal capacity (units)",
+            "32,000",
+            "32,000",
+            "32,000",
+            "Average customer demand over 5-year business cycle"
+          ],
+          [
+            "Master-budget capacity (units)",
+            "30,000",
+            "30,000",
+            "30,000",
+            "Expected production for the current year"
+          ],
+          [
+            "Actual production (units)",
+            "28,000",
+            "28,000",
+            "28,000",
+            "Actual output for the current year"
+          ],
+          [
+            "Total budgeted fixed MOH",
+            "$1,900,000",
+            "$1,260,000",
+            "$1,200,000",
+            "Annual fixed manufacturing overhead by department"
+          ]
+        ],
+        "ExhibitID": "CBQ4-D3-E1",
+        "CaseID": "CBQ4-D3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-D3-Q1",
+          "CBQ4-D3-Q2",
+          "CBQ4-D3-Q4"
+        ]
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2: Fixed Overhead Variance Impact by Denominator Level Choice",
+        "Headers": [
+          "Denominator Level",
+          "Fixed MOH Rate",
+          "Applied FOH (28,000 units)",
+          "Budget Variance",
+          "Volume Variance",
+          "Total Underapplied FOH"
+        ],
+        "Rows": [
+          [
+            "Theoretical (50,000)",
+            "$38.00/unit",
+            "$1,064,000",
+            "—",
+            "$836,000 U",
+            "$836,000 U"
+          ],
+          [
+            "Practical (38,000)",
+            "$50.00/unit",
+            "$1,400,000",
+            "—",
+            "$500,000 U",
+            "$500,000 U"
+          ],
+          [
+            "Normal (32,000)",
+            "$59.38/unit",
+            "$1,662,500",
+            "—",
+            "$237,500 U",
+            "$237,500 U"
+          ],
+          [
+            "Master-budget (30,000)",
+            "$63.33/unit",
+            "$1,773,333",
+            "—",
+            "$126,667 U",
+            "$126,667 U"
+          ]
+        ],
+        "ExhibitID": "CBQ4-D3-E2",
+        "CaseID": "CBQ4-D3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-D3-Q2",
+          "CBQ4-D3-Q3"
+        ]
+      }
+    ]
+  },
+  "CBQ4-E2": {
+    "Title": "Application IT Controls",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1: ERP Application Control Summary — Key Input Controls",
+        "Headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ],
+        "Rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "ExhibitID": "CBQ4-E2-E1",
+        "CaseID": "CBQ4-E2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-E2-Q1",
+          "CBQ4-E2-Q2",
+          "CBQ4-E2-Q4"
+        ]
+      },
+      {
+        "Type": "table",
+        "Title": "Exhibit 2: IT Application Control Types — COSO Framework Mapping",
+        "Headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ],
+        "Rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "ExhibitID": "CBQ4-E2-E2",
+        "CaseID": "CBQ4-E2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-E2-Q3",
+          "CBQ4-E2-Q5"
+        ]
+      }
+    ]
+  },
+  "CBQ5-E1": {
+    "Title": "Internal Auditing Standards",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - IIA Standards Categories",
+        "Headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ],
+        "Rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "ExhibitID": "CBQ5-E1-E1",
+        "CaseID": "CBQ5-E1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-E1-Q1",
+          "CBQ5-E1-Q2"
+        ]
+      },
+      {
+        "Type": "text",
+        "Title": "Exhibit 2 - Internal Audit Charter and Reporting Structure",
+        "Body": "The IIA Standards require the internal audit charter to be approved by the board or audit committee. The charter must define purpose, authority, and responsibility; establish the CAE's functional reporting to the board and administrative reporting to the CEO; authorize access to records, personnel, and physical properties; and define the scope of assurance and consulting services. The audit committee approved a revised charter establishing the CAE's functional reporting to the Audit Committee and administrative reporting to the CEO, with a direct communication line to the Audit Committee chair. The charter prohibits internal auditors from assuming operational responsibilities or performing audit work in areas where they held operational roles within the past 12 months.",
+        "ExhibitID": "CBQ5-E1-E2",
+        "CaseID": "CBQ5-E1",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-E1-Q3",
+          "CBQ5-E1-Q4",
+          "CBQ5-E1-Q5"
+        ]
+      }
+    ]
+  },
+  "CBQ5-E2": {
+    "Title": "Cybersecurity and Malware",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Malware Types and Incident Timeline",
+        "Headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ],
+        "Rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "ExhibitID": "CBQ5-E2-E1",
+        "CaseID": "CBQ5-E2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-E2-Q1",
+          "CBQ5-E2-Q2",
+          "CBQ5-E2-Q5"
+        ]
+      },
+      {
+        "Type": "text",
+        "Title": "Exhibit 2 - Cybersecurity Control Assessment",
+        "Body": "Post-incident assessment identified these control gaps: (1) No mandatory cybersecurity awareness training for staff — phishing simulation had never been conducted. (2) Multi-factor authentication (MFA) was implemented for remote VPN access but not for internal system access, EHR access, or privileged administrative accounts. (3) Endpoint detection and response (EDR) software was installed on only 40% of workstations; the remaining 60% had only basic antivirus. (4) Network segmentation between the billing department workstations and the EHR server was inadequate — once the billing workstation was compromised, lateral movement to the EHR was unrestricted. (5) The backup strategy used daily backups to a network-attached storage device on the same network segment as production systems — ransomware encrypted both production and backup files. (6) The incident response plan had not been updated in 3 years and did not include specific ransomware containment procedures, communication protocols, or regulatory notification requirements.",
+        "ExhibitID": "CBQ5-E2-E2",
+        "CaseID": "CBQ5-E2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-E2-Q3",
+          "CBQ5-E2-Q4",
+          "CBQ5-E2-Q5"
+        ]
+      }
+    ]
+  },
+  "CBQ5-E3": {
+    "Title": "Data Privacy Frameworks",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "DataBridge Solutions — Selected Financial and Operational Data",
+        "Headers": [
+          "Item",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "ExhibitID": "CBQ5-E3-E1",
+        "CaseID": "CBQ5-E3",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-E3-Q1",
+          "CBQ5-E3-Q2"
+        ]
+      }
+    ]
+  },
+  "CBQ4-F2": {
+    "Title": "Artificial Intelligence & ML",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - Machine Learning Approaches and Retail Applications",
+        "Headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ],
+        "Rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "ExhibitID": "CBQ4-F2-E1",
+        "CaseID": "CBQ4-F2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-F2-Q1",
+          "CBQ4-F2-Q2",
+          "CBQ4-F2-Q5"
+        ]
+      },
+      {
+        "Type": "text",
+        "Title": "Exhibit 2 - ML Implementation Results",
+        "Body": "After six months of deployment, the demand forecasting model achieved 92% forecast accuracy across all 200 stores, compared to 78% accuracy under the previous rule-based system. The fraud detection model reviewed 4.5 million transactions, correctly identifying 1,240 fraudulent transactions while generating 85 false positives. The customer segmentation model identified 12 distinct customer clusters, enabling targeted promotions that increased basket size by 15% in three test markets. The data science team noted that the forecasting model performs well on stores with more than three years of data but shows significantly higher error rates on the 12 newest stores with limited historical data.",
+        "ExhibitID": "CBQ4-F2-E2",
+        "CaseID": "CBQ4-F2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ4-F2-Q3",
+          "CBQ4-F2-Q4"
+        ]
+      }
+    ]
+  },
+  "CBQ5-F2": {
+    "Title": "Robotic Process Automation (RPA)",
+    "Exhibits": [
+      {
+        "Type": "table",
+        "Title": "Exhibit 1 - RPA Suitability Assessment",
+        "Headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ],
+        "Rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "ExhibitID": "CBQ5-F2-E1",
+        "CaseID": "CBQ5-F2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-F2-Q1",
+          "CBQ5-F2-Q2",
+          "CBQ5-F2-Q3",
+          "CBQ5-F2-Q4"
+        ]
+      },
+      {
+        "Type": "text",
+        "Title": "Exhibit 2 - Internal Audit Assessment of RPA Control Risks",
+        "Body": "The internal audit team identified the following control considerations for RPA implementation: (1) Bots use attended (user-triggered) and unattended (scheduled) modes. Unattended bots process 70% of transactions and require exception-handling protocols. (2) Each bot operates under a single service account with access to ERP, bank portals, and vendor master data. Segregation of duties between bot operation and bot oversight must be maintained. (3) Audit logs capture bot execution timestamps, input/output values, and error codes. The current retention policy is 90 days, but the audit team recommends 12 months. (4) Process changes in underlying systems (ERP upgrades, bank portal changes) can cause bot failures. A change management protocol is needed to coordinate system updates with bot maintenance. (5) The bot's service account creates a potential SOD conflict because the bot can initiate, approve, and post transactions without human intervention unless supervisory review controls are configured for high-value transactions.",
+        "ExhibitID": "CBQ5-F2-E2",
+        "CaseID": "CBQ5-F2",
+        "ValidationVersion": "2.0",
+        "ReferencedBy": [
+          "CBQ5-F2-Q4",
+          "CBQ5-F2-Q5"
+        ]
+      }
+    ]
+  },
+  "CBQ3-A3": {
+    "Title": "Revenue Recognition Under ASC 606",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ3-A3-E1",
+        "CaseID": "CBQ3-A3",
+        "Type": "table",
+        "Title": "Exhibit 1 — Contract Terms and Standalone Selling Prices",
+        "Purpose": "Provides contract price, standalone selling prices for each performance obligation, and payment terms.",
+        "ReferencedBy": [
+          "CBQ3-A3-Q1",
+          "CBQ3-A3-Q2",
+          "CBQ3-A3-Q3"
+        ],
+        "Headers": [
+          "Component",
+          "Standalone Selling Price",
+          "Contract Price"
+        ],
+        "Rows": [
+          [
+            "Surgical Navigation Equipment",
+            "$520,000",
+            "$600,000 (bundled)"
+          ],
+          [
+            "Installation Service",
+            "$110,00",
+            "Included in bundle"
+          ],
+          [
+            "Total Standalone",
+            "$630,000",
+            ""
+          ]
+        ],
+        "DataFormat": "Currency in USD"
+      },
+      {
+        "ExhibitID": "CBQ3-A3-E2",
+        "CaseID": "CBQ3-A3",
+        "Type": "table",
+        "Title": "Exhibit 2 — Variable Consideration Estimate",
+        "Purpose": "Provides the volume rebate terms and probability-weighted estimate for variable consideration.",
+        "ReferencedBy": [
+          "CBQ3-A3-Q4"
+        ],
+        "Headers": [
+          "Rebate Term",
+          "Threshold",
+          "Rebate %",
+          "Est. Probability"
+        ],
+        "Rows": [
+          [
+            "Additional purchases > $500K in 12 months",
+            "$500,000",
+            "5%",
+            "60%"
+          ]
+        ],
+        "DataFormat": "Percentage, probability"
+      }
+    ]
+  },
+  "CBQ3-C4": {
+    "Title": "Standard Costing and Variance Analysis",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ3-C4-E1",
+        "CaseID": "CBQ3-C4",
+        "Type": "table",
+        "Title": "Exhibit 1 — Standard Cost Card (Product X-7)",
+        "Purpose": "Provides the standard quantities, prices, and rates for direct materials, direct labor, and variable overhead.",
+        "ReferencedBy": [
+          "CBQ3-C4-Q1",
+          "CBQ3-C4-Q2",
+          "CBQ3-C4-Q3"
+        ],
+        "Headers": [
+          "Cost Element",
+          "Standard Quantity",
+          "Standard Price/Rate",
+          "Standard Cost"
+        ],
+        "Rows": [
+          [
+            "Direct Materials",
+            "2.5 lbs",
+            "$40.00/lb",
+            "$100.00"
+          ],
+          [
+            "Direct Labor",
+            "0.8 hrs",
+            "$28.00/hr",
+            "$22.40"
+          ],
+          [
+            "Variable Overhead",
+            "0.8 DLH",
+            "$35.00/DLH",
+            "$28.00"
+          ],
+          [
+            "Total Standard Cost",
+            "",
+            "",
+            "$150.40"
+          ]
+        ],
+        "DataFormat": "Currency in USD, quantities in decimal"
+      },
+      {
+        "ExhibitID": "CBQ3-C4-E2",
+        "CaseID": "CBQ3-C4",
+        "Type": "table",
+        "Title": "Exhibit 2 — March 2026 Actual Results",
+        "Purpose": "Provides actual quantities, prices, and costs for the production period.",
+        "ReferencedBy": [
+          "CBQ3-C4-Q1",
+          "CBQ3-C4-Q2",
+          "CBQ3-C4-Q3",
+          "CBQ3-C4-Q4"
+        ],
+        "Headers": [
+          "Cost Element",
+          "Actual Quantity",
+          "Actual Price/Rate",
+          "Total Actual Cost"
+        ],
+        "Rows": [
+          [
+            "Direct Materials",
+            "10,800 lbs",
+            "$42.00/lb",
+            "$453,600"
+          ],
+          [
+            "Direct Labor",
+            "3,400 hrs",
+            "$29.00/hr",
+            "$98,600"
+          ],
+          [
+            "Variable Overhead",
+            "3,400 DLH",
+            "$36.00/DLH",
+            "$122,400"
+          ],
+          [
+            "Units Produced",
+            "4,000 units",
+            "",
+            ""
+          ]
+        ],
+        "DataFormat": "Currency in USD, quantities in whole numbers"
+      }
+    ]
+  }
+}

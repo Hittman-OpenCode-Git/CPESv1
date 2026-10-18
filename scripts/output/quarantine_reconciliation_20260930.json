@@ -1,0 +1,1414 @@
+{
+  "artifact": "quarantine_reconciliation_20260930.json",
+  "generated": "2026-09-30T03:13:24.469Z",
+  "session": "P2-085",
+  "defectId": "DL-P2-023",
+  "purpose": "Reconstruction of the unattributed bulk quarantine performed by scripts/quarantine_all_case_inversions.js on 2026-09-24T03:37-03:42Z. That script emitted no manifest, no log, and no provenance stamps.",
+  "groundTruth": {
+    "method": "Wave A pre-quarantine backups (epoch 1790221063xxx), cross-validated against git ref 54144674 — 6/6 banks agree (AGENTS.md §6 two-implementation gate)",
+    "liveCommitAtQuarantine": "54144674 (no commit occurred during the quarantine window)",
+    "certifiedBefore": 180,
+    "certifiedNow": 75,
+    "casesDemoted": 105,
+    "itemsDemoted": 215,
+    "itemsDeleted": 0,
+    "itemsAdded": 0,
+    "casesTotal": 190,
+    "itemsTotal": 1085
+  },
+  "evidenceBase": {
+    "generated": "2026-09-30T03:12:28.209Z",
+    "method": "case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w)",
+    "source": "scripts/case_semantic_screens.js run against a Wave A pre-quarantine mirror",
+    "note": "Fresh, dated run. Supersedes scripts/output/case_inversion_analysis.json, which is undated and cannot be proven to predate the quarantine.",
+    "totalFlags": 444,
+    "inversionFlags": 161
+  },
+  "scriptDefect": {
+    "file": "scripts/quarantine_all_case_inversions.js",
+    "hardcodedCaseIds": 123,
+    "provenanceStampsWritten": 0,
+    "manifestEmitted": false,
+    "referencesInRepo": 0,
+    "guardDifference": "Drops the certifiedItems===0 case-level guard present in quarantine_case_inversions.js:183 and _v2.js:178, downgrading every Certified item in a listed case (lines 87-89).",
+    "formatLoss": "JSON.stringify reserialization destroyed original source formatting and left a UTF-8 BOM in p2/case_pack_p2_C4_C8.js (char 0 = U+FEFF)."
+  },
+  "adjudication": {
+    "basis": "Fresh screen run on pre-quarantine content. Per DL-045, screen output is evidence, not remediation — no item was flipped on screen output alone.",
+    "counts": {
+      "A_collateral": 4,
+      "B_needsHandSolve": 101,
+      "C_ambiguous": 0
+    },
+    "fpRate": "DL-065 adjudicated 216 flags -> 211 false positives, 5 genuine (2.3%). Bucket B therefore means NEEDS HAND-SOLVE, not confirmed-defective."
+  },
+  "buckets": {
+    "A_collateral": [
+      {
+        "caseId": "CBQ23-A5",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "reason": "No FLAG-severity screen evidence in pre-quarantine content; demotion attributable to the unguarded case-level wildcard.",
+        "action": "Eligible for state-only restore"
+      },
+      {
+        "caseId": "CBQ23-A8",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "reason": "No FLAG-severity screen evidence in pre-quarantine content; demotion attributable to the unguarded case-level wildcard.",
+        "action": "Eligible for state-only restore"
+      },
+      {
+        "caseId": "CBQ23-C7",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "reason": "No FLAG-severity screen evidence in pre-quarantine content; demotion attributable to the unguarded case-level wildcard.",
+        "action": "Eligible for state-only restore"
+      },
+      {
+        "caseId": "CBQ23-C8",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "reason": "No FLAG-severity screen evidence in pre-quarantine content; demotion attributable to the unguarded case-level wildcard.",
+        "action": "Eligible for state-only restore"
+      }
+    ],
+    "B_needsHandSolve": [
+      {
+        "caseId": "CBQ-C2",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ-C2-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ-C3",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ-C3-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ-D2",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ-D2-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ-E1",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ-E1-Q1"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ-E2",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ-E2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ2-F1",
+        "file": "content/cases/case_pack_1_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ2-F1-Q1",
+          "CBQ2-F1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ2-A3",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ2-A3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-A1",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ3-A1-Q2"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-A1",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ4-A1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ2-B2",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 6,
+        "implicatedItems": [
+          "CBQ2-B2-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-B2",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ3-B2-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ2-C3",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ2-C3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-C3",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ3-C3-Q1",
+          "CBQ3-C3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-C1",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ4-C1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-E1",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ4-E1-Q3",
+          "CBQ4-E1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-F1",
+        "file": "content/cases/case_pack_2_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ4-F1-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-A2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 4,
+        "totalFlags": 8,
+        "implicatedItems": [
+          "CBQ5-A2-Q2",
+          "CBQ5-A2-Q4",
+          "CBQ5-A2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-B2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ5-B2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-B1",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 9,
+        "implicatedItems": [
+          "CBQ4-B1-Q4",
+          "CBQ4-B1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-B2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ4-B2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-D3",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ4-D3-Q1",
+          "CBQ4-D3-Q2",
+          "CBQ4-D3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-E2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ4-E2-Q3",
+          "CBQ4-E2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-E3",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ4-E3-Q3",
+          "CBQ4-E3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-E1",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ5-E1-Q2"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-E2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ5-E2-Q4",
+          "CBQ5-E2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-E3",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 4,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ5-E3-Q1",
+          "CBQ5-E3-Q2",
+          "CBQ5-E3-Q4",
+          "CBQ5-E3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ4-F2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ4-F2-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ5-F2",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ5-F2-Q4",
+          "CBQ5-F2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-A3",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ3-A3-Q1",
+          "CBQ3-A3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-A4",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ3-A4-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ3-C4",
+        "file": "content/cases/case_pack_3_corrected.js",
+        "part": "P1",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ3-C4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-B1",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-B1-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-C1",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-C1-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-E1",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-E1-Q3",
+          "CBQ21-E1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-A1",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-A1-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-D1",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-D1-Q4",
+          "CBQ21-D1-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-B2",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-B2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-E2",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-E2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-A3",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-A3-Q4",
+          "CBQ21-A3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-C3",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-C3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-D2",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ21-D2-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-F2",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ21-F2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-E3",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-E3-Q4",
+          "CBQ21-E3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-A4",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-A4-Q2",
+          "CBQ21-A4-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-B4",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ21-B4-Q2",
+          "CBQ21-B4-Q3",
+          "CBQ21-B4-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-C4",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-C4-Q5",
+          "CBQ21-C4-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-F3",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ21-F3-Q3",
+          "CBQ21-F3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-A6",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-A6-Q3",
+          "CBQ21-A6-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-F4",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-F4-Q1",
+          "CBQ21-F4-Q3",
+          "CBQ21-F4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-B5",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ21-B5-Q3",
+          "CBQ21-B5-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-D3",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ21-D3-Q3",
+          "CBQ21-D3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-D4",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 2,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ21-D4-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ21-F5",
+        "file": "p2/case_pack_p2_1.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ21-F5-Q1",
+          "CBQ21-F5-Q2",
+          "CBQ21-F5-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-F1",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-F1-Q1",
+          "CBQ22-F1-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-A2",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 5,
+        "totalFlags": 6,
+        "implicatedItems": [
+          "CBQ22-A2-Q4",
+          "CBQ22-A2-Q5",
+          "CBQ22-A2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-D2",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-D2-Q4",
+          "CBQ22-D2-Q5",
+          "CBQ22-D2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C1",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-C1-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-E1",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-E1-Q4",
+          "CBQ22-E1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-B2",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-B2-Q4",
+          "CBQ22-B2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C2",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 4,
+        "totalFlags": 5,
+        "implicatedItems": [
+          "CBQ22-C2-Q3",
+          "CBQ22-C2-Q4",
+          "CBQ22-C2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-D3",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 5,
+        "implicatedItems": [
+          "CBQ22-D3-Q3",
+          "CBQ22-D3-Q4",
+          "CBQ22-D3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-A3",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-A3-Q2",
+          "CBQ22-A3-Q4",
+          "CBQ22-A3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-F3",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ22-F3-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-B3",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-B3-Q2",
+          "CBQ22-B3-Q4",
+          "CBQ22-B3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-D4",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ22-D4-Q3",
+          "CBQ22-D4-Q4",
+          "CBQ22-D4-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-B5",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 6,
+        "implicatedItems": [
+          "CBQ22-B5-Q3",
+          "CBQ22-B5-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-D5",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-D5-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-A4",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ22-A4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C3",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-C3-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-F4",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-F4-Q2",
+          "CBQ22-F4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C4",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-C4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C6",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-C6-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C7",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-C7-Q3",
+          "CBQ22-C7-Q4",
+          "CBQ22-C7-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-C8",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-C8-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-A5",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-A5-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-F5",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ22-F5-Q1",
+          "CBQ22-F5-Q2"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ22-F6",
+        "file": "p2/case_pack_p2_2.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ22-F6-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C1",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-C1-Q4",
+          "CBQ23-C1-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-E1",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-E1-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C2",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-C2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-F2",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 7,
+        "totalFlags": 7,
+        "implicatedItems": [
+          "CBQ23-F2-Q2",
+          "CBQ23-F2-Q3",
+          "CBQ23-F2-Q4",
+          "CBQ23-F2-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-A1",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-A1-Q3",
+          "CBQ23-A1-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-E2",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ23-E2-Q3",
+          "CBQ23-E2-Q4",
+          "CBQ23-E2-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C3",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 3,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-C3-Q2",
+          "CBQ23-C3-Q3",
+          "CBQ23-C3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-D2",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-D2-Q2"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-E3",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-E3-Q4",
+          "CBQ23-E3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-A3",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ23-A3-Q3",
+          "CBQ23-A3-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-F4",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-F4-Q3",
+          "CBQ23-F4-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-A4",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 4,
+        "implicatedItems": [
+          "CBQ23-A4-Q3",
+          "CBQ23-A4-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C5",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-C5-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-D3",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 3,
+        "implicatedItems": [
+          "CBQ23-D3-Q3",
+          "CBQ23-D3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-E4",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 5,
+        "implicatedItems": [
+          "CBQ23-E4-Q3"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-F5",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 3,
+        "totalFlags": 5,
+        "implicatedItems": [
+          "CBQ23-F5-Q1",
+          "CBQ23-F5-Q3",
+          "CBQ23-F5-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-A6",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-A6-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-A7",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-A7-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-B3",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 1,
+        "strongFlags": 1,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-B3-Q4"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-B4",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-B4-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-B5",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-B5-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-B6",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-B6-Q2"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C6",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 1,
+        "totalFlags": 1,
+        "implicatedItems": [
+          "CBQ23-C6-Q5"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      },
+      {
+        "caseId": "CBQ23-C9",
+        "file": "p2/case_pack_p2_3.js",
+        "part": "P2",
+        "mutatedItemsSinceWaveA": 0,
+        "strongFlags": 2,
+        "totalFlags": 2,
+        "implicatedItems": [
+          "CBQ23-C9-Q4",
+          "CBQ23-C9-Q6"
+        ],
+        "action": "Independent hand-solve required (DL-047 flow). Not certified on screen output."
+      }
+    ],
+    "C_ambiguous": []
+  },
+  "postQuarantineContentRemediation": {
+    "note": "58 of 105 demoted cases also received legitimate content fixes AFTER the quarantine. A wholesale restore from Wave A would revert these.",
+    "fieldsChanged": {
+      "Explanation": 132,
+      "Choices": 13,
+      "Correct": 10,
+      "FormulaReference": 8,
+      "AccountingPrinciple": 5,
+      "Prompt": 1,
+      "ExplanationVersion": 1
+    },
+    "attribution": {
+      "2026-09-22": "pre-quarantine, 0 mutations",
+      "2026-09-25": "DL-063 recert",
+      "2026-09-28": "DL-065 adjudication"
+    },
+    "implication": "Remediation MUST be state-only and content-preserving."
+  },
+  "perFile": {
+    "content/cases/case_pack_1_corrected.js": {
+      "demoted": 6,
+      "itemsInAudit": 35
+    },
+    "content/cases/case_pack_2_corrected.js": {
+      "demoted": 10,
+      "itemsInAudit": 52
+    },
+    "content/cases/case_pack_3_corrected.js": {
+      "demoted": 15,
+      "itemsInAudit": 76
+    },
+    "p2/case_pack_p2_1.js": {
+      "demoted": 22,
+      "itemsInAudit": 132
+    },
+    "p2/case_pack_p2_2.js": {
+      "demoted": 24,
+      "itemsInAudit": 144
+    },
+    "p2/case_pack_p2_3.js": {
+      "demoted": 28,
+      "itemsInAudit": 168
+    }
+  },
+  "unresolved": {
+    "undatedArtifacts": [
+      "scripts/output/case_inversion_analysis.json",
+      "scripts/output/case_semantic_flags.json"
+    ],
+    "p1Exposure": "31 P1 cases demoted by the same script; 163 P1 items In Audit. Out of scope for P2-085, tracked as DL-066."
+  }
+}

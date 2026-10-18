@@ -1,0 +1,549 @@
+{
+ "timestamp": "2026-09-24T14:09:56.402Z",
+ "description": "P2 base schema ERROR items (missing required fields), corrected from prompt to match actual state",
+ "prompt_discrepancy": "Prompt claimed 67 items in p2/pack_p2_f.js with \"missing source_ids + distractor_intent\" — actual: P2-F has 0 base schema errors; the 67 errors are missing ExplanationWrong fields across P2-A(18), P2-C(2), P2-E(47)",
+ "totalErrorItems": 67,
+ "byPack": {
+  "A": 18,
+  "C": 2,
+  "E": 47
+ },
+ "items": [
+  {
+   "qid": "P2-A-604",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-606",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-A-607",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-608",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-609",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-610",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-611",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-A-612",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-A-613",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-614",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-615",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-616",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-617",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-618",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-619",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-A-620",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-621",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-A-622",
+   "pack": "A",
+   "file": "p2/pack_p2_a.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-C-198",
+   "pack": "C",
+   "file": "p2/pack_p2_c.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-C-199",
+   "pack": "C",
+   "file": "p2/pack_p2_c.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-288",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-289",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-291",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongD'"
+   ]
+  },
+  {
+   "qid": "P2-E-292",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-293",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-294",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-295",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongD'"
+   ]
+  },
+  {
+   "qid": "P2-E-296",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-297",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-298",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-299",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-300",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongD'"
+   ]
+  },
+  {
+   "qid": "P2-E-301",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-302",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-303",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-304",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-306",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-308",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongD'"
+   ]
+  },
+  {
+   "qid": "P2-E-309",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-311",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-312",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-314",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-315",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-436",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-437",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-439",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-440",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-441",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-442",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-443",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-444",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-445",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-446",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-447",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-448",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-449",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongD'"
+   ]
+  },
+  {
+   "qid": "P2-E-451",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-452",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-454",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-455",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongA'"
+   ]
+  },
+  {
+   "qid": "P2-E-456",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-457",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-458",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongB'"
+   ]
+  },
+  {
+   "qid": "P2-E-460",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-461",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-463",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  },
+  {
+   "qid": "P2-E-464",
+   "pack": "E",
+   "file": "p2/pack_p2_e.js",
+   "errors": [
+    "missing required field 'ExplanationWrongC'"
+   ]
+  }
+ ]
+}

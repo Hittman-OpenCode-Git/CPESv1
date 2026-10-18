@@ -1,0 +1,684 @@
+[
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ-C2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-C2-Q1: 15 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-C2-Q1",
+        "type": "numeric",
+        "derived": "15",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ-C3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-C3-Q1: 5 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-C3-Q1",
+        "type": "numeric",
+        "derived": "5",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ-D2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-D2-Q1: 12.50 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-D2-Q1",
+        "type": "numeric",
+        "derived": "12.50",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ-E1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-E1-Q1: 1,2,4 (choices-endorsed)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E1-Q1",
+        "type": "multi",
+        "derived": "1,2,4",
+        "method": "choices-endorsed",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ-E2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ-E2-Q1: 0.03529 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E2-Q1",
+        "type": "numeric",
+        "derived": "0.03529",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_1_corrected.js",
+    "caseId": "CBQ2-F1",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ2-F1-Q1: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-F1-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Real-time dashboards with drill-down capability enable diagnostic analytics, which answers \\\"why did it happen?\\\" Users can identify patterns, correlations, and root causes. While dashboards can display descriptive information (what happened), the real-time drill-down feature distinguishes it as dia"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ2-A3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ2-A3-Q1: 43000 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-A3-Q1",
+        "type": "numeric",
+        "derived": "43000",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ3-A1",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ3-A1-Q1: EXTRACT_FAILED (none); CBQ3-A1-Q3: 190560 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A1-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Under ASC 842, a lease is classified as a finance lease if any of five criteria are met. Here, the PV of lease payments ($231,660) exceeds substantially all (90%) of the fair value ($250,000 x 90% = $225,000). At 92.6%, the PV substantially exceeds substantially all of fair value — triggering financ"
+      },
+      {
+        "itemId": "CBQ3-A1-Q3",
+        "type": "numeric",
+        "derived": "190560",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ4-A1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-A1-Q1: 150000 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-A1-Q1",
+        "type": "numeric",
+        "derived": "150000",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ2-B2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ2-B2-Q1: 675000 (defining-equation); CBQ2-B2-Q4: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-B2-Q1",
+        "type": "numeric",
+        "derived": "675000",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      },
+      {
+        "itemId": "CBQ2-B2-Q4",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: A 30% cash-sales rate increases January cash collections by $30,000, reducing the borrowing need. Without the equipment purchase, January cash would be $20,000, still $15,000 below the minimum, so borrowing would not be eliminated. The December collection increase: $400,000 x 5% = $20,000. The uncol"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ3-B2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ3-B2-Q1: 276000 (defining-equation); CBQ3-B2-Q4: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-B2-Q1",
+        "type": "numeric",
+        "derived": "276000",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      },
+      {
+        "itemId": "CBQ3-B2-Q4",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Fixed OH per unit decreases with higher volume (spreading effect). The predetermined rate is set before the period begins for timely product costing. Applied OH = predetermined rate x actual activity. Variable OH is always included in the predetermined rate."
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ2-C3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ2-C3-Q1: 1 (positive-context)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-C3-Q1",
+        "type": "select",
+        "derived": "1",
+        "method": "positive-context",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ3-C3",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ3-C3-Q1: 15 (single-endorsed); CBQ3-C3-Q2: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C3-Q1",
+        "type": "select",
+        "derived": "15",
+        "method": "single-endorsed",
+        "keyHidden": true,
+        "note": ""
+      },
+      {
+        "itemId": "CBQ3-C3-Q2",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: The sales volume variance is favorable because volume increased. The selling price variance is unfavorable: ($75 − $73) × 12,000 = $24,000. Fixed MOH variance is $185,000 − $180,000 = $5,000 unfavorable. Total variable costs: flexible budget = $240,000 + $180,000 + $120,000 + $60,000 = $600,000; act"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ4-C1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-C1-Q1: 200 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-C1-Q1",
+        "type": "numeric",
+        "derived": "200",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ4-E1",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-E1-Q1: 1 (single-endorsed)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E1-Q1",
+        "type": "select",
+        "derived": "1",
+        "method": "single-endorsed",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_2_corrected.js",
+    "caseId": "CBQ4-F1",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ4-F1-Q1: EXTRACT_FAILED (none); CBQ4-F1-Q2: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F1-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: The IaaS business case is compelling: steady-state costs are $460,000 lower per year ($985,000 − $525,000), with a payback period of approximately 5 months on the incremental investment ($190,000 / $460,000 per year = 0.41 years or ~5 months, demonstrating a rapid return on the migration investment)"
+      },
+      {
+        "itemId": "CBQ4-F1-Q2",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: MedTech retains full responsibility for its data and compliance regardless of cloud deployment. Data residency requirements must be addressed. SOC 2 reports are the standard mechanism for evaluating cloud provider controls. Vendor lock-in is a real risk. The distractor is incorrect because internal "
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-A2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ5-A2-Q1: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-A2-Q1",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Trading security gains flow through Net Income. Dividends reduce retained earnings directly. The others are classic OCI components (PUFI). This explanation directly addresses why the selected choice is correct based on the exhibit data."
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-B2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ5-B2-Q1: 922768 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-B2-Q1",
+        "type": "numeric",
+        "derived": "922768",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ4-B1",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ4-B1-Q1: 10000 (first-half-last-equals); CBQ4-B1-Q4: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B1-Q1",
+        "type": "numeric",
+        "derived": "10000",
+        "method": "first-half-last-equals",
+        "keyHidden": true,
+        "note": ""
+      },
+      {
+        "itemId": "CBQ4-B1-Q4",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: High-Low is simple but ignores all intermediate data and is skewed by extreme highs/lows."
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ4-B2",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ4-B2-Q1: 300000 (first-half-last-equals)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B2-Q1",
+        "type": "numeric",
+        "derived": "300000",
+        "method": "first-half-last-equals",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ4-D3",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ4-D3-Q1: EXTRACT_FAILED (none); CBQ4-D3-Q2: 1,2,3,4,6 (choices-endorsed)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-D3-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: The volume variance = (Denominator level − Actual production) × Fixed MOH rate. At practical capacity: (38,000 − 28,000) × $50 = $500,000 U. At master-budget: (30,000 − 28,000) × $63.33 = $126,667 U. Using a lower denominator level reduces the gap between denominator and actual production, producing"
+      },
+      {
+        "itemId": "CBQ4-D3-Q2",
+        "type": "multi",
+        "derived": "1,2,3,4,6",
+        "method": "choices-endorsed",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ4-E2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ4-E2-Q1: EXTRACT_FAILED (none); CBQ4-E2-Q2: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E2-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Management override of controls is one of the most significant internal control weaknesses identified in COSO and by the SEC. Even well-designed controls are ineffective if they can be routinely bypassed. Frequent overrides (47 times in 6 months for one vendor) indicate a control breakdown that coul"
+      },
+      {
+        "itemId": "CBQ4-E2-Q2",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Run-to-run totals, sequence checks, and reasonableness checks are all processing controls — they operate on data during or after processing to ensure accuracy and completeness. The weekly payment report review is an output control (reviewing processed output). The user login screen is an access cont"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-E1",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ5-E1-Q1: EXTRACT_FAILED (none); CBQ5-E1-Q2: EXTRACT_FAILED (none); CBQ5-E1-Q4: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E1-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Attribute Standards define the characteristics required for internal audit activities. Performance Standards describe the nature of internal audit work. Implementation Standards adapt Attribute and Performance Standards to specific engagement types such as assurance or consulting. The fourth option "
+      },
+      {
+        "itemId": "CBQ5-E1-Q2",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Under IIA Standard 1000, the charter must define purpose, authority, and responsibility. It must establish reporting relationships (functional to the board, administrative to management) and define the scope of activities. While periodic review is recommended, specific duration (e.g., annual) is not"
+      },
+      {
+        "itemId": "CBQ5-E1-Q4",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: IIA Standard 1300 requires a QAIP covering all aspects of internal audit. It must include ongoing internal monitoring (project supervision, feedback, metrics), periodic internal self-assessments, and external assessments at least every five years by an independent qualified reviewer or assessment te"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-E2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ5-E2-Q1: EXTRACT_FAILED (none); CBQ5-E2-Q3: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E2-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: The entire attack chain began with a phishing email that succeeded because no security awareness training had been conducted. While MFA, EDR, and network segmentation gaps all contributed to the severity, the root cause enabling the initial compromise was the human control failure — an untrained emp"
+      },
+      {
+        "itemId": "CBQ5-E2-Q3",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: All four controls address specific gaps identified in Exhibit 2: (1) Awareness training directly addresses the phishing root cause. (2) EDR on all endpoints provides detection capability that was missing on 60% of workstations. (3) Network segmentation would have prevented the RAT from moving from t"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-E3",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ5-E3-Q1: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E3-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Expected loss without the program = (30% × €8,000,000) + (45% × €1,200,000) = €2,400,000 + €540,000 = €2,940,000. The proposed program costs €1,500,000 annually. Expected net benefit = €2,940,000 − €1,500,000 = €1,440,000. Since the expected benefit is positive, the program is financially justified "
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ4-F2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ4-F2-Q1: Demand forecasting uses historical sales data with known outcomes to train a supervised regression model — the model learns the relationship between input features (season, promotions, price) and the target variable (units sold). Fraud detection is supervised classification->the model trains on historical transactions labeled as legitimate or fraudulent (pair-extraction); CBQ4-F2-Q2: EXTRACT_FAILED (none); CBQ4-F2-Q4: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F2-Q1",
+        "type": "match",
+        "derived": "Demand forecasting uses historical sales data with known outcomes to train a supervised regression model — the model learns the relationship between input features (season, promotions, price) and the target variable (units sold). Fraud detection is supervised classification->the model trains on historical transactions labeled as legitimate or fraudulent",
+        "method": "pair-extraction",
+        "keyHidden": true,
+        "note": ""
+      },
+      {
+        "itemId": "CBQ4-F2-Q2",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Overfitting occurs when a model learns noise or random fluctuations in the training data rather than the underlying pattern. Limited data for newer stores means the model may memorize specific transactions rather than learning generalizable demand patterns. Excessive model complexity relative to sam"
+      },
+      {
+        "itemId": "CBQ4-F2-Q4",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: Customer segmentation enables targeted marketing (personalized promotions to clusters with distinct preferences), merchandising strategy (tailoring product placement to cluster buying behavior), and customer acquisition (identifying segments with low current penetration for targeted outreach). Segme"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ5-F2",
+    "currentState": "In Audit",
+    "verdict": "quarantine",
+    "handSolveNotes": "CBQ5-F2-Q1: EXTRACT_FAILED (none); CBQ5-F2-Q3: EXTRACT_FAILED (none)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-F2-Q1",
+        "type": "select",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choice from: Invoice data entry to ERP meets all RPA suitability criteria: high volume, rule-based processing, structured data format, and low exception rate. The process is repetitive and standardized, requiring the bot to extract vendor name, PO number, GL code, and amount from invoices and enter these into th"
+      },
+      {
+        "itemId": "CBQ5-F2-Q3",
+        "type": "multi",
+        "derived": "EXTRACT_FAILED",
+        "method": "none",
+        "keyHidden": true,
+        "note": "Could not identify choices from: All four processes share RPA-suitability characteristics: high volume, rule-based processing, structured data, and low exception rates (1% to 8%). Complex loss reserve estimation requires actuarial judgment and has a 35% exception rate, making it unsuitable for RPA. Vendor contract negotiation and f"
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ3-A3",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-A3-Q1: 0.825397 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A3-Q1",
+        "type": "numeric",
+        "derived": "0.825397",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ3-A4",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-A4-Q1: 807.50 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A4-Q1",
+        "type": "numeric",
+        "derived": "807.50",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "bank": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\case_pack_3_corrected.js",
+    "caseId": "CBQ3-C4",
+    "currentState": "In Audit",
+    "verdict": "certify",
+    "handSolveNotes": "CBQ3-C4-Q1: 800 (defining-equation)",
+    "stampSession": "DL-066-keyless-hand-solve-v4",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C4-Q1",
+        "type": "numeric",
+        "derived": "800",
+        "method": "defining-equation",
+        "keyHidden": true,
+        "note": ""
+      }
+    ]
+  }
+]

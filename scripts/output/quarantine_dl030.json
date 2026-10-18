@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-09-05T21:33:43.598Z",
+  "totalItems": 2620,
+  "confirmedKeyErrors": [
+    {
+      "qid": "P1-D-070",
+      "pack": "A",
+      "storedCC": "B",
+      "derivedCC": "C",
+      "ecSupports": "C",
+      "confidence": "high",
+      "reasoning": "Meridian's metrics (2.8% supplier defect rate, 4.2-hour changeover time, monthly production schedules) are incompatible with immediate JIT implementation. A phased approach addressing supplier quality, setup time reduction, and scheduling frequency first is the prerequisite for successful JIT conversion.",
+      "reason": "DL-030: Stored CorrectChoice disagrees with independent model derivation AND ExplanationCorrect"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "C",
+      "storedCC": "D",
+      "derivedCC": "B",
+      "ecSupports": "B",
+      "confidence": "high",
+      "reasoning": "An independent reconciler who does not handle or record cash can objectively detect errors or irregularities without being influenced by their own transactions. This is a fundamental internal control principle regarding segregation of duties.",
+      "reason": "DL-030: Stored CorrectChoice disagrees with independent model derivation AND ExplanationCorrect"
+    },
+    {
+      "qid": "P1-BD-017",
+      "pack": "D",
+      "storedCC": "A",
+      "derivedCC": "C",
+      "ecSupports": "C",
+      "confidence": "medium",
+      "reasoning": "Over a seven-year horizon, the total cost of ownership (purchase price + maintenance + interest - tax shields from depreciation and interest) is less than seven years of lease payments, and ownership provides operational control over the asset plus residual equity. The purchase recommendation is correct despite higher first-year cash outlay.",
+      "reason": "DL-030: Stored CorrectChoice disagrees with independent model derivation AND ExplanationCorrect"
+    },
+    {
+      "qid": "P1E-A-020",
+      "pack": "E",
+      "storedCC": "C",
+      "derivedCC": "B",
+      "ecSupports": "B",
+      "confidence": "high",
+      "reasoning": "A 3-for-1 split means each existing share becomes 3 shares, multiplying shares outstanding by 3. The increase from the original count is 2 times (200% increase), making shares outstanding 3 times the original.",
+      "reason": "DL-030: Stored CorrectChoice disagrees with independent model derivation AND ExplanationCorrect"
+    }
+  ],
+  "dispositionBreakdown": {
+    "agree": 2616,
+    "confirm-key-error": 4
+  },
+  "keyAgreementRate": "2605/2620 = 99.4%",
+  "model": "auto/best-coding",
+  "temperature": 0,
+  "notes": [
+    "Phase 1: All 2,620 items independently derived by LLM (H items thorough, L items terse)",
+    "Phase 1b: 53 candidate items re-verified with EC context",
+    "11 items reclassified from needs-human to agree (model error — EC supports stored CC)",
+    "4 confirmed DL-030 key errors on live Certified items → quarantine list",
+    "0 confirmed DL-047 misassignments (all H items verified agree)"
+  ]
+}

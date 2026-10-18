@@ -1,0 +1,1213 @@
+{
+  "summary": {
+    "totalCases": 80,
+    "totalItems": 425,
+    "files": [
+      {
+        "file": "content/cases/case_pack_1_corrected.js",
+        "cases": 25,
+        "items": 141,
+        "rawOccurrences": 205,
+        "rawDistinct": 25,
+        "status": "OK"
+      },
+      {
+        "file": "content/cases/case_pack_2_corrected.js",
+        "cases": 25,
+        "items": 132,
+        "rawOccurrences": 192,
+        "rawDistinct": 25,
+        "status": "OK"
+      },
+      {
+        "file": "content/cases/case_pack_3_corrected.js",
+        "cases": 30,
+        "items": 152,
+        "rawOccurrences": 232,
+        "rawDistinct": 30,
+        "status": "OK"
+      }
+    ],
+    "errors": 0,
+    "warnings": 147,
+    "dl051_note": "Semantic key/explanation agreement is Step 2 (human/LLM independent solve). This script never judges correctness."
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A1",
+      "item": "CBQ-A1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A1",
+      "item": "CBQ-A1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A1",
+      "item": "CBQ-A1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A1",
+      "item": "CBQ-A1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A3",
+      "item": "CBQ-A3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A3",
+      "item": "CBQ-A3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-A3",
+      "item": "CBQ-A3-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-A2",
+      "item": "CBQ2-A2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-A2",
+      "item": "CBQ2-A2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B1",
+      "item": "CBQ-B1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B1",
+      "item": "CBQ-B1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B1",
+      "item": "CBQ-B1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B1",
+      "item": "CBQ-B1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B1",
+      "item": "CBQ-B1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B3",
+      "item": "CBQ-B3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B3",
+      "item": "CBQ-B3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B3",
+      "item": "CBQ-B3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-B3",
+      "item": "CBQ-B3-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-B1",
+      "item": "CBQ2-B1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-B1",
+      "item": "CBQ2-B1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-B1",
+      "item": "CBQ2-B1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-B1",
+      "item": "CBQ2-B1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-C2",
+      "item": "CBQ-C2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-C2",
+      "item": "CBQ-C2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-C3",
+      "item": "CBQ-C3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-C3",
+      "item": "CBQ-C3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-C2",
+      "item": "CBQ2-C2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-C2",
+      "item": "CBQ2-C2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-C2",
+      "item": "CBQ2-C2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-C2",
+      "item": "CBQ2-C2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-C2",
+      "item": "CBQ2-C2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-D2",
+      "item": "CBQ-D2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-D2",
+      "item": "CBQ-D2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D1",
+      "item": "CBQ2-D1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D2",
+      "item": "CBQ2-D2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D2",
+      "item": "CBQ2-D2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D2",
+      "item": "CBQ2-D2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D2",
+      "item": "CBQ2-D2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D2",
+      "item": "CBQ2-D2-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D3",
+      "item": "CBQ2-D3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D3",
+      "item": "CBQ2-D3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D3",
+      "item": "CBQ2-D3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ2-D3",
+      "item": "CBQ2-D3-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-E1",
+      "item": "CBQ-E1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-E2",
+      "item": "CBQ-E2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-F2",
+      "item": "CBQ-F2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-F2",
+      "item": "CBQ-F2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_1_corrected.js",
+      "caseId": "CBQ-F1",
+      "item": "CBQ-F1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-A3",
+      "item": "CBQ2-A3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-A3",
+      "item": "CBQ2-A3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-A3",
+      "item": "CBQ2-A3-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A1",
+      "item": "CBQ3-A1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A1",
+      "item": "CBQ3-A1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A2",
+      "item": "CBQ3-A2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A2",
+      "item": "CBQ3-A2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A2",
+      "item": "CBQ3-A2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A2",
+      "item": "CBQ3-A2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-A2",
+      "item": "CBQ3-A2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-A1",
+      "item": "CBQ4-A1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-A1",
+      "item": "CBQ4-A1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-A1",
+      "item": "CBQ4-A1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-A1",
+      "item": "CBQ4-A1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B2",
+      "item": "CBQ2-B2-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B3",
+      "item": "CBQ2-B3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B3",
+      "item": "CBQ2-B3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B3",
+      "item": "CBQ2-B3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-B3",
+      "item": "CBQ2-B3-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B1",
+      "item": "CBQ3-B1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B1",
+      "item": "CBQ3-B1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B1",
+      "item": "CBQ3-B1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B1",
+      "item": "CBQ3-B1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B1",
+      "item": "CBQ3-B1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-B2",
+      "item": "CBQ3-B2-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-C3",
+      "item": "CBQ2-C3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-C3",
+      "item": "CBQ2-C3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-C3",
+      "item": "CBQ2-C3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-C3",
+      "item": "CBQ2-C3-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ2-C3",
+      "item": "CBQ2-C3-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-C1",
+      "item": "CBQ4-C1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-C1",
+      "item": "CBQ4-C1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-C1",
+      "item": "CBQ4-C1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-C1",
+      "item": "CBQ4-C1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-C1",
+      "item": "CBQ4-C1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D1",
+      "item": "CBQ3-D1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D1",
+      "item": "CBQ3-D1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D1",
+      "item": "CBQ3-D1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D1",
+      "item": "CBQ3-D1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D1",
+      "item": "CBQ3-D1-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D2",
+      "item": "CBQ3-D2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D2",
+      "item": "CBQ3-D2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D2",
+      "item": "CBQ3-D2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D2",
+      "item": "CBQ3-D2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ3-D2",
+      "item": "CBQ3-D2-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D1",
+      "item": "CBQ4-D1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D1",
+      "item": "CBQ4-D1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D1",
+      "item": "CBQ4-D1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D2",
+      "item": "CBQ4-D2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D2",
+      "item": "CBQ4-D2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_2_corrected.js",
+      "caseId": "CBQ4-D2",
+      "item": "CBQ4-D2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-A2",
+      "item": "CBQ4-A2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-A2",
+      "item": "CBQ4-A2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-A2",
+      "item": "CBQ4-A2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-A2",
+      "item": "CBQ5-A2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B2",
+      "item": "CBQ5-B2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B2",
+      "item": "CBQ5-B2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B2",
+      "item": "CBQ5-B2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B2",
+      "item": "CBQ5-B2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B2",
+      "item": "CBQ5-B2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ3-B3",
+      "item": "CBQ3-B3-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B1",
+      "item": "CBQ4-B1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B1",
+      "item": "CBQ4-B1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B1",
+      "item": "CBQ4-B1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B1",
+      "item": "CBQ4-B1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ4-B2",
+      "item": "CBQ4-B2-Q6",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-B1",
+      "item": "CBQ5-B1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C1",
+      "item": "CBQ5-C1-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C1",
+      "item": "CBQ5-C1-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C1",
+      "item": "CBQ5-C1-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C1",
+      "item": "CBQ5-C1-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C1",
+      "item": "CBQ5-C1-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C2",
+      "item": "CBQ5-C2-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C2",
+      "item": "CBQ5-C2-Q4",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C3",
+      "item": "CBQ5-C3-Q1",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C3",
+      "item": "CBQ5-C3-Q2",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-C3",
+      "item": "CBQ5-C3-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-D2",
+      "item": "CBQ5-D2-Q3",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    },
+    {
+      "severity": "WARNING",
+      "code": "CALC_UNREFERENCED",
+      "file": "content/cases/case_pack_3_corrected.js",
+      "caseId": "CBQ5-D2",
+      "item": "CBQ5-D2-Q5",
+      "detail": "calculation item references no exhibit — confirm self-contained or flag"
+    }
+  ]
+}

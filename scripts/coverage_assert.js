@@ -33,6 +33,16 @@ function writeState(state) {
   fs.writeFileSync(COVERAGE_STATE_FILE, JSON.stringify(state, null, 2));
 }
 
+// FAIL mode is armed only after the board's precondition is actually met:
+// 2 consecutive clean probe:parity runs. Persisted in the state file rather
+// than hardcoded, so the gate can be re-armed deliberately after any change
+// that invalidates coverage evidence.
+const CLEAN_RUNS_REQUIRED = 2;
+
+function isArmed(state) {
+  return state.cleanRuns >= CLEAN_RUNS_REQUIRED;
+}
+
 function loadProbeParity() {
   try {
     const raw = fs.readFileSync("scripts/output/coverage_summary.v1.json", "utf8");
@@ -43,21 +53,32 @@ function loadProbeParity() {
 }
 
 function main() {
-  console.log("=== COVERAGE ASSERTION GATE (v2.0 Final) ===");
-  console.log("Mode: WARNING (hardens to FAIL after 2 clean probe:parity runs)");
-  console.log("");
-
   const probe = loadProbeParity();
   const state = readState();
+  const armed = isArmed(state);
+
+  console.log("=== COVERAGE ASSERTION GATE (v2.0 Final) ===");
+  console.log(armed
+    ? "Mode: FAIL (armed — coverage gaps now block the pipeline)"
+    : "Mode: WARNING (arms to FAIL after " + CLEAN_RUNS_REQUIRED + " clean probe:parity runs)");
+  console.log("");
+
+  const gaps = [];
 
   if (!probe) {
     console.log("WARN: coverage_summary.v1.json not found — probe:parity may not have run");
-    console.log("WARNING: coverage gate incomplete");
+    if (armed) {
+      console.log("FAIL: coverage evidence missing while gate is armed — coverage cannot be asserted.");
+      state.cleanRuns = 0;
+      state.lastRun = new Date().toISOString();
+      writeState(state);
+      return 1;
+    }
+    console.log("WARNING: coverage gate incomplete (not armed — exiting 0)");
     return 0;
   }
 
   // Check for gaps in probe:parity
-  const gaps = [];
   if (probe.divergences && probe.divergences.length > 0) {
     gaps.push(...probe.divergences.map(d => `probe:parity: ${d}`));
   }
@@ -105,28 +126,35 @@ function main() {
   }
 
   if (gaps.length > 0) {
-    console.log("COVERAGE GAPS DETECTED (WARNING mode):");
+    console.log((armed ? "COVERAGE GAPS DETECTED (FAIL mode):" : "COVERAGE GAPS DETECTED (WARNING mode):"));
     for (const gap of gaps) {
       console.log(`  - ${gap}`);
     }
     console.log("");
-    console.log("WARNING: Coverage gaps present. Hardening to FAIL after 2 consecutive clean probe:parity runs.");
-    console.log(`Current clean runs: ${state.cleanRuns}/2`);
+    // Any gap resets the clean-run counter, so FAIL mode re-arms only after a
+    // fresh pair of clean probe:parity runs.
+    const wasArmed = armed;
     state.cleanRuns = 0;
     state.lastRun = new Date().toISOString();
     writeState(state);
+    if (wasArmed) {
+      console.log("FAIL: coverage gaps present while gate is armed — pipeline must not proceed.");
+      return 1;
+    }
+    console.log("WARNING: coverage gaps present. Gate arms to FAIL after " +
+                CLEAN_RUNS_REQUIRED + " consecutive clean probe:parity runs.");
     return 0; // WARNING mode: exit 0
   } else {
     console.log("All coverage checks PASSED — no gaps detected.");
     state.cleanRuns += 1;
     state.lastRun = new Date().toISOString();
     writeState(state);
-    console.log(`Clean runs: ${state.cleanRuns}/2`);
-    if (state.cleanRuns >= 2) {
-      console.log("NOTICE: 2 consecutive clean runs — gate will harden to FAIL on next run if gaps appear.");
+    console.log(`Clean runs: ${state.cleanRuns}/${CLEAN_RUNS_REQUIRED}`);
+    if (state.cleanRuns >= CLEAN_RUNS_REQUIRED) {
+      console.log("Gate ARMED to FAIL mode — coverage gaps will now block the pipeline.");
     }
     return 0;
   }
 }
 
-main();
+process.exit(main());

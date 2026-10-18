@@ -1,22 +1,22 @@
 # Validation Report Summary
 
-**Generated:** 2026-09-25T05:11:38.295Z
+**Generated:** 2026-10-17T20:51:52.764Z
 **Project:** CMA Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 1ms |
-| Metadata Validator | WARN | 0 | 1 | 339ms |
-| Blueprint Validator | WARN | 0 | 188 | 215ms |
-| Part 2 Blueprint Validator | WARN | 0 | 3263 | 411ms |
-| Difficulty Validator | WARN | 0 | 72 | 312ms |
-| Reference Validator | WARN | 0 | 77 | 227ms |
-| Explanation Validator | WARN | 0 | 6 | 973ms |
-| Case Integrity Validator | WARN | 0 | 1 | 232ms |
-| Case Identity Validator | PASS | 0 | 0 | 56ms |
-| PsychometricValidator | WARN | 0 | 7108 | 7026ms |
+| Repository Validator | PASS | 0 | 0 | 2ms |
+| Metadata Validator | WARN | 0 | 1 | 323ms |
+| Blueprint Validator | WARN | 0 | 188 | 240ms |
+| Part 2 Blueprint Validator | WARN | 0 | 3263 | 363ms |
+| Difficulty Validator | WARN | 0 | 72 | 505ms |
+| Reference Validator | WARN | 0 | 77 | 225ms |
+| Explanation Validator | WARN | 0 | 6 | 1134ms |
+| Case Integrity Validator | WARN | 0 | 1 | 214ms |
+| Case Identity Validator | PASS | 0 | 0 | 49ms |
+| PsychometricValidator | WARN | 0 | 7108 | 6084ms |
 
 **Total Errors:** 0
 **Total Warnings:** 10716
@@ -26,14 +26,14 @@
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 1ms
+**Duration:** 2ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 339ms
+**Duration:** 323ms
 **Statistics:**
 - Cases Checked: 190
 **Warnings:**
@@ -41,7 +41,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 215ms
+**Duration:** 240ms
 **Statistics:**
 - Cases Checked: 190
 - Cross-Domain Cases: 2
@@ -249,7 +249,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 411ms
+**Duration:** 363ms
 **Statistics:**
 - P2 MCQ Packs Found: 6
 - P2 Case Packs Found: 5
@@ -3528,7 +3528,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 312ms
+**Duration:** 505ms
 **Statistics:**
 - Cases Checked: 190
 - Items Checked: 1085
@@ -3618,7 +3618,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 227ms
+**Duration:** 225ms
 **Statistics:**
 - Cases Checked: 190
 - Total References: 0
@@ -3705,15 +3705,15 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 973ms
+**Duration:** 1134ms
 **Statistics:**
 - MCQ Questions Checked: 6600
 - Case Items Checked: 1485
 - Questions with Placeholder Explanations: 0
 - Fields with Placeholder Text: 0
 - Short Explanations (<50 chars): 2
-- Correct Explanation Avg Length: 600
-- Wrong Explanation Avg Length: 283
+- Correct Explanation Avg Length: 604
+- Wrong Explanation Avg Length: 285
 **Warnings:**
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 355: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 1814: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
@@ -3724,7 +3724,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 232ms
+**Duration:** 214ms
 **Statistics:**
 - Total Cases Checked: 190
 - Total Items Checked: 1085
@@ -3742,7 +3742,7 @@
 
 ### Case Identity Validator
 **Status:** PASS
-**Duration:** 56ms
+**Duration:** 49ms
 **Statistics:**
 - content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
 - content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
@@ -3797,7 +3797,7 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 7026ms
+**Duration:** 6084ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 6600
 - AbsoluteLanguageValidator.findings: 2571

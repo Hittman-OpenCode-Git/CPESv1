@@ -1,0 +1,39 @@
+{
+  "total": 442,
+  "caseStates": [
+    "Certified",
+    "In Audit"
+  ],
+  "itemStates": [
+    "Certified",
+    "In Audit",
+    null
+  ],
+  "screens": {
+    "B": 335,
+    "C": 96,
+    "B-num": 11
+  },
+  "severityByScreen": {
+    "B": {
+      "weak": 280,
+      "FLAG": 55
+    },
+    "C": {
+      "FLAG": 42,
+      "info": 54
+    },
+    "B-num": {
+      "info": 8,
+      "FLAG": 3
+    }
+  },
+  "flagItems": 100,
+  "certifiedItems": 156,
+  "inversionItems": 159,
+  "inversionByState": {
+    "In Audit": 73,
+    "null": 86
+  },
+  "timestamp": "2026-09-25T04:58:00.793Z"
+}

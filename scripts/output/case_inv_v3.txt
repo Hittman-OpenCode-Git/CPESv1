@@ -1,0 +1,369 @@
+
+================================================================================
+BANK: content/cases/case_pack_1_corrected.js  (3 strong candidates)
+================================================================================
+
+--- CBQ-C2 / CBQ-C2-Q3 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="95 full cost" stored(C)="70 variable cost" recall=1.00 margin=0.00
+  Type: select
+  Prompt: With idle capacity and no opportunity cost, what is the minimum transfer price from the company perspective?
+  Choice A: 95 full cost
+  Choice B: 108 outside purchase price
+  Choice C: 70 variable cost
+  Choice D: 110 market price
+  Correct: 70 variable cost
+  CorrectLetter: C
+  EC: Under the managerial accounting transfer pricing framework codified in CMA Part 1 Section C, the minimum transfer price from the selling division's perspective is: Minimum Transfer Price = Variable Cost per Unit + Opportunity Cost per Unit. Opportunity cost represents the contribution margin forgone on lost external sales. When the selling division has idle capacity — as Exhibit 2 confirms ("Idle capacity? Yes") — the opportunity cost is zero because no external sales are displaced. From Exhibit 2, the Motor Division's variable cost per motor is $70. Minimum Transfer Price = $70 + $0 = $70. Th
+  EWA: Full cost of 95 includes allocated fixed costs, which are irrelevant for the minimum transfer price decision when idle capacity exists. Under CMA transfer pricing principles, the minimum transfer pric
+  EWB: The outside purchase price of 108 represents the maximum price the buying division should be willing to pay, not the minimum the selling division should accept. The minimum transfer price is determine
+  EWC: 
+  EWD: Market price of 110 is the appropriate transfer price only when the selling division has no idle capacity and an active external market exists for the product. With idle capacity and no opportunity co
+
+--- CBQ-C3 / CBQ-C3-Q3 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Operating income" stored(C)="Training hours per employee" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which metric is most clearly a learning and growth measure?
+  Choice A: Operating income
+  Choice B: On-time delivery
+  Choice C: Training hours per employee
+  Choice D: Defect rate
+  Correct: Training hours per employee
+  CorrectLetter: C
+  EC: Under the Kaplan & Norton Balanced Scorecard (BSC) framework, the Learning & Growth perspective captures the organization's intangible assets — human capital, information capital, and organizational capital. Training hours per employee is a classic Learning & Growth measure because it reflects investment in employee capabilities, skills development, and future process improvement capacity. In contrast: Operating income (Choice B) belongs to the FINANCIAL perspective — it measures past financial results. On-time delivery (Choice C) belongs to the CUSTOMER or INTERNAL PROCESS perspective — it me
+  EWA: Operating income is a financial perspective metric in the Balanced Scorecard framework, not a learning and growth measure. Under Kaplan and Norton's BSC model, the financial perspective captures laggi
+  EWB: On-time delivery is an internal business process perspective metric that measures operational efficiency and customer fulfillment performance. While it reflects the effectiveness of internal processes
+  EWC: 
+  EWD: Defect rate is an internal business process metric measuring quality performance at a point in time. It indicates how well production or service processes are currently performing but does not measure
+
+--- CBQ-D2 / CBQ-D2-Q3 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Cutting" stored(B)="Welding" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which operation is the bottleneck?
+  Choice A: Cutting
+  Choice B: Welding
+  Choice C: Painting
+  Choice D: No bottleneck exists
+  Correct: Welding
+  CorrectLetter: B
+  EC: Under the Theory of Constraints (TOC) developed by Dr. Eliyahu Goldratt, a bottleneck is the resource with the lowest capacity that limits the throughput of the entire production system. From Exhibit 2, Keystone Bikes' three operations have these capacities: Cutting 24,000 frames, Welding 19,500 frames, Painting 21,000 frames. Arranging in ascending order: Welding (19,500) < Painting (21,000) < Cutting (24,000). Welding is the bottleneck because it has the lowest throughput capacity. Regardless of how efficiently Cutting or Painting operates, the system cannot produce more than 19,500 complete
+  EWA: Cutting has higher capacity than welding, meaning it can process more units per period than the bottleneck operation. Under the Theory of Constraints, the bottleneck is the resource with the lowest th
+  EWB: 
+  EWC: Painting has a higher capacity than welding, so it is not the system constraint. Under TOC principles, non-bottleneck resources should not be operated at full utilization because this would only build
+  EWD: A bottleneck always exists in any multi-step production process because capacities across operations are never perfectly balanced. The Theory of Constraints defines the bottleneck as the operation wit
+
+================================================================================
+BANK: content/cases/case_pack_2_corrected.js  (7 strong candidates)
+================================================================================
+
+--- CBQ2-A3 / CBQ2-A3-Q4 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="$38,000" stored(C)="$48,000" recall=1.00 margin=0.00
+  Type: select
+  Prompt: If the unadjusted ADA balance was a $5,000 debit, what is the bad debt expense?
+  Choice A: $38,000
+  Choice B: $43,000
+  Choice C: $48,000
+  Choice D: $5,000
+  Correct: $48,000
+  CorrectLetter: C
+  EC: When the unadjusted Allowance for Doubtful Accounts has a debit balance, the bad debt expense must be large enough to both eliminate the debit and establish the required credit balance. Required ending credit balance (from aging): $43,000. Current balance: $5,000 debit. Bad debt expense = $43,000 + $5,000 = $48,000. $38,000 incorrectly subtracts the debit balance instead of adding it -- this would leave the ADA $10,000 short. $43,000 ignores the existing debit balance, leaving the ADA at only $38,000 credit after adjustment (the $43k entry nets against the $5k debit). $5,000 is merely the exis
+
+--- CBQ3-A1 / CBQ3-A1-Q2 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Operating lease" stored(B)="Finance lease" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Based on ASC 842, how should Meridian classify this lease?
+  Choice A: Operating lease
+  Choice B: Finance lease
+  Choice C: Short-term lease
+  Choice D: Sale-leaseback
+  Correct: Finance lease
+  CorrectLetter: B
+  EC: Under ASC 842, a lease is classified as a finance lease if any of five criteria are met. Here, the PV of lease payments ($231,660) exceeds substantially all (90%) of the fair value ($250,000 x 90% = $225,000). At 92.6%, the PV substantially exceeds substantially all of fair value — triggering finance lease classification. Operating lease ($231,660 > $225,000 rules this out), short-term lease (5-year term exceeds 12 months), and sale-leaseback (Meridian is the lessee, not a seller-lessee) are incorrect. A candidate reaching operating lease may have failed to compute or apply the PV/fair value t
+
+--- CBQ4-A1 / CBQ4-A1-Q5 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(B)="Calculate the implied fair value of goodwill" stored(A)="No impairment loss is recognized, and no further testing is required" recall=1.00 margin=0.00
+  Type: select
+  Prompt: If a reporting unit's fair value is greater than its carrying amount, what is the next step for goodwill impairment testing?
+  Choice A: No impairment loss is recognized, and no further testing is required
+  Choice B: Calculate the implied fair value of goodwill
+  Choice C: Perform a qualitative assessment
+  Choice D: Recognize an impairment gain
+  Correct: No impairment loss is recognized, and no further testing is required
+  CorrectLetter: A
+  EC: Under ASC 350-20, goodwill impairment testing uses a simplified one-step approach: if the reporting unit's fair value exceeds its carrying amount (including goodwill), no impairment exists and no further testing is required. The old two-step process (calculating implied fair value of goodwill) was eliminated by ASU 2017-04. A qualitative assessment (Step 0) is an optional screening step that was bypassed here per the exhibit. 'Recognize an impairment gain' is incorrect — impairment losses reduce the asset; gains are not recognized simply because FV exceeds carrying amount. A candidate selectin
+
+--- CBQ2-B2 / CBQ2-B2-Q4 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="$35,000" stored(C)="$125,000" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What amount must Harbor borrow in January to meet the minimum cash balance?
+  Choice A: $35,000
+  Choice B: $90,000
+  Choice C: $125,000
+  Choice D: $200,000
+  Correct: $125,000
+  CorrectLetter: C
+  EC: The cash deficit before financing is $90,000. To reach the $35,000 minimum balance, the company must borrow $90,000 + $35,000 = $125,000.
+
+--- CBQ2-C3 / CBQ2-C3-Q5 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Division C" stored(B)="Division A" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which division had the best performance based on residual income?
+  Choice A: Division C
+  Choice B: Division A
+  Choice C: Division B
+  Choice D: Cannot be determined from the data provided
+  Correct: Division A
+  CorrectLetter: B
+  EC: Residual income calculations: Division A = $480,000 - (12% x $3,000,000) = $120,000. Division B = $350,000 - (12% x $2,500,000) = $350,000 - $300,000 = $50,000. Division C = $600,000 - (12% x $5,000,000) = $600,000 - $600,000 = $0. Division A has the highest residual income at $120,000. A candidate might select Division C based on absolute operating income ($600,000), which ignores the much larger asset base supporting that income. Division C's residual income of $0 means it earned exactly the required return but no economic profit above it. This illustrates why absolute income alone is a misl
+
+--- CBQ3-C3 / CBQ3-C3-Q1 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(B)="Favorable $126,000 — actual revenue of $876,000 exceeded static budget revenue o" stored(A)="Favorable $50,000 — the flexible budget shows expected operating income at 12,00" recall=0.94 margin=0.09
+  Type: select
+  Prompt: The production manager notes that actual revenue exceeded the static budget by $126,000 and believes performance was strong. However, the controller points out that actual sales volume was 12,000 units compared to the budgeted 10,000. Based on Exhibit 1, what is the sales volume variance for operating income?
+  Choice A: Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance
+  Choice B: Favorable $126,000 — actual revenue of $876,000 exceeded static budget revenue of $750,000, so the volume variance is favorable by $126,000
+  Choice C: Unfavorable $11,000 — actual operating income of $41,000 exceeded the flexible budget operating income of $30,000 by $11,000
+  Choice D: Favorable $11,000 — actual operating income of $41,000 exceeded static budget operating income of $30,000 by $11,000
+  Correct: Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance
+  CorrectLetter: A
+  EC: The sales volume variance isolates the effect of changes in sales volume on operating income while holding selling prices and costs at budgeted amounts. Per Exhibit 2, the standard contribution margin per unit is $75 selling price − $20 DM − $15 DL − $10 VOH − $5 VS&A = $25 per unit. Flexible budget operating income at 12,000 units = (12,000 × $25 CM) − $180,000 fixed MOH − $40,000 fixed S&A = $300,000 − $220,000 = $80,000. The static budget operating income at 10,000 units is $30,000. Sales volume variance = $80,000 − $30,000 = $50,000 Favorable. Equivalently, (12,000 − 10,000) × $25 = $50,00
+
+--- CBQ4-C1 / CBQ4-C1-Q5 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(C)="Fixed overhead spending variance" stored(D)="Fixed overhead production-volume variance" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which variance is NEVER considered controllable by the production supervisor?
+  Choice A: Variable overhead spending variance
+  Choice B: Variable overhead efficiency variance
+  Choice C: Fixed overhead spending variance
+  Choice D: Fixed overhead production-volume variance
+  Correct: Fixed overhead production-volume variance
+  CorrectLetter: D
+  EC: The fixed overhead production-volume variance is NEVER controllable by the production supervisor because it arises from the difference between the denominator activity level (set by top management for capacity planning) and actual production volume. The supervisor controls spending and efficiency on the shop floor but cannot influence how many units the company produces relative to budgeted capacity. VOH spending and efficiency variances are directly affected by supervisor decisions (material prices, labor efficiency). FOH spending variance reflects deviations from budget that may include supe
+
+================================================================================
+BANK: content/cases/case_pack_3_corrected.js  (4 strong candidates)
+================================================================================
+
+--- CBQ5-E3 / CBQ5-E3-Q1 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(C)="€20,000,000" stored(D)="€32,000,000" recall=1.00 margin=0.00
+  Type: select
+  Prompt: DataBridge Solutions Inc. has been found by a EU supervisory authority to have intentionally violated EU data subjects' rights under Article 83(5) of the GDPR. Based on the financial data provided in Exhibit 1, what is the maximum potential administrative fine DataBridge faces?
+  Choice A: €10,000,000
+  Choice B: €16,000,000
+  Choice C: €20,000,000
+  Choice D: €32,000,000
+  Correct: €32,000,000
+  CorrectLetter: D
+  EC: Under GDPR Article 83(5), for serious violations including infringement of data subject rights, the maximum fine is the higher of €20,000,000 or 4% of the undertaking's total worldwide annual turnover for the preceding financial year. DataBridge's global annual turnover is €800,000,000. 4% × €800,000,000 = €32,000,000. Since €32,000,000 exceeds €20,000,000, the maximum fine is €32,000,000.
+
+--- CBQ5-E3 / CBQ5-E3-Q2 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="€1,500,000" stored(B)="€1,440,000" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Using the data in Exhibit 1, what is the expected annual net benefit (or cost) of implementing the proposed privacy compliance program? (Expected value of avoided losses minus program cost.)
+  Choice A: €1,500,000
+  Choice B: €1,440,000
+  Choice C: €2,400,000
+  Choice D: €2,940,000
+  Correct: €1,440,000
+  CorrectLetter: B
+  EC: Expected loss without the program = (30% × €8,000,000) + (45% × €1,200,000) = €2,400,000 + €540,000 = €2,940,000. The proposed program costs €1,500,000 annually. Expected net benefit = €2,940,000 − €1,500,000 = €1,440,000. Since the expected benefit is positive, the program is financially justified on an expected-value basis.
+
+--- CBQ5-E3 / CBQ5-E3-Q4 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Right to access" stored(C)="Right to erasure (right to be forgotten)" recall=1.00 margin=0.00
+  Type: select
+  Prompt: An EU data subject submits a request to DataBridge demanding that the company delete all personal data collected about them and cease processing. Under the GDPR, which data subject right has been invoked?
+  Choice A: Right to access
+  Choice B: Right to rectification
+  Choice C: Right to erasure (right to be forgotten)
+  Choice D: Right to data portability
+  Correct: Right to erasure (right to be forgotten)
+  CorrectLetter: C
+  EC: The right to erasure, also known as the right to be forgotten, is established under GDPR Article 17. It allows data subjects to request the deletion of their personal data without undue delay when certain grounds apply, such as the data is no longer necessary for the purpose for which it was collected, the data subject withdraws consent, or the data was unlawfully processed. This is distinct from the right to access (Article 15), right to rectification (Article 16), and right to data portability (Article 20).
+
+--- CBQ5-E3 / CBQ5-E3-Q5 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(A)="Binding Corporate Rules (BCRs)" stored(B)="Standard Contractual Clauses (SCCs)" recall=1.00 margin=0.00
+  Type: select
+  Prompt: DataBridge needs to transfer personal data of EU customers from its Irish subsidiary to its primary data center in Chicago for centralized analytics processing. Which GDPR-approved transfer mechanism is most appropriate for this recurring data transfer scenario?
+  Choice A: Binding Corporate Rules (BCRs)
+  Choice B: Standard Contractual Clauses (SCCs)
+  Choice C: Privacy Shield framework
+  Choice D: Data Protection Impact Assessment (DPIA)
+  Correct: Standard Contractual Clauses (SCCs)
+  CorrectLetter: B
+  EC: Standard Contractual Clauses (SCCs) are pre-approved model data protection clauses issued by the European Commission that controllers and processors can use to ensure adequate data protection for transfers to countries without an adequacy decision. SCCs are the most commonly used transfer mechanism for routine business-to-business data transfers. Binding Corporate Rules (BCRs) are an alternative but are more complex to implement and are typically used for intra-group transfers within a multinational corporate group. The Privacy Shield framework was invalidated by the Court of Justice of the Eu
+
+================================================================================
+BANK: p2/case_pack_p2_1.js  (8 strong candidates)
+================================================================================
+
+--- CBQ21-B4 / CBQ21-B4-Q2 | caseState=In Audit | itemState=In Audit ---
+  INVERSION: predicted(B)="A two-notch downgrade because any D/E above 1.0 triggers the maximum negative ad" stored(C)="A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/De" recall=0.91 margin=0.00
+  Type: select
+  Prompt: Under S&P-style notching rules (Exhibit 2), Flash Industrial's pre-deal D/E of 0.8 supports a BBB+ rating. The post-deal D/E rises to 1.4, and FFO/Debt falls below 40%. Using the matrix, what is the most likely rating outcome?
+  Choice A: No change; rating agencies do not adjust notches on the basis of D/E movements alone.
+  Choice B: A two-notch downgrade because any D/E above 1.0 triggers the maximum negative adjustment.
+  Choice C: A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/Debt < 40%.
+  Choice D: A one-notch upgrade because the new debt is senior unsecured and benefits from subordination protection.
+  Correct: A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/Debt < 40%.
+  CorrectLetter: C
+  EC: S&P-style rating methodologies apply notching adjustments based on financial-risk indicators and structural features. Applied to Flash Industrial, the post-deal D/E of 1.4 with FFO/Debt below 40% triggers the one-notch downgrade rule from BBB+. Interpretation: the matrix is a rule-based overlay on the issuer's anchor credit profile, and a single negative trigger is calibrated to one notch, not two. A common trap is to assume any D/E above 1.0 automatically drives the maximum adjustment, which would be inconsistent with notching calibration.
+  EWA: Claiming no change ignores the matrix rule, which explicitly ties notching to leverage and FFO/Debt thresholds for senior unsecured issuers.
+  EWB: Two notches is the matrix convention for subordination, not for the D/E / FFO/Debt rule cited for this scenario.
+  EWC: 
+  EWD: An upgrade is not produced by senior-unsecured status when D/E and FFO/Debt move adversely; the matrix rule is a downward adjustment.
+
+--- CBQ21-F4 / CBQ21-F4-Q1 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="Confidentiality" stored(B)="Credibility — fair disclosure requires headline match assurance scope; 60% unaud" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which IMA standard is MOST implicated by the carbon-neutral headline with 40% assurance?
+  Choice A: Confidentiality
+  Choice B: Credibility — fair disclosure requires headline match assurance scope; 60% unaudited misleads
+  Choice C: Competence
+  Choice D: Integrity only if intent proven
+  Correct: B
+  EC: The carbon-neutral headline claims portfolio-wide Scope 1-3 coverage, but assurance is limited to 40% AUM (listed equities only). IMA Credibility (fourth standard) requires fair and full disclosure of all relevant information — communicating 'carbon-neutral' when 60% of the endowment is unaudited misleads donors and beneficiaries. The headline-scope mismatch is a greenwashing exposure that the audit committee and donors should see. Choice A (Confidentiality) governs how information moves through proper channels, not what may be claimed; Choice C (Competence) is technical expertise, not communi
+
+--- CBQ21-F4 / CBQ21-F4-Q3 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="Recognize $25M immediately" stored(A)="Disclose contingency and avoid recognizing; do not inflate claim to secure gift" recall=1.00 margin=0.00
+  Type: select
+  Prompt: How should the $25M conditional gift be treated?
+  Choice A: Disclose contingency and avoid recognizing; do not inflate claim to secure gift
+  Choice B: Recognize $25M immediately
+  Choice C: Book as liability until verified
+  Choice D: Defer until lawsuit
+  Correct: A
+  EC: Under ASC 958 (Not-for-Profit Entities) and ASC 450 (Contingencies), a conditional gift with a measurable barrier (the donor's '$25M if report overstates') is not recognized as revenue until the barrier is met. Recognition requires unconditional promise or completed transfer; a conditional promise is disclosed, not booked, until the condition is substantially met. Recognizing $25M immediately to 'secure the gift' violates ASC 958-605 and inflates the donor-reporting claim that triggered the condition in the first place. The CEO's pressure compounds the credibility risk (IMA Credibility). Discl
+
+--- CBQ21-F4 / CBQ21-F4-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="Publish as drafted" stored(B)="Escalate to audit committee with Exhibit 1, bypassing involved VP" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What is Amir's correct first step under IMA resolution when VP pressures claim?
+  Choice A: Publish as drafted
+  Choice B: Escalate to audit committee with Exhibit 1, bypassing involved VP
+  Choice C: Confront donor
+  Choice D: Resign immediately
+  Correct: B
+  EC: IMA resolution (Statement of Ethical Professional Practice, 'Resolve Ethical Conflicts' subsection) starts with the immediate supervisor unless that person appears involved in the conflict. Here the VP of Sales authored the return-rights instruction that drives the credibility concern, so direct confrontation both fails procedurally and risks tipping the counterparty. Escalation moves to next-level management or the audit committee with contemporaneous documentation (email, memo, dates). Resignation is the last resort only after channels are exhausted. Choice A (publish as drafted) abandons th
+
+--- CBQ21-B5 / CBQ21-B5-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="Residual signals confidence" stored(A)="Stable signals confidence, reduces volatility; residual signals investment oppor" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What is the signaling effect of a stable $2 dividend vs residual $3?
+  Choice A: Stable signals confidence, reduces volatility; residual signals investment opportunities but payout varies
+  Choice B: Residual signals confidence
+  Choice C: Stable always higher
+  Choice D: No signaling
+  Correct: A
+  EC: Stable $2.00 signals management's confidence that future earnings can sustain the dividend even through cyclical downturns; the trade-off is retaining $4M of excess earnings that could fund additional growth or repurchase. Residual $3.00 signals the opposite — that attractive investment opportunities exist — but introduces payout volatility that some income-oriented shareholders dislike. The right choice for Orchard depends on shareholder mix: growth-oriented investors prefer residual (signaling growth); income-oriented investors prefer stable (signaling confidence). Choice B reverses the stan
+
+--- CBQ21-D3 / CBQ21-D3-Q3 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="Health 20% — lowest" stored(C)="Life 50% — highest RAROC above hurdle, best risk-adjusted" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which line should receive incremental capital?
+  Choice A: Health 20% — lowest
+  Choice B: Auto 30% — but Life 50% highest
+  Choice C: Life 50% — highest RAROC above hurdle, best risk-adjusted
+  Choice D: Property 30% — tie
+  Correct: C
+  EC: Life line RAROC = ($6M - $1M) / $10M = 50%, the highest in the portfolio and well above the 15% hurdle. Per D.5 and D.7 capital allocation discipline, incremental capital should flow to the highest-RAROC line first because each marginal dollar of capital earns more risk-adjusted return there. Auto (30%), Property (30%), and Health (20%) all clear the hurdle but rank below Life. Choice A misidentifies Health (the lowest); Choice B cites Auto but ignores Life (highest); Choice D treats the Property-Auto tie as equivalent to Life's dominance.
+
+--- CBQ21-D3 / CBQ21-D3-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="Destroys value" stored(A)="Creates value — return exceeds risk-adjusted hurdle; allocate" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What does RAROC 30% vs hurdle 15% imply?
+  Choice A: Creates value — return exceeds risk-adjusted hurdle; allocate
+  Choice B: Destroys value
+  Choice C: Breakeven
+  Choice D: Ignore hurdle
+  Correct: A
+  EC: RAROC of 30% against a 15% hurdle implies value creation: the line's risk-adjusted return exceeds the cost-of-capital-adjusted hurdle, so every dollar of capital allocated generates positive economic profit (RAROC - hurdle, times capital). For Auto, that spread is 15 percentage points × $20M capital = $3.0M of expected economic profit per period. A line below hurdle would destroy value (negative economic profit); a line at hurdle is the break-even risk-adjusted decision boundary. Choice B (destroys value) is the inverse trap; Choice C (breakeven) applies only when RAROC = hurdle exactly; Choic
+
+--- CBQ21-D4 / CBQ21-D4-Q3 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="Supplier A scores 12 (Moderate likelihood, High severity); Supplier B scores 6 (" stored(C)="Supplier A scores 8 (Low likelihood, High severity); Supplier B scores 9 (Modera" recall=1.00 margin=0.05
+  Type: select
+  Prompt: Based on Exhibit 1, which of the following correctly classifies the three suppliers on the risk heat map using the likelihood x severity scoring method?
+  Choice A: Supplier A scores 12 (Moderate likelihood, High severity); Supplier B scores 6 (Low likelihood, Moderate severity); Supplier C scores 12 (High likelihood, Moderate severity)
+  Choice B: Supplier A scores 20 (High likelihood, High severity); Supplier B scores 6 (Low likelihood, Moderate severity); Supplier C scores 15 (Moderate likelihood, High severity)
+  Choice C: Supplier A scores 8 (Low likelihood, High severity); Supplier B scores 9 (Moderate likelihood, Moderate severity); Supplier C scores 16 (High likelihood, High severity)
+  Choice D: Supplier A scores 12 (Moderate likelihood, High severity); Supplier B scores 8 (Low likelihood, High severity); Supplier C scores 12 (High likelihood, Moderate severity)
+  Correct: C
+  EC: Risk score equals likelihood multiplied by severity using the 1-5 integer scale from Exhibit 1. Supplier A: likelihood 3 (Moderate) x severity 4 (High) = 12. Supplier B: likelihood 2 (Low) x severity 3 (Moderate) = 6. Supplier C: likelihood 4 (High) x severity 3 (Moderate) = 12. Both Supplier A and Supplier C score 12 but occupy different quadrants: Supplier A is a moderate-probability high-impact event while Supplier C is a high-probability moderate-impact event. Supplier B scores 6, placing it in the low-priority quadrant. The heat map reveals that concentration risk is not solely driven by 
+
+================================================================================
+BANK: p2/case_pack_p2_2.js  (4 strong candidates)
+================================================================================
+
+--- CBQ22-C2 / CBQ22-C2-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="$36.00 per unit" stored(D)="$39.25 per unit" recall=1.00 margin=0.00
+  Type: select
+  Prompt: At what purchase price per unit from Vantage would Kestrel be financially indifferent between making and buying the module, after considering the sublease alternative?
+  Choice A: $36.00 per unit
+  Choice B: $32.75 per unit
+  Choice C: $43.25 per unit
+  Choice D: $39.25 per unit
+  Correct: D
+  EC: Set the net cost of buying equal to the relevant cost of making: 24,000 x P - $78,000 = $864,000, so 24,000P = $942,000 and P = $39.25. Verification: 24,000 x $39.25 = $942,000; $942,000 - $78,000 = $864,000, which ties to Exhibit 1's avoidable cost. Any quote below $39.25 makes purchasing cheaper; above it, making wins. The distractors map to real errors: $36.00 omits the $3.25 per-unit opportunity charge ($78,000 / 24,000); $32.75 subtracts instead of adds it ($36.00 - $3.25); and $43.25 wrongly starts from the $46.50 full cost and deducts the same $3.25, anchoring on data that includes $10.
+
+--- CBQ22-B5 / CBQ22-B5-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="1,379,310 — same as forward" stored(A)="1,408,451 — 200M/142=1,408k, $29k above forward" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What is unhedged USD cost if yen strengthens to 142 at maturity?
+  Correct: A
+  EC: Choice A: divide by the realized rate. Unhedged cost = 200,000,000 / 142 = 1,408,450.70, rounded to 1,408,451. Against the forward cost of 200,000,000 / 145 = 1,379,310, the strengthening yen costs Ortega an extra 29,141. Choice B prices the forward scenario, not the unhedged one. Choice C divides by today's spot (148), assuming no rate move at all. Choice D invents a round number with no derivation. The trap is answering the exposure (200M) or the hedged cost instead of the stated scenario rate.
+
+--- CBQ22-F4 / CBQ22-F4-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="No deficiency — template is control" stored(B)="Material weakness or significant deficiency — reasonable possibility of material" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What is the SOX404 implication of the template that auto-books agent fees as consulting?
+  Correct: B
+  EC: Choice B: a material weakness or significant deficiency. The template that auto-books agent fees as consulting, combined with the manager approving without inquiry, overrides proper classification — Exhibit 2's test is reasonable possibility of material misstatement, which mislabeled bribery payments plus inattentive review squarely meet. Choice A mistakes automation for control (a template that encodes the wrong treatment is a deficiency, not a control). Choice C understates: this is not disclosure-only. Choice D wrongly walls FCPA off from SOX; corrupt payments flowing through false books ar
+
+--- CBQ22-C7 / CBQ22-C7-Q3 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div" stored(C)="$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A" recall=0.92 margin=0.01
+  Type: select
+  Prompt: What is the negotiated transfer price range within which both divisions benefit from the internal transfer?
+  Choice A: $22.00 to $35.00 — from the Components Division's variable cost to the market selling price
+  Choice B: $14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Division's external purchase price
+  Choice C: $22.00 to $33.00 — from the Components Division's variable cost (floor) to the Assembly Division's external purchase price (ceiling)
+  Choice D: $28.50 to $35.00 — the midpoint of the range to the market price
+  Correct: C
+  EC: The negotiated range is bounded by the seller's minimum ($22.00 = variable cost with idle capacity) and the buyer's maximum ($33.00 = external purchase price). Any transfer price within this range improves both divisions' results relative to their outside alternatives. The Components Division earns positive CM at any price above $22.00, and the Assembly Division saves money at any price below $33.00. At $22.00, the Components Division breaks even on the transfer and the Assembly Division captures the full $11 benefit. At $33.00, the Assembly Division breaks even and the Components captures the
+
+================================================================================
+BANK: p2/case_pack_p2_3.js  (3 strong candidates)
+================================================================================
+
+--- CBQ23-D3 / CBQ23-D3-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(B)="Share — insurance" stored(A)="Reduce — lowers likelihood L3→1" recall=1.00 margin=0.00
+  Type: select
+  Prompt: Which response classification is dual-sourcing Alpha?
+  Correct: A
+  EC: Choice A (Reduce): dual-sourcing lowers the likelihood leg (L3 to L1) by removing single-source fragility — the textbook Reduce response to a concentration risk. Choice B (Share) would transfer risk via insurance, which Exhibit 2 does not offer. Choice C (Avoid) means exiting the product, wildly disproportionate. Choice D (Accept) does nothing while a top-priority risk sits above tolerance. The classification trap is confusing the response verb with its cost row; match the MECHANISM (likelihood down) to the label.
+
+--- CBQ23-F5 / CBQ23-F5-Q3 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="Both annual — no difference" stored(C)="302 quarterly CEO/CFO certify fair presentation and disclosure controls (this qu" recall=1.00 margin=0.05
+  Type: select
+  Prompt: How do SOX302 and SOX404 differ for this override?
+  Correct: C
+  EC: Choice C states the Exhibit 2 split exactly: SOX 302 is the quarterly CEO/CFO certification of fair presentation and disclosure controls — which this quarter fails on both counts — while SOX 404 is the annual management ICFR assessment plus auditor attestation that will capture the year-end deficiency. Choice A erases the cadence difference; choice B reverses it; choice D moves certification to the auditor when 302 explicitly puts it on management. The trap is memorizing numbers without owners and frequencies.
+
+--- CBQ23-F5 / CBQ23-F5-Q4 | caseState=In Audit | itemState=null ---
+  INVERSION: predicted(A)="No deficiency — override is management discretion" stored(B)="Material weakness or significant deficiency — override of key control creates re" recall=1.00 margin=0.00
+  Type: select
+  Prompt: What is the ICFR implication of overriding the 3-way match for $420k?
+  Correct: B
+  EC: Choice B: material weakness or significant deficiency. Overriding a key application control (3-way match) to ship $420k unordered goods creates a reasonable possibility of material misstatement, and management override is itself an indicator of ineffective ICFR. Choice A calls override 'discretion' — discretion ends where control design begins. Choice C understates to disclosure-only when the balance sheet is misstated. Choice D assumes $420k immaterial without analysis and ignores that override indicators do not scale with the invoice.
+C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\extract_case_items_v3.js:31
+  for (const c of cases) {
+                  ^
+
+TypeError: cases is not iterable
+    at Object.<anonymous> (C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\extract_case_items_v3.js:31:19)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14)
+    at Object..js (node:internal/modules/cjs/loader:2003:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.19.0

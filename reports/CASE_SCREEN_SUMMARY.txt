@@ -1,0 +1,49 @@
+CASE SEMANTIC SCREENS — SCREEN/SEVERITY SUMMARY
+================================================
+Generated: 2026-09-25
+Source: scripts/output/case_semantic_flags.json
+Method: case_semantic_screens.js DL-051 Phase 1 v3 (dual-verified)
+
+CENSUS (all banks):
+  Total cases:        190
+  Total items:      1,085
+  Certified items:    478
+
+FLAG CENSUS (all flags, all states): 427
+  By Screen:  B=335  C=81  B-num=11
+  By Severity: weak=280  FLAG=107  info=40
+
+CERTIFIED-STATE FLAGS (caseState=Certified & itemState=Certified): 148
+  By Screen:  B=97  C=48  B-num=3
+  By Severity: weak=78  FLAG=47  info=23
+
+  Screen × Severity (certified-state):
+
+    Screen | weak | FLAG | info | Total
+    -------|------|------|------|-----
+    B      |  78  |  19  |   0  |  97
+    C      |   0  |  27  |  21  |  48
+    B-num  |   0  |   1  |   2  |   3
+    -------|------|------|------|-----
+    Total  |  78  |  47  |  23  | 148
+
+DETAIL CATEGORY BREAKDOWN (certified-state, 148 total):
+
+    Category                    | Count | Severity
+    ------------------------------|-------|---------
+    B:INVERSION                   |  10   | mixed
+    B:UNSUPPORTED-CORRECT         |  15   | mixed
+    B:EXTRA-REFUTED               |  27   | weak
+    B:DISJOINT                    |   4   | mixed
+    B:multi-predicted             |  41   | mixed
+    C:jaccard                     |  27   | FLAG
+    C:SHORT                       |  21   | info
+    B-num:SIGN-CONVENTION         |   2   | info
+    B-num:numeric-absent          |   1   | FLAG
+    ------------------------------|-------|---------
+    Total                         | 148   |
+
+Note: The 148 certified-state total spans ALL screens/categories (B+C+B-num),
+NOT just the B:INVERSION subset. B:INVERSION has only 10 certified-state items
+out of 159 total across all states. See EXTERNAL_REVIEW_INDEX.txt for governance
+context and CASE_REVIEW_ITEMS.txt for per-item adjudication records.

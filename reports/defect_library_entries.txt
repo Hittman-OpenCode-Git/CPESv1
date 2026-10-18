@@ -1,0 +1,68 @@
+
+
+## DL-051 — Case Semantic Key/Explanation Inversion — Session 2026-09-15
+
+**Defect ID:** DL-051
+**Class:** Content
+**Domain:** Case study answer key
+**Severity:** Critical
+**Detected By:** Independent review (Section A gate)
+**Status:** Remediated
+
+**Description:** CBQ3-A4 (Inventory Valuation and LCNRV, case_pack_3) — Items Q2/Q3/Q4 had answer keys that did not match exhibit data. Q2 stored Correct="12000" (write-down amount) but all three product lines have cost below NRV (Laptops $680<$807.50, Tablets $220<$228, Accessories $35<$39.90), so the correct write-down is $0. Q3 (journal entry) and Q4 (ratio analysis) cascade from Q2's incorrect key. Q2 Explanation contained self-contradicting meta-commentary ("Wait — this yields $0...").
+
+**Detection Rule:** Independent hand-solve of case numeric items against exhibit data, cross-checked to stored keys.
+
+**Root Cause:** Authoring error — stored answer key did not match exhibit data computation.
+
+**Correction:**
+- Q2: Correct "12000" → "0"; Explanation rewritten with clean LCNRV analysis, meta-commentary stripped.
+- Q3: Prompt + Choices + Correct restructured — correct answer is now "Record no journal entry because cost does not exceed NRV for any product line."
+- Q4: Correct → Choice D ("Neither ratio is affected") since no write-down exists.
+- All 5 items quarantined: Certified → In Audit. Q1/Q5 unaffected and quarantined for consistency.
+- cert_provenance stamps added to all 5 items.
+
+**Verification:** Independent solve of 7 numeric case items in Sections C and E (all verified correct); QID count pre/post unchanged (152 case items); reparse OK.
+
+**Files Modified:** `content/cases/case_pack_3_corrected.js`
+**Backup:** `.bak-20260915213102`
+
+---
+
+## DL-003 — Remediation Wave — Session 2026-09-15
+
+**Defect ID:** DL-003
+**Class:** Pedagogical
+**Domain:** Absolute language in distractors
+**Severity:** Medium
+**Detected By:** Comprehensive word-boundary regex scan (all 3,070 MCQ)
+**Status:** Remediated
+
+**Description:** 103 distractor choices across packs A-E contained absolute language ("always"/"never"/"impossible") creating elimination cues for 4-choice tests.
+
+**Correction:** 103 distractors reworded: "always"→"typically", "never"→"rarely", "impossible"→"highly impractical". 20 items with truth-bearing absolutes in correct choices documented as keeps (including P1B-E-150 per COSO limitations per closeout verdict). 4 "all of the above" items excluded (valid choice format).
+
+**Rule-5 batching:** pack_a(7), pack_b(20), pack_c(28) compliant. pack_d(35) exceeds cap → BLOCK-AUTHORIZED marker applied.
+
+**Verification:** Post-remediation scan: 0 distractor absolutes remain (P1B-E-150 Choice D "always" correctly retained as documented keep). QID counts unchanged (A:560, B:620, C:620, D:590, E:680). Re-parse OK.
+
+**Files Modified:** `content/packs/pack_a_corrected.js`, `pack_b_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`, `pack_e_corrected.js`
+**Backups:** `.bak-20260915213102` on all 5 files
+
+---
+
+## DL-052 — Metadata Label/Score Mismatch — Session 2026-09-15
+
+**Defect ID:** DL-052
+**Class:** Structural (metadata)
+**Domain:** Difficulty label vs DifficultyScore misalignment
+**Severity:** MEDIUM
+**Detected By:** Cog-diff mismatch scan (Section E/F gates)
+**Status:** Remediated
+
+**Description:** 6 items had Difficulty label not matching DifficultyScore. DS=4 (Difficult) and DS=5 (Very Difficult) items labeled "Easy". Additional item (P1-F-013) had CognitiveLevel=Analyze with DS=1 (below Analyze floor of DS≥3).
+
+**Correction:** 5 items: Difficulty label aligned to DifficultyScore (Easy→Difficult for DS=4; Easy→Very Difficult for DS=5). 1 item (P1-F-013): CognitiveLevel lowered from Analyze to Apply to match DS=1 floor. All 6 items quarantined Certified→In Audit.
+
+**Files Modified:** `content/packs/pack_a_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`
+**Backup:** `.bak-20260915213102` on all affected files

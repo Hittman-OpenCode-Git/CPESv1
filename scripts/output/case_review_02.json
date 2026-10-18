@@ -1,0 +1,55 @@
+{
+  "waves": [
+    {
+      "pack": 1,
+      "file": "content/cases/case_pack_1_corrected.js",
+      "cases": 25,
+      "items": 141,
+      "flags": [
+        {
+          "pack": 1,
+          "file": "content/cases/case_pack_1_corrected.js",
+          "caseId": "CBQ2-A2",
+          "item": "CBQ2-A2-Q5",
+          "type": "multi",
+          "code": "B-CASE-ECHO",
+          "detail": "best-recall choice != stored Correct (best=\"Selling expenses\" r=1.00 stored=\"Direct materials\")"
+        },
+        {
+          "pack": 1,
+          "file": "content/cases/case_pack_1_corrected.js",
+          "caseId": "CBQ-B3",
+          "item": "CBQ-B3-Q5",
+          "type": "select",
+          "code": "B-CASE-ECHO",
+          "detail": "best-recall choice != stored Correct (best=\"No borrowing required; ending cash exceeds minimum\" r=0.83 stored=\"2,400 borrowing required\")"
+        }
+      ]
+    },
+    {
+      "pack": 2,
+      "file": "content/cases/case_pack_2_corrected.js",
+      "cases": 25,
+      "items": 132,
+      "flags": []
+    },
+    {
+      "pack": 3,
+      "file": "content/cases/case_pack_3_corrected.js",
+      "cases": 30,
+      "items": 152,
+      "flags": [
+        {
+          "pack": 3,
+          "file": "content/cases/case_pack_3_corrected.js",
+          "caseId": "CBQ4-D3",
+          "item": "CBQ4-D3-Q1",
+          "type": "select",
+          "code": "B-CASE-ECHO",
+          "detail": "best-recall choice != stored Correct (best=\"Master-budget capacity — it aligns allocated overhead with the annual budget and\" r=0.82 stored=\"Practical capacity — it represents the maximum sustainable production under rea)"
+        }
+      ]
+    }
+  ],
+  "note": "CANDIDATES only — adjudicate per DL-051 flow before any fix."
+}

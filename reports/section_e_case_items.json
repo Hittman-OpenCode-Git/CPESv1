@@ -1,0 +1,4407 @@
+[
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q1",
+    "type": "select",
+    "prompt": "Which control weakness is most directly related to fictitious vendor risk?",
+    "correct": "Same AP clerk can create vendors and enter invoices",
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q2",
+    "type": "multi",
+    "prompt": "Select controls that would improve the AP process.",
+    "correct": [
+      "Independent vendor-master approval",
+      "Preventive three-way match before payment where applicable",
+      "Documented review of duplicate-payment reports"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q3",
+    "type": "numeric",
+    "prompt": "Enter the duplicate/fictitious payment loss as a percentage of pretax income, rounded to one decimal place.",
+    "correct": "3.0",
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q4",
+    "type": "fill",
+    "prompt": "Fill in the blank: Management override and collusion are inherent limitations, so internal control provides reasonable, not _____, assurance.",
+    "correct": "absolute",
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q5",
+    "type": "match",
+    "prompt": "Match each control to preventive or detective.",
+    "correct": {
+      "Independent vendor approval": "Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed",
+      "Three-way match before payment": "Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed",
+      "Duplicate-payment report review": "Detective — identifies duplicate payments already processed, after disbursement has occurred",
+      "Bank reconciliation": "Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "pack": 1,
+    "itemId": "CBQ-E1-Q6",
+    "type": "select",
+    "prompt": "Which evidence issue most weakens operating effectiveness?",
+    "correct": "The report was generated but not reviewed for two months",
+    "exhibits": [
+      {
+        "id": "CBQ-E1-E1",
+        "rows": [
+          [
+            "Vendor master access",
+            "AP clerk can create vendors and enter invoices"
+          ],
+          [
+            "Invoice approval",
+            "Supervisor approves invoices above 25,000 after payment run"
+          ],
+          [
+            "Three-way match",
+            "Disabled for service invoices"
+          ],
+          [
+            "Duplicate payment report",
+            "Generated monthly but not reviewed in April or May"
+          ],
+          [
+            "Fraud loss",
+            "Duplicate and fictitious vendor payments total 180,000"
+          ]
+        ],
+        "headers": [
+          "Observation",
+          "Detail"
+        ]
+      },
+      {
+        "id": "CBQ-E1-E2",
+        "rows": [
+          [
+            "Pretax income",
+            "6,000,000"
+          ],
+          [
+            "Total assets",
+            "84,000,000"
+          ],
+          [
+            "Management materiality threshold",
+            "300,000"
+          ]
+        ],
+        "headers": [
+          "Measure",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q1",
+    "type": "select",
+    "prompt": "Which response best addresses shared administrator IDs?",
+    "correct": "Unique privileged IDs with MFA and periodic access review",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q2",
+    "type": "numeric",
+    "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+    "correct": "3.5",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q3",
+    "type": "multi",
+    "prompt": "Select ITGCs relevant to the exceptions.",
+    "correct": [
+      "Logical access controls",
+      "Change-management controls",
+      "Computer operations/interface monitoring"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q4",
+    "type": "fill",
+    "prompt": "Fill in the blank: Emergency changes should receive timely post-implementation review and _____.",
+    "correct": "approval",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q5",
+    "type": "match",
+    "prompt": "Match each exception to the primary risk.",
+    "correct": {
+      "Shared administrator IDs": "Lack of accountability",
+      "Terminated users active": "Unauthorized access",
+      "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+      "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q6",
+    "type": "select",
+    "prompt": "Why is 14-day log retention a concern?",
+    "correct": "It may prevent investigation of issues discovered after logs are overwritten",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q1",
+    "type": "numeric",
+    "prompt": "Enter monthly labor hours saved by RPA.",
+    "correct": "1350",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q2",
+    "type": "numeric",
+    "prompt": "Enter the number of invoices routed to exception handling each month.",
+    "correct": "630",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q3",
+    "type": "select",
+    "prompt": "Which governance finding creates the clearest accountability risk?",
+    "correct": "One shared service account",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q4",
+    "type": "multi",
+    "prompt": "Select controls that should be added before expanding automation.",
+    "correct": [
+      "Unique bot/service credentials with monitored access",
+      "Change approval for exception rules",
+      "Vendor master-data cleanup"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q5",
+    "type": "fill",
+    "prompt": "Fill in the blank: Periodic review of false positives and missed exceptions is model _____.",
+    "correct": "monitoring",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q6",
+    "type": "match",
+    "prompt": "Match each finding to the main control response.",
+    "correct": {
+      "Shared bot account": "Unique credentials and access logging",
+      "Unapproved rule changes": "Change management",
+      "Duplicate vendor IDs": "Master-data governance",
+      "No false-positive review": "Model monitoring"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E1",
+    "pack": 1,
+    "itemId": "CBQ2-E1-Q1",
+    "type": "match",
+    "prompt": "Match each IT general control category to the primary risk it addresses.",
+    "correct": {
+      "Logical access controls": "Unauthorized users gaining system access",
+      "Change management controls": "Unauthorized or untested system modifications causing errors or security gaps",
+      "Computer operations controls": "Processing errors, data loss, or incomplete processing going undetected",
+      "Program development controls": "Flawed or malicious code introduced into production systems"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ2-E1-E1",
+        "rows": [
+          [
+            "Logical access",
+            "Password-based authentication with 90-day rotation",
+            "Shared admin accounts exist; no multi-factor authentication"
+          ],
+          [
+            "Change management",
+            "System changes approved via email",
+            "No formal change advisory board; emergency changes not tracked"
+          ],
+          [
+            "Computer operations",
+            "Batch processing runs overnight",
+            "No independent review of job completion logs"
+          ],
+          [
+            "Program development",
+            "Developers have access to production data",
+            "No segregation between development, test, and production environments"
+          ],
+          [
+            "Physical security",
+            "Server room requires badge access",
+            "Visitor logs not maintained consistently"
+          ]
+        ],
+        "headers": [
+          "Control Area",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E1",
+    "pack": 1,
+    "itemId": "CBQ2-E1-Q2",
+    "type": "match",
+    "prompt": "Match each control deficiency identified in Exhibit 1 to the most appropriate remediation.",
+    "correct": {
+      "Shared admin accounts without MFA": "Implement individual accounts with multi-factor authentication and periodic access reviews",
+      "Changes approved only via email": "Establish a change advisory board with formal approval, testing, and rollback procedures",
+      "Developers accessing production data": "Enforce environment segregation and restrict production access to operations team only",
+      "No batch job completion review": "Implement automated job monitoring with alerts for failures and independent review of logs"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ2-E1-E1",
+        "rows": [
+          [
+            "Logical access",
+            "Password-based authentication with 90-day rotation",
+            "Shared admin accounts exist; no multi-factor authentication"
+          ],
+          [
+            "Change management",
+            "System changes approved via email",
+            "No formal change advisory board; emergency changes not tracked"
+          ],
+          [
+            "Computer operations",
+            "Batch processing runs overnight",
+            "No independent review of job completion logs"
+          ],
+          [
+            "Program development",
+            "Developers have access to production data",
+            "No segregation between development, test, and production environments"
+          ],
+          [
+            "Physical security",
+            "Server room requires badge access",
+            "Visitor logs not maintained consistently"
+          ]
+        ],
+        "headers": [
+          "Control Area",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E1",
+    "pack": 1,
+    "itemId": "CBQ2-E1-Q3",
+    "type": "match",
+    "prompt": "Match each IT control type to the correct description of its purpose.",
+    "correct": {
+      "Preventive control": "Stops errors or unauthorized actions before they occur",
+      "Detective control": "Identifies errors or irregularities after they have occurred",
+      "Corrective control": "Resolves issues after detection to restore normal operations",
+      "Compensating control": "Provides alternative oversight when primary controls are not feasible"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ2-E1-E1",
+        "rows": [
+          [
+            "Logical access",
+            "Password-based authentication with 90-day rotation",
+            "Shared admin accounts exist; no multi-factor authentication"
+          ],
+          [
+            "Change management",
+            "System changes approved via email",
+            "No formal change advisory board; emergency changes not tracked"
+          ],
+          [
+            "Computer operations",
+            "Batch processing runs overnight",
+            "No independent review of job completion logs"
+          ],
+          [
+            "Program development",
+            "Developers have access to production data",
+            "No segregation between development, test, and production environments"
+          ],
+          [
+            "Physical security",
+            "Server room requires badge access",
+            "Visitor logs not maintained consistently"
+          ]
+        ],
+        "headers": [
+          "Control Area",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E1",
+    "pack": 1,
+    "itemId": "CBQ2-E1-Q4",
+    "type": "match",
+    "prompt": "Match each application control type to its correct example.",
+    "correct": {
+      "Input validation": "Range check ensuring dollar amounts fall within expected limits",
+      "Processing control": "Run-to-run control totals verifying data processed completely",
+      "Output control": "Review of printed reports for reasonableness before distribution",
+      "Access control": "User authentication required to access the application"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ2-E1-E1",
+        "rows": [
+          [
+            "Logical access",
+            "Password-based authentication with 90-day rotation",
+            "Shared admin accounts exist; no multi-factor authentication"
+          ],
+          [
+            "Change management",
+            "System changes approved via email",
+            "No formal change advisory board; emergency changes not tracked"
+          ],
+          [
+            "Computer operations",
+            "Batch processing runs overnight",
+            "No independent review of job completion logs"
+          ],
+          [
+            "Program development",
+            "Developers have access to production data",
+            "No segregation between development, test, and production environments"
+          ],
+          [
+            "Physical security",
+            "Server room requires badge access",
+            "Visitor logs not maintained consistently"
+          ]
+        ],
+        "headers": [
+          "Control Area",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E1",
+    "pack": 1,
+    "itemId": "CBQ2-E1-Q5",
+    "type": "match",
+    "prompt": "Match each IT role to the correct segregation-of-duties conflict if the role is combined with others.",
+    "correct": {
+      "System administrator also performs user access reviews": "The administrator could grant excessive privileges and conceal the action during review",
+      "Developer also moves code to production": "Code could be deployed without independent testing or approval",
+      "IT operator also records changes in the change log": "Changes could be made without independent verification of completion",
+      "Database administrator also approves system access requests": "Access could be granted without independent approval, bypassing access controls"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ2-E1-E1",
+        "rows": [
+          [
+            "Logical access",
+            "Password-based authentication with 90-day rotation",
+            "Shared admin accounts exist; no multi-factor authentication"
+          ],
+          [
+            "Change management",
+            "System changes approved via email",
+            "No formal change advisory board; emergency changes not tracked"
+          ],
+          [
+            "Computer operations",
+            "Batch processing runs overnight",
+            "No independent review of job completion logs"
+          ],
+          [
+            "Program development",
+            "Developers have access to production data",
+            "No segregation between development, test, and production environments"
+          ],
+          [
+            "Physical security",
+            "Server room requires badge access",
+            "Visitor logs not maintained consistently"
+          ]
+        ],
+        "headers": [
+          "Control Area",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E2",
+    "pack": 2,
+    "itemId": "CBQ2-E2-Q1",
+    "type": "multi",
+    "prompt": "An internal auditor is reviewing the segregation of duties in Atlas Distribution's purchasing and cash disbursements process (Exhibit 1). Select the process steps where inadequate segregation of duties creates a fraud risk. (Select all that apply.)",
+    "correct": [
+      "Accounts payable clerk performs three-way match and also processes payments and adjusts vendor records",
+      "Controller signs checks up to $50,000 without review of supporting documentation"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ2-E2-E1",
+        "rows": [
+          [
+            "Purchase requisition",
+            "Department manager",
+            "Manual approval via email",
+            "No formal authorization limits or purchase order required"
+          ],
+          [
+            "Vendor selection",
+            "Purchasing agent",
+            "Three quotes required over $5,000",
+            "Same agent selects vendor and creates purchase order"
+          ],
+          [
+            "Goods receipt",
+            "Warehouse clerk",
+            "Paper receiving report",
+            "Receiving reports not reconciled to purchase orders"
+          ],
+          [
+            "Invoice processing",
+            "Accounts payable clerk",
+            "Three-way match (PO, receipt, invoice)",
+            "Clerk also processes payments and adjusts vendor records"
+          ],
+          [
+            "Check signing",
+            "Controller",
+            "Single signature required up to $50,000",
+            "No review of supporting documentation before signing"
+          ]
+        ],
+        "headers": [
+          "Process Step",
+          "Performed By",
+          "Current Control",
+          "Issue"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E2",
+    "pack": 2,
+    "itemId": "CBQ2-E2-Q2",
+    "type": "multi",
+    "prompt": "Atlas Distribution's audit team is designing preventive controls to address the weaknesses identified in Exhibit 1. Select the controls that are classified as PREVENTIVE controls. (Select all that apply.)",
+    "correct": [
+      "Require purchase orders for all purchases above $500 with automated approval routing based on dollar thresholds",
+      "Implement automated three-way match in the ERP system that blocks invoice payment unless PO and receipt match",
+      "Require dual signatures on all checks above $10,000 with mandatory review of supporting documents",
+      "Restrict vendor record maintenance to a separate master data team outside of accounts payable"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ2-E2-E1",
+        "rows": [
+          [
+            "Purchase requisition",
+            "Department manager",
+            "Manual approval via email",
+            "No formal authorization limits or purchase order required"
+          ],
+          [
+            "Vendor selection",
+            "Purchasing agent",
+            "Three quotes required over $5,000",
+            "Same agent selects vendor and creates purchase order"
+          ],
+          [
+            "Goods receipt",
+            "Warehouse clerk",
+            "Paper receiving report",
+            "Receiving reports not reconciled to purchase orders"
+          ],
+          [
+            "Invoice processing",
+            "Accounts payable clerk",
+            "Three-way match (PO, receipt, invoice)",
+            "Clerk also processes payments and adjusts vendor records"
+          ],
+          [
+            "Check signing",
+            "Controller",
+            "Single signature required up to $50,000",
+            "No review of supporting documentation before signing"
+          ]
+        ],
+        "headers": [
+          "Process Step",
+          "Performed By",
+          "Current Control",
+          "Issue"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E2",
+    "pack": 2,
+    "itemId": "CBQ2-E2-Q3",
+    "type": "multi",
+    "prompt": "According to the COSO Internal Control — Integrated Framework, which of the following are COMPONENTS of internal control? (Select all that apply.)",
+    "correct": [
+      "Control environment",
+      "Risk assessment",
+      "Information and communication",
+      "Control activities",
+      "Monitoring activities"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ2-E2-E1",
+        "rows": [
+          [
+            "Purchase requisition",
+            "Department manager",
+            "Manual approval via email",
+            "No formal authorization limits or purchase order required"
+          ],
+          [
+            "Vendor selection",
+            "Purchasing agent",
+            "Three quotes required over $5,000",
+            "Same agent selects vendor and creates purchase order"
+          ],
+          [
+            "Goods receipt",
+            "Warehouse clerk",
+            "Paper receiving report",
+            "Receiving reports not reconciled to purchase orders"
+          ],
+          [
+            "Invoice processing",
+            "Accounts payable clerk",
+            "Three-way match (PO, receipt, invoice)",
+            "Clerk also processes payments and adjusts vendor records"
+          ],
+          [
+            "Check signing",
+            "Controller",
+            "Single signature required up to $50,000",
+            "No review of supporting documentation before signing"
+          ]
+        ],
+        "headers": [
+          "Process Step",
+          "Performed By",
+          "Current Control",
+          "Issue"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E2",
+    "pack": 2,
+    "itemId": "CBQ2-E2-Q4",
+    "type": "multi",
+    "prompt": "The internal audit team at Atlas Distribution is assessing fraud risk in the procurement process. Select the RED FLAGS that increase the risk of procurement fraud. (Select all that apply.)",
+    "correct": [
+      "The same purchasing agent has the ability to create new vendor records in the system",
+      "One vendor has a significantly different address than all other vendors and the purchasing agent's home address",
+      "A purchasing agent frequently processes rush orders that bypass the three-quote requirement"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ2-E2-E1",
+        "rows": [
+          [
+            "Purchase requisition",
+            "Department manager",
+            "Manual approval via email",
+            "No formal authorization limits or purchase order required"
+          ],
+          [
+            "Vendor selection",
+            "Purchasing agent",
+            "Three quotes required over $5,000",
+            "Same agent selects vendor and creates purchase order"
+          ],
+          [
+            "Goods receipt",
+            "Warehouse clerk",
+            "Paper receiving report",
+            "Receiving reports not reconciled to purchase orders"
+          ],
+          [
+            "Invoice processing",
+            "Accounts payable clerk",
+            "Three-way match (PO, receipt, invoice)",
+            "Clerk also processes payments and adjusts vendor records"
+          ],
+          [
+            "Check signing",
+            "Controller",
+            "Single signature required up to $50,000",
+            "No review of supporting documentation before signing"
+          ]
+        ],
+        "headers": [
+          "Process Step",
+          "Performed By",
+          "Current Control",
+          "Issue"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-E2",
+    "pack": 2,
+    "itemId": "CBQ2-E2-Q5",
+    "type": "multi",
+    "prompt": "The audit team recommends implementing several new control activities. Select the activities that BEST address the weaknesses identified in Exhibit 1. (Select all that apply.)",
+    "correct": [
+      "Implement an automated purchase order system with approval routing based on dollar amount and department budget",
+      "Restrict vendor master maintenance to a separate team and require supporting documents for new vendor setup",
+      "Segregate invoice processing from payment processing so the AP clerk cannot both match invoices and release payments",
+      "Require the controller to review a check register with supporting documentation before signing checks"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ2-E2-E1",
+        "rows": [
+          [
+            "Purchase requisition",
+            "Department manager",
+            "Manual approval via email",
+            "No formal authorization limits or purchase order required"
+          ],
+          [
+            "Vendor selection",
+            "Purchasing agent",
+            "Three quotes required over $5,000",
+            "Same agent selects vendor and creates purchase order"
+          ],
+          [
+            "Goods receipt",
+            "Warehouse clerk",
+            "Paper receiving report",
+            "Receiving reports not reconciled to purchase orders"
+          ],
+          [
+            "Invoice processing",
+            "Accounts payable clerk",
+            "Three-way match (PO, receipt, invoice)",
+            "Clerk also processes payments and adjusts vendor records"
+          ],
+          [
+            "Check signing",
+            "Controller",
+            "Single signature required up to $50,000",
+            "No review of supporting documentation before signing"
+          ]
+        ],
+        "headers": [
+          "Process Step",
+          "Performed By",
+          "Current Control",
+          "Issue"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E1",
+    "pack": 2,
+    "itemId": "CBQ3-E1-Q1",
+    "type": "match",
+    "prompt": "The Chief Risk Officer is training department heads on the five COSO ERM 2017 components. Match each risk management activity to the correct ERM component.",
+    "correct": {
+      "Establishing the board's risk oversight structure and defining risk culture expectations": "Governance and Culture",
+      "Defining risk appetite and aligning risk tolerances with strategic planning": "Strategy and Objective-Setting",
+      "Identifying and assessing risks that could affect the achievement of strategic objectives": "Performance",
+      "Communicating risk information to stakeholders through structured reporting channels": "Information, Communication, and Reporting"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E1-E1",
+        "rows": [
+          [
+            "Governance and Culture",
+            "Board risk committee established; risk policy approved",
+            "Risk culture not consistently embedded at plant level"
+          ],
+          [
+            "Strategy and Objective-Setting",
+            "Strategic objectives defined; risk appetite statement drafted",
+            "Risk appetite not yet translated into operational limits for each facility"
+          ],
+          [
+            "Performance",
+            "Risk identification completed for all product lines",
+            "No formal risk quantification or prioritization using heat maps"
+          ],
+          [
+            "Review and Revision",
+            "Quarterly risk reviews scheduled",
+            "No process for assessing emerging risks or substantial changes"
+          ],
+          [
+            "Information, Communication, and Reporting",
+            "Monthly risk reports distributed to executives",
+            "No real-time risk dashboards; reporting is siloed by department"
+          ]
+        ],
+        "headers": [
+          "COSO ERM Component",
+          "Current State",
+          "Gap Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E1",
+    "pack": 2,
+    "itemId": "CBQ3-E1-Q2",
+    "type": "match",
+    "prompt": "Match each ERM implementation activity at MedTech Devices to the correct COSO ERM component where the activity belongs.",
+    "correct": {
+      "Training plant managers on the company's risk culture expectations and ethical values": "Governance and Culture",
+      "Setting operational risk limits for each facility based on the board's risk appetite statement": "Strategy and Objective-Setting",
+      "Developing a risk heat map to prioritize the top 10 risks across all product lines": "Performance",
+      "Conducting semi-annual ERM program effectiveness reviews and updating the risk register": "Review and Revision"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E1-E1",
+        "rows": [
+          [
+            "Governance and Culture",
+            "Board risk committee established; risk policy approved",
+            "Risk culture not consistently embedded at plant level"
+          ],
+          [
+            "Strategy and Objective-Setting",
+            "Strategic objectives defined; risk appetite statement drafted",
+            "Risk appetite not yet translated into operational limits for each facility"
+          ],
+          [
+            "Performance",
+            "Risk identification completed for all product lines",
+            "No formal risk quantification or prioritization using heat maps"
+          ],
+          [
+            "Review and Revision",
+            "Quarterly risk reviews scheduled",
+            "No process for assessing emerging risks or substantial changes"
+          ],
+          [
+            "Information, Communication, and Reporting",
+            "Monthly risk reports distributed to executives",
+            "No real-time risk dashboards; reporting is siloed by department"
+          ]
+        ],
+        "headers": [
+          "COSO ERM Component",
+          "Current State",
+          "Gap Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E1",
+    "pack": 2,
+    "itemId": "CBQ3-E1-Q3",
+    "type": "match",
+    "prompt": "MedTech Devices has identified the following risks during the Performance component assessment. Match each risk to the most appropriate risk response strategy.",
+    "correct": {
+      "Regulatory risk: New FDA traceability requirements may increase compliance costs by $500,000": "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
+      "Supplier risk: Single-source supplier for titanium may face labor strike; probability is low but impact is severe": "Mitigation — develop alternative supplier relationships and maintain safety stock",
+      "Technology risk: Current ERP system is obsolete and requires immediate upgrade to avoid operational disruption": "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
+      "Market risk: Competitor is launching a similar surgical instrument at a 15% lower price point": "Acceptance — monitor competitor pricing and differentiate through quality and service"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E1-E1",
+        "rows": [
+          [
+            "Governance and Culture",
+            "Board risk committee established; risk policy approved",
+            "Risk culture not consistently embedded at plant level"
+          ],
+          [
+            "Strategy and Objective-Setting",
+            "Strategic objectives defined; risk appetite statement drafted",
+            "Risk appetite not yet translated into operational limits for each facility"
+          ],
+          [
+            "Performance",
+            "Risk identification completed for all product lines",
+            "No formal risk quantification or prioritization using heat maps"
+          ],
+          [
+            "Review and Revision",
+            "Quarterly risk reviews scheduled",
+            "No process for assessing emerging risks or substantial changes"
+          ],
+          [
+            "Information, Communication, and Reporting",
+            "Monthly risk reports distributed to executives",
+            "No real-time risk dashboards; reporting is siloed by department"
+          ]
+        ],
+        "headers": [
+          "COSO ERM Component",
+          "Current State",
+          "Gap Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E1",
+    "pack": 2,
+    "itemId": "CBQ3-E1-Q4",
+    "type": "match",
+    "prompt": "The Review and Revision component requires MedTech Devices to assess changes that could affect ERM effectiveness. Match each change scenario to the correct ERM revision principle.",
+    "correct": {
+      "The company plans to acquire a smaller competitor with a different risk culture": "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
+      "The FDA has proposed new quality reporting requirements that could affect product clearance timelines": "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
+      "A key supplier experienced a data breach that could affect MedTech's supply chain systems": "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile",
+      "The risk committee's quarterly review found two emerging risks not previously identified": "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E1-E1",
+        "rows": [
+          [
+            "Governance and Culture",
+            "Board risk committee established; risk policy approved",
+            "Risk culture not consistently embedded at plant level"
+          ],
+          [
+            "Strategy and Objective-Setting",
+            "Strategic objectives defined; risk appetite statement drafted",
+            "Risk appetite not yet translated into operational limits for each facility"
+          ],
+          [
+            "Performance",
+            "Risk identification completed for all product lines",
+            "No formal risk quantification or prioritization using heat maps"
+          ],
+          [
+            "Review and Revision",
+            "Quarterly risk reviews scheduled",
+            "No process for assessing emerging risks or substantial changes"
+          ],
+          [
+            "Information, Communication, and Reporting",
+            "Monthly risk reports distributed to executives",
+            "No real-time risk dashboards; reporting is siloed by department"
+          ]
+        ],
+        "headers": [
+          "COSO ERM Component",
+          "Current State",
+          "Gap Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E1",
+    "pack": 2,
+    "itemId": "CBQ3-E1-Q5",
+    "type": "match",
+    "prompt": "Match each ERM benefit described by MedTech's CRO to the correct COSO ERM component that primarily delivers that benefit.",
+    "correct": {
+      "Improved risk awareness and ethical decision-making throughout the organization": "Governance and Culture — establishes tone at the top and risk culture",
+      "Better-informed strategic decisions because risk appetite is explicitly considered": "Strategy and Objective-Setting — integrates risk with strategic planning",
+      "Faster identification of operational risks through standardized risk assessment processes": "Performance — provides systematic risk identification and assessment tools",
+      "More effective board oversight through structured risk reporting and dashboards": "Information, Communication, and Reporting — delivers risk data to decision-makers"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E1-E1",
+        "rows": [
+          [
+            "Governance and Culture",
+            "Board risk committee established; risk policy approved",
+            "Risk culture not consistently embedded at plant level"
+          ],
+          [
+            "Strategy and Objective-Setting",
+            "Strategic objectives defined; risk appetite statement drafted",
+            "Risk appetite not yet translated into operational limits for each facility"
+          ],
+          [
+            "Performance",
+            "Risk identification completed for all product lines",
+            "No formal risk quantification or prioritization using heat maps"
+          ],
+          [
+            "Review and Revision",
+            "Quarterly risk reviews scheduled",
+            "No process for assessing emerging risks or substantial changes"
+          ],
+          [
+            "Information, Communication, and Reporting",
+            "Monthly risk reports distributed to executives",
+            "No real-time risk dashboards; reporting is siloed by department"
+          ]
+        ],
+        "headers": [
+          "COSO ERM Component",
+          "Current State",
+          "Gap Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E2",
+    "pack": 2,
+    "itemId": "CBQ3-E2-Q1",
+    "type": "select",
+    "prompt": "Based on Exhibit 1, FFCU's online banking platform and member call center system both require a Recovery Time Objective (RTO) of 2 hours and a Recovery Point Objective (RPO) of 15 minutes. Using Exhibit 2, which disaster recovery strategy is MOST appropriate for these critical systems?",
+    "correct": "Hot site or Cloud-based DRaaS — both can achieve the required 2-hour RTO and 15-minute RPO, providing near-real-time data replication and rapid system failover",
+    "exhibits": [
+      {
+        "id": "CBQ3-E2-E1",
+        "rows": [
+          [
+            "Online banking platform",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ],
+          [
+            "Teller transaction processing",
+            "4 hours",
+            "1 hour",
+            "High"
+          ],
+          [
+            "Loan origination system",
+            "24 hours",
+            "4 hours",
+            "Medium"
+          ],
+          [
+            "Human resources portal",
+            "72 hours",
+            "24 hours",
+            "Low"
+          ],
+          [
+            "Email and collaboration",
+            "8 hours",
+            "4 hours",
+            "High"
+          ],
+          [
+            "Member call center system",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ]
+        ],
+        "headers": [
+          "Business Function",
+          "Max Acceptable Downtime (RTO)",
+          "Max Data Loss (RPO)",
+          "Criticality"
+        ]
+      },
+      {
+        "id": "CBQ3-E2-E2",
+        "rows": [
+          [
+            "Hot site",
+            "$500K–$1M+ annually",
+            "Minutes to hours",
+            "Fully staffed",
+            "Critical systems with RTO < 4 hours"
+          ],
+          [
+            "Warm site",
+            "$150K–$400K annually",
+            "Hours to 1 day",
+            "Partially equipped",
+            "Important systems with RTO 4–24 hours"
+          ],
+          [
+            "Cold site",
+            "$50K–$100K annually",
+            "Days to weeks",
+            "Empty facility",
+            "Non-critical systems with RTO > 24 hours"
+          ],
+          [
+            "Cloud-based DRaaS",
+            "$100K–$300K annually",
+            "Minutes to hours",
+            "Managed by vendor",
+            "Variable; scalable for any criticality"
+          ]
+        ],
+        "headers": [
+          "Site Type",
+          "Setup Cost",
+          "Recovery Time",
+          "Staffing",
+          "Best For"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E2",
+    "pack": 2,
+    "itemId": "CBQ3-E2-Q2",
+    "type": "select",
+    "prompt": "FFCU's internal audit team identifies that the current disaster recovery plan has not been tested in 18 months and that backup tapes for the loan origination system are stored in the same building as the primary data center. Which BC/DR governance issue does this represent?",
+    "correct": "Inadequate testing and maintenance of the BCP — regular testing is essential to ensure the plan remains effective, and storing backups at the primary site defeats the purpose of geographic redundancy",
+    "exhibits": [
+      {
+        "id": "CBQ3-E2-E1",
+        "rows": [
+          [
+            "Online banking platform",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ],
+          [
+            "Teller transaction processing",
+            "4 hours",
+            "1 hour",
+            "High"
+          ],
+          [
+            "Loan origination system",
+            "24 hours",
+            "4 hours",
+            "Medium"
+          ],
+          [
+            "Human resources portal",
+            "72 hours",
+            "24 hours",
+            "Low"
+          ],
+          [
+            "Email and collaboration",
+            "8 hours",
+            "4 hours",
+            "High"
+          ],
+          [
+            "Member call center system",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ]
+        ],
+        "headers": [
+          "Business Function",
+          "Max Acceptable Downtime (RTO)",
+          "Max Data Loss (RPO)",
+          "Criticality"
+        ]
+      },
+      {
+        "id": "CBQ3-E2-E2",
+        "rows": [
+          [
+            "Hot site",
+            "$500K–$1M+ annually",
+            "Minutes to hours",
+            "Fully staffed",
+            "Critical systems with RTO < 4 hours"
+          ],
+          [
+            "Warm site",
+            "$150K–$400K annually",
+            "Hours to 1 day",
+            "Partially equipped",
+            "Important systems with RTO 4–24 hours"
+          ],
+          [
+            "Cold site",
+            "$50K–$100K annually",
+            "Days to weeks",
+            "Empty facility",
+            "Non-critical systems with RTO > 24 hours"
+          ],
+          [
+            "Cloud-based DRaaS",
+            "$100K–$300K annually",
+            "Minutes to hours",
+            "Managed by vendor",
+            "Variable; scalable for any criticality"
+          ]
+        ],
+        "headers": [
+          "Site Type",
+          "Setup Cost",
+          "Recovery Time",
+          "Staffing",
+          "Best For"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E2",
+    "pack": 2,
+    "itemId": "CBQ3-E2-Q3",
+    "type": "multi",
+    "prompt": "The BC/DR planning committee is developing the recovery strategy. According to COSO and IT governance frameworks, which of the following are essential components of an effective business continuity plan? (Select all that apply.)",
+    "correct": [
+      "A comprehensive risk assessment identifying threats that could disrupt operations (e.g., natural disasters, cyberattacks, utility failures)",
+      "Documented recovery procedures with assigned responsibilities, contact information, and escalation paths for each critical business function",
+      "A communication plan for notifying employees, customers, regulators, and other stakeholders during and after a disruption event",
+      "Regular training and awareness programs so that employees understand their BC/DR roles before an incident occurs"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ3-E2-E1",
+        "rows": [
+          [
+            "Online banking platform",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ],
+          [
+            "Teller transaction processing",
+            "4 hours",
+            "1 hour",
+            "High"
+          ],
+          [
+            "Loan origination system",
+            "24 hours",
+            "4 hours",
+            "Medium"
+          ],
+          [
+            "Human resources portal",
+            "72 hours",
+            "24 hours",
+            "Low"
+          ],
+          [
+            "Email and collaboration",
+            "8 hours",
+            "4 hours",
+            "High"
+          ],
+          [
+            "Member call center system",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ]
+        ],
+        "headers": [
+          "Business Function",
+          "Max Acceptable Downtime (RTO)",
+          "Max Data Loss (RPO)",
+          "Criticality"
+        ]
+      },
+      {
+        "id": "CBQ3-E2-E2",
+        "rows": [
+          [
+            "Hot site",
+            "$500K–$1M+ annually",
+            "Minutes to hours",
+            "Fully staffed",
+            "Critical systems with RTO < 4 hours"
+          ],
+          [
+            "Warm site",
+            "$150K–$400K annually",
+            "Hours to 1 day",
+            "Partially equipped",
+            "Important systems with RTO 4–24 hours"
+          ],
+          [
+            "Cold site",
+            "$50K–$100K annually",
+            "Days to weeks",
+            "Empty facility",
+            "Non-critical systems with RTO > 24 hours"
+          ],
+          [
+            "Cloud-based DRaaS",
+            "$100K–$300K annually",
+            "Minutes to hours",
+            "Managed by vendor",
+            "Variable; scalable for any criticality"
+          ]
+        ],
+        "headers": [
+          "Site Type",
+          "Setup Cost",
+          "Recovery Time",
+          "Staffing",
+          "Best For"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E2",
+    "pack": 2,
+    "itemId": "CBQ3-E2-Q4",
+    "type": "match",
+    "prompt": "FFCU has identified four business functions that require different recovery strategies. Match each function to the most appropriate recovery approach based on Exhibits 1 and 2.",
+    "correct": {
+      "Online banking platform — RTO 2 hours; RPO 15 minutes; critical to member trust and regulatory compliance": "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
+      "Loan origination system — RTO 24 hours; RPO 4 hours; moderate impact if unavailable for a day": "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
+      "Human resources portal — RTO 72 hours; RPO 24 hours; low criticality, can tolerate extended downtime": "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred",
+      "Teller transaction processing — RTO 4 hours; RPO 1 hour; high impact on branch operations": "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-E2-E1",
+        "rows": [
+          [
+            "Online banking platform",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ],
+          [
+            "Teller transaction processing",
+            "4 hours",
+            "1 hour",
+            "High"
+          ],
+          [
+            "Loan origination system",
+            "24 hours",
+            "4 hours",
+            "Medium"
+          ],
+          [
+            "Human resources portal",
+            "72 hours",
+            "24 hours",
+            "Low"
+          ],
+          [
+            "Email and collaboration",
+            "8 hours",
+            "4 hours",
+            "High"
+          ],
+          [
+            "Member call center system",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ]
+        ],
+        "headers": [
+          "Business Function",
+          "Max Acceptable Downtime (RTO)",
+          "Max Data Loss (RPO)",
+          "Criticality"
+        ]
+      },
+      {
+        "id": "CBQ3-E2-E2",
+        "rows": [
+          [
+            "Hot site",
+            "$500K–$1M+ annually",
+            "Minutes to hours",
+            "Fully staffed",
+            "Critical systems with RTO < 4 hours"
+          ],
+          [
+            "Warm site",
+            "$150K–$400K annually",
+            "Hours to 1 day",
+            "Partially equipped",
+            "Important systems with RTO 4–24 hours"
+          ],
+          [
+            "Cold site",
+            "$50K–$100K annually",
+            "Days to weeks",
+            "Empty facility",
+            "Non-critical systems with RTO > 24 hours"
+          ],
+          [
+            "Cloud-based DRaaS",
+            "$100K–$300K annually",
+            "Minutes to hours",
+            "Managed by vendor",
+            "Variable; scalable for any criticality"
+          ]
+        ],
+        "headers": [
+          "Site Type",
+          "Setup Cost",
+          "Recovery Time",
+          "Staffing",
+          "Best For"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-E2",
+    "pack": 2,
+    "itemId": "CBQ3-E2-Q5",
+    "type": "select",
+    "prompt": "FFCU's CFO asks whether BC/DR costs can be justified as a necessary business expense rather than discretionary spending. Which argument BEST supports the position that BC/DR is a necessary governance function?",
+    "correct": "BC/DR is a fiduciary responsibility — management has a duty to protect member assets and ensure continuity of critical financial services; regulatory bodies including the FFIEC and NCUA require financial institutions to have documented and tested BC/DR plans",
+    "exhibits": [
+      {
+        "id": "CBQ3-E2-E1",
+        "rows": [
+          [
+            "Online banking platform",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ],
+          [
+            "Teller transaction processing",
+            "4 hours",
+            "1 hour",
+            "High"
+          ],
+          [
+            "Loan origination system",
+            "24 hours",
+            "4 hours",
+            "Medium"
+          ],
+          [
+            "Human resources portal",
+            "72 hours",
+            "24 hours",
+            "Low"
+          ],
+          [
+            "Email and collaboration",
+            "8 hours",
+            "4 hours",
+            "High"
+          ],
+          [
+            "Member call center system",
+            "2 hours",
+            "15 minutes",
+            "Critical"
+          ]
+        ],
+        "headers": [
+          "Business Function",
+          "Max Acceptable Downtime (RTO)",
+          "Max Data Loss (RPO)",
+          "Criticality"
+        ]
+      },
+      {
+        "id": "CBQ3-E2-E2",
+        "rows": [
+          [
+            "Hot site",
+            "$500K–$1M+ annually",
+            "Minutes to hours",
+            "Fully staffed",
+            "Critical systems with RTO < 4 hours"
+          ],
+          [
+            "Warm site",
+            "$150K–$400K annually",
+            "Hours to 1 day",
+            "Partially equipped",
+            "Important systems with RTO 4–24 hours"
+          ],
+          [
+            "Cold site",
+            "$50K–$100K annually",
+            "Days to weeks",
+            "Empty facility",
+            "Non-critical systems with RTO > 24 hours"
+          ],
+          [
+            "Cloud-based DRaaS",
+            "$100K–$300K annually",
+            "Minutes to hours",
+            "Managed by vendor",
+            "Variable; scalable for any criticality"
+          ]
+        ],
+        "headers": [
+          "Site Type",
+          "Setup Cost",
+          "Recovery Time",
+          "Staffing",
+          "Best For"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "pack": 2,
+    "itemId": "CBQ4-E1-Q1",
+    "type": "select",
+    "prompt": "Summit Electronics' internal audit team has identified inconsistent tone at the middle, where plant managers tolerate minor inventory discrepancies. Which COSO component is primarily affected by this deficiency?",
+    "correct": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+    "exhibits": [
+      {
+        "id": "CBQ4-E1-E1",
+        "rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "pack": 2,
+    "itemId": "CBQ4-E1-Q2",
+    "type": "select",
+    "prompt": "The internal audit team noted that Summit Electronics' risk assessment does not specifically address financial reporting risks for new contracts. Which COSO principle is most directly violated by this gap?",
+    "correct": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+    "exhibits": [
+      {
+        "id": "CBQ4-E1-E1",
+        "rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "pack": 2,
+    "itemId": "CBQ4-E1-Q3",
+    "type": "select",
+    "prompt": "Summit Electronics has strong automated controls over accounts payable (three-way match) but no controls over manual journal entries. According to the COSO framework, which statement BEST describes the implication of this gap?",
+    "correct": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+    "exhibits": [
+      {
+        "id": "CBQ4-E1-E1",
+        "rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "pack": 2,
+    "itemId": "CBQ4-E1-Q4",
+    "type": "select",
+    "prompt": "Summit Electronics lacks a formal whistleblower hotline and communicates policies only on an ad hoc basis. Which COSO principle is MOST directly affected by these gaps?",
+    "correct": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+    "exhibits": [
+      {
+        "id": "CBQ4-E1-E1",
+        "rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "pack": 2,
+    "itemId": "CBQ4-E1-Q5",
+    "type": "select",
+    "prompt": "Summit Electronics relies on quarterly internal audit reviews and annual external audits for monitoring, with no ongoing monitoring of controls. According to the COSO framework, which statement is MOST accurate?",
+    "correct": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+    "exhibits": [
+      {
+        "id": "CBQ4-E1-E1",
+        "rows": [
+          [
+            "Control Environment",
+            "The board has an audit committee; code of conduct exists",
+            "Tone at the middle is inconsistent; plant managers tolerate minor inventory discrepancies"
+          ],
+          [
+            "Risk Assessment",
+            "Annual enterprise risk assessment conducted",
+            "Risk assessment does not specifically address financial reporting risks for new contracts"
+          ],
+          [
+            "Control Activities",
+            "Segregation of duties in AP and payroll; automated three-way match",
+            "No controls over manual journal entries; no independent review of standing data changes"
+          ],
+          [
+            "Information and Communication",
+            "Monthly financial reports distributed to department heads",
+            "No formal whistleblower hotline; communication of policies is ad hoc"
+          ],
+          [
+            "Monitoring Activities",
+            "Quarterly internal audit reviews; annual external audit",
+            "No ongoing monitoring of controls; audits are point-in-time only"
+          ]
+        ],
+        "headers": [
+          "COSO Component",
+          "Current Assessment",
+          "Deficiency Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "pack": 3,
+    "itemId": "CBQ4-E2-Q1",
+    "type": "match",
+    "prompt": "The internal audit team identified several scenarios where application controls should prevent or detect errors. Match each scenario to the appropriate application control from Exhibit 1.",
+    "correct": {
+      "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+      "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+      "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+      "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-E2-E1",
+        "rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ]
+      },
+      {
+        "id": "CBQ4-E2-E2",
+        "rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "pack": 3,
+    "itemId": "CBQ4-E2-Q2",
+    "type": "select",
+    "prompt": "The internal audit team discovers that the three-way match control (matching PO, receiving report, and invoice) can be overridden by senior procurement managers. In the past 6 months, the override has been used 47 times for one particular vendor. Which control risk does this situation represent?",
+    "correct": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+    "exhibits": [
+      {
+        "id": "CBQ4-E2-E1",
+        "rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ]
+      },
+      {
+        "id": "CBQ4-E2-E2",
+        "rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "pack": 3,
+    "itemId": "CBQ4-E2-Q3",
+    "type": "multi",
+    "prompt": "The ERP system includes processing controls in addition to input controls. According to Exhibit 2, which of the following are examples of processing controls that MedTech should have in place? (Select all that apply.)",
+    "correct": [
+      "A run-to-run control that compares the total dollar value of invoices entered in a batch to the total posted to the general ledger",
+      "A sequence check that verifies purchase order numbers are sequential and reports any gaps that may indicate deleted or missing transactions",
+      "A reasonableness check that compares weekly inventory write-offs to historical averages and flags significant deviations for review"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-E2-E1",
+        "rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ]
+      },
+      {
+        "id": "CBQ4-E2-E2",
+        "rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "pack": 3,
+    "itemId": "CBQ4-E2-Q4",
+    "type": "match",
+    "prompt": "MedTech's internal audit team is classifying application controls by type. Match each control description to the correct control category using Exhibit 2.",
+    "correct": {
+      "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
+      "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+      "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+      "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices": "Access control — role-based security prevents users from performing incompatible functions"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-E2-E1",
+        "rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ]
+      },
+      {
+        "id": "CBQ4-E2-E2",
+        "rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "pack": 3,
+    "itemId": "CBQ4-E2-Q5",
+    "type": "select",
+    "prompt": "The same employee in MedTech's AP department can create new vendor records, enter invoices, and process payments in the ERP system. Management argues that the system's input controls (vendor validity check, three-way match) compensate for this lack of segregation. Which assessment BEST reflects the internal control risk?",
+    "correct": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+    "exhibits": [
+      {
+        "id": "CBQ4-E2-E1",
+        "rows": [
+          [
+            "Purchase order limit check",
+            "Procure-to-Pay",
+            "Rejects PO lines where unit price exceeds authorized limit by more than 20%",
+            "Unauthorized price increases or data entry errors in PO pricing"
+          ],
+          [
+            "Vendor master validity check",
+            "Procure-to-Pay",
+            "Verifies vendor ID against approved vendor master table before processing invoice",
+            "Payments to unapproved or fictitious vendors"
+          ],
+          [
+            "Three-way match",
+            "Procure-to-Pay",
+            "Matches PO, receiving report, and invoice; flags discrepancies > $100",
+            "Payment for goods not ordered or not received"
+          ],
+          [
+            "Order quantity reasonableness check",
+            "Order-to-Cash",
+            "Warns if order quantity exceeds 200% of customer's average order",
+            "Unusually large orders that may be data entry errors or fraud"
+          ],
+          [
+            "Customer credit limit check",
+            "Order-to-Cash",
+            "Blocks order if customer would exceed credit limit after this order",
+            "Sales to customers beyond approved credit terms"
+          ],
+          [
+            "Completeness check on required fields",
+            "All modules",
+            "Prevents save/submit when mandatory fields are blank",
+            "Incomplete records that would break downstream processes"
+          ],
+          [
+            "Check digit on customer account number",
+            "Order-to-Cash",
+            "Validates account number format using modulus-10 algorithm",
+            "Transposition errors that would route order to wrong customer"
+          ]
+        ],
+        "headers": [
+          "Control Name",
+          "Module",
+          "What It Does",
+          "Prevents"
+        ]
+      },
+      {
+        "id": "CBQ4-E2-E2",
+        "rows": [
+          [
+            "Input controls",
+            "Prevent or detect errors when data enters the system",
+            "Edit checks, validation rules, authorization requirements",
+            "Control Activities"
+          ],
+          [
+            "Processing controls",
+            "Ensure data is processed accurately and completely",
+            "Run-to-run totals, reasonableness checks, sequence checks",
+            "Control Activities"
+          ],
+          [
+            "Output controls",
+            "Verify processed output is accurate and distributed appropriately",
+            "Report review, reconciliation, distribution controls",
+            "Monitoring / Info & Communication"
+          ],
+          [
+            "Access controls",
+            "Limit system access to authorized users",
+            "User IDs, passwords, role-based permissions, segregation of duties",
+            "Control Activities / Risk Assessment"
+          ]
+        ],
+        "headers": [
+          "Control Category",
+          "Definition",
+          "Examples",
+          "COSO Component"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "pack": 3,
+    "itemId": "CBQ4-E3-Q1",
+    "type": "select",
+    "prompt": "Referring to Exhibit 1, the sales manager paid $500 to a customs official to expedite clearance of a shipment of emergency replacement parts. The payment was recorded as \"expediting fee\" in the books. Under the FCPA, which statement BEST characterizes this payment?",
+    "correct": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+    "exhibits": [
+      {
+        "id": "CBQ4-E3-E1",
+        "rows": [
+          [
+            "Foreign customs expediting fees",
+            "Sales manager paid $500 to customs official to expedite clearance of a shipment",
+            "Could be a facilitating payment (permissible) or a bribe depending on circumstances",
+            "Low-Medium"
+          ],
+          [
+            "Third-party agent commission",
+            "Agent in Country X receives 15% commission on government contracts; agent is related to a government procurement official",
+            "Red flag — commission to related party of government official suggests potential improper payment",
+            "High"
+          ],
+          [
+            "Charitable donation request",
+            "Foreign government minister requests $50,000 donation to his personal foundation; company wants to support community",
+            "Likely improper — donation to official's personal entity may be indirect bribe",
+            "High"
+          ],
+          [
+            "Client entertainment",
+            "Sales team hosted 10 government clients at a luxury resort ($1,200 per person) including spouses",
+            "Exceeds reasonable business entertainment threshold; potential FCPA issue",
+            "Medium"
+          ],
+          [
+            "Local partner joint venture",
+            "Proposed JV partner has government officials on its board; partner demands $100,000 \"advisory fee\"",
+            "High-risk — JV with government-affiliated entity requires enhanced due diligence",
+            "High"
+          ]
+        ],
+        "headers": [
+          "Risk Scenario",
+          "Description",
+          "FCPA Concern",
+          "Risk Level"
+        ]
+      },
+      {
+        "id": "CBQ4-E3-E2",
+        "rows": [
+          [
+            "Anti-bribery provisions (15 U.S.C. § 78dd-1)",
+            "Prohibits paying or offering anything of value to foreign officials to obtain or retain business",
+            "Covers any US person/company; applies to payments through third parties; no materiality threshold",
+            "Corporations: up to $2M per violation; Individuals: up to $250K and 20 years imprisonment"
+          ],
+          [
+            "Accounting provisions (15 U.S.C. § 78m(b))",
+            "Requires issuers to maintain accurate books/records and devise adequate internal accounting controls",
+            "Books and records must accurately reflect transactions; internal controls must provide reasonable assurance",
+            "Corporations: up to $25M per violation; Individuals: up to $5M and 20 years imprisonment"
+          ],
+          [
+            "Facilitating payments exception",
+            "Small payments to low-level officials to expedite routine non-discretionary government actions",
+            "Must be for routine action (processing permits, visas); cannot be for discretionary decision",
+            "Not prohibited, but must be accurately recorded in the books"
+          ],
+          [
+            "Affirmative defenses",
+            "Payment was lawful under foreign law OR was reasonable and bona fide business expense",
+            "Company must prove the payment was legal in the foreign country or was directly related to promotion/demonstration of products",
+            "Burden of proof on defendant"
+          ]
+        ],
+        "headers": [
+          "Provision",
+          "Requirement",
+          "Key Elements",
+          "Penalties"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "pack": 3,
+    "itemId": "CBQ4-E3-Q2",
+    "type": "select",
+    "prompt": "Apex's internal audit team discovers that the 15% commission paid to Agent X in Country X (Exhibit 1) was routed through a shell company in a third country and there is no written agreement defining the services provided. The agent is a cousin of the country's minister of procurement. What is the MOST significant FCPA risk?",
+    "correct": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+    "exhibits": [
+      {
+        "id": "CBQ4-E3-E1",
+        "rows": [
+          [
+            "Foreign customs expediting fees",
+            "Sales manager paid $500 to customs official to expedite clearance of a shipment",
+            "Could be a facilitating payment (permissible) or a bribe depending on circumstances",
+            "Low-Medium"
+          ],
+          [
+            "Third-party agent commission",
+            "Agent in Country X receives 15% commission on government contracts; agent is related to a government procurement official",
+            "Red flag — commission to related party of government official suggests potential improper payment",
+            "High"
+          ],
+          [
+            "Charitable donation request",
+            "Foreign government minister requests $50,000 donation to his personal foundation; company wants to support community",
+            "Likely improper — donation to official's personal entity may be indirect bribe",
+            "High"
+          ],
+          [
+            "Client entertainment",
+            "Sales team hosted 10 government clients at a luxury resort ($1,200 per person) including spouses",
+            "Exceeds reasonable business entertainment threshold; potential FCPA issue",
+            "Medium"
+          ],
+          [
+            "Local partner joint venture",
+            "Proposed JV partner has government officials on its board; partner demands $100,000 \"advisory fee\"",
+            "High-risk — JV with government-affiliated entity requires enhanced due diligence",
+            "High"
+          ]
+        ],
+        "headers": [
+          "Risk Scenario",
+          "Description",
+          "FCPA Concern",
+          "Risk Level"
+        ]
+      },
+      {
+        "id": "CBQ4-E3-E2",
+        "rows": [
+          [
+            "Anti-bribery provisions (15 U.S.C. § 78dd-1)",
+            "Prohibits paying or offering anything of value to foreign officials to obtain or retain business",
+            "Covers any US person/company; applies to payments through third parties; no materiality threshold",
+            "Corporations: up to $2M per violation; Individuals: up to $250K and 20 years imprisonment"
+          ],
+          [
+            "Accounting provisions (15 U.S.C. § 78m(b))",
+            "Requires issuers to maintain accurate books/records and devise adequate internal accounting controls",
+            "Books and records must accurately reflect transactions; internal controls must provide reasonable assurance",
+            "Corporations: up to $25M per violation; Individuals: up to $5M and 20 years imprisonment"
+          ],
+          [
+            "Facilitating payments exception",
+            "Small payments to low-level officials to expedite routine non-discretionary government actions",
+            "Must be for routine action (processing permits, visas); cannot be for discretionary decision",
+            "Not prohibited, but must be accurately recorded in the books"
+          ],
+          [
+            "Affirmative defenses",
+            "Payment was lawful under foreign law OR was reasonable and bona fide business expense",
+            "Company must prove the payment was legal in the foreign country or was directly related to promotion/demonstration of products",
+            "Burden of proof on defendant"
+          ]
+        ],
+        "headers": [
+          "Provision",
+          "Requirement",
+          "Key Elements",
+          "Penalties"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "pack": 3,
+    "itemId": "CBQ4-E3-Q3",
+    "type": "multi",
+    "prompt": "Based on Exhibit 1 and Exhibit 2, which of the following actions should Apex Components take to strengthen its FCPA compliance program? (Select all that apply.)",
+    "correct": [
+      "Conduct enhanced due diligence on all third-party agents and intermediaries in high-risk countries before entering into agreements",
+      "Require all international employees to complete annual FCPA training covering anti-bribery provisions, red flags, and reporting procedures",
+      "Implement a policy requiring all facilitating payments to be approved in advance by the compliance officer and documented in the accounting records",
+      "Terminate the proposed joint venture partner if due diligence confirms government officials on the board without legitimate business rationale"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-E3-E1",
+        "rows": [
+          [
+            "Foreign customs expediting fees",
+            "Sales manager paid $500 to customs official to expedite clearance of a shipment",
+            "Could be a facilitating payment (permissible) or a bribe depending on circumstances",
+            "Low-Medium"
+          ],
+          [
+            "Third-party agent commission",
+            "Agent in Country X receives 15% commission on government contracts; agent is related to a government procurement official",
+            "Red flag — commission to related party of government official suggests potential improper payment",
+            "High"
+          ],
+          [
+            "Charitable donation request",
+            "Foreign government minister requests $50,000 donation to his personal foundation; company wants to support community",
+            "Likely improper — donation to official's personal entity may be indirect bribe",
+            "High"
+          ],
+          [
+            "Client entertainment",
+            "Sales team hosted 10 government clients at a luxury resort ($1,200 per person) including spouses",
+            "Exceeds reasonable business entertainment threshold; potential FCPA issue",
+            "Medium"
+          ],
+          [
+            "Local partner joint venture",
+            "Proposed JV partner has government officials on its board; partner demands $100,000 \"advisory fee\"",
+            "High-risk — JV with government-affiliated entity requires enhanced due diligence",
+            "High"
+          ]
+        ],
+        "headers": [
+          "Risk Scenario",
+          "Description",
+          "FCPA Concern",
+          "Risk Level"
+        ]
+      },
+      {
+        "id": "CBQ4-E3-E2",
+        "rows": [
+          [
+            "Anti-bribery provisions (15 U.S.C. § 78dd-1)",
+            "Prohibits paying or offering anything of value to foreign officials to obtain or retain business",
+            "Covers any US person/company; applies to payments through third parties; no materiality threshold",
+            "Corporations: up to $2M per violation; Individuals: up to $250K and 20 years imprisonment"
+          ],
+          [
+            "Accounting provisions (15 U.S.C. § 78m(b))",
+            "Requires issuers to maintain accurate books/records and devise adequate internal accounting controls",
+            "Books and records must accurately reflect transactions; internal controls must provide reasonable assurance",
+            "Corporations: up to $25M per violation; Individuals: up to $5M and 20 years imprisonment"
+          ],
+          [
+            "Facilitating payments exception",
+            "Small payments to low-level officials to expedite routine non-discretionary government actions",
+            "Must be for routine action (processing permits, visas); cannot be for discretionary decision",
+            "Not prohibited, but must be accurately recorded in the books"
+          ],
+          [
+            "Affirmative defenses",
+            "Payment was lawful under foreign law OR was reasonable and bona fide business expense",
+            "Company must prove the payment was legal in the foreign country or was directly related to promotion/demonstration of products",
+            "Burden of proof on defendant"
+          ]
+        ],
+        "headers": [
+          "Provision",
+          "Requirement",
+          "Key Elements",
+          "Penalties"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "pack": 3,
+    "itemId": "CBQ4-E3-Q4",
+    "type": "match",
+    "prompt": "The internal audit team classified each risk scenario from Exhibit 1 for further action. Match each scenario to the most appropriate compliance response.",
+    "correct": {
+      "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+      "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+      "Charitable donation request — $50,000 to minister's personal foundation": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+      "Luxury client entertainment — $1,200/person including spouses for government clients": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-E3-E1",
+        "rows": [
+          [
+            "Foreign customs expediting fees",
+            "Sales manager paid $500 to customs official to expedite clearance of a shipment",
+            "Could be a facilitating payment (permissible) or a bribe depending on circumstances",
+            "Low-Medium"
+          ],
+          [
+            "Third-party agent commission",
+            "Agent in Country X receives 15% commission on government contracts; agent is related to a government procurement official",
+            "Red flag — commission to related party of government official suggests potential improper payment",
+            "High"
+          ],
+          [
+            "Charitable donation request",
+            "Foreign government minister requests $50,000 donation to his personal foundation; company wants to support community",
+            "Likely improper — donation to official's personal entity may be indirect bribe",
+            "High"
+          ],
+          [
+            "Client entertainment",
+            "Sales team hosted 10 government clients at a luxury resort ($1,200 per person) including spouses",
+            "Exceeds reasonable business entertainment threshold; potential FCPA issue",
+            "Medium"
+          ],
+          [
+            "Local partner joint venture",
+            "Proposed JV partner has government officials on its board; partner demands $100,000 \"advisory fee\"",
+            "High-risk — JV with government-affiliated entity requires enhanced due diligence",
+            "High"
+          ]
+        ],
+        "headers": [
+          "Risk Scenario",
+          "Description",
+          "FCPA Concern",
+          "Risk Level"
+        ]
+      },
+      {
+        "id": "CBQ4-E3-E2",
+        "rows": [
+          [
+            "Anti-bribery provisions (15 U.S.C. § 78dd-1)",
+            "Prohibits paying or offering anything of value to foreign officials to obtain or retain business",
+            "Covers any US person/company; applies to payments through third parties; no materiality threshold",
+            "Corporations: up to $2M per violation; Individuals: up to $250K and 20 years imprisonment"
+          ],
+          [
+            "Accounting provisions (15 U.S.C. § 78m(b))",
+            "Requires issuers to maintain accurate books/records and devise adequate internal accounting controls",
+            "Books and records must accurately reflect transactions; internal controls must provide reasonable assurance",
+            "Corporations: up to $25M per violation; Individuals: up to $5M and 20 years imprisonment"
+          ],
+          [
+            "Facilitating payments exception",
+            "Small payments to low-level officials to expedite routine non-discretionary government actions",
+            "Must be for routine action (processing permits, visas); cannot be for discretionary decision",
+            "Not prohibited, but must be accurately recorded in the books"
+          ],
+          [
+            "Affirmative defenses",
+            "Payment was lawful under foreign law OR was reasonable and bona fide business expense",
+            "Company must prove the payment was legal in the foreign country or was directly related to promotion/demonstration of products",
+            "Burden of proof on defendant"
+          ]
+        ],
+        "headers": [
+          "Provision",
+          "Requirement",
+          "Key Elements",
+          "Penalties"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "pack": 3,
+    "itemId": "CBQ4-E3-Q5",
+    "type": "select",
+    "prompt": "Apex's CFO argues that the company does not need separate FCPA-specific internal controls because the company already has a general internal control system. Referring to Exhibit 2, which response BEST addresses this argument?",
+    "correct": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+    "exhibits": [
+      {
+        "id": "CBQ4-E3-E1",
+        "rows": [
+          [
+            "Foreign customs expediting fees",
+            "Sales manager paid $500 to customs official to expedite clearance of a shipment",
+            "Could be a facilitating payment (permissible) or a bribe depending on circumstances",
+            "Low-Medium"
+          ],
+          [
+            "Third-party agent commission",
+            "Agent in Country X receives 15% commission on government contracts; agent is related to a government procurement official",
+            "Red flag — commission to related party of government official suggests potential improper payment",
+            "High"
+          ],
+          [
+            "Charitable donation request",
+            "Foreign government minister requests $50,000 donation to his personal foundation; company wants to support community",
+            "Likely improper — donation to official's personal entity may be indirect bribe",
+            "High"
+          ],
+          [
+            "Client entertainment",
+            "Sales team hosted 10 government clients at a luxury resort ($1,200 per person) including spouses",
+            "Exceeds reasonable business entertainment threshold; potential FCPA issue",
+            "Medium"
+          ],
+          [
+            "Local partner joint venture",
+            "Proposed JV partner has government officials on its board; partner demands $100,000 \"advisory fee\"",
+            "High-risk — JV with government-affiliated entity requires enhanced due diligence",
+            "High"
+          ]
+        ],
+        "headers": [
+          "Risk Scenario",
+          "Description",
+          "FCPA Concern",
+          "Risk Level"
+        ]
+      },
+      {
+        "id": "CBQ4-E3-E2",
+        "rows": [
+          [
+            "Anti-bribery provisions (15 U.S.C. § 78dd-1)",
+            "Prohibits paying or offering anything of value to foreign officials to obtain or retain business",
+            "Covers any US person/company; applies to payments through third parties; no materiality threshold",
+            "Corporations: up to $2M per violation; Individuals: up to $250K and 20 years imprisonment"
+          ],
+          [
+            "Accounting provisions (15 U.S.C. § 78m(b))",
+            "Requires issuers to maintain accurate books/records and devise adequate internal accounting controls",
+            "Books and records must accurately reflect transactions; internal controls must provide reasonable assurance",
+            "Corporations: up to $25M per violation; Individuals: up to $5M and 20 years imprisonment"
+          ],
+          [
+            "Facilitating payments exception",
+            "Small payments to low-level officials to expedite routine non-discretionary government actions",
+            "Must be for routine action (processing permits, visas); cannot be for discretionary decision",
+            "Not prohibited, but must be accurately recorded in the books"
+          ],
+          [
+            "Affirmative defenses",
+            "Payment was lawful under foreign law OR was reasonable and bona fide business expense",
+            "Company must prove the payment was legal in the foreign country or was directly related to promotion/demonstration of products",
+            "Burden of proof on defendant"
+          ]
+        ],
+        "headers": [
+          "Provision",
+          "Requirement",
+          "Key Elements",
+          "Penalties"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "pack": 3,
+    "itemId": "CBQ5-E1-Q1",
+    "type": "match",
+    "prompt": "Match each IIA Standard category to the type of guidance it provides.",
+    "correct": {
+      "Attribute Standards": "Define the characteristics and capabilities required for internal audit activities and individuals",
+      "Performance Standards": "Describe the nature of internal audit work and quality criteria for measuring performance",
+      "Implementation Standards": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ5-E1-E1",
+        "rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ]
+      },
+      {
+        "id": "CBQ5-E1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "pack": 3,
+    "itemId": "CBQ5-E1-Q2",
+    "type": "select",
+    "prompt": "The internal audit department previously performed consulting engagements for the lending department. Based on IIA Standards, which action is MOST critical for preserving objectivity?",
+    "correct": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+    "exhibits": [
+      {
+        "id": "CBQ5-E1-E1",
+        "rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ]
+      },
+      {
+        "id": "CBQ5-E1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "pack": 3,
+    "itemId": "CBQ5-E1-Q3",
+    "type": "multi",
+    "prompt": "The CAE has drafted a revised internal audit charter for Audit Committee approval. Based on IIA Standards, which elements MUST be included? (Select all that apply.)",
+    "correct": [
+      "The internal audit activity's purpose, authority, and responsibility",
+      "The CAE's functional and administrative reporting relationships",
+      "The scope of internal audit activities including assurance and consulting services"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-E1-E1",
+        "rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ]
+      },
+      {
+        "id": "CBQ5-E1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "pack": 3,
+    "itemId": "CBQ5-E1-Q4",
+    "type": "select",
+    "prompt": "Under the IIA Standards, which reporting structure best supports internal audit independence at First Continental Bank?",
+    "correct": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+    "exhibits": [
+      {
+        "id": "CBQ5-E1-E1",
+        "rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ]
+      },
+      {
+        "id": "CBQ5-E1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "pack": 3,
+    "itemId": "CBQ5-E1-Q5",
+    "type": "multi",
+    "prompt": "The CAE needs to establish a Quality Assurance and Improvement Program (QAIP) under IIA Standards. Which of the following are required QAIP components? (Select all that apply.)",
+    "correct": [
+      "Ongoing internal monitoring of internal audit performance through project supervision and feedback",
+      "Periodic external assessments conducted at least once every five years by an independent reviewer",
+      "Internal self-assessments covering the internal audit activity's compliance with the Standards"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-E1-E1",
+        "rows": [
+          [
+            "Attribute Standards",
+            "1000",
+            "Purpose, Authority, and Responsibility: charter must define audit activity's purpose, authority, and responsibility"
+          ],
+          [
+            "Attribute Standards",
+            "1100",
+            "Independence and Objectivity: internal audit activity must be independent and auditors must be objective"
+          ],
+          [
+            "Attribute Standards",
+            "1200",
+            "Proficiency and Due Professional Care: engagements must be performed with proficiency and due professional care"
+          ],
+          [
+            "Performance Standards",
+            "2000",
+            "Managing the Internal Audit Activity: CAE must manage the activity to ensure it adds value"
+          ],
+          [
+            "Performance Standards",
+            "2100",
+            "Nature of Work: evaluate and contribute to improvement of governance, risk management, and control"
+          ],
+          [
+            "Performance Standards",
+            "2200",
+            "Engagement Planning: auditors must develop and document a plan for each engagement"
+          ],
+          [
+            "Implementation Standards",
+            "1000.A1",
+            "The charter must include the nature of assurance services provided"
+          ],
+          [
+            "Implementation Standards",
+            "1000.C1",
+            "The nature of consulting services provided must be defined in the audit charter"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Standard Number",
+          "Description"
+        ]
+      },
+      {
+        "id": "CBQ5-E1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "pack": 3,
+    "itemId": "CBQ5-E2-Q1",
+    "type": "match",
+    "prompt": "The CISO is preparing an incident report for the board. Match each cybersecurity threat type to its role in the CCHS incident.",
+    "correct": {
+      "Phishing email": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+      "Remote Access Trojan (RAT)": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+      "Ransomware": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+      "DDoS (distraction attack)": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ5-E2-E1",
+        "rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ]
+      },
+      {
+        "id": "CBQ5-E2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "pack": 3,
+    "itemId": "CBQ5-E2-Q2",
+    "type": "select",
+    "prompt": "Based on the incident timeline, which control failure was the MOST critical enabler of the ransomware attack at CCHS?",
+    "correct": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+    "exhibits": [
+      {
+        "id": "CBQ5-E2-E1",
+        "rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ]
+      },
+      {
+        "id": "CBQ5-E2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "pack": 3,
+    "itemId": "CBQ5-E2-Q3",
+    "type": "numeric",
+    "prompt": "Using Exhibit 2 data, the CISO proposes implementing MFA for all internal system access at a cost of $420,000 annually. Based on the incident, the probability of a similar attack in any given year without MFA is estimated at 12%, and with MFA it drops to 3%. Using expected value analysis, calculate the annual net benefit (or cost) of implementing MFA. The $18.2 million total loss is the exposure for a successful attack. Enter your answer as the nearest whole number in dollars. If the net benefit is negative, include the minus sign. Do not use commas or dollar signs.",
+    "correct": 1218000,
+    "exhibits": [
+      {
+        "id": "CBQ5-E2-E1",
+        "rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ]
+      },
+      {
+        "id": "CBQ5-E2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "pack": 3,
+    "itemId": "CBQ5-E2-Q4",
+    "type": "multi",
+    "prompt": "Based on Exhibit 2, which control improvements should CCHS implement to prevent a recurrence? (Select all that apply.)",
+    "correct": [
+      "Implement mandatory quarterly cybersecurity awareness training with phishing simulations for all employees to reduce the likelihood of successful social engineering attacks",
+      "Deploy endpoint detection and response (EDR) software on all workstations and servers to enable real-time threat detection and automated containment of malware",
+      "Implement network segmentation between administrative workstations and clinical systems to prevent lateral movement from compromised non-clinical devices to the EHR",
+      "Adopt the 3-2-1 backup strategy (3 copies, 2 media types, 1 offsite) with immutable or air-gapped backups to ensure recoverability even if ransomware penetrates the network"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-E2-E1",
+        "rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ]
+      },
+      {
+        "id": "CBQ5-E2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "pack": 3,
+    "itemId": "CBQ5-E2-Q5",
+    "type": "select",
+    "prompt": "The board asks whether paying the ransom was the right decision. Based on cybersecurity best practices and internal control principles, which response is MOST appropriate?",
+    "correct": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+    "exhibits": [
+      {
+        "id": "CBQ5-E2-E1",
+        "rows": [
+          [
+            "Phishing email",
+            "Social engineering via deceptive email with malicious attachment",
+            "Initial access vector - bypassed human controls",
+            "Spoofed sender domain, urgent language, mismatched URL and link text"
+          ],
+          [
+            "Remote Access Trojan (RAT)",
+            "Disguised as an invoice PDF attachment; user double-clicked to install",
+            "Credential harvesting, persistent backdoor access, network reconnaissance",
+            "Unexpected outbound traffic, unusual process execution, registry changes"
+          ],
+          [
+            "Ransomware",
+            "Deployed via RAT after credential escalation; encrypted files across mapped drives",
+            "Encrypted EHR, file servers, and workstations; 22-day operational outage",
+            "Mass file renaming (.encrypted extension), ransom notes, file share encryption events"
+          ],
+          [
+            "DDoS (distraction attack)",
+            "Coordinated traffic flood targeting the public-facing patient portal",
+            "Patient portal unavailable during initial response; diverted IT attention from the ransomware",
+            "5x normal traffic volume from distributed IP addresses, portal timeout errors"
+          ]
+        ],
+        "headers": [
+          "Malware Type",
+          "Method of Delivery",
+          "Primary Impact",
+          "Indicators of Compromise"
+        ]
+      },
+      {
+        "id": "CBQ5-E2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "pack": 3,
+    "itemId": "CBQ5-E3-Q1",
+    "type": "select",
+    "prompt": "DataBridge Solutions Inc. has been found by a EU supervisory authority to have intentionally violated EU data subjects' rights under Article 83(5) of the GDPR. Based on the financial data provided in Exhibit 1, what is the maximum potential administrative fine DataBridge faces?",
+    "correct": "€32,000,000",
+    "exhibits": [
+      {
+        "id": "CBQ5-E3-E1",
+        "rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "headers": [
+          "Item",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "pack": 3,
+    "itemId": "CBQ5-E3-Q2",
+    "type": "select",
+    "prompt": "Using the data in Exhibit 1, what is the expected annual net benefit (or cost) of implementing the proposed privacy compliance program? (Expected value of avoided losses minus program cost.)",
+    "correct": "€1,440,000",
+    "exhibits": [
+      {
+        "id": "CBQ5-E3-E1",
+        "rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "headers": [
+          "Item",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "pack": 3,
+    "itemId": "CBQ5-E3-Q3",
+    "type": "select",
+    "prompt": "DataBridge discovers that an employee inadvertently exposed a database containing personal data of 3,200 EU data subjects. Under the GDPR, within how many hours must DataBridge notify the appropriate supervisory authority of this data breach?",
+    "correct": "72 hours",
+    "exhibits": [
+      {
+        "id": "CBQ5-E3-E1",
+        "rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "headers": [
+          "Item",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "pack": 3,
+    "itemId": "CBQ5-E3-Q4",
+    "type": "select",
+    "prompt": "An EU data subject submits a request to DataBridge demanding that the company delete all personal data collected about them and cease processing. Under the GDPR, which data subject right has been invoked?",
+    "correct": "Right to erasure (right to be forgotten)",
+    "exhibits": [
+      {
+        "id": "CBQ5-E3-E1",
+        "rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "headers": [
+          "Item",
+          "Amount"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "pack": 3,
+    "itemId": "CBQ5-E3-Q5",
+    "type": "select",
+    "prompt": "DataBridge needs to transfer personal data of EU customers from its Irish subsidiary to its primary data center in Chicago for centralized analytics processing. Which GDPR-approved transfer mechanism is most appropriate for this recurring data transfer scenario?",
+    "correct": "Standard Contractual Clauses (SCCs)",
+    "exhibits": [
+      {
+        "id": "CBQ5-E3-E1",
+        "rows": [
+          [
+            "Global annual turnover",
+            "€800,000,000"
+          ],
+          [
+            "EU-derived revenue",
+            "€210,000,000"
+          ],
+          [
+            "California-derived revenue",
+            "$65,000,000"
+          ],
+          [
+            "Proposed annual privacy compliance program cost",
+            "€1,500,000"
+          ],
+          [
+            "Actuarial probability of material GDPR fine (without program)",
+            "30%"
+          ],
+          [
+            "Estimated average GDPR fine exposure (without program)",
+            "€8,000,000"
+          ],
+          [
+            "Probability of remediation and litigation costs (without program)",
+            "45%"
+          ],
+          [
+            "Estimated average remediation and litigation costs",
+            "€1,200,000"
+          ],
+          [
+            "Number of EU data subjects",
+            "15,200"
+          ],
+          [
+            "Number of California consumer records processed",
+            "42,000"
+          ],
+          [
+            "GDPR upper-tier fine maximum (fixed amount)",
+            "€20,000,000"
+          ],
+          [
+            "GDPR upper-tier fine rate",
+            "4% of global annual turnover"
+          ],
+          [
+            "GDPR lower-tier fine maximum (fixed amount)",
+            "€10,000,000"
+          ],
+          [
+            "GDPR lower-tier fine rate",
+            "2% of global annual turnover"
+          ]
+        ],
+        "headers": [
+          "Item",
+          "Amount"
+        ]
+      }
+    ]
+  }
+]

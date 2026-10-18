@@ -1,0 +1,220 @@
+{
+  "timestamp": "2026-10-17T20:51:52.762Z",
+  "validators": [
+    {
+      "validator": "Repository Validator",
+      "status": "PASS",
+      "statistics": {
+        "Question Packs": 5,
+        "Case Banks": 5
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Metadata Validator",
+      "status": "WARN",
+      "statistics": {
+        "Cases Checked": 190
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Blueprint Validator",
+      "status": "WARN",
+      "statistics": {
+        "Cases Checked": 190,
+        "Cross-Domain Cases": 2,
+        "Domain: Corporate Finance": 18,
+        "Domain: Cost Management": 15,
+        "Domain: Decision Analysis": 29,
+        "Domain: External Financial Reporting Decisions": 13,
+        "Domain: Financial Statement Analysis": 21,
+        "Domain: Internal Controls": 13,
+        "Domain: Investment Decisions": 12,
+        "Domain: Performance Management": 15,
+        "Domain: Planning, Budgeting, and Forecasting": 13,
+        "Domain: Professional Ethics": 19,
+        "Domain: Risk Management": 11,
+        "Domain: Technology and Analytics": 11
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Part 2 Blueprint Validator",
+      "status": "WARN",
+      "statistics": {
+        "P2 MCQ Packs Found": 6,
+        "P2 Case Packs Found": 5,
+        "P2 Items Checked": 4190,
+        "P2 Cases Checked": 110,
+        "P2 Domain: Corporate Finance": 728,
+        "P2 Domain: Decision Analysis": 962,
+        "P2 Domain: Financial Statement Analysis": 748,
+        "P2 Domain: Investment Decisions": 572,
+        "P2 Domain: Professional Ethics": 614,
+        "P2 Domain: Risk Management": 566
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Difficulty Validator",
+      "status": "WARN",
+      "statistics": {
+        "Cases Checked": 190,
+        "Items Checked": 1085,
+        "Difficulty: Difficult": 76,
+        "Difficulty: Easy": 4,
+        "Difficulty: Moderate": 100,
+        "Difficulty: Moderate-Easy": 0,
+        "Difficulty: Very Difficult": 10,
+        "Cognitive: Analyze": 364,
+        "Cognitive: Apply": 396,
+        "Cognitive: Evaluate": 278,
+        "Cognitive: Remember": 1,
+        "Cognitive: Understand": 46
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Reference Validator",
+      "status": "WARN",
+      "statistics": {
+        "Cases Checked": 190,
+        "Total References": 0,
+        "Orphan Exhibits (unreferenced)": 76,
+        "Orphan References (missing exhibits)": 0
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Explanation Validator",
+      "status": "WARN",
+      "statistics": {
+        "MCQ Questions Checked": 6600,
+        "Case Items Checked": 1485,
+        "Questions with Placeholder Explanations": 0,
+        "Fields with Placeholder Text": 0,
+        "Short Explanations (<50 chars)": 2,
+        "Correct Explanation Avg Length": 604,
+        "Wrong Explanation Avg Length": 285
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Case Integrity Validator",
+      "status": "WARN",
+      "statistics": {
+        "Total Cases Checked": 190,
+        "Total Items Checked": 1085,
+        "Cases with Duplicate Stems": 0,
+        "Cases with Duplicate Choices": 0,
+        "Cases with Placeholder Choices": 3,
+        "Cases with Empty Prompts": 0,
+        "Items with Missing Choices": 0,
+        "Items with Missing Explanations": 0,
+        "Duplicate ItemIDs Found": 0,
+        "Cases with Duplicate Explanations": 0,
+        "Cases with Missing Exhibits": 0
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "Case Identity Validator",
+      "status": "PASS",
+      "statistics": {
+        "content/cases/case_pack_1_corrected.js :: Moderate-Easy": "38 (27.0%)",
+        "content/cases/case_pack_1_corrected.js :: Moderate": "36 (25.5%)",
+        "content/cases/case_pack_1_corrected.js :: Difficult": "64 (45.4%)",
+        "content/cases/case_pack_1_corrected.js :: Easy": "3 (2.1%)",
+        "content/cases/case_pack_2_corrected.js :: Moderate": "37 (28.0%)",
+        "content/cases/case_pack_2_corrected.js :: Difficult": "85 (64.4%)",
+        "content/cases/case_pack_2_corrected.js :: Moderate-Easy": "10 (7.6%)",
+        "content/cases/case_pack_3_corrected.js :: Moderate": "57 (37.5%)",
+        "content/cases/case_pack_3_corrected.js :: Difficult": "72 (47.4%)",
+        "content/cases/case_pack_3_corrected.js :: Moderate-Easy": "17 (11.2%)",
+        "content/cases/case_pack_3_corrected.js :: Easy": "6 (3.9%)",
+        "content/cases/legacy/scored_cases.js :: Moderate-Easy": "35 (38.9%)",
+        "content/cases/legacy/scored_cases.js :: Moderate": "18 (20.0%)",
+        "content/cases/legacy/scored_cases.js :: Difficult": "34 (37.8%)",
+        "content/cases/legacy/scored_cases.js :: Easy": "3 (3.3%)",
+        "content/cases/legacy/scored_cases2.js :: Moderate-Easy": "4 (5.1%)",
+        "content/cases/legacy/scored_cases2.js :: Moderate": "29 (37.2%)",
+        "content/cases/legacy/scored_cases2.js :: Difficult": "45 (57.7%)",
+        "content/cases/legacy/scored_cases3.js :: Moderate-Easy": "7 (8.9%)",
+        "content/cases/legacy/scored_cases3.js :: Moderate": "19 (24.1%)",
+        "content/cases/legacy/scored_cases3.js :: Difficult": "53 (67.1%)",
+        "content/cases/legacy/scored_cases4.js :: Moderate": "25 (32.1%)",
+        "content/cases/legacy/scored_cases4.js :: Difficult": "46 (59.0%)",
+        "content/cases/legacy/scored_cases4.js :: Moderate-Easy": "7 (9.0%)",
+        "content/cases/legacy/scored_cases5.js :: Moderate": "27 (36.0%)",
+        "content/cases/legacy/scored_cases5.js :: Difficult": "36 (48.0%)",
+        "content/cases/legacy/scored_cases5.js :: Moderate-Easy": "12 (16.0%)",
+        "p2/case_pack_p2_1.js :: Moderate": "113 (57.1%)",
+        "p2/case_pack_p2_1.js :: Difficult": "65 (32.8%)",
+        "p2/case_pack_p2_1.js :: Moderate-Easy": "14 (7.1%)",
+        "p2/case_pack_p2_1.js :: Very Difficult": "6 (3.0%)",
+        "p2/case_pack_p2_2.js :: Moderate-Easy": "8 (4.0%)",
+        "p2/case_pack_p2_2.js :: Difficult": "70 (35.4%)",
+        "p2/case_pack_p2_2.js :: Moderate": "117 (59.1%)",
+        "p2/case_pack_p2_2.js :: Very Difficult": "3 (1.5%)",
+        "p2/case_pack_p2_3.js :: Moderate": "101 (49.5%)",
+        "p2/case_pack_p2_3.js :: Moderate-Easy": "18 (8.8%)",
+        "p2/case_pack_p2_3.js :: Difficult": "61 (29.9%)",
+        "p2/case_pack_p2_3.js :: Very Difficult": "24 (11.8%)",
+        "p2/case_pack_p2_authored.js :: Moderate": "18 (60.0%)",
+        "p2/case_pack_p2_authored.js :: Difficult": "12 (40.0%)",
+        "p2/case_pack_p2_C4_C8.js :: Moderate": "15 (50.0%)",
+        "p2/case_pack_p2_C4_C8.js :: Difficult": "12 (40.0%)",
+        "p2/case_pack_p2_C4_C8.js :: Very Difficult": "3 (10.0%)",
+        "Total Cases Checked": 265,
+        "Unique CaseIDs": 190,
+        "Total Items Checked": 1485,
+        "Duplicate CaseIDs (live banks incl. P2)": 0,
+        "Archived↔Live Overlaps (expected, S916)": 75,
+        "Score/Label Mismatches": 0
+      },
+      "scanned": null,
+      "rawExpected": null
+    },
+    {
+      "validator": "PsychometricValidator",
+      "status": "WARN",
+      "statistics": {
+        "AbsoluteLanguageValidator.questionsScanned": 6600,
+        "AbsoluteLanguageValidator.findings": 2571,
+        "AbsoluteLanguageValidator.pattern.only/exclusively": 1912,
+        "AbsoluteLanguageValidator.pattern.must": 389,
+        "AbsoluteLanguageValidator.pattern.exactly": 92,
+        "AbsoluteLanguageValidator.pattern.no-other/exception/alternative": 14,
+        "AbsoluteLanguageValidator.pattern.always": 117,
+        "AbsoluteLanguageValidator.pattern.never": 41,
+        "AbsoluteLanguageValidator.pattern.impossible": 6,
+        "AmbiguityValidator.questionsScanned": 6600,
+        "AmbiguityValidator.findings": 2487,
+        "AmbiguityValidator.vagueQualifierHits": 660,
+        "DistractorSimilarityValidator.questionsScanned": 6600,
+        "DistractorSimilarityValidator.highSimilarityPairs": 758,
+        "DistractorSimilarityValidator.moderateSimilarityPairs": 1404,
+        "DistractorSimilarityValidator.totalFlagged": 2162,
+        "ExplanationConsistencyValidator.questionsScanned": 6600,
+        "ExplanationConsistencyValidator.findings": 0,
+        "MathematicalValidator.questionsScanned": 6600,
+        "MathematicalValidator.findings": 0,
+        "MathematicalValidator.falsePositiveRate": "0%",
+        "modules": 5,
+        "psychometricModuleErrors": 0,
+        "psychometricModuleWarnings": 7108
+      },
+      "scanned": null,
+      "rawExpected": null
+    }
+  ]
+}

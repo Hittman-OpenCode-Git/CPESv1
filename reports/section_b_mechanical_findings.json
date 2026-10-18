@@ -1,0 +1,628 @@
+{
+  "totalItems": 604,
+  "findings": [
+    {
+      "qid": "P1-B-033",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 74 chars"
+    },
+    {
+      "qid": "P1-B-038",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 73 chars"
+    },
+    {
+      "qid": "P1-B-058",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 68 chars"
+    },
+    {
+      "qid": "P1-B-074",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 63 chars"
+    },
+    {
+      "qid": "P1-B-082",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 74 chars"
+    },
+    {
+      "qid": "P1-B-082",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 70 chars"
+    },
+    {
+      "qid": "P1-B-094",
+      "pack": "pack_a",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 72 chars"
+    },
+    {
+      "qid": "P1E-B-003",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 68 chars"
+    },
+    {
+      "qid": "P1E-B-005",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 71 chars"
+    },
+    {
+      "qid": "P1E-B-005",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 69 chars"
+    },
+    {
+      "qid": "P1E-B-010",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 60 chars"
+    },
+    {
+      "qid": "P1E-B-010",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 64 chars"
+    },
+    {
+      "qid": "P1E-B-011",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 66 chars"
+    },
+    {
+      "qid": "P1E-B-011",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 62 chars"
+    },
+    {
+      "qid": "P1E-B-011",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 69 chars"
+    },
+    {
+      "qid": "P1E-B-015",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 70 chars"
+    },
+    {
+      "qid": "P1E-B-017",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 70 chars"
+    },
+    {
+      "qid": "P1E-B-019",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 74 chars"
+    },
+    {
+      "qid": "P1E-B-019",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 70 chars"
+    },
+    {
+      "qid": "P1E-B-020",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 66 chars"
+    },
+    {
+      "qid": "P1E-B-024",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 65 chars"
+    },
+    {
+      "qid": "P1E-B-029",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 63 chars"
+    },
+    {
+      "qid": "P1E-B-030",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 69 chars"
+    },
+    {
+      "qid": "P1E-B-030",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 56 chars"
+    },
+    {
+      "qid": "P1E-B-032",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 65 chars"
+    },
+    {
+      "qid": "P1E-B-033",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 72 chars"
+    },
+    {
+      "qid": "P1E-B-035",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 74 chars"
+    },
+    {
+      "qid": "P1E-B-038",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 74 chars"
+    },
+    {
+      "qid": "P1E-B-038",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 71 chars"
+    },
+    {
+      "qid": "P1E-B-039",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 73 chars"
+    },
+    {
+      "qid": "P1E-B-040",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 59 chars"
+    },
+    {
+      "qid": "P1E-B-043",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[A] 69 chars"
+    },
+    {
+      "qid": "P1E-B-046",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 70 chars"
+    },
+    {
+      "qid": "P1E-B-046",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 69 chars"
+    },
+    {
+      "qid": "P1E-B-046",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 53 chars"
+    },
+    {
+      "qid": "P1E-B-049",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 73 chars"
+    },
+    {
+      "qid": "P1E-B-049",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 66 chars"
+    },
+    {
+      "qid": "P1E-B-052",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 58 chars"
+    },
+    {
+      "qid": "P1E-B-054",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 63 chars"
+    },
+    {
+      "qid": "P1E-B-058",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 59 chars"
+    },
+    {
+      "qid": "P1E-B-058",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 58 chars"
+    },
+    {
+      "qid": "P1E-B-059",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 69 chars"
+    },
+    {
+      "qid": "P1E-B-059",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 72 chars"
+    },
+    {
+      "qid": "P1E-B-065",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[C] 62 chars"
+    },
+    {
+      "qid": "P1E-B-068",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 61 chars"
+    },
+    {
+      "qid": "P1E-B-070",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[B] 71 chars"
+    },
+    {
+      "qid": "P1E-B-097",
+      "pack": "pack_e",
+      "check": "SHORT-EW",
+      "severity": "MEDIUM",
+      "detail": "EW[D] 68 chars"
+    },
+    {
+      "qid": "P1-BD-034",
+      "pack": "pack_d",
+      "check": "COG-DIFF-MISMATCH",
+      "severity": "MEDIUM",
+      "detail": "Cog=Analyze Diff=Easy"
+    },
+    {
+      "qid": "P1-BD-042",
+      "pack": "pack_d",
+      "check": "COG-DIFF-MISMATCH",
+      "severity": "MEDIUM",
+      "detail": "Cog=Analyze Diff=Easy"
+    },
+    {
+      "qid": "P1B-B-172",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"always\""
+    },
+    {
+      "qid": "P1B-B-206",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"never\""
+    },
+    {
+      "qid": "P1B-B-208",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"never\""
+    },
+    {
+      "qid": "P1B-B-211",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"never\""
+    },
+    {
+      "qid": "P1B-B-211",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"never\""
+    },
+    {
+      "qid": "P1B-B-222",
+      "pack": "pack_b",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"always\""
+    },
+    {
+      "qid": "P1-BC-105",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1-BC-106",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1-BC-111",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"never\""
+    },
+    {
+      "qid": "P1-BC-112",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1-BC-113",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"never\""
+    },
+    {
+      "qid": "P1-BC-121",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"never\""
+    },
+    {
+      "qid": "P1-BC-122",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1-BC-125",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1-BC-125",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"never\""
+    },
+    {
+      "qid": "P1-BC-126",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1-BC-127",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1-BC-129",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1-BC-130",
+      "pack": "pack_c",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"always\""
+    },
+    {
+      "qid": "P1-BD-006",
+      "pack": "pack_d",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"impossible\""
+    },
+    {
+      "qid": "P1-BD-012",
+      "pack": "pack_d",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"never\""
+    },
+    {
+      "qid": "P1-BD-084",
+      "pack": "pack_d",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"never\""
+    },
+    {
+      "qid": "P1E-B-101",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"never\""
+    },
+    {
+      "qid": "P1E-B-102",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"never\""
+    },
+    {
+      "qid": "P1E-B-103",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"always\""
+    },
+    {
+      "qid": "P1E-B-105",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1E-B-106",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1E-B-106",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"always\""
+    },
+    {
+      "qid": "P1E-B-107",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1E-B-108",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice D contains \"never\""
+    },
+    {
+      "qid": "P1E-B-112",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"never\""
+    },
+    {
+      "qid": "P1E-B-116",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1E-B-116",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"never\""
+    },
+    {
+      "qid": "P1E-B-122",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"always\""
+    },
+    {
+      "qid": "P1E-B-125",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"never\""
+    },
+    {
+      "qid": "P1E-B-126",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    },
+    {
+      "qid": "P1E-B-126",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice C contains \"never\""
+    },
+    {
+      "qid": "P1E-B-127",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1E-B-128",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice A contains \"always\""
+    },
+    {
+      "qid": "P1E-B-130",
+      "pack": "pack_e",
+      "check": "FORBIDDEN-TERM",
+      "severity": "HIGH",
+      "detail": "Choice B contains \"always\""
+    }
+  ]
+}

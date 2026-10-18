@@ -249,6 +249,42 @@ function runScreen() {
             }
           }
         }
+
+        // E5 KEY-AGREEMENT: the explanation's DERIVED ANSWER disagrees with the
+        // stored key. E1 checks 'is the key number PRESENT in the explanation';
+        // E5 checks 'is the number the explanation computes as its ANSWER different
+        // from the key'.
+        //
+        // Calibration (P2-HAND-SOLVE-WAVE): the loose 'last number anywhere' rule
+        // produced 218 flags (~20% FP) because explanations trail exhibit refs
+        // ('Exhibit 2') and distractor commentary. Anchoring on the LAST computational
+        // conclusion marker (=, ->, =>, 'rounds to', 'is ', 'answer is') recovers the
+        // derived answer. The B4-Q1 class (key 7.45%, expl derives 7.48%, 0.4% off) is
+        // the motivating defect. Conceptual inversions (A7-Q4 direction) and arithmetic
+        // self-contradictions (A8-Q2 '= 61.5 = 60 days') are out of scope here.
+        //
+        // READ-ONLY — evidence only (DL-045).
+        (function agreementE5(it, expl, keyStr, type, kn, rec) {
+          if (kn.length < 1 || !('numeric'.includes(type) || 'fill'.includes(type))) return;
+          // last computational conclusion: a number right after a result marker
+          var markers = [/(?:=|->|=>)\s*[\u00A3$£](-?[\d][\d,.]*?(?:\.[\d]+)?)\b/g, /(?:=|->|=>)\s*(-?[\d][\d,.]*?(?:\.\d+)?)\s*%/g, /(?:rounds? to|answer is|result is|final value is|yields)\s*[\u00A3$£](-?[\d][\d,.]*?(?:\.[\d]+)?)\b/gi, /(?:rounds? to|answer is|result is|final value is|yields)\s*(-?[\d][\d,.]*?(?:\.\d+)?)\s*%/gi];
+          var lastVal = null;
+          for (var m of markers) { var mm; while ((mm = m.exec(expl)) !== null) { lastVal = String(mm[1]).replace(/[%$,\s()]/g, ''); } }
+          if (lastVal === null) {
+            // no derivation conclusion stated — let E1/presence handle it
+            return;
+          }
+          var cv = parseFloat(lastVal.replace(/,/g, ''));
+          if (isNaN(cv)) return;
+          var kv = kn[0];
+          var rel = Math.abs(cv - kv) / (Math.abs(kv) || 1);
+          var ab = Math.abs(cv - kv);
+          if (rel > 2e-3 && ab > 0.5) {
+            rec('E', 'FLAG', 'KEY-AGREEMENT',
+              'key ' + kn.join(',') + ' vs explanation-derived ' + cv + ' (' + (rel * 100).toFixed(2) + '% disagree)' +
+              ' | expl-conclusion=' + lastVal);
+          }
+        });/* E5 DISABLED — calibration verdict: non-viable (24/24 FP loose, 196/196 FP tightened). Regex-based conclusion extraction cannot distinguish derived answer from dense numeric prose. Prototype retained for phase-2 semantic key-extraction screen. */
       }
     }
   }

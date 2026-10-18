@@ -1,0 +1,16 @@
+[
+  {
+    "itemId": "CBQ3-A1-Q3",
+    "fixed": true,
+    "derived": 190560,
+    "method": "lease-liability-ending-balance",
+    "note": "Ending balance: 231,660 - 41,100 = 190560"
+  },
+  {
+    "itemId": "CBQ4-B2-Q1",
+    "fixed": true,
+    "derived": 300000,
+    "method": "ar-gross-calc",
+    "note": "$1,000,000 x (28% + 2%) = $300000"
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "generated": "2026-09-30T03:49:53.428Z",
+  "banks": 8,
+  "cases": 190,
+  "items": 1085,
+  "uniqueFingerprints": 185,
+  "duplicateGroups": 5,
+  "crossBankGroups": 5,
+  "allCertifiedGroups": 1,
+  "groups": [
+    {
+      "fingerprint": "4a27618f185be1b9c01b18d2c36555ddc680b89185e1302cbaeba6ce361d4c36",
+      "members": [
+        {
+          "caseId": "CBQ22-C7",
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "state": "In Audit",
+          "items": 6
+        },
+        {
+          "caseId": "CBQ22-C12",
+          "bank": "p2/case_pack_p2_C4_C8.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        }
+      ]
+    },
+    {
+      "fingerprint": "438cfe071afcb4c7239b743ee054d0be9db24f537bca20d22e0286eb755ee47d",
+      "members": [
+        {
+          "caseId": "CBQ22-A5",
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "state": "In Audit",
+          "items": 6
+        },
+        {
+          "caseId": "CBQ22-A8",
+          "bank": "p2/case_pack_p2_authored.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        }
+      ]
+    },
+    {
+      "fingerprint": "46a042815d1a2fb5d5f2624a078c7063d3c599166e45d5b7c66a52ad505dcd4f",
+      "members": [
+        {
+          "caseId": "CBQ22-F7",
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        },
+        {
+          "caseId": "CBQ22-F8",
+          "bank": "p2/case_pack_p2_authored.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        }
+      ]
+    },
+    {
+      "fingerprint": "0f54762a42c12a2b41750346ff73f41127b9f01114a53431eed3e652c575cb95",
+      "members": [
+        {
+          "caseId": "CBQ22-F5",
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "state": "In Audit",
+          "items": 6
+        },
+        {
+          "caseId": "CBQ22-F9",
+          "bank": "p2/case_pack_p2_authored.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        }
+      ]
+    },
+    {
+      "fingerprint": "d9926b2f7e0180571bc1730179f02d319ea963c6993fc7adc5c85d697a1e2820",
+      "members": [
+        {
+          "caseId": "CBQ22-F6",
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "state": "In Audit",
+          "items": 6
+        },
+        {
+          "caseId": "CBQ22-F10",
+          "bank": "p2/case_pack_p2_authored.js",
+          "part": "P2",
+          "state": "Certified",
+          "items": 6
+        }
+      ]
+    }
+  ]
+}

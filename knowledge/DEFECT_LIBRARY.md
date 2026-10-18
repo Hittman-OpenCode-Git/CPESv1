@@ -6,7 +6,9 @@ Class            Governance / Process
 Domain           Certification state integrity — P1 case banks
 Severity         High (163 P1 case items In Audit following the same unattributed bulk quarantine as DL-P2-023)
 Detected By      P2-085 forensic reconstruction (2026-09-30)
-Status           Open — tracked, out of scope for P2-085; remediation requires per-item hand-solve
+Status           **Resolved — 2026-10-17.** 31 cases / 163 items hand-solved, verified, and certified
+                 (batch DL-066-HANDSOLVE). 1 stored-key defect repaired (CBQ4-D3-Q3). P1 pool now 80/80
+                 cases / 425/425 items Certified.
 ```
 
 **Files:** `content/cases/case_pack_1_corrected.js`, `content/cases/case_pack_2_corrected.js`, `content/cases/case_pack_3_corrected.js`
@@ -15,25 +17,29 @@ Status           Open — tracked, out of scope for P2-085; remediation requires
 
 `scripts/quarantine_all_case_inversions.js` (2026-09-24) demoted **31 P1 cases** across the three P1 case banks as collateral to its 105 P2 demotions. All were `Certified` pre-quarantine (verified: 25/25, 25/25, 30/30 = 80 cases Certified at Wave A, cross-validated against git ref `54144674`).
 
-Current P1 case item census: **262 Certified / 163 In Audit** of 425.
+P1 case item census pre-remediation: **262 Certified / 163 In Audit** of 425.
 
 The P1 exposure is the same defect class as **DL-P2-023** but was **not** remediated in that session — P2 was the authorized scope. Of the 31 P1 demoted cases, 3 fell in Bucket A (collateral, no FLAG-severity screen evidence) and 28 require independent hand-solve.
 
-Note that DL-065 (2026-09-28) already remediated genuine P1 case defects in `case_pack_1_corrected.js` and `case_pack_3_corrected.js` — those content fixes are post-quarantine and must be preserved. **Any P1 remediation is state-only and content-preserving**, exactly as specified for P2 in DL-P2-023.
+### Resolution (2026-10-17)
 
-### Why this matters
+Per-item independent hand-solve across all 163 In Audit items via a keyless byte-range extraction subagent (`scripts/output/dl066_byte_range_solutions.json`), verified by an ItemID-based verifier (`scripts/dl066_verify2.js`, string-aware bracket-scanner pack parsing; the original `dl066_verify.js` was broken — it matched the stale masked file's prompts and paired solutions positionally, producing four false-negative "44/44 failure" reports; lessons per 2026-09-29 DL-011).
 
-`PROMPT_P2_CONTENT_CERTIFICATION_COMPLETE.md` asserts "425 P1 Certified" as a DoD criterion. That claim is false against live state (262/163) and the brief's Scope table contradicts its own DoD. DoD criterion #3 was struck in the P2-085 plan; the real gap is now tracked here rather than silently dropped.
+**Verification outcome:** 159/163 verbatim key matches (match items, multi-select arrays, numerics with stated tolerances); 1 stored-key defect found and repaired — **CBQ4-D3-Q3** (multi-select: stored {1,3,4} correct under DL-P2-031 lineage wait — statement-3-only derivation per exhibit math: theoretical capacity 50,000 units → $38 lowest absorption rate; `Correct` reduced to statement 3, Explanation rewritten to v2, DL-069-style independent re-solve); 3 remaining discrepancies adjudicated as subagent derivation errors with CORRECT stored keys (CBQ-C3-Q5, CBQ-E1-Q5, CBQ4-F1-Q3). CBQ4-A1-Q3 (match item, ASC 350 mapping) adjudicated correct — the "empty-string array artifact" was a verifier phantom, item intact. **163/163 validated.**
 
-### Remediation path (NOT executed)
+**Certification batches (Rule 16 stamps):** `certification_batch: DL-066-HANDSOLVE`, `certification_date: 2026-10-17` (items were never previously Certified → certification, not recertification). State flips executed by `scripts/dl066_certify_flip.js` in 9 Rule-5-compliant waves (13/25/30/6 objects per wave, span-bounded regex with per-wave parse post-asserts; ~194 occurrences = 31 case-level + 163 item-level). Backups: `backups/case_pack_{1,2,3}_corrected.js.bak-<pre-flip timestamps>`.
 
-Per-item independent hand-solve across the 163 In Audit items → DL-047 flow (quarantine → solve → verify → restore) → Rule 16 `recertification_batch` / `recertification_date` stamps. No bulk clear (DL-045). Requires its own session and authorization.
+**Tend gates (all PASS):** syntax `node --check` ×3 packs; census 80/80 cases / 425/425 items Certified, 0 duplicates; semantic screens PASS deterministic (certified-state flags 335→431 as 163 items entered the screen set; identical across two runs); `verify_remediation.js --all` 39/39 after refreshing two stale recorded-state DL entries (DL-P2-032, DL-P2-031 — updated with provenance, content verdicts untouched); `npm run pipeline` all gates green incl. baseline-coherence (3 pack hash rows refreshed via `--fix`, backup `.bak-coherence-20261017205129`) and coverage-assertion gate; `npm run probe:parity` PASS 0 divergences.
+
+**Subagent self-report reliability note:** Subagent session self-reports during this work product claimed "44/44 verified", "0 mismatches", "16/34 verified" — all three were contradicted by direct evidence and were rejected. Raw verification only (§5 dual verification).
 
 ### Cross-references
 
-- DL-P2-023 (same-class P2 defect, remediated 2026-09-30) · DL-045 (no-auto-remediate) · DL-065 (post-quarantine P1 content session)
-- `scripts/output/quarantine_reconciliation_20260930.json`
-- `knowledge/REVISION_HISTORY_P2.md` Session P2-085
+- DL-P2-023 (same-class P2 defect, remediated 2026-09-30) · DL-045 (no-auto-remediate) · DL-065 (post-quarantine P1 content session) · DL-011 (verifier-matching precedent)
+- `scripts/dl066_verify2.js` (correct verifier) · `scripts/dl066_certify_flip.js` (wave runner) · `scripts/output/dl066_final_census.js`
+- `scripts/output/dl066_verify2_results.json` · `scripts/output/handsolve_wave1_results.json`
+- `knowledge/REVISION_HISTORY.md` — DL-066 remediation entry (2026-10-17)
+- `knowledge/CURRENT_BASELINES.md` — refreshed P1 case-pack hashes (2026-10-17)
 
 ---
 

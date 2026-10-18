@@ -1,0 +1,14 @@
+{
+  "batch_id": "P2-HAND-SOLVE-B1",
+  "session": "P2-HAND-SOLVE-WAVE",
+  "certification_date": "2026-09-30",
+  "evidence_basis": "adjudicated",
+  "cases": [
+    {
+      "case_id": "CBQ21-A4",
+      "bank": "p2/case_pack_p2_1.js",
+      "expected_items": 6,
+      "expected_states": { "case": "Certified", "items": "Certified" }
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+ "totalInversions": 161,
+ "byState": {
+  "In Audit": 73,
+  "Unknown": 88
+ },
+ "byCaseState": {
+  "In Audit": 74,
+  "Certified": 1
+ },
+ "inAuditCases": 51,
+ "strongCandidates": 30,
+ "moderateCandidates": 44,
+ "detailPatterns": {
+  "A→C": 22,
+  "A→B": 31,
+  "B→A": 26,
+  "B→D": 3,
+  "C→B": 15,
+  "C→A": 13,
+  "C→D": 2,
+  "D→A": 15,
+  "D→C": 6,
+  "B→C": 14,
+  "E→A": 1,
+  "D→B": 4,
+  "A→D": 9
+ },
+ "strongItems": [
+  {
+   "bank": "content/cases/case_pack_1_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ-C2",
+   "itemId": "CBQ-C2-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"95 full cost\" stored(C)=\"70 variable cost\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_1_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ-C3",
+   "itemId": "CBQ-C3-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Operating income\" stored(C)=\"Training hours per employee\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_1_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ-D2",
+   "itemId": "CBQ-D2-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Cutting\" stored(B)=\"Welding\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ2-A3",
+   "itemId": "CBQ2-A3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"$38,000\" stored(C)=\"$48,000\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-A1",
+   "itemId": "CBQ3-A1-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Operating lease\" stored(B)=\"Finance lease\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ4-A1",
+   "itemId": "CBQ4-A1-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Calculate the implied fair value of goodwill\" stored(A)=\"No impairment loss is recognized, and no further testing is required\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ2-B2",
+   "itemId": "CBQ2-B2-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"$35,000\" stored(C)=\"$125,000\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ2-C3",
+   "itemId": "CBQ2-C3-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Division C\" stored(B)=\"Division A\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-C3",
+   "itemId": "CBQ3-C3-Q1",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Favorable $126,000 — actual revenue of $876,000 exceeded static budget revenue o\" stored(A)=\"Favorable $50,000 — the flexible budget shows expected operating income at 12,00\" recall=0.94 margin=0.09"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ4-C1",
+   "itemId": "CBQ4-C1-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Fixed overhead spending variance\" stored(D)=\"Fixed overhead production-volume variance\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ5-E3",
+   "itemId": "CBQ5-E3-Q1",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"€20,000,000\" stored(D)=\"€32,000,000\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ5-E3",
+   "itemId": "CBQ5-E3-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"€1,500,000\" stored(B)=\"€1,440,000\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ5-E3",
+   "itemId": "CBQ5-E3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Right to access\" stored(C)=\"Right to erasure (right to be forgotten)\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ5-E3",
+   "itemId": "CBQ5-E3-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Binding Corporate Rules (BCRs)\" stored(B)=\"Standard Contractual Clauses (SCCs)\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-B4",
+   "itemId": "CBQ21-B4-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"A two-notch downgrade because any D/E above 1.0 triggers the maximum negative ad\" stored(C)=\"A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/De\" recall=0.91 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-F4",
+   "itemId": "CBQ21-F4-Q1",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Confidentiality\" stored(B)=\"Credibility — fair disclosure requires headline match assurance scope; 60% unaud\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-F4",
+   "itemId": "CBQ21-F4-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Recognize $25M immediately\" stored(A)=\"Disclose contingency and avoid recognizing; do not inflate claim to secure gift\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-F4",
+   "itemId": "CBQ21-F4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Publish as drafted\" stored(B)=\"Escalate to audit committee with Exhibit 1, bypassing involved VP\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-B5",
+   "itemId": "CBQ21-B5-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Residual signals confidence\" stored(A)=\"Stable signals confidence, reduces volatility; residual signals investment oppor\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-D3",
+   "itemId": "CBQ21-D3-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Health 20% — lowest\" stored(C)=\"Life 50% — highest RAROC above hurdle, best risk-adjusted\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-D3",
+   "itemId": "CBQ21-D3-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Destroys value\" stored(A)=\"Creates value — return exceeds risk-adjusted hurdle; allocate\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-D4",
+   "itemId": "CBQ21-D4-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Supplier A scores 12 (Moderate likelihood, High severity); Supplier B scores 6 (\" stored(C)=\"Supplier A scores 8 (Low likelihood, High severity); Supplier B scores 9 (Modera\" recall=1.00 margin=0.05"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-C2",
+   "itemId": "CBQ22-C2-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"$36.00 per unit\" stored(D)=\"$39.25 per unit\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-B5",
+   "itemId": "CBQ22-B5-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"1,379,310 — same as forward\" stored(A)=\"1,408,451 — 200M/142=1,408k, $29k above forward\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-F4",
+   "itemId": "CBQ22-F4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"No deficiency — template is control\" stored(B)=\"Material weakness or significant deficiency — reasonable possibility of material\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-C7",
+   "itemId": "CBQ22-C7-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div\" stored(C)=\"$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A\" recall=0.92 margin=0.01"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-D3",
+   "itemId": "CBQ23-D3-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Share — insurance\" stored(A)=\"Reduce — lowers likelihood L3→1\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-F5",
+   "itemId": "CBQ23-F5-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Both annual — no difference\" stored(C)=\"302 quarterly CEO/CFO certify fair presentation and disclosure controls (this qu\" recall=1.00 margin=0.05"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-F5",
+   "itemId": "CBQ23-F5-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"No deficiency — override is management discretion\" stored(B)=\"Material weakness or significant deficiency — override of key control creates re\" recall=1.00 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_C4_C8.js",
+   "part": "P2",
+   "caseId": "CBQ22-C12",
+   "itemId": "CBQ22-C12-Q3",
+   "itemState": null,
+   "caseState": "Certified",
+   "detail": "INVERSION: predicted(B)=\"$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div\" stored(C)=\"$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A\" recall=0.92 margin=0.01"
+  }
+ ],
+ "moderateItems": [
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-B2",
+   "itemId": "CBQ3-B2-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Per-unit fixed overhead remains constant as production increases\" stored(B)=\"Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases\" recall=0.71 margin=0.01"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-C3",
+   "itemId": "CBQ3-C3-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Both budgets should be used: the static budget for evaluating the sales departme\" stored(A)=\"The flexible budget adjusts allowed costs to actual production volume, so the pr\" recall=0.71 margin=0.07"
+  },
+  {
+   "bank": "content/cases/case_pack_2_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ4-E1",
+   "itemId": "CBQ4-E1-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Manual journal entries are not a significant risk because they are reviewed by t\" stored(A)=\"Control activities should be designed at various levels, including both automate\" recall=0.70 margin=0.03"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ4-D3",
+   "itemId": "CBQ4-D3-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"The volume variance would increase from $500,000 unfavorable to $836,000 unfavor\" stored(A)=\"The volume variance would decrease from $500,000 unfavorable to $126,667 unfavor\" recall=0.85 margin=0.17"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ4-F2",
+   "itemId": "CBQ4-F2-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Rule-based systems require more computational resources than ML models\" stored(A)=\"ML models can adapt to evolving fraud patterns by learning from new transaction \" recall=0.71 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-A3",
+   "itemId": "CBQ3-A3-Q1",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Three — equipment, installation, and the volume rebate\" stored(B)=\"Two — equipment delivery and installation service\" recall=0.80 margin=0.05"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-A3",
+   "itemId": "CBQ3-A3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"$18,000 — the rebate amount weighted by 60% probability\" stored(C)=\"$0 — the rebate should be excluded until the threshold is met\" recall=0.86 margin=0.19"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-A4",
+   "itemId": "CBQ3-A4-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Debit Loss on Inventory Write-Down $12,000; Credit Inventory $12,000\" stored(A)=\"Record no journal entry because cost does not exceed NRV for any product line\" recall=0.73 margin=0.00"
+  },
+  {
+   "bank": "content/cases/case_pack_3_corrected.js",
+   "part": "P1",
+   "caseId": "CBQ3-C4",
+   "itemId": "CBQ3-C4-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"The favorable labor rate variance indicates the company hired more skilled worke\" stored(B)=\"The unfavorable material price variance may have caused the unfavorable quantity\" recall=0.70 margin=0.03"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-B1",
+   "itemId": "CBQ21-B1-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"DPO, which shortened 3.3 days and offset the other components\" stored(A)=\"DSO, which lengthened 12.4 days as receivables grew faster than sales\" recall=0.71 margin=0.16"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-C1",
+   "itemId": "CBQ21-C1-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(E)=\"Drop Utensils instead, because its $170,000 segment margin is lower than Cookwar\" stored(A)=\"Drop the line; profit rises by $15,000\" recall=0.75 margin=0.04"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-E1",
+   "itemId": "CBQ21-E1-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"B, C, and A — $4.5M invested, NPV of $1.42M\" stored(C)=\"A, C, D, and F — $5.0M invested, NPV of $1.48M\" recall=0.80 margin=0.00"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-D1",
+   "itemId": "CBQ21-D1-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Dual sourcing = avoid; insurance = avoid; delay = reduce\" stored(B)=\"Dual sourcing = REDUCE (lowers likelihood); insurance = SHARE (transfers excess \" recall=0.86 margin=0.14"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-A3",
+   "itemId": "CBQ21-A3-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"4.13 times, computed as net income plus interest expense divided by interest exp\" stored(B)=\"5.17 times, computed as operating income (EBIT) divided by interest expense.\" recall=0.83 margin=0.03"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-C3",
+   "itemId": "CBQ21-C3-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(D)=\"$184, adding the avoided selling expense back onto the indifference price.\" stored(C)=\"$166, covering variable cost plus tooling and displaced contribution spread acro\" recall=0.89 margin=0.22"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-F2",
+   "itemId": "CBQ21-F2-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Audit committee → sign under protest as a fallback → IMA Ethics Hotline → resign\" stored(C)=\"IMA Ethics Hotline first (to obtain guidance before any internal action) → audit\" recall=0.80 margin=0.13"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-E3",
+   "itemId": "CBQ21-E3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Project Beta — highest qualitative score (12) and a positive NPV.\" stored(C)=\"Project Gamma — highest NPV ($15.0M) and a defensible qualitative score (10), wi\" recall=0.75 margin=0.08"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-E3",
+   "itemId": "CBQ21-E3-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Ga\" stored(B)=\"IRR-ranking would prefer Alpha (18.4% IRR is highest) but NPV-ranking prefers Ga\" recall=0.86 margin=0.04"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-A4",
+   "itemId": "CBQ21-A4-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"The bakery segment exceeds at least the 10% revenue and 10% asset thresholds, so\" stored(A)=\"The bakery segment fails the revenue and profit thresholds but exceeds the 10% a\" recall=0.80 margin=0.01"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-A4",
+   "itemId": "CBQ21-A4-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Skip the qualitative step only when no impairment indicators are present; otherw\" stored(C)=\"Document the qualitative assessment weighing negative indicators (EBITDA decline\" recall=0.80 margin=0.04"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-B4",
+   "itemId": "CBQ21-B4-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"The asset sale is universally preferable because it preserves the BBB+ rating an\" stored(C)=\"The decision depends on the relative tax shield value, the change in operating E\" recall=0.80 margin=0.22"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-C4",
+   "itemId": "CBQ21-C4-Q6",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Transfer pricing is irrelevant because intra-group financing is recorded at cost\" stored(B)=\"The interest rate charged by Flash Capital must be arm's-length, supported by a \" recall=0.78 margin=0.01"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-A6",
+   "itemId": "CBQ21-A6-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Cash — monetary, correct at nominal\" stored(B)=\"Inventory — FIFO ending at recent prices but COGS at old prices, gross margin ov\" recall=0.75 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_1.js",
+   "part": "P2",
+   "caseId": "CBQ21-F5",
+   "itemId": "CBQ21-F5-Q1",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"SOX Section 302, which requires the CEO and CFO to certify that financial statem\" stored(C)=\"SOX Section 806, which provides whistleblower protection for employees who repor\" recall=0.83 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-D2",
+   "itemId": "CBQ22-D2-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"MFA = share; insurance = avoid; in-house conversion = reduce\" stored(D)=\"MFA = REDUCE (lowers likelihood); insurance = SHARE (transfers severity above re\" recall=0.71 margin=0.13"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-B3",
+   "itemId": "CBQ22-B3-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Annual DPS = $0.55; coverage = $1.60 / $0.55 = 2.91x\" stored(B)=\"Annual DPS = $2.20; coverage = $1.60 / $2.20 = 0.73x, indicating the dividend is\" recall=0.82 margin=0.02"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-B3",
+   "itemId": "CBQ22-B3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Tax-exempt investors generally prefer dividends because dividends are more predi\" stored(B)=\"Tax-exempt investors are indifferent to dividend tax treatment and may prefer a \" recall=0.89 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-B3",
+   "itemId": "CBQ22-B3-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(D)=\"Maintain the dividend at $0.40 quarterly with no buyback and no debt pre-funding\" stored(B)=\"Approve a moderate dividend hike (e.g., to $0.45–$0.50 quarterly) sufficient to \" recall=0.78 margin=0.06"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-D4",
+   "itemId": "CBQ22-D4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Enhanced controls = Share; transfer program = Reduce; exiting the corridor = Acc\" stored(C)=\"Enhanced controls = Reduce (lowers likelihood), transfer program = Share (transf\" recall=0.75 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-A4",
+   "itemId": "CBQ22-A4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Fail — 1.92 <1.80\" stored(A)=\"Pass 1.92 >1.80 but high TDTL 4.17 means small sales miss hits coverage hard — m\" recall=0.80 margin=0.19"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-C3",
+   "itemId": "CBQ22-C3-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"No — joint cost makes it loss\" stored(A)=\"Yes — incremental $7k (25k-18k) adds profit; joint $53k irrelevant\" recall=0.75 margin=0.08"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-C4",
+   "itemId": "CBQ22-C4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Life-cycle pricing only considers manufacturing cost — tooling and warranty are \" stored(D)=\"Life-cycle pricing considers all costs from product inception through end-of-lif\" recall=0.70 margin=0.12"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-C6",
+   "itemId": "CBQ22-C6-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$\" stored(B)=\"Wait 12 months — its worst-case payoff of $1 million is better than the worst ca\" recall=0.78 margin=0.09"
+  },
+  {
+   "bank": "p2/case_pack_p2_2.js",
+   "part": "P2",
+   "caseId": "CBQ22-F5",
+   "itemId": "CBQ22-F5-Q1",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries \" stored(C)=\"Opportunity — the combined CFO/Controller role, lack of approval signatures, and\" recall=0.75 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-E2",
+   "itemId": "CBQ23-E2-Q3",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Fund Project Delta because its internal rate of return near 20 percent exceeds A\" stored(A)=\"Fund Project Atlas because its net present value of $138,084 exceeds Delta $115,\" recall=0.80 margin=0.04"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-C3",
+   "itemId": "CBQ23-C3-Q3",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Margin of safety is approximately $161,000, or about 23% of expected sales, indi\" stored(C)=\"Margin of safety is approximately $336,000, indicating the plant could halve vol\" recall=0.75 margin=0.21"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-D2",
+   "itemId": "CBQ23-D2-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"The green-amber boundary at 2.5% sits exactly 2.0 standard deviations above the \" stored(A)=\"The green-amber boundary at 2.5% sits approximately 1.3 standard deviations abov\" recall=0.83 margin=0.18"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-A4",
+   "itemId": "CBQ23-A4-Q4",
+   "itemState": null,
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(B)=\"Pass 1.45 <1.40\" stored(A)=\"Breach 1.45 >1.40 — request waiver and restructure synthetic to on-BS loan or re\" recall=0.80 margin=0.05"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-B3",
+   "itemId": "CBQ23-B3-Q4",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(C)=\"No — the 12% IRR is below the 10.73% hurdle rate\" stored(B)=\"The hurdle is 10.73% (WACC + 200 bps); the 12% IRR exceeds it by 127 bps, cleari\" recall=0.86 margin=0.02"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-B5",
+   "itemId": "CBQ23-B5-Q5",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"Share price increases by 48.6% to match the DDM intrinsic value of $52\" stored(D)=\"Share price increases moderately as income-seeking investors bid up the stock, p\" recall=0.70 margin=0.27"
+  },
+  {
+   "bank": "p2/case_pack_p2_3.js",
+   "part": "P2",
+   "caseId": "CBQ23-B6",
+   "itemId": "CBQ23-B6-Q2",
+   "itemState": "In Audit",
+   "caseState": "In Audit",
+   "detail": "INVERSION: predicted(A)=\"USD interest rates are lower than EUR interest rates\" stored(B)=\"USD interest rates are higher than EUR interest rates, causing the EUR to trade \" recall=0.86 margin=0.02"
+  },
+  {
+   "bank": "p2/case_pack_p2_authored.js",
+   "part": "P2",
+   "caseId": "CBQ22-F9",
+   "itemId": "CBQ22-F9-Q1",
+   "itemState": null,
+   "caseState": "Certified",
+   "detail": "INVERSION: predicted(A)=\"Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries \" stored(C)=\"Opportunity — the combined CFO/Controller role, lack of approval signatures, and\" recall=0.75 margin=0.25"
+  },
+  {
+   "bank": "p2/case_pack_p2_C4_C8.js",
+   "part": "P2",
+   "caseId": "CBQ22-C9",
+   "itemId": "CBQ22-C9-Q4",
+   "itemState": null,
+   "caseState": "Certified",
+   "detail": "INVERSION: predicted(A)=\"Life-cycle pricing only considers manufacturing cost — tooling and warranty are \" stored(D)=\"Life-cycle pricing considers all costs from product inception through end-of-lif\" recall=0.70 margin=0.12"
+  },
+  {
+   "bank": "p2/case_pack_p2_C4_C8.js",
+   "part": "P2",
+   "caseId": "CBQ22-C11",
+   "itemId": "CBQ22-C11-Q4",
+   "itemState": null,
+   "caseState": "Certified",
+   "detail": "INVERSION: predicted(C)=\"Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$\" stored(B)=\"Wait 12 months — its worst-case payoff of $1 million is better than the worst ca\" recall=0.78 margin=0.09"
+  }
+ ]
+}

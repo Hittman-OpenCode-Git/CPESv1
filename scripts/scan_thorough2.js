@@ -1,0 +1,18 @@
+var fs=require("fs");var PACKS={a:"content/packs/pack_a_corrected.js",b:"content/packs/pack_b_corrected.js",c:"content/packs/pack_c_corrected.js",d:"content/packs/pack_d_corrected.js",e:"content/packs/pack_e_corrected.js"};
+var total=0;
+var action=0;
+var allAbs=[];
+var correctAbs=[];
+Object.keys(PACKS).forEach(function(k){var s=fs.readFileSync(PACKS[k],"utf8");var arr=new Function(s+"\\nreturn MCQ_BANK_"+k.toUpperCase()+";")();arr.forEach(function(q){if(!q.Choices)return;var cc=String(q.CorrectChoice||"").toUpperCase();["A","B","C","D"].forEach(function(L){if(!q.Choices[L])return;var t=String(q.Choices[L]);if(/\\b(always|never|impossible)\\b/i.test(t)){total++;allAbs.push({qid:q.QuestionID,pack:k,choice:L,cc:cc,isCC:L===cc});if(L===cc)correctAbs.push({qid:q.QuestionID,pack:k,choice:L,cc:cc});else action++;}});});});
+console.log("=== ALL choice-position absolutes ===");
+console.log("Total choice-position absolutes: "+total);
+console.log("Distractor absolutes (true DL-003): "+action);
+console.log("Correct-answer absolutes: "+correctAbs.length);
+console.log("");
+console.log("--- Distractor DL-003 QIDs ---");
+var dq=new Set(allAbs.filter(function(f){return !f.isCC}).map(function(f){return f.qid}));
+if(dq.size===0)console.log("NONE");else Array.from(dq).sort().forEach(function(q){console.log(q)});
+console.log("");
+console.log("--- Correct-answer absolutes (NOT DL-003) ---");
+var cq=new Set(correctAbs.map(function(f){return f.qid}));
+Array.from(cq).sort().forEach(function(q){console.log(q)});

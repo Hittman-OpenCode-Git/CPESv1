@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CMA Part 2 — DEV SHELL (do not ship)</title><link rel="stylesheet" href="../styles.css"><style>.dev-banner{background:#7c2d12;color:#fff;padding:10px 16px;font-weight:700;text-align:center;position:sticky;top:0;z-index:9999}</style></head><body><div class="dev-banner">DEV ONLY — Part 2 mode-switch sandbox. Primary app (index_updated.html) unaffected. No May layer. P2 MCQ + case delivery live.</div><header class="hero"><div class="hero-inner"><div><p class="eyebrow">DEV — CMA Part 2 Exam-Style Practice (single-app mode switch)</p><h1>CMA Part 2 DEV Practice Sandbox</h1><p class="lede">Part 2 MCQ banks (P2-A through P2-F) running on the shared engine: custom timer, navigator, flags, review-before-submit, score report, grade bands. Delivery pool: Certified-only + Rule-14 runtime QID gate.</p><p class="disclaimer">Development sandbox only. Not learner-facing. Original study content only — not real CMA exam questions, not endorsed by IMA.</p></div><div class="hero-card" id="validationStatus">Loading catalog...</div></div><div style="position:absolute;top:52px;right:16px;"><button class="theme-toggle" id="themeToggle" title="Toggle light/dark theme">&#9680;</button><span id="saveStatus" class="save-status"></span></div><button class="may-float-btn" id="mayFloatBtn" title="May AI Coach (disabled in P2 dev mode)" style="display:none"><span class="may-float-label">May</span><span class="may-float-sub">AI Coach</span><span class="may-float-dot"></span></button></header><main class="layout">
+  <section class="panel setup-panel">
+    <h2>Start Session (Part 2)</h2>
+    <div class="may-quickstart" id="mayQuickstart" style="display:none">
+      <span class="may-quickstart-label">Quick start</span>
+      <div class="may-quickstart-actions">
+        <button type="button" class="may-quickstart-btn" onclick="quickStart('mcq')">MCQ Practice</button>
+        <button type="button" class="may-quickstart-btn" onclick="quickStart('case')">Case Studies</button>
+        <button type="button" class="may-quickstart-btn" onclick="quickStart('mixed')">Mixed Session</button>
+        <button type="button" class="may-quickstart-btn may-quickstart-btn-primary" onclick="quickStart('full')">Full Exam</button>
+      </div>
+    </div>
+    <form id="sessionForm">
+      <label class="field"><span>Content</span>
+        <input type="hidden" id="mode" value="mcq">
+        <div class="content-cards">
+          <label class="content-card selected" id="cardMcq">
+            <input type="radio" name="contentType" value="mcq" checked onchange="setMode('mcq')">
+            <div class="content-card-body"><span class="content-card-title">MCQ Practice</span><span class="content-card-desc">Multiple-choice questions only</span></div>
+          </label>
+          <label class="content-card" id="cardCase">
+            <input type="radio" name="contentType" value="case" onchange="setMode('case')">
+            <div class="content-card-body"><span class="content-card-title">Case Study Practice</span><span class="content-card-desc">P2 case studies from live pool</span></div>
+          </label>
+          <label class="content-card" id="cardMixed">
+            <input type="radio" name="contentType" value="mixed" onchange="setMode('mixed')">
+            <div class="content-card-body"><span class="content-card-title">Mixed Session</span><span class="content-card-desc">MCQs + case studies</span></div>
+          </label>
+          <label class="content-card" id="cardFull">
+            <input type="radio" name="contentType" value="full" onchange="setMode('full')">
+            <div class="content-card-body"><span class="content-card-title">Full Exam</span><span class="content-card-desc">100 MCQs + 2 cases, 4 hrs</span></div>
+          </label>
+        </div>
+      </label>
+      <div id="countField"><label class="field"><span>Number of MCQs</span>
+        <select id="mcqCount">
+          <option value="10">10</option><option value="25">25</option><option value="35">35</option>
+          <option value="50" selected>50</option><option value="65">65</option>
+          <option value="75">75</option><option value="90">90</option><option value="100">100</option>
+        </select>
+      </label></div>
+      <div id="caseCountField"><label class="field"><span>Number of Cases</span>
+        <select id="caseCount">
+          <option value="1">1</option><option value="2" selected>2</option>
+          <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+        </select>
+      </label></div>
+      <fieldset><legend>Question Packs (Part 2)</legend>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="A" checked> P2-A</label>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="B" checked> P2-B</label>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="C" checked> P2-C</label>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="D" checked> P2-D</label>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="E" checked> P2-E</label>
+        <label class="checkbox-label"><input type="checkbox" name="pack" value="F" checked> P2-F</label>
+      </fieldset>
+      <div id="difficultyField"><label class="field"><span>Difficulty Mix</span>
+        <input type="range" id="difficultySlider" min="1" max="5" value="3" step="1" list="difficultyTicks">
+        <datalist id="difficultyTicks">
+          <option value="1" label="Easy"><option value="2" label=""><option value="3" label="Std">
+          <option value="4" label=""><option value="5" label="Hard">
+        </datalist>
+      </label><p id="sliderNote" class="small">Standard mix (mostly Moderate). All difficulties represented.</p></div>
+      <fieldset><legend>Sections (Part 2)</legend>
+        <div class="checkbox-grid-2">
+          <label class="checkbox-label"><input type="checkbox" name="section" value="A" checked> A &mdash; Financial Statement Analysis</label>
+          <label class="checkbox-label"><input type="checkbox" name="section" value="B" checked> B &mdash; Corporate Finance</label>
+          <label class="checkbox-label"><input type="checkbox" name="section" value="C" checked> C &mdash; Decision Analysis</label>
+          <label class="checkbox-label"><input type="checkbox" name="section" value="D" checked> D &mdash; Risk Management</label>
+          <label class="checkbox-label"><input type="checkbox" name="section" value="E" checked> E &mdash; Investment Decisions</label>
+          <label class="checkbox-label"><input type="checkbox" name="section" value="F" checked> F &mdash; Professional Ethics</label>
+        </div>
+      </fieldset>
+      <label class="checkbox-label" id="weightedField"><input type="checkbox" id="weighted" checked> Use official Part 2 blueprint weighting when all sections are selected</label>
+      <label class="checkbox-label"><input type="checkbox" id="realConditions"> Simulate Real Exam Conditions (pause disabled)</label>
+      <div id="fullOverrideNote" class="override-note" style="display:none"><p><strong>Full Part 2 Simulation:</strong> 100 MCQs + 2 case studies with a 4-hour countdown timer to match the real CMA Part 2 exam format.</p></div>
+      <p id="timeEstimate" class="small">Estimated time: ~2 hr 25 min</p>
+      <button type="submit" class="primary" id="startSessionBtn">Start Session</button>
+    </form>
+  </section>
+  <section class="panel work-panel">
+    <nav class="tabs">
+      <button class="tab active" data-view="homeView">Home</button>
+      <button class="tab" data-view="studyView">Study</button>
+      <button class="tab" data-view="sessionView">Exam</button>
+      <button class="tab" data-view="dashboardView">Dashboard</button>
+      <button class="tab" data-view="coachView" style="display:none">May</button>
+      <button class="tab" data-view="historyView">History</button>
+      <button class="tab" data-view="catalogView">Catalog & Sources</button>
+      <button class="tab" data-view="settingsView">Settings</button>
+      <button class="tab" data-view="operationsView" style="display:none">Operations</button>
+    </nav>
+    <div class="view active" id="homeView"></div>
+    <div class="view" id="studyView">
+      <h2>Study Center</h2>
+      <div class="study-layout">
+        <div class="study-card" id="studyRecs">
+          <div class="study-card-header">What to Practice Next</div>
+          <div id="whatToPracticeNext"><p class="small">Complete a practice session for personalized recommendations.</p></div>
+        </div>
+        <div class="study-card" id="studyRecovery">
+          <div class="study-card-header">Recovery Candidates</div>
+          <div id="recoveryCandidates"><p class="small">Questions you missed across sessions appear here for focused retry.</p></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="view" id="sessionView"></div>
+    <div class="view" id="catalogView"></div>
+    <div class="view" id="historyView"></div>
+    <div class="view" id="dashboardView"></div>
+    <div class="view" id="coachView"></div>
+    <div class="view" id="settingsView"></div>
+    <div class="view" id="helpView"></div>
+    <div class="view" id="operationsView"></div>
+  </section>
+</main>
+<!-- DEV-ONLY load order: P2 banks first, shared engine last. May layer and -->
+<!-- admin data intentionally excluded (May Phase 0 = P1-only). Never mirror -->
+<!-- these script tags into index_updated.html without a Full Governance     -->
+<!-- promotion session.                                                     -->
+<script>window.__DEV_PART = 'P2';</script>
+<script src="../p2/pack_p2_a.js"></script>
+<script src="../p2/pack_p2_b.js"></script>
+<script src="../p2/pack_p2_c.js"></script>
+<script src="../p2/pack_p2_d.js"></script>
+<script src="../p2/pack_p2_e.js"></script>
+<script src="../p2/pack_p2_f.js"></script>
+<script src="../p2/case_pack_p2_1.js"></script>
+<script src="../p2/case_pack_p2_2.js"></script>
+<script src="../p2/case_pack_p2_3.js"></script>
+<script src="../app/app.js"></script></body></html>

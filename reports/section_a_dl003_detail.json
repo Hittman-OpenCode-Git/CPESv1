@@ -1,0 +1,79 @@
+{
+  "totalChoiceHits": [
+    {
+      "qid": "P1B-A-161",
+      "pack": "pack_b",
+      "choice": "D",
+      "term": "never",
+      "isCorrectChoice": true,
+      "context": "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying p"
+    },
+    {
+      "qid": "P1-AC-125",
+      "pack": "pack_c",
+      "choice": "C",
+      "term": "never",
+      "isCorrectChoice": true,
+      "context": "$140,000 to APIC (equity transaction, no gain) with NCI established at $360,000 carrying — control retained means owner-"
+    }
+  ],
+  "actionableChoiceHits": [],
+  "correctSlotAbsolutes": [
+    {
+      "qid": "P1B-A-161",
+      "pack": "pack_b",
+      "choice": "D",
+      "term": "never",
+      "isCorrectChoice": true,
+      "context": "No gain; recalculate the effective yield prospectively ($40,000 annual coupon over 7 years against $1,000,000 carrying p"
+    },
+    {
+      "qid": "P1-AC-125",
+      "pack": "pack_c",
+      "choice": "C",
+      "term": "never",
+      "isCorrectChoice": true,
+      "context": "$140,000 to APIC (equity transaction, no gain) with NCI established at $360,000 carrying — control retained means owner-"
+    }
+  ],
+  "wheneverItems": [
+    {
+      "qid": "P1-A-012",
+      "choice": "C",
+      "text": "Accrue $1,900,000 total: $520,000 + $1,200,000 + $180,000. All three claims shou"
+    },
+    {
+      "qid": "P1-A-081",
+      "choice": "A",
+      "text": "$300,000 — write off all goodwill whenever fair value declines at all"
+    },
+    {
+      "qid": "P1-AC-016",
+      "choice": "B",
+      "text": "Increase goodwill whenever fair value rises above carrying amount"
+    },
+    {
+      "qid": "P1-AC-017",
+      "choice": "B",
+      "text": "Increase goodwill whenever fair value rises above carrying amount"
+    },
+    {
+      "qid": "P1-AC-018",
+      "choice": "C",
+      "text": "Increase goodwill whenever fair value rises above carrying amount"
+    },
+    {
+      "qid": "P1-AC-019",
+      "choice": "B",
+      "text": "Increase goodwill whenever fair value rises above carrying amount"
+    },
+    {
+      "qid": "P1-AC-020",
+      "choice": "A",
+      "text": "Increase goodwill whenever fair value rises above carrying amount"
+    }
+  ],
+  "totalUniqueQIDs": 2,
+  "actionableUniqueQIDs": 0,
+  "ccSlotCount": 2
+}

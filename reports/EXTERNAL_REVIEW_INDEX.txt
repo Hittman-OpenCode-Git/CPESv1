@@ -1,0 +1,48 @@
+EXTERNAL REVIEW INDEX — SEMANTIC ADJUDICATION WORKLIST
+==========================================================
+Generated: 2026-09-25T16:45:52.958Z
+Repository: CMA Exam Simulator v2.0.0
+Commit: b5cc69c
+Tag: v2.0.0
+
+OVERVIEW:
+---------
+All structural validation gates PASS (preflight, pipeline, guard, baseline).
+The following items require human semantic adjudication per DL-045/DL-047.
+
+FILES IN THIS PACKAGE:
+1. MCQ_REVIEW_ITEMS.txt — 68 B:INVERSION REVIEW flags (MCQ)
+2. CASE_REVIEW_ITEMS.txt — 148 certified-state case flags
+3. CASE_SCREEN_SUMMARY.txt — Breakdown by screen/severity
+4. semantic_key_verifier.json — Raw MCQ semantic key verifier output
+5. case_semantic_flags.json — Raw case semantic screens output
+
+VERIFIED COUNTS (dual-verified against raw JSON):
+------------------------------------------------
+MCQ B:INVERSION REVIEW:     68
+  Block: 0 | BlockFP (known): 0 | Warn: 27
+  Breakdown by pack: P1-A=34, P1-B=12, P1-C=11, P1-D=8, P1-E=3
+
+Case Certified-State Flags: 148 (total)
+  By Screen: B=97, C=48, B-num=3
+  By Severity: FLAG=47, weak=78, info=23
+
+Case INVERSION (all states): 159 total, 10 certified-state
+  (Note: earlier index incorrectly stated "149 (148 certified-state)" — that 148 was the
+   certified-state TOTAL across ALL screens, not just INVERSION.)
+
+GOVERNANCE CONTEXT:
+-------------------
+- DL-045: Screen output is evidence, not an author
+- DL-047: Quarantine → fix → verify → restore with provenance stamp
+- 2026-09-20 Calibration: B:INVERSION demoted BLOCK→REVIEW (29/29 FPs confirmed)
+- DL-051: Case semantic screens operational (Phase 1-4 complete)
+
+ADJUDICATION WORKFLOW:
+1. Load item from source pack file (QID/CaseID+ItemID)
+2. Read stem, choices, exhibits, stored CorrectChoice
+3. Independently hand-solve
+4. Compare to stored CC and explanation
+5. Record verdict: FP / GENUINE / UNDETERMINED
+6. If GENUINE: fix explanation/key, REVISION_HISTORY entry, recertify
+7. If FP: document in DEFECT_LIBRARY, no content change

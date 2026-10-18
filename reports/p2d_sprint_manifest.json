@@ -1,0 +1,1043 @@
+{
+  "sprint": "P2-D 3x30 Sprint (P2-D-246..335)",
+  "schema": "P2_SCHEMA_STANDARD.md v1.1",
+  "question_state": "Unprocessed",
+  "domain": "Risk Management",
+  "stakeholder_cast": {
+    "controller": "Mariela Hoffmann",
+    "cfo": "Adaeze Onuorah",
+    "segment_analyst": "Priya Ramaswamy",
+    "credit_analyst": "Lena Fischer",
+    "treasurer": "Maya Caldwell",
+    "pm": "Naomi Castellanos",
+    "entity_prefix": [
+      "Flash Manufacturing",
+      "Flash Capital",
+      "Flash Industrial",
+      "Flash Logistics",
+      "Flash Holdings"
+    ]
+  },
+  "source_ids_authority": "COSO ERM 2017",
+  "formula_ids": {
+    "RM-01": "Expected Loss = Probability x Impact",
+    "RM-02": "Risk Score = Likelihood x Severity",
+    "RM-03": "Value at Risk (parametric)"
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "staging_file": "p2d_batch1_items.json",
+      "qids": [
+        "P2-D-246",
+        "P2-D-247",
+        "P2-D-248",
+        "P2-D-249",
+        "P2-D-250",
+        "P2-D-251",
+        "P2-D-252",
+        "P2-D-253",
+        "P2-D-254",
+        "P2-D-255",
+        "P2-D-256",
+        "P2-D-257",
+        "P2-D-258",
+        "P2-D-259",
+        "P2-D-260",
+        "P2-D-261",
+        "P2-D-262",
+        "P2-D-263",
+        "P2-D-264",
+        "P2-D-265",
+        "P2-D-266",
+        "P2-D-267",
+        "P2-D-268",
+        "P2-D-269",
+        "P2-D-270",
+        "P2-D-271",
+        "P2-D-272",
+        "P2-D-273",
+        "P2-D-274",
+        "P2-D-275"
+      ],
+      "slots": [
+        {
+          "qid": "P2-D-246",
+          "topic": "inherent-risk-register-screening",
+          "los": "D.3",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-247",
+          "topic": "coso-erm-performance-component",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-248",
+          "topic": "expected-loss-pd-ead-lgd",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-249",
+          "topic": "risk-appetite-board-statement",
+          "los": "D.3",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-250",
+          "topic": "risk-response-avoid-exit-decision",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-251",
+          "topic": "kri-leading-lagging-portfolio",
+          "los": "D.4",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-252",
+          "topic": "heat-map-prioritization-likelihood-severity",
+          "los": "D.3",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-253",
+          "topic": "three-lines-defense-role",
+          "los": "D.1",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-254",
+          "topic": "appetite-tolerance-capacity-limit",
+          "los": "D.3",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-255",
+          "topic": "residual-risk-control-strength",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-256",
+          "topic": "scenario-stress-testing-methodology",
+          "los": "D.2",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-257",
+          "topic": "erm-strategy-objective-alignment",
+          "los": "D.5",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-258",
+          "topic": "risk-register-update-cadence",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-259",
+          "topic": "insurance-deductible-tradeoff",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-260",
+          "topic": "enterprise-risk-aggregation-diversification",
+          "los": "D.5",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-261",
+          "topic": "compliance-risk-regulation-mapping",
+          "los": "D.2",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-262",
+          "topic": "var-parametric-confidence",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-263",
+          "topic": "board-risk-oversight-escalation",
+          "los": "D.1",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-264",
+          "topic": "risk-response-share-via-insurance",
+          "los": "D.4",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-265",
+          "topic": "risk-culture-tone-at-top",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-266",
+          "topic": "kri-threshold-trigger-response",
+          "los": "D.5",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-267",
+          "topic": "cyber-risk-operational-classification",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-268",
+          "topic": "risk-adjusted-return-capital-allocation",
+          "los": "D.5",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-269",
+          "topic": "fraud-triangle-pressure-opportunity",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-270",
+          "topic": "supply-chain-concentration-mitigation",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-271",
+          "topic": "risk-appetite-quantitative-threshold",
+          "los": "D.3",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-272",
+          "topic": "emerging-risk-scanning-horizon",
+          "los": "D.5",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-273",
+          "topic": "residual-risk-acceptance-decision",
+          "los": "D.3",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-274",
+          "topic": "stress-test-capital-planning",
+          "los": "D.5",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-275",
+          "topic": "risk-owner-accountability-remediation",
+          "los": "D.2",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "D",
+          "calc": true
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "staging_file": "p2d_batch2_items.json",
+      "qids": [
+        "P2-D-276",
+        "P2-D-277",
+        "P2-D-278",
+        "P2-D-279",
+        "P2-D-280",
+        "P2-D-281",
+        "P2-D-282",
+        "P2-D-283",
+        "P2-D-284",
+        "P2-D-285",
+        "P2-D-286",
+        "P2-D-287",
+        "P2-D-288",
+        "P2-D-289",
+        "P2-D-290",
+        "P2-D-291",
+        "P2-D-292",
+        "P2-D-293",
+        "P2-D-294",
+        "P2-D-295",
+        "P2-D-296",
+        "P2-D-297",
+        "P2-D-298",
+        "P2-D-299",
+        "P2-D-300",
+        "P2-D-301",
+        "P2-D-302",
+        "P2-D-303",
+        "P2-D-304",
+        "P2-D-305"
+      ],
+      "slots": [
+        {
+          "qid": "P2-D-276",
+          "topic": "coso-erm-governance-culture-component",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-277",
+          "topic": "operational-risk-loss-event-types",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-278",
+          "topic": "expected-loss-two-risks-combined",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-279",
+          "topic": "risk-tolerance-band-application",
+          "los": "D.3",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-280",
+          "topic": "risk-response-reduce-control-design",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-281",
+          "topic": "inherent-vs-residual-assessment",
+          "los": "D.2",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-282",
+          "topic": "risk-score-multiplication",
+          "los": "D.2",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-283",
+          "topic": "erm-information-communication-reporting",
+          "los": "D.1",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-284",
+          "topic": "risk-capacity-financial-bounds",
+          "los": "D.3",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-285",
+          "topic": "risk-response-accept-continue",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-286",
+          "topic": "residual-loss-control-effectiveness-calc",
+          "los": "D.2",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-287",
+          "topic": "scenario-analysis-plausibility",
+          "los": "D.3",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-288",
+          "topic": "strategy-risk-integration",
+          "los": "D.5",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-289",
+          "topic": "risk-register-risk-owner",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-290",
+          "topic": "insurance-retention-cost-comparison",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-291",
+          "topic": "risk-correlation-portfolio-diversification",
+          "los": "D.5",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-292",
+          "topic": "financial-risk-market-credit-liquidity",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-293",
+          "topic": "value-at-risk-portfolio-margin",
+          "los": "D.2",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-294",
+          "topic": "board-committee-erm-oversight",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-295",
+          "topic": "hedging-futures-risk-transfer",
+          "los": "D.4",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-296",
+          "topic": "risk-culture-incentive-alignment",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-297",
+          "topic": "kri-escalation-escalation-protocol",
+          "los": "D.5",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-298",
+          "topic": "cyber-risk-transfer-insurance",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-299",
+          "topic": "risk-adjusted-performance-evaluate-unit",
+          "los": "D.5",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-300",
+          "topic": "fraud-triangle-rationalization",
+          "los": "D.1",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-301",
+          "topic": "supplier-concentration-single-source",
+          "los": "D.3",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-302",
+          "topic": "appetite-statement-capital-metric",
+          "los": "D.3",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-303",
+          "topic": "emerging-risk-signal-detection",
+          "los": "D.5",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-304",
+          "topic": "residual-risk-appetite-reassessment",
+          "los": "D.3",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-305",
+          "topic": "stress-test-liquidity-scenario",
+          "los": "D.5",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "D",
+          "calc": true
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "staging_file": "p2d_batch3_items.json",
+      "qids": [
+        "P2-D-306",
+        "P2-D-307",
+        "P2-D-308",
+        "P2-D-309",
+        "P2-D-310",
+        "P2-D-311",
+        "P2-D-312",
+        "P2-D-313",
+        "P2-D-314",
+        "P2-D-315",
+        "P2-D-316",
+        "P2-D-317",
+        "P2-D-318",
+        "P2-D-319",
+        "P2-D-320",
+        "P2-D-321",
+        "P2-D-322",
+        "P2-D-323",
+        "P2-D-324",
+        "P2-D-325",
+        "P2-D-326",
+        "P2-D-327",
+        "P2-D-328",
+        "P2-D-329",
+        "P2-D-330",
+        "P2-D-331",
+        "P2-D-332",
+        "P2-D-333",
+        "P2-D-334",
+        "P2-D-335"
+      ],
+      "slots": [
+        {
+          "qid": "P2-D-306",
+          "topic": "coso-erm-strategy-objective-setting",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-307",
+          "topic": "strategic-risk-external-driver",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-308",
+          "topic": "expected-loss-multi-outcome-weighted",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Remember",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-309",
+          "topic": "risk-tolerance-vs-appetite",
+          "los": "D.3",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-310",
+          "topic": "risk-response-avoid-discontinue-line",
+          "los": "D.4",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-311",
+          "topic": "risk-identification-methods",
+          "los": "D.2",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-312",
+          "topic": "risk-score-threshold-applied",
+          "los": "D.2",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-313",
+          "topic": "coso-erm-review-revision-substantial-change",
+          "los": "D.1",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-314",
+          "topic": "risk-capacity-vs-appetite",
+          "los": "D.3",
+          "difficulty": "Easy",
+          "ds": 1,
+          "cl": "Understand",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-315",
+          "topic": "risk-response-share-joint-venture",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-316",
+          "topic": "residual-loss-mitigation-net",
+          "los": "D.2",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-317",
+          "topic": "scenario-stress-worst-case",
+          "los": "D.3",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-318",
+          "topic": "erm-performance-strategy-alignment",
+          "los": "D.5",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-319",
+          "topic": "risk-register-likelihood-impact",
+          "los": "D.1",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-320",
+          "topic": "deductible-vs-premium-tradeoff",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-321",
+          "topic": "portfolio-risk-concentration-limit",
+          "los": "D.5",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-322",
+          "topic": "operational-risk-control-failure",
+          "los": "D.2",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-323",
+          "topic": "var-parametric-daily-loss",
+          "los": "D.2",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Apply",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-324",
+          "topic": "audit-committee-erm-separation",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-325",
+          "topic": "hedging-vs-insurance-choice",
+          "los": "D.4",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-326",
+          "topic": "risk-culture-whistleblower",
+          "los": "D.1",
+          "difficulty": "Moderate-Easy",
+          "ds": 2,
+          "cl": "Apply",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-327",
+          "topic": "kri-selection-measurability",
+          "los": "D.5",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-328",
+          "topic": "insurance-transfer-expected-value",
+          "los": "D.4",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-329",
+          "topic": "risk-adjusted-capital-ranking",
+          "los": "D.5",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-330",
+          "topic": "fraud-triangle-opportunity-control",
+          "los": "D.1",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-331",
+          "topic": "supply-chain-dual-sourcing",
+          "los": "D.3",
+          "difficulty": "Moderate",
+          "ds": 3,
+          "cl": "Analyze",
+          "cc": "D",
+          "calc": true
+        },
+        {
+          "qid": "P2-D-332",
+          "topic": "appetite-tolerance-capacity-consistency",
+          "los": "D.3",
+          "difficulty": "Difficult",
+          "ds": 4,
+          "cl": "Analyze",
+          "cc": "A",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-333",
+          "topic": "emerging-risk-review-routing",
+          "los": "D.5",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "B",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-334",
+          "topic": "residual-risk-tolerance-test",
+          "los": "D.3",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "C",
+          "calc": false
+        },
+        {
+          "qid": "P2-D-335",
+          "topic": "stress-test-recovery-plan",
+          "los": "D.5",
+          "difficulty": "Very Difficult",
+          "ds": 5,
+          "cl": "Evaluate",
+          "cc": "D",
+          "calc": true
+        }
+      ]
+    }
+  ]
+}

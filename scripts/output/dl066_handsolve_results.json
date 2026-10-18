@@ -1,0 +1,819 @@
+[
+  {
+    "caseId": "CBQ-C2",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ-C2-Q1",
+        "type": "numeric",
+        "prompt": "Enter Motor Division residual income.",
+        "derived": "84000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under the managerial accounting framework for investment center performance, Residual Income (RI) = Operating Income - (Required Rate of Return x Average Operating Assets). From Exhibit 1, the Motor Division reports Operating Income of $420,000 and Average Operating Assets of $2,800,000. The Required Return is 12%. Required asset charge = 12% x $2,800,000 = $336,000. Residual Income = $420,000 - $336,000 = $84,000. In Juniper Appliances' context, the Motor Division generates $84,000 of income ab..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-C3",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ-C3-Q1",
+        "type": "numeric",
+        "prompt": "Enter the unfavorable operating income variance as a positive amount.",
+        "derived": "60000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under variance analysis in CMA Part 1 Section C, an operating income variance measures the difference between target (budgeted) and actual performance. Unfavorable variance = Target - Actual when actual is below target. From Exhibit 1: target operating income = $900,000, actual operating income = $840,000. Variance = $900,000 - $840,000 = $60,000 unfavorable. The variance is reported as a positive amount per the prompt (\"unfavorable operating income variance as positive amount\"). Med Devices fel..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-D2",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ-D2-Q1",
+        "type": "numeric",
+        "prompt": "Enter equivalent units for conversion costs using weighted-average.",
+        "derived": "20400",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under process costing methodology in CMA Part 1 Section D (Cost Management), equivalent units of production (EUP) express partially completed work-in-process in terms of fully completed units. The weighted-average formula is: Equivalent Units = Units Completed + (Ending WIP Units x Percentage Complete). From Keystone Bikes' Exhibit 1: 18,000 units started and completed at 100%, ending WIP of 4,000 units at 60% completion for conversion costs, beginning WIP = 0. Equivalent units = 18,000 + (4,000..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ-E1-Q1",
+        "type": "select",
+        "prompt": "Which control weakness is most directly related to fictitious vendor risk?",
+        "derived": "Same AP clerk can create vendors and enter invoices",
+        "choices": [
+          "Same AP clerk can create vendors and enter invoices",
+          "Supervisor approves invoices after payment",
+          "Duplicate report was not reviewed in April or May",
+          "Service invoices lack receiving documents"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under COSO 2013 Principle 11, management must deploy control activities through policies that establish segregation of duties — the separation of authorization, custody, and recordkeeping responsibilities. SOX Section 404 requires management to assess internal control over financial reporting, including whether incompatible duties are adequately separated. The fictitious vendor scheme is one of the most significant AP fraud risks: an employee creates a shell company in the vendor master file, th..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ-E2-Q1",
+        "type": "select",
+        "prompt": "Which response best addresses shared administrator IDs?",
+        "derived": "Unique privileged IDs with MFA and periodic access review",
+        "choices": [
+          "Keep shared IDs but change the password quarterly",
+          "Disable audit logging to reduce storage cost",
+          "Unique privileged IDs with MFA and periodic access review",
+          "Allow only finance users to know the shared password"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under COSO Principle 11, general control activities over technology must ensure that system actions can be attributed to specific individuals through unique user identification, multi-factor authentication, periodic access review, and comprehensive audit logging. Vector Labs' Exhibit 1 reveals three shared administrator IDs remain active in the cloud ERP — a severe ITGC deficiency that undermines individual accountability. The correct response establishes: (1) unique privileged IDs so each admin..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "bank": "content/cases/case_pack_1_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ2-F1-Q1",
+        "type": "select",
+        "prompt": "Based on the scenario, which level of analytics maturity best describes Meridian Retail Group's current state?",
+        "derived": "Descriptive analytics — reporting on historical performance",
+        "choices": [
+          "Descriptive analytics — reporting on historical performance",
+          "Diagnostic analytics — analyzing why something happened",
+          "Predictive analytics — forecasting future outcomes",
+          "Prescriptive analytics — recommending optimal actions",
+          "Cognitive analytics — autonomous decision-making by AI"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Meridian currently uses historical sales data for monthly variance reports and budget comparisons, which is descriptive analytics — answering \"what happened?\" Descriptive analytics summarizes past data to identify trends. Diagnostic analytics would answer \"why did it happen?\" through root cause analysis. Predictive analytics uses models to forecast what might happen. Prescriptive analytics recommends actions. Cognitive analytics involves AI-driven autonomous decisions. The company is not yet per..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ2-A3-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the transaction price allocated to the Hardware performance obligation (round to nearest whole dollar).",
+        "derived": "363636",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 606, the transaction price ($500,000) is allocated to performance obligations based on their relative standalone selling prices. Hardware standalone price: $400,000. Total standalone: $400,000 + $50,000 + $100,000 = $550,000. Allocation to hardware = ($400,000 / $550,000) x $500,000 = $363,636 (rounded to nearest whole dollar). This represents the revenue Vertex will recognize when control of the hardware transfers to the customer upon delivery. A common error is to allocate the entire..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-A1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the present value of the lease payments (round to nearest dollar).",
+        "derived": "231660",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 842, the present value of lease payments is calculated using the incremental borrowing rate (6%) since the implicit rate is unknown. Annual payment: $55,000. PV factor for 6% over 5 periods (ordinary annuity): 4.212. PV = $55,000 x 4.212 = $231,660. This present value is used to determine lease classification — if it equals or exceeds substantially all ($225,000 / 90% of $250,000 fair value), the lease is a finance lease. A common error is to use 6 periods (4.917) instead of 5, which w..."
+      },
+      {
+        "itemId": "CBQ3-A1-Q3",
+        "type": "fill",
+        "prompt": "Under ASC 842, the lessee records a lease liability and a ______________ asset on the balance sheet.",
+        "derived": "right-of-use",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 842, the lessee records a right-of-use (ROU) asset and a corresponding lease liability on the balance sheet for both operating and finance leases. This represents the lessee's right to use the leased asset over the lease term. The ROU asset is initially measured at the lease liability amount plus any prepayments, initial direct costs, and less lease incentives. This is a fundamental change from pre-ASC 842 guidance, under which operating leases were off-balance-sheet."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-A1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the initial amount of Goodwill recognized on the acquisition date.",
+        "derived": "400000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 805 (Business Combinations), goodwill is calculated as the excess of the purchase price over the fair value of identifiable net assets acquired. Purchase price: $2,500,000. Fair value of identifiable net assets: $2,100,000. Goodwill = $2,500,000 - $2,100,000 = $400,000. This represents the future economic benefits arising from assets acquired that are not individually identified and separately recognized. Goodwill is not amortized but is tested for impairment annually at the reporting ..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ2-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter total cash collections for January.",
+        "derived": "540000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Cash sales: $600,000 x 20% = $120,000. January credit sales collected in January: ($600,000 x 80%) x 50% = $240,000. December credit sales collected in January: ($500,000 x 80%) x 45% = $180,000. Total = $120,000 + $240,000 + $180,000 = $540,000. A common error is to apply collection percentages to total sales instead of credit sales only."
+      },
+      {
+        "itemId": "CBQ2-B2-Q4",
+        "type": "select",
+        "prompt": "What amount must Harbor borrow in January to meet the minimum cash balance?",
+        "derived": "$125,000",
+        "choices": [
+          "$35,000",
+          "$90,000",
+          "$125,000",
+          "$200,000"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The cash deficit before financing is $90,000. To reach the $35,000 minimum balance, the company must borrow $90,000 + $35,000 = $125,000."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter the budgeted direct labor cost for July.",
+        "derived": "264000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "8,000 units x 1.5 DLH per unit = 12,000 DLH. 12,000 DLH x $22 = $264,000. A common error is to use selling price or omit the DLH per unit."
+      },
+      {
+        "itemId": "CBQ3-B2-Q4",
+        "type": "select",
+        "prompt": "What effect would adding a second shift in September have on budgeted fixed overhead cost?",
+        "derived": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+        "choices": [
+          "Total fixed overhead cost increases proportionally with production hours",
+          "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+          "Per-unit fixed overhead remains constant as production increases",
+          "Fixed overhead becomes a variable cost under the second shift"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Fixed overhead is a capacity cost that does not change within the relevant range. Higher production volume spreads fixed costs over more units, reducing per-unit fixed overhead. Adding a second shift may eventually increase total fixed cost if capacity is exceeded, but within the existing range, total fixed cost stays constant."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ2-C3-Q1",
+        "type": "select",
+        "prompt": "Using the information in Exhibit 1, what is Division A's return on investment for the current year?",
+        "derived": "16.0%",
+        "choices": [
+          "16.0%",
+          "12.0%",
+          "18.5%",
+          "13.3%"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "ROI = Operating income / Total assets = $480,000 / $3,000,000 = 16.0%. A candidate might compute 12% by confusing the required rate of return with ROI, or compute 18.5% by using net assets (total assets minus current liabilities = $2,600,000; $480,000 / $2,600,000 = 18.5%), but ROI conventionally uses total assets for investment center evaluation unless the company specifically defines invested capital as net assets."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-C3-Q1",
+        "type": "select",
+        "prompt": "The production manager notes that actual revenue exceeded the static budget by $126,000 and believes performance was strong. However, the controller points out that actual sales volume was 12,000 units compared to the budgeted 10,000. Based on Exhibit 1, what is the sales volume variance for operating income?",
+        "derived": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+        "choices": [
+          "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+          "Favorable $126,000 — actual revenue of $876,000 exceeded static budget revenue of $750,000, so the volume variance is favorable by $126,000",
+          "Unfavorable $11,000 — actual operating income of $41,000 exceeded the flexible budget operating income of $30,000 by $11,000",
+          "Favorable $11,000 — actual operating income of $41,000 exceeded static budget operating income of $30,000 by $11,000"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The sales volume variance isolates the effect of changes in sales volume on operating income while holding selling prices and costs at budgeted amounts. Per Exhibit 2, the standard contribution margin per unit is $75 selling price − $20 DM − $15 DL − $10 VOH − $5 VS&A = $25 per unit. Flexible budget operating income at 12,000 units = (12,000 × $25 CM) − $180,000 fixed MOH − $40,000 fixed S&A = $300,000 − $220,000 = $80,000. The static budget operating income at 10,000 units is $30,000. Sales vol..."
+      },
+      {
+        "itemId": "CBQ3-C3-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 1 and Exhibit 2, compute the flexible budget variance for direct materials. Compare actual direct materials cost to the flexible budget amount at 12,000 units.",
+        "derived": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+        "choices": [
+          "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+          "Unfavorable $52,000 — static budget DM = $200,000; actual DM = $252,000; variance = $252,000 − $200,000 = $52,000 unfavorable",
+          "Favorable $12,000 — actual DM cost of $252,000 was less than the flexible budget amount of $264,000 when adjusted for actual volume",
+          "Favorable $48,000 — the company produced 2,000 more units than budgeted, so DM variance should be favorable because of economies of scale"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The flexible budget variance compares actual costs to what costs SHOULD have been at the actual activity level. At 12,000 units, the flexible budget allows $20 per unit for DM = $240,000. Actual DM was $252,000. The $12,000 unfavorable variance indicates that actual material cost per unit ($21.00 = $252,000 / 12,000) exceeded the standard ($20.00), suggesting either higher material prices or greater usage than standard. Comparing to the static budget ($200,000) would incorrectly include the volu..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-C1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the Variable Overhead Spending Variance (enter unfavorable as positive, favorable as negative, or just absolute value).",
+        "derived": "1600",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The Variable Overhead Spending Variance measures the difference between actual variable overhead incurred and the standard variable overhead allowed for actual hours worked. Actual VOH: $31,000. Standard VOH for actual hours: 9,800 DLH x $3/DLH = $29,400. Spending variance = $31,000 - $29,400 = $1,600 Unfavorable. This is unfavorable because Nova spent more on VOH ($31,000) than the standard allows for the hours actually worked ($29,400). The VOH spending variance combines both price and usage e..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-E1-Q1",
+        "type": "select",
+        "prompt": "Summit Electronics' internal audit team has identified inconsistent tone at the middle, where plant managers tolerate minor inventory discrepancies. Which COSO component is primarily affected by this deficiency?",
+        "derived": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+        "choices": [
+          "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+          "Risk Assessment — the risk of inventory misstatement should be formally assessed",
+          "Control Activities — physical inventory controls should prevent discrepancies",
+          "Information and Communication — inventory discrepancy data should be communicated to management",
+          "Monitoring Activities — periodic inventory audits would detect discrepancies"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The control environment is the foundation of the COSO framework. Inconsistent tone at the middle, where managers tolerate deviations from policies, represents a control environment deficiency even if individual control activities exist. While risk assessment, control activities, and monitoring are all relevant, the root cause is management's attitude and operating style — a control environment issue."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "bank": "content/cases/case_pack_2_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-F1-Q1",
+        "type": "match",
+        "prompt": "The IT steering committee is evaluating different cloud service models for MedTech's applications. Using Exhibit 1, match each application requirement to the most appropriate cloud service model.",
+        "derived": "{\"The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser\":\"SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access\",\"The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure\":\"PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data\",\"The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves\":\"IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure\",\"The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise\":\"On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data\"}",
+        "choices": [],
+        "leftItems": [
+          "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser",
+          "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure",
+          "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves",
+          "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise"
+        ],
+        "rightItems": [
+          "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
+          "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+          "Community cloud — shared infrastructure among several organizations with common compliance concerns",
+          "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+          "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data"
+        ],
+        "explanation": "The shared responsibility model is key to understanding cloud services. SaaS provides the least customer responsibility (only data and access). PaaS provides a development platform. IaaS provides raw infrastructure. On-premise provides maximum control. The regulated nature of MedTech's data means that on-premise or a private cloud may be most appropriate for the ERP system, while less sensitive applications can use SaaS or IaaS."
+      },
+      {
+        "itemId": "CBQ4-F1-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 2, the CFO asks whether cloud migration makes financial sense. Which statement BEST analyzes the financial impact of migrating from on-premise to IaaS?",
+        "derived": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+        "choices": [
+          "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+          "Cloud migration is not financially beneficial — total Year 1 cost is $715,000 vs $985,000 on-premise, but the reduction in IT staff headcount makes this a bad decision for employee morale",
+          "SaaS is the best option because it has the lowest total cost in Year 1 ($880,000) and eliminates the need for IT staff entirely",
+          "The analysis is incomplete because it does not include the cost of potential data breaches, which makes cloud computing too risky for MedTech regardless of cost savings"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The IaaS business case is compelling: steady-state costs are $460,000 lower per year ($985,000 − $525,000), with a payback period of approximately 5 months on the incremental investment ($190,000 / $460,000 per year = 0.41 years or ~5 months, demonstrating a rapid return on the migration investment). SaaS steady-state is $340,000 lower but requires higher subscription costs. IT staff are not eliminated but redeployed to higher-value activities. Data breach risk exists for all deployment models a..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-A2-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the total Comprehensive Income for the year.",
+        "derived": "510000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Comprehensive Income = Net Income ($500k) + OCI items. OCI = AFS Gains ($40k) - Translation Losses ($30k) = $10k. Total CI = $510,000. Note: Trading security gains are already in Net Income."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-B2-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the cash interest payment made every six months.",
+        "derived": "40000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The semiannual cash interest payment is determined by the bonds stated (coupon) rate, not the market yield. The cash payment is fixed by the bond contract: Face value: $1,000,000. Stated rate: 8% annual. Semiannual period: 6/12. Cash interest = $1,000,000 x 8% x (6/12) = $40,000. This $40,000 is paid each June 30 and December 31 regardless of the bonds carrying value. The difference between cash interest paid and interest expense (calculated using the market rate) is the discount or premium amor..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-B1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the variable cost per machine hour using the High-Low method.",
+        "derived": "4",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The high-low method estimates the variable cost per unit from the two most extreme observed activity levels, isolating how cost responds to volume. The high point is 8,000 machine hours at a total cost of $42,000; the low point is 5,000 hours at $30,000. Variable cost per hour = change in cost / change in activity = ($42,000 - $30,000) / (8,000 - 5,000) = $12,000 / 3,000 = $4.00 per machine hour. Recomputed independently: 12,000 / 3,000 = 4. The implied fixed cost is then the high-point cost les..."
+      },
+      {
+        "itemId": "CBQ4-B1-Q4",
+        "type": "select",
+        "prompt": "What does the R-squared value of 0.85 indicate?",
+        "derived": "85% of the variation in total cost is explained by machine hours",
+        "choices": [
+          "85% of the variation in total cost is explained by machine hours",
+          "The correlation coefficient is 0.85",
+          "There is an 85% probability that the cost prediction is perfectly accurate",
+          "Fixed costs are 85% of total costs"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "R-squared (coefficient of determination) represents the proportion of variance in the dependent variable explained by the independent variable."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter the ending inventory balance at March 31.",
+        "derived": "170000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "$120,000 beginning inventory + $650,000 purchases - $600,000 COGS = $170,000. The inventory balance is driven by the purchases budget and cost of goods sold. A common error is to confuse beginning and ending inventory in the formula."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-D3-Q1",
+        "type": "select",
+        "prompt": "Summit Furniture's Cutting Department can theoretically produce 50,000 units per year. After accounting for scheduled maintenance (2,000 hours), employee breaks and shift changes (1,500 hours), and machine setup time (3,500 hours), the practical capacity is 38,000 units. Which capacity measure should Summit use for fixed overhead allocation to BEST approximate the cost of unused capacity?",
+        "derived": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+        "choices": [
+          "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+          "Theoretical capacity — it is the most conservative measure and ensures that all fixed costs are allocated to products, maximizing inventory valuation",
+          "Normal capacity — it smooths out business cycle fluctuations over multiple years and is preferred by GAAP for external financial reporting",
+          "Master-budget capacity — it aligns allocated overhead with the annual budget and minimizes unfavorable volume variances"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Practical capacity is considered the conceptually best denominator level for fixed overhead allocation because it reflects real-world production capability. Unused capacity costs (practical minus actual) are treated as a period cost rather than being buried in inventory values. Theoretical capacity is unattainable and leads to large unfavorable volume variances. Normal capacity is useful for long-term planning but can mask annual fluctuations. Master-budget capacity minimizes volume variances bu..."
+      },
+      {
+        "itemId": "CBQ4-D3-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 2, what would be the difference in the fixed overhead volume variance if Summit Furniture changed its denominator level from practical capacity (38,000 units) to master-budget capacity (30,000 units)?",
+        "derived": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+        "choices": [
+          "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+          "The volume variance would increase from $500,000 unfavorable to $836,000 unfavorable — using a lower denominator level increases the fixed rate and makes the volume variance more unfavorable",
+          "The volume variance would remain unchanged at $500,000 — the denominator level only affects the overhead rate, not the total volume variance amount",
+          "The volume variance would reverse from unfavorable to favorable — switching to a lower denominator level always produces a favorable volume variance"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "The volume variance = (Denominator level − Actual production) × Fixed MOH rate. At practical capacity: (38,000 − 28,000) × $50 = $500,000 U. At master-budget: (30,000 − 28,000) × $63.33 = $126,667 U. Using a lower denominator level reduces the gap between denominator and actual production, producing a smaller unfavorable variance. However, the fixed MOH rate increases with the lower denominator, which increases product cost."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-E2-Q1",
+        "type": "match",
+        "prompt": "The internal audit team identified several scenarios where application controls should prevent or detect errors. Match each scenario to the appropriate application control from Exhibit 1.",
+        "derived": "{\"An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order\":\"Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection\",\"A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table\":\"Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found\",\"An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits\":\"Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid\",\"An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit\":\"Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded\"}",
+        "choices": [],
+        "leftItems": [
+          "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order",
+          "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table",
+          "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits",
+          "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit"
+        ],
+        "rightItems": [
+          "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
+          "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+          "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+          "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+          "Completeness check — ensures all required fields like customer name, address, and order date are filled"
+        ],
+        "explanation": "Each input control addresses a specific data entry risk. Limit checks prevent extreme value errors. Validity checks prevent use of unauthorized master data. Check digits detect transposition errors. Credit limit checks prevent orders that exceed customer creditworthiness. Without these controls, MedTech could make payments to the wrong vendor at inflated prices or extend credit to customers who cannot pay."
+      },
+      {
+        "itemId": "CBQ4-E2-Q2",
+        "type": "select",
+        "prompt": "The internal audit team discovers that the three-way match control (matching PO, receiving report, and invoice) can be overridden by senior procurement managers. In the past 6 months, the override has been used 47 times for one particular vendor. Which control risk does this situation represent?",
+        "derived": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+        "choices": [
+          "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+          "Segregation of duties failure — the procurement manager should not have system access that allows override of the three-way match control",
+          "Inadequate control design — the three-way match threshold of $100 is too low and should be increased to reduce false positives",
+          "Excessive monitoring — internal audit should focus on material risks rather than questioning legitimate management actions"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Management override of controls is one of the most significant internal control weaknesses identified in COSO and by the SEC. Even well-designed controls are ineffective if they can be routinely bypassed. Frequent overrides (47 times in 6 months for one vendor) indicate a control breakdown that could result in unauthorized payments. While segregation of duties is also a concern, the fundamental issue is that the control is being systematically overridden. The threshold ($100) seems reasonable — ..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-E1-Q1",
+        "type": "match",
+        "prompt": "Match each IIA Standard category to the type of guidance it provides.",
+        "derived": "{\"Attribute Standards\":\"Define the characteristics and capabilities required for internal audit activities and individuals\",\"Performance Standards\":\"Describe the nature of internal audit work and quality criteria for measuring performance\",\"Implementation Standards\":\"Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting\"}",
+        "choices": [],
+        "leftItems": [
+          "Attribute Standards",
+          "Performance Standards",
+          "Implementation Standards"
+        ],
+        "rightItems": [
+          "Establish the ethical requirements for internal audit professionals including integrity and confidentiality",
+          "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting",
+          "Define the characteristics and capabilities required for internal audit activities and individuals",
+          "Describe the nature of internal audit work and quality criteria for measuring performance"
+        ],
+        "explanation": "Attribute Standards define the characteristics required for internal audit activities. Performance Standards describe the nature of internal audit work. Implementation Standards adapt Attribute and Performance Standards to specific engagement types such as assurance or consulting. The fourth option describes the Code of Ethics, which is a separate IIA framework."
+      },
+      {
+        "itemId": "CBQ5-E1-Q2",
+        "type": "select",
+        "prompt": "The internal audit department previously performed consulting engagements for the lending department. Based on IIA Standards, which action is MOST critical for preserving objectivity?",
+        "derived": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+        "choices": [
+          "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+          "Require the Audit Committee to pre-approve all consulting engagements before they are initiated",
+          "Report the lending department consulting engagements in the next audit committee meeting minutes",
+          "Discontinue all consulting engagements at the bank to avoid any appearance of impartiality"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "IIA Standard 1130 addresses impairment to objectivity: internal auditors must not assume operational responsibility for activities they previously audited or consulted on. Consulting for the lending department creates a familiarity threat that could impair objectivity if the same auditors later perform assurance over those processes. A cooling-off period is the appropriate safeguard. Pre-approval by the Audit Committee improves governance but does not directly address the objectivity threat. Rep..."
+      },
+      {
+        "itemId": "CBQ5-E1-Q4",
+        "type": "select",
+        "prompt": "Under the IIA Standards, which reporting structure best supports internal audit independence at First Continental Bank?",
+        "derived": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+        "choices": [
+          "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+          "CAE reports functionally and administratively to the CFO, who has operational responsibility for financial reporting and accounting processes",
+          "CAE reports administratively to the Audit Committee and functionally to the CEO, maintaining independence through operational separation",
+          "CAE reports to the Chief Risk Officer since risk management and internal audit have complementary functions in the bank"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "IIA Standard 1110 requires the CAE to report functionally to the board (or audit committee) and administratively to the CEO. Functional reporting includes board approval of the audit plan, budget, and CAE appointment/removal. Administrative reporting covers day-to-day operations. The CAE must have direct communication with the board. Reporting to the CFO (the current structure) impairs independence because the internal audit function would be auditing processes managed by the CFO's organization."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-E2-Q1",
+        "type": "match",
+        "prompt": "The CISO is preparing an incident report for the board. Match each cybersecurity threat type to its role in the CCHS incident.",
+        "derived": "{\"Phishing email\":\"The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation\",\"Remote Access Trojan (RAT)\":\"The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement\",\"Ransomware\":\"The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses\",\"DDoS (distraction attack)\":\"A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment\"}",
+        "choices": [],
+        "leftItems": [
+          "Phishing email",
+          "Remote Access Trojan (RAT)",
+          "Ransomware",
+          "DDoS (distraction attack)"
+        ],
+        "rightItems": [
+          "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+          "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+          "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+          "A vulnerability scanning tool that identifies missing security patches across network devices and servers",
+          "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+        ],
+        "explanation": "The phishing email was the initial attack vector that bypassed human controls (no security awareness training had been conducted, per Exhibit 2). The RAT provided persistence — it allowed attackers to maintain access, harvest credentials, and conduct reconnaissance before deploying ransomware. Ransomware was the final destructive payload causing the $18.2 million in losses. The DDoS attack on the patient portal likely served as a distraction to occupy IT resources while ransomware encrypted syst..."
+      },
+      {
+        "itemId": "CBQ5-E2-Q3",
+        "type": "numeric",
+        "prompt": "Using Exhibit 2 data, the CISO proposes implementing MFA for all internal system access at a cost of $420,000 annually. Based on the incident, the probability of a similar attack in any given year without MFA is estimated at 12%, and with MFA it drops to 3%. Using expected value analysis, calculate the annual net benefit (or cost) of implementing MFA. The $18.2 million total loss is the exposure for a successful attack. Enter your answer as the nearest whole number in dollars. If the net benefit is negative, include the minus sign. Do not use commas or dollar signs.",
+        "derived": "1218000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Expected loss without MFA: $18,200,000 x 12% = $2,184,000. Expected loss with MFA: $18,200,000 x 3% = $546,000. Risk reduction benefit: $2,184,000 - $546,000 = $1,638,000. Annual cost of MFA: $420,000. Net annual benefit: $1,638,000 - $420,000 = $1,218,000. The expected value analysis shows MFA provides a strongly positive net benefit, even before considering secondary benefits such as regulatory compliance, patient trust, and reduced insurance premiums. Answer: 1218000."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-E3-Q1",
+        "type": "select",
+        "prompt": "DataBridge Solutions Inc. has been found by a EU supervisory authority to have intentionally violated EU data subjects' rights under Article 83(5) of the GDPR. Based on the financial data provided in Exhibit 1, what is the maximum potential administrative fine DataBridge faces?",
+        "derived": "€32,000,000",
+        "choices": [
+          "€10,000,000",
+          "€16,000,000",
+          "€20,000,000",
+          "€32,000,000"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under GDPR Article 83(5), for serious violations including infringement of data subject rights, the maximum fine is the higher of €20,000,000 or 4% of the undertaking's total worldwide annual turnover for the preceding financial year. DataBridge's global annual turnover is €800,000,000. 4% × €800,000,000 = €32,000,000. Since €32,000,000 exceeds €20,000,000, the maximum fine is €32,000,000."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ4-F2-Q1",
+        "type": "select",
+        "prompt": "OmniRetail's demand forecasting model requires historical sales data with known actual demand to predict future sales. Which type of machine learning does this approach represent?",
+        "derived": "Supervised learning",
+        "choices": [
+          "Supervised learning",
+          "Unsupervised learning",
+          "Reinforcement learning",
+          "Semi-supervised learning"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Supervised learning uses labeled training data where input variables are paired with known output values. OmniRetail's demand forecasting model is trained on historical sales data with known actual demand, which provides the labeled outcomes needed for a supervised regression model to predict future demand."
+      },
+      {
+        "itemId": "CBQ4-F2-Q2",
+        "type": "match",
+        "prompt": "For each machine learning application at OmniRetail, select whether it uses supervised or unsupervised learning.",
+        "derived": "{\"Demand forecasting\":\"Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand\",\"Fraud detection\":\"Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent\",\"Customer segmentation\":\"Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories\",\"Anomaly detection\":\"Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels\"}",
+        "choices": [],
+        "leftItems": [
+          "Demand forecasting",
+          "Fraud detection",
+          "Customer segmentation",
+          "Anomaly detection"
+        ],
+        "rightItems": [
+          "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+          "Reinforcement learning — agent learns optimal policy through trial-and-error interaction with the environment, receiving rewards for correct actions",
+          "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels",
+          "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+          "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+          "Semi-supervised learning — model trained on a small set of labeled transactions combined with a large pool of unlabeled data"
+        ],
+        "explanation": "Demand forecasting uses historical sales data with known outcomes to train a supervised regression model — the model learns the relationship between input features (season, promotions, price) and the target variable (units sold). Fraud detection is supervised classification: the model trains on historical transactions labeled as legitimate or fraudulent, learning patterns that distinguish the two classes. Customer segmentation is unsupervised clustering: the algorithm groups customers based on p..."
+      },
+      {
+        "itemId": "CBQ4-F2-Q4",
+        "type": "select",
+        "prompt": "OmniRetail's fraud detection model uses machine learning rather than a traditional rule-based system with fixed thresholds. What is the primary advantage of the ML approach for this application?",
+        "derived": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+        "choices": [
+          "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+          "ML models always achieve 100% accuracy in detecting fraudulent transactions",
+          "Rule-based systems require more computational resources than ML models",
+          "ML models do not require any historical data to detect fraud effectively"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Machine learning models continuously learn from new data and can detect novel fraud patterns that rule-based systems would miss. Rule-based systems require manual updates whenever fraud tactics change, making them less effective against adaptive threats. ML models identify subtle, non-obvious patterns across multiple variables simultaneously, whereas rules typically check individual conditions."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ5-F2-Q1",
+        "type": "match",
+        "prompt": "The CFO's team is preparing a training deck on RPA for the audit committee. Match each RPA characteristic to its correct description.",
+        "derived": "{\"Rule-based processing\":\"RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment\",\"User interface interaction\":\"RPA bots interact with applications through the same user interface as human users, requiring no system integration changes\",\"Exception handling\":\"Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member\",\"Attended vs unattended mode\":\"Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention\"}",
+        "choices": [],
+        "leftItems": [
+          "Rule-based processing",
+          "User interface interaction",
+          "Exception handling",
+          "Attended vs unattended mode"
+        ],
+        "rightItems": [
+          "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+          "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns",
+          "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention",
+          "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+          "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment"
+        ],
+        "explanation": "RPA is characterized by rule-based processing following predefined logic rather than artificial intelligence or machine learning. Bots interact with systems at the UI layer, simulating keystrokes and clicks, which makes them lightweight to deploy but sensitive to UI changes. Exception handling is critical because RPA works best for high-volume, low-exception processes — Exhibit 1 shows the most suitable processes have 1-8% exception rates. Attended bots assist individual users with specific task..."
+      },
+      {
+        "itemId": "CBQ5-F2-Q3",
+        "type": "numeric",
+        "prompt": "Using the scenario data, calculate the annual net benefit (annual benefits minus annual ongoing costs) for the RPA initiative in Year 2, after implementation costs have been incurred. Enter your answer as a whole number in dollars. Do not use commas or dollar signs.",
+        "derived": "525000",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Year 2 ongoing costs: $180,000 (license maintenance, bot support, infrastructure). Year 2 benefits: $620,000 (labor savings) + $85,000 (error reduction) = $705,000. Year 2 net benefit: $705,000 - $180,000 = $525,000. In Year 1, the initial implementation costs of $450,000 (licenses/infrastructure) + $320,000 (consulting) + $95,000 (training) create a negative net benefit of -$340,000, but from Year 2 onward the initiative generates a steady $525,000 annual net benefit. The payback period is appr..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-A3-Q1",
+        "type": "select",
+        "prompt": "How many distinct performance obligations exist in Crestline's contract with Regional Hospital?",
+        "derived": "Two — equipment delivery and installation service",
+        "choices": [
+          "One — the equipment and installation are a single performance obligation",
+          "Two — equipment delivery and installation service",
+          "Three — equipment, installation, and the volume rebate",
+          "Two — equipment and the volume rebate"
+        ],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 606-10-25-19 through 25-21, a performance obligation is a promise to transfer a distinct good or service. The equipment is distinct because the customer can benefit from it on its own and it is separately identifiable. Installation is distinct because it does not significantly modify or customize the equipment and Crestline does not provide a significant integration service. The volume rebate is not a separate performance obligation — it is variable consideration that modifies the tran..."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-A4-Q1",
+        "type": "numeric",
+        "prompt": "Enter the net realizable value (NRV) per unit for tablets.",
+        "derived": "228",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Under ASC 330-10-35-1B, net realizable value is the estimated selling price in the ordinary course of business less reasonably predictable costs of completion, disposal, and transportation. For tablets: NRV = Selling price - Selling costs = $240 - ($240 x 5%) = $240 - $12 = $228. The 5% selling cost is applied to the selling price, not the cost. A common error is to subtract selling costs from cost instead of from selling price."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "bank": "content/cases/case_pack_3_corrected.js",
+    "currentCase": "In Audit",
+    "items": [
+      {
+        "itemId": "CBQ3-C4-Q1",
+        "type": "numeric",
+        "prompt": "Enter the direct material price variance for March. Indicate unfavorable variances as negative numbers.",
+        "derived": "-21600",
+        "choices": [],
+        "leftItems": [],
+        "rightItems": [],
+        "explanation": "Material Price Variance = (Actual Price - Standard Price) x Actual Quantity Purchased = ($42.00 - $40.00) x 10,800 = $2.00 x 10,800 = $21,600 Unfavorable (shown as negative per instructions). The variance arises because Apex paid $2.00 more per pound than the standard. Since the variance is computed at the time of purchase, the full quantity purchased (10,800 lbs) is used, not just the quantity consumed in production. A common error is to use the standard quantity allowed instead of actual quant..."
+      }
+    ]
+  }
+]

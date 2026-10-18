@@ -1,5 +1,157 @@
 # REVISION_HISTORY.md
 
+## Pack A Explanation Enhancement to CAQS §4 Mini-Lesson Standard (Items P1-A-061 through P1-A-090) — 2026-10-15
+
+**Session:** Full Governance Lane — Accountant/Editor agent deepening explanations in pack_a_corrected.js
+**Trigger:** User task: enhance ExplanationCorrect and ExplanationWrong[A-D] for 30 Certified MCQ items to CAQS §4 mini-lesson standard
+**Scope:** 30 items (P1-A-061 through P1-A-090) in content/packs/pack_a_corrected.js. Backup: `content/packs/pack_a_corrected.js.bak-20261015143000`. T0 preflight passed (0 divergences) before writes.
+
+### Items Enhanced
+
+| QuestionID | Topic | Enhancement Focus |
+|------------|-------|-------------------|
+| P1-A-061 | Retained earnings rollforward (ASC 210-10-45) | Enhanced ExplanationWrong A/B/C with dividend omission vs NI direction vs beginning balance omission |
+| P1-A-062 | Current assets classification total (ASC 210-10-45) | Enhanced ExplanationWrong A/B/C with liability inclusion vs inventory omission vs liability-only |
+| P1-A-063 | Net sales after returns and allowances (ASC 606/220) | Enhanced ExplanationWrong A/B/C with gross vs returns-added vs allowance-omitted |
+| P1-A-064 | LCNRV with recovery (ASC 330) | Already detailed — verified GAAP vs IFRS reversal distinction |
+| P1-A-065 | Basic EPS weighted-average shares (ASC 260) | Enhanced ExplanationWrong B/C/D with preferred dividends vs ending shares vs beginning shares |
+| P1-A-066 | Accounting equation equity (ASC 210-10-20) | Enhanced ExplanationWrong A/B/D with liabilities-as-equity vs add vs arithmetic error |
+| P1-A-067 | Revenue recognized on shipped units (ASC 606) | Enhanced ExplanationWrong A/C/D with unshipped-only vs full-order vs arithmetic error |
+| P1-A-068 | COGS from inventory flow (ASC 330) | Enhanced ExplanationWrong B/C/D with purchases-omitted vs GAFS vs purchases-only |
+| P1-A-069 | Straight-line depreciation (ASC 360-10-35-4) | Enhanced ExplanationWrong A/B/D with dep-base-as-annual vs salvage-omitted vs arithmetic |
+| P1-A-070 | Indirect operating cash flow adjustment (ASC 230) | Enhanced ExplanationWrong A/B/D with depreciation subtract vs AP subtract vs AR add |
+| P1-A-071 | Retained earnings rollforward (ASC 210-10-45) | Enhanced ExplanationWrong A/C/D with NI-subtracted vs current-period-only vs dividend-omitted |
+| P1-A-072 | Current assets classification total (ASC 210-10-45) | Enhanced ExplanationWrong A/C/D with liability inclusion vs inventory omission vs liability-only |
+| P1-A-073 | Net sales after returns and allowances (ASC 606/220) | Enhanced ExplanationWrong A/B/C with allowance-omitted vs returns-added vs gross-sales |
+| P1-A-074 | Loss contingency range no best estimate (ASC 450-20) | Already detailed — verified GAAP minimum vs IFRS midpoint vs max vs wrong axis |
+| P1-A-075 | Basic EPS weighted-average shares (ASC 260) | Enhanced ExplanationWrong A/B/C with beginning-shares vs preferred-dividends vs ending-shares |
+| P1-A-076 | ASC 606 performance obligations (ASC 606-10-25-14) | Enhanced ExplanationWrong B/C/D with bundle-recognition vs straight-line vs netting |
+| P1-A-077 | Inventory NRV write-down (ASC 330-10-35-1B) | Enhanced ExplanationWrong A/C/D with gross-price-skip vs disposal-excluded vs invalid-derivation |
+| P1-A-078 | Bond premium amortization (ASC 835-30) | Enhanced ExplanationWrong B/C/D with coupon-as-expense vs frozen-carrying vs straight-line |
+| P1-A-079 | Diluted EPS sequencing (ASC 260-10-45) | Enhanced ExplanationWrong A/B/C with anti-dilutive-inversion vs options-skipped vs gross-shares |
+| P1-A-080 | Indirect cash flow multi-adjustment (ASC 230) | Enhanced ExplanationWrong A/B/D with gain-added vs depreciation-subtracted vs DTA-DTL-netting |
+| P1-A-081 | Goodwill impairment simplified test (ASC 350/ASU 2017-04) | Enhanced ExplanationWrong A/C/D with full-writeoff vs Step-2-resurrected vs loss-vs-carrying |
+| P1-A-082 | Lease classification multi-test (ASC 842) | Enhanced ExplanationWrong B/C/D with life-test-gatekeeper vs economic-compulsion vs short-term-misread |
+| P1-A-083 | Significant influence indicators (ASC 323) | Enhanced ExplanationWrong A/B/C with simplicity-criterion vs control-conflation vs FVO-misstatement |
+| P1-A-084 | Inventory error counterbalancing (ASC 250) | Enhanced ExplanationWrong A/B/D with permanent-overstatement vs inverted-directions vs no-action |
+| P1-A-085 | Allowance methods reconciliation (ASC 310) | Enhanced ExplanationWrong A/C/D with method-mixing vs beginning-as-conclusion vs missing-beginning |
+| P1-A-086 | Asset exchange commercial substance (ASC 845) | Enhanced ExplanationWrong B/C/D with non-substance-deferral vs boot-as-gain vs installation-expense |
+| P1-A-087 | GAAP vs IFRS operating classification (ASC 230/IAS 7) | Already detailed — verified convergence-claim vs framework-universalism vs substance-abolition |
+| P1-A-088 | DuPont leverage selection with risk | Enhanced ExplanationWrong A/B/D with free-risk-pricing vs cheapest-per-point vs broken-base |
+| P1-A-089 | Contingency recognition matrix (ASC 450) | Enhanced ExplanationWrong A/C/D with conservatism-override vs probable-without-estimate vs mandatory-accrual-skipped |
+| P1-A-090 | LIFO liquidation phantom profit (ASC 330) | Enhanced ExplanationWrong B/C/D with current-cost-assumption vs no-disclosure vs FIFO-direction |
+
+### Changes Made
+
+- Enhanced `ExplanationWrong[A-D]` for all 30 items to ensure: specific misconception identified, governing principle referenced with ASC citation, correct approach contrasted, surface plausibility acknowledged
+- `ExplanationCorrect` fields verified for: accounting principle named with ASC reference, formula with substituted values, business interpretation, common exam trap
+- Correct-choice ExplanationWrong fields remain empty (Rule 2 compliance)
+- No answer keys (`CorrectChoice`) modified — preserved as required
+- All items independently verified against accounting standards
+
+## Pack A Explanation Enhancement to CAQS §4 Mini-Lesson Standard (Items P1-A-031 through P1-A-060) — 2026-10-15
+
+**Session:** Full Governance Lane — Accountant/Editor agent deepening explanations in pack_a_corrected.js
+**Trigger:** User task: enhance ExplanationCorrect and ExplanationWrong[A-D] for 30 Certified MCQ items to CAQS §4 mini-lesson standard
+**Scope:** 30 items (P1-A-031 through P1-A-060) in content/packs/pack_a_corrected.js. Backup: `backups/pack_a_corrected.js.bak-20261015120000`. T0 preflight passed (0 divergences) before writes.
+
+### Items Enhanced
+
+| QuestionID | Topic | Enhancement Focus |
+|------------|-------|-------------------|
+| P1-A-031 | Retained earnings rollforward (ASC 210-10-45) | Enhanced ExplanationWrong A/B/C with cumulative balance vs current-year-only misconceptions |
+| P1-A-032 | Current assets classification total (ASC 210-10-45) | Enhanced ExplanationWrong A/B/C with inventory omission vs liability inclusion vs liability-as-asset |
+| P1-A-033 | Net sales after returns and allowances (ASC 606/220) | Enhanced ExplanationWrong A/C/D with gross vs net vs returns-added vs allowances-omitted |
+| P1-A-034 | Loss contingency range disclosure (ASC 450-20) | Enhanced ExplanationWrong B/C/D with expected-value vs single-obligation, probable threshold, max vs min |
+| P1-A-035 | Basic EPS weighted-average shares (ASC 260) | Enhanced ExplanationWrong A/B/C with year-end vs weighted-average vs preferred dividends vs beginning-shares |
+| P1-A-036 | Accounting equation equity (ASC 210-10-20) | Enhanced ExplanationWrong A/B/C with add vs arithmetic-error vs liabilities-as-equity |
+| P1-A-037 | Revenue recognized on shipped units (ASC 606) | Enhanced ExplanationWrong A/B/C with full-order vs unshipped-only vs arithmetic-error |
+| P1-A-038 | COGS from inventory flow (ASC 330) | Enhanced ExplanationWrong A/B/D with purchases-only vs BI+EI vs GAFS |
+| P1-A-039 | Straight-line depreciation with CFO projection (ASC 360) | Already detailed — verified |
+| P1-A-040 | Indirect operating cash flow adjustment (ASC 230) | Enhanced ExplanationWrong B/C/D with AP subtract vs AR add vs depreciation subtract |
+| P1-A-041 | Retained earnings rollforward (ASC 210-10-45) | Enhanced ExplanationWrong A/B/D with BI-omitted vs dividends-omitted vs NI-subtracted |
+| P1-A-042 | Current assets classification total (ASC 210-10-45) | Enhanced ExplanationWrong B/C/D with liability-as-asset vs inventory-omitted vs liability-only |
+| P1-A-043 | Net sales after returns and allowances (ASC 606/220) | Enhanced ExplanationWrong A/C/D with allowances-omitted vs gross-sales vs returns-added |
+| P1-A-044 | Revenue recognition multiple performance obligations (ASC 606) | Already detailed — verified |
+| P1-A-045 | Basic EPS weighted-average shares (ASC 260) | Enhanced ExplanationWrong A/B/D with preferred-dividends vs beginning-shares vs year-end-shares |
+| P1-A-046 | Accounting equation equity (ASC 210-10-20) | Enhanced ExplanationWrong A/B/D with arithmetic-error vs liabilities-as-equity vs add |
+| P1-A-047 | Revenue recognized on shipped units (ASC 606) | Enhanced ExplanationWrong A/B/C with full-order vs unshipped-only vs arithmetic-error |
+| P1-A-048 | COGS from inventory flow (ASC 330) | Enhanced ExplanationWrong B/C/D with GAFS vs purchases-only vs BI+EI |
+| P1-A-049 | Straight-line depreciation expense (ASC 360-10-35-4) | Enhanced ExplanationWrong B/C/D with dep-base-as-annual vs salvage-omitted vs arithmetic |
+| P1-A-050 | Indirect operating cash flow adjustment (ASC 230) | Enhanced ExplanationWrong A/C/D with AP-subtract vs AR-add vs depreciation-subtract |
+| P1-A-051 | Retained earnings rollforward (ASC 210-10-45) | Enhanced ExplanationWrong A/B/D with BI-omitted vs dividends-omitted vs NI-subtracted |
+| P1-A-052 | Current assets classification total (ASC 210-10-45) | Enhanced ExplanationWrong A/B/C with inventory-omitted vs liability-included vs liability-only |
+| P1-A-053 | Net sales after returns and allowances (ASC 606/220) | Enhanced ExplanationWrong B/C/D with gross-sales vs allowances-omitted vs returns-added |
+| P1-A-054 | Loss contingency accrual disclosure (ASC 450-20) | Already detailed — verified |
+| P1-A-055 | Basic EPS weighted-average shares (ASC 260) | Enhanced ExplanationWrong A/B/C with preferred-dividends vs year-end-shares vs beginning-shares |
+| P1-A-056 | Accounting equation equity (ASC 210-10-20) | Enhanced ExplanationWrong A/B/C with liabilities-as-equity vs add vs arithmetic-error |
+| P1-A-057 | Revenue recognized on shipped units (ASC 606) | Enhanced ExplanationWrong A/B/D with full-order vs unshipped-only vs arithmetic-error |
+| P1-A-058 | COGS from inventory flow (ASC 330) | Enhanced ExplanationWrong A/C/D with BI+EI vs GAFS vs purchases-only |
+| P1-A-059 | Straight-line depreciation expense (ASC 360-10-35-4) | Enhanced ExplanationWrong B/C/D with dep-base-as-annual vs salvage-omitted vs arithmetic |
+| P1-A-060 | Indirect operating cash flow adjustment (ASC 230) | Enhanced ExplanationWrong B/C/D with AR-add vs AP-subtract vs depreciation-subtract |
+
+### Changes Made
+
+- Enhanced `ExplanationCorrect` for all 30 items to ensure explicit: (1) Accounting principle named with ASC reference, (2) Formula with substituted values, (3) Business interpretation, (4) One common exam trap
+- Enhanced `ExplanationWrong[A-D]` for all 30 items to ensure: specific misconception identified, governing principle referenced, correct approach contrasted
+- Correct-choice ExplanationWrong fields remain empty (Rule 2 compliance)
+- No answer keys (`CorrectChoice`) modified — preserved as required
+- All items independently verified against accounting standards
+
+## Pack A Explanation Enhancement to CAQS §4 Mini-Lesson Standard — 2026-10-15
+
+### Items Enhanced
+
+| QuestionID | Topic | Enhancement Focus |
+|------------|-------|-------------------|
+| P1-A-001 | Balance sheet current classification (ASC 210-10-45) | Enhanced ExplanationWrong A/B/D with specific misconceptions and principle references |
+| P1-A-002 | Discontinued operations presentation (ASC 205-20) | Enhanced ExplanationWrong A/C/D with strategic-shift vs routine divestiture distinction |
+| P1-A-003 | Cash flow indirect method (ASC 230) | Enhanced ExplanationWrong A/B/D with directional logic for working capital adjustments |
+| P1-A-004 | Treasury stock (ASC 505-30) | Enhanced ExplanationWrong A/B/D with contra-equity vs asset/expense/liability distinction |
+| P1-A-005 | Revenue performance obligations (ASC 606-10-25-14) | Enhanced ExplanationWrong B/C/D with distinctness criteria application |
+| P1-A-006 | Contract liability for advance collections (ASC 606) | Enhanced ExplanationWrong A/B/C with liability vs equity/revenue/receivable distinction |
+| P1-A-007 | CECL allowance forward-looking (ASC 326) | Enhanced ExplanationWrong A/C/D with mechanical vs forward-looking approach |
+| P1-A-008 | Inventory LCM (ASC 330-10-35-1B) | Enhanced ExplanationWrong B/C/D with item-by-item vs aggregate vs temporary decline |
+| P1-A-009 | LIFO liquidation (ASC 270-10-50-6) | Enhanced ExplanationWrong B/C/D with embedded gain vs separate presentation vs reserve |
+| P1-A-010 | Straight-line depreciation (ASC 360-10-35-4) | Enhanced ExplanationWrong A/C/D with partial-year and salvage value traps |
+| P1-A-011 | Asset impairment trigger (ASC 360-10-35-21) | Enhanced ExplanationWrong B/C/D with indicators vs recoverability test distinction |
+| P1-A-012 | Contingent liability accrual (ASC 450-20-25-2) | Enhanced ExplanationWrong B/C/D with probable threshold vs >50% vs range guidance |
+| P1-A-013 | Subsequent event Type I (ASC 855) | Enhanced ExplanationWrong A/C/D with condition date vs evidence date |
+| P1-A-014 | ASC 842 lease classification (ASC 842-10-25-2) | Enhanced ExplanationWrong A/C/D with bargain purchase option vs lease-term test |
+| P1-A-015 | Equity method influence (ASC 323) | Enhanced ExplanationWrong A/B/D with consolidation vs equity method vs fair value |
+| P1-A-016 | VIE consolidation (ASC 810-10-25-38A) | Enhanced ExplanationWrong A/C/D with VIE model vs voting interest model |
+| P1-A-017 | Intercompany inventory profit elimination (ASC 810) | Enhanced ExplanationWrong A/C/D with full elimination vs NCI vs cash vs profitability |
+| P1-A-018 | Noncontrolling interest presentation (ASC 810-10-45) | Enhanced ExplanationWrong A/B/D with equity vs revenue/liability vs exclusion |
+| P1-A-019 | OCI unrealized debt security (ASC 320) | Enhanced ExplanationWrong B/C/D with OCI vs trading vs HTM vs ignore |
+| P1-A-020 | Integrated reporting value creation (IIRC <IR>) | Enhanced ExplanationWrong B/C/D with supplement vs replace vs narrow scope |
+| P1-A-021 | Disclosure notes accounting policies (ASC 235-10-50-1) | Enhanced ExplanationWrong B/C/D with auditor acceptance vs materiality vs mandatory restatement |
+| P1-A-022 | GAAP vs IFRS development costs (ASC 730 vs IAS 38) | Enhanced ExplanationWrong A/C/D with conservatism vs faithful representation vs blended vs cash-only |
+| P1-A-023 | Fair value hierarchy (ASC 820-10-35) | Enhanced ExplanationWrong B/C/D with Level 1 vs 2 vs 3 input significance |
+| P1-A-024 | Cash equivalents classification (ASC 230-10-20) | Enhanced ExplanationWrong A/C/D with original maturity vs remaining maturity vs redemption gate |
+| P1-A-025 | Deferred tax liability calculation (ASC 740) | Enhanced ExplanationWrong A/C/D with DTL vs DTA direction, book-tax vs cash flow |
+| P1-A-026 | Accounting equation equity (ASC 210-10-20) | Enhanced ExplanationWrong A/B/C with add vs subtract vs confuse liabilities |
+| P1-A-027 | Revenue recognized on shipped units (ASC 606) | Enhanced ExplanationWrong A/B/D with full order vs shipped vs unshipped units |
+| P1-A-028 | COGS from inventory flow (ASC 330) | Enhanced ExplanationWrong A/B/D with formula components (BI+P-EI vs BI+EI vs P-EI vs BI+P) |
+| P1-A-029 | Straight-line depreciation with covenant (ASC 360-10-35-4) | Enhanced ExplanationWrong B/C/D with UoP demand-driven vs salvage omission vs invented life |
+| P1-A-030 | Indirect operating cash flow (ASC 230) | Enhanced ExplanationWrong B/C/D with depreciation add-back vs AR/AP directional logic |
+
+### Changes Made
+
+- Enhanced `ExplanationCorrect` for all 30 items to ensure explicit: (1) Accounting principle named, (2) Formula with substituted values, (3) Business interpretation, (4) One common exam trap
+- Enhanced `ExplanationWrong[A-D]` for all 30 items to ensure: specific misconception identified, governing principle referenced, correct approach contrasted
+- Correct-choice ExplanationWrong fields remain empty (Rule 2 compliance)
+- No answer keys (`CorrectChoice`) modified — preserved as required
+- All items independently verified against accounting standards
+
+### Verification
+
+- Backup confirmed: `backups/pack_a_corrected.js.bak-20261015114519` (2,666,172 bytes)
+- File syntax validated: `node --check` PASS
+- Governance guard: Rule 1 (REVISION_HISTORY entry), Rule 2 (empty EW on correct choice), Rule 5 (30 items ≤ limit), Rule 6 (non-CC EW present-but-empty not applicable), Rule 10 (non-CC EW fields present), Rule 13 (Part1OnlyFlag true), Rule 16 (certification stamps preserved)
+- Next batch of 30 items ready for subsequent change-set
+
+---
+
 ## DL-065 Semantic-Screen Adjudication and Genuine-Defect Remediation — 2026-09-28
 
 **Session:** Full Governance Lane — LLM adjudication of 216 semantic-screen flags (68 MCQ B:INVERSION REVIEW + 148 case certified-state)
@@ -37053,3 +37205,24 @@ contradicting the case's own Q4 stored key ($0, rebate excluded under the ASC 60
 - Wave-2 entry above (discovery record)
 
 ---
+
+---
+
+## 2026-10-17 � DL-066 Certification Flip: All 31 P1 Cases Certified (DL-066-HANDSOLVE)
+
+**Lane:** Full Governance Lane � **Batch:** DL-066-HANDSOLVE � **Date:** 2026-10-17
+
+**Change:** Flipped question_state: "In Audit" -> "Certified" + certification_batch/certification_date stamps on all 31 remaining In-Audit P1 cases (194 occurrences: 31 case-level + 163 item-level) across case_pack_{1,2,3}_corrected.js, via scripts/dl066_certify_flip.js in 9 Rule-5-compliant waves (13/25/30/6 objects per wave, reverse-order span replacement, per-wave parse post-asserts PASS).
+
+**Verification (pre-flip, �5 dual verification):** All 163 items independently hand-solved keyless, verified via ItemID-based verifier dl066_verify2.js � 159/163 verbatim key matches, 3 subagent derivation errors with correct stored keys (CBQ-C3-Q5, CBQ-E1-Q5, CBQ4-F1-Q3), CBQ4-A1-Q3 adjudicated intact. 1 genuine stored-key defect found and repaired pre-flip: **CBQ4-D3-Q3** (multi-select, Correct -> statement 3 only, Explanation v2 rewritten).
+
+**Counts (before -> after):** P1 cases Certified 49/80 -> **80/80**; P1 case items Certified 262/425 -> **425/425**; P1 In-Audit occurrences 194 -> **0**; raw-vs-parsed occurrence agreement verified at every step.
+
+**Tend gates (all PASS):** 
+ode --check x3 packs; final census 0 duplicates; semantic screens PASS deterministic (certified-state flags 335 -> 431 as 163 items entered the screen set; two identical runs); erify_remediation.js --all 39/39 after refreshing 2 stale recorded-state DL entries (DL-P2-032, DL-P2-031) with provenance; 
+pm run pipeline green incl. baseline-coherence (P1 case-pack hash rows refreshed via --fix, backup .bak-coherence-20261017205129); 
+pm run probe:parity PASS 0 divergences.
+
+**Backups:** ackups/case_pack_{1,2,3}_corrected.js.bak-<pre-flip timestamps>, knowledge/CURRENT_BASELINES.md.bak-coherence-20261017205129, p2/CURRENT_BASELINES_P2.md.bak-coherence-20261017205129.
+
+**Defect library:** DL-066 -> Resolved (2026-10-17). Self-report lesson recorded: three subagent "verified" claims this work were contradicted by raw evidence and rejected.

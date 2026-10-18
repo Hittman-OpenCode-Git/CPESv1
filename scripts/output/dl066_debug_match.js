@@ -1,0 +1,14 @@
+const fs = require('fs');
+const d = JSON.parse(fs.readFileSync('scripts/output/dl066_byte_range_solutions.json', 'utf8'));
+const solCase = d.find(x => x.caseId === 'CBQ5-F2');
+const item = solCase.items.find(y => y.itemId === 'CBQ5-F2-Q1');
+const derived = item.derived;
+const needle0 = 'Rule-based processing->RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment';
+const normalize = s => String(s).toLowerCase().trim().replace(/[×−]/g, m => (m === '×' ? 'x' : '-')).replace(/\s+/g, ' ');
+const needle = normalize(needle0);
+const hay = normalize(derived);
+console.log('needle:', needle.substring(0, 120));
+console.log('hay[0:200]:', hay.substring(0, 200));
+console.log('includes?', hay.includes(needle));
+const idx = hay.indexOf('rule-based processing');
+console.log('hay at key:', JSON.stringify(hay.substring(idx, idx + 140)));

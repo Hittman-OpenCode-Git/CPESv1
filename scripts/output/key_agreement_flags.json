@@ -1,0 +1,34 @@
+{
+  "generated": "2026-10-17T20:51:55.620Z",
+  "method": "key_agreement_screen.js v1 (E1 key-unsupported / E2 scratchwork+disagreement / E3 key-type / E4 encoding)",
+  "scanned": 1085,
+  "census": {
+    "content/cases/case_pack_1_corrected.js": 25,
+    "content/cases/case_pack_2_corrected.js": 25,
+    "content/cases/case_pack_3_corrected.js": 30,
+    "p2/case_pack_p2_1.js": 33,
+    "p2/case_pack_p2_2.js": 33,
+    "p2/case_pack_p2_3.js": 34,
+    "p2/case_pack_p2_authored.js": 5,
+    "p2/case_pack_p2_C4_C8.js": 5
+  },
+  "summary": {
+    "SCRATCHWORK": 1
+  },
+  "flags": [
+    {
+      "screen": "E",
+      "severity": "FLAG",
+      "label": "SCRATCHWORK",
+      "detail": "authorial-Wait: \"Wait\" |  = $2.00 / 0.06 = $33.33 = $33 rounded. Wait, the question says nearest dollar: $33.33 = $33. However, the cur",
+      "bank": "p2/case_pack_p2_3.js",
+      "part": "P2",
+      "caseId": "CBQ23-B5",
+      "caseState": "Certified",
+      "itemId": "CBQ23-B5-Q1",
+      "itemType": "numeric",
+      "itemState": "Certified",
+      "keyType": "numeric-string"
+    }
+  ]
+}

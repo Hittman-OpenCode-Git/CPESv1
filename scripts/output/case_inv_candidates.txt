@@ -1,0 +1,208 @@
+
+================================================================================
+BANK: content/cases/case_pack_1_corrected.js  (3 strong candidates)
+================================================================================
+
+--- CBQ-C2 / CBQ-C2-Q3 | state=In Audit ---
+  INVERSION: predicted(A)="95 full cost" stored(C)="70 variable cost" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ-C2:
+    (no ID) [?]
+
+--- CBQ-C3 / CBQ-C3-Q3 | state=In Audit ---
+  INVERSION: predicted(A)="Operating income" stored(C)="Training hours per employee" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ-C3:
+    (no ID) [?]
+
+--- CBQ-D2 / CBQ-D2-Q3 | state=In Audit ---
+  INVERSION: predicted(A)="Cutting" stored(B)="Welding" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ-D2:
+    (no ID) [?]
+
+================================================================================
+BANK: content/cases/case_pack_2_corrected.js  (7 strong candidates)
+================================================================================
+
+--- CBQ2-A3 / CBQ2-A3-Q4 | state=In Audit ---
+  INVERSION: predicted(A)="$38,000" stored(C)="$48,000" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ2-A3:
+    (no ID) [?]
+
+--- CBQ3-A1 / CBQ3-A1-Q2 | state=In Audit ---
+  INVERSION: predicted(A)="Operating lease" stored(B)="Finance lease" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ3-A1:
+    (no ID) [?]
+
+--- CBQ4-A1 / CBQ4-A1-Q5 | state=In Audit ---
+  INVERSION: predicted(B)="Calculate the implied fair value of goodwill" stored(A)="No impairment loss is recognized, and no further testing is required" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ4-A1:
+    (no ID) [?]
+
+--- CBQ2-B2 / CBQ2-B2-Q4 | state=In Audit ---
+  INVERSION: predicted(A)="$35,000" stored(C)="$125,000" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ2-B2:
+    (no ID) [?]
+
+--- CBQ2-C3 / CBQ2-C3-Q5 | state=In Audit ---
+  INVERSION: predicted(A)="Division C" stored(B)="Division A" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ2-C3:
+    (no ID) [?]
+
+--- CBQ3-C3 / CBQ3-C3-Q1 | state=In Audit ---
+  INVERSION: predicted(B)="Favorable $126,000 — actual revenue of $876,000 exceeded static budget revenue o" stored(A)="Favorable $50,000 — the flexible budget shows expected operating income at 12,00" recall=0.94 margin=0.09
+  [NOT FOUND]
+  Available ItemIDs for CBQ3-C3:
+    (no ID) [?]
+
+--- CBQ4-C1 / CBQ4-C1-Q5 | state=In Audit ---
+  INVERSION: predicted(C)="Fixed overhead spending variance" stored(D)="Fixed overhead production-volume variance" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ4-C1:
+    (no ID) [?]
+
+================================================================================
+BANK: content/cases/case_pack_3_corrected.js  (4 strong candidates)
+================================================================================
+
+--- CBQ5-E3 / CBQ5-E3-Q1 | state=In Audit ---
+  INVERSION: predicted(C)="€20,000,000" stored(D)="€32,000,000" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ5-E3:
+    (no ID) [?]
+
+--- CBQ5-E3 / CBQ5-E3-Q2 | state=In Audit ---
+  INVERSION: predicted(A)="€1,500,000" stored(B)="€1,440,000" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ5-E3:
+    (no ID) [?]
+
+--- CBQ5-E3 / CBQ5-E3-Q4 | state=In Audit ---
+  INVERSION: predicted(A)="Right to access" stored(C)="Right to erasure (right to be forgotten)" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ5-E3:
+    (no ID) [?]
+
+--- CBQ5-E3 / CBQ5-E3-Q5 | state=In Audit ---
+  INVERSION: predicted(A)="Binding Corporate Rules (BCRs)" stored(B)="Standard Contractual Clauses (SCCs)" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ5-E3:
+    (no ID) [?]
+
+================================================================================
+BANK: p2/case_pack_p2_1.js  (8 strong candidates)
+================================================================================
+
+--- CBQ21-B4 / CBQ21-B4-Q2 | state=In Audit ---
+  INVERSION: predicted(B)="A two-notch downgrade because any D/E above 1.0 triggers the maximum negative ad" stored(C)="A one-notch downgrade, consistent with the matrix rule for D/E > 1.0 with FFO/De" recall=0.91 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-B4:
+    (no ID) [?]
+
+--- CBQ21-F4 / CBQ21-F4-Q1 | state=? ---
+  INVERSION: predicted(A)="Confidentiality" stored(B)="Credibility — fair disclosure requires headline match assurance scope; 60% unaud" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-F4:
+    (no ID) [?]
+
+--- CBQ21-F4 / CBQ21-F4-Q3 | state=? ---
+  INVERSION: predicted(B)="Recognize $25M immediately" stored(A)="Disclose contingency and avoid recognizing; do not inflate claim to secure gift" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-F4:
+    (no ID) [?]
+
+--- CBQ21-F4 / CBQ21-F4-Q4 | state=? ---
+  INVERSION: predicted(A)="Publish as drafted" stored(B)="Escalate to audit committee with Exhibit 1, bypassing involved VP" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-F4:
+    (no ID) [?]
+
+--- CBQ21-B5 / CBQ21-B5-Q4 | state=? ---
+  INVERSION: predicted(B)="Residual signals confidence" stored(A)="Stable signals confidence, reduces volatility; residual signals investment oppor" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-B5:
+    (no ID) [?]
+
+--- CBQ21-D3 / CBQ21-D3-Q3 | state=? ---
+  INVERSION: predicted(A)="Health 20% — lowest" stored(C)="Life 50% — highest RAROC above hurdle, best risk-adjusted" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-D3:
+    (no ID) [?]
+
+--- CBQ21-D3 / CBQ21-D3-Q4 | state=? ---
+  INVERSION: predicted(B)="Destroys value" stored(A)="Creates value — return exceeds risk-adjusted hurdle; allocate" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-D3:
+    (no ID) [?]
+
+--- CBQ21-D4 / CBQ21-D4-Q3 | state=? ---
+  INVERSION: predicted(A)="Supplier A scores 12 (Moderate likelihood, High severity); Supplier B scores 6 (" stored(C)="Supplier A scores 8 (Low likelihood, High severity); Supplier B scores 9 (Modera" recall=1.00 margin=0.05
+  [NOT FOUND]
+  Available ItemIDs for CBQ21-D4:
+    (no ID) [?]
+
+================================================================================
+BANK: p2/case_pack_p2_2.js  (4 strong candidates)
+================================================================================
+
+--- CBQ22-C2 / CBQ22-C2-Q4 | state=? ---
+  INVERSION: predicted(A)="$36.00 per unit" stored(D)="$39.25 per unit" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ22-C2:
+    (no ID) [?]
+
+--- CBQ22-B5 / CBQ22-B5-Q4 | state=? ---
+  INVERSION: predicted(B)="1,379,310 — same as forward" stored(A)="1,408,451 — 200M/142=1,408k, $29k above forward" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ22-B5:
+    (no ID) [?]
+
+--- CBQ22-F4 / CBQ22-F4-Q4 | state=? ---
+  INVERSION: predicted(A)="No deficiency — template is control" stored(B)="Material weakness or significant deficiency — reasonable possibility of material" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ22-F4:
+    (no ID) [?]
+
+--- CBQ22-C7 / CBQ22-C7-Q3 | state=? ---
+  INVERSION: predicted(B)="$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div" stored(C)="$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A" recall=0.92 margin=0.01
+  [NOT FOUND]
+  Available ItemIDs for CBQ22-C7:
+    (no ID) [?]
+
+================================================================================
+BANK: p2/case_pack_p2_3.js  (3 strong candidates)
+================================================================================
+
+--- CBQ23-D3 / CBQ23-D3-Q4 | state=? ---
+  INVERSION: predicted(B)="Share — insurance" stored(A)="Reduce — lowers likelihood L3→1" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ23-D3:
+    (no ID) [?]
+
+--- CBQ23-F5 / CBQ23-F5-Q3 | state=? ---
+  INVERSION: predicted(A)="Both annual — no difference" stored(C)="302 quarterly CEO/CFO certify fair presentation and disclosure controls (this qu" recall=1.00 margin=0.05
+  [NOT FOUND]
+  Available ItemIDs for CBQ23-F5:
+    (no ID) [?]
+
+--- CBQ23-F5 / CBQ23-F5-Q4 | state=? ---
+  INVERSION: predicted(A)="No deficiency — override is management discretion" stored(B)="Material weakness or significant deficiency — override of key control creates re" recall=1.00 margin=0.00
+  [NOT FOUND]
+  Available ItemIDs for CBQ23-F5:
+    (no ID) [?]
+
+================================================================================
+BANK: p2/case_pack_p2_C4_C8.js  (1 strong candidates)
+================================================================================
+
+--- CBQ22-C12 / CBQ22-C12-Q3 | state=? ---
+  INVERSION: predicted(B)="$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div" stored(C)="$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A" recall=0.92 margin=0.01
+  [NOT FOUND]
+  Available ItemIDs for CBQ22-C12:
+    (no ID) [?]

@@ -1,0 +1,4512 @@
+[
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q1",
+    "type": "select",
+    "prompt": "Which response best addresses shared administrator IDs?",
+    "correct": "Unique privileged IDs with MFA and periodic access review",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q2",
+    "type": "numeric",
+    "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+    "correct": "3.5",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q3",
+    "type": "multi",
+    "prompt": "Select ITGCs relevant to the exceptions.",
+    "correct": [
+      "Logical access controls",
+      "Change-management controls",
+      "Computer operations/interface monitoring"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q4",
+    "type": "fill",
+    "prompt": "Fill in the blank: Emergency changes should receive timely post-implementation review and _____.",
+    "correct": "approval",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q5",
+    "type": "match",
+    "prompt": "Match each exception to the primary risk.",
+    "correct": {
+      "Shared administrator IDs": "Lack of accountability",
+      "Terminated users active": "Unauthorized access",
+      "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+      "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "pack": 1,
+    "itemId": "CBQ-E2-Q6",
+    "type": "select",
+    "prompt": "Why is 14-day log retention a concern?",
+    "correct": "It may prevent investigation of issues discovered after logs are overwritten",
+    "exhibits": [
+      {
+        "id": "CBQ-E2-E1",
+        "rows": [
+          [
+            "Privileged access",
+            "Three shared administrator IDs remain active"
+          ],
+          [
+            "Terminated users",
+            "12 of 340 users active more than 30 days after termination"
+          ],
+          [
+            "Change management",
+            "Emergency report changes migrated without post-implementation approval"
+          ],
+          [
+            "Interface controls",
+            "Sales subledger to GL reconciliation fails intermittently"
+          ],
+          [
+            "Audit logs",
+            "Enabled but retained for only 14 days"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Exception"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q1",
+    "type": "numeric",
+    "prompt": "Enter monthly labor hours saved by RPA.",
+    "correct": "1350",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q2",
+    "type": "numeric",
+    "prompt": "Enter the number of invoices routed to exception handling each month.",
+    "correct": "630",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q3",
+    "type": "select",
+    "prompt": "Which governance finding creates the clearest accountability risk?",
+    "correct": "One shared service account",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q4",
+    "type": "multi",
+    "prompt": "Select controls that should be added before expanding automation.",
+    "correct": [
+      "Unique bot/service credentials with monitored access",
+      "Change approval for exception rules",
+      "Vendor master-data cleanup"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q5",
+    "type": "fill",
+    "prompt": "Fill in the blank: Periodic review of false positives and missed exceptions is model _____.",
+    "correct": "monitoring",
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F2",
+    "pack": 1,
+    "itemId": "CBQ-F2-Q6",
+    "type": "match",
+    "prompt": "Match each finding to the main control response.",
+    "correct": {
+      "Shared bot account": "Unique credentials and access logging",
+      "Unapproved rule changes": "Change management",
+      "Duplicate vendor IDs": "Master-data governance",
+      "No false-positive review": "Model monitoring"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-F2-E1",
+        "rows": [
+          [
+            "Invoices per month",
+            "9,000",
+            "9,000"
+          ],
+          [
+            "Manual minutes per invoice",
+            "12",
+            "3"
+          ],
+          [
+            "Exception rate",
+            "N/A",
+            "7%"
+          ],
+          [
+            "Unresolved exceptions over 10 days",
+            "N/A",
+            "126"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Before RPA",
+          "After RPA"
+        ]
+      },
+      {
+        "id": "CBQ-F2-E2",
+        "rows": [
+          [
+            "Bot credentials",
+            "One shared service account"
+          ],
+          [
+            "Exception rules",
+            "Changed by analyst without approval"
+          ],
+          [
+            "Vendor master data",
+            "Duplicate vendor IDs remain"
+          ],
+          [
+            "Model monitoring",
+            "No review of false positives or missed exceptions"
+          ]
+        ],
+        "headers": [
+          "Area",
+          "Finding"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q1",
+    "type": "numeric",
+    "prompt": "Enter the percentage of claims missing installation date, as a whole number.",
+    "correct": "20",
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q2",
+    "type": "select",
+    "prompt": "Which data governance response best addresses inconsistent product codes?",
+    "correct": "Assign data ownership and master-data standards",
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q3",
+    "type": "multi",
+    "prompt": "Select data-quality dimensions directly affected.",
+    "correct": [
+      "Completeness",
+      "Uniqueness",
+      "Consistency"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q4",
+    "type": "match",
+    "prompt": "Match each analytics request to its type.",
+    "correct": {
+      "Summarize failure rate": "Descriptive",
+      "Investigate supplier batch relationship": "Diagnostic",
+      "Estimate reserve": "Predictive",
+      "Recommend inspection threshold": "Prescriptive"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q5",
+    "type": "fill",
+    "prompt": "Fill in the blank: Documentation showing source fields, transformations, and report logic is data _____.",
+    "correct": "lineage",
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-F1",
+    "pack": 1,
+    "itemId": "CBQ-F1-Q6",
+    "type": "select",
+    "prompt": "What is the best recommendation before presenting the dashboard to executives?",
+    "correct": "Resolve or disclose material data-quality limitations before drawing conclusions",
+    "exhibits": [
+      {
+        "id": "CBQ-F1-E1",
+        "rows": [
+          [
+            "Warranty claims in file",
+            "18,000"
+          ],
+          [
+            "Missing installation date",
+            "3,600"
+          ],
+          [
+            "Duplicate serial numbers",
+            "450"
+          ],
+          [
+            "Product codes not matching ERP master data",
+            "1,200"
+          ],
+          [
+            "Claims for XR-500 model",
+            "2,800"
+          ]
+        ],
+        "headers": [
+          "Issue",
+          "Count"
+        ]
+      },
+      {
+        "id": "CBQ-F1-E2",
+        "rows": [
+          [
+            "Summarize third-quarter failure rate",
+            "What happened"
+          ],
+          [
+            "Investigate supplier batch relationship",
+            "Why it happened"
+          ],
+          [
+            "Estimate next quarter warranty reserve",
+            "What may happen"
+          ],
+          [
+            "Recommend inspection threshold",
+            "What should be done"
+          ]
+        ],
+        "headers": [
+          "Request",
+          "Purpose"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "pack": 1,
+    "itemId": "CBQ2-F1-Q1",
+    "type": "select",
+    "prompt": "Based on the scenario, which level of analytics maturity best describes Meridian Retail Group's current state?",
+    "correct": "Descriptive analytics — reporting on historical performance",
+    "exhibits": [
+      {
+        "id": "CBQ2-F1-E1",
+        "rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "pack": 1,
+    "itemId": "CBQ2-F1-Q2",
+    "type": "select",
+    "prompt": "The CDO proposes implementing a dashboard that shows real-time sales by region, inventory turnover, and customer foot traffic. What type of analytics does this dashboard primarily enable?",
+    "correct": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+    "exhibits": [
+      {
+        "id": "CBQ2-F1-E1",
+        "rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "pack": 1,
+    "itemId": "CBQ2-F1-Q3",
+    "type": "select",
+    "prompt": "For the next phase of the analytics roadmap, the CDO wants to use historical sales data and external economic indicators to forecast next quarter's revenue. What type of analytics is being described?",
+    "correct": "Predictive analytics — using historical data and models to forecast future outcomes",
+    "exhibits": [
+      {
+        "id": "CBQ2-F1-E1",
+        "rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "pack": 1,
+    "itemId": "CBQ2-F1-Q4",
+    "type": "select",
+    "prompt": "The supply chain team wants a tool that recommends optimal inventory reorder quantities and identifies the most cost-effective shipping routes. The tool should consider demand forecasts, supplier lead times, and freight rates. What type of analytics is required?",
+    "correct": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+    "exhibits": [
+      {
+        "id": "CBQ2-F1-E1",
+        "rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "pack": 1,
+    "itemId": "CBQ2-F1-Q5",
+    "type": "select",
+    "prompt": "Before Meridian can advance its analytics maturity, it must address several data challenges. Which of the following is the MOST critical prerequisite for successful analytics implementation?",
+    "correct": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+    "exhibits": [
+      {
+        "id": "CBQ2-F1-E1",
+        "rows": [
+          [
+            "Finance",
+            "Descriptive",
+            "Historical sales, GL",
+            "Monthly variance reports, budget vs actual"
+          ],
+          [
+            "Marketing",
+            "Descriptive / Diagnostic",
+            "Customer surveys, web traffic",
+            "Campaign ROI analysis, customer segmentation"
+          ],
+          [
+            "Supply Chain",
+            "Descriptive",
+            "Inventory levels, supplier lead times",
+            "Reorder point calculations, stockout reports"
+          ],
+          [
+            "Store Operations",
+            "Descriptive",
+            "POS data, labor schedules",
+            "Sales per square foot, labor cost percentage"
+          ]
+        ],
+        "headers": [
+          "Department",
+          "Analytics Type Used",
+          "Data Sources",
+          "Decision Support"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F2",
+    "pack": 1,
+    "itemId": "CBQ2-F2-Q1",
+    "type": "fill",
+    "prompt": "Enter the term for the data management practice that ensures consistent, accurate, and uniform data across the enterprise by creating a single source of truth for critical business entities such as members and providers.",
+    "correct": "Master data management",
+    "exhibits": [
+      {
+        "id": "CBQ2-F2-E1",
+        "rows": [
+          [
+            "Data creation / acquisition",
+            "Member enrollment data entered by call center; provider contracts scanned as PDF",
+            "No standardized data entry validation; duplicate member records estimated at 4%"
+          ],
+          [
+            "Data storage and maintenance",
+            "Claims data stored in legacy system; provider data in separate CRM",
+            "No master data management; provider and member data fragmented across 3 systems"
+          ],
+          [
+            "Data usage",
+            "Claims processors access member and provider data daily; analytics team runs ad hoc queries",
+            "No data usage tracking; analysts use different definitions for \"active member\""
+          ],
+          [
+            "Data archiving",
+            "Claims older than 7 years stored on tape backup",
+            "No consistent retention policy; some data purged prematurely"
+          ],
+          [
+            "Data disposal",
+            "Paper records shredded by third-party vendor",
+            "No certification of destruction; e-waste disposal unmonitored"
+          ]
+        ],
+        "headers": [
+          "Data Lifecycle Stage",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F2",
+    "pack": 1,
+    "itemId": "CBQ2-F2-Q2",
+    "type": "fill",
+    "prompt": "Enter the data quality dimension that is violated when different departments use different definitions for \"active member,\" leading to inconsistent analytics results.",
+    "correct": "Consistency",
+    "exhibits": [
+      {
+        "id": "CBQ2-F2-E1",
+        "rows": [
+          [
+            "Data creation / acquisition",
+            "Member enrollment data entered by call center; provider contracts scanned as PDF",
+            "No standardized data entry validation; duplicate member records estimated at 4%"
+          ],
+          [
+            "Data storage and maintenance",
+            "Claims data stored in legacy system; provider data in separate CRM",
+            "No master data management; provider and member data fragmented across 3 systems"
+          ],
+          [
+            "Data usage",
+            "Claims processors access member and provider data daily; analytics team runs ad hoc queries",
+            "No data usage tracking; analysts use different definitions for \"active member\""
+          ],
+          [
+            "Data archiving",
+            "Claims older than 7 years stored on tape backup",
+            "No consistent retention policy; some data purged prematurely"
+          ],
+          [
+            "Data disposal",
+            "Paper records shredded by third-party vendor",
+            "No certification of destruction; e-waste disposal unmonitored"
+          ]
+        ],
+        "headers": [
+          "Data Lifecycle Stage",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F2",
+    "pack": 1,
+    "itemId": "CBQ2-F2-Q3",
+    "type": "fill",
+    "prompt": "Enter the term for the data that describes the structure, context, and meaning of other data — for example, the definition of \"claim status\" field, its data type, and allowable values.",
+    "correct": "Metadata",
+    "exhibits": [
+      {
+        "id": "CBQ2-F2-E1",
+        "rows": [
+          [
+            "Data creation / acquisition",
+            "Member enrollment data entered by call center; provider contracts scanned as PDF",
+            "No standardized data entry validation; duplicate member records estimated at 4%"
+          ],
+          [
+            "Data storage and maintenance",
+            "Claims data stored in legacy system; provider data in separate CRM",
+            "No master data management; provider and member data fragmented across 3 systems"
+          ],
+          [
+            "Data usage",
+            "Claims processors access member and provider data daily; analytics team runs ad hoc queries",
+            "No data usage tracking; analysts use different definitions for \"active member\""
+          ],
+          [
+            "Data archiving",
+            "Claims older than 7 years stored on tape backup",
+            "No consistent retention policy; some data purged prematurely"
+          ],
+          [
+            "Data disposal",
+            "Paper records shredded by third-party vendor",
+            "No certification of destruction; e-waste disposal unmonitored"
+          ]
+        ],
+        "headers": [
+          "Data Lifecycle Stage",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F2",
+    "pack": 1,
+    "itemId": "CBQ2-F2-Q4",
+    "type": "fill",
+    "prompt": "Enter the regulatory framework acronym that requires HealthPlus to protect member health information, including implementing data access controls, encryption, and breach notification procedures.",
+    "correct": "HIPAA",
+    "exhibits": [
+      {
+        "id": "CBQ2-F2-E1",
+        "rows": [
+          [
+            "Data creation / acquisition",
+            "Member enrollment data entered by call center; provider contracts scanned as PDF",
+            "No standardized data entry validation; duplicate member records estimated at 4%"
+          ],
+          [
+            "Data storage and maintenance",
+            "Claims data stored in legacy system; provider data in separate CRM",
+            "No master data management; provider and member data fragmented across 3 systems"
+          ],
+          [
+            "Data usage",
+            "Claims processors access member and provider data daily; analytics team runs ad hoc queries",
+            "No data usage tracking; analysts use different definitions for \"active member\""
+          ],
+          [
+            "Data archiving",
+            "Claims older than 7 years stored on tape backup",
+            "No consistent retention policy; some data purged prematurely"
+          ],
+          [
+            "Data disposal",
+            "Paper records shredded by third-party vendor",
+            "No certification of destruction; e-waste disposal unmonitored"
+          ]
+        ],
+        "headers": [
+          "Data Lifecycle Stage",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F2",
+    "pack": 1,
+    "itemId": "CBQ2-F2-Q5",
+    "type": "fill",
+    "prompt": "Enter the term for the data lifecycle stage in which HealthPlus should implement a formal data retention schedule that specifies how long different types of data must be kept based on regulatory, legal, and business requirements.",
+    "correct": "Data archiving",
+    "exhibits": [
+      {
+        "id": "CBQ2-F2-E1",
+        "rows": [
+          [
+            "Data creation / acquisition",
+            "Member enrollment data entered by call center; provider contracts scanned as PDF",
+            "No standardized data entry validation; duplicate member records estimated at 4%"
+          ],
+          [
+            "Data storage and maintenance",
+            "Claims data stored in legacy system; provider data in separate CRM",
+            "No master data management; provider and member data fragmented across 3 systems"
+          ],
+          [
+            "Data usage",
+            "Claims processors access member and provider data daily; analytics team runs ad hoc queries",
+            "No data usage tracking; analysts use different definitions for \"active member\""
+          ],
+          [
+            "Data archiving",
+            "Claims older than 7 years stored on tape backup",
+            "No consistent retention policy; some data purged prematurely"
+          ],
+          [
+            "Data disposal",
+            "Paper records shredded by third-party vendor",
+            "No certification of destruction; e-waste disposal unmonitored"
+          ]
+        ],
+        "headers": [
+          "Data Lifecycle Stage",
+          "Current Practice",
+          "Issue Identified"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F1",
+    "pack": 2,
+    "itemId": "CBQ3-F1-Q1",
+    "type": "fill",
+    "prompt": "Enter the single word that describes the SDLC phase where the project team defines functional requirements by gathering input from loan officers, credit analysts, and compliance stakeholders.",
+    "correct": "Analysis",
+    "exhibits": [
+      {
+        "id": "CBQ3-F1-E1",
+        "rows": [
+          [
+            "Planning",
+            "Feasibility study, cost-benefit analysis, project charter",
+            "Approved project charter",
+            "4 weeks"
+          ],
+          [
+            "Analysis",
+            "Requirements gathering, business process mapping, gap analysis",
+            "Functional requirements specification",
+            "8 weeks"
+          ],
+          [
+            "Design",
+            "System architecture, database design, UI/UX wireframes",
+            "Technical design document",
+            "6 weeks"
+          ],
+          [
+            "Implementation",
+            "Coding, unit testing, system integration testing",
+            "Tested and deployed system",
+            "14 weeks"
+          ],
+          [
+            "Maintenance",
+            "Post-implementation support, change management, performance monitoring",
+            "System operational",
+            "Ongoing"
+          ]
+        ],
+        "headers": [
+          "SDLC Phase",
+          "Key Activities",
+          "Deliverable",
+          "Estimated Duration"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F1",
+    "pack": 2,
+    "itemId": "CBQ3-F1-Q2",
+    "type": "fill",
+    "prompt": "Enter the two-word term for the testing phase where loan officers and credit analysts validate that the new system meets their business requirements before it is deployed to production.",
+    "correct": "User acceptance testing",
+    "exhibits": [
+      {
+        "id": "CBQ3-F1-E1",
+        "rows": [
+          [
+            "Planning",
+            "Feasibility study, cost-benefit analysis, project charter",
+            "Approved project charter",
+            "4 weeks"
+          ],
+          [
+            "Analysis",
+            "Requirements gathering, business process mapping, gap analysis",
+            "Functional requirements specification",
+            "8 weeks"
+          ],
+          [
+            "Design",
+            "System architecture, database design, UI/UX wireframes",
+            "Technical design document",
+            "6 weeks"
+          ],
+          [
+            "Implementation",
+            "Coding, unit testing, system integration testing",
+            "Tested and deployed system",
+            "14 weeks"
+          ],
+          [
+            "Maintenance",
+            "Post-implementation support, change management, performance monitoring",
+            "System operational",
+            "Ongoing"
+          ]
+        ],
+        "headers": [
+          "SDLC Phase",
+          "Key Activities",
+          "Deliverable",
+          "Estimated Duration"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F1",
+    "pack": 2,
+    "itemId": "CBQ3-F1-Q3",
+    "type": "fill",
+    "prompt": "Enter the SDLC methodology name that uses iterative cycles (typically 2–4 weeks) with continuous stakeholder feedback, as opposed to completing all phases sequentially for the entire project.",
+    "correct": "Agile",
+    "exhibits": [
+      {
+        "id": "CBQ3-F1-E1",
+        "rows": [
+          [
+            "Planning",
+            "Feasibility study, cost-benefit analysis, project charter",
+            "Approved project charter",
+            "4 weeks"
+          ],
+          [
+            "Analysis",
+            "Requirements gathering, business process mapping, gap analysis",
+            "Functional requirements specification",
+            "8 weeks"
+          ],
+          [
+            "Design",
+            "System architecture, database design, UI/UX wireframes",
+            "Technical design document",
+            "6 weeks"
+          ],
+          [
+            "Implementation",
+            "Coding, unit testing, system integration testing",
+            "Tested and deployed system",
+            "14 weeks"
+          ],
+          [
+            "Maintenance",
+            "Post-implementation support, change management, performance monitoring",
+            "System operational",
+            "Ongoing"
+          ]
+        ],
+        "headers": [
+          "SDLC Phase",
+          "Key Activities",
+          "Deliverable",
+          "Estimated Duration"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F1",
+    "pack": 2,
+    "itemId": "CBQ3-F1-Q4",
+    "type": "fill",
+    "prompt": "Enter the two-word term for the SDLC concept that describes moving code or system changes from the development or testing environment to the live production environment.",
+    "correct": "Change management",
+    "exhibits": [
+      {
+        "id": "CBQ3-F1-E1",
+        "rows": [
+          [
+            "Planning",
+            "Feasibility study, cost-benefit analysis, project charter",
+            "Approved project charter",
+            "4 weeks"
+          ],
+          [
+            "Analysis",
+            "Requirements gathering, business process mapping, gap analysis",
+            "Functional requirements specification",
+            "8 weeks"
+          ],
+          [
+            "Design",
+            "System architecture, database design, UI/UX wireframes",
+            "Technical design document",
+            "6 weeks"
+          ],
+          [
+            "Implementation",
+            "Coding, unit testing, system integration testing",
+            "Tested and deployed system",
+            "14 weeks"
+          ],
+          [
+            "Maintenance",
+            "Post-implementation support, change management, performance monitoring",
+            "System operational",
+            "Ongoing"
+          ]
+        ],
+        "headers": [
+          "SDLC Phase",
+          "Key Activities",
+          "Deliverable",
+          "Estimated Duration"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F1",
+    "pack": 2,
+    "itemId": "CBQ3-F1-Q5",
+    "type": "fill",
+    "prompt": "Enter the two-word term for the environment that should be strictly separated from the development and testing environments to prevent unauthorized or untested code from affecting live operations.",
+    "correct": "Production environment",
+    "exhibits": [
+      {
+        "id": "CBQ3-F1-E1",
+        "rows": [
+          [
+            "Planning",
+            "Feasibility study, cost-benefit analysis, project charter",
+            "Approved project charter",
+            "4 weeks"
+          ],
+          [
+            "Analysis",
+            "Requirements gathering, business process mapping, gap analysis",
+            "Functional requirements specification",
+            "8 weeks"
+          ],
+          [
+            "Design",
+            "System architecture, database design, UI/UX wireframes",
+            "Technical design document",
+            "6 weeks"
+          ],
+          [
+            "Implementation",
+            "Coding, unit testing, system integration testing",
+            "Tested and deployed system",
+            "14 weeks"
+          ],
+          [
+            "Maintenance",
+            "Post-implementation support, change management, performance monitoring",
+            "System operational",
+            "Ongoing"
+          ]
+        ],
+        "headers": [
+          "SDLC Phase",
+          "Key Activities",
+          "Deliverable",
+          "Estimated Duration"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F2",
+    "pack": 2,
+    "itemId": "CBQ3-F2-Q1",
+    "type": "match",
+    "prompt": "Based on Exhibit 1, each of the following retail metrics requires a specific chart type to communicate effectively. Match each data relationship to the most appropriate chart type.",
+    "correct": {
+      "Monthly revenue trend over 24 months showing seasonal patterns": "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points",
+      "Sales comparison across 30 stores to identify top and bottom performers": "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
+      "Relationship between advertising spend and weekly revenue": "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers",
+      "Proportion of total expenses by category (6 categories)": "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-F2-E1",
+        "rows": [
+          [
+            "Monthly revenue trend (24 months)",
+            "Pie chart showing each month as % of total",
+            "Pie chart is poor for trend comparison across many categories",
+            "Line chart — shows trend direction and seasonality clearly"
+          ],
+          [
+            "Sales by store for current month",
+            "Data table with 30 rows of numbers",
+            "Management cannot quickly identify best/worst performers",
+            "Bar chart sorted descending — highlights top and bottom stores instantly"
+          ],
+          [
+            "Revenue vs advertising spend relationship",
+            "Two separate line charts",
+            "Relationship between variables is not visible",
+            "Scatter plot with trend line — shows correlation visually"
+          ],
+          [
+            "Expense categories as % of total",
+            "Bar chart",
+            "Bar chart works but a different option may be better",
+            "Waterfall or treemap — shows composition and hierarchical structure"
+          ],
+          [
+            "Inventory turnover by product category",
+            "3D pie chart",
+            "3D perspective distorts perception of relative sizes",
+            "Horizontal bar chart — accurate comparison without 3D distortion"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Current Visualization",
+          "Problem",
+          "Recommended"
+        ]
+      },
+      {
+        "id": "CBQ3-F2-E2",
+        "rows": [
+          [
+            "Chart type matches data relationship",
+            "Line for trends, bar for comparisons, scatter for correlation, pie for composition (limited categories)",
+            "Use line chart for revenue trend, not pie chart"
+          ],
+          [
+            "Minimize cognitive load",
+            "Remove gridlines, 3D effects, decorative elements that do not convey information",
+            "Simplify dashboard to show only essential data-ink ratio"
+          ],
+          [
+            "Use color purposefully",
+            "Color should encode data (e.g., red = below target), not decorate",
+            "Highlight stores below target in red; use consistent color coding"
+          ],
+          [
+            "Provide context",
+            "Show benchmarks, targets, and prior periods for meaningful interpretation",
+            "Include budget line on actuals chart; show prior year comparison"
+          ],
+          [
+            "Tell a story",
+            "Arrange charts in logical sequence; annotate key insights; highlight what matters",
+            "Dashboard should lead viewer from overview → detail → action items"
+          ]
+        ],
+        "headers": [
+          "Principle",
+          "Description",
+          "Application Example"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F2",
+    "pack": 2,
+    "itemId": "CBQ3-F2-Q2",
+    "type": "select",
+    "prompt": "The client's current dashboard uses a 3D pie chart to show inventory turnover by product category. The chart has 8 categories, and the 3D perspective makes the slice in front appear larger. According to Exhibit 2, what is the BEST recommendation?",
+    "correct": "Replace the 3D pie chart with a horizontal bar chart — 3D perspective creates visual distortion that misleads relative size perception; horizontal bar charts allow accurate comparison without distortion",
+    "exhibits": [
+      {
+        "id": "CBQ3-F2-E1",
+        "rows": [
+          [
+            "Monthly revenue trend (24 months)",
+            "Pie chart showing each month as % of total",
+            "Pie chart is poor for trend comparison across many categories",
+            "Line chart — shows trend direction and seasonality clearly"
+          ],
+          [
+            "Sales by store for current month",
+            "Data table with 30 rows of numbers",
+            "Management cannot quickly identify best/worst performers",
+            "Bar chart sorted descending — highlights top and bottom stores instantly"
+          ],
+          [
+            "Revenue vs advertising spend relationship",
+            "Two separate line charts",
+            "Relationship between variables is not visible",
+            "Scatter plot with trend line — shows correlation visually"
+          ],
+          [
+            "Expense categories as % of total",
+            "Bar chart",
+            "Bar chart works but a different option may be better",
+            "Waterfall or treemap — shows composition and hierarchical structure"
+          ],
+          [
+            "Inventory turnover by product category",
+            "3D pie chart",
+            "3D perspective distorts perception of relative sizes",
+            "Horizontal bar chart — accurate comparison without 3D distortion"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Current Visualization",
+          "Problem",
+          "Recommended"
+        ]
+      },
+      {
+        "id": "CBQ3-F2-E2",
+        "rows": [
+          [
+            "Chart type matches data relationship",
+            "Line for trends, bar for comparisons, scatter for correlation, pie for composition (limited categories)",
+            "Use line chart for revenue trend, not pie chart"
+          ],
+          [
+            "Minimize cognitive load",
+            "Remove gridlines, 3D effects, decorative elements that do not convey information",
+            "Simplify dashboard to show only essential data-ink ratio"
+          ],
+          [
+            "Use color purposefully",
+            "Color should encode data (e.g., red = below target), not decorate",
+            "Highlight stores below target in red; use consistent color coding"
+          ],
+          [
+            "Provide context",
+            "Show benchmarks, targets, and prior periods for meaningful interpretation",
+            "Include budget line on actuals chart; show prior year comparison"
+          ],
+          [
+            "Tell a story",
+            "Arrange charts in logical sequence; annotate key insights; highlight what matters",
+            "Dashboard should lead viewer from overview → detail → action items"
+          ]
+        ],
+        "headers": [
+          "Principle",
+          "Description",
+          "Application Example"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F2",
+    "pack": 2,
+    "itemId": "CBQ3-F2-Q3",
+    "type": "multi",
+    "prompt": "Insight Analytics proposes a redesigned dashboard following the principles in Exhibit 2. Which of the following dashboard design choices align with data visualization best practices? (Select all that apply.)",
+    "correct": [
+      "Removing background gridlines and reducing border clutter to focus attention on the data itself",
+      "Using red color coding to highlight stores that are below their monthly sales target",
+      "Including a sparkline next to each store's monthly number to show the 12-month trend in a compact format",
+      "Arranging charts in a logical left-to-right, top-to-bottom flow: executive summary → financial overview → operational detail → action items"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ3-F2-E1",
+        "rows": [
+          [
+            "Monthly revenue trend (24 months)",
+            "Pie chart showing each month as % of total",
+            "Pie chart is poor for trend comparison across many categories",
+            "Line chart — shows trend direction and seasonality clearly"
+          ],
+          [
+            "Sales by store for current month",
+            "Data table with 30 rows of numbers",
+            "Management cannot quickly identify best/worst performers",
+            "Bar chart sorted descending — highlights top and bottom stores instantly"
+          ],
+          [
+            "Revenue vs advertising spend relationship",
+            "Two separate line charts",
+            "Relationship between variables is not visible",
+            "Scatter plot with trend line — shows correlation visually"
+          ],
+          [
+            "Expense categories as % of total",
+            "Bar chart",
+            "Bar chart works but a different option may be better",
+            "Waterfall or treemap — shows composition and hierarchical structure"
+          ],
+          [
+            "Inventory turnover by product category",
+            "3D pie chart",
+            "3D perspective distorts perception of relative sizes",
+            "Horizontal bar chart — accurate comparison without 3D distortion"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Current Visualization",
+          "Problem",
+          "Recommended"
+        ]
+      },
+      {
+        "id": "CBQ3-F2-E2",
+        "rows": [
+          [
+            "Chart type matches data relationship",
+            "Line for trends, bar for comparisons, scatter for correlation, pie for composition (limited categories)",
+            "Use line chart for revenue trend, not pie chart"
+          ],
+          [
+            "Minimize cognitive load",
+            "Remove gridlines, 3D effects, decorative elements that do not convey information",
+            "Simplify dashboard to show only essential data-ink ratio"
+          ],
+          [
+            "Use color purposefully",
+            "Color should encode data (e.g., red = below target), not decorate",
+            "Highlight stores below target in red; use consistent color coding"
+          ],
+          [
+            "Provide context",
+            "Show benchmarks, targets, and prior periods for meaningful interpretation",
+            "Include budget line on actuals chart; show prior year comparison"
+          ],
+          [
+            "Tell a story",
+            "Arrange charts in logical sequence; annotate key insights; highlight what matters",
+            "Dashboard should lead viewer from overview → detail → action items"
+          ]
+        ],
+        "headers": [
+          "Principle",
+          "Description",
+          "Application Example"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F2",
+    "pack": 2,
+    "itemId": "CBQ3-F2-Q4",
+    "type": "select",
+    "prompt": "The client's CFO asks Insight Analytics to explain why the proposed dashboard replaces a data table showing 30 stores' sales numbers with a bar chart. Which argument BEST justifies this change?",
+    "correct": "Bar charts leverage pre-attentive processing — the human brain can rapidly compare bar lengths visually, while reading and comparing 30 numbers in a table requires sequential cognitive effort that is slower and more error-prone",
+    "exhibits": [
+      {
+        "id": "CBQ3-F2-E1",
+        "rows": [
+          [
+            "Monthly revenue trend (24 months)",
+            "Pie chart showing each month as % of total",
+            "Pie chart is poor for trend comparison across many categories",
+            "Line chart — shows trend direction and seasonality clearly"
+          ],
+          [
+            "Sales by store for current month",
+            "Data table with 30 rows of numbers",
+            "Management cannot quickly identify best/worst performers",
+            "Bar chart sorted descending — highlights top and bottom stores instantly"
+          ],
+          [
+            "Revenue vs advertising spend relationship",
+            "Two separate line charts",
+            "Relationship between variables is not visible",
+            "Scatter plot with trend line — shows correlation visually"
+          ],
+          [
+            "Expense categories as % of total",
+            "Bar chart",
+            "Bar chart works but a different option may be better",
+            "Waterfall or treemap — shows composition and hierarchical structure"
+          ],
+          [
+            "Inventory turnover by product category",
+            "3D pie chart",
+            "3D perspective distorts perception of relative sizes",
+            "Horizontal bar chart — accurate comparison without 3D distortion"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Current Visualization",
+          "Problem",
+          "Recommended"
+        ]
+      },
+      {
+        "id": "CBQ3-F2-E2",
+        "rows": [
+          [
+            "Chart type matches data relationship",
+            "Line for trends, bar for comparisons, scatter for correlation, pie for composition (limited categories)",
+            "Use line chart for revenue trend, not pie chart"
+          ],
+          [
+            "Minimize cognitive load",
+            "Remove gridlines, 3D effects, decorative elements that do not convey information",
+            "Simplify dashboard to show only essential data-ink ratio"
+          ],
+          [
+            "Use color purposefully",
+            "Color should encode data (e.g., red = below target), not decorate",
+            "Highlight stores below target in red; use consistent color coding"
+          ],
+          [
+            "Provide context",
+            "Show benchmarks, targets, and prior periods for meaningful interpretation",
+            "Include budget line on actuals chart; show prior year comparison"
+          ],
+          [
+            "Tell a story",
+            "Arrange charts in logical sequence; annotate key insights; highlight what matters",
+            "Dashboard should lead viewer from overview → detail → action items"
+          ]
+        ],
+        "headers": [
+          "Principle",
+          "Description",
+          "Application Example"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-F2",
+    "pack": 2,
+    "itemId": "CBQ3-F2-Q5",
+    "type": "match",
+    "prompt": "Insight Analytics trains the client's finance team on data storytelling. Match each data presentation goal to the visualization approach that BEST achieves it.",
+    "correct": {
+      "Show that Q4 sales are consistently higher than other quarters across three years": "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale",
+      "Identify which product categories have profit margins significantly above or below the company average": "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
+      "Communicate to the board that the company achieved its revenue target despite economic headwinds": "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation",
+      "Compare each store's actual sales to its individual target and prior year performance": "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ3-F2-E1",
+        "rows": [
+          [
+            "Monthly revenue trend (24 months)",
+            "Pie chart showing each month as % of total",
+            "Pie chart is poor for trend comparison across many categories",
+            "Line chart — shows trend direction and seasonality clearly"
+          ],
+          [
+            "Sales by store for current month",
+            "Data table with 30 rows of numbers",
+            "Management cannot quickly identify best/worst performers",
+            "Bar chart sorted descending — highlights top and bottom stores instantly"
+          ],
+          [
+            "Revenue vs advertising spend relationship",
+            "Two separate line charts",
+            "Relationship between variables is not visible",
+            "Scatter plot with trend line — shows correlation visually"
+          ],
+          [
+            "Expense categories as % of total",
+            "Bar chart",
+            "Bar chart works but a different option may be better",
+            "Waterfall or treemap — shows composition and hierarchical structure"
+          ],
+          [
+            "Inventory turnover by product category",
+            "3D pie chart",
+            "3D perspective distorts perception of relative sizes",
+            "Horizontal bar chart — accurate comparison without 3D distortion"
+          ]
+        ],
+        "headers": [
+          "Metric",
+          "Current Visualization",
+          "Problem",
+          "Recommended"
+        ]
+      },
+      {
+        "id": "CBQ3-F2-E2",
+        "rows": [
+          [
+            "Chart type matches data relationship",
+            "Line for trends, bar for comparisons, scatter for correlation, pie for composition (limited categories)",
+            "Use line chart for revenue trend, not pie chart"
+          ],
+          [
+            "Minimize cognitive load",
+            "Remove gridlines, 3D effects, decorative elements that do not convey information",
+            "Simplify dashboard to show only essential data-ink ratio"
+          ],
+          [
+            "Use color purposefully",
+            "Color should encode data (e.g., red = below target), not decorate",
+            "Highlight stores below target in red; use consistent color coding"
+          ],
+          [
+            "Provide context",
+            "Show benchmarks, targets, and prior periods for meaningful interpretation",
+            "Include budget line on actuals chart; show prior year comparison"
+          ],
+          [
+            "Tell a story",
+            "Arrange charts in logical sequence; annotate key insights; highlight what matters",
+            "Dashboard should lead viewer from overview → detail → action items"
+          ]
+        ],
+        "headers": [
+          "Principle",
+          "Description",
+          "Application Example"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "pack": 2,
+    "itemId": "CBQ4-F1-Q1",
+    "type": "match",
+    "prompt": "The IT steering committee is evaluating different cloud service models for MedTech's applications. Using Exhibit 1, match each application requirement to the most appropriate cloud service model.",
+    "correct": {
+      "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+      "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
+      "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+      "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-F1-E1",
+        "rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ]
+      },
+      {
+        "id": "CBQ4-F1-E2",
+        "rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "pack": 2,
+    "itemId": "CBQ4-F1-Q2",
+    "type": "select",
+    "prompt": "Using Exhibit 2, the CFO asks whether cloud migration makes financial sense. Which statement BEST analyzes the financial impact of migrating from on-premise to IaaS?",
+    "correct": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+    "exhibits": [
+      {
+        "id": "CBQ4-F1-E1",
+        "rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ]
+      },
+      {
+        "id": "CBQ4-F1-E2",
+        "rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "pack": 2,
+    "itemId": "CBQ4-F1-Q3",
+    "type": "multi",
+    "prompt": "The compliance officer raises concerns about data security and regulatory compliance in the cloud. Based on Exhibit 1 and general cloud computing knowledge, which of the following are VALID concerns that MedTech should address in its cloud migration plan? (Select all that apply.)",
+    "correct": [
+      "In cloud models, MedTech retains responsibility for its data regardless of where it is stored; the company must ensure the cloud provider's controls meet FDA and HIPAA requirements",
+      "Data residency requirements may restrict where patient data can be stored; the cloud provider must offer data centers in approved geographic locations",
+      "Cloud service providers typically offer SOC 2 Type II reports that can be used to assess their controls; MedTech should review these reports as part of vendor due diligence",
+      "Vendor lock-in is a risk — migrating data and applications between cloud providers can be complex and costly"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-F1-E1",
+        "rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ]
+      },
+      {
+        "id": "CBQ4-F1-E2",
+        "rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "pack": 2,
+    "itemId": "CBQ4-F1-Q4",
+    "type": "select",
+    "prompt": "MedTech's controller is concerned about capitalizing cloud implementation costs versus expensing them. Under current accounting guidance (ASC 350-40), which statement BEST describes how MedTech should account for the cloud migration costs shown in Exhibit 2?",
+    "correct": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+    "exhibits": [
+      {
+        "id": "CBQ4-F1-E1",
+        "rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ]
+      },
+      {
+        "id": "CBQ4-F1-E2",
+        "rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "pack": 2,
+    "itemId": "CBQ4-F1-Q5",
+    "type": "match",
+    "prompt": "The IT steering committee is considering different cloud deployment models. Match each deployment model to the scenario that BEST fits its characteristics.",
+    "correct": {
+      "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+      "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+      "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+      "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-F1-E1",
+        "rows": [
+          [
+            "Applications",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Vendor"
+          ],
+          [
+            "Data",
+            "Customer",
+            "Customer",
+            "Customer",
+            "Customer"
+          ],
+          [
+            "Runtime environment",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Middleware / OS",
+            "Customer",
+            "Customer",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Virtualization",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Servers / Storage",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Networking",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ],
+          [
+            "Physical facility",
+            "Customer",
+            "Vendor",
+            "Vendor",
+            "Vendor"
+          ]
+        ],
+        "headers": [
+          "Responsibility",
+          "On-Premise",
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ]
+      },
+      {
+        "id": "CBQ4-F1-E2",
+        "rows": [
+          [
+            "Hardware/software licenses",
+            "$450,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Cloud subscription fees",
+            "$0",
+            "$320,000",
+            "$480,000"
+          ],
+          [
+            "IT staff (data center operations)",
+            "$280,000",
+            "$100,000",
+            "$60,000"
+          ],
+          [
+            "Facility costs (power, cooling, space)",
+            "$120,000",
+            "$0",
+            "$0"
+          ],
+          [
+            "Data migration (one-time)",
+            "—",
+            "$150,000",
+            "$200,000"
+          ],
+          [
+            "Training (one-time)",
+            "—",
+            "$40,000",
+            "$35,000"
+          ],
+          [
+            "Compliance/audit costs",
+            "$50,000",
+            "$70,000",
+            "$80,000"
+          ],
+          [
+            "Estimated downtime cost (annual)",
+            "$85,000",
+            "$35,000",
+            "$25,000"
+          ],
+          [
+            "Total annual cost (Year 1)",
+            "$985,000",
+            "$715,000",
+            "$880,000"
+          ],
+          [
+            "Total annual cost (Year 2+, steady state)",
+            "$985,000",
+            "$525,000",
+            "$645,000"
+          ]
+        ],
+        "headers": [
+          "Cost Category",
+          "Current On-Premise",
+          "Public Cloud (IaaS)",
+          "Public Cloud (SaaS)"
+        ]
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "pack": 3,
+    "itemId": "CBQ4-F2-Q1",
+    "type": "select",
+    "prompt": "OmniRetail's demand forecasting model requires historical sales data with known actual demand to predict future sales. Which type of machine learning does this approach represent?",
+    "correct": "Supervised learning",
+    "exhibits": [
+      {
+        "id": "CBQ4-F2-E1",
+        "rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ]
+      },
+      {
+        "id": "CBQ4-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "pack": 3,
+    "itemId": "CBQ4-F2-Q2",
+    "type": "match",
+    "prompt": "For each machine learning application at OmniRetail, select whether it uses supervised or unsupervised learning.",
+    "correct": {
+      "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+      "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+      "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+      "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-F2-E1",
+        "rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ]
+      },
+      {
+        "id": "CBQ4-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "pack": 3,
+    "itemId": "CBQ4-F2-Q3",
+    "type": "multi",
+    "prompt": "The data science team observes that the demand forecasting model performs poorly on stores with limited historical data. Which of the following factors are likely contributing to overfitting in the model? (Select all that apply.)",
+    "correct": [
+      "Training on insufficient data for newer stores",
+      "Model complexity exceeding the available training sample size",
+      "Learning noise from limited transaction records rather than general patterns"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-F2-E1",
+        "rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ]
+      },
+      {
+        "id": "CBQ4-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "pack": 3,
+    "itemId": "CBQ4-F2-Q4",
+    "type": "select",
+    "prompt": "OmniRetail's fraud detection model uses machine learning rather than a traditional rule-based system with fixed thresholds. What is the primary advantage of the ML approach for this application?",
+    "correct": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+    "exhibits": [
+      {
+        "id": "CBQ4-F2-E1",
+        "rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ]
+      },
+      {
+        "id": "CBQ4-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "pack": 3,
+    "itemId": "CBQ4-F2-Q5",
+    "type": "multi",
+    "prompt": "OmniRetail's customer segmentation model identified 12 distinct customer clusters using unsupervised learning. Which of the following are valid retail business applications of these segmentation results? (Select all that apply.)",
+    "correct": [
+      "Targeting high-value clusters with personalized promotions to increase basket size",
+      "Designing store layout and product placement strategies based on cluster purchasing patterns",
+      "Identifying underpenetrated customer segments for acquisition marketing campaigns"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-F2-E1",
+        "rows": [
+          [
+            "Supervised Learning",
+            "Labeled historical data with known outcomes",
+            "Demand forecasting using past sales with known actual demand",
+            "Continuous value (regression) or class label (classification)"
+          ],
+          [
+            "Supervised Learning",
+            "Labeled transaction data with fraud flags",
+            "Fraud detection using approved and flagged transactions",
+            "Binary classification (fraud / not fraud)"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled customer purchase history",
+            "Customer segmentation based on purchasing patterns",
+            "Cluster membership"
+          ],
+          [
+            "Unsupervised Learning",
+            "Unlabeled transaction data",
+            "Anomaly detection for identifying unusual transaction patterns",
+            "Anomaly score"
+          ]
+        ],
+        "headers": [
+          "Learning Type",
+          "Data Requirement",
+          "Retail Application",
+          "Output Type"
+        ]
+      },
+      {
+        "id": "CBQ4-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F3",
+    "pack": 3,
+    "itemId": "CBQ4-F3-Q1",
+    "type": "select",
+    "prompt": "MedSecure Health plans to encrypt its patient database using a method that uses the same key for both encryption and decryption. Which encryption method does this describe?",
+    "correct": "Symmetric encryption",
+    "exhibits": [
+      {
+        "id": "CBQ4-F3-E1",
+        "rows": [
+          [
+            "Symmetric encryption",
+            "Single shared key for encryption and decryption",
+            "Fast",
+            "Bulk data encryption at rest",
+            "Key distribution is challenging; both parties must share the same key securely"
+          ],
+          [
+            "Asymmetric encryption",
+            "Public-private key pair",
+            "Slower than symmetric",
+            "Secure key exchange and digital signatures",
+            "Public key can be shared openly; private key must remain confidential"
+          ],
+          [
+            "Hashing",
+            "No key; one-way mathematical function",
+            "Very fast",
+            "Data integrity verification",
+            "No key management; same input always produces the same fixed-length output"
+          ]
+        ],
+        "headers": [
+          "Method",
+          "Key Structure",
+          "Speed",
+          "Primary Use Case",
+          "Key Management"
+        ]
+      },
+      {
+        "id": "CBQ4-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F3",
+    "pack": 3,
+    "itemId": "CBQ4-F3-Q2",
+    "type": "match",
+    "prompt": "Match each cryptographic method to its correct description.",
+    "correct": {
+      "Symmetric encryption": "Uses one shared key for both encryption and decryption",
+      "Asymmetric encryption": "Uses a public-private key pair for encryption and decryption",
+      "Hashing": "Produces a fixed-length output that cannot be reversed to the original input",
+      "Digital signature": "Uses a private key to sign and a public key to verify authenticity"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ4-F3-E1",
+        "rows": [
+          [
+            "Symmetric encryption",
+            "Single shared key for encryption and decryption",
+            "Fast",
+            "Bulk data encryption at rest",
+            "Key distribution is challenging; both parties must share the same key securely"
+          ],
+          [
+            "Asymmetric encryption",
+            "Public-private key pair",
+            "Slower than symmetric",
+            "Secure key exchange and digital signatures",
+            "Public key can be shared openly; private key must remain confidential"
+          ],
+          [
+            "Hashing",
+            "No key; one-way mathematical function",
+            "Very fast",
+            "Data integrity verification",
+            "No key management; same input always produces the same fixed-length output"
+          ]
+        ],
+        "headers": [
+          "Method",
+          "Key Structure",
+          "Speed",
+          "Primary Use Case",
+          "Key Management"
+        ]
+      },
+      {
+        "id": "CBQ4-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F3",
+    "pack": 3,
+    "itemId": "CBQ4-F3-Q3",
+    "type": "multi",
+    "prompt": "The CISO at MedSecure Health proposes using hashing to verify data integrity during patient record backups. Which of the following are characteristics of hashing that support this use case? (Select all that apply.)",
+    "correct": [
+      "Hashing produces a fixed-length output regardless of input size",
+      "Any change to the input data produces a completely different hash value",
+      "Hashing is a one-way function that cannot be reversed to recover the original data"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-F3-E1",
+        "rows": [
+          [
+            "Symmetric encryption",
+            "Single shared key for encryption and decryption",
+            "Fast",
+            "Bulk data encryption at rest",
+            "Key distribution is challenging; both parties must share the same key securely"
+          ],
+          [
+            "Asymmetric encryption",
+            "Public-private key pair",
+            "Slower than symmetric",
+            "Secure key exchange and digital signatures",
+            "Public key can be shared openly; private key must remain confidential"
+          ],
+          [
+            "Hashing",
+            "No key; one-way mathematical function",
+            "Very fast",
+            "Data integrity verification",
+            "No key management; same input always produces the same fixed-length output"
+          ]
+        ],
+        "headers": [
+          "Method",
+          "Key Structure",
+          "Speed",
+          "Primary Use Case",
+          "Key Management"
+        ]
+      },
+      {
+        "id": "CBQ4-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F3",
+    "pack": 3,
+    "itemId": "CBQ4-F3-Q4",
+    "type": "select",
+    "prompt": "MedSecure Health needs to securely share encryption keys with a hospital partner over the internet. The CISO recommends using a method where the hospital's public key encrypts the symmetric key and only the hospital's private key can decrypt it. Which cryptographic concept does this process describe?",
+    "correct": "Asymmetric encryption for secure key exchange",
+    "exhibits": [
+      {
+        "id": "CBQ4-F3-E1",
+        "rows": [
+          [
+            "Symmetric encryption",
+            "Single shared key for encryption and decryption",
+            "Fast",
+            "Bulk data encryption at rest",
+            "Key distribution is challenging; both parties must share the same key securely"
+          ],
+          [
+            "Asymmetric encryption",
+            "Public-private key pair",
+            "Slower than symmetric",
+            "Secure key exchange and digital signatures",
+            "Public key can be shared openly; private key must remain confidential"
+          ],
+          [
+            "Hashing",
+            "No key; one-way mathematical function",
+            "Very fast",
+            "Data integrity verification",
+            "No key management; same input always produces the same fixed-length output"
+          ]
+        ],
+        "headers": [
+          "Method",
+          "Key Structure",
+          "Speed",
+          "Primary Use Case",
+          "Key Management"
+        ]
+      },
+      {
+        "id": "CBQ4-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F3",
+    "pack": 3,
+    "itemId": "CBQ4-F3-Q5",
+    "type": "multi",
+    "prompt": "Based on the HIPAA Security Rule technical safeguards, which of the following controls should MedSecure Health implement to protect ePHI and maintain compliance? (Select all that apply.)",
+    "correct": [
+      "Encrypting patient records stored in the database to meet transmission and storage security requirements",
+      "Implementing audit controls that record and examine access to ePHI",
+      "Establishing unique user identification and automatic logoff for access control"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ4-F3-E1",
+        "rows": [
+          [
+            "Symmetric encryption",
+            "Single shared key for encryption and decryption",
+            "Fast",
+            "Bulk data encryption at rest",
+            "Key distribution is challenging; both parties must share the same key securely"
+          ],
+          [
+            "Asymmetric encryption",
+            "Public-private key pair",
+            "Slower than symmetric",
+            "Secure key exchange and digital signatures",
+            "Public key can be shared openly; private key must remain confidential"
+          ],
+          [
+            "Hashing",
+            "No key; one-way mathematical function",
+            "Very fast",
+            "Data integrity verification",
+            "No key management; same input always produces the same fixed-length output"
+          ]
+        ],
+        "headers": [
+          "Method",
+          "Key Structure",
+          "Speed",
+          "Primary Use Case",
+          "Key Management"
+        ]
+      },
+      {
+        "id": "CBQ4-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F1",
+    "pack": 3,
+    "itemId": "CBQ5-F1-Q1",
+    "type": "match",
+    "prompt": "OmniMart's data environment exhibits characteristics of all four Vs of big data. Match each V to the data characteristic it describes.",
+    "correct": {
+      "Volume": "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles",
+      "Velocity": "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute",
+      "Variety": "The diverse data formats including structured POS data, semi-structured RFID feeds, and unstructured social media text",
+      "Veracity": "The uncertainty and quality concerns arising from 22% incomplete profiles, 3% RFID read failures, and unreconciled cost data"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ5-F1-E1",
+        "rows": [
+          [
+            "Data infrastructure (servers, storage, ETL)",
+            "$2,100,000",
+            "$450,000",
+            "$475,000"
+          ],
+          [
+            "Data engineering and analytics staffing",
+            "$1,200,000",
+            "$1,260,000",
+            "$1,323,000"
+          ],
+          [
+            "Software licenses and cloud services",
+            "$200,000",
+            "$210,000",
+            "$220,500"
+          ],
+          [
+            "Total costs",
+            "$3,500,000",
+            "$1,920,000",
+            "$2,018,500"
+          ],
+          [
+            "Projected benefits - inventory reduction",
+            "$1,800,000",
+            "$2,100,000",
+            "$2,400,000"
+          ],
+          [
+            "Projected benefits - pricing optimization",
+            "$1,400,000",
+            "$1,600,000",
+            "$1,800,000"
+          ],
+          [
+            "Projected benefits - fraud loss reduction",
+            "$400,000",
+            "$450,000",
+            "$500,000"
+          ],
+          [
+            "Total projected benefits",
+            "$3,600,000",
+            "$4,150,000",
+            "$4,700,000"
+          ],
+          [
+            "Net annual benefit (cost)",
+            "$100,000",
+            "$2,230,000",
+            "$2,681,500"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ]
+      },
+      {
+        "id": "CBQ5-F1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F1",
+    "pack": 3,
+    "itemId": "CBQ5-F1-Q2",
+    "type": "select",
+    "prompt": "OmniMart's management accounting team wants to use the big data initiative to improve inventory management. Which application of big data analytics is BEST suited for reducing inventory holding costs?",
+    "correct": "Predictive analytics using POS and RFID data to forecast demand at the store-SKU level and automate replenishment timing, reducing safety stock requirements",
+    "exhibits": [
+      {
+        "id": "CBQ5-F1-E1",
+        "rows": [
+          [
+            "Data infrastructure (servers, storage, ETL)",
+            "$2,100,000",
+            "$450,000",
+            "$475,000"
+          ],
+          [
+            "Data engineering and analytics staffing",
+            "$1,200,000",
+            "$1,260,000",
+            "$1,323,000"
+          ],
+          [
+            "Software licenses and cloud services",
+            "$200,000",
+            "$210,000",
+            "$220,500"
+          ],
+          [
+            "Total costs",
+            "$3,500,000",
+            "$1,920,000",
+            "$2,018,500"
+          ],
+          [
+            "Projected benefits - inventory reduction",
+            "$1,800,000",
+            "$2,100,000",
+            "$2,400,000"
+          ],
+          [
+            "Projected benefits - pricing optimization",
+            "$1,400,000",
+            "$1,600,000",
+            "$1,800,000"
+          ],
+          [
+            "Projected benefits - fraud loss reduction",
+            "$400,000",
+            "$450,000",
+            "$500,000"
+          ],
+          [
+            "Total projected benefits",
+            "$3,600,000",
+            "$4,150,000",
+            "$4,700,000"
+          ],
+          [
+            "Net annual benefit (cost)",
+            "$100,000",
+            "$2,230,000",
+            "$2,681,500"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ]
+      },
+      {
+        "id": "CBQ5-F1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F1",
+    "pack": 3,
+    "itemId": "CBQ5-F1-Q3",
+    "type": "numeric",
+    "prompt": "Using the projections in Exhibit 1, calculate the total net benefit (benefits minus costs) for the three-year period. Enter your answer as a whole number in dollars. Do not use commas or dollar signs.",
+    "correct": 5011500,
+    "exhibits": [
+      {
+        "id": "CBQ5-F1-E1",
+        "rows": [
+          [
+            "Data infrastructure (servers, storage, ETL)",
+            "$2,100,000",
+            "$450,000",
+            "$475,000"
+          ],
+          [
+            "Data engineering and analytics staffing",
+            "$1,200,000",
+            "$1,260,000",
+            "$1,323,000"
+          ],
+          [
+            "Software licenses and cloud services",
+            "$200,000",
+            "$210,000",
+            "$220,500"
+          ],
+          [
+            "Total costs",
+            "$3,500,000",
+            "$1,920,000",
+            "$2,018,500"
+          ],
+          [
+            "Projected benefits - inventory reduction",
+            "$1,800,000",
+            "$2,100,000",
+            "$2,400,000"
+          ],
+          [
+            "Projected benefits - pricing optimization",
+            "$1,400,000",
+            "$1,600,000",
+            "$1,800,000"
+          ],
+          [
+            "Projected benefits - fraud loss reduction",
+            "$400,000",
+            "$450,000",
+            "$500,000"
+          ],
+          [
+            "Total projected benefits",
+            "$3,600,000",
+            "$4,150,000",
+            "$4,700,000"
+          ],
+          [
+            "Net annual benefit (cost)",
+            "$100,000",
+            "$2,230,000",
+            "$2,681,500"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ]
+      },
+      {
+        "id": "CBQ5-F1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F1",
+    "pack": 3,
+    "itemId": "CBQ5-F1-Q4",
+    "type": "multi",
+    "prompt": "The management accounting team must design data governance controls to address the veracity challenges identified in Exhibit 2. Which controls are MOST appropriate? (Select all that apply.)",
+    "correct": [
+      "Implement automated data validation rules at the point of capture for clickstream and RFID data to flag incomplete or anomalous records in real time",
+      "Establish a data stewardship program with assigned owners for each major data domain (customer, product, inventory, supply chain) responsible for quality standards",
+      "Create a master data management (MDM) system to standardize product categorization codes across all three source systems, enabling reliable cross-system analysis"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-F1-E1",
+        "rows": [
+          [
+            "Data infrastructure (servers, storage, ETL)",
+            "$2,100,000",
+            "$450,000",
+            "$475,000"
+          ],
+          [
+            "Data engineering and analytics staffing",
+            "$1,200,000",
+            "$1,260,000",
+            "$1,323,000"
+          ],
+          [
+            "Software licenses and cloud services",
+            "$200,000",
+            "$210,000",
+            "$220,500"
+          ],
+          [
+            "Total costs",
+            "$3,500,000",
+            "$1,920,000",
+            "$2,018,500"
+          ],
+          [
+            "Projected benefits - inventory reduction",
+            "$1,800,000",
+            "$2,100,000",
+            "$2,400,000"
+          ],
+          [
+            "Projected benefits - pricing optimization",
+            "$1,400,000",
+            "$1,600,000",
+            "$1,800,000"
+          ],
+          [
+            "Projected benefits - fraud loss reduction",
+            "$400,000",
+            "$450,000",
+            "$500,000"
+          ],
+          [
+            "Total projected benefits",
+            "$3,600,000",
+            "$4,150,000",
+            "$4,700,000"
+          ],
+          [
+            "Net annual benefit (cost)",
+            "$100,000",
+            "$2,230,000",
+            "$2,681,500"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ]
+      },
+      {
+        "id": "CBQ5-F1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F1",
+    "pack": 3,
+    "itemId": "CBQ5-F1-Q5",
+    "type": "select",
+    "prompt": "The CFO is concerned about organizational readiness for the Big Data Analytics Initiative. Which factor is MOST critical for the initiative's long-term success?",
+    "correct": "Establishing a data-driven culture where management decisions are consistently informed by analytics, supported by executive sponsorship and change management",
+    "exhibits": [
+      {
+        "id": "CBQ5-F1-E1",
+        "rows": [
+          [
+            "Data infrastructure (servers, storage, ETL)",
+            "$2,100,000",
+            "$450,000",
+            "$475,000"
+          ],
+          [
+            "Data engineering and analytics staffing",
+            "$1,200,000",
+            "$1,260,000",
+            "$1,323,000"
+          ],
+          [
+            "Software licenses and cloud services",
+            "$200,000",
+            "$210,000",
+            "$220,500"
+          ],
+          [
+            "Total costs",
+            "$3,500,000",
+            "$1,920,000",
+            "$2,018,500"
+          ],
+          [
+            "Projected benefits - inventory reduction",
+            "$1,800,000",
+            "$2,100,000",
+            "$2,400,000"
+          ],
+          [
+            "Projected benefits - pricing optimization",
+            "$1,400,000",
+            "$1,600,000",
+            "$1,800,000"
+          ],
+          [
+            "Projected benefits - fraud loss reduction",
+            "$400,000",
+            "$450,000",
+            "$500,000"
+          ],
+          [
+            "Total projected benefits",
+            "$3,600,000",
+            "$4,150,000",
+            "$4,700,000"
+          ],
+          [
+            "Net annual benefit (cost)",
+            "$100,000",
+            "$2,230,000",
+            "$2,681,500"
+          ]
+        ],
+        "headers": [
+          "Category",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ]
+      },
+      {
+        "id": "CBQ5-F1-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "pack": 3,
+    "itemId": "CBQ5-F2-Q1",
+    "type": "match",
+    "prompt": "The CFO's team is preparing a training deck on RPA for the audit committee. Match each RPA characteristic to its correct description.",
+    "correct": {
+      "Rule-based processing": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+      "User interface interaction": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+      "Exception handling": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+      "Attended vs unattended mode": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ5-F2-E1",
+        "rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ]
+      },
+      {
+        "id": "CBQ5-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "pack": 3,
+    "itemId": "CBQ5-F2-Q2",
+    "type": "select",
+    "prompt": "Based on the data in Exhibit 1, which finance process is the STRONGEST candidate for RPA implementation at Meridian?",
+    "correct": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+    "exhibits": [
+      {
+        "id": "CBQ5-F2-E1",
+        "rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ]
+      },
+      {
+        "id": "CBQ5-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "pack": 3,
+    "itemId": "CBQ5-F2-Q3",
+    "type": "numeric",
+    "prompt": "Using the scenario data, calculate the annual net benefit (annual benefits minus annual ongoing costs) for the RPA initiative in Year 2, after implementation costs have been incurred. Enter your answer as a whole number in dollars. Do not use commas or dollar signs.",
+    "correct": 525000,
+    "exhibits": [
+      {
+        "id": "CBQ5-F2-E1",
+        "rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ]
+      },
+      {
+        "id": "CBQ5-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "pack": 3,
+    "itemId": "CBQ5-F2-Q4",
+    "type": "multi",
+    "prompt": "Which of the following processes from Exhibit 1 are appropriate candidates for RPA? (Select all that apply.)",
+    "correct": [
+      "Invoice data entry to ERP — structured data, rule-based extraction and posting, low exception rate",
+      "Bank account reconciliation — high-volume matching of structured data against defined reconciliation rules",
+      "Intercompany transaction matching — rule-based elimination entries using structured GL data with manageable exceptions",
+      "Standard journal entry posting — recurring, template-driven entries with virtually no exceptions"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-F2-E1",
+        "rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ]
+      },
+      {
+        "id": "CBQ5-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "pack": 3,
+    "itemId": "CBQ5-F2-Q5",
+    "type": "select",
+    "prompt": "Based on Exhibit 2, which internal control enhancement is MOST critical to address the segregation of duties (SOD) risk created by the RPA implementation?",
+    "correct": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+    "exhibits": [
+      {
+        "id": "CBQ5-F2-E1",
+        "rows": [
+          [
+            "Invoice data entry to ERP",
+            "3,750 invoices",
+            "Yes - vendor, PO, GL fields",
+            "Standardized PDF/EDI",
+            "4%",
+            "Yes"
+          ],
+          [
+            "Bank account reconciliation",
+            "12,000 accounts",
+            "Yes - match rules defined",
+            "Structured CSV/OFX",
+            "8%",
+            "Yes"
+          ],
+          [
+            "Intercompany transaction matching",
+            "2,400 pairs",
+            "Yes - elimination rules",
+            "Structured GL extracts",
+            "6%",
+            "Yes"
+          ],
+          [
+            "Standard journal entry posting",
+            "800 entries",
+            "Yes - recurring templates",
+            "Structured spreadsheet",
+            "1%",
+            "Yes"
+          ],
+          [
+            "Complex loss reserve estimation",
+            "150 analyses",
+            "No - actuarial judgment",
+            "Multiple unstructured",
+            "35%",
+            "No"
+          ],
+          [
+            "Vendor contract negotiation",
+            "200 renewals",
+            "No - strategic judgment",
+            "Legal text (unstructured)",
+            "N/A",
+            "No"
+          ],
+          [
+            "Financial statement note drafting",
+            "85 notes",
+            "No - narrative judgment",
+            "Unstructured text",
+            "N/A",
+            "No"
+          ]
+        ],
+        "headers": [
+          "Process",
+          "Volume (Monthly)",
+          "Rule-Based?",
+          "Data Format",
+          "Exceptions Rate",
+          "RPA Suitable?"
+        ]
+      },
+      {
+        "id": "CBQ5-F2-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F3",
+    "pack": 3,
+    "itemId": "CBQ5-F3-Q1",
+    "type": "match",
+    "prompt": "The CFO is presenting blockchain fundamentals to the board. Match each blockchain concept to its correct accounting application.",
+    "correct": {
+      "Distributed ledger": "A shared database across network participants that eliminates reconciliation between separate organizational systems",
+      "Immutability": "Data permanence that prevents retroactive alteration of records, strengthening audit trail reliability",
+      "Smart contracts": "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met",
+      "Consensus mechanism": "A validation process where network participants agree on transaction validity before records are added to the ledger"
+    },
+    "exhibits": [
+      {
+        "id": "CBQ5-F3-E1",
+        "rows": [
+          [
+            "Distributed ledger",
+            "A shared, synchronized database maintained by multiple independent network participants",
+            "All supply chain participants share a single version of custody events, eliminating reconciliation between separate systems"
+          ],
+          [
+            "Immutability",
+            "Once recorded, data cannot be altered or deleted without network consensus",
+            "Creates an audit trail for inventory movements and title transfers that cannot be retroactively modified"
+          ],
+          [
+            "Smart contracts",
+            "Self-executing code on the blockchain that automatically enforces and executes contract terms",
+            "Automated payment release when delivery confirmation and quality inspection data meet predefined thresholds"
+          ],
+          [
+            "Consensus mechanism",
+            "The process by which network participants agree on the validity of new transactions added to the ledger",
+            "Ensures only verified custody transfers are recorded, reducing the risk of fraudulent or duplicate invoices"
+          ],
+          [
+            "Permissioned blockchain",
+            "A blockchain where access is restricted to approved participants with known identities",
+            "Only vetted suppliers, distributors, and retailers can view or add transaction data, protecting competitive information"
+          ]
+        ],
+        "headers": [
+          "Concept",
+          "Description",
+          "Accounting Application"
+        ]
+      },
+      {
+        "id": "CBQ5-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F3",
+    "pack": 3,
+    "itemId": "CBQ5-F3-Q2",
+    "type": "select",
+    "prompt": "Based on Exhibit 1, which blockchain application offers the GREATEST potential benefit to GlobalLink's accounting operations?",
+    "correct": "Smart contracts that automate payment release upon verified delivery — this directly addresses the $2.3 million annual loss from disputes, delays, and reconciliation by eliminating 90% of disputes and reducing the payment cycle from 32 to 5 days",
+    "exhibits": [
+      {
+        "id": "CBQ5-F3-E1",
+        "rows": [
+          [
+            "Distributed ledger",
+            "A shared, synchronized database maintained by multiple independent network participants",
+            "All supply chain participants share a single version of custody events, eliminating reconciliation between separate systems"
+          ],
+          [
+            "Immutability",
+            "Once recorded, data cannot be altered or deleted without network consensus",
+            "Creates an audit trail for inventory movements and title transfers that cannot be retroactively modified"
+          ],
+          [
+            "Smart contracts",
+            "Self-executing code on the blockchain that automatically enforces and executes contract terms",
+            "Automated payment release when delivery confirmation and quality inspection data meet predefined thresholds"
+          ],
+          [
+            "Consensus mechanism",
+            "The process by which network participants agree on the validity of new transactions added to the ledger",
+            "Ensures only verified custody transfers are recorded, reducing the risk of fraudulent or duplicate invoices"
+          ],
+          [
+            "Permissioned blockchain",
+            "A blockchain where access is restricted to approved participants with known identities",
+            "Only vetted suppliers, distributors, and retailers can view or add transaction data, protecting competitive information"
+          ]
+        ],
+        "headers": [
+          "Concept",
+          "Description",
+          "Accounting Application"
+        ]
+      },
+      {
+        "id": "CBQ5-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F3",
+    "pack": 3,
+    "itemId": "CBQ5-F3-Q3",
+    "type": "numeric",
+    "prompt": "Using the data in Exhibit 2, calculate the annual working capital benefit from reducing the payment cycle from 32 days to 5 days. GlobalLink processes $2.4 billion in annual supplier payments. Use a 365-day year. Enter your answer as the nearest whole number in dollars. Do not use commas or dollar signs.",
+    "correct": 15978082,
+    "exhibits": [
+      {
+        "id": "CBQ5-F3-E1",
+        "rows": [
+          [
+            "Distributed ledger",
+            "A shared, synchronized database maintained by multiple independent network participants",
+            "All supply chain participants share a single version of custody events, eliminating reconciliation between separate systems"
+          ],
+          [
+            "Immutability",
+            "Once recorded, data cannot be altered or deleted without network consensus",
+            "Creates an audit trail for inventory movements and title transfers that cannot be retroactively modified"
+          ],
+          [
+            "Smart contracts",
+            "Self-executing code on the blockchain that automatically enforces and executes contract terms",
+            "Automated payment release when delivery confirmation and quality inspection data meet predefined thresholds"
+          ],
+          [
+            "Consensus mechanism",
+            "The process by which network participants agree on the validity of new transactions added to the ledger",
+            "Ensures only verified custody transfers are recorded, reducing the risk of fraudulent or duplicate invoices"
+          ],
+          [
+            "Permissioned blockchain",
+            "A blockchain where access is restricted to approved participants with known identities",
+            "Only vetted suppliers, distributors, and retailers can view or add transaction data, protecting competitive information"
+          ]
+        ],
+        "headers": [
+          "Concept",
+          "Description",
+          "Accounting Application"
+        ]
+      },
+      {
+        "id": "CBQ5-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F3",
+    "pack": 3,
+    "itemId": "CBQ5-F3-Q4",
+    "type": "multi",
+    "prompt": "Which of the following are advantages of implementing a permissioned blockchain for GlobalLink's supply chain? (Select all that apply.)",
+    "correct": [
+      "Single shared version of custody events eliminates the need for bilateral reconciliation between GlobalLink and each of its 1,200 suppliers",
+      "Immutability of recorded transactions provides auditors with reliable evidence of custody transfers and delivery confirmation that cannot be altered retroactively",
+      "Smart contracts reduce dispute resolution costs by automating payment terms verification and eliminating 90% of manual dispute processing",
+      "All network participants use the same data, reducing the risk of inventory discrepancies between supplier shipping records and buyer receiving records"
+    ],
+    "exhibits": [
+      {
+        "id": "CBQ5-F3-E1",
+        "rows": [
+          [
+            "Distributed ledger",
+            "A shared, synchronized database maintained by multiple independent network participants",
+            "All supply chain participants share a single version of custody events, eliminating reconciliation between separate systems"
+          ],
+          [
+            "Immutability",
+            "Once recorded, data cannot be altered or deleted without network consensus",
+            "Creates an audit trail for inventory movements and title transfers that cannot be retroactively modified"
+          ],
+          [
+            "Smart contracts",
+            "Self-executing code on the blockchain that automatically enforces and executes contract terms",
+            "Automated payment release when delivery confirmation and quality inspection data meet predefined thresholds"
+          ],
+          [
+            "Consensus mechanism",
+            "The process by which network participants agree on the validity of new transactions added to the ledger",
+            "Ensures only verified custody transfers are recorded, reducing the risk of fraudulent or duplicate invoices"
+          ],
+          [
+            "Permissioned blockchain",
+            "A blockchain where access is restricted to approved participants with known identities",
+            "Only vetted suppliers, distributors, and retailers can view or add transaction data, protecting competitive information"
+          ]
+        ],
+        "headers": [
+          "Concept",
+          "Description",
+          "Accounting Application"
+        ]
+      },
+      {
+        "id": "CBQ5-F3-E2"
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F3",
+    "pack": 3,
+    "itemId": "CBQ5-F3-Q5",
+    "type": "select",
+    "prompt": "The internal audit team is evaluating control considerations for the blockchain implementation. Which control concern is MOST significant for GlobalLink's management accountants?",
+    "correct": "Smart contract code errors or logic flaws could execute incorrect payments automatically without human intervention, requiring rigorous testing and audit of contract code before deployment",
+    "exhibits": [
+      {
+        "id": "CBQ5-F3-E1",
+        "rows": [
+          [
+            "Distributed ledger",
+            "A shared, synchronized database maintained by multiple independent network participants",
+            "All supply chain participants share a single version of custody events, eliminating reconciliation between separate systems"
+          ],
+          [
+            "Immutability",
+            "Once recorded, data cannot be altered or deleted without network consensus",
+            "Creates an audit trail for inventory movements and title transfers that cannot be retroactively modified"
+          ],
+          [
+            "Smart contracts",
+            "Self-executing code on the blockchain that automatically enforces and executes contract terms",
+            "Automated payment release when delivery confirmation and quality inspection data meet predefined thresholds"
+          ],
+          [
+            "Consensus mechanism",
+            "The process by which network participants agree on the validity of new transactions added to the ledger",
+            "Ensures only verified custody transfers are recorded, reducing the risk of fraudulent or duplicate invoices"
+          ],
+          [
+            "Permissioned blockchain",
+            "A blockchain where access is restricted to approved participants with known identities",
+            "Only vetted suppliers, distributors, and retailers can view or add transaction data, protecting competitive information"
+          ]
+        ],
+        "headers": [
+          "Concept",
+          "Description",
+          "Accounting Application"
+        ]
+      },
+      {
+        "id": "CBQ5-F3-E2"
+      }
+    ]
+  }
+]

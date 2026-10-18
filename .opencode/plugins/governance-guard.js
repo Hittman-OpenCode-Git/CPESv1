@@ -229,6 +229,51 @@ export const GovernanceGuard = async ({ client }) => {
     return violations;
   }
 
+  /**
+   * RULE 11 AF-3 trade-off vocabulary.
+   *
+   * v4 (P2-085 calibration, 2026-09-30). Rationale from measured evidence —
+   * see REVISION_HISTORY_P2.md Session P2-085.
+   *
+   * v1 scanned ExplanationCorrect only, with 5 tokens, and produced **13 false
+   * positives on the S122 gold standard** (board gate: zero). Root cause: all 13
+   * share one signature — a definitional citation ("Under COSO Principle 11")
+   * whose explanation merely restates the principle, so no trade-off token can
+   * appear. v1 also missed genuine trade-offs stated in the stem (e.g. P1-E-008,
+   * whose three-option judgment carries "balance" only in the stem).
+   *
+   * Two corrections:
+   *   1. scan BOTH stem and explanation, and widen to the decision vocabulary
+   *      P2 authors actually use (judgment, prioritise, alternative course, ...);
+   *   2. exempt a definitional anchor — a numbered standard citation names a
+   *      rule rather than posing a choice between alternatives.
+   *
+   * Validated: 0 FP on S122 gold (67 Analyze/Evaluate items); remains non-inert
+   * (3 P1, 27 P2, 1 P2 case item fire) so the gate still has discriminating power.
+   */
+  const AF3_TRADEOFF = /(competing|best option|weigh|trade.?off|balance|judgment|judgement|most defensible|prioriti[sz]|alternative course|compromise|recommend|best course|which of the following is the best)/i;
+
+  /**
+   * Definitional anchor — "Under COSO Principle 11", "under ASC 842".
+   *
+   * A numbered citation names a rule, so the explanation can only restate it
+   * and no trade-off token can appear. This is only an exemption when the stem
+   * ALSO asks a judgment question. On its own it is not enough: P1-A-012
+   * ("Under ASC 450 ... what is the required treatment?") is genuinely
+   * deterministic and must still block.
+   */
+  const AF3_DEFINITIONAL = /\bunder (ASC|IFRS|COSO|GAAP|IAS)(\s+principle)?\s*(\d|\d+[A-Z]?)/i;
+
+  /**
+   * Judgment-question framing — the counterpart to a definitional citation.
+   *
+   * Calibrated to the S122 gold phrasing family: "which evaluation of X is
+   * most accurate?", "which best evaluates...", "which of the following
+   * represents the most appropriate...". Deliberately does NOT match
+   * "what is the required treatment?" so P1-A-012 still blocks.
+   */
+  const AF3_JUDGMENT = /(best (characteriz|describ|evaluat|accurat)|most (accurat|appropriat|defensib)|which (statement|conclusion|option)|assess the|evaluat(e|ing) the|which best|analyz|what best|best (course|approach|alternative))/i;
+
   /** Return array of { qid, cog, gate, reason, actual } for cognitive classification violations */
   function findCognitiveViolations(text) {
     const violations = [];
@@ -237,15 +282,19 @@ export const GovernanceGuard = async ({ client }) => {
       const cog = obj.CognitiveLevel;
       if (!cog || !/^(Analyze|Evaluate)$/.test(cog)) continue;
 
-      const qid = obj.QuestionID || '(unknown)';
-      const stem = obj.Stem || '';
-      const ec = obj.ExplanationCorrect || '';
+      const qid = obj.QuestionID || obj.ItemID || '(unknown)';
+      // Case items carry Prompt/Explanation; MCQ items carry Stem/ExplanationCorrect.
+      const stem = obj.Stem || obj.Prompt || '';
+      const ec = obj.ExplanationCorrect || obj.Explanation || '';
       const diff = obj.DifficultyScore;
 
       // GATE 3 (AF-3) — Deterministic Rule Application → BLOCK
       const hasRuleRef = /Under (ASC|IFRS|COSO|GAAP|IAS)/i.test(stem);
-      const hasTradeOff = /competing|best option|weigh|trade.off|balance/i.test(ec);
-      if (hasRuleRef && !hasTradeOff) {
+      // Trade-off may be argued in either field.
+      const hasTradeOff = AF3_TRADEOFF.test(ec) || AF3_TRADEOFF.test(stem);
+      // Exempt only when a numbered citation is paired with judgment framing.
+      const isDefinitionalJudgment = AF3_DEFINITIONAL.test(stem) && AF3_JUDGMENT.test(stem);
+      if (hasRuleRef && !hasTradeOff && !isDefinitionalJudgment) {
         violations.push({ qid, cog, gate: 'AF-3', reason: 'Deterministic rule application without trade-off language', actual: 'Apply' });
       }
 

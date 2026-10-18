@@ -166,6 +166,14 @@ function findDL021Violations(text) {
   return violations;
 }
 
+// Mirror of governance-guard.js findCognitiveViolations — keep byte-semantics
+// in sync with the plugin. v4 (P2-085): AF-3 scans stem AND explanation, and
+// exempts a definitional numbered-standard citation. Also reads Prompt/ItemID
+// so P2 case items are covered.
+const AF3_TRADEOFF = /(competing|best option|weigh|trade.?off|balance|judgment|judgement|most defensible|prioriti[sz]|alternative course|compromise|recommend|best course|which of the following is the best)/i;
+const AF3_DEFINITIONAL = /\bunder (ASC|IFRS|COSO|GAAP|IAS)(\s+principle)?\s*(\d|\d+[A-Z]?)/i;
+const AF3_JUDGMENT = /(best (characteriz|describ|evaluat|accurat)|most (accurat|appropriat|defensib)|which (statement|conclusion|option)|assess the|evaluat(e|ing) the|which best|analyz|what best|best (course|approach|alternative))/i;
+
 function findCognitiveViolations(text) {
   const violations = [];
   const objects = extractObjectsFromText(text);
@@ -173,15 +181,16 @@ function findCognitiveViolations(text) {
     const cog = obj.CognitiveLevel;
     if (!cog || !/^(Analyze|Evaluate)$/.test(cog)) continue;
 
-    const qid = obj.QuestionID || '(unknown)';
-    const stem = obj.Stem || '';
-    const ec = obj.ExplanationCorrect || '';
+    const qid = obj.QuestionID || obj.ItemID || '(unknown)';
+    const stem = obj.Stem || obj.Prompt || '';
+    const ec = obj.ExplanationCorrect || obj.Explanation || '';
     const diff = obj.DifficultyScore;
 
     // GATE 3 (AF-3) — Deterministic Rule Application
     const hasRuleRef = /Under (ASC|IFRS|COSO|GAAP|IAS)/i.test(stem);
-    const hasTradeOff = /competing|best option|weigh|trade.off|balance/i.test(ec);
-    if (hasRuleRef && !hasTradeOff) {
+    const hasTradeOff = AF3_TRADEOFF.test(ec) || AF3_TRADEOFF.test(stem);
+    const isDefinitionalJudgment = AF3_DEFINITIONAL.test(stem) && AF3_JUDGMENT.test(stem);
+    if (hasRuleRef && !hasTradeOff && !isDefinitionalJudgment) {
       violations.push({ qid, cog, gate: 'AF-3', reason: 'Deterministic rule application without trade-off language', actual: 'Apply' });
     }
 
@@ -192,7 +201,7 @@ function findCognitiveViolations(text) {
 
     // GATE 5 (AF-5) — Difficulty-Cognitive Mismatch
     if (cog === 'Evaluate' && diff !== undefined && diff <= 2) {
-      violations.push({ qid, cog, gate: 'AF-5', reason: `Evaluate requires DifficultyScore >= 3 (got ${diff})`, actual: 'Analyze' });
+      violations.push({ qid, cog, gate: 'AF-5', reason: `Evaluate requires DifficultyScore >= 3 (got ${diff})`, actual: cog === 'Evaluate' ? 'Analyze' : 'Apply' });
     }
     if (cog === 'Analyze' && diff !== undefined && diff == 1) {
       violations.push({ qid, cog, gate: 'AF-5', reason: `Analyze requires DifficultyScore >= 2 (got ${diff})`, actual: 'Apply' });
@@ -955,6 +964,129 @@ test("AF-5 PASS — Analyze at DifficultyScore=2 (boundary minimum)", () => {
   assert(v.length === 0, `Expected 0 violations (Analyze at Difficulty=2 meets minimum), got ${v.length}`);
 });
 
+console.log("\n  RULE 11 — P2 Calibration (Session P2-085, AF-3 v4)\n");
+
+test("RULE11-P2 PASS — definitional COSO Principle citation is not a trade-off question", () => {
+  // Regression: the S122 gold-standard false positive. P1-ED-013 family —
+  // "Under COSO Principle 12" names a rule; the explanation restates it, so
+  // no trade-off token can appear. v1 flagged this; v4 exempts it.
+  const text = `{
+    "QuestionID": "P1-ED-013",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 4,
+    "Stem": "The monitoring report was generated and found nothing unusual. Evaluate the design of this control activity under COSO Principle 12.",
+    "ExplanationCorrect": "Under COSO Principle 12, the organization deploys control activities through policies that establish what is expected."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (definitional citation exempt), got ${v.length}: ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 PASS — numbered ASC citation is a definitional anchor", () => {
+  const text = `{
+    "QuestionID": "P2-A-049",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3,
+    "Stem": "Pacific Logistics reported total liabilities of $1,920,000 before adopting ASC 842. What is the post-adoption total?",
+    "ExplanationCorrect": "Under ASC 842, lessees must recognize a right-of-use asset and a corresponding lease liability."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (ASC 842 numbered citation exempt), got ${v.length}: ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 PASS — trade-off stated in the STEM only (v1 false negative)", () => {
+  // P1-E-008 family: three-option judgment whose only trade-off token
+  // ("balance") lives in the stem. v1 scanned the explanation alone and
+  // wrongly flagged it; v4 scans both fields.
+  const text = `{
+    "QuestionID": "P1-E-008",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "Under COSO's Internal Control framework, the controller has three options: (A) write off the balance, (B) investigate further, (C) escalate. Which should the controller recommend?",
+    "ExplanationCorrect": "Under COSO Principle 1, management bears primary responsibility."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (stem trade-off detected), got ${v.length}: ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 BLOCK — genuine P2 case item with rule ref and no trade-off", () => {
+  // P2 case items use Prompt/ItemID/Explanation rather than
+  // Stem/QuestionID/ExplanationCorrect. The gate must still fire.
+  const text = `{
+    "ItemID": "CBQ23-TEST-Q1",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3,
+    "Prompt": "Under GAAP, how is this item presented on the statement?",
+    "Explanation": "GAAP requires the item to be recorded at cost."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.some(x => x.gate === "AF-3"), `Expected AF-3 to fire on P2 case item, got ${JSON.stringify(v)}`);
+  assert(v[0].qid === "CBQ23-TEST-Q1", `Expected ItemID as qid for case items, got ${v[0].qid}`);
+});
+
+test("RULE11-P2 BLOCK — rule ref with no trade-off and no numbered citation still fires", () => {
+  const text = `{
+    "QuestionID": "P2-D-TEST-001",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "Under COSO, what is required here?",
+    "ExplanationCorrect": "COSO requires documentation of the control."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.some(x => x.gate === "AF-3"), `Expected AF-3 to fire, got ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 PASS — genuine P2 Evaluate with a real trade-off (Pack D family)", () => {
+  // P2-D-273 family: residual risk within tolerance vs cost of further
+  // controls — a real judgment call. Must NOT be flagged.
+  const text = `{
+    "QuestionID": "P2-D-273",
+    "CorrectChoice": "C",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 5,
+    "Stem": "Under COSO ERM 2017, should the business accept the residual risk or purchase further controls?",
+    "ExplanationCorrect": "Acceptance is legitimate when residual risk sits within tolerance and the cost of further response exceeds the benefit — this is a competing-alternative judgment."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (genuine Evaluate), got ${v.length}: ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 PASS — 'which evaluation of X is most accurate' + numbered citation", () => {
+  // P1-ED-057/063/068 + P1-ED-006 + P1-EC-034 family. A narrow judgment
+  // regex (requiring "best characterizes") missed this phrasing and let 5
+  // S122 gold items through as false positives. Locks the wider calibration.
+  const text = `{
+    "QuestionID": "P1-ED-068",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 4,
+    "Stem": "Which best evaluates the integrity of Orion's KPI-based monitoring under COSO Principle 16?",
+    "ExplanationCorrect": "COSO Principle 16 states that the organization selects, develops, and performs ongoing evaluations."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}: ${JSON.stringify(v)}`);
+});
+
+test("RULE11-P2 BLOCK — numbered citation WITHOUT judgment framing still blocks", () => {
+  // Guards the other edge: the exemption must require BOTH a numbered
+  // citation and judgment framing. This is the P1-A-012 shape — a numbered
+  // ASC citation asking for required treatment, which is deterministic.
+  const text = `{
+    "QuestionID": "P1-A-012",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "Under ASC 450, which accounts for loss contingencies, what is the required treatment when a loss is probable and reasonably estimable?",
+    "ExplanationCorrect": "Under ASC 450, a loss contingency must be accrued when both conditions are met."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.some(x => x.gate === "AF-3"), `Expected AF-3 to fire, got ${JSON.stringify(v)}`);
+});
+
 console.log("\n  Negative Tests — Genuine Higher-Order Items Pass\n");
 
 test("PASS — Genuine Evaluate: decision maker + competing alternatives + trade-off + Diff=4", () => {
@@ -1420,6 +1552,163 @@ test("Rule 21 BYPASS — BLOCK-AUTHORIZED marker allows adjudicated restore", ()
   const v = findQuarantinedCertViolations(scope, Q_MANIFEST);
   const blocked = v.length > 0 && !BLOCK_AUTH_RE.test(scope);
   assert(blocked === false, `Expected bypass to allow, got blocked=${blocked}`);
+});
+
+// ── RULE 22 / 23 — Board v2.0 Final (added Session P2-085) ───────────────────
+// RULE 22: evidence-basis traceability. RULE 23: chunked-part manifest.
+// These were implemented in the plugin with zero coverage; AGENTS.md §8 claimed
+// the suite ran via `npm run preflight`, which no npm script did.
+
+console.log("\nRULE 22 — Evidence-basis traceability (board v2.0 Final / DL-045)\n");
+
+// RULE 22 mirrors the plugin's SOURCE_FILE_RE, which matches a bare basename.
+const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js|pack_p2_[a-f]\.js)$/i;
+const ADMISSIBLE_RE = /\b(stratified review|context review|adjudicated|independently derived|triage|candidate-list|BLOCK-AUTHORIZED)\b/i;
+
+// Mirror of plugin findEvidenceBasisViolations
+function findEvidenceBasisViolations(text, oldText, filePath) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  const oldObjects = extractObjectsFromText(oldText || "");
+  const isSourceFile = SOURCE_FILE_RE.test(String(filePath).replace(/\\/g, "/").split("/").pop());
+  if (!isSourceFile) return violations;
+  for (const obj of objects) {
+    const qid = obj.QuestionID || "(unknown)";
+    const oldObj = oldObjects.find(o => o.QuestionID === qid);
+    const newState = obj.question_state, oldState = oldObj && oldObj.question_state;
+    const isCertTransition = newState && oldState && newState !== oldState &&
+      (newState === "Certified" || oldState === "Certified");
+    const isAnswerKeyChange = oldObj &&
+      ((obj.CorrectChoice && oldObj.CorrectChoice && obj.CorrectChoice !== oldObj.CorrectChoice) ||
+       (obj.Correct && oldObj.Correct && obj.Correct !== oldObj.Correct));
+    const isExplanationRewrite = obj.question_state === "Certified" && oldObj &&
+      ((obj.ExplanationCorrect && oldObj.ExplanationCorrect && obj.ExplanationCorrect !== oldObj.ExplanationCorrect) ||
+       (obj.ExplanationWrongA && oldObj.ExplanationWrongA && obj.ExplanationWrongA !== oldObj.ExplanationWrongA) ||
+       (obj.ExplanationWrongB && oldObj.ExplanationWrongB && obj.ExplanationWrongB !== oldObj.ExplanationWrongB) ||
+       (obj.ExplanationWrongC && oldObj.ExplanationWrongC && obj.ExplanationWrongC !== oldObj.ExplanationWrongC) ||
+       (obj.ExplanationWrongD && oldObj.ExplanationWrongD && obj.ExplanationWrongD !== oldObj.ExplanationWrongD));
+    if (!isCertTransition && !isAnswerKeyChange && !isExplanationRewrite) continue;
+    if (!ADMISSIBLE_RE.test(text)) {
+      violations.push({ qid, reason: "certification/answer-key/explanation change without evidence-basis note" });
+    }
+  }
+  return violations;
+}
+
+// SOURCE_FILE_RE matches a BASENAME (the plugin passes basename(filePath)),
+// so the fixture path must be a bare pack filename, not a repo-relative path.
+const PKG = "pack_a_corrected.js";
+const BEFORE_CERT = `{ "QuestionID": "P1-A-500", "CorrectChoice": "B", "question_state": "In Audit" }`;
+const AFTER_CERT  = `{ "QuestionID": "P1-A-500", "CorrectChoice": "B", "question_state": "Certified" }`;
+const BEFORE_KEY  = `{ "QuestionID": "P1-A-501", "CorrectChoice": "A", "question_state": "In Audit" }`;
+const AFTER_KEY   = `{ "QuestionID": "P1-A-501", "CorrectChoice": "C", "question_state": "In Audit" }`;
+const NOTE = `evidence basis: stratified review`;
+
+test("Rule 22 BLOCK — certification transition without evidence basis", () => {
+  const v = findEvidenceBasisViolations(AFTER_CERT, BEFORE_CERT, PKG);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].qid === "P1-A-500", `Expected P1-A-500, got ${v[0].qid}`);
+});
+
+test("Rule 22 PASS — certification transition with evidence basis", () => {
+  const v = findEvidenceBasisViolations(AFTER_CERT + "\n" + NOTE, BEFORE_CERT, PKG);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 22 BLOCK — answer-key change without evidence basis", () => {
+  const v = findEvidenceBasisViolations(AFTER_KEY, BEFORE_KEY, PKG);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+});
+
+test("Rule 22 PASS — non-source file is out of scope", () => {
+  const v = findEvidenceBasisViolations(AFTER_CERT, BEFORE_CERT, "scripts/some_tool.js");
+  assert(v.length === 0, `Expected 0 violations for non-source file, got ${v.length}`);
+});
+
+console.log("\nRULE 23 — Chunked-part manifest (board v2.0 Final / §18.2)\n");
+
+const CHUNKED_PART_PATHS_RE = /(?:^|\/)(?:content\/packs|p2)\/.*\.js$/;
+const CHUNK_THRESHOLD = 200 * 1024;
+
+// Mirror of plugin findChunkedPartViolations (file-size branch only)
+function findChunkedPartViolations(filePath, sizeBytes) {
+  const normalizedPath = String(filePath || "").replace(/\\/g, "/");
+  if (!CHUNKED_PART_PATHS_RE.test(normalizedPath)) return [];
+  if (sizeBytes <= CHUNK_THRESHOLD) return [];
+  return [{ reason: `Pack file exceeds ${Math.round(CHUNK_THRESHOLD/1024)}KB threshold without chunked-part protocol` }];
+}
+
+test("Rule 23 BLOCK — pack file >200KB without chunked-part protocol", () => {
+  const v = findChunkedPartViolations("content/packs/pack_a_corrected.js", 300 * 1024);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+});
+
+test("Rule 23 PASS — pack file under the 200KB threshold", () => {
+  const v = findChunkedPartViolations("content/packs/pack_a_corrected.js", 150 * 1024);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 23 PASS — non-pack path is out of scope", () => {
+  const v = findChunkedPartViolations("scripts/build_master_registry.js", 400 * 1024);
+  assert(v.length === 0, `Expected 0 violations for non-pack path, got ${v.length}`);
+});
+
+test("Rule 23 PASS — P2 pack over threshold IS in scope", () => {
+  const v = findChunkedPartViolations("p2/pack_p2_a.js", 300 * 1024);
+  assert(v.length === 1, `Expected 1 violation for p2 pack over threshold, got ${v.length}`);
+});
+
+console.log("\nRULE 20 — CaseExtractor fail-closed behaviour (DL-P2-025)\n");
+
+// Direct tests against the real lib, not a copy — DL-P2-025's whole point is
+// that a duplicated mirror can drift from the shipped implementation.
+const CaseExtractor = require(path.join(__dirname, "lib/CaseExtractor.js"));
+
+test("DL-P2-025 — plain JSON bank extracts", () => {
+  const r = CaseExtractor.extractFromContentDetailed('const CASE_PACK_1 = [{"CaseID":"A","Items":[]}];');
+  assert(r.ok === true, `Expected ok, got ${r.error}`);
+  assert(r.cases.length === 1, `Expected 1 case, got ${r.cases.length}`);
+});
+
+test("DL-P2-025 — JS-literal values no longer silently drop the bank", () => {
+  // These five all returned null before the fix, vanishing from every gate.
+  for (const [label, src] of [
+    ["template literal", 'const CASE_PACK_1 = [{"CaseID":"A","Items":[],"T":`x`}];'],
+    ["regex literal",    'const CASE_PACK_1 = [{"CaseID":/ab/,"Items":[]}];'],
+    ["function value",   'const CASE_PACK_1 = [{"CaseID":function(){},"Items":[]}];'],
+    ["undefined",        'const CASE_PACK_1 = [{"CaseID":undefined,"Items":[]}];'],
+    ["NaN",              'const CASE_PACK_1 = [{"CaseID":NaN,"Items":[]}];'],
+  ]) {
+    const r = CaseExtractor.extractFromContentDetailed(src);
+    assert(r.ok === true, `${label}: expected ok, got "${r.error}"`);
+    assert(r.cases.length === 1, `${label}: expected 1 case, got ${r.cases.length}`);
+  }
+});
+
+test("DL-P2-025 — malformed input reports a reason, not a bare null", () => {
+  const r = CaseExtractor.extractFromContentDetailed('const CASE_PACK_1 = [{"CaseID":"A","Items":[];');
+  assert(r.ok === false, "Expected ok=false for a truncated bank");
+  assert(typeof r.error === "string" && r.error.length > 0, "Expected a non-empty error string");
+  assert(r.cases === null, "Expected cases=null on failure");
+});
+
+test("DL-P2-025 — no-array input is reported, not silently null", () => {
+  const r = CaseExtractor.extractFromContentDetailed('const X = 42;');
+  assert(r.ok === false, "Expected ok=false when no case array is present");
+  assert(/no case-array/i.test(r.error), `Expected descriptive error, got "${r.error}"`);
+});
+
+test("DL-P2-025 — strict mode throws instead of returning null", () => {
+  let threw = false;
+  try { CaseExtractor.extractFromContent('const CASE_PACK_1 = [{"CaseID":"A","Items":[];', { strict: true }); }
+  catch (e) { threw = true; }
+  assert(threw, "Expected strict mode to throw on parse failure");
+});
+
+test("DL-P2-025 — all-or-nothing: a failed parse never yields a partial array", () => {
+  const r = CaseExtractor.extractFromContentDetailed('const CASE_PACK_1 = [{"CaseID":"A","Items":[]};');
+  assert(!(Array.isArray(r.cases) && r.cases.length > 0),
+         "Must never return a partial array on failure");
 });
 
 // ── SEMANTIC KEY VERIFIER GATE — Regression Test ─────────────────────────────

@@ -110,13 +110,54 @@ function flag(bank, part, caseObj, item, screen, detail, severity) {
     screen, severity, detail
   });
 }
+// ── Screen D: explanation boilerplate + authoring scratchwork ──────────────
+// Added 2026-09-30 (Session P2-HAND-SOLVE-WAVE) after DL-P2-026 was closed
+// against a 6-phrase list that turned out to be incomplete, and after screen C
+// caught a learner-facing explanation containing raw authoring scratchwork.
+//
+// The phrase list below is the FULL verified set (9 phrases, zero-asserted at
+// 0/660 by two independent methods). It is load-bearing: adding to it prevents
+// recurrence, so a future session that finds a new phrase should append it here
+// rather than only fixing the affected items.
+//
+// DL-045: this screen emits evidence only. It never rewrites anything.
+const BOILERPLATE_PHRASES = [
+  // Original DL-P2-026 set (6)
+  'The explanation supports all correct choices by addressing each one individually.',
+  'The correct choice is supported by the exhibit data and the governing accounting standard.',
+  'This explanation specifically supports the correct choice based on the exhibit data and governing standard.',
+  'The calculation follows the standard formula with the values from the exhibits.',
+  'This result means the business can make an informed decision based on the quantitative analysis.',
+  'A common error is to misapply the formula or use incorrect exhibit values.',
+  // 7th phrase + its lead-in, found 2026-09-30 in 18 items (8 already Certified)
+  'Under the applicable accounting standard, This is the correct answer because it properly applies the governing standard.',
+  'Under the applicable accounting standard,',
+  'This is the correct answer because it properly applies the governing standard',
+];
+// Authoring scratchwork: reasoning left in learner-facing text.
+// The `(?:\.\d+)?\s*(?:approx|for|\?)` tail is what catches the real
+// "Set 1.62?" / "We key 1.58 approx" forms seen on the P1/P2 pools.
+const SCRATCHWORK_RE = /\bHmm\b|\bWe key\b|\bSet \d+(?:\.\d+)?\s*(?:approx|for|\?)|\? Actually|\bNeed compute\b|\bsimplify:\s*we key\b/;
+
 function isCertified(caseObj, item) {
   return (item.question_state || caseObj.question_state) === 'Certified';
 }
 
+// Tracks banks the extractor could not parse. A silently-skipped bank would
+// report "zero cases scanned" and read as a clean pass — DL-P2-025.
+let extractionFailures = 0;
+
 for (const { file, part } of BANKS) {
   const full = path.join(BASE, file);
-  const cases = CaseExtractor.extractCases(full) || [];
+  const detail = CaseExtractor.extractFromContentDetailed(fs.readFileSync(full, 'utf8'));
+  if (!detail.ok) {
+    // Fail closed: a bank we cannot parse is an unverified bank, not an empty one.
+    extractionFailures++;
+    census.banks[file] = { cases: 0, items: 0, certified: 0, extractionFailed: true, error: detail.error };
+    console.error('EXTRACTION FAILURE: ' + file + ' — ' + detail.error);
+    continue;
+  }
+  const cases = detail.cases;
   census.banks[file] = { cases: cases.length, items: 0, certified: 0 };
   census.totalCases += cases.length;
   for (const c of cases) {
@@ -228,6 +269,22 @@ for (const { file, part } of BANKS) {
           flag(file, part, c, it, 'B', 'ORPHAN-CORRECT (DL-038 class): ' + orphans.length + ' Correct value(s) not in RightItems: ' + orphans.map(s => s.slice(0, 50)).join(' | '), 'FLAG');
         }
       }
+      // Screen D: generic boilerplate or raw authoring scratchwork in a
+      // learner-facing explanation. Both make an item unteachable regardless of
+      // whether its answer key is correct.
+      if (expl) {
+        const hits = BOILERPLATE_PHRASES.filter(p => expl.includes(p));
+        if (hits.length) {
+          flag(file, part, c, it, 'D', 'BOILERPLATE: ' + hits.length + ' known filler phrase(s): ' +
+            hits.map(h => '"' + h.slice(0, 48) + (h.length > 48 ? '…' : '') + '"').join(' | '), 'FLAG');
+        }
+        const sm = SCRATCHWORK_RE.exec(expl);
+        if (sm) {
+          flag(file, part, c, it, 'D', 'SCRATCHWORK: authoring reasoning left in learner text near "' +
+            sm[0] + '" — ' + expl.slice(Math.max(0, sm.index - 40), sm.index + 90).replace(/\s+/g, ' '), 'FLAG');
+        }
+      }
+
       // Screen C: explanation scope = Prompt + choices + ScenarioText.
       if (explWords >= 20) {
         const scope = tokenSet((it.Prompt || '') + ' ' + (Array.isArray(it.Choices) ? it.Choices.join(' ') : '') + ' ' + scenario);
@@ -240,13 +297,30 @@ for (const { file, part } of BANKS) {
       } else {
         flag(file, part, c, it, 'C', 'EMPTY: Explanation missing/empty', 'FLAG');
       }
+
+      // Screen E4 (SHORT-EXPLANATION): an explanation shorter than the gold-schema
+      // floor (ITEM_BANK_GOLD_SCHEMA.md §4.1, ALGORITHMS_SCORING_AND_ANALYTICS.md:149)
+      // cannot carry the principle + formula/substitution + interpretation the
+      // standard requires, so it is unteachable regardless of correctness.
+      //
+      // Calibration boundary stated in the closure claim: a sweep of all 1,085
+      // case-bank items found 27 explanations under 150 chars (7 In Audit, 20
+      // Certified). These are reported as evidence, not suppressed — the class is
+      // schema-bounded at 150 chars per the gold standard, not fitted to one
+      // observation. DL-P2-029. READ-ONLY — emits evidence only (DL-045).
+      const explLen = String(expl || '').length;
+      if (explLen > 0 && explLen < 150) {
+        flag(file, part, c, it, 'E', 'SHORT-EXPLANATION: ' + explLen +
+          ' chars (< 150 gold-schema floor) — cannot carry principle + formula + interpretation', 'FLAG');
+      }
     }
   }
 }
 
 const out = {
   generated: new Date().toISOString(),
-  method: 'case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w)',
+  method: 'case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w) D(9-phrase boilerplate + authoring-scratchwork regex; added 2026-09-30 DL-P2-026 correction) E(KEY-UNSUPPORTED+SCRATCHWORK+KEY-TYPE+ENCODING+SHORT-LENGTH; added 2026-10-04 per DL-P2-029/DL-P2-026/DL-P2-026-ext/DL-067 short-explanation class)',
+  extractionFailures,
   census,
   flags
 };
@@ -271,3 +345,12 @@ console.log('flags=' + flags.length + ' ' + JSON.stringify(byScreen) + ' severit
 console.log(JSON.stringify(byKind, null, 1));
 console.log('certified-state flags=' + certFlags);
 console.log('wrote ' + jsonPath);
+
+// DL-P2-025: an unparseable bank means an unverified bank. Report it as a
+// non-zero exit so no caller can treat a partial scan as a clean run.
+if (extractionFailures > 0) {
+  console.error('SCREEN GATE: FAIL — ' + extractionFailures +
+                ' bank(s) could not be extracted; results are incomplete.');
+  process.exit(1);
+}
+console.log('screen gate: PASS — all ' + BANKS.length + ' banks extracted');

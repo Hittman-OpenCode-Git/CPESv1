@@ -1,5 +1,22 @@
 const fs = require("fs");
 
+// ── DL-P2-025: silent parse-failure containment ─────────────────────────────
+// Before: extractFromContent caught every error and returned `null`, and
+// consumers treated `null` as "skip this bank". A bank containing a
+// template literal, regex literal, function, `undefined`, or `NaN` therefore
+// vanished from every downstream gate with no signal — the Rule 20
+// silent-drop class (DL-049).
+//
+// Three changes:
+//   1. `extractFromContentDetailed` returns { ok, cases, error, partial } so a
+//      caller can distinguish a parse failure from an legitimately empty bank.
+//   2. On failure it records the error and the offending offset — never a bare null.
+//   3. `extractFromContent` keeps its original signature for back-compat but now
+//      WARNS on stderr instead of failing silently, and supports an
+//      { strict: true } option that throws instead of returning null.
+//
+// All-or-nothing is preserved deliberately: the extractor has never returned a
+// PARTIAL array, so a non-null result is always the complete bank.
 class CaseExtractor {
     /**
      * Extracts case arrays from a JS case bank file.
@@ -8,13 +25,37 @@ class CaseExtractor {
      *   const ENHANCED_CASE_BASE2 = [{...}, ...];
      *   const SCORED_CASES = [{...}, ...];
      */
-    static extractCases(filePath) {
+    static extractCases(filePath, opts) {
         if (!fs.existsSync(filePath)) return null;
         const content = fs.readFileSync(filePath, "utf8");
-        return CaseExtractor.extractFromContent(content);
+        const r = CaseExtractor.extractFromContentDetailed(content, opts);
+        return r.ok ? r.cases : null;
     }
 
-    static extractFromContent(content) {
+    /** Back-compat wrapper. See DL-P2-025 note above. */
+    static extractFromContent(content, opts) {
+        const r = CaseExtractor.extractFromContentDetailed(content, opts);
+        if (r.ok) return r.cases;
+        if (opts && opts.strict) {
+            throw new Error("CaseExtractor: " + r.error);
+        }
+        // Loud, not silent. Consumers that ignore this will still see null,
+        // but the failure is now visible in logs instead of vanishing.
+        console.error(
+            "CaseExtractor: FAILED to parse case bank (" + r.error + ")" +
+            (r.hint ? " — " + r.hint : "") +
+            "\n  Returning null. Callers MUST fail closed; treat this bank as unverified."
+        );
+        return null;
+    }
+
+    /**
+     * Detailed extraction. Returns:
+     *   { ok: true,  cases: [...], error: null, hint: null }
+     *   { ok: false, cases: null,   error: string, hint: string }
+     * A successful result is ALWAYS the complete array (never partial).
+     */
+    static extractFromContentDetailed(content, opts) {
         try {
             // Find the array assignment pattern
             const patterns = [
@@ -40,7 +81,15 @@ class CaseExtractor {
                 }
             }
 
-            if (startIdx === -1) return null;
+            if (startIdx === -1) {
+                return {
+                    ok: false, cases: null,
+                    error: "no case-array declaration found",
+                    hint: "expected const/var CASE_PACK_N, casePackP2_N, " +
+                          "casePackP2Authored, casePackP2_C4_C8, ENHANCED_CASE_BASE, " +
+                          "SCORED_CASES, or a bare leading array",
+                };
+            }
 
             // Track bracket depth to find matching closing bracket
             let depth = 0;
@@ -75,7 +124,11 @@ class CaseExtractor {
                 }
             }
 
-            if (endIdx === -1) return null;
+            if (endIdx === -1) {
+                return { ok: false, cases: null,
+                    error: "unterminated array literal starting at offset " + startIdx,
+                    hint: "no matching ']' — file may be truncated" };
+            }
 
             let arrayText = content.substring(startIdx, endIdx + 1);
 
@@ -85,10 +138,35 @@ class CaseExtractor {
             // Convert JS to JSON
             arrayText = CaseExtractor.normalizeToJSON(arrayText);
 
-            const parsed = JSON.parse(arrayText);
-            return Array.isArray(parsed) ? parsed : [parsed];
+            let parsed;
+            try {
+                parsed = JSON.parse(arrayText);
+            } catch (e) {
+                // JSON.parse cannot handle JS-literal values (template literals,
+                // regex, functions, undefined, NaN). Fall back to the JS
+                // evaluator before declaring failure — this closes the gap that
+                // made those values silently drop the whole bank.
+                try {
+                    parsed = new Function("return " + arrayText)();
+                } catch (e2) {
+                    return {
+                        ok: false, cases: null,
+                        error: "parse failed at offset ~" + startIdx + ": " + e2.message,
+                        hint: "JS-literal value (template literal, regex, function, " +
+                              "undefined, NaN) or malformed object literal. Source is " +
+                              "not JSON-parseable and not valid JS either.",
+                    };
+                }
+            }
+            return {
+                ok: true,
+                cases: Array.isArray(parsed) ? parsed : [parsed],
+                error: null, hint: null,
+            };
         } catch (e) {
-            return null;
+            return { ok: false, cases: null,
+                error: "unexpected: " + (e && e.message ? e.message : String(e)),
+                hint: null };
         }
     }
 

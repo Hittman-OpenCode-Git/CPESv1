@@ -1,0 +1,194 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-09-30T20:06:11.573Z",
+  "root": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026",
+  "result": "PASS",
+  "failures": 0,
+  "baselines": {
+    "p1": {
+      "perPack": [
+        {
+          "file": "content/packs/pack_a_corrected.js",
+          "label": "P1-A",
+          "raw": 560,
+          "cert": 560
+        },
+        {
+          "file": "content/packs/pack_b_corrected.js",
+          "label": "P1-B",
+          "raw": 620,
+          "cert": 620
+        },
+        {
+          "file": "content/packs/pack_c_corrected.js",
+          "label": "P1-C",
+          "raw": 620,
+          "cert": 606
+        },
+        {
+          "file": "content/packs/pack_d_corrected.js",
+          "label": "P1-D",
+          "raw": 590,
+          "cert": 586
+        },
+        {
+          "file": "content/packs/pack_e_corrected.js",
+          "label": "P1-E",
+          "raw": 680,
+          "cert": 680
+        }
+      ],
+      "totalCertified": 3052
+    },
+    "p2": {
+      "perPack": [
+        {
+          "file": "p2/pack_p2_a.js",
+          "label": "P2-A",
+          "raw": 622,
+          "cert": 622
+        },
+        {
+          "file": "p2/pack_p2_b.js",
+          "label": "P2-B",
+          "raw": 620,
+          "cert": 620
+        },
+        {
+          "file": "p2/pack_p2_c.js",
+          "label": "P2-C",
+          "raw": 788,
+          "cert": 788
+        },
+        {
+          "file": "p2/pack_p2_d.js",
+          "label": "P2-D",
+          "raw": 500,
+          "cert": 500
+        },
+        {
+          "file": "p2/pack_p2_e.js",
+          "label": "P2-E",
+          "raw": 500,
+          "cert": 500
+        },
+        {
+          "file": "p2/pack_p2_f.js",
+          "label": "P2-F",
+          "raw": 500,
+          "cert": 500
+        }
+      ],
+      "totalCertified": 3530
+    },
+    "p2cases": {
+      "files": [
+        "p2/case_pack_p2_1.js",
+        "p2/case_pack_p2_2.js",
+        "p2/case_pack_p2_3.js",
+        "p2/case_pack_p2_authored.js",
+        "p2/case_pack_p2_C4_C8.js"
+      ],
+      "strictEligible": 33
+    }
+  },
+  "log": [
+    "PASS: P1-A raw QID 560 == baseline",
+    "PASS: P1-A parsePack records == raw (560)",
+    "PASS: P1-A Certified 560 == baseline",
+    "PASS: P1-A Tier-1-only: no Unprocessed/In Audit/Editorial/Active/missing states",
+    "PASS: P1-B raw QID 620 == baseline",
+    "PASS: P1-B parsePack records == raw (620)",
+    "PASS: P1-B Certified 620 == baseline",
+    "PASS: P1-B Tier-1-only: no Unprocessed/In Audit/Editorial/Active/missing states",
+    "PASS: P1-C raw QID 620 == baseline",
+    "PASS: P1-C parsePack records == raw (620)",
+    "PASS: P1-C Certified 606 == baseline",
+    "PASS: P1-C 14 Archived reconciled (raw-cert==archived; excluded from delivery by design)",
+    "PASS: P1-C Tier-1-only: no Unprocessed/In Audit/Editorial/Active/missing states",
+    "PASS: P1-D raw QID 590 == baseline",
+    "PASS: P1-D parsePack records == raw (590)",
+    "PASS: P1-D Certified 586 == baseline",
+    "PASS: P1-D 4 Archived reconciled (raw-cert==archived; excluded from delivery by design)",
+    "PASS: P1-D Tier-1-only: no Unprocessed/In Audit/Editorial/Active/missing states",
+    "PASS: P1-E raw QID 680 == baseline",
+    "PASS: P1-E parsePack records == raw (680)",
+    "PASS: P1-E Certified 680 == baseline",
+    "PASS: P1-E Tier-1-only: no Unprocessed/In Audit/Editorial/Active/missing states",
+    "PASS: P1 Tier-1 pool total 3052 == baseline 3052",
+    "PASS: P2-A raw QID 622 == baseline",
+    "PASS: P2-A parsePack records == raw",
+    "PASS: P2-A Certified 622 == baseline",
+    "PASS: P2-A Part2OnlyFlag true on all 622",
+    "PASS: P2-A Rule-14 part eligibility clean",
+    "PASS: P2-A Tier-1-only clean",
+    "PASS: P2-B raw QID 620 == baseline",
+    "PASS: P2-B parsePack records == raw",
+    "PASS: P2-B Certified 620 == baseline",
+    "PASS: P2-B Part2OnlyFlag true on all 620",
+    "PASS: P2-B Rule-14 part eligibility clean",
+    "PASS: P2-B Tier-1-only clean",
+    "PASS: P2-C raw QID 788 == baseline",
+    "PASS: P2-C parsePack records == raw",
+    "PASS: P2-C Certified 788 == baseline",
+    "PASS: P2-C Part2OnlyFlag true on all 788",
+    "PASS: P2-C Rule-14 part eligibility clean",
+    "PASS: P2-C Tier-1-only clean",
+    "PASS: P2-D raw QID 500 == baseline",
+    "PASS: P2-D parsePack records == raw",
+    "PASS: P2-D Certified 500 == baseline",
+    "PASS: P2-D Part2OnlyFlag true on all 500",
+    "PASS: P2-D Rule-14 part eligibility clean",
+    "PASS: P2-D Tier-1-only clean",
+    "PASS: P2-E raw QID 500 == baseline",
+    "PASS: P2-E parsePack records == raw",
+    "PASS: P2-E Certified 500 == baseline",
+    "PASS: P2-E Part2OnlyFlag true on all 500",
+    "PASS: P2-E Rule-14 part eligibility clean",
+    "PASS: P2-E Tier-1-only clean",
+    "PASS: P2-F raw QID 500 == baseline",
+    "PASS: P2-F parsePack records == raw",
+    "PASS: P2-F Certified 500 == baseline",
+    "PASS: P2-F Part2OnlyFlag true on all 500",
+    "PASS: P2-F Rule-14 part eligibility clean",
+    "PASS: P2-F Tier-1-only clean",
+    "PASS: P2 Tier-1 pool total 3530 == baseline 3530",
+    "PASS: p2/case_pack_p2_1.js global casePackP2_1 evaluates (33 cases)",
+    "PASS: p2/case_pack_p2_2.js global casePackP2_2 evaluates (33 cases)",
+    "PASS: p2/case_pack_p2_3.js global casePackP2_3 evaluates (34 cases)",
+    "PASS: p2/case_pack_p2_authored.js global casePackP2Authored evaluates (5 cases)",
+    "PASS: p2/case_pack_p2_C4_C8.js global casePackP2_C4_C8 evaluates (5 cases)",
+    "PASS: no legacy scored_cases/ENHANCED_CASE_BASE globals contribute to P2 strict pool",
+    "PASS: P2 strict-eligible 33 cases / 198 items == preflight",
+    "INFO: P1 live banks census: 80 cases / 425 items (expect 80/425 all Certified)",
+    "PASS: P1 live case count 80 == baseline",
+    "INFO: blocklist manifests: governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json=114; governance/DEFECT_MANIFEST_DL008_DL026.json=264; scripts/output/semantic_quarantine.json=0",
+    "PASS: blocklist enforcement data present (378 blocked entries + 0 live-quarantine)",
+    "PASS: live quarantine empty (semantic_quarantine active 0/26 resolved) — no quarantined ID can leak",
+    "PASS: all 378 blocked entries resolve to real bank IDs (no manifest drift)",
+    "INFO: served-pool accounting: 6780 Certified pooled-eligible, 6422 served after blocklist exclusion",
+    "INFO: staleness note: Session-88 delivery blocklist predates remediation waves (over-blocking, learner-safe); refresh follow-up filed, not a probe FAIL",
+    "PASS: extractor loadAllQuestions scanned 6600 == raw total 6600 (5 P1 + 6 P2)",
+    "PASS: CaseExtractor content/cases/case_pack_1_corrected.js: 25 cases (raw CaseIDs 205)",
+    "PASS: CaseExtractor content/cases/case_pack_2_corrected.js: 25 cases (raw CaseIDs 192)",
+    "PASS: CaseExtractor content/cases/case_pack_3_corrected.js: 30 cases (raw CaseIDs 232)",
+    "PASS: CaseExtractor p2/case_pack_p2_1.js: 33 cases (raw CaseIDs 100)",
+    "PASS: CaseExtractor p2/case_pack_p2_2.js: 33 cases (raw CaseIDs 106)",
+    "PASS: CaseExtractor p2/case_pack_p2_3.js: 34 cases (raw CaseIDs 111)",
+    "PASS: CaseExtractor p2/case_pack_p2_authored.js: 5 cases (raw CaseIDs 15)",
+    "PASS: CaseExtractor p2/case_pack_p2_C4_C8.js: 5 cases (raw CaseIDs 15)",
+    "PASS: CaseIdentityValidator content/cases/case_pack_1_corrected.js: 25 cases with CaseID",
+    "PASS: CaseIdentityValidator content/cases/case_pack_2_corrected.js: 25 cases with CaseID",
+    "PASS: CaseIdentityValidator content/cases/case_pack_3_corrected.js: 30 cases with CaseID",
+    "PASS: CaseIdentityValidator p2/case_pack_p2_1.js: 33 cases with CaseID",
+    "PASS: CaseIdentityValidator p2/case_pack_p2_2.js: 33 cases with CaseID",
+    "PASS: CaseIdentityValidator p2/case_pack_p2_3.js: 34 cases with CaseID",
+    "PASS: CaseIdentityValidator p2/case_pack_p2_authored.js: 5 cases with CaseID",
+    "PASS: CaseIdentityValidator p2/case_pack_p2_C4_C8.js: 5 cases with CaseID",
+    "PASS: semantic_key_verifier lists 5 P1 + 6 P2 banks (P1=5 P2=6 refs)",
+    "PASS: case_semantic_screens covers all 8 live case banks",
+    "PASS: s121 dashboard covers 6 P2 packs (+5 P1)",
+    "PASS: ExplanationValidator covers P1+P2 MCQ and live case banks",
+    "PASS: Part2BlueprintValidator case files via config.part2CasePacks (5 files)"
+  ]
+}

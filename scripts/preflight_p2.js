@@ -177,18 +177,26 @@ for (const cpack of CASE_PACKS) {
 
   const content = fs.readFileSync(fp, "utf8");
 
-  // Parse check + CaseID extraction via CaseExtractor
+  // Parse check + CaseID extraction via CaseExtractor.
+  // DL-P2-025: a bank that cannot be extracted is UNVERIFIED, not empty.
+  // warn() increments the divergence counter, so this fails the T0 gate
+  // rather than silently shrinking the census.
   let cases = null;
   try {
     const CaseExtractor = require("./lib/CaseExtractor");
-    cases = CaseExtractor.extractFromContent(content);
+    const detail = CaseExtractor.extractFromContentDetailed(content);
+    if (!detail.ok) {
+      warn(cpack.label + " — CaseExtractor FAILED: " + detail.error);
+    } else {
+      cases = detail.cases;
+    }
   } catch (e) {
     warn(cpack.label + " — CaseExtractor FAILED: " + e.message.substring(0, 100));
   }
 
-  if (!cases || cases.length === 0) {
-    warn(cpack.label + " — no cases extracted (bare array or parse failure)");
-  } else {
+  if (cases && cases.length === 0) {
+    warn(cpack.label + " — bank extracted but contains ZERO cases");
+  } else if (cases) {
     ok(cpack.label + " — parse OK (" + cases.length + " cases)");
     let caseCertified = 0;
     for (const c of cases) {
@@ -210,7 +218,10 @@ for (const cpack of CASE_PACKS) {
   }
 
   // Global var presence check (flag bare arrays)
-  const varMatch = content.match(/^(var|const)\s+(\w+)\s*=/m);
+  // BOM-tolerant: quarantine_all_case_inversions.js rewrote packs via
+  // writeFileSync(..., '\uFEFF' + JSON.stringify(...)) leaving a leading BOM,
+  // which defeats the ^ anchor. Strip it before matching.
+  const varMatch = content.replace(/^\uFEFF/, "").match(/^(var|const)\s+(\w+)\s*=/m);
   if (!varMatch) {
     warn(cpack.label + " — NO GLOBAL VAR (bare array)");
   } else {

@@ -1,0 +1,441 @@
+{
+ "timestamp": "2026-09-24T14:17:21.706Z",
+ "mode": "commit",
+ "files": {
+  "p2/pack_p2_a.js": {
+   "itemsProcessed": 18,
+   "itemsSkipped": 0,
+   "originalHash": "38228a7998f8fde47bde959c742baf5927e251675ac0c78b86134afe7a6a23c9",
+   "insertions": [
+    {
+     "lineNum": 32231,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-622",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 32192,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-621",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 32152,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-620",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 32109,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-619",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 32070,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-618",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 32029,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-617",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 31986,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-616",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 31947,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-615",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 31904,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-614",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 31863,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-613",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 31823,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-A-612",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 31782,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-A-611",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 31743,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-610",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 31700,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-609",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 31660,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-608",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 31622,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-A-607",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 31581,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-A-606",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 31498,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-A-604",
+     "field": "ExplanationWrongA"
+    }
+   ],
+   "backupPath": "pack_p2_a.js.bak-20260924T141721",
+   "newHash": "ea398abe300d0b127cc5c3331c75ea34ec0885c38900f31b80daf1c7466f0123",
+   "originalSize": 2693034,
+   "newSize": 2693556
+  },
+  "p2/pack_p2_c.js": {
+   "itemsProcessed": 2,
+   "itemsSkipped": 0,
+   "originalHash": "8dd991db4fd8af66abbe22ea1432f2e72c9bc84a15020699709b341b9d5070da",
+   "insertions": [
+    {
+     "lineNum": 8961,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-C-199",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 8887,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-C-198",
+     "field": "ExplanationWrongA"
+    }
+   ],
+   "backupPath": "pack_p2_c.js.bak-20260924T141721",
+   "newHash": "64da5c3ce90fc9a705efb397bd24ba42d4b2b667ef9217ddf0737c1e4be67789",
+   "originalSize": 2821194,
+   "newSize": 2821252
+  },
+  "p2/pack_p2_e.js": {
+   "itemsProcessed": 47,
+   "itemsSkipped": 0,
+   "originalHash": "98c7670bd5aca0c890844b8519f137e8aca690fd7afda0ee9d3a9784cdf34fae",
+   "insertions": [
+    {
+     "lineNum": 22086,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-464",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 22043,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-463",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21957,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-461",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21915,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-460",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21827,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-458",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21785,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-457",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21741,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-456",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21697,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-455",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 21656,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-454",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21570,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-452",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21526,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-451",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21442,
+     "text": "    \"ExplanationWrongD\": \"\",",
+     "qid": "P2-E-449",
+     "field": "ExplanationWrongD"
+    },
+    {
+     "lineNum": 21398,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-448",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21355,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-447",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21312,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-446",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21269,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-445",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21225,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-444",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21181,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-443",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 21141,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-442",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 21098,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-441",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21055,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-440",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 21011,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-439",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 20927,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-437",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 20883,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-436",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 15444,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-315",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 15399,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-314",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 15308,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-312",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 15262,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-311",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 15177,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-309",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 15135,
+     "text": "    \"ExplanationWrongD\": \"\",",
+     "qid": "P2-E-308",
+     "field": "ExplanationWrongD"
+    },
+    {
+     "lineNum": 15043,
+     "text": "    \"ExplanationWrongC\": \"\",",
+     "qid": "P2-E-306",
+     "field": "ExplanationWrongC"
+    },
+    {
+     "lineNum": 14957,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-304",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14912,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-303",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14867,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-302",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14821,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-301",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 14779,
+     "text": "    \"ExplanationWrongD\": \"\",",
+     "qid": "P2-E-300",
+     "field": "ExplanationWrongD"
+    },
+    {
+     "lineNum": 14732,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-299",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14687,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-298",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14641,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-297",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 14596,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-296",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 14554,
+     "text": "    \"ExplanationWrongD\": \"\",",
+     "qid": "P2-E-295",
+     "field": "ExplanationWrongD"
+    },
+    {
+     "lineNum": 14507,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-294",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14462,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-293",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14416,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-292",
+     "field": "ExplanationWrongA"
+    },
+    {
+     "lineNum": 14374,
+     "text": "    \"ExplanationWrongD\": \"\",",
+     "qid": "P2-E-291",
+     "field": "ExplanationWrongD"
+    },
+    {
+     "lineNum": 14281,
+     "text": "    \"ExplanationWrongB\": \"\",",
+     "qid": "P2-E-289",
+     "field": "ExplanationWrongB"
+    },
+    {
+     "lineNum": 14235,
+     "text": "    \"ExplanationWrongA\": \"\",",
+     "qid": "P2-E-288",
+     "field": "ExplanationWrongA"
+    }
+   ],
+   "backupPath": "pack_p2_e.js.bak-20260924T141721",
+   "newHash": "735e30ebe478b6aba7de481415fafe75ee8ad5b42489b7625791126dab869092",
+   "originalSize": 1732215,
+   "newSize": 1733578
+  }
+ }
+}

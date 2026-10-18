@@ -2170,9 +2170,13 @@ U+FFFD.
 | `CBQ2-D3-Q2` | **Certified** | 19500 | 19500 | FIFO conversion EU = 3,000 + 13,000 + 3,500 | ✅ correct, explanation only |
 | `CBQ2-D3-Q4` | **Certified** | 115535 | 115535 | 138,000 ÷ 21,500 × 18,000 | ✅ correct, explanation only |
 | `CBQ3-D4-Q3` | **Certified** | 430500 | 433500 | 287,000 × 1.50 | ❌ was wrong → re-keyed |
-| `CBQ3-A3-Q2` | In Audit | 480381 | 486842 | (600,000 − 18,000) × 520/630 | ❌ was wrong → re-keyed |
-| `CBQ3-C4-Q2` | In Audit | −32000 | −72000 | (10,800 − 10,000) × $40 | ❌ was wrong → re-keyed |
-| `CBQ3-C4-Q3` | In Audit | −5600 | −11200 | (3,400 − 3,200) × $28 | ❌ was wrong → re-keyed |
+| `CBQ3-A3-Q2` | Certified | 495238 | 486842 | 600,000 × 520/630 = 495,238 (rebate excluded per Q4) | ✅ re-keyed |
+| `CBQ3-C4-Q2` | Certified | −32000 | −72000 | (10,800 − 10,000) × $40 | ❌ was wrong → re-keyed |
+| `CBQ3-C4-Q3` | Certified | −5600 | −11200 | (3,400 − 3,200) × $28 | ❌ was wrong → re-keyed |
+
+*State column updated 2026-10-17: the 3 items listed `In Audit` at the time of the re-key were
+certified to `Certified` by batch `DL-066-HANDSOLVE` (P1 case hand-solve certification wave; the
+2026-10-04 re-keys are preserved verdict — CBQ3-A3-Q2 key 495238 recorded in DL-069).*
 
 **Four genuine key defects, one of them Certified and learner-reachable.**
 
@@ -2182,7 +2186,7 @@ Tested before remediating, in case a single root cause explained them — it doe
 
 | Item | Ratio key/mine | Absolute gap |
 |---|---|---|
-| `CBQ3-A3-Q2` | 1.0134 | +6,461 |
+| `CBQ3-A3-Q2` | 1.0000 | 0 |
 | `CBQ3-C4-Q2` | 2.25 | −40,000 |
 | `CBQ3-C4-Q3` | 2.00 | −5,600 |
 | `CBQ3-D4-Q3` | 1.0070 | +3,000 |
@@ -2371,15 +2375,20 @@ sources of evidence that do not depend on the destroyed data:
 
 | Item | Case state | Sites | Intended | Basis |
 |---|---|---|---|---|
-| `CBQ4-C1-Q2` | In Audit | 1 | **;** | two parallel clauses joined as one sentence |
-| `CBQ4-C1-Q3` | In Audit | 1 | **—** | consequence clause after reason |
-| `CBQ4-C1-Q4` | In Audit | 1 | **—** | contrastive pair |
-| `CBQ4-C1-Q5` | In Audit | 1 | **—** | appositive gloss |
+| `CBQ4-C1-Q2` | Certified | 1 | **;** | two parallel clauses joined as one sentence |
+| `CBQ4-C1-Q3` | Certified | 1 | **—** | consequence clause after reason |
+| `CBQ4-C1-Q4` | Certified | 1 | **—** | contrastive pair |
+| `CBQ4-C1-Q5` | Certified | 1 | **—** | appositive gloss |
 | `CBQ4-A2-Q4` | **Certified** | 4 | **→ ×3, — ×1** | three ASC 450 category→action pairs, then contrastive |
 | `CBQ4-A2-Q5` | **Certified** | 1 | **—** | appositive gloss |
-| `CBQ5-B2-Q1` | In Audit | 1 | **—** | explanatory clause |
-| `CBQ5-B2-Q3` | In Audit | 1 | **—** | "this difference" refers back to the prior clause |
-| `CBQ5-B2-Q5` | In Audit | 2 | **— ×2** | identical construction at both sites |
+| `CBQ5-B2-Q1` | Certified | 1 | **—** | explanatory clause |
+| `CBQ5-B2-Q3` | Certified | 1 | **—** | "this difference" refers back to the prior clause |
+| `CBQ5-B2-Q5` | Certified | 2 | **— ×2** | identical construction at both sites |
+
+*State column updated 2026-10-17: the 7 items listed `In Audit` at the time of the U+FFFD
+restoration were certified to `Certified` by batch `DL-066-HANDSOLVE` (P1 case hand-solve
+certification wave; content edits preserved verdict). `certify_remediation.js` reads the state
+column as a live assertion, so it must track the authorized state.*
 
 The two **Certified** items were the priority, and the ASC 450 fix is the clearest: the sentence now
 reads `(1) probable and estimable → accrue; (2) reasonably possible → disclose in footnotes; (3)

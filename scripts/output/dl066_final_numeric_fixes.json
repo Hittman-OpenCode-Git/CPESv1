@@ -1,0 +1,40 @@
+[
+  {
+    "itemId": "CBQ-E2-Q1",
+    "fixed": true,
+    "derived": 3.529,
+    "method": "exception-rate-rounded",
+    "note": "Rate: 3.529% (from 12/340)"
+  },
+  {
+    "itemId": "CBQ3-A1-Q3",
+    "fixed": false,
+    "reason": "Pattern not found"
+  },
+  {
+    "itemId": "CBQ4-B1-Q1",
+    "fixed": true,
+    "derived": 10000,
+    "method": "high-low-fallback",
+    "note": "Found $10,000 in explanation"
+  },
+  {
+    "itemId": "CBQ4-B2-Q1",
+    "fixed": false,
+    "reason": "Pattern not found"
+  },
+  {
+    "itemId": "CBQ3-A3-Q1",
+    "fixed": true,
+    "derived": 480381,
+    "method": "revenue-allocation-alt",
+    "note": "$582,000 × 0.8253968 = 480380.95 → 480381"
+  },
+  {
+    "itemId": "CBQ3-C4-Q1",
+    "fixed": true,
+    "derived": 32000,
+    "method": "dm-variance-fallback",
+    "note": "Found 32000 in explanation"
+  }
+]

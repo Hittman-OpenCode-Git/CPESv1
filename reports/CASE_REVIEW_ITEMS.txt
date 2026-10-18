@@ -1,0 +1,1210 @@
+CASE SEMANTIC SCREENS — CERTIFIED-STATE ITEMS FOR EXTERNAL ADJUDICATION
+========================================================================
+Generated: 2026-09-25T16:07:45.398Z
+Source: scripts/output/case_semantic_flags.json
+Total certified-state flags: 148
+Total flags (all states): 427
+
+INSTRUCTIONS:
+Each item below is in a Certified case (caseState=Certified, itemState=Certified)
+but triggered a semantic screen flag. Per DL-047/DL-051 flow, these require
+hand-solve adjudication: quarantine → fix → verify → restore with provenance stamp.
+Screen output is evidence, not an author (DL-045).
+
+Severity legend:
+  FLAG — Requires hand-solve adjudication (potential genuine defect)
+  weak — Documented false positive pattern (e.g., EXTRA-REFUTED)
+  info — Benign (e.g., SHORT explanations below threshold)
+
+---
+
+=== Screen B (97 items) ===
+
+Case: CBQ-A1
+  Item: CBQ-A1-Q6
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-A2
+  Item: CBQ-A2-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.00 choice="Direct materials"
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: DISJOINT: predicted={D} stored={A,B,C}
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B1
+  Item: CBQ-B1-Q6
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B2
+  Item: CBQ-B2-Q4
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B3
+  Item: CBQ-B3-Q6
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-C1
+  Item: CBQ-C1-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-D1
+  Item: CBQ-D1-Q4
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-D1
+  Item: CBQ2-D1-Q1
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-D1
+  Item: CBQ2-D1-Q2
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,D,C,B} stored={A,B,C} best=1.00
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-D1
+  Item: CBQ2-D1-Q3
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-D1
+  Item: CBQ2-D1-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,C,A,D} stored={A,B,C} best=1.00
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-D2
+  Item: CBQ2-D2-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,C,D} stored={A,B,D} best=0.67
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-F2
+  Item: CBQ-F2-Q4
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-F1
+  Item: CBQ-F1-Q3
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.14 choice="A higher percentage of credit customers pay in the quarter of sale"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: DISJOINT: predicted={D} stored={A,B,C}
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-B1
+  Item: CBQ3-B1-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,D,A,B} stored={A,B,C,D} best=1.00
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-B1
+  Item: CBQ3-B1-Q4
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.13 stored="Accelerated cash inflows but potentially lower overall sales"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-C2
+  Item: CBQ3-C2-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E} stored={A,B,C,E} best=0.73
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D1
+  Item: CBQ3-D1-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A,B,C} stored={A,C,D} best=0.71
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D2
+  Item: CBQ3-D2-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={D} stored={A,B,D} best=0.75
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D3
+  Item: CBQ3-D3-Q1
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,B,D} stored={A,B,C} best=0.86
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D3
+  Item: CBQ3-D3-Q2
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D3
+  Item: CBQ3-D3-Q3
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D3
+  Item: CBQ3-D3-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A,C,E,B} stored={A,B,C,D} best=0.82
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-D3
+  Item: CBQ3-D3-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,B} stored={A,B,C,D} best=0.78
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D1
+  Item: CBQ4-D1-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,A,D} stored={A,B,C} best=1.00
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D2
+  Item: CBQ4-D2-Q3
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.20 stored="SMED (Single-Minute Exchange of Die)"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D2
+  Item: CBQ4-D2-Q4
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(C) recall=0.20 choice="Reduced work-in-process inventory between operations"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D2
+  Item: CBQ4-D2-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={D,A,B} stored={A,C,D} best=0.83
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q1
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={F,D,A,C} stored={D,E} best=0.83
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q2
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(D) recall=0.18 choice="Require dual signatures on all checks above $10,000 with mandatory review of sup"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q2
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={A,B,D,F} best=0.46
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q3
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,D} stored={B,D,F} best=0.63
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.17 choice="Implement an automated purchase order system with approval routing based on doll"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-E2
+  Item: CBQ2-E2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E} stored={A,B,D,E} best=0.56
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-E2
+  Item: CBQ3-E2-Q3
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(E) recall=0.10 choice="Regular training and awareness programs so that employees understand their BC/DR"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-E2
+  Item: CBQ3-E2-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={A,B,C,E} best=0.40
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-F2
+  Item: CBQ3-F2-Q3
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(E) recall=0.13 choice="Arranging charts in a logical left-to-right, top-to-bottom flow: executive summa"
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-F2
+  Item: CBQ3-F2-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={A,B,D,E} best=0.45
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ5-B1
+  Item: CBQ5-B1-Q4
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(B) recall=0.22 choice="The proportion of high-margin to low-margin products sold differs from the budge"
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={B} best=0.22
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C3
+  Item: CBQ5-C3-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={D,B,A,E} stored={A,B,C,D} best=0.67
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-D2
+  Item: CBQ5-D2-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.08 choice="The Six Sigma initiative has a first-year ROI exceeding 500%, making it a financ"
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-D2
+  Item: CBQ5-D2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,C,D} stored={A,B,C,D} best=0.81
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-D3
+  Item: CBQ5-D3-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ4-F3
+  Item: CBQ4-F3-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(A) recall=0.20 choice="Encrypting patient records stored in the database to meet transmission and stora"
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ4-F3
+  Item: CBQ4-F3-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,C} stored={A,B,C} best=0.71
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-F1
+  Item: CBQ5-F1-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A} stored={A,B,C} best=0.50
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-F3
+  Item: CBQ5-F3-Q4
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(B) recall=0.14 choice="Immutability of recorded transactions provides auditors with reliable evidence o"
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-F3
+  Item: CBQ5-F3-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={C,E} stored={A,B,C,D} best=0.60
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ21-A2
+  Item: CBQ21-A2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A,C} stored={A,C,E} best=0.56
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-C2
+  Item: CBQ21-C2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={B,A} stored={A,B,D} best=0.64
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-F1
+  Item: CBQ21-F1-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(E) recall=0.00 choice="Escalate through Bluepine's established ethics channel and, if unresolved, prese"
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-F1
+  Item: CBQ21-F1-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={B,C,E} best=0.36
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-B3
+  Item: CBQ21-B3-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-C5
+  Item: CBQ21-C5-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-E4
+  Item: CBQ21-E4-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-B6
+  Item: CBQ21-B6-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-C7
+  Item: CBQ21-C7-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-E5
+  Item: CBQ21-E5-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: DISJOINT: predicted={D} stored={A,B,C}
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ22-F2
+  Item: CBQ22-F2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={A,C,D} best=0.38
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-B4
+  Item: CBQ22-B4-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-E2
+  Item: CBQ22-E2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A} stored={A,B} best=0.50
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-E3
+  Item: CBQ22-E3-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-C5
+  Item: CBQ22-C5-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A,D,B} stored={A,C,E} best=0.88
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-A6
+  Item: CBQ22-A6-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={} stored={A,C,E} best=0.45
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-F7
+  Item: CBQ22-F7-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A} stored={A,C,E} best=0.54
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-B6
+  Item: CBQ22-B6-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ23-D1
+  Item: CBQ23-D1-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: DISJOINT: predicted={D} stored={A,B,C}
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ23-A2
+  Item: CBQ23-A2-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={D,A} stored={A,B,D} best=0.55
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ23-F3
+  Item: CBQ23-F3-Q5
+  Screen: B
+  Severity: FLAG
+  Detail: UNSUPPORTED-CORRECT: stored(D) recall=0.15 choice="Adopt a policy prohibiting facilitation payments worldwide and train Asia-Pacifi"
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ23-F3
+  Item: CBQ23-F3-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={C} stored={A,C,D} best=0.55
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ23-C4
+  Item: CBQ23-C4-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ23-B2
+  Item: CBQ23-B2-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+Case: CBQ22-A7
+  Item: CBQ22-A7-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,C,D} stored={A,C,E} best=0.63
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-A8
+  Item: CBQ22-A8-Q3
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(C)="Yes — the company can issue debt instead of equity because the D/E ratio of 1.22" stored(B)="No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percenta" recall=0.53 margin=0.08
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-A8
+  Item: CBQ22-A8-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E,C} stored={A,C,E} best=0.71
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F8
+  Item: CBQ22-F8-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A} stored={A,C,E} best=0.54
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F9
+  Item: CBQ22-F9-Q1
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(A)="Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries " stored(C)="Opportunity — the combined CFO/Controller role, lack of approval signatures, and" recall=0.75 margin=0.25
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F9
+  Item: CBQ22-F9-Q2
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(B)="The entries were prepared on business days during normal working hours" stored(A)="All entries debit capital accounts and credit expense accounts with no supportin" recall=0.43 margin=0.00
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F9
+  Item: CBQ22-F9-Q4
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={E} stored={A,C,E} best=0.56
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F10
+  Item: CBQ22-F10-Q3
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={F,C,B,E,A} stored={A,B,D} best=0.93
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-F10
+  Item: CBQ22-F10-Q6
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(D)="Delay the restatement filing until the retaliation investigation is complete, si" stored(A)="Engage independent forensic counsel to investigate the retaliation claim, direct" recall=0.38 margin=0.07
+  Bank: p2/case_pack_p2_authored.js
+  Part: P2
+
+Case: CBQ22-C9
+  Item: CBQ22-C9-Q4
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(A)="Life-cycle pricing only considers manufacturing cost â€” tooling and warranty ar" stored(D)="Life-cycle pricing considers all costs from product inception through end-of-lif" recall=0.70 margin=0.12
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C9
+  Item: CBQ22-C9-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={D,B,A} stored={A,C,E} best=0.67
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C10
+  Item: CBQ22-C10-Q4
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(A)="$8.00 per hour â€” each additional extrusion hour increases total contribution m" stored(D)="$6.00 per hour â€” the marginal CM from producing 1/3 additional unit of B (A's " recall=0.92 margin=0.04
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C10
+  Item: CBQ22-C10-Q5
+  Screen: B
+  Severity: weak
+  Detail: multi predicted={A,D,E} stored={A,C,E} best=0.81
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C11
+  Item: CBQ22-C11-Q4
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(C)="Conduct the pilot â€” its worst case of âˆ’$1.5M is better than immediate entry'" stored(B)="Wait 12 months â€” its worst-case payoff of $1 million is better than the worst " recall=0.78 margin=0.09
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C12
+  Item: CBQ22-C12-Q3
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(B)="$14.00 to $33.00 â€” from the Components Division's fixed cost to the Assembly D" stored(C)="$22.00 to $33.00 â€” from the Components Division's variable cost (floor) to the" recall=0.92 margin=0.01
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C12
+  Item: CBQ22-C12-Q4
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(A)="Dual pricing is required by GAAP for all intercompany transfers" stored(D)="Dual pricing lets the selling division record revenue at one price (e.g., market" recall=0.67 margin=0.01
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C12
+  Item: CBQ22-C12-Q6
+  Screen: B
+  Severity: weak
+  Detail: INVERSION: predicted(A)="Set the transfer price at $35.00 (market price) to fairly compensate the Compone" stored(B)="Implement dual pricing at $35.00 for the Components Division and $22.00 for the " recall=0.64 margin=0.00
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+Case: CBQ22-C13
+  Item: CBQ22-C13-Q5
+  Screen: B
+  Severity: weak
+  Detail: EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50
+  Bank: p2/case_pack_p2_C4_C8.js
+  Part: P2
+
+=== Screen C (48 items) ===
+
+Case: CBQ-A2
+  Item: CBQ-A2-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0438 explWords=240
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q2
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 14 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q3
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 16 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 10 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-A2
+  Item: CBQ2-A2-Q5
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 7 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B1
+  Item: CBQ-B1-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0349 explWords=394
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B1
+  Item: CBQ-B1-Q4
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0405 explWords=484
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-B2
+  Item: CBQ-B2-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0464 explWords=260
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-B1
+  Item: CBQ2-B1-Q2
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 13 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-B1
+  Item: CBQ2-B1-Q5
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 6 content words (<20)
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-C1
+  Item: CBQ2-C1-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0480 explWords=121
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-C1
+  Item: CBQ2-C1-Q4
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0288 explWords=81
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ2-C1
+  Item: CBQ2-C1-Q5
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0481 explWords=78
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ-D1
+  Item: CBQ-D1-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0415 explWords=287
+  Bank: content/cases/case_pack_1_corrected.js
+  Part: P1
+
+Case: CBQ3-A2
+  Item: CBQ3-A2-Q1
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0294 explWords=35
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-A2
+  Item: CBQ3-A2-Q2
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 8 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-A2
+  Item: CBQ3-A2-Q3
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 8 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-A2
+  Item: CBQ3-A2-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 8 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0244 explWords=67
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q3
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0364 explWords=28
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 15 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ2-B3
+  Item: CBQ2-B3-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0161 explWords=29
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-B1
+  Item: CBQ3-B1-Q3
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 12 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-B1
+  Item: CBQ3-B1-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 10 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-C2
+  Item: CBQ3-C2-Q4
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0450 explWords=85
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D1
+  Item: CBQ4-D1-Q1
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0299 explWords=46
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D1
+  Item: CBQ4-D1-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0196 explWords=26
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D2
+  Item: CBQ4-D2-Q3
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0441 explWords=28
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ4-D2
+  Item: CBQ4-D2-Q6
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 19 content words (<20)
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-E1
+  Item: CBQ3-E1-Q3
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0309 explWords=54
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-F2
+  Item: CBQ3-F2-Q1
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0300 explWords=45
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ3-F2
+  Item: CBQ3-F2-Q5
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0374 explWords=52
+  Bank: content/cases/case_pack_2_corrected.js
+  Part: P1
+
+Case: CBQ5-B1
+  Item: CBQ5-B1-Q1
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0364 explWords=31
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-B1
+  Item: CBQ5-B1-Q3
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 7 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-B1
+  Item: CBQ5-B1-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 6 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-B1
+  Item: CBQ5-B1-Q5
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 7 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q2
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 19 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q3
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 18 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q4
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 17 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C1
+  Item: CBQ5-C1-Q5
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 11 content words (<20)
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ5-C2
+  Item: CBQ5-C2-Q5
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0388 explWords=53
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ21-F1
+  Item: CBQ21-F1-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0313 explWords=66
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-E4
+  Item: CBQ21-E4-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0426 explWords=25
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ21-E5
+  Item: CBQ21-E5-Q6
+  Screen: C
+  Severity: info
+  Detail: SHORT: Explanation 18 content words (<20)
+  Bank: p2/case_pack_p2_1.js
+  Part: P2
+
+Case: CBQ22-B4
+  Item: CBQ22-B4-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0469 explWords=28
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-B4
+  Item: CBQ22-B4-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0154 explWords=27
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ22-E2
+  Item: CBQ22-E2-Q2
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0396 explWords=80
+  Bank: p2/case_pack_p2_2.js
+  Part: P2
+
+Case: CBQ23-C4
+  Item: CBQ23-C4-Q6
+  Screen: C
+  Severity: FLAG
+  Detail: jaccard=0.0465 explWords=41
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+
+=== Screen B-num (3 items) ===
+
+Case: CBQ5-C3
+  Item: CBQ5-C3-Q1
+  Screen: B-num
+  Severity: info
+  Detail: SIGN-CONVENTION (info): stored [-230000] matches by absolute value only
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ3-D4
+  Item: CBQ3-D4-Q4
+  Screen: B-num
+  Severity: info
+  Detail: SIGN-CONVENTION (info): stored [-226500] matches by absolute value only
+  Bank: content/cases/case_pack_3_corrected.js
+  Part: P1
+
+Case: CBQ23-C4
+  Item: CBQ23-C4-Q2
+  Screen: B-num
+  Severity: FLAG
+  Detail: stored numbers [600000] absent from Explanation numbers [0.4,2800,0.6,400,880,0.4,1200,0.6,600,840,880,2800...]
+  Bank: p2/case_pack_p2_3.js
+  Part: P2
+

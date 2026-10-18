@@ -1,0 +1,1368 @@
+[
+  {
+    "bank": "Accounts Payable Controls and SOX Evaluation",
+    "caseId": "CBQ-E1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ-E1-Q1: null (none); CBQ-E1-Q2: null (none); CBQ-E1-Q3: 0 (simple-equation); CBQ-E1-Q4: null (none); CBQ-E1-Q5: null (none); CBQ-E1-Q6: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E1-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E1-Q2",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E1-Q3",
+        "type": "numeric",
+        "derived": 0,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ-E1-Q4",
+        "type": "fill",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E1-Q5",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E1-Q6",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "IT General Controls, Change Management, and Access Review",
+    "caseId": "CBQ-E2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ-E2-Q1: null (none); CBQ-E2-Q2: 3.5294117647058822 (division-chain); CBQ-E2-Q3: null (none); CBQ-E2-Q4: null (none); CBQ-E2-Q5: null (none); CBQ-E2-Q6: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ-E2-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E2-Q2",
+        "type": "numeric",
+        "derived": 3.5294117647058822,
+        "keyHidden": true,
+        "match": false,
+        "method": "division-chain"
+      },
+      {
+        "itemId": "CBQ-E2-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E2-Q4",
+        "type": "fill",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E2-Q5",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ-E2-Q6",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Data Analytics Maturity",
+    "caseId": "CBQ2-F1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ2-F1-Q1: null (none); CBQ2-F1-Q2: null (none); CBQ2-F1-Q3: null (none); CBQ2-F1-Q4: null (none); CBQ2-F1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-F1-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-F1-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-F1-Q3",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-F1-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-F1-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Lease Accounting and Classification",
+    "caseId": "CBQ3-A1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-A1-Q1: 231660 (pv-verified); CBQ3-A1-Q2: null (none); CBQ3-A1-Q3: null (none); CBQ3-A1-Q4: 41100 (simple-equation); CBQ3-A1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A1-Q1",
+        "type": "numeric",
+        "derived": 231660,
+        "keyHidden": true,
+        "match": true,
+        "method": "pv-verified"
+      },
+      {
+        "itemId": "CBQ3-A1-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A1-Q3",
+        "type": "fill",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A1-Q4",
+        "type": "numeric",
+        "derived": 41100,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-A1-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Intangible Assets and Goodwill Impairment",
+    "caseId": "CBQ4-A1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-A1-Q1: null (none); CBQ4-A1-Q2: 150000 (simple-equation); CBQ4-A1-Q3: null (none); CBQ4-A1-Q4: null (none); CBQ4-A1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-A1-Q1",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-A1-Q2",
+        "type": "numeric",
+        "derived": 150000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ4-A1-Q3",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-A1-Q4",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-A1-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Cash Budgeting and Forecasting",
+    "caseId": "CBQ2-B2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ2-B2-Q1: 540000 (addition-chain-verified); CBQ2-B2-Q2: 675000 (addition-chain-verified); CBQ2-B2-Q3: -90000 (simple-equation); CBQ2-B2-Q4: 125000 (simple-equation); CBQ2-B2-Q5: null (none); CBQ2-B2-Q6: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-B2-Q1",
+        "type": "numeric",
+        "derived": 540000,
+        "keyHidden": true,
+        "match": true,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ2-B2-Q2",
+        "type": "numeric",
+        "derived": 675000,
+        "keyHidden": true,
+        "match": true,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ2-B2-Q3",
+        "type": "numeric",
+        "derived": -90000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ2-B2-Q4",
+        "type": "select",
+        "derived": 125000,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ2-B2-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-B2-Q6",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Direct Labor and Manufacturing Overhead Budget",
+    "caseId": "CBQ3-B2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-B2-Q1: 264000 (simple-equation); CBQ3-B2-Q2: 276000 (addition-chain-verified); CBQ3-B2-Q3: null (none); CBQ3-B2-Q4: null (none); CBQ3-B2-Q5: null (none); CBQ3-B2-Q6: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-B2-Q1",
+        "type": "numeric",
+        "derived": 264000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-B2-Q2",
+        "type": "numeric",
+        "derived": 276000,
+        "keyHidden": true,
+        "match": true,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ3-B2-Q3",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-B2-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-B2-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-B2-Q6",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Investment Center Performance Evaluation",
+    "caseId": "CBQ2-C3",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ2-C3-Q1: 0.16 (division-chain); CBQ2-C3-Q2: null (none); CBQ2-C3-Q3: 0.16 (division-chain); CBQ2-C3-Q4: null (none); CBQ2-C3-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ2-C3-Q1",
+        "type": "select",
+        "derived": 0.16,
+        "keyHidden": true,
+        "match": false,
+        "method": "division-chain"
+      },
+      {
+        "itemId": "CBQ2-C3-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-C3-Q3",
+        "type": "select",
+        "derived": 0.16,
+        "keyHidden": true,
+        "match": false,
+        "method": "division-chain"
+      },
+      {
+        "itemId": "CBQ2-C3-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ2-C3-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Flexible Budget Variances",
+    "caseId": "CBQ3-C3",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-C3-Q1: 50000 (final-computed); CBQ3-C3-Q2: 240000 (simple-equation); CBQ3-C3-Q3: 600000 (addition-chain-verified); CBQ3-C3-Q4: null (none); CBQ3-C3-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C3-Q1",
+        "type": "select",
+        "derived": 50000,
+        "keyHidden": true,
+        "match": false,
+        "method": "final-computed"
+      },
+      {
+        "itemId": "CBQ3-C3-Q2",
+        "type": "select",
+        "derived": 240000,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-C3-Q3",
+        "type": "multi",
+        "derived": 600000,
+        "keyHidden": true,
+        "match": false,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ3-C3-Q4",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-C3-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Standard Costing: 3-Way and 4-Way Overhead Variances",
+    "caseId": "CBQ4-C1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-C1-Q1: 1600 (final-computed); CBQ4-C1-Q2: 600 (multiplication-chain-verified); CBQ4-C1-Q3: 2000 (final-computed); CBQ4-C1-Q4: 2000 (final-computed); CBQ4-C1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-C1-Q1",
+        "type": "numeric",
+        "derived": 1600,
+        "keyHidden": true,
+        "match": true,
+        "method": "final-computed"
+      },
+      {
+        "itemId": "CBQ4-C1-Q2",
+        "type": "numeric",
+        "derived": 600,
+        "keyHidden": true,
+        "match": true,
+        "method": "multiplication-chain-verified"
+      },
+      {
+        "itemId": "CBQ4-C1-Q3",
+        "type": "numeric",
+        "derived": 2000,
+        "keyHidden": true,
+        "match": true,
+        "method": "final-computed"
+      },
+      {
+        "itemId": "CBQ4-C1-Q4",
+        "type": "numeric",
+        "derived": 2000,
+        "keyHidden": true,
+        "match": true,
+        "method": "final-computed"
+      },
+      {
+        "itemId": "CBQ4-C1-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "COSO Internal Control Framework",
+    "caseId": "CBQ4-E1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-E1-Q1: null (none); CBQ4-E1-Q2: null (none); CBQ4-E1-Q3: null (none); CBQ4-E1-Q4: null (none); CBQ4-E1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E1-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E1-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E1-Q3",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E1-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E1-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Cloud Computing Models",
+    "caseId": "CBQ4-F1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-F1-Q1: null (none); CBQ4-F1-Q2: 0 (simple-equation); CBQ4-F1-Q3: null (none); CBQ4-F1-Q4: null (none); CBQ4-F1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F1-Q1",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F1-Q2",
+        "type": "select",
+        "derived": 0,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ4-F1-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F1-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F1-Q5",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Comprehensive Income and Stockholders' Equity",
+    "caseId": "CBQ5-A2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-A2-Q1: 510000 (simple-equation); CBQ5-A2-Q2: null (none); CBQ5-A2-Q3: 150000 (simple-equation); CBQ5-A2-Q4: null (none); CBQ5-A2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-A2-Q1",
+        "type": "numeric",
+        "derived": 510000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ5-A2-Q2",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-A2-Q3",
+        "type": "numeric",
+        "derived": 150000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ5-A2-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-A2-Q5",
+        "type": "fill",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Bonds Payable and Effective Interest Amortization",
+    "caseId": "CBQ5-B2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-B2-Q1: null (none); CBQ5-B2-Q2: 922768 (addition-chain-verified); CBQ5-B2-Q3: null (none); CBQ5-B2-Q4: 71094 (simple-equation); CBQ5-B2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-B2-Q1",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-B2-Q2",
+        "type": "numeric",
+        "derived": 922768,
+        "keyHidden": true,
+        "match": true,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ5-B2-Q3",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-B2-Q4",
+        "type": "numeric",
+        "derived": 71094,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ5-B2-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Cost Estimation and High-Low Method",
+    "caseId": "CBQ4-B1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-B1-Q1: 4 (simple-equation); CBQ4-B1-Q2: null (none); CBQ4-B1-Q3: 38300 (simple-equation); CBQ4-B1-Q4: null (none); CBQ4-B1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B1-Q1",
+        "type": "numeric",
+        "derived": 4,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ4-B1-Q2",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B1-Q3",
+        "type": "numeric",
+        "derived": 38300,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ4-B1-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B1-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Budgeted Balance Sheet and Financial Budget",
+    "caseId": "CBQ4-B2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-B2-Q1: 170000 (simple-equation); CBQ4-B2-Q2: null (none); CBQ4-B2-Q3: null (none); CBQ4-B2-Q4: null (none); CBQ4-B2-Q5: null (none); CBQ4-B2-Q6: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-B2-Q1",
+        "type": "numeric",
+        "derived": 170000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ4-B2-Q2",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B2-Q3",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B2-Q4",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B2-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-B2-Q6",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Capacity Management Concepts",
+    "caseId": "CBQ4-D3",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-D3-Q1: null (none); CBQ4-D3-Q2: null (none); CBQ4-D3-Q3: null (none); CBQ4-D3-Q4: null (none); CBQ4-D3-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-D3-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-D3-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-D3-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-D3-Q4",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-D3-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Application IT Controls",
+    "caseId": "CBQ4-E2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-E2-Q1: null (none); CBQ4-E2-Q2: null (none); CBQ4-E2-Q3: null (none); CBQ4-E2-Q4: null (none); CBQ4-E2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-E2-Q1",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E2-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E2-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E2-Q4",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-E2-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Internal Auditing Standards",
+    "caseId": "CBQ5-E1",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-E1-Q1: null (none); CBQ5-E1-Q2: null (none); CBQ5-E1-Q3: null (none); CBQ5-E1-Q4: null (none); CBQ5-E1-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E1-Q1",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E1-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E1-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E1-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E1-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Cybersecurity and Malware",
+    "caseId": "CBQ5-E2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-E2-Q1: null (none); CBQ5-E2-Q2: null (none); CBQ5-E2-Q3: 1638000 (simple-equation); CBQ5-E2-Q4: null (none); CBQ5-E2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E2-Q1",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E2-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E2-Q3",
+        "type": "numeric",
+        "derived": 1638000,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ5-E2-Q4",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E2-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Data Privacy Frameworks",
+    "caseId": "CBQ5-E3",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-E3-Q1: null (none); CBQ5-E3-Q2: null (none); CBQ5-E3-Q3: null (none); CBQ5-E3-Q4: null (none); CBQ5-E3-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-E3-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E3-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E3-Q3",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E3-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-E3-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Artificial Intelligence & ML",
+    "caseId": "CBQ4-F2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ4-F2-Q1: null (none); CBQ4-F2-Q2: null (none); CBQ4-F2-Q3: null (none); CBQ4-F2-Q4: null (none); CBQ4-F2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ4-F2-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F2-Q2",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F2-Q3",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F2-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ4-F2-Q5",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Robotic Process Automation (RPA)",
+    "caseId": "CBQ5-F2",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ5-F2-Q1: null (none); CBQ5-F2-Q2: null (none); CBQ5-F2-Q3: 525000 (simple-equation); CBQ5-F2-Q4: null (none); CBQ5-F2-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ5-F2-Q1",
+        "type": "match",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-F2-Q2",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-F2-Q3",
+        "type": "numeric",
+        "derived": 525000,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ5-F2-Q4",
+        "type": "multi",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ5-F2-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Revenue Recognition Under ASC 606",
+    "caseId": "CBQ3-A3",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-A3-Q1: null (none); CBQ3-A3-Q2: 630000 (addition-chain-verified); CBQ3-A3-Q3: null (none); CBQ3-A3-Q4: null (none); CBQ3-A3-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A3-Q1",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A3-Q2",
+        "type": "numeric",
+        "derived": 630000,
+        "keyHidden": true,
+        "match": false,
+        "method": "addition-chain-verified"
+      },
+      {
+        "itemId": "CBQ3-A3-Q3",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A3-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A3-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Inventory Valuation and LCNRV",
+    "caseId": "CBQ3-A4",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-A4-Q1: null (none); CBQ3-A4-Q2: 0 (simple-equation); CBQ3-A4-Q3: null (none); CBQ3-A4-Q4: null (none); CBQ3-A4-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-A4-Q1",
+        "type": "numeric",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A4-Q2",
+        "type": "numeric",
+        "derived": 0,
+        "keyHidden": true,
+        "match": true,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-A4-Q3",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A4-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-A4-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  },
+  {
+    "bank": "Standard Costing and Variance Analysis",
+    "caseId": "CBQ3-C4",
+    "currentState": "In Audit",
+    "verdict": "review",
+    "handSolveNotes": "CBQ3-C4-Q1: 21600 (multiplication-chain); CBQ3-C4-Q2: 32000 (simple-equation); CBQ3-C4-Q3: 5600 (simple-equation); CBQ3-C4-Q4: null (none); CBQ3-C4-Q5: null (none)",
+    "stampSession": "DL-066-direct-pack-solve",
+    "stampDate": "2026-10-13",
+    "items": [
+      {
+        "itemId": "CBQ3-C4-Q1",
+        "type": "numeric",
+        "derived": 21600,
+        "keyHidden": true,
+        "match": false,
+        "method": "multiplication-chain"
+      },
+      {
+        "itemId": "CBQ3-C4-Q2",
+        "type": "numeric",
+        "derived": 32000,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-C4-Q3",
+        "type": "numeric",
+        "derived": 5600,
+        "keyHidden": true,
+        "match": false,
+        "method": "simple-equation"
+      },
+      {
+        "itemId": "CBQ3-C4-Q4",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      },
+      {
+        "itemId": "CBQ3-C4-Q5",
+        "type": "select",
+        "derived": null,
+        "keyHidden": true,
+        "match": false,
+        "method": "none"
+      }
+    ]
+  }
+]

@@ -31,6 +31,16 @@ Desktop.ini
 temp_*.txt
 ~$*
 
+# Session scratch directories (constitution §11.4 — no ad-hoc temp files)
+.commandcode/scratchpad/
+scratchpad/
+4caceaa9-b5e6-47d5-ae1a-6221b5696ef8/
+
+# Misplaced backup fingerprints (prevention — backups must live in backups/)
+*.dl066_backup_*
+*.verified-*
+*.fresh-*
+
 # Environment
 .env
 .env.local

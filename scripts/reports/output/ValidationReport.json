@@ -8,7 +8,7 @@
       "Question Packs": 5,
       "Case Banks": 5
     },
-    "duration": 1,
+    "duration": 2,
     "confidence": 100
   },
   {
@@ -21,7 +21,7 @@
     "statistics": {
       "Cases Checked": 190
     },
-    "duration": 339,
+    "duration": 323,
     "confidence": 100
   },
   {
@@ -234,7 +234,7 @@
       "Domain: Risk Management": 11,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 215,
+    "duration": 240,
     "confidence": 100
   },
   {
@@ -3518,7 +3518,7 @@
       "P2 Domain: Professional Ethics": 614,
       "P2 Domain: Risk Management": 566
     },
-    "duration": 411,
+    "duration": 363,
     "confidence": 100
   },
   {
@@ -3613,7 +3613,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 46
     },
-    "duration": 312,
+    "duration": 505,
     "confidence": 100
   },
   {
@@ -3705,7 +3705,7 @@
       "Orphan Exhibits (unreferenced)": 76,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 227,
+    "duration": 225,
     "confidence": 100
   },
   {
@@ -3726,10 +3726,10 @@
       "Questions with Placeholder Explanations": 0,
       "Fields with Placeholder Text": 0,
       "Short Explanations (<50 chars)": 2,
-      "Correct Explanation Avg Length": 600,
-      "Wrong Explanation Avg Length": 283
+      "Correct Explanation Avg Length": 604,
+      "Wrong Explanation Avg Length": 285
     },
-    "duration": 973,
+    "duration": 1134,
     "confidence": 100
   },
   {
@@ -3752,7 +3752,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 232,
+    "duration": 214,
     "confidence": 100
   },
   {
@@ -3812,7 +3812,7 @@
       "Archived↔Live Overlaps (expected, S916)": 75,
       "Score/Label Mismatches": 0
     },
-    "duration": 56,
+    "duration": 49,
     "confidence": 100
   },
   {
@@ -10955,7 +10955,7 @@
       "psychometricModuleErrors": 0,
       "psychometricModuleWarnings": 7108
     },
-    "duration": 7026,
+    "duration": 6084,
     "confidence": 100
   }
 ]

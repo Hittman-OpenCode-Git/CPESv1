@@ -1,0 +1,41 @@
+{
+  "generated": "2026-10-17T20:51:59.240Z",
+  "method": "p2_case_clone_gate.js — AGENTS.md §19.4 (numeric multiset + Topic) + whole-case fingerprint",
+  "census": {
+    "banks": 8,
+    "cases": 190,
+    "items": 1085,
+    "archived": 9
+  },
+  "itemsScanned": 1031,
+  "classA_wholeCaseDuplicates": 0,
+  "classA_unacknowledged": 0,
+  "classA_learnerReachable": 0,
+  "classA_groups": [],
+  "classB_itemRotationClones": 1,
+  "classB_unacknowledged": 0,
+  "classB_groups": [
+    {
+      "key": "806|806::confidentiality boundaries",
+      "members": [
+        {
+          "bank": "p2/case_pack_p2_1.js",
+          "part": "P2",
+          "caseId": "CBQ21-F3",
+          "itemId": "CBQ21-F3-Q4",
+          "topic": "Confidentiality boundaries",
+          "nums": 2
+        },
+        {
+          "bank": "p2/case_pack_p2_2.js",
+          "part": "P2",
+          "caseId": "CBQ22-F1",
+          "itemId": "CBQ22-F1-Q5",
+          "topic": "Confidentiality boundaries",
+          "nums": 2
+        }
+      ]
+    }
+  ],
+  "note": "Evidence only. No case is archived or modified by this tool (DL-045). Suspected clones require independent human adjudication."
+}

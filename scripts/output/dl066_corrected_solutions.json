@@ -1,0 +1,1322 @@
+[
+  {
+    "caseId": "CBQ-C2",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ-C2-Q1",
+        "type": "numeric",
+        "prompt": "Enter Motor Division residual income.",
+        "derived": 84000,
+        "derivationNotes": "RI = 420,000 - (12% x 2,800,000) = 420,000 - 336,000 = 84,000."
+      },
+      {
+        "itemId": "CBQ-C2-Q2",
+        "type": "numeric",
+        "prompt": "Enter Motor Division ROI percentage as a whole number.",
+        "derived": 15,
+        "derivationNotes": "ROI = 420,000 / 2,800,000 = 0.15 = 15 (whole-number percent)."
+      },
+      {
+        "itemId": "CBQ-C2-Q3",
+        "type": "select",
+        "prompt": "With idle capacity and no opportunity cost, what is the minimum transfer price from the company perspective?",
+        "derived": "70 variable cost",
+        "derivationNotes": "Min transfer price = variable cost 70 + opportunity cost 0 (idle capacity) = 70."
+      },
+      {
+        "itemId": "CBQ-C2-Q4",
+        "type": "multi",
+        "prompt": "Select reasons residual income may improve goal congruence compared with ROI.",
+        "derived": "1,2,4",
+        "derivationNotes": "Correct: encourages projects above required return; charges for assets; avoids rejecting ROI-lowering value projects. \"Always increases with assets\" is false."
+      },
+      {
+        "itemId": "CBQ-C2-Q5",
+        "type": "fill",
+        "prompt": "Fill in the blank: A transfer price should promote goal _____ so divisional decisions support overall company interests.",
+        "derived": "congruence",
+        "derivationNotes": "A transfer price should promote goal congruence."
+      },
+      {
+        "itemId": "CBQ-C2-Q6",
+        "type": "match",
+        "prompt": "Match each measure to the best description.",
+        "derived": "ROI->Operating income divided by assets;Residual income->Income after required asset charge;Minimum transfer price with idle capacity->Variable cost plus opportunity cost;Market price->External benchmark when available",
+        "derivationNotes": "ROI -> operating income / assets; RI -> income after required asset charge; min TP idle -> variable cost + opportunity cost; market price -> external benchmark."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-C3",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ-C3-Q1",
+        "type": "numeric",
+        "prompt": "Enter the unfavorable operating income variance as a positive amount.",
+        "derived": 60000,
+        "derivationNotes": "Unfavorable OI variance = 900,000 - 840,000 = 60,000 (positive as instructed)."
+      },
+      {
+        "itemId": "CBQ-C3-Q2",
+        "type": "numeric",
+        "prompt": "Enter the on-time delivery shortfall in percentage points.",
+        "derived": 5,
+        "derivationNotes": "On-time shortfall = 96% - 91% = 5 percentage points."
+      },
+      {
+        "itemId": "CBQ-C3-Q3",
+        "type": "select",
+        "prompt": "Which metric is most clearly a learning and growth measure?",
+        "derived": "Training hours per employee",
+        "derivationNotes": "Training hours per employee is the Learning & Growth measure."
+      },
+      {
+        "itemId": "CBQ-C3-Q4",
+        "type": "multi",
+        "prompt": "Select likely leading indicators of future financial performance.",
+        "derived": "1,2,3",
+        "derivationNotes": "Leading indicators: defect rate, on-time delivery, training hours. Prior-period operating income is lagging."
+      },
+      {
+        "itemId": "CBQ-C3-Q5",
+        "type": "match",
+        "prompt": "Match each scorecard perspective to the best metric.",
+        "derived": "Financial->Operating income;Customer->Customer satisfaction index;Internal process->Defect rate;Learning and growth->Training hours per employee",
+        "derivationNotes": "Financial -> operating income; Customer -> customer satisfaction index; Internal process -> defect rate; Learning & growth -> training hours."
+      },
+      {
+        "itemId": "CBQ-C3-Q6",
+        "type": "select",
+        "prompt": "Which issue should production investigate first?",
+        "derived": "Machine setup errors",
+        "derivationNotes": "Machine setup errors fall within production's span of control."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-D2",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ-D2-Q1",
+        "type": "numeric",
+        "prompt": "Enter equivalent units for conversion costs using weighted-average.",
+        "derived": 20400,
+        "derivationNotes": "EU conversion = 18,000 + (4,000 x 60%) = 20,400."
+      },
+      {
+        "itemId": "CBQ-D2-Q2",
+        "type": "numeric",
+        "prompt": "Enter conversion cost per equivalent unit.",
+        "derived": 12.5,
+        "derivationNotes": "255,000 / 20,400 = 12.50 per equivalent unit."
+      },
+      {
+        "itemId": "CBQ-D2-Q3",
+        "type": "select",
+        "prompt": "Which operation is the bottleneck?",
+        "derived": "Welding",
+        "derivationNotes": "Welding capacity 19,500 is the lowest, hence the bottleneck."
+      },
+      {
+        "itemId": "CBQ-D2-Q4",
+        "type": "multi",
+        "prompt": "Select actions consistent with lean thinking.",
+        "derived": "1,3,4",
+        "derivationNotes": "Lean actions: reduce waiting, investigate rework, simplify material movement. Increasing batch queues contradicts lean."
+      },
+      {
+        "itemId": "CBQ-D2-Q5",
+        "type": "fill",
+        "prompt": "Fill in the blank: Equivalent units combine completed units and partially completed work expressed as _____ units.",
+        "derived": "complete",
+        "derivationNotes": "Equivalent units express partial work in terms of complete units."
+      },
+      {
+        "itemId": "CBQ-D2-Q6",
+        "type": "match",
+        "prompt": "Match each issue to the best tool.",
+        "derived": "Partially complete WIP->Equivalent units;Lowest capacity resource->Bottleneck analysis;Unnecessary movement->Lean waste review;Continuous homogeneous output->Process costing",
+        "derivationNotes": "Partially complete WIP -> equivalent units; lowest capacity resource -> bottleneck analysis; unnecessary movement -> lean waste review; continuous homogeneous output -> process costing. NOTE: item Explanation references a different set of RightItems labels (likely a rotation/template mismatch) — mapping derived from the actual LeftItems/RightItems content."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E1",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ-E1-Q1",
+        "type": "select",
+        "prompt": "Which control weakness is most directly related to fictitious vendor risk?",
+        "derived": "Same AP clerk can create vendors and enter invoices",
+        "derivationNotes": "Same clerk creating vendors and entering invoices is the segregation failure enabling fictitious vendors."
+      },
+      {
+        "itemId": "CBQ-E1-Q2",
+        "type": "multi",
+        "prompt": "Select controls that would improve the AP process.",
+        "derived": "1,2,4",
+        "derivationNotes": "Correct: independent vendor approval, preventive three-way match, documented duplicate-report review. Post-payment high-dollar-only approval is a weaker design."
+      },
+      {
+        "itemId": "CBQ-E1-Q3",
+        "type": "numeric",
+        "prompt": "Enter the duplicate/fictitious payment loss as a percentage of pretax income, rounded to one decimal place.",
+        "derived": 3,
+        "derivationNotes": "180,000 / 6,000,000 = 0.03 = 3.0% of pretax income."
+      },
+      {
+        "itemId": "CBQ-E1-Q4",
+        "type": "fill",
+        "prompt": "Fill in the blank: Management override and collusion are inherent limitations, so internal control provides reasonable, not _____, assurance.",
+        "derived": "absolute",
+        "derivationNotes": "Internal control provides reasonable, not absolute, assurance."
+      },
+      {
+        "itemId": "CBQ-E1-Q5",
+        "type": "match",
+        "prompt": "Match each control to preventive or detective.",
+        "derived": "Independent vendor approval->Preventive — stops unauthorized vendors from entering the master file before any transaction can be processed;Three-way match before payment->Preventive — blocks improper payment by verifying PO, receiving report, and invoice consistency before cash is disbursed;Duplicate-payment report review->Detective — identifies duplicate payments already processed, after disbursement has occurred;Bank reconciliation->Detective — compares entity cash records to bank records after transactions have cleared, identifying discrepancies that already exist",
+        "derivationNotes": "Vendor approval -> preventive (stops unauthorized vendors); three-way match -> preventive (blocks improper payment); duplicate report review -> detective (after disbursement); bank reconciliation -> detective."
+      },
+      {
+        "itemId": "CBQ-E1-Q6",
+        "type": "select",
+        "prompt": "Which evidence issue most weakens operating effectiveness?",
+        "derived": "The report was generated but not reviewed for two months",
+        "derivationNotes": "Generated but unreviewed for two months is definitive evidence of non-performance."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ-E2",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ-E2-Q1",
+        "type": "select",
+        "prompt": "Which response best addresses shared administrator IDs?",
+        "derived": "Unique privileged IDs with MFA and periodic access review",
+        "derivationNotes": "Unique privileged IDs with MFA and periodic access review restores accountability."
+      },
+      {
+        "itemId": "CBQ-E2-Q2",
+        "type": "numeric",
+        "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+        "derived": 3.5,
+        "derivationNotes": "12 / 340 = 3.529% -> 3.5%."
+      },
+      {
+        "itemId": "CBQ-E2-Q3",
+        "type": "multi",
+        "prompt": "Select ITGCs relevant to the exceptions.",
+        "derived": "1,2,3",
+        "derivationNotes": "Logical access, change management, and computer operations/interface monitoring are ITGCs. Sales price variance analysis is not."
+      },
+      {
+        "itemId": "CBQ-E2-Q4",
+        "type": "fill",
+        "prompt": "Fill in the blank: Emergency changes should receive timely post-implementation review and _____.",
+        "derived": "approval",
+        "derivationNotes": "Emergency changes require post-implementation review and approval."
+      },
+      {
+        "itemId": "CBQ-E2-Q5",
+        "type": "match",
+        "prompt": "Match each exception to the primary risk.",
+        "derived": "Shared administrator IDs->Lack of accountability;Terminated users active->Unauthorized access;Unapproved emergency changes->Unauthorized or erroneous report logic;Failed interface reconciliation->Incomplete or inaccurate data transfer",
+        "derivationNotes": "Shared IDs -> lack of accountability; terminated users -> unauthorized access; unapproved emergency changes -> unauthorized/erroneous report logic; failed interface reconciliation -> incomplete/inaccurate data transfer."
+      },
+      {
+        "itemId": "CBQ-E2-Q6",
+        "type": "select",
+        "prompt": "Why is 14-day log retention a concern?",
+        "derived": "It may prevent investigation of issues discovered after logs are overwritten",
+        "derivationNotes": "14-day retention may prevent investigation once logs are overwritten."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-F1",
+    "bank": 1,
+    "items": [
+      {
+        "itemId": "CBQ2-F1-Q1",
+        "type": "select",
+        "prompt": "Based on the scenario, which level of analytics maturity best describes Meridian Retail Group's current state?",
+        "derived": "Descriptive analytics — reporting on historical performance",
+        "derivationNotes": "Historical variance reporting = descriptive analytics."
+      },
+      {
+        "itemId": "CBQ2-F1-Q2",
+        "type": "select",
+        "prompt": "The CDO proposes implementing a dashboard that shows real-time sales by region, inventory turnover, and customer foot traffic. What type of analytics does this dashboard primarily enable?",
+        "derived": "Diagnostic analytics — the dashboard allows drill-down to understand performance drivers",
+        "derivationNotes": "Real-time drill-down dashboard enables diagnostic analytics."
+      },
+      {
+        "itemId": "CBQ2-F1-Q3",
+        "type": "select",
+        "prompt": "For the next phase of the analytics roadmap, the CDO wants to use historical sales data and external economic indicators to forecast next quarter's revenue. What type of analytics is being described?",
+        "derived": "Predictive analytics — using historical data and models to forecast future outcomes",
+        "derivationNotes": "Forecasting next-quarter revenue = predictive analytics."
+      },
+      {
+        "itemId": "CBQ2-F1-Q4",
+        "type": "select",
+        "prompt": "The supply chain team wants a tool that recommends optimal inventory reorder quantities and identifies the most cost-effective shipping routes. The tool should consider demand forecasts, supplier lead times, and freight rates. What type of analytics is required?",
+        "derived": "Prescriptive analytics — recommending optimal actions based on multiple variables and constraints",
+        "derivationNotes": "Recommending optimal actions under constraints = prescriptive analytics."
+      },
+      {
+        "itemId": "CBQ2-F1-Q5",
+        "type": "select",
+        "prompt": "Before Meridian can advance its analytics maturity, it must address several data challenges. Which of the following is the MOST critical prerequisite for successful analytics implementation?",
+        "derived": "Establishing data governance policies to ensure data quality, consistency, and accessibility across departments",
+        "derivationNotes": "Data governance is the most critical prerequisite."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-A3",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ2-A3-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the transaction price allocated to the Hardware performance obligation (round to nearest whole dollar).",
+        "derived": 363636,
+        "derivationNotes": "Hardware allocation = (400,000 / 550,000) x 500,000 = 363,636."
+      },
+      {
+        "itemId": "CBQ2-A3-Q2",
+        "type": "numeric",
+        "prompt": "Calculate the required ending balance in the Allowance for Doubtful Accounts.",
+        "derived": 43000,
+        "derivationNotes": "800,000x1% + 300,000x5% + 100,000x20% = 8,000+15,000+20,000 = 43,000."
+      },
+      {
+        "itemId": "CBQ2-A3-Q3",
+        "type": "multi",
+        "prompt": "Under ASC 606, which criteria indicate a distinct performance obligation?",
+        "derived": "1,2",
+        "derivationNotes": "Distinct if customer can benefit on its own AND promise is separately identifiable. Delivery and payment are consequences, not criteria."
+      },
+      {
+        "itemId": "CBQ2-A3-Q4",
+        "type": "select",
+        "prompt": "If the unadjusted ADA balance was a $5,000 debit, what is the bad debt expense?",
+        "derived": "$48,000",
+        "derivationNotes": "Bad debt expense = 43,000 + 5,000 debit = 48,000."
+      },
+      {
+        "itemId": "CBQ2-A3-Q5",
+        "type": "fill",
+        "prompt": "The method of estimating bad debt using an aging schedule is known as the ______ approach.",
+        "derived": "balance sheet",
+        "derivationNotes": "Aging-schedule estimation is the balance sheet approach."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A1",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ3-A1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the present value of the lease payments (round to nearest dollar).",
+        "derived": 231660,
+        "derivationNotes": "55,000 x 4.212 (6%, 5 periods) = 231,660."
+      },
+      {
+        "itemId": "CBQ3-A1-Q2",
+        "type": "select",
+        "prompt": "Based on ASC 842, how should Meridian classify this lease?",
+        "derived": "Finance lease",
+        "derivationNotes": "PV 231,660 > 90% x 250,000 = 225,000, so finance lease."
+      },
+      {
+        "itemId": "CBQ3-A1-Q3",
+        "type": "fill",
+        "prompt": "Under ASC 842, the lessee records a lease liability and a ______________ asset on the balance sheet.",
+        "derived": "right-of-use",
+        "derivationNotes": "Lessee records a lease liability and a right-of-use asset."
+      },
+      {
+        "itemId": "CBQ3-A1-Q4",
+        "type": "numeric",
+        "prompt": "What is the lease liability balance at the end of Year 1 after the first payment? (Use the PV calculated previously).",
+        "derived": 190560,
+        "derivationNotes": "231,660 - (55,000 - 13,899.6) = 231,660 - 41,100.4 = 190,559.6 -> 190,560."
+      },
+      {
+        "itemId": "CBQ3-A1-Q5",
+        "type": "multi",
+        "prompt": "Which of the following are criteria for a finance lease?",
+        "derived": "1,2,3",
+        "derivationNotes": "Finance lease criteria: major part of economic life; PV >= substantially all FV; ownership transfers. \"Standard/easily replaced asset\" is not a criterion."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-A1",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ4-A1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the initial amount of Goodwill recognized on the acquisition date.",
+        "derived": 400000,
+        "derivationNotes": "Goodwill = 2,500,000 - 2,100,000 = 400,000."
+      },
+      {
+        "itemId": "CBQ4-A1-Q2",
+        "type": "numeric",
+        "prompt": "Calculate the goodwill impairment loss recognized at the end of Year 2.",
+        "derived": 150000,
+        "derivationNotes": "Impairment = carrying 2,400,000 - fair value 2,250,000 = 150,000."
+      },
+      {
+        "itemId": "CBQ4-A1-Q4",
+        "type": "multi",
+        "prompt": "Which of the following would be capitalized as part of the cost of an internally developed patent?",
+        "derived": "1,2",
+        "derivationNotes": "Capitalized: successful legal defense costs and registration fees. R&D and admin overhead are expensed."
+      },
+      {
+        "itemId": "CBQ4-A1-Q5",
+        "type": "select",
+        "prompt": "If a reporting unit's fair value is greater than its carrying amount, what is the next step for goodwill impairment testing?",
+        "derived": "No impairment loss is recognized, and no further testing is required",
+        "derivationNotes": "If FV > carrying amount, no impairment and no further testing (simplified one-step test)."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-B2",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ2-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter total cash collections for January.",
+        "derived": 540000,
+        "derivationNotes": "120,000 cash + 240,000 Jan credit + 180,000 Dec credit = 540,000."
+      },
+      {
+        "itemId": "CBQ2-B2-Q2",
+        "type": "numeric",
+        "prompt": "Enter total cash disbursements for January.",
+        "derived": 675000,
+        "derivationNotes": "390,000 COGS + 175,000 S&A + 110,000 equipment = 675,000 (depreciation excluded)."
+      },
+      {
+        "itemId": "CBQ2-B2-Q3",
+        "type": "numeric",
+        "prompt": "Enter the ending cash balance before financing for January. Use a negative sign if the balance is negative.",
+        "derived": -90000,
+        "derivationNotes": "45,000 + 540,000 - 675,000 = -90,000."
+      },
+      {
+        "itemId": "CBQ2-B2-Q4",
+        "type": "select",
+        "prompt": "What amount must Harbor borrow in January to meet the minimum cash balance?",
+        "derived": "$125,000",
+        "derivationNotes": "Deficit 90,000 + minimum 35,000 = 125,000 borrowing."
+      },
+      {
+        "itemId": "CBQ2-B2-Q5",
+        "type": "multi",
+        "prompt": "CFO Chen is reviewing the preliminary January forecast. Select the statements that correctly describe how a change would affect the borrowing requirement.",
+        "derived": "1,3,4",
+        "derivationNotes": "Higher cash-sales % reduces borrowing (T); +5% on Dec credit = +20,000 (T); 5% of Dec credit = 20,000 uncollectible (T). Deferring equipment still leaves a 15,000 shortfall (F)."
+      },
+      {
+        "itemId": "CBQ2-B2-Q6",
+        "type": "match",
+        "prompt": "Match each forecast risk to the correct management response.",
+        "derived": "Cash deficit exceeds $100,000 in January->Negotiate extended payment terms with suppliers;December credit collections arrive slower than budgeted->Increase reliance on the line of credit in January;Equipment supplier offers a January discount but payment is due in February->Defer purchase to February, increasing January cash available;Actual January sales exceed budget by 15%->Increase both collections and COGS projections in the forecast",
+        "derivationNotes": "Deficit >100K -> negotiate supplier terms; slower collections -> more credit; discount purchase due Feb -> defer purchase; higher sales -> update collections and COGS."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-B2",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ3-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter the budgeted direct labor cost for July.",
+        "derived": 264000,
+        "derivationNotes": "8,000 x 1.5 x 22 = 264,000."
+      },
+      {
+        "itemId": "CBQ3-B2-Q2",
+        "type": "numeric",
+        "prompt": "Enter the total budgeted manufacturing overhead cost for July (variable + fixed).",
+        "derived": 276000,
+        "derivationNotes": "12,000 x 8 = 96,000 variable + 180,000 fixed = 276,000."
+      },
+      {
+        "itemId": "CBQ3-B2-Q3",
+        "type": "numeric",
+        "prompt": "Enter the predetermined total overhead rate per direct labor hour using denominator activity.",
+        "derived": 20,
+        "derivationNotes": "8 + (180,000 / 15,000 = 12) = 20 per DLH."
+      },
+      {
+        "itemId": "CBQ3-B2-Q4",
+        "type": "select",
+        "prompt": "What effect would adding a second shift in September have on budgeted fixed overhead cost?",
+        "derived": "Total fixed overhead cost remains unchanged; per-unit fixed overhead decreases",
+        "derivationNotes": "Total fixed OH unchanged within relevant range; per-unit fixed OH decreases."
+      },
+      {
+        "itemId": "CBQ3-B2-Q5",
+        "type": "multi",
+        "prompt": "Select the true statements about manufacturing overhead budgeting.",
+        "derived": "1,2,3",
+        "derivationNotes": "Fixed OH/unit falls with volume; rate set before period; applied OH = rate x actual activity. Variable OH IS in the rate."
+      },
+      {
+        "itemId": "CBQ3-B2-Q6",
+        "type": "match",
+        "prompt": "Match each budget component to its correct calculation formula.",
+        "derived": "Direct labor budget->Units produced x DLH per unit x Wage rate;Variable overhead budget->Actual DLH x Variable OH rate per DLH;Fixed overhead budget->Remains constant within the relevant range;Applied manufacturing overhead->Predetermined OH rate x Actual activity",
+        "derivationNotes": "DL budget -> units x DLH/unit x wage; VOH budget -> actual DLH x VOH rate; FOH budget -> constant; applied OH -> predetermined rate x actual activity."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ2-C3",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ2-C3-Q1",
+        "type": "select",
+        "prompt": "Using the information in Exhibit 1, what is Division A's return on investment for the current year?",
+        "derived": "16.0%",
+        "derivationNotes": "480,000 / 3,000,000 = 16.0%."
+      },
+      {
+        "itemId": "CBQ2-C3-Q2",
+        "type": "select",
+        "prompt": "What is Division A's residual income for the current year?",
+        "derived": "$120,000",
+        "derivationNotes": "480,000 - 360,000 = 120,000."
+      },
+      {
+        "itemId": "CBQ2-C3-Q3",
+        "type": "select",
+        "prompt": "If the proposed $500,000 investment is accepted, what will Division A's new ROI be?",
+        "derived": "16.0%",
+        "derivationNotes": "560,000 / 3,500,000 = 16.0% (project ROI = current ROI)."
+      },
+      {
+        "itemId": "CBQ2-C3-Q4",
+        "type": "select",
+        "prompt": "If Division A is evaluated using residual income, should the manager accept the proposed $500,000 investment?",
+        "derived": "Yes, because residual income will increase by $20,000",
+        "derivationNotes": "RI contribution = 80,000 - 60,000 = 20,000 > 0, so accept."
+      },
+      {
+        "itemId": "CBQ2-C3-Q5",
+        "type": "select",
+        "prompt": "Which division had the best performance based on residual income?",
+        "derived": "Division A",
+        "derivationNotes": "RI: A = 120,000; B = 50,000; C = 0. Division A best."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C3",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ3-C3-Q1",
+        "type": "select",
+        "prompt": "The production manager notes that actual revenue exceeded the static budget by $126,000 and believes performance was strong. However, the controller points out that actual sales volume was 12,000 units compared to the budgeted 10,000. Based on Exhibit 1, what is the sales volume variance for operating income?",
+        "derived": "Favorable $50,000 — the flexible budget shows expected operating income at 12,000 units is $80,000, compared to static budget operating income of $30,000, yielding a $50,000 favorable volume variance",
+        "derivationNotes": "Flexible OI at 12,000 = 80,000; static = 30,000; volume variance = 50,000 F."
+      },
+      {
+        "itemId": "CBQ3-C3-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 1 and Exhibit 2, compute the flexible budget variance for direct materials. Compare actual direct materials cost to the flexible budget amount at 12,000 units.",
+        "derived": "Unfavorable $12,000 — flexible budget DM = 12,000 × $20 = $240,000; actual DM = $252,000; variance = $252,000 − $240,000 = $12,000 unfavorable (actual cost exceeded the flexible budget)",
+        "derivationNotes": "Flexible DM = 12,000 x 20 = 240,000; actual 252,000; 12,000 U."
+      },
+      {
+        "itemId": "CBQ3-C3-Q3",
+        "type": "multi",
+        "prompt": "The controller identified several variances. Which of the following statements correctly interpret the variance results shown in Exhibit 1? (Select all that apply.)",
+        "derived": "1,3,4,5",
+        "derivationNotes": "Correct: volume variance favorable; selling price variance 24,000 U; FOH spending 5,000 U; total variable flexible variance 8,000 U. DL variance is 12,000 F, not U."
+      },
+      {
+        "itemId": "CBQ3-C3-Q4",
+        "type": "match",
+        "prompt": "Match each variance description to the correct variance formula for Precision Manufacturing's standard costing system.",
+        "derived": "Difference between actual revenue and flexible budget revenue at 12,000 units->Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U;Difference between flexible budget variable cost at 12,000 units and actual variable cost->Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A;Difference between static budget operating income and flexible budget operating income->Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F;Difference between actual fixed overhead and budgeted fixed overhead->Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U",
+        "derivationNotes": "Revenue vs flexible -> selling price variance; variable cost flexible vs actual -> flexible budget variable cost variance; static vs flexible OI -> sales volume variance; actual vs budgeted FOH -> FOH spending variance."
+      },
+      {
+        "itemId": "CBQ3-C3-Q5",
+        "type": "select",
+        "prompt": "The production manager is evaluated based on the flexible budget variance for manufacturing costs. Which statement BEST explains why the flexible budget is more appropriate than the static budget for evaluating the production manager's cost control?",
+        "derived": "The flexible budget adjusts allowed costs to actual production volume, so the production manager is evaluated only on cost elements within their control (price and efficiency), not on volume changes that are typically outside production management's control",
+        "derivationNotes": "Flexible budget isolates controllable price/efficiency effects from volume effects."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-C1",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ4-C1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the Variable Overhead Spending Variance (enter unfavorable as positive, favorable as negative, or just absolute value).",
+        "derived": 1600,
+        "derivationNotes": "31,000 - (9,800 x 3 = 29,400) = 1,600 U."
+      },
+      {
+        "itemId": "CBQ4-C1-Q2",
+        "type": "numeric",
+        "prompt": "Calculate the Variable Overhead Efficiency Variance.",
+        "derived": 600,
+        "derivationNotes": "(9,800 - 9,600) x 3 = 600 U."
+      },
+      {
+        "itemId": "CBQ4-C1-Q3",
+        "type": "numeric",
+        "prompt": "Calculate the Fixed Overhead Production-Volume Variance.",
+        "derived": 2000,
+        "derivationNotes": "(10,000 - 9,600) x 5 = 2,000 U."
+      },
+      {
+        "itemId": "CBQ4-C1-Q4",
+        "type": "numeric",
+        "prompt": "Calculate the Fixed Overhead Spending (Budget) Variance.",
+        "derived": 2000,
+        "derivationNotes": "52,000 - 50,000 = 2,000 U."
+      },
+      {
+        "itemId": "CBQ4-C1-Q5",
+        "type": "select",
+        "prompt": "Which variance is NEVER considered controllable by the production supervisor?",
+        "derived": "Fixed overhead production-volume variance",
+        "derivationNotes": "FOH production-volume variance is never controllable by the supervisor."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E1",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ4-E1-Q1",
+        "type": "select",
+        "prompt": "Summit Electronics' internal audit team has identified inconsistent tone at the middle, where plant managers tolerate minor inventory discrepancies. Which COSO component is primarily affected by this deficiency?",
+        "derived": "Control Environment — management's philosophy and operating style set the tone for control consciousness",
+        "derivationNotes": "Inconsistent tone at the middle is a Control Environment deficiency."
+      },
+      {
+        "itemId": "CBQ4-E1-Q2",
+        "type": "select",
+        "prompt": "The internal audit team noted that Summit Electronics' risk assessment does not specifically address financial reporting risks for new contracts. Which COSO principle is most directly violated by this gap?",
+        "derived": "The organization identifies and assesses changes that could significantly impact the system of internal control",
+        "derivationNotes": "Principle 9: identify/assess changes impacting internal control (new contracts)."
+      },
+      {
+        "itemId": "CBQ4-E1-Q3",
+        "type": "select",
+        "prompt": "Summit Electronics has strong automated controls over accounts payable (three-way match) but no controls over manual journal entries. According to the COSO framework, which statement BEST describes the implication of this gap?",
+        "derived": "Control activities should be designed at various levels, including both automated and manual controls, to address all relevant risks",
+        "derivationNotes": "Control activities must cover automated and manual levels for all relevant risks."
+      },
+      {
+        "itemId": "CBQ4-E1-Q4",
+        "type": "select",
+        "prompt": "Summit Electronics lacks a formal whistleblower hotline and communicates policies only on an ad hoc basis. Which COSO principle is MOST directly affected by these gaps?",
+        "derived": "The organization communicates internal control information to personnel, including their roles and responsibilities in the internal control system",
+        "derivationNotes": "Information & Communication: communicate roles and reporting mechanisms (whistleblower)."
+      },
+      {
+        "itemId": "CBQ4-E1-Q5",
+        "type": "select",
+        "prompt": "Summit Electronics relies on quarterly internal audit reviews and annual external audits for monitoring, with no ongoing monitoring of controls. According to the COSO framework, which statement is MOST accurate?",
+        "derived": "Monitoring activities should include both ongoing evaluations (built into operations) and separate evaluations (periodic audits) to provide timely feedback on control effectiveness",
+        "derivationNotes": "Monitoring requires both ongoing and separate evaluations."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F1",
+    "bank": 2,
+    "items": [
+      {
+        "itemId": "CBQ4-F1-Q1",
+        "type": "match",
+        "prompt": "The IT steering committee is evaluating different cloud service models for MedTech's applications. Using Exhibit 1, match each application requirement to the most appropriate cloud service model.",
+        "derived": "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser->SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access;The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure->PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data;The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves->IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure;The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise->On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
+        "derivationNotes": "HR -> SaaS; custom app platform -> PaaS; raw servers -> IaaS; regulated ERP -> on-premise."
+      },
+      {
+        "itemId": "CBQ4-F1-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 2, the CFO asks whether cloud migration makes financial sense. Which statement BEST analyzes the financial impact of migrating from on-premise to IaaS?",
+        "derived": "IaaS offers significant long-term savings ($460,000/year in steady state) but requires $190,000 in one-time migration costs; the 5-month payback period is attractive, and the ongoing operational savings (reduced IT staff, no facility costs, lower downtime) support the business case",
+        "derivationNotes": "IaaS steady-state saves 460,000/yr with 190,000 one-time cost and ~5-month payback."
+      },
+      {
+        "itemId": "CBQ4-F1-Q3",
+        "type": "multi",
+        "prompt": "The compliance officer raises concerns about data security and regulatory compliance in the cloud. Based on Exhibit 1 and general cloud computing knowledge, which of the following are VALID concerns that MedTech should address in its cloud migration plan? (Select all that apply.)",
+        "derived": "1,2,4,5",
+        "derivationNotes": "Valid: retained data responsibility; data residency; SOC 2 reports; vendor lock-in. Cloud does not eliminate internal controls."
+      },
+      {
+        "itemId": "CBQ4-F1-Q4",
+        "type": "select",
+        "prompt": "MedTech's controller is concerned about capitalizing cloud implementation costs versus expensing them. Under current accounting guidance (ASC 350-40), which statement BEST describes how MedTech should account for the cloud migration costs shown in Exhibit 2?",
+        "derived": "Cloud implementation costs should be accounted for based on the nature of the cost — subscription fees are expensed as incurred; one-time migration costs (data migration, training) should be evaluated under the hosting arrangement guidance, with certain implementation costs capitalized if the arrangement is a service contract",
+        "derivationNotes": "Treatment depends on cost nature / whether a software license exists; subscriptions expensed, some implementation costs capitalized."
+      },
+      {
+        "itemId": "CBQ4-F1-Q5",
+        "type": "match",
+        "prompt": "The IT steering committee is considering different cloud deployment models. Match each deployment model to the scenario that BEST fits its characteristics.",
+        "derived": "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center->Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs;MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure->Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads;MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud->Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance;MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process->Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment",
+        "derivationNotes": "ERP -> private cloud; R&D sandbox -> public cloud; shared regulated -> community cloud; acquisition -> public cloud (rapid deployment)."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-A2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-A2-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the total Comprehensive Income for the year.",
+        "derived": 510000,
+        "derivationNotes": "500,000 + (40,000 AFS - 30,000 FX) = 510,000."
+      },
+      {
+        "itemId": "CBQ5-A2-Q2",
+        "type": "multi",
+        "prompt": "Which of the following items bypass the income statement and go directly to Other Comprehensive Income (OCI)?",
+        "derived": "1,2,3",
+        "derivationNotes": "OCI: AFS unrealized, FX translation, pension prior service costs. Trading securities go through NI; dividends are not OCI."
+      },
+      {
+        "itemId": "CBQ5-A2-Q3",
+        "type": "numeric",
+        "prompt": "What is the total reduction to Stockholders' Equity resulting from the treasury stock purchase?",
+        "derived": 150000,
+        "derivationNotes": "10,000 x 15 = 150,000 reduction to equity."
+      },
+      {
+        "itemId": "CBQ5-A2-Q4",
+        "type": "select",
+        "prompt": "If Silverline used the par value method instead of the cost method for treasury stock, how would the initial purchase affect total stockholders' equity?",
+        "derived": "The total reduction to equity would be exactly the same",
+        "derivationNotes": "Cost and par-value methods remove the same total dollars from equity."
+      },
+      {
+        "itemId": "CBQ5-A2-Q5",
+        "type": "fill",
+        "prompt": "Comprehensive income includes all changes in equity during a period except those resulting from investments by and distributions to _________.",
+        "derived": "owners",
+        "derivationNotes": "Comprehensive income excludes investments by and distributions to owners."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-B2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-B2-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the cash interest payment made every six months.",
+        "derived": 40000,
+        "derivationNotes": "1,000,000 x 8% x 1/2 = 40,000."
+      },
+      {
+        "itemId": "CBQ5-B2-Q2",
+        "type": "numeric",
+        "prompt": "Calculate the issue price of the bonds (round to nearest whole dollar).",
+        "derived": 922768,
+        "derivationNotes": "613,900 + (40,000 x 7.7217 = 308,868) = 922,768."
+      },
+      {
+        "itemId": "CBQ5-B2-Q3",
+        "type": "numeric",
+        "prompt": "Calculate the interest expense to be recorded for the first six months (ending June 30, Year 1).",
+        "derived": 46138,
+        "derivationNotes": "922,768 x 5% = 46,138."
+      },
+      {
+        "itemId": "CBQ5-B2-Q4",
+        "type": "numeric",
+        "prompt": "Calculate the carrying value of the bond immediately after the first interest payment on June 30.",
+        "derived": 928906,
+        "derivationNotes": "922,768 + (46,138 - 40,000 = 6,138) = 928,906."
+      },
+      {
+        "itemId": "CBQ5-B2-Q5",
+        "type": "select",
+        "prompt": "How are bond issue costs treated under current US GAAP?",
+        "derived": "Deducted from the carrying value of the bond liability",
+        "derivationNotes": "Bond issue costs are deducted from the carrying value of the liability (ASU 2015-03)."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B1",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-B1-Q1",
+        "type": "numeric",
+        "prompt": "Calculate the variable cost per machine hour using the High-Low method.",
+        "derived": 4,
+        "derivationNotes": "(42,000 - 30,000) / (8,000 - 5,000) = 12,000 / 3,000 = 4."
+      },
+      {
+        "itemId": "CBQ4-B1-Q2",
+        "type": "numeric",
+        "prompt": "Calculate the total fixed cost using the High-Low method.",
+        "derived": 10000,
+        "derivationNotes": "42,000 - (4 x 8,000) = 10,000."
+      },
+      {
+        "itemId": "CBQ4-B1-Q3",
+        "type": "numeric",
+        "prompt": "What is the estimated total cost for 7,000 hours using the Regression model?",
+        "derived": 38300,
+        "derivationNotes": "11,000 + 3.90 x 7,000 = 38,300."
+      },
+      {
+        "itemId": "CBQ4-B1-Q4",
+        "type": "select",
+        "prompt": "What does the R-squared value of 0.85 indicate?",
+        "derived": "85% of the variation in total cost is explained by machine hours",
+        "derivationNotes": "R-squared = proportion of cost variance explained by machine hours = 85%."
+      },
+      {
+        "itemId": "CBQ4-B1-Q5",
+        "type": "multi",
+        "prompt": "What are the primary disadvantages of the High-Low method compared to regression?",
+        "derived": "1,2",
+        "derivationNotes": "High-low uses only two points and is skewed by outliers. It is simple (not complex) and can separate fixed/variable."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-B2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-B2-Q1",
+        "type": "numeric",
+        "prompt": "Enter the ending inventory balance at March 31.",
+        "derived": 170000,
+        "derivationNotes": "120,000 + 650,000 - 600,000 = 170,000."
+      },
+      {
+        "itemId": "CBQ4-B2-Q2",
+        "type": "numeric",
+        "prompt": "Enter the ending accounts receivable balance at March 31 (gross, before allowance for doubtful accounts).",
+        "derived": 300000,
+        "derivationNotes": "1,000,000 x (28% + 2%) = 300,000 gross A/R."
+      },
+      {
+        "itemId": "CBQ4-B2-Q3",
+        "type": "numeric",
+        "prompt": "Enter the ending accounts payable balance at March 31.",
+        "derived": 130000,
+        "derivationNotes": "650,000 x 20% = 130,000."
+      },
+      {
+        "itemId": "CBQ4-B2-Q4",
+        "type": "numeric",
+        "prompt": "Enter the ending cash balance at March 31.",
+        "derived": 31500,
+        "derivationNotes": "100,000+200,000+700,000-100,000-520,000-140,000-100,000-20,000-15,000-73,500 = 31,500."
+      },
+      {
+        "itemId": "CBQ4-B2-Q5",
+        "type": "select",
+        "prompt": "Which budgeted financial statement item is NOT directly affected by the sales collection assumption?",
+        "derived": "Ending inventory balance",
+        "derivationNotes": "Inventory is determined by purchases and COGS, not collection assumptions."
+      },
+      {
+        "itemId": "CBQ4-B2-Q6",
+        "type": "match",
+        "prompt": "Match each budgeted balance sheet line item to the primary budget or policy that determines it.",
+        "derived": "Cash->Cash budget and collection/disbursement timing;Accounts receivable->Sales budget and credit collection policy;Inventory->Cost of goods sold budget and purchases budget;Accounts payable->Purchases budget and supplier payment terms",
+        "derivationNotes": "Cash -> cash budget/timing; A/R -> sales budget/collection policy; inventory -> COGS + purchases budgets; A/P -> purchases budget/payment terms."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-D3",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-D3-Q1",
+        "type": "select",
+        "prompt": "Summit Furniture's Cutting Department can theoretically produce 50,000 units per year. After accounting for scheduled maintenance (2,000 hours), employee breaks and shift changes (1,500 hours), and machine setup time (3,500 hours), the practical capacity is 38,000 units. Which capacity measure should Summit use for fixed overhead allocation to BEST approximate the cost of unused capacity?",
+        "derived": "Practical capacity — it represents the maximum sustainable production under realistic operating conditions; using practical capacity highlights the cost of unused capacity (the difference between practical and actual) and avoids distorting product costs with the cost of idle facilities",
+        "derivationNotes": "Practical capacity best approximates the cost of unused capacity."
+      },
+      {
+        "itemId": "CBQ4-D3-Q2",
+        "type": "select",
+        "prompt": "Using Exhibit 2, what would be the difference in the fixed overhead volume variance if Summit Furniture changed its denominator level from practical capacity (38,000 units) to master-budget capacity (30,000 units)?",
+        "derived": "The volume variance would decrease from $500,000 unfavorable to $126,667 unfavorable — a $373,333 reduction — because a lower denominator level reduces the fixed overhead rate per unit and decreases the unfavorable volume variance",
+        "derivationNotes": "Volume variance falls from 500,000 U to 126,667 U (373,333 reduction)."
+      },
+      {
+        "itemId": "CBQ4-D3-Q3",
+        "type": "multi",
+        "prompt": "The CFO is evaluating the implications of the capacity denominator level choice. Which of the following statements correctly describe the impact of different capacity measures? (Select all that apply.)",
+        "derived": "3",
+        "derivationNotes": "DL-047-suspect item. Only statement 3 (volume variance zero when denominator = actual) is correct; statement 1 wrongly claims theoretical capacity gives the highest rate (it gives the lowest, $38)."
+      },
+      {
+        "itemId": "CBQ4-D3-Q4",
+        "type": "match",
+        "prompt": "The CFO must recommend a capacity management strategy for each department. Match each department's situation to the most appropriate capacity strategy using Exhibit 1.",
+        "derived": "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle->Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap;Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000->Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint;Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M->Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput;All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle->Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle",
+        "derivationNotes": "Cutting idle -> reduce unused capacity; Assembly highest -> monitor as potential constraint; Finishing -> defer capital; all -> normal capacity for strategic view."
+      },
+      {
+        "itemId": "CBQ4-D3-Q5",
+        "type": "select",
+        "prompt": "Summit's CFO must recommend a denominator level to the board. The board is concerned about minimizing unfavorable volume variances to avoid explaining large write-offs to investors. Which recommendation BEST balances board concerns with sound accounting practice?",
+        "derived": "Use practical capacity and clearly disclose the cost of unused capacity as a separate line item in the management discussion — this provides transparency about capacity utilization and avoids distorting product costs while still informing investors about operational efficiency",
+        "derivationNotes": "Use practical capacity and disclose unused-capacity cost transparently."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-E2-Q1",
+        "type": "match",
+        "prompt": "The internal audit team identified several scenarios where application controls should prevent or detect errors. Match each scenario to the appropriate application control from Exhibit 1.",
+        "derived": "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order->Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection;A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table->Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found;An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits->Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid;An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit->Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
+        "derivationNotes": "$25,000 vs $2,500 -> PO limit check; nonexistent vendor -> vendor master validity; transposition -> check digit; credit limit -> credit limit check."
+      },
+      {
+        "itemId": "CBQ4-E2-Q2",
+        "type": "select",
+        "prompt": "The internal audit team discovers that the three-way match control (matching PO, receiving report, and invoice) can be overridden by senior procurement managers. In the past 6 months, the override has been used 47 times for one particular vendor. Which control risk does this situation represent?",
+        "derived": "Control override by management — the three-way match is a key detective/preventive control; frequent overrides indicate that the control is not operating effectively and may allow erroneous or fraudulent payments to bypass control",
+        "derivationNotes": "Frequent overrides = control override by management; control not operating effectively."
+      },
+      {
+        "itemId": "CBQ4-E2-Q3",
+        "type": "multi",
+        "prompt": "The ERP system includes processing controls in addition to input controls. According to Exhibit 2, which of the following are examples of processing controls that MedTech should have in place? (Select all that apply.)",
+        "derived": "1,2,4",
+        "derivationNotes": "Run-to-run, sequence, and reasonableness checks are processing controls. Weekly report review is output; login screen is access."
+      },
+      {
+        "itemId": "CBQ4-E2-Q4",
+        "type": "match",
+        "prompt": "MedTech's internal audit team is classifying application controls by type. Match each control description to the correct control category using Exhibit 2.",
+        "derived": "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%->Input control — quantity reasonableness check prevents receiving errors from entering the system;The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches->Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing;The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days->Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies;The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices->Access control — role-based security prevents users from performing incompatible functions",
+        "derivationNotes": "Quantity reasonableness -> input; batch sequence -> processing; aged-payables review -> output; role restriction -> access."
+      },
+      {
+        "itemId": "CBQ4-E2-Q5",
+        "type": "select",
+        "prompt": "The same employee in MedTech's AP department can create new vendor records, enter invoices, and process payments in the ERP system. Management argues that the system's input controls (vendor validity check, three-way match) compensate for this lack of segregation. Which assessment BEST reflects the internal control risk?",
+        "derived": "Segregation of duties is severely compromised — one employee has end-to-end control over the vendor lifecycle (create, pay, reconcile); application controls reduce but do not eliminate the fraud risk, as the employee could create a fictitious vendor and process payments while manually overriding the three-way match",
+        "derivationNotes": "End-to-end vendor lifecycle control by one employee severely compromises SOD; application controls do not eliminate fraud risk."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-E3",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-E3-Q1",
+        "type": "select",
+        "prompt": "Referring to Exhibit 1, the sales manager paid $500 to a customs official to expedite clearance of a shipment of emergency replacement parts. The payment was recorded as \"expediting fee\" in the books. Under the FCPA, which statement BEST characterizes this payment?",
+        "derived": "This may qualify as a facilitating payment if it was for a routine, non-discretionary government action (processing customs clearance) and was accurately recorded — however, the company should establish clear policies defining when facilitating payments are acceptable and require documentation",
+        "derivationNotes": "May qualify as a facilitating payment for a routine non-discretionary action, accurately recorded."
+      },
+      {
+        "itemId": "CBQ4-E3-Q2",
+        "type": "select",
+        "prompt": "Apex's internal audit team discovers that the 15% commission paid to Agent X in Country X (Exhibit 1) was routed through a shell company in a third country and there is no written agreement defining the services provided. The agent is a cousin of the country's minister of procurement. What is the MOST significant FCPA risk?",
+        "derived": "This presents a high-risk red flag for indirect bribery — the FCPA prohibits corrupt payments through third parties; the combination of relationship to a government official, opaque payment structure, and lack of written agreement strongly suggests the commission may be a conduit for improper payments",
+        "derivationNotes": "High-risk red flag: indirect bribery via third party with government-official ties and opaque structure."
+      },
+      {
+        "itemId": "CBQ4-E3-Q3",
+        "type": "multi",
+        "prompt": "Based on Exhibit 1 and Exhibit 2, which of the following actions should Apex Components take to strengthen its FCPA compliance program? (Select all that apply.)",
+        "derived": "1,2,4,5",
+        "derivationNotes": "Enhanced due diligence, FCPA training, controlled facilitating payments, and risk-based JV decisions. Cultural practices do not override FCPA."
+      },
+      {
+        "itemId": "CBQ4-E3-Q4",
+        "type": "match",
+        "prompt": "The internal audit team classified each risk scenario from Exhibit 1 for further action. Match each scenario to the most appropriate compliance response.",
+        "derived": "Customs expediting fee — $500 paid to customs official; recorded as expense->Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring;Agent commission — 15% via shell company; agent related to procurement minister->Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ;Charitable donation request — $50,000 to minister's personal foundation->Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options;Luxury client entertainment — $1,200/person including spouses for government clients->Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper",
+        "derivationNotes": "Customs fee -> permissible if approved/documented; agent commission -> investigate/terminate; donation -> decline and report; entertainment -> strengthen expense policy."
+      },
+      {
+        "itemId": "CBQ4-E3-Q5",
+        "type": "select",
+        "prompt": "Apex's CFO argues that the company does not need separate FCPA-specific internal controls because the company already has a general internal control system. Referring to Exhibit 2, which response BEST addresses this argument?",
+        "derived": "The FCPA's accounting provisions specifically require issuers to maintain internal accounting controls sufficient to provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements and to maintain accountability for assets — general controls may not be sufficient to detect and prevent improper foreign payments that could be disguised in the books",
+        "derivationNotes": "FCPA accounting provisions require issuer internal accounting controls; general controls may not suffice."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E1",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-E1-Q1",
+        "type": "match",
+        "prompt": "Match each IIA Standard category to the type of guidance it provides.",
+        "derived": "Attribute Standards->Define the characteristics and capabilities required for internal audit activities and individuals;Performance Standards->Describe the nature of internal audit work and quality criteria for measuring performance;Implementation Standards->Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting",
+        "derivationNotes": "Attribute -> characteristics/capabilities; Performance -> nature of work/quality criteria; Implementation -> apply to specific engagement types."
+      },
+      {
+        "itemId": "CBQ5-E1-Q2",
+        "type": "select",
+        "prompt": "The internal audit department previously performed consulting engagements for the lending department. Based on IIA Standards, which action is MOST critical for preserving objectivity?",
+        "derived": "Prohibit internal auditors from performing assurance engagements in the lending department for a reasonable period after performing consulting work there",
+        "derivationNotes": "Cooling-off period prohibiting assurance in the lending department preserves objectivity."
+      },
+      {
+        "itemId": "CBQ5-E1-Q3",
+        "type": "multi",
+        "prompt": "The CAE has drafted a revised internal audit charter for Audit Committee approval. Based on IIA Standards, which elements MUST be included? (Select all that apply.)",
+        "derived": "1,2,3",
+        "derivationNotes": "Charter must include purpose/authority/responsibility, reporting relationships, and scope. Annual review and methodology are not mandated."
+      },
+      {
+        "itemId": "CBQ5-E1-Q4",
+        "type": "select",
+        "prompt": "Under the IIA Standards, which reporting structure best supports internal audit independence at First Continental Bank?",
+        "derived": "CAE reports functionally to the Audit Committee and administratively to the CEO, with direct access to the Audit Committee chair for sensitive matters",
+        "derivationNotes": "CAE functionally to Audit Committee, administratively to CEO, direct access to chair."
+      },
+      {
+        "itemId": "CBQ5-E1-Q5",
+        "type": "multi",
+        "prompt": "The CAE needs to establish a Quality Assurance and Improvement Program (QAIP) under IIA Standards. Which of the following are required QAIP components? (Select all that apply.)",
+        "derived": "1,2,3",
+        "derivationNotes": "QAIP: ongoing monitoring, periodic internal self-assessments, external assessment at least every 5 years. Compensation metrics and benchmarking are not required."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-E2-Q1",
+        "type": "match",
+        "prompt": "The CISO is preparing an incident report for the board. Match each cybersecurity threat type to its role in the CCHS incident.",
+        "derived": "Phishing email->The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation;Remote Access Trojan (RAT)->The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement;Ransomware->The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses;DDoS (distraction attack)->A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment",
+        "derivationNotes": "Phishing -> initial vector; RAT -> persistence; ransomware -> final payload; DDoS -> distraction traffic flood."
+      },
+      {
+        "itemId": "CBQ5-E2-Q2",
+        "type": "select",
+        "prompt": "Based on the incident timeline, which control failure was the MOST critical enabler of the ransomware attack at CCHS?",
+        "derived": "Lack of mandatory cybersecurity awareness training — the phishing email was the initial attack vector, and without training, the employee had no basis to recognize the social engineering indicators",
+        "derivationNotes": "Lack of security awareness training was the most critical enabler (initial foothold)."
+      },
+      {
+        "itemId": "CBQ5-E2-Q3",
+        "type": "numeric",
+        "prompt": "Using Exhibit 2 data, the CISO proposes implementing MFA for all internal system access at a cost of $420,000 annually. Based on the incident, the probability of a similar attack in any given year without MFA is estimated at 12%, and with MFA it drops to 3%. Using expected value analysis, calculate the annual net benefit (or cost) of implementing MFA. The $18.2 million total loss is the exposure for a successful attack. Enter your answer as the nearest whole number in dollars. If the net benefit is negative, include the minus sign. Do not use commas or dollar signs.",
+        "derived": 1218000,
+        "derivationNotes": "18.2M x (12% - 3%) - 420,000 = 1,638,000 - 420,000 = 1,218,000."
+      },
+      {
+        "itemId": "CBQ5-E2-Q4",
+        "type": "multi",
+        "prompt": "Based on Exhibit 2, which control improvements should CCHS implement to prevent a recurrence? (Select all that apply.)",
+        "derived": "1,2,3,4",
+        "derivationNotes": "Awareness training, EDR on all endpoints, network segmentation, and 3-2-1 immutable backups. Post-incident reports and blanket internet restriction are not preventive controls."
+      },
+      {
+        "itemId": "CBQ5-E2-Q5",
+        "type": "select",
+        "prompt": "The board asks whether paying the ransom was the right decision. Based on cybersecurity best practices and internal control principles, which response is MOST appropriate?",
+        "derived": "The decision to pay should be made collaboratively with law enforcement, cybersecurity experts, and legal counsel, considering data backups, decryption feasibility, and regulatory obligations — but prevention through layered controls is always the superior strategy",
+        "derivationNotes": "Ransom decision should be structured/collaborative; layered prevention is superior."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-E3",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-E3-Q1",
+        "type": "select",
+        "prompt": "DataBridge Solutions Inc. has been found by a EU supervisory authority to have intentionally violated EU data subjects' rights under Article 83(5) of the GDPR. Based on the financial data provided in Exhibit 1, what is the maximum potential administrative fine DataBridge faces?",
+        "derived": "€32,000,000",
+        "derivationNotes": "Max = higher of EUR20M or 4% x 800M = EUR32M."
+      },
+      {
+        "itemId": "CBQ5-E3-Q2",
+        "type": "select",
+        "prompt": "Using the data in Exhibit 1, what is the expected annual net benefit (or cost) of implementing the proposed privacy compliance program? (Expected value of avoided losses minus program cost.)",
+        "derived": "€1,440,000",
+        "derivationNotes": "(30% x 8M) + (45% x 1.2M) = 2.94M; less 1.5M cost = 1.44M net benefit."
+      },
+      {
+        "itemId": "CBQ5-E3-Q3",
+        "type": "select",
+        "prompt": "DataBridge discovers that an employee inadvertently exposed a database containing personal data of 3,200 EU data subjects. Under the GDPR, within how many hours must DataBridge notify the appropriate supervisory authority of this data breach?",
+        "derived": "72 hours",
+        "derivationNotes": "GDPR Article 33: notify supervisory authority within 72 hours."
+      },
+      {
+        "itemId": "CBQ5-E3-Q4",
+        "type": "select",
+        "prompt": "An EU data subject submits a request to DataBridge demanding that the company delete all personal data collected about them and cease processing. Under the GDPR, which data subject right has been invoked?",
+        "derived": "Right to erasure (right to be forgotten)",
+        "derivationNotes": "Request to delete all personal data and cease processing = right to erasure (right to be forgotten)."
+      },
+      {
+        "itemId": "CBQ5-E3-Q5",
+        "type": "select",
+        "prompt": "DataBridge needs to transfer personal data of EU customers from its Irish subsidiary to its primary data center in Chicago for centralized analytics processing. Which GDPR-approved transfer mechanism is most appropriate for this recurring data transfer scenario?",
+        "derived": "Standard Contractual Clauses (SCCs)",
+        "derivationNotes": "Standard Contractual Clauses are the appropriate transfer mechanism."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ4-F2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ4-F2-Q1",
+        "type": "select",
+        "prompt": "OmniRetail's demand forecasting model requires historical sales data with known actual demand to predict future sales. Which type of machine learning does this approach represent?",
+        "derived": "Supervised learning",
+        "derivationNotes": "Labeled historical demand -> supervised learning."
+      },
+      {
+        "itemId": "CBQ4-F2-Q2",
+        "type": "match",
+        "prompt": "For each machine learning application at OmniRetail, select whether it uses supervised or unsupervised learning.",
+        "derived": "Demand forecasting->Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand;Fraud detection->Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent;Customer segmentation->Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories;Anomaly detection->Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels",
+        "derivationNotes": "Demand forecasting -> supervised regression; fraud detection -> supervised classification; segmentation -> unsupervised clustering; anomaly detection -> unsupervised outlier detection."
+      },
+      {
+        "itemId": "CBQ4-F2-Q3",
+        "type": "multi",
+        "prompt": "The data science team observes that the demand forecasting model performs poorly on stores with limited historical data. Which of the following factors are likely contributing to overfitting in the model? (Select all that apply.)",
+        "derived": "1,2,3",
+        "derivationNotes": "Overfitting contributors: insufficient data, excess complexity vs sample size, learning noise. A simpler model is underfitting."
+      },
+      {
+        "itemId": "CBQ4-F2-Q4",
+        "type": "select",
+        "prompt": "OmniRetail's fraud detection model uses machine learning rather than a traditional rule-based system with fixed thresholds. What is the primary advantage of the ML approach for this application?",
+        "derived": "ML models can adapt to evolving fraud patterns by learning from new transaction data without manual rule updates",
+        "derivationNotes": "ML adapts to evolving fraud patterns without manual rule updates."
+      },
+      {
+        "itemId": "CBQ4-F2-Q5",
+        "type": "multi",
+        "prompt": "OmniRetail's customer segmentation model identified 12 distinct customer clusters using unsupervised learning. Which of the following are valid retail business applications of these segmentation results? (Select all that apply.)",
+        "derived": "1,2,3",
+        "derivationNotes": "Valid: targeted promotions, store layout/placement, acquisition of underpenetrated segments. Inventory reorder requires demand forecasting."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ5-F2",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ5-F2-Q1",
+        "type": "match",
+        "prompt": "The CFO's team is preparing a training deck on RPA for the audit committee. Match each RPA characteristic to its correct description.",
+        "derived": "Rule-based processing->RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment;User interface interaction->RPA bots interact with applications through the same user interface as human users, requiring no system integration changes;Exception handling->Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member;Attended vs unattended mode->Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention",
+        "derivationNotes": "Rule-based -> predefined structured steps; UI interaction -> same UI as humans; exception handling -> flag out-of-parameter items; attended/unattended -> user-triggered vs scheduled."
+      },
+      {
+        "itemId": "CBQ5-F2-Q2",
+        "type": "select",
+        "prompt": "Based on the data in Exhibit 1, which finance process is the STRONGEST candidate for RPA implementation at Meridian?",
+        "derived": "Invoice data entry to ERP — it is high-volume (3,750 per month), entirely rule-based with structured data, and has the second-lowest exception rate at 4%",
+        "derivationNotes": "Invoice data entry is high-volume, rule-based, structured, low exception rate."
+      },
+      {
+        "itemId": "CBQ5-F2-Q3",
+        "type": "numeric",
+        "prompt": "Using the scenario data, calculate the annual net benefit (annual benefits minus annual ongoing costs) for the RPA initiative in Year 2, after implementation costs have been incurred. Enter your answer as a whole number in dollars. Do not use commas or dollar signs.",
+        "derived": 525000,
+        "derivationNotes": "620,000 + 85,000 - 180,000 = 525,000 Year 2 net benefit."
+      },
+      {
+        "itemId": "CBQ5-F2-Q4",
+        "type": "multi",
+        "prompt": "Which of the following processes from Exhibit 1 are appropriate candidates for RPA? (Select all that apply.)",
+        "derived": "1,2,3,4",
+        "derivationNotes": "Invoice entry, bank rec, intercompany matching, and standard JE posting are RPA-suitable. Loss reserve estimation requires judgment."
+      },
+      {
+        "itemId": "CBQ5-F2-Q5",
+        "type": "select",
+        "prompt": "Based on Exhibit 2, which internal control enhancement is MOST critical to address the segregation of duties (SOD) risk created by the RPA implementation?",
+        "derived": "Configure supervisory review and approval workflows for all high-value transactions processed by unattended bots, ensuring no transaction exceeds a defined threshold without human authorization",
+        "derivationNotes": "Supervisory review/approval for high-value transactions is the most critical SOD enhancement."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A3",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ3-A3-Q1",
+        "type": "select",
+        "prompt": "How many distinct performance obligations exist in Crestline's contract with Regional Hospital?",
+        "derived": "Two — equipment delivery and installation service",
+        "derivationNotes": "Two distinct obligations: equipment delivery and installation; rebate is variable consideration."
+      },
+      {
+        "itemId": "CBQ3-A3-Q2",
+        "type": "numeric",
+        "prompt": "Enter the amount of revenue Crestline should allocate to the equipment performance obligation (round to nearest whole dollar).",
+        "derived": 495238,
+        "derivationNotes": "Rebate excluded under constraint (consistent with Q4); 600,000 x 520,000/630,000 = 495,238."
+      },
+      {
+        "itemId": "CBQ3-A3-Q3",
+        "type": "select",
+        "prompt": "When should Crestline recognize revenue for the equipment portion of the contract?",
+        "derived": "On October 15 when the equipment is delivered to the hospital",
+        "derivationNotes": "Equipment control transfers at delivery, October 15."
+      },
+      {
+        "itemId": "CBQ3-A3-Q4",
+        "type": "select",
+        "prompt": "Under the most likely amount method, what amount of variable consideration should Crestline include in the transaction price for the volume rebate?",
+        "derived": "$0 — the rebate should be excluded until the threshold is met",
+        "derivationNotes": "Rebate constrained to $0 until the threshold is met."
+      },
+      {
+        "itemId": "CBQ3-A3-Q5",
+        "type": "select",
+        "prompt": "If Crestline subsequently receives a contract modification on November 1 that adds $80,000 of additional equipment (standalone price $75,000) to the original contract, how should the modification be accounted for?",
+        "derived": "As a separate contract because the additional goods are distinct and priced at standalone selling price",
+        "derivationNotes": "Distinct goods priced at standalone selling price -> separate contract."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-A4",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ3-A4-Q1",
+        "type": "numeric",
+        "prompt": "Enter the net realizable value (NRV) per unit for tablets.",
+        "derived": 228,
+        "derivationNotes": "NRV = 240 - (5% x 240 = 12) = 228."
+      },
+      {
+        "itemId": "CBQ3-A4-Q2",
+        "type": "numeric",
+        "prompt": "Enter the total inventory write-down amount Harbor must record at December 31, 2026.",
+        "derived": 0,
+        "derivationNotes": "No product line has cost > NRV, so total write-down = 0."
+      },
+      {
+        "itemId": "CBQ3-A4-Q3",
+        "type": "select",
+        "prompt": "What is the appropriate accounting treatment regarding inventory write-downs for Harbor at December 31, 2026?",
+        "derived": "Record no journal entry because cost does not exceed NRV for any product line",
+        "derivationNotes": "No write-down; no journal entry."
+      },
+      {
+        "itemId": "CBQ3-A4-Q4",
+        "type": "select",
+        "prompt": "How does the inventory write-down affect Harbor's current ratio and gross margin percentage?",
+        "derived": "Neither ratio is affected because no write-down exists — cost is below NRV for every product line",
+        "derivationNotes": "Neither ratio affected because no write-down exists."
+      },
+      {
+        "itemId": "CBQ3-A4-Q5",
+        "type": "select",
+        "prompt": "Exhibit 2 shows the prior year carried $760,000 at cost and $745,000 at LCNRV (a $15,000 write-down) with a 32.5% gross margin. Given this year's $0 write-down from Q2, what trend judgment should Controller David Park report?",
+        "derived": "Write-downs fell from $15,000 to $0, removing a prior-year drag on gross margin — directionally favorable",
+        "derivationNotes": "Write-downs fell from 15,000 to 0 — directionally favorable."
+      }
+    ]
+  },
+  {
+    "caseId": "CBQ3-C4",
+    "bank": 3,
+    "items": [
+      {
+        "itemId": "CBQ3-C4-Q1",
+        "type": "numeric",
+        "prompt": "Enter the direct material price variance for March. Indicate unfavorable variances as negative numbers.",
+        "derived": -21600,
+        "derivationNotes": "(42 - 40) x 10,800 = 21,600 U -> -21600."
+      },
+      {
+        "itemId": "CBQ3-C4-Q2",
+        "type": "numeric",
+        "prompt": "Enter the direct material quantity variance for March. Indicate unfavorable variances as negative numbers.",
+        "derived": -32000,
+        "derivationNotes": "(10,800 - 10,000) x 40 = 32,000 U -> -32000."
+      },
+      {
+        "itemId": "CBQ3-C4-Q3",
+        "type": "numeric",
+        "prompt": "Enter the direct labor efficiency variance for March. Indicate unfavorable variances as negative numbers.",
+        "derived": -5600,
+        "derivationNotes": "(3,400 - 3,200) x 28 = 5,600 U -> -5600."
+      },
+      {
+        "itemId": "CBQ3-C4-Q4",
+        "type": "select",
+        "prompt": "Based on the variance results, which of the following interpretations is most appropriate?",
+        "derived": "The unfavorable material price variance may have caused the unfavorable quantity variance if lower-quality materials were purchased",
+        "derivationNotes": "Lower-quality materials may explain the unfavorable price and quantity variances together."
+      },
+      {
+        "itemId": "CBQ3-C4-Q5",
+        "type": "select",
+        "prompt": "Which variance should Apex investigate first, considering both materiality and controllability?",
+        "derived": "The direct material quantity variance because it is the largest unfavorable variance and is controllable by production",
+        "derivationNotes": "Investigate the DM quantity variance first: largest unfavorable and controllable by production."
+      }
+    ]
+  }
+]
