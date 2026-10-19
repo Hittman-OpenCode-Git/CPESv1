@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17 20:52:01",
+  "generated": "2026-10-19 00:21:06",
   "session": "S121",
   "pools": {
     "part1": {
@@ -21,9 +21,9 @@
       },
       "correctChoice": {
         "A": 752,
-        "B": 879,
+        "B": 882,
         "C": 751,
-        "D": 688
+        "D": 685
       },
       "certified": 3052,
       "unprocessed": 0,
@@ -56,11 +56,12 @@
         "C": 844,
         "D": 725
       },
-      "certified": 3530,
+      "certified": 3529,
       "unprocessed": 0,
-      "nonCertified": 0,
+      "nonCertified": 1,
       "byState": {
-        "Certified": 3530
+        "Certified": 3529,
+        "Archived": 1
       }
     }
   },
@@ -87,9 +88,9 @@
       },
       "correctChoice": {
         "A": 146,
-        "B": 182,
+        "B": 185,
         "C": 124,
-        "D": 108
+        "D": 105
       },
       "certified": 560,
       "unprocessed": 0,
@@ -197,9 +198,9 @@
           },
           "correctChoice": {
             "A": 22,
-            "B": 21,
+            "B": 24,
             "C": 17,
-            "D": 15
+            "D": 12
           }
         },
         "F": {
@@ -292,17 +293,17 @@
         {
           "dimension": "answer_position",
           "label": "B",
-          "actual": 32.5,
+          "actual": 33,
           "target": 25,
-          "delta": 7.5,
+          "delta": 8,
           "flag": "OVER"
         },
         {
           "dimension": "answer_position",
           "label": "D",
-          "actual": 19.3,
+          "actual": 18.8,
           "target": 25,
-          "delta": -5.7,
+          "delta": -6.3,
           "flag": "UNDER"
         }
       ],
@@ -1441,12 +1442,13 @@
         "C": 169,
         "D": 153
       },
-      "certified": 788,
+      "certified": 787,
       "unprocessed": 0,
       "byState": {
-        "Certified": 788
+        "Certified": 787,
+        "Archived": 1
       },
-      "nonCertified": 0,
+      "nonCertified": 1,
       "bySection": {
         "C": {
           "difficulty": {

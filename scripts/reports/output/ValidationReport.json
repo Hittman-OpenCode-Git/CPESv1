@@ -16,14 +16,12 @@
     "status": "WARN",
     "errors": [],
     "warnings": [
-      "content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6",
-      "No cases found in p2/case_pack_p2_authored.js",
-      "No cases found in p2/case_pack_p2_C4_C8.js"
+      "content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6"
     ],
     "statistics": {
       "Cases Checked": 190
     },
-    "duration": 548,
+    "duration": 514,
     "confidence": 100
   },
   {
@@ -236,7 +234,7 @@
       "Domain: Risk Management": 11,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 468,
+    "duration": 434,
     "confidence": 100
   },
   {
@@ -3510,7 +3508,7 @@
     ],
     "statistics": {
       "P2 MCQ Packs Found": 6,
-      "P2 Case Packs Found": 5,
+      "P2 Case Packs Found": 3,
       "P2 Items Checked": 4190,
       "P2 Cases Checked": 110,
       "P2 Domain: Corporate Finance": 728,
@@ -3520,7 +3518,7 @@
       "P2 Domain: Professional Ethics": 614,
       "P2 Domain: Risk Management": 566
     },
-    "duration": 590,
+    "duration": 645,
     "confidence": 100
   },
   {
@@ -3615,7 +3613,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 46
     },
-    "duration": 396,
+    "duration": 589,
     "confidence": 100
   },
   {
@@ -3707,7 +3705,7 @@
       "Orphan Exhibits (unreferenced)": 76,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 822,
+    "duration": 564,
     "confidence": 100
   },
   {
@@ -3731,7 +3729,7 @@
       "Correct Explanation Avg Length": 604,
       "Wrong Explanation Avg Length": 285
     },
-    "duration": 1551,
+    "duration": 1343,
     "confidence": 100
   },
   {
@@ -3739,8 +3737,6 @@
     "status": "WARN",
     "errors": [],
     "warnings": [
-      "No cases found in p2/case_pack_p2_authored.js",
-      "No cases found in p2/case_pack_p2_C4_C8.js",
       "Placeholder choices found in cases: CBQ3-E2, CBQ21-E5, CBQ23-E3"
     ],
     "statistics": {
@@ -3756,17 +3752,14 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 362,
+    "duration": 306,
     "confidence": 100
   },
   {
     "validator": "Case Identity Validator",
-    "status": "WARN",
+    "status": "PASS",
     "errors": [],
-    "warnings": [
-      "No cases parsed in p2/case_pack_p2_authored.js",
-      "No cases parsed in p2/case_pack_p2_C4_C8.js"
-    ],
+    "warnings": [],
     "statistics": {
       "content/cases/case_pack_1_corrected.js :: Moderate-Easy": "38 (27.0%)",
       "content/cases/case_pack_1_corrected.js :: Moderate": "36 (25.5%)",
@@ -3814,7 +3807,7 @@
       "Archived↔Live Overlaps (expected, S916)": 75,
       "Score/Label Mismatches": 0
     },
-    "duration": 114,
+    "duration": 73,
     "confidence": 100
   },
   {
@@ -10957,7 +10950,7 @@
       "psychometricModuleErrors": 0,
       "psychometricModuleWarnings": 7108
     },
-    "duration": 10813,
+    "duration": 6820,
     "confidence": 100
   }
 ]

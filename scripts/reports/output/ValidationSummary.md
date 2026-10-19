@@ -1,6 +1,6 @@
 # Validation Report Summary
 
-**Generated:** 2026-10-18T18:51:55.552Z
+**Generated:** 2026-10-19T00:20:52.868Z
 **Project:** CMA Exam Simulator v2.0
 
 ## Results
@@ -8,18 +8,18 @@
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
 | Repository Validator | PASS | 0 | 0 | 1ms |
-| Metadata Validator | WARN | 0 | 3 | 548ms |
-| Blueprint Validator | WARN | 0 | 188 | 468ms |
-| Part 2 Blueprint Validator | WARN | 0 | 3263 | 590ms |
-| Difficulty Validator | WARN | 0 | 72 | 396ms |
-| Reference Validator | WARN | 0 | 77 | 822ms |
-| Explanation Validator | WARN | 0 | 6 | 1551ms |
-| Case Integrity Validator | WARN | 0 | 3 | 362ms |
-| Case Identity Validator | WARN | 0 | 2 | 114ms |
-| PsychometricValidator | WARN | 0 | 7108 | 10813ms |
+| Metadata Validator | WARN | 0 | 1 | 514ms |
+| Blueprint Validator | WARN | 0 | 188 | 434ms |
+| Part 2 Blueprint Validator | WARN | 0 | 3263 | 645ms |
+| Difficulty Validator | WARN | 0 | 72 | 589ms |
+| Reference Validator | WARN | 0 | 77 | 564ms |
+| Explanation Validator | WARN | 0 | 6 | 1343ms |
+| Case Integrity Validator | WARN | 0 | 1 | 306ms |
+| Case Identity Validator | PASS | 0 | 0 | 73ms |
+| PsychometricValidator | WARN | 0 | 7108 | 6820ms |
 
 **Total Errors:** 0
-**Total Warnings:** 10722
+**Total Warnings:** 10716
 **Overall Status:** WARN
 
 ## Details
@@ -33,17 +33,15 @@
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 548ms
+**Duration:** 514ms
 **Statistics:**
 - Cases Checked: 190
 **Warnings:**
 - content/cases/case_pack_2_corrected.js[18] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6
-- No cases found in p2/case_pack_p2_authored.js
-- No cases found in p2/case_pack_p2_C4_C8.js
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 468ms
+**Duration:** 434ms
 **Statistics:**
 - Cases Checked: 190
 - Cross-Domain Cases: 2
@@ -251,10 +249,10 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 590ms
+**Duration:** 645ms
 **Statistics:**
 - P2 MCQ Packs Found: 6
-- P2 Case Packs Found: 5
+- P2 Case Packs Found: 3
 - P2 Items Checked: 4190
 - P2 Cases Checked: 110
 - P2 Domain: Corporate Finance: 728
@@ -3530,7 +3528,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 396ms
+**Duration:** 589ms
 **Statistics:**
 - Cases Checked: 190
 - Items Checked: 1085
@@ -3620,7 +3618,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 822ms
+**Duration:** 564ms
 **Statistics:**
 - Cases Checked: 190
 - Total References: 0
@@ -3707,7 +3705,7 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 1551ms
+**Duration:** 1343ms
 **Statistics:**
 - MCQ Questions Checked: 6600
 - Case Items Checked: 1485
@@ -3726,7 +3724,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 362ms
+**Duration:** 306ms
 **Statistics:**
 - Total Cases Checked: 190
 - Total Items Checked: 1085
@@ -3740,13 +3738,11 @@
 - Cases with Duplicate Explanations: 0
 - Cases with Missing Exhibits: 0
 **Warnings:**
-- No cases found in p2/case_pack_p2_authored.js
-- No cases found in p2/case_pack_p2_C4_C8.js
 - Placeholder choices found in cases: CBQ3-E2, CBQ21-E5, CBQ23-E3
 
 ### Case Identity Validator
-**Status:** WARN
-**Duration:** 114ms
+**Status:** PASS
+**Duration:** 73ms
 **Statistics:**
 - content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
 - content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
@@ -3793,13 +3789,10 @@
 - Duplicate CaseIDs (live banks incl. P2): 0
 - Archived↔Live Overlaps (expected, S916): 75
 - Score/Label Mismatches: 0
-**Warnings:**
-- No cases parsed in p2/case_pack_p2_authored.js
-- No cases parsed in p2/case_pack_p2_C4_C8.js
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 10813ms
+**Duration:** 6820ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 6600
 - AbsoluteLanguageValidator.findings: 2571

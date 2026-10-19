@@ -121,6 +121,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-B1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter Q2 days sales outstanding (DSO), rounded to one decimal.",
         "Correct": "103.7",
@@ -143,6 +146,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the Q2 cash conversion cycle in days, rounded to one decimal.",
         "Correct": "131.0",
@@ -168,6 +174,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which component contributed most to the CCC deterioration from Q1 to Q2?",
         "Correct": "A",
@@ -198,6 +207,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Per the board request in Exhibit 2, how much cash would a 90-day DSO target release, based on Q2 sales?",
         "Correct": "A",
@@ -226,6 +238,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two actions would most directly shorten the cash conversion cycle?",
         "Correct": [
@@ -258,6 +273,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each working-capital component to its Q1-to-Q2 change.",
         "Correct": {
@@ -469,6 +487,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the Bakeware line segment margin in dollars.",
         "Correct": "70000",
@@ -490,6 +511,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the incremental profit from accepting the 3,000-unit special order, in dollars.",
         "Correct": "21000",
@@ -511,6 +535,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "If Bakeware is dropped, the freed capacity can earn an $85,000 contribution from a new line. What is the income effect of dropping Bakeware?",
         "Correct": "A",
@@ -542,6 +569,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Based on Exhibit 2, what are the expected annual savings from outsourcing the handles?",
         "Correct": "A",
@@ -570,6 +600,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three cost items are relevant to the outsourcing decision?",
         "Correct": [
@@ -602,6 +635,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each decision to its governing principle.",
         "Correct": {
@@ -797,6 +833,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-E1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the profitability index of Proposal B, rounded to two decimal places.",
         "Correct": "1.33",
@@ -818,6 +857,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the operating income variance in dollars from Exhibit 2; use a negative sign for unfavorable.",
         "Correct": "-80000",
@@ -839,6 +881,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which combination maximizes total NPV within the $5.0 million budget?",
         "Correct": "C",
@@ -869,6 +914,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which component contributed most to the unfavorable post-audit variance?",
         "Correct": "A",
@@ -899,6 +947,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three of the following are legitimate purposes of a capital project post-audit?",
         "Correct": [
@@ -931,6 +982,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each capital budgeting tool to its purpose.",
         "Correct": {
@@ -1137,6 +1191,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the current ratio, rounded to two decimals (answers within 0.01 accepted).",
         "Correct": "1.63",
@@ -1159,6 +1216,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the quick ratio, rounded to two decimals (answers within 0.01 accepted).",
         "Correct": "0.93",
@@ -1181,6 +1241,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter days sales outstanding (DSO) using average receivables, rounded to one decimal.",
         "Correct": "45.5",
@@ -1203,6 +1266,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Based on Exhibits 1 and your computations, which covenant position does Harborline present at year-end?",
         "Correct": "B",
@@ -1231,6 +1297,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which diagnosis best explains the quick-ratio shortfall and points to the fastest compliant fix?",
         "Correct": "D",
@@ -1259,6 +1328,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which presentation to First Meridian Bank best positions the renewal?",
         "Correct": "C",
@@ -1430,6 +1502,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-D1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the INHERENT expected loss for R1 (sole-source chip disruption), in dollars.",
         "Correct": "1000000",
@@ -1452,6 +1527,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the RESIDUAL expected loss for R1 after implementing the dual-source contract, in dollars.",
         "Correct": "400000",
@@ -1474,6 +1552,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the net year-one economic benefit of the dual-source contract, in dollars.",
         "Correct": "450000",
@@ -1496,6 +1577,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Classify each proposed response under the COSO ERM risk-response taxonomy.",
         "Correct": "B",
@@ -1525,6 +1609,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Against the board's appetite cap of $500K expected loss per initiative, which risk(s) require action BEFORE launch?",
         "Correct": "C",
@@ -1553,6 +1640,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which board recommendation best integrates the quantified analysis?",
         "Correct": "B",
@@ -1716,6 +1806,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-B2-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the AFTER-TAX cost of debt in percent, rounded to two decimals.",
         "Correct": "4.50",
@@ -1738,6 +1831,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B2-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the cost of preferred stock in percent, rounded to two decimals.",
         "Correct": "10.00",
@@ -1759,6 +1855,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B2-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the CAPM cost of common equity in percent, rounded to two decimals.",
         "Correct": "10.60",
@@ -1780,6 +1879,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B2-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter Northstar's current WACC in percent, rounded to two decimals.",
         "Correct": "8.71",
@@ -1805,6 +1907,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B2-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "The committee proposes funding the entire $40M with new 6% debt because 'debt is the cheapest source.' Which evaluation is correct?",
         "Correct": "B",
@@ -1833,6 +1938,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B2-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which funding recommendation best balances the competing considerations?",
         "Correct": "A",
@@ -1982,6 +2090,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-E2-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the PRESENT VALUE of keeping the defender for its remaining three years (costs positive), in dollars, within ±$500.",
         "Correct": "667054",
@@ -2004,6 +2115,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E2-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the CHALLENGER's equivalent annual ANNUITY cost (a positive number), in dollars, within ±$500.",
         "Correct": "231899",
@@ -2026,6 +2140,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E2-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the DEFENDER's equivalent annual annuity cost (a positive number), in dollars, within ±$500.",
         "Correct": "268233",
@@ -2050,6 +2167,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E2-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Why is the equivalent annual annuity method required here rather than comparing total present values of cost?",
         "Correct": "B",
@@ -2077,6 +2197,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E2-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which development would MOST likely reverse the replace-now recommendation?",
         "Correct": "A",
@@ -2104,6 +2227,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E2-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which recommendation should Marcus Webb present?",
         "Correct": "C",
@@ -2310,6 +2436,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A2-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using Exhibit 1, compute Harborline's FY2026 times-interest-earned ratio (EBIT divided by interest expense). Enter as a plain number rounded to two decimal places (tolerance +/-0.01).",
         "Correct": "4.00",
@@ -2326,6 +2455,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A2-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using Exhibits 1 and 2, compute Harborline's FY2026 return on equity through the three-component DuPont decomposition (net profit margin x total asset turnover x equity multiplier). Express the result as a percentage rounded to two decimal places (tolerance +/-0.01 percentage points) and use average total assets and average shareholders' equity.",
         "Correct": "17.63",
@@ -2342,6 +2474,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A2-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "In assessing FY2026 earnings quality for the credit committee, which observation represents the most significant limitation on the sustainability of reported net income?",
         "Correct": "B",
@@ -2364,6 +2499,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A2-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Receivables grew 33.3 percent and inventory grew 22.4 percent in FY2026 while net sales grew 11.5 percent. Based on Exhibits 1 and 2, which conclusion should anchor the earnings-quality section of the lender presentation?",
         "Correct": "D",
@@ -2386,6 +2524,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A2-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three actions should CFO Elena Vasquez include in the renewal package to address the bank's earnings-quality concerns? Select the three appropriate actions.",
         "Correct": [
@@ -2413,6 +2554,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A2-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each credit metric to its correct FY2026 value or reading, computed from Exhibits 1 and 2.",
         "LeftItems": [
@@ -2611,6 +2755,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C2-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using Exhibits 1 and 2, compute F-100's segment result as currently reported (contribution margin less traceable fixed costs less allocated corporate fixed costs). Enter the LOSS as a positive whole dollar amount (tolerance +/- $1).",
         "Correct": "58000",
@@ -2627,6 +2774,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C2-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "If F-100 were dropped outright with no replacement use of the freed machine hours, by how many dollars would Corvid's annual operating income decrease? Enter as a positive whole dollar amount (tolerance +/- $1).",
         "Correct": "152000",
@@ -2643,6 +2793,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C2-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Before considering any use of the freed machine hours, what is the annual dollar advantage of outsourcing F-100 production versus continuing to manufacture it, based on Exhibits 1 and 2?",
         "Correct": "C",
@@ -2665,6 +2818,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C2-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which combined course of action should Dana Whitfield recommend to the Executive Committee, and what is its total annual operating-income effect versus the status quo?",
         "Correct": "A",
@@ -2687,6 +2843,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C2-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three considerations justify accepting the export order at 70 dollars per unit? Select the three appropriate statements.",
         "Correct": [
@@ -2714,6 +2873,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C2-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each decision element to its correct dollar effect for the coming year, based on the case analysis.",
         "LeftItems": [
@@ -2867,6 +3029,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-F1-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Per the classification analysis in Exhibit 2, and disregarding any related depreciation effects, by how many dollars does the CFO's directive overstate Bluepine's operating income this period? Enter as a whole dollar amount (tolerance +/- $1).",
         "Correct": "230000",
@@ -2883,6 +3048,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F1-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using Bluepine's 25 percent effective tax rate from Exhibit 2, by how many dollars is NET income overstated by the misclassification? Round to the nearest whole dollar (tolerance +/- $1).",
         "Correct": "172500",
@@ -2899,6 +3067,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F1-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which principle within the IMA Statement of Ethical Professional Practice is most directly compromised by recording routine maintenance as machinery and equipment?",
         "Correct": "B",
@@ -2921,6 +3092,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F1-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "After completing his written analysis, what is Marcus's appropriate first course of action under the IMA resolution pathway?",
         "Correct": "C",
@@ -2943,6 +3117,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F1-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three responses represent appropriate professional conduct for Marcus under the IMA Statement and the SOX framework? Select the three appropriate actions.",
         "Correct": [
@@ -2970,6 +3147,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F1-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each professional duty or protection to the framework provision that establishes it.",
         "LeftItems": [
@@ -3162,6 +3342,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using Exhibit 2, compute Northwind Ceramics' FY2025 net profit margin as a percentage of net sales. Enter the percentage rounded to two decimal places (digits only).",
         "Correct": "6.00",
@@ -3180,6 +3363,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using three-step DuPont decomposition with the year-end balances shown in Exhibits 2 and 3, compute Northwind Ceramics' FY2025 return on equity as a percentage. Round to two decimal places (digits only).",
         "Correct": "15.63",
@@ -3198,6 +3384,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "At the strategy session, Elena must attribute the year-over-year ROE decline to its source. Based on Exhibits 2 and 3, which statement should she present?",
         "Choices": [
@@ -3222,6 +3411,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A3-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "The company's lender reviews Northwind's credit file annually. Compute FY2025 times interest earned from Exhibit 2 and choose the correct figure.",
         "Choices": [
@@ -3246,6 +3438,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A3-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three conclusions are supported by the DuPont analysis of the two years shown in Exhibits 2 and 3?",
         "Choices": [
@@ -3275,6 +3470,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A3-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Prepare the board scorecard Elena will distribute: match each metric to its correct value for the year indicated, using Exhibits 2 and 3.",
         "LeftItems": [
@@ -3448,6 +3646,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-B3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using the present value factors in Exhibit 1, compute the issue price of Copperline's bond offering. Round to the nearest whole dollar (digits only).",
         "Correct": "9188870",
@@ -3466,6 +3667,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Under the effective interest method beginning from the issue price, compute Copperline's interest expense for Period 2 (the second semiannual period). Round to the nearest whole dollar (digits only).",
         "Correct": "370257",
@@ -3486,6 +3690,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "For the audit committee briefing, which characterization of the issuance is accurate?",
         "Choices": [
@@ -3510,6 +3717,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B3-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Marcus needs an answer for First Meridian before signing. Applying the covenant definition stated in Exhibit 2, which conclusion should Dana deliver?",
         "Choices": [
@@ -3534,6 +3744,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B3-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three statements about the notes and the covenant position are accurate?",
         "Choices": [
@@ -3563,6 +3776,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B3-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Complete the treasury memo Marcus will file with the loan package: match each schedule element to its correct amount.",
         "LeftItems": [
@@ -3723,6 +3939,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Setting aside capacity effects and the one-time setup for the moment, compute the incremental contribution margin the Cascadia order itself would generate. Round to the nearest whole dollar (digits only).",
         "Correct": "54000",
@@ -3741,6 +3960,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the opportunity cost of regular contribution displaced if Silverpine accepts the Cascadia order at current production levels. Round to the nearest whole dollar (digits only).",
         "Correct": "90000",
@@ -3759,6 +3981,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Weighing all relevant amounts from Exhibits 1 and 2, what should Rebecca Hale recommend to Sam Ortiz?",
         "Choices": [
@@ -3786,6 +4011,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C3-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "If Silverpine counter-offers instead of walking away, what minimum unit price leaves the company indifferent between accepting and declining the 3,000-unit order?",
         "Choices": [
@@ -3812,6 +4040,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C3-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three statements about the decision analysis are accurate?",
         "Choices": [
@@ -3841,6 +4072,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C3-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Summarize the decision inputs for the leadership meeting: match each quantity to its correct value.",
         "LeftItems": [
@@ -4722,6 +4956,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-E3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE-REPAIR",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the NPV of Project Alpha at WACC = 9.0%. Initial outlay $48M; $14M annual after-tax operating cash flow for 6 years (years 1-6); zero terminal value. Enter NPV in $M, rounded to one decimal place.",
         "Correct": 14.8,
@@ -4730,7 +4967,7 @@ const casePackP2_1 = [
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "NPV(Alpha) = -48 + 14 × [PV annuity factor, 9%, 6 years]. PV annuity factor = (1 - 1.09^-6) / 0.09 = (1 - 0.5963) / 0.09 = 4.4859. NPV = -48 + 14 × 4.4859 = -48 + 62.80 = 14.80 ≈ $14.8M. Recomputed: 1.09^6 ≈ 1.677; 1 - 1/1.677 = 1 - 0.5963 = 0.4037; 0.4037 / 0.09 = 4.4859; 14 × 4.4859 = 62.80; 62.80 - 48 = 14.80. Rounded to $14.8M.",
+        "ExplanationCorrect": "Under capital-budgeting NPV rules (IMA/CMA, ASC 360 impairment-testing analog), accept a project when NPV > 0 at the firm's WACC (9.0%): NPV = -Initial Outlay + sum of OCF_t/(1+r)^t. Alpha: -48 + 14 x [(1 - 1/1.09^6)/0.09] = -48 + 14 x 4.4859 = -48 + 62.80 = $14.8M. The 6-year annuity factor of 4.4859 converts the level $14M OCF stream to present value; zero terminal value means no year-6 salvage term. Business interpretation: Alpha adds $14.8M of shareholder value at the 9% hurdle and is value-accretive, slightly below Gamma's $15.0M. A common exam trap is discounting the OCF with the simple sum ($14M x 6 = $84M) instead of the annuity factor, or using the wrong exponent (1.09^5 instead of 1.09^6).",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
@@ -4744,6 +4981,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE-REPAIR",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the NPV of Project Beta at WACC = 9.0%. Initial outlay $48M; $9M annual OCF for 10 years; $6M terminal value at end of year 10. Enter NPV in $M, rounded to one decimal place.",
         "Correct": 12.3,
@@ -4752,7 +4992,7 @@ const casePackP2_1 = [
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "NPV(Beta) = -48 + 9 × [PV annuity factor, 9%, 10 yrs] + 6 / 1.09^10. PV annuity factor 9%/10y = (1 - 1.09^-10)/0.09. 1.09^10 ≈ 2.3674; 1/2.3674 = 0.4224; 1 - 0.4224 = 0.5776; 0.5776/0.09 = 6.4178. Operating-CF PV = 9 × 6.4178 = 57.76. Terminal-value PV = 6 / 2.3674 = 2.534. NPV = -48 + 57.76 + 2.534 = 12.30 ≈ $12.3M. Rounded to $12.3M.",
+        "ExplanationCorrect": "NPV rule (IMA/CMA capital budgeting): NPV = -48 + 9 x [(1 - 1/1.09^10)/0.09] + 6/1.09^10 = -48 + 9 x 6.4178 + 2.53 = -48 + 57.76 + 2.53 = $12.3M. The terminal value of $6M must be discounted as a single lump sum at year 10 (6/1.09^10 = 2.53), separate from the 10-year annuity of operating cash flows. Business interpretation: Beta creates $12.3M of value but has the lowest NPV of the three projects; its longer 10-year horizon and $6M terminal value do not overcome the lower $9M annual OCF. A common exam trap is adding the terminal value undiscounted ($6M) or applying the annuity factor to it, or omitting the terminal value entirely.",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
@@ -4763,6 +5003,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE-REPAIR",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the NPV of Project Gamma at WACC = 9.0%. Initial outlay $48M; $11M annual OCF for 7 years; $14M terminal value at end of year 7. Enter NPV in $M, rounded to one decimal place.",
         "Correct": 15,
@@ -4771,7 +5014,7 @@ const casePackP2_1 = [
         "CognitiveLevel": "Apply",
         "Difficulty": "Moderate",
         "DifficultyScore": 3,
-        "ExplanationCorrect": "NPV(Gamma) = -48 + 11 × [PV annuity factor, 9%, 7 yrs] + 14 / 1.09^7. 1.09^7 ≈ 1.8280; PV annuity = (1 - 1/1.8280)/0.09 = (1 - 0.5470)/0.09 = 5.0330. Operating-CF PV = 11 × 5.0330 = 55.36. Terminal-value PV = 14 / 1.8280 = 7.659. NPV = -48 + 55.36 + 7.659 = 15.02 ≈ $15.0M.",
+        "ExplanationCorrect": "NPV rule (IMA/CMA capital budgeting): NPV = -48 + 11 x [(1 - 1/1.09^7)/0.09] + 14/1.09^7 = -48 + 11 x 5.0330 + 7.66 = -48 + 55.36 + 7.66 = $15.0M. The $14M terminal value at year 7 is discounted as a lump sum (14/1.09^7 = 7.66) in addition to the 7-year annuity of $11M OCF. Business interpretation: Gamma has the highest NPV ($15.0M) of the three projects and is the recommended choice under NPV-dominant capital allocation; its strong customer-base expansion score (5/5) and terminal-value liquidity optionality reinforce the recommendation. A common exam trap is using the 7-year annuity factor for the terminal value or netting the terminal value against the outlay.",
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
@@ -5960,6 +6203,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the quality-of-income ratio (operating cash flow divided by net income), rounded to two decimals.",
         "Correct": "0.60",
@@ -5983,6 +6229,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter CORE earnings after removing both transitory items, net of tax, in millions of dollars (e.g., 44.25 for $44.25M).",
         "Correct": "44.25",
@@ -6006,6 +6255,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter CURRENT-year days sales outstanding using AVERAGE receivables and annual sales, rounded to one decimal.",
         "Correct": "29.4",
@@ -6029,6 +6281,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the sustainable growth rate based on CORE ROE and the retention ratio, in percent rounded to two decimals (e.g., 14.08 for 14.08%). Use average common equity for ROE.",
         "Correct": "14.08",
@@ -6055,6 +6310,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which composite assessment best explains Harborline's earnings quality and the funding implication?",
         "Correct": "C",
@@ -6089,6 +6347,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each Harborline metric to its correct interpretation.",
         "Correct": {
@@ -6293,6 +6554,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter Product Beta's contribution margin per bonding-line hour, in dollars rounded to two decimals.",
         "Correct": "12.00",
@@ -6316,6 +6580,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the maximum monthly contribution (in dollars) from the optimal product mix of Alpha and Beta given the 10,000-hour bonding-line constraint and the stated demands.",
         "Correct": "138000",
@@ -6341,6 +6608,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "The customer offers $52 per unit for 500 units of a Beta-variant that consumes 5.0 hours each. With the optimal mix already committed, what is the correct incremental analysis?",
         "Correct": "B",
@@ -6372,6 +6642,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Should the 500 kg by-product lot be sold as-is for $3,000 or processed further for incremental revenue of $5,200 and incremental cost of $1,800?",
         "Correct": "A",
@@ -6401,6 +6674,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two statements correctly state the minimum transfer-price floors for the 10,000 kg internal ester transfer? (Select two.)",
         "Correct": [
@@ -6434,6 +6710,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each Cascadia decision to its governing principle.",
         "Correct": {
@@ -6566,6 +6845,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-F3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which IMA ethical standards are most directly implicated by accepting the vendor's $800 personal gift and recording the $900K shipment with the undocumented return promise?",
         "Correct": "C",
@@ -6595,6 +6877,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Under the IMA resolution process, what is Elena's correct first step regarding the $900K shipment with the side-letter return rights?",
         "Correct": "B",
@@ -6624,6 +6909,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "How should the $800 vendor gift and the $900K shipment be classified under FCPA, books-and-records, and ASC 606 principles analogously applied?",
         "Correct": "A",
@@ -6654,6 +6942,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F3-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "How far do Elena's confidentiality obligations extend if internal escalation stalls?",
         "Correct": "B",
@@ -6683,6 +6974,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F3-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three controls would most directly address the vendor-gift and revenue-pressuring risks at Northstar? (Select three.)",
         "Correct": [
@@ -6718,6 +7012,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F3-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each Northstar fact to its correct ethical treatment.",
         "Correct": {
@@ -6888,6 +7185,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-A6-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter Year2 net income restated to Year1 constant dollars, in millions (rounded to two decimals).",
         "Correct": "21.43",
@@ -6910,6 +7210,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A6-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the real growth rate of net income, in percent rounded to one decimal.",
         "Correct": "7.2",
@@ -6932,6 +7235,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A6-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which line item is MOST distorted by inflation under FIFO? (Select one)",
         "Correct": "B",
@@ -6960,6 +7266,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A6-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What does current ratio 2.10 nominal vs 1.92 constant imply?",
         "Correct": "C",
@@ -6988,6 +7297,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A6-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two steps correctly restate Year2 to constant dollars? (Select two)",
         "Correct": [
@@ -7019,6 +7331,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-A6-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each concept to treatment",
         "Correct": {
@@ -7210,6 +7525,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C6-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the weighted-average CM per ton, in dollars.",
         "Correct": "64.00",
@@ -7232,6 +7550,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C6-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the breakeven tons per month, rounded to nearest ton.",
         "Correct": "7500",
@@ -7254,6 +7575,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C6-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the DOL at the 10k-ton budget, rounded to two decimals.",
         "Correct": "4.00",
@@ -7276,6 +7600,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C6-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What is the margin of safety at budget?",
         "Correct": "A",
@@ -7304,6 +7631,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C6-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two statements about WACM under this constraint are correct? (Select two)",
         "Correct": [
@@ -7335,6 +7665,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C6-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each CVP concept to Greenstone",
         "Correct": {
@@ -7457,6 +7790,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-F4-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which IMA standard is MOST implicated by the carbon-neutral headline with 40% assurance?",
         "Correct": "B",
@@ -7485,6 +7821,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F4-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What is the correct description of the assurance gap?",
         "Correct": "C",
@@ -7513,6 +7852,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F4-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "How should the $25M conditional gift be treated?",
         "Correct": "A",
@@ -7541,6 +7883,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F4-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What is Amir's correct first step under IMA resolution when VP pressures claim?",
         "Correct": "B",
@@ -7569,6 +7914,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F4-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which three controls address greenwash and pressure? (Select three)",
         "Correct": [
@@ -7601,6 +7949,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F4-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each Pinnacle fact to treatment",
         "Correct": {
@@ -7746,6 +8097,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-B5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the residual dividend, in dollars.",
         "Correct": "3.00",
@@ -7768,6 +8122,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the repurchase accretion in EPS, in dollars (EPS after - before), rounded to cents.",
         "Correct": "0.78",
@@ -7790,6 +8147,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which payout policy fits Orchard's growth?",
         "Correct": "B",
@@ -7818,6 +8178,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What is the signaling effect of a stable $2 dividend vs residual $3?",
         "Correct": "A",
@@ -7846,6 +8209,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two factors support repurchase over dividend here? (Select two)",
         "Correct": [
@@ -7878,6 +8244,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match payout concept to Orchard",
         "Correct": {
@@ -8034,6 +8403,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-D3-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the RAROC for Auto line, in percent.",
         "Correct": "30.00",
@@ -8056,6 +8428,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D3-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the RAROC for Health line, in percent.",
         "Correct": "20.00",
@@ -8078,6 +8453,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D3-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which line should receive incremental capital?",
         "Correct": "C",
@@ -8106,6 +8484,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D3-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What does RAROC 30% vs hurdle 15% imply?",
         "Correct": "A",
@@ -8134,6 +8515,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D3-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two actions improve RAROC? (Select two)",
         "Correct": [
@@ -8166,6 +8550,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D3-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match RAROC concept to Shield",
         "Correct": {
@@ -8332,10 +8719,13 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-E4-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the coefficient of variation for NPV, rounded to two decimals.",
         "Correct": "0.67",
-        "Explanation": "CV=SD/Mean=0.8/1.2=0.67 (66.7%). Higher than 0.50 threshold for high risk. Point NPV 1.2 alone understates risk.",
+        "Explanation": "Under capital-budgeting risk analysis (IMA/CMA), the coefficient of variation (CV) measures relative risk per unit of expected return: CV = SD_NPV / E[NPV] = 0.8 / 1.2 = 0.6667, rounded to 0.67. A CV of 0.67 (66.7%) exceeds the 0.50 threshold typically associated with high risk, so the point NPV of $1.2M alone understates the project's risk; the full distribution matters. Business interpretation: Northwind's drug line carries material dispersion around its expected value - a decision-maker should weigh the 84% probability of positive NPV against the 5% VaR of -$0.12M. A common exam trap is reporting only the point NPV, confusing CV with the standard deviation, or ignoring that a positive mean can coexist with a 16% chance of loss.",
         "Topic": "CV",
         "Subtopic": "SD/Mean",
         "Difficulty": "Moderate",
@@ -8354,10 +8744,13 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E4-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the z-score for NPV=0, rounded to two decimals.",
         "Correct": "-1.50",
-        "Explanation": "Z=(0-1.2)/0.8=-1.50. P(Z<-1.5)=6.68% => P>0 93.3% normal, simulation 84% due to skew. VaR -0.12 confirms left tail.",
+        "Explanation": "Z-score for NPV = 0 under the normal approximation: Z = (0 - mu)/sigma = (0 - 1.2)/0.8 = -1.50. A Z of -1.50 corresponds to a 6.68% left-tail probability, i.e., a 93.3% probability that NPV exceeds zero under normality; the simulation shows 84% due to skew. Business interpretation: the drug line has roughly a 1-in-15 chance of destroying value under the normal model, but the skewed distribution (84% simulated) signals fatter downside risk than the bell curve implies; the 5% VaR of -$0.12M confirms the left tail. A common exam trap is using (mean - 0)/SD (sign error) yielding +1.50, or treating the normal-tail probability as the simulated probability.",
         "Topic": "Z-score",
         "Subtopic": "(0-mean)/SD",
         "Difficulty": "Moderate",
@@ -8376,6 +8769,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E4-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What does Monte Carlo 84% P(NPV>0) vs point NPV $1.2M imply?",
         "Correct": "B",
@@ -8404,6 +8800,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E4-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which driver should sensitivity focus audit on?",
         "Correct": "A",
@@ -8432,6 +8831,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E4-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two actions manage risk given tornado? (Select two)",
         "Correct": [
@@ -8464,6 +8866,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E4-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match Monte Carlo concept to Northwind",
         "Correct": {
@@ -8655,6 +9060,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-D4-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Using the data in Exhibit 1, compute the expected annual loss for Supplier C. Enter your answer in whole dollars.",
         "Correct": "160000",
@@ -8676,6 +9084,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D4-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute Cascade Manufacturing's total expected annual loss across all three suppliers. Enter your answer in whole dollars.",
         "Correct": "334000",
@@ -8699,6 +9110,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D4-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Based on Exhibit 1, which of the following correctly classifies the three suppliers on the risk heat map using the likelihood x severity scoring method?",
         "Correct": "A",
@@ -8728,6 +9142,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D4-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Using Exhibit 2, which insurance deductible option results in the lower total annual cost to Cascade, and by how much?",
         "Correct": "B",
@@ -8758,6 +9175,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D4-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Select the two risk response strategies that are most appropriate for Supplier A and Supplier C respectively, given their heat-map positions and expected loss contributions.",
         "Correct": [
@@ -8795,6 +9215,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-D4-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each supplier to the risk response classification that best reflects its heat-map position and expected loss contribution.",
         "Correct": {
@@ -8969,6 +9392,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-F5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Daniel Grant personally certifies Pinnacle's quarterly financial reports. Under which SOX section does Grant face personal liability if he knowingly certifies financial statements that contain the misstated software maintenance costs?",
         "Correct": "A",
@@ -8997,6 +9423,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Sarah Okafor decides to report the CFO's directive to the audit committee chair. Under which SOX section is Okafor protected from termination, demotion, or other retaliation by Pinnacle Logistics?",
         "Correct": "A",
@@ -9025,6 +9454,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Okafor's immediate supervisor is CFO Grant, who directed the improper capitalization. Under the IMA Statement of Ethical Professional Practice and the SOX framework, which three actions represent the correct resolution sequence?",
         "Correct": [
@@ -9059,6 +9491,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "If Pinnacle's $1,200,000 misclassification is not corrected before the year-end financial statements are issued, how would the deficiency be classified under SOX Section 404?",
         "Correct": "B",
@@ -9087,6 +9522,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each fact from the Pinnacle Logistics scenario to the governance or regulatory framework that governs it.",
         "LeftItems": [
@@ -9127,6 +9565,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-F5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "The audit committee chair has received Okafor's report. Grant maintains that the reclassification is a reasonable judgment call and urges the committee to defer correction until after the debt covenant test. What is the most appropriate integrated response by the audit committee?",
         "Correct": "D",
@@ -9281,6 +9722,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-B6-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Enter the annualized forward premium on the euro, expressed as a percentage rounded to two decimals. Use the 360-day year convention.",
         "Correct": "2.60",
@@ -9295,6 +9739,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B6-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the guaranteed USD proceeds under a money-market hedge of the €5,000,000 receivable. Round to nearest whole dollar.",
         "Correct": "5426762",
@@ -9309,6 +9756,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B6-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which hedging alternative yields the highest guaranteed USD proceeds for the €5,000,000 receivable?",
         "Correct": "A",
@@ -9329,6 +9779,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B6-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Under the current rates, covered interest arbitrage would be profitable. Which condition best explains why?",
         "Correct": "A",
@@ -9349,6 +9802,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B6-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which two factors most directly determine why the forward hedge yields higher proceeds than the money-market hedge? (Select two.)",
         "Correct": [
@@ -9373,6 +9829,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-B6-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each hedging concept to its correct characterization for Vantage's €5,000,000 receivable.",
         "Correct": {
@@ -9542,6 +10001,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-C7-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "What is the contribution margin per inspection hour for product Alpha? Round to two decimals.",
         "Correct": "30.00",
@@ -9556,6 +10018,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C7-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "At the optimal product mix, what is the total monthly contribution margin? Enter as a whole number.",
         "Correct": "1680",
@@ -9570,6 +10035,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C7-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "At the optimal product mix, which resource constraint is binding?",
         "Correct": "B",
@@ -9590,6 +10058,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C7-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "What is the shadow price of one additional inspection hour?",
         "Correct": "C",
@@ -9610,6 +10081,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C7-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which statements about Velox's capacity situation are correct? (Select all that apply.)",
         "Correct": [
@@ -9635,6 +10109,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-C7-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each resource metric to its value at the optimal product mix.",
         "Correct": {
@@ -9812,6 +10289,9 @@ const casePackP2_1 = [
     "Items": [
       {
         "ItemID": "CBQ21-E5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the option-adjusted NPV considering all three real options. Enter your answer in dollars.",
         "Correct": "6000000",
@@ -9826,6 +10306,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "numeric",
         "Prompt": "Compute the option-adjusted NPV considering only the deferral and abandonment options (exclude expansion). Enter in dollars.",
         "Correct": "1000000",
@@ -9840,6 +10323,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "Which pair of real options is most likely mutually exclusive for Ironridge Mining?",
         "Correct": "B",
@@ -9860,6 +10346,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "select",
         "Prompt": "The expansion option's value declines from $5M to $2M due to lower copper demand. Deferral ($6M) and abandonment ($3M) unchanged. Which statement best describes the revised project?",
         "Correct": "A",
@@ -9880,6 +10369,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "multi",
         "Prompt": "Which statements about the relative value of Ironridge's real options are correct? (Select all that apply.)",
         "Correct": [
@@ -9905,6 +10397,9 @@ const casePackP2_1 = [
       },
       {
         "ItemID": "CBQ21-E5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
         "Type": "match",
         "Prompt": "Match each decision scenario to the appropriate recommendation for Ironridge's board.",
         "Correct": {

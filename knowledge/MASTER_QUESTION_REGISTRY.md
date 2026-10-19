@@ -2,15 +2,15 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-10-17 20:52:00
-  Source hash: dec877f3
+  Last generated: 2026-10-19 00:21:05
+  Source hash: 874c5f47
 -->
 
 # Master Question Registry — CMA Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-10-17 20:52:00
-**Source Hash:** `dec877f3`
+**Generated:** 2026-10-19 00:21:05
+**Source Hash:** `874c5f47`
 **Total Questions:** 3495
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
@@ -11502,22 +11502,22 @@ Questions that triggered one or more validator errors or warnings:
 
 ## Validator Suite Summary
 
-- **Repository Validator**: PASS (0 errors, 0 warnings, 2ms)
-- **Metadata Validator**: WARN (0 errors, 1 warnings, 323ms)
-- **Blueprint Validator**: WARN (0 errors, 188 warnings, 240ms)
-- **Part 2 Blueprint Validator**: WARN (0 errors, 3263 warnings, 363ms)
-- **Difficulty Validator**: WARN (0 errors, 72 warnings, 505ms)
-- **Reference Validator**: WARN (0 errors, 77 warnings, 225ms)
-- **Explanation Validator**: WARN (0 errors, 6 warnings, 1134ms)
-- **Case Integrity Validator**: WARN (0 errors, 1 warnings, 214ms)
-- **Case Identity Validator**: PASS (0 errors, 0 warnings, 49ms)
-- **PsychometricValidator**: WARN (0 errors, 7108 warnings, 6084ms)
+- **Repository Validator**: PASS (0 errors, 0 warnings, 1ms)
+- **Metadata Validator**: WARN (0 errors, 1 warnings, 514ms)
+- **Blueprint Validator**: WARN (0 errors, 188 warnings, 434ms)
+- **Part 2 Blueprint Validator**: WARN (0 errors, 3263 warnings, 645ms)
+- **Difficulty Validator**: WARN (0 errors, 72 warnings, 589ms)
+- **Reference Validator**: WARN (0 errors, 77 warnings, 564ms)
+- **Explanation Validator**: WARN (0 errors, 6 warnings, 1343ms)
+- **Case Integrity Validator**: WARN (0 errors, 1 warnings, 306ms)
+- **Case Identity Validator**: PASS (0 errors, 0 warnings, 73ms)
+- **PsychometricValidator**: WARN (0 errors, 7108 warnings, 6820ms)
 
 ---
 
 <!--
-  Registry regenerated on 2026-10-17 20:52:00
-  Source hash: dec877f3
+  Registry regenerated on 2026-10-19 00:21:05
+  Source hash: 874c5f47
   Questions: 3495
   To regenerate: node scripts/generate_registry.js
 -->

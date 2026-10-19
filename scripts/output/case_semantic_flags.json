@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T22:49:41.477Z",
+ "generated": "2026-10-19T00:20:55.528Z",
  "method": "case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w) D(9-phrase boilerplate + authoring-scratchwork regex; added 2026-09-30 DL-P2-026 correction) E(KEY-UNSUPPORTED+SCRATCHWORK+KEY-TYPE+ENCODING+SHORT-LENGTH; added 2026-10-04 per DL-P2-029/DL-P2-026/DL-P2-026-ext/DL-067 short-explanation class)",
  "extractionFailures": 0,
  "census": {
@@ -27,7 +27,7 @@
    "p2/case_pack_p2_2.js": {
     "cases": 43,
     "items": 258,
-    "certified": 204
+    "certified": 258
    },
    "p2/case_pack_p2_3.js": {
     "cases": 34,
@@ -37,7 +37,7 @@
   },
   "totalCases": 190,
   "totalItems": 1085,
-  "certifiedItems": 1031
+  "certifiedItems": 1085
  },
  "flags": [
   {
@@ -2555,7 +2555,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B1-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"DPO, which shortened 3.3 days and offset the other components\" stored(A)=\"DSO, which lengthened 12.4 days as receivables grew faster than sales\" recall=0.71 margin=0.16"
@@ -2567,7 +2567,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B} stored={A,B} best=0.57"
@@ -2579,7 +2579,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C1-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(E)=\"Drop Utensils instead, because its $170,000 segment margin is lower than Cookwar\" stored(A)=\"Drop the line; profit rises by $15,000\" recall=0.75 margin=0.04"
@@ -2591,7 +2591,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,E,C,D} stored={A,B,C} best=0.75"
@@ -2603,7 +2603,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E1-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B-num",
    "severity": "info",
    "detail": "SIGN-CONVENTION (info): stored [-80000] matches by absolute value only"
@@ -2615,7 +2615,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E1-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"B, C, and A — $4.5M invested, NPV of $1.42M\" stored(C)=\"A, C, D, and F — $5.0M invested, NPV of $1.48M\" recall=0.80 margin=0.00"
@@ -2627,7 +2627,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(B) recall=0.00 choice=\"Identifying systematic estimation bias\""
@@ -2639,7 +2639,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={C,E,D} stored={A,B,C} best=0.80"
@@ -2651,7 +2651,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.20 stored=\"Commit to converting at least $60K of identified slow-moving inventory into cash\""
@@ -2663,7 +2663,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Disclose the breach and request a waiver without operational changes, relying on\" stored(C)=\"Commit to converting at least $60K of identified slow-moving inventory into cash\" recall=0.27 margin=0.07"
@@ -2675,7 +2675,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D1-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Dual sourcing = avoid; insurance = avoid; delay = reduce\" stored(B)=\"Dual sourcing = REDUCE (lowers likelihood); insurance = SHARE (transfers excess \" recall=0.86 margin=0.14"
@@ -2687,7 +2687,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Purchase warranty insurance immediately because transferring risk is typically t\" stored(B)=\"Fund the dual-source contract now — residual R1 expected loss of $400K moves ins\" recall=0.40 margin=0.07"
@@ -2699,7 +2699,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B2-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0455 explWords=32"
@@ -2711,7 +2711,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B2-Q3",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0462 explWords=31"
@@ -2723,7 +2723,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B2-Q4",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0282 explWords=54"
@@ -2735,7 +2735,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B2-Q5",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"The proposal is sound: 4.50% after-tax is below every other component, so the ma\" stored(B)=\"Incremental borrowing raises the leverage ratio and therefore the equity holders\" recall=0.57 margin=0.17"
@@ -2747,7 +2747,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E2-Q3",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0488 explWords=37"
@@ -2759,7 +2759,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Keep the defender through year 3 because its book value is low and disposal woul\" stored(C)=\"REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats t\" recall=0.45 margin=0.16"
@@ -2771,7 +2771,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A,C} stored={A,C,E} best=0.56"
@@ -2783,7 +2783,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,A} stored={A,B,D} best=0.64"
@@ -2795,7 +2795,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(E) recall=0.00 choice=\"Escalate through Bluepine's established ethics channel and, if unresolved, prese\""
@@ -2807,7 +2807,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={B,C,E} best=0.36"
@@ -2819,7 +2819,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F1-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0313 explWords=66"
@@ -2831,7 +2831,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A3-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"4.13 times, computed as net income plus interest expense divided by interest exp\" stored(B)=\"5.17 times, computed as operating income (EBIT) divided by interest expense.\" recall=0.83 margin=0.03"
@@ -2843,7 +2843,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.13 choice=\"Return on equity declined by more than four percentage points year over year.\""
@@ -2855,7 +2855,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A,B} stored={A,C,D} best=0.75"
@@ -2867,7 +2867,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A3-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0481 explWords=76"
@@ -2879,7 +2879,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -2891,7 +2891,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C3-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"$184, adding the avoided selling expense back onto the indifference price.\" stored(C)=\"$166, covering variable cost plus tooling and displaced contribution spread acro\" recall=0.89 margin=0.22"
@@ -2903,7 +2903,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,C,D,A} stored={A,C,E} best=0.78"
@@ -3047,7 +3047,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -3059,7 +3059,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Disclosure in a footnote cures both the gift conflict and the revenue measuremen\" stored(A)=\"The gift must be declined and disclosed as a conflict under Integrity, the $800 \" recall=0.63 margin=0.13"
@@ -3071,7 +3071,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.09 choice=\"Anonymous whistleblower hotline with audit-committee oversight and SOX 806 non-r\""
@@ -3083,7 +3083,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={A,B,C} best=0.38"
@@ -3095,7 +3095,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A6-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Cash — monetary, correct at nominal\" stored(B)=\"Inventory — FIFO ending at recent prices but COGS at old prices, gross margin ov\" recall=1.00 margin=0.00"
@@ -3107,7 +3107,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A6-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Nominal 2.10 is covenant metric, no action\" stored(C)=\"Real liquidity eroded — constant-dollar assets lag CPI, so headroom overstated —\" recall=0.67 margin=0.13"
@@ -3119,7 +3119,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-A6-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -3131,7 +3131,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F4-Q1",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Confidentiality\" stored(B)=\"Credibility — fair disclosure requires headline match assurance scope; 60% unaud\" recall=1.00 margin=0.00"
@@ -3143,7 +3143,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Recognize $25M immediately\" stored(A)=\"Disclose contingency and avoid recognizing; do not inflate claim to secure gift\" recall=1.00 margin=0.00"
@@ -3155,7 +3155,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Publish as drafted\" stored(B)=\"Escalate to audit committee with Exhibit 1, bypassing involved VP\" recall=1.00 margin=0.00"
@@ -3167,7 +3167,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -3179,7 +3179,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"100% payout — ignores projects\" stored(B)=\"Residual $3 — funds $8M projects, distributes remainder, avoids external equity\" recall=1.00 margin=0.11"
@@ -3191,7 +3191,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B5-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Residual signals confidence\" stored(A)=\"Stable signals confidence, reduces volatility; residual signals investment oppor\" recall=1.00 margin=0.00"
@@ -3203,7 +3203,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -3215,7 +3215,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Health 20% — lowest\" stored(C)=\"Life 50% — highest RAROC above hurdle, best risk-adjusted\" recall=1.00 margin=0.00"
@@ -3227,7 +3227,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D3-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Destroys value\" stored(A)=\"Creates value — return exceeds risk-adjusted hurdle; allocate\" recall=1.00 margin=0.00"
@@ -3239,7 +3239,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -3249,45 +3249,9 @@
    "part": "P2",
    "caseId": "CBQ21-E4",
    "caseState": "Certified",
-   "itemId": "CBQ21-E4-Q1",
-   "itemType": "numeric",
-   "itemState": null,
-   "screen": "E",
-   "severity": "FLAG",
-   "detail": "SHORT-EXPLANATION: 112 chars (< 150 gold-schema floor) — cannot carry principle + formula + interpretation"
-  },
-  {
-   "bank": "p2/case_pack_p2_1.js",
-   "part": "P2",
-   "caseId": "CBQ21-E4",
-   "caseState": "Certified",
-   "itemId": "CBQ21-E4-Q2",
-   "itemType": "numeric",
-   "itemState": null,
-   "screen": "C",
-   "severity": "FLAG",
-   "detail": "jaccard=0.0426 explWords=25"
-  },
-  {
-   "bank": "p2/case_pack_p2_1.js",
-   "part": "P2",
-   "caseId": "CBQ21-E4",
-   "caseState": "Certified",
-   "itemId": "CBQ21-E4-Q2",
-   "itemType": "numeric",
-   "itemState": null,
-   "screen": "E",
-   "severity": "FLAG",
-   "detail": "SHORT-EXPLANATION: 115 chars (< 150 gold-schema floor) — cannot carry principle + formula + interpretation"
-  },
-  {
-   "bank": "p2/case_pack_p2_1.js",
-   "part": "P2",
-   "caseId": "CBQ21-E4",
-   "caseState": "Certified",
    "itemId": "CBQ21-E4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -3299,7 +3263,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-D4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -3311,7 +3275,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F5-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"SOX Section 906, which imposes criminal penalties on officers who knowingly cert\" stored(A)=\"SOX Section 806, which prohibits retaliation against employees who report suspec\" recall=0.58 margin=0.11"
@@ -3323,7 +3287,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F5-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(A) recall=0.21 choice=\"Document the facts — the $1,200,000 misclassification, the CFO's directive, and \""
@@ -3335,7 +3299,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-F5-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B} stored={A,B,C} best=0.57"
@@ -3347,7 +3311,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-B6-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -3359,7 +3323,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-C7-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -3371,7 +3335,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "DISJOINT: predicted={D} stored={A,B,C}"
@@ -3383,7 +3347,7 @@
    "caseState": "Certified",
    "itemId": "CBQ21-E5-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "info",
    "detail": "SHORT: Explanation 18 content words (<20)"
@@ -3395,7 +3359,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F1-Q1",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Confidentiality only — the side letter is private information belonging to the d\" stored(C)=\"Integrity (abstaining from activities that discredit the profession) and Credibi\" recall=0.29 margin=0.04"
@@ -3407,7 +3371,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.22 stored=\"Document the findings contemporaneously, decline to support certification as pre\""
@@ -3419,7 +3383,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B-num",
    "severity": "FLAG",
    "detail": "stored numbers [22500000] absent from Explanation numbers [5,1,0.25,3.75,3,0.75,2.25,24,3.75,2.25,22.5]"
@@ -3431,7 +3395,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.19 stored=\"Cash covers only 60% of earnings, receivables grow three-and-a-half times faster\""
@@ -3443,7 +3407,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q5",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(A) recall=0.23 stored=\"Distributor-level sell-through data showing inventory piling up at customers alo\""
@@ -3455,7 +3419,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q5",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"A lower effective tax rate relative to the statutory rate\" stored(A)=\"Distributor-level sell-through data showing inventory piling up at customers alo\" recall=0.43 margin=0.20"
@@ -3467,7 +3431,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(B) recall=0.21 stored=\"Value Riverbend on the $22.5M core base ONLY with cash-flow verification conditi\""
@@ -3479,7 +3443,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Value on operating cash flow of $14.4M alone, ignoring earnings entirely\" stored(B)=\"Value Riverbend on the $22.5M core base ONLY with cash-flow verification conditi\" recall=0.22 margin=0.01"
@@ -3491,7 +3455,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"MFA = share; insurance = avoid; in-house conversion = reduce\" stored(D)=\"MFA = REDUCE (lowers likelihood); insurance = SHARE (transfers severity above re\" recall=0.71 margin=0.13"
@@ -3503,7 +3467,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D2-Q5",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Insurance fails the appetite test because premiums count as expected loss\" stored(B)=\"Insurance leaves the 15% likelihood untouched — the event still occurs with oper\" recall=0.44 margin=0.12"
@@ -3515,7 +3479,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Terminate the payroll vendor now despite the migration cost, since any breach ri\" stored(A)=\"Fund the enhanced-MFA program immediately — net benefit +$210K and residual of $\" recall=0.27 margin=0.00"
@@ -3527,7 +3491,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C1-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"$16,000, the soft-state contribution spread between the two commitments\" stored(B)=\"$4,000, the probability-weighted gain from switching schedules with hindsight\" recall=0.63 margin=0.05"
@@ -3539,7 +3503,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E} stored={A,C,E} best=0.50"
@@ -3551,7 +3515,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E1-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"The rule failed because the profitability index was computed against the wrong d\" stored(C)=\"The rule failed because highest-PI selection ignores indivisibility: the PI-rank\" recall=0.33 margin=0.08"
@@ -3563,7 +3527,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(E) recall=0.17 choice=\"The EAA comparison implicitly assumes both compressors can be replaced with econ\""
@@ -3575,7 +3539,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "DISJOINT: predicted={D} stored={A,C,E}"
@@ -3587,7 +3551,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Inventory accumulation is the primary driver, adding close to five days of CCC\" stored(B)=\"Slower collections are the largest single driver: DSO lengthened by about 4.8 da\" recall=0.44 margin=0.09"
@@ -3599,7 +3563,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.18 choice=\"An eleven-day CCC deterioration ties up roughly $1.3 million of additional cash \""
@@ -3611,7 +3575,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "DISJOINT: predicted={C} stored={A,D,E}"
@@ -3623,7 +3587,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C2-Q1",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0476 explWords=87"
@@ -3635,7 +3599,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C2-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"All $1,116,000 of recorded manufacturing cost, because every element disappears \" stored(B)=\"Direct materials, direct labor, variable overhead, avoidable fixed overhead, and\" recall=0.38 margin=0.01"
@@ -3647,7 +3611,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"$36.00 per unit\" stored(D)=\"$39.25 per unit\" recall=1.00 margin=0.00"
@@ -3659,7 +3623,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.00 choice=\"The assembly team holds proprietary calibration expertise that would be difficul\""
@@ -3671,7 +3635,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "DISJOINT: predicted={E} stored={A,B,C}"
@@ -3683,7 +3647,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D3-Q1",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0388 explWords=82"
@@ -3695,7 +3659,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Cargo theft from yards and trailers, residual 6, inside the monitored band\" stored(A)=\"Cyberattack disabling the transportation management system, whose residual score\" recall=0.44 margin=0.08"
@@ -3707,7 +3671,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D3-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Share by raising cyber insurance limits alone while leaving the control roadmap \" stored(D)=\"Reduce further by funding the remaining zero-trust phases, tabletop incident-res\" recall=0.45 margin=0.10"
@@ -3719,7 +3683,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.17 choice=\"Assign a named executive owner and a dated treatment milestone to every risk sco\""
@@ -3731,7 +3695,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={A,C,D} best=0.33"
@@ -3743,7 +3707,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={A,C,D} best=0.38"
@@ -3839,7 +3803,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B4-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0469 explWords=28"
@@ -3849,21 +3813,9 @@
    "part": "P2",
    "caseId": "CBQ22-B4",
    "caseState": "Certified",
-   "itemId": "CBQ22-B4-Q4",
-   "itemType": "select",
-   "itemState": null,
-   "screen": "E",
-   "severity": "FLAG",
-   "detail": "SHORT-EXPLANATION: 142 chars (< 150 gold-schema floor) — cannot carry principle + formula + interpretation"
-  },
-  {
-   "bank": "p2/case_pack_p2_2.js",
-   "part": "P2",
-   "caseId": "CBQ22-B4",
-   "caseState": "Certified",
    "itemId": "CBQ22-B4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -3875,7 +3827,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B4-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0154 explWords=27"
@@ -3887,7 +3839,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Appetite at $300,000 is the hard ceiling; tolerance is meaningless and capacity \" stored(C)=\"Appetite (≤$300,000 residual per event class per year) is the board's desired wi\" recall=0.44 margin=0.08"
@@ -3899,7 +3851,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Enhanced controls = Share; transfer program = Reduce; exiting the corridor = Acc\" stored(C)=\"Enhanced controls = Reduce (lowers likelihood), transfer program = Share (transf\" recall=0.75 margin=0.25"
@@ -3911,7 +3863,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(A) recall=0.00 choice=\"R1 — Midstream pipeline release at $480,000 expected loss\""
@@ -3923,7 +3875,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={A,B,C} best=0.25"
@@ -3935,7 +3887,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E2-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0440 explWords=70"
@@ -3947,7 +3899,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A} stored={A,B} best=0.50"
@@ -3959,7 +3911,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Forward always cheapest when yen premium\" stored(B)=\"With 1% JPY vs 4% USD, MMH ~1,348k vs forward 1,379k — MMH slightly cheaper befo\" recall=0.80 margin=0.13"
@@ -3971,7 +3923,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B5-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"1,379,310 — same as forward\" stored(A)=\"1,408,451 — 200M/142=1,408k, $29k above forward\" recall=1.00 margin=0.00"
@@ -3983,7 +3935,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -3995,7 +3947,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Appetite breached — Governance\" stored(B)=\"Tolerance breached (4.2% >3.5%) — Performance triggers review; appetite 2% is ha\" recall=1.00 margin=0.00"
@@ -4007,7 +3959,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D5-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Accept\" stored(A)=\"Reduce — lowers likelihood 7.5%→4%\" recall=1.00 margin=0.17"
@@ -4019,7 +3971,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-D5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -4031,7 +3983,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-E3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -4043,7 +3995,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Fail — 1.92 <1.80\" stored(A)=\"Pass 1.92 >1.80 but high TDTL 4.17 means small sales miss hits coverage hard — m\" recall=0.80 margin=0.19"
@@ -4055,7 +4007,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -4067,7 +4019,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"No — joint cost makes it loss\" stored(A)=\"Yes — incremental $7k (25k-18k) adds profit; joint $53k irrelevant\" recall=0.75 margin=0.08"
@@ -4079,7 +4031,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -4091,7 +4043,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F4-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"No — consulting is reasonable label\" stored(A)=\"Yes — inaccurate books, misclassifies bribe, second FCPA violation even if anti-\" recall=0.67 margin=0.08"
@@ -4103,7 +4055,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"No deficiency — template is control\" stored(B)=\"Material weakness or significant deficiency — reasonable possibility of material\" recall=1.00 margin=0.00"
@@ -4115,7 +4067,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Life-cycle pricing only considers manufacturing cost — tooling and warranty are \" stored(D)=\"Life-cycle pricing considers all costs from product inception through end-of-lif\" recall=0.70 margin=0.12"
@@ -4127,7 +4079,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={D,B,A} stored={A,C,E} best=0.67"
@@ -4139,7 +4091,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A,D,B} stored={A,C,E} best=0.88"
@@ -4151,7 +4103,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C6-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B-num",
    "severity": "FLAG",
    "detail": "stored numbers [2750000] absent from Explanation numbers [28,8,1,0.3,28,0.45,8,0.25,1,8.4,3.6,0.25...]"
@@ -4163,7 +4115,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C6-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Conduct the pilot — its worst case of −$1.5M is better than immediate entry's −$\" stored(B)=\"Wait 12 months — its worst-case payoff of $1 million is better than the worst ca\" recall=0.78 margin=0.09"
@@ -4175,7 +4127,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C7-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"$14.00 to $33.00 — from the Components Division's fixed cost to the Assembly Div\" stored(C)=\"$22.00 to $33.00 — from the Components Division's variable cost (floor) to the A\" recall=0.92 margin=0.01"
@@ -4187,7 +4139,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C7-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Dual pricing is required by GAAP for all intercompany transfers\" stored(D)=\"Dual pricing lets the selling division record revenue at one price (e.g., market\" recall=0.67 margin=0.01"
@@ -4199,7 +4151,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-C7-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Set the transfer price at $35.00 (market price) to fairly compensate the Compone\" stored(B)=\"Implement dual pricing at $35.00 for the Components Division and $22.00 for the \" recall=0.64 margin=0.00"
@@ -4211,7 +4163,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C8-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"The $11.00 per unit fixed overhead allocation that will continue regardless of t\" stored(B)=\"The $9,300 in regular contribution margin that Precision sacrifices by diverting\" recall=0.67 margin=0.00"
@@ -4223,7 +4175,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C8-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -4235,7 +4187,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-A6-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={} stored={A,C,E} best=0.45"
@@ -4247,7 +4199,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-A5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Yes — the company can issue debt instead of equity because the D/E ratio of 1.22\" stored(B)=\"No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percenta\" recall=0.53 margin=0.08"
@@ -4259,7 +4211,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-A5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E,C} stored={A,C,E} best=0.71"
@@ -4271,7 +4223,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F7-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A} stored={A,C,E} best=0.54"
@@ -4283,7 +4235,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F5-Q1",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries \" stored(C)=\"Opportunity — the combined CFO/Controller role, lack of approval signatures, and\" recall=0.75 margin=0.25"
@@ -4295,7 +4247,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F5-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"The entries were prepared on business days during normal working hours\" stored(A)=\"All entries debit capital accounts and credit expense accounts with no supportin\" recall=0.43 margin=0.00"
@@ -4307,7 +4259,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F5-Q4",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E} stored={A,C,E} best=0.56"
@@ -4319,7 +4271,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F6-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={F,C,B,E,A} stored={A,B,D} best=0.93"
@@ -4331,7 +4283,7 @@
    "caseState": "Archived",
    "itemId": "CBQ22-F6-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Delay the restatement filing until the retaliation investigation is complete, si\" stored(A)=\"Engage independent forensic counsel to investigate the retaliation claim, direct\" recall=0.38 margin=0.07"
@@ -4343,7 +4295,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-B6-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -4355,7 +4307,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A7-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E,C,D} stored={A,C,E} best=0.63"
@@ -4367,7 +4319,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A8-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Yes — the company can issue debt instead of equity because the D/E ratio of 1.22\" stored(B)=\"No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percenta\" recall=0.53 margin=0.08"
@@ -4379,7 +4331,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-A8-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E,C} stored={A,C,E} best=0.71"
@@ -4391,7 +4343,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F8-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A} stored={A,C,E} best=0.54"
@@ -4403,7 +4355,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F9-Q1",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Pressure — the subsidiary CFO faced quarterly earnings targets, but the entries \" stored(C)=\"Opportunity — the combined CFO/Controller role, lack of approval signatures, and\" recall=0.75 margin=0.25"
@@ -4415,7 +4367,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F9-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"The entries were prepared on business days during normal working hours\" stored(A)=\"All entries debit capital accounts and credit expense accounts with no supportin\" recall=0.43 margin=0.00"
@@ -4427,7 +4379,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F9-Q4",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={E} stored={A,C,E} best=0.56"
@@ -4439,7 +4391,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F10-Q3",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={F,C,B,E,A} stored={A,B,D} best=0.93"
@@ -4451,7 +4403,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-F10-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Delay the restatement filing until the retaliation investigation is complete, si\" stored(A)=\"Engage independent forensic counsel to investigate the retaliation claim, direct\" recall=0.38 margin=0.07"
@@ -4463,7 +4415,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C9-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Life-cycle pricing only considers manufacturing cost â€” tooling and warranty ar\" stored(D)=\"Life-cycle pricing considers all costs from product inception through end-of-lif\" recall=0.70 margin=0.12"
@@ -4475,7 +4427,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C9-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,A,D,E} stored={B,C,E} best=0.75"
@@ -4487,7 +4439,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C10-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"$8.00 per hour â€” each additional extrusion hour increases total contribution m\" stored(D)=\"$6.00 per hour â€” the marginal CM from producing 1/3 additional unit of B (A's \" recall=0.92 margin=0.04"
@@ -4499,7 +4451,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C10-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -4511,7 +4463,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C11-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Conduct the pilot â€” its worst case of −$1.5M is better than immediate entry's \" stored(B)=\"Wait 12 months â€” its worst-case payoff of $1 million is better than the worst \" recall=0.78 margin=0.09"
@@ -4523,7 +4475,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C12-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"$14.00 to $33.00 â€” from the Components Division's fixed cost to the Assembly D\" stored(C)=\"$22.00 to $33.00 â€” from the Components Division's variable cost (floor) to the\" recall=0.92 margin=0.01"
@@ -4535,7 +4487,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C12-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Dual pricing is required by GAAP for all intercompany transfers\" stored(D)=\"Dual pricing lets the selling division record revenue at one price (e.g., market\" recall=0.67 margin=0.01"
@@ -4547,7 +4499,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C12-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Set the transfer price at $35.00 (market price) to fairly compensate the Compone\" stored(B)=\"Implement dual pricing at $35.00 for the Components Division and $22.00 for the \" recall=0.64 margin=0.00"
@@ -4559,7 +4511,7 @@
    "caseState": "Certified",
    "itemId": "CBQ22-C13-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -4571,7 +4523,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C1-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"The $24.00 outside quote\" stored(B)=\"The $6.00 per-unit allocated corporate fixed cost, because it continues under ei\" recall=0.50 margin=0.17"
@@ -4583,7 +4535,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.20 stored=\"OUTSOURCE — the net annual advantage is $425,000 — CONTINGENT on qualifying a se\""
@@ -4595,7 +4547,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C1-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Continue making brackets in-house because the outside quote exceeds the standard\" stored(C)=\"OUTSOURCE — the net annual advantage is $425,000 — CONTINGENT on qualifying a se\" recall=0.36 margin=0.06"
@@ -4607,7 +4559,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E1-Q5",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"IRR is always larger than NPV, so it flatters the project before the committee\" stored(B)=\"NPV measures dollars of value created assuming interim flows reinvest at the 10%\" recall=0.43 margin=0.05"
@@ -4619,7 +4571,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C2-Q3",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B-num",
    "severity": "info",
    "detail": "SIGN-CONVENTION (info): stored [-11600] matches by absolute value only"
@@ -4631,7 +4583,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.12 stored=\"DECLINE the 1,200 at $65 as structured, present the tiered counter (idle units f\""
@@ -4643,7 +4595,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Accept at $65 but ask production to add a weekend shift at premium overtime to p\" stored(D)=\"DECLINE the 1,200 at $65 as structured, present the tiered counter (idle units f\" recall=0.15 margin=0.04"
@@ -4655,7 +4607,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(B) recall=0.17 stored=\"Secure copies of the evidence, restrict further payments to the vendor, and esca\""
@@ -4667,7 +4619,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q2",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Notify law enforcement personally and freeze the branch manager's employment\" stored(B)=\"Secure copies of the evidence, restrict further payments to the vendor, and esca\" recall=0.38 margin=0.20"
@@ -4679,7 +4631,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.08 stored=\"Conducting a covert forensic interview of the branch manager herself to 'get his\""
@@ -4691,7 +4643,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Confirming with the bank — through counsel once engaged — the beneficial owner o\" stored(C)=\"Conducting a covert forensic interview of the branch manager herself to 'get his\" recall=0.33 margin=0.21"
@@ -4703,7 +4655,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.20 stored=\"A layered program: enforced segregation of vendor-setup and payment approval, co\""
@@ -4715,7 +4667,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F2-Q6",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Mandate annual signed ethics codes at every location and declare the program com\" stored(D)=\"A layered program: enforced segregation of vendor-setup and payment approval, co\" recall=0.20 margin=0.00"
@@ -4727,7 +4679,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A1-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"1.34 - guarantee plus the absolute value of the AOCI translation deficit\" stored(C)=\"1.30 - full guarantee of $6.0 million added to total liabilities\" recall=0.56 margin=0.06"
@@ -4739,7 +4691,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A1-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"Balance-sheet translation uses the weighted-average income-statement rate\" stored(B)=\"Balance-sheet accounts are translated at the current rate and the translation ad\" recall=0.67 margin=0.13"
@@ -4751,7 +4703,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,C,E} stored={A,B,D} best=0.57"
@@ -4763,7 +4715,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-D1-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "DISJOINT: predicted={D} stored={A,B,C}"
@@ -4775,7 +4727,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={D,A} stored={A,B,D} best=0.55"
@@ -4787,7 +4739,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E2-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Fund Project Delta because its internal rate of return near 20 percent exceeds A\" stored(A)=\"Fund Project Atlas because its net present value of $138,084 exceeds Delta $115,\" recall=0.80 margin=0.04"
@@ -4799,7 +4751,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E2-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"The internal rate of return assumes interim cash flows are reinvested at the cos\" stored(C)=\"Project Delta posts the higher internal rate of return because of its smaller ou\" recall=0.50 margin=0.05"
@@ -4811,7 +4763,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(E) recall=0.18 choice=\"Verify that projected costs exclude allocations of existing corporate overhead t\""
@@ -4823,7 +4775,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={B,D} stored={A,B,E} best=0.50"
@@ -4835,7 +4787,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.15 choice=\"Adopt a policy prohibiting facilitation payments worldwide and train Asia-Pacifi\""
@@ -4847,7 +4799,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={C} stored={A,C,D} best=0.55"
@@ -4931,7 +4883,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Because yen strengthened, the payable should be remeasured at average rate and d\" stored(A)=\"The subsidiary's functional currency is JPY, so its statements are translated us\" recall=0.55 margin=0.01"
@@ -4943,7 +4895,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(D) recall=0.18 choice=\"Fixed-charge coverage under credit agreement formula is about 1.65x and therefor\""
@@ -4955,7 +4907,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={C} stored={B,C,D} best=0.50"
@@ -4967,7 +4919,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A3-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0441 explWords=31"
@@ -4979,7 +4931,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C4-Q2",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B-num",
    "severity": "FLAG",
    "detail": "stored numbers [600000] absent from Explanation numbers [0.4,2800,0.6,400,880,0.4,1200,0.6,600,840,880,2800...]"
@@ -4991,7 +4943,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -5003,7 +4955,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C4-Q6",
    "itemType": "match",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0465 explWords=41"
@@ -5015,7 +4967,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"A material weakness under 404 cannot exist if the dollar amount is below $1 mill\" stored(C)=\"SOX 302 is the quarterly CEO/CFO certification of fair presentation and disclosu\" recall=0.54 margin=0.06"
@@ -5027,7 +4979,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "FLAG",
    "detail": "UNSUPPORTED-CORRECT: stored(C) recall=0.09 choice=\"Anonymous whistleblower hotline with audit-committee oversight and SOX 806 non-r\""
@@ -5039,7 +4991,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "multi predicted={A} stored={A,B,C} best=0.71"
@@ -5051,7 +5003,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(C)=\"Add 50% only\" stored(B)=\"Add full $8M — recourse guarantee is debt-like for covenant economics; disclose \" recall=1.00 margin=0.20"
@@ -5063,7 +5015,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A4-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Pass 1.45 <1.40\" stored(A)=\"Breach 1.45 >1.40 — request waiver and restructure synthetic to on-BS loan or re\" recall=0.80 margin=0.05"
@@ -5075,7 +5027,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-A4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -5087,7 +5039,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-B2-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -5099,7 +5051,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Cost-plus 24+6=30, price at $30\" stored(B)=\"Target 22 — design to $22 via kaizen/learning/value engineering; cost-plus ignor\" recall=1.00 margin=0.20"
@@ -5111,7 +5063,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-C5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -5123,7 +5075,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-D3-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(D)=\"All equal\" stored(A)=\"Alpha 70% single source L3S5 score 15 EL 320k — top priority\" recall=1.00 margin=0.20"
@@ -5135,7 +5087,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-D3-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Share — insurance\" stored(A)=\"Reduce — lowers likelihood L3→1\" recall=1.00 margin=0.00"
@@ -5147,7 +5099,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-D3-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 3 distractor(s) at >=0.50"
@@ -5159,7 +5111,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E4-Q1",
    "itemType": "numeric",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0270 explWords=91"
@@ -5171,7 +5123,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"PI greedy always optimal\" stored(B)=\"PI greedy picks B,C,A =4.5M NPV1.42 but leaves $1.5M unused that could add D 0.2\" recall=1.00 margin=0.33"
@@ -5183,7 +5135,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E4-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0159 explWords=54"
@@ -5195,7 +5147,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-E4-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 2 distractor(s) at >=0.50"
@@ -5207,7 +5159,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F5-Q1",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(B)=\"Pressure — memo 'make quarter' is pressure, rationalization is 'for company', bu\" stored(A)=\"Opportunity — override of 3-way match and side-letter return creates control bre\" recall=0.92 margin=0.15"
@@ -5219,7 +5171,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"Both annual — no difference\" stored(C)=\"302 quarterly CEO/CFO certify fair presentation and disclosure controls (this qu\" recall=1.00 margin=0.05"
@@ -5231,7 +5183,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F5-Q3",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "C",
    "severity": "FLAG",
    "detail": "jaccard=0.0260 explWords=53"
@@ -5243,7 +5195,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F5-Q4",
    "itemType": "select",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "INVERSION: predicted(A)=\"No deficiency — override is management discretion\" stored(B)=\"Material weakness or significant deficiency — override of key control creates re\" recall=1.00 margin=0.00"
@@ -5255,7 +5207,7 @@
    "caseState": "Certified",
    "itemId": "CBQ23-F5-Q5",
    "itemType": "multi",
-   "itemState": null,
+   "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
    "detail": "EXTRA-REFUTED (weak): explanation also covers 1 distractor(s) at >=0.50"
@@ -5418,16 +5370,16 @@
   }
  ],
  "summary": {
-  "totalFlags": 448,
+  "totalFlags": 444,
   "byScreen": {
    "B": 336,
-   "C": 74,
-   "E": 27,
+   "C": 73,
+   "E": 24,
    "B-num": 11
   },
   "bySev": {
    "weak": 281,
-   "FLAG": 128,
+   "FLAG": 124,
    "info": 39
   },
   "byKind": {
@@ -5435,7 +5387,7 @@
    "C:jaccard=0.0438 explWords=240": 1,
    "B:INVERSION": 160,
    "C:SHORT": 31,
-   "E:SHORT-EXPLANATION": 27,
+   "E:SHORT-EXPLANATION": 24,
    "B:UNSUPPORTED-CORRECT": 45,
    "B:DISJOINT": 9,
    "C:jaccard=0.0349 explWords=394": 1,
@@ -5511,7 +5463,6 @@
    "C:jaccard=0.0481 explWords=76": 1,
    "B:multi predicted={B,C,D,A} stored={A,C,E} best=0.78": 1,
    "B:multi predicted={} stored={A,B,C} best=0.38": 1,
-   "C:jaccard=0.0426 explWords=25": 1,
    "B:multi predicted={B} stored={A,B,C} best=0.57": 1,
    "B-num:stored numbers [22500000] absent from Explanation numbers [5,1,0.25,3.75,3,0.75,2.25,24,3.75,2.25,22.5]": 1,
    "B:multi predicted={E} stored={A,C,E} best=0.50": 1,
@@ -5548,6 +5499,6 @@
    "C:jaccard=0.0328 explWords=33": 1,
    "C:jaccard=0.0455 explWords=137": 1
   },
-  "certifiedStateFlags": 431
+  "certifiedStateFlags": 444
  }
 }
