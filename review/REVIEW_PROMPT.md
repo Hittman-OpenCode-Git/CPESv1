@@ -115,5 +115,3 @@ Produce a structured report with:
 - State your tested population boundary for each task
 - Do not treat self-reports as evidence
 - Do not auto-remediate — report findings only
-PROMPT
-echo "Prompt rewritten with all fixes"
