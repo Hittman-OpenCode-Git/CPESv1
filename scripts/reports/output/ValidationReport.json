@@ -21,7 +21,7 @@
     "statistics": {
       "Cases Checked": 190
     },
-    "duration": 514,
+    "duration": 396,
     "confidence": 100
   },
   {
@@ -234,7 +234,7 @@
       "Domain: Risk Management": 11,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 434,
+    "duration": 286,
     "confidence": 100
   },
   {
@@ -3518,7 +3518,7 @@
       "P2 Domain: Professional Ethics": 614,
       "P2 Domain: Risk Management": 566
     },
-    "duration": 645,
+    "duration": 450,
     "confidence": 100
   },
   {
@@ -3613,7 +3613,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 46
     },
-    "duration": 589,
+    "duration": 763,
     "confidence": 100
   },
   {
@@ -3705,7 +3705,7 @@
       "Orphan Exhibits (unreferenced)": 76,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 564,
+    "duration": 286,
     "confidence": 100
   },
   {
@@ -3729,7 +3729,7 @@
       "Correct Explanation Avg Length": 604,
       "Wrong Explanation Avg Length": 285
     },
-    "duration": 1343,
+    "duration": 1260,
     "confidence": 100
   },
   {
@@ -3752,7 +3752,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 306,
+    "duration": 252,
     "confidence": 100
   },
   {
@@ -3807,7 +3807,7 @@
       "Archived↔Live Overlaps (expected, S916)": 75,
       "Score/Label Mismatches": 0
     },
-    "duration": 73,
+    "duration": 61,
     "confidence": 100
   },
   {
@@ -10950,7 +10950,7 @@
       "psychometricModuleErrors": 0,
       "psychometricModuleWarnings": 7108
     },
-    "duration": 6820,
+    "duration": 6257,
     "confidence": 100
   }
 ]

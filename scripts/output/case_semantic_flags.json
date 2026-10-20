@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T00:20:55.528Z",
+ "generated": "2026-10-20T12:44:20.279Z",
  "method": "case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w) D(9-phrase boilerplate + authoring-scratchwork regex; added 2026-09-30 DL-P2-026 correction) E(KEY-UNSUPPORTED+SCRATCHWORK+KEY-TYPE+ENCODING+SHORT-LENGTH; added 2026-10-04 per DL-P2-029/DL-P2-026/DL-P2-026-ext/DL-067 short-explanation class)",
  "extractionFailures": 0,
  "census": {

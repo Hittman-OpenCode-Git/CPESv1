@@ -1,4 +1,4 @@
-﻿=== S121 Portfolio Dashboard ===
+=== S121 Portfolio Dashboard ===
 
 --- Part 1 ---
   Pack A: 560 items, 560 Certified
@@ -92,5 +92,5 @@
   JSON: C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\output\S121_PORTFOLIO_DASHBOARD.json
   MD:   C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\output\S121_PORTFOLIO_DASHBOARD.md
 
-  Total divergence flags: 69 (WARN class ΓÇö portfolio drift, not content)
-  (Divergences exceed ┬▒3pp tolerance from S121 targets ΓÇö authoring signal, non-blocking)
+  Total divergence flags: 69 (WARN class -- portfolio drift, not content)
+  (Divergences exceed +-3pp tolerance from S121 targets -- authoring signal, non-blocking)

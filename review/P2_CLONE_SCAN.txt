@@ -1,15 +1,15 @@
-﻿=== P2 CASE CLONE GATE ===
+=== P2 CASE CLONE GATE ===
 banks scanned: 6   cases: 190   items: 1085
 unique case fingerprints: 181   duplicate groups: 0
 
-CLASS A ΓÇö whole-case duplicates: 0 (0 unacknowledged)
+CLASS A -- whole-case duplicates: 0 (0 unacknowledged)
    learner-reachable (ALL copies Certified): 0
 
-CLASS B ΓÇö item rotation-clones: 1 (0 unacknowledged)
+CLASS B -- item rotation-clones: 1 (0 unacknowledged)
    CBQ21-F3-Q4  ==  CBQ22-F1-Q5   [Confidentiality boundaries]   (acknowledged)
 
 REPORT: scripts/output/p2_case_clone_report.json
 TOTAL: 1 suspected (0 whole-case, 1 item-level)
 ACKNOWLEDGED (filed, blocked from certification): 1
 NEW / UNACKNOWLEDGED: 0
-GATE: PASS ΓÇö no new clones beyond the documented/filed set.
+GATE: PASS -- no new clones beyond the documented/filed set.
