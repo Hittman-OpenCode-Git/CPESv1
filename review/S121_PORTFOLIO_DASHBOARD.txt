@@ -1,0 +1,96 @@
+﻿=== S121 Portfolio Dashboard ===
+
+--- Part 1 ---
+  Pack A: 560 items, 560 Certified
+    DIV: difficulty/Easy: 11.4% vs 15% (UNDER -3.6pp)
+    DIV: difficulty/Moderate-Easy: 23.8% vs 20% (OVER 3.7pp)
+    DIV: difficulty/Moderate: 36.6% vs 30% (OVER 6.6pp)
+    DIV: difficulty/Very Difficult: 4.6% vs 10% (UNDER -5.4pp)
+    DIV: cognitive/Remember: 0.5% vs 8% (UNDER -7.5pp)
+    DIV: cognitive/Understand: 20.5% vs 17% (OVER 3.5pp)
+    DIV: cognitive/Apply: 50% vs 45% (OVER 5pp)
+    DIV: cognitive/Analyze: 16.1% vs 20% (UNDER -3.9pp)
+    DIV: answer_position/B: 33% vs 25% (OVER 8pp)
+    DIV: answer_position/D: 18.8% vs 25% (UNDER -6.3pp)
+  Pack B: 620 items, 620 Certified
+    DIV: difficulty/Easy: 25.2% vs 15% (OVER 10.2pp)
+    DIV: difficulty/Moderate-Easy: 14.4% vs 20% (UNDER -5.6pp)
+    DIV: difficulty/Moderate: 33.9% vs 30% (OVER 3.9pp)
+    DIV: difficulty/Difficult: 20.3% vs 25% (UNDER -4.7pp)
+    DIV: difficulty/Very Difficult: 6.3% vs 10% (UNDER -3.7pp)
+    DIV: cognitive/Apply: 51.1% vs 45% (OVER 6.1pp)
+    DIV: cognitive/Analyze: 15.6% vs 20% (UNDER -4.4pp)
+  Pack C: 620 items, 606 Certified
+    DIV: difficulty/Easy: 18.7% vs 15% (OVER 3.7pp)
+    DIV: difficulty/Moderate-Easy: 14.5% vs 20% (UNDER -5.5pp)
+    DIV: cognitive/Remember: 6.8% vs 10% (UNDER -3.2pp)
+    DIV: cognitive/Understand: 26.9% vs 20% (OVER 6.9pp)
+    DIV: cognitive/Apply: 36.3% vs 40% (UNDER -3.7pp)
+    DIV: answer_position/B: 28.2% vs 25% (OVER 3.2pp)
+  Pack D: 590 items, 586 Certified
+    DIV: difficulty/Moderate-Easy: 11% vs 20% (UNDER -9pp)
+    DIV: difficulty/Moderate: 24.6% vs 30% (UNDER -5.4pp)
+    DIV: difficulty/Difficult: 42.9% vs 25% (OVER 17.9pp)
+    DIV: cognitive/Remember: 0% vs 8% (UNDER -8pp)
+    DIV: cognitive/Understand: 28.3% vs 17% (OVER 11.3pp)
+    DIV: cognitive/Apply: 23.6% vs 45% (UNDER -21.4pp)
+    DIV: cognitive/Analyze: 30.3% vs 20% (OVER 10.3pp)
+    DIV: cognitive/Evaluate: 17.8% vs 10% (OVER 7.8pp)
+    DIV: answer_position/B: 31.2% vs 25% (OVER 6.2pp)
+    DIV: answer_position/D: 21.2% vs 25% (UNDER -3.8pp)
+  Pack E: 680 items, 680 Certified
+    DIV: difficulty/Moderate-Easy: 23.5% vs 20% (OVER 3.5pp)
+    DIV: difficulty/Difficult: 21.2% vs 25% (UNDER -3.8pp)
+    DIV: difficulty/Very Difficult: 6.9% vs 10% (UNDER -3.1pp)
+    DIV: cognitive/Remember: 1.5% vs 10% (UNDER -8.5pp)
+    DIV: cognitive/Understand: 56.5% vs 20% (OVER 36.5pp)
+    DIV: cognitive/Apply: 18.5% vs 40% (UNDER -21.5pp)
+    DIV: cognitive/Analyze: 14.9% vs 20% (UNDER -5.1pp)
+
+--- Part 2 ---
+  Pack P2-A: 622 items, 622 Certified
+    DIV: difficulty/Moderate-Easy: 16.4% vs 20% (UNDER -3.6pp)
+    DIV: difficulty/Moderate: 35% vs 30% (OVER 5pp)
+    DIV: cognitive/Understand: 16.7% vs 20% (UNDER -3.3pp)
+    DIV: cognitive/Analyze: 23.5% vs 20% (OVER 3.5pp)
+    DIV: answer_position/B: 28.5% vs 25% (OVER 3.5pp)
+    DIV: answer_position/D: 21.4% vs 25% (UNDER -3.6pp)
+  Pack P2-B: 620 items, 620 Certified
+    DIV: difficulty/Moderate: 36.6% vs 30% (OVER 6.6pp)
+    DIV: cognitive/Apply: 43.4% vs 40% (OVER 3.4pp)
+    DIV: answer_position/A: 28.5% vs 25% (OVER 3.5pp)
+    DIV: answer_position/D: 21% vs 25% (UNDER -4pp)
+  Pack P2-C: 788 items, 787 Certified
+    DIV: difficulty/Moderate-Easy: 14.8% vs 20% (UNDER -5.2pp)
+    DIV: difficulty/Moderate: 38.3% vs 30% (OVER 8.3pp)
+    DIV: answer_position/A: 31.7% vs 25% (OVER 6.7pp)
+    DIV: answer_position/C: 21.4% vs 25% (UNDER -3.6pp)
+    DIV: answer_position/D: 19.4% vs 25% (UNDER -5.6pp)
+  Pack P2-D: 500 items, 500 Certified
+    DIV: difficulty/Moderate: 33.4% vs 30% (OVER 3.4pp)
+    DIV: difficulty/Difficult: 20.6% vs 25% (UNDER -4.4pp)
+    DIV: answer_position/D: 19.6% vs 25% (UNDER -5.4pp)
+  Pack P2-E: 500 items, 500 Certified
+    DIV: difficulty/Moderate: 33.4% vs 30% (OVER 3.4pp)
+    DIV: cognitive/Remember: 3.2% vs 10% (UNDER -6.8pp)
+    DIV: cognitive/Understand: 13.8% vs 20% (UNDER -6.2pp)
+    DIV: cognitive/Apply: 46.2% vs 40% (OVER 6.2pp)
+    DIV: cognitive/Analyze: 23.2% vs 20% (OVER 3.2pp)
+    DIV: cognitive/Evaluate: 13.6% vs 10% (OVER 3.6pp)
+    DIV: answer_position/B: 28.6% vs 25% (OVER 3.6pp)
+    DIV: answer_position/D: 20.8% vs 25% (UNDER -4.2pp)
+  Pack P2-F: 500 items, 500 Certified
+    DIV: difficulty/Moderate: 36% vs 30% (OVER 6pp)
+    DIV: difficulty/Difficult: 21% vs 25% (UNDER -4pp)
+    DIV: answer_position/D: 21.4% vs 25% (UNDER -3.6pp)
+
+=== Pool Totals ===
+  Part 1: 3070 items, 3052 Certified, 18 non-Certified ({"Certified":3052,"Archived":18})
+  Part 2: 3530 items, 3529 Certified, 1 non-Certified ({"Certified":3529,"Archived":1})
+  Combined: 6600 items
+
+  JSON: C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\output\S121_PORTFOLIO_DASHBOARD.json
+  MD:   C:\Users\User\OneDrive\Desktop\CMA_Part_1_2026\scripts\output\S121_PORTFOLIO_DASHBOARD.md
+
+  Total divergence flags: 69 (WARN class ΓÇö portfolio drift, not content)
+  (Divergences exceed ┬▒3pp tolerance from S121 targets ΓÇö authoring signal, non-blocking)

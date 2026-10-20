@@ -1,0 +1,775 @@
+
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "recommendation",
+          "special order"
+        ],
+        "Dependencies": [
+          "CBQ22-C8-Q1",
+          "CBQ22-C8-Q2"
+        ]
+      }
+    ],
+    "certification_batch": "P2-HAND-SOLVE-WAVE"
+  },
+  {
+    "CaseID": "CBQ22-A6",
+    "Title": "DuPont Decomposition at Sentinel Defense",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute ROE and decompose it using the DuPont identity to isolate profitability, efficiency, and leverage drivers",
+      "Evaluate earnings quality by reconciling net income to operating cash flow and analyzing accrual patterns",
+      "Interpret receivables aging trends as leading indicators of revenue quality risk"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 35,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Sentinel Defense Systems' CFO Maria Santos must explain to the board why ROE fell from approximately 18.4% in Year 1 to 6.4% in Year 3 despite a 12% revenue increase. The controller has prepared three-year condensed financials and a receivables aging report. Maria needs a full DuPont decomposition to isolate which component — profitability, asset efficiency, or financial leverage — drove the decline, and an earnings-quality review to determine whether the reported improvement in operations is sustainable.",
+    "Industry": "Aerospace and defense",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Sentinel Defense Systems",
+    "Stakeholder": "CFO Maria Santos",
+    "BusinessFunction": "Financial reporting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "DuPont",
+      "ROE",
+      "earnings quality",
+      "receivables aging",
+      "financial statement analysis"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
+    "certification_date": "2026-09-05",
+    "certification_session": "P2-CERT-AUDIT-CASE",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute ROE from condensed financial statements using average equity",
+      "Decompose ROE into net profit margin, asset turnover, and equity multiplier components",
+      "Identify the primary driver of ROE change through component analysis",
+      "Detect earnings-quality red flags from accrual-to-cash divergences and receivables trends",
+      "Select board-level findings supported by converging financial signals",
+      "Map specific red flags to their underlying risk categories"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-A6-E1",
+        "CaseID": "CBQ22-A6",
+        "Type": "table",
+        "Title": "Exhibit 1 — Three-Year Condensed Financials",
+        "Purpose": "Provides income statement and balance sheet data for computing ROE, DuPont components, and earnings-quality ratios across three years.",
+        "ReferencedBy": [
+          "CBQ22-A6-Q1",
+          "CBQ22-A6-Q2",
+          "CBQ22-A6-Q4"
+        ],
+        "Headers": [
+          "Item",
+          "Year 1",
+          "Year 2",
+          "Year 3"
+        ],
+        "Rows": [
+          [
+            "Net sales ($000s)",
+            "$250,000",
+            "$280,000",
+            "$313,600"
+          ],
+          [
+            "Cost of goods sold ($000s)",
+            "$155,000",
+            "$176,400",
+            "$200,704"
+          ],
+          [
+            "Gross profit ($000s)",
+            "$95,000",
+            "$103,600",
+            "$112,896"
+          ],
+          [
+            "Operating expenses ($000s)",
+            "$68,000",
+            "$81,200",
+            "$99,968"
+          ],
+          [
+            "Operating income ($000s)",
+            "$27,000",
+            "$22,400",
+            "$12,928"
+          ],
+          [
+            "Interest expense ($000s)",
+            "$2,500",
+            "$2,800",
+            "$3,136"
+          ],
+          [
+            "Pre-tax income ($000s)",
+            "$24,500",
+            "$19,600",
+            "$9,792"
+          ],
+          [
+            "Income tax (25%)",
+            "$6,125",
+            "$4,900",
+            "$2,448"
+          ],
+          [
+            "Net income ($000s)",
+            "$18,375",
+            "$14,700",
+            "$7,344"
+          ],
+          [
+            "Cash dividends ($000s)",
+            "$7,350",
+            "$5,880",
+            "$2,938"
+          ],
+          [
+            "Accounts receivable ($000s)",
+            "$28,000",
+            "$39,200",
+            "$67,500"
+          ],
+          [
+            "Inventories ($000s)",
+            "$35,000",
+            "$42,000",
+            "$50,400"
+          ],
+          [
+            "Total current assets ($000s)",
+            "$80,000",
+            "$98,000",
+            "$130,900"
+          ],
+          [
+            "Net fixed assets ($000s)",
+            "$120,000",
+            "$122,000",
+            "$119,100"
+          ],
+          [
+            "Total assets ($000s)",
+            "$200,000",
+            "$220,000",
+            "$250,000"
+          ],
+          [
+            "Total current liabilities ($000s)",
+            "$35,000",
+            "$40,000",
+            "$48,000"
+          ],
+          [
+            "Long-term debt ($000s)",
+            "$65,000",
+            "$70,000",
+            "$82,000"
+          ],
+          [
+            "Total liabilities ($000s)",
+            "$100,000",
+            "$110,000",
+            "$130,000"
+          ],
+          [
+            "Total common equity ($000s)",
+            "$100,000",
+            "$110,000",
+            "$120,000"
+          ],
+          [
+            "Preferred dividends ($000s)",
+            "$0",
+            "$0",
+            "$0"
+          ]
+        ],
+        "DataFormat": "USD thousands; 365-day year; tax rate 25% flat; equity is common shareholders' equity only",
+        "AccuracyCheck": "Year 3 ROE = 7,344 / ((110,000 + 120,000)/2) = 7,344 / 115,000 = 6.39%. Year 3 EM = 235,000 / 115,000 = 2.04. Year 3 NPM = 7,344 / 313,600 = 2.34%. Year 1 ROE (avg equity (90,000 + 100,000)/2 = 95,000) = 18,375 / 95,000 = 19.34%; Year 1 NPM = 7.35%; Year 1 EM = 210,000 / 95,000 = 2.21. Exhibit rows themselves are internally consistent (totals add; aging 44% past 60 days confirmed)."
+      },
+      {
+        "ExhibitID": "CBQ22-A6-E2",
+        "CaseID": "CBQ22-A6",
+        "Type": "table",
+        "Title": "Exhibit 2 — Receivables Aging Report (Year 3)",
+        "Purpose": "Provides the aging distribution of year-end receivables for earnings-quality analysis and DSO computation.",
+        "ReferencedBy": [
+          "CBQ22-A6-Q3",
+          "CBQ22-A6-Q4",
+          "CBQ22-A6-Q5",
+          "CBQ22-A6-Q6"
+        ],
+        "Headers": [
+          "Aging Category",
+          "Balance ($000s)",
+          "Percentage"
+        ],
+        "Rows": [
+          [
+            "Current (0–30 days)",
+            "$20,250",
+            "30.0%"
+          ],
+          [
+            "31–60 days",
+            "$17,550",
+            "26.0%"
+          ],
+          [
+            "61–90 days",
+            "$14,850",
+            "22.0%"
+          ],
+          [
+            "Over 90 days",
+            "$14,850",
+            "22.0%"
+          ],
+          [
+            "Total receivables",
+            "$67,500",
+            "100.0%"
+          ]
+        ],
+        "DataFormat": "USD thousands; aging as of Year 3 balance sheet date",
+        "AccuracyCheck": "20,250 + 17,550 + 14,850 + 14,850 = 67,500 ✓; 44% past 60 days"
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-A6-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "numeric",
+        "Prompt": "Compute Sentinel's Year 3 return on equity (ROE) using average common shareholders' equity. Enter the result as a percentage rounded to two decimal places.",
+        "Correct": "6.39",
+        "Explanation": "ROE = Net Income / Average Common Equity. Year 3 net income = $7,344K; average common equity = ($110,000K + $120,000K) / 2 = $115,000K. ROE = $7,344 / $115,000 = 6.39%. The decline from Year 1 (18,375 / 95,000 = 19.34% on average equity) reflects the collapse of Year 3 net income to $7,344K despite higher revenue — an extreme margin compression. This is the starting point for the DuPont decomposition in Q2. A common trap is to use ending equity ($120,000K → 6.12%) instead of the average balance, or to carry forward the narrative Year 1 ROE.",
+        "Topic": "Return on equity",
+        "Subtopic": "ROE computation from condensed financials",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-13: Return on Equity",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "ROE",
+          "profitability"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-A6-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "numeric",
+        "Prompt": "Compute the three DuPont components for Year 3: net profit margin (NPM), total asset turnover (TAT), and equity multiplier (EM). Enter the equity multiplier rounded to two decimal places.",
+        "Correct": "2.04",
+        "Explanation": "The three DuPont components for Year 3 are: NPM = Net Income / Sales = $7,344K / $313,600K = 2.34%; TAT = Sales / Average Total Assets = $313,600K / [($220,000K + $250,000K) / 2] = $313,600K / $235,000K = 1.33; EM = Average Total Assets / Average Equity = $235,000K / $115,000K = 2.04. Product check: 2.34% × 1.33 × 2.04 = 6.39%, matching the ROE from Q1. The equity multiplier of 2.04 means Sentinel holds $2.04 of assets for each $1.00 of equity. Compared with Year 1 (EM = $210,000K / $95,000K = 2.21), leverage declined modestly, so the ROE collapse is driven by margin, not leverage. A common trap is to use ending balances instead of averages, which distorts both TAT and EM.",
+        "Topic": "DuPont decomposition",
+        "Subtopic": "Three-factor ROE breakdown",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-14: DuPont Identity",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DuPont",
+          "decomposition"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "select",
+        "Prompt": "Based on the DuPont decomposition, which component is the PRIMARY driver of Sentinel's ROE decline from Year 1 to Year 3?",
+        "Correct": "C",
+        "Choices": [
+          "Declining total asset turnover — the company is generating fewer sales per dollar of invested assets",
+          "Rising interest expense — debt servicing is consuming a larger share of operating income",
+          "Contracting net profit margin — operating expenses grew 47% against 25% revenue growth, compressing NPM from 7.35% to 2.34%, which is the dominant force behind the ROE decline",
+          "Increasing tax burden — the effective tax rate rose materially from Year 1 to Year 3"
+        ],
+        "Explanation": "Decomposing the ROE change from Year 1 to Year 3: NPM fell from 18,375/250,000 = 7.35% to 7,344/313,600 = 2.34% — a 5.01 percentage-point contraction and by far the largest component move. Total asset turnover actually improved (Year 1: 250,000/210,000 = 1.19; Year 3: 313,600/235,000 = 1.33). The equity multiplier declined modestly (Year 1: 210,000/95,000 = 2.21; Year 3: 235,000/115,000 = 2.04). Operating expenses grew 47% ($68,000K → $99,968K) against 25% revenue growth, directly compressing the bottom line. The board should focus on operating-expense discipline; both asset efficiency and leverage moved favorably or mildly.",
+        "Topic": "DuPont interpretation",
+        "Subtopic": "Component attribution",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-14: DuPont Identity",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "DuPont",
+          "attribution"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "select",
+        "Prompt": "Which earnings-quality concern is MOST clearly supported by Exhibits 1 and 2 together?",
+        "Correct": "A",
+        "Choices": [
+          "Accounts receivable grew 72% while net sales grew only 12% from Year 2 to Year 3, and 44% of receivables are past 60 days — revenue may include premature or channel-stuffed shipments that will not convert to cash",
+          "Net income declined in absolute terms, which always signals deteriorating earnings quality regardless of the cause",
+          "Operating expenses grew faster than sales, indicating that the company is liquidating long-lived assets to fund operations",
+          "The dividend payout ratio increased, which reduces retained earnings and signals that management lacks confidence in future cash flows"
+        ],
+        "Explanation": "The receivables aging in Exhibit 2 shows 44% of the $67.5M balance is past 60 days ($14.85M at 61–90 days + $14.85M over 90 days = $29.7M). Receivables growth of ($67,500 − $39,200) / $39,200 = 72.2% far outpaced the 12% sales growth from Year 2 to Year 3. This divergence — ballooning receivables with deteriorating aging — is the classic channel-stuffing fingerprint: goods shipped to fill orders sit uncollected, or side arrangements extend payment terms beyond economic substance. Net income declining (B) is a result, not a quality indicator. Operating-expense growth (C) is an efficiency issue, not an earnings-quality issue. Dividend payout changes (D) affect capital allocation, not revenue quality.",
+        "Topic": "Earnings quality",
+        "Subtopic": "Receivables-sales divergence",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-05: Days Sales Outstanding",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "earnings quality",
+          "receivables"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-A6-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "multi",
+        "Prompt": "Which three findings should Maria present to the board as converging evidence of earnings-quality risk? Select exactly three.",
+        "Correct": [
+          "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor"
+        ],
+        "Choices": {
+          "A": "Net profit margin contracted 5.01 percentage points despite 25% revenue growth, indicating cost growth is out of control and compressing bottom-line returns",
+          "B": "The equity multiplier declined from 2.22 to 2.00, indicating the company is underleveraged relative to its defense-industry peers and should increase debt",
+          "C": "Accounts receivable grew 72% against 12% sales growth, creating a $28.3M gap between bookings and collections that may signal channel stuffing or aggressive revenue recognition",
+          "D": "Total asset turnover improved from Year 1 to Year 3, confirming that operational efficiency gains are the primary driver of the ROE change",
+          "E": "44% of year-end receivables are past 60 days old ($29.7M), suggesting systemic collection deterioration rather than normal seasonal patterns for a defense contractor",
+          "F": "The company paid $2.9M in dividends despite declining earnings, which is unsustainable and indicates capital misallocation"
+        },
+        "Explanation": "Statements A, C, and E form the converging earnings-quality narrative: margin erosion (A — NPM collapsed from 7.35% to 2.34%, a 5.01-point contraction) shows the income-statement side; receivables outpacing sales (C — AR up 72% from Year 2 to Year 3 versus 12% sales growth, a $28.3M increase in the AR balance) shows the balance-sheet symptom; aging deterioration (E — 44% past 60 days, $29.7M) shows the cash-conversion consequence. Statement B misreads the leverage decline: a lower equity multiplier reduces financial risk, and recommending more debt while margins compress and collections deteriorate would be imprudent. Statement D is factually true (TAT improved) but is not an earnings-quality concern — it is the offset that keeps the ROE decline from being even steeper. Statement F overstates the concern: $2.9M of dividends against $7.3M of net income is a 40% payout — elevated, but not by itself dispositive evidence of capital misallocation.",
+        "Topic": "Board reporting",
+        "Subtopic": "Converging evidence selection",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "board reporting",
+          "convergence"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q3",
+          "CBQ22-A6-Q4"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A6-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "match",
+        "Prompt": "Match each earnings-quality red flag observed at Sentinel to the risk category it most directly indicates.",
+        "LeftItems": [
+          "Net profit margin declining despite revenue growth",
+          "Receivables growing 72% against 25% sales growth",
+          "44% of receivables past 60 days with $14.9M over 90 days",
+          "Operating expenses growing 47% against 25% revenue growth"
+        ],
+        "RightItems": [
+          "Margin erosion from uncontrolled cost structure",
+          "Potential premature or channel-stuffed revenue recognition",
+          "Cash conversion risk and possible future write-offs",
+          "Operational inefficiency or SGA bloat independent of revenue quality",
+          "Working capital mismanagement",
+          "Tax planning opportunity",
+          "Capital structure optimization"
+        ],
+        "Correct": {
+          "Net profit margin declining despite revenue growth": "Margin erosion from uncontrolled cost structure",
+          "Receivables growing 72% against 25% sales growth": "Potential premature or channel-stuffed revenue recognition",
+          "44% of receivables past 60 days with $14.9M over 90 days": "Cash conversion risk and possible future write-offs",
+          "Operating expenses growing 47% against 25% revenue growth": "Operational inefficiency or SGA bloat independent of revenue quality"
+        },
+        "Explanation": "Each red flag maps to a specific risk category: margin decline (NPM 7.35% → 2.34%) reflects cost growth outpacing revenue — a margin-erosion signal. The receivables-sales divergence (72% vs. 12% growth) is the textbook indicator of premature revenue recognition or channel stuffing — goods shipped but not yet earned. The aging concentration (44% past 60 days, $14.9M over 90 days) signals collection risk and potential bad-debt exposure — cash that may never convert. The operating-expense growth (47% vs. 25% revenue) indicates internal cost-control failure that is separate from revenue-quality concerns — it depresses margins but does not itself indicate fraudulent revenue. Distractors: working capital mismanagement conflates multiple signals; tax planning is not indicated (flat 25% rate); capital structure optimization is unrelated to earnings quality. Match key unchanged.",
+        "Topic": "Red flag classification",
+        "Subtopic": "Risk category mapping",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "red flags",
+          "classification"
+        ],
+        "Dependencies": [
+          "CBQ22-A6-Q4",
+          "CBQ22-A6-Q5"
+        ]
+      }
+    ]
+  },
+  {
+    "CaseID": "CBQ22-A5",
+    "Title": "Sustainable Growth Rate at Harborline Diagnostics",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute the sustainable growth rate using the Higgins model",
+      "Quantify the growth gap between target growth and sustainable growth",
+      "Evaluate whether a company can fund planned expansion without issuing new equity"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Harborline Diagnostics' CFO Dr. Rajiv Anand must decide whether to pursue a $45M expansion without issuing new equity. The company's ROE is 22%, dividend payout is 40%, and total equity is $180M. The board has asked whether the sustainable growth rate can support the planned 15% revenue growth. Dr. Anand must compute the sustainable growth rate, quantify any growth gap, and recommend which financial levers — if any — can bridge the shortfall.",
+    "Industry": "Medical diagnostics",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Harborline Diagnostics",
+    "Stakeholder": "CFO Dr. Rajiv Anand",
+    "BusinessFunction": "Corporate finance",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "sustainable growth rate",
+      "Higgins",
+      "dividend policy",
+      "retention ratio",
+      "growth financing"
+    ],
+    "CreatedDate": "2026-09-04",
+    "ModifiedDate": "2026-09-04",
+    "Author": "Case Author",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-09-04",
+        "Version": "1.0",
+        "Author": "Case Author",
+        "Summary": "Initial creation"
+      }
+    ],
+    "question_state": "Archived",
+    "archive_batch": "DL-P2-024-DEDUP",
+    "archive_date": "2026-09-30",
+    "archive_reason": "DL-P2-024 whole-case duplicate; survivor retained in p2/case_pack_p2_authored.js or p2/case_pack_p2_C4_C8.js",
+    "certification_date": "2026-09-05",
+    "certification_session": "P2-CERT-AUDIT-CASE",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "LearningObjectives": [
+      "Compute the sustainable growth rate from ROE and the retention ratio",
+      "Quantify the dollar and percentage gap between target growth and sustainable capacity",
+      "Evaluate whether existing financial policies can support planned expansion",
+      "Identify dividend policy levers that affect growth capacity",
+      "Select the combination of financial levers most likely to bridge a growth gap",
+      "Draft a recommendation memo integrating SGR analysis with financing constraints"
+    ],
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ22-A5-E1",
+        "CaseID": "CBQ22-A5",
+        "Type": "table",
+        "Title": "Exhibit 1 — Retention and Payout Schedule",
+        "Purpose": "Provides the dividend policy parameters and equity base for computing the sustainable growth rate and retention ratio.",
+        "ReferencedBy": [
+          "CBQ22-A5-Q1",
+          "CBQ22-A5-Q2",
+          "CBQ22-A5-Q3"
+        ],
+        "Headers": [
+          "Parameter",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Return on equity (ROE)",
+            "22.0%"
+          ],
+          [
+            "Dividend payout ratio",
+            "40.0%"
+          ],
+          [
+            "Retention ratio (b)",
+            "60.0%"
+          ],
+          [
+            "Total common equity (beginning of year)",
+            "$180,000,000"
+          ],
+          [
+            "Net income (trailing twelve months)",
+            "$39,600,000"
+          ],
+          [
+            "Planned revenue growth rate",
+            "15.0%"
+          ],
+          [
+            "Planned capital expenditure",
+            "$45,000,000"
+          ],
+          [
+            "Total assets (current)",
+            "$400,000,000"
+          ],
+          [
+            "Total debt (current)",
+            "$220,000,000"
+          ],
+          [
+            "Debt-to-equity ratio",
+            "1.22"
+          ]
+        ],
+        "DataFormat": "USD; percentages rounded to one decimal; ROE computed as NI / beginning equity = $39.6M / $180M = 22.0%",
+        "AccuracyCheck": "Retention ratio = 1 - 0.40 = 0.60; SGR = ROE × b = 22% × 0.60 = 13.2%"
+      },
+      {
+        "ExhibitID": "CBQ22-A5-E2",
+        "CaseID": "CBQ22-A5",
+        "Type": "text",
+        "Title": "Exhibit 2 — Board Request Email",
+        "Purpose": "Provides the board's directive and financial context for the growth-funding decision.",
+        "ReferencedBy": [
+          "CBQ22-A5-Q4",
+          "CBQ22-A5-Q5",
+          "CBQ22-A5-Q6"
+        ],
+        "Body": "From: Patricia Voss, Board Chair\nTo: Dr. Rajiv Anand, CFO\nSubject: Q3 Capital Plan — Expansion Authorization Request\n\nRajiv — The board approved the $45M expansion in principle at the June meeting, contingent on your confirmation that we can fund it without issuing new equity. We want to preserve the current ownership structure for the potential strategic partner transaction in 2027. Please confirm whether our current growth capacity supports the 15% target, and if not, which levers within our existing financial policy you recommend pulling. We need your written recommendation by the July board session. Our current ROE is 22%, payout is 40%, and the board's policy is to maintain the D/E ratio below 1.5."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ22-A5-Q1",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "numeric",
+        "Prompt": "Compute Harborline's sustainable growth rate (SGR) using the Higgins model. Enter the result as a percentage rounded to two decimal places.",
+        "Correct": "13.20",
+        "Explanation": "SGR = ROE × Retention Ratio = 22.0% × 0.60 = 13.20%. The retention ratio is 1 minus the payout ratio (1 − 0.40 = 0.60). This means Harborline can grow equity-financed assets at 13.2% per year without issuing new equity or changing its dividend policy, assuming ROE and the payout ratio remain constant. The Higgins model implicitly assumes constant capital structure, constant dividend policy, and no new equity issuance — all conditions the board's email (Exhibit 2) explicitly wants to maintain. Any growth above 13.2% requires either reduced dividends, increased leverage, or new equity — each of which the board has constrained.",
+        "Topic": "Sustainable growth rate",
+        "Subtopic": "Higgins model computation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "SGR",
+          "Higgins"
+        ],
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ22-A5-Q2",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "numeric",
+        "Prompt": "Compute the annual growth gap: the difference between Harborline's planned 15% growth rate and the sustainable growth rate. Enter the gap in percentage points rounded to two decimal places.",
+        "Correct": "1.80",
+        "Explanation": "Growth gap = Target growth − SGR = 15.00% − 13.20% = 1.80 percentage points. In dollar terms, the sustainable growth supports $180M × 13.2% = $23.76M in additional equity-financed assets, while 15% growth requires $180M × 15% = $27.0M — leaving a $3.24M annual equity shortfall. Over a multi-year expansion, this gap compounds: Year 2 sustainable equity addition would be $23.76M × 1.132 = $26.9M while 15% growth demands $27.0M × 1.15 = $31.05M, widening the gap. The 1.80-point gap is small enough that modest adjustments to any single lever — dividend payout, asset turnover, or operating margin — can close it, but no single lever alone may be sufficient if the board's constraints bind.",
+        "Topic": "Growth gap analysis",
+        "Subtopic": "Quantifying the shortfall",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "growth gap",
+          "SGR"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q3",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "select",
+        "Prompt": "Based on the SGR analysis, can Harborline sustain 15% growth without issuing new equity?",
+        "Correct": "B",
+        "Choices": [
+          "Yes — 15% is well within the sustainable growth rate because ROE at 22% exceeds the cost of equity",
+          "No — the 13.20% sustainable growth rate is below the 15% target by 1.80 percentage points, meaning the company would need to either increase retention, improve ROE, or accept a lower growth rate to avoid equity issuance",
+          "Yes — the company can issue debt instead of equity because the D/E ratio of 1.22 is below the board's 1.5 ceiling",
+          "No — the company must reduce dividends to zero because any payout above 0% makes growth impossible"
+        ],
+        "Explanation": "The SGR of 13.20% is the mathematical ceiling for equity-retained growth under current policies. At 15% target growth, Harborline falls 1.80 points short — meaning it cannot fund the expansion from internal equity generation alone while maintaining the 40% payout. Option C is tempting but misreads the analysis: increasing debt to fund growth changes the capital structure, which the board explicitly wants to preserve for the 2027 strategic partner transaction. The D/E ratio would rise above 1.5 if debt funds the gap. Option D overstates the constraint — zero dividends is not required; the gap can be closed by reducing the payout modestly (e.g., from 40% to approximately 27.3%) or by improving ROE through operational efficiency.",
+        "Topic": "SGR interpretation",
+        "Subtopic": "Sustainability assessment",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "SGR",
+          "sustainability"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q4",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "select",
+        "Prompt": "Which dividend policy adjustment would close the 1.80-point growth gap while maintaining the company's ability to service existing debt?",
+        "Correct": "A",
+        "Choices": [
+          "Reduce the payout ratio from 40% to approximately 27.3%, increasing the retention ratio to 72.7% so that SGR = 22% × 0.727 = 16.0%, which exceeds the 15% target",
+          "Eliminate dividends entirely to maximize retention, increasing SGR to 22.0% — well above the 15% target",
+          "Maintain the 40% payout and issue a one-time special dividend to signal confidence before the expansion",
+          "Increase the payout ratio to 50% to attract income-focused investors who will provide the equity gap through secondary offerings"
+        ],
+        "Explanation": "Closing the gap requires SGR ≥ 15%. Solving: 15% = 22% × b, so b = 0.6818, meaning payout = 1 − 0.6818 = 31.82%. Rounding up to a clean policy: reducing payout from 40% to approximately 27.3% (retention = 72.7%) yields SGR = 22% × 0.727 = 16.0%, which covers the 15% target with a 1-point buffer. Option B (eliminating dividends) is extreme and would damage stock price and investor confidence — the gap is modest and does not require zero dividends. Option C is counterproductive — a special dividend drains equity, making the growth gap worse. Option D contradicts the board's no-new-equity directive.",
+        "Topic": "Dividend policy levers",
+        "Subtopic": "Payout ratio adjustment",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-22: Payout Ratio",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "dividend policy",
+          "payout"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q3"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q5",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "multi",
+        "Prompt": "Which three levers could Dr. Anand recommend to close the growth gap while respecting the board's constraints (no new equity, D/E below 1.5)? Select exactly three.",
+        "Correct": [
+          "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
+          "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
+          "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator"
+        ],
+        "Choices": {
+          "A": "Reduce the dividend payout ratio from 40% to approximately 27–32%, increasing the retention ratio and directly raising the sustainable growth rate toward or above 15%",
+          "B": "Issue additional long-term debt up to the 1.5 D/E ceiling to fund the equity gap, since debt is not equity and the board only prohibits new equity issuance",
+          "C": "Improve asset turnover by generating more sales per dollar of assets, which reduces the equity needed to support 15% growth and effectively raises SGR without changing payout or leverage",
+          "D": "Reduce the planned capital expenditure from $45M to $25M to match the internal funding capacity, accepting a slower rollout",
+          "E": "Improve operating margin by reducing SG&A or COGS, which raises net income and therefore ROE, directly increasing the SGR numerator",
+          "F": "Issue new common equity through a private placement with the strategic partner, since the 2027 transaction will dilute ownership anyway"
+        },
+        "Explanation": "The three levers that raise SGR within the board's constraints are: (A) increasing retention by reducing payout, which directly raises the retention ratio; (C) improving asset turnover, which reduces the asset base needed per dollar of sales; and (E) improving operating margin, which raises net income and ROE. Option B is tempting — the D/E ratio of 1.22 leaves room to 1.5 — but the board's email explicitly states they want to preserve the ownership structure for the 2027 strategic partner transaction, and increasing leverage changes the capital structure that the partner is evaluating. Option D (cutting capex) does not raise SGR — it merely reduces the growth target. Option F contradicts the board's directive to avoid equity issuance.",
+        "Topic": "Growth-gap levers",
+        "Subtopic": "Multi-lever strategy",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "FA-21: Sustainable Growth Rate",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Tags": [
+          "growth levers",
+          "multi-factor"
+        ],
+        "Dependencies": [
+          "CBQ22-A5-Q4"
+        ]
+      },
+      {
+        "ItemID": "CBQ22-A5-Q6",
+        "question_state": "Certified",
+        "certification_batch": "GOAL-1-P2-CASE-CLOSE",
+        "certification_date": "2026-10-18",
+        "Type": "select",
+        "Prompt": "Complete the recommendation memo: Which course of action best integrates Dr. Anand's analysis with the board's constraints?",
+        "Correct": "D",
+        "Choices": [
+          "Recommend issuing $3.24M in new equity to close the gap — the dilution is immaterial and the board will accept it once the math is presented",
+          "Recommend eliminating the dividend entirely, which raises SGR to 22% and provides ample headroom for 15% growth without any other changes",
+          "Recommend reducing the expansion budget to $30M so that internal equity alone can fund it at the current SGR of 13.2%, with no policy changes required",
+          "Recommend reducing the payout ratio from 40% to 30%, which raises SGR to 15.4% and covers the 15% target with a buffer; combined with modest margin-improvement initiatives, this approach preserves the ownership structure for the 2027 transaction while funding the expansion internally"
+        ],
+        "Explanation": "Option D integrates the SGR math with the board's constraint: reducing payout from 40% to 30% yields SGR = 22% × 0.70 = 15.4%, which exceeds the 15% target. The 0.4-point buffer accommodates minor ROE fluctuations. Combined with margin-improvement initiatives (operational efficiency that raises ROE further), this appro
