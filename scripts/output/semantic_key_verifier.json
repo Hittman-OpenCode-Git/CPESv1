@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-23T13:21:52.331Z",
+  "timestamp": "2026-10-23T17:45:48.980Z",
   "mode": "gate",
   "thresholds": {
     "block": {
@@ -25,8 +25,8 @@
       "p2/pack_p2_e.js",
       "p2/pack_p2_f.js"
     ],
-    "totalQuestions": 6600,
-    "totalCertified": 6581
+    "totalQuestions": 6633,
+    "totalCertified": 6614
   },
   "gateResult": "PASS",
   "bFlags": {
@@ -7772,15 +7772,15 @@
       "file": "p2/pack_p2_c.js"
     },
     "P2-D": {
-      "questions": 500,
+      "questions": 522,
       "diagnostics": 0,
-      "records": 500,
+      "records": 522,
       "file": "p2/pack_p2_d.js"
     },
     "P2-E": {
-      "questions": 500,
+      "questions": 511,
       "diagnostics": 0,
-      "records": 500,
+      "records": 511,
       "file": "p2/pack_p2_e.js"
     },
     "P2-F": {

@@ -1,6 +1,6 @@
 # S121 — Portfolio Distribution Dashboard
 
-**Generated:** 2026-10-20 21:12:28
+**Generated:** 2026-10-23 17:44:46
 **Authority:** S121_PORTFOLIO_TARGETS.md
 **Packs scanned:** 11 (5 P1, 6 P2)
 
@@ -9,8 +9,8 @@
 | Pool | Packs | Total Items | Certified | Non-Certified | States |
 |------|-------|------------|-----------|---------------|--------|
 | **Part 1** | 5 | 3070 | 3052 (99.4%) | 18 (0.6%) | Archived: 18, Certified: 3052 |
-| **Part 2** | 6 | 3530 | 3529 (100.0%) | 1 (0.0%) | Archived: 1, Certified: 3529 |
-| **Combined** | 11 | 6600 | 6581 (99.7%) | 19 (0.3%) | P1 {Archived: 18, Certified: 3052}; P2 {Archived: 1, Certified: 3529} |
+| **Part 2** | 6 | 3563 | 3562 (100.0%) | 1 (0.0%) | Archived: 1, Certified: 3562 |
+| **Combined** | 11 | 6633 | 6614 (99.7%) | 19 (0.3%) | P1 {Archived: 18, Certified: 3052}; P2 {Archived: 1, Certified: 3562} |
 
 ## 1. Per-Pack Difficulty Distribution
 
@@ -21,11 +21,11 @@
 | Pack C | 620 | 18.7% | 14.5% | 30.3% | 27.3% | 9.2% | 2 |
 | Pack D | 590 | 13.4% | 11.0% | 24.6% | 42.9% | 8.1% | 3 |
 | Pack E | 680 | 15.6% | 23.5% | 32.8% | 21.2% | 6.9% | 3 |
-| Pack P2-A | 622 | 14.5% | 16.4% | 35.0% | 23.3% | 10.8% | 2 |
+| Pack P2-A | 622 | 14.5% | 16.4% | 34.4% | 24.0% | 10.8% | 2 |
 | Pack P2-B | 620 | 14.5% | 18.1% | 36.6% | 22.1% | 8.7% | 1 |
 | Pack P2-C | 788 | 14.2% | 14.8% | 38.3% | 24.7% | 7.9% | 2 |
-| Pack P2-D | 500 | 14.4% | 21.6% | 33.4% | 20.6% | 10.0% | 2 |
-| Pack P2-E | 500 | 12.2% | 19.6% | 33.4% | 24.0% | 10.8% | 1 |
+| Pack P2-D | 522 | 13.8% | 20.7% | 35.1% | 20.9% | 9.6% | 2 |
+| Pack P2-E | 511 | 13.3% | 20.0% | 32.7% | 23.5% | 10.6% | 0 |
 | Pack P2-F | 500 | 14.8% | 18.8% | 36.0% | 21.0% | 9.4% | 2 |
 
 ### Target Difficulty Distribution
@@ -47,11 +47,11 @@
 | Pack C | 620 | 6.8% | 26.9% | 36.3% | 19.5% | 10.5% | 3 |
 | Pack D | 590 | 0.0% | 28.3% | 23.6% | 30.3% | 17.8% | 5 |
 | Pack E | 680 | 1.5% | 56.5% | 18.5% | 14.9% | 8.7% | 4 |
-| Pack P2-A | 622 | 8.2% | 16.7% | 39.2% | 23.5% | 12.4% | 2 |
+| Pack P2-A | 622 | 8.2% | 16.7% | 40.0% | 22.7% | 12.4% | 1 |
 | Pack P2-B | 620 | 8.4% | 18.4% | 43.4% | 19.5% | 10.3% | 1 |
 | Pack P2-C | 788 | 5.3% | 16.6% | 46.4% | 20.8% | 10.8% | 0 |
-| Pack P2-D | 500 | 7.6% | 21.2% | 39.4% | 20.2% | 11.6% | 0 |
-| Pack P2-E | 500 | 3.2% | 13.8% | 46.2% | 23.2% | 13.6% | 5 |
+| Pack P2-D | 522 | 7.3% | 20.3% | 42.0% | 19.3% | 11.1% | 0 |
+| Pack P2-E | 511 | 5.3% | 13.5% | 45.2% | 22.7% | 13.3% | 4 |
 | Pack P2-F | 500 | 8.6% | 19.2% | 40.8% | 19.6% | 11.8% | 0 |
 
 ### Target Cognitive Distribution (Default)
@@ -76,8 +76,8 @@
 | Pack P2-A | 622 | 25.1% | 28.5% | 25.1% | 21.4% | 7.1pp |
 | Pack P2-B | 620 | 28.5% | 27.3% | 23.2% | 21.0% | 7.6pp |
 | Pack P2-C | 788 | 31.7% | 27.4% | 21.4% | 19.4% | 12.3pp |
-| Pack P2-D | 500 | 27.4% | 27.4% | 25.6% | 19.6% | 7.8pp |
-| Pack P2-E | 500 | 27.2% | 28.6% | 23.4% | 20.8% | 7.8pp |
+| Pack P2-D | 522 | 30.1% | 26.4% | 24.7% | 18.8% | 11.3pp |
+| Pack P2-E | 511 | 27.6% | 28.8% | 23.3% | 20.4% | 8.4pp |
 | Pack P2-F | 500 | 25.4% | 27.2% | 26.0% | 21.4% | 5.8pp |
 
 **Tolerance:** 22–28% per position (±3pp from 25% target). Spread > 6pp flagged.
@@ -161,13 +161,13 @@
 
 | Section | Items | A | B | C | D | Spread |
 |---|---|---|---|---|---|---|
-| D | 500 | 27.4% | 27.4% | 25.6% | 19.6% | 7.8pp |
+| D | 522 | 30.1% | 26.4% | 24.7% | 18.8% | 11.3pp |
 
 ### Pack P2-E
 
 | Section | Items | A | B | C | D | Spread |
 |---|---|---|---|---|---|---|
-| E | 500 | 27.2% | 28.6% | 23.4% | 20.8% | 7.8pp |
+| E | 511 | 27.6% | 28.8% | 23.3% | 20.4% | 8.4pp |
 
 ### Pack P2-F
 
@@ -235,9 +235,8 @@
 ### Pack P2-A (Part 2)
 
 - **difficulty** `Moderate-Easy`: 16.4% actual vs 20% target (UNDER by 3.6pp)
-- **difficulty** `Moderate`: 35% actual vs 30% target (OVER by 5pp)
+- **difficulty** `Moderate`: 34.4% actual vs 30% target (OVER by 4.4pp)
 - **cognitive** `Understand`: 16.7% actual vs 20% target (UNDER by 3.3pp)
-- **cognitive** `Analyze`: 23.5% actual vs 20% target (OVER by 3.5pp)
 - **answer_position** `B`: 28.5% actual vs 25% target (OVER by 3.5pp)
 - **answer_position** `D`: 21.4% actual vs 25% target (UNDER by 3.6pp)
 
@@ -258,20 +257,19 @@
 
 ### Pack P2-D (Part 2)
 
-- **difficulty** `Moderate`: 33.4% actual vs 30% target (OVER by 3.4pp)
-- **difficulty** `Difficult`: 20.6% actual vs 25% target (UNDER by 4.4pp)
-- **answer_position** `D`: 19.6% actual vs 25% target (UNDER by 5.4pp)
+- **difficulty** `Moderate`: 35.1% actual vs 30% target (OVER by 5.1pp)
+- **difficulty** `Difficult`: 20.9% actual vs 25% target (UNDER by 4.1pp)
+- **answer_position** `A`: 30.1% actual vs 25% target (OVER by 5.1pp)
+- **answer_position** `D`: 18.8% actual vs 25% target (UNDER by 6.2pp)
 
 ### Pack P2-E (Part 2)
 
-- **difficulty** `Moderate`: 33.4% actual vs 30% target (OVER by 3.4pp)
-- **cognitive** `Remember`: 3.2% actual vs 10% target (UNDER by 6.8pp)
-- **cognitive** `Understand`: 13.8% actual vs 20% target (UNDER by 6.2pp)
-- **cognitive** `Apply`: 46.2% actual vs 40% target (OVER by 6.2pp)
-- **cognitive** `Analyze`: 23.2% actual vs 20% target (OVER by 3.2pp)
-- **cognitive** `Evaluate`: 13.6% actual vs 10% target (OVER by 3.6pp)
-- **answer_position** `B`: 28.6% actual vs 25% target (OVER by 3.6pp)
-- **answer_position** `D`: 20.8% actual vs 25% target (UNDER by 4.2pp)
+- **cognitive** `Remember`: 5.3% actual vs 10% target (UNDER by 4.7pp)
+- **cognitive** `Understand`: 13.5% actual vs 20% target (UNDER by 6.5pp)
+- **cognitive** `Apply`: 45.2% actual vs 40% target (OVER by 5.2pp)
+- **cognitive** `Evaluate`: 13.3% actual vs 10% target (OVER by 3.3pp)
+- **answer_position** `B`: 28.8% actual vs 25% target (OVER by 3.8pp)
+- **answer_position** `D`: 20.4% actual vs 25% target (UNDER by 4.6pp)
 
 ### Pack P2-F (Part 2)
 
@@ -284,4 +282,4 @@
 **No structural warnings across all packs.**
 
 ---
-*Generated by S121 Portfolio Dashboard — 2026-10-20 21:12:28*
+*Generated by S121 Portfolio Dashboard — 2026-10-23 17:44:46*

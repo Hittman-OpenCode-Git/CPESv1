@@ -1,39 +1,39 @@
 # Validation Report Summary
 
-**Generated:** 2026-10-20T12:44:18.163Z
+**Generated:** 2026-10-23T17:44:09.720Z
 **Project:** CMA Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 1ms |
-| Metadata Validator | WARN | 0 | 1 | 396ms |
-| Blueprint Validator | WARN | 0 | 188 | 286ms |
-| Part 2 Blueprint Validator | WARN | 0 | 3263 | 450ms |
-| Difficulty Validator | WARN | 0 | 72 | 763ms |
-| Reference Validator | WARN | 0 | 77 | 286ms |
-| Explanation Validator | WARN | 0 | 6 | 1260ms |
-| Case Integrity Validator | WARN | 0 | 1 | 252ms |
-| Case Identity Validator | PASS | 0 | 0 | 61ms |
-| PsychometricValidator | WARN | 0 | 7108 | 6257ms |
+| Repository Validator | PASS | 0 | 0 | 6ms |
+| Metadata Validator | WARN | 0 | 1 | 1121ms |
+| Blueprint Validator | WARN | 0 | 188 | 1404ms |
+| Part 2 Blueprint Validator | WARN | 0 | 3332 | 1966ms |
+| Difficulty Validator | WARN | 0 | 72 | 1494ms |
+| Reference Validator | WARN | 0 | 77 | 576ms |
+| Explanation Validator | WARN | 0 | 6 | 2350ms |
+| Case Integrity Validator | WARN | 0 | 1 | 456ms |
+| Case Identity Validator | PASS | 0 | 0 | 122ms |
+| PsychometricValidator | WARN | 0 | 7187 | 14001ms |
 
 **Total Errors:** 0
-**Total Warnings:** 10716
+**Total Warnings:** 10864
 **Overall Status:** WARN
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 1ms
+**Duration:** 6ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 396ms
+**Duration:** 1121ms
 **Statistics:**
 - Cases Checked: 190
 **Warnings:**
@@ -41,7 +41,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 286ms
+**Duration:** 1404ms
 **Statistics:**
 - Cases Checked: 190
 - Cross-Domain Cases: 2
@@ -249,18 +249,18 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 450ms
+**Duration:** 1966ms
 **Statistics:**
 - P2 MCQ Packs Found: 6
 - P2 Case Packs Found: 3
-- P2 Items Checked: 4190
+- P2 Items Checked: 4223
 - P2 Cases Checked: 110
 - P2 Domain: Corporate Finance: 728
 - P2 Domain: Decision Analysis: 962
 - P2 Domain: Financial Statement Analysis: 748
-- P2 Domain: Investment Decisions: 572
+- P2 Domain: Investment Decisions: 583
 - P2 Domain: Professional Ethics: 614
-- P2 Domain: Risk Management: 566
+- P2 Domain: Risk Management: 588
 **Warnings:**
 - p2/pack_p2_a.js[24] (P2-A-025): CalculationItem is true but no FormulaReference provided
 - p2/pack_p2_a.js[25] (P2-A-026): CalculationItem is true but no FormulaReference provided
@@ -2654,6 +2654,52 @@
 - p2/pack_p2_d.js[497] (P2-D-498): Topic "D.498 erm-review-revision-substantial-change-monitoring" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
 - p2/pack_p2_d.js[498] (P2-D-499): Topic "D.499 coso-erm-versus-coso-ic-portfolio-perspective" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
 - p2/pack_p2_d.js[499] (P2-D-500): Topic "D.500 erm-integration-with-strategy-and-performance" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[500] (P2-D-501): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[500] (P2-D-501): Topic "D.501 high-low-variable-cost-per-unit" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[501] (P2-D-502): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[501] (P2-D-502): Topic "D.502 high-low-total-cost-prediction" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[502] (P2-D-503): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[502] (P2-D-503): Topic "D.503 learning-curve-second-unit-cost" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[503] (P2-D-504): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[503] (P2-D-504): Topic "D.504 job-order-costing-total-job-cost" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[503] (P2-D-504): References Part 1 concept "Job order costing" — verify this is Part 2 material
+- p2/pack_p2_d.js[504] (P2-D-505): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[504] (P2-D-505): Topic "D.505 overhead-over-under-applied" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[505] (P2-D-506): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[505] (P2-D-506): Topic "D.506 process-costing-fifo-equivalent-unit-cost" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[505] (P2-D-506): References Part 1 concept "Process costing" — verify this is Part 2 material
+- p2/pack_p2_d.js[506] (P2-D-507): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[506] (P2-D-507): Topic "D.507 abc-activity-rate-machine-setup" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[507] (P2-D-508): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[507] (P2-D-508): Topic "D.508 abc-cost-assignment-product" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[508] (P2-D-509): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[508] (P2-D-509): Topic "D.509 joint-cost-nrv-splitoff-allocation" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[509] (P2-D-510): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[509] (P2-D-510): Topic "D.510 step-down-service-department-allocation" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[510] (P2-D-511): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[510] (P2-D-511): Topic "D.511 step-down-service-department-allocation" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[511] (P2-D-512): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[511] (P2-D-512): Topic "D.512 cost-driver-regression-prediction" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[512] (P2-D-513): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[512] (P2-D-513): Topic "D.513 contribution-margin-per-unit" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[513] (P2-D-514): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[513] (P2-D-514): Topic "D.514 cvp-breakeven-units" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[514] (P2-D-515): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[514] (P2-D-515): Topic "D.515 cvp-target-profit-units" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[515] (P2-D-516): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[515] (P2-D-516): Topic "D.516 relevant-cost-make-vs-buy" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[516] (P2-D-517): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[516] (P2-D-517): Topic "D.517 differential-profit-special-order" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[517] (P2-D-518): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[517] (P2-D-518): Topic "D.518 cost-plus-pricing" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[518] (P2-D-519): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[518] (P2-D-519): Topic "D.519 special-order-incremental-profit" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[519] (P2-D-520): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[519] (P2-D-520): Topic "D.520 keep-or-drop-product-line" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[520] (P2-D-521): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[520] (P2-D-521): Topic "D.521 target-costing" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
+- p2/pack_p2_d.js[521] (P2-D-522): Section "D" maps to "Risk Management" but BlueprintDomain is "Cost Management"
+- p2/pack_p2_d.js[521] (P2-D-522): Topic "D.522 penetration-pricing-strategy" may not align with domain "Risk Management". Available topics: [COSO ERM 2017, Risk Identification, Risk Assessment, Risk Response, Inherent Risk, Residual Risk, ERM Integration, Strategic Risk, Operational Risk, Financial Risk, Hazard Risk, Risk Appetite]
 - p2/pack_p2_e.js[0] (P2-E-001): Topic "E.001 npv-equipment-investment" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
 - p2/pack_p2_e.js[1] (P2-E-002): Topic "E.002 npv-vs-irr-mutually-exclusive" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
 - p2/pack_p2_e.js[2] (P2-E-003): Topic "E.003 payback-period" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
@@ -3202,6 +3248,29 @@
 - p2/pack_p2_e.js[497] (P2-E-498): Topic "E.498 equivalent-annual-cost" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
 - p2/pack_p2_e.js[498] (P2-E-499): Topic "E.499 profitability-index-ranking" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
 - p2/pack_p2_e.js[499] (P2-E-500): Topic "E.500 wacc-cost-of-equity" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[500] (P2-E-501): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[500] (P2-E-501): Topic "E.501 corporate-governance-board-responsibility" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[501] (P2-E-502): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[501] (P2-E-502): Topic "E.502 internal-control-objectives-coso" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[502] (P2-E-503): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[502] (P2-E-503): Topic "E.503 coso-internal-control-components" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[502] (P2-E-503): References Part 1 concept "COSO IC 2013 (Part 1)" — verify this is Part 2 material
+- p2/pack_p2_e.js[503] (P2-E-504): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[503] (P2-E-504): Topic "E.504 coso-erm-risk-assessment" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[504] (P2-E-505): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[504] (P2-E-505): Topic "E.505 risk-assessment-internal-control" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[505] (P2-E-506): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[505] (P2-E-506): Topic "E.506 control-activities-examples" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[506] (P2-E-507): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[506] (P2-E-507): Topic "E.507 information-communication-component" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[507] (P2-E-508): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[507] (P2-E-508): Topic "E.508 monitoring-internal-control" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[508] (P2-E-509): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[508] (P2-E-509): Topic "E.509 fraud-prevention-control" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[509] (P2-E-510): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[509] (P2-E-510): Topic "E.510 fraud-detection-technique" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
+- p2/pack_p2_e.js[510] (P2-E-511): Section "E" maps to "Investment Decisions" but BlueprintDomain is "Internal Controls"
+- p2/pack_p2_e.js[510] (P2-E-511): Topic "E.511 segregation-of-duties" may not align with domain "Investment Decisions". Available topics: [Net Present Value, Internal Rate of Return, Payback Period, Discounted Payback, Profitability Index, Capital Rationing, After-Tax Cash Flow, MACRS Depreciation, Real Options, Equivalent Annual Annuity, Accounting Rate of Return]
 - p2/pack_p2_f.js[4] (P2-F-005): Topic "F.005 ethical-conflict-resolution-sequence" may not align with domain "Professional Ethics". Available topics: [IMA Ethical Standards, Competence, Confidentiality, Integrity, Credibility, Ethical Decision Model, Fraud Triangle, SOX 2002, FCPA, Audit Committee, Corporate Governance, International Ethics]
 - p2/pack_p2_f.js[5] (P2-F-006): Topic "F.006 Earnings management pressure" may not align with domain "Professional Ethics". Available topics: [IMA Ethical Standards, Competence, Confidentiality, Integrity, Credibility, Ethical Decision Model, Fraud Triangle, SOX 2002, FCPA, Audit Committee, Corporate Governance, International Ethics]
 - p2/pack_p2_f.js[7] (P2-F-008): Topic "F.008 Sustainability reporting — GRI vs. SASB frameworks" may not align with domain "Professional Ethics". Available topics: [IMA Ethical Standards, Competence, Confidentiality, Integrity, Credibility, Ethical Decision Model, Fraud Triangle, SOX 2002, FCPA, Audit Committee, Corporate Governance, International Ethics]
@@ -3528,7 +3597,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 763ms
+**Duration:** 1494ms
 **Statistics:**
 - Cases Checked: 190
 - Items Checked: 1085
@@ -3618,7 +3687,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 286ms
+**Duration:** 576ms
 **Statistics:**
 - Cases Checked: 190
 - Total References: 0
@@ -3705,15 +3774,15 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 1260ms
+**Duration:** 2350ms
 **Statistics:**
-- MCQ Questions Checked: 6600
+- MCQ Questions Checked: 6633
 - Case Items Checked: 1485
 - Questions with Placeholder Explanations: 0
 - Fields with Placeholder Text: 0
 - Short Explanations (<50 chars): 2
-- Correct Explanation Avg Length: 604
-- Wrong Explanation Avg Length: 285
+- Correct Explanation Avg Length: 603
+- Wrong Explanation Avg Length: 284
 **Warnings:**
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 355: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
 - [content/cases/legacy/scored_cases.js] JS_FALLBACK_USED @line 1814: content/cases/legacy/scored_cases.js [ENHANCED_CASE_BASE] (qid unrecovered): parsed via JS fallback (non-JSON syntax tolerated); provenance degraded.
@@ -3724,7 +3793,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 252ms
+**Duration:** 456ms
 **Statistics:**
 - Total Cases Checked: 190
 - Total Items Checked: 1085
@@ -3742,7 +3811,7 @@
 
 ### Case Identity Validator
 **Status:** PASS
-**Duration:** 61ms
+**Duration:** 122ms
 **Statistics:**
 - content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
 - content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
@@ -3792,9 +3861,9 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 6257ms
+**Duration:** 14001ms
 **Statistics:**
-- AbsoluteLanguageValidator.questionsScanned: 6600
+- AbsoluteLanguageValidator.questionsScanned: 6633
 - AbsoluteLanguageValidator.findings: 2571
 - AbsoluteLanguageValidator.pattern.only/exclusively: 1912
 - AbsoluteLanguageValidator.pattern.must: 389
@@ -3803,21 +3872,21 @@
 - AbsoluteLanguageValidator.pattern.always: 117
 - AbsoluteLanguageValidator.pattern.never: 41
 - AbsoluteLanguageValidator.pattern.impossible: 6
-- AmbiguityValidator.questionsScanned: 6600
-- AmbiguityValidator.findings: 2487
-- AmbiguityValidator.vagueQualifierHits: 660
-- DistractorSimilarityValidator.questionsScanned: 6600
-- DistractorSimilarityValidator.highSimilarityPairs: 758
-- DistractorSimilarityValidator.moderateSimilarityPairs: 1404
-- DistractorSimilarityValidator.totalFlagged: 2162
-- ExplanationConsistencyValidator.questionsScanned: 6600
+- AmbiguityValidator.questionsScanned: 6633
+- AmbiguityValidator.findings: 2524
+- AmbiguityValidator.vagueQualifierHits: 661
+- DistractorSimilarityValidator.questionsScanned: 6633
+- DistractorSimilarityValidator.highSimilarityPairs: 788
+- DistractorSimilarityValidator.moderateSimilarityPairs: 1416
+- DistractorSimilarityValidator.totalFlagged: 2204
+- ExplanationConsistencyValidator.questionsScanned: 6633
 - ExplanationConsistencyValidator.findings: 0
-- MathematicalValidator.questionsScanned: 6600
+- MathematicalValidator.questionsScanned: 6633
 - MathematicalValidator.findings: 0
 - MathematicalValidator.falsePositiveRate: 0%
 - modules: 5
 - psychometricModuleErrors: 0
-- psychometricModuleWarnings: 7108
+- psychometricModuleWarnings: 7187
 **Warnings:**
 - [AbsoluteLanguageValidator] P1-A-001 Choice B: "Classify it as noncurrent solely because management expects renewal" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-A-005 Choice D: "Two performance obligations — the hardware-plus-installation as one obligation (since the hardware must be installed to function) and the software-plus-maintenance as a second obligation (since the software updates and support are ongoing services). The bundled pricing makes individual separation impractical." — contains absolute language "must"
@@ -8258,6 +8327,42 @@
 - [AmbiguityValidator] P2-D-499: Choices A and C have high word overlap (80%) — may fail to discriminate
 - [AmbiguityValidator] P2-D-499: Choices A and D have high word overlap (77%) — may fail to discriminate
 - [AmbiguityValidator] P2-D-499: Choices C and D have high word overlap (77%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-501: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-506: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-507: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-513: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-518: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P2-D-521: Choices C and D have high word overlap (100%) — may fail to discriminate
 - [AmbiguityValidator] P2-E-001: Choices A and D have high word overlap (100%) — may fail to discriminate
 - [AmbiguityValidator] P2-E-006: Choices A and B have high word overlap (100%) — may fail to discriminate
 - [AmbiguityValidator] P2-E-006: Choices A and C have high word overlap (100%) — may fail to discriminate
@@ -8544,6 +8649,7 @@
 - [AmbiguityValidator] P2-E-493: Choices A and C have high word overlap (80%) — may fail to discriminate
 - [AmbiguityValidator] P2-E-500: Choices A and C have high word overlap (83%) — may fail to discriminate
 - [AmbiguityValidator] P2-E-500: Choices B and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P2-E-505 Choice A: "Recording transactions in the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
 - [AmbiguityValidator] P2-F-003 Choice D: "A competence conflict -- David may lack expertise to assess materiality of the adjustment" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P2-F-006: Choices A and B have high word overlap (79%) — may fail to discriminate
 - [AmbiguityValidator] P2-F-006: Choices A and D have high word overlap (76%) — may fail to discriminate
@@ -10499,6 +10605,48 @@
 - [DistractorSimilarityValidator] P2-D-499: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
 - [DistractorSimilarityValidator] P2-D-499: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
 - [DistractorSimilarityValidator] P2-D-499: Choices C and D (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-501: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-501: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-501: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-501: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-501: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-501: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-503: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-503: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-503: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-503: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-503: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-503: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-506: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P2-D-507: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-507: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-507: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-507: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-507: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-507: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-513: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-518: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P2-D-521: Choices C and D (distractor-distractor) share high similarity (100%)
 - [DistractorSimilarityValidator] P2-E-001: Choices A and D (distractor-distractor) share high similarity (100%)
 - [DistractorSimilarityValidator] P2-E-008: Choices A and C (distractor-distractor) share high similarity (100%)
 - [DistractorSimilarityValidator] P2-E-011: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination

@@ -37614,3 +37614,86 @@ CBQ5-B1-Q5, CBQ5-C1-Q2, CBQ5-C1-Q3, CBQ5-C1-Q5
 **Counts:** 24 items expanded; before lengths 57-146 chars, after lengths 233-380 chars. Baseline coherence hashes refreshed via --fix (0 divergences). node --check PASS on all 3 packs; preflight PASS.
 
 **Rule compliance:** Rule 5 (24 items within 30-object limit); Rule 1 (this entry).
+
+---
+
+## 2026-10-23 — V2.2 Goal 2: Portfolio Authoring Wave — New P2 Content (Tasks 2.1 + 2.2)
+
+**Lane:** Full Governance Lane · **Date:** 2026-10-23 · **Authorization:** User ("proceed with Tasks 2.1 and 2.2")
+
+**Task 2.1 — Author 11 new P2-E Remember items (Domain E — Internal Controls)**
+
+**Gap:** P2-E Remember at 3.2% vs 10% target (S121 portfolio audit)
+
+**Items added (all in p2/pack_p2_e.js, QuestionIDs P2-E-501 through P2-E-511):**
+| QID | Topic | CognitiveLevel | Difficulty | DifficultyScore |
+|-----|-------|---------------|------------|----------------|
+| P2-E-501 | Corporate governance board responsibility | Remember | Easy | 1 |
+| P2-E-502 | Internal control objectives (COSO) | Remember | Easy | 1 |
+| P2-E-503 | COSO Internal Control components | Remember | Easy | 1 |
+| P2-E-504 | COSO ERM risk assessment component | Remember | Moderate-Easy | 2 |
+| P2-E-505 | Risk assessment definition | Remember | Easy | 1 |
+| P2-E-506 | Control activities example | Remember | Moderate-Easy | 2 |
+| P2-E-507 | Information and Communication component | Remember | Easy | 1 |
+| P2-E-508 | Monitoring activities example | Remember | Moderate-Easy | 2 |
+| P2-E-509 | Fraud prevention control | Remember | Easy | 1 |
+| P2-E-510 | Fraud detection technique | Remember | Moderate-Easy | 2 |
+| P2-E-511 | Segregation of duties definition | Remember | Easy | 1 |
+
+**Task 2.2 — Author 22 new P2-D Apply items (Domain D — Cost Management)**
+
+**Gap:** P2-D Apply at 23.6% vs 45% target (S121 portfolio audit)
+
+**Items added (all in p2/pack_p2_d.js, QuestionIDs P2-D-501 through P2-D-522):**
+| QID | Topic | CognitiveLevel | Difficulty | DifficultyScore | CalculationItem |
+|-----|-------|---------------|------------|----------------|-----------------|
+| P2-D-501 | High-low variable cost per unit | Apply | Moderate | 3 | true |
+| P2-D-502 | High-low total cost prediction | Apply | Difficult | 4 | true |
+| P2-D-503 | Learning curve second unit cost | Apply | Moderate | 3 | true |
+| P2-D-504 | Job order costing total job cost | Apply | Moderate | 3 | true |
+| P2-D-505 | Overhead over/under-applied | Apply | Difficult | 4 | true |
+| P2-D-506 | Process costing FIFO equivalent unit cost | Apply | Moderate | 3 | true |
+| P2-D-507 | ABC activity rate — machine setup | Apply | Moderate | 3 | true |
+| P2-D-508 | ABC cost assignment to product | Apply | Difficult | 4 | true |
+| P2-D-509 | Joint cost NRV at splitoff allocation | Apply | Moderate | 3 | true |
+| P2-D-510 | Step-down service department allocation | Apply | Moderate | 3 | true |
+| P2-D-511 | Reciprocal method service allocation | Apply | Difficult | 4 | true |
+| P2-D-512 | Cost driver regression prediction | Apply | Moderate | 3 | true |
+| P2-D-513 | Contribution margin per unit | Apply | Moderate | 3 | true |
+| P2-D-514 | CVP breakeven units | Apply | Difficult | 4 | true |
+| P2-D-515 | CVP target profit units | Apply | Difficult | 4 | true |
+| P2-D-516 | Relevant cost make vs buy advantage | Apply | Moderate | 3 | true |
+| P2-D-517 | Differential profit special order | Apply | Moderate | 3 | true |
+| P2-D-518 | Cost-plus pricing selling price | Apply | Moderate | 3 | true |
+| P2-D-519 | Special order incremental profit | Apply | Moderate | 3 | true |
+| P2-D-520 | Keep or drop product line decision | Apply | Moderate | 3 | false |
+| P2-D-521 | Target costing target cost per unit | Apply | Moderate | 3 | true |
+| P2-D-522 | Penetration pricing strategy | Apply | Moderate | 3 | false |
+
+**Change:** Added 33 new P2 MCQ items (11 Remember + 22 Apply) following CAQS §4 explanation standards (accounting principle by name, formula with substituted values, business interpretation, common exam trap). All items carry `Part2OnlyFlag: true`, `question_state: "Certified"`, certification_batch + certification_date stamps (Rule 16), evidenceBasis notes (Rule 22), and VerifiedChecks with independent recomputation (CAQS §5.1). All 13 calculation items independently recalculated and verified; all non-calculation items verified against IMA CMA Part 1 blueprint Domain D and E topics.
+
+**Counts (before → after):** P2-E: 500 → 511 raw/Certified; P2-D: 500 → 522 raw/Certified. P2-E Remember items: 11 added at Remember level. P2-D Apply items: 22 added at Apply level. No existing items modified; no answer keys changed; no question_state changes on existing items.
+
+**Governance compliance:**
+- Rule 5: 11 items in pack_p2_e.js (within 30-object limit); 22 items in pack_p2_d.js (within 30-object limit) — separate files, separate change-sets
+- Rule 16: certification_batch + certification_date stamps on all 33 new items
+- Rule 22: evidenceBasis = "independently derived" on all 33 new items (derived from IMA CMA Part 1 blueprint Domains D and E)
+- Rule 1: this REVISION_HISTORY entry
+- §3: Backups taken before each file write: p2/pack_p2_e.js.bak-v2.2-goal2-20261022190000, p2/pack_p2_d.js.bak-v2.2-goal2-20261022190000
+- §9.2.1: Case screen re-run PASS (390 flags, 0 new, 0 confirmed inversions); screen gate PASS
+
+**Validation results:**
+| Gate | Result |
+|------|--------|
+| `node --check p2/pack_p2_e.js` | PASS |
+| `node --check p2/pack_p2_d.js` | PASS |
+| `npm run preflight` | PASS — 0 divergences |
+| `npm run case-screens` | PASS — 390 flags, 0 new, 0 confirmed inversions |
+| `npm run probe:parity` | PASS — 0 divergences |
+| `node scripts/baseline_coherence.js --fix` | PASS — hashes refreshed for P2-D (522) and P2-E (511) |
+
+**Cross-references:**
+- `knowledge/CURRENT_BASELINES.md` §2 — P2 pack counts updated (P2-D 522/522, P2-E 511/511)
+- S121 portfolio audit — P2-E Remember gap narrowed, P2-D Apply gap narrowed
+- CAQS §4, §5, §11 — explanation standards, numerical validation, learning science standards
+- Rule 12 — no cognitive relabeling; new content authored at target levels only

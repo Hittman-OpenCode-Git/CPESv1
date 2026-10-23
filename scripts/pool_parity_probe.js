@@ -62,11 +62,11 @@ const P2_PACKS = [
   { file: 'p2/pack_p2_a.js', label: 'P2-A', raw: 622, cert: 622 },
   { file: 'p2/pack_p2_b.js', label: 'P2-B', raw: 620, cert: 620 },
   { file: 'p2/pack_p2_c.js', label: 'P2-C', raw: 788, cert: 787 },
-  { file: 'p2/pack_p2_d.js', label: 'P2-D', raw: 500, cert: 500 },
-  { file: 'p2/pack_p2_e.js', label: 'P2-E', raw: 500, cert: 500 },
+  { file: 'p2/pack_p2_d.js', label: 'P2-D', raw: 522, cert: 522 },
+  { file: 'p2/pack_p2_e.js', label: 'P2-E', raw: 511, cert: 511 },
   { file: 'p2/pack_p2_f.js', label: 'P2-F', raw: 500, cert: 500 },
 ];
-const P2_TOTAL_CERT = 3529; // 2026-10-18: DL-074 clone archive (P2-C-732) — was 3530 (WSC-CERT-20260922)
+const P2_TOTAL_CERT = 3562; // 2026-10-23: V2.2 Goal 2 added 22 P2-D Apply + 11 P2-E Remember items
 const P2_CASE_FILES = [
   { file: 'p2/case_pack_p2_1.js', global: 'casePackP2_1' },
   { file: 'p2/case_pack_p2_2.js', global: 'casePackP2_2' },

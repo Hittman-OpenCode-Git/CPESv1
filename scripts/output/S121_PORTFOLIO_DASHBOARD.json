@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 21:12:28",
+  "generated": "2026-10-23 17:44:46",
   "session": "S121",
   "pools": {
     "part1": {
@@ -35,32 +35,32 @@
     },
     "part2": {
       "label": "Part 2",
-      "totalItems": 3530,
+      "totalItems": 3563,
       "difficulty": {
-        "Difficult": 805,
+        "Difficult": 815,
         "Very Difficult": 334,
-        "Easy": 499,
-        "Moderate-Easy": 631,
-        "Moderate": 1261
+        "Easy": 506,
+        "Moderate-Easy": 635,
+        "Moderate": 1273
       },
       "cognitive": {
-        "Analyze": 746,
+        "Analyze": 741,
         "Evaluate": 411,
-        "Apply": 1511,
-        "Remember": 242,
+        "Apply": 1538,
+        "Remember": 253,
         "Understand": 620
       },
       "correctChoice": {
-        "A": 983,
-        "B": 978,
-        "C": 844,
+        "A": 1008,
+        "B": 983,
+        "C": 847,
         "D": 725
       },
-      "certified": 3529,
+      "certified": 3562,
       "unprocessed": 0,
       "nonCertified": 1,
       "byState": {
-        "Certified": 3529,
+        "Certified": 3562,
         "Archived": 1
       }
     }
@@ -1223,16 +1223,16 @@
       "totalItems": 622,
       "itemsScanned": 622,
       "difficulty": {
-        "Difficult": 145,
+        "Difficult": 149,
         "Very Difficult": 67,
         "Easy": 90,
         "Moderate-Easy": 102,
-        "Moderate": 218
+        "Moderate": 214
       },
       "cognitive": {
-        "Analyze": 146,
+        "Analyze": 141,
         "Evaluate": 77,
-        "Apply": 244,
+        "Apply": 249,
         "Remember": 51,
         "Understand": 104
       },
@@ -1251,16 +1251,16 @@
       "bySection": {
         "A": {
           "difficulty": {
-            "Difficult": 145,
+            "Difficult": 149,
             "Very Difficult": 67,
             "Easy": 90,
             "Moderate-Easy": 102,
-            "Moderate": 218
+            "Moderate": 214
           },
           "cognitive": {
-            "Analyze": 146,
+            "Analyze": 141,
             "Evaluate": 77,
-            "Apply": 244,
+            "Apply": 249,
             "Remember": 51,
             "Understand": 104
           },
@@ -1284,9 +1284,9 @@
         {
           "dimension": "difficulty",
           "label": "Moderate",
-          "actual": 35,
+          "actual": 34.4,
           "target": 30,
-          "delta": 5,
+          "delta": 4.4,
           "flag": "OVER"
         },
         {
@@ -1296,14 +1296,6 @@
           "target": 20,
           "delta": -3.3,
           "flag": "UNDER"
-        },
-        {
-          "dimension": "cognitive",
-          "label": "Analyze",
-          "actual": 23.5,
-          "target": 20,
-          "delta": 3.5,
-          "flag": "OVER"
         },
         {
           "dimension": "answer_position",
@@ -1521,32 +1513,32 @@
       "name": "Pack P2-D",
       "part": "Part 2",
       "file": "p2/pack_p2_d.js",
-      "totalItems": 500,
-      "itemsScanned": 500,
+      "totalItems": 522,
+      "itemsScanned": 522,
       "difficulty": {
         "Easy": 72,
         "Moderate-Easy": 108,
-        "Moderate": 167,
-        "Difficult": 103,
+        "Moderate": 183,
+        "Difficult": 109,
         "Very Difficult": 50
       },
       "cognitive": {
         "Understand": 106,
-        "Apply": 197,
+        "Apply": 219,
         "Analyze": 101,
         "Evaluate": 58,
         "Remember": 38
       },
       "correctChoice": {
-        "A": 137,
-        "B": 137,
-        "C": 128,
+        "A": 157,
+        "B": 138,
+        "C": 129,
         "D": 98
       },
-      "certified": 500,
+      "certified": 522,
       "unprocessed": 0,
       "byState": {
-        "Certified": 500
+        "Certified": 522
       },
       "nonCertified": 0,
       "bySection": {
@@ -1554,21 +1546,21 @@
           "difficulty": {
             "Easy": 72,
             "Moderate-Easy": 108,
-            "Moderate": 167,
-            "Difficult": 103,
+            "Moderate": 183,
+            "Difficult": 109,
             "Very Difficult": 50
           },
           "cognitive": {
             "Understand": 106,
-            "Apply": 197,
+            "Apply": 219,
             "Analyze": 101,
             "Evaluate": 58,
             "Remember": 38
           },
           "correctChoice": {
-            "A": 137,
-            "B": 137,
-            "C": 128,
+            "A": 157,
+            "B": 138,
+            "C": 129,
             "D": 98
           }
         }
@@ -1577,25 +1569,33 @@
         {
           "dimension": "difficulty",
           "label": "Moderate",
-          "actual": 33.4,
+          "actual": 35.1,
           "target": 30,
-          "delta": 3.4,
+          "delta": 5.1,
           "flag": "OVER"
         },
         {
           "dimension": "difficulty",
           "label": "Difficult",
-          "actual": 20.6,
+          "actual": 20.9,
           "target": 25,
-          "delta": -4.4,
+          "delta": -4.1,
           "flag": "UNDER"
         },
         {
           "dimension": "answer_position",
-          "label": "D",
-          "actual": 19.6,
+          "label": "A",
+          "actual": 30.1,
           "target": 25,
-          "delta": -5.4,
+          "delta": 5.1,
+          "flag": "OVER"
+        },
+        {
+          "dimension": "answer_position",
+          "label": "D",
+          "actual": 18.8,
+          "target": 25,
+          "delta": -6.2,
           "flag": "UNDER"
         }
       ],
@@ -1605,121 +1605,105 @@
       "name": "Pack P2-E",
       "part": "Part 2",
       "file": "p2/pack_p2_e.js",
-      "totalItems": 500,
-      "itemsScanned": 500,
+      "totalItems": 511,
+      "itemsScanned": 511,
       "difficulty": {
-        "Moderate-Easy": 98,
+        "Moderate-Easy": 102,
         "Moderate": 167,
         "Difficult": 120,
         "Very Difficult": 54,
-        "Easy": 61
+        "Easy": 68
       },
       "cognitive": {
         "Apply": 231,
         "Analyze": 116,
         "Understand": 69,
         "Evaluate": 68,
-        "Remember": 16
+        "Remember": 27
       },
       "correctChoice": {
-        "A": 136,
-        "B": 143,
-        "C": 117,
+        "A": 141,
+        "B": 147,
+        "C": 119,
         "D": 104
       },
-      "certified": 500,
+      "certified": 511,
       "unprocessed": 0,
       "byState": {
-        "Certified": 500
+        "Certified": 511
       },
       "nonCertified": 0,
       "bySection": {
         "E": {
           "difficulty": {
-            "Moderate-Easy": 98,
+            "Moderate-Easy": 102,
             "Moderate": 167,
             "Difficult": 120,
             "Very Difficult": 54,
-            "Easy": 61
+            "Easy": 68
           },
           "cognitive": {
             "Apply": 231,
             "Analyze": 116,
             "Understand": 69,
             "Evaluate": 68,
-            "Remember": 16
+            "Remember": 27
           },
           "correctChoice": {
-            "A": 136,
-            "B": 143,
-            "C": 117,
+            "A": 141,
+            "B": 147,
+            "C": 119,
             "D": 104
           }
         }
       },
       "diffs": [
         {
-          "dimension": "difficulty",
-          "label": "Moderate",
-          "actual": 33.4,
-          "target": 30,
-          "delta": 3.4,
-          "flag": "OVER"
-        },
-        {
           "dimension": "cognitive",
           "label": "Remember",
-          "actual": 3.2,
+          "actual": 5.3,
           "target": 10,
-          "delta": -6.8,
+          "delta": -4.7,
           "flag": "UNDER"
         },
         {
           "dimension": "cognitive",
           "label": "Understand",
-          "actual": 13.8,
+          "actual": 13.5,
           "target": 20,
-          "delta": -6.2,
+          "delta": -6.5,
           "flag": "UNDER"
         },
         {
           "dimension": "cognitive",
           "label": "Apply",
-          "actual": 46.2,
+          "actual": 45.2,
           "target": 40,
-          "delta": 6.2,
-          "flag": "OVER"
-        },
-        {
-          "dimension": "cognitive",
-          "label": "Analyze",
-          "actual": 23.2,
-          "target": 20,
-          "delta": 3.2,
+          "delta": 5.2,
           "flag": "OVER"
         },
         {
           "dimension": "cognitive",
           "label": "Evaluate",
-          "actual": 13.6,
+          "actual": 13.3,
           "target": 10,
-          "delta": 3.6,
+          "delta": 3.3,
           "flag": "OVER"
         },
         {
           "dimension": "answer_position",
           "label": "B",
-          "actual": 28.6,
+          "actual": 28.8,
           "target": 25,
-          "delta": 3.6,
+          "delta": 3.8,
           "flag": "OVER"
         },
         {
           "dimension": "answer_position",
           "label": "D",
-          "actual": 20.8,
+          "actual": 20.4,
           "target": 25,
-          "delta": -4.2,
+          "delta": -4.6,
           "flag": "UNDER"
         }
       ],

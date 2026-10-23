@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-20T12:44:18.160Z",
+  "timestamp": "2026-10-23T17:44:09.714Z",
   "validators": [
     {
       "validator": "Repository Validator",
@@ -48,14 +48,14 @@
       "statistics": {
         "P2 MCQ Packs Found": 6,
         "P2 Case Packs Found": 3,
-        "P2 Items Checked": 4190,
+        "P2 Items Checked": 4223,
         "P2 Cases Checked": 110,
         "P2 Domain: Corporate Finance": 728,
         "P2 Domain: Decision Analysis": 962,
         "P2 Domain: Financial Statement Analysis": 748,
-        "P2 Domain: Investment Decisions": 572,
+        "P2 Domain: Investment Decisions": 583,
         "P2 Domain: Professional Ethics": 614,
-        "P2 Domain: Risk Management": 566
+        "P2 Domain: Risk Management": 588
       },
       "scanned": null,
       "rawExpected": null
@@ -96,13 +96,13 @@
       "validator": "Explanation Validator",
       "status": "WARN",
       "statistics": {
-        "MCQ Questions Checked": 6600,
+        "MCQ Questions Checked": 6633,
         "Case Items Checked": 1485,
         "Questions with Placeholder Explanations": 0,
         "Fields with Placeholder Text": 0,
         "Short Explanations (<50 chars)": 2,
-        "Correct Explanation Avg Length": 604,
-        "Wrong Explanation Avg Length": 285
+        "Correct Explanation Avg Length": 603,
+        "Wrong Explanation Avg Length": 284
       },
       "scanned": null,
       "rawExpected": null
@@ -183,7 +183,7 @@
       "validator": "PsychometricValidator",
       "status": "WARN",
       "statistics": {
-        "AbsoluteLanguageValidator.questionsScanned": 6600,
+        "AbsoluteLanguageValidator.questionsScanned": 6633,
         "AbsoluteLanguageValidator.findings": 2571,
         "AbsoluteLanguageValidator.pattern.only/exclusively": 1912,
         "AbsoluteLanguageValidator.pattern.must": 389,
@@ -192,21 +192,21 @@
         "AbsoluteLanguageValidator.pattern.always": 117,
         "AbsoluteLanguageValidator.pattern.never": 41,
         "AbsoluteLanguageValidator.pattern.impossible": 6,
-        "AmbiguityValidator.questionsScanned": 6600,
-        "AmbiguityValidator.findings": 2487,
-        "AmbiguityValidator.vagueQualifierHits": 660,
-        "DistractorSimilarityValidator.questionsScanned": 6600,
-        "DistractorSimilarityValidator.highSimilarityPairs": 758,
-        "DistractorSimilarityValidator.moderateSimilarityPairs": 1404,
-        "DistractorSimilarityValidator.totalFlagged": 2162,
-        "ExplanationConsistencyValidator.questionsScanned": 6600,
+        "AmbiguityValidator.questionsScanned": 6633,
+        "AmbiguityValidator.findings": 2524,
+        "AmbiguityValidator.vagueQualifierHits": 661,
+        "DistractorSimilarityValidator.questionsScanned": 6633,
+        "DistractorSimilarityValidator.highSimilarityPairs": 788,
+        "DistractorSimilarityValidator.moderateSimilarityPairs": 1416,
+        "DistractorSimilarityValidator.totalFlagged": 2204,
+        "ExplanationConsistencyValidator.questionsScanned": 6633,
         "ExplanationConsistencyValidator.findings": 0,
-        "MathematicalValidator.questionsScanned": 6600,
+        "MathematicalValidator.questionsScanned": 6633,
         "MathematicalValidator.findings": 0,
         "MathematicalValidator.falsePositiveRate": "0%",
         "modules": 5,
         "psychometricModuleErrors": 0,
-        "psychometricModuleWarnings": 7108
+        "psychometricModuleWarnings": 7187
       },
       "scanned": null,
       "rawExpected": null
