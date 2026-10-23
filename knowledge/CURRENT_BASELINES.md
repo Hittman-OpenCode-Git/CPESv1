@@ -148,7 +148,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 | Rule 19 — Duplicate CaseID within a change-set | BLOCK | Active |
 | Rule 20 — Legacy silent-drop extractor regression block (board R21 / DL-049) | BLOCK | Active |
 | Rule 21 — Semantic quarantine manifest enforcement on Certified writes (board R25 / DL-047) | BLOCK | Active |
-| **Test Suite** | **123/123 PASS** | **Verified 2026-10-18 (baseline_coherence --fix)** |
+| **Test Suite** | **123/123 PASS** | **Verified 2026-10-23 (baseline_coherence --fix)** |
 
 ---
 
