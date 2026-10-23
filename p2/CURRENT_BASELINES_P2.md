@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,529/3,530 Certified** (2026-10-18 coherence refresh)
+**Updated:** 2026-09-06 — Full-pool certification wave: all 330 remaining Unprocessed MCQs (Pack A +100, B +100, C +130) + 12 Unprocessed cases/72 items (Pack 3 CBQ23-A5..C9) certified. Pack C archived clones (P2-C-198, P2-C-199) replaced with new Decision Analysis items (EVSI/Bayesian revision + transfer pricing with opportunity cost). Pool now **3,529/3,530 Certified** (2026-10-23 coherence refresh)
 **Preflight script:** `scripts/preflight_p2.js` (read-only T0/Tend gate; cross-checks counts here)
 
 **2026-09-04 — Portfolio Target Amendment (user-authorized):** New pool targets ratified — **3,450 MCQs (A=600, B=600, C=750, D=500, E=500, F=500)** and **100 cases (Pack 1=33, Pack 2=33, Pack 3=34)**. Supersedes prior 2,500-MCQ / 75-case allocation. Sizing rule: 25% CSO weight → 750 items, 20% → 600, ≤15% → 500. Per-pack Section QID ranges re-allocated in this session; current authoritative QID-range table at §5.
@@ -13,7 +13,7 @@
 
 | Pack | File | Target QIDs | Current QIDs | Certified | Unprocessed | Archived | Hash (SHA256, post-Tend) |
 |------|------|-------------|-------------|-----------|-------------|----------|--------------------------|
-| A | p2/pack_p2_a.js | **600** | 622 | 622 | 0 | 0 | `ea398abe300d0b127cc5c3331c75ea34ec0885c38900f31b80daf1c7466f0123` |
+| A | p2/pack_p2_a.js | **600** | 622 | 622 | 0 | 0 | `03102d74f5d3a677d1e5225dbb601dbd63807d9a4a65e5c4a8fc08a960711794` |
 | B | p2/pack_p2_b.js | **600** | 620 | 620 | 0 | 0 | `d0888d6353269b52bcdfa82193e4ab3368129b6d075df79125218604376e01bc` |
 | C | p2/pack_p2_c.js | **750** | 788 | 787 | 0 | 1 | `19634bbab86b09efd616eac682317fc33bd6cf48c2c5c511618d2227010c6d2e` |
 | D | p2/pack_p2_d.js | **500** | 500 | 500 | 0 | 0 | `8297753f87f6f6af8024f00dae2916041c6717e71e92af90d913ea70c2168154` |

@@ -8103,7 +8103,7 @@ const casePackP2_1 = [
         "Type": "numeric",
         "Prompt": "Enter the residual dividend, in dollars.",
         "Correct": "3.00",
-        "Explanation": "Residual dividend = (Net Income - Positive-NPV Investments) / Shares = ($14M - $8M) / 2M = $6M / 2M = $3.00 per share. The residual model (B.7) preserves shareholder value by funding all positive-NPV projects first and distributing only the leftover earnings. For Orchard Capital the residual $3.00 is the maximum sustainable dividend that funds the $8M project slate without external equity or changed capital structure. Choice A is the gross payout $14M / 2M = $7.00 (ignores investment opportunity); Choice C is the stable $2 Maya is considering (would retain $4M excess, suboptimal signaling); Choice D is hoarding cash (zero payout).",
+        "Explanation": "Residual dividend = (Net Income - Positive-NPV Investments) / Shares = ($14M - $8M) / 2M = $6M / 2M = $3.00 per share. The residual model (B.7) preserves shareholder value by funding all positive-NPV projects first and distributing only the leftover earnings. For Orchard Capital the residual $3.00 is the maximum sustainable dividend that funds the $8M project slate without external equity or changed capital structure. A common error is to compute the gross payout ($14M / 2M = $7.00) ignoring the investment opportunity, or to retain excess cash (hoarding) when positive-NPV projects are available. The correct approach funds all value-creating projects first, then distributes the residual.",
         "Topic": "Residual dividend",
         "Subtopic": "Earnings-projects",
         "Difficulty": "Moderate",

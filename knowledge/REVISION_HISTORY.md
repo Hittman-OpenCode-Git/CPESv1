@@ -1,3 +1,55 @@
+## V2.2 Goal 1.2 + Goal 2.3 — Quick Fixes — 2026-10-23
+
+**Batch:** V2.2-QUICK-FIXES
+**Date:** 2026-10-23
+**Authority:** CAQS 1.7.4 (VERIFIED-AUTHORING basis), AGENTS.md Rule 12 (no cognitive relabeling without content change — genuine misclassification fixes only)
+
+### Task 1.2 — CBQ21-B5-Q1 Schema Drift Fix
+
+**File:** p2/case_pack_p2_1.js (CBQ21-B5-Q1)
+**Defect:** Numeric item whose Explanation referenced Choice A/C/D (non-existent Choices array)
+**Fix:** Rewrote explanation tail — removed Choice A/C/D references, replaced with conceptual description of common errors (gross payout ignoring investment opportunity; hoarding cash)
+**Key unchanged:** Correct=3.00 (verified: (14M-8M)/2M = 3.00 per share)
+**Explanation length:** 638 -> 695 chars
+**Evidence basis (Rule 22):** Independently derived and independently verified by hand-solve
+
+### Task 2.3 — Cognitive/ Difficulty Mismatch Resolution (DL-P2-015)
+
+**File:** p2/pack_p2_a.js
+**Items fixed:** 9 (5 cognitive level + 4 difficulty score)
+
+**Cognitive level corrections (Analyze -> Apply):**
+- P2-A-042: EPS computation (ASC 260-10) — Apply, DS2 (was Analyze@DS2)
+- P2-A-043: EBITDA margin (ASC 205) — Apply, DS2 (was Analyze@DS2)
+- P2-A-044: Segment profitability — Apply, DS2 (was Analyze@DS2)
+- P2-A-045: Profitability benchmarking — Apply, DS2 (was Analyze@DS2)
+- P2-A-046: Sustainable growth rate — Apply, DS2 (was Analyze@DS2)
+
+**Difficulty score corrections (Moderate -> Difficult, DS3 -> DS4):**
+- P2-A-054: Credit leverage analysis — Evaluate, DS4 (was Evaluate@DS3)
+- P2-A-055: Covenant compliance — Evaluate, DS4 (was Evaluate@DS3)
+- P2-A-056: Liquidity vs solvency comparison — Evaluate, DS4 (was Evaluate@DS3)
+- P2-A-057: Earnings quality assessment — Evaluate, DS4 (was Evaluate@DS3)
+
+**False positive (no change):**
+- P2-A-009: Evaluate@DS5 — correctly classified (Evaluate at DS5 is valid)
+
+**Rule 12 compliance:** These are genuine misclassification fixes (item demand determines level), NOT portfolio-gap relabeling. Each item was reviewed for question demand before reclassification.
+
+**Certification stamps:** P2 MCQ items do not use certification_batch/date stamps (MCQ packs use question_state only). Cognitive level and difficulty are metadata fields, not certification state.
+
+### Verification
+- node --check PASS (both files)
+- Case screens: 444 flags, identical to pre-fix (no new flags)
+- Preflight: 0 divergences (after baseline_coherence --fix)
+- Baseline coherence: 0 divergences
+
+### Backups
+- p2/case_pack_p2_1.js.bak-v2.2-goal1-20261022213010
+- p2/pack_p2_a.js.bak-v2.2-goal2-20261022213010
+
+---
+
 # G7 Release Manager Final Approval — P2 Go-Live — 2026-10-20
 
 **Decision:** APPROVE — P2 go-live release approved for learner delivery.
