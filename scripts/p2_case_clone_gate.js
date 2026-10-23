@@ -132,6 +132,8 @@ for (const [key, members] of byKey) {
   if (members.length < 2) continue;
   const ids = new Set(members.map(m => m.itemId));
   if (ids.size < 2) continue;                     // same item indexed twice
+  const caseIds = new Set(members.map(m => m.caseId));
+  if (caseIds.size < 2) continue;                // intra-case siblings, not rotation-clones
   groups.push({ key, members });
 }
 
