@@ -400,7 +400,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "What is the total reduction to Stockholders' Equity resulting from the treasury stock purchase?",
         "Correct": 150000,
-        "Explanation": "10,000 shares x $15 = $150,000. Under the cost method, a contra-equity account is created for the full cost.",
+        "Explanation": "Under the cost method, treasury stock is recorded at cost in a contra-equity account that reduces total stockholders equity. Purchase of 10,000 shares at $15 = $150,000 reduction. A common trap is reducing equity by par value or the original issue price instead of the repurchase cost.",
         "Topic": "Treasury Stock",
         "ItemID": "CBQ5-A2-Q3",
         "CognitiveLevel": "Apply",
@@ -472,7 +472,7 @@ const CASE_PACK_3 = [
         "Type": "fill",
         "Prompt": "Comprehensive income includes all changes in equity during a period except those resulting from investments by and distributions to _________.",
         "Correct": "owners",
-        "Explanation": "Standard definition of comprehensive income (excludes dividends and stock issuances).",
+        "Explanation": "Comprehensive income includes all changes in equity during a period except those resulting from investments by owners and distributions to owners. Dividends and stock issuances are therefore excluded. A common trap is including dividends in comprehensive income.",
         "Topic": "Comprehensive Income",
         "ItemID": "CBQ5-A2-Q5",
         "CognitiveLevel": "Understand",
@@ -1205,7 +1205,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the total fixed cost using the High-Low method.",
         "Correct": 10000,
-        "Explanation": "Total Cost - (VC/hr x Hours) = $42,000 - ($4 x 8,000) = $10,000.",
+        "Explanation": "High-Low method: variable cost per hour = ($42,000 - $30,000) / (8,000 - 5,000) = $12,000 / 3,000 = $4.00. Fixed cost = $42,000 - ($4.00 x 8,000) = $42,000 - $32,000 = $10,000. A common trap is using only the high point without subtracting variable cost.",
         "Topic": "High-Low",
         "ItemID": "CBQ4-B1-Q2",
         "CognitiveLevel": "Apply",
@@ -1235,7 +1235,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "What is the estimated total cost for 7,000 hours using the Regression model?",
         "Correct": 38300,
-        "Explanation": "Y = a + bX = $11,000 + ($3.90 x 7,000) = $11,000 + $27,300 = $38,300.",
+        "Explanation": "Regression model: Y = a + bX = $11,000 + ($3.90 x 7,000) = $11,000 + $27,300 = $38,300. The intercept is fixed cost and the slope is variable cost per hour. A common trap is using the High-Low variable rate instead of the regression slope.",
         "Topic": "Regression",
         "ItemID": "CBQ4-B1-Q3",
         "CognitiveLevel": "Apply",
@@ -1269,7 +1269,7 @@ const CASE_PACK_3 = [
         "Type": "select",
         "Prompt": "What does the R-squared value of 0.85 indicate?",
         "Correct": "85% of the variation in total cost is explained by machine hours",
-        "Explanation": "R-squared (coefficient of determination) represents the proportion of variance in the dependent variable explained by the independent variable.",
+        "Explanation": "R-squared of 0.85 means 85% of the variation in total maintenance cost is explained by machine hours, indicating a strong linear relationship. It does not imply an 85% prediction accuracy probability or a correlation of 0.85. A common trap is confusing R-squared with the correlation coefficient.",
         "Topic": "Regression",
         "Choices": [
           "85% of the variation in total cost is explained by machine hours",
@@ -1313,7 +1313,7 @@ const CASE_PACK_3 = [
           "It only uses two data points",
           "It is heavily influenced by outliers"
         ],
-        "Explanation": "High-Low is simple but ignores all intermediate data and is skewed by extreme highs/lows.",
+        "Explanation": "The High-Low method uses only the highest and lowest activity levels, so it ignores all intermediate data points and is easily skewed by outliers. Regression uses all data and is more reliable. A common trap is claiming High-Low is too complex or cannot separate costs.",
         "Topic": "Cost Behavior",
         "Choices": [
           "It only uses two data points",
@@ -1923,7 +1923,7 @@ const CASE_PACK_3 = [
         "Type": "select",
         "Prompt": "Which budgeting approach requires managers to justify every dollar of their budget from scratch each year?",
         "Correct": "Zero-based budgeting",
-        "Explanation": "ZBB assumes a base of zero and requires justification for all expenses.",
+        "Explanation": "Zero-based budgeting requires every expense to be justified from a base of zero each period, unlike incremental budgeting, which adjusts prior-period amounts. A common trap is confusing ZBB with activity-based budgeting, which focuses on activities and cost drivers.",
         "Topic": "Budgeting Methodologies",
         "Choices": [
           "Incremental budgeting",
@@ -1962,7 +1962,7 @@ const CASE_PACK_3 = [
           "Strengths",
           "Weaknesses"
         ],
-        "Explanation": "Strengths and Weaknesses are internal. Opportunities and Threats are external.",
+        "Explanation": "In SWOT analysis, Strengths and Weaknesses are internal factors controlled by the firm, while Opportunities and Threats are external factors in the environment. A common trap is classifying market opportunities as internal strengths.",
         "Topic": "Strategic Management",
         "Choices": [
           "Strengths",
@@ -1998,7 +1998,7 @@ const CASE_PACK_3 = [
         "Type": "fill",
         "Prompt": "A ______ smoothing forecast applies different weights to past data, usually assigning the highest weight to the most recent period.",
         "Correct": "exponential",
-        "Explanation": "Exponential smoothing is a weighted moving average forecasting technique.",
+        "Explanation": "Exponential smoothing is a weighted moving average technique that assigns exponentially decreasing weights to older observations, with the highest weight on the most recent period. A common trap is confusing it with a simple moving average, which weights all periods equally.",
         "Topic": "Forecasting",
         "ItemID": "CBQ5-B1-Q5",
         "CognitiveLevel": "Understand",
@@ -2507,7 +2507,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the Direct Material Mix Variance for Material B.",
         "Correct": 3000,
-        "Explanation": "Material B mix variance = (5,000 - 4,000) × $3.00 = +3,000 unfavorable; actual usage exceeded the standard mix for the more expensive material.",
+        "Explanation": "Material B mix variance = (Actual quantity B - Standard quantity B at actual total input) x Standard price B. Standard quantity B = 40% x 10,000 = 4,000 lbs; actual = 5,000 lbs; variance = (5,000 - 4,000) x $3.00 = $3,000 unfavorable. A common trap is using actual price instead of standard price.",
         "Topic": "Mix Variance",
         "ItemID": "CBQ5-C1-Q2",
         "CognitiveLevel": "Apply",
@@ -2537,7 +2537,7 @@ const CASE_PACK_3 = [
         "Type": "numeric",
         "Prompt": "Calculate the Total Direct Material Mix Variance.",
         "Correct": 1000,
-        "Explanation": "Total mix variance = -$2,000 (Favorable) + $3,000 (Unfavorable) = +$1,000 unfavorable; the actual input mix was costlier than the standard recipe.",
+        "Explanation": "Total mix variance = Material A mix variance + Material B mix variance = -$2,000 favorable + $3,000 unfavorable = $1,000 unfavorable. The actual mix was costlier than the standard recipe. A common trap is netting without regard to favorable and unfavorable signs.",
         "Topic": "Mix Variance",
         "ItemID": "CBQ5-C1-Q3",
         "CognitiveLevel": "Apply",
@@ -2605,7 +2605,7 @@ const CASE_PACK_3 = [
         "Correct": [
           "The proportion of high-margin to low-margin products sold differs from the budget"
         ],
-        "Explanation": "Sales mix variance specifically isolates the impact of the shift in the relative ratio of products sold.",
+        "Explanation": "Sales mix variance isolates the effect of selling a different proportion of products than budgeted, holding total quantity constant. It arises when the mix of high-margin and low-margin products sold differs from the budget. A common trap is confusing it with sales volume or price variance.",
         "Topic": "Sales Mix Variance",
         "Choices": [
           "The actual total quantity sold differs from the budget",

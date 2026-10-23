@@ -1255,7 +1255,7 @@ const CASE_PACK_1 = [
           "FIFO": "Ending inventory reflects current costs",
           "Weighted Average": "Smooths out price fluctuations"
         },
-        "Explanation": "LIFO matches current costs to COGS. FIFO leaves current costs in Inventory.",
+        "Explanation": "Under ASC 330, LIFO matches recent costs to COGS, FIFO leaves current costs in ending inventory, and weighted average smooths price fluctuations. LIFO better matches current costs to revenue but may understate inventory on the balance sheet; FIFO ending inventory reflects replacement cost more closely. A common trap is confusing LIFO COGS effect with inventory valuation effect.",
         "Topic": "Inventory",
         "LeftItems": [
           "LIFO",
@@ -1302,7 +1302,7 @@ const CASE_PACK_1 = [
           "Factory overhead",
           "Direct labor"
         ],
-        "Explanation": "Manufacturing costs are inventoried; selling/admin are period expenses.",
+        "Explanation": "Under ASC 330, product costs (direct materials, direct labor, and factory overhead) are capitalized into inventory as assets until sold. Period costs such as selling and administrative expenses are expensed in the period incurred and never inventoried. A common trap is capitalizing selling costs or expensing factory overhead.",
         "Topic": "Inventory",
         "Choices": [
           "Direct materials",
@@ -2557,7 +2557,7 @@ const CASE_PACK_1 = [
         "Type": "numeric",
         "Prompt": "How many units must Apex produce in February?",
         "Correct": 12600,
-        "Explanation": "Sales (12,000) + End FG (15k * 20% = 3,000) - Beg FG (2,400) = 12,600.",
+        "Explanation": "Production budget formula: Budgeted production = Budgeted sales + Desired ending FG - Beginning FG. February: 12,000 + (20% x 15,000) - 2,400 = 12,000 + 3,000 - 2,400 = 12,600 units. Desired ending FG is 20% of next month sales. A common trap is using current month sales instead of next month for the ending FG percentage.",
         "Topic": "Production Budget",
         "ItemID": "CBQ2-B1-Q2",
         "CognitiveLevel": "Apply",
@@ -2589,7 +2589,7 @@ const CASE_PACK_1 = [
         "Type": "numeric",
         "Prompt": "How many pounds of raw material must be purchased in January?",
         "Correct": 31860,
-        "Explanation": "Jan prod needs = 10,400 * 3 = 31,200. End RM = 12,600 * 3 * 10% = 3,780. Purch = 31,200 + 3,780 - 3,120 = 31,860 lbs.",
+        "Explanation": "Direct materials purchases = (Units to produce x lbs per unit) + Desired ending RM in lbs - Beginning RM. January production 10,400 units x 3 lbs = 31,200 lbs; desired ending RM = 12,600 x 3 x 10% = 3,780 lbs; less beginning RM 3,120 lbs = 31,860 lbs. A common trap is omitting desired ending raw materials or using units instead of pounds.",
         "Topic": "Materials Budget",
         "ItemID": "CBQ2-B1-Q3",
         "CognitiveLevel": "Apply",
@@ -2651,7 +2651,7 @@ const CASE_PACK_1 = [
         "Type": "select",
         "Prompt": "Which budget must be prepared first?",
         "Correct": "Sales budget",
-        "Explanation": "The sales budget drives all subsequent operating budgets.",
+        "Explanation": "The sales budget is prepared first because it drives every other operating budget, including production, direct materials, direct labor, and manufacturing overhead. Production cannot be planned without a sales forecast. A common trap is selecting the production budget, which itself depends on sales.",
         "Topic": "Budget sequence",
         "Choices": [
           "Production budget",

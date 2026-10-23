@@ -4437,7 +4437,7 @@ const casePackP2_2 = [
         "Type": "numeric",
         "Prompt": "Enter Meridian's WACC using retained earnings (before the break), in percent rounded to two decimals.",
         "Correct": "9.41",
-        "Explanation": "WACC = (E/V)*Re + (D/V)*Rd*(1-t) = 0.70*10.875% + 0.30*6.00% = 9.4125% rounded to 9.41%. Market values must be used, not book values. Using pre-tax debt overstates WACC to 10.02%.",
+        "Explanation": "WACC = (E/V)*Re + (D/V)*Rd*(1-t) = 0.70*10.875% + 0.30*6.00% = 9.4125% rounded to 9.41%. Market values must be used, not book values. Using pre-tax debt overstates WACC to 10.02%. Under the WACC formula (IMA/CMA corporate finance), the cost of equity (10.875% via CAPM) is weighted 70% and the after-tax cost of debt (6.00%) 30%, using market values of equity ($420M) and debt ($180M). Using book values instead of market values would distort the weights, producing an incorrect WACC. A common exam trap is to apply the tax shield to the debt weight rather than to the cost of debt, or to omit the (1-t) factor entirely, which overstates WACC to 10.02%. In practice, Meridian should refresh market-value weights each financing cycle and use marginal costs, not historical book costs.",
         "Topic": "Weighted average cost of capital",
         "Subtopic": "Market-value weights",
         "Difficulty": "Moderate",
@@ -4581,7 +4581,7 @@ const casePackP2_2 = [
           "Exhaustion of $14M retained earnings at 70% equity — $20M total capital",
           "Using book values instead of market values (180/600 and 420/600)"
         ],
-        "Explanation": "CAPM prices only systematic risk via beta times premium. WACC must be market-weighted. CCC shortened via DSO/DIO. MCC steps when $14M retained earnings at 70% weight exhausted at $20M total capital.",
+        "Explanation": "CAPM prices only systematic risk via beta times premium. WACC must be market-weighted. CCC shortened via DSO/DIO. MCC steps when $14M retained earnings at 70% weight exhausted at $20M total capital. Under CAPM (IMA/CMA), equity cost equals the risk-free rate plus beta times the market risk premium, pricing only systematic (non-diversifiable) risk; unsystematic risk is assumed diversified away. WACC must be weighted by market values (420/600 equity, 180/600 debt), not book values, because market values reflect current investor opportunity costs. The cash conversion cycle shortens when DSO or DIO falls or DPO rises, freeing working capital. The marginal cost of capital steps up once the $14M of retained earnings is exhausted at the 70% equity weight (at $20M total capital), after which new equity must be issued at a higher cost. A common exam trap is to use beta-adjusted total risk or book-value weights, both of which misstate the true cost of capital. In practice, Meridian should track the MCC schedule to identify the optimal capital budget before the break point.",
         "Topic": "Concept-to-fact mapping",
         "Subtopic": "CAPM/WACC/CCC/MCC integration",
         "Difficulty": "Moderate",
@@ -5398,7 +5398,7 @@ const casePackP2_2 = [
           "900k > 466k continuation — exercise, adds $434k at Y2",
           "Alpha $102,101 vs Beta $84,698 — Alpha higher equivalent annual value; raw NPV not comparable"
         ],
-        "Explanation": "The matching integrates the capital-budgeting build: Year 2 shield peaks, NPV adds salvage correctly, EAA annualizes for unequal lives, and abandonment is exercised when it exceeds continuation PV.",
+        "Explanation": "The matching integrates the capital-budgeting build: Year 2 shield peaks, NPV adds salvage correctly, EAA annualizes for unequal lives, and abandonment is exercised when it exceeds continuation PV. Under capital-budgeting rules (IMA/CMA, ASC 360), ATCF in Year 2 peaks because the MACRS depreciation shield is largest in that year. Alpha NPV equals the present value of four annual ATCFs plus the after-tax salvage, discounted at 10%, less the initial outlay. EAA converts each project NPV to an equivalent annual amount so projects with unequal lives can be compared on a common annual basis; raw NPV alone is not comparable across different horizons. The abandonment option should be exercised when salvage exceeds continuation value, adding value at that point. A common exam trap is to compare raw NPVs of unequal-life projects or to discount salvage at the wrong tax basis. In practice, Harborview should use EAA for replacement-cycle decisions and exercise abandonment whenever salvage exceeds continuation value.",
         "Topic": "Integrated capital budgeting",
         "Subtopic": "Matching build to result",
         "Difficulty": "Moderate",

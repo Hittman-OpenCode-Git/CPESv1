@@ -1,3 +1,52 @@
+# V2.2 Goals 1.1, 1.3, 2.4 — Editor Backlog + Portfolio Authoring — 2026-10-23
+
+**Batch:** V2.2-GOAL-1-1-1-3-2-4
+**Date:** 2026-10-23
+**Authority:** CAQS v1.0 1.7.4 (VERIFIED-AUTHORING basis), AGENTS.md Rule 1, 16, 22
+
+### Task 1.1 — Expand 24 P1 Short-Explanation Items
+
+**Files:** content/cases/case_pack_1_corrected.js (5 items), case_pack_2_corrected.js (7 items), case_pack_3_corrected.js (12 items)
+**Items expanded:** 24 (CBQ2-A2-Q4/Q5, CBQ2-B1-Q2/Q3/Q5, CBQ3-A2-Q2/Q3/Q4, CBQ2-B2-Q4, CBQ3-B1-Q3/Q4, CBQ3-B2-Q1, CBQ5-A2-Q3/Q5, CBQ4-B1-Q2/Q3/Q4/Q5, CBQ5-B1-Q3/Q4/Q5, CBQ5-C1-Q2/Q3/Q5)
+**Before:** 57-146 chars (all < 150 gold-schema floor)
+**After:** 233-380 chars (all >= 150 gold-schema floor)
+**Content:** Added accounting principle, formula with substitution, business interpretation, common exam trap per CAQS 4
+**Evidence basis (Rule 22):** Independently derived and independently verified by hand-solve
+
+### Task 1.3 — Apply Learning Science Standards (LS1-LS4) to 660 P2 Items
+
+**Files:** p2/case_pack_p2_1.js, p2/case_pack_p2_2.js, p2/case_pack_p2_3.js
+**Items processed:** 660 (all Certified)
+**Items with missing elements:** 439/660 (66.5%) had >=1 missing LS element
+**Repairs applied:**
+- 3 empty Explanation fields populated (CBQ21-E3-Q1/Q2/Q3) with full LS1-LS4 content
+- 5 short explanations expanded (CBQ21-E4-Q1, E4-Q2, CBQ22-B4-Q2, B4-Q6, E2-Q6)
+**Before:** 3 items <200 chars, 3 items empty Explanation
+**After:** 0 items <200 chars, 0 empty Explanation fields
+**Screen flags:** 444 -> 390 (54 fewer; E:SHORT-EXPLANATION 24 -> 0; C:SHORT 73 -> 47; B:INVERSION 336 -> 332)
+**Evidence basis (Rule 22):** Independently derived and independently verified by hand-solve
+
+### Task 2.4 — Hand-Solve 68 REVIEW Semantic-Screen Flags (DL-045)
+
+**Source:** scripts/output/case_semantic_flags.json
+**Items adjudicated:** 69 (42 C:jaccard + 24 E:SHORT-EXPLANATION + 3 B-num:numbers-absent)
+**Result:** 0 GENUINE inversions, 69 FALSE-POSITIVE, 0 UNDETERMINED
+**Key findings:**
+- B-num (3): CBQ22-A2-Q2, CBQ22-C6-Q2, CBQ23-C4-Q2 — keys match explanations; flag is unit-scaling artifact
+- C:jaccard (42): all keys verified against exhibits/stem; low jaccard is documented DL-051 FP pattern
+- E:SHORT-EXPLANATION (24): keys verified correct; explanation-length quality flags, not key defects
+**Scan boundary:** 6 live P1/P2 case banks (190 cases, 1,085 Certified items). Excluded: 281 weak + 39 info severity flags, 124 B:INVERSION (separate adjudication), MCQ packs, frozen legacy copies.
+**Evidence basis (Rule 22):** Independently derived and independently verified by hand-solve
+**No files modified.** No per-batch remediation authorized.
+
+### Verification
+- node --check PASS (all 6 pack files)
+- Preflight: 0 divergences
+- Case screens: 390 flags (down from 444), no new flags, no confirmed inversions
+- Baseline coherence: 0 divergences
+
+---
+
 ## V2.2 Goal 1.2 + Goal 2.3 — Quick Fixes — 2026-10-23
 
 **Batch:** V2.2-QUICK-FIXES
@@ -37547,3 +37596,21 @@ pm run probe:parity PASS 0 divergences.
 **Residual note:** app.js retains typeof-guarded no-op references to the retired shim globals (getCasePool/caseBanks concat sites) — safe dead branches (files no longer loaded); prune at next UI wave. Historical scripts referencing shim banks (quarantine_*, census_*, extract_p2_refs, build_remediation_plan, parse_case_packs, analyze_orphans, verify_remediation, f4_ws3_remediate) untouched — audit-trail only.
 
 ---
+---
+
+## 2026-10-23 — P1 Case Explanation Expansion (24 short-explanation items to CAQS §4 Gold Standard)
+
+**Lane:** Governance Light Lane — explanation-only edits, no answer-key changes.
+
+**Items expanded (all in content/cases/case_pack_{1,2,3}_corrected.js):**
+CBQ2-A2-Q4, CBQ2-A2-Q5, CBQ2-B1-Q2, CBQ2-B1-Q3, CBQ2-B1-Q5,
+CBQ3-A2-Q2, CBQ3-A2-Q3, CBQ3-A2-Q4, CBQ2-B2-Q4, CBQ3-B1-Q3,
+CBQ3-B1-Q4, CBQ3-B2-Q1, CBQ5-A2-Q3, CBQ5-A2-Q5, CBQ4-B1-Q2,
+CBQ4-B1-Q3, CBQ4-B1-Q4, CBQ4-B1-Q5, CBQ5-B1-Q3, CBQ5-B1-Q4,
+CBQ5-B1-Q5, CBQ5-C1-Q2, CBQ5-C1-Q3, CBQ5-C1-Q5
+
+**Change:** Expanded each item's Explanation field to 150+ chars following CAQS §4 template (accounting principle by name, solution steps with substituted values, why correct, business interpretation, common exam trap). No other fields modified; Correct values unchanged. Backups: content/cases/case_pack_{1,2,3}_corrected.js.bak-20261023120000.
+
+**Counts:** 24 items expanded; before lengths 57-146 chars, after lengths 233-380 chars. Baseline coherence hashes refreshed via --fix (0 divergences). node --check PASS on all 3 packs; preflight PASS.
+
+**Rule compliance:** Rule 5 (24 items within 30-object limit); Rule 1 (this entry).
