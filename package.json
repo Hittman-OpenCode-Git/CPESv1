@@ -1,6 +1,6 @@
 {
   "name": "cma-part-1-exam-simulator",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "CMA Exam Simulator & Question Repository",
   "private": true,
   "main": "main.js",

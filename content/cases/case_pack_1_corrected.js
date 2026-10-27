@@ -1255,7 +1255,7 @@ const CASE_PACK_1 = [
           "FIFO": "Ending inventory reflects current costs",
           "Weighted Average": "Smooths out price fluctuations"
         },
-        "Explanation": "Under ASC 330, LIFO matches recent costs to COGS, FIFO leaves current costs in ending inventory, and weighted average smooths price fluctuations. LIFO better matches current costs to revenue but may understate inventory on the balance sheet; FIFO ending inventory reflects replacement cost more closely. A common trap is confusing LIFO COGS effect with inventory valuation effect.",
+        "Explanation": "Under ASC 330, inventory is measured at the lower of cost or market. LIFO matches recent (current) purchase costs to revenue/COGS, so cost of goods sold reflects current prices; FIFO leaves the most recent costs in ending inventory on the balance sheet; weighted average smooths price fluctuations by blending all units available. In context, Oasis' 10,000 units are carried at historical cost under FIFO, with replacement cost $12 and NRV $13 relevant only to a potential lower-of-cost-or-market write-down. A common trap is confusing LIFO's COGS effect with its ending-inventory valuation effect.",
         "Topic": "Inventory",
         "LeftItems": [
           "LIFO",
@@ -1302,7 +1302,7 @@ const CASE_PACK_1 = [
           "Factory overhead",
           "Direct labor"
         ],
-        "Explanation": "Under ASC 330, product costs (direct materials, direct labor, and factory overhead) are capitalized into inventory as assets until sold. Period costs such as selling and administrative expenses are expensed in the period incurred and never inventoried. A common trap is capitalizing selling costs or expensing factory overhead.",
+        "Explanation": "Under ASC 330, product costs—direct materials, direct labor, and factory overhead—are capitalized into inventory as assets until the goods are sold. Period costs such as selling and administrative expenses are expensed in the period incurred and never inventoried. For Oasis Retail, inventory includes the purchase-related product costs, not selling expenses. A common trap is capitalizing selling costs or expensing factory overhead.",
         "Topic": "Inventory",
         "Choices": [
           "Direct materials",
@@ -2557,7 +2557,7 @@ const CASE_PACK_1 = [
         "Type": "numeric",
         "Prompt": "How many units must Apex produce in February?",
         "Correct": 12600,
-        "Explanation": "Production budget formula: Budgeted production = Budgeted sales + Desired ending FG - Beginning FG. February: 12,000 + (20% x 15,000) - 2,400 = 12,000 + 3,000 - 2,400 = 12,600 units. Desired ending FG is 20% of next month sales. A common trap is using current month sales instead of next month for the ending FG percentage.",
+        "Explanation": "Production budget formula: Budgeted production = Budgeted sales + Desired ending finished goods − Beginning finished goods. February: 12,000 sales + (20% × 15,000 March sales = 3,000) − 2,400 beginning FG (20% of February sales) = 12,600 units. Desired ending FG is based on next month's sales, not the current month. A common trap is using current-month sales for the ending-FG percentage.",
         "Topic": "Production Budget",
         "ItemID": "CBQ2-B1-Q2",
         "CognitiveLevel": "Apply",
@@ -2589,7 +2589,7 @@ const CASE_PACK_1 = [
         "Type": "numeric",
         "Prompt": "How many pounds of raw material must be purchased in January?",
         "Correct": 31860,
-        "Explanation": "Direct materials purchases = (Units to produce x lbs per unit) + Desired ending RM in lbs - Beginning RM. January production 10,400 units x 3 lbs = 31,200 lbs; desired ending RM = 12,600 x 3 x 10% = 3,780 lbs; less beginning RM 3,120 lbs = 31,860 lbs. A common trap is omitting desired ending raw materials or using units instead of pounds.",
+        "Explanation": "Direct materials purchases = (Units to produce × lbs per unit) + Desired ending raw materials − Beginning raw materials. January production = 10,000 sales + 2,400 ending FG − 2,000 beginning FG = 10,400 units × 3 lbs = 31,200 lbs. Desired ending RM = 10% of February production needs (12,600 × 3 × 10% = 3,780 lbs) less beginning RM 3,120 lbs = 31,860 lbs. A common trap is omitting desired ending raw materials or using units instead of pounds.",
         "Topic": "Materials Budget",
         "ItemID": "CBQ2-B1-Q3",
         "CognitiveLevel": "Apply",
@@ -2651,7 +2651,7 @@ const CASE_PACK_1 = [
         "Type": "select",
         "Prompt": "Which budget must be prepared first?",
         "Correct": "Sales budget",
-        "Explanation": "The sales budget is prepared first because it drives every other operating budget, including production, direct materials, direct labor, and manufacturing overhead. Production cannot be planned without a sales forecast. A common trap is selecting the production budget, which itself depends on sales.",
+        "Explanation": "The sales budget is prepared first because it drives every other operating budget, including production, direct materials, direct labor, and manufacturing overhead. Production cannot be planned without a sales forecast, and cash collections depend on projected sales. Under the master budget sequence, the sales budget is the starting point. A common trap is selecting the production budget, which itself depends on the sales budget.",
         "Topic": "Budget sequence",
         "Choices": [
           "Production budget",

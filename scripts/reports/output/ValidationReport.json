@@ -8,7 +8,7 @@
       "Question Packs": 5,
       "Case Banks": 5
     },
-    "duration": 6,
+    "duration": 2,
     "confidence": 100
   },
   {
@@ -21,7 +21,7 @@
     "statistics": {
       "Cases Checked": 190
     },
-    "duration": 1121,
+    "duration": 361,
     "confidence": 100
   },
   {
@@ -234,7 +234,7 @@
       "Domain: Risk Management": 11,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 1404,
+    "duration": 292,
     "confidence": 100
   },
   {
@@ -3587,7 +3587,7 @@
       "P2 Domain: Professional Ethics": 614,
       "P2 Domain: Risk Management": 588
     },
-    "duration": 1966,
+    "duration": 450,
     "confidence": 100
   },
   {
@@ -3682,7 +3682,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 46
     },
-    "duration": 1494,
+    "duration": 516,
     "confidence": 100
   },
   {
@@ -3774,7 +3774,7 @@
       "Orphan Exhibits (unreferenced)": 76,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 576,
+    "duration": 308,
     "confidence": 100
   },
   {
@@ -3798,7 +3798,7 @@
       "Correct Explanation Avg Length": 603,
       "Wrong Explanation Avg Length": 284
     },
-    "duration": 2350,
+    "duration": 1071,
     "confidence": 100
   },
   {
@@ -3821,7 +3821,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 456,
+    "duration": 234,
     "confidence": 100
   },
   {
@@ -3876,7 +3876,7 @@
       "Archived↔Live Overlaps (expected, S916)": 75,
       "Score/Label Mismatches": 0
     },
-    "duration": 122,
+    "duration": 53,
     "confidence": 100
   },
   {
@@ -11098,7 +11098,7 @@
       "psychometricModuleErrors": 0,
       "psychometricModuleWarnings": 7187
     },
-    "duration": 14001,
+    "duration": 6093,
     "confidence": 100
   }
 ]

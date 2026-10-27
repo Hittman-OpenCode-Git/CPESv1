@@ -609,7 +609,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Net Cash Provided by (Used in) Investing Activities.",
         "Correct": 55000,
-        "Explanation": "Investing activities include cash flows from acquiring and disposing of long-term assets. Here, proceeds from the sale of equipment of $55,000 are the only investing cash flow; the $15,000 gain on sale is removed in operating activities. Net cash provided by investing activities = $55,000. A common trap is netting the gain or using book value instead of proceeds.",
+        "Explanation": "Under ASC 230, investing activities include cash flows from acquiring and disposing of long-term assets. The proceeds from the sale of equipment of $55,000 are the only investing cash flow; the $15,000 gain on sale is removed from operating activities because it is not an operating cash flow. Net cash provided by investing activities = $55,000. A common trap is netting the gain against proceeds or using book value instead of cash proceeds.",
         "Topic": "Cash Flows",
         "ItemID": "CBQ3-A2-Q2",
         "CognitiveLevel": "Apply",
@@ -638,7 +638,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Calculate the Net Cash Provided by Financing Activities.",
         "Correct": 50000,
-        "Explanation": "Financing activities include transactions with owners and creditors. Silverline issued $100,000 of common stock (+) and paid $50,000 of dividends (-), yielding net cash provided by financing activities of $50,000. A common trap is treating dividends paid as an operating outflow under US GAAP.",
+        "Explanation": "Under ASC 230, financing activities include transactions with owners and creditors. Silverline issued $100,000 of common stock (cash inflow) and paid $50,000 of dividends (cash outflow). Net cash provided by financing activities = $100,000 − $50,000 = $50,000. A common trap is treating dividends paid as an operating outflow under US GAAP.",
         "Topic": "Cash Flows",
         "ItemID": "CBQ3-A2-Q3",
         "CognitiveLevel": "Apply",
@@ -667,7 +667,7 @@ const CASE_PACK_2 = [
         "Type": "select",
         "Prompt": "Where is the payment of dividends reported under US GAAP?",
         "Correct": "Financing activities",
-        "Explanation": "Under US GAAP (ASC 230), dividends paid are classified as financing activities, whereas under IFRS they may be classified as operating or financing. The scenario follows US GAAP, so payment of dividends is reported in financing activities. A common trap is applying IFRS flexibility to a US GAAP question.",
+        "Explanation": "Under US GAAP (ASC 230), dividends paid are classified as financing activities because they are a distribution to owners. Under IFRS, dividends paid may be classified as operating or financing, but this scenario follows US GAAP. A common trap is applying IFRS flexibility to a US GAAP question.",
         "Topic": "Cash Flows",
         "Choices": [
           "Operating activities",
@@ -1262,7 +1262,7 @@ const CASE_PACK_2 = [
           "$200,000"
         ],
         "Correct": "$125,000",
-        "Explanation": "The cash deficit before financing equals total disbursements less total collections. To maintain the $35,000 minimum compensating balance, Harbor must borrow the deficit plus the minimum: $90,000 + $35,000 = $125,000. A common trap is borrowing only the deficit and ignoring the compensating balance requirement.",
+        "Explanation": "Total January collections = cash sales $120,000 + January credit collections $240,000 + December credit collections $180,000 = $540,000. Total disbursements = COGS $390,000 + operating expenses $175,000 + equipment purchase $110,000 = $675,000 (depreciation is non-cash). Cash before financing = $45,000 + $540,000 − $675,000 = −$90,000. To maintain the $35,000 minimum compensating balance, borrow $90,000 + $35,000 = $125,000. A common trap is borrowing only the deficit and ignoring the compensating balance.",
         "Topic": "Cash budget financing",
         "ItemID": "CBQ2-B2-Q4",
         "CognitiveLevel": "Apply",
@@ -1908,7 +1908,7 @@ const CASE_PACK_2 = [
           "Direct Materials Budget",
           "Capital Expenditure Budget"
         ],
-        "Explanation": "The cash budget is prepared last among the operating budgets because it requires inputs from the sales, production, direct materials, direct labor, manufacturing overhead, and capital expenditure budgets. The budgeted balance sheet is prepared after the cash budget. A common trap is omitting the capital expenditure budget, which drives cash outflows.",
+        "Explanation": "The cash budget is prepared last among the operating budgets because it requires inputs from the sales, production, direct materials, direct labor, manufacturing overhead, and capital expenditure budgets. The capital expenditure budget drives cash outflows for long-term assets. The budgeted balance sheet is prepared after the cash budget, not before. A common trap is omitting the capital expenditure budget or including the budgeted balance sheet too early.",
         "Topic": "Master Budget",
         "Choices": [
           "Sales Budget",
@@ -1944,7 +1944,7 @@ const CASE_PACK_2 = [
         "Type": "select",
         "Prompt": "If the company tightens credit terms to 2/10, net 30, what is the most likely immediate impact?",
         "Correct": "Accelerated cash inflows but potentially lower overall sales",
-        "Explanation": "Offering a 2/10, net 30 discount accelerates cash collections by incentivizing early payment, but tighter terms may deter marginal credit customers and reduce overall sales volume. The net effect depends on the cost of capital versus lost margin. A common trap is assuming discounts always increase total profitability.",
+        "Explanation": "Offering a 2/10, net 30 cash discount accelerates cash collections by incentivizing early payment, improving near-term liquidity. However, tighter credit terms may deter marginal credit customers and reduce overall sales volume. The net effect depends on the cost of capital versus the lost margin and sales. A common trap is assuming discounts always increase total profitability.",
         "Topic": "Working Capital Management",
         "Choices": [
           "Accelerated cash inflows but potentially lower overall sales",
@@ -2139,7 +2139,7 @@ const CASE_PACK_2 = [
         "Type": "numeric",
         "Prompt": "Enter the budgeted direct labor cost for July.",
         "Correct": "264000",
-        "Explanation": "Direct labor cost = Budgeted units x Direct labor hours per unit x Direct labor rate per hour. July: 8,000 x 1.5 = 12,000 DLH; 12,000 x $22 = $264,000. A common trap is using the selling price per unit or omitting the labor hours per unit, which understates the cost.",
+        "Explanation": "Direct labor cost = Budgeted units × Direct labor hours per unit × Direct labor rate per hour. July: 8,000 units × 1.5 DLH/unit = 12,000 DLH; 12,000 × $22 = $264,000. A common trap is using the selling price per unit or omitting the labor hours per unit, which understates the cost.",
         "Topic": "Direct labor budget",
         "ItemID": "CBQ3-B2-Q1",
         "CognitiveLevel": "Apply",

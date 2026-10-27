@@ -37697,3 +37697,77 @@ CBQ5-B1-Q5, CBQ5-C1-Q2, CBQ5-C1-Q3, CBQ5-C1-Q5
 - S121 portfolio audit — P2-E Remember gap narrowed, P2-D Apply gap narrowed
 - CAQS §4, §5, §11 — explanation standards, numerical validation, learning science standards
 - Rule 12 — no cognitive relabeling; new content authored at target levels only
+
+---
+
+## V2.2 Goal 1 explanation enhancement + baseline refresh — 2026-10-27
+
+**Finding (verified vs raw files):** V2.2 Goal 1 Task 1.1 (24 P1 short-explanation items) and Task 1.2 (CBQ21-B5-Q1 schema drift) were ALREADY COMPLETE in prior session (REVISION_HISTORY 2026-10-23). Raw verification at session start: all 24 items at 233-380 chars (>= 150 gold-schema floor); CBQ21-B5-Q1 numeric item has Correct=3.00, clean `Explanation`, no `ExplanationCorrect`/no `Choices` array — already compliant, no edit needed.
+
+**This session:** Enhanced the 24 already-compliant P1 case explanations to fuller CAQS §4 mini-lessons (233-380 -> 300-400 chars each) with explicit "In context" business interpretation; no answer keys changed, no question_state changes.
+
+**Files modified:** content/cases/case_pack_1_corrected.js (5 items), case_pack_2_corrected.js (7 items), case_pack_3_corrected.js (12 items); knowledge/CURRENT_BASELINES.md (hash refresh via baseline_coherence --fix).
+
+**Items:** CBQ2-A2-Q4/Q5, CBQ2-B1-Q2/Q3/Q5, CBQ3-A2-Q2/Q3/Q4, CBQ2-B2-Q4, CBQ3-B1-Q3/Q4, CBQ3-B2-Q1, CBQ5-A2-Q3/Q5, CBQ4-B1-Q2/Q3/Q4/Q5, CBQ5-B1-Q3/Q4/Q5, CBQ5-C1-Q2/Q3/Q5.
+
+**Evidence basis (Rule 22):** All 24 stored keys independently re-solved and verified correct (no key changes); explanations follow CAQS §4 (accounting principle by name, formula with substituted values, business interpretation, common exam trap).
+
+**Governance:** Rule 5 — 24 items across 3 files (5/7/12 per file), each within 30-object limit. Rule 22 — explanation rewrites on Certified items; evidence basis documented. §3 — backups taken before each file write (case_pack_*_corrected.js.bak-v2.2-goal1-* and CURRENT_BASELINES.md.bak-v2.2-goal1-*). Rule 1 — this REVISION_HISTORY entry.
+
+**Verification:**
+- node --check PASS x3 (all 3 case pack files)
+- npm run case-screens PASS — 390 flags, 0 new, 0 confirmed inversions
+- node scripts/baseline_coherence.js --fix — 0 divergences (3 case pack hash rows refreshed)
+- npm run preflight — PASS, 0 divergences
+
+---
+
+## V2.2 Goal 3 — Release Infrastructure — 2026-10-27
+
+**Lane:** Governance Light Lane (documentation + tooling, no content changes; no question_state or answer-key changes).
+
+**E1 — G1-G7 sign-off matrix:** G1-G6 sign-off evidence captured in release artifact (G1 Accountant PASS, G2 Psychometrician WARN non-blocking — 69 portfolio drift flags no Rule 12 violation, G3 Validator PASS, G4 Editor PASS, G5 Validator PASS, G6 Validator PASS). **G7 Release Manager approval PENDING** — human decision required before version bump + git tag + publish (RELEASE_READINESS_CHECKLIST §3 assigns tag creation to Release Manager; G7 prompt is read-only review).
+
+**E2 — S121 portfolio audit (formal run):** `npm run dashboard` PASS — Pool totals P1 3070 items/3052 Certified/18 Archived; P2 3563 items/3562 Certified/1 Archived; Combined 6633 items. 67 WARN-class divergence flags (portfolio drift vs S121 ±3pp tolerance; authoring signal only, non-blocking, Rule 12 — author new content never relabel). Artifacts: scripts/output/S121_PORTFOLIO_DASHBOARD.md + .json.
+
+**E3 — §18 third-party handoff (quarantined P2 cases):** `scripts/output/semantic_quarantine.json` active is `[]` — 0 items actively quarantined, nothing to hand off. 9 archived P2 cases are terminal DL-P2-024 whole-case duplicates (not learner-reachable, not pending review). E3 satisfied — no active quarantine.
+
+**E4 — Versioned hash-stamped release artifact:** `releases/RELEASE-v2.2.0-20261027T023103Z.json` written containing releaseVersion, releaseDate, gitCommit, gitTreeHash, fileHashes (20 source files), certifiedCounts, blocklistSnapshot (3 manifests), screenResult (390 flags, 0 new, 0 genuine inversions), gateResults (T0 preflight, pipeline EXIT 0, probe:parity, case-screens, smoke, guard-tests 123/123, S121 audit), G1-G7 signoff matrix (G7 PENDING human). VERSION file bump + git tag are Release Manager actions (RELEASE_READINESS_CHECKLIST §3), not executed in this Light Lane session.
+
+**E5 — This REVISION_HISTORY entry.**
+
+**Verification (all read-only, same session):**
+- npm run preflight — PASS, 0 divergences
+- npm run pipeline — EXIT 0 (validate → case-screens → build-registry → dashboard → baseline-coherence → coverage-assert all green; coverage-assert no gaps)
+- npm run probe:parity — PASS, 0 divergences
+- npm run case-screens — PASS, 390 flags, 0 new, 0 confirmed inversions
+- npm run smoke — PASS, all UI surfaces verified, zero page errors
+- npm run guard-tests — 123/123 PASS
+- node scripts/baseline_coherence.js — 0 divergences
+
+**Rule 1:** this REVISION_HISTORY entry pairs with the release documentation changes above.
+
+---
+
+## V2.2 Release Execution — G7 APPROVE — 2026-10-27
+
+**Decision:** G7 Release Manager approval = APPROVE (user authorization: "execute the release").
+**Rationale:** All automated gates green (preflight 0 divergences; pipeline EXIT 0 incl. coverage-assert; probe:parity 0 divergences; case-screens 390 flags/0 new/0 confirmed inversions; smoke PASS all UI surfaces zero page errors; guard-tests 123/123 PASS; baseline-coherence 0 divergences). No genuine key errors (0 across certified pool). No Rule 12 violations (portfolio drift is authoring signal only, non-blocking). No learner-safety risk in Certified pool.
+
+**Files changed this release session:**
+- content/cases/case_pack_1_corrected.js (5 P1 explanation enhancements, no key/state change)
+- content/cases/case_pack_2_corrected.js (7 P1 explanation enhancements, no key/state change)
+- content/cases/case_pack_3_corrected.js (12 P1 explanation enhancements, no key/state change)
+- knowledge/CURRENT_BASELINES.md (3 case-pack hash rows refreshed via baseline_coherence --fix)
+- knowledge/REVISION_HISTORY.md (Goal 1 + Goal 3 entries)
+- releases/RELEASE-v2.2.0-20261027T023103Z.json (versioned hash-stamped release artifact)
+- VERSION (2.1.0 -> 2.2.0)
+- package.json (2.0.0 -> 2.2.0)
+
+**Certified counts at release:** P1 MCQ 3052/3070 (18 Archived); P2 MCQ 3562/3563 (1 Archived DL-P2-024); P1 Case 425/425; P2 Case strict-eligible 660/660 (9 Archived terminal dupes); Combined 6633 items.
+
+**Governance:** Rule 1 (this entry); Rule 5 (24 explanation edits across 3 files, each ≤30 objects); Rule 16 (no new Certified flips this session; existing stamps preserved); Rule 22 (explanation rewrites on Certified items carry evidence basis); §3 backups taken before all pack edits; §5 dual verification (raw file evidence, not self-reports); §9.2.1 Tend gate clean.
+
+**Release Manager actions completed:** VERSION bump, package.json bump, git commit, annotated tag v2.2.0 (see git log). Push to origin reserved for separate authorization.
+
+**Known non-blocking items carried forward:** 67 S121 portfolio drift WARNs (Rule 12 authoring signal), 68 REVIEW semantic-screen flags (pre-existing, adjudicate before new certification), 1 acknowledged rotation-clone CBQ21-F3-Q4 == CBQ22-F1-Q5 (quarantined), 24 P1 short-explanation items (enhanced this session to 300-400 chars).

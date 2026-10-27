@@ -1,0 +1,92 @@
+{
+  "releaseVersion": "2.2.0",
+  "releaseDate": "2026-10-27T02:31:03.242Z",
+  "gitCommit": "20cd62fd443fbdc4c66d6941ddebbdc521311d97",
+  "gitTreeHash": "e3fa1bb5e3a0d9839e7d9fa2e04f90b2b4ec39e5",
+  "fileHashes": {
+    "app/app.js": "640ee2797fe0204cbf1a79f2e052b719fec553f08ce5318a1a58cd1d71f0de41",
+    "index_updated.html": "b7b87d076e6edabbe5f46f23efed25ef93c27e02e444e82f8969017bb530dd2a",
+    "styles.css": "1ca36a5547d2d47f68bd068c5a751ddde42d268e0687b8c8e59607f170f4db15",
+    "app/may/may-core.js": "c7fbaca61bfd91719d43498c35989cc5d70d5aaf572004aef7e7f108793f6728",
+    "app/may/may-learner-state.js": "bc88079308c6dd8727710b00b155405cb8abfe210f1938f2a784e9c5ca0f0869",
+    "content/packs/pack_a_corrected.js": "d85df0c26ced4f310b16fcd10fe811d476a19815bd80b400918970188547c566",
+    "content/packs/pack_b_corrected.js": "714b944f9e76a3f22e0d87139d3e1ed8971ef6650cde51f5e604afdaa5ad2f43",
+    "content/packs/pack_c_corrected.js": "0b97601d02421da41e719703bb0c8bed1ef43e357d7a81cda81a07e9466ffd63",
+    "content/packs/pack_d_corrected.js": "7de5b731ecc8f63633e9aebc1d0cc9ccf3b0d4028c02b279498d5e958698befe",
+    "content/packs/pack_e_corrected.js": "7165d24fd3173a77b5314be9fa40ef79267b91dfcdac8bc2b7da7e9b1fe5dbb6",
+    "content/cases/case_pack_1_corrected.js": "e48db68f31c11e730d94c1a02d3c45ae7b2b4f024f2a967b0aaff53fa42765d9",
+    "content/cases/case_pack_2_corrected.js": "0171d0f988876f892e4d51c92610f04728443a80c4415611f7246dde993a0092",
+    "content/cases/case_pack_3_corrected.js": "e7f695908ffab2ad62cbcb3be9e14369637f9aa82877598a4129ebcf6db369c5",
+    "p2/pack_p2_a.js": "03102d74f5d3a677d1e5225dbb601dbd63807d9a4a65e5c4a8fc08a960711794",
+    "p2/pack_p2_b.js": "d0888d6353269b52bcdfa82193e4ab3368129b6d075df79125218604376e01bc",
+    "p2/pack_p2_c.js": "19634bbab86b09efd616eac682317fc33bd6cf48c2c5c511618d2227010c6d2e",
+    "p2/pack_p2_d.js": "4fa9fc38589411694ceafb4ed607eb612d86e0781e9e32679ac2a758de1fc86d",
+    "p2/pack_p2_e.js": "c1928bb409dd2a1e7dc9d048df738dcf2aff5a0928a701bb12767dd8656b4ffd",
+    "p2/pack_p2_f.js": "c348cc47a6b82bc36b97624941bcf1468f1f11003035385add60b72bb4c8163d",
+    "p2/case_pack_p2_1.js": "f265502564078849a494ceae7c03e37ef1be3f666ffebb57e705234507a34622",
+    "p2/case_pack_p2_2.js": "a476dd3d8640106781a135c66c5a0b835220817137f2bce73f174019ed6f009a",
+    "p2/case_pack_p2_3.js": "cfa668c36e9a10def751cc4eeb0b2ee314fdcc857d1962014e6da778c62ca9c6"
+  },
+  "certifiedCounts": {
+    "P1 MCQ": {
+      "raw": 3070,
+      "certified": 3052,
+      "archived": 18
+    },
+    "P2 MCQ": {
+      "raw": 3563,
+      "certified": 3562,
+      "archived": 1
+    },
+    "P1 Case": {
+      "cases": 80,
+      "items": 425,
+      "certified": 425
+    },
+    "P2 Case": {
+      "cases": 110,
+      "items": 660,
+      "certifiedStrictEligible": 660,
+      "archived": 9
+    }
+  },
+  "blocklistSnapshot": {
+    "governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json": "cd07a1cfdb149d0b4301dc6a1d2a6cdf5c68eb22d58d602c00424ed07c5c3922",
+    "governance/DEFECT_MANIFEST_DL008_DL026.json": "80191f90b9a0aeca205e4acd55c24e5a31d5137af534a4d56d59075cc1df0c94",
+    "scripts/output/semantic_quarantine.json": "2ddd18b4217f2c237f7ee34426e1ed6f0b758b33c056bb9a30780b335ced4277"
+  },
+  "screenResult": {
+    "caseScreenFlags": 390,
+    "documentedFPSet": "B/C/B-num screens; FP-dominated per DL-065/DL-051 calibration",
+    "genuineInversions": 0,
+    "newFlagsSinceLastGreen": 0,
+    "screenGate": "PASS"
+  },
+  "gateResults": {
+    "T0_preflight": "PASS — 0 divergences",
+    "Gate1_pipeline": "PASS — EXIT 0 (validate → case-screens → build-registry → dashboard → baseline-coherence → coverage-assert)",
+    "Gate2_probeParity": "PASS — 0 divergences",
+    "Gate3_caseScreens": "PASS — 390 flags, 0 new, 0 confirmed inversions",
+    "Gate4_smoke": "PASS — all UI surfaces verified, zero page errors",
+    "Gate5_guardTests": "PASS — 123/123 rules",
+    "S121_portfolioAudit": "PASS (formal run) — 67 WARN-class drift flags, non-blocking, Rule 12 authoring signal only"
+  },
+  "signoffs": {
+    "G1_TechnicalReview_Accountant": "PASS — converged evidence (RELEASE_PLAN v1.0 §4)",
+    "G2_PsychometricReview_Psychometrician": "WARN (non-blocking) — 69 portfolio drift flags, no Rule 12 violation",
+    "G3_NumericalValidation_Validator": "PASS — independent recalculation, rounding, tolerance",
+    "G4_InstructionalReview_Editor": "PASS — explanation quality, writing clarity, educational value",
+    "G5_MetadataReview_Validator": "PASS — all required fields present and valid",
+    "G6_FinalValidation_Validator": "PASS — automated suite zero errors, no new warnings",
+    "G7_Approval_ReleaseManager": "PENDING — human Release Manager decision required before tag/publish"
+  },
+  "notes": [
+    "V2.2 Goal 3 Release Infrastructure (Governance Light Lane — documentation + tooling, no content changes)",
+    "E1: G1-G6 sign-off evidence captured; G7 pending Release Manager decision",
+    "E2: S121 portfolio audit formally run (scripts/output/S121_PORTFOLIO_DASHBOARD.md + .json)",
+    "E3: semantic_quarantine.json active empty (0 quarantined items to hand off); 9 archived P2 cases are terminal DL-P2-024 duplicates, not pending review",
+    "E4: this artifact; VERSION file bump + git tag are Release Manager actions (RELEASE_READINESS_CHECKLIST §3)",
+    "E5: REVISION_HISTORY.md entry appended for V2.2 release",
+    "All gates read-only; no question_state or answer-key changes in this session"
+  ]
+}

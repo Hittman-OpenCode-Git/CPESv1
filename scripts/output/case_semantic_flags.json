@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T17:44:17.865Z",
+ "generated": "2026-10-27T02:28:52.229Z",
  "method": "case_semantic_screens.js DL-051 Phase 1 v3: expl=Explanation||ExplanationCorrect; B-select/B-multi normalized (array|object Choices, letter-Correct resolved; INVERSION r>=0.50/m>=0.40 + UNSUPPORTED<0.25 + DISJOINT + UNRESOLVABLE + EXTRA-weak) B-num(exact|abs-info|no-numbers-FLAG|absent-FLAG) C(scope=prompt+choices+scenario,j<0.05,>=20w) D(9-phrase boilerplate + authoring-scratchwork regex; added 2026-09-30 DL-P2-026 correction) E(KEY-UNSUPPORTED+SCRATCHWORK+KEY-TYPE+ENCODING+SHORT-LENGTH; added 2026-10-04 per DL-P2-029/DL-P2-026/DL-P2-026-ext/DL-067 short-explanation class)",
  "extractionFailures": 0,
  "census": {
@@ -1322,7 +1322,7 @@
    "itemState": "Certified",
    "screen": "B",
    "severity": "weak",
-   "detail": "multi predicted={A,D} stored={A,B} best=0.75"
+   "detail": "multi predicted={D,A} stored={A,B} best=1.00"
   },
   {
    "bank": "content/cases/case_pack_3_corrected.js",
@@ -4779,7 +4779,7 @@
    "B:multi predicted={} stored={A,B,D,E} best=0.45": 1,
    "C:jaccard=0.0374 explWords=52": 1,
    "B:multi predicted={A,C,E} stored={A,B,D,E} best=0.59": 1,
-   "B:multi predicted={A,D} stored={A,B} best=0.75": 1,
+   "B:multi predicted={D,A} stored={A,B} best=1.00": 1,
    "C:jaccard=0.0145 explWords=62": 1,
    "C:jaccard=0.0430 explWords=43": 1,
    "B:multi predicted={D,B,A,E} stored={A,B,C,D} best=0.67": 1,

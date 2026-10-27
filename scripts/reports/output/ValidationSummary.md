@@ -1,22 +1,22 @@
 # Validation Report Summary
 
-**Generated:** 2026-10-23T17:44:09.720Z
+**Generated:** 2026-10-27T02:28:50.398Z
 **Project:** CMA Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 6ms |
-| Metadata Validator | WARN | 0 | 1 | 1121ms |
-| Blueprint Validator | WARN | 0 | 188 | 1404ms |
-| Part 2 Blueprint Validator | WARN | 0 | 3332 | 1966ms |
-| Difficulty Validator | WARN | 0 | 72 | 1494ms |
-| Reference Validator | WARN | 0 | 77 | 576ms |
-| Explanation Validator | WARN | 0 | 6 | 2350ms |
-| Case Integrity Validator | WARN | 0 | 1 | 456ms |
-| Case Identity Validator | PASS | 0 | 0 | 122ms |
-| PsychometricValidator | WARN | 0 | 7187 | 14001ms |
+| Repository Validator | PASS | 0 | 0 | 2ms |
+| Metadata Validator | WARN | 0 | 1 | 361ms |
+| Blueprint Validator | WARN | 0 | 188 | 292ms |
+| Part 2 Blueprint Validator | WARN | 0 | 3332 | 450ms |
+| Difficulty Validator | WARN | 0 | 72 | 516ms |
+| Reference Validator | WARN | 0 | 77 | 308ms |
+| Explanation Validator | WARN | 0 | 6 | 1071ms |
+| Case Integrity Validator | WARN | 0 | 1 | 234ms |
+| Case Identity Validator | PASS | 0 | 0 | 53ms |
+| PsychometricValidator | WARN | 0 | 7187 | 6093ms |
 
 **Total Errors:** 0
 **Total Warnings:** 10864
@@ -26,14 +26,14 @@
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 6ms
+**Duration:** 2ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 1121ms
+**Duration:** 361ms
 **Statistics:**
 - Cases Checked: 190
 **Warnings:**
@@ -41,7 +41,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 1404ms
+**Duration:** 292ms
 **Statistics:**
 - Cases Checked: 190
 - Cross-Domain Cases: 2
@@ -249,7 +249,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 1966ms
+**Duration:** 450ms
 **Statistics:**
 - P2 MCQ Packs Found: 6
 - P2 Case Packs Found: 3
@@ -3597,7 +3597,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 1494ms
+**Duration:** 516ms
 **Statistics:**
 - Cases Checked: 190
 - Items Checked: 1085
@@ -3687,7 +3687,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 576ms
+**Duration:** 308ms
 **Statistics:**
 - Cases Checked: 190
 - Total References: 0
@@ -3774,7 +3774,7 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 2350ms
+**Duration:** 1071ms
 **Statistics:**
 - MCQ Questions Checked: 6633
 - Case Items Checked: 1485
@@ -3793,7 +3793,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 456ms
+**Duration:** 234ms
 **Statistics:**
 - Total Cases Checked: 190
 - Total Items Checked: 1085
@@ -3811,7 +3811,7 @@
 
 ### Case Identity Validator
 **Status:** PASS
-**Duration:** 122ms
+**Duration:** 53ms
 **Statistics:**
 - content/cases/case_pack_1_corrected.js :: Moderate-Easy: 38 (27.0%)
 - content/cases/case_pack_1_corrected.js :: Moderate: 36 (25.5%)
@@ -3861,7 +3861,7 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 14001ms
+**Duration:** 6093ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 6633
 - AbsoluteLanguageValidator.findings: 2571
